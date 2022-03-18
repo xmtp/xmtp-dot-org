@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  :root {
+    /* Docusaurus themeing*/
+
+    /* --ifm-font-family-monospace: 'Inconsolata', SFMono-Regular, ui-monospace, 
+      Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; */
+
+    --font-code: var(--ifm-font-family-monospace) !important;
+    --font-mono: var(--ifm-font-family-monospace) !important;
+
+    --font-ui: 'Inter', -apple-system, ui-sans-serif, system-ui,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --font-prose: var(--font-ui);
+
+    --ifm-heading-font-family: var(--font-ui);
+    --ifm-font-family-base: var(--font-ui);
+
+    /* --ifm-code-font-size: 100%; */
+
+    --ifm-background-color: #fff;
+
+  }
+
+}
