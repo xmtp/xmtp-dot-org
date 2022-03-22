@@ -2,15 +2,17 @@
 
 This web starter is built using [Docusaurus 2](https://docusaurus.io/) and [Tailwind CSS](https://tailwindcss.com/docs/installation).
 
+This repo will serve as the base for new websites to be built at `xmtp.com` (for XMTP Labs) and `xmtp.org` (for XMTP). Any changes that would need to happen on both sites should be made here, and upstream changes pulled in each individual repo.
+
 ## Installation
 
-```
+``` txt
 npm install
 ```
 
 ## Local Development
 
-```
+``` txt
 npm run start
 ```
 
@@ -18,7 +20,7 @@ This command starts a local development server and opens up a browser window. Mo
 
 ## Build
 
-```
+``` txt
 npm run build
 ```
 
