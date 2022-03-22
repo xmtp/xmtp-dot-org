@@ -54,12 +54,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        disableSwitch: false,
+      },
       navbar: {
-        title: 'XMTP Labs Website Starter Kit',
+        title: '', // CHANGE ME / Add title if necessary
         logo: {
           alt: 'XMTP Logo',
           src: 'img/logomark.svg', // CHANGE ME
-          srcDark: 'img/logomark-color-dark.png', // CHANGE ME
+          srcDark: 'img/logomark-dark.svg', // CHANGE ME
         },
         items: [
           {
