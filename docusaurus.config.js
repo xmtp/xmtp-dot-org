@@ -8,15 +8,15 @@ const { tailwindPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'XMTP Labs Website Starter Kit', // CHANGE ME
+  tagline: 'Start Here', // CHANGE ME
+  url: 'https://xmtp.com', // CHANGE ME
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  favicon: 'img/favicon.png', // CHANGE ME / Add favicon
+  organizationName: 'xmtp-labs', // CHANGE ME / Usually your GitHub org/user name.
+  projectName: 'web-starter', // CHANGE ME / Usually your repo name.
 
   presets: [
     [
@@ -25,20 +25,20 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // Please change this to target repo.
+          editUrl: 'https://github.com/xmtp-labs/web-starter/tree/main', // CHANGE ME
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
+          // Please change this to target repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/xmtp-labs/web-starter/tree/main', // CHANGE ME
         },
         theme: {
           customCss: require.resolve('./src/css/tailwind.css'),
         },
         gtag: {
-          trackingID: '3342098857', // Please change this to your Google Analytics tag
+          trackingID: '3342098857', // CHANGE ME to the correct Google Analytics tag
           anonymizeIP: true,
         },
       }),
@@ -55,10 +55,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'XMTP Labs Website Starter Kit',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'XMTP Logo',
+          src: 'img/logomark.svg', // CHANGE ME
+          srcDark: 'img/logomark-color-dark.png', // CHANGE ME
         },
         items: [
           {
@@ -69,7 +70,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/xmtp-labs/web-starter', // CHANGE ME
             label: 'GitHub',
             position: 'right',
           },
@@ -91,16 +92,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/xmtp',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/xmtp;_',
               },
             ],
           },
@@ -113,12 +110,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/xmtp-labs/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} XMTP Labs`,
       },
       prism: {
         theme: lightCodeTheme,
