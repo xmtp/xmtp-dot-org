@@ -71,9 +71,15 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'doc',
+            docId: 'faqs/intro',
+            position: 'left',
+            label: 'FAQs',
+          },
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/xmtp/website', // CHANGE ME
             label: 'GitHub',
