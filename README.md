@@ -21,6 +21,7 @@ website # Root directory of your site
 - [Tailwind CSS](https://tailwindcss.com/docs/installation)
 - Docusaurus
   - [`plugin-google-gtag`](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-google-gtag)
+  - [`theme-search-algolia`](https://docusaurus.io/docs/next/api/themes/@docusaurus/theme-search-algolia)
 
 ### Components added
 
