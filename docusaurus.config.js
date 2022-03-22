@@ -91,10 +91,6 @@ const config = {
                label: 'Docs',
                to: '/docs/intro',
               },
-              {
-               label: 'FAQs',
-               to: '/faqs/intro',
-              },
             ],
           },
           {
