@@ -35,7 +35,7 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/tailwind.css'),
         },
         gtag: {
           trackingID: '3342098857', // Please change this to your Google Analytics tag
