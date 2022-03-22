@@ -8,15 +8,15 @@ const { tailwindPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'XMTP Labs Website Starter Kit', // CHANGE ME
-  tagline: 'Start Here', // CHANGE ME
-  url: 'https://xmtp.com', // CHANGE ME
+  title: 'XMTP', // CHANGE ME
+  tagline: 'The web3 communication network', // CHANGE ME
+  url: 'https://xmtp.org', // CHANGE ME
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png', // CHANGE ME / Add favicon
-  organizationName: 'xmtp-labs', // CHANGE ME / Usually your GitHub org/user name.
-  projectName: 'web-starter', // CHANGE ME / Usually your repo name.
+  organizationName: 'xmtp', // CHANGE ME / Usually your GitHub org/user name.
+  projectName: 'website', // CHANGE ME / Usually your repo name.
 
   presets: [
     [
@@ -28,13 +28,13 @@ const config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           // Please change this to target repo.
-          editUrl: 'https://github.com/xmtp-labs/web-starter/tree/main', // CHANGE ME
+          editUrl: 'https://github.com/xmtp/website/tree/main', // CHANGE ME
         },
         blog: {
           showReadingTime: true,
           // Please change this to target repo.
           editUrl:
-            'https://github.com/xmtp-labs/web-starter/tree/main', // CHANGE ME
+            'https://github.com/xmtp/website/tree/main', // CHANGE ME
         },
         theme: {
           customCss: require.resolve('./src/css/tailwind.css'),
@@ -75,7 +75,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/xmtp-labs/web-starter', // CHANGE ME
+            href: 'https://github.com/xmtp/website', // CHANGE ME
             label: 'GitHub',
             position: 'right',
           },
@@ -85,42 +85,50 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'XMTP',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+               label: 'Docs',
+               to: '/docs/intro',
+              },
+              {
+               label: 'FAQs',
+               to: '/faqs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'XMTP Community',
             items: [
               {
-                label: 'Discord',
-                href: 'https://discord.gg/xmtp',
+                label: `Twitter`,
+                href: `https://twitter.com/xmtp_`
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/xmtp;_',
+                label: `XMTP Discord`,
+                href: `https://discord.gg/xmtp`
+              },
+              {
+                label: `Community Forum`,
+                href: `https://community.xmtp.org`
               },
             ],
           },
           {
-            title: 'More',
+            title: 'About this site',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Website is CC0 No Rights Resered',
+                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/'
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/xmtp-labs/',
+                label: 'Edit on Github',
+                href: 'https://github.com/xmtp/website/'
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} XMTP Labs`,
+        // copyright: `Website CC0 XMTP`,
       },
       algolia: {
         // The application ID provided by Algolia
