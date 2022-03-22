@@ -2,7 +2,6 @@
 sidebar_position: 1
 sidebar_label: Docs
 id: intro
-slug: /
 ---
 
 # 📧 What is XMTP?
