@@ -25,6 +25,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           // Please change this to target repo.
           editUrl: 'https://github.com/xmtp-labs/web-starter/tree/main', // CHANGE ME
         },
