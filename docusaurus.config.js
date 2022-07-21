@@ -163,7 +163,7 @@ const config = {
         ],
         // copyright: `Website CC0 XMTP`,
       },
-/*      algolia: {
+        algolia: {
         // The application ID provided by Algolia
         appId: 'ALGOLIA_APP_ID',
 
@@ -185,7 +185,7 @@ const config = {
         searchPagePath: 'search',
 
         //... other Algolia params
-      },*/
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
