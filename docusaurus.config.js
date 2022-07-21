@@ -8,15 +8,15 @@ const { tailwindPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'XMTP', // CHANGE ME
-  tagline: 'The web3 communication network', // CHANGE ME
+  title: 'The open protocol, network, and standards for secure web3 messaging', // CHANGE ME
+  tagline: 'Build with XMTP to send alerts, announcements, and messages between blockchain accounts', // CHANGE ME
   url: 'https://xmtp.org', // CHANGE ME
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png', // CHANGE ME / Add favicon
   organizationName: 'xmtp', // CHANGE ME / Usually your GitHub org/user name.
-  projectName: 'website', // CHANGE ME / Usually your repo name.
+  projectName: 'xmtp-dot-org', // CHANGE ME / Usually your repo name.
 
   presets: [
     [
@@ -25,23 +25,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
+          showLastUpdateAuthor: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
+          showLastUpdateTime: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           // Please change this to target repo.
-          editUrl: 'https://github.com/xmtp/website/tree/main', // CHANGE ME
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to target repo.
-          editUrl:
-            'https://github.com/xmtp/website/tree/main', // CHANGE ME
+          editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main', // CHANGE ME
         },
         theme: {
           customCss: require.resolve('./src/css/tailwind.css'),
-        },
-        gtag: {
-          trackingID: '3342098857', // CHANGE ME to the correct Google Analytics tag
-          anonymizeIP: true,
         },
       }),
     ],
@@ -49,6 +39,27 @@ const config = {
 
   plugins: [
     tailwindPlugin,
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'dev-concepts',
+        path: 'dev-concepts',
+        routeBasePath: 'dev-concepts',
+        sidebarPath: require.resolve('./sidebars-dev-concepts.js'),
+        // ... other options
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'what-is-xmtp',
+        path: 'what-is-xmtp',
+        routeBasePath: 'what-is-xmtp',
+        sidebarPath: require.resolve('./sidebars-what-is-xmtp.js'),
+        // ... other options
+      },
+    ],
+
   ],
 
   clientModules: [require.resolve('./src/css/tailwind.css')],
@@ -68,18 +79,44 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/xmtp/website', // CHANGE ME
-            label: 'GitHub',
+            type: 'dropdown',
+            label: 'Docs',
             position: 'right',
-          },
-        ],
+            items: [
+                {
+                  to: 'docs/tutorials/placeholder',
+                  label: 'Client SDK',
+                },
+                {
+                  to: 'dev-concepts/placeholder',
+                  label: 'Development concepts',
+                },
+              ],
+            },
+            {
+              to: 'sdks-and-tools',   // To highlight the navbar item, you must link to a document, not a top-level directory
+              position: 'right',
+              label: 'SDK and tools',
+              activeBaseRegex: `/`,
+            },
+            {
+              to: 'community',   // To highlight the navbar item, you must link to a document, not a top-level directory
+              position: 'right',
+              label: 'Community',
+              activeBaseRegex: `/`,
+            },
+            {
+              to: '/what-is-xmtp/placeholder',   // To highlight the navbar item, you must link to a document, not a top-level directory
+              position: 'right',
+              label: 'What is XMTP?',
+              activeBaseRegex: `/what-is-xmtp/`,
+            },
+            {
+              href: 'https://github.com/xmtp/website', // CHANGE ME
+              label: 'GitHub',
+              position: 'right',
+            },
+          ],
       },
       footer: {
         style: 'dark',
@@ -89,7 +126,7 @@ const config = {
             items: [
               {
                label: 'Docs',
-               to: '/docs/intro',
+               to: '/docs/tutorials/placeholder',
               },
             ],
           },
@@ -129,24 +166,24 @@ const config = {
       algolia: {
         // The application ID provided by Algolia
         appId: 'ALGOLIA_APP_ID',
-  
+
         // Public API key: it is safe to commit it
         apiKey: 'ALGOLIA_API_KEY',
-  
+
         indexName: 'ALGOLIA_INDEX_NAME',
-  
+
         // Optional: see doc section below
         contextualSearch: true,
-  
+
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
         externalUrlRegex: 'external\\.com|domain\\.com',
-  
+
         // Optional: Algolia search parameters
         searchParameters: {},
-  
+
         // Optional: path for search page that enabled by default (`false` to disable it)
         searchPagePath: 'search',
-  
+
         //... other Algolia params
       },
       prism: {
