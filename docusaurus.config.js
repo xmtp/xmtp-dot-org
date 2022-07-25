@@ -1,6 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
+require('dotenv').config();
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
@@ -24,7 +24,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars/sidebars.js'),
           showLastUpdateAuthor: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           showLastUpdateTime: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           // Please change this to target repo.
@@ -38,6 +38,12 @@ const config = {
   ],
 
   plugins: [
+    [
+      "docusaurus2-dotenv",
+      {
+        systemvars: true,
+      },
+    ],
     tailwindPlugin,
     [
       '@docusaurus/plugin-content-docs',
@@ -45,7 +51,7 @@ const config = {
         id: 'dev-concepts',
         path: 'dev-concepts',
         routeBasePath: 'dev-concepts',
-        sidebarPath: require.resolve('./sidebars-dev-concepts.js'),
+        sidebarPath: require.resolve('./sidebars/sidebars-dev-concepts.js'),
         // ... other options
       },
     ],
@@ -55,7 +61,7 @@ const config = {
         id: 'what-is-xmtp',
         path: 'what-is-xmtp',
         routeBasePath: 'what-is-xmtp',
-        sidebarPath: require.resolve('./sidebars-what-is-xmtp.js'),
+        sidebarPath: require.resolve('./sidebars/sidebars-what-is-xmtp.js'),
         // ... other options
       },
     ],
@@ -165,18 +171,18 @@ const config = {
       },
         algolia: {
         // The application ID provided by Algolia
-        appId: 'ALGOLIA_APP_ID',
+        appId: process.env.ALGOLIA_APP_ID,
 
         // Public API key: it is safe to commit it
-        apiKey: 'ALGOLIA_API_KEY',
+        apiKey: process.env.ALGOLIA_API_KEY,
 
-        indexName: 'ALGOLIA_INDEX_NAME',
+        indexName: process.env.ALGOLIA_INDEX_NAME,
 
         // Optional: see doc section below
         contextualSearch: true,
 
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: 'external\\.com|domain\\.com',
+        // externalUrlRegex: 'external\\.com|domain\\.com',
 
         // Optional: Algolia search parameters
         searchParameters: {},
