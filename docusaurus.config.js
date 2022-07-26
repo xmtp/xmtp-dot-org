@@ -1,6 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-require('dotenv').config();
+require('dotenv').config()
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
@@ -9,7 +9,8 @@ const { tailwindPlugin } = require('./src/plugins')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'The open protocol, network, and standards for secure web3 messaging', // CHANGE ME
-  tagline: 'Build with XMTP to send alerts, announcements, and messages between blockchain accounts', // CHANGE ME
+  tagline:
+    'Build with XMTP to send alerts, announcements, and messages between blockchain accounts', // CHANGE ME
   url: 'https://xmtp.org', // CHANGE ME
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -38,12 +39,6 @@ const config = {
   ],
 
   plugins: [
-    [
-      "docusaurus2-dotenv",
-      {
-        systemvars: true,
-      },
-    ],
     tailwindPlugin,
     [
       '@docusaurus/plugin-content-docs',
@@ -65,7 +60,6 @@ const config = {
         // ... other options
       },
     ],
-
   ],
 
   clientModules: [require.resolve('./src/css/tailwind.css')],
@@ -89,40 +83,39 @@ const config = {
             label: 'Docs',
             position: 'right',
             items: [
-                {
-                  to: 'docs/tutorials/placeholder',
-                  label: 'Client SDK',
-                },
-                {
-                  to: 'dev-concepts/placeholder',
-                  label: 'Development concepts',
-                },
-              ],
-            },
-            {
-              to: 'sdks-and-tools',   // To highlight the navbar item, you must link to a document, not a top-level directory
-              position: 'right',
-              label: 'SDK and tools',
-              activeBaseRegex: `/`,
-            },
-            {
-              to: 'community',   // To highlight the navbar item, you must link to a document, not a top-level directory
-              position: 'right',
-              label: 'Community',
-              activeBaseRegex: `/`,
-            },
-            {
-              to: '/what-is-xmtp/placeholder',   // To highlight the navbar item, you must link to a document, not a top-level directory
-              position: 'right',
-              label: 'What is XMTP?',
-              activeBaseRegex: `/what-is-xmtp/`,
-            },
-            {
-              href: 'https://github.com/xmtp/website', // CHANGE ME
-              label: 'GitHub',
-              position: 'right',
-            },
-          ],
+              {
+                to: 'docs/tutorials/placeholder',
+                label: 'Client SDK',
+              },
+              {
+                to: 'dev-concepts/placeholder',
+                label: 'Development concepts',
+              },
+            ],
+          },
+          {
+            to: 'sdks-and-tools', // To highlight the navbar item, you must link to a document, not a top-level directory
+            position: 'right',
+            label: 'SDK and tools',
+            activeBaseRegex: `/`,
+          },
+          {
+            to: 'community', // To highlight the navbar item, you must link to a document, not a top-level directory
+            position: 'right',
+            label: 'Community',
+            activeBaseRegex: `/`,
+          },
+          {
+            to: '/what-is-xmtp/placeholder', // To highlight the navbar item, you must link to a document, not a top-level directory
+            position: 'right',
+            label: 'What is XMTP?',
+            activeBaseRegex: `/what-is-xmtp/`,
+          },
+          {
+            href: 'https://github.com/xmtp/website',
+            position: 'right',
+          },
+        ],
       },
       footer: {
         style: 'dark',
@@ -131,8 +124,8 @@ const config = {
             title: 'XMTP',
             items: [
               {
-               label: 'Docs',
-               to: '/docs/tutorials/placeholder',
+                label: 'Docs',
+                to: '/docs/tutorials/placeholder',
               },
             ],
           },
@@ -141,15 +134,15 @@ const config = {
             items: [
               {
                 label: `Twitter`,
-                href: `https://twitter.com/xmtp_`
+                href: `https://twitter.com/xmtp_`,
               },
               {
                 label: `XMTP Discord`,
-                href: `https://discord.gg/xmtp`
+                href: `https://discord.gg/xmtp`,
               },
               {
                 label: `Community Forum`,
-                href: `https://community.xmtp.org`
+                href: `https://community.xmtp.org`,
               },
             ],
           },
@@ -158,18 +151,18 @@ const config = {
             items: [
               {
                 label: 'Website is CC0 No Rights Resered',
-                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/'
+                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/',
               },
               {
                 label: 'Edit on Github',
-                href: 'https://github.com/xmtp/website/'
+                href: 'https://github.com/xmtp/website/',
               },
             ],
           },
         ],
         // copyright: `Website CC0 XMTP`,
       },
-        algolia: {
+      algolia: {
         // The application ID provided by Algolia
         appId: process.env.ALGOLIA_APP_ID,
 
