@@ -1,0 +1,37 @@
+# This is a basic workflow to help you get started with Actions
+
+ name: DocSearch Scraper
+
+ # Controls when the workflow will run
+ on:
+   # Triggers the workflow on push or pull request events but only for the main branch
+   push:
+     branches: [ main ]
+   pull_request:
+     branches: [ main ]
+
+   # Allows you to run this workflow manually from the Actions tab
+   workflow_dispatch:
+
+ # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+ jobs:
+   # This workflow contains a single job called "build"
+   build:
+     # The type of runner that the job will run on
+     runs-on: ubuntu-latest
+
+     # Steps represent a sequence of tasks that will be executed as part of the job
+     steps:
+
+     - uses: actions/checkout@v2
+
+     - name: Get the content of algolia.config.json as config
+       id: algolia_config
+       run: echo "::set-output name=config::$(cat algolia.config.json | jq -r tostring)"
+
+     - name: Push indices to Algolia
+       uses: signcl/docsearch-scraper-action@master
+       env:
+         APPLICATION_ID: ${{ secrets.ALGOLIA_APP_ID }}
+         API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+         CONFIG: ${{ steps.algolia_config.outputs.config }}
