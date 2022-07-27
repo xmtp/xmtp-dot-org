@@ -1,10 +1,10 @@
 {
-    "index_name": "xmtp_docs",
+    "index_name": "xmtp_dot_org",
     "start_urls": [
-      "https://docs.xmtp.org/"
+      "https://xmtp.org/"
     ],
     "sitemap_urls": [
-      "https://docs.xmtp.org/sitemap.xml"
+      "https://xmtp.org/sitemap.xml"
     ],
     "sitemap_alternate_links": true,
     "stop_urls": [],
