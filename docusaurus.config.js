@@ -43,20 +43,20 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'dev-concepts',
-        path: 'dev-concepts',
-        routeBasePath: 'dev-concepts',
-        sidebarPath: require.resolve('./sidebars/sidebars-dev-concepts.js'),
+        id: 'client-sdk',
+        path: 'client-sdk',
+        routeBasePath: 'client-sdk',
+        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk.js'),
         // ... other options
       },
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'what-is-xmtp',
-        path: 'what-is-xmtp',
-        routeBasePath: 'what-is-xmtp',
-        sidebarPath: require.resolve('./sidebars/sidebars-what-is-xmtp.js'),
+        id: 'about',
+        path: 'about',
+        routeBasePath: 'about',
+        sidebarPath: require.resolve('./sidebars/sidebars-about.js'),
         // ... other options
       },
     ],
@@ -84,11 +84,11 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/tutorials/placeholder',
+                to: 'client-sdk/tutorials/placeholder',
                 label: 'Client SDK',
               },
               {
-                to: 'dev-concepts/placeholder',
+                to: 'docs/placeholder',
                 label: 'Development concepts',
               },
             ],
@@ -106,10 +106,10 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: '/what-is-xmtp/placeholder', // To highlight the navbar item, you must link to a document, not a top-level directory
+            to: '/about/placeholder', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
             label: 'What is XMTP?',
-            activeBaseRegex: `/what-is-xmtp/`,
+            activeBaseRegex: `/about/`,
           },
           {
             href: 'https://github.com/xmtp/website',
@@ -125,7 +125,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: '/docs/tutorials/placeholder',
+                to: '/client-sdk/tutorials/placeholder',
               },
             ],
           },
