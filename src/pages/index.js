@@ -16,7 +16,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/client-sdk/tutorials/placeholder">
+            to="client-sdk/javascript/tutorials/quickstart">
             Get started with the <code>xmtp-js</code> client SDK
           </Link>
         </div>

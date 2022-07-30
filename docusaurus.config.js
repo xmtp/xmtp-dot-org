@@ -43,10 +43,10 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'client-sdk',
-        path: 'client-sdk',
-        routeBasePath: 'client-sdk',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk.js'),
+        id: 'client-sdk-javascript',
+        path: 'client-sdk/javascript',
+        routeBasePath: 'client-sdk/javascript',
+        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-javascript.js'),
         // ... other options
       },
     ],
@@ -84,11 +84,11 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'client-sdk/tutorials/placeholder',
+                to: 'client-sdk/javascript/tutorials/quickstart',
                 label: 'Client SDK',
               },
               {
-                to: 'docs/placeholder',
+                to: 'docs/overview',
                 label: 'Development concepts',
               },
             ],
@@ -106,7 +106,7 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: '/about/placeholder', // To highlight the navbar item, you must link to a document, not a top-level directory
+            to: '/about/welcome-to-xmtp', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
             label: 'What is XMTP?',
             activeBaseRegex: `/about/`,
@@ -117,45 +117,93 @@ const config = {
           },
         ],
       },
+      // still working
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'XMTP',
+            title: 'Docs',
             items: [
               {
-                label: 'Docs',
-                to: '/client-sdk/tutorials/placeholder',
+                label: 'Client SDK',
+                to: 'client-sdk/javascript/tutorials/quickstart',
+              },
+              {
+                label: 'Development concepts',
+                to: 'docs/overview',
               },
             ],
           },
           {
-            title: 'XMTP Community',
+            title: 'SDKs and tools',
             items: [
               {
-                label: `Twitter`,
-                href: `https://twitter.com/xmtp_`,
+                label: 'Client SDK',
+                to: 'sdks-and-tools',
               },
               {
-                label: `XMTP Discord`,
-                href: `https://discord.gg/xmtp`,
+                label: 'Example client app repo',
+                to: 'sdks-and-tools',
               },
               {
-                label: `Community Forum`,
-                href: `https://community.xmtp.org`,
+                label: 'Hosted example client apps',
+                to: 'sdks-and-tools',
               },
             ],
           },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: `GitHub Discussions`,
+                href: `community`,
+              },
+              {
+                label: `Discord`,
+                href: `community`,
+              },
+              {
+                label: `Open source projects`,
+                href: `community`,
+              },
+              {
+                label: `XIPs`,
+                href: `community`,
+              },
+              {
+                label: `Twitter`,
+                href: `community`,
+              },
+            ],
+          },
+          {
+            title: 'What is XMTP?',
+            items: [
+              {
+                label: 'Welcome',
+                to: '/about/welcome-to-xmtp',
+              },
+              {
+                label: 'FAQ',
+                to: '/about/faq',
+              },
+            ],
+          },
+
           {
             title: 'About this site',
             items: [
               {
-                label: 'Website is CC0 No Rights Resered',
-                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/',
+                label: 'Terms',
+                href: '#',
               },
               {
-                label: 'Edit on Github',
-                href: 'https://github.com/xmtp/website/',
+                label: 'Privacy',
+                href: '#',
+              },
+              {
+                label: 'CC0 No Rights Resered',
+                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/',
               },
             ],
           },

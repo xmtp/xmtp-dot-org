@@ -1,3 +1,20 @@
-# SDK and developer tools
+# XMTP SDK and developer tools
 
-Culture muse about Cambrian explosion astonishment realm of the galaxies descended from astronomers. Prime number Sea of Tranquility star stuff harvesting star light as a patch of light the carbon in our apple pies bits of moving fluff? With pretty stories for which there's little good evidence two ghostly white figures in coveralls and helmets are softly dancing corpus callosum vanquish the impossible from which we spring emerged into consciousness and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+## Client SDK
+
+`xmtp-js` is a TypeScript implementation of the XMTP client protocol for use with JavaScript and React applications.
+
+[GitHub repo](https://github.com/xmtp/xmtp-js) | [Docs](/client-sdk/javascript/tutorials/quickstart)
+
+## Example XMTP client app repo
+
+`example-chat-react` is an example React chat app that demonstrates the core features of the `xmtp-js` client implementation.
+
+[GitHub repo](https://github.com/xmtp/example-chat-react)
+
+## Hosted example client apps
+
+XMTP Labs hosts deployments of the `example-chat-react` app to provide people with a way to try out a basic app built with XMTP.
+
+- [Try the app](https://xmtp.chat) connected to the XMTP `production` network
+- [Try the app](https://xmtp.vercel.app/) connected to the XMTP `dev` network
