@@ -15,26 +15,28 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.png', // CHANGE ME / Add favicon
-  organizationName: 'xmtp', // CHANGE ME / Usually your GitHub org/user name.
-  projectName: 'xmtp-dot-org', // CHANGE ME / Usually your repo name.
+  favicon: 'img/favicon.png',
+  organizationName: 'xmtp',
+  projectName: 'xmtp-dot-org',
 
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
-          sidebarPath: require.resolve('./sidebars/sidebars.js'),
+          path: 'docs/client-sdk',
+          id: 'default',
+          routeBasePath: 'docs/client-sdk',
+          sidebarPath: require.resolve('./sidebars/sidebars-client-sdk.js'),
+          includeCurrentVersion:true,
           showLastUpdateAuthor: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           showLastUpdateTime: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
-          // Please change this to target repo.
-          editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main', // CHANGE ME
+          editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
         },
         theme: {
           customCss: require.resolve('./src/css/tailwind.css'),
         },
-      }),
+      },
     ],
   ],
 
@@ -43,11 +45,11 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'client-sdk',
-        path: 'client-sdk',
-        routeBasePath: 'client-sdk',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk.js'),
-        // ... other options
+        id: 'dev-concepts',
+        path: 'docs/dev-concepts',
+        routeBasePath: '/docs/dev-concepts',
+        sidebarPath: require.resolve('./sidebars/sidebars.js'),
+        
       },
     ],
     [
@@ -57,9 +59,17 @@ const config = {
         path: 'about',
         routeBasePath: 'about',
         sidebarPath: require.resolve('./sidebars/sidebars-about.js'),
-        // ... other options
       },
     ],
+    /* [
+      '@docusaurus/plugin-content-docs',
+      {
+        path: 'docs/javascript',
+        routeBasePath: 'javascript',
+        id: 'javascript',
+        sidebarPath: require.resolve('./sidebars/sidebars.js'),
+      },
+    ], */
   ],
 
   clientModules: [require.resolve('./src/css/tailwind.css')],
@@ -78,17 +88,18 @@ const config = {
           srcDark: 'img/logomark-dark.svg', // CHANGE ME
         },
         items: [
+          // { type: 'docsVersionDropdown' },
           {
             type: 'dropdown',
             label: 'Docs',
             position: 'right',
             items: [
               {
-                to: 'client-sdk/tutorials/placeholder',
+                to: 'docs/client-sdk/tutorials/placeholder',
                 label: 'Client SDK',
               },
               {
-                to: 'docs/placeholder',
+                to: 'docs/dev-concepts/placeholder',
                 label: 'Development concepts',
               },
             ],
@@ -106,7 +117,7 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: '/about/placeholder', // To highlight the navbar item, you must link to a document, not a top-level directory
+            to: 'about/placeholder', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
             label: 'What is XMTP?',
             activeBaseRegex: `/about/`,
@@ -114,6 +125,7 @@ const config = {
           {
             href: 'https://github.com/xmtp/website',
             position: 'right',
+            className: 'header-github-link',
           },
         ],
       },
@@ -125,7 +137,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: '/client-sdk/tutorials/placeholder',
+                to: 'docs/client-sdk/tutorials/placeholder',
               },
             ],
           },
@@ -190,6 +202,6 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-};
+}
 
 module.exports = config
