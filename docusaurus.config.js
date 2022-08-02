@@ -24,10 +24,10 @@ const config = {
       'classic',
       {
         docs: {
-          path: 'docs/client-sdk',
+          path: 'docs/client-sdk/javascript',
           id: 'default',
-          routeBasePath: 'docs/client-sdk',
-          sidebarPath: require.resolve('./sidebars/sidebars-client-sdk.js'),
+          routeBasePath: 'docs/client-sdk/javascript',
+          sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-javascript.js'),
           showLastUpdateAuthor: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           showLastUpdateTime: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
@@ -83,7 +83,7 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/tutorials/placeholder',
+                to: 'docs/client-sdk/javascript/tutorials/placeholder',
                 label: 'Client SDK',
               },
               {
@@ -125,7 +125,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: 'docs/client-sdk/tutorials/placeholder',
+                to: 'docs/client-sdk/javascript/tutorials/placeholder',
               },
             ],
           },
