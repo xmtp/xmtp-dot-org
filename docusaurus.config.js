@@ -24,11 +24,11 @@ const config = {
       'classic',
       {
         docs: {
-          path: 'docs/client-sdk',
-          id: 'default',
-          routeBasePath: 'docs/client-sdk',
+          path: 'docs/client-sdk/javascript',
+          id: 'javascript',
+          routeBasePath: 'docs/client-sdk/javascript',
           sidebarPath: require.resolve('./sidebars/sidebars-client-sdk.js'),
-          includeCurrentVersion:true,
+          // includeCurrentVersion: false,
           showLastUpdateAuthor: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           showLastUpdateTime: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
@@ -49,7 +49,6 @@ const config = {
         path: 'docs/dev-concepts',
         routeBasePath: '/docs/dev-concepts',
         sidebarPath: require.resolve('./sidebars/sidebars.js'),
-        
       },
     ],
     [
@@ -61,15 +60,29 @@ const config = {
         sidebarPath: require.resolve('./sidebars/sidebars-about.js'),
       },
     ],
-    /* [
+    [
       '@docusaurus/plugin-content-docs',
       {
-        path: 'docs/javascript',
-        routeBasePath: 'javascript',
-        id: 'javascript',
+        lastVersion: undefined,
+        includeCurrentVersion: false,
+        versions: {
+          '1.2.0': {
+            label: 'Swift',
+            path: '1.2.0',
+            banner: 'none',
+          },
+          '1.1.0': {
+            label: 'Swift v1.1',
+            path: '1.1.0',
+            banner: 'unmaintained',
+          },
+        },
+        id: 'swift',
+        path: 'docs/client-sdk/swift',
+        routeBasePath: '/docs/client-sdk/swift',
         sidebarPath: require.resolve('./sidebars/sidebars.js'),
       },
-    ], */
+    ],
   ],
 
   clientModules: [require.resolve('./src/css/tailwind.css')],
@@ -81,11 +94,11 @@ const config = {
         disableSwitch: false,
       },
       navbar: {
-        title: '', // CHANGE ME / Add title if necessary
+        title: '',
         logo: {
           alt: 'XMTP Logo',
-          src: 'img/logomark.svg', // CHANGE ME
-          srcDark: 'img/logomark-dark.svg', // CHANGE ME
+          src: 'img/logomark.svg',
+          srcDark: 'img/logomark-dark.svg',
         },
         items: [
           // { type: 'docsVersionDropdown' },
@@ -95,7 +108,7 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/tutorials/placeholder',
+                to: 'docs/client-sdk/javascript/tutorials/placeholder',
                 label: 'Client SDK',
               },
               {
