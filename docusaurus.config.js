@@ -24,8 +24,8 @@ const config = {
       'classic',
       {
         docs: {
-          path: 'docs/client-sdk/javascript',
           id: 'javascript',
+          path: 'docs/client-sdk/javascript',
           routeBasePath: 'docs/client-sdk/javascript',
           sidebarPath: require.resolve('./sidebars/sidebars-client-sdk.js'),
           // includeCurrentVersion: false,
@@ -47,7 +47,7 @@ const config = {
       {
         id: 'dev-concepts',
         path: 'docs/dev-concepts',
-        routeBasePath: '/docs/dev-concepts',
+        routeBasePath: 'docs/dev-concepts',
         sidebarPath: require.resolve('./sidebars/sidebars.js'),
       },
     ],
@@ -67,12 +67,12 @@ const config = {
         includeCurrentVersion: false,
         versions: {
           '1.2.0': {
-            label: 'Swift',
+            label: '1.2.0',
             path: '1.2.0',
             banner: 'none',
           },
           '1.1.0': {
-            label: 'Swift v1.1',
+            label: '1.1.0',
             path: '1.1.0',
             banner: 'unmaintained',
           },
@@ -81,6 +81,7 @@ const config = {
         path: 'docs/client-sdk/swift',
         routeBasePath: '/docs/client-sdk/swift',
         sidebarPath: require.resolve('./sidebars/sidebars.js'),
+        onlyIncludeVersions: ['1.2.0', '1.1.0'],
       },
     ],
   ],

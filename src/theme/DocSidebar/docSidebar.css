@@ -1,0 +1,23 @@
+.versioned-page div:first-child {
+  padding-top: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown button::after {
+  border-color: currentColor transparent;
+  border-style: solid;
+  border-width: 0.4em 0.4em 0;
+  content: '';
+  display: inline-block;
+  margin-left: 0.3em;
+  position: relative;
+  top: 2px;
+  transform: translateY(-50%);
+}
+
+.language-text {
+    text-transform: capitalize;
+}
