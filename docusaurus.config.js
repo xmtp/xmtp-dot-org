@@ -83,11 +83,11 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/tutorials/placeholder',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
                 label: 'Client SDK',
               },
               {
-                to: 'docs/dev-concepts/placeholder',
+                to: 'docs/dev-concepts/introduction',
                 label: 'Development concepts',
               },
             ],
@@ -105,7 +105,7 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'about/placeholder', // To highlight the navbar item, you must link to a document, not a top-level directory
+            to: 'about/welcome', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
             label: 'What is XMTP?',
             activeBaseRegex: `/about/`,
@@ -125,7 +125,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: 'docs/client-sdk/javascript/tutorials/placeholder',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
               },
             ],
           },
