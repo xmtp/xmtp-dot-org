@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
+sidebar_label: TypeDoc reference
 ---
 
-# Placeholder
+# TypeDoc for XMTP JavaScript SDK
 
 Placeholder for where we'll autogenerate xmtp-js TypeDoc. Currently autogenerating to https://xmtp-js.pages.dev/.
 
