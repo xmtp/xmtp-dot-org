@@ -3,11 +3,13 @@ import DocSidebar from '@theme-original/DocSidebar'
 import VersionDropdown from '@theme/NavbarItem/DocsVersionDropdownNavbarItem'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useGlobalData from '@docusaurus/useGlobalData'
+import { Redirect } from '@docusaurus/router'
+import { useHistory, useParams } from 'react-router-dom'
 import Versions from '../../../javascript_versions.json'
 import './docSidebar.css'
 
 export const getDocId = () => {
-  const [, ...doc] = window.location.pathname.split('/')
+  const [, ...doc] = window.location.pathname.split('/').slice(1)
   if (doc.includes('javascript')) {
     return 'javascript'
   }
@@ -18,16 +20,13 @@ export const getDocId = () => {
 }
 
 export default function DocSidebarWrapper(props) {
-  // let docId = getDocId()
   const data = useDocusaurusContext()
-  // console.log("DATA", data);
   const globalData = useGlobalData()
   const [docId, setDocId] = useState(getDocId())
   const [language, setLanguage] = useState(docId)
-  // console.log('Props', window.location.pathname)
+  const history = useHistory()
 
   useEffect(() => {
-    // console.log('LANGUAGE', language)
     setDocId(language)
   }, [language])
 
@@ -35,18 +34,27 @@ export default function DocSidebarWrapper(props) {
     if (lang === docId) return
     setLanguage(lang)
     let url = ''
-    if (language == 'javascript') {
-      url =
-        globalData['docusaurus-plugin-content-docs'].swift.versions.at(-1)
-          .docs[0].path
+    if (lang == 'javascript') {
+      const versionsJS =
+        globalData['docusaurus-plugin-content-docs'].javascript.versions
+      const urlJS = versionsJS.find(
+        (item) =>
+          item.label ===
+          localStorage.getItem('docs-preferred-version-javascript')
+      )
+      url = `${urlJS.path}/${urlJS.mainDocId}`
     }
-    if (language == 'swift') {
-      url =
-        globalData['docusaurus-plugin-content-docs'].javascript.versions.at(-1)
-          .docs[0].path
+    if (lang == 'swift') {
+      const versionSwift =
+        globalData['docusaurus-plugin-content-docs'].swift.versions
+      const urlSwift = versionSwift.find(
+        (item) =>
+          item.label === localStorage.getItem('docs-preferred-version-swift')
+      )
+      url = `${urlSwift.path}/${urlSwift.mainDocId}`
     }
-    // console.log('GLOBAL', globalData["docusaurus-plugin-content-docs"].javascript);
-    window.history.pushState({}, '', url)
+
+    history.push(url)
   }
 
   const getCurrentPage = () => {
@@ -62,10 +70,6 @@ export default function DocSidebarWrapper(props) {
       {getCurrentPage() ? (
         <div className="pt-14">
           <div className="my-4 flex items-center justify-around">
-            {/* <select value={language} onChange={handleLanguageChange} className="text-lg border-none bg-transparent">
-            <option value="javascript">JavaScript</option>
-            <option value="swift">Swift</option>
-          </select> */}
             <div className="dropdown inline-block relative">
               <button className="bg-transparent py-2 px-4 rounded inline-flex items-center border-0 font-medium text-base">
                 <span className="mr-1 language-text w-20 text-left">

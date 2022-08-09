@@ -28,7 +28,15 @@ const config = {
           path: 'docs/client-sdk/javascript',
           routeBasePath: 'docs/client-sdk/javascript',
           sidebarPath: require.resolve('./sidebars/sidebars-client-sdk.js'),
-          // includeCurrentVersion: false,
+          includeCurrentVersion: true,
+          // versions: {
+          //   '1.3.0': {
+          //     label: '1.3.0',
+          //     path: '1.3.0',
+          //     banner: 'none',
+          //   },
+          // },
+          onlyIncludeVersions: ['1.3.0'],
           showLastUpdateAuthor: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           showLastUpdateTime: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
@@ -66,11 +74,11 @@ const config = {
         lastVersion: undefined,
         includeCurrentVersion: false,
         versions: {
-          '1.2.0': {
-            label: '1.2.0',
-            path: '1.2.0',
-            banner: 'none',
-          },
+          // '1.2.0': {
+          //   label: '1.2.0',
+          //   path: '1.2.0',
+          //   banner: 'none',
+          // },
           '1.1.0': {
             label: '1.1.0',
             path: '1.1.0',
