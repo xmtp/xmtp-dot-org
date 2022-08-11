@@ -6,50 +6,6 @@ Vastness is **bearable** only through love concept of the number one worldlets t
 
 The only home we've ever known rich in heavy atoms a mote of dust suspended in a sunbeam Sea of Tranquility a mote of dust suspended in a sunbeam shores of the cosmic ocean and billions upon billions upon billions upon billions upon billions upon billions upon billions.
 
-## Some unordered and ordered list in a long heading just to see what it looks like what an h2 needs to wrap (h2)
-
-### Unordered list (h3)
-
-Some nested lists. Probably shouldn't have three levels, but just curious.
-
-- With pretty stories for which there's little good evidence totam rem aperiam.
-
-  - Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
-
-- Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
-
-  - With pretty stories for which there's little good evidence totam rem aperiam.
-
-    - With pretty stories for which there's little good evidence totam rem aperiam.
-
-- Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
-
-  1. For kicks. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
-
-  2. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
-
-### Ordered list (h3)
-
-Probably shouldn't have three levels, but just curious.
-
-1. Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
-
-   a. Ut enim ad minima veniam the ash of stellar alchemy network of wormholes and billions upon billions upon billions upon billions upon billions upon billions upon billions.
-
-2. Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-
-   a. Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
-
-3. Ut enim ad minima veniam the ash of stellar alchemy network of wormholes and billions upon billions upon billions upon billions upon billions upon billions upon billions.
-
-   - Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-
-   - Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
-
-#### Throwing in an h4 heading just to see what it looks like (h4)
-
-The only home we've ever known rich in heavy atoms a mote of dust suspended in a sunbeam Sea of Tranquility a mote of dust suspended in a sunbeam shores of the cosmic ocean and billions upon billions upon billions upon billions upon billions upon billions upon billions.
-
 ## Callouts/admonitions (h2)
 
 :::note
@@ -146,3 +102,73 @@ How can I use markdown to define image width? Otherwise, I need to manually resi
 Here's an animated GIF for good measure:
 
 ![some informative alt text](message-encrypt-decrypt-flow-cropped.gif)
+
+## Some unordered and ordered list in a long heading just to see what it looks like what an h2 needs to wrap (h2)
+
+### Unordered list (h3)
+
+Some nested lists. Probably shouldn't have three levels, but just curious.
+
+These items have empty lines before each item. This is the way I like to write my bullets for editing readability.
+
+- With pretty stories for which there's little good evidence totam rem aperiam.
+
+  - Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
+
+- Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
+
+  - With pretty stories for which there's little good evidence totam rem aperiam.
+
+    - With pretty stories for which there's little good evidence totam rem aperiam.
+
+- Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
+
+  1. For kicks. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
+
+  2. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
+
+These are the same items without the empty lines. Just seeing if that impacts the end result.
+
+- With pretty stories for which there's little good evidence totam rem aperiam.
+  - Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
+- Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
+  - With pretty stories for which there's little good evidence totam rem aperiam.
+    - With pretty stories for which there's little good evidence totam rem aperiam.
+- Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
+  1. For kicks. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
+  2. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
+
+### Ordered list (h3)
+
+Probably shouldn't have three levels, but just curious. These items have empty lines before each item. This is the way I like to write my bullets for editing readability.
+
+1. Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
+
+   a. Ut enim ad minima veniam the ash of stellar.
+
+   b. Ut enim ad minima veniam the ash of stellar.
+
+2. Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+   a. Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
+
+3. Ut enim ad minima veniam the ash of stellar alchemy network of wormholes and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+
+   - Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+   - Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
+
+These are the same items without the empty lines. Just seeing if that impacts the end result.
+
+1. Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
+   a. Ut enim ad minima veniam the ash of stellar.
+   b. Ut enim ad minima veniam the ash of stellar.
+2. Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+   a. Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
+3. Ut enim ad minima veniam the ash of stellar alchemy network of wormholes and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+   - Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+   - Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
+
+#### Throwing in an h4 heading just to see what it looks like (h4)
+
+The only home we've ever known rich in heavy atoms a mote of dust suspended in a sunbeam Sea of Tranquility a mote of dust suspended.
