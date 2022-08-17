@@ -20,6 +20,7 @@ module.exports = {
       },
       screens: {
         lg: '997px',
+        max: '1440px',
       },
       // colors: {
       //   primary: {

@@ -72,6 +72,7 @@ const config = {
       navbar: {
         title: '',
         logo: {
+          className: 'navbar__logo__img',
           alt: 'XMTP Logo',
           src: 'img/logomark.svg',
           srcDark: 'img/logomark-dark.svg',
@@ -83,12 +84,16 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
-                label: 'Client SDK',
+                to: 'docs/client-sdk/javascript/tutorials/placeholder',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Client SDK</div>
+                 <div><small>Use the client SDK to build a web3 messaging solution</small></div></div></div>`,
               },
               {
-                to: 'docs/dev-concepts/introduction',
-                label: 'Development concepts',
+                to: 'docs/dev-concepts/placeholder',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Concepts</div>
+                 <div><small>Content types, supported wallets, nodes, security, and more</small></div></div></div>`,
               },
             ],
           },
