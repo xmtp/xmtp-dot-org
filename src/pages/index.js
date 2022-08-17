@@ -263,15 +263,121 @@ export default function Home() {
               <img src="/img/mobile.png" />
             </div>
           </div>
-          <div className='flex justify-center flex-col items-center -mt-10'>
-            <h1 className='text-white text-4xl font-bold mb-4'>Messages meet users where they are</h1>
-            <p className='text-neutral-300 text-base leading-6 text-center max-w-[656px] mb-8'>
+          <div className="flex justify-center flex-col items-center -mt-10">
+            <h1 className="text-white text-4xl font-bold mb-4">
+              Messages meet users where they are
+            </h1>
+            <p className="text-neutral-300 text-base leading-6 text-center max-w-[656px] mb-8">
               Building with XMTP gives users a portable inbox that follows them
               across web3, providing access to their messages using any app
               built with XMTP.
             </p>
             <button className="bg-white rounded-lg w-52 h-12 text-black font-bold text-base cursor-pointer">
               Read more about this
+            </button>
+          </div>
+        </div>
+
+        <div className="mx-12 mb-10">
+          <h1 className="text4xl font-bold mb-4">Latest from XMTP</h1>
+          <div className="h-[1px] bg-black w-full mb-8"></div>
+          <div className="flex">
+            <div>
+              <div className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-4 w-fit">
+                Developers
+              </div>
+              <h3 className="text-red-500 text-xl">
+                HackFS x XMTP awards wrap-up: Decentralized Ticket Platform,
+                Optik video conferencing, and GhostShare file sharing
+              </h3>
+              <p className="text-sm text-neutral-800 mb-6">
+                HackFS by @ETHGlobal and @ProtocolLabs wrapped and creativity
+                and quality of projects was outstanding.
+              </p>
+              <div className="flex">
+                <div>
+                  <img className="mr-3" src="/img/avatar.png" />
+                </div>
+                <div>
+                  <p className="text-gray-800 text-base mb-0 text-sm font-medium">
+                    Peter Denton
+                  </p>
+                  <p className="text-sm leading-5 font-normal text-neutral-800">
+                    01 Aug 2022 · 4 min read
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mx-11">
+              <div className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-4 w-fit">
+                Developers
+              </div>
+              <h3 className="text-red-500 text-xl">
+                OTC Swap - Building a message-based bartering system with
+                OpenSea’s Seaport and XMTP
+              </h3>
+              <p className="text-sm text-neutral-800 mb-6">
+                How developer @0x_Yuzu built an application that enables buyers
+                and sellers to barter on NFTs using...
+              </p>
+              <div className="flex">
+                <div>
+                  <img className="mr-3" src="/img/avatar.png" />
+                </div>
+                <div>
+                  <p className="text-gray-800 mb-0 text-sm font-medium">
+                    Peter Denton
+                  </p>
+                  <p className="text-sm leading-5 font-normal text-neutral-800">
+                    15 Jul 2022 · 3 min read
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="rounded-full border border-green-300 bg-green-100 text-xs font-semibold text-green-800 border-solid px-2.5 py-0.5 mb-4 w-fit">
+                Hackathon
+              </div>
+              <h3 className="text-red-500 text-xl">
+                ETH NYC Awards Wrap: OTC Swap for OpenSea, E2EE Chat via
+                Intercom widget, and a kill switch “Burn My Wallet” for...
+              </h3>
+              <p className="text-sm text-neutral-800 mb-6">
+                We just got back from ETH NYC and what a great event. 1,300
+                builders, 50 sponsors, so much energy.
+              </p>
+              <div className="flex">
+                <div>
+                  <img className="mr-3" src="/img/avatar.png" />
+                </div>
+                <div>
+                  <p className="text-gray-800 text-sm mb-0 text-sm font-medium">
+                    Peter Denton
+                  </p>
+                  <p className="text-sm leading-5 font-normal text-neutral-800">
+                    08 Jul 2022 · 3 min read
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col mt-24 h-[384px] max-w-screen-max mx-auto border border-solid border-black mr-12 ml-12 mb-14 rounded-2xl bg-cover bg-no-repeat ">
+          <div className="flex justify-center flex-col items-center mt-12">
+            <h1 className="text-black text-4xl font-bold mb-4">
+              Join a community of builders
+            </h1>
+            <p className="text-neutral-800 text-sm leading-6 text-center max-w-[656px] mb-8">
+              From hackathons to startups, developers are building with XMTP to
+              address crucial use cases for secure messaging for blockchain
+              accounts
+            </p>
+            <button className="bg-black rounded-lg w-52 h-12 text-white font-bold text-sm cursor-pointer flex justify-center items-center border-0">
+              <img src="/img/github-icon.svg" className="w-5 h-5 mr-2.5" />
+              <div>Start building</div>
             </button>
           </div>
         </div>
