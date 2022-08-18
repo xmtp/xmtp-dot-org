@@ -1,4 +1,4 @@
-# Privacy
+# Privacy policy
 
 [xmtp.org](https://xmtp.org/) does not use cookies and does not collect any personal data or personally-identifiable information (PII).
 

@@ -18,6 +18,7 @@ const config = {
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
+  scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain':'xmtp.org'}],
 
   presets: [
     [
@@ -150,16 +151,22 @@ const config = {
             title: 'About this site',
             items: [
               {
-                label: 'Website is CC0 No Rights Resered',
-                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/',
-              },
-              {
                 label: 'Edit on Github',
                 href: 'https://github.com/xmtp/website/',
+              },
+              {
+                label: 'Terms',
+                to: '/terms',
+              },
+              {
+                label: 'Privacy',
+                to: '/privacy',
               },
             ],
           },
         ],
+        copyright: 'Except as otherwise noted, website content is licensed under the Creative Commons Attribution 4.0 License and code samples are licensed under the MIT License.'
+
         // copyright: `Website CC0 XMTP`,
       },
       algolia: {
