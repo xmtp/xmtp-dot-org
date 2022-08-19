@@ -18,7 +18,6 @@ const config = {
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
-  scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain':'xmtp.org'}],
 
   presets: [
     [
@@ -165,7 +164,7 @@ const config = {
             ],
           },
         ],
-        copyright: 'Except as otherwise noted, website content is licensed under the Creative Commons Attribution 4.0 License and code samples are licensed under the MIT License.'
+        copyright: '<div>Except as otherwise noted, website content is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a> and code samples are licensed under the <a href="http://opensource.org/licenses/MIT">MIT License.</a></div>'
 
         // copyright: `Website CC0 XMTP`,
       },
