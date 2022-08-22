@@ -24,6 +24,7 @@
     --ifm-color-primary-lighter: #672eab;
     --ifm-color-primary-lightest: #7534c2;
     --ifm-code-font-size: 95%;
+    --ifm-footer-background-color: #171717;
 
     /*Tailwind colors*/
     --ifm-navbar-link-hover-color: #ef4444; /*red 500*/
@@ -49,6 +50,11 @@
     /* --ifm-code-font-size: 100%; */
 
     --ifm-background-color: #fff;
+
+    --shadow-color: rgb(255 255 255 / 85%);
+  }
+  [data-theme='light'] {
+    --ifm-footer-background-color: #171717;
   }
 
   /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -60,6 +66,8 @@
     --ifm-color-primary-light: #d1b1f2;
     --ifm-color-primary-lighter: #dbc2f4;
     --ifm-color-primary-lightest: #f8f2fd;
+    --ifm-heading-color: #fff;
+    --shadow-color: rgb(23 23 23 / 85%);
   }
 
   /* From original custom.css */
@@ -137,6 +145,10 @@
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 0) 0%,
-    rgb(255 255 255 / 85%) 37%
-  );background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgb(255 255 255 / 85%) 37%);
+    var(--shadow-color) 37%
+  );
+}
+
+.footer {
+  background-color: #171717;
 }

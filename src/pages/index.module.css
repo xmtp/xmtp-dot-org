@@ -22,6 +22,21 @@
   justify-content: center;
 }
 
+
+
+.heroBannerDark {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 504px;
+  background-image: url('/static/img/dark-background.png');
+  border-bottom: thin solid black;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
 .heroTitle {
   max-width: 664px;
   font-size: 2.5rem;

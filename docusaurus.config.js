@@ -126,40 +126,117 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'XMTP',
+            title: 'What is XMTP?',
             items: [
               {
-                label: 'Docs',
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
+                label: 'Lorem ipsum',
+                to: '/docs',
+              },
+              {
+                label: 'Architectural overview',
+                to: '/docs',
+              },
+              {
+                label: 'Case studies',
+                to: '/docs',
+              },
+              {
+                label: 'Send a web3 message',
+                to: '/docs',
+              },
+              {
+                label: 'Maintenance and governance',
+                to: '/docs',
+              },
+              {
+                label: 'FAQ',
+                to: '/docs',
+              },
+              {
+                label: 'Whitepaper',
+                to: '/docs',
               },
             ],
           },
           {
-            title: 'XMTP Community',
+            title: 'Client SDK',
             items: [
               {
-                label: `Twitter`,
-                href: `https://twitter.com/xmtp_`,
+                label: `Tutorials`,
+                to: `https://twitter.com/xmtp_`,
               },
               {
-                label: `XMTP Discord`,
-                href: `https://discord.gg/xmtp`,
+                label: `Concepts`,
+                to: `https://discord.gg/xmtp`,
               },
               {
-                label: `Community Forum`,
-                href: `https://community.xmtp.org`,
+                label: `References`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Development concepts`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Lorem ipsum`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Intro to XMTP development`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Architecture`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Use cases`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Glossary`,
+                to: `https://community.xmtp.org`,
               },
             ],
           },
           {
-            title: 'About this site',
+            title: 'SDK and tools',
             items: [
               {
-                label: 'Website is CC0 No Rights Resered',
+                label: 'Client SDK',
                 href: 'https://creativecommons.org/share-your-work/public-domain/cc0/',
               },
               {
-                label: 'Edit on Github',
+                label: 'Example chat app',
+                href: 'https://github.com/xmtp/website/',
+              },
+              {
+                label: 'Hosted example chat app',
+                href: 'https://github.com/xmtp/website/',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Discussions',
+                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/',
+              },
+              {
+                label: 'Discord',
+                href: 'https://github.com/xmtp/website/',
+              },
+              {
+                label: 'Contribute to XMTP',
+                href: 'https://github.com/xmtp/website/',
+              },
+              {
+                label: 'XMTP Improvement Proposals',
+                href: 'https://github.com/xmtp/website/',
+              },
+              {
+                label: 'Twitter',
                 href: 'https://github.com/xmtp/website/',
               },
             ],
