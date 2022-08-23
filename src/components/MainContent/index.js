@@ -1,5 +1,36 @@
 import React from 'react'
 import { useColorMode } from '@docusaurus/theme-common'
+import { HeaderBox } from '../HeaderBox'
+import { SliderItem } from '../SliderItem'
+import { HEADER_DATA, SLIDER_ITEMS } from '../../helpers/constants'
+import { BlogItem } from '../BlogItem'
+
+const BLOG_DATA = [
+  {
+    tag: 'Developers',
+    title:
+      'HackFS x XMTP awards wrap-up: Decentralized Ticket Platform, Optik video conferencing, and GhostShare file sharing',
+    content:
+      'HackFS by @ETHGlobal and @ProtocolLabs wrapped and creativity and quality of projects was outstanding.',
+    user: { name: 'Peter Denton', date: '01 Aug 2022 · 4 min read' },
+  },
+  {
+    tag: 'Developers',
+    title:
+      'OTC Swap - Building a message-based bartering system with OpenSea’s Seaport and XMTP',
+    content:
+      ' How developer @0x_Yuzu built an application that enables buyers and sellers to barter on NFTs using...',
+    user: { name: 'Peter Denton', date: '15 Jul 2022 · 3 min read' },
+  },
+  {
+    tag: 'Hackathon',
+    title:
+      'ETH NYC Awards Wrap: OTC Swap for OpenSea, E2EE Chat via Intercom widget, and a kill switch “Burn My Wallet” for...',
+    content:
+      'We just got back from ETH NYC and what a great event. 1,300 builders, 50 sponsors, so much energy.',
+    user: { name: 'Peter Denton', date: '08 Jul 2022 · 3 min read' },
+  },
+]
 
 export const MainContent = ({ styles }) => {
   const { colorMode } = useColorMode()
@@ -7,49 +38,9 @@ export const MainContent = ({ styles }) => {
   return (
     <main className={`max-w-screen-max mx-auto ${colorMode}`}>
       <div className={styles.bannerCards}>
-        <div className="bg-white dark:bg-neutral-900 rounded-lg border-black dark:border-neutral-700 border border-solid px-8 py-6 w-432 ml-12 flex flex-col justify-between">
-          <div className="flex justify-between">
-            <h4 className="text-red-500 text-xl">What is XMTP?</h4>
-            <img
-              className="h-5 mt-1"
-              src="/img/xmtp-icon.svg"
-              alt="xmtp icon"
-            />
-          </div>
-          <div className="text-2xl font-semibold mb-0 dark:text-white">
-            Learn about the protocol, network, case studies, litepaper, and
-            <p className="mb-0 mt-5">{'->'}</p>
-          </div>
-        </div>
-        <div className="bg-white dark:bg-neutral-900 rounded-lg border-black dark:border-neutral-700 border border-solid px-8 py-6 w-432 mx-6 flex flex-col justify-between">
-          <div className="flex justify-between">
-            <h4 className="text-red-500 text-xl">Quickstart: Client SDK</h4>
-            <img
-              className="h-5 mt-1"
-              src="/img/quickstart-icon.svg"
-              alt="quickstart icon"
-            />
-          </div>
-          <div className="text-2xl font-semibold mb-0">
-            Build apps and tools for messaging between blockchain accounts
-            <p className="mb-0 mt-5">{'->'}</p>
-          </div>
-        </div>
-        <div className="bg-white dark:bg-neutral-900 rounded-lg border-black dark:border-neutral-700 border border-solid px-8 py-6 w-432 mr-12 flex flex-col justify-between">
-          <div className="flex justify-between">
-            <h4 className="text-red-500 text-xl">Development concepts</h4>
-            <img
-              className="h-5 mt-1"
-              src="/img/development-icon.svg"
-              alt="development icon"
-            />
-          </div>
-          <div className="text-2xl font-semibold mb-0">
-            Learn about clients, nodes, message encryption, authentication, and
-            more
-            <p className="mb-0 mt-5">{'->'}</p>
-          </div>
-        </div>
+        {HEADER_DATA.map(({ title, subtitle }) => (
+          <HeaderBox key={title} title={title} subtitle={subtitle} />
+        ))}
       </div>
       <div className="flex mt-20 max-w-screen-max mx-auto">
         <img
@@ -60,7 +51,7 @@ export const MainContent = ({ styles }) => {
           }
           alt="laptop"
         />
-        <div className='max-w-[437px]'>
+        <div className="max-w-[437px]">
           <h4 className="text-4xl font-bold mb-2">Build with XMTP</h4>
           <small className="text-base text-neutral-800 dark:text-neutral-300">
             Deliver apps and tools that enable messaging between blockchain
@@ -133,98 +124,9 @@ export const MainContent = ({ styles }) => {
           />
         </div>
         <div className="inner-div flex flex-nowrap overflow-x-scroll w-3/4 flex-1 scroll-smooth">
-          <div className="w-[430px] h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto]">
-            <p className="text-xl font-bold mb-0 text-blue-600 text-base">
-              <img className="align-middle mr-2" src="/img/repo.png" />
-              xmtp-js client SDK
-            </p>
-            <small className="text-base text-sm text-gray-600 dark:text-neutral-300">
-              A TypeScript implementation of the XMTP client protocol for use
-              with JavaScript and React applications
-            </small>
-            <div className="flex flex-row mt-3">
-              <div className="text-xs mr-5 flex">
-                <div className="rounded-full bg-cyan-700 w-3.5 h-3.5 mr-1"></div>
-                TypeScript
-              </div>
-              <div className="text-xs mr-5 flex items-start">
-                <img src="/img/star-icon.svg" className="mr-1" />
-                54
-              </div>
-              <div className="text-xs mr-5 flex items-start">
-                <img src="/img/branch-icon.svg" className="mr-1" />1
-              </div>
-            </div>
-          </div>
-          <div className="w-[430px] h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto]">
-            <p className="text-xl font-bold mb-0 text-blue-600 text-base">
-              <img className="align-middle mr-2" src="/img/repo.png" />
-              example-chat-react
-            </p>
-            <small className="text-base text-sm text-gray-600  dark:text-neutral-300">
-              A chat application in React demonstrating the core concepts and
-              capabilities of the XMTP Client SDK
-            </small>
-            <div className="flex flex-row mt-3">
-              <div className="text-xs mr-5 flex">
-                <div className="rounded-full bg-cyan-700 w-3.5 h-3.5 mr-1"></div>
-                TypeScript
-              </div>
-              <div className="text-xs mr-5 flex items-start">
-                <img src="/img/star-icon.svg" className="mr-1" />
-                54
-              </div>
-              <div className="text-xs mr-5 flex items-start">
-                <img src="/img/branch-icon.svg" className="mr-1" />1
-              </div>
-            </div>
-          </div>
-          <div className="w-[430px] h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto]">
-            <p className="text-xl font-bold mb-0 text-blue-600 text-base">
-              <img className="align-middle mr-2" src="/img/repo.png" />
-              Hosted example chat app
-            </p>
-            <small className="text-base text-sm text-gray-600 dark:text-neutral-300">
-              Hosted deployment of the example-chat-react app connected to the
-              XMTP dev network
-            </small>
-            <div className="flex flex-row mt-3">
-              <div className="text-xs mr-5 flex">
-                <div className="rounded-full bg-cyan-700 w-3.5 h-3.5 mr-1"></div>
-                TypeScript
-              </div>
-              <div className="text-xs mr-5 flex items-start">
-                <img src="/img/star-icon.svg" className="mr-1" />
-                54
-              </div>
-              <div className="text-xs mr-5 flex items-start">
-                <img src="/img/branch-icon.svg" className="mr-1" />1
-              </div>
-            </div>
-          </div>
-          <div className="w-[430px] h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto]">
-            <p className="text-xl font-bold mb-0 text-blue-600 text-base">
-              <img className="align-middle mr-2" src="/img/repo.png" />
-              Hosted example chat app
-            </p>
-            <small className="text-base text-sm text-gray-600 dark:text-neutral-300">
-              Hosted deployment of the example-chat-react app connected to the
-              XMTP dev network
-            </small>
-            <div className="flex flex-row mt-3">
-              <div className="text-xs mr-5 flex">
-                <div className="rounded-full bg-cyan-700 w-3.5 h-3.5 mr-1"></div>
-                TypeScript
-              </div>
-              <div className="text-xs mr-5 flex items-start">
-                <img src="/img/star-icon.svg" className="mr-1" />
-                54
-              </div>
-              <div className="text-xs mr-5 flex items-start">
-                <img src="/img/branch-icon.svg" className="mr-1" />1
-              </div>
-            </div>
-          </div>
+          {SLIDER_ITEMS.map((items) => (
+            <SliderItem key={items.title} items={items} />
+          ))}
         </div>
         <div className="arrow-icon w-40 h-[128px] absolute right-0 flex justify-center">
           <img
@@ -264,86 +166,11 @@ export const MainContent = ({ styles }) => {
         <h1 className="text4xl font-bold mb-4">Latest from XMTP</h1>
         <div className="h-[1px] bg-black dark:bg-neutral-500 w-full mb-8"></div>
         <div className="flex">
-          <div>
-            <div className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-4 w-fit">
-              Developers
-            </div>
-            <h3 className="text-red-500 text-xl">
-              HackFS x XMTP awards wrap-up: Decentralized Ticket Platform, Optik
-              video conferencing, and GhostShare file sharing
-            </h3>
-            <p className="text-sm text-neutral-800 dark:text-neutral-300 mb-6">
-              HackFS by @ETHGlobal and @ProtocolLabs wrapped and creativity and
-              quality of projects was outstanding.
-            </p>
-            <div className="flex">
-              <div>
-                <img className="mr-3" src="/img/avatar.png" />
-              </div>
-              <div>
-                <p className="text-gray-800 dark:text-white text-base mb-0 text-sm font-medium">
-                  Peter Denton
-                </p>
-                <p className="text-sm leading-5 font-normal text-neutral-800 dark:text-neutral-500">
-                  01 Aug 2022 · 4 min read
-                </p>
-              </div>
-            </div>
-          </div>
+          {BLOG_DATA.map((items) => (
+            <BlogItem key={items.title} items={items} />
+          ))}
 
-          <div className="mx-11">
-            <div className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-4 w-fit">
-              Developers
-            </div>
-            <h3 className="text-red-500 text-xl">
-              OTC Swap - Building a message-based bartering system with
-              OpenSea’s Seaport and XMTP
-            </h3>
-            <p className="text-sm text-neutral-800 dark:text-neutral-300 mb-6">
-              How developer @0x_Yuzu built an application that enables buyers
-              and sellers to barter on NFTs using...
-            </p>
-            <div className="flex">
-              <div>
-                <img className="mr-3" src="/img/avatar.png" />
-              </div>
-              <div>
-                <p className="text-gray-800 dark:text-white mb-0 text-sm font-medium">
-                  Peter Denton
-                </p>
-                <p className="text-sm leading-5 font-normal text-neutral-800 dark:text-neutral-500">
-                  15 Jul 2022 · 3 min read
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="rounded-full border border-green-300 bg-green-100 text-xs font-semibold text-green-800 border-solid px-2.5 py-0.5 mb-4 w-fit">
-              Hackathon
-            </div>
-            <h3 className="text-red-500 text-xl">
-              ETH NYC Awards Wrap: OTC Swap for OpenSea, E2EE Chat via Intercom
-              widget, and a kill switch “Burn My Wallet” for...
-            </h3>
-            <p className="text-sm text-neutral-800 dark:text-neutral-300 mb-6">
-              We just got back from ETH NYC and what a great event. 1,300
-              builders, 50 sponsors, so much energy.
-            </p>
-            <div className="flex">
-              <div>
-                <img className="mr-3" src="/img/avatar.png" />
-              </div>
-              <div>
-                <p className="text-gray-800 dark:text-white text-sm mb-0 text-sm font-medium">
-                  Peter Denton
-                </p>
-                <p className="text-sm leading-5 font-normal text-neutral-800 dark:text-neutral-500">
-                  08 Jul 2022 · 3 min read
-                </p>
-              </div>
-            </div>
-          </div>
+          {/*  <div className="mx-11"></div> */}
         </div>
       </div>
 
