@@ -84,13 +84,13 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/tutorials/placeholder',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Client SDK</div>
                  <div><small>Use the client SDK to build a web3 messaging solution</small></div></div></div>`,
               },
               {
-                to: 'docs/dev-concepts/placeholder',
+                to: 'docs/dev-concepts/introduction',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Concepts</div>
                  <div><small>Content types, supported wallets, nodes, security, and more</small></div></div></div>`,
