@@ -8,8 +8,8 @@ export default function FooterWrapper(props) {
     <>
       <Footer {...props} />
       <div className={`bg-[#171717] px-12 ${colorMode}`}>
-        <div className="h-px bg-white " />
-        <div className="flex justify-between items-center h-32">
+        <div className="h-px bg-white max-w-screen-max mx-auto" />
+        <div className="flex justify-between items-center h-32 max-w-screen-max mx-auto">
           <img src="/img/xmtp-icon.svg" />
           <div className="text-red-500 dark:text-white">
             <span className="text-sm">

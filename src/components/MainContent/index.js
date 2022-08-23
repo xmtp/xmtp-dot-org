@@ -107,7 +107,7 @@ export const MainContent = ({ styles }) => {
           </button>
         </div>
       </div>
-      <div className="mt-14 ml-12 flex mb-12">
+      <div className="mt-14 ml-12 flex mb-12 relative">
         <div className="w-56 mr-6 mt-4">
           <p className="text-xl font-bold mb-2">SDK and tools</p>
           <small className="text-base">
@@ -119,7 +119,11 @@ export const MainContent = ({ styles }) => {
             onClick={() => {
               document.getElementsByClassName('inner-div')[0].scrollLeft -= 100
             }}
-            src="/img/right-arrow.svg"
+            src={
+              colorMode === 'light'
+                ? '/img/right-arrow.svg'
+                : '/img/right-arrow-dark.svg'
+            }
             className="-scale-x-100 cursor-pointer"
           />
         </div>
@@ -133,7 +137,11 @@ export const MainContent = ({ styles }) => {
             onClick={() => {
               document.getElementsByClassName('inner-div')[0].scrollLeft += 100
             }}
-            src="/img/right-arrow.svg"
+            src={
+              colorMode === 'light'
+                ? '/img/right-arrow.svg'
+                : '/img/right-arrow-dark.svg'
+            }
             className="cursor-pointer w-12"
           />
         </div>
