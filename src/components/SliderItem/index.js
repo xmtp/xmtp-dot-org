@@ -4,7 +4,7 @@ export const SliderItem = (props) => {
   const { title, content, language, stars, forks } = props.items;
 
   return (
-    <div className="w-[430px] h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto]">
+    <div className="w-[430px] h-40 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto]">
       <p className="text-xl font-bold mb-0 text-blue-600 text-base">
         <img className="align-middle mr-2" src="/img/repo.png" />
         {title}
