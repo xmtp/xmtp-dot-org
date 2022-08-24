@@ -109,25 +109,7 @@ Here's an animated GIF for good measure:
 
 Some nested lists. Probably shouldn't have three levels, but just curious.
 
-These items have empty lines before each item. This is the way I like to write my bullets for editing readability.
-
-- With pretty stories for which there's little good evidence totam rem aperiam.
-
-  - Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
-
-- Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
-
-  - With pretty stories for which there's little good evidence totam rem aperiam.
-
-    - With pretty stories for which there's little good evidence totam rem aperiam.
-
-- Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
-
-  1. For kicks. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
-
-  2. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
-
-These are the same items without the empty lines. Just seeing if that impacts the end result.
+No empty lines between items.
 
 - With pretty stories for which there's little good evidence totam rem aperiam.
   - Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
@@ -137,28 +119,20 @@ These are the same items without the empty lines. Just seeing if that impacts th
 - Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
   1. For kicks. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
   2. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
+
+Here are some bullets that have nested text that aren't bullets.
+- Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.  
+  Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.  
+  Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
+- Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.  
+  Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.  
+  Vitae dicta sunt explicabo intelligent beings sed quia non numquam eius modi tempora.
 
 ### Ordered list (h3)
 
-Probably shouldn't have three levels, but just curious. These items have empty lines before each item. This is the way I like to write my bullets for editing readability.
+Probably shouldn't have three levels, but just curious.
 
-1. Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
-
-   a. Ut enim ad minima veniam the ash of stellar.
-
-   b. Ut enim ad minima veniam the ash of stellar.
-
-2. Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-
-   a. Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
-
-3. Ut enim ad minima veniam the ash of stellar alchemy network of wormholes and billions upon billions upon billions upon billions upon billions upon billions upon billions.
-
-   - Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-
-   - Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
-
-These are the same items without the empty lines. Just seeing if that impacts the end result.
+No empty lines between items.
 
 1. Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
    a. Ut enim ad minima veniam the ash of stellar.
@@ -168,6 +142,14 @@ These are the same items without the empty lines. Just seeing if that impacts th
 3. Ut enim ad minima veniam the ash of stellar alchemy network of wormholes and billions upon billions upon billions upon billions upon billions upon billions upon billions.
    - Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
    - Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
+
+Here are some bullets that have nested text that aren't bullets.
+
+1. Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  
+   Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
+2. Ut enim ad minima veniam the ash of stellar alchemy network of wormholes and billions upon billions upon billions upon billions upon billions upon billions upon billions.  
+   Network of wormholes network of wormholes sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  
+   Incidunt ut labore et dolore magnam aliquam quaerat voluptatem hearts of the stars rings of Uranus.
 
 #### Throwing in an h4 heading just to see what it looks like (h4)
 
