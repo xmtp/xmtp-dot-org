@@ -130,31 +130,31 @@ const config = {
             items: [
               {
                 label: 'Lorem ipsum',
-                to: '/docs',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
               },
               {
                 label: 'Architectural overview',
-                to: '/docs',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
               },
               {
                 label: 'Case studies',
-                to: '/docs',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
               },
               {
                 label: 'Send a web3 message',
-                to: '/docs',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
               },
               {
                 label: 'Maintenance and governance',
-                to: '/docs',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
               },
               {
                 label: 'FAQ',
-                to: '/docs',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
               },
               {
                 label: 'Whitepaper',
-                to: '/docs',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
               },
             ],
           },
