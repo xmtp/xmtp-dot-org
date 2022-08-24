@@ -11,7 +11,7 @@ export default function FooterWrapper(props) {
         <div className="h-px bg-white max-w-screen-max mx-auto" />
         <div className="flex justify-between items-center h-32 max-w-screen-max mx-auto">
           <img src="/img/xmtp-icon.svg" />
-          <div className="text-red-500 dark:text-white">
+          <div className="text-white">
             <span className="text-sm">
               Except where otherwise noted, this website is licensed under
               Creative Commons CC0.

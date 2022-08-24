@@ -160,8 +160,8 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-24 min-h-[384px] max-w-screen-max mx-auto border border-solid border-black bg-white mr-12 ml-12 mb-14 rounded-2xl bg-cover bg-no-repeat relative">
-          <div className="flex justify-center flex-col items-center mt-12 text-center mx-8">
+        <div className="flex flex-col mt-24 min-h-[384px] max-w-screen-max mx-auto border border-solid border-black bg-white mr-12 ml-12 mb-14 rounded-2xl bg-cover bg-no-repeat relative px-8">
+          <div className="flex justify-center flex-col items-center mt-12 text-center">
             <h1 className="text-black text-4xl font-bold mb-4">
               Join a community of builders
             </h1>
@@ -176,11 +176,11 @@ export const MainContent = ({ styles }) => {
             </button>
           </div>
           <div className="flex justify-evenly mt-12 flex-wrap">
-            <img src="/img/logo-example.svg" className='flex-1 object-none' />
-            <img src="/img/logo-example.svg" className='flex-1 object-none' />
-            <img src="/img/logo-example.svg" className='flex-1 object-none' />
-            <img src="/img/logo-example.svg" className='flex-1 object-none' />
-            <img src="/img/logo-example.svg" className='flex-1 object-none' />
+            <img src="/img/logo-example.svg" className='flex-1 object-none m-2.5' />
+            <img src="/img/logo-example.svg" className='flex-1 object-none m-2.5' />
+            <img src="/img/logo-example.svg" className='flex-1 object-none m-2.5' />
+            <img src="/img/logo-example.svg" className='flex-1 object-none m-2.5' />
+            <img src="/img/logo-example.svg" className='flex-1 object-none m-2.5' />
           </div>
         </div>
       </main>
