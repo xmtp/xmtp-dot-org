@@ -12,14 +12,20 @@ function HomepageHeader() {
   return (
     <header
       className={
-        colorMode === 'light' ? styles.heroBanner : styles.heroBannerDark
+        "px-0 pt-12 lg:pt-16 h-[504px] bg-[url('/img/background.png')] bg-cover border-0 border-b border-solid border-b-black " +
+        (colorMode === 'light'
+          ? "bg-[url('/img/background.png')]"
+          : "bg-[url('/img/dark-background.png')]")
       }
     >
-      <div className={clsx('container', styles.container)}>
-        <h1 className={clsx('hero__title', styles.heroTitle)}>
+      <div className="container text-left py-0 md:px-12 m-0 max-w-screen-max">
+        <div className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-3 lg:mb-4 w-fit">
+          Now available: xmtp-js client implementation for React Native »
+        </div>
+        <h1 className="hero__title max-w-2xl text-4xl lg:text-5xl">
           {siteConfig.title}
         </h1>
-        <p className={clsx('hero__subtitle', styles.heroSubtitle)}>
+        <p className="hero__subtitle max-w-2xl text-lg lg:text-xl">
           {siteConfig.tagline}
         </p>
       </div>
