@@ -20,7 +20,7 @@ module.exports = {
         mono: ['"Inconsolata"', defaultTheme.fontFamily.mono],
       },
       screens: {
-        lg: '997px',
+        lg: '1193px',
         max: '1440px',
       },
       /* // colors: {

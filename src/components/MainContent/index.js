@@ -10,15 +10,17 @@ export const MainContent = ({ styles }) => {
 
   return (
     <>
-      <main className={`max-w-screen-max mx-4 lg:mx-auto ${colorMode}`}>
-        <div className={`${styles.bannerCards} -mt-32 flex-wrap`}>
+      <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto ${colorMode}`}>
+        <div
+          className={`${styles.bannerCards} -mt-32 flex-wrap lg:flex-nowrap`}
+        >
           {HEADER_DATA.map(({ title, subtitle }) => (
             <HeaderBox key={title} title={title} subtitle={subtitle} />
           ))}
         </div>
         <div className="flex mt-20 max-w-screen-max mx-auto flex-wrap-reverse">
           <img
-            className="h-[504px] lg:h-auto object-cover max-w-fit overflow-hidden -ml-4"
+            className="h-[504px] lg:h-auto object-cover max-w-fit overflow-hidden -ml-4 basis-1/2"
             src={
               colorMode === 'light'
                 ? '/img/build-xmtp.png'
@@ -125,7 +127,7 @@ export const MainContent = ({ styles }) => {
             />
           </div>
         </div>
-        <div className="flex flex-col mt-20 lg:mt-24 h-[1064px] max-w-screen-max bg-black mx-0 lg:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')]">
+        <div className="flex flex-col mt-20 lg:mt-24 h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')]">
           <div className="flex">
             <div className="mt-12 mr-40">
               <img src="/img/browser.png" />
@@ -149,7 +151,7 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="mx-0 lg:mx-12 mb-10">
+        <div className="mx-0 xl:mx-12 mb-10">
           <h1 className="text4xl font-bold mb-4">Latest from XMTP</h1>
           <div className="h-[1px] bg-black dark:bg-neutral-500 w-full mb-8"></div>
           <div className="flex flex-wrap flex-col lg:flex-row lg:flex-nowrap">
@@ -161,7 +163,7 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-14 min-h-[384px] max-w-screen-max border border-solid border-black bg-white mx-0 lg:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat relative px-8">
+        <div className="flex flex-col mt-14 min-h-[384px] max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat relative px-8">
           <div className="flex justify-center flex-col items-center mt-12 text-center">
             <h1 className="text-black text-4xl font-bold mb-4">
               Join a community of builders
@@ -201,21 +203,22 @@ export const MainContent = ({ styles }) => {
         </div>
       </main>
       <div className="flex justify-center bg-neutral-900 -mt-64">
-        <div className="flex max-w-screen-max mx-4 lg:mx-12 mb-16 w-full mt-60 justify-center flex-wrap">
-          <div className="w-full max-w-[426px] h-[308px] mb-8 rounded-2xl bg-neutral-200 bg-no-repeat bg-[url('/img/github-bg.png')] px-6 bg-right-top">
-            <h1 className="text-xl font-bold mt-[183px] mb-1 leading-7 text-black">
+        <div className="flex max-w-screen-max mx-4 xl:mx-12 mb-16 w-full mt-60 justify-center flex-wrap lg:flex-nowrap">
+          <div className="w-full max-w-[366px] xl:max-w-[426px] h-[308px] mb-8 rounded-2xl bg-neutral-200 bg-no-repeat bg-[url('/img/github-bg.png')] px-6 bg-top xl:bg-right-top">
+            <h1 className="text-xl font-bold mt-[183px] mb-1 text-black">
               Have a question or idea?
             </h1>
             <p className="mb-4 leading-6 text-black">
-              Start or join a discussion in the XMTP forum
+              Start <span className="hidden xl:inline">or join</span> a
+              discussion in the XMTP forum
             </p>
             <div className="h-px mb-4 bg-black"></div>
             <p className="leading-6 text-right font-semibold text-black">
               GitHub Discussions →
             </p>
           </div>
-          <div className="w-full max-w-[426px] h-[308px] mb-8 rounded-2xl bg-blue-700 md:mx-7 bg-no-repeat bg-[url('/img/discord-bg.png')] px-6 bg-right-top">
-            <h1 className="text-xl font-bold mt-[183px] mb-1 leading-7 text-white">
+          <div className="w-full max-w-[366px] xl:max-w-[426px] h-[308px] mb-8 rounded-2xl bg-blue-700 md:mx-7 bg-no-repeat bg-[url('/img/discord-bg.png')] px-6 bg-top xl:bg-right-top">
+            <h1 className="text-xl font-bold mt-[183px] mb-1 text-white">
               Chat with the XMTP community
             </h1>
             <p className="mb-4 leading-6 text-white">
@@ -226,8 +229,8 @@ export const MainContent = ({ styles }) => {
               Discord →
             </p>
           </div>
-          <div className="w-full max-w-[426px] h-[308px] mb-8 rounded-2xl bg-sky-500 bg-no-repeat bg-[url('/img/twitter-bg.png')] px-6 bg-right-top">
-            <h1 className="text-xl font-bold mt-[183px] mb-1 leading-7 text-white">
+          <div className="w-full max-w-[366px] xl:max-w-[426px] h-[308px] mb-8 rounded-2xl bg-sky-500 bg-no-repeat bg-[url('/img/twitter-bg.png')] px-6 bg-top xl:bg-right-top">
+            <h1 className="text-xl font-bold mt-[183px] mb-1 text-white">
               Follow XMTP on Twitter
             </h1>
             <p className="mb-4 leading-6 text-white">
