@@ -12,6 +12,10 @@ const config = {
   tagline:
     'Build with XMTP to send alerts, announcements, and messages between blockchain accounts',
   url: 'https://xmtp.org',
+  customFields: {
+    githubAPI: process.env.GITHUB_PUBLIC_URL,
+    personalToken: process.env.GITHUB_AUTH_PERSONAL_TOKEN,
+  },
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -27,7 +31,9 @@ const config = {
           path: 'docs/client-sdk/javascript',
           id: 'default',
           routeBasePath: 'docs/client-sdk/javascript',
-          sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-javascript.js'),
+          sidebarPath: require.resolve(
+            './sidebars/sidebars-client-sdk-javascript.js'
+          ),
           showLastUpdateAuthor: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           showLastUpdateTime: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',

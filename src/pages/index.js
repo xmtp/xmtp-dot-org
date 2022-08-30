@@ -18,7 +18,7 @@ function HomepageHeader() {
           : "bg-[url('/img/dark-background.png')]")
       }
     >
-      <div className="container text-left py-0 md:px-12 m-auto max-w-screen-max">
+      <div className="container text-left py-0 xl:px-12 m-auto max-w-screen-max">
         <div className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-3 lg:mb-4 w-fit">
           Now available: xmtp-js client implementation for React Native »
         </div>

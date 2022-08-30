@@ -1,18 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { useColorMode } from '@docusaurus/theme-common'
 import { HeaderBox } from '../HeaderBox'
 import { SliderItem } from '../SliderItem'
-import { HEADER_DATA, SLIDER_ITEMS, BLOG_DATA } from '../../helpers/constants'
+import { HEADER_DATA, BLOG_DATA } from '../../helpers/constants'
 import { BlogItem } from '../BlogItem'
 
 export const MainContent = ({ styles }) => {
   const { colorMode } = useColorMode()
+  const {
+    siteConfig: { customFields },
+  } = useDocusaurusContext()
+  const [sliderItems, setSliderItems] = useState(null)
+
+  const userAction = async () => {
+    const response = await fetch(customFields.githubAPI, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
+    const data = await response.json()
+    setSliderItems(data)
+  }
+
+  useEffect(() => {
+    userAction()
+  }, [])
 
   return (
     <>
       <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto ${colorMode}`}>
         <div
-          className={`${styles.bannerCards} -mt-32 flex-wrap lg:flex-nowrap`}
+          className={`${styles.bannerCards} -mt-32 flex-wrap lg:flex-nowrap xl:mx-4`}
         >
           {HEADER_DATA.map(({ title, subtitle }) => (
             <HeaderBox key={title} title={title} subtitle={subtitle} />
@@ -84,7 +103,7 @@ export const MainContent = ({ styles }) => {
             </button>
           </div>
         </div>
-        <div className="mt-14 ml-12 hidden mb-12 relative lg:flex">
+        <div className="mt-14 xl:ml-12 hidden mb-12 relative lg:flex">
           <div className="w-56 mr-6 mt-4">
             <p className="text-xl font-bold mb-2">SDK and tools</p>
             <small className="text-base">
@@ -107,9 +126,9 @@ export const MainContent = ({ styles }) => {
             />
           </div>
           <div className="inner-div flex flex-nowrap overflow-x-scroll w-3/4 flex-1 scroll-smooth">
-            {SLIDER_ITEMS.map((items) => (
-              <SliderItem key={items.title} items={items} />
-            ))}
+            {sliderItems ? sliderItems.map((items) => (
+              <SliderItem key={items.id} items={items} />
+            )) : null}
           </div>
           <div className="arrow-icon w-40 h-[128px] absolute right-0 flex justify-center">
             <img
