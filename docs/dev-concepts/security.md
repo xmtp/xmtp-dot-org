@@ -1,11 +1,9 @@
 ---
 sidebar_label: Authentication and encryption
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # Participant authentication and message encryption with XMTP
-
-<!--from https://github.com/xmtp/docs/blob/main/docs/client-sdk/security.md-->
 
 The XMTP SDK enables clients to establish secure, unfalsifiable relationships between identities in which only the sender and recipient can decrypt messages sent between them. The protocol design also accommodates asynchronous offline communication and secure storage of messages.
 

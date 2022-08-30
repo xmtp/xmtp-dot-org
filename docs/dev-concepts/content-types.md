@@ -1,11 +1,9 @@
 ---
 sidebar_label: Content types
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Content types with XMTP
-
-<!--from https://github.com/xmtp/docs/blob/main/docs/client-sdk/content-types.md-->
 
 All messages in XMTP are encoded with a **content type** to ensure interoperability and consistency of experience across the XMTP Network.
 
@@ -25,6 +23,8 @@ The client SDK adopted these content types through the [XMTP Improvement Proposa
 To learn more about content types, see [Different types of content](https://github.com/xmtp/xmtp-js/tree/0ec6b344cb69823e5c4c924f35d1262b51fa636e#different-types-of-content))
 
 ## Usage
+
+<!--This content needs to be moved out of this concepts page. I believe it can live on the README.md in the xmtp-js repo. Going forward, I anticipate that we'll need to provide more conceptual and tutorial content for content types.-->
 
 You can use `xmtp-js` to specify and send a custom content type beyond the predefined `TextCodec` and `CompositeCodec` content types.
 

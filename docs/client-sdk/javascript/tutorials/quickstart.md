@@ -5,7 +5,11 @@ sidebar_position: 1
 
 # Quickstart for the XMTP JavaScript SDK
 
-<!--We want to push this from https://github.com/xmtp/xmtp-js/blob/main/README.md upon GitHub merge action. For some reason, Docusaurus doens't like it when I name this file README.md, which is the name of the source file. We'll need to figure out how to rename the file when it comes over or how to fix the reason why Docusaurus doesn't like that file name.-->
+:::warning We want to push this from https://github.com/xmtp/xmtp-js/blob/main/README.md
+
+This content is a placeholder. We want to use a GitHub Action to dynamically push this content to this target location from this source location https://github.com/xmtp/xmtp-js/blob/main/README.md when there is a GitHub merge action in the source location.
+
+:::
 
 ![Test](https://github.com/xmtp/xmtp-js/actions/workflows/test.yml/badge.svg)
 ![Lint](https://github.com/xmtp/xmtp-js/actions/workflows/lint.yml/badge.svg)
