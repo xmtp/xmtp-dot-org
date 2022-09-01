@@ -31,15 +31,15 @@ export const MainContent = ({ styles }) => {
     <>
       <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto ${colorMode}`}>
         <div
-          className={`${styles.bannerCards} -mt-32 flex-wrap lg:flex-nowrap xl:mx-4`}
+          className={`${styles.bannerCards} -mt-32 flex-wrap lg:flex-nowrap mx-0 xl:mx-12`}
         >
           {HEADER_DATA.map(({ title, subtitle }) => (
             <HeaderBox key={title} title={title} subtitle={subtitle} />
           ))}
         </div>
-        <div className="flex mt-20 max-w-screen-max mx-auto flex-wrap-reverse">
+        <div className="flex mt-20 max-w-screen-max mx-auto flex-wrap-reverse justify-between xl:justify-start">
           <img
-            className="h-[504px] lg:h-auto object-cover max-w-fit overflow-hidden -ml-4 basis-1/2"
+            className="lg:h-auto object-cover max-w-fit overflow-hidden -mx-4 xl:ml-12 lg:basis-1/2 h-[540px] "
             src={
               colorMode === 'light'
                 ? '/img/build-xmtp.png'
@@ -47,8 +47,8 @@ export const MainContent = ({ styles }) => {
             }
             alt="laptop"
           />
-          <div className="max-w-[437px] mx-4">
-            <h4 className="text-4xl font-bold mb-2">Build with XMTP</h4>
+          <div className="max-w-[540px] xl:max-w-[437px] mx-0 xl:mx-4">
+            <h4 className="text-4xl font-bold mb-2 pt-0 xl:pt-12">Build with XMTP</h4>
             <small className="text-base text-neutral-800 dark:text-neutral-300">
               Deliver apps and tools that enable messaging between blockchain
               accounts. Want to talk about a use case?
@@ -56,7 +56,7 @@ export const MainContent = ({ styles }) => {
                 Join in the discussion
               </span>
             </small>
-            <ul>
+            <ul className='px-0'>
               <li className="flex mt-10 flex-row">
                 <img className="w-12 h-12 mr-4" src="/img/alerts-icon.png" />
                 <div>
@@ -146,17 +146,17 @@ export const MainContent = ({ styles }) => {
             />
           </div>
         </div>
-        <div className="flex flex-col mt-20 lg:mt-24 h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')]">
+        <div className="flex flex-col mt-20 lg:mt-24 h-[1118px] lg:h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center"> {/* background-position: -196px -73px; */}
           <div className="flex">
-            <div className="mt-12 mr-40">
+            <div className="mr-40 hidden lg:block">
               <img src="/img/browser.png" />
             </div>
             <div>
-              <img src="/img/mobile.png" />
+              <img src="/img/browser-mobile.png" />
             </div>
           </div>
-          <div className="flex justify-center flex-col items-center -mt-10">
-            <h1 className="text-white text-4xl font-bold mb-4">
+          <div className="flex justify-center flex-col items-center mt-8 :lg:-mt-10 mx-6">
+            <h1 className="text-white text-3xl xl:text-4xl font-bold mb-4 leading-9">
               Messages meet users where they are
             </h1>
             <p className="text-neutral-300 text-base leading-6 text-center max-w-[656px] mb-8">
