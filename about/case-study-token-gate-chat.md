@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Case study: Token-gated chat'
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Case study: Token-gated chat

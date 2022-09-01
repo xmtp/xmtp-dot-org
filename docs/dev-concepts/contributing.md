@@ -1,5 +1,5 @@
 ---
-sidebar_label: Contribute to XMTP
+sidebar_label: Contribute
 sidebar_position: 8
 ---
 

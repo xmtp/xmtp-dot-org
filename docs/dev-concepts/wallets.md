@@ -3,7 +3,7 @@ sidebar_label: Supported wallets
 sidebar_position: 6
 ---
 
-# Supported wallets
+# Wallets supported by XMTP
 
 Because XMTP identities are [securely tied to wallets](./security/#key-generation), a connected wallet must be present to initialize the client. The XMTP SDK **does not** include a wallet abstraction as XMTP assumes that developers have a way to obtain a wallet connection.
 
