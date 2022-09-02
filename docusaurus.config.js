@@ -83,7 +83,7 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
+                to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
                 label: 'Client SDK',
               },
               {
