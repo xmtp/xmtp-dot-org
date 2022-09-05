@@ -21,13 +21,7 @@ XMTP Labs is focused on serving developers. We build [SDKs, UI components, and e
 
 XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts, though XMTP itself does not use EVMs.
 
-More specifically, XMTP can be used with EVM-compatible wallet apps that support ECDSA signing on the secp256k1 elliptic curve. This includes common wallet apps such as MetaMask, Coinbase Wallet, and Rainbow Wallet, as well as most wallet apps in the WalletConnect network.
-
-XMTP works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s including Polygon, Avalanche, and Optimism. Users can access XMTP using their account regardless of which of these networks their wallet app is connected to.
-
-A signature from the account is used to create and enable the XMTP identity.
-
-To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](signatures).
+To learn more, see [Wallet apps and blockchains supported by XMTP](wallets).
 
 ## Network
 
