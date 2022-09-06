@@ -5,9 +5,7 @@ sidebar_position: 1
 
 # Introduction to the XMTP JavaScript SDK
 
-<!--from https://github.com/xmtp/docs/blob/main/docs/client-sdk/xmtp-js.md. Need to understand the context for this info - where in the flow is this used? It would be great to link from this "plain English" list to code that provides these functions. This may be more appropriate in the Reference section. Is there more info like this that we want to provide about the SDK?-->
-
-The XMTP JavaScript SDK is a TypeScript implementation of an XMTP client for use with JavaScript and React apps.
+The [XMTP JavaScript SDK](https://github.com/xmtp/xmtp-js) is a TypeScript implementation of an XMTP client for use with JavaScript and React apps.
 
 When you build an app with XMTP, you can use the following functions provided by the SDK:
 
@@ -25,3 +23,7 @@ When you build an app with XMTP, you can use the following functions provided by
 | Message streaming | Receive new messages in real-time. |
 | Message content validation | Ensure message security using this middleware. |
 | Message format validation | Ensure messages are properly formatted for the XMTP network using this middleware. |
+
+To learn how to build an app with the XMTP SDK, see [Quickstart for the XMTP JavaScript SDK](/docs/client-sdk/javascript/tutorials/quickstart).
+
+To learn about XMTP SDK classes and interfaces, see [XMTP Javascript SDK Reference](/docs/client-sdk/javascript/reference/classes/Client).
