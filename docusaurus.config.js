@@ -116,9 +116,10 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
+            className: 'dropdown-carrot',
             to: 'about/welcome', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
-            label: 'What is XMTP?',
+            label: 'Vision',
             activeBaseRegex: `/about/`,
           },
           {
@@ -132,75 +133,55 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'What is XMTP?',
-            items: [
-              {
-                label: 'Lorem ipsum',
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
-              },
-              {
-                label: 'Architectural overview',
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
-              },
-              {
-                label: 'Case studies',
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
-              },
-              {
-                label: 'Send a web3 message',
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
-              },
-              {
-                label: 'Maintenance and governance',
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
-              },
-              {
-                label: 'FAQ',
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
-              },
-              {
-                label: 'Whitepaper',
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
-              },
-            ],
-          },
-          {
-            title: 'Client SDK',
+            title: 'Client SDK docs',
             items: [
               {
                 label: `Tutorials`,
-                to: `https://twitter.com/xmtp_`,
+                to: `https://community.xmtp.org`,
               },
               {
                 label: `Concepts`,
-                to: `https://discord.gg/xmtp`,
+                to: `https://community.xmtp.org`,
               },
               {
                 label: `References`,
                 to: `https://community.xmtp.org`,
               },
+            ],
+          },
+          {
+            title: 'Development concepts',
+            items: [
               {
-                label: `Development concepts`,
+                label: `Architectural overview`,
                 to: `https://community.xmtp.org`,
               },
               {
-                label: `Lorem ipsum`,
+                label: `FAQ`,
                 to: `https://community.xmtp.org`,
               },
               {
-                label: `Intro to XMTP development`,
+                label: `Content types`,
                 to: `https://community.xmtp.org`,
               },
               {
-                label: `Architecture`,
+                label: `Authentication and encryption`,
                 to: `https://community.xmtp.org`,
               },
               {
-                label: `Use cases`,
+                label: `Supported wallets`,
                 to: `https://community.xmtp.org`,
               },
               {
-                label: `Glossary`,
+                label: `Signatures`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Contribute to XMTP`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `XMTP Improvement Proposals`,
                 to: `https://community.xmtp.org`,
               },
             ],
@@ -209,16 +190,20 @@ const config = {
             title: 'SDK and tools',
             items: [
               {
-                label: 'Client SDK',
-                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/',
+                label: 'XMTP JavaScript SDK',
+                href: 'https://github.com/xmtp/xmtp-js',
               },
               {
-                label: 'Example chat app',
-                href: 'https://github.com/xmtp/website/',
+                label: 'Example chat app repo',
+                href: 'https://github.com/xmtp/example-chat-react/',
               },
               {
-                label: 'Hosted example chat app',
-                href: 'https://github.com/xmtp/website/',
+                label: 'Hosted example chat app - production',
+                href: 'https://xmtp.chat/',
+              },
+              {
+                label: 'Hosted example chat app - dev',
+                href: 'https://xmtp.vercel.app/',
               },
             ],
           },
@@ -227,23 +212,36 @@ const config = {
             items: [
               {
                 label: 'Discussions',
-                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/',
+                href: 'https://github.com/orgs/xmtp/discussions',
               },
               {
                 label: 'Discord',
-                href: 'https://github.com/xmtp/website/',
+                href: 'https://discord.gg/xmtp',
               },
               {
                 label: 'Contribute to XMTP',
-                href: 'https://github.com/xmtp/website/',
+                href: 'https://community.xmtp.org',
               },
               {
                 label: 'XMTP Improvement Proposals',
-                href: 'https://github.com/xmtp/website/',
+                href: 'https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md',
               },
               {
                 label: 'Twitter',
-                href: 'https://github.com/xmtp/website/',
+                href: 'https://twitter.com/xmtp_',
+              },
+            ],
+          },
+          {
+            title: 'Vision',
+            items: [
+              {
+                label: 'Roadmap',
+                to: 'https://community.xmtp.org',
+              },
+              {
+                label: 'Case study: Token-gated chat',
+                to: 'https://community.xmtp.org',
               },
             ],
           },
