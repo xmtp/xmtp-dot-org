@@ -31,7 +31,7 @@ export const MainContent = ({ styles }) => {
     <>
       <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto ${colorMode}`}>
         <div
-          className={`${styles.bannerCards} -mt-32 flex-wrap lg:flex-nowrap mx-0 xl:mx-12`}
+          className={`${styles.bannerCards} -mt-36 flex-wrap lg:flex-nowrap mx-0 xl:mx-12`}
         >
           {HEADER_DATA.map(({ title, subtitle }) => (
             <HeaderBox key={title} title={title} subtitle={subtitle} />
@@ -48,7 +48,9 @@ export const MainContent = ({ styles }) => {
             alt="laptop"
           />
           <div className="max-w-[540px] xl:max-w-[437px] mx-0 xl:mx-4">
-            <h4 className="text-4xl font-bold mb-2 pt-0 xl:pt-12">Build with XMTP</h4>
+            <h4 className="text-4xl font-bold mb-2 pt-0 xl:pt-12">
+              Build with XMTP
+            </h4>
             <small className="text-base text-neutral-800 dark:text-neutral-300">
               Deliver apps and tools that enable messaging between blockchain
               accounts. Want to talk about a use case?
@@ -56,7 +58,7 @@ export const MainContent = ({ styles }) => {
                 Join in the discussion
               </span>
             </small>
-            <ul className='px-0'>
+            <ul className="px-0">
               <li className="flex mt-10 flex-row">
                 <img className="w-12 h-12 mr-4" src="/img/alerts-icon.png" />
                 <div>
@@ -126,9 +128,11 @@ export const MainContent = ({ styles }) => {
             />
           </div>
           <div className="inner-div flex flex-nowrap overflow-x-scroll w-3/4 flex-1 scroll-smooth">
-            {sliderItems ? sliderItems.map((items) => (
-              <SliderItem key={items.id} items={items} />
-            )) : null}
+            {sliderItems
+              ? sliderItems.map((items) => (
+                  <SliderItem key={items.id} items={items} />
+                ))
+              : null}
           </div>
           <div className="arrow-icon w-40 h-[128px] absolute right-0 flex justify-center">
             <img
@@ -146,7 +150,9 @@ export const MainContent = ({ styles }) => {
             />
           </div>
         </div>
-        <div className="flex flex-col mt-20 lg:mt-24 h-[1118px] lg:h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center"> {/* background-position: -196px -73px; */}
+        <div className="flex flex-col mt-20 lg:mt-24 h-[1118px] lg:h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center">
+          {' '}
+          {/* background-position: -196px -73px; */}
           <div className="flex">
             <div className="mr-40 hidden lg:block">
               <img src="/img/browser.png" />
@@ -198,26 +204,36 @@ export const MainContent = ({ styles }) => {
             </button>
           </div>
           <div className="flex justify-evenly mt-12 flex-wrap">
-            <img
-              src="/img/logo-example.svg"
-              className="flex-1 object-none m-2.5"
-            />
-            <img
-              src="/img/logo-example.svg"
-              className="flex-1 object-none m-2.5"
-            />
-            <img
-              src="/img/logo-example.svg"
-              className="flex-1 object-none m-2.5"
-            />
-            <img
-              src="/img/logo-example.svg"
-              className="flex-1 object-none m-2.5"
-            />
-            <img
-              src="/img/logo-example.svg"
-              className="flex-1 object-none m-2.5"
-            />
+            <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
+              <img
+                src="/img/logo-example.svg"
+                className="flex-1 object-none"
+              />
+            </div>
+            <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
+              <img
+                src="/img/logo-example.svg"
+                className="flex-1 object-none"
+              />
+            </div>
+            <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
+              <img
+                src="/img/logo-example.svg"
+                className="flex-1 object-none"
+              />
+            </div>
+            <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
+              <img
+                src="/img/logo-example.svg"
+                className="flex-1 object-none"
+              />
+            </div>
+            <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
+              <img
+                src="/img/logo-example.svg"
+                className="flex-1 object-none"
+              />
+            </div>
           </div>
         </div>
       </main>

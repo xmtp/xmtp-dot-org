@@ -152,3 +152,7 @@
 .footer {
   background-color: #171717;
 }
+
+.footer .container {
+  max-width: 1440px;
+}
