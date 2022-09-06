@@ -14,7 +14,10 @@ export default function FooterWrapper(props) {
           <div className="flex flex-col md:flex-row justify-center text-white my-7 md:my-0">
             <span className="text-sm">
               Except where otherwise noted, this website is licensed under
-              Creative Commons CC0.
+              <a className='ml-2' href="https://creativecommons.org/licenses/by/4.0/">
+                Creative Commons Attribution 4.0 License
+              </a>
+              {/* Except as otherwise noted, website content is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a> and code samples are licensed under the <a href="http://opensource.org/licenses/MIT">MIT License.</a> */}
             </span>
             <span className="mx-8 text-semibold text-sm text-red-600 my-8 md:my-0">
               Privacy policy

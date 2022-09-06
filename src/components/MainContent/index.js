@@ -55,7 +55,7 @@ export const MainContent = ({ styles }) => {
               Deliver apps and tools that enable messaging between blockchain
               accounts. Want to talk about a use case?
               <span className="text-red-500 font-bold">
-                Join in the discussion
+                Join the discussion
               </span>
             </small>
             <ul className="px-0">
@@ -109,7 +109,7 @@ export const MainContent = ({ styles }) => {
           <div className="w-56 mr-6 mt-4">
             <p className="text-xl font-bold mb-2">SDK and tools</p>
             <small className="text-base">
-              Use the SDK and dev tools to help you build with XMTP
+              Build with XMTP using the SDK and dev tools
             </small>
           </div>
           <div className="flex">
@@ -171,7 +171,7 @@ export const MainContent = ({ styles }) => {
               built with XMTP.
             </p>
             <button className="bg-white rounded-lg w-52 h-12 text-black font-bold text-base cursor-pointer border-0">
-              Read more about this
+              Learn more
             </button>
           </div>
         </div>
@@ -183,8 +183,6 @@ export const MainContent = ({ styles }) => {
             {BLOG_DATA.map((items) => (
               <BlogItem key={items.title} items={items} />
             ))}
-
-            {/*  <div className="mx-11"></div> */}
           </div>
         </div>
 
@@ -195,8 +193,7 @@ export const MainContent = ({ styles }) => {
             </h1>
             <p className="text-neutral-800 text-sm leading-6 text-center max-w-[656px] mb-8">
               From hackathons to startups, developers are building with XMTP to
-              address crucial use cases for secure messaging for blockchain
-              accounts
+              address use cases for secure messaging for blockchain accounts
             </p>
             <button className="bg-black rounded-lg w-52 h-12 text-white font-bold text-sm cursor-pointer flex justify-center items-center border-0">
               <img src="/img/github-icon.svg" className="w-5 h-5 mr-2.5" />
@@ -205,34 +202,19 @@ export const MainContent = ({ styles }) => {
           </div>
           <div className="flex justify-evenly mt-12 flex-wrap">
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img
-                src="/img/logo-example.svg"
-                className="flex-1 object-none"
-              />
+              <img src="/img/logo-example.svg" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img
-                src="/img/logo-example.svg"
-                className="flex-1 object-none"
-              />
+              <img src="/img/logo-example.svg" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img
-                src="/img/logo-example.svg"
-                className="flex-1 object-none"
-              />
+              <img src="/img/logo-example.svg" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img
-                src="/img/logo-example.svg"
-                className="flex-1 object-none"
-              />
+              <img src="/img/logo-example.svg" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img
-                src="/img/logo-example.svg"
-                className="flex-1 object-none"
-              />
+              <img src="/img/logo-example.svg" className="flex-1 object-none" />
             </div>
           </div>
         </div>
@@ -269,7 +251,7 @@ export const MainContent = ({ styles }) => {
               Follow XMTP on Twitter
             </h1>
             <p className="mb-4 leading-6 text-white">
-              Keep up with the latest news and insights
+              Keep up with the latest updates and insights
             </p>
             <div className="h-px mb-4 bg-white"></div>
             <p className="leading-6 text-right font-semibold text-white">
