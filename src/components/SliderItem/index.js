@@ -24,17 +24,17 @@ export const SliderItem = (props) => {
       </div>
       <div className="flex flex-row mt-3">
         {language && (
-          <div className="text-xs mr-5 flex">
+          <div className="text-xs mr-5 flex text-black dark:text-neutral-500">
             <div className="rounded-full bg-cyan-700 w-3.5 h-3.5 mr-1"></div>
             {language}
           </div>
         )}
-        <div className="text-xs mr-5 flex items-start">
-          <img src="/img/star-icon.svg" className="mr-1" />
+        <div className="text-xs mr-5 flex items-start text-black dark:text-neutral-500">
+          <img src="/img/star-icon.svg" className="mr-1 dark:contrast-50" />
           {stargazers_count}
         </div>
-        <div className="text-xs mr-5 flex items-start">
-          <img src="/img/branch-icon.svg" className="mr-1" />
+        <div className="text-xs mr-5 flex items-start text-black dark:text-neutral-500">
+          <img src="/img/branch-icon.svg" className="mr-1 dark:contrast-50" />
           {forks_count}
         </div>
       </div>

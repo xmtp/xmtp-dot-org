@@ -15,7 +15,7 @@ function HomepageHeader() {
         "px-0 pt-12 lg:pt-16 h-[504px] bg-[url('/img/background.png')] bg-cover border-0 border-b border-solid border-b-black " +
         (colorMode === 'light'
           ? "bg-[url('/img/background.png')]"
-          : "bg-[url('/img/dark-background.png')]")
+          : "bg-[url('/img/dark-background.png')] bg-black")
       }
     >
       <div className="container text-left py-0 xl:px-12 m-auto max-w-screen-max">
