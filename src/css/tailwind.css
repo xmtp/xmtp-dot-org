@@ -129,7 +129,9 @@
 }
 
 .navbar__inner {
-  margin: 0 2%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 3rem;
 }
 
 .navbar__item .dropdown__menu {
@@ -193,4 +195,11 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 1280px) {
+  .navbar__inner {
+    margin: 0;
+    padding: 0;
+  }
 }
