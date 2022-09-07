@@ -62,7 +62,7 @@ export const MainContent = ({ styles }) => {
               accounts. Want to talk about a use case?
               <a
                 href="https://github.com/orgs/xmtp/discussions"
-                className="text-red-500 font-bold hover:no-underline"
+                className="text-red-500 font-bold hover:no-underline ml-1"
               >
                 Join the discussion
               </a>
