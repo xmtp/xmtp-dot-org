@@ -5,6 +5,12 @@ sidebar_position: 2
 
 # XMTP Litepaper - public draft
 
+:::warning OPEN ITEM
+
+Do we want to provide this page to surface access to the Litepaper?
+
+:::
+
 Read the public draft of the [XMTP Litepaper](https://github.com/xmtp/litepaper#readme) to get a primer on how XMTP works and learn about the motivations and vision informing its development.
 
 Discuss the litepaper with the XMTP community on the following platforms:
