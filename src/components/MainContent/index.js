@@ -21,7 +21,7 @@ export const MainContent = ({ styles }) => {
       },
     })
     const data = await response.json()
-    if (data) setSliderItems(data)
+    if (data?.length) setSliderItems(data)
   }
 
   useEffect(() => {
