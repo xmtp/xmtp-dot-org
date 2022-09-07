@@ -8,7 +8,9 @@ assignees: ''
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is. Include 1 bug per issue.
+A clear and concise description of what the bug is. 
+
+Include **1 bug per issue**.  Please do not include multiple bugs or pieces of feedback in 1 issue. Creating 1 issue per bug will make it easier for us to assign and track progress on bugs.
 
 **To Reproduce**
 Steps to reproduce the behavior:
