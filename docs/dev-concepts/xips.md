@@ -5,9 +5,9 @@ sidebar_position: 9
 
 # XIP Purpose, Process, & Guidelines
 
-:::warning We want to push this from https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md
+:::warning OPEN ITEM
 
-This content is a placeholder. We want to use a GitHub Action to dynamically push this content to this target location from this source location https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md when there is a GitHub merge action in the source location.
+We are going to single source this content from https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md using a GitHub Action.
 
 :::
 

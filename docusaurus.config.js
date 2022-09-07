@@ -90,7 +90,7 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
+                to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Client SDK</div>
                  <div><small>Use the client SDK to build a web3 messaging solution</small></div></div></div>`,
@@ -98,8 +98,8 @@ const config = {
               {
                 to: 'docs/dev-concepts/introduction',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div>Concepts</div>
-                 <div><small>Content types, supported wallets, nodes, security, and more</small></div></div></div>`,
+                 <div class="navbar__client__dropdown_text"><div>Development concepts</div>
+                 <div><small>Learn about the protocol, architecture, security, FAQ, and more</small></div></div></div>`,
               },
             ],
           },
@@ -136,16 +136,16 @@ const config = {
             title: 'Client SDK docs',
             items: [
               {
-                label: `Tutorials`,
-                to: `https://community.xmtp.org`,
+                label: `Concepts`,
+                to: `/docs/client-sdk/javascript/concepts/intro-to-sdk`,
               },
               {
-                label: `Concepts`,
-                to: `https://community.xmtp.org`,
+                label: `Tutorials`,
+                to: `/docs/client-sdk/javascript/tutorials/quickstart`,
               },
               {
                 label: `References`,
-                to: `https://community.xmtp.org`,
+                to: `/docs/client-sdk/javascript/reference/classes/Client`,
               },
             ],
           },
@@ -153,36 +153,40 @@ const config = {
             title: 'Development concepts',
             items: [
               {
+                label: `Intro to XMTP`,
+                to: `/docs/dev-concepts/introduction`,
+              },
+              {
                 label: `Architectural overview`,
-                to: `https://community.xmtp.org`,
+                to: `/docs/dev-concepts/architectural-overview`,
               },
               {
                 label: `FAQ`,
-                to: `https://community.xmtp.org`,
+                to: `/docs/dev-concepts/faq`,
               },
               {
                 label: `Content types`,
-                to: `https://community.xmtp.org`,
+                to: `/docs/dev-concepts/content-types`,
               },
               {
                 label: `Authentication and encryption`,
-                to: `https://community.xmtp.org`,
+                to: `/docs/dev-concepts/security`,
               },
               {
                 label: `Supported wallets`,
-                to: `https://community.xmtp.org`,
+                to: `/docs/dev-concepts/wallets`,
               },
               {
                 label: `Signatures`,
-                to: `https://community.xmtp.org`,
+                to: `/docs/dev-concepts/signatures`,
               },
               {
                 label: `Contribute to XMTP`,
-                to: `https://community.xmtp.org`,
+                to: `/docs/dev-concepts/contributing`,
               },
               {
                 label: `XMTP Improvement Proposals`,
-                to: `https://community.xmtp.org`,
+                to: `/docs/dev-concepts/xips`,
               },
             ],
           },
@@ -219,16 +223,16 @@ const config = {
                 href: 'https://discord.gg/xmtp',
               },
               {
+                label: 'Twitter',
+                href: 'https://twitter.com/xmtp_',
+              },
+              {
                 label: 'Contribute to XMTP',
-                href: 'https://community.xmtp.org',
+                to: '/docs/dev-concepts/contributing',
               },
               {
                 label: 'XMTP Improvement Proposals',
-                href: 'https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/xmtp_',
+                to: '/docs/dev-concepts/xips',
               },
             ],
           },
@@ -237,11 +241,15 @@ const config = {
             items: [
               {
                 label: 'Roadmap',
-                to: 'https://community.xmtp.org',
+                to: '/about/roadmap',
+              },
+              {
+                label: 'Litepaper',
+                to: '/about/litepaper',
               },
               {
                 label: 'Case study: Token-gated chat',
-                to: 'https://community.xmtp.org',
+                to: '/about/case-study-token-gate-chat',
               },
             ],
           },
