@@ -9,9 +9,9 @@ XMTP (Extensible Message Transport Protocol) is an open protocol, network, and s
 
 XMTP's extensible design enables a diverse set of use cases for sending message data between web3 identities. For example, building with the [XMTP client SDK](https://github.com/xmtp/xmtp-js), developers can enhance their apps with:
 
-- **user-to-user** direct messages
-- **app-to-user** notifications
-- **creator-to-community** announcements
+- **User-to-user** direct messages
+- **App-to-user** notifications
+- **Creator-to-community** announcements
 
 Because the XMTP network persists messages, and those messages are tied to web3 identities as opposed to a specific client app, each web3 identity has a **portable inbox** of that it can access using any client app built with XMTP.
 

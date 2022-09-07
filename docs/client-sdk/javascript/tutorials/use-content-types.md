@@ -47,6 +47,6 @@ You can use `xmtp-js` to specify and send a custom content type beyond the prede
 
     The receiving client uses the `contentType` value of `ContentTypeNumber` to identify the content type of the `3.14` message sent through the `send` API. If the receiving client supports the content type, it displays the message. If it doesn't support the content type, it displays the fall-back plaintext.
 
-    To learn more about the `send` API, see [sendMessage](https://xmtp-js.pages.dev/classes/Client#sendMessage).
+    To learn more about the `send` API, see [sendMessage](/docs/client-sdk/javascript/reference/classes/Client#sendmessage).
 
 To learn more about sending new content types, see [Different content types](https://github.com/xmtp/xmtp-js/blob/4157fadd80bce80c8094135f3e47d3856515468f/README.md#different-types-of-content).
