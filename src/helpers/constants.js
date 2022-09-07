@@ -2,7 +2,7 @@ export const HEADER_DATA = [
   {
     title: 'Concepts',
     subtitle:
-      'Learn about the protocol, architecture, encryption, authentication, FAQ, and more',
+      'Learn about the protocol, architecture, encryption, authentication, and more',
     url: '/docs/dev-concepts/introduction',
   },
   {

@@ -11,9 +11,9 @@ export const HeaderBox = ({ title, subtitle, url }) => {
         <h4 className="text-red-500 text-xl">{title}</h4>
         <img className="h-5 mt-1" src="/img/xmtp-icon.svg" alt="xmtp icon" />
       </div>
-      <div className="text-2xl font-semibold mb-0 dark:text-white text-gray-900">
+      <div className="text-2xl font-semibold mb-0 dark:text-white text-gray-900 mt-9">
         {subtitle}
-        <p className="mb-0 mt-5">&rarr;</p>
+        <p className="mb-0 mt-2.5">&rarr;</p>
       </div>
     </Link>
   )
