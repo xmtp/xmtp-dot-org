@@ -17,32 +17,32 @@ export default function FooterWrapper(props) {
               <a
                 className="ml-2 text-white hover:text-white"
                 target="_blank"
-                href="https://creativecommons.org/licenses/by/4.0/"
+                href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
               >
                 CC BY 4.0
               </a>
             </span>
             <Link
-              to="/docs/src/pages/privacy"
+              to="/privacy"
               className="mx-8 text-semibold text-sm text-red-600 hover:text-red-600 hover:no-underline my-8 md:my-0"
             >
               Privacy policy
             </Link>
             <Link
-              to="/docs/src/pages/terms"
+              to="/terms"
               className="text-sm text-red-600 hover:text-red-600 hover:no-underline"
             >
-              Term of use
+              Term of service
             </Link>
           </div>
           <div className="flex w-[139px] justify-between">
             <a href="https://github.com/xmtp" target="_blank">
               <img src="/img/github-icon.svg" />
             </a>
-            <a href="https://github.com/xmtp" target="_blank">
+            <a href="https://twitter.com/xmtp_" target="_blank">
               <img src="/img/twitter-icon.svg" />
             </a>
-            <a href="https://github.com/xmtp" target="_blank">
+            <a href="https://discord.gg/xmtp" target="_blank">
               <img src="/img/discord-icon.svg" />
             </a>
           </div>
