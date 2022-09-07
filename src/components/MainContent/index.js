@@ -211,7 +211,7 @@ export const MainContent = ({ styles }) => {
               address use cases for secure messaging for blockchain accounts
             </p>
             <button className="bg-black rounded-lg w-52 h-12 text-white font-bold text-sm cursor-pointer flex justify-center items-center border-0">
-              <img src="/img/github-icon.svg" className="w-5 h-5 mr-2.5" />
+              <img src="/img/xmtp-sm-icon.png" className="w-5 h-5 mr-2.5" />
               <Link
                 className="hover:no-underline text-white hover:text-white"
                 to="/docs/client-sdk/javascript/tutorials/quickstart"

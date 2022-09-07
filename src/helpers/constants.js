@@ -13,7 +13,7 @@ export const HEADER_DATA = [
   {
     title: 'Vision',
     subtitle: 'Learn about the XMTP roadmap, case studies, and more',
-    url: '/about/welcome',
+    url: '/about/roadmap',
   },
 ]
 
