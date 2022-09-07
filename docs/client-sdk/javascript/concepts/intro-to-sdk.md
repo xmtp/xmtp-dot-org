@@ -1,9 +1,9 @@
 ---
-sidebar_label: SDK overview
+sidebar_label: Intro to the XMTP JavaScript SDK
 sidebar_position: 1
 ---
 
-# Overview of XMTP JavaScript SDK functions
+# Introduction to the XMTP JavaScript SDK
 
 <!--from https://github.com/xmtp/docs/blob/main/docs/client-sdk/xmtp-js.md. Need to understand the context for this info - where in the flow is this used? It would be great to link from this "plain English" list to code that provides these functions. This may be more appropriate in the Reference section. Is there more info like this that we want to provide about the SDK?-->
 

@@ -117,7 +117,7 @@ const config = {
           },
           {
             className: 'dropdown-carrot',
-            to: 'about/welcome', // To highlight the navbar item, you must link to a document, not a top-level directory
+            to: 'about/roadmap', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
             label: 'Vision',
             activeBaseRegex: `/about/`,
