@@ -12,6 +12,10 @@ const config = {
   tagline:
     'Build with XMTP to send alerts, announcements, and messages between blockchain accounts',
   url: 'https://xmtp.org',
+  customFields: {
+    githubAPI: process.env.PUBLIC_URL,
+    personalToken: process.env.AUTH_PERSONAL_TOKEN,
+  },
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -27,9 +31,11 @@ const config = {
           path: 'docs/client-sdk/javascript',
           id: 'default',
           routeBasePath: 'docs/client-sdk/javascript',
-          sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-javascript.js'),
-          showLastUpdateAuthor: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
-          showLastUpdateTime: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
+          sidebarPath: require.resolve(
+            './sidebars/sidebars-client-sdk-javascript.js'
+          ),
+          showLastUpdateAuthor: true, // setting to false for now to resolve errors due to some new files not being tracked by git yet
+          showLastUpdateTime: true, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
         },
         theme: {
@@ -72,6 +78,7 @@ const config = {
       navbar: {
         title: '',
         logo: {
+          className: 'navbar__logo__img',
           alt: 'XMTP Logo',
           src: 'img/logomark.svg',
           srcDark: 'img/logomark-dark.svg',
@@ -83,12 +90,16 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
-                label: 'Client SDK',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Client SDK</div>
+                 <div><small>Use the client SDK to build a web3 messaging solution</small></div></div></div>`,
               },
               {
                 to: 'docs/dev-concepts/introduction',
-                label: 'Development concepts',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Concepts</div>
+                 <div><small>Content types, supported wallets, nodes, security, and more</small></div></div></div>`,
               },
             ],
           },
@@ -105,13 +116,14 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
+            className: 'dropdown-carrot',
             to: 'about/roadmap', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
             label: 'Vision',
             activeBaseRegex: `/about/`,
           },
           {
-            href: 'https://github.com/xmtp/website',
+            href: 'https://github.com/xmtp',
             position: 'right',
             className: 'header-github-link',
           },
@@ -121,41 +133,115 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'XMTP',
+            title: 'Client SDK docs',
             items: [
               {
-                label: 'Docs',
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
+                label: `Tutorials`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Concepts`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `References`,
+                to: `https://community.xmtp.org`,
               },
             ],
           },
           {
-            title: 'XMTP Community',
+            title: 'Development concepts',
             items: [
               {
-                label: `Twitter`,
-                href: `https://twitter.com/xmtp_`,
+                label: `Architectural overview`,
+                to: `https://community.xmtp.org`,
               },
               {
-                label: `XMTP Discord`,
-                href: `https://discord.gg/xmtp`,
+                label: `FAQ`,
+                to: `https://community.xmtp.org`,
               },
               {
-                label: `Community Forum`,
-                href: `https://community.xmtp.org`,
+                label: `Content types`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Authentication and encryption`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Supported wallets`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Signatures`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `Contribute to XMTP`,
+                to: `https://community.xmtp.org`,
+              },
+              {
+                label: `XMTP Improvement Proposals`,
+                to: `https://community.xmtp.org`,
               },
             ],
           },
           {
-            title: 'About this site',
+            title: 'SDK and tools',
             items: [
               {
-                label: 'Website is CC0 No Rights Resered',
-                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/',
+                label: 'XMTP JavaScript SDK',
+                href: 'https://github.com/xmtp/xmtp-js',
               },
               {
-                label: 'Edit on Github',
-                href: 'https://github.com/xmtp/website/',
+                label: 'Example chat app repo',
+                href: 'https://github.com/xmtp/example-chat-react/',
+              },
+              {
+                label: 'Hosted example chat app - production',
+                href: 'https://xmtp.chat/',
+              },
+              {
+                label: 'Hosted example chat app - dev',
+                href: 'https://xmtp.vercel.app/',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Discussions',
+                href: 'https://github.com/orgs/xmtp/discussions',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/xmtp',
+              },
+              {
+                label: 'Contribute to XMTP',
+                href: 'https://community.xmtp.org',
+              },
+              {
+                label: 'XMTP Improvement Proposals',
+                href: 'https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/xmtp_',
+              },
+            ],
+          },
+          {
+            title: 'Vision',
+            items: [
+              {
+                label: 'Roadmap',
+                to: 'https://community.xmtp.org',
+              },
+              {
+                label: 'Case study: Token-gated chat',
+                to: 'https://community.xmtp.org',
               },
             ],
           },
