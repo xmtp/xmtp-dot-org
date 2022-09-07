@@ -1,11 +1,20 @@
 import React from 'react'
 
 export const SliderItem = (props) => {
-  const { full_name, description, language, stargazers_count, forks_count } =
-    props.items
-
+  const {
+    full_name,
+    description,
+    language,
+    stargazers_count,
+    forks_count,
+    html_url,
+  } = props.items
   return (
-    <div className="w-[430px] h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto]">
+    <a
+      href={html_url}
+      target="_blank"
+      className="w-[430px] h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto] hover:no-underline"
+    >
       <p className="font-bold mb-0 text-blue-600 text-base">
         <img className="align-middle mr-2" src="/img/repo.png" />
         {full_name}
@@ -29,6 +38,6 @@ export const SliderItem = (props) => {
           {forks_count}
         </div>
       </div>
-    </div>
+    </a>
   )
 }

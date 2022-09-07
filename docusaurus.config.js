@@ -123,7 +123,7 @@ const config = {
             activeBaseRegex: `/about/`,
           },
           {
-            href: 'https://github.com/xmtp/website',
+            href: 'https://github.com/xmtp',
             position: 'right',
             className: 'header-github-link',
           },

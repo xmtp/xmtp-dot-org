@@ -172,3 +172,8 @@
   top: 2px;
   transform: translateY(-50%);
 }
+
+
+.footer__item {
+  margin-bottom: 1rem;
+}
