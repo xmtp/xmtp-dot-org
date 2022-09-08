@@ -65,6 +65,12 @@ const config = {
         sidebarPath: require.resolve('./sidebars/sidebars-about.js'),
       },
     ],
+    [
+      'docusaurus-plugin-plausible',
+      {
+        domain: 'xmtp.org',
+      },
+    ],
   ],
 
   clientModules: [require.resolve('./src/css/tailwind.css')],
