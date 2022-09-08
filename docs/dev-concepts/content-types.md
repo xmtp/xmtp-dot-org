@@ -9,7 +9,7 @@ All messages in XMTP are encoded with a **content type** to ensure interoperabil
 
 Message **payloads** are transported as a set of bytes. This means that payloads can carry any content type that a client supports, such as plain text, JSON, or even non-text binary or media content.
 
-The client app interface allows developers to adopt new content types and put them to immediate use without going through a formal process. Other client apps might choose to adopt those content types if they want to render those message types, but they can also rely on fall-back plain text.
+The XMTP SDK allows developers to adopt new content types and put them to immediate use without going through a formal process. Client apps might choose to adopt those content types if they want to render those message types, but they can also rely on fall-back plain text.
 
 Fall-back plain text is "alt text"-like description text that you can associate with original content if you are concerned that the receiving client app might not be able to handle the original content. If the receiving client app is unable to handle the original content, it displays the fall-back plain text instead.
 
