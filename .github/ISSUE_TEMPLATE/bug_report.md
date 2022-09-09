@@ -1,40 +1,50 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
+title: 'Bug: '
 labels: prelaunch-feedback
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is. 
+## Describe the bug
+
+A clear and concise description of what the bug is.
 
 Include **1 bug per issue**.  Please do not include multiple bugs or pieces of feedback in 1 issue. Creating 1 issue per bug will make it easier for us to assign and track progress on bugs.
 
-**To Reproduce**
+## Steps to Reproduce
+
 Steps to reproduce the behavior:
+
 1. Go to '...' (include a link, if helpful)
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
+## Expected behavior
+
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
+## Screenshots
+
 If applicable, add screenshots to help explain your problem.
 
-**Additional context**
+## Additional context
+
 Add any other context about the problem here.
 
-**Desktop (please complete the following information if you think it is relevant to the bug):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+### Desktop
 
-**Smartphone (please complete the following information if you think it is relevan to the bug):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+Please complete the following information if you think it is relevant to the bug:
+
+- OS & Version: [e.g. macOS 12.3]
+- Browser & Version: [e.g. Chrome 105.0.5195.102, Safari 15.4]
+
+### Smartphone
+
+Please complete the following information if you think it is relevant to the bug:
+
+- Device: [e.g. iPhone 14]
+- OS: [e.g. iOS 16.1]
+- Browser: [e.g. Safari, Chrome]
