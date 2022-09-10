@@ -18,7 +18,7 @@ To help ensure that your experience as a contributor goes as smoothly as possibl
 
 To provide feedback about the [xmtp.org](https://xmtp.org) website and documentation, please open one of these types of GitHub Issues:
 
-- [Report a bug]()
+- [Report a bug](https://github.com/xmtp/xmtp-dot-org/issues/new?assignees=&labels=prelaunch-feedback&template=bug_report.md&title=Bug%3A+)
 
   Examples of bug might include things like:
 
@@ -28,9 +28,9 @@ To provide feedback about the [xmtp.org](https://xmtp.org) website and documenta
 
   If the bug fix is straightforward, consider [submitting a PR using the Edit this page link](#submit-a-pr-using-the-edit-this-page-link) instead of opening a GitHub Issue.
 
-- [Request an enhancement]()
+- [Request a feature or enhancement](https://github.com/xmtp/xmtp-dot-org/issues/new?assignees=&labels=prelaunch-feedback&template=feature_request.md&title=)
 
-Examples of enhancements include things like:
+  Examples of enhancements include things like:
 
   - New documentation topics
   - New website features
