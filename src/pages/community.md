@@ -10,7 +10,7 @@ Have a question? Want to discuss an idea or protocol improvement? Start or join 
 
 ## Discord
 
-Chat with the XMTP community. Come say 👋, GM, or wagmi!
+Chat with the XMTP community. Say 👋, join a dev hangout, or get support.
 
 [Chat with other builders](https://discord.gg/xmtp)
 
