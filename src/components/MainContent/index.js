@@ -4,7 +4,14 @@ import { useColorMode } from '@docusaurus/theme-common'
 import { Link } from 'react-router-dom'
 import { HeaderBox } from '../HeaderBox'
 import { SliderItem } from '../SliderItem'
-import { HEADER_DATA, BLOG_DATA } from '../../helpers/constants'
+import {
+  HEADER_DATA,
+  BLOG_DATA,
+  XMTP_JS_URL,
+  EXAMPLE_CHAT_URL,
+  CHAT_ITEM,
+  VERCEL_ITEM,
+} from '../../helpers/constants'
 import { BlogItem } from '../BlogItem'
 
 export const MainContent = ({ styles }) => {
@@ -15,13 +22,24 @@ export const MainContent = ({ styles }) => {
   const [sliderItems, setSliderItems] = useState(null)
 
   const userAction = async () => {
-    const response = await fetch(customFields.githubAPI, {
+    let items = []
+    const responseXmtp = await fetch(XMTP_JS_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
     })
-    const data = await response.json()
-    if (data?.length) setSliderItems(data)
+    const responseChat = await fetch(EXAMPLE_CHAT_URL, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
+    const dataXmtp = await responseXmtp.json()
+    if (dataXmtp) items = [...items, dataXmtp]
+    const dataChat = await responseChat.json()
+    if (dataChat) items = [...items, dataChat]
+
+    items = [...items, CHAT_ITEM, VERCEL_ITEM]
+    setSliderItems(items)
   }
 
   useEffect(() => {
@@ -129,7 +147,7 @@ export const MainContent = ({ styles }) => {
               onClick={() => {
                 document.getElementsByClassName(
                   'inner-div'
-                )[0].scrollLeft -= 100
+                )[0].scrollLeft -= 453
               }}
               src={
                 colorMode === 'light'
@@ -151,7 +169,7 @@ export const MainContent = ({ styles }) => {
               onClick={() => {
                 document.getElementsByClassName(
                   'inner-div'
-                )[0].scrollLeft += 100
+                )[0].scrollLeft += 453
               }}
               src={
                 colorMode === 'light'

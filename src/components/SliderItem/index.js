@@ -7,6 +7,7 @@ export const SliderItem = (props) => {
     language,
     stargazers_count,
     forks_count,
+    text,
     html_url,
   } = props.items
   return (
@@ -23,20 +24,29 @@ export const SliderItem = (props) => {
         {description}
       </div>
       <div className="flex flex-row mt-3">
-        {language && (
-          <div className="text-xs mr-5 flex text-black dark:text-neutral-500">
-            <div className="rounded-full bg-cyan-700 w-3.5 h-3.5 mr-1"></div>
-            {language}
-          </div>
+        {text ? (
+          <div className='text-xs text-blue-600 font-bold'>{text}</div>
+        ) : (
+          <>
+            {language && (
+              <div className="text-xs mr-5 flex text-black dark:text-neutral-500">
+                <div className="rounded-full bg-cyan-700 w-3.5 h-3.5 mr-1"></div>
+                {language}
+              </div>
+            )}
+            <div className="text-xs mr-5 flex items-start text-black dark:text-neutral-500">
+              <img src="/img/star-icon.svg" className="mr-1 dark:contrast-50" />
+              {stargazers_count}
+            </div>
+            <div className="text-xs mr-5 flex items-start text-black dark:text-neutral-500">
+              <img
+                src="/img/branch-icon.svg"
+                className="mr-1 dark:contrast-50"
+              />
+              {forks_count}
+            </div>
+          </>
         )}
-        <div className="text-xs mr-5 flex items-start text-black dark:text-neutral-500">
-          <img src="/img/star-icon.svg" className="mr-1 dark:contrast-50" />
-          {stargazers_count}
-        </div>
-        <div className="text-xs mr-5 flex items-start text-black dark:text-neutral-500">
-          <img src="/img/branch-icon.svg" className="mr-1 dark:contrast-50" />
-          {forks_count}
-        </div>
       </div>
     </a>
   )
