@@ -5,39 +5,43 @@ sidebar_position: 5
 
 # Participant authentication and message encryption with XMTP
 
-The XMTP SDK enables clients to establish secure, unfalsifiable relationships between identities in which only the sender and recipient can decrypt messages sent between them. The protocol design also accommodates asynchronous offline communication and secure storage of messages.
+The XMTP SDK enables client apps to establish secure, unfalsifiable relationships between XMTP identities in which only the sender and recipient can decrypt messages sent between them. The protocol design also accommodates asynchronous offline communication and secure storage of messages.
 
-These relationships between identities are established using a set of keys. When a user connects their wallet to their client, the wallet signs with its public and private key. This enables the client SDK to generate the following keys:
+These relationships between XMTP identities are established using a set of keys. When a user connects their blockchain account to their client app, their wallet app signs with the account's public and private key. This enables the XMTP SDK to generate the following keys:
 
 - `IdentityPrivateKey`
 - `IdentityPublicKey`
 - `PreKeys`
 
-You can think of the `IdentityPrivateKey` and `IdentityPublicKey` as proxies for a user's wallet keys.
+You can think of the `IdentityPrivateKey` and `IdentityPublicKey` as proxies for a user's blockchain account keys.
 
-Because XMTP cannot access the actual wallet keys, XMTP generates `IdentityPrivateKey` and `IdentityPublicKey` and asks the user to vouch for them by signing them with their wallet keys.
+Because XMTP cannot access the actual blockchain account keys, XMTP generates `IdentityPrivateKey` and `IdentityPublicKey` and asks the user to vouch for them by signing them with their blockchain account keys.
 
-Anyone can verify the user's wallet signature and consider it as an attestation that the `IdentityPrivateKey` and `IdentityPublicKey` are the user's true proxy keys since only the user's wallet keys could have created the signature.
+Anyone can verify the user's signature and consider it as an attestation that the `IdentityPrivateKey` and `IdentityPublicKey` are the user's true proxy keys since only the user's keys could have created the signature.
 
-The client publishes the user's `IdentityPublicKey` and `PreKeys` to the XMTP Network in a `PublicKeyBundle`. The `PublicKeyBundle` contains all of the information needed for someone to contact the user.
+To learn more about signatures, see [Signatures](signatures).
 
-The `IdentityPrivateKey` (and a copy of the other keys, for good measure) are encrypted and stored locally on the client or on the XMTP Network. Only clients authorized by the user can access these encrypted keys. By design, XMTP and the XMTP Network cannot access these encrypted keys.
+The client app publishes the user's `IdentityPublicKey` and `PreKeys` to the XMTP network in a `PublicKeyBundle`. The `PublicKeyBundle` contains all of the information needed for someone to contact the user.
 
-## Algorithms
+The `IdentityPrivateKey` (and a copy of the other keys, for good measure) are encrypted and stored locally by the client app or on the XMTP network. Only client apps authorized by the user can access these encrypted keys. By design, XMTP and the XMTP network cannot access these encrypted keys.
 
-XMTP is designed to be able to replace algorithms or expand the set of supported algorithms in a backward-compatible manner.
+To learn more, see [Message encryption and decryption](architectural-overview#message-encryption-and-decryption).
 
-Our initial choice of algorithms was driven by fairly pragmatic criteria. For example, the algorithms we chose are:
+## Algorithms in use
+
+XMTP supports the replacement and expansion of supported algorithms in a backward-compatible manner.
+
+Supported algorithms are selected based on fairly pragmatic criteria. For example, the algorithm must be:
 
 - Tried and true and in widespread use
-- Well-supported in client languages, such as JavaScript
-- Available in standard browser APIs, rather than third-party dependencies
+- Well-supported in desirable XMTP client app languages, such as JavaScript
+- Available in standard browser APIs, rather than via third-party dependencies
 
-We also aimed to reuse existing algorithms, looking to well-known and standard algorithms with trustworthy implementations.
+XMTP also aims to reuse existing algorithms, looking to well-known and standard algorithms with trustworthy implementations.
 
-As such, we built the cryptographic primitives around the standard [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto) and the [@noble libraries](https://www.npmjs.com/package/@noble/secp256k1), using components of Signal's X3DH protocol for secure offline communication.
+As such, XMTP's cryptographic primitives are built around the standard [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto) and the [@noble libraries](https://www.npmjs.com/package/@noble/secp256k1), using components of Signal's X3DH protocol for secure offline communication.
 
-Specifically, our algorithm choices include:
+Specifically, XMTP's participant authentication and message encryption algorithm choices include:
 
 - EC Public/Private Keys (secp256k1)
 - ECDSA signatures and signing of public keys (ECDSA and EIP-191)

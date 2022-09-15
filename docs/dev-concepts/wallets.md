@@ -1,13 +1,19 @@
 ---
-sidebar_label: Supported wallets
+sidebar_label: Wallet app and chain support
 sidebar_position: 6
 ---
 
-# Wallets supported by XMTP
+# Wallet apps and blockchains supported by XMTP
 
-Because XMTP identities are [securely tied to wallets](./security/#key-generation), a connected wallet must be present to initialize the client. The XMTP SDK **does not** include a wallet abstraction as XMTP assumes that developers have a way to obtain a wallet connection.
+XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts, though XMTP itself does not use EVMs.
 
-Identities must be generated from and associated with an Ethereum wallet's public address and private key.
+## Wallet apps
+
+XMTP can be used with EVM-compatible wallet apps that support ECDSA signing on the secp256k1 elliptic curve. These include common wallet apps such as MetaMask, Coinbase Wallet, and Rainbow Wallet, as well as most wallet apps in the WalletConnect network.
+
+The XMTP SDK **does not** include a wallet app abstraction, as XMTP assumes that developers have a way to obtain a wallet app connection.
+
+XMTP uses a signature from the blockchain account to create and enable the XMTP identity. Specifically, XMTP identities must be generated from and associated with an Ethereum account's public address and private key. As such, a connected wallet app must be present to generate the signature and initialize the API client in the client app.
 
 :::info Info
 
@@ -17,12 +23,16 @@ The `xmtp-js` client is initialized using an `ethers.Signer` instance.
 
 :::info Info
 
-You can generate multiple identities from the same wallet by changing to a different address.
+You can generate multiple XMTP identities from the same wallet app by changing to a different blockchain account.
 
 :::
 
+To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](signatures).
+
 ## Chains
 
-XMTP messages are stored off-chain. This means that the messages are interoperable across different blockchains. This is particularly relevant if XMTP extends wallet support beyond Ethereum.
+XMTP works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s, including Polygon, Avalanche, and Optimism.
 
-Because all Ethereum Virtual Machine (EVM) chains share the same Ethereum wallet and address format, XMTP is interoperable across EVM chains, including testnets. For example, whether a user has their wallet set to Ethereum or any other EVM chain, such as Polygon, Avalanche, or Optimism, their private key will work for generating or retrieving their XMTP key pair.
+Because all Ethereum Virtual Machine (EVM) chains share the same Ethereum wallet and address format and XMTP messages are stored off-chain, XMTP is interoperable across EVM chains, including testnets.
+
+For example, whether a user has their wallet app connected to Ethereum or an Ethereum side-chain or L2, their private key can generate and retrieve their XMTP key pair to give them access to XMTP.
