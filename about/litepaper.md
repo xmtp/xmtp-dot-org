@@ -1,6 +1,6 @@
 ---
 sidebar_label: Litepaper
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # XMTP Litepaper - public draft

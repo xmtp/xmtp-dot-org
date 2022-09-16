@@ -263,7 +263,7 @@ export const MainContent = ({ styles }) => {
               Chat with the XMTP community
             </h1>
             <p className="mb-4 leading-6 text-white">
-              Say 👋, join a dev hangout, or get support
+              Say 👋, join a dev hangout, or get help
             </p>
             <div className="h-px mb-4 bg-white"></div>
             <a

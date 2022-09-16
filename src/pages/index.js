@@ -20,7 +20,7 @@ function HomepageHeader() {
     >
       <div className="container text-left py-0 xl:px-12 m-auto max-w-screen-max">
         <div className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-3 lg:mb-4 w-fit">
-          Now available: xmtp-js client implementation for React Native »
+          Now available: Read the XMTP Litepaper - public draft »
         </div>
         <h1 className="hero__title max-w-2xl text-4xl lg:text-5xl">
           {siteConfig.title}

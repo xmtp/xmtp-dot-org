@@ -10,7 +10,7 @@ const { tailwindPlugin } = require('./src/plugins')
 const config = {
   title: 'The open protocol, network, and standards for secure web3 messaging',
   tagline:
-    'Build with XMTP to send alerts, announcements, and messages between blockchain accounts',
+    'Build with XMTP to send messages between blockchain accounts including DMs, alerts, announcements, and more',
   url: 'https://xmtp.org',
   customFields: {
     githubAPI: process.env.PUBLIC_URL,
@@ -127,16 +127,16 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'about/roadmap',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div>Roadmap</div>
-                 <div><small>Learn about what's in store for XMTP in the months ahead</small></div></div></div>`,
-              },
-              {
                 to: 'about/litepaper',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Litepaper</div>
                  <div><small>Read the public draft of the XMTP Litepaper</small></div></div></div>`,
+              },
+              {
+                to: 'about/roadmap',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Roadmap</div>
+                 <div><small>Learn about what's in store for XMTP in the months ahead</small></div></div></div>`,
               },
               {
                 to: 'about/case-study-token-gate-chat',
