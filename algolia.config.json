@@ -1,10 +1,12 @@
 {
     "index_name": "xmtp_dot_org",
     "start_urls": [
-      "https://xmtp.org/"
+      // "https://xmtp.org/",
+      "https://junk-range-possible.vercel.app"
     ],
     "sitemap_urls": [
-      "https://xmtp.org/sitemap.xml"
+      // "https://xmtp.org/sitemap.xml",
+      "https://junk-range-possible.vercel.app/sitemap.xml"
     ],
     "sitemap_alternate_links": true,
     "stop_urls": [],
