@@ -7,7 +7,7 @@ sidebar_position: 1
 
 :::warning OPEN ITEM
 
-We are going to single source this content from https://github.com/xmtp/xmtp-js/blob/main/README.md using a clone of the repo and a GitHub Action.
+We are going to single source this content from <https://github.com/xmtp/xmtp-js/blob/main/README.md> using a clone of the repo and a GitHub Action.
 
 :::
 
@@ -88,7 +88,7 @@ import { Wallet } from 'ethers'
 const wallet = Wallet.createRandom()
 // Create the client with your wallet. This will connect to the XMTP development network by default
 const xmtp = await Client.create(wallet)
-// Start a conversation with Vitalik
+// Start a conversation
 const conversation = await xmtp.conversations.newConversation(
   '0x3F11b27F323b62B159D2642964fa27C46C841897'
 )
