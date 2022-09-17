@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # XMTP code of conduct
 
-This code of conduct applies within all XMTP community spaces, virtual and physical, and also applies when an individual is officially representing the XMTP community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+This code of conduct applies within all XMTP community spaces, virtual and physical, and also applies when an individual is officially representing the XMTP community in public spaces. Examples of representing our community include using an official email address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
 
 ## Our pledge
 
@@ -19,10 +19,10 @@ Examples of behaviors that contribute to a positive environment for our communit
 
 - Demonstrating empathy and kindness toward other people
 - Being collaborative and respectful of differing opinions, viewpoints, and experiences. A great protocol is built by many contributors learning and working together.
-- Being bold yet intentional when presenting ideas. We are here to help change the world through web3 communications, while also acknowledging that building successful protocols and ecosystems requires the application of logic and evidence.
+- Being bold yet intentional when presenting ideas. We are here to help change the world through web3 communications while also acknowledging that building successful protocols and ecosystems requires the application of logic and evidence.
 - Giving and gracefully accepting constructive feedback
 - Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
-- Focusing on what is best not just for us as individuals, but for the overall community
+- Focusing on what is best not just for us as individuals but for the overall community
 
 Examples of unacceptable behavior include:
 
@@ -35,7 +35,7 @@ Examples of unacceptable behavior include:
 
 Community moderators are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
 
-Community moderators have the right and responsibility to remove, edit, or reject comments, commits, code, issues, and other contributions that are not aligned to this code of conduct, and will communicate reasons for moderation decisions when appropriate.
+Community moderators have the right and responsibility to remove, edit, or reject comments, commits, code, issues, and other contributions that are not aligned to this code of conduct and will communicate reasons for moderation decisions when appropriate.
 
 ## Enforcement
 
