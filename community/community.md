@@ -1,9 +1,9 @@
 ---
-sidebar_label: Join in and participate
+sidebar_label: Join in and contribute
 sidebar_position: 1
 ---
 
-# Join in and participate in the XMTP community
+# Join in and contribute to the XMTP community
 
 There are many ways to participate in the XMTP community, whether you are a developer building with XMTP, a developer working on improving the protocol, or a web3 enthusiast interested in learning more about XMTP.
 

@@ -133,7 +133,7 @@ const config = {
                 to: 'community/community',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Join in and contribute</div>
-                 <div><small>Learn about ways to join in and contribute to XMTP</small></div></div></div>`,
+                 <div><small>Learn ways to join in and contribute to the XMTP community</small></div></div></div>`,
               },
               {
                 to: 'community/code-of-conduct',
