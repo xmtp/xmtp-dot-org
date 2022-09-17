@@ -125,33 +125,39 @@ To learn more, see [Installation](https://docusaurus.io/docs/installation) in th
 
 ### Install Docusaurus
 
-**To install Docusaurus:**
+Run this command in the root folder of your fork of the `xmtp-dot-org` repo.
 
-1. At the command line, navigate to the root folder of your fork of the `xmtp-dot-org` repo.
-
-2. Run `npm install`.
+```bash
+$ npm install
+```
 
 ### Run a local development server
 
-Run a local development server to view the website and check your changes as you edit files.
+Run this command to start a local development server you can use to view the website.
 
-To start and run the server, run `npm run start`.
+```bash
+$ npm run start
+```
 
 The command opens the website at `http://localhost:3000/` in your default browser.
 
-As you make and save changes to markdown files, the website automatically updates to reflect your changes.
+As you make and save changes to markdown files, the website automatically updates to reflect most changes without having to restart the server.
 
-### Generate a static website build
+### Generate and view a local static build
 
-When you run the build command, Docusaurus generates a static website build and puts it into the `build` folder.
+1. Run this command to generate static website content into the `build` directory.
 
-**To generate a static website build:**
+    ```bash
+    $ npm run build
+    ```
 
-1. To generate a static website build, run `npm run build`.
+2. Run this command to start a local server to view the static website content generated to the `build` directory.
 
-2. To view the static website build, run `npm run serve`.
+    ```bash
+    $ npm run serve
+    ```
 
-   The command opens the website at http://localhost:3000/ in your default browser.
+    The command opens the website at http://localhost:3000/ in your default browser.
 
 Note that any changes you save to markdown files aren't reflected in this static build because the command serves the website from the `build` directory, not the editable markdown files.
 
