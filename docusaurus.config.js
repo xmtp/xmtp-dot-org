@@ -59,6 +59,15 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'community',
+        path: 'community',
+        routeBasePath: 'community',
+        sidebarPath: require.resolve('./sidebars/sidebars-community.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'about',
         path: 'about',
         routeBasePath: 'about',
@@ -116,10 +125,23 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'community', // To highlight the navbar item, you must link to a document, not a top-level directory
+            to: 'community/community', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
             label: 'Community',
-            activeBaseRegex: `/`,
+            items: [
+              {
+                to: 'community/community',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Join in and contribute</div>
+                 <div><small>Learn about ways to join in and contribute to XMTP</small></div></div></div>`,
+              },
+              {
+                to: 'community/code-of-conduct',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Code of conduct</div>
+                 <div><small>Foster a safe and positive XMTP community experience</small></div></div></div>`,
+              },
+            ],
           },
           {
             type: 'dropdown',
@@ -257,6 +279,10 @@ const config = {
               {
                 label: 'XMTP Improvement Proposals',
                 to: '/docs/dev-concepts/xips',
+              },
+              {
+                label: 'XMTP code of conduct',
+                to: '/community/code-of-conduct',
               },
             ],
           },
