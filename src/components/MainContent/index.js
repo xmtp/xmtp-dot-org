@@ -191,15 +191,25 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="mx-0 xl:mx-12 mb-10">
-          <h1 className="text4xl font-bold mb-4">Latest from XMTP</h1>
-          <div className="h-[1px] bg-black dark:bg-neutral-500 w-full mb-8"></div>
-          <div className="flex flex-wrap flex-col lg:flex-row lg:flex-nowrap">
-            {BLOG_DATA.map((items) => (
-              <BlogItem key={items.title} items={items} />
-            ))}
+
+        <div className="pt-0 pb-8 sm:px-6">
+          <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
+
+            <div>
+              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">Latest From XMTP</h2>
+            </div>
+
+            <hr className="my-5 bg-black"/>
+
+            <div className="grid gap-16 mt-9 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+                {BLOG_DATA.map((items) => (
+                  <BlogItem key={items.title} items={items} />
+                ))}
+            </div>
+
           </div>
         </div>
+
 
         <div className="flex flex-col mt-14 min-h-[384px] max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat relative px-8">
           <div className="flex justify-center flex-col items-center mt-12 text-center">

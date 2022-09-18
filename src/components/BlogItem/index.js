@@ -4,48 +4,58 @@ export const BlogItem = (props) => {
   const { tag, title, content, user, url } = props.items
 
   return (
-    <div className="mr-6 last:mr-0 w-full lg:w-1/3">
-      <div className="flex">
+
+    
+    <div key={title}>
+
+      <div>
         {tag.map((tag) => (
           <div
             key={tag}
-            className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-4 w-fit mr-3"
+            className="inline-block"
           >
-            {tag}
+              <span className="inline-flex items-center mr-3 mb-2 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border-solid border-1 border-blue-300">
+                {tag}
+              </span>
+              
           </div>
         ))}
       </div>
-      <a
-        href={url}
-        target="_blank"
-        className="multiline-text-2 group text-red-500 hover:text-red-500 hover:no-underline text-xl h-14 cursor-pointer font-semibold block mb-3"
-      >
-        {title}
-        <img
-          className="ml-2 opacity-0 group-hover:opacity-100"
-          src="/img/new-window-icon.svg"
-          alt="open new window"
-        />
-      </a>
-      <p className="multiline-text-3 text-sm text-neutral-800 dark:text-neutral-300">
-        {content}
-      </p>
-      <div className="flex mb-6">
-        <div>
-          <img
-            className="mr-3 w-10 h-10 rounded-full"
-            src={`/img/${user.img || 'avatar.png'}`}
-          />
+      
+      <div className="min-h-[144px]">
+        <a
+          href={url}
+          target="_blank"
+          className="mt-0 block"
+        >
+          <p className="mb-2 text-xl font-semibold text-red-500">{title}</p>
+        </a>
+
+        <p className="mt-0 mb-0 text-base text-neutral-800 text-ellipsis">
+          {content}
+        </p>
+      </div>
+
+      <div className="mt-4 flex items-middle">
+        <div className="flex-shrink-0">
+          
+          <span className="sr-only">{user.name}</span>
+          <img className="h-10 w-10 rounded-full" src={`/img/${user.img || 'avatar.png'}`} alt="" />
+
         </div>
-        <div>
-          <p className="text-gray-800 dark:text-white mb-0 text-sm font-medium">
+
+        <div className="ml-3">
+          <p className="mb-0 text-sm font-medium text-neutral-800">
             {user.name}
           </p>
-          <p className="text-sm leading-5 font-normal text-neutral-800 dark:text-neutral-500">
-            {user.date}
-          </p>
+          <div className="flex space-x-1 text-sm text-neutral-800">
+            <time>{user.date}</time>
+          </div>
         </div>
+
       </div>
     </div>
   )
 }
+
+
