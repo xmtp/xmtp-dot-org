@@ -57,6 +57,8 @@
   }
   [data-theme='light'] {
     --ifm-footer-background-color: #171717;
+    --header-back-img: url('/img/background.png');
+    --header-bg-color: white;
   }
 
   /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -70,6 +72,8 @@
     --ifm-color-primary-lightest: #f8f2fd;
     --ifm-heading-color: #fff;
     --shadow-color: rgb(23 23 23 / 85%);
+    --header-back-img: url('/img/dark-background.png');
+    --header-bg-color: black;
   }
 
   /* From original custom.css */
@@ -104,7 +108,7 @@
 }
 
 .container {
-  max-width: var(--max-width)!important;
+  max-width: var(--max-width) !important;
 }
 
 .navbar__client__dropdown {
@@ -201,6 +205,11 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.homepageHeader {
+  background-image: var(--header-back-img);
+  background-color: var(--header-bg-color);
 }
 
 @media only screen and (max-width: 1280px) {

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const HeaderBox = ({ title, subtitle, url }) => {
+export const HeaderBox = ({ title, subtitle, url,styles }) => {
   return (
     <Link
       to={url}
-      className="bg-white first:ml-0 last:mr-0 dark:bg-neutral-900 rounded-lg border-black dark:border-neutral-700 border border-solid px-8 py-6 w-432 mx-0 my-4 md:mx-4 flex flex-col justify-between cursor-pointer hover:no-underline"
+      className={`${styles.headerBox} first:ml-0 last:mr-0 rounded-lg border-black dark:border-neutral-700 border border-solid px-8 py-6 w-432 mx-0 my-4 md:mx-4 flex flex-col justify-between cursor-pointer hover:no-underline`}
     >
       <div className="flex justify-between">
         <h4 className="text-red-500 text-xl">{title}</h4>

@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { useColorMode } from '@docusaurus/theme-common'
+import ThemedImage from '@theme/ThemedImage'
+import useBaseUrl from '@docusaurus/useBaseUrl'
 import { Link } from 'react-router-dom'
 import { HeaderBox } from '../HeaderBox'
 import { SliderItem } from '../SliderItem'
@@ -8,11 +10,11 @@ import { HEADER_DATA, BLOG_DATA } from '../../helpers/constants'
 import { BlogItem } from '../BlogItem'
 
 export const MainContent = ({ styles }) => {
+  const [sliderItems, setSliderItems] = useState(null)
   const { colorMode } = useColorMode()
   const {
     siteConfig: { customFields },
   } = useDocusaurusContext()
-  const [sliderItems, setSliderItems] = useState(null)
 
   const userAction = async () => {
     const response = await fetch(customFields.githubAPI, {
@@ -40,20 +42,20 @@ export const MainContent = ({ styles }) => {
               title={title}
               subtitle={subtitle}
               url={url}
+              styles={styles}
             />
           ))}
         </div>
         <div className="flex mt-20 max-w-screen-max mx-auto flex-wrap-reverse justify-between xl:justify-start">
-          <img
-            className="lg:h-auto object-cover max-w-fit overflow-hidden -mx-4 xl:ml-12 lg:basis-1/2 h-[540px] "
-            src={
-              colorMode === 'light'
-                ? '/img/build-xmtp.png'
-                : '/img/build-xmtp-dark.png'
-            }
+          <ThemedImage
+            className="lg:h-auto object-cover md:object-right max-w-fit overflow-hidden -mx-4 xl:ml-12 lg:basis-1/2 h-[453px] sm:h-[540px]"
+            sources={{
+              light: useBaseUrl('/img/build-xmtp.png'),
+              dark: useBaseUrl('/img/build-xmtp-dark.png'),
+            }}
             alt="laptop"
           />
-          <div className="max-w-[540px] xl:max-w-[437px] mx-0 xl:mx-4">
+          <div className="max-w-[5 40px] xl:max-w-[437px] mx-0 xl:mx-4">
             <h4 className="text-4xl font-bold mb-2 pt-0 xl:pt-12">
               Build with XMTP
             </h4>
@@ -125,17 +127,17 @@ export const MainContent = ({ styles }) => {
             </small>
           </div>
           <div className="flex">
-            <img
+            <ThemedImage
               onClick={() => {
                 document.getElementsByClassName(
                   'inner-div'
                 )[0].scrollLeft -= 100
               }}
-              src={
-                colorMode === 'light'
-                  ? '/img/right-arrow.svg'
-                  : '/img/right-arrow-dark.svg'
-              }
+              sources={{
+                light: useBaseUrl('/img/right-arrow.svg'),
+                dark: useBaseUrl('/img/right-arrow-dark.svg'),
+              }}
+              alt="arrow"
               className="-scale-x-100 cursor-pointer"
             />
           </div>
@@ -147,24 +149,22 @@ export const MainContent = ({ styles }) => {
               : null}
           </div>
           <div className="arrow-icon w-40 h-[128px] absolute right-0 flex justify-center">
-            <img
+            <ThemedImage
               onClick={() => {
                 document.getElementsByClassName(
                   'inner-div'
                 )[0].scrollLeft += 100
               }}
-              src={
-                colorMode === 'light'
-                  ? '/img/right-arrow.svg'
-                  : '/img/right-arrow-dark.svg'
-              }
+              sources={{
+                light: useBaseUrl('/img/right-arrow.svg'),
+                dark: useBaseUrl('/img/right-arrow-dark.svg'),
+              }}
               className="cursor-pointer w-12"
+              alt="arrow"
             />
           </div>
         </div>
         <div className="flex flex-col mt-20 lg:mt-24 h-[1118px] lg:h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center">
-          {' '}
-          {/* background-position: -196px -73px; */}
           <div className="flex">
             <div className="mr-40 hidden lg:block">
               <img src="/img/browser.png" />

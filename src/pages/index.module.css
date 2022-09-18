@@ -12,3 +12,8 @@
   align-items: center;
   justify-content: center;
 }
+
+
+.headerBox{
+  background-color: var(--ifm-background-color)
+}
