@@ -4,8 +4,7 @@ export const BlogItem = (props) => {
   const { tag, title, content, user, url } = props.items
 
   return (
-
-    
+   
     <div key={title}>
 
       <div>
@@ -22,16 +21,16 @@ export const BlogItem = (props) => {
         ))}
       </div>
       
-      <div className="lg:min-h-[144px] lg:max-h-[144px] lg:max-w-[100%] lg:overflow-hidden">
+      <div className="lg:min-h-[106px] lg:max-h-[106px] lg:max-w-[100%]">
         <a
           href={url}
           target="_blank"
           className="mt-0 block"
         >
-          <p className="mb-2 text-xl font-semibold text-red-500">{title}</p>
+          <p className="mb-2 text-xl font-semibold text-red-500 line-clamp-1">{title}</p>
         </a>
 
-        <p className="mt-0 mb-0 text-base text-neutral-800 lg:overflow-ellipsis">
+        <p className="mt-0 mb-0 text-base text-neutral-800 line-clamp-3">
           {content}
         </p>
       </div>
