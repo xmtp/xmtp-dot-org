@@ -22,7 +22,7 @@ export const BlogItem = (props) => {
         ))}
       </div>
       
-      <div className="min-h-[144px]">
+      <div className="lg:min-h-[144px] lg:max-h-[144px] lg:max-w-[100%] lg:overflow-hidden">
         <a
           href={url}
           target="_blank"
@@ -31,7 +31,7 @@ export const BlogItem = (props) => {
           <p className="mb-2 text-xl font-semibold text-red-500">{title}</p>
         </a>
 
-        <p className="mt-0 mb-0 text-base text-neutral-800 text-ellipsis">
+        <p className="mt-0 mb-0 text-base text-neutral-800 lg:overflow-ellipsis">
           {content}
         </p>
       </div>

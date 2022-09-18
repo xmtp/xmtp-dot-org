@@ -201,7 +201,7 @@ export const MainContent = ({ styles }) => {
 
             <hr className="my-5 bg-black"/>
 
-            <div className="grid gap-16 mt-9 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+            <div className="grid gap-16 mt-9 gap-y-8 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
                 {BLOG_DATA.map((items) => (
                   <BlogItem key={items.title} items={items} />
                 ))}
