@@ -5,23 +5,25 @@ sidebar_position: 1
 
 # Introduction to XMTP
 
-<!--once we move to xmtp-dot-org, this page will move to be the first page in the dev-concepts section/doc instance-->
+XMTP (Extensible Message Transport Protocol) is an open protocol, network, and standards for secure, private web3 messaging.
 
-We’re excited you’re here!
+XMTP's extensible design enables a diverse set of use cases for sending message data between web3 identities. For example, building with the [XMTP client SDK](https://github.com/xmtp/xmtp-js), developers can enhance their apps with:
 
-## What is XMTP?
+- **User-to-user** direct messages
+- **App-to-user** notifications
+- **Creator-to-community** announcements
 
-XMTP (Extensible Message Transport Protocol) is an open protocol and network for secure, private messaging between blockchain accounts (also known as crypto accounts).
-
-XMTP's extensible design enables a diverse set of use cases for sending message data between web3 identities. Building with the [XMTP client SDK](https://github.com/xmtp/xmtp-js), developers can enhance their apps with **wallet-to-wallet** direct messages, **app-to-wallet** notifications, and **creator-to-community** announcements. Because the XMTP network persists messages, and those messages are tied to web3 identities as opposed to a specific client, each web3 identity has a **portable inbox** of that it can access using any client app built with XMTP.
+Because the XMTP network persists messages, and those messages are tied to web3 identities as opposed to a specific client app, each web3 identity has a **portable inbox** of that it can access using any client app built with XMTP.
 
 Developers can also build tools for decentralized apps (dapps), decentralized autonomous organizations (DAOs), creators, and protocols to re-engage users with web3 messaging.
 
-XMTP is chain-agnostic but currently works only with Ethereum accounts, as well as other web3 identities that client apps built with XMTP can derive from Ethereum accounts, such as ENS names and Lens profiles.
+XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets), though XMTP itself does not use EVMs. XMTP also works with other web3 identities that apps built with XMTP can derive from Ethereum accounts, such as ENS names and Lens profiles.
 
-:::note
+To learn more, see [Wallet apps and blockchains supported by XMTP](wallets).
 
-In web3, "wallet" is commonly used shorthand that refers to a blockchain "wallet address" or "crypto account." When this documentation needs to refer to a tool for managing blockchain accounts, we use "wallet apps."
+:::tip Blockchain account versus wallet app
+
+In web3, people commonly use _wallet_ as shorthand to refer to a _blockchain account_, _crypto account_, or _wallet address_. This documentation uses **blockchain account** to refer to this concept of a unique identifier for a blockchain wallet held by a user. This documentation uses **wallet app** to refer to a tool for managing blockchain accounts.
 
 :::
 

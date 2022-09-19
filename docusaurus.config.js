@@ -65,6 +65,12 @@ const config = {
         sidebarPath: require.resolve('./sidebars/sidebars-about.js'),
       },
     ],
+    [
+      'docusaurus-plugin-plausible',
+      {
+        domain: 'xmtp.org',
+      },
+    ],
   ],
 
   clientModules: [require.resolve('./src/css/tailwind.css')],
@@ -116,11 +122,29 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            className: 'dropdown-carrot',
-            to: 'about/roadmap', // To highlight the navbar item, you must link to a document, not a top-level directory
-            position: 'right',
+            type: 'dropdown',
             label: 'Vision',
-            activeBaseRegex: `/about/`,
+            position: 'right',
+            items: [
+              {
+                to: 'about/roadmap',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Roadmap</div>
+                 <div><small>Learn about what's in store for XMTP in the months ahead</small></div></div></div>`,
+              },
+              {
+                to: 'about/litepaper',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Litepaper</div>
+                 <div><small>Read the public draft of the XMTP Litepaper</small></div></div></div>`,
+              },
+              {
+                to: 'about/case-study-token-gate-chat',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Case study: Token-gated chat</div>
+                 <div><small>@NftTopBest demonstrates one future for trustless messaging</small></div></div></div>`,
+              },
+            ],
           },
           {
             href: 'https://github.com/xmtp',
