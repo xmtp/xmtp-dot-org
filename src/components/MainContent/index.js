@@ -8,6 +8,7 @@ import { HeaderBox } from '../HeaderBox'
 import { SliderItem } from '../SliderItem'
 import { HEADER_DATA, BLOG_DATA } from '../../helpers/constants'
 import { BlogItem } from '../BlogItem'
+import ALink from '../ALink'
 
 export const MainContent = ({ styles }) => {
   const [sliderItems, setSliderItems] = useState(null)
@@ -31,7 +32,7 @@ export const MainContent = ({ styles }) => {
   }, [])
 
   useEffect(() => {
-     if (
+    if (
       localStorage.getItem('theme') === 'dark' ||
       (!('theme' in localStorage) &&
         window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -74,12 +75,12 @@ export const MainContent = ({ styles }) => {
             <small className="text-base text-neutral-800 dark:text-neutral-300">
               Deliver apps and tools that enable messaging between blockchain
               accounts. Want to talk about a use case?
-              <a
-                href="https://github.com/orgs/xmtp/discussions"
-                className="text-red-500 font-bold hover:no-underline ml-1"
+              <ALink
+                to="https://github.com/orgs/xmtp/discussions"
+                className="text-red-500 font-bold ml-1"
               >
                 Join the discussion
-              </a>
+              </ALink>
             </small>
             <ul className="px-0">
               <li className="flex mt-10 flex-row">
@@ -262,13 +263,10 @@ export const MainContent = ({ styles }) => {
               discussion in the XMTP forum
             </p>
             <div className="h-px mb-4 bg-black"></div>
-            <a
-              href="https://github.com/orgs/xmtp/discussions"
-              target="_blank"
-              className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end hover:no-underline"
-            >
-              GitHub Discussions →
-            </a>
+            <ALink
+                to="https://github.com/orgs/xmtp/discussions"
+                className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end"
+              >GitHub Discussions →</ALink>
           </div>
           <div className="w-full max-w-[366px] xl:max-w-[426px] h-[308px] mb-8 rounded-2xl bg-blue-700 md:mx-7 bg-no-repeat bg-[url('/img/discord-bg.png')] px-6 bg-top xl:bg-right-top">
             <h1 className="text-xl font-bold mt-[183px] mb-1 text-white">
@@ -278,13 +276,12 @@ export const MainContent = ({ styles }) => {
               Come say 👋, GM, or wagmi!
             </p>
             <div className="h-px mb-4 bg-white"></div>
-            <a
-              href="https://discord.gg/xmtp"
-              target="_blank"
-              className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
+            <ALink
+              to="https://discord.gg/xmtp"
+              className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end cursor-pointer"
             >
               Discord →
-            </a>
+            </ALink>
           </div>
           <div className="w-full max-w-[366px] xl:max-w-[426px] h-[308px] mb-8 rounded-2xl bg-sky-500 bg-no-repeat bg-[url('/img/twitter-bg.png')] px-6 bg-top xl:bg-right-top">
             <h1 className="text-xl font-bold mt-[183px] mb-1 text-white">
@@ -294,13 +291,12 @@ export const MainContent = ({ styles }) => {
               Keep up with the latest updates
             </p>
             <div className="h-px mb-4 bg-white"></div>
-            <a
-              href="https://twitter.com/xmtp_"
-              target="_blank"
-              className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
+            <ALink
+              to="https://twitter.com/xmtp_"
+              className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end"
             >
               Twitter →
-            </a>
+            </ALink>
           </div>
         </div>
       </div>

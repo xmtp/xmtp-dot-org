@@ -1,4 +1,5 @@
 import React from 'react'
+import ALink from '../ALink'
 
 export const SliderItem = (props) => {
   const {
@@ -10,10 +11,9 @@ export const SliderItem = (props) => {
     html_url,
   } = props.items
   return (
-    <a
-      href={html_url}
-      target="_blank"
-      className="w-[430px] h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto] hover:no-underline"
+    <ALink
+      to={html_url}
+      className="w-[430px] h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto]"
     >
       <p className="font-bold mb-0 text-blue-600 text-base">
         <img className="align-middle mr-2" src="/img/repo.png" />
@@ -38,6 +38,6 @@ export const SliderItem = (props) => {
           {forks_count}
         </div>
       </div>
-    </a>
+    </ALink>
   )
 }

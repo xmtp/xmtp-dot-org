@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '@theme-original/Footer'
 import { useColorMode } from '@docusaurus/theme-common'
 import { Link } from 'react-router-dom'
+import ALink from '../../components/ALink'
 
 export default function FooterWrapper(props) {
   const { colorMode } = useColorMode()
@@ -14,13 +15,12 @@ export default function FooterWrapper(props) {
           <img src="/img/xmtp-icon.svg" className="w-10 md:w-auto" />
           <div className="flex flex-col md:flex-row justify-center text-white my-7 md:my-0">
             <span className="text-sm">
-              <a
+              <ALink
                 className="ml-2 text-white hover:text-white"
-                target="_blank"
-                href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+                tp="https://creativecommons.org/licenses/by/4.0/"
               >
                 CC BY 4.0
-              </a>
+              </ALink>
             </span>
             <Link
               to="/privacy"
@@ -36,15 +36,15 @@ export default function FooterWrapper(props) {
             </Link>
           </div>
           <div className="flex w-[139px] justify-between">
-            <a href="https://github.com/xmtp" target="_blank">
+            <ALink to="https://github.com/xmtp">
               <img src="/img/github-icon.svg" />
-            </a>
-            <a href="https://twitter.com/xmtp_" target="_blank">
+            </ALink>
+            <ALink to="https://twitter.com/xmtp_">
               <img src="/img/twitter-icon.svg" />
-            </a>
-            <a href="https://discord.gg/xmtp" target="_blank">
+            </ALink>
+            <ALink to="https://discord.gg/xmtp">
               <img src="/img/discord-icon.svg" />
-            </a>
+            </ALink>
           </div>
         </div>
       </div>

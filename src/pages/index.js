@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import Layout from '@theme/Layout'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import { useColorMode } from '@docusaurus/theme-common'
 import styles from './index.module.css'
 import { MainContent } from '../components/MainContent'
 

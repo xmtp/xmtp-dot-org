@@ -1,4 +1,5 @@
 import React from 'react'
+import ALink from '../ALink'
 
 export const BlogItem = (props) => {
   const { tag, title, content, user, url } = props.items
@@ -15,10 +16,9 @@ export const BlogItem = (props) => {
           </div>
         ))}
       </div>
-      <a
-        href={url}
-        target="_blank"
-        className="multiline-text-2 group text-red-500 hover:text-red-500 hover:no-underline text-xl h-14 cursor-pointer font-semibold block mb-3"
+      <ALink
+        to={url}
+        className="multiline-text-2 group text-red-500 hover:text-red-500 text-xl h-14 cursor-pointer font-semibold block mb-3"
       >
         {title}
         <img
@@ -26,7 +26,7 @@ export const BlogItem = (props) => {
           src="/img/new-window-icon.svg"
           alt="open new window"
         />
-      </a>
+      </ALink>
       <p className="multiline-text-3 text-sm text-neutral-800 dark:text-neutral-300">
         {content}
       </p>
