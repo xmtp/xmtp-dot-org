@@ -134,13 +134,16 @@ menu, ol, ul {
   margin-right: 20px;
   margin-top: 5px;
 }
+.navbar__client__dropdown_text {
+  font: 1.5rem;
+}
 
 .navbar__client__dropdown_text p {
   margin: 0;
 }
 
 .navbar__client__dropdown_text small {
-  color: #475569;
+  color: #A3A3A3;
 }
 
 /* Override Docusaurus styling*/
