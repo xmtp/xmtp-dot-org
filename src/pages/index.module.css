@@ -13,7 +13,6 @@
   justify-content: center;
 }
 
-
-.headerBox{
-  background-color: var(--ifm-background-color)
+.headerBox {
+  background-color: var(--header-box-background);
 }

@@ -59,6 +59,7 @@
     --ifm-footer-background-color: #171717;
     --header-back-img: url('/img/background.png');
     --header-bg-color: white;
+    --header-box-background: #fff;
   }
 
   /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -74,6 +75,11 @@
     --shadow-color: rgb(23 23 23 / 85%);
     --header-back-img: url('/img/dark-background.png');
     --header-bg-color: black;
+    --header-box-background: #171717;
+  }
+
+  html[data-theme='dark'] {
+    --ifm-background-color: black;
   }
 
   /* From original custom.css */
