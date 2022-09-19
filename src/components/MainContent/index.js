@@ -31,18 +31,22 @@ export const MainContent = ({ styles }) => {
   return (
     <>
       <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto ${colorMode}`}>
-        <div
-          className={`${styles.bannerCards} -mt-36 flex-wrap lg:flex-nowrap mx-0 xl:mx-12`}
-        >
-          {HEADER_DATA.map(({ title, subtitle, url }) => (
-            <HeaderBox
-              key={title}
-              title={title}
-              subtitle={subtitle}
-              url={url}
-            />
-          ))}
+        
+        <div className="xl:px-12">
+          <ul role="list" className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3">
+
+            {HEADER_DATA.map(({ title, subtitle, url }) => (
+              <HeaderBox
+                key={title}
+                title={title}
+                subtitle={subtitle}
+                url={url}
+              />
+            ))}
+
+          </ul>
         </div>
+
         <div className="flex mt-20 max-w-screen-max mx-auto flex-wrap-reverse justify-between xl:justify-start">
           <img
             className="lg:h-auto object-cover max-w-fit overflow-hidden -mx-4 xl:ml-12 lg:basis-1/2 h-[540px] "
@@ -53,6 +57,7 @@ export const MainContent = ({ styles }) => {
             }
             alt="laptop"
           />
+          
           <div className="max-w-[540px] xl:max-w-[437px] mx-0 xl:mx-4">
             <h4 className="text-4xl font-bold mb-2 pt-0 xl:pt-12">
               Build with XMTP
