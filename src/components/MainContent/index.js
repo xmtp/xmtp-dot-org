@@ -145,22 +145,20 @@ export const MainContent = ({ styles }) => {
                 </div>
 
                 <div className="relative -mx-4 mt-10 lg:col-start-1 lg:mt-0">
-                  <img
+                  <ThemedImage
                     className="relative mx-auto hidden 2xl:inline-block 2xl:max-w-[640px]"
-                    src={
-                      colorMode === 'light'
-                        ? '/img/featureGraphicwithFade.png'
-                        : '/img/featureGraphicwithFadeDark.png'
-                    }
+                    sources={{
+                      light: '/img/featureGraphicwithFade.png',
+                      dark: '/img/featureGraphicwithFadeDark.png',
+                    }}
                     alt="laptop"
                   />
-                  <img
-                    className="relative mx-auto inline-block object-fill 2xl:hidden"
-                    src={
-                      colorMode === 'light'
-                        ? '/img/build-xmtp.png'
-                        : '/img/build-xmtp-dark.png'
-                    }
+                  <ThemedImage
+                    className="relative mx-auto inline-block object-fill 2xl:!hidden"
+                    sources={{
+                      light: useBaseUrl('/img/build-xmtp.png'),
+                      dark: useBaseUrl('/img/build-xmtp-dark.png'),
+                    }}
                     alt="laptop"
                   />
                 </div>
