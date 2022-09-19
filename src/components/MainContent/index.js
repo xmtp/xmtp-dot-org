@@ -50,8 +50,8 @@ export const MainContent = ({ styles }) => {
             <div className="lg:absolute mt-12 sm:mt-16">
               <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
                 <div className="lg:col-start-2 md:w-3/6 mx-auto lg:mx-0 lg:w-4/6">
-                  <h3 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">Build with XMTP</h3>
-                  <p className="mt-3 mb-1 text-base text-neutral-800">
+                  <h3 className="text-3xl font-bold tracking-tight text-black sm:text-4xl dark:text-white">Build with XMTP</h3>
+                  <p className="mt-3 mb-1 text-base text-neutral-800 dark:text-neutral-300">
                     Deliver apps and tools that enable messaging between blockchain accounts. Want to talk about a use case?
                   </p>
                   
@@ -71,9 +71,9 @@ export const MainContent = ({ styles }) => {
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
                           <img className="w-6 h-6" src="/img/bell.svg" />
                         </div>
-                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900">Alerts</p>
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">Alerts</p>
                       </dt>
-                      <dd className="ml-16 text-base text-neutral-800">Enable apps to keep users informed with timely event-based notifications</dd>
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">Enable apps to keep users informed with timely event-based notifications</dd>
                     </div>
                     
                     <div className="relative">
@@ -81,9 +81,9 @@ export const MainContent = ({ styles }) => {
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
                           <img className="w-6 h-6" src="/img/speakerphone.svg" />
                         </div>
-                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900">Announcements</p>
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">Announcements</p>
                       </dt>
-                      <dd className="ml-16 text-base text-neutral-800">Enable apps to engage users with meaningful one-to-many messaging</dd>
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">Enable apps to engage users with meaningful one-to-many messaging</dd>
                     </div>
                     
                     <div className="relative">
@@ -91,9 +91,9 @@ export const MainContent = ({ styles }) => {
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
                           <img className="w-6 h-6" src="/img/dm.svg" />
                         </div>
-                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900">Direct messaging</p>
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">Direct messaging</p>
                       </dt>
-                      <dd className="ml-16 text-base text-neutral-800">Enable users to connect and build community with one-to-one messaging</dd>
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">Enable users to connect and build community with one-to-one messaging</dd>
                     </div>
                     
                   </dl>
