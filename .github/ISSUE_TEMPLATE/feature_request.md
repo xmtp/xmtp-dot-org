@@ -1,8 +1,8 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ''
-labels: prelaunch-feedback
+title: 'Feature request:'
+labels: enhancement, prelaunch-feedback
 assignees: ''
 
 ---
