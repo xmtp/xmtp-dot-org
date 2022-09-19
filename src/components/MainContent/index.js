@@ -116,7 +116,7 @@ export const MainContent = ({ styles }) => {
                     src={
                       colorMode === 'light'
                         ? '/img/featureGraphicwithFade.png'
-                        : '/img/featureGraphicwithFade.png'
+                        : '/img/featureGraphicwithFadeDark.png'
                     }
                     alt="laptop"
                   />
