@@ -2,7 +2,7 @@
 
 ## Client SDK
 
-`xmtp-js` is a TypeScript implementation of the XMTP client protocol for use with JavaScript and React applications.
+The XMTP JavaScript SDK is a TypeScript implementation of an XMTP client for use with JavaScript and React apps.
 
 [GitHub repo](https://github.com/xmtp/xmtp-js) | [Docs](docs/client-sdk/javascript/tutorials/quickstart)
 
