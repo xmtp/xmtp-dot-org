@@ -13,7 +13,7 @@ export const BlogItem = (props) => {
             key={tag}
             className="inline-block"
           >
-              <span className="inline-flex items-center mr-3 mb-2 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border-solid border-1 border-blue-300">
+              <span className="inline-flex items-center mr-2 mb-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border-solid border-1 border-blue-300">
                 {tag}
               </span>
               
@@ -27,7 +27,7 @@ export const BlogItem = (props) => {
           target="_blank"
           className="mt-0 block"
         >
-          <p className="mb-2 text-xl font-semibold text-red-500 line-clamp-1">{title}</p>
+          <p className="mb-2 mt-1 text-xl font-semibold text-red-500 line-clamp-1">{title}</p>
         </a>
 
         <p className="mt-0 mb-0 text-base text-neutral-800 line-clamp-3">
