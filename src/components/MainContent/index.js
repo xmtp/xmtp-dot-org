@@ -30,6 +30,18 @@ export const MainContent = ({ styles }) => {
     userAction()
   }, [])
 
+  useEffect(() => {
+     if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [colorMode])
+
   return (
     <>
       <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto ${colorMode}`}>
@@ -55,7 +67,7 @@ export const MainContent = ({ styles }) => {
             }}
             alt="laptop"
           />
-          <div className="max-w-[5 40px] xl:max-w-[437px] mx-0 xl:mx-4">
+          <div className="max-w-[540px] xl:max-w-[437px] mx-0 xl:mx-4">
             <h4 className="text-4xl font-bold mb-2 pt-0 xl:pt-12">
               Build with XMTP
             </h4>
