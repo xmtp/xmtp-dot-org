@@ -43,80 +43,98 @@ export const MainContent = ({ styles }) => {
             />
           ))}
         </div>
-        <div className="flex mt-20 max-w-screen-max mx-auto flex-wrap-reverse justify-between xl:justify-start">
-          <img
-            className="lg:h-auto object-cover max-w-fit overflow-hidden -mx-4 xl:ml-12 lg:basis-1/2 h-[540px] "
-            src={
-              colorMode === 'light'
-                ? '/img/build-xmtp.png'
-                : '/img/build-xmtp-dark.png'
-            }
-            alt="laptop"
-          />
-          <div className="max-w-[540px] xl:max-w-[437px] mx-0 xl:mx-4">
-            <h4 className="text-4xl font-bold mb-2 pt-0 xl:pt-12">
-              Build with XMTP
-            </h4>
-            <small className="text-base text-neutral-800 dark:text-neutral-300">
-              Deliver apps and tools that enable messaging between blockchain
-              accounts. Want to talk about a use case?
-              <a
-                href="https://github.com/orgs/xmtp/discussions"
-                className="text-red-500 font-bold hover:no-underline ml-1"
-              >
-                Join the discussion
-              </a>
-            </small>
-            <ul className="px-0">
-              <li className="flex mt-10 flex-row">
-                <img className="w-12 h-12 mr-4" src="/img/alerts-icon.png" />
-                <div>
-                  <p className="text-black dark:text-white text-xl font-bold mb-2">
-                    Alerts
+            
+        <div>
+          <div className="relative min-h-[630px]">
+
+            <div className="lg:absolute mt-12 sm:mt-16">
+              <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
+                <div className="lg:col-start-2 md:w-3/6 mx-auto lg:mx-0 lg:w-4/6">
+                  <h3 className="text-3xl font-bold tracking-tight text-black sm:text-4xl dark:text-white">Build with XMTP</h3>
+                  <p className="mt-3 mb-1 text-base text-neutral-800 dark:text-neutral-300">
+                    Deliver apps and tools that enable messaging between blockchain accounts. Want to talk about a use case?
                   </p>
-                  <small className="text-base">
-                    Enable apps to keep users informed with timely event-based
-                    notifications
-                  </small>
+                  
+                  <span className="text-base text-neutral-800 dark:text-neutral-300">
+                    <a
+                      href="https://github.com/orgs/xmtp/discussions"
+                      className="text-red-500 font-bold hover:no-underline"
+                    >
+                      Join the discussion
+                    </a>
+                  </span>
+
+                  <dl className="mt-10 space-y-8">
+                    
+                    <div className="relative">
+                      <dt>
+                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
+                          <img className="w-6 h-6" src="/img/bell.svg" />
+                        </div>
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">Alerts</p>
+                      </dt>
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">Enable apps to keep users informed with timely event-based notifications</dd>
+                    </div>
+                    
+                    <div className="relative">
+                      <dt>
+                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
+                          <img className="w-6 h-6" src="/img/speakerphone.svg" />
+                        </div>
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">Announcements</p>
+                      </dt>
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">Enable apps to engage users with meaningful one-to-many messaging</dd>
+                    </div>
+                    
+                    <div className="relative">
+                      <dt>
+                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
+                          <img className="w-6 h-6" src="/img/dm.svg" />
+                        </div>
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">Direct messaging</p>
+                      </dt>
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">Enable users to connect and build community with one-to-one messaging</dd>
+                    </div>
+                    
+                  </dl>
+
+                  <Link
+                    to="/docs/client-sdk/javascript/tutorials/quickstart"
+                    className="bg-red-500 text-white border-none rounded-lg py-3 px-5 font-bold text-base w-44 mt-10 h-12 cursor-pointer hover:bg-red-600 mb-14 xl:mb-0 block hover:no-underline hover:text-white"
+                  >
+                    <img
+                      className="w-5 h-5 mr-2 align-middle"
+                      src="/img/xmtp-sm-icon.png"
+                    />
+                    Start building
+                  </Link>
                 </div>
-              </li>
-              <li className="flex mt-6 flex-row">
-                <img className="w-12 h-12 mr-4" src="/img/announce-icon.png" />
-                <div>
-                  <p className="text-black dark:text-white text-xl font-bold mb-2">
-                    Announcements
-                  </p>
-                  <small className="text-base">
-                    Enable apps to engage users with meaningful one-to-many
-                    messaging
-                  </small>
+
+                <div className="relative -mx-4 mt-10 lg:col-start-1 lg:mt-0">
+                  <img
+                    className="relative mx-auto hidden 2xl:inline-block 2xl:max-w-[640px]"
+                    src={
+                      colorMode === 'light'
+                        ? '/img/featureGraphicwithFade.png'
+                        : '/img/featureGraphicwithFadeDark.png'
+                    }
+                    alt="laptop"
+                  />
+                  <img
+                    className="relative mx-auto inline-block object-fill 2xl:hidden"
+                    src={
+                      colorMode === 'light'
+                        ? '/img/build-xmtp.png'
+                        : '/img/build-xmtp-dark.png'
+                    }
+                    alt="laptop"
+                  />
                 </div>
-              </li>
-              <li className="flex mt-6 flex-row">
-                <img className="w-12 h-12 mr-4" src="/img/dm-icon.png" />
-                <div>
-                  <p className="text-black dark:text-white text-xl font-bold mb-2">
-                    Direct messaging
-                  </p>
-                  <small className="text-base">
-                    Enable users to connect and build community with one-to-one
-                    messaging
-                  </small>
-                </div>
-              </li>
-            </ul>
-            <Link
-              to="/docs/client-sdk/javascript/tutorials/quickstart"
-              className="bg-red-500 text-white border-none rounded-lg py-3 px-5 font-bold text-base w-44 mt-10 h-12 cursor-pointer hover:bg-red-600 mb-14 xl:mb-0 mx-auto block hover:no-underline hover:text-white"
-            >
-              <img
-                className="w-5 h-5 mr-2 align-middle"
-                src="/img/xmtp-sm-icon.png"
-              />
-              Start building
-            </Link>
+              </div>
+            </div>
           </div>
         </div>
+        
         <div className="mt-14 xl:ml-12 hidden mb-12 relative lg:flex">
           <div className="w-56 mr-6 mt-4">
             <p className="text-xl font-bold mb-2">SDK and tools</p>
