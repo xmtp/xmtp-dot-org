@@ -46,18 +46,20 @@ export const MainContent = ({ styles }) => {
   return (
     <>
       <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto ${colorMode}`}>
-        <div
-          className={`${styles.bannerCards} -mt-36 flex-wrap lg:flex-nowrap mx-0 xl:mx-12`}
-        >
-          {HEADER_DATA.map(({ title, subtitle, url }) => (
-            <HeaderBox
-              key={title}
-              title={title}
-              subtitle={subtitle}
-              url={url}
-              styles={styles}
-            />
-          ))}
+        <div className="xl:px-12">
+          <ul
+            role="list"
+            className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
+          >
+            {HEADER_DATA.map(({ title, subtitle, url }) => (
+              <HeaderBox
+                key={title}
+                title={title}
+                subtitle={subtitle}
+                url={url}
+              />
+            ))}
+          </ul>
         </div>
 
         <div>
@@ -146,7 +148,7 @@ export const MainContent = ({ styles }) => {
 
                 <div className="relative -mx-4 mt-10 lg:col-start-1 lg:mt-0">
                   <ThemedImage
-                    className="relative mx-auto hidden 2xl:inline-block 2xl:max-w-[640px]"
+                    className="relative mx-auto !hidden 2xl:!inline-block 2xl:max-w-[640px]"
                     sources={{
                       light: '/img/featureGraphicwithFade.png',
                       dark: '/img/featureGraphicwithFadeDark.png',
