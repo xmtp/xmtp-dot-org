@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { useColorMode } from '@docusaurus/theme-common'
 import ThemedImage from '@theme/ThemedImage'
@@ -152,8 +152,8 @@ export const MainContent = ({ styles }) => {
                   <ThemedImage
                     className="relative mx-auto !hidden 2xl:!inline-block 2xl:max-w-[640px]"
                     sources={{
-                      light: '/img/featureGraphicwithFade.png',
-                      dark: '/img/featureGraphicwithFadeDark.png',
+                      light: useBaseUrl('/img/featureGraphicwithFade.png'),
+                      dark: useBaseUrl('/img/featureGraphicwithFadeDark.png'),
                     }}
                     alt="laptop"
                   />
@@ -243,22 +243,21 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-
         <div className="lg:px-0 xl:px-12">
           <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
-
             <div>
-              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Latest From XMTP</h2>
+              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+                Latest From XMTP
+              </h2>
             </div>
 
-            <hr className="my-4 bg-black dark:bg-neutral-500"/>
+            <hr className="my-4 bg-black dark:bg-neutral-500" />
 
             <div className="grid gap-16 mt-8 gap-y-8 md:grid-cols-3 md:gap-x-5 md:gap-y-12">
-                {BLOG_DATA.map((items) => (
-                  <BlogItem key={items.title} items={items} />
-                ))}
+              {BLOG_DATA.map((items) => (
+                <BlogItem key={items.title} items={items} />
+              ))}
             </div>
-
           </div>
         </div>
 

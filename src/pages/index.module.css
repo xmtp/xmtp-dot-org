@@ -15,4 +15,5 @@
 
 .headerBox {
   background-color: var(--header-box-background);
+  border-color: #404040;
 }
