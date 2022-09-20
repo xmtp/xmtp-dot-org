@@ -12,8 +12,8 @@ export const HEADER_DATA = [
   },
   {
     title: 'Vision',
-    subtitle: 'Learn about the XMTP roadmap, case studies, and more',
-    url: '/about/roadmap',
+    subtitle: 'Read the XMTP Litepaper public draft, roadmap, and case studies',
+    url: '/about/litepaper',
   },
 ]
 
@@ -22,7 +22,7 @@ export const BLOG_DATA = [
     tag: ['Developers', 'Litepaper', 'Messaging'],
     title: 'Introducing the XMTP Litepaper Public Draft',
     content:
-      'A primer on XMTP-the secure web3 messaging protocol-why we’re building it, how it works, and where we see it going in the future.',
+      'A primer on XMTP-the secure web3 messaging protocol-why we’re building it, how it works, and where we see it going in the future. A primer on XMTP-the secure web3 messaging protocol-why we’re building it, how it works, and where we see it going in the future. A primer on XMTP-the secure web3 messaging protocol-why we’re building it, how it works, and where we see it going in the future. ',
     user: {
       name: 'Matt Galligan',
       date: '31 Aug 2022 · 1 min read',

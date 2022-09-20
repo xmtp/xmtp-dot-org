@@ -13,6 +13,9 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
   theme: {
     extend: {
       fontFamily: {
