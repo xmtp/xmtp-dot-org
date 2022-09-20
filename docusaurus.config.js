@@ -131,13 +131,13 @@ const config = {
             items: [
               {
                 to: 'community/community',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Join in and contribute</div>
                  <div><small>Learn ways to join in and contribute to the XMTP community</small></div></div></div>`,
               },
               {
                 to: 'community/code-of-conduct',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/scale.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Code of conduct</div>
                  <div><small>Foster a safe and positive XMTP community experience</small></div></div></div>`,
               },
