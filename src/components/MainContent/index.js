@@ -240,16 +240,16 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-14 min-h-[384px] max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat relative px-8">
+        <div className="flex flex-col mt-8 max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
           <div className="flex justify-center flex-col items-center mt-12 text-center">
             <h1 className="text-black text-4xl font-bold mb-4">
               Join a community of builders
             </h1>
-            <p className="text-neutral-800 text-sm leading-6 text-center max-w-[656px] mb-8">
+            <p className="text-neutral-800 text-base leading-6 text-center max-w-[656px] mb-8">
               From hackathons to startups, developers are building with XMTP to
               address use cases for secure messaging for blockchain accounts
             </p>
-            <button className="bg-black rounded-lg w-52 h-12 text-white font-bold text-sm cursor-pointer flex justify-center items-center border-0">
+            <button className="bg-black rounded-lg w-52 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
               <img src="/img/xmtp-sm-icon.png" className="w-5 h-5 mr-2.5" />
               <Link
                 className="hover:no-underline text-white hover:text-white"
@@ -278,59 +278,84 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
       </main>
-      <div className="flex justify-center bg-neutral-900 -mt-64">
-        <div className="flex max-w-screen-max mx-4 xl:mx-12 mb-16 w-full mt-60 justify-center flex-wrap lg:flex-nowrap">
-          <div className="w-full max-w-[366px] xl:max-w-[426px] h-[308px] mb-8 rounded-2xl bg-neutral-200 bg-no-repeat bg-[url('/img/github-bg.png')] px-6 bg-top xl:bg-right-top">
-            <h1 className="text-xl font-bold mt-[183px] mb-1 text-black">
-              Have a question or idea?
-            </h1>
-            <p className="mb-4 leading-6 text-black">
-              Start <span className="hidden xl:inline">or join</span> a
-              discussion in the XMTP forum
-            </p>
-            <div className="h-px mb-4 bg-black"></div>
-            <a
-              href="https://github.com/orgs/xmtp/discussions"
-              target="_blank"
-              className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end hover:no-underline"
-            >
-              GitHub Discussions →
-            </a>
-          </div>
-          <div className="w-full max-w-[366px] xl:max-w-[426px] h-[308px] mb-8 rounded-2xl bg-blue-700 md:mx-7 bg-no-repeat bg-[url('/img/discord-bg.png')] px-6 bg-top xl:bg-right-top">
-            <h1 className="text-xl font-bold mt-[183px] mb-1 text-white">
-              Chat with the XMTP community
-            </h1>
-            <p className="mb-4 leading-6 text-white">
-              Say 👋, join a dev hangout, or get help
-            </p>
-            <div className="h-px mb-4 bg-white"></div>
-            <a
-              href="https://discord.gg/xmtp"
-              target="_blank"
-              className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
-            >
-              Discord →
-            </a>
-          </div>
-          <div className="w-full max-w-[366px] xl:max-w-[426px] h-[308px] mb-8 rounded-2xl bg-sky-500 bg-no-repeat bg-[url('/img/twitter-bg.png')] px-6 bg-top xl:bg-right-top">
-            <h1 className="text-xl font-bold mt-[183px] mb-1 text-white">
-              Follow XMTP on Twitter
-            </h1>
-            <p className="mb-4 leading-6 text-white">
-              Keep up with the latest updates
-            </p>
-            <div className="h-px mb-4 bg-white"></div>
-            <a
-              href="https://twitter.com/xmtp_"
-              target="_blank"
-              className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
-            >
-              Twitter →
-            </a>
-          </div>
+
+      <div className="bg-neutral-900 -mt-48">
+        <div className="max-w-screen-max mx-auto pt-56 pb-16 px-4 lg:px-5 xl:px-12">
+          <ul
+            role="list"
+            className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
+          >
+            <li className="col-span-1">    
+              <div class="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                <div>
+                  <h1 className="text-xl font-bold mt-[144px] mb-1 text-black">
+                    Have a question or idea?
+                  </h1>
+                  <p className="mb-4 leading-6 text-black">
+                    Start <span className="hidden xl:inline">or join</span> a
+                    discussion in the XMTP forum
+                  </p>
+                  <hr className="my-4 bg-black"/>
+                  <a
+                    href="https://github.com/orgs/xmtp/discussions"
+                    target="_blank"
+                    className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end hover:no-underline"
+                  >
+                    GitHub Discussions →
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li className="col-span-1">    
+              <div class="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                <div>
+                  <h1 className="text-xl font-bold mt-[144px] mb-1 text-white">
+                    Chat with the XMTP community
+                  </h1>
+                  <p className="mb-4 leading-6 text-white">
+                    Say 👋, join a dev hangout, or get help
+                  </p>
+                  <hr className="my-4 bg-white"/>
+                    <a
+                      href="https://discord.gg/xmtp"
+                      target="_blank"
+                      className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
+                    >
+                      Discord →
+                    </a>
+                </div>
+              </div>
+            </li>
+
+            <li className="col-span-1">    
+              <div class="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#01A3EE] bg-no-repeat bg-[url('/img/twitter-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                <div>
+                  <h1 className="text-xl font-bold mt-[144px] mb-1 text-white">
+                    Follow XMTP on Twitter
+                  </h1>
+                  <p className="mb-4 leading-6 text-white">
+                    Keep up with the latest updates
+                  </p>
+                  <hr className="my-4 bg-white"/>
+                    <a
+                      href="https://twitter.com/xmtp_"
+                      target="_blank"
+                      className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
+                    >
+                      Twitter →
+                    </a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
         </div>
       </div>
+
+      
+
+
     </>
   )
 }
