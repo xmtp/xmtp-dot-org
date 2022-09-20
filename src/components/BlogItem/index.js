@@ -30,7 +30,7 @@ export const BlogItem = (props) => {
           <p className="mb-2 mt-1 text-xl font-semibold text-red-500 line-clamp-1">{title}</p>
         </a>
 
-        <p className="mt-0 mb-0 text-base text-neutral-800 line-clamp-3">
+        <p className="mt-0 mb-0 text-base text-neutral-800 dark:text-neutral-300 line-clamp-3">
           {content}
         </p>
       </div>
@@ -38,16 +38,16 @@ export const BlogItem = (props) => {
       <div className="mt-4 flex items-middle">
         <div className="flex-shrink-0">
           
-          <span className="sr-only">{user.name}</span>
+          <span className="sr-only dark:text-white">{user.name}</span>
           <img className="h-10 w-10 rounded-full" src={`/img/${user.img || 'avatar.png'}`} alt="" />
 
         </div>
 
         <div className="ml-3">
-          <p className="mb-0 text-sm font-medium text-neutral-800">
+          <p className="mb-0 text-sm font-medium text-neutral-800 dark:text-white">
             {user.name}
           </p>
-          <div className="flex space-x-1 text-sm text-neutral-800">
+          <div className="flex space-x-1 text-sm text-neutral-800 dark:text-neutral-500">
             <time>{user.date}</time>
           </div>
         </div>
