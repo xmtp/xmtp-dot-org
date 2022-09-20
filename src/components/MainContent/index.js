@@ -286,7 +286,7 @@ export const MainContent = ({ styles }) => {
             className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
           >
             <li className="col-span-1">    
-              <div class="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+              <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
                   <h1 className="text-xl font-bold mt-[144px] mb-1 text-black">
                     Have a question or idea?
@@ -308,7 +308,7 @@ export const MainContent = ({ styles }) => {
             </li>
 
             <li className="col-span-1">    
-              <div class="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+              <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
                   <h1 className="text-xl font-bold mt-[144px] mb-1 text-white">
                     Chat with the XMTP community
@@ -329,7 +329,7 @@ export const MainContent = ({ styles }) => {
             </li>
 
             <li className="col-span-1">    
-              <div class="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#01A3EE] bg-no-repeat bg-[url('/img/twitter-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+              <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#01A3EE] bg-no-repeat bg-[url('/img/twitter-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
                   <h1 className="text-xl font-bold mt-[144px] mb-1 text-white">
                     Follow XMTP on Twitter
