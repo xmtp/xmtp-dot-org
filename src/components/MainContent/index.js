@@ -230,13 +230,22 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="mx-0 xl:mx-12 mb-10">
-          <h1 className="text4xl font-bold mb-4">Latest from XMTP</h1>
-          <div className="h-[1px] bg-black dark:bg-neutral-500 w-full mb-8"></div>
-          <div className="flex flex-wrap flex-col lg:flex-row lg:flex-nowrap">
-            {BLOG_DATA.map((items) => (
-              <BlogItem key={items.title} items={items} />
-            ))}
+
+        <div className="lg:px-0 xl:px-12">
+          <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
+
+            <div>
+              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Latest From XMTP</h2>
+            </div>
+
+            <hr className="my-4 bg-black dark:bg-neutral-500"/>
+
+            <div className="grid gap-16 mt-8 gap-y-8 md:grid-cols-3 md:gap-x-5 md:gap-y-12">
+                {BLOG_DATA.map((items) => (
+                  <BlogItem key={items.title} items={items} />
+                ))}
+            </div>
+
           </div>
         </div>
 
