@@ -125,6 +125,18 @@ menu, ol, ul {
   max-width: var(--max-width) !important;
 }
 
+.navbar {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(15px);
+  box-shadow: none;
+}
+
+[data-theme='dark'] .navbar {
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(15px);
+  box-shadow: none;
+}
+
 .navbar__client__dropdown {
   display: flex;
 }
