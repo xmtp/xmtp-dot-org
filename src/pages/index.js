@@ -8,14 +8,7 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
 
   return (
-    <header
-      className={
-        "px-0 pt-12 lg:pt-16 h-[504px] bg-[url('/img/background.jpg')] bg-cover border-0 border-b border-solid border-b-black " +
-        (colorMode === 'light'
-          ? "bg-[url('/img/background.jpg')]"
-          : "bg-[url('/img/dark-background.jpg')] bg-black")
-      }
-    >
+    <header className="homepageHeader px-0 pt-12 lg:pt-16 h-[504px] bg-cover border-0 border-b border-solid border-b-black">
       <div className="container text-left py-0 xl:px-12 m-auto max-w-screen-max">
         <div className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-3 lg:mb-4 w-fit">
           📄 Read the XMTP Litepaper - public draft »

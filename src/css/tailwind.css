@@ -57,7 +57,7 @@
   }
   [data-theme='light'] {
     --ifm-footer-background-color: #171717;
-    --header-back-img: url('/img/background.png');
+    --header-back-img: url('/img/background.jpg');
     --header-bg-color: white;
     --header-box-background: #fff;
   }
@@ -73,7 +73,7 @@
     --ifm-color-primary-lightest: #f8f2fd;
     --ifm-heading-color: #fff;
     --shadow-color: rgb(23 23 23 / 85%);
-    --header-back-img: url('/img/dark-background.png');
+    --header-back-img: url('/img/dark-background.jpg');
     --header-bg-color: black;
     --header-box-background: #171717;
   }

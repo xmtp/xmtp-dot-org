@@ -51,12 +51,14 @@ export const MainContent = ({ styles }) => {
             role="list"
             className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
           >
-            {HEADER_DATA.map(({ title, subtitle, url }) => (
+            {HEADER_DATA.map(({ title, subtitle, url, icon }) => (
               <HeaderBox
                 key={title}
                 title={title}
                 subtitle={subtitle}
                 url={url}
+                styles={styles}
+                icon={icon}
               />
             ))}
           </ul>
