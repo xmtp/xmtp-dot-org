@@ -43,7 +43,7 @@ If you open a feature request and want to work on it, comment on the issue to le
 
 You can contribute by creating or updating XMTP documentation.
 
-Except for [quick fixes](#make-a-quick-fix), before you start contributing to XMTP documentation, please consider opening a documentation issue first by [reporting a bug](#report-a-bug) or [requesting a feature](#request-a-feature).
+With the exception of [quick fixes](#make-a-quick-fix), please open a documentation issue **before** you start contributing to XMTP documentation: [Report a bug](#report-a-bug) or [request a feature](#request-a-feature)
 
 Opening a documentation issue first gives the `xmtp.org` team the opportunity to share relevant context for your proposed contribution.
 
@@ -55,7 +55,7 @@ To contribute to XMTP documentation, [submit a pull request](#submit-a-pull-requ
 
 Here are two common methods for submitting a PR to the `xmtp-dot-org` repo. Use the one that best suits the issue and the way you like to work.
 
-When you submit a PR, make sure to include a link to the [bug report](#report-a-bug) or [feature request](#request-a-feature-or-enhancement) your PR addresses, if one exists.
+When you submit a PR, make sure to include a link to the [bug report](#report-a-bug) or [feature request](#request-a-feature-or-enhancement) your PR addresses. If a documentation issue doesn't exist, please open one before you start contributing.
 
 - Use the **Edit this page** link at the bottom of every documentation page on `xmtp.org`.
 
@@ -73,9 +73,9 @@ When you submit a PR, make sure to include a link to the [bug report](#report-a-
 
 After you've submitted your PR, the `xmtp.org` team will review your PR and either:
 
-- Accept your proposal and publish your change
-- Accept your proposal but ask for some changes before publishing
-- Not accept your proposal and explain why
+- Accept your PR and publish your contribution
+- Accept your PR but request some changes before publishing your contribution
+- Not accept your PR and explain why
 
 The `xmtp.org` team includes technical writers, product managers, developers, designers, and other XMTP subject matter experts. The team reviews documentation PRs based on a few criteria, including:
 
@@ -163,10 +163,10 @@ Note that any changes you save to markdown files aren't reflected in this static
 
 ## Documentation style guidance
 
-When writing XMTP documentation, follow the **[Google developer documentation style guide](https://developers.google.com/style)**. You might find the [Word list](https://developers.google.com/style/word-list#word-list) particularly useful.
+When writing XMTP documentation, follow the [Google developer documentation style guide](https://developers.google.com/style). You might find the [Word list](https://developers.google.com/style/word-list#word-list) particularly useful.
 
-If you can't find the guidance you need in the _Google developer documentation style guide_, follow the **[Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)**.
+If you can't find the guidance you need in the _Google developer documentation style guide_, follow the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
 
-If you need guidance about the spelling of a nontechnical term, follow the **[Merriam-Webster Dictionary](https://www.merriam-webster.com/)**.
+If you need guidance about the spelling of a nontechnical term, follow the [Merriam-Webster Dictionary](https://www.merriam-webster.com/).
 
-XMTP documentation strives to use plain language to ensure that content is clear to as many people as possible. **[Plainlanguage.gov](https://www.plainlanguage.gov/)** is a great place to learn how to write plainly.
+XMTP documentation strives to use plain language to ensure that content is clear to as many people as possible. [Plainlanguage.gov](https://www.plainlanguage.gov/) is a great place to learn how to write plainly.
