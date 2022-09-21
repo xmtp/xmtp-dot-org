@@ -62,7 +62,7 @@ export const EXAMPLE_CHAT_URL = "https://api.github.com/repos/xmtp/example-chat-
 
 export const CHAT_ITEM = {
   id:"2534740",
-  full_name: 'Hosted example app on production network',
+  full_name: 'Hosted example app',
   description:
     'Hosted example-react-app connected to the XMTP production network',
   text: 'Try it',

@@ -38,7 +38,7 @@ export const MainContent = ({ styles }) => {
     const dataChat = await responseChat.json()
     if (dataChat) items = [...items, dataChat]
 
-    items = [...items, CHAT_ITEM, VERCEL_ITEM]
+    items = [...items, CHAT_ITEM]
     setSliderItems(items)
   }
 
@@ -181,43 +181,47 @@ export const MainContent = ({ styles }) => {
               Build with XMTP using the SDK and dev tools
             </small>
           </div>
-          <div className="flex">
-            <img
-              onClick={() => {
-                document.getElementsByClassName(
-                  'inner-div'
-                )[0].scrollLeft -= 453
-              }}
-              src={
-                colorMode === 'light'
-                  ? '/img/right-arrow.svg'
-                  : '/img/right-arrow-dark.svg'
-              }
-              className="-scale-x-100 cursor-pointer"
-            />
-          </div>
+          {sliderItems && sliderItems?.length > 3 ? (
+            <div className="flex">
+              <img
+                onClick={() => {
+                  document.getElementsByClassName(
+                    'inner-div'
+                  )[0].scrollLeft -= 453
+                }}
+                src={
+                  colorMode === 'light'
+                    ? '/img/right-arrow.svg'
+                    : '/img/right-arrow-dark.svg'
+                }
+                className="-scale-x-100 cursor-pointer"
+              />
+            </div>
+          ) : null}
           <div className="inner-div flex flex-nowrap overflow-x-scroll w-3/4 flex-1 scroll-smooth">
             {sliderItems
               ? sliderItems.map((items) => (
-                  <SliderItem key={items.id} items={items} />
+                  <SliderItem key={items.id} items={items} size={sliderItems?.length} />
                 ))
               : null}
           </div>
-          <div className="arrow-icon w-40 h-[128px] absolute right-0 flex justify-center">
-            <img
-              onClick={() => {
-                document.getElementsByClassName(
-                  'inner-div'
-                )[0].scrollLeft += 453
-              }}
-              src={
-                colorMode === 'light'
-                  ? '/img/right-arrow.svg'
-                  : '/img/right-arrow-dark.svg'
-              }
-              className="cursor-pointer w-12"
-            />
-          </div>
+          {sliderItems && sliderItems?.length > 3 ? (
+            <div className="arrow-icon w-40 h-[128px] absolute right-0 flex justify-center">
+              <img
+                onClick={() => {
+                  document.getElementsByClassName(
+                    'inner-div'
+                  )[0].scrollLeft += 453
+                }}
+                src={
+                  colorMode === 'light'
+                    ? '/img/right-arrow.svg'
+                    : '/img/right-arrow-dark.svg'
+                }
+                className="cursor-pointer w-12"
+              />
+            </div>
+          ) : null}
         </div>
         <div className="flex flex-col mt-20 lg:mt-24 h-[1118px] lg:h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center">
           {' '}
