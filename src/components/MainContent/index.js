@@ -240,7 +240,7 @@ export const MainContent = ({ styles }) => {
           <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
             <div>
               <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white color-white">
-                Latest From XMTP
+                Latest from XMTP
               </h2>
             </div>
 
@@ -324,7 +324,7 @@ export const MainContent = ({ styles }) => {
               <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
                   <h1 className="text-xl font-bold mt-36 mb-1 text-white">
-                    Chat with the XMTP community
+                    Chat with the community
                   </h1>
                   <p className="mb-4 leading-6 text-white">
                     Say 👋, join a dev hangout, or get help
