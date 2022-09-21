@@ -67,6 +67,7 @@ export const CHAT_ITEM = {
     'Hosted example-react-app connected to the XMTP production network',
   text: 'Try it',
   html_url: 'https://xmtp.chat/',
+  icon:'chat-icon.svg'
 }
 export const VERCEL_ITEM = {
   id:"1768846",
@@ -74,4 +75,5 @@ export const VERCEL_ITEM = {
   description: 'Hosted example-react-app connected to the XMTP dev network',
   text: 'Try it',
   html_url: 'https://xmtp.vercel.app/',
+  icon:'chat-icon.svg'
 }

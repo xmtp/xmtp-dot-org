@@ -9,6 +9,7 @@ export const SliderItem = (props) => {
     forks_count,
     text,
     html_url,
+    icon,
   } = props.items
   return (
     <a
@@ -17,7 +18,7 @@ export const SliderItem = (props) => {
       className="w-[430px] h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto] hover:no-underline"
     >
       <p className="font-bold mb-0 text-blue-600 text-base">
-        <img className="align-middle mr-2" src="/img/repo.png" />
+        <img className="align-middle mr-2" src={`/img/${icon || 'repo.png'}`} />
         {full_name}
       </p>
       <div className="text-sm text-gray-600 dark:text-neutral-300 mt-1.5 h-10">
@@ -25,7 +26,7 @@ export const SliderItem = (props) => {
       </div>
       <div className="flex flex-row mt-3">
         {text ? (
-          <div className='text-xs text-blue-600 font-bold'>{text}</div>
+          <div className="text-xs text-blue-600 font-bold">{text}</div>
         ) : (
           <>
             {language && (
