@@ -151,7 +151,7 @@ export const MainContent = ({ styles }) => {
                 <div className="-mx-4 mt-10 lg:col-start-1 lg:mt-0">
                   <div className="absolute mx-auto object-fill bg-none img-gradient z-10 h-[91%] w-36"></div>
                   <ThemedImage
-                    className="relative mx-auto inline-block object-fill md:h-[573px]"
+                    className="relative mx-auto !inline-block object-fill md:max-h-[573px] lg:w-11/12"
                     sources={{
                       light: useBaseUrl('/img/build-xmtp.png'),
                       dark: useBaseUrl('/img/build-xmtp-dark.png'),
