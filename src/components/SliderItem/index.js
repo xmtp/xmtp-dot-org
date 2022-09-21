@@ -12,15 +12,11 @@ export const SliderItem = (props) => {
     icon,
   } = props.items
 
-  const { size } = props
-
   return (
     <a
       href={html_url}
       target="_blank"
-      className={`${
-        size > 3 ? 'w-[430px]' : 'w-[357px]'
-      } h-32 border-gray-200 dark:border-neutral-700 p-4 mr-6 border-x border-y border-solid flex-[0_0_auto] hover:no-underline`}
+      className="lg:w-[357px] h-32 border-gray-200 dark:border-neutral-700 p-4 lg:mr-6 border-x border-y border-solid flex-[0_0_auto] hover:no-underline w-auto"
     >
       <p className="font-bold mb-0 text-blue-600 text-base">
         <img className="align-middle mr-2" src={`/img/${icon || 'repo.png'}`} />
