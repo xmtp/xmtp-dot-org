@@ -23,14 +23,14 @@ export const BlogItem = (props) => {
           </p>
         </ALink>
 
-        <p className="mt-0 mb-0 text-base text-neutral-800 dark:text-neutral-300 line-clamp-3">
+        <p className="mt-0 mb-0 text-base text-neutral-800 dark:text-neutral-300 line-clamp-3 color-neutral-300">
           {content}
         </p>
       </div>
 
       <div className="mt-4 flex items-middle">
         <div className="flex-shrink-0">
-          <span className="sr-only dark:text-white">{user.name}</span>
+          <span className="sr-only dark:text-white color-white">{user.name}</span>
           <img
             className="h-10 w-10 rounded-full"
             src={`/img/${user.img || 'avatar.png'}`}
@@ -39,10 +39,10 @@ export const BlogItem = (props) => {
         </div>
 
         <div className="ml-3">
-          <p className="mb-0 text-sm font-medium text-neutral-800 dark:text-white">
+          <p className="mb-0 text-sm font-medium text-neutral-800 dark:text-white color-white">
             {user.name}
           </p>
-          <div className="flex space-x-1 text-sm text-neutral-800 dark:text-neutral-500">
+          <div className="flex space-x-1 text-sm text-neutral-800 dark:text-neutral-500 color-neutral-500">
             <time>{user.date}</time>
           </div>
         </div>

@@ -17,7 +17,7 @@ export const HeaderBox = ({ title, subtitle, url, styles, icon }) => {
           <h3 className="text-xl md:text-2xl font-semibold mb-0 mt-3 md:mt-9">
             <Link
               to={url}
-              className="focus:outline-none dark:text-white text-gray-900 hover:text-red-500 dark:hover:text-red-500 hover:no-underline"
+              className="focus:outline-none text-gray-900 hover:text-red-500 dark:hover:text-red-500 hover:no-underline dark:text-white color-white"
             >
               <span className="absolute inset-0" aria-hidden="true"></span>
               {subtitle}

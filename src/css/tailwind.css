@@ -115,10 +115,12 @@
 
 /* List style reset */
 
-menu, ol, ul {
-    list-style: none;
-    margin: 0;
-    padding:0
+menu,
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -155,7 +157,7 @@ menu, ol, ul {
 }
 
 .navbar__client__dropdown_text small {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 /* Override Docusaurus styling*/

@@ -66,18 +66,18 @@ export const MainContent = ({ styles }) => {
 
         <div>
           <div className="relative min-h-[630px]">
-            <div className="lg:absolute mt-12 sm:mt-16">
+            <div className="mt-12 sm:mt-16">
               <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
                 <div className="lg:col-start-2 md:w-3/6 mx-auto lg:mx-0 lg:w-4/6">
-                  <h3 className="text-3xl font-bold tracking-tight text-black sm:text-4xl dark:text-white">
+                  <h3 className="text-3xl font-bold tracking-tight text-black sm:text-4xl dark:text-white color-white">
                     Build with XMTP
                   </h3>
-                  <p className="mt-3 mb-1 text-base text-neutral-800 dark:text-neutral-300">
+                  <p className="mt-3 mb-1 text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                     Deliver apps and tools that enable messaging between
                     blockchain accounts. Want to talk about a use case?
                   </p>
 
-                  <span className="text-base text-neutral-800 dark:text-neutral-300">
+                  <span className="text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                     <ALink
                       to="https://github.com/orgs/xmtp/discussions"
                       className="text-red-500 font-bold ml-1"
@@ -89,14 +89,14 @@ export const MainContent = ({ styles }) => {
                   <dl className="mt-10 space-y-8">
                     <div className="relative">
                       <dt>
-                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
+                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800">
                           <img className="w-6 h-6" src="/img/bell.svg" />
                         </div>
-                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Alerts
                         </p>
                       </dt>
-                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                         Enable apps to keep users informed with timely
                         event-based notifications
                       </dd>
@@ -104,17 +104,17 @@ export const MainContent = ({ styles }) => {
 
                     <div className="relative">
                       <dt>
-                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
+                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800">
                           <img
                             className="w-6 h-6"
                             src="/img/speakerphone.svg"
                           />
                         </div>
-                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Announcements
                         </p>
                       </dt>
-                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                         Enable apps to engage users with meaningful one-to-many
                         messaging
                       </dd>
@@ -122,14 +122,14 @@ export const MainContent = ({ styles }) => {
 
                     <div className="relative">
                       <dt>
-                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
+                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 ">
                           <img className="w-6 h-6" src="/img/dm.svg" />
                         </div>
-                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Direct messaging
                         </p>
                       </dt>
-                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                         Enable users to connect and build community with
                         one-to-one messaging
                       </dd>
@@ -148,17 +148,10 @@ export const MainContent = ({ styles }) => {
                   </Link>
                 </div>
 
-                <div className="relative -mx-4 mt-10 lg:col-start-1 lg:mt-0">
+                <div className="-mx-4 mt-10 lg:col-start-1 lg:mt-0">
+                  <div className="absolute mx-auto object-fill bg-none img-gradient z-10 h-[91%] w-1/5"></div>
                   <ThemedImage
-                    className="relative mx-auto !hidden 2xl:!inline-block 2xl:max-w-[640px]"
-                    sources={{
-                      light: useBaseUrl('/img/featureGraphicwithFade.png'),
-                      dark: useBaseUrl('/img/featureGraphicwithFadeDark.png'),
-                    }}
-                    alt="laptop"
-                  />
-                  <ThemedImage
-                    className="relative mx-auto inline-block object-fill 2xl:!hidden"
+                    className="relative mx-auto inline-block object-fill"
                     sources={{
                       light: useBaseUrl('/img/build-xmtp.png'),
                       dark: useBaseUrl('/img/build-xmtp-dark.png'),
@@ -246,7 +239,7 @@ export const MainContent = ({ styles }) => {
         <div className="lg:px-0 xl:px-12">
           <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
             <div>
-              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white color-white">
                 Latest From XMTP
               </h2>
             </div>

@@ -3,6 +3,7 @@ import Layout from '@theme/Layout'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import styles from './index.module.css'
 import { MainContent } from '../components/MainContent'
+import './custom.css'
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
