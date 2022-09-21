@@ -9,7 +9,7 @@ export default function FooterWrapper(props) {
   return (
     <>
       <Footer {...props} />
-      <div className={`bg-[#171717] px-4 md-px-12 ${colorMode}`}>
+      <div className={`bg-black px-4 md-px-12 ${colorMode}`}>
         <div className="h-px bg-white max-w-screen-max mx-auto" />
         <div className="flex justify-center flex-wrap md:justify-between items-center h-auto md:h-32 max-w-screen-max mx-auto mt-9 md:mt-0 mb-20 md:mb-0 text-center md:text-inherit flex-col md:flex-row">
           <img src="/img/xmtp-icon.svg" className="w-10 md:w-auto" />

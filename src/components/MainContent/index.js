@@ -293,7 +293,7 @@ export const MainContent = ({ styles }) => {
         </div>
       </main>
 
-      <div className="bg-neutral-900 -mt-48">
+      <div className="bg-black -mt-48">
         <div className="max-w-screen-max mx-auto pt-56 pb-16 px-4 lg:px-5 xl:px-12">
           <ul
             role="list"
