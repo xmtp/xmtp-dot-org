@@ -27,8 +27,10 @@
   color: var(--text-color-neutral-700);
 }
 
-.img-gradient {
-  --tw-gradient-stops: var(--tw-gradient-from),
-    var(--tw-gradient-to, rgb(0 0 0 / 0));
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+@media (min-width: 1536px) {
+  .img-gradient {
+    --tw-gradient-stops: var(--tw-gradient-from),
+      var(--tw-gradient-to, rgb(0 0 0 / 0));
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
 }
