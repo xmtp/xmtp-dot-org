@@ -125,7 +125,7 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'community/community', // To highlight the navbar item, you must link to a document, not a top-level directory
+            type: 'dropdown',
             position: 'right',
             label: 'Community',
             items: [
@@ -137,7 +137,7 @@ const config = {
               },
               {
                 to: 'community/code-of-conduct',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/scale.svg" alt="icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Code of conduct</div>
                  <div><small>Foster a safe and positive XMTP community experience</small></div></div></div>`,
               },
