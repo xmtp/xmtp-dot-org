@@ -22,6 +22,7 @@ const config = {
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
+  clientModules: [require.resolve('./src/css/tailwind.css')],
 
   presets: [
     [
@@ -73,7 +74,6 @@ const config = {
     ],
   ],
 
-  clientModules: [require.resolve('./src/css/tailwind.css')],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
