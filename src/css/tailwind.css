@@ -209,11 +209,11 @@
 }
 
 .footer__item {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .footer__item .footer__link-item {
-  line-height: 1rem;
+  line-height: .5rem;
 }
 
 .multiline-text-2 {
