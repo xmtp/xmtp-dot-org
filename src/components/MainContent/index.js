@@ -49,7 +49,7 @@ export const MainContent = ({ styles }) => {
         <div className="xl:px-12">
           <ul
             role="list"
-            className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
+            className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
           >
             {HEADER_DATA.map(({ title, subtitle, url, icon }) => (
               <HeaderBox
@@ -222,7 +222,7 @@ export const MainContent = ({ styles }) => {
             <h1 className="text-white text-3xl xl:text-4xl font-bold mb-4 leading-9">
               Messages meet users where they are
             </h1>
-            <p className="text-neutral-300 text-base leading-6 text-center max-w-[656px] mb-8">
+            <p className="text-neutral-300 text-base leading-6 text-center lg:max-w-[70%] mb-8">
               Building with XMTP gives users a portable inbox that follows them
               across web3, providing access to their messages using any app
               built with XMTP.
@@ -259,7 +259,7 @@ export const MainContent = ({ styles }) => {
             <h1 className="text-black text-4xl font-bold mb-4">
               Join a community of builders
             </h1>
-            <p className="text-neutral-800 text-base leading-6 text-center max-w-[656px] mb-8">
+            <p className="text-neutral-800 text-base leading-6 text-center lg:max-w-[70%] mb-8">
               From hackathons to startups, developers are building with XMTP to
               address use cases for secure messaging for blockchain accounts
             </p>
@@ -297,12 +297,12 @@ export const MainContent = ({ styles }) => {
         <div className="max-w-screen-max mx-auto pt-56 pb-16 px-4 lg:px-5 xl:px-12">
           <ul
             role="list"
-            className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
+            className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
           >
             <li className="col-span-1">
               <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
-                  <h1 className="text-xl font-bold mt-[144px] mb-1 text-black">
+                  <h1 className="text-xl font-bold mt-36 mb-1 text-black">
                     Have a question or idea?
                   </h1>
                   <p className="mb-4 leading-6 text-black">
@@ -323,7 +323,7 @@ export const MainContent = ({ styles }) => {
             <li className="col-span-1">
               <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
-                  <h1 className="text-xl font-bold mt-[144px] mb-1 text-white">
+                  <h1 className="text-xl font-bold mt-36 mb-1 text-white">
                     Chat with the XMTP community
                   </h1>
                   <p className="mb-4 leading-6 text-white">
@@ -343,7 +343,7 @@ export const MainContent = ({ styles }) => {
             <li className="col-span-1">
               <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#01A3EE] bg-no-repeat bg-[url('/img/twitter-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
-                  <h1 className="text-xl font-bold mt-[144px] mb-1 text-white">
+                  <h1 className="text-xl font-bold mt-36 mb-1 text-white">
                     Follow XMTP on Twitter
                   </h1>
                   <p className="mb-4 leading-6 text-white">

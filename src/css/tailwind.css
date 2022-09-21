@@ -115,14 +115,6 @@
 
 /* List style reset */
 
-menu,
-ol,
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   max-width: var(--max-width) !important;
 }
