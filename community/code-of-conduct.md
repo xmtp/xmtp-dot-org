@@ -22,7 +22,7 @@ Examples of behaviors that contribute to a positive environment for our communit
 - Being bold yet intentional when presenting ideas. We are here to help ensure the world has access to secure and private communication, while also acknowledging that building successful protocols and ecosystems requires the application of logic and evidence.
 - Giving and gracefully accepting constructive feedback
 - Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
-- Focusing on what is best not just for us as individuals but for the overall community
+- Focusing on what is best not just for us as individuals but for the overall community, and the people depending on XMTP for communication.
 
 Examples of unacceptable behavior include:
 
