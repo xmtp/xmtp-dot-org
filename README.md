@@ -170,3 +170,4 @@ If you can't find the guidance you need in the _Google developer documentation s
 If you need guidance about the spelling of a nontechnical term, follow the [Merriam-Webster Dictionary](https://www.merriam-webster.com/).
 
 XMTP documentation strives to use plain language to ensure that content is clear to as many people as possible. [Plainlanguage.gov](https://www.plainlanguage.gov/) is a great place to learn how to write plainly.
+
