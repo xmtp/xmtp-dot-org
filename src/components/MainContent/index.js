@@ -173,58 +173,59 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="mt-14 xl:ml-12 mb-12 relative flex flex-col lg:flex-row">
-          <div className="w-auto lg:max-w-[224px] mr-6 mt-4 mb-6 lg:mb-0">
+        <div className="mt-14 xl:ml-12 mb-12 relative grid grid-cols-1 lg:grid-cols-11">
+          <div className="w-auto mr-6 mt-4 mb-6 lg:mb-0 col-span-2">
             <p className="text-xl font-bold mb-2">SDK and tools</p>
             <small className="text-base">
               Build with XMTP using the SDK and dev tools
             </small>
           </div>
-
-          <div
-            className={`hidden lg:flex ${
-              sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
-            }`}
-          >
-            <img
-              onClick={() => {
-                document.getElementsByClassName(
-                  'inner-div'
-                )[0].scrollLeft -= 360
-              }}
-              src={
-                colorMode === 'light'
-                  ? '/img/right-arrow.svg'
-                  : '/img/right-arrow-dark.svg'
-              }
-              className="-scale-x-100 cursor-pointer"
-            />
-          </div>
-          <div className="inner-div flex flex-col lg:flex-row overflow-x-scroll w-auto space-y-4 lg:space-y-0 lg:w-3/4 flex-1 scroll-smooth">
-            {sliderItems
-              ? sliderItems.map((items) => (
-                  <SliderItem key={items.id} items={items} />
-                ))
-              : null}
-          </div>
-          <div
-            className={`arrow-icon w-40 h-[128px] absolute right-0 justify-center hidden lg:flex ${
-              sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
-            }`}
-          >
-            <img
-              onClick={() => {
-                document.getElementsByClassName(
-                  'inner-div'
-                )[0].scrollLeft += 360
-              }}
-              src={
-                colorMode === 'light'
-                  ? '/img/right-arrow.svg'
-                  : '/img/right-arrow-dark.svg'
-              }
-              className="cursor-pointer w-12"
-            />
+          <div className="col-span-9 grid grid-cols-10 relative">
+            <div
+              className={`hidden -scale-x-100 lg:grid absolute -left-8 h-32 justify-center arrow-icon w-20 items-center ${
+                sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
+              }`}
+            >
+              <img
+                onClick={() => {
+                  document.getElementsByClassName(
+                    'inner-div'
+                  )[0].scrollLeft -= 360
+                }}
+                src={
+                  colorMode === 'light'
+                    ? '/img/right-arrow.svg'
+                    : '/img/right-arrow-dark.svg'
+                }
+                className="cursor-pointer w-12"
+              />
+            </div>
+            <div className="inner-div grid grid-flow-row lg:grid-flow-col overflow-x-scroll w-auto space-y-4 lg:space-y-0 flex-1 scroll-smooth col-span-10">
+              {sliderItems
+                ? sliderItems.map((items) => (
+                    <SliderItem key={items.id} items={items} />
+                  ))
+                : null}
+            </div>
+            <div
+              className={`arrow-icon w-40 h-32 absolute right-0 items-center justify-center hidden lg:grid ${
+                sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
+              }`}
+            >
+              <img
+                onClick={() => {
+                  document.getElementsByClassName(
+                    'inner-div'
+                  )[0].scrollLeft += 360
+                }}
+                src={
+                  colorMode === 'light'
+                    ? '/img/right-arrow.svg'
+                    : '/img/right-arrow-dark.svg'
+                }
+                className="cursor-pointer w-12"
+              />
+            </div>
           </div>
         </div>
         <div className="flex flex-col mt-20 lg:mt-24 h-[1118px] lg:h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center">

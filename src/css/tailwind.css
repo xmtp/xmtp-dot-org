@@ -69,7 +69,7 @@
     --ifm-color-primary-lighter: #dbc2f4;
     --ifm-color-primary-lightest: #f8f2fd;
     --ifm-heading-color: #fff;
-    --shadow-color: rgb(23 23 23 / 85%);
+    --shadow-color: rgb(0 0 0 / 75%);
   }
 
   /* From original custom.css */
