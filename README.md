@@ -83,7 +83,7 @@ The `xmtp.org` team includes technical writers, product managers, developers, de
 - Audience needs
 - Adherence to [documentation style guidance](#documentation-style-guidance)
 
-## Use the **Edit this page** link to submit a pull request
+## Use the “Edit this page” link to submit a pull request
 
 Using the **Edit this page** link provides a guided flow for editing content and submitting a PR using the GitHub UI in a web browser. Note that this method only allows you to submit a PR to an **existing** documentation page.
 
