@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Join in and contribute to the XMTP community
 
-There are many ways to participate in the XMTP community, whether you are a developer building with XMTP, a developer working on improving the protocol, or a web3 enthusiast interested in learning more about XMTP.
+There are many ways to participate in the XMTP community, whether you are building with XMTP, working on improving the protocol, or simply interested in learning more about XMTP.
 
 ## GitHub Discussions
 
