@@ -93,7 +93,7 @@ A PR is a request to the `xmtp.org` team to add (or pull) your content updates i
 
 1. Click the **Edit this page** link at the bottom of the page you want to fix. The link takes you to the page’s markdown file on GitHub.
 
-2. The GitHub UI might tell you that you need to fork the repository to propose changes. Forking the repo means that you’re making an editable copy of the `xmtp-dot-org` repo. Click **Fork this repository** to continue.
+2. The GitHub UI might tell you that you need to fork the repository to propose changes. Forking the repo means that you’re making an editable copy of the `xmtp-dot-org` repo within an org or account you control. Click **Fork this repository** to continue.
 
 3. Edit the markdown file to make your change.
 
