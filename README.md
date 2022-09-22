@@ -87,7 +87,7 @@ The `xmtp.org` team includes technical writers, product managers, developers, de
 
 Using the **Edit this page** link provides a guided flow for editing content and submitting a PR using the GitHub UI in a web browser. Note that this method only allows you to submit a PR to an **existing** documentation page.
 
-A PR is a request to the `xmtp.org` team to add (or pull) your content updates into the project and publish them to the documentation on the site. After you submit a pull request, your proposed changes are publicly visible, meaning that anyone with a GitHub account can see them on GitHub.
+A PR is a request to add (or pull) your content updates into the project and publish them to the documentation on the site. After you submit a pull request, your proposed changes are publicly visible, meaning that anyone with a GitHub account can see them on GitHub.
 
 **To use the Edit this page link to submit a pull request:**
 
@@ -115,13 +115,7 @@ If you are contributing to `xmtp.org` documentation by forking the `xmtp-dot-org
 
 ### Prerequisites
 
-You must have [Node.js](https://nodejs.org/en/download/) version 16.14 or later installed. You can check your version by running `node -v`.
-
-Docusaurus recommends selecting all checkboxes related to dependencies when you install Node.
-
-Node is required because you need npm, a tool installed along with Node, to install and run Docusaurus.
-
-To learn more, see [Installation](https://docusaurus.io/docs/installation) in the Docusaurus documentation.
+Using Docusaurus requires that you have a [supported version of Node.js](https://docusaurus.io/docs/installation) installed.
 
 ### Install Docusaurus
 
@@ -170,4 +164,3 @@ If you can't find the guidance you need in the _Google developer documentation s
 If you need guidance about the spelling of a nontechnical term, follow the [Merriam-Webster Dictionary](https://www.merriam-webster.com/).
 
 XMTP documentation strives to use plain language to ensure that content is clear to as many people as possible. [Plainlanguage.gov](https://www.plainlanguage.gov/) is a great place to learn how to write plainly.
-
