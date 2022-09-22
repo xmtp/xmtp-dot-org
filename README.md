@@ -1,6 +1,6 @@
 # Welcome to `xmtp-dot-org`
 
-This is the repo for the `xmtp.org` website, an XMTP community resource you can use to learn about, build with, and contribute to XMTP.
+This is the repo for the [`xmtp.org`](https://xmtp.org) website, an XMTP community resource you can use to learn about, build with, and contribute to XMTP.
 
 This repo is open and contributions from the public are welcome! 🫶
 
