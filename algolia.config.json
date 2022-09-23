@@ -4,8 +4,18 @@
     "start_urls": [
       {
         "url": "https://junk-range-possible.vercel.app/docs/client-sdk/javascript/concepts/intro-to-sdk",
-        "tags": "javascript-sdk",
-        "selectors_key": "javascript-sdk"
+        "tags": "javascript-sdk-concepts",
+        "selectors_key": "javascript-sdk-concepts"
+      },
+      {
+        "url": "https://junk-range-possible-git-omg-algolia-xmtp-labs.vercel.app/docs/client-sdk/javascript/tutorials/quickstart",
+        "tags": "javascript-sdk-tutorials",
+        "selectors_key": "javascript-sdk-tutorials"
+      },
+      {
+        "url": "https://junk-range-possible-git-omg-algolia-xmtp-labs.vercel.app/docs/client-sdk/javascript/reference/classes/Client",
+        "tags": "javascript-sdk-reference",
+        "selectors_key": "javascript-sdk-reference"
       },
       {
         "url": "https://junk-range-possible.vercel.app/docs/dev-concepts/introduction",
@@ -32,11 +42,53 @@
     "stop_urls": [],
 
     "selectors": {
-      "javascript-sdk": {
+      "default": {
         "lvl0": {
           "selector": "",
           "global": true,
-          "default_value": "JavaScript SDK"
+          "default_value": "Documentation"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "javascript-sdk-concepts": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "JavaScript SDK concepts"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "javascript-sdk-tutorials": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "JavaScript SDK tutorials"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "javascript-sdk-reference": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "JavaScript SDK reference"
         },
         "lvl1": "article h1",
         "lvl2": "article h2",
