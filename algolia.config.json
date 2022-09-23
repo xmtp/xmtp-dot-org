@@ -6,32 +6,31 @@
     "start_urls": [
       {
         "url": "https://junk-range-possible.vercel.app/docs/client-sdk/javascript/concepts/intro-to-sdk",
-        "tags": "JavaScript SDK",
-        "selectors_key": "javascript"
+        "tags": "javascript-sdk",
+        "selectors_key": "javascript-sdk"
       },
       {
         "url": "https://junk-range-possible.vercel.app/docs/dev-concepts/introduction",
-        "tags": "Development concepts",
-        "selectors_key": "devconcepts"
+        "tags": "dev-concepts",
+        "selectors_key": "dev-concepts"
       },
       {
         "url": "https://junk-range-possible.vercel.app/about/litepaper",
-        "tags": "Vision",
+        "tags": "vision",
         "selectors_key": "vision"
       },
       {
         "url": "https://junk-range-possible.vercel.app/sdks-and-tools",
-        "tags": "SDKs and tools",
-        "selectors_key": "sdks"
+        "tags": "sdks-and-tools",
+        "selectors_key": "sdks-and-tools"
       },
       {
         "url": "https://junk-range-possible.vercel.app/community",
-        "tags": "Community",
+        "tags": "community",
         "selectors_key": "community"
       },
       "https://junk-range-possible.vercel.app"
     ],
-    "sitemap_alternate_links": true,
     "stop_urls": [],
     "selectors": {
       "default": {
@@ -48,7 +47,7 @@
         "lvl6": "article h6",
         "text": "article p, article li, article td:last-child"
       },
-      "javascript": {
+      "javascript-sdk": {
         "lvl0": {
           "selector": "",
           "global": true,
@@ -62,7 +61,7 @@
         "lvl6": "article h6",
         "text": "article p, article li, article td:last-child"
       },
-      "devconcepts": {
+      "dev-concepts": {
         "lvl0": {
           "selector": "",
           "global": true,
@@ -104,7 +103,7 @@
         "lvl6": "article h6",
         "text": "article p, article li, article td:last-child"
       },
-      "sdks": {
+      "sdks-and-tools": {
         "lvl0": {
           "selector": "",
           "global": true,
