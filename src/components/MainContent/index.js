@@ -28,19 +28,6 @@ export const MainContent = ({ styles }) => {
     userAction()
   }, [])
 
-  const handleDarkMode = () => {
-    if (colorMode === 'dark') setColorMode('light')
-    if (colorMode === 'light') setColorMode('dark')
-  }
-
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    })
-  }
-
   return (
     <>
       <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto ${colorMode}`}>
@@ -58,18 +45,6 @@ export const MainContent = ({ styles }) => {
               />
             ))}
           </ul>
-        </div>
-        <div
-          onClick={handleDarkMode}
-          className="w-11 h-11 rounded-full bg-gray-900 grid justify-center items-center border-2 border-solid border-gray-500 fixed right-12 bottom-20 z-50 cursor-pointer"
-        >
-          <img src={`/img/icons/${colorMode}.svg`} />
-        </div>
-        <div
-          onClick={handleScrollToTop}
-          className="w-11 h-11 rounded-full bg-gray-900 grid justify-center items-center border-2 border-solid border-gray-500 fixed right-12 bottom-7 z-50 cursor-pointer"
-        >
-          <img src="/img/icons/arrow-up.svg" />
         </div>
 
         <div>
@@ -255,22 +230,21 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-
         <div className="lg:px-0 xl:px-12">
           <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
-
             <div>
-              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Latest From XMTP</h2>
+              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+                Latest From XMTP
+              </h2>
             </div>
 
-            <hr className="my-4 bg-black dark:bg-neutral-500"/>
+            <hr className="my-4 bg-black dark:bg-neutral-500" />
 
             <div className="grid gap-16 mt-8 gap-y-8 md:grid-cols-3 md:gap-x-5 md:gap-y-12">
-                {BLOG_DATA.map((items) => (
-                  <BlogItem key={items.title} items={items} />
-                ))}
+              {BLOG_DATA.map((items) => (
+                <BlogItem key={items.title} items={items} />
+              ))}
             </div>
-
           </div>
         </div>
 
@@ -319,7 +293,7 @@ export const MainContent = ({ styles }) => {
             role="list"
             className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
           >
-            <li className="col-span-1">    
+            <li className="col-span-1">
               <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
                   <h1 className="text-xl font-bold mt-[144px] mb-1 text-black">
@@ -329,7 +303,7 @@ export const MainContent = ({ styles }) => {
                     Start <span className="hidden xl:inline">or join</span> a
                     discussion in the XMTP forum
                   </p>
-                  <hr className="my-4 bg-black"/>
+                  <hr className="my-4 bg-black" />
                   <a
                     href="https://github.com/orgs/xmtp/discussions"
                     target="_blank"
@@ -341,7 +315,7 @@ export const MainContent = ({ styles }) => {
               </div>
             </li>
 
-            <li className="col-span-1">    
+            <li className="col-span-1">
               <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
                   <h1 className="text-xl font-bold mt-[144px] mb-1 text-white">
@@ -350,19 +324,19 @@ export const MainContent = ({ styles }) => {
                   <p className="mb-4 leading-6 text-white">
                     Say 👋, join a dev hangout, or get help
                   </p>
-                  <hr className="my-4 bg-white"/>
-                    <a
-                      href="https://discord.gg/xmtp"
-                      target="_blank"
-                      className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
-                    >
-                      Discord →
-                    </a>
+                  <hr className="my-4 bg-white" />
+                  <a
+                    href="https://discord.gg/xmtp"
+                    target="_blank"
+                    className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
+                  >
+                    Discord →
+                  </a>
                 </div>
               </div>
             </li>
 
-            <li className="col-span-1">    
+            <li className="col-span-1">
               <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#01A3EE] bg-no-repeat bg-[url('/img/twitter-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
                   <h1 className="text-xl font-bold mt-[144px] mb-1 text-white">
@@ -371,25 +345,20 @@ export const MainContent = ({ styles }) => {
                   <p className="mb-4 leading-6 text-white">
                     Keep up with the latest updates
                   </p>
-                  <hr className="my-4 bg-white"/>
-                    <a
-                      href="https://twitter.com/xmtp_"
-                      target="_blank"
-                      className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
-                    >
-                      Twitter →
-                    </a>
+                  <hr className="my-4 bg-white" />
+                  <a
+                    href="https://twitter.com/xmtp_"
+                    target="_blank"
+                    className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
+                  >
+                    Twitter →
+                  </a>
                 </div>
               </div>
             </li>
-
           </ul>
         </div>
       </div>
-
-      
-
-
     </>
   )
 }

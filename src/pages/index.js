@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import clsx from 'clsx'
+import React from 'react'
 import Layout from '@theme/Layout'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import styles from './index.module.css'
 import { MainContent } from '../components/MainContent'
 import { useColorMode } from '@docusaurus/theme-common'
+import ToggleButtons from '../components/ToggleButtons'
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
@@ -35,10 +35,13 @@ function HomepageHeader() {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext()
+
   return (
     <Layout title={`${siteConfig.title}`} description="Homepage">
       <HomepageHeader />
       <MainContent styles={styles} />
+
+      <ToggleButtons />
     </Layout>
   )
 }
