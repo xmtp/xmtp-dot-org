@@ -19,7 +19,7 @@ When you build an app with XMTP, you can use the following functions provided by
 | Message sending | Capture plaintext and submit it to the network. |
 | Message history retrieval | Retrieve the history of messages between two accounts, filterable by date range. |
 | Message streaming | Receive new messages in real-time. |
-| Message content validation | Ensure message security. |
+| Message authentication | Validate messages are from their purported sender. |
 | Message format validation | Ensure messages are properly formatted for the XMTP network. |
 
 To learn how to build an app with the XMTP SDK, see [Quickstart for the XMTP JavaScript SDK](/docs/client-sdk/javascript/tutorials/quickstart).
