@@ -11,15 +11,13 @@ When you build an app with XMTP, you can use the following functions provided by
 
 | Function | Description |
 | --- | --- |
-| Wallet-based authentication  | Connect to a user's wallet to get the wallet address, sign keys used for message signing and encryption, and authenticate incoming messages. |
-| Wallet connection management | Manage changes in wallet addresses or chain IDs. Manage connection issues. |
-| Key pair generation | Create keys used for message signing and encryption and advertising public keys to the network. |
-| Key storage | Store keys securely. |
-| Key signing | Sign keys with a connected wallet. |
-| Relationship initiation | Create a secure messaging relationship between two wallets. |
-| Conversation initiation | Create a container of messages between two wallets. |
+| Key pair generation | Create XMTP keys used for message signing and encryption and advertising public keys to the network. |
+| Key storage | Store XMTP keys securely. |
+| Key signing | Sign XMTP keys using a connected wallet app. |
+| Relationship initiation | Create a secure messaging relationship between two accounts. |
+| Conversation initiation | Create a container of messages between two accounts. |
 | Message sending | Capture plaintext and submit it to the network. |
-| Message history retrieval | Retrieve the history of messages between two wallets, filterable by date range. |
+| Message history retrieval | Retrieve the history of messages between two accounts, filterable by date range. |
 | Message streaming | Receive new messages in real-time. |
 | Message content validation | Ensure message security using this middleware. |
 | Message format validation | Ensure messages are properly formatted for the XMTP network using this middleware. |
