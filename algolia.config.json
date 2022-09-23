@@ -3,7 +3,7 @@
     "sitemap_urls": [
       "https://junk-range-possible.vercel.app/sitemap.xml"
     ],
-    "start_urls":
+    "start_urls": [
       {
         "url": "https://junk-range-possible.vercel.app/docs",
         "tags": "Documentation",
@@ -119,3 +119,4 @@
     },
     "nb_hits": 1110
   }
+}
