@@ -32,10 +32,11 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     })
+
     const dataXmtp = await responseXmtp.json()
-    if (dataXmtp) items = [...items, dataXmtp]
+    if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp]
     const dataChat = await responseChat.json()
-    if (dataChat) items = [...items, dataChat]
+    if (dataChat && !dataChat.message) items = [...items, dataChat]
 
     items = [...items, CHAT_ITEM]
     setSliderItems(items)
@@ -200,7 +201,7 @@ export const MainContent = ({ styles }) => {
                 className="cursor-pointer w-12"
               />
             </div>
-            <div className="inner-div grid grid-flow-row lg:grid-flow-col overflow-x-scroll w-auto space-y-4 lg:space-y-0 flex-1 scroll-smooth col-span-10">
+            <div className="inner-div grid grid-flow-row lg:grid-flow-col overflow-x-scroll w-auto space-y-4 lg:space-y-0 scroll-smooth col-span-10 lg:justify-start">
               {sliderItems
                 ? sliderItems.map((items) => (
                     <SliderItem key={items.id} items={items} />
@@ -229,8 +230,6 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
         <div className="flex flex-col mt-20 lg:mt-24 h-[1118px] lg:h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center">
-          {' '}
-          {/* background-position: -196px -73px; */}
           <div className="flex">
             <div className="mr-40 hidden lg:block">
               <img src="/img/browser.png" />
