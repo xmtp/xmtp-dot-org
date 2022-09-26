@@ -90,7 +90,7 @@ export const MainContent = ({ styles }) => {
                     <div className="relative">
                       <dt>
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800">
-                          <img className="w-6 h-6" src="/img/bell.svg" />
+                          <img alt="bell icon representing the alert message use case" className="w-6 h-6" src="/img/bell.svg" />
                         </div>
                         <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Alerts
@@ -106,6 +106,7 @@ export const MainContent = ({ styles }) => {
                       <dt>
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800">
                           <img
+                            alt="megaphone icon representing the announcement message use case"
                             className="w-6 h-6"
                             src="/img/speakerphone.svg"
                           />
@@ -123,7 +124,7 @@ export const MainContent = ({ styles }) => {
                     <div className="relative">
                       <dt>
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 ">
-                          <img className="w-6 h-6" src="/img/dm.svg" />
+                          <img alt="chat icon representing the direct messaging use case" className="w-6 h-6" src="/img/dm.svg" />
                         </div>
                         <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Direct messaging
@@ -156,7 +157,7 @@ export const MainContent = ({ styles }) => {
                       light: useBaseUrl('/img/build-xmtp.png'),
                       dark: useBaseUrl('/img/build-xmtp-dark.png'),
                     }}
-                    alt="laptop"
+                    alt="Laptop and mobile device screens showing alerts, announcements, and direct messages enabled by building apps with XMTP"
                   />
                 </div>
               </div>
