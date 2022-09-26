@@ -105,14 +105,16 @@
 
 /* List style reset */
 
-menu, ol, ul {
-    list-style: none;
-    margin: 0;
-    padding:0
+menu,
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  max-width: var(--max-width)!important;
+  max-width: var(--max-width) !important;
 }
 
 .navbar {
@@ -221,6 +223,18 @@ menu, ol, ul {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.DocSearch-Button {
+  width: 256px;
+  border-radius: 8px !important;
+  border: thin solid #d4d4d4 !important;
+  background: #fafafa !important;
+}
+
+.DocSearch-Search-Icon {
+  filter: invert(70%) sepia(8%) saturate(20%) hue-rotate(317deg) brightness(94%)
+    contrast(83%);
 }
 
 @media only screen and (max-width: 1280px) {
