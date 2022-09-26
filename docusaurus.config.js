@@ -59,10 +59,19 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'about',
-        path: 'about',
-        routeBasePath: 'about',
-        sidebarPath: require.resolve('./sidebars/sidebars-about.js'),
+        id: 'community',
+        path: 'community',
+        routeBasePath: 'community',
+        sidebarPath: require.resolve('./sidebars/sidebars-community.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'vision',
+        path: 'vision',
+        routeBasePath: 'vision',
+        sidebarPath: require.resolve('./sidebars/sidebars-vision.js'),
       },
     ],
     [
@@ -116,10 +125,23 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'community', // To highlight the navbar item, you must link to a document, not a top-level directory
+            type: 'dropdown',
             position: 'right',
             label: 'Community',
-            activeBaseRegex: `/`,
+            items: [
+              {
+                to: 'community/community',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Join in and contribute</div>
+                 <div><small>Learn ways to join in and contribute to the XMTP community</small></div></div></div>`,
+              },
+              {
+                to: 'community/code-of-conduct',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div>Code of conduct</div>
+                 <div><small>Foster a safe and positive XMTP community experience</small></div></div></div>`,
+              },
+            ],
           },
           {
             type: 'dropdown',
@@ -127,22 +149,16 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'about/litepaper',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                to: 'vision/litepaper',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Litepaper</div>
                  <div><small>Read the public draft of the XMTP Litepaper</small></div></div></div>`,
               },
               {
-                to: 'about/roadmap',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                to: 'vision/roadmap',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Roadmap</div>
                  <div><small>Learn about what's in store for XMTP in the months ahead</small></div></div></div>`,
-              },
-              {
-                to: 'about/case-study-token-gate-chat',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div>Case study: Token-gated chat</div>
-                 <div><small>@NftTopBest demonstrates one future for trustless messaging</small></div></div></div>`,
               },
             ],
           },
@@ -258,22 +274,22 @@ const config = {
                 label: 'XMTP Improvement Proposals',
                 to: '/docs/dev-concepts/xips',
               },
+              {
+                label: 'XMTP code of conduct',
+                to: '/community/code-of-conduct',
+              },
             ],
           },
           {
             title: 'Vision',
             items: [
               {
-                label: 'Roadmap',
-                to: '/about/roadmap',
-              },
-              {
                 label: 'Litepaper',
-                to: '/about/litepaper',
+                to: '/vision/litepaper',
               },
               {
-                label: 'Case study: Token-gated chat',
-                to: '/about/case-study-token-gate-chat',
+                label: 'Roadmap',
+                to: '/vision/roadmap',
               },
             ],
           },

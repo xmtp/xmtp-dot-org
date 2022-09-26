@@ -1,6 +1,11 @@
-# XMTP Community
+---
+sidebar_label: Join in and contribute
+sidebar_position: 1
+---
 
-There are many ways to participate in the XMTP community, whether you are a developer building with XMTP, a developer working on improving the protocol, or a web3 enthusiast interested in learning more about XMTP.
+# Join in and contribute to the XMTP community
+
+There are many ways to participate in the XMTP community, whether you are building with XMTP, working on improving the protocol, or simply interested in learning more about XMTP.
 
 ## GitHub Discussions
 
@@ -16,10 +21,11 @@ Chat with the XMTP community. Say 👋, join a dev hangout, or get support.
 
 ## Open source XMTP projects
 
-Contribute to XMTP open source projects to help improve the SDKs, developer tools, and protocol.
+Contribute to XMTP open source projects to help improve the SDKs, developer tools, protocol, and documentation.
 
 * [View XMTP JavaScript SDK open issues](https://github.com/xmtp/xmtp-js/issues)
 * [View example chat app open issues](https://github.com/xmtp/example-chat-react/issues)
+* [Contribute to XMTP documentation](https://github.com/xmtp/xmtp-dot-org#readme)
 
 ## XMTP Improvement Proposals
 
