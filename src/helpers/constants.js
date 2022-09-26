@@ -4,16 +4,19 @@ export const HEADER_DATA = [
     subtitle:
       'Learn about the protocol, architecture, encryption, authentication, and more',
     url: '/docs/dev-concepts/introduction',
+    icon: 'development-icon.svg'
   },
   {
     title: 'Quickstart: Client SDK',
     subtitle: 'Build apps and tools for messaging between blockchain accounts',
     url: '/docs/client-sdk/javascript/tutorials/quickstart',
+    icon: 'quickstart-icon.svg'
   },
   {
     title: 'Vision',
     subtitle: 'Read the XMTP Litepaper public draft, roadmap, and case studies',
     url: '/about/litepaper',
+    icon: 'xmtp-icon.svg'
   },
 ]
 
