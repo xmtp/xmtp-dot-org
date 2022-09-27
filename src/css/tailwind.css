@@ -57,6 +57,7 @@
   }
   [data-theme='light'] {
     --ifm-footer-background-color: #171717;
+    --nav-search-border-color: #d4d4d4;
   }
 
   /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -70,6 +71,7 @@
     --ifm-color-primary-lightest: #f8f2fd;
     --ifm-heading-color: #fff;
     --shadow-color: rgb(23 23 23 / 85%);
+    --nav-search-border-color: #444444;
   }
 
   /* From original custom.css */
@@ -228,8 +230,8 @@ ul {
 .DocSearch-Button {
   width: 256px;
   border-radius: 8px !important;
-  border: thin solid #d4d4d4 !important;
-  background: #fafafa !important;
+  border: thin solid var(--nav-search-border-color) !important;
+  background: var(--docsearch-searchbox-background) !important;
 }
 
 .DocSearch-Search-Icon {
