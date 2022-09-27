@@ -10,7 +10,7 @@ const { tailwindPlugin } = require('./src/plugins')
 const config = {
   title: 'The open protocol and network for secure web3 messaging',
   tagline:
-    'Build with XMTP to send messages between blockchain accounts including DMs, alerts, announcements, and more',
+    'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more',
   url: 'https://xmtp.org',
   customFields: {
     githubAPI: process.env.PUBLIC_URL,
@@ -22,6 +22,7 @@ const config = {
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
+  clientModules: [require.resolve('./src/css/tailwind.css')],
 
   presets: [
     [
@@ -82,7 +83,6 @@ const config = {
     ],
   ],
 
-  clientModules: [require.resolve('./src/css/tailwind.css')],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
