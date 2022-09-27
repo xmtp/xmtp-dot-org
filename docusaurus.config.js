@@ -10,7 +10,7 @@ const { tailwindPlugin } = require('./src/plugins')
 const config = {
   title: 'The open protocol and network for secure web3 messaging',
   tagline:
-    'Build with XMTP to send messages between blockchain accounts including DMs, alerts, announcements, and more',
+    'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more',
   url: 'https://xmtp.org',
   customFields: {
     githubAPI: process.env.PUBLIC_URL,
@@ -22,6 +22,7 @@ const config = {
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
+  clientModules: [require.resolve('./src/css/tailwind.css')],
 
   presets: [
     [
@@ -68,10 +69,10 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'about',
-        path: 'about',
-        routeBasePath: 'about',
-        sidebarPath: require.resolve('./sidebars/sidebars-about.js'),
+        id: 'vision',
+        path: 'vision',
+        routeBasePath: 'vision',
+        sidebarPath: require.resolve('./sidebars/sidebars-vision.js'),
       },
     ],
     [
@@ -82,7 +83,6 @@ const config = {
     ],
   ],
 
-  clientModules: [require.resolve('./src/css/tailwind.css')],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -149,22 +149,16 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'about/litepaper',
+                to: 'vision/litepaper',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Litepaper</div>
                  <div><small>Read the public draft of the XMTP Litepaper</small></div></div></div>`,
               },
               {
-                to: 'about/roadmap',
+                to: 'vision/roadmap',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Roadmap</div>
                  <div><small>Learn about what's in store for XMTP in the months ahead</small></div></div></div>`,
-              },
-              {
-                to: 'about/case-study-token-gate-chat',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/lightbulb.svg" alt="icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div>Case study: Token-gated chat</div>
-                 <div><small>@NftTopBest demonstrates one future for trustless messaging</small></div></div></div>`,
               },
             ],
           },
@@ -290,16 +284,12 @@ const config = {
             title: 'Vision',
             items: [
               {
-                label: 'Roadmap',
-                to: '/about/roadmap',
-              },
-              {
                 label: 'Litepaper',
-                to: '/about/litepaper',
+                to: '/vision/litepaper',
               },
               {
-                label: 'Case study: Token-gated chat',
-                to: '/about/case-study-token-gate-chat',
+                label: 'Roadmap',
+                to: '/vision/roadmap',
               },
             ],
           },
