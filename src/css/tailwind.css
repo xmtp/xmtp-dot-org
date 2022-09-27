@@ -54,6 +54,7 @@
     --shadow-color: rgb(255 255 255 / 85%);
 
     --max-width: 1440px;
+    --nav-searchbox-shadow:inset 0 0 0 2px #FC4F37;
   }
   [data-theme='light'] {
     --ifm-footer-background-color: #171717;
@@ -242,6 +243,12 @@
 .DocSearch-Search-Icon {
   filter: invert(70%) sepia(8%) saturate(20%) hue-rotate(317deg) brightness(94%)
     contrast(83%);
+}
+
+.DocSearch-Button:active,
+.DocSearch-Button:focus,
+.DocSearch-Button:hover {
+  box-shadow: var(--nav-searchbox-shadow) !important;
 }
 
 .homepageHeader {
