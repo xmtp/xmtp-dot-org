@@ -15,7 +15,7 @@ export const HEADER_DATA = [
   {
     title: 'Vision',
     subtitle: 'Read the XMTP Litepaper public draft and learn about the XMTP roadmap',
-    url: '/about/litepaper',
+    url: '/vision/litepaper',
     icon: 'xmtp-icon.svg'
   },
 ]
