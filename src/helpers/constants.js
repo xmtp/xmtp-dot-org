@@ -4,16 +4,19 @@ export const HEADER_DATA = [
     subtitle:
       'Learn about the protocol, architecture, encryption, authentication, and more',
     url: '/docs/dev-concepts/introduction',
+    icon: 'development-icon.svg'
   },
   {
     title: 'Quickstart: Client SDK',
     subtitle: 'Build apps and tools for messaging between blockchain accounts',
     url: '/docs/client-sdk/javascript/tutorials/quickstart',
+    icon: 'quickstart-icon.svg'
   },
   {
     title: 'Vision',
     subtitle: 'Read the XMTP Litepaper public draft, roadmap, and case studies',
     url: '/about/litepaper',
+    icon: 'xmtp-icon.svg'
   },
 ]
 
@@ -56,3 +59,24 @@ export const BLOG_DATA = [
     url: 'https://blog.xmtp.com/truths-not-spoofs/',
   },
 ]
+
+export const XMTP_JS_URL = "https://api.github.com/repos/xmtp/xmtp-js"
+export const EXAMPLE_CHAT_URL = "https://api.github.com/repos/xmtp/example-chat-react"
+
+export const CHAT_ITEM = {
+  id:"2534740",
+  full_name: 'Hosted example app',
+  description:
+    'Hosted example-react-app connected to the XMTP production network',
+  text: 'Try it',
+  html_url: 'https://xmtp.chat/',
+  icon:'chat-icon.svg'
+}
+export const VERCEL_ITEM = {
+  id:"1768846",
+  full_name: 'Hosted example app on dev network',
+  description: 'Hosted example-react-app connected to the XMTP dev network',
+  text: 'Try it',
+  html_url: 'https://xmtp.vercel.app/',
+  icon:'chat-icon.svg'
+}

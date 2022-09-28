@@ -1,32 +1,65 @@
 import React, { useEffect, useState } from 'react'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { useColorMode } from '@docusaurus/theme-common'
+import ThemedImage from '@theme/ThemedImage'
+import useBaseUrl from '@docusaurus/useBaseUrl'
 import { Link } from 'react-router-dom'
 import { HeaderBox } from '../HeaderBox'
 import { SliderItem } from '../SliderItem'
-import { HEADER_DATA, BLOG_DATA } from '../../helpers/constants'
+import {
+  HEADER_DATA,
+  BLOG_DATA,
+  XMTP_JS_URL,
+  EXAMPLE_CHAT_URL,
+  CHAT_ITEM,
+} from '../../helpers/constants'
 import { BlogItem } from '../BlogItem'
+import ALink from '../ALink'
 
 export const MainContent = ({ styles }) => {
-  const { colorMode, setColorMode } = useColorMode()
+  const [sliderItems, setSliderItems] = useState(null)
+  const { colorMode } = useColorMode()
   const {
     siteConfig: { customFields },
   } = useDocusaurusContext()
-  const [sliderItems, setSliderItems] = useState(null)
 
   const userAction = async () => {
-    const response = await fetch(customFields.githubAPI, {
+    let items = []
+    const responseXmtp = await fetch(XMTP_JS_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
     })
-    const data = await response.json()
-    if (data?.length) setSliderItems(data)
+    const responseChat = await fetch(EXAMPLE_CHAT_URL, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
+
+    const dataXmtp = await responseXmtp.json()
+    if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp]
+    const dataChat = await responseChat.json()
+    if (dataChat && !dataChat.message) items = [...items, dataChat]
+
+    items = [...items, CHAT_ITEM]
+    setSliderItems(items)
   }
 
   useEffect(() => {
     userAction()
   }, [])
+
+  useEffect(() => {
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [colorMode])
 
   return (
     <>
@@ -34,14 +67,16 @@ export const MainContent = ({ styles }) => {
         <div className="xl:px-12">
           <ul
             role="list"
-            className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
+            className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
           >
-            {HEADER_DATA.map(({ title, subtitle, url }) => (
+            {HEADER_DATA.map(({ title, subtitle, url, icon }) => (
               <HeaderBox
                 key={title}
                 title={title}
                 subtitle={subtitle}
                 url={url}
+                styles={styles}
+                icon={icon}
               />
             ))}
           </ul>
@@ -49,37 +84,37 @@ export const MainContent = ({ styles }) => {
 
         <div>
           <div className="relative min-h-[630px]">
-            <div className="lg:absolute mt-12 sm:mt-16">
+            <div className="mt-12 sm:mt-16">
               <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
                 <div className="lg:col-start-2 md:w-3/6 mx-auto lg:mx-0 lg:w-4/6">
-                  <h3 className="text-3xl font-bold tracking-tight text-black sm:text-4xl dark:text-white">
+                  <h3 className="text-3xl font-bold tracking-tight text-black sm:text-4xl dark:text-white color-white">
                     Build with XMTP
                   </h3>
-                  <p className="mt-3 mb-1 text-base text-neutral-800 dark:text-neutral-300">
+                  <p className="mt-3 mb-1 text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                     Deliver apps and tools that enable messaging between
                     blockchain accounts. Want to talk about a use case?
                   </p>
 
-                  <span className="text-base text-neutral-800 dark:text-neutral-300">
-                    <a
-                      href="https://github.com/orgs/xmtp/discussions"
-                      className="text-red-500 font-bold hover:no-underline"
+                  <span className="text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
+                    <ALink
+                      to="https://github.com/orgs/xmtp/discussions"
+                      className="text-red-500 font-bold ml-1"
                     >
                       Join the discussion
-                    </a>
+                    </ALink>
                   </span>
 
                   <dl className="mt-10 space-y-8">
                     <div className="relative">
                       <dt>
-                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
+                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800">
                           <img className="w-6 h-6" src="/img/bell.svg" />
                         </div>
-                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Alerts
                         </p>
                       </dt>
-                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                         Enable apps to keep users informed with timely
                         event-based notifications
                       </dd>
@@ -87,17 +122,17 @@ export const MainContent = ({ styles }) => {
 
                     <div className="relative">
                       <dt>
-                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
+                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800">
                           <img
                             className="w-6 h-6"
                             src="/img/speakerphone.svg"
                           />
                         </div>
-                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Announcements
                         </p>
                       </dt>
-                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                         Enable apps to engage users with meaningful one-to-many
                         messaging
                       </dd>
@@ -105,14 +140,14 @@ export const MainContent = ({ styles }) => {
 
                     <div className="relative">
                       <dt>
-                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 text-white">
+                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 ">
                           <img className="w-6 h-6" src="/img/dm.svg" />
                         </div>
-                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white">
+                        <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Direct messaging
                         </p>
                       </dt>
-                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300">
+                      <dd className="ml-16 text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                         Enable users to connect and build community with
                         one-to-one messaging
                       </dd>
@@ -131,23 +166,14 @@ export const MainContent = ({ styles }) => {
                   </Link>
                 </div>
 
-                <div className="relative -mx-4 mt-10 lg:col-start-1 lg:mt-0">
-                  <img
-                    className="relative mx-auto hidden 2xl:inline-block 2xl:max-w-[640px]"
-                    src={
-                      colorMode === 'light'
-                        ? '/img/featureGraphicwithFade.png'
-                        : '/img/featureGraphicwithFadeDark.png'
-                    }
-                    alt="laptop"
-                  />
-                  <img
-                    className="relative mx-auto inline-block object-fill 2xl:hidden"
-                    src={
-                      colorMode === 'light'
-                        ? '/img/build-xmtp.png'
-                        : '/img/build-xmtp-dark.png'
-                    }
+                <div className="-mx-4 mt-10 lg:col-start-1 lg:mt-0">
+                  <div className="absolute mx-auto object-fill bg-none img-gradient z-10 h-[91%] w-36"></div>
+                  <ThemedImage
+                    className="relative mx-auto !inline-block object-fill md:max-h-[573px] lg:w-11/12"
+                    sources={{
+                      light: useBaseUrl('/img/build-xmtp.png'),
+                      dark: useBaseUrl('/img/build-xmtp-dark.png'),
+                    }}
                     alt="laptop"
                   />
                 </div>
@@ -156,54 +182,62 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="mt-14 xl:ml-12 hidden mb-12 relative lg:flex">
-          <div className="w-56 mr-6 mt-4">
+        <div className="mt-14 xl:ml-12 mb-12 relative grid grid-cols-1 lg:grid-cols-11">
+          <div className="w-auto mr-6 mt-4 mb-6 lg:mb-0 col-span-2">
             <p className="text-xl font-bold mb-2">SDK and tools</p>
             <small className="text-base">
               Build with XMTP using the SDK and dev tools
             </small>
           </div>
-          <div className="flex">
-            <img
-              onClick={() => {
-                document.getElementsByClassName(
-                  'inner-div'
-                )[0].scrollLeft -= 100
-              }}
-              src={
-                colorMode === 'light'
-                  ? '/img/right-arrow.svg'
-                  : '/img/right-arrow-dark.svg'
-              }
-              className="-scale-x-100 cursor-pointer"
-            />
-          </div>
-          <div className="inner-div flex flex-nowrap overflow-x-scroll w-3/4 flex-1 scroll-smooth">
-            {sliderItems
-              ? sliderItems.map((items) => (
-                  <SliderItem key={items.id} items={items} />
-                ))
-              : null}
-          </div>
-          <div className="arrow-icon w-40 h-[128px] absolute right-0 flex justify-center">
-            <img
-              onClick={() => {
-                document.getElementsByClassName(
-                  'inner-div'
-                )[0].scrollLeft += 100
-              }}
-              src={
-                colorMode === 'light'
-                  ? '/img/right-arrow.svg'
-                  : '/img/right-arrow-dark.svg'
-              }
-              className="cursor-pointer w-12"
-            />
+          <div className="col-span-9 grid grid-cols-10 relative">
+            <div
+              className={`hidden -scale-x-100 lg:grid absolute -left-8 h-32 justify-center arrow-icon w-20 items-center ${
+                sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
+              }`}
+            >
+              <ThemedImage
+                onClick={() => {
+                  document.getElementsByClassName(
+                    'inner-div'
+                  )[0].scrollLeft -= 100
+                }}
+                sources={{
+                  light: useBaseUrl('/img/right-arrow.svg'),
+                  dark: useBaseUrl('/img/right-arrow-dark.svg'),
+                }}
+                alt="arrow"
+                className="cursor-pointer w-12"
+              />
+            </div>
+            <div className="inner-div grid grid-flow-row lg:grid-flow-col overflow-x-scroll w-auto space-y-4 lg:space-y-0 scroll-smooth col-span-10 lg:justify-start">
+              {sliderItems
+                ? sliderItems.map((items) => (
+                    <SliderItem key={items.id} items={items} />
+                  ))
+                : null}
+            </div>
+            <div
+              className={`arrow-icon w-40 h-32 absolute right-0 items-center justify-center hidden lg:grid ${
+                sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
+              }`}
+            >
+              <ThemedImage
+                onClick={() => {
+                  document.getElementsByClassName(
+                    'inner-div'
+                  )[0].scrollLeft += 360
+                }}
+                sources={{
+                  light: useBaseUrl('/img/right-arrow.svg'),
+                  dark: useBaseUrl('/img/right-arrow-dark.svg'),
+                }}
+                className="cursor-pointer w-12"
+                alt="arrow"
+              />
+            </div>
           </div>
         </div>
         <div className="flex flex-col mt-20 lg:mt-24 h-[1118px] lg:h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center">
-          {' '}
-          {/* background-position: -196px -73px; */}
           <div className="flex">
             <div className="mr-40 hidden lg:block">
               <img src="/img/browser.png" />
@@ -216,7 +250,7 @@ export const MainContent = ({ styles }) => {
             <h1 className="text-white text-3xl xl:text-4xl font-bold mb-4 leading-9">
               Messages meet users where they are
             </h1>
-            <p className="text-neutral-300 text-base leading-6 text-center max-w-[656px] mb-8">
+            <p className="text-neutral-300 text-base leading-6 text-center lg:max-w-[70%] mb-8">
               Building with XMTP gives users a portable inbox that follows them
               across web3, providing access to their messages using any app
               built with XMTP.
@@ -233,8 +267,8 @@ export const MainContent = ({ styles }) => {
         <div className="lg:px-0 xl:px-12">
           <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
             <div>
-              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-                Latest From XMTP
+              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white color-white">
+                Latest from XMTP
               </h2>
             </div>
 
@@ -253,7 +287,7 @@ export const MainContent = ({ styles }) => {
             <h1 className="text-black text-4xl font-bold mb-4">
               Join a community of builders
             </h1>
-            <p className="text-neutral-800 text-base leading-6 text-center max-w-[656px] mb-8">
+            <p className="text-neutral-800 text-base leading-6 text-center lg:max-w-[70%] mb-8">
               From hackathons to startups, developers are building with XMTP to
               address use cases for secure messaging for blockchain accounts
             </p>
@@ -287,16 +321,16 @@ export const MainContent = ({ styles }) => {
         </div>
       </main>
 
-      <div className="bg-neutral-900 -mt-48">
+      <div className="bg-black -mt-48">
         <div className="max-w-screen-max mx-auto pt-56 pb-16 px-4 lg:px-5 xl:px-12">
           <ul
             role="list"
-            className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
+            className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
           >
             <li className="col-span-1">
               <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
-                  <h1 className="text-xl font-bold mt-[144px] mb-1 text-black">
+                  <h1 className="text-xl font-bold mt-36 mb-1 text-black">
                     Have a question or idea?
                   </h1>
                   <p className="mb-4 leading-6 text-black">
@@ -304,13 +338,12 @@ export const MainContent = ({ styles }) => {
                     discussion in the XMTP forum
                   </p>
                   <hr className="my-4 bg-black" />
-                  <a
-                    href="https://github.com/orgs/xmtp/discussions"
-                    target="_blank"
-                    className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end hover:no-underline"
+                  <ALink
+                    to="https://github.com/orgs/xmtp/discussions"
+                    className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end"
                   >
                     GitHub Discussions →
-                  </a>
+                  </ALink>
                 </div>
               </div>
             </li>
@@ -318,20 +351,19 @@ export const MainContent = ({ styles }) => {
             <li className="col-span-1">
               <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
-                  <h1 className="text-xl font-bold mt-[144px] mb-1 text-white">
-                    Chat with the XMTP community
+                  <h1 className="text-xl font-bold mt-36 mb-1 text-white">
+                    Chat with the community
                   </h1>
                   <p className="mb-4 leading-6 text-white">
                     Say 👋, join a dev hangout, or get help
                   </p>
                   <hr className="my-4 bg-white" />
-                  <a
-                    href="https://discord.gg/xmtp"
-                    target="_blank"
-                    className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
+                  <ALink
+                    to="https://discord.gg/xmtp"
+                    className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end"
                   >
                     Discord →
-                  </a>
+                  </ALink>
                 </div>
               </div>
             </li>
@@ -339,20 +371,19 @@ export const MainContent = ({ styles }) => {
             <li className="col-span-1">
               <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#01A3EE] bg-no-repeat bg-[url('/img/twitter-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                 <div>
-                  <h1 className="text-xl font-bold mt-[144px] mb-1 text-white">
+                  <h1 className="text-xl font-bold mt-36 mb-1 text-white">
                     Follow XMTP on Twitter
                   </h1>
                   <p className="mb-4 leading-6 text-white">
                     Keep up with the latest updates
                   </p>
                   <hr className="my-4 bg-white" />
-                  <a
-                    href="https://twitter.com/xmtp_"
-                    target="_blank"
-                    className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end hover:no-underline"
+                  <ALink
+                    to="https://twitter.com/xmtp_"
+                    className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end"
                   >
                     Twitter →
-                  </a>
+                  </ALink>
                 </div>
               </div>
             </li>
