@@ -5,23 +5,29 @@ import { useColorMode } from '@docusaurus/theme-common'
 export default function PrimaryMenuWrapper(props) {
   const { colorMode, setColorMode } = useColorMode()
 
-  const handleMode = (e) => {
-    console.log(e.target.value)
-    setColorMode(e.target.value)
+  const handleMode = (mode) => {
+    setColorMode(mode)
   }
+
   return (
     <>
       <PrimaryMenu {...props} />
-      <div className=" border-0 border-solid border-t border-neutral-300 grid grid-cols-2 pt-4 pb-6">
-        <div className="pl-3 items-baseline">Switch theme</div>
-        <select
-          className="w-32 h-11 ml-auto"
-          defaultValue={colorMode || 'light'}
-          onChange={handleMode}
-        >
-          <option value="dark">Dark</option>
-          <option value="light">Light</option>
-        </select>
+      <div className=" border-0 border-solid border-t border-neutral-300 grid grid-cols-2 pt-4 pb-3">
+        <div className="pl-3 grid items-center">Switch theme</div>
+        <div className="grid grid-flow-col gap-1 items-center ml-auto p-3 mr-4 rounded-full cursor-pointer hover:drop-shadow-md">
+          {colorMode === 'light' ? (
+            <>
+              <img
+                src="/img/lightbulb.svg"
+                onClick={() => handleMode('dark')}
+              />
+            </>
+          ) : (
+            <>
+              <img src="/img/shield.svg" onClick={() => handleMode('light')} />
+            </>
+          )}
+        </div>
       </div>
     </>
   )
