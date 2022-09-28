@@ -3,6 +3,7 @@ import Footer from '@theme-original/Footer'
 import { useColorMode } from '@docusaurus/theme-common'
 import { Link } from 'react-router-dom'
 import ALink from '../../components/ALink'
+import ToggleButtons from '../../components/ToggleButtons'
 
 export default function FooterWrapper(props) {
   const { colorMode } = useColorMode()
@@ -12,12 +13,12 @@ export default function FooterWrapper(props) {
       <div className={`bg-black px-4 md-px-12 ${colorMode}`}>
         <div className="h-px bg-white max-w-screen-max mx-auto" />
         <div className="flex justify-center flex-wrap md:justify-between items-center h-auto md:h-32 max-w-screen-max mx-auto mt-9 md:mt-0 mb-20 md:mb-0 text-center md:text-inherit flex-col md:flex-row">
-          <img src="/img/xmtp-icon.svg" className="w-10 md:w-auto" />
+          <img alt="XMTP icon" src="/img/xmtp-icon.svg" className="w-10 md:w-auto" />
           <div className="flex flex-col md:flex-row justify-center text-white my-7 md:my-0">
             <span className="text-sm">
               <ALink
                 className="ml-2 text-white hover:text-white"
-                tp="https://creativecommons.org/licenses/by/4.0/"
+                to="https://creativecommons.org/licenses/by/4.0/"
               >
                 CC BY 4.0
               </ALink>
@@ -37,17 +38,18 @@ export default function FooterWrapper(props) {
           </div>
           <div className="flex w-[139px] justify-between">
             <ALink to="https://github.com/xmtp">
-              <img src="/img/github-icon.svg" />
+              <img alt="Go to the XMTP GitHub repo" src="/img/github-icon.svg" />
             </ALink>
             <ALink to="https://twitter.com/xmtp_">
-              <img src="/img/twitter-icon.svg" />
+              <img alt="Go to the XMTP Twitter profile" src="/img/twitter-icon.svg" />
             </ALink>
             <ALink to="https://discord.gg/xmtp">
-              <img src="/img/discord-icon.svg" />
+              <img alt="Go to the XMTP Discord" src="/img/discord-icon.svg" />
             </ALink>
           </div>
         </div>
       </div>
+      <ToggleButtons />
     </>
   )
 }
