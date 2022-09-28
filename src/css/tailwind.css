@@ -61,6 +61,7 @@
     --header-back-img: url('/img/background.jpg');
     --header-bg-color: white;
     --header-box-background: #fff;
+    --toc-link-color: #525252;
   }
 
   /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -78,6 +79,7 @@
     --header-back-img: url('/img/dark-background.jpg');
     --header-bg-color: black;
     --header-box-background: #171717;
+    --toc-link-color: #a3a3a3;
   }
 
   html[data-theme='dark'] {
@@ -254,6 +256,10 @@
 .homepageHeader {
   background-image: var(--header-back-img);
   background-color: var(--header-bg-color);
+}
+
+.table-of-contents__link {
+  color: var(--toc-link-color);
 }
 
 .table-of-contents__link--active {
