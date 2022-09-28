@@ -58,6 +58,9 @@
   [data-theme='light'] {
     --ifm-footer-background-color: #171717;
     --backdrop-mobile-menu: rgba(255, 255, 255, 0.95);
+    --header-back-img: url('/img/background.jpg');
+    --header-bg-color: white;
+    --header-box-background: #fff;
   }
 
   /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -72,6 +75,13 @@
     --ifm-heading-color: #fff;
     --shadow-color: rgb(23 23 23 / 85%);
     --backdrop-mobile-menu: rgba(0, 0, 0, 0.95);
+    --header-back-img: url('/img/dark-background.jpg');
+    --header-bg-color: black;
+    --header-box-background: #171717;
+  }
+
+  html[data-theme='dark'] {
+    --ifm-background-color: black;
   }
 
   /* From original custom.css */
@@ -107,27 +117,20 @@
 
 /* Override Docusaurus styling*/
 
-menu,
-ol,
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   max-width: var(--max-width) !important;
 }
 
-.navbar {
-  background-color: rgba(255, 255, 255, 0.95);
+/* .navbar {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(15px);
   box-shadow: none;
 }
 
 [data-theme='dark'] .navbar {
   background-color: rgba(0, 0, 0, 0.95);
   box-shadow: none;
-}
+} */
 
 .navbar__client__dropdown {
   display: flex;
@@ -138,13 +141,16 @@ ul {
   margin-right: 20px;
   margin-top: 5px;
 }
+.navbar__client__dropdown_text {
+  font: 1.5rem;
+}
 
 .navbar__client__dropdown_text p {
   margin: 0;
 }
 
 .navbar__client__dropdown_text small {
-  color: #475569;
+  color: #a3a3a3;
 }
 
 .navbar__item {
@@ -152,7 +158,7 @@ ul {
 }
 
 .navbar__logo__img {
-  width: 75%;
+  width: 7rem;
 }
 
 .navbar__inner {
@@ -204,7 +210,7 @@ ul {
 }
 
 .footer {
-  background-color: #171717;
+  background-color: black;
 }
 
 .footer .container {
@@ -224,11 +230,11 @@ ul {
 }
 
 .footer__item {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .footer__item .footer__link-item {
-  line-height: 1rem;
+  line-height: .5rem;
 }
 
 .multiline-text-2 {
@@ -243,6 +249,11 @@ ul {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.homepageHeader {
+  background-image: var(--header-back-img);
+  background-color: var(--header-bg-color);
 }
 
 @media only screen and (max-width: 1280px) {
