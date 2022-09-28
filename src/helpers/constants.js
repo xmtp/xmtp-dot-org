@@ -1,6 +1,6 @@
 export const HEADER_DATA = [
   {
-    title: 'Concepts',
+    title: 'Development concepts',
     subtitle:
       'Learn about the protocol, architecture, encryption, authentication, and more',
     url: '/docs/dev-concepts/introduction',
@@ -14,7 +14,7 @@ export const HEADER_DATA = [
   },
   {
     title: 'Vision',
-    subtitle: 'Read the XMTP Litepaper public draft, roadmap, and case studies',
+    subtitle: 'Read the XMTP Litepaper public draft and learn about the XMTP roadmap',
     url: '/about/litepaper',
     icon: 'xmtp-icon.svg'
   },
