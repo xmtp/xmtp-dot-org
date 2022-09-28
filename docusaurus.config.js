@@ -174,7 +174,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Client SDK docs',
+            title: 'Client SDK',
             items: [
               {
                 label: `Concepts`,
