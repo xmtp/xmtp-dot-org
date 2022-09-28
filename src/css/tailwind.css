@@ -123,16 +123,10 @@
   max-width: var(--max-width) !important;
 }
 
-/* .navbar {
-  background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(15px);
-  box-shadow: none;
-}
-
 [data-theme='dark'] .navbar {
   background-color: rgba(0, 0, 0, 0.95);
   box-shadow: none;
-} */
+}
 
 .navbar__client__dropdown {
   display: flex;
@@ -163,7 +157,7 @@
   width: 7rem;
 }
 
-.navbar__inner {
+.navbar__inner__max__width {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 3rem;
