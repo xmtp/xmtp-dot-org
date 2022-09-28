@@ -106,13 +106,13 @@ const config = {
             items: [
               {
                 to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="Client SDK icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Client SDK</div>
                  <div><small>Use the client SDK to build a web3 messaging solution</small></div></div></div>`,
               },
               {
                 to: 'docs/dev-concepts/introduction',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Development concepts icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Development concepts</div>
                  <div><small>Learn about the protocol, architecture, security, FAQ, and more</small></div></div></div>`,
               },
@@ -131,13 +131,13 @@ const config = {
             items: [
               {
                 to: 'community/community',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Join in and contribute</div>
                  <div><small>Learn ways to join in and contribute to the XMTP community</small></div></div></div>`,
               },
               {
                 to: 'community/code-of-conduct',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield with a check icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Code of conduct</div>
                  <div><small>Foster a safe and positive XMTP community experience</small></div></div></div>`,
               },
@@ -150,13 +150,13 @@ const config = {
             items: [
               {
                 to: 'vision/litepaper',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="Document icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Litepaper</div>
                  <div><small>Read the public draft of the XMTP Litepaper</small></div></div></div>`,
               },
               {
                 to: 'vision/roadmap',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="Map icon" /></div>
                  <div class="navbar__client__dropdown_text"><div>Roadmap</div>
                  <div><small>Learn about what's in store for XMTP in the months ahead</small></div></div></div>`,
               },
@@ -164,6 +164,7 @@ const config = {
           },
           {
             href: 'https://github.com/xmtp',
+            title: 'Go to the XMTP GitHub repo',
             position: 'right',
             className: 'header-github-link',
           },
@@ -242,12 +243,8 @@ const config = {
                 href: 'https://github.com/xmtp/example-chat-react/',
               },
               {
-                label: 'Hosted example chat app - production',
+                label: 'Hosted example chat app',
                 href: 'https://xmtp.chat/',
-              },
-              {
-                label: 'Hosted example chat app - dev',
-                href: 'https://xmtp.vercel.app/',
               },
             ],
           },
