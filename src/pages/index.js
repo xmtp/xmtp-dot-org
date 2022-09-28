@@ -46,7 +46,6 @@ export default function Home() {
       <HomepageHeader />
       <MainContent styles={styles} />
 
-      <ToggleButtons />
     </Layout>
   )
 }
