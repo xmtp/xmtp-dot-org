@@ -59,3 +59,24 @@ export const BLOG_DATA = [
     url: 'https://blog.xmtp.com/truths-not-spoofs/',
   },
 ]
+
+export const XMTP_JS_URL = "https://api.github.com/repos/xmtp/xmtp-js"
+export const EXAMPLE_CHAT_URL = "https://api.github.com/repos/xmtp/example-chat-react"
+
+export const CHAT_ITEM = {
+  id:"2534740",
+  full_name: 'Hosted example app',
+  description:
+    'Hosted example-react-app connected to the XMTP production network',
+  text: 'Try it',
+  html_url: 'https://xmtp.chat/',
+  icon:'chat-icon.svg'
+}
+export const VERCEL_ITEM = {
+  id:"1768846",
+  full_name: 'Hosted example app on dev network',
+  description: 'Hosted example-react-app connected to the XMTP dev network',
+  text: 'Try it',
+  html_url: 'https://xmtp.vercel.app/',
+  icon:'chat-icon.svg'
+}
