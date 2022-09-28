@@ -214,7 +214,7 @@ const config = {
                 to: `/docs/dev-concepts/security`,
               },
               {
-                label: `Supported wallets`,
+                label: `Wallet app and chain support`,
                 to: `/docs/dev-concepts/wallets`,
               },
               {
