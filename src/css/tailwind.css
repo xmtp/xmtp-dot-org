@@ -276,6 +276,30 @@
   display: none;
 }
 
+li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-2.menu__list-item
+  a,
+li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-item
+  a {
+  border-left: thin solid #d3d3d3;
+  border-radius: 0;
+}
+
+.menu__list-item:not(:first-child) {
+  margin-top: 0;
+}
+
+.menu__list-item {
+  margin-bottom: 0;
+}
+
+li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-2.menu__list-item
+  a.menu__link.menu__link--active,
+li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-item
+  a.menu__link.menu__link--active {
+  border-left: thin solid #ef4444;
+  color: #ef4444 !important;
+}
+
 @media only screen and (max-width: 1280px) {
   .navbar__inner {
     margin: 0;
