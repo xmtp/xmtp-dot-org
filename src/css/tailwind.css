@@ -294,15 +294,14 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   color: #ef4444 !important;
 }
 
-main.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Main-styles-module
-  .col--3 {
+main[class*='docMainContainer'] .col--3 {
   max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
   overflow-y: auto;
   position: sticky;
   top: calc(var(--ifm-navbar-height) + 2rem);
 }
 
-.tableOfContents_node_modules-\@docusaurus-theme-classic-lib-theme-TOC-styles-module {
+[class*='tableOfContents'] {
   top: 0 !important;
 }
 
