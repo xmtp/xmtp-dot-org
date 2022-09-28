@@ -234,7 +234,7 @@
 }
 
 .footer__item .footer__link-item {
-  line-height: .5rem;
+  line-height: 0.5rem;
 }
 
 .multiline-text-2 {
@@ -254,6 +254,16 @@
 .homepageHeader {
   background-image: var(--header-back-img);
   background-color: var(--header-bg-color);
+}
+
+.table-of-contents__link--active {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.table-of-contents__left-border {
+  border: none;
+  padding-left: 0;
 }
 
 @media only screen and (max-width: 1280px) {
