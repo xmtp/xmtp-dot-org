@@ -235,6 +235,11 @@
   background-color: var(--header-bg-color);
 }
 
+[aria-label="Scroll back to top"] {
+  display: none;
+
+}
+
 @media only screen and (max-width: 1280px) {
   .navbar__inner {
     margin: 0;
