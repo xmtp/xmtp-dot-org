@@ -31,7 +31,7 @@ const tags = {
   spotlight: { name: 'Spotlight', url: 'https://blog.xmtp.com/tag/spotlight/' },
   hackathon: {
     name: 'Hackathon',
-    url: 'https://blog.xmtp.com/tag/developers/',
+    url: 'https://blog.xmtp.com/tag/hackathon/',
   },
   nfts: { name: 'NFTs', url: 'https://blog.xmtp.com/tag/nfts/' },
 }
