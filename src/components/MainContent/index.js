@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { useColorMode } from '@docusaurus/theme-common'
 import ThemedImage from '@theme/ThemedImage'
@@ -22,6 +22,8 @@ export const MainContent = ({ styles }) => {
   const {
     siteConfig: { customFields },
   } = useDocusaurusContext()
+  const videoRef = useRef(null)
+  const [showReplayBtn, setShowReplayBtn] = useState(false)
 
   const userAction = async () => {
     let items = []
@@ -45,8 +47,17 @@ export const MainContent = ({ styles }) => {
     setSliderItems(items)
   }
 
+  const handleReplay = () => {
+    setShowReplayBtn(false)
+    videoRef.current.currentTime = 0
+    videoRef.current.play()
+  }
+
   useEffect(() => {
     userAction()
+    videoRef.current.onended = function () {
+      setShowReplayBtn(true)
+    }
   }, [])
 
   useEffect(() => {
@@ -248,7 +259,24 @@ export const MainContent = ({ styles }) => {
         </div>
         <div className="flex flex-col mt-20 lg:mt-24 max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center relative overflow-hidden">
           <div className="grid grid-flow-col">
-            <video  loop autoPlay="autoplay" muted playsInline className="rounded-2xl">
+            {showReplayBtn ? (
+              <div className="bg-neutral-800/50 absolute grid justify-center items-center w-full h-full ml-2.5 z-10">
+                <img
+                  onClick={handleReplay}
+                  src="/img/icons/play-icon.svg"
+                  alt="play button"
+                  className="w-14 cursor-pointer hover:invert"
+                />
+              </div>
+            ) : null}
+            <video
+              ref={videoRef}
+              // loop
+              autoPlay="autoplay"
+              muted
+              playsInline
+              className="rounded-2xl"
+            >
               <source src="/img/animation.mp4" type="video/mp4" />
               Your browser does not support HTML video.
             </video>
