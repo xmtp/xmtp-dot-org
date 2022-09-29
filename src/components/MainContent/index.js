@@ -257,7 +257,7 @@ export const MainContent = ({ styles }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col mt-20 lg:mt-24 max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center relative overflow-hidden">
+        <div className="flex flex-col mt-20 lg:mt-24 max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl justify-center items-center text-center relative overflow-hidden">
           <div className="grid grid-flow-col">
             {showReplayBtn ? (
               <div className="bg-neutral-800/50 absolute grid justify-center items-center w-full h-full ml-2.5 z-10">
@@ -275,13 +275,16 @@ export const MainContent = ({ styles }) => {
               autoPlay="autoplay"
               muted
               playsInline
-              className="rounded-2xl"
+              className="rounded-2xl hidden lg:block"
             >
               <source src="/img/animation.mp4" type="video/mp4" />
               Your browser does not support HTML video.
             </video>
+            <div className="flex lg:hidden p-4">
+              <img src="/img/mobile-animation-bg.jpg" alt='animation background' className='rounded-xl max-h-[51rem]'/>
+            </div>
           </div>
-          <div className="flex justify-center flex-col items-center mt-8 :lg:-mt-10 mx-6 absolute bottom-9">
+          <div className="flex justify-center flex-col items-center mt-8 :lg:-mt-10 mx-6 lg:absolute lg:bottom-9 mb-14 lg:mb-0">
             <h1 className="text-white text-3xl xl:text-4xl font-bold mb-4 leading-9">
               Messages meet users where they are
             </h1>
