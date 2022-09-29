@@ -257,7 +257,6 @@
 }
 
 .DocSearch-Button {
-  width: 256px;
   border-radius: 8px !important;
   border: thin solid var(--nav-search-border-color) !important;
   background: var(--docsearch-searchbox-background) !important;
