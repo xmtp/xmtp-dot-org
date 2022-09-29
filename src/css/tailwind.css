@@ -54,7 +54,7 @@
     --shadow-color: rgb(255 255 255 / 85%);
 
     --max-width: 1440px;
-    --nav-searchbox-shadow:inset 0 0 0 2px #FC4F37;
+    --nav-searchbox-shadow: inset 0 0 0 2px #fc4f37;
   }
   [data-theme='light'] {
     --ifm-footer-background-color: #171717;
@@ -64,6 +64,9 @@
     --header-bg-color: white;
     --header-box-background: #fff;
     --toc-link-color: #525252;
+    --toc-footer-border-color: black;
+    --docs-sidebar-link-color: #525252;
+    --docs-sidebar-title-color: black;
   }
 
   /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -83,6 +86,9 @@
     --header-bg-color: black;
     --header-box-background: #171717;
     --toc-link-color: #a3a3a3;
+    --toc-footer-border-color: #737373;
+    --docs-sidebar-link-color: #a3a3a3;
+    --docs-sidebar-title-color: white;
   }
 
   html[data-theme='dark'] {
@@ -297,6 +303,7 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   a {
   border-left: thin solid #d3d3d3;
   border-radius: 0;
+  color: var(--docs-sidebar-link-color);
 }
 
 .menu__list-item:not(:first-child) {
@@ -315,6 +322,11 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   color: #ef4444 !important;
 }
 
+.menu__list-item-collapsible a {
+  font-weight: 600;
+  color: var(--docs-sidebar-title-color);
+}
+
 main[class*='docMainContainer'] .col--3 {
   max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
   overflow-y: auto;
@@ -324,6 +336,10 @@ main[class*='docMainContainer'] .col--3 {
 
 [class*='tableOfContents'] {
   top: 0 !important;
+}
+
+.toc-footer {
+  border-color: var(--toc-footer-border-color);
 }
 
 @media only screen and (max-width: 1280px) {
