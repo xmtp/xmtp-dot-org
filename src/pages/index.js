@@ -43,7 +43,7 @@ export default function Home() {
       document.documentElement.classList.remove('dark')
     }
     const element = document.getElementsByClassName('navbar__inner')[0]
-    element.classList.add('navbar__inner__max__width')
+    element.classList.add('navbar__inner__padding')
   }, [])
 
   return (
