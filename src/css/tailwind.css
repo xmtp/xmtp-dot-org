@@ -327,7 +327,8 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   color: var(--docs-sidebar-title-color);
 }
 
-main[class*='docMainContainer'] .col--3 {
+main[class*='docMainContainer'] .col--3,
+.col--2 {
   max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
   overflow-y: auto;
   position: sticky;
