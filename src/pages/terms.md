@@ -10,7 +10,7 @@ You will find the following notice at the bottom of pages on [xmtp.org](https://
 
 This means that except as otherwise noted, page content is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/) and code samples are licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
-When you see a page with this notice you are free to use [nearly everything](#what-is-not-licensed) on the page in your own creations. For example, you could quote the text in a book, cut-and-paste sections to your blog, record it as an audiobook for the visually impaired, or even translate it into Swahili. Really. That's what open content licenses are all about. We just ask that you give us [attribution](#attribution) when you reuse our work.
+When you see a page with this notice, you are free to use [nearly everything](#what-is-not-licensed) on the page in your own creations. For example, you could quote the text in a book, cut-and-paste sections to your blog, record it as an audiobook for the visually impaired, or even translate it into Swahili. Really. That's what open content licenses are all about. We just ask that you give us [attribution](#attribution) when you reuse our work.
 
 If you have any questions about these terms of service, post to the [XMTP Q&A discussion forum](https://github.com/orgs/xmtp/discussions/categories/q-a).
 
@@ -26,7 +26,7 @@ In some cases, a page might include content consisting of images, audio or video
 
 Proper attribution is required when you reuse or create modified versions of content that appears on a page made available under the terms of the Creative Commons Attribution license. The complete requirements for attribution can be found in section 3 of the [Creative Commons legal code](https://creativecommons.org/licenses/by/4.0/legalcode).
 
-In practice we ask that you provide attribution to XMTP to the best of the ability of the medium in which you are producing the work.
+In practice, we ask that you provide attribution to XMTP to the best of the ability of the medium in which you are producing the work.
 
 There are several typical ways in which this might apply:
 

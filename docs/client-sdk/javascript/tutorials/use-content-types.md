@@ -50,3 +50,5 @@ You can use `xmtp-js` to specify and send a custom content type beyond the prede
     To learn more about the `send` API, see [sendMessage](/docs/client-sdk/javascript/reference/classes/Client#sendmessage).
 
 To learn more about sending new content types, see [Different content types](https://github.com/xmtp/xmtp-js/blob/4157fadd80bce80c8094135f3e47d3856515468f/README.md#different-types-of-content).
+
+**Questions? [Give us feedback](https://github.com/orgs/xmtp/discussions/categories/q-a)**

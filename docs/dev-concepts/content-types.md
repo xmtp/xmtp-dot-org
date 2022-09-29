@@ -23,3 +23,5 @@ The client SDK adopted these content types through the [XMTP Improvement Proposa
 To learn more about content types, see [Different types of content](https://github.com/xmtp/xmtp-js/tree/0ec6b344cb69823e5c4c924f35d1262b51fa636e#different-types-of-content).
 
 To learn how to use content types when developing a client app, see [Use content types](/docs/client-sdk/javascript/tutorials/use-content-types).
+
+**Questions? [Give us feedback](https://github.com/orgs/xmtp/discussions/categories/q-a)**

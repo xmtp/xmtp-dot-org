@@ -101,7 +101,7 @@ const config = {
         items: [
           {
             type: 'dropdown',
-            label: 'Docs',
+            label: 'Documentation',
             position: 'right',
             items: [
               {
