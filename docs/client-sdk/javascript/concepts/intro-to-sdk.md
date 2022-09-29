@@ -24,4 +24,4 @@ When you build an app with XMTP, you can use the following functions provided by
 
 To learn how to build an app with the XMTP SDK, see [Quickstart for the XMTP JavaScript SDK](/docs/client-sdk/javascript/tutorials/quickstart).
 
-To learn about XMTP SDK classes and interfaces, see [XMTP Javascript SDK Reference](/docs/client-sdk/javascript/reference/classes/Client).
+To learn about XMTP SDK classes and interfaces, see [XMTP JavaScript SDK Reference](/docs/client-sdk/javascript/reference/classes/Client).
