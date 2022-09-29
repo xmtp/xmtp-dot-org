@@ -31,11 +31,11 @@ export default function ToggleButtons() {
       document.documentElement.scrollTop > 1000
     ) {
       scrollToTopBtnRef.current.style.display = 'grid'
-      darkModeBtnRef.current.style.transform = 'translateY(0)'
+      darkModeBtnRef.current.style.transform = 'translateY(-4rem)'
       darkModeBtnRef.current.style.transition = 'all 0.5s ease'
     } else {
       scrollToTopBtnRef.current.style.display = 'none'
-      darkModeBtnRef.current.style.transform = 'translateY(3.25rem)'
+      darkModeBtnRef.current.style.transform = 'translateY(-0.76rem)'
       darkModeBtnRef.current.style.transition = 'all 0.5s ease'
     }
   }
@@ -45,14 +45,14 @@ export default function ToggleButtons() {
       <div
         ref={darkModeBtnRef}
         onClick={handleDarkMode}
-        className="w-11 h-11 rounded-full bg-gray-900 grid justify-center items-center border-2 border-solid border-gray-500 right-12 bottom-20 z-[60] cursor-pointer fixed"
+        className="w-11 h-11 rounded-full bg-gray-900 grid justify-center items-center border-2 border-solid border-gray-500 right-12 bottom-4 z-[60] cursor-pointer fixed"
       >
         <img src={`/img/icons/${colorMode}.svg`} />
       </div>
       <div
         ref={scrollToTopBtnRef}
         onClick={handleScrollToTop}
-        className="w-11 h-11 rounded-full bg-gray-900 grid justify-center items-center border-2 border-solid border-gray-500 fixed right-12 bottom-7 z-50 cursor-pointer"
+        className="hidden w-11 h-11 rounded-full bg-gray-900 grid justify-center items-center border-2 border-solid border-gray-500 fixed right-12 bottom-7 z-50 cursor-pointer"
       >
         <img src="/img/icons/arrow-up.svg" />
       </div>

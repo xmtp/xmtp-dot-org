@@ -67,6 +67,7 @@
     --toc-footer-border-color: black;
     --docs-sidebar-link-color: #525252;
     --docs-sidebar-title-color: black;
+    --docs-bg-image-url: url('../../static/img/doc-bg-light.png');
   }
 
   /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -89,6 +90,7 @@
     --toc-footer-border-color: #737373;
     --docs-sidebar-link-color: #a3a3a3;
     --docs-sidebar-title-color: white;
+    --docs-bg-image-url: url('../../static/img/doc-bg-dark.png');
   }
 
   html[data-theme='dark'] {
@@ -132,9 +134,12 @@
   max-width: var(--max-width) !important;
 }
 
+.navbar {
+  box-shadow: none;
+}
+
 [data-theme='dark'] .navbar {
   background-color: rgba(0, 0, 0, 0.95);
-  box-shadow: none;
 }
 
 .navbar__client__dropdown {
@@ -277,6 +282,16 @@
   box-shadow: var(--nav-searchbox-shadow) !important;
 }
 
+.theme-doc-sidebar-container {
+  border: none !important;
+}
+
+.main-wrapper {
+  background-image: var(--docs-bg-image-url);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .homepageHeader {
   background-image: var(--header-back-img);
   background-color: var(--header-bg-color);
@@ -322,6 +337,11 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-2.menu__list-it
 li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-item
   a.menu__link.menu__link--active {
   border-left: thin solid #ef4444;
+  color: #ef4444 !important;
+}
+
+.li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1.menu__list-item
+  a.menu__link--active {
   color: #ef4444 !important;
 }
 
