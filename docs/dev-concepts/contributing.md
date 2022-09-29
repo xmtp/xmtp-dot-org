@@ -5,7 +5,7 @@ sidebar_position: 8
 
 # Contribute to XMTP
 
-If you're seeing this document, you're an early contributor to the development and success of XMTP. We welcome your questions, feedback, suggestions, and code contributions.
+There are many ways to participate in the XMTP community, whether you are building with XMTP, working on improving the protocol, or simply interested in learning more about XMTP. We welcome your questions, feedback, suggestions, and code contributions.
 
 ## 🛠 SDK access
 
@@ -25,4 +25,4 @@ Request features by creating an issue in the [related XMTP GitHub repo](https://
 
 ## 🔀 Pull requests
 
-We encourage pull requests (PRs) from the community, but we suggest that you start with a feature request or a post to the [XMTP Community Forum on Discourse](https://community.xmtp.org/), just to do a temperature check. For example, if the PR involves a major change to the XMTP protocol, it must be fleshed out as an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) before work begins.
+We encourage pull requests (PRs) from the community, but we suggest that you start with a feature request or a post to [XMTP GitHub Discussions](https://github.com/orgs/xmtp/discussions), just to do a temperature check. For example, if the PR involves a major change to the XMTP protocol, it must be fleshed out as an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) before work begins.

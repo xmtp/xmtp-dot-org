@@ -149,7 +149,7 @@ Have other questions or ideas about message attachments? Post to the [XMTP discu
 
 ### Is XMTP more like email or chat?
 
-XMTP enables developers to implement messaging features and UX paradigms that best fit their needs. As a result, messages sent apps built with XMTP might resemble many typical forms of communication, such as email, chat, text messaging, push notifications, and more.
+XMTP enables developers to implement messaging features and UX paradigms that best fit their needs. As a result, messages sent using apps built with XMTP might resemble many typical forms of communication, such as email, chat, text messaging, push notifications, and more.
 
 ### Does XMTP support real-time conversations?
 
