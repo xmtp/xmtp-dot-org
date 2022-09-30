@@ -283,7 +283,7 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-8 max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
+        <div className="flex flex-col mt-16 max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
           <div className="flex justify-center flex-col items-center mt-12 text-center">
             <h1 className="text-black text-4xl font-bold mb-4">
               Join a community of builders
