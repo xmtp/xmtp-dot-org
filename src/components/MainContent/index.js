@@ -274,7 +274,7 @@ export const MainContent = ({ styles }) => {
               autoPlay="autoplay"
               muted
               playsInline
-              className="rounded-2xl hidden lg:block"
+              className="rounded-2xl hidden lg:block justify-center items-center translate-y-0 translate-x-0"
             >
               <source src="/img/animation.mp4" type="video/mp4" />
               Your browser does not support HTML video.
