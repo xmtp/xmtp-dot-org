@@ -27,6 +27,10 @@
   color: var(--text-color-neutral-700);
 }
 
+[class*='toggleButton'] {
+  display: none;
+}
+
 @media (min-width: 1536px) {
   .img-gradient {
     --tw-gradient-stops: var(--tw-gradient-from),
