@@ -192,7 +192,6 @@
 .navbar-sidebar {
   margin: 9px;
   border-radius: 8px;
-  height: fit-content;
   box-shadow: 0px 10px 15px -3px rgb(0 0 0 / 10%),
     0px 4px 6px -2px rgb(0 0 0 / 5%), 0px 0px 0px 1px rgb(0 0 0 / 5%);
 }
