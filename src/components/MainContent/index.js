@@ -303,13 +303,13 @@ export const MainContent = ({ styles }) => {
             </button>
           </div>
           <div className="flex justify-evenly mt-12 flex-wrap">
-            <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
+            <div className="flex w-full sm:w-auto max-h-14 md:max-h-full justify-center mb-10 mx-6">
               <img src="/img/Gitcoin.svg" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
               <img src="/img/Lens.svg" className="flex-1 object-none" />
             </div>
-            <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
+            <div className="flex w-full sm:w-auto max-h-14 md:max-h-full justify-center mb-10 mx-6">
               <img src="/img/Lit.svg" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
