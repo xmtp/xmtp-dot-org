@@ -258,9 +258,9 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
         <div className="flex flex-col mt-20 lg:mt-24 max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl justify-center items-center text-center relative overflow-hidden">
-          <div className="grid grid-flow-col">
+          <div className="grid grid-flow-col relative">
             {showReplayBtn ? (
-              <div className="bg-neutral-800/50 absolute grid justify-center items-center w-full h-full ml-2.5 z-10">
+              <div className="bg-neutral-800/50 absolute grid justify-center items-center w-full h-full z-10">
                 <img
                   onClick={handleReplay}
                   src="/img/icons/play-icon.svg"
