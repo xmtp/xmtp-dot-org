@@ -9,7 +9,7 @@ export const BlogItem = (props) => {
       <div>
         {tag.map((tag) => (
           <ALink to={tag.url} key={tag.name} className="inline-block">
-            <span className="inline-flex items-center mr-2 mb-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border-solid border-1 border-blue-300">
+            <span className="inline-flex items-center mr-2 mb-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border-solid border border-blue-300">
               {tag.name}
             </span>
           </ALink>
