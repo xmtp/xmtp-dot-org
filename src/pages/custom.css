@@ -27,8 +27,8 @@
   color: var(--text-color-neutral-700);
 }
 
-[aria-label="Switch between dark and light mode (currently light mode)"] {
-  display: none;
+[class*='toggleButton'] {
+  display: none!important;
 }
 
 @media (min-width: 1536px) {
