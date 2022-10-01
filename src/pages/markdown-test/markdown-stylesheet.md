@@ -85,7 +85,7 @@ println(str[0..14])                                          // 4
 |:---|:---|
 | **Environments** | JavaScript. Swift and React Native are on the roadmap. |
 | **Message cost** | Most messaging incurs no fee. As XMTP decentralizes, messaging between participants that opt-in will remain free, while unsolicited messages will often incur fees or see token staking requirements. Some `inline_code`, **bold text**, _italicized text_, and _**stuff**_. |
-| **Decentralization** | XMTP network nodes are run by XMTP Labs at this time. In the future, network node software will be open sourced and anyone will be welcome to operate a node. <br /><br /> Client implementation is permissionless, nor is permission required to access and develop with the SDK. Permission isn't required to connect to the XMTP network to send/receive messages on behalf of users. <br /><br /> We will publish a phased decentralization roadmap in [Fall 2022](/community). |
+| **Decentralization** | XMTP network nodes are run by XMTP Labs at this time. In the future, network node software will be open sourced and anyone will be welcome to operate a node. <br /><br /> Client implementation is permissionless, nor is permission required to access and develop with the SDK. Permission isn't required to connect to the XMTP network to send/receive messages on behalf of users. <br /><br /> We will publish a phased decentralization roadmap in Fall 2022. |
 
 ## Images (h2)
 
