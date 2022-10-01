@@ -1,5 +1,4 @@
-<!--[@xmtp/xmtp-js](../README.md) / [Exports](../modules.md) / ContentCodec-->
-
+<!---->
 # Interface: ContentCodec<T\>
 
 ## Type parameters
@@ -13,32 +12,21 @@
 - [`CompositeCodec`](../classes/CompositeCodec.md)
 - [`TextCodec`](../classes/TextCodec.md)
 
-<!--## Table of contents
-
-### Properties
-
-- [contentType](ContentCodec.md#contenttype)
-
-### Methods
-
-- [decode](ContentCodec.md#decode)
-- [encode](ContentCodec.md#encode)-->
-
 ## Properties
 
 ### contentType
 
-• **contentType**: [`ContentTypeId`](../classes/ContentTypeId.md)
+ **contentType**: [`ContentTypeId`](../classes/ContentTypeId.md)
 
 #### Defined in
 
-[MessageContent.ts:45](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/MessageContent.ts#L45)
+[MessageContent.ts:45](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/MessageContent.ts#L45)
 
 ## Methods
 
 ### decode
 
-▸ **decode**(`content`, `registry`): `T`
+**decode**(`content`, `registry`): `T`
 
 #### Parameters
 
@@ -53,13 +41,13 @@
 
 #### Defined in
 
-[MessageContent.ts:47](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/MessageContent.ts#L47)
+[MessageContent.ts:47](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/MessageContent.ts#L47)
 
 ___
 
 ### encode
 
-▸ **encode**(`content`, `registry`): [`EncodedContent`](EncodedContent.md)
+**encode**(`content`, `registry`): [`EncodedContent`](EncodedContent.md)
 
 #### Parameters
 
@@ -74,4 +62,4 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:46](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/MessageContent.ts#L46)
+[MessageContent.ts:46](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/MessageContent.ts#L46)

@@ -5,43 +5,33 @@ sidebar_position: 1
 
 # Quickstart for the XMTP JavaScript SDK
 
-:::warning OPEN ITEM
-
-We are going to single source this content from <https://github.com/xmtp/xmtp-js/blob/main/README.md> using a clone of the repo and a GitHub Action.
-
-:::
-
 ![Test](https://github.com/xmtp/xmtp-js/actions/workflows/test.yml/badge.svg)
 ![Lint](https://github.com/xmtp/xmtp-js/actions/workflows/lint.yml/badge.svg)
 ![Build](https://github.com/xmtp/xmtp-js/actions/workflows/build.yml/badge.svg)
 
-![x-red-sm](https://user-images.githubusercontent.com/510695/163488403-1fb37e86-c673-4b48-954e-8460ae4d4b05.png)
-
-**XMTP client SDK for JavaScript applications**
-
-`xmtp-js` provides a TypeScript implementation of the XMTP client protocol for use with JavaScript and React applications.
+The [XMTP JavaScript SDK](https://github.com/xmtp/xmtp-js) (`xmtp-js`) provides a TypeScript implementation of an XMTP client for use with JavaScript and React applications.
 
 Build with `xmtp-js` to provide messaging between blockchain wallet addresses, delivering on use cases such as wallet-to-wallet messaging and dapp-to-wallet notifications.
 
-For a demonstration of the core concepts and capabilities of the `xmtp-js` client SDK, see the [example React app](https://github.com/xmtp/example-chat-react).
+For a demonstration of the core concepts and capabilities of the `xmtp-js` client SDK, see the [example React app repo](https://github.com/xmtp/example-chat-react).
 
 `xmtp-js` has not undergone a formal security audit.
 
-To learn more about XMTP and get answers to frequently asked questions, see <https://xmtp.org/docs/>.
+To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/dev-concepts/faq).
 
-## 🏗 **Breaking revisions**
+## Breaking revisions
 
 Because `xmtp-js` is in active development, you should expect breaking revisions that might require you to adopt the latest SDK release to enable your app to continue working as expected.
 
-XMTP communicates about breaking revisions in the XMTP Discord community ([request access](https://xmtp.typeform.com/to/yojTJarb?utm_source=docs_home)), providing as much advance notice as possible. Additionally, breaking revisions in an `xmtp-js` release are described on the [Releases page](https://github.com/xmtp/xmtp-js/releases).
+XMTP communicates about breaking revisions in the [XMTP Discord community](https://discord.gg/xmtp), providing as much advance notice as possible. Additionally, breaking revisions in an `xmtp-js` release are described on the [Releases page](https://github.com/xmtp/xmtp-js/releases).
 
 Issues and PRs are welcome in accordance with our [contribution guidelines](https://github.com/xmtp/xmtp-js/blob/main/CONTRIBUTING.md).
 
-## XMTP `production` and `dev` network environments
+## XMTP "production" and "dev" network environments
 
 XMTP provides both `production` and `dev` network environments to support the development phases of your project.
 
-The `production` network is configured to store messages indefinitely. XMTP may occasionally delete messages and keys from the `dev` network, and will provide advance notice in the XMTP Discord community ([request access](https://xmtp.typeform.com/to/yojTJarb?utm_source=docs_home)).
+The `production` network is configured to store messages indefinitely. XMTP may occasionally delete messages and keys from the `dev` network, and will provide advance notice in the [XMTP Discord community](https://discord.gg/xmtp).
 
 To learn how to set your client's network environment, see [Configuring the Client](#configuring-the-client).
 
@@ -58,7 +48,7 @@ Additional configuration is required in React environments due to the removal of
 Use `react-scripts` prior to version `5.0.0`. For example:
 
 ```bash
-npx create-react-app --scripts-version 4.0.2
+npx create-react-app my-app --scripts-version 4.0.2
 ```
 
 Or downgrade after creating your app.
@@ -88,7 +78,7 @@ import { Wallet } from 'ethers'
 const wallet = Wallet.createRandom()
 // Create the client with your wallet. This will connect to the XMTP development network by default
 const xmtp = await Client.create(wallet)
-// Start a conversation
+// Start a conversation with XMTP
 const conversation = await xmtp.conversations.newConversation(
   '0x3F11b27F323b62B159D2642964fa27C46C841897'
 )
@@ -98,7 +88,7 @@ const messages = await conversation.messages()
 await conversation.send('gm')
 // Listen for new messages in the conversation
 for await (const message of await conversation.streamMessages()) {
-  console.log(`[${message.senderAddress}]: ${message.text}`)
+  console.log(`[${message.senderAddress}]: ${message.content}`)
 }
 ```
 
@@ -121,13 +111,14 @@ const xmtp = await Client.create(wallet)
 
 The client's network connection and key storage method can be configured with these optional parameters of `Client.create`:
 
-| Parameter             | Default               | Description                                                                                                                                                                                                                                                    |
-| --------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| env                   | `dev`                 | Connect to the specified XMTP network environment. Valid values also include `production`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments). |
-| waitForPeersTimeoutMs | `10000`               | Wait this long for an initial peer connection.                                                                                                                                                                                                                 |
-| keyStoreType          | `networkTopicStoreV1` | Persist the wallet's key bundle to the network, or optionally to `localStorage`.                                                                                                                                                                               |
-| codecs                | `[TextCodec]`         | Add codecs to support additional content types.                                                                                                                                                                                                                |
-| maxContentSize        | `100M`                | Maximum message content size in bytes.                                                                                                                                                                                                                         |
+| Parameter      | Default               | Description                                                                                                                                                                                                                                                                |
+| -------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| env            | `dev`                 | Connect to the specified XMTP network environment. Valid values also include `production` and `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments). |
+| apiUrl         | `undefined`           | Manually specify an API URL to use. If specified, value of `env` will be ignored.                                                                                                                                                                                          |
+|                |
+| keyStoreType   | `networkTopicStoreV1` | Persist the wallet's key bundle to the network, or optionally to `localStorage`.                                                                                                                                                                                           |
+| codecs         | `[TextCodec]`         | Add codecs to support additional content types.                                                                                                                                                                                                                            |
+| maxContentSize | `100M`                | Maximum message content size in bytes.                                                                                                                                                                                                                                     |
 
 ### Conversations
 
@@ -224,8 +215,24 @@ for await (const message of await conversation.streamMessages()) {
     // This message was sent from me
     continue
   }
-  console.log(`New message from ${message.senderAddress}: ${message.text}`)
+  console.log(`New message from ${message.senderAddress}: ${message.content}`)
 }
+```
+
+#### Checking if an address is on the network
+
+If you would like to check and see if a blockchain address is registered on the network before instantiating a client instance, you can use `Client.canMessage`.
+
+```ts
+import { Client } from '@xmtp/xmtp-js'
+
+const isOnDevNetwork = await Client.canMessage(
+  '0x3F11b27F323b62B159D2642964fa27C46C841897'
+)
+const isOnProdNetwork = await Client.canMessage(
+  '0x3F11b27F323b62B159D2642964fa27C46C841897',
+  { env: 'production' }
+)
 ```
 
 #### Different types of content

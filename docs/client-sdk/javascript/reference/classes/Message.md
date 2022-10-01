@@ -1,48 +1,15 @@
-<!--[@xmtp/xmtp-js](../README.md) / [Exports](../modules.md) / Message-->
-
+<!---->
 # Class: Message
 
 ## Implements
 
-- `V1Message`
-
-<!--## Table of contents
-
-### Constructors
-
-- [constructor](Message.md#constructor)
-
-### Properties
-
-- [ciphertext](Message.md#ciphertext)
-- [content](Message.md#content)
-- [contentTopic](Message.md#contenttopic)
-- [contentType](Message.md#contenttype)
-- [decrypted](Message.md#decrypted)
-- [error](Message.md#error)
-- [header](Message.md#header)
-- [headerBytes](Message.md#headerbytes)
-- [id](Message.md#id)
-
-### Accessors
-
-- [recipientAddress](Message.md#recipientaddress)
-- [senderAddress](Message.md#senderaddress)
-- [sent](Message.md#sent)
-
-### Methods
-
-- [toBytes](Message.md#tobytes)
-- [create](Message.md#create)
-- [decode](Message.md#decode)
-- [encode](Message.md#encode)
-- [fromBytes](Message.md#frombytes)-->
+- `MessageV1`
 
 ## Constructors
 
 ### constructor
 
-• **new Message**(`id`, `bytes`, `obj`, `header`)
+**new Message**(`id`, `bytes`, `obj`, `header`)
 
 #### Parameters
 
@@ -51,105 +18,115 @@
 | `id` | `string` |
 | `bytes` | `Uint8Array` |
 | `obj` | `Message` |
-| `header` | `MessageHeader` |
+| `header` | `MessageHeaderV1` |
 
 #### Defined in
 
-[Message.ts:45](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L45)
+[Message.ts:45](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L45)
 
 ## Properties
 
-### ciphertext
+### bytes
 
-• **ciphertext**: `default`
-
-#### Implementation of
-
-proto.V1Message.ciphertext
+ `Private` **bytes**: `Uint8Array`
 
 #### Defined in
 
-[Message.ts:29](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L29)
+[Message.ts:43](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L43)
+
+___
+
+### ciphertext
+
+ **ciphertext**: `default`
+
+#### Implementation of
+
+proto.MessageV1.ciphertext
+
+#### Defined in
+
+[Message.ts:29](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L29)
 
 ___
 
 ### content
 
-• `Optional` **content**: `any`
+ `Optional` **content**: `any`
 
 #### Defined in
 
-[Message.ts:34](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L34)
+[Message.ts:34](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L34)
 
 ___
 
 ### contentTopic
 
-• `Optional` **contentTopic**: `string`
+ `Optional` **contentTopic**: `string`
 
 #### Defined in
 
-[Message.ts:35](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L35)
+[Message.ts:35](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L35)
 
 ___
 
 ### contentType
 
-• `Optional` **contentType**: [`ContentTypeId`](ContentTypeId.md)
+ `Optional` **contentType**: [`ContentTypeId`](ContentTypeId.md)
 
 #### Defined in
 
-[Message.ts:33](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L33)
+[Message.ts:33](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L33)
 
 ___
 
 ### decrypted
 
-• `Optional` **decrypted**: `Uint8Array`
+ `Optional` **decrypted**: `Uint8Array`
 
 #### Defined in
 
-[Message.ts:30](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L30)
+[Message.ts:30](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L30)
 
 ___
 
 ### error
 
-• `Optional` **error**: `Error`
+ `Optional` **error**: `Error`
 
 #### Defined in
 
-[Message.ts:36](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L36)
+[Message.ts:36](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L36)
 
 ___
 
 ### header
 
-• **header**: `MessageHeader`
+ **header**: `MessageHeaderV1`
 
 #### Defined in
 
-[Message.ts:27](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L27)
+[Message.ts:27](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L27)
 
 ___
 
 ### headerBytes
 
-• **headerBytes**: `Uint8Array`
+ **headerBytes**: `Uint8Array`
 
 #### Implementation of
 
-proto.V1Message.headerBytes
+proto.MessageV1.headerBytes
 
 #### Defined in
 
-[Message.ts:28](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L28)
+[Message.ts:28](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L28)
 
 ___
 
 ### id
 
-• **id**: `string`
+ **id**: `string`
 
 Identifier that is deterministically derived from the bytes of the message
 header and ciphertext, where all those bytes are authenticated. This can
@@ -157,13 +134,13 @@ be used in determining uniqueness of messages.
 
 #### Defined in
 
-[Message.ts:42](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L42)
+[Message.ts:42](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L42)
 
 ## Accessors
 
 ### recipientAddress
 
-• `get` **recipientAddress**(): `undefined` \| `string`
+`get` **recipientAddress**(): `undefined` \| `string`
 
 #### Returns
 
@@ -171,13 +148,13 @@ be used in determining uniqueness of messages.
 
 #### Defined in
 
-[Message.ts:97](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L97)
+[Message.ts:97](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L97)
 
 ___
 
 ### senderAddress
 
-• `get` **senderAddress**(): `undefined` \| `string`
+`get` **senderAddress**(): `undefined` \| `string`
 
 #### Returns
 
@@ -185,13 +162,13 @@ ___
 
 #### Defined in
 
-[Message.ts:87](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L87)
+[Message.ts:87](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L87)
 
 ___
 
 ### sent
 
-• `get` **sent**(): `undefined` \| `Date`
+`get` **sent**(): `undefined` \| `Date`
 
 #### Returns
 
@@ -199,13 +176,13 @@ ___
 
 #### Defined in
 
-[Message.ts:82](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L82)
+[Message.ts:82](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L82)
 
 ## Methods
 
 ### toBytes
 
-▸ **toBytes**(): `Uint8Array`
+**toBytes**(): `Uint8Array`
 
 #### Returns
 
@@ -213,20 +190,20 @@ ___
 
 #### Defined in
 
-[Message.ts:62](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L62)
+[Message.ts:62](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L62)
 
 ___
 
 ### create
 
-▸ `Static` **create**(`obj`, `header`, `bytes`): `Promise`<[`Message`](Message.md)\>
+`Static` **create**(`obj`, `header`, `bytes`): `Promise`<[`Message`](Message.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `obj` | `Message` |
-| `header` | `MessageHeader` |
+| `header` | `MessageHeaderV1` |
 | `bytes` | `Uint8Array` |
 
 #### Returns
@@ -235,19 +212,19 @@ ___
 
 #### Defined in
 
-[Message.ts:66](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L66)
+[Message.ts:66](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L66)
 
 ___
 
 ### decode
 
-▸ `Static` **decode**(`viewer`, `bytes`): `Promise`<[`Message`](Message.md)\>
+`Static` **decode**(`viewer`, `bytes`): `Promise`<[`Message`](Message.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `viewer` | [`PrivateKeyBundle`](PrivateKeyBundle.md) |
+| `viewer` | [`PrivateKeyBundleV1`](PrivateKeyBundleV1.md) |
 | `bytes` | `Uint8Array` |
 
 #### Returns
@@ -256,19 +233,19 @@ ___
 
 #### Defined in
 
-[Message.ts:136](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L136)
+[Message.ts:139](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L139)
 
 ___
 
 ### encode
 
-▸ `Static` **encode**(`sender`, `recipient`, `message`, `timestamp`): `Promise`<[`Message`](Message.md)\>
+`Static` **encode**(`sender`, `recipient`, `message`, `timestamp`): `Promise`<[`Message`](Message.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `sender` | [`PrivateKeyBundle`](PrivateKeyBundle.md) |
+| `sender` | [`PrivateKeyBundleV1`](PrivateKeyBundleV1.md) |
 | `recipient` | [`PublicKeyBundle`](PublicKeyBundle.md) |
 | `message` | `Uint8Array` |
 | `timestamp` | `Date` |
@@ -279,13 +256,13 @@ ___
 
 #### Defined in
 
-[Message.ts:107](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L107)
+[Message.ts:107](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L107)
 
 ___
 
 ### fromBytes
 
-▸ `Static` **fromBytes**(`bytes`): `Promise`<[`Message`](Message.md)\>
+`Static` **fromBytes**(`bytes`): `Promise`<[`Message`](Message.md)\>
 
 #### Parameters
 
@@ -299,4 +276,4 @@ ___
 
 #### Defined in
 
-[Message.ts:75](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/Message.ts#L75)
+[Message.ts:75](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Message.ts#L75)
