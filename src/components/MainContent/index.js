@@ -259,7 +259,7 @@ export const MainContent = ({ styles }) => {
         </div>
         <div className="flex flex-col mt-20 lg:mt-24 max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl justify-center items-center text-center relative overflow-hidden">
           <div className="grid grid-flow-col relative">
-            {showReplayBtn ? (
+            {/* {showReplayBtn ? (
               <div className="bg-neutral-800/50 absolute grid justify-center items-center w-full h-full z-10">
                 <img
                   onClick={handleReplay}
@@ -268,7 +268,7 @@ export const MainContent = ({ styles }) => {
                   className="w-14 cursor-pointer hover:invert"
                 />
               </div>
-            ) : null}
+            ) : null} */}
             <video
               ref={videoRef}
               autoPlay="autoplay"
