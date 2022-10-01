@@ -153,4 +153,4 @@ Here are some bullets that have nested text that aren't bullets.
 
 #### Throwing in an h4 heading just to see what it looks like (h4)
 
-The only home we've ever known rich in heavy atoms a mote of dust suspended in a sunbeam Sea of Tranquility a mote of dust suspended.
+The only home we've ever known rich in heavy atoms a mote of dust suspended in a sunbeam Sea of Tranquility a mote of dust suspended in time.
