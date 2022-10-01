@@ -1,37 +1,21 @@
-<!--[@xmtp/xmtp-js](../README.md) / [Exports](../modules.md) / TextCodec-->
-
+<!---->
 # Class: TextCodec
 
 ## Implements
 
 - [`ContentCodec`](../interfaces/ContentCodec.md)<`string`\>
 
-<!--## Table of contents
-
-### Constructors
-
-- [constructor](TextCodec.md#constructor)
-
-### Accessors
-
-- [contentType](TextCodec.md#contenttype)
-
-### Methods
-
-- [decode](TextCodec.md#decode)
-- [encode](TextCodec.md#encode)-->
-
 ## Constructors
 
 ### constructor
 
-• **new TextCodec**()
+**new TextCodec**()
 
 ## Accessors
 
 ### contentType
 
-• `get` **contentType**(): [`ContentTypeId`](ContentTypeId.md)
+`get` **contentType**(): [`ContentTypeId`](ContentTypeId.md)
 
 #### Returns
 
@@ -43,13 +27,13 @@
 
 #### Defined in
 
-[codecs/Text.ts:18](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/codecs/Text.ts#L18)
+[codecs/Text.ts:18](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Text.ts#L18)
 
 ## Methods
 
 ### decode
 
-▸ **decode**(`content`): `string`
+**decode**(`content`): `string`
 
 #### Parameters
 
@@ -67,13 +51,13 @@
 
 #### Defined in
 
-[codecs/Text.ts:30](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/codecs/Text.ts#L30)
+[codecs/Text.ts:30](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Text.ts#L30)
 
 ___
 
 ### encode
 
-▸ **encode**(`content`): [`EncodedContent`](../interfaces/EncodedContent.md)
+**encode**(`content`): [`EncodedContent`](../interfaces/EncodedContent.md)
 
 #### Parameters
 
@@ -91,4 +75,4 @@ ___
 
 #### Defined in
 
-[codecs/Text.ts:22](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/codecs/Text.ts#L22)
+[codecs/Text.ts:22](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Text.ts#L22)

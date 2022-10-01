@@ -1,78 +1,79 @@
-<!--[@xmtp/xmtp-js](../README.md) / [Exports](../modules.md) / PublicKeyBundle-->
-
+<!---->
 # Class: PublicKeyBundle
 
 ## Implements
 
 - `PublicKeyBundle`
 
-<!--## Table of contents
-
-### Constructors
-
-- [constructor](PublicKeyBundle.md#constructor)
-
-### Properties
-
-- [identityKey](PublicKeyBundle.md#identitykey)
-- [preKey](PublicKeyBundle.md#prekey)
-
-### Methods
-
-- [toBytes](PublicKeyBundle.md#tobytes)
-- [walletSignatureAddress](PublicKeyBundle.md#walletsignatureaddress)
-- [fromBytes](PublicKeyBundle.md#frombytes)-->
-
 ## Constructors
 
 ### constructor
 
-• **new PublicKeyBundle**(`identityKey`, `preKey`)
+**new PublicKeyBundle**(`bundle`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `identityKey` | [`PublicKey`](PublicKey.md) |
-| `preKey` | [`PublicKey`](PublicKey.md) |
+| `bundle` | `PublicKeyBundle` |
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:11](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PublicKeyBundle.ts#L11)
+[crypto/PublicKeyBundle.ts:57](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L57)
 
 ## Properties
 
 ### identityKey
 
-• **identityKey**: [`PublicKey`](PublicKey.md)
+ **identityKey**: [`PublicKey`](PublicKey.md)
 
 #### Implementation of
 
-proto.PublicKeyBundle.identityKey
+publicKey.PublicKeyBundle.identityKey
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:8](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PublicKeyBundle.ts#L8)
+[crypto/PublicKeyBundle.ts:54](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L54)
 
 ___
 
 ### preKey
 
-• **preKey**: [`PublicKey`](PublicKey.md)
+ **preKey**: [`PublicKey`](PublicKey.md)
 
 #### Implementation of
 
-proto.PublicKeyBundle.preKey
+publicKey.PublicKeyBundle.preKey
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:9](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PublicKeyBundle.ts#L9)
+[crypto/PublicKeyBundle.ts:55](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L55)
 
 ## Methods
 
+### equals
+
+**equals**(`other`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `other` | [`PublicKeyBundle`](PublicKeyBundle.md) |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[crypto/PublicKeyBundle.ts:68](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L68)
+
+___
+
 ### toBytes
 
-▸ **toBytes**(): `Uint8Array`
+**toBytes**(): `Uint8Array`
 
 #### Returns
 
@@ -80,13 +81,13 @@ proto.PublicKeyBundle.preKey
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:26](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PublicKeyBundle.ts#L26)
+[crypto/PublicKeyBundle.ts:79](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L79)
 
 ___
 
 ### walletSignatureAddress
 
-▸ **walletSignatureAddress**(): `string`
+**walletSignatureAddress**(): `string`
 
 #### Returns
 
@@ -94,13 +95,13 @@ ___
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:22](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PublicKeyBundle.ts#L22)
+[crypto/PublicKeyBundle.ts:75](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L75)
 
 ___
 
 ### fromBytes
 
-▸ `Static` **fromBytes**(`bytes`): [`PublicKeyBundle`](PublicKeyBundle.md)
+`Static` **fromBytes**(`bytes`): [`PublicKeyBundle`](PublicKeyBundle.md)
 
 #### Parameters
 
@@ -114,4 +115,4 @@ ___
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:30](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PublicKeyBundle.ts#L30)
+[crypto/PublicKeyBundle.ts:83](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L83)
