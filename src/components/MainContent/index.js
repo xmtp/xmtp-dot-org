@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { useColorMode } from '@docusaurus/theme-common'
 import ThemedImage from '@theme/ThemedImage'
@@ -22,6 +22,8 @@ export const MainContent = ({ styles }) => {
   const {
     siteConfig: { customFields },
   } = useDocusaurusContext()
+  const videoRef = useRef(null)
+  const [showReplayBtn, setShowReplayBtn] = useState(false)
 
   const userAction = async () => {
     let items = []
@@ -45,8 +47,17 @@ export const MainContent = ({ styles }) => {
     setSliderItems(items)
   }
 
+  const handleReplay = () => {
+    setShowReplayBtn(false)
+    videoRef.current.currentTime = 0
+    videoRef.current.play()
+  }
+
   useEffect(() => {
     userAction()
+    videoRef.current.onended = function () {
+      setShowReplayBtn(true)
+    }
   }, [])
 
   useEffect(() => {
@@ -108,7 +119,11 @@ export const MainContent = ({ styles }) => {
                     <div className="relative">
                       <dt>
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800">
-                          <img alt="bell icon representing the alert message use case" className="w-6 h-6" src="/img/bell.svg" />
+                          <img
+                            alt="bell icon representing the alert message use case"
+                            className="w-6 h-6"
+                            src="/img/bell.svg"
+                          />
                         </div>
                         <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Alerts
@@ -142,7 +157,11 @@ export const MainContent = ({ styles }) => {
                     <div className="relative">
                       <dt>
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 ">
-                          <img alt="chat icon representing the direct messaging use case" className="w-6 h-6" src="/img/dm.svg" />
+                          <img
+                            alt="chat icon representing the direct messaging use case"
+                            className="w-6 h-6"
+                            src="/img/dm.svg"
+                          />
                         </div>
                         <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Direct messaging
@@ -238,20 +257,37 @@ export const MainContent = ({ styles }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col mt-12 lg:mt-14 h-[1118px] lg:h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center">
-          <div className="flex">
-            <div className="mr-40 hidden lg:block">
-              <img src="/img/browser.png" />
-            </div>
-            <div>
-              <img src="/img/browser-mobile.png" />
+        <div className="flex flex-col mt-20 lg:mt-24 max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl justify-center items-center text-center relative overflow-hidden">
+          <div className="grid grid-flow-col relative w-full">
+            {showReplayBtn ? (
+              <div className="bg-neutral-800/50 absolute hidden lg:grid justify-center items-center w-full h-full z-10">
+                <img
+                  onClick={handleReplay}
+                  src="/img/icons/play-icon.svg"
+                  alt="play button"
+                  className="w-14 cursor-pointer hover:invert"
+                />
+              </div>
+            ) : null}
+            <video
+              ref={videoRef}
+              autoPlay="autoplay"
+              muted
+              playsInline
+              className="rounded-2xl hidden lg:block justify-center items-center translate-y-0 translate-x-0"
+            >
+              <source src="/img/animation.mp4" type="video/mp4" />
+              Your browser does not support HTML video.
+            </video>
+            <div className="grid justify-center lg:hidden p-4">
+              <img src="/img/mobile-animation-bg.jpg" alt='animation background' className='rounded-xl max-h-[51rem]'/>
             </div>
           </div>
-          <div className="flex justify-center flex-col items-center mt-8 :lg:-mt-10 mx-6">
+          <div className="flex justify-center flex-col items-center mt-8 :lg:-mt-10 mx-6 lg:absolute lg:bottom-9 mb-14 lg:mb-0 z-10">
             <h1 className="text-white text-3xl xl:text-4xl font-bold mb-4 leading-9">
               Messages meet users where they are
             </h1>
-            <p className="text-neutral-300 text-base leading-6 text-center lg:max-w-[70%] mb-8">
+            <p className="text-white text-base leading-6 text-center lg:max-w-[70%] mb-8">
               Building with XMTP gives users a portable inbox that follows them
               across web3, providing access to their messages using any app
               built with XMTP.
