@@ -45,7 +45,7 @@ export default function ToggleButtons() {
       <div
         ref={darkModeBtnRef}
         onClick={handleDarkMode}
-        className="w-11 h-11 rounded-full bg-gray-900 grid justify-center items-center border-2 border-solid border-gray-500 right-5 lg:right-12 bottom-5 z-[60] cursor-pointer fixed"
+        className="w-11 h-11 rounded-full bg-gray-900 grid justify-center items-center border-2 border-solid border-gray-500 right-4 lg:right-12 bottom-5 z-[60] cursor-pointer fixed"
       >
         <img src={`/img/icons/${colorMode}.svg`} />
       </div>
