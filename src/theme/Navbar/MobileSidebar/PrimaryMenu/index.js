@@ -12,7 +12,7 @@ export default function PrimaryMenuWrapper(props) {
   return (
     <>
       <PrimaryMenu {...props} />
-      <div className=" border-0 border-solid border-t border-neutral-300 grid grid-cols-2 pt-4 pb-3">
+      <div className=" border-0 border-solid border-t border-neutral-300 grid grid-cols-2 pt-4 pb-3 mt-4">
         <div className="pl-3 grid items-center">Switch theme</div>
         <div className="grid grid-flow-col gap-1 items-center ml-auto p-3 mr-4 rounded-full cursor-pointer hover:drop-shadow-md">
           {colorMode === 'dark' ? (
