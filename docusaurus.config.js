@@ -107,14 +107,14 @@ const config = {
               {
                 to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="Client SDK icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div>Client SDK</div>
-                 <div><small>Use the client SDK to build a web3 messaging solution</small></div></div></div>`,
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold text-black dark:text-white">Client SDK</div>
+                 <div class="subheadline text-sm text-slate-600 dark:text-neutral-300 text-normal whitespace-pre-line">Use the client SDK to build a web3 messaging solution</div></div></div>`,
               },
               {
                 to: 'docs/dev-concepts/introduction',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Development concepts icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div>Development concepts</div>
-                 <div><small>Learn about the protocol, architecture, security, FAQ, and more</small></div></div></div>`,
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold text-black dark:text-white">Development concepts</div>
+                 <div class="subheadline text-sm text-slate-600 dark:text-neutral-300 text-normal whitespace-pre-line">Learn about the protocol, architecture, security, FAQ, and more</div></div></div>`,
               },
             ],
           },
@@ -132,14 +132,14 @@ const config = {
               {
                 to: 'community/community',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div>Join in and contribute</div>
-                 <div><small>Learn ways to join in and contribute to the XMTP community</small></div></div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold text-black dark:text-white">Join in and contribute</div>
+                <div class="subheadline text-sm text-slate-600 dark:text-neutral-300 text-normal whitespace-pre-line">Learn ways to join in and contribute to the XMTP community</div></div></div>`,
               },
               {
                 to: 'community/code-of-conduct',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield with a check icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div>Code of conduct</div>
-                 <div><small>Foster a safe and positive XMTP community experience</small></div></div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold text-black dark:text-white">Code of conduct</div>
+                 <div class="subheadline text-sm text-slate-600 dark:text-neutral-300 text-normal whitespace-pre-line">Foster a safe and positive XMTP community experience</div></div></div>`,
               },
             ],
           },
@@ -151,14 +151,14 @@ const config = {
               {
                 to: 'vision/litepaper',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="Document icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div>Litepaper</div>
-                 <div><small>Read the public draft of the XMTP Litepaper</small></div></div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold text-black dark:text-white">Litepaper</div>
+                <div class="subheadline text-sm text-slate-600 dark:text-neutral-300 text-normal whitespace-pre-line">Read the public draft of the XMTP Litepaper</div></div></div>`,
               },
               {
                 to: 'vision/roadmap',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="Map icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div>Roadmap</div>
-                 <div><small>Learn about what's in store for XMTP in the months ahead</small></div></div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold text-black dark:text-white">Roadmap</div>
+                 <div class="subheadline text-sm text-slate-600 dark:text-neutral-300 text-normal whitespace-pre-line">Learn about what's in store for XMTP in the months ahead</div></div></div>`,
               },
             ],
           },
