@@ -283,7 +283,7 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-8 max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
+        <div className="flex flex-col mt-16 max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
           <div className="flex justify-center flex-col items-center mt-12 text-center">
             <h1 className="text-black text-4xl sm:text-3xl font-bold mb-4">
               Join a community of builders
@@ -304,19 +304,19 @@ export const MainContent = ({ styles }) => {
           </div>
           <div className="flex justify-evenly mt-12 flex-wrap">
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/logo-example.svg" className="flex-1 object-none" />
+              <img src="/img/Gitcoin.svg" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/logo-example.svg" className="flex-1 object-none" />
+              <img src="/img/Lens.svg" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/logo-example.svg" className="flex-1 object-none" />
+              <img src="/img/Lit.svg" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/logo-example.svg" className="flex-1 object-none" />
+              <img src="/img/Boson.svg" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/logo-example.svg" className="flex-1 object-none" />
+              <img src="/img/Relay.svg" className="flex-1 object-none" />
             </div>
           </div>
         </div>
