@@ -205,6 +205,14 @@
   margin-bottom: 12px;
 }
 
+.navbar__item .dropdown__menu li {
+  margin-bottom: 0.5rem;
+}
+
+.navbar__item .dropdown__menu li:last-child {
+  margin-bottom: 0;
+}
+
 .inner-div {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -212,6 +220,26 @@
 
 .inner-div::-webkit-scrollbar {
   display: none;
+}
+
+.dropdown__link {
+  padding: 0.75rem !important;
+}
+
+[data-theme='dark'] .dropdown__link {
+  color: white !important;
+}
+
+.dropdown__link--active {
+  color: black;
+}
+
+[data-theme='dark'] .dropdown__link--active {
+  color: #d4d4d4 !important;
+}
+
+.whitespace-pre-line {
+  white-space: pre-line !important;
 }
 
 .arrow-icon {

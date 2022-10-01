@@ -31,7 +31,7 @@
   display: none!important;
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1480px) {
   .img-gradient {
     --tw-gradient-stops: var(--tw-gradient-from),
       var(--tw-gradient-to, rgb(0 0 0 / 0));

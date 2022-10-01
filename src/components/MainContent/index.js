@@ -109,7 +109,7 @@ export const MainContent = ({ styles }) => {
                   <span className="text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                     <ALink
                       to="https://github.com/orgs/xmtp/discussions"
-                      className="text-red-500 font-bold ml-1"
+                      className="text-red-500 font-bold"
                     >
                       Join the discussion
                     </ALink>
@@ -189,7 +189,7 @@ export const MainContent = ({ styles }) => {
                 <div className="-mx-4 mt-10 lg:col-start-1 lg:mt-0">
                   <div className="absolute mx-auto object-fill bg-none img-gradient z-10 h-[91%] w-36"></div>
                   <ThemedImage
-                    className="relative mx-auto !inline-block object-fill md:max-h-[573px] lg:w-11/12"
+                    className="relative mx-auto !inline-block object-fill md:max-h-fill lg:w-12/12"
                     sources={{
                       light: useBaseUrl('/img/build-xmtp.png'),
                       dark: useBaseUrl('/img/build-xmtp-dark.png'),
@@ -202,7 +202,7 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="mt-14 xl:ml-12 mb-12 relative grid grid-cols-1 lg:grid-cols-11">
+        <div className="my-0 xl:ml-12 relative grid grid-cols-1 lg:grid-cols-11">
           <div className="w-auto mr-6 mt-4 mb-6 lg:mb-0 col-span-2">
             <p className="text-xl font-bold mb-2">SDK and tools</p>
             <small className="text-base">
@@ -304,7 +304,7 @@ export const MainContent = ({ styles }) => {
         <div className="lg:px-0 xl:px-12">
           <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
             <div>
-              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white color-white">
+              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white color-white">
                 Latest from XMTP
               </h2>
             </div>
@@ -321,7 +321,7 @@ export const MainContent = ({ styles }) => {
 
         <div className="flex flex-col mt-8 max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
           <div className="flex justify-center flex-col items-center mt-12 text-center">
-            <h1 className="text-black text-4xl font-bold mb-4">
+            <h1 className="text-black text-4xl sm:text-3xl font-bold mb-4">
               Join a community of builders
             </h1>
             <p className="text-neutral-800 text-base leading-6 text-center lg:max-w-[70%] mb-8">
