@@ -88,6 +88,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
+        defaultMode:'light',
         disableSwitch: false,
       },
       navbar: {

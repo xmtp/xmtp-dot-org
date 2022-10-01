@@ -33,6 +33,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext()
 
   useEffect(() => {
+    if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'light')
     if (
       localStorage.getItem('theme') === 'dark' ||
       (!('theme' in localStorage) &&
