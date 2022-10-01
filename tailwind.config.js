@@ -1,7 +1,8 @@
 /* eslint-disable */
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,jsx}',
     './src/components/**/*.{js,jsx}',
@@ -12,6 +13,7 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
+  plugins: [require('@tailwindcss/line-clamp')],
   theme: {
     extend: {
       fontFamily: {
@@ -19,9 +21,10 @@ module.exports = {
         mono: ['"Inconsolata"', defaultTheme.fontFamily.mono],
       },
       screens: {
-        lg: '997px',
+        lg: '1193px',
+        max: '1440px',
       },
-      // colors: {
+      /* // colors: {
       //   primary: {
       //     DEFAULT: 'var(--docs-color-primary)',
       //     100: 'var(--docs-color-primary-100)',
@@ -37,7 +40,7 @@ module.exports = {
       //     200: 'var(--docs-color-background-200)',
       //     300: 'var(--docs-color-background-300)',
       //   },
-      // },
+      // }, */
     },
   },
-};
+}

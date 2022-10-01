@@ -1,0 +1,36 @@
+[data-theme='light'] {
+  --tw-gradient-from: #fff;
+  --tw-gradient-to: transparent;
+}
+
+[data-theme='dark'] {
+  --tw-gradient-from: #000;
+  --tw-gradient-to: transparent;
+  --text-color-white: white;
+  --text-color-neutral-300: #d4d4d4;
+  --text-color-neutral-500: #737373;
+}
+
+.color-white {
+  color: var(--text-color-white);
+}
+
+.color-neutral-300 {
+  color: var(--text-color-neutral-300);
+}
+
+.color-neutral-500 {
+  color: var(--text-color-neutral-500);
+}
+
+.border-700 {
+  color: var(--text-color-neutral-700);
+}
+
+@media (min-width: 1480px) {
+  .img-gradient {
+    --tw-gradient-stops: var(--tw-gradient-from),
+      var(--tw-gradient-to, rgb(0 0 0 / 0));
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+}

@@ -2,7 +2,7 @@
 
 ## Client SDK
 
-`xmtp-js` is a TypeScript implementation of the XMTP client protocol for use with JavaScript and React applications.
+The XMTP JavaScript SDK is a TypeScript implementation of an XMTP client for use with JavaScript and React apps.
 
 [GitHub repo](https://github.com/xmtp/xmtp-js) | [Docs](docs/client-sdk/javascript/tutorials/quickstart)
 
@@ -12,9 +12,8 @@
 
 [GitHub repo](https://github.com/xmtp/example-chat-react)
 
-## Hosted example client apps
+## Hosted example client app
 
-XMTP Labs hosts deployments of the `example-chat-react` app to provide people with a way to try out a basic app built with XMTP.
+XMTP Labs hosts a deployment of the `example-chat-react` app connected to the `production` network to provide people with a way to try out a basic app built with XMTP.
 
-- [Try the app](https://xmtp.chat) connected to the XMTP `production` network
-- [Try the app](https://xmtp.vercel.app/) connected to the XMTP `dev` network
+[Try it](https://xmtp.chat)

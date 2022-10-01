@@ -1,37 +1,151 @@
 {
     "index_name": "xmtp_dot_org",
+    "sitemap_urls": ["https://junk-range-possible.vercel.app/sitemap.xml"],
     "start_urls": [
-      "https://xmtp.org/"
-    ],
-    "sitemap_urls": [
-      "https://xmtp.org/sitemap.xml"
-    ],
-    "sitemap_alternate_links": true,
-    "stop_urls": [],
-    "selectors": {
-      "lvl0": {
-        "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
-        "type": "xpath",
-        "global": true,
-        "default_value": "Documentation"
+      {
+        "url": "https://junk-range-possible.vercel.app/docs/client-sdk/javascript/concepts/intro-to-sdk",
+        "tags": "javascript-sdk-concepts",
+        "selectors_key": "javascript-sdk-concepts"
       },
-      "lvl1": "header h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article p, article li, article td:last-child"
+      {
+        "url": "https://junk-range-possible-git-omg-algolia-xmtp-labs.vercel.app/docs/client-sdk/javascript/tutorials/quickstart",
+        "tags": "javascript-sdk-tutorials",
+        "selectors_key": "javascript-sdk-tutorials"
+      },
+      {
+        "url": "https://junk-range-possible-git-omg-algolia-xmtp-labs.vercel.app/docs/client-sdk/javascript/reference/classes/Client",
+        "tags": "javascript-sdk-reference",
+        "selectors_key": "javascript-sdk-reference"
+      },
+      {
+        "url": "https://junk-range-possible.vercel.app/docs/dev-concepts/introduction",
+        "tags": "dev-concepts",
+        "selectors_key": "dev-concepts"
+      },
+      {
+        "url": "https://junk-range-possible.vercel.app/vision/litepaper",
+        "tags": "vision",
+        "selectors_key": "vision"
+      },
+      {
+        "url": "https://junk-range-possible.vercel.app/sdks-and-tools",
+        "tags": "sdks-and-tools",
+        "selectors_key": "sdks-and-tools"
+      },
+      {
+        "url": "https://junk-range-possible.vercel.app/community",
+        "tags": "community",
+        "selectors_key": "community"
+      },
+      "https://junk-range-possible.vercel.app"
+    ],
+    "stop_urls": [],
+
+    "selectors": {
+      "javascript-sdk-concepts": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "JavaScript SDK concepts"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "javascript-sdk-tutorials": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "JavaScript SDK tutorials"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "javascript-sdk-reference": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "JavaScript SDK reference"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "dev-concepts": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "Development concepts"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "vision": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "Vision"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "community": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "Community"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "sdks-and-tools": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "SDKs and tools"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      }
     },
+
     "strip_chars": " .,;:#",
     "custom_settings": {
       "separatorsToIndex": "_",
-      "attributesForFaceting": [
-        "language",
-        "version",
-        "type",
-        "docusaurus_tag"
-      ],
+      "attributesForFaceting": ["language", "version", "type", "docusaurus_tag"],
       "attributesToRetrieve": [
         "hierarchy",
         "content",
@@ -42,4 +156,4 @@
       ]
     },
     "nb_hits": 1110
-  }
+}
