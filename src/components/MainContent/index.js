@@ -340,19 +340,19 @@ export const MainContent = ({ styles }) => {
           </div>
           <div className="flex justify-evenly mt-12 flex-wrap">
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Gitcoin.svg" className="flex-1 object-none" />
+              <img src="/img/Gitcoin.svg" alt="Gitcoin icon"className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Lens.svg" className="flex-1 object-none" />
+              <img src="/img/Lens.svg" alt="Lens Protocol icon" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Lit.svg" className="flex-1 object-none" />
+              <img src="/img/Lit.svg" alt="Lit Protocol icon" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Boson.svg" className="flex-1 object-none" />
+              <img src="/img/Boson.svg" alt="Boson Protocol icon" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Relay.svg" className="flex-1 object-none" />
+              <img src="/img/Relay.svg" alt="Relay icon" className="flex-1 object-none" />
             </div>
           </div>
         </div>
