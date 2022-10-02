@@ -1,8 +1,8 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Create a feature request to suggest an idea or enhancement for this project
 title: 'Feature request:'
-labels: enhancement, prelaunch-feedback
+labels: enhancement
 assignees: ''
 
 ---
