@@ -4,6 +4,56 @@
       "source": "/signatures",
       "destination": "/docs/dev-concepts/signatures",
       "permanent": true
-    }
+    },
+    {
+      "source": "/docs",
+      "destination": "/docs/dev-concepts/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/docs/client-sdk/",
+      "destination": "/docs/client-sdk/javascript/concepts/intro-to-sdk",
+      "permanent": true
+    },
+    {
+      "source": "/docs/client-sdk/xmtp-js",
+      "destination": "/docs/client-sdk/javascript/concepts/intro-to-sdk",
+      "permanent": true
+    },
+    {
+      "source": "/docs/contributing",
+      "destination": "/docs/dev-concepts/contributing",
+      "permanent": true
+    },
+    {
+      "source": "/community",
+      "destination": "/community/community",
+      "permanent": true
+    },
+    {
+      "source": "/about/roadmap",
+      "destination": "/vision/roadmap",
+      "permanent": true
+    },
+    {
+      "source": "/docs/roadmap",
+      "destination": "/vision/roadmap",
+      "permanent": true
+    },
+    {
+      "source": "/about/architectural-overview",
+      "destination": "/docs/dev-concepts/architectural-overview",
+      "permanent": true
+    },
+    {
+      "source": "/docs/client-sdk/content-types",
+      "destination": "/docs/dev-concepts/content-types",
+      "permanent": true
+    },
+    {
+      "source": "/docs/faq",
+      "destination": "/docs/dev-concepts/faq",
+      "permanent": true
+    },
   ]
 }
