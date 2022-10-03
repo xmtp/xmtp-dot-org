@@ -88,6 +88,7 @@
     --header-bg-color: black;
     --header-box-background: #171717;
     --dropdown-subtext-color: #cbd5e1;
+    --toc-footer-border-color: #737373;
   }
 
   html[data-theme='dark'] {
@@ -389,8 +390,9 @@ main[class*='docMainContainer'] .col--3,
 }
 
 [class*='colorModeToggle'] {
-  display: none;}
-  
+  display: none;
+}
+
 [aria-label='Scroll back to top'] {
   display: none;
 }
