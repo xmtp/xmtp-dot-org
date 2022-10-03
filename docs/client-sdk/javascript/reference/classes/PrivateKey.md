@@ -1,41 +1,15 @@
-<!--[@xmtp/xmtp-js](../README.md) / [Exports](../modules.md) / PrivateKey-->
-
+<!---->
 # Class: PrivateKey
 
 ## Implements
 
 - `PrivateKey`
 
-<!--## Table of contents
-
-### Constructors
-
-- [constructor](PrivateKey.md#constructor)
-
-### Properties
-
-- [publicKey](PrivateKey.md#publickey)
-- [secp256k1](PrivateKey.md#secp256k1)
-- [timestamp](PrivateKey.md#timestamp)
-
-### Methods
-
-- [decrypt](PrivateKey.md#decrypt)
-- [encrypt](PrivateKey.md#encrypt)
-- [generated](PrivateKey.md#generated)
-- [matches](PrivateKey.md#matches)
-- [sharedSecret](PrivateKey.md#sharedsecret)
-- [sign](PrivateKey.md#sign)
-- [signKey](PrivateKey.md#signkey)
-- [toBytes](PrivateKey.md#tobytes)
-- [fromBytes](PrivateKey.md#frombytes)
-- [generate](PrivateKey.md#generate)-->
-
 ## Constructors
 
 ### constructor
 
-• **new PrivateKey**(`obj`)
+**new PrivateKey**(`obj`)
 
 #### Parameters
 
@@ -45,55 +19,55 @@
 
 #### Defined in
 
-[crypto/PrivateKey.ts:15](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L15)
+[crypto/PrivateKey.ts:181](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L181)
 
 ## Properties
 
 ### publicKey
 
-• **publicKey**: [`PublicKey`](PublicKey.md)
+ **publicKey**: [`PublicKey`](PublicKey.md)
 
 #### Implementation of
 
-proto.PrivateKey.publicKey
+privateKey.PrivateKey.publicKey
 
 #### Defined in
 
-[crypto/PrivateKey.ts:13](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L13)
+[crypto/PrivateKey.ts:179](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L179)
 
 ___
 
 ### secp256k1
 
-• **secp256k1**: `undefined` \| `PrivateKey_Secp256k1`
+ **secp256k1**: `secp256k1`
 
 #### Implementation of
 
-proto.PrivateKey.secp256k1
+privateKey.PrivateKey.secp256k1
 
 #### Defined in
 
-[crypto/PrivateKey.ts:12](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L12)
+[crypto/PrivateKey.ts:178](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L178)
 
 ___
 
 ### timestamp
 
-• **timestamp**: `Long`
+ **timestamp**: `Long`
 
 #### Implementation of
 
-proto.PrivateKey.timestamp
+privateKey.PrivateKey.timestamp
 
 #### Defined in
 
-[crypto/PrivateKey.ts:11](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L11)
+[crypto/PrivateKey.ts:177](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L177)
 
 ## Methods
 
 ### decrypt
 
-▸ **decrypt**(`encrypted`, `peer`, `additionalData?`): `Promise`<`Uint8Array`\>
+**decrypt**(`encrypted`, `peer`, `additionalData?`): `Promise`<`Uint8Array`\>
 
 #### Parameters
 
@@ -109,13 +83,13 @@ proto.PrivateKey.timestamp
 
 #### Defined in
 
-[crypto/PrivateKey.ts:115](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L115)
+[crypto/PrivateKey.ts:262](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L262)
 
 ___
 
 ### encrypt
 
-▸ **encrypt**(`plain`, `peer`, `additionalData?`): `Promise`<`default`\>
+**encrypt**(`plain`, `peer`, `additionalData?`): `Promise`<`default`\>
 
 #### Parameters
 
@@ -131,13 +105,13 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:104](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L104)
+[crypto/PrivateKey.ts:251](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L251)
 
 ___
 
 ### generated
 
-▸ **generated**(): `undefined` \| `Date`
+**generated**(): `undefined` \| `Date`
 
 #### Returns
 
@@ -145,13 +119,13 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:50](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L50)
+[crypto/PrivateKey.ts:212](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L212)
 
 ___
 
 ### matches
 
-▸ **matches**(`key`): `boolean`
+**matches**(`key`): `boolean`
 
 #### Parameters
 
@@ -165,19 +139,19 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:125](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L125)
+[crypto/PrivateKey.ts:272](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L272)
 
 ___
 
 ### sharedSecret
 
-▸ **sharedSecret**(`peer`): `Uint8Array`
+**sharedSecret**(`peer`): `Uint8Array`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `peer` | [`PublicKey`](PublicKey.md) |
+| `peer` | `SignedPublicKey` \| [`PublicKey`](PublicKey.md) |
 
 #### Returns
 
@@ -185,13 +159,13 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:87](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L87)
+[crypto/PrivateKey.ts:240](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L240)
 
 ___
 
 ### sign
 
-▸ **sign**(`digest`): `Promise`<`default`\>
+**sign**(`digest`): `Promise`<`default`\>
 
 #### Parameters
 
@@ -205,13 +179,13 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:58](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L58)
+[crypto/PrivateKey.ts:217](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L217)
 
 ___
 
 ### signKey
 
-▸ **signKey**(`pub`): `Promise`<[`PublicKey`](PublicKey.md)\>
+**signKey**(`pub`): `Promise`<[`PublicKey`](PublicKey.md)\>
 
 #### Parameters
 
@@ -225,13 +199,13 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:76](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L76)
+[crypto/PrivateKey.ts:232](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L232)
 
 ___
 
 ### toBytes
 
-▸ **toBytes**(): `Uint8Array`
+**toBytes**(): `Uint8Array`
 
 #### Returns
 
@@ -239,13 +213,13 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:129](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L129)
+[crypto/PrivateKey.ts:277](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L277)
 
 ___
 
 ### fromBytes
 
-▸ `Static` **fromBytes**(`bytes`): [`PrivateKey`](PrivateKey.md)
+`Static` **fromBytes**(`bytes`): [`PrivateKey`](PrivateKey.md)
 
 #### Parameters
 
@@ -259,13 +233,13 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:133](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L133)
+[crypto/PrivateKey.ts:282](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L282)
 
 ___
 
 ### generate
 
-▸ `Static` **generate**(): [`PrivateKey`](PrivateKey.md)
+`Static` **generate**(): [`PrivateKey`](PrivateKey.md)
 
 #### Returns
 
@@ -273,4 +247,4 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:33](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/crypto/PrivateKey.ts#L33)
+[crypto/PrivateKey.ts:195](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PrivateKey.ts#L195)

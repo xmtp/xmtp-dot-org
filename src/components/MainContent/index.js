@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { useColorMode } from '@docusaurus/theme-common'
 import ThemedImage from '@theme/ThemedImage'
@@ -22,6 +22,8 @@ export const MainContent = ({ styles }) => {
   const {
     siteConfig: { customFields },
   } = useDocusaurusContext()
+  const videoRef = useRef(null)
+  const [showReplayBtn, setShowReplayBtn] = useState(false)
 
   const userAction = async () => {
     let items = []
@@ -45,8 +47,17 @@ export const MainContent = ({ styles }) => {
     setSliderItems(items)
   }
 
+  const handleReplay = () => {
+    setShowReplayBtn(false)
+    videoRef.current.currentTime = 0
+    videoRef.current.play()
+  }
+
   useEffect(() => {
     userAction()
+    videoRef.current.onended = function () {
+      setShowReplayBtn(true)
+    }
   }, [])
 
   useEffect(() => {
@@ -98,7 +109,7 @@ export const MainContent = ({ styles }) => {
                   <span className="text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                     <ALink
                       to="https://github.com/orgs/xmtp/discussions"
-                      className="text-red-500 font-bold ml-1"
+                      className="text-red-500 font-bold"
                     >
                       Join the discussion
                     </ALink>
@@ -108,7 +119,11 @@ export const MainContent = ({ styles }) => {
                     <div className="relative">
                       <dt>
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800">
-                          <img alt="bell icon representing the alert message use case" className="w-6 h-6" src="/img/bell.svg" />
+                          <img
+                            alt="bell icon representing the alert message use case"
+                            className="w-6 h-6"
+                            src="/img/bell.svg"
+                          />
                         </div>
                         <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Alerts
@@ -142,7 +157,11 @@ export const MainContent = ({ styles }) => {
                     <div className="relative">
                       <dt>
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-800 ">
-                          <img alt="chat icon representing the direct messaging use case" className="w-6 h-6" src="/img/dm.svg" />
+                          <img
+                            alt="chat icon representing the direct messaging use case"
+                            className="w-6 h-6"
+                            src="/img/dm.svg"
+                          />
                         </div>
                         <p className="ml-16 mb-2 text-xl font-semibold leading-6 text-neutral-900 dark:text-white color-white">
                           Direct messaging
@@ -168,9 +187,9 @@ export const MainContent = ({ styles }) => {
                 </div>
 
                 <div className="-mx-4 mt-10 lg:col-start-1 lg:mt-0">
-                  <div className="absolute mx-auto object-fill bg-none img-gradient z-10 h-[91%] w-36"></div>
+                  <div className="absolute mx-auto object-fill bg-none img-gradient z-10 h-[92%] w-36"></div>
                   <ThemedImage
-                    className="relative mx-auto !inline-block object-fill md:max-h-[573px] lg:w-11/12"
+                    className="relative mx-auto !inline-block object-fill md:max-h-fill lg:w-12/12"
                     sources={{
                       light: useBaseUrl('/img/build-xmtp.png'),
                       dark: useBaseUrl('/img/build-xmtp-dark.png'),
@@ -183,7 +202,7 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="mt-14 xl:ml-12 mb-12 relative grid grid-cols-1 lg:grid-cols-11">
+        <div className="my-0 xl:ml-12 relative grid grid-cols-1 lg:grid-cols-11">
           <div className="w-auto mr-6 mt-4 mb-6 lg:mb-0 col-span-2">
             <p className="text-xl font-bold mb-2">SDK and tools</p>
             <small className="text-base">
@@ -238,20 +257,37 @@ export const MainContent = ({ styles }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col mt-20 lg:mt-24 h-[1118px] lg:h-[1064px] max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl bg-cover bg-no-repeat bg-[url('/img/animation-bg.svg')] justify-center items-center text-center">
-          <div className="flex">
-            <div className="mr-40 hidden lg:block">
-              <img src="/img/browser.png" />
-            </div>
-            <div>
-              <img src="/img/browser-mobile.png" />
+        <div className="flex flex-col mt-20 lg:mt-24 max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl justify-center items-center text-center relative overflow-hidden">
+          <div className="grid grid-flow-col relative w-full">
+            {showReplayBtn ? (
+              <div className="bg-neutral-800/50 absolute hidden lg:grid justify-center items-center w-full h-full z-10">
+                <img
+                  onClick={handleReplay}
+                  src="/img/icons/play-icon.svg"
+                  alt="play button"
+                  className="w-14 cursor-pointer hover:invert"
+                />
+              </div>
+            ) : null}
+            <video
+              ref={videoRef}
+              autoPlay="autoplay"
+              muted
+              playsInline
+              className="rounded-2xl hidden lg:block justify-center items-center translate-y-0 translate-x-0"
+            >
+              <source src="/img/animation.mp4" type="video/mp4" />
+              Your browser does not support HTML video.
+            </video>
+            <div className="grid justify-center lg:hidden p-4">
+              <img src="/img/mobile-animation-bg.jpg" alt='animation background' className='rounded-xl max-h-[51rem]'/>
             </div>
           </div>
-          <div className="flex justify-center flex-col items-center mt-8 :lg:-mt-10 mx-6">
+          <div className="flex justify-center flex-col items-center mt-8 :lg:-mt-10 mx-6 lg:absolute lg:bottom-9 mb-14 lg:mb-0 z-10">
             <h1 className="text-white text-3xl xl:text-4xl font-bold mb-4 leading-9">
               Messages meet users where they are
             </h1>
-            <p className="text-neutral-300 text-base leading-6 text-center lg:max-w-[70%] mb-8">
+            <p className="text-white text-base leading-6 text-center lg:max-w-[70%] mb-8">
               Building with XMTP gives users a portable inbox that follows them
               across web3, providing access to their messages using any app
               built with XMTP.
@@ -268,7 +304,7 @@ export const MainContent = ({ styles }) => {
         <div className="lg:px-0 xl:px-12">
           <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
             <div>
-              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white color-white">
+              <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white color-white">
                 Latest from XMTP
               </h2>
             </div>
@@ -283,9 +319,9 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-8 max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
+        <div className="flex flex-col mt-16 max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
           <div className="flex justify-center flex-col items-center mt-12 text-center">
-            <h1 className="text-black text-4xl font-bold mb-4">
+            <h1 className="text-black text-4xl sm:text-3xl font-bold mb-4">
               Join a community of builders
             </h1>
             <p className="text-neutral-800 text-base leading-6 text-center lg:max-w-[70%] mb-8">
@@ -304,19 +340,19 @@ export const MainContent = ({ styles }) => {
           </div>
           <div className="flex justify-evenly mt-12 flex-wrap">
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/logo-example.svg" className="flex-1 object-none" />
+              <img src="/img/Gitcoin.svg" alt="Gitcoin icon"className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/logo-example.svg" className="flex-1 object-none" />
+              <img src="/img/Lens.svg" alt="Lens Protocol icon" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/logo-example.svg" className="flex-1 object-none" />
+              <img src="/img/Lit.svg" alt="Lit Protocol icon" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/logo-example.svg" className="flex-1 object-none" />
+              <img src="/img/Boson.svg" alt="Boson Protocol icon" className="flex-1 object-none" />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/logo-example.svg" className="flex-1 object-none" />
+              <img src="/img/Relay.svg" alt="Relay icon" className="flex-1 object-none" />
             </div>
           </div>
         </div>

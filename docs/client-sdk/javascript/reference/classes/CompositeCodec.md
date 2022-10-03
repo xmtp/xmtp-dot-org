@@ -1,37 +1,21 @@
-<!--[@xmtp/xmtp-js](../README.md) / [Exports](../modules.md) / CompositeCodec-->
-
+<!---->
 # Class: CompositeCodec
 
 ## Implements
 
 - [`ContentCodec`](../interfaces/ContentCodec.md)<[`Composite`](../modules.md#composite)\>
 
-<!--## Table of contents
-
-### Constructors
-
-- [constructor](CompositeCodec.md#constructor)
-
-### Accessors
-
-- [contentType](CompositeCodec.md#contenttype)
-
-### Methods
-
-- [decode](CompositeCodec.md#decode)
-- [encode](CompositeCodec.md#encode)-->
-
 ## Constructors
 
 ### constructor
 
-• **new CompositeCodec**()
+**new CompositeCodec**()
 
 ## Accessors
 
 ### contentType
 
-• `get` **contentType**(): [`ContentTypeId`](ContentTypeId.md)
+`get` **contentType**(): [`ContentTypeId`](ContentTypeId.md)
 
 #### Returns
 
@@ -43,13 +27,13 @@
 
 #### Defined in
 
-[codecs/Composite.ts:35](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/codecs/Composite.ts#L35)
+[codecs/Composite.ts:35](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Composite.ts#L35)
 
 ## Methods
 
 ### decode
 
-▸ **decode**(`content`, `codecs`): [`Composite`](../modules.md#composite)
+**decode**(`content`, `codecs`): [`Composite`](../modules.md#composite)
 
 #### Parameters
 
@@ -68,13 +52,13 @@
 
 #### Defined in
 
-[codecs/Composite.ts:55](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/codecs/Composite.ts#L55)
+[codecs/Composite.ts:55](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Composite.ts#L55)
 
 ___
 
 ### encode
 
-▸ **encode**(`content`, `codecs`): [`EncodedContent`](../interfaces/EncodedContent.md)
+**encode**(`content`, `codecs`): [`EncodedContent`](../interfaces/EncodedContent.md)
 
 #### Parameters
 
@@ -93,4 +77,46 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:39](https://github.com/xmtp/xmtp-js/blob/83d4d4b/src/codecs/Composite.ts#L39)
+[codecs/Composite.ts:39](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Composite.ts#L39)
+
+___
+
+### fromProto
+
+`Private` **fromProto**(`content`, `codecs`): [`Composite`](../modules.md#composite)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `content` | `Composite_Part` |
+| `codecs` | `CodecRegistry` |
+
+#### Returns
+
+[`Composite`](../modules.md#composite)
+
+#### Defined in
+
+[codecs/Composite.ts:83](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Composite.ts#L83)
+
+___
+
+### toProto
+
+`Private` **toProto**(`content`, `codecs`): `Composite_Part`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `content` | [`Composite`](../modules.md#composite) |
+| `codecs` | `CodecRegistry` |
+
+#### Returns
+
+`Composite_Part`
+
+#### Defined in
+
+[codecs/Composite.ts:62](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Composite.ts#L62)

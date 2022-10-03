@@ -8,11 +8,11 @@ export const BlogItem = (props) => {
     <div key={title}>
       <div>
         {tag.map((tag) => (
-          <div key={tag} className="inline-block">
-            <span className="inline-flex items-center mr-2 mb-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border-solid border-1 border-blue-300">
-              {tag}
+          <ALink to={tag.url} key={tag.name} className="inline-block">
+            <span className="inline-flex items-center mr-2 mb-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border-solid border border-blue-300">
+              {tag.name}
             </span>
-          </div>
+          </ALink>
         ))}
       </div>
 
@@ -30,17 +30,26 @@ export const BlogItem = (props) => {
 
       <div className="mt-4 flex items-middle">
         <div className="flex-shrink-0">
-          <span className="sr-only dark:text-white color-white">{user.name}</span>
-          <img
-            className="h-10 w-10 rounded-full"
-            src={`/img/${user.img || 'avatar.png'}`}
-            alt=""
-          />
+          <span className="sr-only dark:text-white color-white">
+            {user.name}
+          </span>
+          <ALink to={user.url}>
+            <img
+              className="h-10 w-10 rounded-full"
+              src={`/img/${user.img || 'avatar.png'}`}
+              alt=""
+            />
+          </ALink>
         </div>
 
         <div className="ml-3">
           <p className="mb-0 text-sm font-medium text-neutral-800 dark:text-white color-white">
-            {user.name}
+            <ALink
+              to={user.url}
+              className="mt-0 block text-black dark:text-white"
+            >
+              {user.name}
+            </ALink>
           </p>
           <div className="flex space-x-1 text-sm text-neutral-800 dark:text-neutral-500 color-neutral-500">
             <time>{user.date}</time>
