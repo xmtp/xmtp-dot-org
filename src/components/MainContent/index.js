@@ -187,7 +187,7 @@ export const MainContent = ({ styles }) => {
                 </div>
 
                 <div className="-mx-4 mt-10 lg:col-start-1 lg:mt-0">
-                  <div className="absolute mx-auto object-fill bg-none img-gradient z-10 h-[91%] w-36"></div>
+                  <div className="absolute mx-auto object-fill bg-none img-gradient z-10 h-[92%] w-36"></div>
                   <ThemedImage
                     className="relative mx-auto !inline-block object-fill md:max-h-fill lg:w-12/12"
                     sources={{

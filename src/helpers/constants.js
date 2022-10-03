@@ -35,12 +35,12 @@ const tags = {
   },
   nfts: { name: 'NFTs', url: 'https://blog.xmtp.com/tag/nfts/' },
   wallets: { name: 'Wallets', url: 'https://blog.xmtp.com/tag/wallets/' },
-  privacysecurity: { name: 'Privacy & Security', url: 'https://blog.xmtp.com/tag/privacy-security/' },
+  privacySecurity: { name: 'Privacy & Security', url: 'https://blog.xmtp.com/tag/privacy-security/' },
 }
 
 export const BLOG_DATA = [
   {
-    tag: [tags.wallets, tags.privacysecurity, tags.developers, tags.messaging],
+    tag: [tags.wallets, tags.privacySecurity, tags.developers, tags.messaging],
     title: 'Secure web3 messaging for wallet apps with XMTP',
     content:
       'How XMTP enables wallets to secure conversations, not just transactions and assets.',
@@ -48,6 +48,7 @@ export const BLOG_DATA = [
       name: 'Matt Galligan',
       date: '12 Sep 2022 · 6 min read',
       img: 'matt-galligan.jpeg',
+      url: 'https://blog.xmtp.com/author/mg/'
     },
     url: 'https://blog.xmtp.com/secure-web3-wallet-messaging/',
   },
@@ -60,6 +61,7 @@ export const BLOG_DATA = [
       name: 'Matt Galligan',
       date: '31 Aug 2022 · 1 min read',
       img: 'matt-galligan.jpeg',
+      url: 'https://blog.xmtp.com/author/mg/'
     },
     url: 'https://blog.xmtp.com/introducing-the-xmtp-litepaper/',
   },
@@ -73,6 +75,7 @@ export const BLOG_DATA = [
       name: 'Peter Denton',
       date: '16 Aug 2022 · 4 min read',
       img: 'peter-denton.jpeg',
+      url: 'https://blog.xmtp.com/author/peter/'
     },
     url: 'https://blog.xmtp.com/project-spotlight-relay-receiver/',
   },

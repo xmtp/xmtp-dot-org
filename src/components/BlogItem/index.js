@@ -33,16 +33,23 @@ export const BlogItem = (props) => {
           <span className="sr-only dark:text-white color-white">
             {user.name}
           </span>
-          <img
-            className="h-10 w-10 rounded-full"
-            src={`/img/${user.img || 'avatar.png'}`}
-            alt=""
-          />
+          <ALink to={user.url}>
+            <img
+              className="h-10 w-10 rounded-full"
+              src={`/img/${user.img || 'avatar.png'}`}
+              alt=""
+            />
+          </ALink>
         </div>
 
         <div className="ml-3">
           <p className="mb-0 text-sm font-medium text-neutral-800 dark:text-white color-white">
-            {user.name}
+            <ALink
+              to={user.url}
+              className="mt-0 block text-black dark:text-white"
+            >
+              {user.name}
+            </ALink>
           </p>
           <div className="flex space-x-1 text-sm text-neutral-800 dark:text-neutral-500 color-neutral-500">
             <time>{user.date}</time>
