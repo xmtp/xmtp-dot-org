@@ -18,7 +18,7 @@
         "selectors_key": "javascript-sdk-reference"
       },
       {
-        "url": "https://xmtp.org/docs/dev-concepts/introduction",
+        "url": "https://xmtp.org/docs/dev-concepts/*",
         "tags": "dev-concepts",
         "selectors_key": "dev-concepts"
       },
