@@ -34,9 +34,23 @@ const tags = {
     url: 'https://blog.xmtp.com/tag/hackathon/',
   },
   nfts: { name: 'NFTs', url: 'https://blog.xmtp.com/tag/nfts/' },
+  wallets: { name: 'Wallets', url: 'https://blog.xmtp.com/tag/wallets/' },
+  privacysecurity: { name: 'Privacy & Security', url: 'https://blog.xmtp.com/tag/privacy-security/' },
 }
 
 export const BLOG_DATA = [
+  {
+    tag: [tags.wallets, tags.privacysecurity, tags.developers, tags.messaging],
+    title: 'Secure web3 messaging for wallet apps with XMTP',
+    content:
+      'How XMTP enables wallets to secure conversations, not just transactions and assets.',
+    user: {
+      name: 'Matt Galligan',
+      date: '12 Sep 2022 · 6 min read',
+      img: 'matt-galligan.jpeg',
+    },
+    url: 'https://blog.xmtp.com/secure-web3-wallet-messaging/',
+  },
   {
     tag: [tags.developers, tags.litepaper, tags.messaging],
     title: 'Introducing the XMTP Litepaper Public Draft',
@@ -61,18 +75,6 @@ export const BLOG_DATA = [
       img: 'peter-denton.jpeg',
     },
     url: 'https://blog.xmtp.com/project-spotlight-relay-receiver/',
-  },
-  {
-    tag: [tags.developers, tags.hackathon, tags.messaging, tags.nfts],
-    title: 'Truths Not Spoofs',
-    content:
-      'In web3, token-gated messaging opens up a world where you can see verifiable transactions and facts about the sender that help you vet who you want to interact with.',
-    user: {
-      name: 'Peter Denton',
-      date: '05 Aug 2022 · 3 min read',
-      img: 'peter-denton.jpeg',
-    },
-    url: 'https://blog.xmtp.com/truths-not-spoofs/',
   },
 ]
 
