@@ -13,6 +13,20 @@ Here are a few details about what's in store for XMTP in the months ahead.
 
 Developers will be able to build client apps in React Native.
 
+- [Read more](https://github.com/xmtp/xmtp-js/issues/170)
+
+### Conversation filtering
+
+Developers will be able to group and filter conversations in a particular context, such as conversations originating from within their app.
+
+- [Read more](https://github.com/orgs/xmtp/discussions/12)
+
+### Participant privacy
+
+Network clients responsible for relaying and storing messages will no longer be able to observe the addresses of participants in ongoing conversations.
+
+- [Read more](https://github.com/orgs/xmtp/discussions/12)
+
 ### Network decentralization milestones
 
 XMTP Labs will specify a phased approach towards architectural and logical decentralization of the network.
@@ -40,10 +54,6 @@ Users will be able to grant explicit permission for an app to use their account 
 ### Push notifications and webhooks
 
 Users will be able to grant apps permission to notify them externally when new messages are received.
-
-### Participant privacy
-
-Network clients responsible for relaying and storing messages will no longer be able to observe the addresses of participants in ongoing conversations.
 
 ### Group chat and announcements channels
 
