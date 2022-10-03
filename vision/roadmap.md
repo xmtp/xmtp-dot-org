@@ -41,8 +41,6 @@ Individuals will be able to send encrypted DMs and announcements to addresses th
 
 Teams will be able to read and send encrypted DMs and announcements using a shared team identity that resolves to their ENS domain or Lens profile. The account admin will be able to delegate access to and revoke access from individual team user accounts.
 
-Team identities will be capable of messaging any address.
-
 ### Compromise recovery
 
 Users will be able to recover their compromised XMTP identity by creating new private keys.
