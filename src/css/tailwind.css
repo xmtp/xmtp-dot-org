@@ -371,13 +371,14 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1.menu__list-it
 main[class*='docMainContainer'] .col--3,
 .col--2 {
   max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
-  overflow-y: auto;
+  overflow-y: hidden!important;
   position: sticky;
   top: calc(var(--ifm-navbar-height) + 2rem);
 }
 
 [class*='tableOfContents'] {
   top: 0 !important;
+  max-height: calc(100vh - 11rem)!important;
 }
 
 .toc-footer {
