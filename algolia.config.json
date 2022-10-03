@@ -3,17 +3,17 @@
     "sitemap_urls": ["https://xmtp.org/sitemap.xml"],
     "start_urls": [
       {
-        "url": "https://xmtp.org/docs/client-sdk/javascript/concepts/intro-to-sdk",
+        "url": "https://xmtp.org/docs/client-sdk/javascript/concepts/*",
         "tags": "javascript-sdk-concepts",
         "selectors_key": "javascript-sdk-concepts"
       },
       {
-        "url": "https://xmtp.org/docs/client-sdk/javascript/tutorials/quickstart",
+        "url": "https://xmtp.org/docs/client-sdk/javascript/tutorials/*",
         "tags": "javascript-sdk-tutorials",
         "selectors_key": "javascript-sdk-tutorials"
       },
       {
-        "url": "https://xmtp.org/docs/client-sdk/javascript/reference/classes/Client",
+        "url": "https://xmtp.org/docs/client-sdk/javascript/reference/*",
         "tags": "javascript-sdk-reference",
         "selectors_key": "javascript-sdk-reference"
       },
@@ -23,7 +23,7 @@
         "selectors_key": "dev-concepts"
       },
       {
-        "url": "https://xmtp.org/vision/litepaper",
+        "url": "https://xmtp.org/vision/*",
         "tags": "vision",
         "selectors_key": "vision"
       },
@@ -33,7 +33,7 @@
         "selectors_key": "sdks-and-tools"
       },
       {
-        "url": "https://xmtp.org/community",
+        "url": "https://xmtp.org/community/*",
         "tags": "community",
         "selectors_key": "community"
       },
