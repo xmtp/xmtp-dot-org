@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/signatures",
+      "destination": "/docs/dev-concepts/signatures",
+      "permanent": true
+    }
+  ]
+}
