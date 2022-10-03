@@ -54,6 +54,6 @@
       "source": "/docs/faq",
       "destination": "/docs/dev-concepts/faq",
       "permanent": true
-    },
+    }
   ]
 }
