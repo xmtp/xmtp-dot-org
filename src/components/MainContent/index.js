@@ -24,7 +24,6 @@ export const MainContent = ({ styles }) => {
   } = useDocusaurusContext()
   const videoRef = useRef(null)
   const [showReplayBtn, setShowReplayBtn] = useState(false)
-
   const userAction = async () => {
     let items = []
     const responseXmtp = await fetch(XMTP_JS_URL, {
@@ -72,10 +71,11 @@ export const MainContent = ({ styles }) => {
     }
   }, [colorMode])
 
+
   return (
     <>
-      <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto ${colorMode}`}>
-        <div className="xl:px-12">
+      <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto px-0 xl:px-4`}>
+        <div>
           <ul
             role="list"
             className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
@@ -188,21 +188,24 @@ export const MainContent = ({ styles }) => {
 
                 <div className="-mx-4 mt-10 lg:col-start-1 lg:mt-0">
                   <div className="absolute mx-auto object-fill bg-none img-gradient z-10 h-[92%] w-36"></div>
-                  <ThemedImage
-                    className="relative mx-auto !inline-block object-fill md:max-h-fill lg:w-12/12"
-                    sources={{
-                      light: useBaseUrl('/img/build-xmtp.png'),
-                      dark: useBaseUrl('/img/build-xmtp-dark.png'),
-                    }}
-                    alt="Laptop and mobile device screens showing alerts, announcements, and direct messages enabled by building apps with XMTP"
-                  />
+                  <link
+                    rel="preload"
+                    href="/img/build-xmtp-dark.png"
+                    as="image"
+                  ></link>
+                  <link
+                    rel="preload"
+                    href="/img/build-xmtp.png"
+                    as="image"
+                  ></link>
+                  <div className="build-xmtp-img"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="my-0 xl:ml-12 relative grid grid-cols-1 lg:grid-cols-11">
+        <div className="my-0 relative grid grid-cols-1 lg:grid-cols-11">
           <div className="w-auto mr-6 mt-4 mb-6 lg:mb-0 col-span-2">
             <p className="text-xl font-bold mb-2">SDK and tools</p>
             <small className="text-base">
@@ -257,7 +260,7 @@ export const MainContent = ({ styles }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col mt-20 lg:mt-24 max-w-screen-max bg-black mx-0 xl:mx-12 mb-14 rounded-2xl justify-center items-center text-center relative overflow-hidden">
+        <div className="flex flex-col mt-20 lg:mt-24 max-w-screen-max bg-black mx-0 mb-14 rounded-2xl justify-center items-center text-center relative overflow-hidden">
           <div className="grid grid-flow-col relative w-full">
             {showReplayBtn ? (
               <div className="bg-neutral-800/50 absolute hidden lg:grid justify-center items-center w-full h-full z-10">
@@ -270,17 +273,21 @@ export const MainContent = ({ styles }) => {
               </div>
             ) : null}
             <video
+              className="w-full hidden lg:block"
               ref={videoRef}
               autoPlay="autoplay"
               muted
               playsInline
-              className="rounded-2xl hidden lg:block justify-center items-center translate-y-0 translate-x-0"
             >
               <source src="/img/animation.mp4" type="video/mp4" />
               Your browser does not support HTML video.
             </video>
             <div className="grid justify-center lg:hidden p-4">
-              <img src="/img/mobile-animation-bg.jpg" alt='animation background' className='rounded-xl max-h-[51rem]'/>
+              <img
+                src="/img/mobile-animation-bg.jpg"
+                alt="animation background"
+                className="rounded-xl max-h-[51rem]"
+              />
             </div>
           </div>
           <div className="flex justify-center flex-col items-center mt-8 :lg:-mt-10 mx-6 lg:absolute lg:bottom-9 mb-14 lg:mb-0 z-10">
@@ -301,7 +308,7 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="lg:px-0 xl:px-12">
+        <div>
           <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
             <div>
               <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white color-white">
@@ -319,7 +326,7 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-16 max-w-screen-max border border-solid border-black bg-white mx-0 xl:mx-12 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
+        <div className="flex flex-col mt-16 max-w-screen-max border border-solid border-black bg-white mx-0 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
           <div className="flex justify-center flex-col items-center mt-12 text-center">
             <h1 className="text-black text-4xl sm:text-3xl font-bold mb-4">
               Join a community of builders
@@ -340,26 +347,46 @@ export const MainContent = ({ styles }) => {
           </div>
           <div className="flex justify-evenly mt-12 flex-wrap">
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Gitcoin.svg" alt="Gitcoin icon"className="flex-1 object-none" />
+              <img
+                src="/img/Gitcoin.svg"
+                alt="Gitcoin icon"
+                className="flex-1 object-none"
+              />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Lens.svg" alt="Lens Protocol icon" className="flex-1 object-none" />
+              <img
+                src="/img/Lens.svg"
+                alt="Lens Protocol icon"
+                className="flex-1 object-none"
+              />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Lit.svg" alt="Lit Protocol icon" className="flex-1 object-none" />
+              <img
+                src="/img/Lit.svg"
+                alt="Lit Protocol icon"
+                className="flex-1 object-none"
+              />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Boson.svg" alt="Boson Protocol icon" className="flex-1 object-none" />
+              <img
+                src="/img/Boson.svg"
+                alt="Boson Protocol icon"
+                className="flex-1 object-none"
+              />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Relay.svg" alt="Relay icon" className="flex-1 object-none" />
+              <img
+                src="/img/Relay.svg"
+                alt="Relay icon"
+                className="flex-1 object-none"
+              />
             </div>
           </div>
         </div>
       </main>
 
       <div className="bg-black -mt-48">
-        <div className="max-w-screen-max mx-auto pt-56 pb-16 px-4 lg:px-5 xl:px-12">
+        <div className="max-w-screen-max mx-auto pt-56 pb-16 px-4">
           <ul
             role="list"
             className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
