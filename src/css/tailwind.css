@@ -144,10 +144,15 @@
 
 .navbar {
   box-shadow: none;
+  background-color: rgba(255,255,255,0.75);
+  /* blur/backdrop-blur-2xl */
+  backdrop-filter: blur(20px);
 }
 
 [data-theme='dark'] .navbar {
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.75);
+  /* blur/backdrop-blur-2xl */
+  backdrop-filter: blur(20px);
 }
 
 .navbar__client__dropdown {
