@@ -391,64 +391,65 @@ export const MainContent = ({ styles }) => {
             className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
           >
             <li className="col-span-1">
-              <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
-                <div>
-                  <h1 className="text-xl font-bold mt-36 mb-1 text-black">
-                    Have a question or idea?
-                  </h1>
-                  <p className="mb-4 leading-6 text-black">
-                    Start <span className="hidden xl:inline">or join</span> a
-                    discussion in the XMTP forum
+              <ALink
+                to="https://github.com/orgs/xmtp/discussions">
+                <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                  <div>
+                    <h1 className="text-xl font-bold mt-36 mb-1 text-black">
+                      Have a question or idea?
+                    </h1>
+                    <p className="mb-4 leading-6 text-black">
+                      Start <span className="hidden xl:inline">or join</span> a
+                      discussion in the XMTP forum
+                    </p>
+                    <hr className="my-4 bg-black" />
+                    <p className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end"
+                    >
+                      GitHub Discussions →
                   </p>
-                  <hr className="my-4 bg-black" />
-                  <ALink
-                    to="https://github.com/orgs/xmtp/discussions"
-                    className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end"
-                  >
-                    GitHub Discussions →
-                  </ALink>
+                  </div>
                 </div>
-              </div>
+              </ALink>
             </li>
 
             <li className="col-span-1">
-              <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
-                <div>
-                  <h1 className="text-xl font-bold mt-36 mb-1 text-white">
-                    Chat with the community
-                  </h1>
-                  <p className="mb-4 leading-6 text-white">
-                    Say 👋, join a dev hangout, or get help
-                  </p>
-                  <hr className="my-4 bg-white" />
-                  <ALink
-                    to="https://discord.gg/xmtp"
-                    className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end"
-                  >
-                    Discord →
-                  </ALink>
+              <ALink
+                to="https://discord.gg/xmtp">
+                <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                  <div>
+                    <h1 className="text-xl font-bold mt-36 mb-1 text-white">
+                      Chat with the community
+                    </h1>
+                    <p className="mb-4 leading-6 text-white">
+                      Say 👋, join a dev hangout, or get help
+                    </p>
+                    <hr className="my-4 bg-white" />
+                    <p className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end">
+                      Discord →
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </ALink>
             </li>
 
             <li className="col-span-1">
-              <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#01A3EE] bg-no-repeat bg-[url('/img/twitter-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
-                <div>
-                  <h1 className="text-xl font-bold mt-36 mb-1 text-white">
-                    Follow XMTP on Twitter
-                  </h1>
-                  <p className="mb-4 leading-6 text-white">
-                    Keep up with the latest updates
-                  </p>
-                  <hr className="my-4 bg-white" />
-                  <ALink
-                    to="https://twitter.com/xmtp_"
-                    className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end"
-                  >
-                    Twitter →
-                  </ALink>
+              <ALink
+                to="https://twitter.com/xmtp_">
+                <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#01A3EE] bg-no-repeat bg-[url('/img/twitter-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                  <div>
+                    <h1 className="text-xl font-bold mt-36 mb-1 text-white">
+                      Follow XMTP on Twitter
+                    </h1>
+                    <p className="mb-4 leading-6 text-white">
+                      Keep up with the latest updates
+                    </p>
+                    <hr className="my-4 bg-white" />
+                    <p  className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end">
+                      Twitter →
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </ALink>
             </li>
           </ul>
         </div>
