@@ -13,7 +13,13 @@ export default function FooterWrapper(props) {
       <div className={`bg-black px-4 ${colorMode}`}>
         <div className="h-px bg-white max-w-screen-max mx-auto" />
         <div className="flex justify-center flex-wrap md:justify-between items-center h-auto md:h-32 max-w-screen-max mx-auto mt-9 md:mt-0 mb-20 md:mb-0 text-center md:text-inherit flex-col md:flex-row">
-          <Link to="/"><img alt="XMTP icon" src="/img/xmtp-icon.svg" className="w-10 md:w-9" /></Link>
+          <Link to="/">
+            <img
+              alt="XMTP icon"
+              src="/img/xmtp-icon.svg"
+              className="w-10 md:w-9"
+            />
+          </Link>
           <div className="flex flex-col md:flex-row justify-center text-white my-7 md:my-0">
             <span className="text-sm">
               <ALink
