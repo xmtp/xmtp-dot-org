@@ -48,13 +48,12 @@ export const MainContent = ({ styles }) => {
 
   const handleReplay = () => {
     setShowReplayBtn(false)
-    videoRef.current.currentTime = 0
     videoRef.current.play()
   }
 
   useEffect(() => {
     userAction()
-    videoRef.current.onended = function () {
+    videoRef.current.onended = () => {
       setShowReplayBtn(true)
     }
   }, [])
