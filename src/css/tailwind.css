@@ -249,6 +249,8 @@
 
 .footer {
   background-color: black;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .footer .container {
