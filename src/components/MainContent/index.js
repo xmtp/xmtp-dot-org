@@ -49,13 +49,12 @@ export const MainContent = ({ styles }) => {
 
   const handleReplay = () => {
     setShowReplayBtn(false)
-    videoRef.current.currentTime = 0
     videoRef.current.play()
   }
 
   useEffect(() => {
     userAction()
-    videoRef.current.onended = function () {
+    videoRef.current.onended = () => {
       setShowReplayBtn(true)
     }
   }, [])
@@ -280,7 +279,11 @@ export const MainContent = ({ styles }) => {
               Your browser does not support HTML video.
             </video>
             <div className="grid justify-center lg:hidden p-4">
-              <img src="/img/mobile-animation-bg.jpg" alt='animation background' className='rounded-xl max-h-[51rem]'/>
+              <img
+                src="/img/mobile-animation-bg.jpg"
+                alt="animation background"
+                className="rounded-xl max-h-[51rem]"
+              />
             </div>
           </div>
           <div className="flex justify-center flex-col items-center mt-8 :lg:-mt-10 mx-6 lg:absolute lg:bottom-9 mb-14 lg:mb-0 z-10">
@@ -340,19 +343,39 @@ export const MainContent = ({ styles }) => {
           </div>
           <div className="flex justify-evenly mt-12 flex-wrap">
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Gitcoin.svg" alt="Gitcoin icon"className="flex-1 object-none" />
+              <img
+                src="/img/Gitcoin.svg"
+                alt="Gitcoin icon"
+                className="flex-1 object-none"
+              />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Lens.svg" alt="Lens Protocol icon" className="flex-1 object-none" />
+              <img
+                src="/img/Lens.svg"
+                alt="Lens Protocol icon"
+                className="flex-1 object-none"
+              />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Lit.svg" alt="Lit Protocol icon" className="flex-1 object-none" />
+              <img
+                src="/img/Lit.svg"
+                alt="Lit Protocol icon"
+                className="flex-1 object-none"
+              />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Boson.svg" alt="Boson Protocol icon" className="flex-1 object-none" />
+              <img
+                src="/img/Boson.svg"
+                alt="Boson Protocol icon"
+                className="flex-1 object-none"
+              />
             </div>
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
-              <img src="/img/Relay.svg" alt="Relay icon" className="flex-1 object-none" />
+              <img
+                src="/img/Relay.svg"
+                alt="Relay icon"
+                className="flex-1 object-none"
+              />
             </div>
           </div>
         </div>
