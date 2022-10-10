@@ -235,6 +235,19 @@
   color: #d4d4d4 !important;
 }
 
+.menu_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-Content-styles-module {
+  padding-top: 1rem !important;
+  padding-bottom: 3em !important;
+}
+
+.theme-doc-sidebar-menu {
+  font-size: 14px;
+}
+
+.theme-doc-sidebar-item-category {
+  margin-top: 0.5rem !important;
+}
+
 .whitespace-pre-line {
   white-space: pre-line !important;
 }
@@ -364,6 +377,7 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   a.menu__link.menu__link--active {
   border-left: thin solid #ef4444;
   color: #ef4444 !important;
+  font-weight: 600;
 }
 
 li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1.menu__list-item
