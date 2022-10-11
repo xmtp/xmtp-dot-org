@@ -444,6 +444,10 @@ main[class*='docMainContainer'] .col--3,
   font-weight: 600;
 }
 
+.markdown table th {
+  text-align: left;
+}
+
 @media only screen and (max-width: 1454px) {
   .navbar__inner {
     margin: 0;
