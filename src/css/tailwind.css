@@ -383,6 +383,9 @@ main[class*='docMainContainer'] .col--3,
   position: sticky;
   top: calc(var(--ifm-navbar-height) + 2rem);
 }
+main[class*='docMainContainer'] tr {
+  vertical-align: top;
+}
 
 [class*='tableOfContents'] {
   top: 0 !important;
@@ -411,7 +414,7 @@ main[class*='docMainContainer'] .col--3,
   margin-left: var(--doc-sidebar-width);
 }
 
-[class*='mdxPageWrapper'] .col{
+[class*='mdxPageWrapper'] .col {
   padding-left: 0;
 }
 
@@ -425,5 +428,6 @@ main[class*='docMainContainer'] .col--3,
 @media only screen and (max-width: 997px) {
   [class*='mdxPageWrapper'] {
     max-width: 100%;
+    margin-left: 0;
   }
 }
