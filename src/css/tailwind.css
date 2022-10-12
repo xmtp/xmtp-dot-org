@@ -411,6 +411,29 @@ main[class*='docMainContainer'] .col--3,
   margin: 0 auto;
 }
 
+/* DocSearch override */
+.DocSearch-Commands {
+  display: none!important;
+}
+
+.DocSearch-Logo {
+  filter: grayscale(1) opacity(0.5);
+}
+
+header.DocSearch-SearchBar::after {
+  content: "Esc";
+  width: 37px;
+  height: 24px;
+  background: #E5E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #9CA3AF;
+}
+
 @media only screen and (max-width: 1454px) {
   .navbar__inner {
     margin: 0;
