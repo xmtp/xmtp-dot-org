@@ -413,7 +413,8 @@ main[class*='docMainContainer'] .col--3,
   margin: 0 auto;
 }
 
-.docItemContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module header + *, .docItemContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module article > *:first-child {
+[class*='docItemContainer'] header + *,
+[class*='docItemContainer'] article > *:first-child {
   margin-top: 1rem !important;
   margin-bottom: 0.25rem !important;
   font-weight: 600;
