@@ -69,7 +69,7 @@
     --toc-footer-border-color: black;
     --docs-sidebar-link-color: #525252;
     --docs-sidebar-title-color: black;
-    --docs-bg-image-url: url('../../static/img/doc-bg-light.png');
+    --docs-bg-image-url: url('../../static/img/doc-bg-light.jpg');
   }
 
   /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -332,7 +332,9 @@
 .main-wrapper {
   background-image: var(--docs-bg-image-url);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 1920px 573px;
+  background-position: top center;
+  background-attachment: fixed;
 }
 
 .homepageHeader {
@@ -436,7 +438,41 @@ main[class*='docMainContainer'] tr {
   padding-left: 0;
 }
 
+[class*='docItemContainer'] header + *,
+[class*='docItemContainer'] article > *:first-child {
+  margin-top: 1rem !important;
+  margin-bottom: 0.25rem !important;
+  font-weight: 600;
+}
 
+.breadcrumbs__link {
+  font-size: 0.875rem !important;
+}
+
+/* Markdown */
+
+.markdown h1 {
+  font-size: 2.25rem;
+}
+
+.markdown h1:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.markdown h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.markdown h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.markdown table th {
+  text-align: left;
+}
 
 @media only screen and (max-width: 1454px) {
   .navbar__inner {
