@@ -43,8 +43,9 @@ export default function Home() {
     } else {
       document.documentElement.classList.remove('dark')
     }
-    const element = document.getElementsByClassName('navbar__inner')[0]
-    element.classList.add('navbar__inner__padding')
+
+    const element = document.getElementsByClassName('main-wrapper')[0]
+    element.style.background = 'none'
   }, [])
 
   return (
