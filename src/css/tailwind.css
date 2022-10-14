@@ -144,10 +144,15 @@
 
 .navbar {
   box-shadow: none;
+  background-color: rgba(255,255,255,0.75);
+  /* blur/backdrop-blur-2xl */
+  backdrop-filter: blur(20px);
 }
 
 [data-theme='dark'] .navbar {
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.75);
+  /* blur/backdrop-blur-2xl */
+  backdrop-filter: blur(20px);
 }
 
 .navbar__client__dropdown {
@@ -184,9 +189,11 @@
 
 .navbar-sidebar__backdrop {
   background-color: var(--backdrop-mobile-menu);
+  height: 100vh;
 }
 
 .navbar-sidebar {
+  height: 97vh;
   margin: 9px;
   border-radius: 8px;
   box-shadow: 0px 10px 15px -3px rgb(0 0 0 / 10%),
