@@ -213,7 +213,7 @@ export const MainContent = ({ styles }) => {
           </div>
           <div className="col-span-9 grid grid-cols-10 relative">
             <div
-              className={`hidden -scale-x-100 lg:grid absolute -left-8 h-32 justify-center arrow-icon w-20 items-center ${
+              className={`hidden -scale-x-100 lg:grid absolute -left-12 h-32 justify-center arrow-icon w-20 items-center ${
                 sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
               }`}
             >
@@ -239,7 +239,7 @@ export const MainContent = ({ styles }) => {
                 : null}
             </div>
             <div
-              className={`arrow-icon w-40 h-32 absolute right-0 items-center justify-center hidden lg:grid ${
+              className={`arrow-icon w-24 h-32 absolute right-0 items-center justify-center hidden lg:grid ${
                 sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
               }`}
             >
