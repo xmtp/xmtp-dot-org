@@ -145,7 +145,7 @@
 
 .navbar {
   box-shadow: none;
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   /* blur/backdrop-blur-2xl */
   backdrop-filter: blur(20px);
 }
@@ -480,6 +480,34 @@ main[class*='docMainContainer'] tr {
 
 .markdown table th {
   text-align: left;
+}
+
+/* Custom theme colors*/
+.sunrise-theme {
+  background: rgb(244, 63, 94);
+  background: linear-gradient(
+    90deg,
+    rgba(244, 63, 94, 1) 0%,
+    rgba(147, 51, 234, 1) 100%
+  );
+}
+
+.midnight-theme {
+  background: rgb(34, 211, 238);
+  background: linear-gradient(
+    90deg,
+    rgba(34, 211, 238, 1) 0%,
+    rgba(147, 51, 234, 1) 100%
+  );
+}
+
+.daylight-theme {
+  background: rgb(52, 211, 153);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 211, 153, 1) 0%,
+    rgba(59, 130, 246, 1) 100%
+  );
 }
 
 @media only screen and (max-width: 1454px) {
