@@ -54,7 +54,7 @@
     --shadow-color: rgb(255 255 255 / 85%);
 
     --max-width: 1440px;
-    --nav-searchbox-shadow: inset 0 0 0 2px #fc4f37;
+    --nav-searchbox-shadow: inset 0 0 0 1px rgb(220, 220, 220);
     --dropdown-subtext-color: #475569;
     --build-xmtp-img-url: url('/img/build-xmtp.png');
   }
@@ -91,6 +91,7 @@
     --dropdown-subtext-color: #cbd5e1;
     --toc-footer-border-color: #737373;
     --build-xmtp-img-url: url('/img/build-xmtp-dark.png');
+    --nav-searchbox-shadow: inset 0 0 0 1px rgb(76, 76, 76);
   }
 
   html[data-theme='dark'] {
