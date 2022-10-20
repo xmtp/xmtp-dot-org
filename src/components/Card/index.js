@@ -8,9 +8,10 @@ const Card = ({
   secondLink,
   logo,
   theme = 'sunrise',
+  className,
 }) => {
   return (
-    <div className="w-96">
+    <div className={`mr-8 ${className}`}>
       <article
         className={`${theme}-theme grid grid-flow-col items-end  h-36 rounded-lg`}
       >
