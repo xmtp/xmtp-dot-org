@@ -319,7 +319,7 @@
 .DocSearch-Button {
   border-radius: 8px !important;
   border: thin solid var(--nav-search-border-color) !important;
-  background: var(--docsearch-searchbox-background) !important;
+  background: transparent !important;
 }
 
 .DocSearch-Search-Icon {
@@ -457,6 +457,10 @@ main[class*='docMainContainer'] tr {
   font-size: 0.875rem !important;
 }
 
+.navbar__toggle {
+  filter: grayscale(1) opacity(0.5);
+}
+
 /* Markdown */
 
 .markdown h1 {
@@ -521,5 +525,11 @@ main[class*='docMainContainer'] tr {
   [class*='mdxPageWrapper'] {
     max-width: 100%;
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .DocSearch-Button {
+    border: none !important;
   }
 }
