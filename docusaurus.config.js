@@ -164,6 +164,12 @@ const config = {
             ],
           },
           {
+            to: 'blog',
+            position: 'right',
+            label: 'Blog',
+            activeBaseRegex: `/`,
+          },
+          {
             href: 'https://github.com/xmtp',
             title: 'Go to the XMTP GitHub repo',
             position: 'right',
