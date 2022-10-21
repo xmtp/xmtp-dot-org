@@ -459,6 +459,8 @@ main[class*='docMainContainer'] tr {
 
 .navbar__toggle {
   filter: grayscale(1) opacity(0.5);
+  width: 24px;
+  margin-right: 1rem;
 }
 
 /* Markdown */
