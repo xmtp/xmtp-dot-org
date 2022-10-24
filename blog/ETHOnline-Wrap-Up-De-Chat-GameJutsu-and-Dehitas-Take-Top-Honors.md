@@ -2,6 +2,7 @@
 title: ETHOnline Wrap Up - De-Chat, GameJutsu, and Dehitas Take Top Honors
 authors: peter
 tags: [Developers, Hackathon, Messaging]
+image: https://blog.xmtp.com/content/images/size/w1460/2022/10/ETHOnlineBlog.png
 ---
 
 **ETH Online hackers build incredible apps across video chat, game security, and talent platforms using XMTP.**
