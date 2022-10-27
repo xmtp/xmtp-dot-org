@@ -17,6 +17,7 @@ At the most basic level, the architecture of XMTP includes three layers:
 
 ![Diagram showing three layers of the XMTP architecture: network, client, and app.](./img/arch-layers.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=407%3A1774-->
 
+
 ## Network layer
 
 The network layer provides the XMTP network which is comprised of nodes (computers) running network client software. The primary responsibilities of the XMTP network and nodes are to:
@@ -27,13 +28,14 @@ The network layer provides the XMTP network which is comprised of nodes (compute
 - Store encrypted private key bundles for XMTP identities
 - Bootstrap newly joined XMTP nodes
 
+
 ### Network topology
 
 Diving a bit deeper into the XMTP network, this diagram illustrates key components of the network topology:
 
 ![Diagram showing five XMTP nodes connected in a peer-to-peer network. Each node contains a bootstrap service and connects to its own data store.](./img/network-topology.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=534%3A1663-->
 
-:::note
+:::info
 
 At this time, XMTP Labs runs all nodes in the XMTP network. XMTP Labs aims to publish a phased decentralization roadmap in Fall 2022.
 
@@ -49,32 +51,43 @@ Every XMTP node:
 - Relays messages and key bundles to other nodes
 - Stores and advertises public key bundles for XMTP identities
 - Stores encrypted private key bundles for XMTP identities
-- Stores messages sent by XMTP identities
+- Stores invites and messages sent by XMTP identities
 - Has a private load balancer and connects to a single public load balancer
 
 Here’s a high-level view of how client apps built with XMTP submit and retrieve messages using the XMTP network:
 
 ![Animation showing the flow of a user sending a message to another user, including how the sender's client app encrypts and submits the message to the XMTP network, how an XMTP node relays the message to other nodes, and how the recipient's client app retrieves the message from the network, decrypts it, and delivers it to the recipient.](./img/xmtp-message-flow.gif) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=291%3A2607-->
 
+
 ### Network storage and message relay
 
-The XMTP network uses pub/sub topics to relay and store messages and key bundles within the network. Here's an overview of the topics the network uses:
+The XMTP network uses pub/sub topics to relay and store conversations, messages, invites, and key bundles within the network. This section describes XMTP V1 and V2 topics and flows.
 
+:::info
+
+For a period of time, the XMTP network will support both V1 and V2 topics and flows to give developers time to upgrade their client apps to use XMTP client SDK for JavaScript (xmtp-js) >=v7.0.0, which will provide their apps with V2 functionality. After support for V1 topics and flows is deprecated, client apps that have not upgraded to >=v7.0.0 may be unable to communicate with the XMTP network.
+
+:::
+
+<!--Correct? Is this the min ver needed to use V2. Provide link to release.-->
+
+#### XMTP V1 topics and flow
+
+With XMTP V1, the network uses the following topics:
+
+<!--add more details about specific values in v1 - so we can call out the changes in v2-->
 - Private store topic  
-A developer building an app with XMTP can choose to store their users' private key bundles locally or encrypted on the XMTP network. When required by a client app, the XMTP network uses a private store topic to store a user's private key bundle.  
+  A developer building an app with XMTP can choose to store their users' private key bundles locally or encrypted on the XMTP network. When required by a client app, the XMTP network uses a private store topic to store a user's private key bundle.
 - Contact topic  
-The XMTP network uses a contact topic to store a user’s public key bundle. The network advertises this public key bundle to enable other users to contact the user.  
+  The XMTP network uses a contact topic to store a user’s public key bundle. The network advertises this public key bundle to enable other users to contact the user.
 - Intro topic  
-The XMTP network uses an intro topic to store the first message sent between two participants (blockchain accounts). This enables client apps to know that messages exist in a given direct message topic.
+  The XMTP network uses an intro topic to store the first message sent between two participants (blockchain accounts). This enables client apps to know that messages exist in a given direct message topic.
+- Conversation topic  
+  The XMTP network uses a conversation topic to store all messages sent between two participants. The conversation topic is shared by the two participants.
 
-<!--Per Jazz, currently, the first message in the concept of a conversation is sent to three topics: intro-amal, intro-bola, and dm-amal-bola. The message is copied to the intro topics so that client apps know that messages exist in a given dm topic. This will change in the future such that the intro topic may just include an index, or list, of conversations and no messages.-->
+This diagram illustrates how these XMTP V1 network topics are created and work together to enable a client app to deliver messages to a user:
 
-- Direct message topic  
-The XMTP network uses a direct message topic to store messages sent between two participants. The direct message topic is shared by the two participants.
-
-This diagram illustrates how these XMTP network topics are created and work together to enable a client app to deliver messages to a user:
-
-![Diagram showing a client app interacting with topics in the XMTP network with the goal of delivering messages to a user named Bola.](./img/deliver-a-message.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=535%3A1664-->
+![Diagram showing a client app interacting with topics in the XMTP V1 network with the goal of delivering messages to a user named Bola.](./img/deliver-a-message.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=535%3A1664-->
 
 In this flow, the client app:
 
@@ -86,7 +99,47 @@ In this flow, the client app:
 
 For more details, see [Message encryption and decryption](#message-encryption-and-decryption).
 
+
+#### XMTP V2 topics and flow
+
+With XMTP V2, the network uses the following topics:
+
+<!--add more details about specific values in v2 - so we can call out the changes from v1-->
+- Private store topic  
+  A developer building an app with XMTP can choose to store their users' private key bundles locally or encrypted on the XMTP network. When required by a client app, the XMTP network uses a private store topic to store a user's private key bundle.  
+- Contact topic  
+  The XMTP network uses a contact topic to store a user’s public key bundle. The network advertises this public key bundle to enable other users to contact the user.
+- Invite topic  
+  XMTP V2 uses an invite topic instead of a V1 intro topic. Instead of storing the first message sent between two participants, the invite topic stores a conversation topic name and key material and no message content. The conversation topic name tells the client app which conversation topic to send messages to. The key material is what the client app uses for message encryption.
+- Conversation topic  
+  The XMTP network uses a conversation topic to store messages sent between two participants. A conversation topic is shared by the two participants. Here are some key differences between conversations topics with XMTP V1 and V2. With XMTP V2:
+  - Two participants can have multiple ongoing conversations. With XMTP V1, all messages between two participants are stored in a single conversation topic.
+  - Conversation topics support `conversationId`s and other metadata. You can use these IDs and metadata to filter and organize conversations, which can be more manageable than filtering individual messages in a single large conversation topic.
+  - The conversation topic name format is `m-DCwPWXQPzoui9RQ eGUD9e9wEz1oOld8E`, for example. The conversation topic name uses a random 32-byte alphanumeric string. With XMTP V1,  the conversation topic name format is `dm-walletaddress1-walletaddress2`, which reveals some identifying information about participants in the conversation.
+
+This diagram illustrates how these XMTP V2 network topics are created and work together to enable a client app to deliver messages to a user:
+
+![Diagram showing a client app interacting with topics in the XMTP V2 network with the goal of delivering messages to a user named Bola.](./img/deliver-a-message-v2.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=535%3A1664-->
+
+In this flow, the client app:
+
+<!--do we need to say morea bout invite encryption?-->
+
+1. Retrieves Bola’s private key bundle from the network. If one doesn’t exist, it creates it and stores it encrypted on the network in a private store topic, or locally.
+2. If one doesn't already exist, stores Bola’s public key bundle on the network in a contact topic, so others can message Bola.
+3. Retrieves Bola’s invite topic to get the conversation topic name where the messages are stored, as well as the key material needed for message encryption.
+4. Retrieves the message from the conversation topic.
+5. Uses the shared secret from the key material to create an encryption key to decrypt Amal’s message and present it to Bola.
+
+
+#### How client apps determine whether to use the V1 or V2 message relay flow
+
+Here's a diagram that shows how a client app determines whether to use XMTP V1 or V2 topics and flows.
+
+![Diagram showing a client app interacting with topics in the XMTP V2 network with the goal of delivering messages to a user named Bola.](./img/v1-or-v2-flow.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=738%3A2120-->
+
 Next, let’s look at the client layer and how apps connect to the XMTP network and send and receive encrypted messages.
+
 
 ## Client layer
 
@@ -98,26 +151,70 @@ The client layer consists of XMTP user clients embedded in client apps built wit
 - Encode and decode message content types
   To learn more, see [Content types](/docs/dev-concepts/content-types).
 
+
 ### Message encryption and decryption
 
-All XMTP messages are encrypted. A client app encrypts and decrypts messages using the following artifacts:
+All XMTP messages are encrypted. This section describes XMTP V1 and V2 message encryption flows.
+
+
+#### XMTP V1 message encryption
+
+With XMTP V1, a client app encrypts and decrypts messages using the following artifacts:
 
 - Public key bundle (per user)
 - Private key bundle (per user)
 - Shared secret (per sender and recipient pair)
 - Encryption key (per sender and recipient pair)
 
-Here’s a high-level overview of the message encryption and decryption flow:
+Here’s a high-level overview of the message encryption and decryption flow for XMTP V1:
 
 ![Animation showing the flow of a user sending a message to another user, including details of how the sender's client app encrypts and submits the message to the XMTP network, how an XMTP node relays the message to other nodes, and how the recipient's client app retrieves the message from the network, decrypts it, and delivers it to the recipient.](./img/message-encrypt-decrypt.gif) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=324%3A1120-->
 
 The following sequence diagram dives a bit deeper into the flow and illustrates how a client app creates and uses these artifacts to encrypt a message:
 
-![Diagram showing the sequence of steps a client app takes to use a private key, public key, shared secret, and encryption key to encrypt a message before submitting it to the XMTP network.](./img/encrypt-message.png) <!--source file: https://lucid.app/lucidchart/d2985646-969e-4625-82f0-cb38853033c5/edit?viewport_loc=-216%2C-25%2C2184%2C1232%2C0_0&invitationId=inv_2faa4c23-7fdb-40d8-9b78-e9c4557b712d#-->
+![Diagram showing the sequence of steps a client app takes to use a private key, public key, shared secret, and encryption key to encrypt a message before submitting it to the XMTP network.](./img/encrypt-message.png) <!--source file: https://lucid.app/lucidchart/d2985646-969e-4625-82f0-cb38853033c5/edit?view_items=jOX3cckT1jt4&invitationId=inv_2faa4c23-7fdb-40d8-9b78-e9c4557b712d-->
 
 Likewise, this sequence diagram illustrates the message decryption process:
 
-![Diagram showing the sequence of steps a client app takes to retrieve a message from the XMTP network, use a private key, public key, shared secret, and encryption key to decrypt them message, and then deliver the message to a user.](./img/decrypt-message.png) <!--source file: https://lucid.app/lucidchart/eda3bcf7-69e5-4d31-b3cb-577399ae5d8b/edit?invitationId=inv_50b45a44-3475-486e-bc28-80c881f035cf#-->
+![Diagram showing the sequence of steps a client app takes to retrieve a message from the XMTP network, use a private key, public key, shared secret, and encryption key to decrypt the message, and then deliver the message to a user.](./img/decrypt-message.png) <!--source file: https://lucid.app/lucidchart/d2985646-969e-4625-82f0-cb38853033c5/edit?view_items=jOX3cckT1jt4&invitationId=inv_2faa4c23-7fdb-40d8-9b78-e9c4557b712d-->
+
+
+#### XMTP V2 invite encryption
+
+With XMTP V2, a client app encrypts and decrypts invites using the following artifacts:
+
+- Public key bundle (per user)
+- Private key bundle (per user)
+- Shared secret (per sender and recipient pair)
+- Encryption key (per sender and recipient pair)
+
+The following sequence diagram dives a bit deeper into the flow and illustrates how a client app creates and uses these artifacts to encrypt an invite:
+
+![Diagram showing the sequence of steps a client app takes to use a private key, public key, shared secret, and encryption key to encrypt an invite before submitting it to the XMTP network.](./img/invite-encrypt-v2.png) <!--source file: https://lucid.app/lucidchart/e2f80322-b2c9-44c1-8f20-421628e4f9ed/edit?viewport_loc=-389%2C-1224%2C3032%2C1592%2C0_0&invitationId=inv_4013c892-b596-4097-bcfd-a50a233de812-->
+
+Likewise, this sequence diagram illustrates the invite decryption process:
+
+![Diagram showing the sequence of steps a client app takes to retrieve a message from the XMTP network, use a private key, public key, shared secret, and encryption key to decrypt the invite.](./img/invite-decrypt-v2.png) <!--source file: https://lucid.app/lucidchart/e2f80322-b2c9-44c1-8f20-421628e4f9ed/edit?viewport_loc=-389%2C-1224%2C3032%2C1592%2C0_0&invitationId=inv_4013c892-b596-4097-bcfd-a50a233de812-->
+
+
+#### XMTP V2 message encryption
+
+With XMTP V2, a client app encrypts and decrypts messages using the following artifacts:
+
+- Shared secret (per invitees to a conversation)
+- Encryption key (per invitees to a conversation)
+<!--not sure about the second bullet. I know that every invitee to a conversation has the same shared secret - I think this means that each of them will generate the same encryption key through HKDF as well?-->
+
+On a related note, the encrypted message is signed by the sender using their private key. Upon decryption but before presentation to the recipient, the client app uses the sender's public key from the message header to verify the sender of the message.
+
+The following sequence diagram dives a bit deeper into the flow and illustrates how a client app creates and uses these artifacts to encrypt and sign a message:
+
+![Diagram showing the sequence of steps a client app takes to use a shared secret and encryption key to encrypt a message before submitting it to the XMTP network.](./img/invite-encrypt-v2.png) <!--source file: https://lucid.app/lucidchart/9ec2b0e2-df13-4d06-82c7-59068059b8a7/edit?viewport_loc=-1118%2C-613%2C3110%2C1633%2C0_0&invitationId=inv_857afa87-d52e-4236-8a9f-c5818c65df04-->
+
+Likewise, this sequence diagram illustrates the message decryption and sender verification process:
+
+![Diagram showing the sequence of steps a client app takes to retrieve a message from the XMTP network, use a private key, public key, shared secret, and encryption key to decrypt the invite.](./img/invite-decrypt-v2.png) <!--source file: https://lucid.app/lucidchart/9ec2b0e2-df13-4d06-82c7-59068059b8a7/edit?viewport_loc=-1118%2C-613%2C3110%2C1633%2C0_0&invitationId=inv_857afa87-d52e-4236-8a9f-c5818c65df04-->
+
 
 ## App layer
 
