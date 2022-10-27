@@ -118,7 +118,7 @@ With XMTP V2, the network uses the following topics:
 - Conversation topic
   The XMTP network uses a conversation topic to store messages sent between two participants. A conversation topic is shared by the two participants. Here are some key differences between conversations topics with XMTP V1 and V2. With XMTP V2:
   - Two participants can have multiple ongoing conversations. With XMTP V1, all messages between two participants are stored in a single conversation topic.
-  - Conversation topics support `conversationId`s and other metadata. You can use these IDs and metadata to filter and organize conversations, which can be more manageable than filtering individual messages in a single large conversation topic.
+  - Conversation topics support `conversationId`s and other metadata. You can use these IDs and metadata to filter and organize conversations, which can be more manageable than filtering individual messages in a single large conversation topic. <!--conversationId is required - is there a default value if the dev doesn't define a custom value? or does the dev always need to provide the value/pattern?-->
   - The conversation topic name format is `m-DCwPWXQPzoui9RQ eGUD9e9wEz1oOld8E`, for example. The conversation topic name uses a random 32-byte alphanumeric string. With XMTP V1,  the conversation topic name format is `dm-walletaddress1-walletaddress2`, which reveals some identifying information about participants in the conversation.
 
 This diagram illustrates how these XMTP V2 network topics are created and work together to enable a client app to deliver messages to a user:
