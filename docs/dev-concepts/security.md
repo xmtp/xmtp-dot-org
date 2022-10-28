@@ -91,11 +91,11 @@ On a related note, the encrypted message is signed by the sender using their pri
 
 The following sequence diagram dives a bit deeper into the flow and illustrates how a client app creates and uses these artifacts to encrypt and sign a message:
 
-![Diagram showing the sequence of steps a client app takes to use a shared secret and encryption key to encrypt a message before submitting it to the XMTP network.](./img/invite-encrypt-v2.png) <!--source file: https://lucid.app/lucidchart/9ec2b0e2-df13-4d06-82c7-59068059b8a7/edit?viewport_loc=-1118%2C-613%2C3110%2C1633%2C0_0&invitationId=inv_857afa87-d52e-4236-8a9f-c5818c65df04-->
+![Diagram showing the sequence of steps a client app takes to use a shared secret and encryption key to encrypt a message before submitting it to the XMTP network.](./img/message-encrypt-v2.png) <!--source file: https://lucid.app/lucidchart/9ec2b0e2-df13-4d06-82c7-59068059b8a7/edit?viewport_loc=-1118%2C-613%2C3110%2C1633%2C0_0&invitationId=inv_857afa87-d52e-4236-8a9f-c5818c65df04-->
 
 Likewise, this sequence diagram illustrates the message decryption and sender verification process:
 
-![Diagram showing the sequence of steps a client app takes to retrieve a message from the XMTP network, use a private key, public key, shared secret, and encryption key to decrypt the invite.](./img/invite-decrypt-v2.png) <!--source file: https://lucid.app/lucidchart/9ec2b0e2-df13-4d06-82c7-59068059b8a7/edit?viewport_loc=-1118%2C-613%2C3110%2C1633%2C0_0&invitationId=inv_857afa87-d52e-4236-8a9f-c5818c65df04-->
+![Diagram showing the sequence of steps a client app takes to retrieve a message from the XMTP network, use a private key, public key, shared secret, and encryption key to decrypt the invite.](./img/message-decrypt-v2.png) <!--source file: https://lucid.app/lucidchart/9ec2b0e2-df13-4d06-82c7-59068059b8a7/edit?viewport_loc=-1118%2C-613%2C3110%2C1633%2C0_0&invitationId=inv_857afa87-d52e-4236-8a9f-c5818c65df04-->
 
 
 ## Algorithms in use

@@ -52,7 +52,7 @@ Every XMTP node:
 - Relays messages and key bundles to other nodes
 - Stores and advertises public key bundles for XMTP identities
 - Stores encrypted private key bundles for XMTP identities
-- Stores invites, conversations, and messages created by XMTP identities
+- Stores messages created by XMTP identities
 - Has a private load balancer and connects to a single public load balancer
 
 Here’s a high-level view of how client apps built with XMTP submit and retrieve messages using the XMTP network:
@@ -66,25 +66,24 @@ The XMTP network uses pub/sub topics to relay and store conversations, messages,
 
 :::info
 
-For a period of time, the XMTP network will support both V1 and V2 topics and flows to give developers time to upgrade their client apps to use XMTP client SDK for JavaScript (xmtp-js) >=v7.0.0, which will provide their apps with V2 functionality. After support for V1 topics and flows is deprecated, client apps that have not upgraded to >=v7.0.0 may be unable to communicate with the XMTP network.
+To enable your client app to support V2 topics and flows, upgrade your client app to use >=v7.0.0 of the XMTP client SDK for JavaScript (xmtp-js).
 
 :::
 
-<!--Correct? Is this the min ver needed to use V2. Provide link to release.-->
+<!--Provide link to release. What should we say about client apps that don't upgrade? Client apps that don't upgrade may eventually be unable to communicate with the network?-->
 
 #### V1 topics and flow
 
 With XMTP V1, the network uses the following topics:
 
 <!--add more details about specific values in v1 - so we can call out the changes in v2-->
-- Private store topic  
-  A developer building an app with XMTP can choose to store their users' private key bundles locally or encrypted on the XMTP network. When required by a client app, the XMTP network uses a private store topic to store a user's private key bundle.
-- Contact topic  
-  The XMTP network uses a contact topic to store a user’s public key bundle. The network advertises this public key bundle to enable other users to contact the user.
-- Intro topic  
-  The XMTP network uses an intro topic to store the first message sent between two participants (blockchain accounts). This enables client apps to know that messages exist in a given direct message topic.
-- Conversation topic  
-  The XMTP network uses a conversation topic to store all messages sent between two participants. The conversation topic is shared by the two participants.
+
+| V1 topic | Description |
+|-------|-------------|
+| Private store | A developer building an app with XMTP can choose to store their users' private key bundles locally or encrypted on the XMTP network. When required by a client app, the XMTP network uses a private store topic to store a user's private key bundle. |
+| Contact | The XMTP network uses a contact topic to store a user’s public key bundle. The network advertises this public key bundle to enable other users to contact the user. |
+| Intro     | The XMTP network uses an intro topic to store the first message sent between two participants (blockchain accounts). This enables client apps to know that messages exist in a given direct message topic. |
+| Conversation | The XMTP network uses a conversation topic to store all messages sent between two participants. The conversation topic is shared by the two participants. |
 
 This diagram illustrates how these XMTP V1 network topics are created and work together to enable a client app to deliver messages to a user:
 
@@ -106,20 +105,15 @@ For more details, see [Message encryption and decryption](#message-encryption-an
 With XMTP V2, the network uses the following topics:
 
 <!--add more details about specific values in v2 - so we can call out the changes from v1-->
-- Private store topic  
-  A developer building an app with XMTP can choose to store their users' private key bundles locally or encrypted on the XMTP network. When required by a client app, the XMTP network uses a private store topic to store a user's private key bundle.  
-- Contact topic  
-  The XMTP network uses a contact topic to store a user’s public key bundle. The network advertises this public key bundle to enable other users to contact the user.
-- Invite topic  
-  XMTP V2 uses an invite topic instead of an intro topic, as in V1. The invite topic stores a conversation topic name and key material and no message content.
-  - The invite topic is sent to both the invitee and sender.
-  - The conversation topic name tells the client app which conversation topic to send messages to.
-  - The key material is what the client app uses for message encryption.
-- Conversation topic
-  The XMTP network uses a conversation topic to store messages sent between two participants. A conversation topic is shared by the two participants. Here are some key differences between conversations topics with XMTP V1 and V2. With XMTP V2:
-  - Two participants can have multiple ongoing conversations. With XMTP V1, all messages between two participants are stored in a single conversation topic.
-  - Conversation topics support `conversationId`s and other metadata. You can use these IDs and metadata to filter and organize conversations, which can be more manageable than filtering individual messages in a single large conversation topic. <!--conversationId is required - is there a default value if the dev doesn't define a custom value? or does the dev always need to provide the value/pattern?-->
-  - The conversation topic name format is `m-DCwPWXQPzoui9RQ eGUD9e9wEz1oOld8E`, for example. The conversation topic name uses a random 32-byte alphanumeric string. With XMTP V1,  the conversation topic name format is `dm-walletaddress1-walletaddress2`, which reveals some identifying information about participants in the conversation.
+
+| V2 topic | Description |
+|-------|-------------|
+| Private store | A developer building an app with XMTP can choose to store their users' private key bundles locally or encrypted on the XMTP network. When required by a client app, the XMTP network uses a private store topic to store a user's private key bundle. |
+| Contact | The XMTP network uses a contact topic to store a user’s public key bundle. The network advertises this public key bundle to enable other users to contact the user. |
+| Invite | XMTP V2 uses an invite topic instead of an intro topic, as in V1. The invite topic stores a conversation topic name and key material and no message content. <ul><li>The invite topic is sent to both the invitee and sender.</li><li>The conversation topic name tells the client app which conversation topic to send messages to.</li><li>The key material is what the client app uses for message encryption.</li></ul> |
+| Conversation | The XMTP network uses a conversation topic to store messages sent between two participants. A conversation topic is shared by the two participants. Here are some key differences between conversations topics with XMTP V1 and V2. With XMTP V2: <ul><li>Two participants can have multiple ongoing conversations. With XMTP V1, all messages between two participants are stored in a single conversation topic.</li><li>Conversation topics support `conversationId`s and other metadata. You can use these IDs and metadata to filter and organize conversations, which can be more manageable than filtering individual messages in a single large conversation topic.</li><li>The conversation topic name format is `m-XxBHrITqjd00nLMuTyaaGDvTLnviazU8`, for example. The conversation topic name uses a random 32-byte alphanumeric string. With XMTP V1, the conversation topic name format is `dm-walletaddress1-walletaddress2`, which reveals some identifying information about participants in the conversation.</li></ul> |
+
+<!--conversationId is required - is there a default value if the dev doesn't define a custom value? or does the dev always need to provide the value/pattern?-->
 
 This diagram illustrates how these XMTP V2 network topics are created and work together to enable a client app to deliver messages to a user:
 
