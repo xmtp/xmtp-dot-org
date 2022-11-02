@@ -95,11 +95,10 @@ Here is the **Messages** panel in Lenster using the Lens DM `conversationId` to 
 
 **To filter for Lens conversations and then display messages in a conversation:**
 
-1. Filter for Lens conversations only as shown in lines 1-8.
-2. Get the Lens profileIds from each conversationId as shown in line 10.
-3. Query Lens for profile metadata using the profileIds in step 2 as shown in lines 12-34.  
+1. Filter for Lens conversations only as shown in lines 1-9.
+2. Get the Lens profileIds from each conversationId as shown in line 11-17.
+3. Query Lens for profile metadata using the profileIds in step 2 as shown in lines 19-44.  
 The result is used to show information about the user and to verify that the profile is still owned by the account associated with the conversation.
-4. Fetch the most recent message for each conversation to render a preview below the Lens profile metadata as shown in lines 36-38.
 
 For example:
 
@@ -135,7 +134,6 @@ query GetProfiles {
    }
  }
 }
-// does this ` belong here below?
 `;
 const fetchProfiles = async () => {
  const response = await apolloClient.query({ query: getProfiles });
@@ -151,7 +149,13 @@ const fetchProfiles = async () => {
 fetchProfiles();
 ```
 
+To see how Lenster uses the Lens DM conversation ID to filter conversations, see [`listConversations`](https://github.com/lensterxyz/lenster/blob/c64636cbbc688aa118ad886f31316b0150d87916/src/components/utils/hooks/useMessagePreviews.tsx#L106) in `/src/components/utils/hooks/useMessagePreviews.tsx` in the Lenster GitHub repo.
+
+To view the `getProfileFromKey` helper method, see [getProfileFromKey](https://github.com/lensterxyz/lenster/blob/c64636cbbc688aa118ad886f31316b0150d87916/src/components/utils/hooks/useMessagePreviews.tsx#L39) in `src/components/utils/hooks/useMessagePreviews.tsx` in the Lenster GitHub repo.
+
 To learn more about the Lens API and see how to configure your ApolloClient, see [Creating the API](https://docs.lens.xyz/docs/developer-quickstart#creating-the-api) in the Lens Developer Quickstart.
+
+Optionally, you can fetch the most recent message for each conversation to render a preview below the Lens profile metadata as shown here:
 
 ```ts showLineNumbers
 /** Optionally fetch the most recent message for each conversation to show a preview.
@@ -184,12 +188,9 @@ setPreviewMessages(newPreviewMessages);
 // Now you can pair a message to a profile by conversationKey to render UI.
 messageProfiles.map(([key, profile]) => {
  const message = previewMessages.get(key);
- // does the ` toward the end of the line below belong here?
  console.log(`profileId: ${profile.id} messageId: ${message?.id}`);
 }
 ```
-
-To see how Lenster uses the Lens DM conversation ID to filter conversations, see [`listConversations`](https://github.com/lensterxyz/lenster/blob/c64636cbbc688aa118ad886f31316b0150d87916/src/components/utils/hooks/useMessagePreviews.tsx#L106) in `/src/components/utils/hooks/useMessagePreviews.tsx` in the Lenster GitHub repo.
 
 
 ## Start a conversation with a Lens profile
