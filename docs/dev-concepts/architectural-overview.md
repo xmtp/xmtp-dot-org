@@ -12,82 +12,205 @@ You can use this information to get an overview of how XMTP works and how buildi
 
 At the most basic level, the architecture of XMTP includes three layers:
 
-- [Network layer](#network-layer)
-- [Client layer](#client-layer)
-- [App layer](#app-layer)
+* [Network layer](#network-layer)
+* [Client layer](#client-layer)
+* [App layer](#app-layer)
 
-![Diagram showing three layers of the XMTP architecture: network, client, and app.](./img/arch-layers.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=407%3A1774-->
+![Diagram showing three layers of the XMTP architecture: network, client, and app.](img/arch-layers.png)
+
+<!--Source file: [https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=0%3A1](https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=0%3A1)-->
 
 
 ## Network layer
 
-The network layer provides the XMTP network which is comprised of nodes (computers) running network client software. The primary responsibilities of the XMTP network and nodes are to:
+The network layer provides the XMTP network which is comprised of **nodes** (computers) running XMTP node software.
 
-- Relay messages to other nodes and to storage
-- Make messages available for retrieval by client apps built with XMTP
-- Store and advertise public key bundles for XMTP identities
-- Store encrypted private key bundles for XMTP identities
-- Bootstrap newly joined XMTP nodes
+The XMTP network enables any computer running XMTP node software to participate in the network. Currently, the node software is closed source and all nodes in the XMTP network are operated by XMTP Labs. XMTP Labs aims to publish a phased decentralization roadmap in Fall 2022.
 
+This diagram shows the key components of an XMTP node. The nodes provide a **message API** that enables client apps built with the XMTP client SDK to communicate with the XMTP network. The nodes use Waku node software to connect to other nodes and form a peer-to-peer network to relay and store envelopes submitted and requested by client apps.
 
-### Network topology
+<a name="xmtp-node-diagram"></a>
 
-Diving a bit deeper into the XMTP network, this diagram illustrates key components of the network topology:
+![Diagram showing three nodes connected in a peer-to-peer fashion to form the XMTP network. The diagram shows the key components of a node, including a message API and Waku node. The diagram also shows a client app connecting a message API client to the message API in a node.](img/xmtp-nodes.png)
 
-![Diagram showing five XMTP nodes connected in a peer-to-peer network. Each node contains a bootstrap service and connects to its own data store.](./img/network-topology.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=534%3A1663-->
+<!--Source file: [https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=16%3A502](https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=16%3A502)-->
 
-:::info
+Every **envelope** contains a payload, often encrypted, that is not observable by nodes. The payload could be a public key bundle, private key bundle, or a message created by a client app, but this information is opaque to nodes. Meaning is assigned to these envelopes in the [Client layer](#client-layer).
 
-At this time, XMTP Labs runs all nodes in the XMTP network. XMTP Labs aims to publish a phased decentralization roadmap in Fall 2022.
+Nodes can see envelope properties which help the nodes understand how to handle envelopes but the properties reveal nothing about message content. An example of an important envelope property is a **topic** name. A topic name is a required envelope property. A topic name helps a node understand where to relay and store the envelope. Each envelope belongs to exactly one topic.
 
-:::
+The primary responsibilities of an XMTP node are to:
 
-The XMTP network has no security perimeter, enabling any node running XMTP network client software to participate in the network. Currently, the network client software is closed source and all nodes are operated by XMTP Labs.
+* Connect to other nodes, forming a peer-to-peer network
+* Advertise information about all of the nodes it’s connected to, enabling newly joined nodes to connect to other nodes in the XMTP network
+* Relay envelopes to other nodes
+* Store envelopes in topics
+* Make envelopes available for retrieval by client apps
 
-Every XMTP node:
+<!--To learn more about the XMTP network layer, nodes, and topics, see Network Layer in The XMTP Protocol specifications.-->
 
-- Has a bootstrapping service that advertises information about all of the nodes it’s connected to, enabling newly joined nodes to connect to every other node in the network
-- Connects to every other node, forming a peer-to-peer network
-- Connects to a data store <!--To learn more about the vision for pre- and post-delivery storage, see the XMTP litepaper.-->
-- Relays messages and key bundles to other nodes
-- Stores and advertises public key bundles for XMTP identities
-- Stores encrypted private key bundles for XMTP identities
-- Stores messages created by XMTP identities
-- Has a private load balancer and connects to a single public load balancer
+Here’s a high-level view of how XMTP nodes relay and store envelopes containing payloads submitted and retrieved by client apps built with XMTP:
 
-Here’s a high-level view of how client apps built with XMTP submit and retrieve messages using the XMTP network:
+![Animation showing the flow of a user sending a message to another user, including how the sender's client app encrypts and submits the message to the XMTP network, how an XMTP node relays the message to other nodes, and how the recipient's client app retrieves the message from the network, decrypts it, and delivers it to the recipient.](img/xmtp-message-flow.gif)
 
-![Animation showing the flow of a user sending a message to another user, including how the sender's client app encrypts and submits the message to the XMTP network, how an XMTP node relays the message to other nodes, and how the recipient's client app retrieves the message from the network, decrypts it, and delivers it to the recipient.](./img/xmtp-message-flow.gif) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=291%3A2607-->
+<!--Source file: [https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A169](https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A169)-->
 
 
-### Network storage and message relay
+## Client layer
 
-The XMTP network uses pub/sub topics to relay and store conversations, messages, invites, and key bundles within the network. This section describes XMTP V1 and V2 topics and flows.
+The client layer consists of XMTP message API clients (clients) embedded in client apps built with the XMTP client SDK. A message API client connects to the message API in an arbitrary XMTP node to communicate with the network, as shown in the [XMTP node diagram](#xmtp-node-diagram).
 
-:::info
+The primary responsibilities of a client are to:
 
-To enable your client app to support V2 topics and flows, upgrade your client app to use >=v7.0.0 of the XMTP client SDK for JavaScript (xmtp-js).
+* Create blockchain account-based XMTP identities, including public and private key bundles.  
+To learn more, see [Participant authentication](participant-authentication).
 
-:::
+* Encrypt and decrypt private key bundles, invitations, and messages.  
+To learn more, see [Invitation and message encryption](invitation-and-message-encryption).
 
-<!--Provide link to release. What should we say about client apps that don't upgrade? Client apps that don't upgrade may eventually be unable to communicate with the network?-->
+* Submit and retrieve public key bundles, encrypted private key bundles, encrypted invitations, and encrypted messages to and from the XMTP network.
 
-#### V1 topics and flow
+* Encode and decode message content types.  
+To learn more, see [Content types](content-types).
 
-With XMTP V1, the network uses the following topics:
 
-<!--add more details about specific values in v1 - so we can call out the changes in v2-->
+### XMTP V2 topics and message presentation flow
 
-| V1 topic | Description |
-|-------|-------------|
-| Private store | A developer building an app with XMTP can choose to store their users' private key bundles locally or encrypted on the XMTP network. When required by a client app, the XMTP network uses a private store topic to store a user's private key bundle. |
-| Contact | The XMTP network uses a contact topic to store a user’s public key bundle. The network advertises this public key bundle to enable other users to contact the user. |
-| Intro     | The XMTP network uses an intro topic to store the first message sent between two participants (blockchain accounts). This enables client apps to know that messages exist in a given direct message topic. |
-| Conversation | The XMTP network uses a conversation topic to store all messages sent between two participants. The conversation topic is shared by the two participants. |
+This section describes how topics and the message presentation flow work for the current version of the protocol, referred to as XMTP V2. Only client apps with XMTP client SDK >=v7.0.0 can use XMTP V2. To learn about how topics and flows work in XMTP V1, see [XMTP V1 topics and message presentation flow](#xmtp-v1-topics-and-message-presentation-flow).
 
-This diagram illustrates how these XMTP V1 network topics are created and work together to enable a client app to deliver messages to a user:
+In XMTP V2, clients use the following topics to perform their primary responsibilities:
 
-![Diagram showing a client app interacting with topics in the XMTP V1 network with the goal of delivering messages to a user named Bola.](./img/deliver-a-message.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=535%3A1664-->
+<table>
+   <tr>
+      <td><strong>Topic</strong>
+      </td>
+      <td><strong>Description</strong>
+      </td>
+      <td><strong>Example name</strong>
+      </td>
+   </tr>
+   <tr>
+      <td><strong>Contact</strong>
+      </td>
+      <td>A client uses a contact topic to advertise a user’s public key bundle on the XMTP network. The network advertises this public key bundle to enable other users to contact the user.
+      </td>
+      <td><code>contact-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38</code>
+      </td>
+   </tr>
+   <tr>
+      <td><strong>Invite</strong>
+      </td>
+      <td>
+         Clients use invite topics to initiate conversations between participants. The client sends an invitation to both the sender and recipient. The invitation includes no message content, but includes:
+         <ul>
+            <li>A randomly generated conversation topic name, which tells the client which conversation topic to use to send and retrieve messages.</li>
+            <li>Encrypted key material, which includes a shared secret for message encryption.</li>
+            <li>Invitations support custom <code>conversationIds</code> and other metadata. Clients can use these IDs and metadata to filter and organize conversations.</li>
+         </ul>
+      </td>
+      <td><code>invite-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38</code>
+      </td>
+   </tr>
+   <tr>
+      <td><strong>Conversation</strong>
+      </td>
+      <td>
+         Clients use conversation topics to store messages sent between two participants. Here are some key features of conversation topics:
+         <ul>
+            <li>Two participants can have multiple ongoing conversations using separate and multiple conversation topics.</li>
+            <li>The conversation topic name uses a random 32-byte alphanumeric string.</li>
+         </ul>
+      </td>
+      <td><code>m-XxBHrITqjd00nLMuTyaaGDvTLnviazU8</code>
+      </td>
+   </tr>
+   <tr>
+      <td><strong>Private store</strong>
+      </td>
+      <td>A client built with XMTP can choose to store its users' private key bundles locally or encrypted on the XMTP network. When required, a client uses a private store topic to store a user's private key bundle.
+      </td>
+      <td><code>privatestore-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38</code>
+      </td>
+   </tr>
+</table>
+
+This diagram shows how a client app uses these topics to present Bola with a message sent by Amal:
+
+![Diagram showing a client app interacting with XMTP V2 topics in the XMTP network with the goal of delivering messages to a user named Bola.](img/deliver-a-message-V2.png)
+
+<!--Source file: [https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A1591](https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A1591)-->
+
+In this flow, the client app:
+
+1. Retrieves Bola’s private key bundle from the network. If one doesn’t exist, it creates it and stores it encrypted on the network in a private store topic, or locally.
+2. If one doesn't already exist, stores Bola’s public key bundle on the network in a contact topic, so others can message Bola.
+3. Retrieves Amal's encrypted invitation to Bola from Bola’s invite topic. Uses Bola's private key and Amal's public key from the invitation header to decrypt the invitation and get the conversation topic name and shared secret.
+4. Uses the conversation topic name from the invitation to retrieve Amal's encrypted message to Bola.
+5. Uses the shared secret from the invitation to create an encryption key to decrypt Amal’s message and present it to Bola.
+
+<!--To learn more about keys, contacts, invitations, and messages, see Client Layer in The XMTP Protocol specifications.-->
+
+
+### XMTP V1 topics and message presentation flow
+
+This section describes how topics and the message presentation flow work for XMTP V1. To understand whether a client app will use XMTP V1 or V2, see [Determining whether to use XMTP V2 or V1 topics](#determining-whether-to-use-xmtp-v2-or-v1-topics).
+
+In XMTP V1, client apps use the following topics to perform their primary responsibilities:
+
+<table>
+   <tr>
+      <td><strong>Topic</strong>
+      </td>
+      <td><strong>Description</strong>
+      </td>
+      <td><strong>Example name</strong>
+      </td>
+   </tr>
+   <tr>
+      <td><strong>Contact</strong>
+      </td>
+      <td>A client uses a contact topic to advertise a user’s public key bundle on the XMTP network. The network advertises this public key bundle to enable other users to contact the user.
+      </td>
+      <td><code>contact-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38</code>
+      </td>
+   </tr>
+   <tr>
+      <td><strong>Intro</strong>
+      </td>
+      <td>Clients use intro topics to store the first message sent between two participants (blockchain accounts). This enables clients to know that messages exist in a given conversation topic.
+      </td>
+      <td><code>intro-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x357540a11BE08e9264c348b346d0C7dBB7df80d7</code>
+      </td>
+   </tr>
+   <tr>
+      <td><strong>Conversation</strong>
+      </td>
+      <td>
+         Clients use conversation topics to store messages sent between two participants. Here are some key features of conversation topics:
+         <ul>
+            <li>All messages between two participants are stored in a single conversation topic.</li>
+            <li>No support for conversation IDs or other conversation metadata.</li>
+            <li>The conversation topic name includes the wallet addresses of the participants, revealing some identifying information.</li>
+         </ul>
+      </td>
+      <td><code>dm-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x357540a11BE08e9264c348b346d0C7dBB7df80d7</code>
+      </td>
+   </tr>
+   <tr>
+      <td><strong>Private store</strong>
+      </td>
+      <td>A client built with XMTP can choose to store its users' private key bundles locally or encrypted on the XMTP network. When required, a client uses a private store topic to store a user's private key bundle.
+      </td>
+      <td><code>privatestore-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38</code>
+      </td>
+   </tr>
+</table>
+
+This diagram shows how a client app uses these XMTP V1 topics to present Bola with a message sent by Amal:
+
+![Diagram showing a client app interacting with XMTP V1 topics in the XMTP network with the goal of delivering messages to a user named Bola.](img/deliver-a-message-V1.png)
+
+<!--Source file: [https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A1513](https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A1513)-->
 
 In this flow, the client app:
 
@@ -97,75 +220,35 @@ In this flow, the client app:
 4. Retrieves the messages between Bola and Amal from their direct message topic.
 5. Uses Bola’s private key and Amal’s public key to create a shared secret. Uses the shared secret to create an encryption key to decrypt Amal’s message and present it to Bola.
 
-For more details, see [Message encryption and decryption](#message-encryption-and-decryption).
+For more details, see [Invitation and message encryption](invitation-and-message-encryption).
 
 
-#### V2 topics and flow
+### Determining whether to use XMTP V2 or V1 topics
 
-With XMTP V2, the network uses the following topics:
+The following diagram shows how a client app using XMTP client SDK >=v7.0.0 determines whether it can use [XMTP V2 topics and message presentation flow](#xmtp-v2-topics-and-message-presentation-flow) or if it must use [XMTP V1 topics and message presentation flow](#xmtp-v1-topics-and-message-presentation-flow) to communicate with another client app.
 
-<!--add more details about specific values in v2 - so we can call out the changes from v1-->
+![Diagram showing a decision tree of how a client app using SDK >=v7.0.0 determines whether it can use XMTP V2 or V1 topics to communicate with another client app](img/v1-or-v2-decision-tree.png)
 
-| V2 topic | Description |
-|-------|-------------|
-| Private store | A developer building an app with XMTP can choose to store their users' private key bundles locally or encrypted on the XMTP network. When required by a client app, the XMTP network uses a private store topic to store a user's private key bundle. |
-| Contact | The XMTP network uses a contact topic to store a user’s public key bundle. The network advertises this public key bundle to enable other users to contact the user. |
-| Invite | XMTP V2 uses an invite topic instead of an intro topic, as in V1. The invite topic stores a conversation topic name and key material and no message content. <ul><li>The invite topic is sent to both the invitee and sender.</li><li>The conversation topic name tells the client app which conversation topic to send messages to.</li><li>The key material is what the client app uses for message encryption.</li></ul> |
-| Conversation | The XMTP network uses a conversation topic to store messages sent between two participants. A conversation topic is shared by the two participants. Here are some key differences between conversations topics with XMTP V1 and V2. With XMTP V2: <ul><li>Two participants can have multiple ongoing conversations. With XMTP V1, all messages between two participants are stored in a single conversation topic.</li><li>Conversation topics support `conversationId`s and other metadata. You can use these IDs and metadata to filter and organize conversations, which can be more manageable than filtering individual messages in a single large conversation topic.</li><li>The conversation topic name format is `m-XxBHrITqjd00nLMuTyaaGDvTLnviazU8`, for example. The conversation topic name uses a random 32-byte alphanumeric string. With XMTP V1, the conversation topic name format is `dm-walletaddress1-walletaddress2`, which reveals some identifying information about participants in the conversation.</li></ul> |
+<!--Source file: [https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A1657](https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A1657)-->
 
-<!--conversationId is required - is there a default value if the dev doesn't define a custom value? or does the dev always need to provide the value/pattern?-->
-
-This diagram illustrates how these XMTP V2 network topics are created and work together to enable a client app to deliver messages to a user:
-
-![Diagram showing a client app interacting with topics in the XMTP V2 network with the goal of delivering messages to a user named Bola.](./img/deliver-a-message-v2.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=535%3A1664-->
-
-In this flow, the client app:
-
-<!--do we need to say more about invite encryption?-->
-
-1. Retrieves Bola’s private key bundle from the network. If one doesn’t exist, it creates it and stores it encrypted on the network in a private store topic, or locally.
-2. If one doesn't already exist, stores Bola’s public key bundle on the network in a contact topic, so others can message Bola.
-3. Retrieves Bola’s invite topic to get the conversation topic name where the messages are stored, as well as the key material needed for message encryption.
-4. Retrieves the message from the conversation topic.
-5. Uses the shared secret from the key material to create an encryption key to decrypt Amal’s message and present it to Bola.
-
-
-#### Rules for using V1 or V2 topics and flows
-
-Here's a diagram that shows how a client app supporting XMTP V2 determines whether it must use V2 or V1 topics and flows to send a message:
-
-![Diagram showing a client app interacting with topics in the XMTP V2 network with the goal of delivering messages to a user named Bola.](./img/v1-or-v2-flow.png) <!--source file: https://www.figma.com/file/1jasKMIn5sAL4855eTwgIm/xmtp-architectural-overview?node-id=738%3A2120-->
-
-Next, let’s look at the client layer and how apps connect to the XMTP network and send and receive encrypted messages.
-
-
-## Client layer
-
-The client layer consists of XMTP user clients embedded in client apps built with the XMTP SDK. The client layer’s main responsibilities are to:
-
-- Create blockchain account-based XMTP identities, including public and private key bundles, and submit them to the network for storage  
-  To learn more, see [Participant authentication](#).
-- Encrypt and decrypt invites and messages  
-  To learn more, see [Message encryption](#).
-- Submit and retrieve messages from the XMTP network
-- Encode and decode message content types
-  To learn more, see [Content types](/docs/dev-concepts/content-types).
+A contact topic may contain multiple versions of a public key bundle for a user. For example, `PublicKeyBundleV2` and `PublicKeyBundleV1`.
+<!--should I hide these for now? Not live yet, correct?-->
 
 
 ## App layer
 
-The app layer consists of client apps built with the XMTP SDK.
+The app layer consists of client apps built with the XMTP client SDK.
 
-A developer can provide messaging between blockchain accounts in their app by building with the [XMTP SDK](https://github.com/xmtp/xmtp-js). When a developer builds with the XMTP SDK, their app embeds an XMTP user client, which handles XMTP network interactions required to enable their users to send and receive messages.
+A developer can provide messaging between blockchain accounts in their app by building with the [XMTP client SDK](https://github.com/xmtp/xmtp-js). When a developer builds with the SDK, their app embeds an XMTP message API client, which communicates with a message API in an XMTP node to handle all XMTP network interactions required to enable their users to send and receive messages. To learn more, see [XMTP node diagram](#xmtp-node-diagram).
 
-With XMTP network interactions handled by an XMTP client, developers can focus on the user-related aspects of building client apps, such as:
+With XMTP network interactions handled by the message API client, developers can focus on the user-related aspects of building client apps, such as:
 
-- User acquisition
-- User interface
-- User identity metadata
-- Inbox filtering  
+* User acquisition
+* User interface
+* User identity metadata
+* Inbox filtering  
 To learn about one developer's approach, see [Truths Not Spoofs](https://blog.xmtp.com/truths-not-spoofs/).
-- Custom content types  
-To learn more, see [Content types](/docs/dev-concepts/content-types).
+* Custom content types  
+To learn more, see [Content types](content-types).
 
-Developers can also help shape XMTP by participating in [XMTP Improvement Proposals (XIPs)](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) and [contributing](/docs/dev-concepts/contributing) to XMTP SDKs and tools.
+Developers can also help shape XMTP by participating in [XMTP Improvement Proposals (XIPs)](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) and [contributing](contributing) to XMTP SDKs and tools.

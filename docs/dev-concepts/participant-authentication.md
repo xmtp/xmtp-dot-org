@@ -1,0 +1,28 @@
+---
+sidebar_label: Participant authentication
+sidebar_position: 5
+---
+
+# Participant authentication with XMTP
+
+The XMTP SDK enables client apps to establish secure, unfalsifiable relationships between XMTP identities in which only the sender and recipient participants can decrypt messages sent between them. The protocol design also accommodates asynchronous offline communication and secure storage of messages.
+
+These relationships between XMTP identities are established using a set of keys. When a user connects their blockchain account to their client app, their wallet app signs with the account's public and private key. This enables the XMTP client SDK to generate the following keys:
+
+* `IdentityPrivateKey`
+* `IdentityPublicKey`
+* `PreKeys`
+
+You can think of the `IdentityPrivateKey` and `IdentityPublicKey` as proxies for a user's blockchain account keys.
+
+Because XMTP cannot access the actual blockchain account keys, XMTP generates `IdentityPrivateKey` and `IdentityPublicKey` and asks the user to vouch for them by signing them with their blockchain account keys.
+
+Anyone can verify the user's signature and consider it as an attestation that the `IdentityPrivateKey` and `IdentityPublicKey` are the user's true proxy keys since only the user's blockchain account keys could have created the signature.
+
+To learn more about signatures, see [Signatures](signatures).
+
+The client app publishes the user's `IdentityPublicKey` and `PreKeys` to the XMTP network in a `PublicKeyBundle`. The `PublicKeyBundle` contains all of the information needed for someone to contact the user.
+
+The `IdentityPrivateKey` (and a copy of the other keys, for good measure) are encrypted and stored locally by the client app or on the XMTP network. Only client apps authorized by the user can access these encrypted keys. By design, XMTP and the XMTP network cannot access these encrypted keys.
+
+<!--To learn more about keys, see Keys in The XMTP Protocol specifications.-->
