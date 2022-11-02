@@ -153,7 +153,7 @@ const fetchProfiles = async () => {
 fetchProfiles()
 ```
 
-To see how Lenster uses the Lens DM conversation ID to filter conversations, see [`listConversations`](https://github.com/lensterxyz/lenster/blob/c64636cbbc688aa118ad886f31316b0150d87916/src/components/utils/hooks/useMessagePreviews.tsx#L106) in `/src/components/utils/hooks/useMessagePreviews.tsx` in the Lenster GitHub repo.
+To see how Lenster uses the Lens DM conversationId to filter conversations, see [`listConversations`](https://github.com/lensterxyz/lenster/blob/c64636cbbc688aa118ad886f31316b0150d87916/src/components/utils/hooks/useMessagePreviews.tsx#L106) in `/src/components/utils/hooks/useMessagePreviews.tsx` in the Lenster GitHub repo.
 
 To view the `getProfileFromKey` helper method, see [getProfileFromKey](https://github.com/lensterxyz/lenster/blob/c64636cbbc688aa118ad886f31316b0150d87916/src/components/utils/hooks/useMessagePreviews.tsx#L39) in `src/components/utils/hooks/useMessagePreviews.tsx` in the Lenster GitHub repo.
 
