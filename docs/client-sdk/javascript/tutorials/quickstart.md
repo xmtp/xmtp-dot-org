@@ -1,6 +1,7 @@
 ---
 sidebar_label: Quickstart
 sidebar_position: 1
+toc_max_heading_level: 4
 ---
 
 # Quickstart for the XMTP JavaScript SDK
