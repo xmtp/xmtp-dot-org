@@ -1,6 +1,6 @@
 ---
 sidebar_label: Wallet app and chain support
-sidebar_position: 6
+sidebar_position: 8
 ---
 
 # Wallet apps and blockchains supported by XMTP
