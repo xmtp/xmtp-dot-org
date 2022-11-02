@@ -91,7 +91,7 @@ You will filter for Lens conversations and then display their message previews.
 
 Here is the **Messages** panel in Lenster using the Lens DM `conversationId` to filter and display a user's Lens conversations only, along with message previews:
 
-![alt_text](img//filter-for-lens-convos.png)
+![Screenshot showing the Messages panel in Lenster with a set of three conversations with preview messages highlighted](img//filter-for-lens-convos.png)
 
 **To filter for Lens conversations and then display messages in a conversation:**
 
@@ -201,7 +201,7 @@ For a Lens app, you want to enable the user to start a conversation with a Lens 
 
 Here is the **New message** modal in Lenster, providing a field where users can search for the Lens profile they want to message:
 
-![alt_text](img/search-for-lens-profile.png)
+![Screenshot showing a search for a Lens profile in the New message panel in Lenster](img/search-for-lens-profile.png)
 
 For example:
 
