@@ -211,8 +211,12 @@ const config = {
                 to: `/docs/dev-concepts/content-types`,
               },
               {
-                label: `Authentication and encryption`,
-                to: `/docs/dev-concepts/security`,
+                label: `Participant authentication`,
+                to: `/docs/dev-concepts/participant-authentication`,
+              },
+              {
+                label: `Invitation and message encryption`,
+                to: `/docs/dev-concepts/invitation-and-message-encryption`,
               },
               {
                 label: `Wallet app and chain support`,
