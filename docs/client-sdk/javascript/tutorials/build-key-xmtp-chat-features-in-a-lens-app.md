@@ -92,7 +92,7 @@ Here is the **Messages** panel in Lenster using the Lens DM `conversationId` to 
 
 1. Filter for Lens conversations only as shown in lines 1-9.
 2. Get the Lens profileIds from each conversationId as shown in line 11-17.
-3. Query Lens for profile metadata using the profileIds in step 2 as shown in lines 19-44.  
+3. Query Lens for profile information using the profileIds in step 2 as shown in lines 19-44.  
    The result is used to show information about the user and to verify that the profile is still owned by the account associated with the conversation.
 
 For example:
