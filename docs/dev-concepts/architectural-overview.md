@@ -24,7 +24,7 @@ At the most basic level, the architecture of XMTP includes three layers:
 
 The network layer provides the XMTP network which is comprised of **nodes** (computers) running XMTP node software.
 
-The XMTP network enables any computer running XMTP node software to participate in the network. Currently, the node software is closed source and all nodes in the XMTP network are operated by XMTP Labs. XMTP Labs aims to publish a phased decentralization roadmap in Fall 2022.
+The XMTP network enables any computer running XMTP node software to participate in the network. Currently, the node software is closed source and all nodes in the XMTP network are operated by XMTP Labs. XMTP Labs aims to publish a phased decentralization roadmap in Fall 2022.<!--verifying timeline-->
 
 This diagram shows the key components of an XMTP node. The nodes provide a **message API** that enables client apps built with the XMTP client SDK to communicate with the XMTP network. The nodes use Waku node software to connect to other nodes and form a peer-to-peer network to relay and store envelopes submitted and requested by client apps.
 
@@ -48,7 +48,7 @@ The primary responsibilities of an XMTP node are to:
 
 Here’s a high-level view of how XMTP nodes relay and store envelopes containing payloads submitted and retrieved by client apps built with XMTP:
 
-![Animation showing the flow of a user sending a message to another user, including how the sender's client app encrypts and submits the message to the XMTP network, how an XMTP node relays the message to other nodes, and how the recipient's client app retrieves the message from the network, decrypts it, and delivers it to the recipient.](img/xmtp-message-flow.gif)<!--Source file: [https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A169](https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A169)-->
+![Animation showing the flow of a user sending a message to another user, including how the sender's client app encrypts and submits the message to the XMTP network, how an XMTP node relays the message to other nodes, and how the recipient's client app retrieves the message from the network, decrypts it, and delivers it to the recipient.](img/xmtp-message-flow.gif)<!--Source file: [https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A169](https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=1%3A169)--><!--change paper icons to open vs closed envelopes-->
 
 
 ## Client layer
@@ -74,7 +74,7 @@ To learn more, see [Content types](content-types).
 This section describes how topics and the message presentation flow work for the current version of the protocol, referred to as XMTP V2. Only client apps with XMTP client SDK >=v7.0.0 can use XMTP V2. To learn about how topics and flows work in XMTP V1, see [XMTP V1 topics and message presentation flow](#xmtp-v1-topics-and-message-presentation-flow).
 
 In XMTP V2, clients use the following topics to perform their primary responsibilities:
-
+<!--update invite row to link to conversation filtering section in SDK readme once releases-->
 <table>
    <tr>
       <td><strong>Topic</strong>
