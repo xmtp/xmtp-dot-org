@@ -75,10 +75,9 @@ const buildConversationId = (profileIdA: string, profileIdB: string) => {
 const profileIdAParsed = parseInt(profileIdA, 16);
 const profileIdBParsed = parseInt(profileIdB, 16);
 
-return `${PREFIX}/${Math.min(profileIdAParsed, profileIdBParsed)}-${Math.max(
-profileIdAParsed,
-profileIdBParsed
-)}`;
+return profileIdAParsed < profileIdBParsed ?
+`${PREFIX}/${profileIdA}-${profileIdB}` :
+`${PREFIX}/${profileIdB}-${profileIdA}`
 };
 ```
 
