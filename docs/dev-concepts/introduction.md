@@ -40,7 +40,7 @@ Here are some key considerations as you explore building with XMTP for secure we
 | **Chain focus** | Chain-agnostic, but currently requires an EVM blockchain account. |
 | **Wallet app compatibility** | EVM-compatible wallets capable of signing with private keys, such as MetaMask, Coinbase Wallet, and Rainbow Wallet. |
 | **Authentication** | An XMTP-specific key bundle derived from a wallet address signature is used to authenticate participant identities. <br /><br /> To learn more about authentication, see [Participant authentication](/docs/dev-concepts/participant-authentication). |
-| **Message encryption** | AES-256-GCM and modified Diffie-Hellman key agreement. Messages are encrypted individually by default and are readable by message participants only. <br /><br /> To learn more about message encryption, see [Message encryption](/docs/dev-concepts/invitation-and-message-encryption). |
+| **Message encryption** | Messages are encrypted individually by default and are readable by message participants only. <br /><br /> To learn more about message encryption, see [Invitation and message encryption](invitation-and-message-encryption). |
 | **Message delivery** | Messages are immediately relayed by XMTP nodes, using the Waku protocol. <!--<br /><br /> To learn more about how XMTP uses Waku, see What is the relationship between Waku and XMTP?--> |
 | **Message storage** | Messages are stored off-chain in the XMTP network, with all nodes currently hosted by XMTP Labs. <br /><br /> We will publish a phased decentralization roadmap in Fall 2022. |
 | **Supported content types** | Plaintext messages as a standard content type, but custom content types are supported as well. <br /><br /> To learn more, see [Content types](/docs/dev-concepts/content-types). |
@@ -57,23 +57,10 @@ A user can send and receive encrypted XMTP messages using an app with an embedde
 
 Clients and nodes are implemented as [Waku2](https://rfc.vac.dev/spec/10/) peers but with XMTP-specific functions and capabilities.
 
-### Clients
+To learn more about clients, see [Client layer](architectural-overview#client-layer).
 
-XMTP clients have the following responsibilities:
+To learn more about nodes, see [Network layer](architectural-overview#network-layer).
 
-- Encode and decode message formats using a [standard interface](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md)
-- Encrypt and decrypt encoded message content
-- Submit and retrieve encrypted messages to and from the XMTP Network
-- Generate secure wallet-based identities capable of encrypting and decrypting messages
-- Persist wallet-based identities locally or on the XMTP Network
-
-### Nodes
-
-XMTP nodes have the following responsibilities:
-
-- Relay encrypted messages into replicated storage
-- Retrieve encrypted messages from storage and deliver them to clients
-- Persist and advertise wallet-based identities
 
 ## XMTP client SDK
 
