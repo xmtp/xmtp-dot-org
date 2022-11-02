@@ -2,6 +2,7 @@
 sidebar_label: Participant authentication
 sidebar_position: 5
 ---
+import Feedback from '/src/components/Feedback'
 
 # Participant authentication with XMTP
 
@@ -26,3 +27,5 @@ The client app publishes the user's `IdentityPublicKey` and `PreKeys` to the XMT
 The `IdentityPrivateKey` (and a copy of the other keys, for good measure) are encrypted and stored locally by the client app or on the XMTP network. Only client apps authorized by the user can access these encrypted keys. By design, XMTP and the XMTP network cannot access these encrypted keys.
 
 <!--To learn more about keys, see Keys in The XMTP Protocol specifications.-->
+
+<Feedback url="https://github.com/orgs/xmtp/discussions/categories/q-a"/>
