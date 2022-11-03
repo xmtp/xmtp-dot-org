@@ -229,7 +229,7 @@ export const MainContent = ({ styles }) => {
                 onClick={() => {
                   document.getElementsByClassName(
                     'inner-div'
-                  )[0].scrollLeft -= 100
+                  )[0].scrollLeft -= 360
                 }}
                 sources={{
                   light: useBaseUrl('/img/right-arrow.svg'),
