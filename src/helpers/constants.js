@@ -43,7 +43,7 @@ const tags = {
 export const BLOG_DATA = [
   {
     tag: [tags.lens, tags.developers, tags.announcements, tags.spotlight],
-    title: 'Delivering secure DMs with the Lens API',
+    title: 'XMTP delivers secure DMs with the Lens API',
     content:
       'Lens Protocol has adopted XMTP to provide a secure and private DM layer for the entire Lens ecosystem.',
     user: {
