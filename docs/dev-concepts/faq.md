@@ -153,12 +153,11 @@ XMTP enables developers to implement messaging features and UX paradigms that be
 
 ### Does XMTP support real-time conversations?
 
-Real-time chat is a core use case for XMTP and is demonstrated by the XMTP example chat app.
+Real-time chat is a core use case for XMTP and is demonstrated by the XMTP Chat app.
 
-- [Try the app](https://xmtp.chat/) connected to the XMTP `production` network
-- [Try the app](https://xmtp.vercel.app/) connected to the XMTP `dev` network
+[Try the app](https://xmtp.chat/) connected to the XMTP `production` network
 
-To learn more about how the XMTP example chat app is built, see the [example-chat-react repo](https://github.com/xmtp/example-chat-react).
+To learn more about how the XMTP Chat app is built, see the [example-chat-react repo](https://github.com/xmtp/example-chat-react).
 
 ### Does XMTP support group messaging?
 

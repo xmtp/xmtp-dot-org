@@ -84,12 +84,12 @@ export const BLOG_DATA = [
 ]
 
 export const XMTP_JS_URL = 'https://api.github.com/repos/xmtp/xmtp-js'
-export const EXAMPLE_CHAT_URL =
-  'https://api.github.com/repos/xmtp/example-chat-react'
+export const QUICKSTART_CHAT_URL = 'https://api.github.com/repos/xmtp/xmtp-quickstart-react'
+export const EXAMPLE_CHAT_URL = 'https://api.github.com/repos/xmtp/example-chat-react'
 
 export const CHAT_ITEM = {
   id: '2534740',
-  full_name: 'Hosted example app',
+  full_name: 'Hosted XMTP Chat app',
   description:
     'Hosted example-react-app connected to the XMTP production network',
   text: 'Try it',

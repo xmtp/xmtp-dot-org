@@ -10,6 +10,7 @@ import {
   HEADER_DATA,
   BLOG_DATA,
   XMTP_JS_URL,
+  QUICKSTART_CHAT_URL,
   EXAMPLE_CHAT_URL,
   CHAT_ITEM,
 } from '../../helpers/constants'
@@ -31,6 +32,11 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     })
+    const responseQuickChat = await fetch(QUICKSTART_CHAT_URL, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
     const responseChat = await fetch(EXAMPLE_CHAT_URL, {
       headers: {
         Authorization: customFields.personalToken,
@@ -39,6 +45,8 @@ export const MainContent = ({ styles }) => {
 
     const dataXmtp = await responseXmtp.json()
     if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp]
+    const dataQuickChat = await responseQuickChat.json()
+    if (dataQuickChat && !dataQuickChat.message) items = [...items, dataQuickChat]
     const dataChat = await responseChat.json()
     if (dataChat && !dataChat.message) items = [...items, dataChat]
 

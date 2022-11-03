@@ -244,11 +244,15 @@ const config = {
                 href: 'https://github.com/xmtp/xmtp-js',
               },
               {
-                label: 'Example chat app repo',
+                label: 'XMTP Quickstart React App repo',
+                href: 'https://github.com/xmtp/xmtp-quickstart-react',
+              },
+              {
+                label: 'XMTP Chat app repo',
                 href: 'https://github.com/xmtp/example-chat-react/',
               },
               {
-                label: 'Hosted example chat app',
+                label: 'Hosted XMTP Chat app',
                 href: 'https://xmtp.chat/',
               },
             ],
