@@ -24,7 +24,7 @@ At the most basic level, the architecture of XMTP includes three layers:
 
 The network layer provides the XMTP network which is comprised of **nodes** (computers) running XMTP node software.
 
-The XMTP network enables any computer running XMTP node software to participate in the network. Currently, the node software is closed source and all nodes in the XMTP network are operated by XMTP Labs. XMTP Labs is working toward phased decentralization of the network and will share a roadmap in the coming months.
+The XMTP network enables any computer running XMTP node software to participate in the network. Currently, the node software is closed source and all nodes in the XMTP network are operated by XMTP Labs. XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months.
 
 This diagram shows the key components of an XMTP node. The nodes provide a **message API** that enables client apps built with the XMTP client SDK to communicate with the XMTP network. The nodes use Waku node software to connect to other nodes and form a peer-to-peer network to relay and store envelopes submitted and requested by client apps.
 

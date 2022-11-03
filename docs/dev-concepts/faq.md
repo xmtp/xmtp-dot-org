@@ -31,7 +31,7 @@ Currently, XMTP Labs (the company) operates all of the network nodes in the two 
 
 Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes.
 
-XMTP Labs is working toward phased decentralization of the network and will share a roadmap in the coming months.
+XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months.
 
 ### Is XMTP a blockchain?
 
@@ -43,7 +43,7 @@ XMTP Labs is researching various consensus protocols that would allow the networ
 
 Yes, you will be able to run a node.
 
-XMTP Labs is working toward phased decentralization of the network and will share a roadmap in the coming months.
+XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months.
 
 ### What is the relationship between Waku and XMTP?
 
