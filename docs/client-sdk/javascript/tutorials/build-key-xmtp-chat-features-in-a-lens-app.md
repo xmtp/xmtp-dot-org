@@ -156,6 +156,8 @@ To see how Lenster uses the Lens DM conversationId to filter conversations, see 
 
 To view the `getProfileFromKey` helper method, see [getProfileFromKey](https://github.com/lensterxyz/lenster/blob/c64636cbbc688aa118ad886f31316b0150d87916/src/components/utils/hooks/useMessagePreviews.tsx#L39) in `src/components/utils/hooks/useMessagePreviews.tsx` in the Lenster GitHub repo.
 
+To see how Lenster implemented `buildConversationKey`, see [buildConversationKey](https://github.com/lensterxyz/lenster/blob/63db97b2ed2e4b20e8fedacb3de472c8f85bb165/src/lib/conversationKey.ts#L5) in `src/lib/conversationKey.ts` in the Lenster GitHub repo.
+
 To learn more about the Lens API and see how to configure your ApolloClient, see [Creating the API](https://docs.lens.xyz/docs/developer-quickstart#creating-the-api) in the Lens Developer Quickstart.
 
 Optionally, you can fetch the most recent message for each conversation to render a preview below the Lens profile metadata as shown here:
