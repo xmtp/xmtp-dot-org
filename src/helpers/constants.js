@@ -13,11 +13,11 @@ export const HEADER_DATA = [
     icon: 'quickstart-icon.svg',
   },
   {
-    title: 'Vision',
+    title: 'Build Lens DMs with XMTP',
     subtitle:
-      'Read the XMTP Litepaper public draft and learn about the XMTP roadmap',
-    url: '/vision/litepaper',
-    icon: 'xmtp-icon.svg',
+      'Learn how to build key XMTP chat features to provide direct messaging in a Lens app',
+    url: '/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app',
+    icon: 'dms-icon.svg',
   },
 ]
 
