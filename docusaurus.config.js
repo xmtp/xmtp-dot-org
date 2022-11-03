@@ -244,7 +244,7 @@ const config = {
                 href: 'https://github.com/xmtp/xmtp-js',
               },
               {
-                label: 'XMTP Quickstart React App repo',
+                label: 'XMTP Quickstart Chat app repo',
                 href: 'https://github.com/xmtp/xmtp-quickstart-react',
               },
               {

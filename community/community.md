@@ -31,7 +31,7 @@ Contribute to XMTP open source projects to help improve the SDKs, developer tool
 
 * [View XMTP JavaScript SDK open issues](https://github.com/xmtp/xmtp-js/issues)
 * [View XMTP Chat app open issues](https://github.com/xmtp/example-chat-react/issues)
-* [View XMTP Quickstart React App open issues](https://github.com/xmtp/xmtp-quickstart-react/issues)
+* [View XMTP Quickstart Chat app open issues](https://github.com/xmtp/xmtp-quickstart-react/issues)
 * [Contribute to XMTP documentation](https://github.com/xmtp/xmtp-dot-org#readme)
 
 ### 🐞 Bugs
