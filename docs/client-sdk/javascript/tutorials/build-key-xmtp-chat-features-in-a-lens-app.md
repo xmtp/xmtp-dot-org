@@ -13,7 +13,6 @@ In this tutorial, we focus on how to build the following key XMTP chat features 
 
 - Build the Lens DM conversation ID
 - Filter for Lens conversations
-- Display messages in a Lens conversation
 - Start a conversation with a Lens profile
 - Stream new Lens DM conversations
 
