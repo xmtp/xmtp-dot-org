@@ -20,7 +20,7 @@ Let’s dive deeper into the details of what happens behind the scenes when you 
 
 The first time you use an app built with XMTP to send or receive messages, you’re prompted to sign to create a public identity on the XMTP network.
 
-For example, here’s the MetaMask **Signature Request** window that displays when connecting to XMTP’s example chat app:
+For example, here’s the MetaMask **Signature Request** window that displays when connecting to the XMTP Chat app:
 
 ![MetaMask wallet browser extension Signature Request window showing an "XMTP: Create Identity" message](img/create-identity.png)
 
@@ -46,7 +46,7 @@ Once you’ve successfully signed to create an XMTP identity, you’ll never be 
 
 After you’ve signed to create an XMTP identity (first-time only) and anytime you start a new messaging session using an app built with XMTP, you’re prompted to sign to enable your XMTP identity.
 
-For example, here’s the Coinbase Wallet **Signature requested** window that displays when connecting to XMTP’s example chat app:
+For example, here’s the Coinbase Wallet **Signature requested** window that displays when connecting to the XMTP Chat app:
 
 ![Coinbase browser extension Signature requested window showing an "XMTP: Enable Identity" message](img/enable-identity.png)
 
