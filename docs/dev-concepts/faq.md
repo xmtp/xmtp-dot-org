@@ -31,7 +31,7 @@ Currently, XMTP Labs (the company) operates all of the network nodes in the two 
 
 Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes.
 
-We aim to publish a phased decentralization roadmap in Fall 2022.
+XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months.
 
 ### Is XMTP a blockchain?
 
@@ -43,7 +43,7 @@ XMTP Labs is researching various consensus protocols that would allow the networ
 
 Yes, you will be able to run a node.
 
-We aim to publish a phased decentralization roadmap, including plans for node software, in Fall 2022.
+XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months.
 
 ### What is the relationship between Waku and XMTP?
 
@@ -153,12 +153,11 @@ XMTP enables developers to implement messaging features and UX paradigms that be
 
 ### Does XMTP support real-time conversations?
 
-Real-time chat is a core use case for XMTP and is demonstrated by the XMTP example chat app.
+Real-time chat is a core use case for XMTP and is demonstrated by the XMTP Chat app.
 
-- [Try the app](https://xmtp.chat/) connected to the XMTP `production` network
-- [Try the app](https://xmtp.vercel.app/) connected to the XMTP `dev` network
+[Try the app](https://xmtp.chat/) connected to the XMTP `production` network
 
-To learn more about how the XMTP example chat app is built, see the [example-chat-react repo](https://github.com/xmtp/example-chat-react).
+To learn more about how the XMTP Chat app is built, see the [example-chat-react repo](https://github.com/xmtp/example-chat-react).
 
 ### Does XMTP support group messaging?
 

@@ -10,6 +10,7 @@ import {
   HEADER_DATA,
   BLOG_DATA,
   XMTP_JS_URL,
+  QUICKSTART_CHAT_URL,
   EXAMPLE_CHAT_URL,
   CHAT_ITEM,
 } from '../../helpers/constants'
@@ -31,6 +32,11 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     })
+    const responseQuickChat = await fetch(QUICKSTART_CHAT_URL, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
     const responseChat = await fetch(EXAMPLE_CHAT_URL, {
       headers: {
         Authorization: customFields.personalToken,
@@ -39,6 +45,8 @@ export const MainContent = ({ styles }) => {
 
     const dataXmtp = await responseXmtp.json()
     if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp]
+    const dataQuickChat = await responseQuickChat.json()
+    if (dataQuickChat && !dataQuickChat.message) items = [...items, dataQuickChat]
     const dataChat = await responseChat.json()
     if (dataChat && !dataChat.message) items = [...items, dataChat]
 
@@ -213,7 +221,7 @@ export const MainContent = ({ styles }) => {
           </div>
           <div className="col-span-9 grid grid-cols-10 relative">
             <div
-              className={`hidden -scale-x-100 lg:grid absolute -left-8 h-32 justify-center arrow-icon w-20 items-center ${
+              className={`hidden -scale-x-100 lg:grid absolute -left-12 h-32 justify-center arrow-icon w-20 items-center ${
                 sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
               }`}
             >
@@ -221,7 +229,7 @@ export const MainContent = ({ styles }) => {
                 onClick={() => {
                   document.getElementsByClassName(
                     'inner-div'
-                  )[0].scrollLeft -= 100
+                  )[0].scrollLeft -= 360
                 }}
                 sources={{
                   light: useBaseUrl('/img/right-arrow.svg'),
@@ -239,7 +247,7 @@ export const MainContent = ({ styles }) => {
                 : null}
             </div>
             <div
-              className={`arrow-icon w-40 h-32 absolute right-0 items-center justify-center hidden lg:grid ${
+              className={`arrow-icon w-24 h-32 absolute right-0 items-center justify-center hidden lg:grid ${
                 sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
               }`}
             >

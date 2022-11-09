@@ -221,8 +221,12 @@ const config = {
                 to: `/docs/dev-concepts/content-types`,
               },
               {
-                label: `Authentication and encryption`,
-                to: `/docs/dev-concepts/security`,
+                label: `Participant authentication`,
+                to: `/docs/dev-concepts/participant-authentication`,
+              },
+              {
+                label: `Invitation and message encryption`,
+                to: `/docs/dev-concepts/invitation-and-message-encryption`,
               },
               {
                 label: `Wallet app and chain support`,
@@ -250,11 +254,15 @@ const config = {
                 href: 'https://github.com/xmtp/xmtp-js',
               },
               {
-                label: 'Example chat app repo',
+                label: 'XMTP Quickstart Chat app repo',
+                href: 'https://github.com/xmtp/xmtp-quickstart-react',
+              },
+              {
+                label: 'XMTP Chat app repo',
                 href: 'https://github.com/xmtp/example-chat-react/',
               },
               {
-                label: 'Hosted example chat app',
+                label: 'Hosted XMTP Chat app',
                 href: 'https://xmtp.chat/',
               },
             ],

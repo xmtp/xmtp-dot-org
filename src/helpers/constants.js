@@ -13,11 +13,11 @@ export const HEADER_DATA = [
     icon: 'quickstart-icon.svg',
   },
   {
-    title: 'Vision',
+    title: 'Build Lens DMs with XMTP',
     subtitle:
-      'Read the XMTP Litepaper public draft and learn about the XMTP roadmap',
-    url: '/vision/litepaper',
-    icon: 'xmtp-icon.svg',
+      'Learn how to build key XMTP chat features to provide direct messaging in a Lens app',
+    url: '/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app',
+    icon: 'dms-icon.svg',
   },
 ]
 
@@ -26,6 +26,8 @@ const tags = {
     name: 'Developers',
     url: 'https://blog.xmtp.com/tag/developers/',
   },
+  lens: { name: 'Lens', url: 'https://blog.xmtp.com/tag/lens/' },
+  announcements: { name: 'Announcements', url: 'https://blog.xmtp.com/tag/announcements/' },
   litepaper: { name: 'Litepaper', url: 'https://blog.xmtp.com/tag/litepaper/' },
   messaging: { name: 'Messaging', url: 'https://blog.xmtp.com/tag/messaging/' },
   spotlight: { name: 'Spotlight', url: 'https://blog.xmtp.com/tag/spotlight/' },
@@ -40,6 +42,33 @@ const tags = {
 
 export const BLOG_DATA = [
   {
+    tag: [tags.lens, tags.developers, tags.announcements, tags.spotlight],
+    title: 'XMTP delivers secure DMs with the Lens API',
+    content:
+      'Lens Protocol has adopted XMTP to provide a secure and private DM layer for the entire Lens ecosystem.',
+    user: {
+      name: 'Matt Galligan',
+      date: '03 Nov 2022 · 3 min read',
+      img: 'matt-galligan.jpeg',
+      url: 'https://blog.xmtp.com/author/mg/'
+    },
+    url: 'https://blog.xmtp.com/lens-dms-with-xmtp/',
+  },
+  {
+    tag: [tags.developers, tags.hackathon, tags.messaging],
+    title:
+      'ETHOnline Wrap Up: De-Chat, GameJutsu, and Dehitas Take Top Honors',
+    content:
+      'ETH Online hackers build incredible apps across video chat, game security, and talent platforms using XMTP.',
+    user: {
+      name: 'Peter Denton',
+      date: '05 Oct 2022 · 4 min read',
+      img: 'peter-denton.jpeg',
+      url: 'https://blog.xmtp.com/author/peter/'
+    },
+    url: 'https://blog.xmtp.com/ethonline-2022-wrap-up/',
+  },
+  {
     tag: [tags.wallets, tags.privacySecurity, tags.developers, tags.messaging],
     title: 'Secure web3 messaging for wallet apps with XMTP',
     content:
@@ -52,42 +81,15 @@ export const BLOG_DATA = [
     },
     url: 'https://blog.xmtp.com/secure-web3-wallet-messaging/',
   },
-  {
-    tag: [tags.developers, tags.litepaper, tags.messaging],
-    title: 'Introducing the XMTP Litepaper Public Draft',
-    content:
-      'A primer on XMTP-the secure web3 messaging protocol-why we’re building it, how it works, and where we see it going in the future. A primer on XMTP-the secure web3 messaging protocol-why we’re building it, how it works, and where we see it going in the future. A primer on XMTP-the secure web3 messaging protocol-why we’re building it, how it works, and where we see it going in the future. ',
-    user: {
-      name: 'Matt Galligan',
-      date: '31 Aug 2022 · 1 min read',
-      img: 'matt-galligan.jpeg',
-      url: 'https://blog.xmtp.com/author/mg/'
-    },
-    url: 'https://blog.xmtp.com/introducing-the-xmtp-litepaper/',
-  },
-  {
-    tag: [tags.developers, tags.spotlight],
-    title:
-      'Project Spotlight: Relay Receiver, a no-code wallet chat for websites',
-    content:
-      'Facilitating user communication and overcoming one of web3’s biggest challenges. NFT sales, POAP events, DAO activities, etc all have very meaningful ...',
-    user: {
-      name: 'Peter Denton',
-      date: '16 Aug 2022 · 4 min read',
-      img: 'peter-denton.jpeg',
-      url: 'https://blog.xmtp.com/author/peter/'
-    },
-    url: 'https://blog.xmtp.com/project-spotlight-relay-receiver/',
-  },
 ]
 
 export const XMTP_JS_URL = 'https://api.github.com/repos/xmtp/xmtp-js'
-export const EXAMPLE_CHAT_URL =
-  'https://api.github.com/repos/xmtp/example-chat-react'
+export const QUICKSTART_CHAT_URL = 'https://api.github.com/repos/xmtp/xmtp-quickstart-react'
+export const EXAMPLE_CHAT_URL = 'https://api.github.com/repos/xmtp/example-chat-react'
 
 export const CHAT_ITEM = {
   id: '2534740',
-  full_name: 'Hosted example app',
+  full_name: 'Hosted XMTP Chat app',
   description:
     'Hosted example-react-app connected to the XMTP production network',
   text: 'Try it',

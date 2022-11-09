@@ -2,7 +2,6 @@
 title: Other types and variables
 sidebar_position: 3
 ---
-<!--added these 3 lines above-->
 
 ## Type Aliases
 
