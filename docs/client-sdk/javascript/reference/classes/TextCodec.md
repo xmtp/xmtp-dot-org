@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[codecs/Text.ts:18](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Text.ts#L18)
+[codecs/Text.ts:18](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/codecs/Text.ts#L18)
 
 ## Methods
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[codecs/Text.ts:30](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Text.ts#L30)
+[codecs/Text.ts:30](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/codecs/Text.ts#L30)
 
 ___
 
@@ -75,4 +75,4 @@ ___
 
 #### Defined in
 
-[codecs/Text.ts:22](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Text.ts#L22)
+[codecs/Text.ts:22](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/codecs/Text.ts#L22)
