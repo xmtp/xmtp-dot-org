@@ -255,6 +255,10 @@ const config = {
                 label: 'Hosted XMTP Chat app',
                 href: 'https://xmtp.chat/',
               },
+              {
+                label: 'XMTP status page',
+                href: 'https://status.xmtp.com/',
+              },
             ],
           },
           {
