@@ -61,7 +61,7 @@ If the keys exist, [the client retrieves them](#key-retrieval-flow).
 
 If the client checks the XMTP network for keys associated with the account and the keys don't exist, the client generates them according to this flow.
 
-![Flowchart shows how a message API client generates and stores identity keys and prekeys needed to support a user's messaging session](img/key-generation-flow.png)
+![Flowchart shows how a message API client generates and stores identity keys and prekeys needed to support a user's messaging session](img/key-generation-flow.png)<!--source file: https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=47%3A755-->
 
 ### Key retrieval flow
 
@@ -69,7 +69,7 @@ If the client checks the XMTP network for keys associated with the account and t
 
 The retrieval flow is not dictated by the XMTP client protocol. After the client has generated the keys, client apps can determine how to best retrieve and store keys. <!--something like this to define that the retrieval flow is not a part of the protocol?-->
 
-![Flowchart shows how a message API client retrieves existing identity keys and prekeys needed to support a user's messaging session](img/key-retrieval-flow.png)
+![Flowchart shows how a message API client retrieves existing identity keys and prekeys needed to support a user's messaging session](img/key-retrieval-flow.png)<!--source file: https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=48%3A813-->
 
 ## Learn more
 
