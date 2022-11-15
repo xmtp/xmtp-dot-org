@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Build an XMTP "hello world" app
 
-XMTP (Extensible Message Transport Protocol) is an open protocol and network for secure and private web3 messaging. For example, you can build with XMTP to send messages between blockchain accounts, including chat/DMs, alerts, announcements, and more.
+XMTP (Extensible Message Transport Protocol) is an open protocol and network for secure and private web3 messaging. For example, you can build an app with XMTP to send messages between blockchain accounts, including chat/DMs, alerts, announcements, and more.
 
 Use this tutorial to build an XMTP "hello world" messaging app based on resources available in the [vehidtr/xmtp-chat-tutorial repo](https://github.com/vehidtr/xmtp-chat-tutorial). Building this app can help you learn some of the fundamental concepts behind building with XMTP.
 
