@@ -165,7 +165,7 @@ The XMTP hello world app uses [Web3Modal](https://web3modal.com/) and [Ethers](h
 
     <!--saul: not sure if "await" in line 14 is needed? const newSigner = await web3Provider.getSigner();-->
 
-    <!--not sure about this comment in line 38: // Redirect User to Install MetaMask if not already installed. I think this is from the Quickstart app- but does this hello world app also work for MetaMask only? JHA verify...-->
+    <!--not sure about this comment in line 38: // Redirect User to Install MetaMask if not already installed. I think this is from the Quickstart app? This hello world app appears to work with more than MetaMask. Specifically, for me, it works with Coinbase Wallet and MetaMask. What is the purpose of this code and do we need it here? Do we need it for every supported wallet? Or should we update the hello world app to support MetaMask only?-->
 
     To learn more about Context in React, see [Context](https://reactjs.org/docs/context.html).
 
