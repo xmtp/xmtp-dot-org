@@ -24,7 +24,7 @@ A message API client (client) and the XMTP network cannot (and should not) acces
 
 A client prompts the user to sign the `IdentityPublicKey` with their blockchain account keys to confirm, or prove, that the user, as controller of the blockchain account, generated the XMTP identity.
 
-Anyone can verify the user's signature and consider it as an attestation that the `IdentityPublicKey` is the user's true proxy keys since only the user's blockchain account keys could have created the signature.
+Anyone can verify the user's signature and consider it as an attestation that the `IdentityPublicKey` is the user's true proxy key since only the user's blockchain account keys could have created the signature.
 
 ## Prekeys
 
