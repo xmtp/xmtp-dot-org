@@ -1,19 +1,11 @@
 ---
-sidebar_label: Participant authentication
+sidebar_label: Key generation and usage
 sidebar_position: 5
 ---
 
-# Participant authentication with XMTP
+# Key generation and usage in XMTP
 
-<!--What do we think about the title of this topic? Consider this definition of "participant" - "Topics have participants, but not users. Client apps and the XMTP network have users, but not participants." Based on this definition I don't think we are authenticating participants, are we? I am thinking of "User authentication" (friendly language) or "Blockchain account authentication" (less friendly, but more accurate?)-->
-
-<!--I removed the language about relationships between XMTP identities being established using a set of keys because the XMTP identity IS one of these keys. The way this is worded, if the relationship is established by the keys, the relationship must be between something that exists before key generation. Following the comment above, I think the keys enable establishing relationships between users (sender and recipient), or more specifically, the sender blockchain account and recipient blockchain account. Any thoughts?-->
-
-The XMTP client protocol enables client apps to establish secure, unfalsifiable relationships between their users' blockchain accounts such that only the sender and recipient can encrypt and decrypt messages sent between them.
-
-More specifically, a client app uses an XMTP message API client (client) to establish these relationships. The client authenticates a user's blockchain account using the keys described here. The client also uses these keys for message encryption and decryption.
-
-<!--or is it that the client is using the user's blockchain account to authenticate the keys?-->
+The XMTP client protocol supports the generation of keys that enable client apps to establish secure, unfalsifiable relationships between their users' blockchain accounts. These keys also enable client apps to ensure that only the sender and recipient can encrypt and decrypt messages sent between them.
 
 To learn more about user authentication, see [Sign to send and receive messages using apps built with XMTP](signatures).
 
