@@ -1,9 +1,9 @@
 ---
-sidebar_label: Filter and label conversations in your app
+sidebar_label: Filter and label conversations
 sidebar_position: 3
 ---
 
-# Filter and label conversations in your app using conversation IDs and metadata
+# Filter and label conversations using conversation IDs and metadata
 
 With XMTP, a conversation is a set of messages sent between two blockchain account addresses (addresses). Two addresses can have multiple ongoing conversations.
 
@@ -126,7 +126,11 @@ for (const conversation of myAppConversations) {
 
 ## Display labels to differentiate multiple conversations between a pair of addresses
 
-With XMTP, a pair of blockchain account addresses can have multiple ongoing conversations. To help illustrate this scenario, let's use `amal.eth` and `bola.eth` as example addresses.
+With XMTP, a pair of blockchain account addresses can have multiple ongoing conversations. In addition, with XMTP, an app can display all conversations a user has, regardless of the app they used to create it.
+
+Depending on how your app displays conversations for a user, a user might see multiple separate and ongoing conversations they are having with the same address, but originating in different apps. To help clarify this user experience, consider displaying conversation labels based on conversation IDs and metadata.
+
+To illustrate this scenario, let's take a look at a couple of conversations between `amal.eth` and `bola.eth`.
 
 `amal.eth` and `bola.eth` can have an ongoing conversation in App ABC. Let's say that App ABC sets a `conversationId` of `abc.dev/dm` and uses it to filter conversations to display only conversations users created using App ABC.
 
@@ -142,9 +146,9 @@ Let's then take a look at App 123, which doesn't filter conversations and displa
 
 `amal.eth` may be confused by seeing two separate conversations they are having with the same address, `bola.eth`.
 
-To help distinguish the multiple conversations `amal.eth` is having with the same address, you can implement a `conversationId`-based label that you display for each conversation.
+To help distinguish the multiple conversations `amal.eth` is having with the same address, you can implement labels based on conversation IDs and metadata that you display for each conversation. <!--are these labels based on the conversation ID or the metadata or the unique combination of both? I'm looking at the json here as an example: https://github.com/xmtp-labs/hq/issues/843#issuecomment-1317913220-->
 
-![Mockup of App 123 with no conversation ID or filtering, but with conversationId-based labels implemented. The app displays amal.eth's inbox with two conversations with bola.eth: One labeled as ABC: "Hey..." and one labeled as XYZ: "Yes..."](img/app-123-convoid-labels.png)
+![Mockup of App 123 with no conversation ID or filtering, but with conversation ID and metadata-based labels implemented. The app displays amal.eth's inbox with two conversations with bola.eth: One labeled as ABC: "Hey..." and one labeled as XYZ: "Yes..."](img/app-123-convo-labels.png)
 
 This can help `amal.eth` recognize the source of each conversation with `bola.eth` and understand why multiple conversations are displaying.
 
