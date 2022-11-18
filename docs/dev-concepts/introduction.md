@@ -39,7 +39,7 @@ Here are some key considerations as you explore building with XMTP for secure we
 | **Participant identities** | Any EVM blockchain EOA (externally owned account) can send a message to any other EVM blockchain EOA that has advertised its XMTP identity on the network. |
 | **Chain focus** | Chain-agnostic, but currently requires an EVM blockchain account. |
 | **Wallet app compatibility** | EVM-compatible wallets capable of signing with private keys, such as MetaMask, Coinbase Wallet, and Rainbow Wallet. |
-| **Authentication** | An XMTP-specific key bundle derived from a wallet address signature is used to authenticate participant identities. <br /><br /> To learn more about authentication, see [Participant authentication](/docs/dev-concepts/participant-authentication). |
+| **Authentication** | An XMTP-specific key bundle derived from a blockchain account address signature is used to authenticate user identities. <br /><br /> To learn more about keys, see [Key generation and usage](/docs/dev-concepts/key-generation-and-usage). |
 | **Message encryption** | Messages are encrypted individually by default and are readable by message participants only. <br /><br /> To learn more about message encryption, see [Invitation and message encryption](invitation-and-message-encryption). |
 | **Message delivery** | Messages are immediately relayed by XMTP nodes, using the Waku protocol. <!--<br /><br /> To learn more about how XMTP uses Waku, see What is the relationship between Waku and XMTP?--> |
 | **Message storage** | Messages are stored off-chain in the XMTP network, with all nodes currently hosted by XMTP Labs. <br /><br /> XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months. |

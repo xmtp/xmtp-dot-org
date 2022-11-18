@@ -14,7 +14,7 @@ To learn more about message encryption, see [Invitation and message encryption w
 
 ## Identity keys
 
-A message API client (client) and the XMTP network cannot (and should not) access a user's blockchain account keys. For this reason, a client generates the following identity keys to serve as proxies for a user's blockchain account keys:
+An XMTP message API client (client) and the XMTP network cannot (and should not) access a user's blockchain account keys. For this reason, a client generates the following identity keys to serve as proxies for a user's blockchain account keys:
 
 - `IdentityPublicKey`
 - `IdentityPrivateKey`
