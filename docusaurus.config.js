@@ -8,16 +8,21 @@ const { tailwindPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'The open protocol, network, and standards for secure web3 messaging', // CHANGE ME
+  title: 'The open protocol and network for secure web3 messaging',
   tagline:
-    'Build with XMTP to send alerts, announcements, and messages between blockchain accounts', // CHANGE ME
-  url: 'https://xmtp.org', // CHANGE ME
+    'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more',
+  url: 'https://xmtp.org',
+  customFields: {
+    githubAPI: process.env.PUBLIC_URL,
+    personalToken: process.env.AUTH_PERSONAL_TOKEN,
+  },
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
+  clientModules: [require.resolve('./src/css/tailwind.css')],
 
   presets: [
     [
@@ -37,8 +42,8 @@ const config = {
           //   },
           // },
           onlyIncludeVersions: ['1.3.0'],
-          showLastUpdateAuthor: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
-          showLastUpdateTime: false, // setting to false for now to resolve errors due to some new files not being tracked by git yet
+          showLastUpdateAuthor: true, // setting to false for now to resolve errors due to some new files not being tracked by git yet
+          showLastUpdateTime: true, // setting to false for now to resolve errors due to some new files not being tracked by git yet
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
         },
         theme: {
@@ -55,17 +60,26 @@ const config = {
       {
         id: 'dev-concepts',
         path: 'docs/dev-concepts',
-        routeBasePath: 'docs/dev-concepts',
+        routeBasePath: '/docs/dev-concepts',
         sidebarPath: require.resolve('./sidebars/sidebars.js'),
       },
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'about',
-        path: 'about',
-        routeBasePath: 'about',
-        sidebarPath: require.resolve('./sidebars/sidebars-about.js'),
+        id: 'community',
+        path: 'community',
+        routeBasePath: 'community',
+        sidebarPath: require.resolve('./sidebars/sidebars-community.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'vision',
+        path: 'vision',
+        routeBasePath: 'vision',
+        sidebarPath: require.resolve('./sidebars/sidebars-vision.js'),
       },
     ],
     [
@@ -92,19 +106,25 @@ const config = {
         onlyIncludeVersions: ['1.2.0', '1.1.0'],
       },
     ],
+    [
+      'docusaurus-plugin-plausible',
+      {
+        domain: 'xmtp.org',
+      },
+    ],
   ],
-
-  clientModules: [require.resolve('./src/css/tailwind.css')],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
+        defaultMode: 'light',
         disableSwitch: false,
       },
       navbar: {
         title: '',
         logo: {
+          className: 'navbar__logo__img',
           alt: 'XMTP Logo',
           src: 'img/logomark.svg',
           srcDark: 'img/logomark-dark.svg',
@@ -113,16 +133,20 @@ const config = {
           // { type: 'docsVersionDropdown' },
           {
             type: 'dropdown',
-            label: 'Docs',
+            label: 'Documentation',
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/tutorials/placeholder',
-                label: 'Client SDK',
+                to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="Client SDK icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Client SDK</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Use the client SDK to build a web3 messaging solution</div></div></div>`,
               },
               {
-                to: 'docs/dev-concepts/placeholder',
-                label: 'Development concepts',
+                to: 'docs/dev-concepts/introduction',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Development concepts icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Development concepts</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about the protocol, architecture, security, FAQ, and more</div></div></div>`,
               },
             ],
           },
@@ -133,19 +157,46 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'community', // To highlight the navbar item, you must link to a document, not a top-level directory
+            type: 'dropdown',
             position: 'right',
             label: 'Community',
-            activeBaseRegex: `/`,
+            items: [
+              {
+                to: 'community/community',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Join in and contribute</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Learn ways to join in and contribute to the XMTP community</div></div></div>`,
+              },
+              {
+                to: 'community/code-of-conduct',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield with a check icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Foster a safe and positive XMTP community experience</div></div></div>`,
+              },
+            ],
           },
           {
-            to: 'about/placeholder', // To highlight the navbar item, you must link to a document, not a top-level directory
+            type: 'dropdown',
+            label: 'Vision',
             position: 'right',
-            label: 'What is XMTP?',
-            activeBaseRegex: `/about/`,
+            items: [
+              {
+                to: 'vision/litepaper',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="Document icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Litepaper</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Read the public draft of the XMTP Litepaper</div></div></div>`,
+              },
+              {
+                to: 'vision/roadmap',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="Map icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Roadmap</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about what's in store for XMTP in the months ahead</div></div></div>`,
+              },
+            ],
           },
           {
-            href: 'https://github.com/xmtp/website',
+            href: 'https://github.com/xmtp',
+            title: 'Go to the XMTP GitHub repo',
             position: 'right',
             className: 'header-github-link',
           },
@@ -155,41 +206,123 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'XMTP',
+            title: 'Client SDK',
+            items: [
+              {
+                label: `Concepts`,
+                to: `/docs/client-sdk/javascript/concepts/intro-to-sdk`,
+              },
+              {
+                label: `Tutorials`,
+                to: `/docs/client-sdk/javascript/tutorials/quickstart`,
+              },
+              {
+                label: `References`,
+                to: `/docs/client-sdk/javascript/reference/classes/Client`,
+              },
+            ],
+          },
+          {
+            title: 'Development concepts',
             items: [
               {
                 label: 'Docs',
                 to: 'docs/client-sdk/tutorials/placeholder',
               },
+              {
+                label: `Intro to XMTP`,
+                to: `/docs/dev-concepts/introduction`,
+              },
+              {
+                label: `Architectural overview`,
+                to: `/docs/dev-concepts/architectural-overview`,
+              },
+              {
+                label: `FAQ`,
+                to: `/docs/dev-concepts/faq`,
+              },
+              {
+                label: `Content types`,
+                to: `/docs/dev-concepts/content-types`,
+              },
+              {
+                label: `Authentication and encryption`,
+                to: `/docs/dev-concepts/security`,
+              },
+              {
+                label: `Wallet app and chain support`,
+                to: `/docs/dev-concepts/wallets`,
+              },
+              {
+                label: `Signatures`,
+                to: `/docs/dev-concepts/signatures`,
+              },
+              {
+                label: `Contribute to XMTP`,
+                to: `/docs/dev-concepts/contributing`,
+              },
+              {
+                label: `XMTP Improvement Proposals`,
+                to: `/docs/dev-concepts/xips`,
+              },
             ],
           },
           {
-            title: 'XMTP Community',
+            title: 'SDK and tools',
             items: [
               {
-                label: `Twitter`,
-                href: `https://twitter.com/xmtp_`,
+                label: 'XMTP JavaScript SDK',
+                href: 'https://github.com/xmtp/xmtp-js',
               },
               {
-                label: `XMTP Discord`,
-                href: `https://discord.gg/xmtp`,
+                label: 'Example chat app repo',
+                href: 'https://github.com/xmtp/example-chat-react/',
               },
               {
-                label: `Community Forum`,
-                href: `https://community.xmtp.org`,
+                label: 'Hosted example chat app',
+                href: 'https://xmtp.chat/',
               },
             ],
           },
           {
-            title: 'About this site',
+            title: 'Community',
             items: [
               {
-                label: 'Website is CC0 No Rights Resered',
-                href: 'https://creativecommons.org/share-your-work/public-domain/cc0/',
+                label: 'Discussions',
+                href: 'https://github.com/orgs/xmtp/discussions',
               },
               {
-                label: 'Edit on Github',
-                href: 'https://github.com/xmtp/website/',
+                label: 'Discord',
+                href: 'https://discord.gg/xmtp',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/xmtp_',
+              },
+              {
+                label: 'Contribute to XMTP',
+                to: '/docs/dev-concepts/contributing',
+              },
+              {
+                label: 'XMTP Improvement Proposals',
+                to: '/docs/dev-concepts/xips',
+              },
+              {
+                label: 'XMTP code of conduct',
+                to: '/community/code-of-conduct',
+              },
+            ],
+          },
+          {
+            title: 'Vision',
+            items: [
+              {
+                label: 'Litepaper',
+                to: '/vision/litepaper',
+              },
+              {
+                label: 'Roadmap',
+                to: '/vision/roadmap',
               },
             ],
           },
