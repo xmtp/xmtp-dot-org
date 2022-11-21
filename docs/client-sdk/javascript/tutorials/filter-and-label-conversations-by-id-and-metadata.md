@@ -15,7 +15,7 @@ For example, you can use conversation IDs and metadata to filter conversations b
 Filter to display only conversations created by a specific app
 
 * A message type<!--added this one because it matches the example we show in the code snippets - okay?-->  
-Filter to display only conversations that are notifications or alerts, for example
+Filter to display only conversations that are notifications or alerts, for example. Conversation IDs are different from [content types](/docs/dev-concepts/content-types). Using a custom content type does not require that you use conversation IDs.
 
 * A subject line  
 Filter to display only conversations with a specific subject line, as in email
