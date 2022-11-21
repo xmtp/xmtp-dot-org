@@ -97,9 +97,9 @@ Now that you've set conversation IDs and metadata, you can use them to filter co
 
 2. Filter by the domain value in your `conversationId`, `mydomain.xyz/` for example, to return only conversations created by your app, as shown in lines 3-8.
 
-3. Further filter by the rest of the `conversationId` and metadata. For example, filter by `notif` to display only notification messages, as shown in lines 10-14. And separately filter by `alert` and the metadata `title` value of `user` to display only user-facing alerts, as shown in lines 15-18.
+3. Further filter by the rest of the `conversationId` and metadata. For example, filter by `notif` to display only notification messages, as shown in lines 10-14. And separately filter by `alert` and display the metadata `title` value of `P0` in your app, as shown in lines 15-18.
 
-4. You can also use metadata values to display useful information in the UI, as shown in line 17.
+<!--correct about lines 15-18 displaying the metadata title value of P0 in the app? just to be sure I understand, do we want to surface that you can use metadata values to display useful info about a conversation in your UI? Should I add it to the heading for this section? Can I also use metadata as a filter - or is it more for displaying info in the UI?-->
 
 ```js showLineNumbers
 // Get all the conversations
@@ -122,8 +122,6 @@ for (const conversation of myAppConversations) {
   }
 }
 ```
-
-<!--With "console.log(conversation.context?.metadata.title)" - it seems like this metadata is not being used as a filter - but rather as a way to display information about the conversation in the UI - is that right? Might we add a metadata filter to this code sample and ALSO use the metadata to display information in the UI?-->
 
 
 ## Display labels to differentiate multiple conversations between a pair of addresses
