@@ -14,7 +14,7 @@ For example, you can use conversation IDs and metadata to filter conversations b
 * An app  
 Filter to display only conversations created by a specific app
 
-* A message type<!--added this one because it matches the example we show in the code snippets - okay?-->  
+* A message type
 Filter to display only conversations that are notifications or alerts, for example. Conversation IDs are different from [content types](/docs/dev-concepts/content-types). Using a custom content type does not require that you use conversation IDs.
 
 * A subject line  
@@ -71,13 +71,13 @@ This `conversationId` indicates that these conversations are notification messag
 
 In addition to setting a conversation ID when creating a conversation, you can set metadata to use as an additional filter. Conversation metadata is private and encrypted.
 
-<!--You can just use metadata without a conversationId if you want, correct? Any guidance or best practices here?-->
+<!--You can just use metadata without a conversationId if you want, correct? Any guidance or best practices here? Sounds like we might capture this kind of guidance in an XRC mentioned here: https://github.com/xmtp-labs/hq/issues/843#issuecomment-1318917960-->
 
 <!--Not sure if the following use case makes sense. What might be a valid use case for filtering alerts? I also thought maybe one that expresses severity - as in P0?-->
 
-This example sets `mydomain.xyz/alert` as the `conversationId`, indicating that these conversations are alerts. In addition, the example sets a conversation metadata `title` value to `user`.
+This example sets `mydomain.xyz/alert` as the `conversationId`, indicating that these conversations are alerts. In addition, the example sets a conversation metadata `title` value to `P0`.
 
-You can then use this conversation ID and metadata to display only user-facing alerts created by your app, for example.
+You can then use this conversation ID and metadata to display only alerts created by your app with a severity of P0, for example.
 
 ```js showLineNumbers
 // Start a scoped conversation with ID mydomain.xyz/alert and add some metadata
@@ -86,7 +86,7 @@ const conversation2 = await xmtp.conversations.newConversation(
   {
     conversationId: 'mydomain.xyz/alert',
     metadata: {
-      title: 'user',
+      title: 'P0',
     },
   }
 )
@@ -129,7 +129,7 @@ for (const conversation of myAppConversations) {
 }
 ```
 
-<!--I think I need to move the following section to a separate tutorial. I think the dev who needs the following info isn't filtering, but needs to adjust their universal inbox to accommodate other apps that are using conversation IDs to filter.-->
+<!--I think I need to move the following section to a separate tutorial. The dev who needs the info below is kind of doing the opposite of the devs who need the info above. For example, the dev using the info below ISN'T filtering, but rather is adjusting the universal inbox in their app to accommodate the impact of other apps that are using conversation IDs to filter. Is this assessment correct?-->
 
 ## Display labels to differentiate multiple conversations between a pair of addresses
 
@@ -160,6 +160,8 @@ To help distinguish the multiple conversations `amal.eth` is having with the sam
 This can help `amal.eth` recognize the source of each conversation with `bola.eth` and understand why multiple conversations are displaying.
 
 For example:
+
+<!--perhaps this code sample will come from XMTP Chat repo PR https://github.com/xmtp/example-chat-react/pull/140? Depending on when this PR is merged, this section may not be included for the initial Dec. 1 publish date.-->
 
 ```js
 
