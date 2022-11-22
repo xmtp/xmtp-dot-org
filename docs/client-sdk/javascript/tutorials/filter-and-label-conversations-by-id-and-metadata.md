@@ -44,6 +44,8 @@ Set the `conversationId` when creating a conversation. `conversationId` values a
 
 <!--I'm also curious about the impact of changing the conversationId value. I understand that once you are using a conversationId for a specific purpose, you shouldn't change it. For example, mydomain.xyz/notif. However if I have a new purpose, I could use mybestdomain.xyz/omg, and this would work in my app. But what would break? Conversation labeling in apps with universal inboxes? Not sure of what value we are using to get those labels...but it seems like a dev could make the label value the same for mydomain.xyz and mybestdomain.xyz, is that right? Should we provide best practice guidance for setting a label value that universal inboxes can use to identify conversations from your app? I'm out of my depth here for sure - just riffing on questions that are coming to mind based on Bhavya's prompt.-->
 
+<!--Along these lines, I am curious about the XRC suggested by Saul here: https://github.com/xmtp-labs/hq/issues/843#issuecomment-1317913220. It sounds like the code samples we surface in this doc should follow the XRC - or should use a pattern that we will formalize in the XRC?-->
+
 :::tip
 
 As a best practice, start your `conversationId` with a domain unique to your app to help avoid collisions between your app and other apps on the XMTP network.
