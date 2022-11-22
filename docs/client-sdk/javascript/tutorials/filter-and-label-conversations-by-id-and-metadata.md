@@ -38,13 +38,17 @@ For example, when you set an ID for a conversation between two users, if they ar
 
 Set the `conversationId` when creating a conversation. `conversationId` values are private and encrypted.
 
+<!--Per Bhavya's comment, I've added text about making this value unique. There is no way for a dev to guarantee uniqueness because devs can't look up the values because they are private and encrypted - so I'm not sure of how to handle that.-->
+
+<!--I am curious about Bhavya's question about whether we should tell devs not to change their conversationID. I am curious about the granularity of the conversationId we are talking about. For example, take mydomain.xyz/notif. Is mydomain.xyz the ID? Or is mydomain.xyz/notif the ID? In the Lens tutorial, we call mydomain.xyz/alert the "domain prefix" and then the conversationId appears to be a string composed of the two profiles in the conversation, or does the concatenation of domain prefix and the profile IDs form the conversationId?-->
+
+<!--I'm also curious about the impact of changing the conversationId value. I understand that once you are using a conversationId for a specific purpose, you shouldn't change it. For example, mydomain.xyz/notif. However if I have a new purpose, I could use mybestdomain.xyz/omg, and this would work in my app. But what would break? Conversation labeling in apps with universal inboxes? Not sure of what value we are using to get those labels...but it seems like a dev could make the label value the same for mydomain.xyz and mybestdomain.xyz, is that right? Should we provide best practice guidance for setting a label value that universal inboxes can use to identify conversations from your app? I'm out of my depth here for sure - just riffing on questions that are coming to mind based on Bhavya's prompt.-->
+
 :::tip
 
 As a best practice, start your `conversationId` with a domain unique to your app to help avoid collisions between your app and other apps on the XMTP network.
 
 :::
-
-<!--In the Lens tutorial, we call mydomain.xyz/alert the "domain prefix" and then the conversationId appears to be a string composed of the two profiles in the conversation, or does the concatenation of domain prefix and the profile IDs form the conversationId? Maybe I'm taking the format "mydomain.xyz/notif" too literally? Can a conversationId just be any string you want it to be?-->
 
 This example sets `mydomain.xyz/notif` as the `conversationID` when creating a conversation with recipient address `0x3F11b27F323b62B159D2642964fa27C46C841897`:
 
@@ -123,6 +127,7 @@ for (const conversation of myAppConversations) {
 }
 ```
 
+<!--I think I need to move the following section to a separate tutorial. I think the dev who needs the following info isn't filtering, but needs to adjust their universal inbox to accommodate other apps that are using conversation IDs to filter.-->
 
 ## Display labels to differentiate multiple conversations between a pair of addresses
 
