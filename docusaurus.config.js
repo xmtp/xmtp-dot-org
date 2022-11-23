@@ -145,7 +145,7 @@ const config = {
                 to: 'docs/client-sdk/swift/concepts/intro-to-sdk',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/swift-icon.svg" alt="Swift icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Swift XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Build blockchain messagins apps in Swift</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Build blockchain messaging apps in Swift</div></div></div>`,
               },
             ],
           },
