@@ -42,6 +42,20 @@ const tags = {
 
 export const BLOG_DATA = [
   {
+    tag: [tags.developers, tags.hackathon, tags.spotlight],
+    title:
+      'ETH San Francisco Wrap-up',
+    content:
+      '"Wow" is just about the best way we could sum up ETHGlobal`s ETHSanFrancisco.',
+    user: {
+      name: 'Peter Denton',
+      date: '22 Nov 2022 · 3 min read',
+      img: 'peter-denton.jpeg',
+      url: 'https://blog.xmtp.com/author/peter/'
+    },
+    url: 'https://blog.xmtp.com/eth-sf-2022/',
+  },
+  {
     tag: [tags.lens, tags.developers, tags.announcements, tags.spotlight],
     title: 'XMTP delivers secure DMs with the Lens API',
     content:
@@ -67,19 +81,6 @@ export const BLOG_DATA = [
       url: 'https://blog.xmtp.com/author/peter/'
     },
     url: 'https://blog.xmtp.com/ethonline-2022-wrap-up/',
-  },
-  {
-    tag: [tags.wallets, tags.privacySecurity, tags.developers, tags.messaging],
-    title: 'Secure web3 messaging for wallet apps with XMTP',
-    content:
-      'How XMTP enables wallets to secure conversations, not just transactions and assets.',
-    user: {
-      name: 'Matt Galligan',
-      date: '12 Sep 2022 · 6 min read',
-      img: 'matt-galligan.jpeg',
-      url: 'https://blog.xmtp.com/author/mg/'
-    },
-    url: 'https://blog.xmtp.com/secure-web3-wallet-messaging/',
   },
 ]
 
