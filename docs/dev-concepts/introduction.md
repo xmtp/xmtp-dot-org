@@ -7,7 +7,7 @@ sidebar_position: 1
 
 XMTP (Extensible Message Transport Protocol) is an open protocol, network, and standards for secure, private web3 messaging.
 
-XMTP's extensible design enables a diverse set of use cases for sending message data between web3 identities. For example, building with the [XMTP client SDK](https://github.com/xmtp/xmtp-js), developers can enhance their apps with:
+XMTP's extensible design enables a diverse set of use cases for sending message data between web3 identities. For example, building with the XMTP client SDK for [Flutter](/docs/client-sdk/flutter/concepts/intro-to-sdk), [JavaScript](/docs/client-sdk/javascript/concepts/intro-to-sdk), or [Swift](/docs/client-sdk/swift/concepts/intro-to-sdk), developers can enhance their apps with:
 
 - **User-to-user** direct messages
 - **App-to-user** notifications
@@ -45,8 +45,8 @@ Here are some key considerations as you explore building with XMTP for secure we
 | **Message storage** | Messages are stored off-chain in the XMTP network, with all nodes currently hosted by XMTP Labs. <br /><br /> XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months. |
 | **Supported content types** | Plaintext messages as a standard content type, but custom content types are supported as well. <br /><br /> To learn more, see [Content types](/docs/dev-concepts/content-types). |
 | **Adoption of standard content types** | Open, extensible, and community-governed via XIP-5 (XMTP Improvement Proposal-5). <br /><br /> To learn more, see [XIP-5 Message Content Types](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md). |
-| **Implementation** | Any app built with the XMTP client SDK can send or receive messages. <br /><br /> To learn more, see [Client SDK](/docs/client-sdk/javascript/tutorials/quickstart). |
-| **Receiving messages** | Any frontend built with the XMTP client SDK can receive messages. <br /><br /> To learn more, see [Client SDK](/docs/client-sdk/javascript/tutorials/quickstart). |
+| **Implementation** | Any app built with the XMTP client SDK can send or receive messages. <br /><br /> To learn more, see [XMTP client SDKs](/sdks-and-tools). |
+| **Receiving messages** | Any frontend built with the XMTP client SDK can receive messages. <br /><br /> To learn more, see [XMTP client SDKs](/sdks-and-tools). |
 | **Environments** | JavaScript. Swift and React Native are on the roadmap. |
 | **Message cost** | Most messaging incurs no fee. As XMTP decentralizes, messaging between participants that opt-in will remain free, while unsolicited messages will often incur fees or see token staking requirements. <!--<br /><br /> To learn more, see Will XMTP have gas fees?--> |
 | **Decentralization** | XMTP network nodes are run by XMTP Labs at this time. In the future, network node software will be open sourced and anyone will be welcome to operate a node. <br /><br /> Client implementation is permissionless, nor is permission required to access and develop with the SDK. Permission isn't required to connect to the XMTP network to send/receive messages on behalf of users. <br /><br /> XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months. |
@@ -60,17 +60,6 @@ Clients and nodes are implemented as [Waku2](https://rfc.vac.dev/spec/10/) peers
 To learn more about clients, see [Client layer](architectural-overview#client-layer).
 
 To learn more about nodes, see [Network layer](architectural-overview#network-layer).
-
-
-## XMTP client SDK
-
-The XMTP JavaScript SDK is a TypeScript implementation of an XMTP client for use with JavaScript and React apps.
-
-Explore the [XMTP JavaScript SDK](https://github.com/xmtp/xmtp-js) on GitHub.
-
-Have questions? Get help from the [XMTP Discord community](https://discord.gg/xmtp).
-
-To learn more about how you can contribute to XMTP, see [Contribute](contributing).
 
 ## Example apps
 

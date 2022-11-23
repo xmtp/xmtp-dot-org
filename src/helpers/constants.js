@@ -2,14 +2,14 @@ export const HEADER_DATA = [
   {
     title: 'Development concepts',
     subtitle:
-      'Learn about the protocol, architecture, encryption, authentication, and more',
+      'Learn about the protocol, architecture, keys, encryption, and more',
     url: '/docs/dev-concepts/introduction',
     icon: 'development-icon.svg',
   },
   {
-    title: 'Quickstart: Client SDK',
-    subtitle: 'Build apps and tools for messaging between blockchain accounts',
-    url: '/docs/client-sdk/javascript/tutorials/quickstart',
+    title: 'XMTP client SDKs',
+    subtitle: 'Use Flutter, JavaScript, or Swift to build apps for messaging between blockchain accounts',
+    url: 'sdks-and-tools',
     icon: 'quickstart-icon.svg',
   },
   {

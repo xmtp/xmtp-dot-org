@@ -51,6 +51,24 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'flutter',
+        path: 'docs/client-sdk/flutter',
+        routeBasePath: 'docs/client-sdk/flutter',
+        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-flutter.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'swift',
+        path: 'docs/client-sdk/swift',
+        routeBasePath: 'docs/client-sdk/swift',
+        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-swift.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'dev-concepts',
         path: 'docs/dev-concepts',
         routeBasePath: '/docs/dev-concepts',
@@ -106,16 +124,28 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="Client SDK icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Use the client SDK to build a web3 messaging solution</div></div></div>`,
-              },
-              {
                 to: 'docs/dev-concepts/introduction',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Development concepts icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Development concepts</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about the protocol, architecture, security, FAQ, and more</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about the protocol, keys, FAQ, and more</div></div></div>`,
+              },
+              {
+                to: 'docs/client-sdk/flutter/concepts/intro-to-sdk',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/flutter-icon.svg" alt="Flutter icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Flutter XMTP client SDK</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Build blockchain messaging apps in Flutter</div></div></div>`,
+              },
+              {
+                to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">JavaScript XMTP client SDK</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Build blockchain messaging apps in JavaScript</div></div></div>`,
+              },
+              {
+                to: 'docs/client-sdk/swift/concepts/intro-to-sdk',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/swift-icon.svg" alt="Swift icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Swift XMTP client SDK</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Build blockchain messagins apps in Swift</div></div></div>`,
               },
             ],
           },
@@ -175,19 +205,19 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Client SDK',
+            title: 'Client SDKs',
             items: [
               {
-                label: `Concepts`,
+                label: `Flutter`,
+                to: `/docs/client-sdk/flutter/concepts/intro-to-sdk`,
+              },
+              {
+                label: `JavaScript`,
                 to: `/docs/client-sdk/javascript/concepts/intro-to-sdk`,
               },
               {
-                label: `Tutorials`,
-                to: `/docs/client-sdk/javascript/tutorials/quickstart`,
-              },
-              {
-                label: `References`,
-                to: `/docs/client-sdk/javascript/reference/classes/Client`,
+                label: `Swift`,
+                to: `/docs/client-sdk/swift/concepts/intro-to-sdk`,
               },
             ],
           },
@@ -240,7 +270,15 @@ const config = {
             title: 'SDK and tools',
             items: [
               {
-                label: 'XMTP JavaScript SDK',
+                label: 'XMTP client SDK for Flutter',
+                href: 'https://github.com/xmtp/xmtp-js',
+              },
+              {
+                label: 'XMTP client SDK for JavaScript',
+                href: 'https://github.com/xmtp/xmtp-js',
+              },
+              {
+                label: 'XMTP client SDK for Swift',
                 href: 'https://github.com/xmtp/xmtp-js',
               },
               {
