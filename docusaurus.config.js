@@ -91,7 +91,6 @@ const config = {
         defaultMode:'light',
         disableSwitch: false,
       },
-      image: 'img/xmtp-postmark.png', // for social preview image
       navbar: {
         title: '',
         logo: {
