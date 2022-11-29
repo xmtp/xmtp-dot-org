@@ -14,12 +14,12 @@ Should be created with `await Client.create(options)`
 
 | Name | Type |
 | :------ | :------ |
-| `keys` | [`PrivateKeyBundleV1`](PrivateKeyBundleV1.md) |
+| `keys` | `PrivateKeyBundleV1` |
 | `apiClient` | `default` |
 
 #### Defined in
 
-[Client.ts:136](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L136)
+[Client.ts:158](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L158)
 
 ## Properties
 
@@ -29,7 +29,7 @@ Should be created with `await Client.create(options)`
 
 #### Defined in
 
-[Client.ts:133](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L133)
+[Client.ts:155](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L155)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[Client.ts:132](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L132)
+[Client.ts:153](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L153)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[Client.ts:134](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L134)
+[Client.ts:156](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L156)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[Client.ts:127](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L127)
+[Client.ts:143](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L143)
 
 ___
 
@@ -69,37 +69,47 @@ ___
 
 #### Defined in
 
-[Client.ts:129](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L129)
+[Client.ts:146](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L146)
 
 ___
 
 ### contacts
 
- `Private` **contacts**: `Set`<`string`\>
+ **contacts**: `Set`<`string`\>
 
 #### Defined in
 
-[Client.ts:130](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L130)
+[Client.ts:147](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L147)
 
 ___
 
 ### keys
 
- **keys**: [`PrivateKeyBundleV1`](PrivateKeyBundleV1.md)
+ **keys**: `PrivateKeyBundleV2`
 
 #### Defined in
 
-[Client.ts:128](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L128)
+[Client.ts:145](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L145)
 
 ___
 
 ### knownPublicKeyBundles
 
- `Private` **knownPublicKeyBundles**: `Map`<`string`, [`PublicKeyBundle`](PublicKeyBundle.md)\>
+ `Private` **knownPublicKeyBundles**: `Map`<`string`, [`SignedPublicKeyBundle`](SignedPublicKeyBundle.md) \| [`PublicKeyBundle`](PublicKeyBundle.md)\>
 
 #### Defined in
 
-[Client.ts:131](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L131)
+[Client.ts:148](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L148)
+
+___
+
+### legacyKeys
+
+ **legacyKeys**: `PrivateKeyBundleV1`
+
+#### Defined in
+
+[Client.ts:144](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L144)
 
 ## Accessors
 
@@ -113,7 +123,7 @@ ___
 
 #### Defined in
 
-[Client.ts:150](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L150)
+[Client.ts:176](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L176)
 
 ## Methods
 
@@ -140,7 +150,7 @@ found for the given address
 
 #### Defined in
 
-[Client.ts:233](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L233)
+[Client.ts:287](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L287)
 
 ___
 
@@ -154,7 +164,7 @@ ___
 
 #### Defined in
 
-[Client.ts:190](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L190)
+[Client.ts:216](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L216)
 
 ___
 
@@ -174,57 +184,76 @@ ___
 
 #### Defined in
 
-[Client.ts:320](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L320)
+[Client.ts:334](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L334)
 
 ___
 
-### decodeMessage
+### encodeContent
 
-**decodeMessage**(`payload`, `contentTopic`): `Promise`<[`Message`](Message.md)\>
+**encodeContent**(`content`, `options?`): `Promise`<`Uint8Array`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `payload` | `Uint8Array` |
-| `contentTopic` | `undefined` \| `string` |
-
-#### Returns
-
-`Promise`<[`Message`](Message.md)\>
-
-#### Defined in
-
-[Client.ts:355](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L355)
-
-___
-
-### encodeMessage
-
-**encodeMessage**(`recipient`, `timestamp`, `content`, `options?`): `Promise`<[`Message`](Message.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `recipient` | [`PublicKeyBundle`](PublicKeyBundle.md) |
-| `timestamp` | `Date` |
 | `content` | `any` |
 | `options?` | [`SendOptions`](../modules.md#sendoptions) |
 
 #### Returns
 
-`Promise`<[`Message`](Message.md)\>
+`Promise`<`Uint8Array`\>
 
 #### Defined in
 
-[Client.ts:332](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L332)
+[Client.ts:346](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L346)
+
+___
+
+### ensureUserContactPublished
+
+`Private` **ensureUserContactPublished**(`legacy?`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `legacy` | `boolean` | `false` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[Client.ts:220](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L220)
+
+___
+
+### forgetContact
+
+**forgetContact**(`peerAddress`): `void`
+
+Used to force getUserContact fetch contact from the network.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `peerAddress` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[Client.ts:279](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L279)
 
 ___
 
 ### getUserContact
 
-**getUserContact**(`peerAddress`): `Promise`<`undefined` \| [`PublicKeyBundle`](PublicKeyBundle.md)\>
+**getUserContact**(`peerAddress`): `Promise`<`undefined` \| [`SignedPublicKeyBundle`](SignedPublicKeyBundle.md) \| [`PublicKeyBundle`](PublicKeyBundle.md)\>
 
 Returns the cached PublicKeyBundle if one is known for the given address or fetches
 one from the network
@@ -237,17 +266,17 @@ one from the network
 
 #### Returns
 
-`Promise`<`undefined` \| [`PublicKeyBundle`](PublicKeyBundle.md)\>
+`Promise`<`undefined` \| [`SignedPublicKeyBundle`](SignedPublicKeyBundle.md) \| [`PublicKeyBundle`](PublicKeyBundle.md)\>
 
 #### Defined in
 
-[Client.ts:208](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L208)
+[Client.ts:255](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L255)
 
 ___
 
 ### init
 
-**init**(`options`): `Promise`<`void`\>
+`Private` **init**(`options`): `Promise`<`void`\>
 
 #### Parameters
 
@@ -261,34 +290,71 @@ ___
 
 #### Defined in
 
-[Client.ts:181](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L181)
+[Client.ts:207](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L207)
 
 ___
 
-### listConversationMessages
+### listEnvelopes
 
-**listConversationMessages**(`peerAddress`, `opts?`): `Promise`<[`Message`](Message.md)[]\>
+**listEnvelopes**<`Out`\>(`topics`, `mapper`, `opts?`): `Promise`<`Out`[]\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `Out` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `peerAddress` | `string` |
+| `topics` | `string`[] |
+| `mapper` | `EnvelopeMapper`<`Out`\> |
 | `opts?` | [`ListMessagesOptions`](../modules.md#listmessagesoptions) |
 
 #### Returns
 
-`Promise`<[`Message`](Message.md)[]\>
+`Promise`<`Out`[]\>
 
 #### Defined in
 
-[Client.ts:411](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L411)
+[Client.ts:376](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L376)
 
 ___
 
-### listIntroductionMessages
+### listEnvelopesPaginated
 
-**listIntroductionMessages**(`opts?`): `Promise`<[`Message`](Message.md)[]\>
+**listEnvelopesPaginated**<`Out`\>(`contentTopics`, `mapper`, `opts?`): `AsyncGenerator`<`Out`[], `any`, `unknown`\>
+
+List messages on a given set of content topics, yielding one page at a time
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `Out` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `contentTopics` | `string`[] |
+| `mapper` | `EnvelopeMapper`<`Out`\> |
+| `opts?` | `ListMessagesPaginatedOptions` |
+
+#### Returns
+
+`AsyncGenerator`<`Out`[], `any`, `unknown`\>
+
+#### Defined in
+
+[Client.ts:410](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L410)
+
+___
+
+### listInvitations
+
+**listInvitations**(`opts?`): `Promise`<`SealedInvitation`[]\>
 
 #### Parameters
 
@@ -298,44 +364,23 @@ ___
 
 #### Returns
 
-`Promise`<[`Message`](Message.md)[]\>
+`Promise`<`SealedInvitation`[]\>
 
 #### Defined in
 
-[Client.ts:406](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L406)
+[Client.ts:367](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L367)
 
 ___
 
-### listMessages
+### publishEnvelopes
 
-`Private` **listMessages**(`topic`, `opts?`): `Promise`<[`Message`](Message.md)[]\>
+**publishEnvelopes**(`envelopes`): `Promise`<`void`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `topic` | `string` |
-| `opts?` | [`ListMessagesOptions`](../modules.md#listmessagesoptions) |
-
-#### Returns
-
-`Promise`<[`Message`](Message.md)[]\>
-
-#### Defined in
-
-[Client.ts:422](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L422)
-
-___
-
-### publishEnvelope
-
-**publishEnvelope**(`env`): `Promise`<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `env` | `Envelope` |
+| `envelopes` | `PublishParams`[] |
 
 #### Returns
 
@@ -343,13 +388,19 @@ ___
 
 #### Defined in
 
-[Client.ts:292](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L292)
+[Client.ts:315](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L315)
 
 ___
 
 ### publishUserContact
 
-`Private` **publishUserContact**(): `Promise`<`void`\>
+**publishUserContact**(`legacy?`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `legacy` | `boolean` | `false` |
 
 #### Returns
 
@@ -357,7 +408,7 @@ ___
 
 #### Defined in
 
-[Client.ts:195](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L195)
+[Client.ts:240](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L240)
 
 ___
 
@@ -377,67 +428,27 @@ ___
 
 #### Defined in
 
-[Client.ts:314](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L314)
+[Client.ts:327](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L327)
 
 ___
 
-### sendMessage
+### validateEnvelope
 
-**sendMessage**(`peerAddress`, `content`, `options?`): `Promise`<[`Message`](Message.md)\>
-
-Send a message to the wallet identified by
-
-**`Peer Address`**
+`Private` **validateEnvelope**(`env`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `peerAddress` | `string` |
-| `content` | `any` |
-| `options?` | [`SendOptions`](../modules.md#sendoptions) |
+| `env` | `PublishParams` |
 
 #### Returns
 
-`Promise`<[`Message`](Message.md)\>
+`void`
 
 #### Defined in
 
-[Client.ts:253](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L253)
-
-___
-
-### streamConversationMessages
-
-**streamConversationMessages**(`peerAddress`): `Promise`<[`Stream`](Stream.md)<[`Message`](Message.md)\>\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `peerAddress` | `string` |
-
-#### Returns
-
-`Promise`<[`Stream`](Stream.md)<[`Message`](Message.md)\>\>
-
-#### Defined in
-
-[Client.ts:395](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L395)
-
-___
-
-### streamIntroductionMessages
-
-**streamIntroductionMessages**(): `Promise`<[`Stream`](Stream.md)<[`Message`](Message.md)\>\>
-
-#### Returns
-
-`Promise`<[`Stream`](Stream.md)<[`Message`](Message.md)\>\>
-
-#### Defined in
-
-[Client.ts:387](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L387)
+[Client.ts:304](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L304)
 
 ___
 
@@ -458,7 +469,7 @@ ___
 
 #### Defined in
 
-[Client.ts:238](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L238)
+[Client.ts:292](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L292)
 
 ___
 
@@ -481,7 +492,7 @@ Create and start a client associated with given wallet.
 
 #### Defined in
 
-[Client.ts:160](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L160)
+[Client.ts:186](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L186)
 
 ___
 
@@ -502,4 +513,4 @@ ___
 
 #### Defined in
 
-[Client.ts:173](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L173)
+[Client.ts:199](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L199)

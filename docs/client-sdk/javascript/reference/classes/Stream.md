@@ -14,7 +14,7 @@ As such can be used with constructs like for-await-of, yield*, array destructing
 
 ### constructor
 
-**new Stream**<`T`\>(`client`, `topics`, `messageTransformer`, `messageFilter?`, `contentTopicUpdater?`)
+**new Stream**<`T`\>(`client`, `topics`, `decoder`, `contentTopicUpdater?`)
 
 #### Type parameters
 
@@ -28,13 +28,12 @@ As such can be used with constructs like for-await-of, yield*, array destructing
 | :------ | :------ |
 | `client` | [`Client`](Client.md) |
 | `topics` | `string`[] |
-| `messageTransformer` | `MessageTransformer`<`T`\> |
-| `messageFilter?` | `MessageFilter` |
-| `contentTopicUpdater?` | `ContentTopicUpdater` |
+| `decoder` | `MessageDecoder`<`T`\> |
+| `contentTopicUpdater?` | `ContentTopicUpdater`<`T`\> |
 
 #### Defined in
 
-[Stream.ts:33](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L33)
+[Stream.ts:28](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L28)
 
 ## Properties
 
@@ -44,7 +43,7 @@ As such can be used with constructs like for-await-of, yield*, array destructing
 
 #### Defined in
 
-[Stream.ts:29](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L29)
+[Stream.ts:24](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L24)
 
 ___
 
@@ -54,7 +53,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:22](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L22)
+[Stream.ts:17](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L17)
 
 ___
 
@@ -64,7 +63,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:24](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L24)
+[Stream.ts:19](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L19)
 
 ___
 
@@ -74,7 +73,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:26](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L26)
+[Stream.ts:21](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L21)
 
 ___
 
@@ -84,7 +83,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:21](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L21)
+[Stream.ts:16](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L16)
 
 ___
 
@@ -94,7 +93,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:31](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L31)
+[Stream.ts:26](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L26)
 
 ## Methods
 
@@ -108,21 +107,20 @@ ___
 
 #### Defined in
 
-[Stream.ts:123](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L123)
+[Stream.ts:106](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L106)
 
 ___
 
 ### newMessageCallback
 
-`Private` **newMessageCallback**(`transformer`, `filter?`, `contentTopicUpdater?`): (`env`: `Envelope`) => `Promise`<`void`\>
+`Private` **newMessageCallback**(`decoder`, `contentTopicUpdater?`): (`env`: `Envelope`) => `Promise`<`void`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transformer` | `MessageTransformer`<`T`\> |
-| `filter?` | `MessageFilter` |
-| `contentTopicUpdater?` | `ContentTopicUpdater` |
+| `decoder` | `MessageDecoder`<`T`\> |
+| `contentTopicUpdater?` | `ContentTopicUpdater`<`T`\> |
 
 #### Returns
 
@@ -142,7 +140,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:52](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L52)
+[Stream.ts:42](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L42)
 
 ___
 
@@ -156,7 +154,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:148](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L148)
+[Stream.ts:131](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L131)
 
 ___
 
@@ -176,7 +174,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:163](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L163)
+[Stream.ts:146](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L146)
 
 ___
 
@@ -190,7 +188,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:131](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L131)
+[Stream.ts:114](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L114)
 
 ___
 
@@ -204,13 +202,13 @@ ___
 
 #### Defined in
 
-[Stream.ts:88](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L88)
+[Stream.ts:78](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L78)
 
 ___
 
 ### create
 
-`Static` **create**<`T`\>(`client`, `topics`, `messageTransformer`, `messageFilter?`, `contentTopicUpdater?`): `Promise`<[`Stream`](Stream.md)<`T`\>\>
+`Static` **create**<`T`\>(`client`, `topics`, `decoder`, `contentTopicUpdater?`): `Promise`<[`Stream`](Stream.md)<`T`\>\>
 
 #### Type parameters
 
@@ -224,9 +222,8 @@ ___
 | :------ | :------ |
 | `client` | [`Client`](Client.md) |
 | `topics` | `string`[] |
-| `messageTransformer` | `MessageTransformer`<`T`\> |
-| `messageFilter?` | `MessageFilter` |
-| `contentTopicUpdater?` | `ContentTopicUpdater` |
+| `decoder` | `MessageDecoder`<`T`\> |
+| `contentTopicUpdater?` | `ContentTopicUpdater`<`T`\> |
 
 #### Returns
 
@@ -234,4 +231,4 @@ ___
 
 #### Defined in
 
-[Stream.ts:104](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Stream.ts#L104)
+[Stream.ts:94](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L94)
