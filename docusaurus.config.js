@@ -211,8 +211,8 @@ const config = {
                 to: `/docs/dev-concepts/content-types`,
               },
               {
-                label: `Participant authentication`,
-                to: `/docs/dev-concepts/participant-authentication`,
+                label: `Key generation and usage`,
+                to: `/docs/dev-concepts/key-generation-and-usage`,
               },
               {
                 label: `Invitation and message encryption`,
