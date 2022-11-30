@@ -1,6 +1,6 @@
 ---
 sidebar_label: Invitation and message encryption
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # Invitation and message encryption with XMTP

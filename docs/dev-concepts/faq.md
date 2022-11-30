@@ -1,6 +1,6 @@
 ---
 sidebar_label: FAQ
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # FAQ about XMTP

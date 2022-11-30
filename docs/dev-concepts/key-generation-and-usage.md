@@ -1,6 +1,6 @@
 ---
 sidebar_label: Key generation and usage
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Key generation and usage in XMTP
