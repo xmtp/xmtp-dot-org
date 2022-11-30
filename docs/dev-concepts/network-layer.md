@@ -29,7 +29,7 @@ The nodes provide a **message API** that enables client apps built with the XMTP
 
 The nodes use Waku node software to connect to other nodes and form a peer-to-peer network to relay and store envelopes submitted and requested by client apps.
 
-Currently, nodes are configured to rate limit high-volume publishing from message API clients. Rate limits can change at any time. The message API returns a 429 status code to a rate-limited message API client.
+Currently, nodes are configured to rate limit high-volume publishing from message API clients. A rate-limited message API client can expect to receive a 429 status code response from node. Rate limits can change at any time in the interest of maintaining network health.
 
 In the network layer, an **envelope** contains a payload, often encrypted, that is not observable by nodes. The payload could be a public key bundle, private key bundle, or a message created by a client app, but this information is opaque to nodes. Meaning is assigned to these envelopes in the [Client layer](#client-layer).
 
