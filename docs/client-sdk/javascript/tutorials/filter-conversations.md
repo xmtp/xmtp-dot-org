@@ -14,35 +14,31 @@ For example, you can use conversation IDs and metadata to filter conversations b
 * An app  
 Filter to display only conversations created by a specific app
 
-* A message type
-Filter to display only conversations that are notifications or alerts, for example. Conversation IDs are different from [content types](/docs/dev-concepts/content-types). Using a custom content type does not require that you use conversation IDs.
+* A message type  
+Filter to display only conversations that are notifications or alerts, for example.
 
 * A subject line  
 Filter to display only conversations with a specific subject line, as in email
 
 * An NFT  
-Filter to display only conversations about an NFT, though not based on ownership of an NFT
+Filter to display only conversations about an NFT, such as price negotiations or shipping instructions
 
-<!--What might this concrete NFT use case sound like? It is not based on ownership - but on a specific NFT contract address (NFT collection) or on a contract address and token ID - a specific instance of an NFT in a collection?-->
+Conversation IDs are different from [content types](/docs/dev-concepts/content-types). Using a custom content type does not require that you use conversation IDs.
 
 Use this tutorial to learn how to use conversation IDs and metadata to filter conversations in your app.
 
 Conversation IDs and metadata are **not required**. Using conversation IDs affects the user experience in certain apps built with XMTP, so implement them only if you have a strategic need to filter conversations.
 
-<!--Only conversation Ids create separate conversation between two addresses, correct? Providing metadata only doesn't have this effect, correct?-->
-
-For example, when you set an ID for a conversation between two users, if they are messaging using multiple apps built with XMTP, they may see multiple conversations between their addresses in apps that use a portable inbox model. To learn more about this scenario, see [Label conversations](label-conversations).
-
-<!--okay to mention portable inbox? The Label conversations tutorial talks a little bit more about what we mean by portable inbox-->
+For example, when you set an ID for a conversation between two users, if they are messaging using multiple apps built with XMTP, they may see multiple conversations between their addresses. To learn how to address this scenario, see [Label conversations](label-conversations).
 
 
 ## Set a conversation ID
 
 Set the `conversationId` when creating a conversation. `conversationId` values are private and encrypted.
 
-:::tip
+:::caution Use a unique conversation ID
 
-As a best practice, start your `conversationId` with a domain unique to your app to help avoid collisions between your app and other apps on the XMTP network.
+As a best practice, start your `conversationId` with a domain that is unique to your app to help avoid collisions between your app and other apps on the XMTP network.
 
 :::
 
@@ -63,24 +59,20 @@ This `conversationId` indicates that these conversations are notification messag
 
 ## Set conversation metadata
 
-In addition to setting a conversation ID when creating a conversation, you can set metadata to use as an additional filter. Conversation metadata is private and encrypted.
+In addition to setting a conversation ID when creating a conversation, you can set metadata to use as an additional filter or to assign useful context to the conversation. Conversation metadata is private and encrypted.
 
-<!--Can you use metadata without a conversationId?-->
+This example sets `mydomain.xyz/message` as the `conversationId`, indicating that these conversations are messages. In addition, the example sets a conversation metadata `nickname` value to `example`.
 
-<!--does this use case make sense? any ideas for a better one? =)-->
-
-This example sets `mydomain.xyz/alert` as the `conversationId`, indicating that these conversations are alerts. In addition, the example sets a conversation metadata `title` value to `P0`.
-
-You can then use this conversation ID and metadata to display only alerts created by your app with a severity of P0, for example.
+You can then use this conversation ID and metadata to display only messages created by your app and surface a conversation label based on the `nickname` value, for example.
 
 ```js showLineNumbers
-// Start a scoped conversation with ID mydomain.xyz/alert and add some metadata
+// Start a scoped conversation with ID mydomain.xyz/message and add some metadata
 const conversation2 = await xmtp.conversations.newConversation(
   '0x3F11b27F323b62B159D2642964fa27C46C841897',
   {
-    conversationId: 'mydomain.xyz/alert',
+    conversationId: 'mydomain.xyz/message',
     metadata: {
-      title: 'P0',
+      nickname: 'example',
     },
   }
 )
@@ -95,9 +87,9 @@ Now that you've set conversation IDs and metadata, you can use them to filter co
 
 2. Filter by the domain value in your `conversationId`, `mydomain.xyz/` for example, to return only conversations created by your app, as shown in lines 3-8.
 
-3. Further filter by the rest of the `conversationId` and metadata. For example, filter by `notif` to display only notification messages, as shown in lines 10-14. And separately filter by `alert` and display the metadata `title` value of `P0` in your app, as shown in lines 15-18.
+3. You can further filter by the rest of the `conversationId` and metadata. For example, filter by `notif` to display only notification messages, as shown in lines 10-14.
 
-<!--correct about lines 15-18 displaying the metadata title value of P0 in the app? Can metadata be used for filtering and/or surfacing informational values in your UI?-->
+4. You can also separately filter by `message` and use the metadata `nickname` value as needed in your app, as shown in lines 15-18.
 
 ```js showLineNumbers
 // Get all the conversations
@@ -114,9 +106,9 @@ for (const conversation of myAppConversations) {
   if (conversationId === 'mydomain.xyz/notif') {
     await conversation.send('notif')
   }
-  if (conversationId === 'mydomain.xyz/alert') {
-    await conversation.send('alert')
-    console.log(conversation.context?.metadata.title)
+  if (conversationId === 'mydomain.xyz/message') {
+    await conversation.send('message')
+    console.log(conversation.context?.metadata.nickname)
   }
 }
 ```

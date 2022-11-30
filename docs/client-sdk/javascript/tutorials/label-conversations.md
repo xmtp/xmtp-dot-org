@@ -11,7 +11,7 @@ Alternatively, an app can implement conversation IDs and metadata to [filter con
 
 Apps that assign conversation IDs in this way have an effect on apps that use a portable inbox model. For example, a user might see multiple separate and ongoing conversations they are having with the same address, but originating in different apps.
 
-To help clarify this user experience, you can display conversation labels based on conversation IDs and metadata.
+If you are using a portable inbox model for your app, you can display conversation labels based on conversation IDs and metadata to help clarify the user experience.
 
 To illustrate this scenario, let's take a look at a couple of conversations between `amal.eth` and `bola.eth`.
 
@@ -35,7 +35,7 @@ To help distinguish the multiple conversations `amal.eth` is having with the sam
 
 These labels can help `amal.eth` recognize the source of each conversation with `bola.eth` and understand why multiple conversations are displaying.
 
-**Use labels to differentiate multiple conversations between a pair of addresses:**
+**To use labels to differentiate multiple conversations between a pair of addresses:**
 
 For example:
 
