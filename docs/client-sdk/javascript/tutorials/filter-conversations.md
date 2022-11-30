@@ -27,24 +27,18 @@ Filter to display only conversations about an NFT, though not based on ownership
 
 Use this tutorial to learn how to use conversation IDs and metadata to filter conversations in your app.
 
-Conversation IDs and metadata are **not required**. Using conversation IDs has downstream impact on the user experience in certain apps built with XMTP, so make sure to implement them only if you have a strategic need to filter conversations.
+Conversation IDs and metadata are **not required**. Using conversation IDs affects the user experience in certain apps built with XMTP, so implement them only if you have a strategic need to filter conversations.
 
-<!--correct - only conversation Ids create separate conversation between two addresses? Providing metadata only doesn't have this effect, correct?-->
+<!--Only conversation Ids create separate conversation between two addresses, correct? Providing metadata only doesn't have this effect, correct?-->
 
-For example, when you set an ID for a conversation between two users, if they are messaging using multiple apps built with XMTP, they may see multiple conversations between their addresses in certain apps. To learn more about this scenario, see [Label conversations](label-conversations).
+For example, when you set an ID for a conversation between two users, if they are messaging using multiple apps built with XMTP, they may see multiple conversations between their addresses in apps that use a portable inbox model. To learn more about this scenario, see [Label conversations](label-conversations).
+
+<!--okay to mention portable inbox? The Label conversations tutorial talks a little bit more about what we mean by portable inbox-->
 
 
 ## Set a conversation ID
 
 Set the `conversationId` when creating a conversation. `conversationId` values are private and encrypted.
-
-<!--Per Bhavya's comment, I've added text about making this value unique. There is no way for a dev to guarantee uniqueness because devs can't look up the values because they are private and encrypted - so I'm not sure of how to handle that.-->
-
-<!--I am curious about Bhavya's question about whether we should tell devs not to change their conversationID. I am curious about the granularity of the conversationId we are talking about. For example, take mydomain.xyz/notif. Is mydomain.xyz the ID? Or is mydomain.xyz/notif the ID? In the Lens tutorial, we call mydomain.xyz/alert the "domain prefix" and then the conversationId appears to be a string composed of the two profiles in the conversation, or does the concatenation of domain prefix and the profile IDs form the conversationId?-->
-
-<!--I'm also curious about the impact of changing the conversationId value. I understand that once you are using a conversationId for a specific purpose, you shouldn't change it. For example, mydomain.xyz/notif. However if I have a new purpose, I could use mybestdomain.xyz/omg, and this would work in my app. But what would break? Conversation labeling in apps with universal inboxes? Not sure of what value we are using to get those labels...but it seems like a dev could make the label value the same for mydomain.xyz and mybestdomain.xyz, is that right? Should we provide best practice guidance for setting a label value that universal inboxes can use to identify conversations from your app? I'm out of my depth here for sure - just riffing on questions that are coming to mind based on Bhavya's prompt.-->
-
-<!--Along these lines, I am curious about the XRC suggested by Saul here: https://github.com/xmtp-labs/hq/issues/843#issuecomment-1317913220. It sounds like the code samples we surface in this doc should follow the XRC - or should use a pattern that we will formalize in the XRC?-->
 
 :::tip
 
@@ -64,16 +58,16 @@ const conversation1 = await xmtp.conversations.newConversation(
 )
 ```
 
-This `conversationId` indicates that these conversations are notification messages created by `mydomain.xyz`, for example. The `mydomain.xyz/notif` conversation ID can the be used to display only notification messages created by the app.
+This `conversationId` indicates that these conversations are notification messages created by `mydomain.xyz`, for example. The `mydomain.xyz/notif` conversation ID can then be used to display only notification messages created by the app.
 
 
 ## Set conversation metadata
 
 In addition to setting a conversation ID when creating a conversation, you can set metadata to use as an additional filter. Conversation metadata is private and encrypted.
 
-<!--You can just use metadata without a conversationId if you want, correct? Any guidance or best practices here? Sounds like we might capture this kind of guidance in an XRC mentioned here: https://github.com/xmtp-labs/hq/issues/843#issuecomment-1318917960-->
+<!--Can you use metadata without a conversationId?-->
 
-<!--Not sure if the following use case makes sense. What might be a valid use case for filtering alerts? I also thought maybe one that expresses severity - as in P0?-->
+<!--does this use case make sense? any ideas for a better one? =)-->
 
 This example sets `mydomain.xyz/alert` as the `conversationId`, indicating that these conversations are alerts. In addition, the example sets a conversation metadata `title` value to `P0`.
 
@@ -97,15 +91,13 @@ const conversation2 = await xmtp.conversations.newConversation(
 
 Now that you've set conversation IDs and metadata, you can use them to filter conversations in your app.
 
-<!--I move between using conversation ID and conversationId - maybe just stick to conversationId? Any preferences? JHA to look up dev doc style guidelines.-->
-
 1. Get all of the conversations, as shown in lines 1-2.
 
 2. Filter by the domain value in your `conversationId`, `mydomain.xyz/` for example, to return only conversations created by your app, as shown in lines 3-8.
 
 3. Further filter by the rest of the `conversationId` and metadata. For example, filter by `notif` to display only notification messages, as shown in lines 10-14. And separately filter by `alert` and display the metadata `title` value of `P0` in your app, as shown in lines 15-18.
 
-<!--correct about lines 15-18 displaying the metadata title value of P0 in the app? just to be sure I understand, do we want to surface that you can use metadata values to display useful info about a conversation in your UI? Should I add it to the heading for this section? Can I also use metadata as a filter - or is it more for displaying info in the UI?-->
+<!--correct about lines 15-18 displaying the metadata title value of P0 in the app? Can metadata be used for filtering and/or surfacing informational values in your UI?-->
 
 ```js showLineNumbers
 // Get all the conversations
