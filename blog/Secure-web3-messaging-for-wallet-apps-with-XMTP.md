@@ -14,13 +14,11 @@ Today's wallet apps are the portal into web3. We use them to transact, secure as
 
 And while they really do seem like a magical-do-everything-Swiss-Army-knife there's still one more trick that could be up their sleeve: **securing conversations, not just transactions and assets.**
 
-
 ## Bringing wallet-to-wallet messaging to …wallets
 
 Wallet apps already securely store the keys necessary for users to transact in web3, so they're a natural fit for where encrypted messaging between blockchain accounts could take place. The demand and discussion around "wallet-to-wallet chat" has increased dramatically in recent months, but with all the complexity that goes into communication protocols, encrypting messages, and the full scope of messaging needs. it's no surprise that it has taken a while for wallets to adopt the necessary functionality. Until now, that is.
 
 [XMTP](https://xmtp.org/docs) takes all of the challenging messy bits of supporting messaging and makes it easy to add a variety of communications use cases, like chat, announcements, and notifications to wallet apps, dapps, etc.
-
 
 ## Why do wallets need secure messaging?
 
