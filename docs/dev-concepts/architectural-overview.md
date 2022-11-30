@@ -32,6 +32,8 @@ This diagram shows the key components of an XMTP node. The nodes provide a **mes
 
 ![Diagram showing three nodes connected in a peer-to-peer fashion to form the XMTP network. The diagram shows the key components of a node, including a message API and Waku node. The diagram also shows a client app connecting a message API client to the message API in a node.](img/xmtp-nodes.png)<!--Source file: [https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=16%3A502](https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?node-id=16%3A502)-->
 
+Currently, nodes are configured to rate limit high-volume publishing from message API clients. A rate-limited message API client can expect to receive a 429 status code response from node. Rate limits can change at any time in the interest of maintaining network health.
+
 Every **envelope** contains a payload, often encrypted, that is not observable by nodes. The payload could be a public key bundle, private key bundle, or a message created by a client app, but this information is opaque to nodes. Meaning is assigned to these envelopes in the [Client layer](#client-layer).
 
 Nodes can see envelope properties which help the nodes understand how to handle envelopes but the properties reveal nothing about message content. An example of an important envelope property is a **topic** name. A topic name is a required envelope property. A topic name helps a node understand where to relay and store the envelope. Each envelope belongs to exactly one topic.
