@@ -58,7 +58,7 @@ Likewise, this sequence diagram illustrates the message decryption and message v
 
 ## XMTP V1 message encryption
 
-This section describes how message encryption works for XMTP V1. To understand whether a client app will use XMTP V1 or V2, see [Determining whether to use XMTP V2 or V1 topics](architectural-overview#determining-whether-to-use-xmtp-v2-or-v1-topics).
+This section describes how message encryption works for XMTP V1. To understand whether a client app will use XMTP V1 or V2, see [Determining whether to use XMTP V2 or V1 topics](client-layer#determining-whether-to-use-xmtp-v2-or-v1-topics).
 
 With XMTP V1 message encryption, a client app encrypts and decrypts messages using the following artifacts:
 

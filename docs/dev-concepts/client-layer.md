@@ -15,7 +15,7 @@ At the most basic level, the architecture of XMTP (Extensible Message Transport 
 
 This topic provides an overview of the client layer of XMTP.
 
-The client layer consists of XMTP message API clients (clients) embedded in client apps built with the XMTP client SDK. A message API client connects to the message API in an arbitrary XMTP node to communicate with the network, as shown in the [XMTP node diagram](#xmtp-node-diagram).
+The client layer consists of XMTP message API clients (clients) embedded in client apps built with the XMTP client SDK. A message API client connects to the message API in an arbitrary XMTP node to communicate with the network. To learn more, see [Network layer](network-layer).
 
 The primary responsibilities of a client are to:
 

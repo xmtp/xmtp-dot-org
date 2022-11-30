@@ -17,7 +17,7 @@ This topic provides an overview of the app layer of XMTP.
 
 The app layer consists of client apps built with the XMTP client SDK.
 
-A developer can provide messaging between blockchain accounts in their app by building with the [XMTP client SDK](https://github.com/xmtp/xmtp-js). When a developer builds with the SDK, their app embeds an XMTP message API client, which communicates with a message API in an XMTP node to handle all XMTP network interactions required to enable their users to send and receive messages. To learn more, see [XMTP node diagram](network-layer#xmtp-node-diagram).
+A developer can provide messaging between blockchain accounts in their app by building with the [XMTP client SDK](https://github.com/xmtp/xmtp-js). When a developer builds with the SDK, their app embeds an XMTP message API client, which communicates with a message API in an XMTP node to handle all XMTP network interactions required to enable their users to send and receive messages. To learn more, see [Network layer](network-layer).
 
 With XMTP network interactions handled by the message API client, developers can focus on the user-related aspects of building client apps, such as:
 

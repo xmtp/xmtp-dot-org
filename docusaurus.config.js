@@ -199,8 +199,16 @@ const config = {
                 to: `/docs/dev-concepts/introduction`,
               },
               {
-                label: `Architectural overview`,
-                to: `/docs/dev-concepts/architectural-overview`,
+                label: `Network layer`,
+                to: `/docs/dev-concepts/network-layer`,
+              },
+              {
+                label: `Client layer`,
+                to: `/docs/dev-concepts/client-layer`,
+              },
+              {
+                label: `App layer`,
+                to: `/docs/dev-concepts/app-layer`,
               },
               {
                 label: `FAQ`,

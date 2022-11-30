@@ -57,9 +57,9 @@ A user can send and receive encrypted XMTP messages using an app with an embedde
 
 Clients and nodes are implemented as [Waku2](https://rfc.vac.dev/spec/10/) peers but with XMTP-specific functions and capabilities.
 
-To learn more about clients, see [Client layer](architectural-overview#client-layer).
+To learn more about clients, see [Client layer](client-layer).
 
-To learn more about nodes, see [Network layer](architectural-overview#network-layer).
+To learn more about nodes, see [Network layer](network-layer).
 
 
 ## XMTP client SDK
