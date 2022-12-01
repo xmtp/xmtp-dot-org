@@ -9,7 +9,7 @@
 
 #### Defined in
 
-[MessageContent.ts:31](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/MessageContent.ts#L31)
+[MessageContent.ts:31](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/MessageContent.ts#L31)
 
 ___
 
@@ -19,7 +19,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:32](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/MessageContent.ts#L32)
+[MessageContent.ts:32](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/MessageContent.ts#L32)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:30](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/MessageContent.ts#L30)
+[MessageContent.ts:30](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/MessageContent.ts#L30)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:29](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/MessageContent.ts#L29)
+[MessageContent.ts:29](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/MessageContent.ts#L29)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:28](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/MessageContent.ts#L28)
+[MessageContent.ts:28](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/MessageContent.ts#L28)

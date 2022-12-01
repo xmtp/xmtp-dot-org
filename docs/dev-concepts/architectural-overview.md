@@ -58,7 +58,7 @@ The client layer consists of XMTP message API clients (clients) embedded in clie
 The primary responsibilities of a client are to:
 
 * Create blockchain account-based XMTP identities, including public and private key bundles.  
-To learn more, see [Participant authentication](participant-authentication).
+To learn more, see [Key generation and usage](key-generation-and-usage).
 
 * Encrypt and decrypt private key bundles, invitations, and messages.  
 To learn more, see [Invitation and message encryption](invitation-and-message-encryption).
@@ -183,7 +183,7 @@ In XMTP V1, client apps use the following topics to perform their primary respon
          <ul>
             <li>All messages between two participants are stored in a single conversation topic.</li>
             <li>No support for conversation IDs or other conversation metadata.</li>
-            <li>The conversation topic name includes the wallet addresses of the participants, revealing some identifying information.</li>
+            <li>The conversation topic name includes the blockchain account addresses of the participants, revealing some identifying information.</li>
          </ul>
       </td>
       <td><code>dm-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x357540a11BE08e9264c348b346d0C7dBB7df80d7</code>
