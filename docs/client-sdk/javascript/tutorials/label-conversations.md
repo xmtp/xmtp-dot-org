@@ -15,13 +15,13 @@ If you are using a portable inbox model for your app, you can display conversati
 
 To illustrate this scenario, let's take a look at a couple of conversations between `amal.eth` and `bola.eth`.
 
-`amal.eth` and `bola.eth` can have an ongoing conversation in App ABC. Let's say that App ABC sets a `conversationId` of `abc.dev/dm` and uses it to filter conversations to display only conversations its users created using App ABC.
+`amal.eth` and `bola.eth` can have an ongoing conversation in App ABC. Let's say that App ABC sets a `conversationId` of `app.abc/dm` and uses it to filter conversations to display only conversations its users created using App ABC.
 
-![Mockup of App ABC setting a conversation ID of abc.dev/dm and filtering conversations by it. The app displays amal.eth's inbox with a "Hey..." conversation from bola.eth](img/app-abc.png)
+![Mockup of App ABC setting a conversation ID of app.abc/dm and filtering conversations by it. The app displays amal.eth's inbox with a "Hey..." conversation from bola.eth](img/app-abc.png)
 
-`amal.eth` and `bola.eth` can also have a separate and ongoing conversation in App XYZ. Let's say that App XYZ sets a `conversationId` of `xyz.dev/dm` and uses it to filter conversations to display only conversations its users created using App XYZ.
+`amal.eth` and `bola.eth` can also have a separate and ongoing conversation in App XYZ. Let's say that App XYZ sets a `conversationId` of `app.xyz/dm` and uses it to filter conversations to display only conversations its users created using App XYZ.
 
-![Mockup of App XYZ setting a conversation ID of xyz.dev/dm and filtering conversations by it. The app displays amal.eth's inbox with a "Yes..." conversation from bola.eth](img/app-xyz.png)
+![Mockup of App XYZ setting a conversation ID of app.xyz/dm and filtering conversations by it. The app displays amal.eth's inbox with a "Yes..." conversation from bola.eth](img/app-xyz.png)
 
 Let's then take a look at App 123, which doesn't filter conversations and displays all conversations for a user regardless of where the conversations were created. In this case, the inbox for `amal.eth` might look something like this:
 
@@ -31,22 +31,25 @@ This scenario may display a confusing user experience for `amal.eth`, surfacing 
 
 To help distinguish the multiple conversations `amal.eth` is having with the same address, you can implement labels, based on conversation IDs and metadata, that display for each conversation.
 
-![Mockup of App 123 with no conversation ID or filtering, but with conversation ID and metadata-based labels implemented. The app displays amal.eth's inbox with two conversations with bola.eth: One labeled as ABC: "Hey..." and one labeled as XYZ: "Yes..."](img/app-123-convo-labels.png)
+![Mockup of App 123 with no conversation ID or filtering, but with conversation ID and metadata-based labels implemented. The app displays amal.eth's inbox with two conversations with bola.eth: One labeled as app.abc: "Hey..." and one labeled as app.xyz: "Yes..."](img/app-123-convo-labels.png)
 
 These labels can help `amal.eth` recognize the source of each conversation with `bola.eth` and understand why multiple conversations are displaying.
 
 **To use labels to differentiate multiple conversations between a pair of addresses:**
 
+Get the `conversationId` value to display as a label.
+
 For example:
 
-<!--do we have a code sample we can include here? perhaps from this XMTP Chat repo PR https://github.com/xmtp/example-chat-react/pull/140? Would love to be able to publish this tutorial for the XMTP V2 Dec. 5 due date - possible?-->
-
-<!--can we provide some context about what the code is doing and where to put it?-->
-
 ```js
+// To get the conversationId
+const conversationId = conversation?.context?.conversationId
 
-<code sample>
+// example conversationId = app.abc/dm/0x123-0x456
 
+const domain = conversationId.split("/")[0]
+
+// domain would be app.abc in this case, which provides the converation label
 ```
 
 
