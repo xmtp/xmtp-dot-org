@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:11](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L11)
+[crypto/PublicKeyBundle.ts:11](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L11)
 
 ## Properties
 
@@ -33,7 +33,7 @@ publicKey.SignedPublicKeyBundle.identityKey
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:8](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L8)
+[crypto/PublicKeyBundle.ts:8](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L8)
 
 ___
 
@@ -47,7 +47,7 @@ publicKey.SignedPublicKeyBundle.preKey
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:9](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L9)
+[crypto/PublicKeyBundle.ts:9](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L9)
 
 ## Methods
 
@@ -67,7 +67,7 @@ publicKey.SignedPublicKeyBundle.preKey
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:26](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L26)
+[crypto/PublicKeyBundle.ts:26](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L26)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:33](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L33)
+[crypto/PublicKeyBundle.ts:33](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L33)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:22](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L22)
+[crypto/PublicKeyBundle.ts:22](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L22)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:37](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L37)
+[crypto/PublicKeyBundle.ts:37](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L37)
 
 ___
 
@@ -135,4 +135,4 @@ ___
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:42](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/crypto/PublicKeyBundle.ts#L42)
+[crypto/PublicKeyBundle.ts:42](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L42)
