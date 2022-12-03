@@ -11,7 +11,7 @@ Alternatively, an app can implement conversation IDs and metadata to [filter con
 
 Apps that assign conversation IDs in this way have an effect on apps that use a portable inbox model. For example, a user might see multiple separate and ongoing conversations they are having with the same address, but originating in different apps.
 
-If you are using a portable inbox model for your app, you can display conversation labels based on conversation IDs and metadata to help clarify the user experience.
+If you're using a portable inbox model for your app, you can display conversation labels based on conversation IDs and metadata to help clarify the user experience.
 
 To illustrate this scenario, let's take a look at a couple of conversations between `amal.eth` and `bola.eth`.
 
@@ -45,11 +45,11 @@ For example:
 // To get the conversationId
 const conversationId = conversation?.context?.conversationId
 
-// example conversationId = app.abc/dm/0x123-0x456
+// Example conversationId = app.abc/dm/0x123-0x456
 
 const domain = conversationId.split("/")[0]
 
-// domain would be app.abc in this case, which provides the converation label
+// In this case, the domain is app.abc, which provides the conversation label
 ```
 
 

@@ -42,7 +42,7 @@ As a best practice, start your `conversationId` with a domain that is unique to 
 
 :::
 
-This example sets `mydomain.xyz/notif` as the `conversationID` when creating a conversation with recipient address `0x3F11b27F323b62B159D2642964fa27C46C841897`:
+This example sets `mydomain.xyz/notif` as the `conversationId` when creating a conversation with recipient address `0x3F11b27F323b62B159D2642964fa27C46C841897`:
 
 ```js showLineNumbers
 // Start a scoped conversation with ID mydomain.xyz/notif
