@@ -224,7 +224,7 @@ This app uses [Web3Modal](https://web3modal.com/) and [Ethers](https://docs.ethe
 
 7. Click the **Connect wallet** button to open your wallet app browser extension and connect a blockchain account address to the app. Your "hello world" app UI doesn't change. However, in your wallet app you can see that your address is now connected to your "hello world" app running at `localhost:3000`:
 
-  ![Screenshot of the MetaMask wallet app browser extension showing an account named Amal with an Ethereum account address with the last 4 characters 80d7 connected to localhost:3000](img/connect-wallet-prompt.png)
+   ![Screenshot of the MetaMask wallet app browser extension showing an account named Amal with an Ethereum account address with the last 4 characters 80d7 connected to localhost:3000](img/connect-wallet-prompt.png)
 
 
 ## Step 3. Build the **Connect to XMTP** button
