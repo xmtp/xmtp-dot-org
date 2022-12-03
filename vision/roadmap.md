@@ -65,6 +65,10 @@ Users will be able to store XMTP private keys in secure contexts such as wallet 
 
 Developers will be able to build client apps in Swift and Kotlin.
 
+## Delivered
+
+For information about delivered features and fixes, see [XMTP releases and updates](/docs/dev-concepts/xmtp-releases).
+
 <!--
 ## Researching
 
