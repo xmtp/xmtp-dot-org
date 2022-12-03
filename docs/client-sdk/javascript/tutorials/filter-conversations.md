@@ -79,9 +79,9 @@ const conversation2 = await xmtp.conversations.newConversation(
 ```
 
 
-## Filter conversations by IDs and metadata
+## Filter conversations by ID and metadata
 
-Now that you've set conversation IDs and metadata, you can use them to filter conversations in your app.
+Now that you've set a conversation ID and metadata, you can use them to filter conversations in your app.
 
 1. Get all of the conversations, as shown in lines 1-2.
 
