@@ -9,23 +9,25 @@ Here are a few details about what's in store for XMTP in the months ahead.
 
 ## In progress
 
-### React Native client support
+### Mobile client support
 
-Developers will be able to build client apps in React Native.
+Developers will be able to build mobile client apps in React Native, Swift, Kotlin, and Flutter
 
-- [Read more](https://github.com/xmtp/xmtp-js/issues/170)
+- [Read more: React Native](https://github.com/xmtp/xmtp-js/issues/170)
+- [Read more: Swift](https://github.com/xmtp/xmtp-ios/issues/7)
+- [Read more: Flutter](https://github.com/xmtp/xmtp-flutter/issues/4)
 
-### Conversation filtering
+### Message any address
 
-Developers will be able to group and filter conversations in a particular context, such as conversations originating from within their app.
+Individuals will be able to send encrypted DMs and announcements to addresses that have not yet created XMTP identities. Recipients will be notified of these messages upon first connection to XMTP.
 
-- [Read more](https://github.com/orgs/xmtp/discussions/12)
+- [Read more](https://github.com/xmtp/xmtp-memo-js)
 
-### Participant privacy
+### Push notifications
 
-Network clients responsible for relaying and storing messages will no longer be able to observe the addresses of participants in ongoing conversations.
+Apps will be able to subscribe users to receive push notifications to their devices upon receiving new messages.
 
-- [Read more](https://github.com/orgs/xmtp/discussions/12)
+- [Read more](https://github.com/xmtp/example-notification-server-go)
 
 ### Network decentralization milestones
 
@@ -33,9 +35,9 @@ XMTP Labs will specify a phased approach towards architectural and logical decen
 
 ## Planned
 
-### Message any address
+### Group chat and announcements channels
 
-Individuals will be able to send encrypted DMs and announcements to addresses that have not yet created XMTP identities. Recipients will be notified of these messages upon first connection to XMTP and will be able to retrieve them if the sender is online or has specified a secure key server.
+Users will be able to send messages to group chats and announcements channels, and will retrieve messages from these channels separately from their DMs.
 
 ### Team inboxes
 
@@ -49,25 +51,23 @@ Users will be able to recover their compromised XMTP identity by creating new pr
 
 Users will be able to grant explicit permission for an app to use their account across sessions and will be able to revoke this permission at any time.
 
-### Push notifications and webhooks
-
-Users will be able to grant apps permission to notify them externally when new messages are received.
-
-### Group chat and announcements channels
-
-Users will be able to send messages to group chats and announcements channels, and will retrieve messages from these channels separately from their DMs.
-
 ### Secure key storage alternatives
 
 Users will be able to store XMTP private keys in secure contexts such as wallet apps.
 
-### Swift, Kotlin client support
-
-Developers will be able to build client apps in Swift and Kotlin.
-
 ## Delivered
 
-For information about delivered features and fixes, see [XMTP releases and updates](/docs/dev-concepts/xmtp-releases).
+### December 2022: XMTP v2
+
+#### Conversation filtering
+
+Developers can now group and filter conversations in a particular context, such as conversations originating from within their app.
+
+#### Participant privacy
+
+Network clients responsible for relaying and storing messages can no longer observe the addresses of participants in ongoing conversations.
+
+_For more information about delivered features and fixes, see [XMTP releases and updates](/docs/dev-concepts/xmtp-releases)._
 
 <!--
 ## Researching
