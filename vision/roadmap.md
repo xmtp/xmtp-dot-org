@@ -11,7 +11,7 @@ Here are a few details about what's in store for XMTP in the months ahead.
 
 ### Mobile client support
 
-Developers will be able to build mobile client apps in React Native, Swift, Kotlin, and Flutter
+Developers will be able to build mobile client apps in React Native, Swift, Kotlin, and Flutter.
 
 - [Read more: React Native](https://github.com/xmtp/xmtp-js/issues/170)
 - [Read more: Swift](https://github.com/xmtp/xmtp-ios/issues/7)
