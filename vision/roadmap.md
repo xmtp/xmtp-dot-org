@@ -17,17 +17,17 @@ Developers will be able to build mobile client apps in React Native, Swift, Kotl
 - [Read more: Swift](https://github.com/xmtp/xmtp-ios/issues/7)
 - [Read more: Flutter](https://github.com/xmtp/xmtp-flutter/issues/4)
 
-### Message any address
-
-Individuals will be able to send encrypted DMs and announcements to addresses that have not yet created XMTP identities. Recipients will be notified of these messages upon first connection to XMTP.
-
-- [Read more](https://github.com/xmtp/xmtp-memo-js)
-
 ### Push notifications
 
 Apps will be able to subscribe users to receive push notifications to their devices upon receiving new messages.
 
 - [Read more](https://github.com/xmtp/example-notification-server-go)
+
+### Message any address
+
+Individuals will be able to send encrypted DMs and announcements to addresses that have not yet created XMTP identities. Recipients will be notified of these messages upon first connection to XMTP.
+
+- [Read more](https://github.com/xmtp/xmtp-memo-js)
 
 ### Network decentralization milestones
 
