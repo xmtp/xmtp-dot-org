@@ -3,11 +3,18 @@ sidebar_label: Built with XMTP
 sidebar_position: 2
 ---
 
-# Built with XMTP
+import BuiltWithXmtp from '@site/src/components/BuiltWithXmtp';
+import { Link } from 'react-router-dom'
 
-- Displays projects using XMTP
-- Will also highlight and showcase "project of the month" using XMTP
-  - "Project of the Month" might be a post on xmtp.org/blog and this page can link to the month's post
-- Created this as an MDX file - more info on how to use MDX and React in Docusaurus: https://docusaurus.io/docs/markdown-features/react
-- Rich: What do you think of the sidebar/left nav order? We can change it to suit your vision!
-- Rich: What do you think of the top nav menu - sparkle icon and the "Explore a showcase of apps built with XMTP" text? We can change that too...
+# Built With XMTP
+
+See Who's Using XMTP
+
+Feel free to track down projects that uses XMTP and reach out if you're looking for more detail on their specific usages.
+
+<BuiltWithXmtp/>
+
+<a href="mailto:mail@example.com"
+  className="bg-red-500 text-white border-none rounded-lg py-3 px-5 w-full mt-10 h-12 cursor-pointer hover:bg-red-600 mb-14 xl:mb-0 block hover:no-underline hover:text-white">
+    Submit project
+</a>

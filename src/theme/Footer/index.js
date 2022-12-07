@@ -44,6 +44,7 @@ export default function FooterWrapper(props) {
           </div>
           <div className="flex w-[139px] justify-between">
             <ALink to="https://github.com/xmtp">
+              foo
               <img
                 alt="Go to the XMTP GitHub repo"
                 src="/img/github-icon.svg"
@@ -56,6 +57,7 @@ export default function FooterWrapper(props) {
               />
             </ALink>
             <ALink to="https://discord.gg/xmtp">
+              foo
               <img alt="Go to the XMTP Discord" src="/img/discord-icon.svg" />
             </ALink>
           </div>

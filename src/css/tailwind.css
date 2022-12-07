@@ -548,6 +548,12 @@ main[class*='docMainContainer'] tr {
   text-align: left;
 }
 
+/* Overriding Docusaurus markdown styling */
+.markdown li + li,
+.markdown li > p {
+  margin: 0;
+}
+
 /* Custom theme colors*/
 .sunrise-theme {
   background: rgb(244, 63, 94);

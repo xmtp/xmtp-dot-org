@@ -1,0 +1,41 @@
+ [
+    {
+       "name":"Lenster",
+       "href":"https://lenster.xyz",
+       "image":"/img/builtWithXmtp/lenster.svg",
+       "description":"Lenster is a composable, decentralized, and permissionless social media web app built with Lens Protocol.",
+       "github": "https://github.com/lensterxyz/lenster",
+       "twitter": "https://twitter.com/lensterxyz"
+    },
+    {
+       "name":"POAP",
+       "href":"https://poap.xyz/",
+       "image":"/img/builtWithXmtp/poap.svg",
+       "description":"POAPs are digital mementos, minted in celebration of life's remarkable moments.",
+       "github": "https://github.com/poap-xyz",
+       "twitter": "https://twitter.com/poapxyz"
+    },
+    {
+       "name":"Relay",
+       "href":"https://relay.cc/",
+       "image":"/img/builtWithXmtp/relay.webp",
+       "description":"Relay’s goal is to provide open-source tools and products on top of XMTP, and create the best place for web3 identities.",
+       "twitter": "https://twitter.com/relay_eth"
+    },
+    {
+       "name":"XMTP.Chat",
+       "href":"https://xmtp.chat",
+       "image":"/img/builtWithXmtp/xmtp.png",
+       "description":"XMTP is an open protocol, network, and standards for secure, private web3 messaging.",
+       "github": "",
+       "twitter": ""
+    },
+    {
+       "name":"meTokens",
+       "href":"https://metokens.com/discover",
+       "image":"/img/builtWithXmtp/meTokens2.svg",
+       "description":"meTokens is a protocol built on Ethereum that allows creators and builders to issue their own personal token.",
+       "github": "",
+       "twitter": ""
+    }
+ ]
