@@ -7,7 +7,7 @@ sidebar_position: 5
 
 The XMTP client protocol supports the generation of keys that enable client apps to establish secure, unfalsifiable relationships between their users' blockchain accounts. These keys also enable client apps to ensure that only the sender and recipient can encrypt and decrypt messages sent between them.
 
-To learn more about user authentication, see [Sign to send and receive messages using apps built with XMTP](signatures).
+To learn more about user authentication, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
 
 To learn more about message encryption, see [Invitation and message encryption with XMTP](invitation-and-message-encryption).
 
