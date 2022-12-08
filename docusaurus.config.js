@@ -224,8 +224,8 @@ const config = {
                 to: `/docs/dev-concepts/wallets`,
               },
               {
-                label: `Signatures`,
-                to: `/docs/dev-concepts/signatures`,
+                label: `Account signatures`,
+                to: `/docs/dev-concepts/account-signatures`,
               },
               {
                 label: `Contribute to XMTP`,

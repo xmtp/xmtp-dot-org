@@ -27,7 +27,7 @@ You can generate multiple XMTP identities from the same wallet app by changing t
 
 :::
 
-To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](signatures).
+To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
 
 ## Chains
 
