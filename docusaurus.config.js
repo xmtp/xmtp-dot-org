@@ -91,6 +91,7 @@ const config = {
         defaultMode:'light',
         disableSwitch: false,
       },
+      image: '/img/mobile-animation-bg.jpg',
       navbar: {
         title: '',
         logo: {
