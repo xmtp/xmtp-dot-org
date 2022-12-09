@@ -289,6 +289,10 @@ const config = {
                 label: 'XMTP code of conduct',
                 to: '/community/code-of-conduct',
               },
+              {
+                label: 'Careers at XMTP Labs',
+                href: 'https://blog.xmtp.com/careers/',
+              },
             ],
           },
           {
