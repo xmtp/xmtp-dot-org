@@ -151,17 +151,17 @@ This app uses [Web3Modal](https://web3modal.com/) and [Ethers](https://docs.ethe
     });
 
     return (
-     <WalletContext.Provider
-       value={{
-         connectWallet,
-         disconnectWallet,
-         walletAddress,
-         signer,
-       }}
-     >
-       {children}
-     </WalletContext.Provider>
-    );
+       <WalletContext.Provider
+         value={{
+           connectWallet,
+           disconnectWallet,
+           walletAddress,
+           signer,
+         }}
+       >
+         {children}
+       </WalletContext.Provider>
+      );
     };
     ```
 
