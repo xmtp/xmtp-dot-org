@@ -16,7 +16,7 @@ upload_dir: blog/media
 public_path: "/blog/media"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":year:-:month:-day:-:filename:"
+file_template: ":year:-:month:-:day:-:filename:"
 build:
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
