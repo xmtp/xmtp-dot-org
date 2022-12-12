@@ -12,7 +12,7 @@ sections:
   label: Blog
   create: all
   match: "**/*"
-upload_dir: blog/media
+upload_dir: static/blog/media
 public_path: "/blog/media"
 front_matter_path: ''
 use_front_matter_path: false
