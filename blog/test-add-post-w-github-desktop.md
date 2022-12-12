@@ -13,7 +13,7 @@ image: https://blog.xmtp.com/content/images/size/w1460/2022/09/blogPost-2.png
 
 Test test test today's wallet apps are the portal into web3. We use them to transact, secure assets, sign into websites with self-sovereign identities, and more, all without usernames and passwords.
 
-![](/blog/uploads/blogpost-2.png)
+![](/blog/media/2022-12-12-blogpost-2.png)
 
 <!--truncate-->
 
