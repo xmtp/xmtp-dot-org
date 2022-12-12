@@ -49,7 +49,7 @@ XMTP Labs is working toward a phased decentralization of the network and will sh
 
 XMTP currently uses the Waku protocol to relay messages between user client and network nodes. <!--change this to "between network nodes" once the gRPC work is complete. At that time, the waku dependency will be removed from xmtp-js - the user client-->
 
-Waku is an unopinionated transport layer built around the libp2p publish/subscribe model. Waku is intentionally open-ended when it comes to handling options like message encoding and encryption, which content topics to use, and how to create and manage encryption keys linked to wallet addresses.
+Waku is an unopinionated transport layer built around the libp2p publish/subscribe model. Waku is intentionally open-ended when it comes to handling options like message encoding and encryption, which content topics to use, and how to create and manage encryption keys linked to blockchain account addresses.
 
 XMTP provides a standardized approach to addressing these options, focusing on maximizing compatibility across apps and ensuring message security and deliverability, while also enabling as many developers as possible to use XMTP to build interoperable messaging apps.
 
@@ -87,21 +87,21 @@ There are no message storage and retrieval-related fees incurred by developers f
 
 ### How does XMTP establish a secure and fraud-proof relationship between two identities?
 
-Wallet addresses sign and advertise a set of keys that XMTP uses to establish a shared secret for encryption using another wallet address’ keys. These keys attest to the authenticity of both wallet addresses and are required to add messages to their conversation. No third-party apps or relayers are involved in this process.
+Blockchain accounts sign and advertise a set of keys that XMTP uses to establish a shared secret for encryption using another blockchain account’s keys. These keys attest to the authenticity of both accounts and are required to add messages to their conversation. No third-party apps or relayers are involved in this process.
 
-To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](signatures).
+To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
 
-### Does each blockchain wallet address have a corresponding XMTP identity?
+### Does each blockchain account address have a corresponding XMTP identity?
 
-Yes. Each blockchain wallet address is represented by an XMTP identity key. This identity key is a part of a key bundle that only that wallet address can use to authenticate messages.
+Yes. Each blockchain account address is represented by an XMTP identity key. This identity key is a part of a key bundle that only that the address can use to authenticate messages.
 
-To learn more about XMTP identities, see [Sign to send and receive messages using apps built with XMTP](signatures).
+To learn more about XMTP identities, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
 
 ### Do apps built with XMTP need to decrypt messages with blockchain account private keys each time?
 
 When a user starts a new messaging session with an app built with XMTP, the user must sign with their blockchain account private key to decrypt their XMTP key bundle, which is then used for message decryption. A one-time signature is also required to create that key bundle, which includes an XMTP identity.
 
-To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](signatures).
+To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
 
 ## Storage
 
@@ -181,4 +181,4 @@ The XMTP SDK currently requires you to use [ethers](https://ethers.org/) or anot
 
 The XMTP client provided by the SDK requires a user's signature in order to decrypt their XMTP message encryption keys. This process must be repeated when starting a new session since there is no secure place in the browser to persist decrypted keys. Based on developer and community feedback, we are researching more robust approaches to secure key management.
 
-To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](signatures).
+To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](account-signatures).

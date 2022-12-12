@@ -7,14 +7,14 @@ sidebar_position: 3
 
 ### ClientOptions
 
- **ClientOptions**: `NetworkOptions` & `KeyStoreOptions` & `ContentOptions`
+ **ClientOptions**: `NetworkOptions` & `KeyStoreOptions` & `ContentOptions` & `LegacyOptions`
 
 Aggregate type for client options. Optional properties are used when the default value is calculated on invocation, and are computed
 as needed by each function. All other defaults are specified in defaultOptions.
 
 #### Defined in
 
-[Client.ts:97](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L97)
+[Client.ts:110](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L110)
 
 ___
 
@@ -24,7 +24,17 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:24](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Composite.ts#L24)
+[codecs/Composite.ts:24](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/codecs/Composite.ts#L24)
+
+___
+
+### Conversation
+
+ **Conversation**: `ConversationV1` \| `ConversationV2`
+
+#### Defined in
+
+[conversations/Conversation.ts:352](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversation.ts#L352)
 
 ___
 
@@ -37,13 +47,34 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `checkAddresses?` | `boolean` |
+| `direction?` | `messageApi.SortDirection` |
 | `endTime?` | `Date` |
 | `limit?` | `number` |
 | `startTime?` | `Date` |
 
 #### Defined in
 
-[Client.ts:46](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L46)
+[Client.ts:45](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L45)
+
+___
+
+### Message
+
+ **Message**: `MessageV1` \| `MessageV2`
+
+#### Defined in
+
+[Message.ts:245](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L245)
+
+___
+
+### PrivateKeyBundle
+
+ **PrivateKeyBundle**: `PrivateKeyBundleV1` \| `PrivateKeyBundleV2`
+
+#### Defined in
+
+[crypto/PrivateKeyBundle.ts:232](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PrivateKeyBundle.ts#L232)
 
 ___
 
@@ -62,7 +93,7 @@ ___
 
 #### Defined in
 
-[Client.ts:61](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L61)
+[Client.ts:67](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L67)
 
 ## Variables
 
@@ -72,7 +103,7 @@ ___
 
 #### Defined in
 
-[Client.ts:30](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/Client.ts#L30)
+[Client.ts:29](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L29)
 
 ___
 
@@ -82,7 +113,7 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:15](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Composite.ts#L15)
+[codecs/Composite.ts:15](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/codecs/Composite.ts#L15)
 
 ___
 
@@ -92,7 +123,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:56](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/MessageContent.ts#L56)
+[MessageContent.ts:56](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/MessageContent.ts#L56)
 
 ___
 
@@ -102,4 +133,94 @@ ___
 
 #### Defined in
 
-[codecs/Text.ts:6](https://github.com/xmtp/xmtp-js/blob/9a266d7/src/codecs/Text.ts#L6)
+[codecs/Text.ts:6](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/codecs/Text.ts#L6)
+
+___
+
+### SortDirection
+
+ **SortDirection**: typeof `SortDirection`
+
+#### Defined in
+
+[ApiClient.ts:7](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/ApiClient.ts#L7)
+
+## Functions
+
+### dateToNs
+
+**dateToNs**(`date`): `Long`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `date` | `Date` |
+
+#### Returns
+
+`Long`
+
+#### Defined in
+
+[utils.ts:110](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/utils.ts#L110)
+
+___
+
+### fromNanoString
+
+**fromNanoString**(`s`): `undefined` \| `Date`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `s` | `undefined` \| `string` |
+
+#### Returns
+
+`undefined` \| `Date`
+
+#### Defined in
+
+[utils.ts:122](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/utils.ts#L122)
+
+___
+
+### nsToDate
+
+**nsToDate**(`ns`): `Date`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `ns` | `Long` |
+
+#### Returns
+
+`Date`
+
+#### Defined in
+
+[utils.ts:114](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/utils.ts#L114)
+
+___
+
+### toNanoString
+
+**toNanoString**(`d`): `undefined` \| `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `d` | `undefined` \| `Date` |
+
+#### Returns
+
+`undefined` \| `string`
+
+#### Defined in
+
+[utils.ts:118](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/utils.ts#L118)

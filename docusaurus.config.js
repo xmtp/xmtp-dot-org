@@ -95,6 +95,7 @@ const config = {
         defaultMode:'light',
         disableSwitch: false,
       },
+      image: '/img/mobile-animation-bg.jpg',
       navbar: {
         title: '',
         logo: {
@@ -221,8 +222,8 @@ const config = {
                 to: `/docs/dev-concepts/content-types`,
               },
               {
-                label: `Participant authentication`,
-                to: `/docs/dev-concepts/participant-authentication`,
+                label: `Key generation and usage`,
+                to: `/docs/dev-concepts/key-generation-and-usage`,
               },
               {
                 label: `Invitation and message encryption`,
@@ -233,8 +234,8 @@ const config = {
                 to: `/docs/dev-concepts/wallets`,
               },
               {
-                label: `Signatures`,
-                to: `/docs/dev-concepts/signatures`,
+                label: `Account signatures`,
+                to: `/docs/dev-concepts/account-signatures`,
               },
               {
                 label: `Contribute to XMTP`,
@@ -297,6 +298,10 @@ const config = {
               {
                 label: 'XMTP code of conduct',
                 to: '/community/code-of-conduct',
+              },
+              {
+                label: 'Careers at XMTP Labs',
+                href: 'https://blog.xmtp.com/careers/',
               },
             ],
           },
