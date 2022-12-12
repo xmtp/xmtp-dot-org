@@ -18,6 +18,7 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":year:-:month:-:day:-:filename:"
 build:
+  preview_output_directory: build
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
