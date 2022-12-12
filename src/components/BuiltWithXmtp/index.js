@@ -19,7 +19,7 @@ const BuiltWithXmtp = () => {
           </div>
         </li>
       )}
-        <li className="flex flex-col w-96">
+        <li className="relative group">
           <a className="rounded border-solid rounded-md border-slate-200 flex justify-center py-6 mb-4 bg-black" href="#" alt="">
             <img className="max-h-20 max-w-20 min-h-20" src="/img/builtWithXmtp/building.svg" alt=""></img>
           </a>
