@@ -7,7 +7,6 @@ sections:
 - type: document
   path: blog/authors.yml
   label: Authors
-  match: "**/*"
 - type: directory
   path: blog
   label: Blog

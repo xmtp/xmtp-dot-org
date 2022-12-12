@@ -35,8 +35,8 @@ fields:
     - mg
     - shanemac
     source:
-      type: simple
-      section: ''
+      type: pages
+      section: authors
       file: 
       path: 
   label: Author(s)
