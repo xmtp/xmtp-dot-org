@@ -4,10 +4,6 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: document
-  path: blog/authors.yml
-  label: Authors
-  match: "**/*"
 - type: directory
   path: blog
   label: Blog
