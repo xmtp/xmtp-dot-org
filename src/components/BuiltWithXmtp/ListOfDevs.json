@@ -18,14 +18,14 @@
     {
        "name":"Relay",
        "href":"https://relay.cc/",
-       "image":"/img/builtWithXmtp/relay.webp",
+       "image":"/img/builtWithXmtp/relay.png",
        "description":"Relay’s goal is to provide open-source tools and products on top of XMTP, and create the best place for web3 identities.",
        "twitter": "https://twitter.com/relay_eth"
     },
     {
        "name":"XMTP.Chat",
        "href":"https://xmtp.chat",
-       "image":"/img/builtWithXmtp/xmtp.png",
+       "image":"/img/builtWithXmtp/xmtp.svg",
        "description":"XMTP is an open protocol, network, and standards for secure, private web3 messaging.",
        "github": "",
        "twitter": ""
