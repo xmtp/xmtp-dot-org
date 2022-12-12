@@ -1,6 +1,7 @@
 ---
 label: Blog post
-hide_body: true
+hide_body: false
+display_field: title
 fields:
 - name: title
   type: text
@@ -35,9 +36,9 @@ fields:
     - mg
     - shanemac
     source:
-      type: pages
+      type: documents
       section: authors
-      file: 
+      file: blog/authors.yml
       path: 
   label: Author(s)
   description: Select the author to be used in the post.
