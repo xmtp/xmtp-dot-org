@@ -11,7 +11,9 @@ image: https://blog.xmtp.com/content/images/size/w1460/2022/09/blogPost-2.png
 ---
 **Enable the author to create a blog post without using git and CLI**
 
-Test test test today's wallet apps are the portal into web3. We use them to transact, secure assets, sign into websites with self-sovereign identities, and more, all without usernames and passwords.![](/blog/uploads/blogpost-2.png)
+Test test test today's wallet apps are the portal into web3. We use them to transact, secure assets, sign into websites with self-sovereign identities, and more, all without usernames and passwords.
+
+![](/blog/uploads/blogpost-2.png)
 
 <!--truncate-->
 
