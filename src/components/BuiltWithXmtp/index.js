@@ -21,7 +21,7 @@ const BuiltWithXmtp = () => {
       )}
         <li className="flex flex-col w-96">
           <a className="rounded border-solid rounded-md border-slate-200 flex justify-center py-6 mb-4 bg-black" href="#" alt="">
-            <img className="max-h-20 max-w-20" src="/img/builtWithXmtp/building.svg" alt=""></img>
+            <img className="max-h-20 max-w-20 min-h-20" src="/img/builtWithXmtp/building.svg" alt=""></img>
           </a>
           <a href="#"><h4 className="my-1 text-xl mt-0">Submit your project</h4></a>
           <p className="text-base text-neutral-800 dark:text-neutral-300 line-clamp-3 mt-0 h-20">Have a project or company that's currently building on XMTP? <a href="#">Submit it here</a> and we'll add it to the showcase.</p>
