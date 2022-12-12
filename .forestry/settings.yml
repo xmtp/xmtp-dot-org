@@ -1,17 +1,25 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path:
+admin_path: "/blog/admin"
 webhook_url:
 sections:
-upload_dir: uploads
-public_path: "/uploads"
+- type: document
+  path: blog/authors.yml
+  label: Authors
+- type: directory
+  path: blog
+  label: Blog
+  create: all
+  match: "**/*"
+upload_dir: static/blog/media
+public_path: "/blog/media"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ":year:-:month:-:day:-:filename:"
 build:
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: npm run develop
+  instant_preview_command: npm run start
