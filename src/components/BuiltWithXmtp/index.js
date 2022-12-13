@@ -13,7 +13,7 @@ const BuiltWithXmtp = () => {
           <h4 className="my-1 text-xl mt-0">{developer.name}</h4>
           <p className="text-base text-neutral-800 dark:text-neutral-300 line-clamp-3 mt-0 h-20">{developer.description}</p>
           <div className='flex items-center'>
-            <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center mr-2"  href="">Github<img src={useBaseUrl('/img/icons/github-icon-black.svg')} class="ml-1"/></a>
+            <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center mr-2"  href="">Github<img src={useBaseUrl('/img/icons/github-icon-black.svg')} class="ml-2"/></a>
             |
             <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center ml-2" href="">Twitter<img src={useBaseUrl('/img/icons/twitter-icon-blue.svg')} class="ml-2" alt="" /></a>
           </div>
