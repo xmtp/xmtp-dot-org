@@ -19,7 +19,7 @@ date: 2022-12-12T06:00
 
 Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
-How about his H3?
+### How about his H3?
 
 Voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 
@@ -31,11 +31,9 @@ Neque porro quisquam est:
 
 How about this numbered list, just for fun?
 
-Ut enim ad minima veniam
-
-Quis nostrum exercitationem
-
-Ullam corporis suscipit laboriosam
+1. Ut enim ad minima veniam
+2. Quis nostrum exercitationem
+3. Ullam corporis suscipit laboriosam
 
 Nisi ut aliquid ex ea [commodi consequatur](https://www.lipsum.com/ "Here's a link title")? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 
