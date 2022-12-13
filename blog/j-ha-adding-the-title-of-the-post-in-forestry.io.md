@@ -48,4 +48,10 @@ Here's a code block:
 
 I wonder how this ReactPlayer code for displaying a youtube video will work?
 
+Here is the code added in WYSIWYG mode using a snippet - that results in nothing displaying in the post:
+
+<ReactPlayer width="100%" controls url='https://www.youtube.com/watch?v=8_ufTvYBdLo' />
+
+Here is the code added in Raw editor mode to see if it somehow treats the code differently when generating the post:
+
 <ReactPlayer width="100%" controls url='https://www.youtube.com/watch?v=8_ufTvYBdLo' />
