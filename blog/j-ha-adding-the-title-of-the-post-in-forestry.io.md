@@ -15,8 +15,6 @@ image: "/blog/media/2022-12-12-blogpost-2.png"
 date: 2022-12-12T06:00
 
 ---
-import ReactPlayer from 'react-player'
-
 ## Should we start with this h2?
 
 Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
@@ -51,5 +49,7 @@ Here's a code block:
 ### Testing ReactPlayer
 
 I wonder how this ReactPlayer code for displaying a youtube video will work?
+
+import ReactPlayer from 'react-player'
 
 <ReactPlayer width="100%" controls url='https://www.youtube.com/watch?v=8_ufTvYBdLo' />
