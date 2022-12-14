@@ -20,11 +20,11 @@ const BuiltWithXmtp = () => {
         </li>
       )}
         <li className="relative group">
-          <a className="rounded border-solid rounded-md border-slate-200 flex justify-center py-6 mb-4 bg-black" href="mailto:richard@xmtp.com" alt="Submit your">
+          <a className="rounded border-solid rounded-md border-slate-200 flex justify-center py-6 mb-4 bg-black" href="https://forms.gle/p1VgVtkoGfHXANXt5" alt="Submit your">
             <img className="max-h-20 max-w-20 min-h-20" src="/img/builtWithXmtp/building.svg" alt=""></img>
           </a>
-          <a href="mailto:richard@xmtp.com"><h4 className="my-1 text-xl mt-0">Submit your project</h4></a>
-          <p className="text-base text-neutral-800 dark:text-neutral-300 line-clamp-3 mt-0 h-20">Have a project or company that's currently building on XMTP? <a href="mailto:richard@xmtp.com">Submit it here</a> and we'll add it to the showcase.</p>
+          <a href="https://forms.gle/p1VgVtkoGfHXANXt5"><h4 className="my-1 text-xl mt-0">Submit request</h4></a>
+          <p className="text-base text-neutral-800 dark:text-neutral-300 line-clamp-3 mt-0 h-20">Have a project building on XMTP? Want your profile updated? <a href="https://forms.gle/p1VgVtkoGfHXANXt5">Share your details</a> and we'll follow up.</p>
         </li>
     </ul>
   )
