@@ -20,7 +20,7 @@ const BuiltWithXmtp = () => {
         </li>
       )}
         <li className="relative group">
-          <a className="rounded border-solid rounded-md border-slate-200 flex justify-center py-6 mb-4 bg-black" href="https://forms.gle/p1VgVtkoGfHXANXt5" alt="Submit your">
+          <a className="rounded border-solid rounded-md border-slate-200 flex justify-center py-6 mb-4 bg-gradient-to-r from-indigo-900 to-red-500" href="https://forms.gle/p1VgVtkoGfHXANXt5" alt="Submit your">
             <img className="max-h-20 max-w-20 min-h-20" src="/img/builtWithXmtp/building.svg" alt=""></img>
           </a>
           <a href="https://forms.gle/p1VgVtkoGfHXANXt5"><h4 className="my-1 text-xl mt-0">Submit request</h4></a>
