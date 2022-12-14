@@ -23,7 +23,7 @@ As its name implies, the XMTP "hello world" app is intentionally barebones. Here
 
    ![Screenshot of the hello world app running in a browser at localhost:3000 showing a connected Ethereum account address, a Send gm button, and a gm message below the button](img/send-gm.png)
 
-The app includes only the code required to accomplish these steps and nothing more. This helps keep the codebase relatively bite-sized so that developers of all skill levels can ease into learning the basics of building a messaging app with XMTP.
+The app includes only the code required to accomplish these steps and little else. This helps keep the codebase relatively bite-sized so that developers of all skill levels can ease into learning the basics of building a messaging app with XMTP.
 
 Completing this tutorial doesn't cost you any Ether. At this time, all messaging with XMTP is free. To learn more, see [Will XMTP charge messaging fees?](/docs/dev-concepts/faq#will-xmtp-charge-messaging-fees)
 
@@ -94,7 +94,9 @@ This app uses [Web3Modal](https://web3modal.com/) and [Ethers](https://docs.ethe
 
    This adds the Ethers dependency to your `package.json`.
 
-3. In the existing `my-app/src` directory, create a `contexts` directory. In the `contexts` directory, create a file named `WalletContext.js`. This code provides the Web3Modal and Ethers functionality your "hello world" app needs to enable you to connect your wallet app. Copy this code block and paste it into the file:
+3. In the existing `my-app/src` directory, create a `contexts` directory. In the `contexts` directory, create a file named `WalletContext.js`. This code provides the Web3Modal and Ethers functionality your "hello world" app needs to enable you to connect your wallet app.
+
+   Copy this code block and paste it into the file:
 
     ```javascript showLineNumbers
     import { createContext, useState } from "react";
@@ -165,13 +167,15 @@ This app uses [Web3Modal](https://web3modal.com/) and [Ethers](https://docs.ethe
     };
     ```
 
-    <!--saul: line 14: not sure if "await" in is needed in: `const newSigner = await web3Provider.getSigner();`-->
+   To learn more about Context in React, see [Context](https://reactjs.org/docs/context.html).
 
-    <!--Deleted lines 38-47 here https://github.com/vehidtr/xmtp-chat-tutorial/blob/main/src/contexts/WalletContext.js#L38 - starting with `// Redirect User to Install MetaMask if not already installed` because a prereq of this tutorial is that users have a wallet app installed. I don't think we need to include this code in the hw app, especially because it implies that only MetaMask is supported.-->
+   <!--saul: line 14: not sure if "await" in is needed in: `const newSigner = await web3Provider.getSigner();`-->
 
-    To learn more about Context in React, see [Context](https://reactjs.org/docs/context.html).
+   <!--Deleted lines 38-47 here https://github.com/vehidtr/xmtp-chat-tutorial/blob/main/src/contexts/WalletContext.js#L38 - starting with `// Redirect User to Install MetaMask if not already installed` because a prereq of this tutorial is that users have a wallet app installed. I don't think we need to include this code in the hw app, especially because it implies that only MetaMask is supported.-->
 
-4. In the `my-app/src` directory, update the existing `App.js` file to use the `WalletContext` you just created and add the **Connect wallet** button UI element, as shown in the highlighted code. Copy this code block and paste it into the file, replacing all existing code.<!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/e81d4b36b87c63c94cc33801cfbb0f91970b8940-->
+4. In the `my-app/src` directory, update the existing `App.js` file to use the `WalletContext` you just created, add the **Connect wallet** button UI element, and remove elements of the vanilla React app, as shown in the highlighted code.
+
+   Copy this code block and paste it into the file, replacing all existing code:<!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/e81d4b36b87c63c94cc33801cfbb0f91970b8940-->
 
     ```javascript {1,3,6,9} showLineNumbers
     import { useContext } from 'react';
@@ -190,7 +194,9 @@ This app uses [Web3Modal](https://web3modal.com/) and [Ethers](https://docs.ethe
     export default App;
     ```
 
-5. In the `my-app/src` directory, update the existing `index.js` file to import the `WalletContextProvider` you created in a previous step and wrap it around your `<App />`, as shown in the highlighted code. This enables your app to access information provided by the wallet app context. <!--information? functionality? both?--> Also, import and use `Buffer` to help support message streaming, which you build in a subsequent step. <!--super light, but accurate statement about Buffer? A great writeup on Buffer for newbies: https://www.freecodecamp.org/news/do-you-want-a-better-understanding-of-buffer-in-node-js-check-this-out-2e29de2968e8/--> Copy this code block and paste it into the file, replacing all existing code.<!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/e81d4b36b87c63c94cc33801cfbb0f91970b8940#diff-bfe9874d239014961b1ae4e89875a6155667db834a410aaaa2ebe3cf89820556-->
+5. In the `my-app/src` directory, update the existing `index.js` file to import the `WalletContextProvider` you created in a previous step and wrap it around your `<App />`, as shown in the highlighted code. This enables your app to access information provided by the wallet app context. <!--information? functionality? both?--> Also, import and use `Buffer` to help support message streaming, which you build in a subsequent step. <!--super light, but accurate statement about Buffer? A great writeup on Buffer for newbies: https://www.freecodecamp.org/news/do-you-want-a-better-understanding-of-buffer-in-node-js-check-this-out-2e29de2968e8/-->
+
+   Copy this code block and paste it into the file, replacing all existing code.<!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/e81d4b36b87c63c94cc33801cfbb0f91970b8940#diff-bfe9874d239014961b1ae4e89875a6155667db834a410aaaa2ebe3cf89820556-->
 
     ```javascript {3,7,9,14,16} showLineNumbers
     import React from "react";
@@ -222,14 +228,14 @@ This app uses [Web3Modal](https://web3modal.com/) and [Ethers](https://docs.ethe
 
    ![Screenshot of the hello world app running in a browser at localhost:3000 with a Connect wallet button located at the top and center of the screen](img/connect-wallet-running.png)
 
-7. Click the **Connect wallet** button to open your wallet app browser extension and connect a blockchain account address to the app. Your "hello world" app UI doesn't change. However, in your wallet app you can see that your address is now connected to your "hello world" app running at `localhost:3000`:
+7. Click the **Connect wallet** button to open your wallet app browser extension and connect a blockchain account to the app. Your "hello world" app UI doesn't change. However, in your wallet app you can see that your account is now connected to your "hello world" app running at `localhost:3000`:
 
    ![Screenshot of the MetaMask wallet app browser extension showing an account named Amal with an Ethereum account address with the last 4 characters 80d7 connected to localhost:3000](img/connect-wallet-prompt.png)
 
 
 ## Step 3. Build the **Connect to XMTP** button
 
-To send and receive XMTP messages, you must create an XMTP identity associated with your blockchain account address. An app built with XMTP must give the user a way to create this identity and use it to connect to the XMTP network. Specifically, the user must:
+To send and receive XMTP messages, you must create an XMTP identity associated with your blockchain account. An app built with XMTP must give the user a way to create this identity and use it to connect to the XMTP network. Specifically, the user must:
 
 1. Sign to create an XMTP identity the first time they use an app built with XMTP (like creating an account).
 
@@ -237,11 +243,11 @@ To send and receive XMTP messages, you must create an XMTP identity associated w
 
 To learn more about creating and enabling an XMTP identity, see [Sign to send and receive messages using apps built with XMTP](https://xmtp.org/docs/dev-concepts/signatures).
 
-Your "hello world" app uses a **Connect to XMTP** button to enable you to provide these signatures and connect to the XMTP network.
+Your "hello world" app uses a **Connect to XMTP** button to enable you to provide these account signatures and connect to the XMTP network.
 
 **To build the Connect to XMTP button:**
 
-1. Install the XMTP client SDK for JavaScript. The SDK provides an XMTP messaging API client that enables your "hello world" app to communicate with the XMTP network. In the `my-app` directory, run:
+1. Install the [XMTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js). The SDK provides an XMTP message API client that enables your "hello world" app to communicate with the XMTP network. In the `my-app` directory, run:
 
     ```bash
     npm i --save @xmtp/xmtp-js
@@ -249,7 +255,15 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
 
     This command adds the `@xmtp/xmtp-js` dependency to your `package.json`.
 
-2. In the existing `my-app/src/contexts` directory, create a file named `XmtpContext.js`. This code provides the XMTP functionality your "hello world" app needs to create the XMTP messaging API client and use it to communicate with the XMTP network to send and retrieve messages. Copy this code block and paste it into the file:<!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/35c8cded3d20816cd06248f2d05c62d79a82c2f3--> <!--Removed lines 59 and 68 here `if (convo.peerAddress !== walletAddress) {` and `}` instead of including a wonky step later to remove it. It just shouldn't be in this app to begin w/ b/c this app is all about an address sending a message to itself--><!--removed extra blank line before `        listConversations();` - it was breaking the code block formatting-->
+2. In the existing `my-app/src/contexts` directory, create a file named `XmtpContext.js`. This code provides the XMTP functionality your "hello world" app needs to initiate the XMTP messaging API client and use it to communicate with the XMTP network to send and retrieve messages.
+
+   :::important
+
+   In this code block, `env: "dev"` connects your "hello world" app to the XMTP `dev` network. This means that the "gm" messages you send with the app are accessible using only apps that are connected to the XMTP `dev` network. To learn more about working with XMTP network environments, see [XMTP production and dev network environments](https://github.com/xmtp/xmtp-js#xmtp-production-and-dev-network-environments).
+
+   :::
+
+   Copy this code block and paste it into the file:<!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/35c8cded3d20816cd06248f2d05c62d79a82c2f3--> <!--Removed lines 59 and 68 here `if (convo.peerAddress !== walletAddress) {` and `}` instead of including a wonky step later to remove it. It just shouldn't be in this app to begin w/ b/c this app is all about an address sending a message to itself--><!--removed extra blank line before `        listConversations();` - it was breaking the code block formatting-->
 
     ```javascript showLineNumbers
     import React, { useState, createContext, useEffect, useContext } from "react";
@@ -338,13 +352,9 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
     };
     ```
 
-   :::note
+3. In the `my-app/src` directory, update the existing `App.js` file to use the `XmtpContext` you just created and add the **Connect to XMTP** button UI element, as shown in the highlighted code.
 
-   Note the `env: "dev"` code, which connects your app to the XMTP `dev` network. To learn more about available XMTP network environments, see [XMTP production and dev network environments](https://github.com/xmtp/xmtp-js#xmtp-production-and-dev-network-environments).
-
-   :::
-
-3. In the `my-app/src` directory, update the existing `App.js` file to use the `XmtpContext` you just created and add the **Connect to XMTP** button UI element, as shown in the highlighted code. Copy this code block and paste it into the file, replacing all existing code. <!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/35c8cded3d20816cd06248f2d05c62d79a82c2f3-->
+   Copy this code block and paste it into the file, replacing all existing code. <!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/35c8cded3d20816cd06248f2d05c62d79a82c2f3-->
 
     ```javascript {4,7,8,12-25,27} showLineNumbers
     import { useContext } from "react";
@@ -383,7 +393,11 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
 
 <!--removed extra blank line before `      return (` - it was breaking the code block formatting-->
 
-4. In the `my-app/src` directory, update the existing `index.js` file to import the `XmtpContextProvider` you created in a previous step and wrap it around your app, as shown in the highlighted code. This enables your app to access information provided by the XMTP context. Note that `XmtpContextProvider` is nested in `WalletContextProvider` because it needs access to the information provided by the wallet app context. Copy this code block and paste it into the file, replacing all existing code. <!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/35c8cded3d20816cd06248f2d05c62d79a82c2f3#diff-bfe9874d239014961b1ae4e89875a6155667db834a410aaaa2ebe3cf89820556-->
+4. In the `my-app/src` directory, update the existing `index.js` file to import the `XmtpContextProvider` you created in a previous step and wrap it around your app, as shown in the highlighted code. This enables your app to access information provided by the XMTP context.
+
+   Note that `XmtpContextProvider` is nested in `WalletContextProvider` because it needs access to the information provided by the wallet app context.
+
+   Copy this code block and paste it into the file, replacing all existing code. <!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/35c8cded3d20816cd06248f2d05c62d79a82c2f3#diff-bfe9874d239014961b1ae4e89875a6155667db834a410aaaa2ebe3cf89820556-->
 
     ```javascript {8,16,18} showLineNumbers
     import React from "react";
@@ -422,18 +436,20 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
 
    ![MetaMask browser extension Signature request window showing an "XMTP: Enable Identity" message](img/connect-to-xmtp-prompt.png)
 
-7. Your "hello world" app now shows your blockchain account address connected to the XMTP network:
+7. Your "hello world" app now shows your blockchain account connected to the XMTP network:
 
    ![Screenshot of the hello world app running in a browser at localhost:3000 showing a connected Ethereum account address](img/connected-address.png)
 
 
 ## Step 4. Build the **Send gm** button, display messages, and stream new messages
 
-Now that the XMTP identity associated with your blockchain account address is connected to the XMTP network, you can send and receive messages with XMTP.
+Now that the XMTP identity associated with your blockchain account is connected to the XMTP network, you can send and receive messages with XMTP.
 
-For simplicity, your "hello world" app enables you to send a preconfigured "gm" message (hello world) to your own already connected address. This makes it easy for you to immediately see the outcome of sending a message.
+For simplicity, your "hello world" app enables you to send a preconfigured "gm" message (hello world) to your own already connected account. This makes it easy for you to immediately see the outcome of sending a message.
 
-1. In the `my-app/src` directory, update the existing `App.js` file to add a `sendMessage` constant, which sends the **gm** message to the connected address. Then create the **Send gm** button UI element that, when clicked, uses `sendMessage` to send the **gm** message. You can see these changes in the highlighted code. Copy this code block and paste it into the file, replacing all existing code. <!--what is `sendMessage`? I called it a constant - but is there something more accurate? And does the button "use" `sendMessage` - is the wording correct?--> <!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/7e2ea197d9516fa93f75b5e866734cd06bf51cdc-->
+1. In the `my-app/src` directory, update the existing `App.js` file to add a `sendMessage` constant, which sends the **gm** message to the connected account. Then create the **Send gm** button UI element that, when clicked, uses `sendMessage` to send the **gm** message. You can see these changes in the highlighted code.
+
+   Copy this code block and paste it into the file, replacing all existing code. <!--what is `sendMessage`? I called it a constant - but is there something more accurate? And does the button "use" `sendMessage` - is the wording correct?--> <!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/7e2ea197d9516fa93f75b5e866734cd06bf51cdc-->
 
     ```javascript showLineNumbers {9-22,35,37-40}
     import { useContext } from "react";
@@ -488,7 +504,9 @@ For simplicity, your "hello world" app enables you to send a preconfigured "gm" 
     export default App;
     ```
 
-2. In the `my-app/src` directory, create a `hooks` directory. In the `hooks` directory, create a file named `useStreamMessages.js`. The purpose of the `useStreamMessages` hook is to enable your "hello world" app to listen for and display (stream) new messages as they become available. Without message streaming, you would need to refresh your app to display new messages. Copy this code block and paste it into the file: <!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/cf9f028b18aa2ac825aeeb0b8877bbb6bbcbbdc5-->
+2. In the `my-app/src` directory, create a `hooks` directory. In the `hooks` directory, create a file named `useStreamMessages.js`. The purpose of the `useStreamMessages` hook is to enable your "hello world" app to listen for and display (stream) new messages as they become available.
+
+   Copy this code block and paste it into the file: <!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/cf9f028b18aa2ac825aeeb0b8877bbb6bbcbbdc5-->
 
     ```javascript showLineNumbers
     import { useContext, useEffect, useState } from "react";
@@ -551,7 +569,9 @@ For simplicity, your "hello world" app enables you to send a preconfigured "gm" 
     export default useStreamMessages;
     ```
 
-3. In the `my-app/src` directory, update the existing `App.js` file to enable the app to display messages and stream messages using the `useStreamMessages` hook you just created, as shown in the highlighted code. Copy this code block and paste it into the file, replacing all existing code. <!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/cf9f028b18aa2ac825aeeb0b8877bbb6bbcbbdc5#diff-3d74dddefb6e35fbffe3c76ec0712d5c416352d9449e2fcc8210a9dee57dff67--><!--Correct descr of what this step is doing? For example, the addition of line 5 enables message streaming, but the rest of the changes are about providing a way to display messages in the conversation, yes?-->
+3. In the `my-app/src` directory, update the existing `App.js` file to enable the app to display existing messages and stream new messages using the `useStreamMessages` hook you just created, as shown in the highlighted code.
+
+   Copy this code block and paste it into the file, replacing all existing code. <!--diff: https://github.com/vehidtr/xmtp-chat-tutorial/commit/cf9f028b18aa2ac825aeeb0b8877bbb6bbcbbdc5#diff-3d74dddefb6e35fbffe3c76ec0712d5c416352d9449e2fcc8210a9dee57dff67--><!--Correct descr of what this step is doing? For example, the addition of line 5 enables message streaming, but the rest of the changes are about providing a way to display messages in the conversation, yes?-->
 
     ```js {5,10-11,42-51} showLineNumbers
     import { useContext } from "react";
@@ -620,13 +640,13 @@ For simplicity, your "hello world" app enables you to send a preconfigured "gm" 
 
 4. In the `my-app` directory, run `npm start` to start your "hello world" app. Click **Connect wallet** to connect your wallet app. Click** Connect to XMTP** and sign to enable your XMTP identity. The following UI appears:
 
-   ![Screenshot of the hello world app running in a browser at localhost:3000 showing a connected Ethereum account address and a Send gm button](img/connected.png)
+   :::important
 
-   :::note
-
-   If you've used your connected address to send XMTP messages to itself on the XMTP `dev` network in the past, the messages display.
+   If you've used your connected account to send XMTP messages to itself on the XMTP `dev` network in the past, the messages appear in your "hello world" app.
 
    :::
+
+   ![Screenshot of the hello world app running in a browser at localhost:3000 showing a connected Ethereum account address and a Send gm button](img/connected.png)
 
 <!--Saul: So I get some messages flickering in and out. I think there might be some conflict in how the state is being updated.-->
 
@@ -634,7 +654,7 @@ For simplicity, your "hello world" app enables you to send a preconfigured "gm" 
 
 <!--jha: not seeing any messages display and then disappear.-->
 
-6. Click **Send gm**. The **gm** message displays.
+6. Click **Send gm**. The **gm** message appears.
 
    ![Screenshot of the hello world app running in a browser at localhost:3000 showing a connected Ethereum account address, a Send gm button, and a gm message below the button](img/send-gm.png)
 
