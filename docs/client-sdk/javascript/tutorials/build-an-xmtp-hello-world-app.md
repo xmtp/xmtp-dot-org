@@ -310,6 +310,7 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
           const convos = await client.conversations.list();
           Promise.all(
             convos.map(async (convo) => {
+                if (convo.peerAddress === walletAddress) {
                 const messages = await convo.messages();
                 convoMessages.set(convo.peerAddress, messages);
                 conversations.set(convo.peerAddress, convo);
@@ -318,6 +319,7 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
                   convoMessages,
                   conversations,
                 });
+              }
             })
           ).then(() => {
             setProviderState({ ...providerState, loadingConversations: false });
