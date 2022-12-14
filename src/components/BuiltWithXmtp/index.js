@@ -8,7 +8,7 @@ const BuiltWithXmtp = () => {
       {ListOfDevelopers.map(developer => 
         <li className="relative group" key={developer.name}>
           <a className="rounded border-solid rounded-md border-slate-200 flex justify-center py-6 mb-4 bg-white" href={developer.href}>
-            <img className="max-h-20 max-w-20" src={useBaseUrl(developer.image)} alt={"this is an image of the" + developer.name + " icon"}></img>
+            <img className="max-h-20 max-w-20 min-h-20" src={useBaseUrl(developer.image)} alt={"this is an image of the" + developer.name + " icon"}></img>
           </a>
           <h4 className="my-1 text-xl mt-0">{developer.name}</h4>
           <p className="text-base text-neutral-800 dark:text-neutral-300 line-clamp-3 mt-0 h-20">{developer.description}</p>

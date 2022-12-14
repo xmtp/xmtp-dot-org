@@ -137,6 +137,10 @@
   height: 35rem;
 }
 
+.min-h-20 {
+  min-height: 5rem;
+}
+
 /* Override Docusaurus styling*/
 
 .container {
