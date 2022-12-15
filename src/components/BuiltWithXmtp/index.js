@@ -15,7 +15,7 @@ const BuiltWithXmtp = () => {
             <img className="max-h-20 max-w-20 min-h-20" src={useBaseUrl(developer.image)} alt={"this is an image of the" + developer.name + " icon"}></img>
           </a>
           <h4 className="my-1 text-xl mt-0">{developer.name}</h4>
-          <p className="text-base text-neutral-800 dark:text-neutral-300 line-clamp-3 mt-0 h-20">{developer.description}</p>
+          <p className="text-base dark:text-neutral-300 line-clamp-3 mt-0 h-20">{developer.description}</p>
           <div className='flex items-center'>
               {developer.github && (
                 <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center mr-2"  href={developer.github}>GitHub<img src={useBaseUrl('/img/icons/github-icon-black.svg')} className="ml-2"/></a>
@@ -30,7 +30,7 @@ const BuiltWithXmtp = () => {
             <img className="max-h-20 max-w-20 min-h-20" src="/img/builtWithXmtp/building.svg" alt=""></img>
           </a>
           <a href="https://forms.gle/p1VgVtkoGfHXANXt5"><h4 className="my-1 text-xl mt-0">Submit request</h4></a>
-          <p className="text-base text-neutral-800 dark:text-neutral-300 line-clamp-3 mt-0 h-20">Have a project building on XMTP? Want your profile updated? <a href="https://forms.gle/p1VgVtkoGfHXANXt5">Share your details</a> and we'll follow up.</p>
+          <p className="text-base dark:text-neutral-300 line-clamp-3 mt-0 h-20">Have a project building on XMTP? Want your profile updated? <a href="https://forms.gle/p1VgVtkoGfHXANXt5">Share your details</a> and we'll follow up.</p>
         </li>
     </ul>
   )
