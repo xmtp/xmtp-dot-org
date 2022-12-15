@@ -2,20 +2,26 @@ import React from 'react'
 import ListOfDevelopers from './ListOfDevs.json'
 import useBaseUrl from '@docusaurus/useBaseUrl/';
 
+
+
 const BuiltWithXmtp = () => {
+
+
   return (
     <ul className="list-none grid grid-cols-1 md:grid-cols-2 gap-6 px-0">
       {ListOfDevelopers.map(developer => 
         <li className="relative group" key={developer.name}>
-          <a className="rounded border-solid rounded-md border-slate-200 flex justify-center py-6 mb-4 bg-white" href={developer.href}>
+          <a className={`rounded border-solid rounded-md border-slate-200 flex justify-center py-6 mb-4 ` + developer.bgColor} href={developer.href}>
             <img className="max-h-20 max-w-20 min-h-20" src={useBaseUrl(developer.image)} alt={"this is an image of the" + developer.name + " icon"}></img>
           </a>
           <h4 className="my-1 text-xl mt-0">{developer.name}</h4>
           <p className="text-base text-neutral-800 dark:text-neutral-300 line-clamp-3 mt-0 h-20">{developer.description}</p>
           <div className='flex items-center'>
-            <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center mr-2"  href="">Github<img src={useBaseUrl('/img/icons/github-icon-black.svg')} className="ml-2"/></a>
-            |
-            <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center ml-2" href="">Twitter<img src={useBaseUrl('/img/icons/twitter-icon-blue.svg')} className="ml-2" alt="" /></a>
+              {developer.github && (
+                <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center mr-2"  href={developer.github}>Github<img src={useBaseUrl('/img/icons/github-icon-black.svg')} className="ml-2"/></a>
+              )}
+              | 
+              <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center ml-2 before:content-[|]" href={developer.twitter}>Twitter<img src={useBaseUrl('/img/icons/twitter-icon-blue.svg')} className="ml-2" alt="" /></a>
           </div>
         </li>
       )}
