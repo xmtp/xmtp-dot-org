@@ -67,7 +67,7 @@
       "name":"Boson App",
       "href":"https://bosonapp.io/",
       "image":"/img/builtWithXmtp/boson.png",
-      "description":"Tokenize, transfer, and trade any physical asset as an NFT",
+      "description":"Tokenize, transfer, and trade any physical asset as an NFT.",
       "github": "https://github.com/bosonprotocol",
       "twitter": "https://twitter.com/BosonProtocol"
    },
@@ -75,7 +75,7 @@
       "name":"Wallet Roullete",
       "href":"https://walletroulette.xyz/",
       "image":"/img/builtWithXmtp/walletroulette.png",
-      "description":"Get matched with random web3 users and chat",
+      "description":"Get matched with random web3 users and chat.",
       "twitter": "https://twitter.com/polmaire"
    }
  ]
