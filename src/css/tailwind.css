@@ -130,6 +130,10 @@
   height: 35rem;
 }
 
+.min-h-20 {
+  min-height: 5rem;
+}
+
 /* Override Docusaurus styling*/
 
 .container {
@@ -539,6 +543,12 @@ main[class*='docMainContainer'] tr {
 
 .markdown table th {
   text-align: left;
+}
+
+/* Overriding Docusaurus markdown styling */
+.markdown li + li,
+.markdown li > p {
+  margin: 0;
 }
 
 /* Custom theme colors*/

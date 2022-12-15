@@ -38,9 +38,37 @@ const tags = {
   nfts: { name: 'NFTs', url: 'https://blog.xmtp.com/tag/nfts/' },
   wallets: { name: 'Wallets', url: 'https://blog.xmtp.com/tag/wallets/' },
   privacySecurity: { name: 'Privacy & Security', url: 'https://blog.xmtp.com/tag/privacy-security/' },
+  protocol: { name: 'Protocol', url: 'https://blog.xmtp.com/tag/protocol/' },
 }
 
 export const BLOG_DATA = [
+  {
+    tag: [tags.privacySecurity, tags.protocol, tags.announcements],
+    title: 'XMTP v2 Is Here',
+    content:
+      'The latest version brings conversation filtering and improvements to privacy',
+    user: {
+      name: 'Matt Galligan',
+      date: '06 Dec 2022 · 3 min read',
+      img: 'matt-galligan.jpeg',
+      url: 'https://blog.xmtp.com/author/mg/'
+    },
+    url: 'https://blog.xmtp.com/xmtp-v2-is-here/',
+  },
+  {
+    tag: [tags.developers, tags.spotlight, tags.messaging],
+    title:
+      'meTokens Integrates with XMTP',
+    content:
+      'With XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.',
+    user: {
+      name: 'Peter Denton',
+      date: '29 Nov 2022 · 2 min read',
+      img: 'peter-denton.jpeg',
+      url: 'https://blog.xmtp.com/author/peter/'
+    },
+    url: 'https://blog.xmtp.com/metokens-integrates-with-xmtp/',
+  },
   {
     tag: [tags.developers, tags.hackathon, tags.spotlight],
     title:
@@ -54,33 +82,6 @@ export const BLOG_DATA = [
       url: 'https://blog.xmtp.com/author/peter/'
     },
     url: 'https://blog.xmtp.com/eth-sf-2022/',
-  },
-  {
-    tag: [tags.lens, tags.developers, tags.announcements, tags.spotlight],
-    title: 'XMTP delivers secure DMs with the Lens API',
-    content:
-      'Lens Protocol has adopted XMTP to provide a secure and private DM layer for the entire Lens ecosystem.',
-    user: {
-      name: 'Matt Galligan',
-      date: '03 Nov 2022 · 3 min read',
-      img: 'matt-galligan.jpeg',
-      url: 'https://blog.xmtp.com/author/mg/'
-    },
-    url: 'https://blog.xmtp.com/lens-dms-with-xmtp/',
-  },
-  {
-    tag: [tags.developers, tags.hackathon, tags.messaging],
-    title:
-      'ETHOnline Wrap Up: De-Chat, GameJutsu, and Dehitas Take Top Honors',
-    content:
-      'ETH Online hackers build incredible apps across video chat, game security, and talent platforms using XMTP.',
-    user: {
-      name: 'Peter Denton',
-      date: '05 Oct 2022 · 4 min read',
-      img: 'peter-denton.jpeg',
-      url: 'https://blog.xmtp.com/author/peter/'
-    },
-    url: 'https://blog.xmtp.com/ethonline-2022-wrap-up/',
   },
 ]
 

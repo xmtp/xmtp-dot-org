@@ -62,7 +62,7 @@ const config = {
       {
         id: 'community',
         path: 'community',
-        routeBasePath: 'community',
+        routeBasePath: '/',
         sidebarPath: require.resolve('./sidebars/sidebars-community.js'),
       },
     ],
@@ -91,6 +91,7 @@ const config = {
         defaultMode:'light',
         disableSwitch: false,
       },
+      image: '/img/mobile-animation-bg.jpg',
       navbar: {
         title: '',
         logo: {
@@ -113,7 +114,7 @@ const config = {
               },
               {
                 to: 'docs/dev-concepts/introduction',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Development concepts icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/development-icon.svg" alt="Development concepts icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Development concepts</div>
                  <div class="subtext text-sm text-normal whitespace-pre-line">Learn about the protocol, architecture, security, FAQ, and more</div></div></div>`,
               },
@@ -131,10 +132,16 @@ const config = {
             label: 'Community',
             items: [
               {
-                to: 'community/community',
+                to: 'community',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Join in and contribute</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Learn ways to join in and contribute to the XMTP community</div></div></div>`,
+                <div class="subtext text-sm text-normal whitespace-pre-line">Join in and contribute to the XMTP community</div></div></div>`,
+              },
+              {
+                to: 'built-with-xmtp',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
               },
               {
                 to: 'community/code-of-conduct',
@@ -223,8 +230,8 @@ const config = {
                 to: `/docs/dev-concepts/wallets`,
               },
               {
-                label: `Signatures`,
-                to: `/docs/dev-concepts/signatures`,
+                label: `Account signatures`,
+                to: `/docs/dev-concepts/account-signatures`,
               },
               {
                 label: `Contribute to XMTP`,
@@ -265,6 +272,10 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'Built with XMTP',
+                href: 'built-with-xmtp',
+              },
+              {
                 label: 'Discussions',
                 href: 'https://github.com/orgs/xmtp/discussions',
               },
@@ -287,6 +298,10 @@ const config = {
               {
                 label: 'XMTP code of conduct',
                 to: '/community/code-of-conduct',
+              },
+              {
+                label: 'Careers at XMTP Labs',
+                href: 'https://blog.xmtp.com/careers/',
               },
             ],
           },
