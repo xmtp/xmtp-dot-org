@@ -56,7 +56,6 @@ export default function FooterWrapper(props) {
               />
             </ALink>
             <ALink to="https://discord.gg/xmtp">
-              foo
               <img alt="Go to the XMTP Discord" src="/img/discord-icon.svg" />
             </ALink>
           </div>
