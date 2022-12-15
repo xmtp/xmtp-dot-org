@@ -12,6 +12,7 @@
       "name":"Lenster",
       "href":"https://lenster.xyz",
       "image":"/img/builtWithXmtp/lenster.svg",
+      "bgColor": "bg-[#8B5CF6]",
       "description":"Lenster is a composable, decentralized, and permissionless social media webapp built with Lens Protocol.",
       "github": "https://github.com/lensterxyz/lenster",
       "twitter": "https://twitter.com/lensterxyz"
