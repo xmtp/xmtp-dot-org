@@ -3,21 +3,21 @@
       "name":"XMTP.chat",
       "href":"https://xmtp.chat",
       "image":"/img/builtWithXmtp/xmtp.svg",
-      "description":"XMTP.chat is an example chat application demonstrating the core concepts and capabilities of the XMTP client SDK.",
-      "github": "",
-      "twitter": ""
+      "description":"XMTP.chat is an example chat application demonstrating the core capabilities of the XMTP client SDK.",
+      "github": "https://github.com/xmtp/example-chat-react",
+      "twitter": "https://twitter.com/xmtp_"
    },
    {
       "name":"Lenster",
       "href":"https://lenster.xyz",
       "image":"/img/builtWithXmtp/lenster.svg",
-      "description":"Lenster is a composable, decentralized, and permissionless social media web app built with Lens Protocol.",
+      "description":"Lenster is a composable, decentralized, and permissionless social media webapp built with Lens Protocol.",
       "github": "https://github.com/lensterxyz/lenster",
       "twitter": "https://twitter.com/lensterxyz"
    },
    {
-      "name":"Beep3er",
-      "href":"https://metokens.com/discover",
+      "name":"Beep3r",
+      "href":"https://bb3.xyz/",
       "image":"/img/builtWithXmtp/beeper.png",
       "description":"Bringing back the joy of owning a 90s pager device and the original vision of twttr - text networks.",
       "github": "https://github.com/FUTUREPRIMITIVEXYZ/bb3-beep3r",
@@ -32,27 +32,34 @@
       "twitter": "https://twitter.com/meTokens"
    },
    {
-      "name":"Relay",
+      "name":"Relay Receiver",
       "href":"https://relay.cc/",
       "image":"/img/builtWithXmtp/relay.png",
       "description":"Relay’s goal is to provide open-source tools and products on top of XMTP, and create the best place for web3 identities.",
+      "github": "https://github.com/relaycc",
       "twitter": "https://twitter.com/relay_eth"
    },
    {
       "name":"Lensport",
       "href":"https://lensport.io/",
       "image":"/img/builtWithXmtp/lensport.png",
-      "description":"Discover, collect, and sell Lens Posts. Invest in creators you support. Built on Lens Protocol.",
-      "github": "https://github.com/lensterxyz/lenster",
-      "twitter": "https://twitter.com/lensterxyz"
+      "description":"Discover, collect, and sell Lens Posts to invest in creators you support. Built on Lens Protocol.",
+      "twitter": "https://twitter.com/lensport_io"
    },
    {
       "name":"GameJutsu",
       "href":"https://gamejutsu.app/",
       "image":"/img/builtWithXmtp/gamejutsu.png",
-      "description":"GameJutsu is a gaming framework to take care of the on-chain / off-chain communication on Web3.",
+      "description":"A gaming app that uses end-to-end encrypted messages as signed game moves between players.",
       "github": "https://github.com/chainhackers/GameJutsu",
-      "twitter": "https://twitter.com/bb3labs"
+      "twitter": "https://twitter.com/ChainHackerClan"
+   },
+   {
+      "name":"Buttrfly",
+      "href":"https://www.buttrfly.app/",
+      "image":"/img/builtWithXmtp/buttrfly.png",
+      "description":"Decentralized social media app built for a mobile first experience on iOS. Built on Lens Protocol.",
+      "twitter": "https://twitter.com/buttrfly_app"
    }
  ]
 
