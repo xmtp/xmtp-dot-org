@@ -60,6 +60,14 @@
       "image":"/img/builtWithXmtp/buttrfly.png",
       "description":"Decentralized social media app built for a mobile first experience on iOS. Built on Lens Protocol.",
       "twitter": "https://twitter.com/buttrfly_app"
+   },
+   {
+      "name":"Boson App",
+      "href":"https://bosonapp.io/",
+      "image":"/img/builtWithXmtp/boson.png",
+      "description":"Tokenize, transfer, and trade any physical asset as an NFT",
+      "github": "https://github.com/bosonprotocol",
+      "twitter": "https://twitter.com/BosonProtocol"
    }
  ]
 
