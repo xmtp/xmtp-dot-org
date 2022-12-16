@@ -320,18 +320,23 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
         const listConversations = async () => {
           console.log("Listing conversations");
           setProviderState({ ...providerState, loadingConversations: true });
-          const { client, conversations } = providerState;
+          const { client, convoMessages, conversations } = providerState;
           const convos = await client.conversations.list();
-          const convoMessages = new Map(providerState.convoMessages);
           Promise.all(
             convos.map(async (convo) => {
-                if (convo.peerAddress === walletAddress) {
-                const messages = await convo.messages();
-                convoMessages.set(convo.peerAddress, messages);
+              if (convo.peerAddress === walletAddress) {
+                let messages = convoMessages.get(convo.peerAddress);
+                if (!messages) {
+                  messages = await convo.messages();
+                  convoMessages.set(convo.peerAddress, messages);
+                  setProviderState({
+                    ...providerState,
+                    convoMessages,
+                  });
+                }
                 conversations.set(convo.peerAddress, convo);
                 setProviderState({
                   ...providerState,
-                  convoMessages,
                   conversations,
                 });
               }
@@ -339,7 +344,7 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
           ).then(() => {
             setProviderState({ ...providerState, loadingConversations: false });
           });
-        };    
+        };
 
         listConversations();
         // eslint-disable-next-line
