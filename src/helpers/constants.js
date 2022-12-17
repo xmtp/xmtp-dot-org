@@ -1,10 +1,10 @@
 export const HEADER_DATA = [
   {
-    title: 'Development concepts',
+    title: 'Preview new SDKs and React Native app',
     subtitle:
-      'Learn about the protocol, architecture, encryption, authentication, and more',
-    url: '/docs/dev-concepts/introduction',
-    icon: 'development-icon.svg',
+      'Try dev previews of Flutter and Swift client SDKs and an example React Native chat app',
+    url: 'sdks-and-tools',
+    icon: 'dms-icon.svg',
   },
   {
     title: 'Quickstart: Client SDK',
@@ -13,11 +13,11 @@ export const HEADER_DATA = [
     icon: 'quickstart-icon.svg',
   },
   {
-    title: 'Build Lens DMs with XMTP',
+    title: 'Development concepts',
     subtitle:
-      'Learn how to build key XMTP chat features to provide direct messaging in a Lens app',
-    url: '/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app',
-    icon: 'dms-icon.svg',
+      'Learn about the protocol, architecture, encryption, authentication, and more',
+    url: '/docs/dev-concepts/introduction',
+    icon: 'development-icon.svg',
   },
 ]
 
@@ -86,6 +86,9 @@ export const BLOG_DATA = [
 ]
 
 export const XMTP_JS_URL = 'https://api.github.com/repos/xmtp/xmtp-js'
+export const XMTP_FLUTTER_URL = 'https://api.github.com/repos/xmtp/xmtp-flutter'
+export const XMTP_IOS_URL = 'https://api.github.com/repos/xmtp/xmtp-ios'
+export const XMTP_REACT_NATIVE_URL = 'https://api.github.com/repos/xmtp/example-chat-react-native'
 export const QUICKSTART_CHAT_URL = 'https://api.github.com/repos/xmtp/xmtp-quickstart-react'
 export const EXAMPLE_CHAT_URL = 'https://api.github.com/repos/xmtp/example-chat-react'
 

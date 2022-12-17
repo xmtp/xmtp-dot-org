@@ -3,36 +3,30 @@ hide_table_of_contents: true
 ---
 import Feedback from '/src/components/Feedback'
 
-# XMTP SDK and developer tools
+# XMTP SDKs and developer tools
 
-## XMTP client SDK for Javascript
+Explore SDKs and developer tools that help you build with XMTP.
 
-A TypeScript implementation of an XMTP client for use with JavaScript and React apps.
+## SDKs
 
-[GitHub repo](https://github.com/xmtp/xmtp-js) | [Docs](docs/client-sdk/javascript/tutorials/quickstart)
+```mdx-code-block
+import { SDKCardList } from '@site/src/components/CardList';
 
-## XMTP Quickstart Chat app repo
+<SDKCardList />
+```
 
-An example React chat app you can use as a developer tool to learn how to build a basic messaging app using the XMTP client SDK. The app is intentionally streamlined and unopinionated, making it a good quickstart launching point for building with XMTP.
+## Example apps
 
-[GitHub repo](https://github.com/xmtp/xmtp-quickstart-react)
+```mdx-code-block
+import { ExampleAppCardList } from '@site/src/components/CardList';
 
-## XMTP Chat app repo
+<ExampleAppCardList />
+```
 
-An example React chat app that demonstrates both basic and advanced features of the XMTP client SDK.
+## More tools
 
-[GitHub repo](https://github.com/xmtp/example-chat-react)
+```mdx-code-block
+import { MoreToolsCardList } from '@site/src/components/CardList';
 
-## Hosted XMTP Chat app
-
-XMTP Labs hosts a deployment of XMTP Chat connected to the XMTP `production` network.
-
-[Try it](https://xmtp.chat)
-
-## XMTP status
-
-View the real-time status of the XMTP production network, XMTP dev network, and XMTP Chat app.
-
-[View status page](https://status.xmtp.com/)
-
-<Feedback url="https://github.com/orgs/xmtp/discussions/categories/q-a"/>
+<MoreToolsCardList />
+```

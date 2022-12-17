@@ -10,6 +10,9 @@ import {
   HEADER_DATA,
   BLOG_DATA,
   XMTP_JS_URL,
+  XMTP_FLUTTER_URL,
+  XMTP_IOS_URL,
+  XMTP_REACT_NATIVE_URL,
   QUICKSTART_CHAT_URL,
   EXAMPLE_CHAT_URL,
   CHAT_ITEM,
@@ -32,6 +35,21 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     })
+    const responseFlutter = await fetch(XMTP_FLUTTER_URL, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
+    const responseIos = await fetch(XMTP_IOS_URL, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
+    const responseRn = await fetch(XMTP_REACT_NATIVE_URL, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
     const responseQuickChat = await fetch(QUICKSTART_CHAT_URL, {
       headers: {
         Authorization: customFields.personalToken,
@@ -45,6 +63,12 @@ export const MainContent = ({ styles }) => {
 
     const dataXmtp = await responseXmtp.json()
     if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp]
+    const dataFlutter = await responseFlutter.json()
+    if (dataFlutter && !dataFlutter.message) items = [...items, dataFlutter]
+    const dataIos = await responseIos.json()
+    if (dataIos && !dataIos.message) items = [...items, dataIos]
+    const dataRn = await responseRn.json()
+    if (dataRn && !dataRn.message) items = [...items, dataRn]
     const dataQuickChat = await responseQuickChat.json()
     if (dataQuickChat && !dataQuickChat.message) items = [...items, dataQuickChat]
     const dataChat = await responseChat.json()
@@ -340,15 +364,15 @@ export const MainContent = ({ styles }) => {
             </h1>
             <p className="text-neutral-800 text-base leading-6 text-center lg:max-w-[70%] mb-8">
               From hackathons to startups, developers are building with XMTP to
-              address use cases for secure messaging for blockchain accounts
+              address use cases for secure messaging for blockchain accounts.
             </p>
             <button className="bg-black rounded-lg w-52 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
               <img src="/img/xmtp-sm-icon.png" className="w-5 h-5 mr-2.5" />
               <Link
                 className="hover:no-underline text-white hover:text-white"
-                to="/docs/client-sdk/javascript/tutorials/quickstart"
+                to="built-with-xmtp"
               >
-                Start building
+                View app showcase
               </Link>
             </button>
           </div>

@@ -31,7 +31,7 @@
     --ifm-navbar-link-color: var(--ifm-navbar-link-hover-color);
     --ifm-navbar-font-size: 14px;
 
-    /* --ifm-font-family-monospace: 'Inconsolata', SFMono-Regular, ui-monospace, 
+    /* --ifm-font-family-monospace: 'Inconsolata', SFMono-Regular, ui-monospace,
       Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; */
 
     --font-code: var(--ifm-font-family-monospace) !important;
@@ -584,6 +584,33 @@ main[class*='docMainContainer'] tr {
     rgba(52, 211, 153, 1) 0%,
     rgba(59, 130, 246, 1) 100%
   );
+}
+
+/* styles for cards on SDKs and tools page*/
+.card-container {
+  flex: 1 1 100%;
+  margin-bottom: 24px;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 450px) {
+  .card-container {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 451px) {
+  .card-container {
+    flex: 1 1 50%;
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+  }
 }
 
 @media only screen and (max-width: 1454px) {

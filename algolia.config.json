@@ -130,7 +130,7 @@
         "lvl0": {
           "selector": "",
           "global": true,
-          "default_value": "SDK and tools"
+          "default_value": "SDKs and tools"
         },
         "lvl1": "article h1",
         "lvl2": "article h2",
