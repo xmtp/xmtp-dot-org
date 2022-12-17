@@ -7,17 +7,17 @@ export const HEADER_DATA = [
     icon: 'dms-icon.svg',
   },
   {
-    title: 'Quickstart: Client SDK',
+    title: 'Quickstart: Client SDK for JavaScript',
     subtitle: 'Build apps and tools for messaging between blockchain accounts',
     url: '/docs/client-sdk/javascript/tutorials/quickstart',
     icon: 'quickstart-icon.svg',
   },
   {
-    title: 'Development concepts',
+    title: 'Build Lens DMs with XMTP',
     subtitle:
-      'Learn about the protocol, architecture, encryption, authentication, and more',
-    url: '/docs/dev-concepts/introduction',
-    icon: 'development-icon.svg',
+      'Learn how to build key XMTP chat features to provide direct messaging in a Lens app',
+    url: '/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app',
+    icon: 'dms-icon.svg',
   },
 ]
 
