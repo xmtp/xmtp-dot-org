@@ -9,21 +9,21 @@ const sdkcards = [
     description: 'A TypeScript implementation of an XMTP client for use with JavaScript and React apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-js' },
     secondLink: { name: 'Docs', link: 'docs/client-sdk/javascript/tutorials/quickstart' },
-    logo: 'img/javascript-icon.svg',
+    logo: 'img/js.svg',
     theme: 'midnight',
   },
   {
     title: 'XMTP client SDK for Flutter',
     description: '🚧 Dev preview: A Flutter implementation of an XMTP client for use with mobile apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-flutter' },
-    logo: 'img/flutter-icon.svg',
+    logo: 'img/flutter.svg',
     theme: 'daylight',
   },
   {
     title: 'XMTP client SDK for Swift',
     description: '🚧 Dev preview: A Swift implementation of an XMTP client for use with iOS apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-ios' },
-    logo: 'img/swift-icon.svg',
+    logo: 'img/swift.svg',
     theme: 'sunrise',
   },
 ]
@@ -55,7 +55,7 @@ const exampleappcards = [
     title: 'XMTP Quickstart Chat app',
     description: 'An example React app you can use to learn to build a basic messaging app using the XMTP client SDK',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-quickstart-react' },
-    logo: 'img/xmtp-icon.svg',
+    logo: 'img/x-mark.svg',
     theme: 'midnight',
   },
   {
@@ -63,14 +63,14 @@ const exampleappcards = [
     description: 'An example React app that demos both basic and advanced features of the XMTP client SDK',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-chat-react' },
     secondLink: { name: 'Try it', link: 'https://xmtp.chat/' },
-    logo: 'img/xmtp-icon.svg',
+    logo: 'img/x-mark.svg',
     theme: 'daylight',
   },
   {
     title: 'XMTP Chat React Native app',
     description: '🚧 Dev preview: An example app that demos how to integrate the XMTP client SDK for JavaSript into a Reative Native app',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-chat-react-native' },
-    logo: 'img/xmtp-icon.svg',
+    logo: 'img/x-mark.svg',
     theme: 'sunrise',
   },
 
@@ -103,7 +103,7 @@ const moretoolcards = [
     title: 'XMTP status page',
     description: 'View the real-time status of the XMTP production network, XMTP dev network, and XMTP Chat app.',
     firstLink: { name: 'View status page', link: 'https://status.xmtp.com/' },
-    logo: 'img/xmtp-icon.svg',
+    logo: 'img/x-mark.svg',
     theme: 'midnight',
   },
 ]
@@ -134,11 +134,11 @@ const Card = ({ title, description, firstLink, secondLink, logo, theme, classNam
   return (
     <div className={`mr-8 ${className}`}>
       <article
-        className={`${theme}-theme grid grid-flow-col items-end  h-36 rounded-lg`}
+        className={`${theme}-theme grid grid-flow-col items-end h-36 rounded-lg relative`}
       >
-        <h3 className="text-white text-2xl bold ml-6 mb-6"> {title}</h3>
-        <section className="h-full grid justify-end items-center mr-3">
-          <img src={logo} alt="card-logo" style={{ width: '30px', height: '30px' }} />
+        <h3 className="text-white text-xl bold ml-6 mb-6 w-9/12"> {title}</h3>
+        <section className="absolute right-4 bottom-4">
+          <img src={logo} alt="card-logo" className="opacity-25" />
         </section>
       </article>
       <p className="mb-2 mt-4">{description}</p>
