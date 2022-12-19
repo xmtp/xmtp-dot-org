@@ -28,12 +28,13 @@ const sdkcards = [
   },
 ]
 
+
 // this provides the list of cards  in the SDKs section on the SDKs and tools page
 const SDKCardList = () => {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <div className="list-none grid grid-cols-1 md:grid-cols-2 px-0 gap-8 mb-8">
       {sdkcards.map((card) => (
-        <div className="card-container">
+        <div className="relative group">
           <Card
             key={card.title}
             title={card.title}
@@ -79,9 +80,9 @@ const exampleappcards = [
 // this provides the list of cards  in the Example Apps section on the SDKs and tools page
 const ExampleAppCardList = () => {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <div className="list-none grid grid-cols-1 md:grid-cols-2 px-0 gap-8 mb-8">
       {exampleappcards.map((card) => (
-        <div className="card-container">
+        <div className="relative group">
           <Card
             key={card.title}
             title={card.title}
@@ -111,9 +112,9 @@ const moretoolcards = [
 // this provides the list of cards  in the Example Apps section on the SDKs and tools page
 const MoreToolsCardList = () => {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <div className="list-none grid grid-cols-1 md:grid-cols-2 px-0 gap-8 mb-8">
       {moretoolcards.map((card) => (
-        <div className="card-container">
+        <div className="relative group">
           <Card
             key={card.title}
             title={card.title}
@@ -132,7 +133,7 @@ const MoreToolsCardList = () => {
 // this is the code that creates the individual cards
 const Card = ({ title, description, firstLink, secondLink, logo, theme, className }) => {
   return (
-    <div className={`mr-8 ${className}`}>
+    <div>
       <article
         className={`${theme}-theme grid grid-flow-col items-end h-36 rounded-lg relative`}
       >
