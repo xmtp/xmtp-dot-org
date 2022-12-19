@@ -2,7 +2,7 @@ export const HEADER_DATA = [
   {
     title: 'Preview new SDKs and React Native app',
     subtitle:
-      'Try out dev previews of Flutter and Swift client SDKs and an example React Native chat app',
+      'Try dev previews of Flutter and Swift client SDKs and an example React Native chat app',
     url: 'sdks-and-tools',
     icon: 'beaker-icon.svg',
   },

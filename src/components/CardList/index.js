@@ -5,7 +5,7 @@ import '/src/css/tailwind.css'
 // this provides the content in the cards in the SDKs section on the SDKs and tools page
 const sdkcards = [
   {
-    title: 'XMTP client SDK for JavaScript',
+    title: 'JavaScript client SDK',
     description: 'A TypeScript implementation of an XMTP client for use with JavaScript and React apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-js' },
     secondLink: { name: 'Docs', link: 'docs/client-sdk/javascript/tutorials/quickstart' },
@@ -13,15 +13,15 @@ const sdkcards = [
     theme: 'midnight',
   },
   {
-    title: 'XMTP client SDK for Flutter',
-    description: '🚧 Dev preview: A Flutter implementation of an XMTP client for use with mobile apps',
+    title: 'Flutter client SDK',
+    description: '🧑‍💻 Dev preview: A Flutter implementation of an XMTP client for use with mobile apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-flutter' },
     logo: 'img/flutter.svg',
     theme: 'daylight',
   },
   {
-    title: 'XMTP client SDK for Swift',
-    description: '🚧 Dev preview: A Swift implementation of an XMTP client for use with iOS apps',
+    title: 'Swift client SDK',
+    description: '🧑‍💻 Dev preview: A Swift implementation of an XMTP client for use with iOS apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-ios' },
     logo: 'img/swift.svg',
     theme: 'sunrise',
@@ -69,7 +69,7 @@ const exampleappcards = [
   },
   {
     title: 'XMTP Chat React Native app',
-    description: '🚧 Dev preview: An example app that demos how to integrate the XMTP client SDK for JavaSript into a Reative Native app',
+    description: '🧑‍💻 Dev preview: An example app that demos how to integrate the XMTP client SDK for JavaSript into a Reative Native app',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-chat-react-native' },
     logo: 'img/x-mark.svg',
     theme: 'sunrise',
