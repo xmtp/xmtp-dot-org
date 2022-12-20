@@ -123,7 +123,7 @@ const config = {
           {
             to: 'sdks-and-tools', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
-            label: 'SDK and tools',
+            label: 'SDKs and tools',
             activeBaseRegex: `/`,
           },
           {
@@ -244,23 +244,15 @@ const config = {
             ],
           },
           {
-            title: 'SDK and tools',
+            title: 'SDKs and tools',
             items: [
               {
-                label: 'XMTP JavaScript SDK',
-                href: 'https://github.com/xmtp/xmtp-js',
+                label: 'SDKs',
+                to: 'sdks-and-tools#sdks',
               },
               {
-                label: 'XMTP Quickstart Chat app repo',
-                href: 'https://github.com/xmtp/xmtp-quickstart-react',
-              },
-              {
-                label: 'XMTP Chat app repo',
-                href: 'https://github.com/xmtp/example-chat-react/',
-              },
-              {
-                label: 'Hosted XMTP Chat app',
-                href: 'https://xmtp.chat/',
+                label: 'Example apps',
+                to: 'sdks-and-tools#example-apps',
               },
               {
                 label: 'XMTP status page',

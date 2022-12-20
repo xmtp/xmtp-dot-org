@@ -1,13 +1,13 @@
 export const HEADER_DATA = [
   {
-    title: 'Development concepts',
+    title: 'Preview new SDKs and React Native app',
     subtitle:
-      'Learn about the protocol, architecture, encryption, authentication, and more',
-    url: '/docs/dev-concepts/introduction',
-    icon: 'development-icon.svg',
+      'Try dev previews of Flutter and Swift client SDKs and an example React Native chat app',
+    url: 'sdks-and-tools',
+    icon: 'beaker-icon.svg',
   },
   {
-    title: 'Quickstart: Client SDK',
+    title: 'Quickstart: Client SDK for JavaScript',
     subtitle: 'Build apps and tools for messaging between blockchain accounts',
     url: '/docs/client-sdk/javascript/tutorials/quickstart',
     icon: 'quickstart-icon.svg',
@@ -86,6 +86,9 @@ export const BLOG_DATA = [
 ]
 
 export const XMTP_JS_URL = 'https://api.github.com/repos/xmtp/xmtp-js'
+export const XMTP_FLUTTER_URL = 'https://api.github.com/repos/xmtp/xmtp-flutter'
+export const XMTP_IOS_URL = 'https://api.github.com/repos/xmtp/xmtp-ios'
+export const XMTP_REACT_NATIVE_URL = 'https://api.github.com/repos/xmtp/example-chat-react-native'
 export const QUICKSTART_CHAT_URL = 'https://api.github.com/repos/xmtp/xmtp-quickstart-react'
 export const EXAMPLE_CHAT_URL = 'https://api.github.com/repos/xmtp/example-chat-react'
 
