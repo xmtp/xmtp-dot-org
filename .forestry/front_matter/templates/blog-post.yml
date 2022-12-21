@@ -69,3 +69,5 @@ fields:
     time_format: 
     display_utc: false
     export_format: YYYY-MM-DDThh:mm
+pages:
+- blog/xmtp-is-delivering-secure-direct-messages-with-the-lens-api.md
