@@ -4,6 +4,7 @@ tags:
 - Developers
 - " Announcements"
 - " Spotlight"
+- New label
 hide_table_of_contents: true
 title: XMTP is delivering secure direct messages with the Lens API
 description: Lens Protocol has adopted XMTP to provide a secure and private direct
