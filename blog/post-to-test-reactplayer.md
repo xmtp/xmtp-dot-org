@@ -10,8 +10,6 @@ import ReactPlayer from 'react-player'
 
 Inspiration comes from everywhere in web3. Check out XMTP co-founder Shane Mac as he shares how Linkin Park’s Mike Shinoda was a key inspiration for XMTP’s approach to web3 messaging.
 
-![](/img/blog-shinoda-title-image.png)
-
 <!--truncate-->
 
 In this clip from an XMTP all-hands meeting, Shane takes us back to mid-2020 when we were gathering on Clubhouse as you could have the WILDEST conversations. Shinoda joined a room and talked about Facebook cutting him off from his audience, and how web3 could solve this for all artists in the future.
@@ -20,22 +18,9 @@ In this clip from an XMTP all-hands meeting, Shane takes us back to mid-2020 whe
 
 <ReactPlayer width="100%" controls url='https://www.youtube.com/embed/AboZKQE_jnc' />
 
-
-## Using ReactPlayer to play video stored in `xmtp-dot-org` repo:
-
-<ReactPlayer width="100%" controls url='/img/test.mp4' />
-
 ## Using ReactPlayer to play audio via SoundCloud URL:
 
 <ReactPlayer width="100%" controls url='https://soundcloud.com/charles-hawthorne-4/seqeaster-sunday?si=72d718edd38346f3a074d3f84580ae7c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing' />
-
-## Using ReactPlayer to play audio stored in `xmtp-dot-org` repo with a thumbnail defined:
-
-<ReactPlayer width="100%" controls config = {{file: { attributes: { poster: '/img/SpacesRecap.png' }}}} url='/img/XMTP_Twitter-Spaces-Event_FCv1-1.mp3' />
-
-## Using ReactPlayer to play audio stored in `xmtp-dot-org` repo with no thumbnail defined - needs thumbnail:
-
-<ReactPlayer width="100%" controls url='/img/XMTP_Twitter-Spaces-Event_FCv1-1.mp3' />
 
 2.5 years later, XMTP + Lens is helping to usher in a new era for social and a new way to think about communication and web3.
 
