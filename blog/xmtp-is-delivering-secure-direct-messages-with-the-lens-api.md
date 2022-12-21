@@ -14,7 +14,7 @@ image: "/blog/media/2022-12-21-blog-lensannounce.png"
 date: 2022-11-03T06:00
 
 ---
-#### Lens Protocol has adopted XMTP to provide a secure and private direct messaging layer for the entire Lens ecosystem.
+### Lens Protocol has adopted XMTP to provide a secure and private direct messaging layer for the entire Lens ecosystem.
 
 ![](/blog/media/2022-12-21-blog-lensannounce.png)
 
