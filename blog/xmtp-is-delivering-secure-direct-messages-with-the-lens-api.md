@@ -14,8 +14,10 @@ image: "/blog/media/2022-12-21-blog-lensannounce.png"
 date: 2022-11-03T06:00
 
 ---
-Today XMTP reaches a big milestone in our journey to build protocol for secure web3 messaging:  
-  
+![](/blog/media/2022-12-21-blog-lensannounce.png)
+
+Today XMTP reaches a big milestone in our journey to build protocol for secure web3 messaging:
+
 [**Lens Protocol**](https://lens.xyz/) **has adopted** [**XMTP**](https://xmtp.org/) **to provide a secure and private direct messaging layer for the entire Lens ecosystem.**
 
 Introducing XMTP to the Lens ecosystem means profiles will be able to privately and securely send end-to-end encrypted direct messages to one another, starting in [Lenster](https://lenster.xyz/). This brings web3 social closer to feature parity with its predecessor and is a big step forward for Lens users, and anyone who cares about private, secure messaging.
