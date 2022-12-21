@@ -69,5 +69,3 @@ fields:
     time_format: 
     display_utc: false
     export_format: YYYY-MM-DDThh:mm
-pages:
-- blog/j-ha-adding-the-title-of-the-post-in-forestry.io.md
