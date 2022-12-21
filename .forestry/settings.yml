@@ -12,6 +12,7 @@ sections:
   label: Blog
   create: all
   match: "**/*"
+  exclude: "*.[!y]*"
 upload_dir: static/blog/media
 public_path: "/blog/media"
 front_matter_path: ''
