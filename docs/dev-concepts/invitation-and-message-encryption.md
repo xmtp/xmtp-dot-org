@@ -12,10 +12,10 @@ All XMTP invitations and messages are encrypted.
 
 This section describes how invitation and message encryption work for XMTP V2. Only client apps with XMTP client SDK >=v7.0.0 can use XMTP V2.
 
-To learn more about invitations and messages, see [XMTP V2 topics and message presentation flow](#xmtp-v2-topics-and-message-presentation-flow).
+To learn more about invitations and messages, see [XMTP V2 topics and message presentation flow](architectural-overview#xmtp-v2-topics-and-message-presentation-flow).
 <!--once specs are published, add link to Client Layer in The XMTP Protocol specifications.-->
 
-To learn about how invitation and message encryption work in XMTP V1, see [XMTP V1 message encryption](#xmtp-v1-topics-and-message-presentation-flow).
+To learn about how invitation and message encryption work in XMTP V1, see [XMTP V1 message encryption](#xmtp-v1-message-encryption).
 
 
 ### Invitation encryption
