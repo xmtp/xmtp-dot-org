@@ -7,7 +7,7 @@ sidebar_position: 3
 
 XMTP (Extensible Message Transport Protocol) is an open protocol and network for secure and private web3 messaging. For example, you can build an app with XMTP to send messages between blockchain accounts, including chat/DMs, alerts, announcements, and more.
 
-Use this tutorial to build an XMTP "hello world" messaging app based on resources available in the [vehidtr/xmtp-chat-tutorial repo](https://github.com/vehidtr/xmtp-chat-tutorial). Building this app can help you learn some of the fundamental concepts behind building with XMTP.
+Use this tutorial to build an XMTP "hello world" messaging app. Building this app can help you learn some of the fundamental concepts involved in building with XMTP.
 
 As its name implies, the XMTP "hello world" app is intentionally barebones. Here's what the app enables you to do:
 
@@ -30,15 +30,17 @@ Completing this tutorial doesn't cost you any Ether. At this time, all messaging
 
 ## Prerequisites
 
-This tutorial has these prerequisites:
+Be sure to have these prerequisites in place before you start the tutorial:
 
 * [Node](https://nodejs.org/en/download/) (LTS version) and npm to install app requirements and dependencies
 
+* The "hello world" app works with Chrome, Firefox, and Brave browsers.
+
 * An Ethereum blockchain account accessible in a wallet app browser extension, such as MetaMask or Coinbase Wallet.  
 
-  For example, you can install the [MetaMask](https://metamask.io/) cryptocurrency wallet app browser extension and use it to create an Ethereum account you can use to send and receive XMTP messages. To learn more, see [How to create a MetaMask Wallet](https://myterablock.medium.com/how-to-create-or-import-a-metamask-wallet-a551fc2f5a6b).
+  For example, you can install the [MetaMask](https://metamask.io/) wallet app browser extension and use it to create an Ethereum account you can use to send and receive XMTP messages. To learn more, see [How to create a MetaMask Wallet](https://myterablock.medium.com/how-to-create-or-import-a-metamask-wallet-a551fc2f5a6b).
 
-  Beyond the purposes of this "hello world" tutorial, XMTP can be used with more than just Ethereum accounts and Metamask or Coinbase Wallets. To learn more, see [Wallet apps and blockchains supported by XMTP](/docs/dev-concepts/wallets).
+  Beyond the purposes of this "hello world" tutorial, XMTP can be used with more than just Ethereum accounts and Metamask or Coinbase Wallet. To learn more, see [Wallet apps and blockchains supported by XMTP](/docs/dev-concepts/wallets).
 
 * A code editor of your choice that you can use to build the app.
 
