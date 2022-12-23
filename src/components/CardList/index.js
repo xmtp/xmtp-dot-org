@@ -53,28 +53,33 @@ const SDKCardList = () => {
 // this provides the content in the cards in the Example Apps section on the SDKs and tools page
 const exampleappcards = [
   {
-    title: 'XMTP Quickstart Chat app',
-    description: 'An example React app you can use to learn to build a basic messaging app using the XMTP client SDK',
+    title: 'Quickstart React web app',
+    description: 'An example React chat app you can use to learn to build a basic messaging app using the XMTP client SDK',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-quickstart-react' },
     logo: 'img/x-mark.svg',
     theme: 'midnight',
   },
   {
-    title: 'XMTP Chat app',
-    description: 'An example React app that demos both basic and advanced features of the XMTP client SDK',
-    firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-chat-react' },
-    secondLink: { name: 'Try it', link: 'https://xmtp.chat/' },
-    logo: 'img/x-mark.svg',
-    theme: 'daylight',
-  },
-  {
-    title: 'XMTP Chat React Native app',
-    description: '🧑‍💻 Dev preview: An example app that demos how to integrate the XMTP client SDK for JavaScript into a React Native app',
+    title: 'React Native example app',
+    description: '🧑‍💻 Dev preview: An example chat app that demos how to integrate the XMTP client SDK for JavaScript into a React Native app',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-chat-react-native' },
     logo: 'img/x-mark.svg',
     theme: 'sunrise',
   },
-
+  {
+    title: 'Awesome XMTP',
+    description: 'Explore a growing list of GitHub repos for projects that use XMTP‍',
+    firstLink: { name: 'Awesome XMTP', link: 'https://github.com/xmtp/awesome-xmtp' },
+    logo: 'img/x-mark.svg',
+    theme: 'midnight',
+  },
+  {
+    title: 'App showcase',
+    description: 'Explore a curated showcase of apps built with XMTP‍',
+    firstLink: { name: 'Built with XMTP', link: 'built-with-xmtp' },
+    logo: 'img/x-mark.svg',
+    theme: 'daylight',
+  },
 ]
 
 // this provides the list of cards  in the Example Apps section on the SDKs and tools page
@@ -134,14 +139,16 @@ const MoreToolsCardList = () => {
 const Card = ({ title, description, firstLink, secondLink, logo, theme, className }) => {
   return (
     <div>
+    <ALink to={firstLink.link}>
       <article
-        className={`${theme}-theme grid grid-flow-col items-end h-36 rounded-lg relative`}
+        className={`${theme}-theme grid grid-flow-col items-end h-36 rounded-lg relative hover:shadow-lg`}
       >
         <h3 className="text-white text-xl bold ml-6 mb-6 w-9/12"> {title}</h3>
         <section className="absolute right-4 bottom-4">
-          <img src={logo} alt="card-logo" className="opacity-25" />
+            <img src={logo} alt="card-logo" className="opacity-25" />
         </section>
       </article>
+      </ALink>
       <p className="mb-2 mt-4">{description}</p>
       <ALink
         className="text-red-500 text-base font-semibold"
