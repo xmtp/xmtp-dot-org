@@ -141,7 +141,7 @@ const Card = ({ title, description, firstLink, secondLink, logo, theme, classNam
     <div>
     <ALink to={firstLink.link}>
       <article
-        className={`${theme}-theme grid grid-flow-col items-end h-36 rounded-lg relative`}
+        className={`${theme}-theme grid grid-flow-col items-end h-36 rounded-lg relative hover:shadow-lg`}
       >
         <h3 className="text-white text-xl bold ml-6 mb-6 w-9/12"> {title}</h3>
         <section className="absolute right-4 bottom-4">
