@@ -554,17 +554,20 @@ main[class*='docMainContainer'] tr {
 /* Custom theme colors*/
 .sunrise-theme {
   background: rgb(244, 63, 94);
-  background: linear-gradient(
-    90deg,
+  background-image: url('/img/projectCardbg.png'), linear-gradient(
+    120deg,
     rgba(244, 63, 94, 1) 0%,
     rgba(147, 51, 234, 1) 100%
   );
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 
 .midnight-theme {
   background: rgb(34, 211, 238);
-  background: linear-gradient(
-    90deg,
+  background-image: url('/img/projectCardbg.png'), linear-gradient(
+    120deg,
     rgba(34, 211, 238, 1) 0%,
     rgba(147, 51, 234, 1) 100%
   );
@@ -572,11 +575,38 @@ main[class*='docMainContainer'] tr {
 
 .daylight-theme {
   background: rgb(52, 211, 153);
-  background: linear-gradient(
-    90deg,
+  background-image: url('/img/projectCardbg.png'), linear-gradient(
+    120deg,
     rgba(52, 211, 153, 1) 0%,
     rgba(59, 130, 246, 1) 100%
   );
+}
+
+/* styles for cards on SDKs and tools page*/
+.card-container {
+  flex: 1 1 100%;
+  margin-bottom: 24px;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 450px) {
+  .card-container {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 451px) {
+  .card-container {
+    flex: 1 1 50%;
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+  }
 }
 
 @media only screen and (max-width: 1454px) {

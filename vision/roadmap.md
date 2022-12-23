@@ -5,35 +5,13 @@ sidebar_position: 2
 
 # Roadmap
 
-Here are a few details about what's in store for XMTP in the months ahead.
+Here are a few details about what we've shipped recently, what we're working on, and what's in store for XMTP in the months ahead.
 
-## In progress
+---
 
-### Mobile client support
+## Planned 📆
 
-Developers will be able to build mobile client apps in React Native, Swift, Kotlin, and Flutter.
-
-- [Read more: React Native](https://github.com/xmtp/xmtp-js/issues/170)
-- [Read more: Swift](https://github.com/xmtp/xmtp-ios/issues/7)
-- [Read more: Flutter](https://github.com/xmtp/xmtp-flutter/issues/4)
-
-### Push notifications
-
-Apps will be able to subscribe users to receive push notifications to their devices upon receiving new messages.
-
-- [Read more](https://github.com/xmtp/example-notification-server-go)
-
-### Message any address
-
-Individuals will be able to send encrypted DMs and announcements to addresses that have not yet created XMTP identities. Recipients will be notified of these messages upon first connection to XMTP.
-
-- [Read more](https://github.com/xmtp/xmtp-memo-js)
-
-### Network decentralization milestones
-
-XMTP Labs will specify a phased approach towards architectural and logical decentralization of the network.
-
-## Planned
+Scoping goals, requirements, and effort via research & proofs of concepts.
 
 ### Group chat and announcements channels
 
@@ -55,9 +33,55 @@ Users will be able to grant explicit permission for an app to use their account 
 
 Users will be able to store XMTP private keys in secure contexts such as wallet apps.
 
-## Delivered
+---
 
-### December 2022: XMTP v2
+## In progress 🏗️
+
+Projects in flight.
+
+### Network decentralization milestones
+
+XMTP Labs will specify a phased approach towards architectural and logical decentralization of the network.
+
+---
+
+## Pre-Preview 👀
+
+A super early peek into what we're building. Ready for exploration, not adoption.
+
+### Push notifications
+
+Apps will be able to subscribe users to receive push notifications to their devices upon receiving new messages.
+
+- [Read more](https://github.com/xmtp/example-notification-server-go)
+
+---
+
+## Developer Preview 🧑‍💻
+
+Opportunity to test, validate, and provide feedback. We do not recommend usage in production apps just yet.
+
+### Mobile client support
+
+Developers will be able to build mobile client apps in Flutter, React Native, and Swift.
+
+- [Read more: React Native](https://github.com/xmtp/xmtp-js/issues/170)
+- [Read more: Swift](https://github.com/xmtp/xmtp-ios/issues/7)
+- [Read more: Flutter](https://github.com/xmtp/xmtp-flutter/issues/4)
+
+### Message any address
+
+Individuals will be able to send encrypted DMs and announcements to addresses that have not yet created XMTP identities. Recipients will be notified of these messages upon first connection to XMTP.
+
+- [Read more](https://github.com/xmtp/xmtp-memo-js)
+
+---
+
+## General Availability ✅
+
+Ready for production use. Check out docs, tutorials, and quick-start examples.
+
+### XMTP v2 (December 2022)
 
 #### Conversation filtering
 
