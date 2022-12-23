@@ -34,15 +34,15 @@ Be sure to have these prerequisites in place before you start the tutorial:
 
 * [Node](https://nodejs.org/en/download/) (LTS version) and npm to install app requirements and dependencies
 
-* The "hello world" app works with Chrome, Firefox, and Brave browsers.
+* Access to Chrome, Firefox, or Brave. The "hello world" app is designed to work with these browsers.
 
-* An Ethereum blockchain account accessible in a wallet app browser extension, such as MetaMask or Coinbase Wallet.  
+* A wallet app browser extension installed, such as MetaMask or Coinbase Wallet, and an Ethereum account
 
   For example, you can install the [MetaMask](https://metamask.io/) wallet app browser extension and use it to create an Ethereum account you can use to send and receive XMTP messages. To learn more, see [How to create a MetaMask Wallet](https://myterablock.medium.com/how-to-create-or-import-a-metamask-wallet-a551fc2f5a6b).
 
   Beyond the purposes of this "hello world" tutorial, XMTP can be used with more than just Ethereum accounts and Metamask or Coinbase Wallet. To learn more, see [Wallet apps and blockchains supported by XMTP](/docs/dev-concepts/wallets).
 
-* A code editor of your choice that you can use to build the app.
+* A code editor of your choice that you can use to build the app
 
 
 ## Step 1. Create a vanilla React app
@@ -81,6 +81,12 @@ In subsequent steps, you add code to this vanilla React app to build each featur
 Your "hello world" app needs a **Connect wallet** button that enables you to connect a wallet app, such as MetaMask.
 
 This app uses [Web3Modal](https://web3modal.com/) and [Ethers](https://docs.ethers.io/v5/single-page/) to connect to commonly used wallet apps.
+
+:::important
+
+Before starting this task, be sure to have a wallet app browser extension installed, such as MetaMask or Coinbase Wallet, and an Ethereum account. To learn more, see [Prerequisites](#prerequisites).
+
+:::
 
 1. Install Web3Modal. In the `my-app` directory, run:
 
@@ -168,7 +174,7 @@ This app uses [Web3Modal](https://web3modal.com/) and [Ethers](https://docs.ethe
 
 4. In the `my-app/src` directory, update the existing `App.js` file to use the `WalletContext` you just created, add the **Connect wallet** button UI element, and remove elements of the vanilla React app.
 
-   To do this, copy this code block and paste it into the file, replacing all existing code. For your reference, lines with code changes are highlighted.
+   To do this, copy this code block and paste it into the file, replacing all existing code. For reference, lines with code changes are highlighted.
 
     ```javascript {1,3,6,9} showLineNumbers
     import { useContext } from 'react';
@@ -191,7 +197,7 @@ This app uses [Web3Modal](https://web3modal.com/) and [Ethers](https://docs.ethe
 
    Also, import and use `Buffer` to help support message streaming, which you build in a subsequent step.
 
-   To do this, copy this code block and paste it into the file, replacing all existing code. For your reference, lines with code changes are highlighted.
+   To do this, copy this code block and paste it into the file, replacing all existing code. For reference, lines with code changes are highlighted.
 
     ```javascript {3,7,9,14,16} showLineNumbers
     import React from "react";
@@ -365,7 +371,7 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
 
 3. In the `my-app/src` directory, update the existing `App.js` file to use the `XmtpContext` you just created and add the **Connect to XMTP** button UI element.
 
-   To do this, copy this code block and paste it into the file, replacing all existing code. For your reference, lines with code changes are highlighted.
+   To do this, copy this code block and paste it into the file, replacing all existing code. For reference, lines with code changes are highlighted.
 
     ```javascript {4,7,8,12-25,27} showLineNumbers
     import { useContext } from "react";
@@ -406,7 +412,7 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
 
    This enables your app to access information provided by the XMTP context. Note that `XmtpContextProvider` is nested in `WalletContextProvider` because it needs access to the information provided by the wallet app context.
 
-   To do this, copy this code block and paste it into the file, replacing all existing code. For your reference, lines with code changes are highlighted.
+   To do this, copy this code block and paste it into the file, replacing all existing code. For reference, lines with code changes are highlighted.
 
     ```javascript {8,16,18} showLineNumbers
     import React from "react";
@@ -531,7 +537,7 @@ For simplicity, your "hello world" app enables you to send a preconfigured "gm" 
 
    Also, enable the app to display existing messages and stream new messages using the `useStreamMessages` hook you just created.
 
-   To do this, copy this code block and paste it into the file, replacing all existing code. For your reference, lines with code changes are highlighted.
+   To do this, copy this code block and paste it into the file, replacing all existing code. For reference, lines with code changes are highlighted.
 
     ```js {5,10-23,37,39-52} showLineNumbers
     import { useContext } from "react";
