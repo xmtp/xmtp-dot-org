@@ -69,7 +69,7 @@ const exampleappcards = [
   },
   {
     title: 'XMTP Chat React Native app',
-    description: '🧑‍💻 Dev preview: An example app that demos how to integrate the XMTP client SDK for JavaSript into a Reative Native app',
+    description: '🧑‍💻 Dev preview: An example app that demos how to integrate the XMTP client SDK for JavaScript into a React Native app',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-chat-react-native' },
     logo: 'img/x-mark.svg',
     theme: 'sunrise',
