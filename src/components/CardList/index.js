@@ -61,24 +61,24 @@ const exampleappcards = [
   },
   {
     title: 'React Native example app',
-    description: '🧑‍💻 Dev preview: An example chat app that demos how to integrate the XMTP client SDK for JavaSript into a Reative Native app',
+    description: '🧑‍💻 Dev preview: An example chat app that demos how to integrate the XMTP client SDK for JavaScript into a React Native app',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-chat-react-native' },
     logo: 'img/x-mark.svg',
-    theme: 'daylight',
+    theme: 'sunrise',
   },
   {
     title: 'Awesome XMTP',
     description: 'Explore a growing list of GitHub repos for projects that use XMTP‍',
     firstLink: { name: 'Awesome XMTP', link: 'https://github.com/xmtp/awesome-xmtp' },
     logo: 'img/x-mark.svg',
-    theme: 'sunrise',
+    theme: 'midnight',
   },
   {
     title: 'App showcase',
     description: 'Explore a curated showcase of apps built with XMTP‍',
     firstLink: { name: 'Built with XMTP', link: 'built-with-xmtp' },
     logo: 'img/x-mark.svg',
-    theme: 'midnight',
+    theme: 'daylight',
   },
 ]
 
