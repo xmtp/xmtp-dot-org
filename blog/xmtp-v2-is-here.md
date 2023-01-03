@@ -13,9 +13,10 @@ image: "/blog/media/2023-01-03-v2-blog2-1.png"
 date: 2022-12-06T06:00
 
 ---
+import ReactPlayer from 'react-player'
+
 ### The latest version brings conversation filtering and improvements to privacy
 
-import ReactPlayer from 'react-player'
 <ReactPlayer width="100%" controls url='[https://www.youtube.com/watch?v=8_ufTvYBdLo](https://www.youtube.com/watch?v=8_ufTvYBdLo "https://www.youtube.com/watch?v=8_ufTvYBdLo")' />
 
 Over the past 12 months, we’ve met with hundreds of development teams using the XMTP protocol to build native web3 messaging.
