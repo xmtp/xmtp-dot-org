@@ -71,3 +71,4 @@ fields:
     export_format: YYYY-MM-DDThh:mm
 pages:
 - blog/xmtp-is-delivering-secure-direct-messages-with-the-lens-api.md
+- blog/xmtp-v2-is-here.md
