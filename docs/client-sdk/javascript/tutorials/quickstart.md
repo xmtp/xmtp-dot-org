@@ -9,6 +9,7 @@ toc_max_heading_level: 4
 ![Test](https://github.com/xmtp/xmtp-js/actions/workflows/test.yml/badge.svg)
 ![Lint](https://github.com/xmtp/xmtp-js/actions/workflows/lint.yml/badge.svg)
 ![Build](https://github.com/xmtp/xmtp-js/actions/workflows/build.yml/badge.svg)
+![Status](https://img.shields.io/badge/Project_Status-General_Availability-brightgreen)
 
 The [XMTP client SDK](https://github.com/xmtp/xmtp-js) for JavaScript (`xmtp-js`) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications.
 
@@ -125,7 +126,7 @@ Currently, network nodes are configured to rate limit high-volume publishing fro
 
 ### Creating a client
 
-A message API client is created with `Client.create(wallet: ethers.Signer): Promise<Client>` that requires passing in a connected Wallet. The client will request a wallet signature in two cases:
+A client is created with `Client.create(wallet: Signer): Promise<Client>` that requires passing in a connected wallet that implements the [Signer](https://github.com/xmtp/xmtp-js/blob/main/src/types/Signer.ts) interface. The client will request a wallet signature in two cases:
 
 1. To sign the newly generated key bundle. This happens only the very first time when key bundle is not found in storage.
 2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started (including the very first time).
@@ -138,7 +139,7 @@ The client connects to the XMTP `dev` environment by default. [Use `ClientOption
 
 ```ts
 import { Client } from '@xmtp/xmtp-js'
-// Create the client with an `ethers.Signer` from your application
+// Create the client with a `Signer` from your application
 const xmtp = await Client.create(wallet)
 ```
 
@@ -161,7 +162,7 @@ Most of the time, when interacting with the network, you'll want to do it throug
 
 ```ts
 import { Client } from '@xmtp/xmtp-js'
-// Create the client with an `ethers.Signer` from your application
+// Create the client with a `Signer` from your application
 const xmtp = await Client.create(wallet)
 const conversations = xmtp.conversations
 ```
@@ -382,13 +383,35 @@ You can export the unencrypted key bundle using the static method `Client.getKey
 
 ```ts
 import { Client } from '@xmtp/xmtp-js'
-// Get the keys using a valid ethers.Signer. Save them somewhere secure.
+// Get the keys using a valid Signer. Save them somewhere secure.
 const keys = await Client.getKeys(wallet)
 // Create a client using keys returned from getKeys
 const client = await Client.create(null, { privateKeyOverride: keys })
 ```
 
 The keys returned by `getKeys` should be treated with the utmost care as compromise of these keys will allow an attacker to impersonate the user on the XMTP network. Ensure these keys are stored somewhere secure and encrypted.
+
+#### Caching conversations
+
+As a performance optimization, you may want to persist the list of conversations in your application outside of the SDK to speed up the first call to `client.conversations.list()`.
+
+The exported conversation list contains encryption keys for any V2 conversations included in the list. As such, you should treat it with the same care that you treat [private keys](#manually-handling-private-key-storage).
+
+You can get a JSON serializable list of conversations by calling:
+
+```ts
+const client = await Client.create(wallet)
+const conversations = await client.conversations.export()
+saveConversationsSomewhere(JSON.stringify(conversations))
+```
+
+To load the conversations in a new SDK instance you can run:
+
+```ts
+const client = await Client.create(wallet)
+const conversations = JSON.parse(loadConversationsFromSomewhere())
+await client.conversations.import(conversations)
+```
 
 #### Under the hood
 
