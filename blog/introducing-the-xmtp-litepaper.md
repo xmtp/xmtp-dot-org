@@ -1,7 +1,7 @@
 ---
 slug: introducing-the-xmtp-litepaper
 hide_table_of_contents: true
-title: Introducing the XMTP Litepaper Public Draft
+title: Introducing the XMTP Litepaper public draft
 date: 2022-08-31
 authors: mg
 description: A primer on XMTP—the secure web3 messaging protocol—why we're building it, how it works, and where we see it going in the future.
@@ -32,4 +32,4 @@ So in the meantime, while we continue to build, we invite you to:
 
 * Read the [XMTP Litepaper](https://github.com/xmtp/litepaper)
 * Discuss it with us on [Twitter](https://twitter.com/xmtp_), [Discord](https://discord.gg/xmtp), and [GitHub Discussions](https://github.com/orgs/xmtp/discussions)
-* Check out the [XMTP Docs](https://xmtp.org/docs) to get started building
+* Check out the [XMTP docs](/docs/dev-concepts/introduction) to get started building

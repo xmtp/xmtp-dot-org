@@ -8,7 +8,7 @@ const { tailwindPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'The open protocol and network for secure web3 messaging',
+  title: 'XMTP: The open protocol and network for secure web3 messaging',
   tagline:
     'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more',
   url: 'https://xmtp.org',
@@ -40,6 +40,7 @@ const config = {
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
         },
         blog: {
+          blogDescription: 'A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging',
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
         },

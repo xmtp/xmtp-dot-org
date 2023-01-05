@@ -9,7 +9,7 @@ image: "media/CleanShot-2022-06-24-at-12.11.50@2x-1.png"
 ---
 import ReactPlayer from 'react-player'
 
-Introducing "You've Got Mail" - An idea we want to build with the XMTP community
+Introducing "You've Got Mail" - An idea we want to build with the XMTP community.
 
 ![](media/CleanShot-2022-06-24-at-12.11.50@2x-1.png)
 
