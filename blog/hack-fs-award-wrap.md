@@ -102,4 +102,4 @@ We were so impressed by the above projects, and as we [shared on Twitter](https:
 * 👾 Official Discord Access  -[ https://xmtp.typeform.com/early-access](https://xmtp.typeform.com/early-access)
 * 🐦 XMTP Official Twitter -[ https://twitter.com/xmtp_](https://twitter.com/xmtp_)
 * 🌐 XMTP Website -[ https://xmtp.com/](https://xmtp.com/)
-* 📖 XMTP Labs Jobs -[ https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
+* 📖 Careers at XMTP Labs -[ https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)

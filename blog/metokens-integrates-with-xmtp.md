@@ -8,8 +8,8 @@ description: With XMTP, meTokens enables all creators to coordinate in a privacy
 image: "media/meTokensShareSplit.png"
 tags:
 - Developers
-- Spotlight
 - Messaging
+- Spotlight
 ---
 
 With XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.

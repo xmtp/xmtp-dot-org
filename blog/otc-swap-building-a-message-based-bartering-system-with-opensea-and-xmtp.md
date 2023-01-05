@@ -20,9 +20,7 @@ How developer [@0x_Yuzu](https://twitter.com/0x_Yuzu) built an application that 
 
 <!--truncate-->
 
-Developers are using web3’s composability to build a wider range of user-centric experiences.
-
-[OpenSea’s Seaport protocol](https://docs.opensea.io/v2.0/reference/seaport-overview) is a good example. Seaport is an open source, decentralized NFT marketplace protocol that enables developers to build apps and tools that reinvent how and where NFT buyers and sellers can interact.
+Developers are using web3’s composability to build a wider range of user-centric experiences. [OpenSea’s Seaport protocol](https://docs.opensea.io/v2.0/reference/seaport-overview) is a good example. Seaport is an open source, decentralized NFT marketplace protocol that enables developers to build apps and tools that reinvent how and where NFT buyers and sellers can interact.
 
 >"Current marketplaces don’t allow users to communicate back and forth in a conversational way,” said [@0x_Yuzu](https://twitter.com/0x_Yuzu). “OTC Swap allows users to fully communicate and come to a consensus, all without giving up their privacy or security."
 
@@ -31,7 +29,7 @@ Today, we’re focusing on how one developer built an application that enables p
 
 ## Introducing OTC Swap
 
-Developer [@0x_Yuzu](https://twitter.com/0x_Yuzu) built a proof-of-concept application called [OTC Swap](https://vimeo.com/729445381) that enables buyers and sellers to barter on the price of an NFT using a chat interface. During the negotiation the seller can use UI controls to accept, reject, or counter offers. Because bartering happens in a chat interface, the buyer and seller can have a conversation about the transaction and negotiate directly. This improves upon today’s NFT marketplaces, where communication must happen externally.
+Developer [@0x_Yuzu](https://twitter.com/0x_Yuzu) built a proof-of-concept application called [OTC Swap](https://vimeo.com/729445381) that enables buyers and sellers to barter on the price of an NFT using a chat interface. During the negotiation the seller can use UI controls to accept, reject, or counter offers. Because bartering happens in a chat interface, the buyer and seller can have a conversation about the transaction and negotiate directly. **This improves upon today’s NFT marketplaces, where communication must happen externally.**
 
 ![alt_text](media/Slide-16_9---1-3.png)
 

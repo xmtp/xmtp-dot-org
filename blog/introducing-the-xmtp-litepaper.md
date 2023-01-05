@@ -24,7 +24,7 @@ When we set out to build XMTP, we envisioned a means of communication where user
 
 With our ambitious goal in mind, we've been lucky to assemble a group of phenomenally talented people at XMTP Labs—a team that's no doubt up for the challenges that lie ahead. And today, we're opening up more around our work—past, present, and future.
 
-We quietly launched XMTP months ago, and have thus far been primarily focused on working with developers to bring secure web3 messaging to their apps and experiences. It's been awesome to see all of the [different use cases](https://blog.xmtp.com/hack-fs-award-wrap/) and ways they're [implementing it already](https://blog.xmtp.com/project-spotlight-relay-receiver/), but this story has [just barely begun](https://blog.xmtp.com/truths-not-spoofs/), and it's time to start telling more of it.
+We quietly launched XMTP months ago, and have thus far been primarily focused on working with developers to bring secure web3 messaging to their apps and experiences. It's been awesome to see all of the [different use cases](hack-fs-award-wrap/) and ways they're [implementing it already](project-spotlight-relay-receiver/), but this story has [just barely begun](truths-not-spoofs/), and it's time to start telling more of it.
 
 Over the coming weeks and months, we'll be sharing in-depth explorations of the ideas put forth in the Litepaper—our motivations, learnings, and progress in building XMTP thus far. This document is still very much a draft, with some sections in an incomplete state, to be filled in as our research continues, but we feel it's time to take the project to the public for discussion.
 

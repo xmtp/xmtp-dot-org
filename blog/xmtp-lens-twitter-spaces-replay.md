@@ -25,15 +25,15 @@ The chat between Len’s Stani Kulechov and XMTP’s Matt Galligan went deeper, 
 
 Just press play to learn more about this milestone and what it means for the future of social communication and web3!
 
-You can read the full transcript below:
+**You can read the full transcript below:**
 
-Matt Galligan - XMTP: Awesome to have you here today. We are gathering together to, to talk about the big launch that we saw last week where Lens launched direct messages and to, and encrypted Lens. Direct messages, which are awesome. For those in the in the audience that are not as familiar with Lens I'll definitely let Stani get in there and talk all about it and what it is and why he got it started.
+**Matt Galligan - XMTP:** Awesome to have you here today. We are gathering together to, to talk about the big launch that we saw last week where Lens launched direct messages and to, and encrypted Lens. Direct messages, which are awesome. For those in the in the audience that are not as familiar with Lens I'll definitely let Stani get in there and talk all about it and what it is and why he got it started.
 
 [00:00:23] And then that will certainly lead into what. XMTP is how it was involved inDMs in that launch. And just in general, what all of this means for web3 social, but I think also in the broader ecosystem of just social in general. There's been a lot of change in turmoil here lately around the social ecosystems.
 
 [00:00:47] And why all of this stuff that's going down is is important to, to talk about.So why don't we kick off with a little bit of of what Lens is all about? How did it get started and what brought you to today and why are you excited about it
 
-[00:01:02] Stani Kulechov - Lens: Yeah, definitely. So I mean something that's very fascinating.
+[00:01:02] **Stani Kulechov - Lens:** Yeah, definitely. So I mean something that's very fascinating.
 
 [00:01:08] What we do at Aave, like in the team itself is for the past years we've seen like a victory bringing access to people globally. And we've seen that, with blockchain there's a lot of things that you can actually do and make an impact in a, like a fair democratic matter globally.
 
@@ -109,13 +109,13 @@ the great things about Lens is that it's a super, super flexible system.
 
 [00:14:34] The protocol in and how we don't just repeat the past where certain, say players have a lot more power in that relationship than others.
 
-[00:14:49] Stani Kulechov - Lens: Yeah. The, the current landscape of social isthat, we went from a internet. People were hosting webpages to more of platforms where you could actually share distributed content create connections message to people across, the world and very efficiently so that the centralized architecture of Internet makes sense because you basically create a lot of efficiency.
+[00:14:49] Stani Kulechov - Lens: Yeah. The, the current landscape of social is that, we went from a internet. People were hosting webpages to more of platforms where you could actually share distributed content create connections message to people across, the world and very efficiently so that the centralized architecture of Internet makes sense because you basically create a lot of efficiency.
 
 [00:15:14] The downside is that, when you put a lot of trust and faith and value into the bigger platforms you, you basically are very dependent on them as well. So you really can't do a dig digital exit out of a, let's say, platform like Twitter. Here for example, because I will leave my followers be behind and all this years, so that.
 
-[00:15:38] How long we've seen social media now there isn't any kind of a standardon how you could actually transfer your follower base to another platform, even if it, that's actually technically possible. That's even easier to do it off chain, right? There isn't incentives there because all of these platforms and networks they're trying to build for themselves.
+[00:15:38] How long we've seen social media now there isn't any kind of a standard on how you could actually transfer your follower base to another platform, even if it, that's actually technically possible. That's even easier to do it off chain, right? There isn't incentives there because all of these platforms and networks they're trying to build for themselves.
 
-[00:15:59] The stronger the network effect, let's say Twitter or Facebook has, it'sharder to compete. So that's why whenever you see people trying to rebuild web twosocial with kind of like a web3 covered applications that are similar, that already, it'sthe hardest thing to do because obviously you get a lot of early adopters that are excited about the future of the application and being early.
+[00:15:59] The stronger the network effect, let's say Twitter or Facebook has, it's harder to compete. So that's why whenever you see people trying to rebuild web two social with kind of like a web3 covered applications that are similar, that already, it's the hardest thing to do because obviously you get a lot of early adopters that are excited about the future of the application and being early.
 
 [00:16:26] But at the same time, you're competing with network effects that really are pretty much locked in. So people go to Twitter because, you hear the news there that is close to your whatever you're following. You go to TikTok because the algorithm just finds whatever is interesting for you at that moment.
 
@@ -159,9 +159,9 @@ the great things about Lens is that it's a super, super flexible system.
 
 [00:24:17] Josh, you wanna take that?
 
-[00:24:20] Josh - Lens: Yes. Yeah, firstly, I wanna say that it was amazing workingwith the team. The beauty of Lens and it kind of shin. Is how open and transparent it is and how another team who has the same moral compass as us can ship something entirely. Yes. We spec out a kind of standard for the DM so we can work, they took, the team took ownership of it and they did.
+[00:24:20] **Josh - Lens:** Yes. Yeah, firstly, I wanna say that it was amazing working with the team. The beauty of Lens and it kind of shin. Is how open and transparent it is and how another team who has the same moral compass as us can ship something entirely. Yes. We spec out a kind of standard for the DM so we can work, they took, the team took ownership of it and they did.
 
-[00:24:46] And they did a PR and Lenster and. Fantastic. Now we have DMs onLens without even the core Lens team changing or working everything, which I thinkis just a testament to how powerful this is and how we can build together. So first Iwanna say that secondly I love the we love the beauty of the portability of the DMs,of course, with Lens of biggest thing is we want to abstract the wallet as much as wecan. We want take it be profile to profile. We wanna make it feel just as it would onTwitter, et cetera, et cetera. And coming soon when we have the SDK for Lens, we will want to baking features like separation of degree within your messages. Being able to hide messages like and order these kind of things, build on top of messaging protocol to allow us to give that tailored, fitted, messaging platform of what we seeLens to be.
+[00:24:46] And they did a PR and Lenster and. Fantastic. Now we have DMs onLens without even the core Lens team changing or working everything, which I think is just a testament to how powerful this is and how we can build together. So first I wanna say that secondly I love the we love the beauty of the portability of the DMs, of course, with Lens of biggest thing is we want to abstract the wallet as much as we can. We want take it be profile to profile. We wanna make it feel just as it would onTwitter, et cetera, et cetera. And coming soon when we have the SDK for Lens, we will want to baking features like separation of degree within your messages. Being able to hide messages like and order these kind of things, build on top of messaging protocol to allow us to give that tailored, fitted, messaging platform of what we seeLens to be.
 
 [00:25:38] So yeah, we see some really exciting things to come when we start putting this nasally within our SDK, which will come, later on. So yeah, super, super excited.
 
@@ -169,19 +169,19 @@ the great things about Lens is that it's a super, super flexible system.
 
 [00:25:55] There's this vast roadmap that that has been planned. And the cool thing is that with each and every. Project and team that wants to go build something on and with XMTP we learn about its, unique properties that may, give us the information we need to bring something out of the roadmap prioritize it.
 
-[00:26:16] And, at least, I'd love to to tap you in on this. For those that that dunno.Elise is on front end here at XMTP and has been an awesome new member of theteam. A handful of months ago joined and was a key player in getting DMs to work with with Lens and maybe digging in on some of the Lens specific.
+[00:26:16] And, at least, I'd love to to tap you in on this. For those that that dunno.Elise is on front end here at XMTP and has been an awesome new member of the team. A handful of months ago joined and was a key player in getting DMs to work with with Lens and maybe digging in on some of the Lens specific.
 
-[00:26:38] Things that came into play for XMTP and maybe a little bit about how they would be able to be used elsewhere. I'm thinking about like conversation IDs andthings like that. Would just love to hear how the integration went and how you see it working for subsequent Lens teams.
+[00:26:38] Things that came into play for XMTP and maybe a little bit about how they would be able to be used elsewhere. I'm thinking about like conversation IDs and things like that. Would just love to hear how the integration went and how you see it working for subsequent Lens teams.
 
-[00:26:55] Elise Alix - XMTP: Oh my gosh, yes.
+[00:26:55] **Elise Alix - XMTP:** Oh my gosh, yes.
 
 [00:26:56] Hi everyone. I'm Elise. Thank you, Matt for the intro. Yeah. So I think first of all, I wanna step back and say it was so important to us to actually ship something that you could feel and use and actually see like that the messages come through.Like we could have announced a partnership and just been like here we, our partners now.
 
-[00:27:17] Happy building, good luck. But I really wanna shout out Josh for intro'ing us to yo who I see here in the crowd. Yo could not have been more welcoming into his repo to actually demonstrate DMs end to end within the Lens protocol. So it'sbeen honestly such a pleasure and it just feels like right place, right time, and Icannot be more excited about this project.
+[00:27:17] Happy building, good luck. But I really wanna shout out Josh for intro'ing us to yo who I see here in the crowd. Yo could not have been more welcoming into his repo to actually demonstrate DMs end to end within the Lens protocol. So it's been honestly such a pleasure and it just feels like right place, right time, and I cannot be more excited about this project.
 
-[00:27:38] So I just wanna start there and say thank you. But yeah, so really we had this network up and running. You could send messages in our demo site today. Butthe piece that was missing for Lens specific was we have a, like universal inbox feel.So you could take your messages, break down these silos and move from platform to platform.
+[00:27:38] So I just wanna start there and say thank you. But yeah, so really we had this network up and running. You could send messages in our demo site today. But the piece that was missing for Lens specific was we have a, like universal inbox feel.So you could take your messages, break down these silos and move from platform to platform.
 
-[00:28:01] However, we also wanted to make it so that developers could say, I want specifically, I want to only see. DMs. So we introduce this way of filtering by conversation id which is documented in our how to get started that I'm sure we can link out. But basically as a developer, you can now specify I want to see messagesfrom this like wallet address, but also specific to this conversation id, which is just a.
+[00:28:01] However, we also wanted to make it so that developers could say, I want specifically, I want to only see. DMs. So we introduce this way of filtering by conversation id which is documented in our how to get started that I'm sure we can link out. But basically as a developer, you can now specify I want to see messages from this like wallet address, but also specific to this conversation id, which is just a.
 
 [00:28:35] And then you can get only your Lens DMs within the Lens context. So you could still, as a developer break down those walls between Lens ecosystems, but you won't get the like messages that are elsewhere on the XMTP network in your platform, if that makes sense. So that was really the biggest protocol change in order to make this work.
 
@@ -191,9 +191,9 @@ the great things about Lens is that it's a super, super flexible system.
 
 [00:29:38] Matt Galligan - XMTP: I'd love to start bringing up some questions, but areal quick mention before that and folks.
 
-[00:29:44] Raising their hands if they would like. But the experience of being at thehackathon. Seeing the ingenuity in the projects that were being built, that were usingLens and XMTP was mind blowing. We were days away from this launch days sincethe DM launch and people were jumping right in and building and.
+[00:29:44] Raising their hands if they would like. But the experience of being at the hackathon. Seeing the ingenuity in the projects that were being built, that were usingLens and XMTP was mind blowing. We were days away from this launch days since the DM launch and people were jumping right in and building and.
 
-[00:30:08] The beauty being, open source, no API keys to speak of, dig right in. Andyou saw some really cool features of say apps that were built around gaming andbeing able to talk with other players and ones that were built around, say being ableto put a bounty on your attention and messages.
+[00:30:08] The beauty being, open source, no API keys to speak of, dig right in. And you saw some really cool features of say apps that were built around gaming and being able to talk with other players and ones that were built around, say being able to put a bounty on your attention and messages.
 
 [00:30:26] Just incredible stuff. So it was so cool to see and that open source and permissionless. Focus is just such a different feel than everything that I've done so far in building in one, two.
 
@@ -209,11 +209,11 @@ the great things about Lens is that it's a super, super flexible system.
 
 [00:31:27] Stani Kulechov - Lens: I think Tommy's just un muted. Tommy, have you got a question?
 
-[00:31:31] Matt Galligan - XMTP: Let's see. We'll bring 'em back up. I don't knowwhat happened there. In the meantime, for anybody that hasn't hasn't used it, hasn'texperienced it Lens.xyz fired up and start sending DMs. We have a profile up forXMTP Labs.
+[00:31:31] Matt Galligan - XMTP: Let's see. We'll bring 'em back up. I don't know what happened there. In the meantime, for anybody that hasn't hasn't used it, hasn't experienced it Lens.xyz fired up and start sending DMs. We have a profile up forXMTP Labs.
 
-[00:31:44] We have one. I'm up there as Galligan dot Lens. Shoot me a dm. Happyto have a chat there. Also, if you have question. Maybe don't want to jump up intothe speaker section. Go ahead and just maybe DM us directly in, in here as well andwe can address it. The project that you were talking about beeper was a ton of fun to see where you just had.
+[00:31:44] We have one. I'm up there as Galligan dot Lens. Shoot me a dm. Happy to have a chat there. Also, if you have question. Maybe don't want to jump up into the speaker section. Go ahead and just maybe DM us directly in, in here as well and we can address it. The project that you were talking about beeper was a ton of fun to see where you just had.
 
-[00:32:07] Say somebody that could send out a beep and it would go to everybody else that had these beepers. And it was all based on NFT. Like my my wallet now has an NFT that is displaying the beeps from the others that are in that beeper network. All powered through Lens and X tp. It was it was cool to see any questions,Not not seeing too many just yet.
+[00:32:07] Say somebody that could send out a beep and it would go to everybody else that had these beepers. And it was all based on NFT. Like my my wallet now has an NFT that is displaying the beeps from the others that are in that beeper network. All powered through Lens and XMTP. It was it was cool to see any questions,Not not seeing too many just yet.
 
 [00:32:27] In any case the Lens team, I'd love to hear a little bit more about the future of Lens and where you see things going from here. Maybe as it relates to communication, both public and and private communications.
 
@@ -225,13 +225,13 @@ the great things about Lens is that it's a super, super flexible system.
 
 [00:33:31] Matt Galligan - XMTP: Yeah. Yeah. And David, just to to go deeper on that for just a moment. The fact that this is all happening with on chain identities with the keys, with the things that we own also means that, it is able to be authenticated.
 
-[00:33:45] If I'm getting a message from say, a a Lens protocol support , I know I'm going straight to support here. I can know that it's real. Cryptographically, I can knowthat it is real and authentic. And that's huge because in a space where you havemillions of dollars that are lost to scams and fishing because we're using insecureplatforms like.
+[00:33:45] If I'm getting a message from say, a a Lens protocol support , I know I'm going straight to support here. I can know that it's real. Cryptographically, I can know that it is real and authentic. And that's huge because in a space where you have millions of dollars that are lost to scams and fishing because we're using insecureplatforms like.
 
 [00:34:05] Like DMs and discord and stuff like that. It's pretty awesome. So hopefully as we see these brand things pop up, being able to rely on solutions like this that are crypto native is gonna just be huge.
 
 [00:34:17] Elise Alix - XMTP: I was gonna say, if we're talking about future of messaging, are we allowed to talk about what we see coming in the future?
 
-[00:34:24] Matt Galligan - XMTP: Hey, I would love it. I wanna take a moment, a couple questions, but let's definitely round it out with some of that stuff. Give, have alittle bit of alpha. That be awesome. So re let's bring you up. I would love to take anyquestion you've got. So bring the speakers in. Floor is yours. Oh, hello.
+[00:34:24] Matt Galligan - XMTP: Hey, I would love it. I wanna take a moment, a couple questions, but let's definitely round it out with some of that stuff. Give, have a little bit of alpha. That be awesome. So re let's bring you up. I would love to take any question you've got. So bring the speakers in. Floor is yours. Oh, hello.
 
 [00:34:44] Spaces guest: Can you guys hear? Sure can. Ah, yeah. Hey, so thanks for this. And yeah, so I'm actually a user of an app called Favor. I believe they have, they build on on Lens, right? And and what I see is the
 
@@ -243,7 +243,7 @@ the great things about Lens is that it's a super, super flexible system.
 
 [00:35:49] Yeah. Thanks.
 
-[00:35:50] Stani Kulechov - Lens: Yeah. Say that. Oh, Chase, you wanna go? No.Yeah. Okay. I was just gonna quickly say that every everything you described isdown to how, we give all the tools for apps to be able to build the most amazing UIthat's possible. So for sure, we'd love to see people pushing, a Snapchat version oran Instagram version or these kind of things.
+[00:35:50] Stani Kulechov - Lens: Yeah. Say that. Oh, Chase, you wanna go? No.Yeah. Okay. I was just gonna quickly say that every everything you described is down to how, we give all the tools for apps to be able to build the most amazing UI that's possible. So for sure, we'd love to see people pushing, a Snapchat version oran Instagram version or these kind of things.
 
 [00:36:16] And I feel like they have all the tools. Like with all the data, with all with the api, with the contracts to go and build. That's just how creative those builders could be. That's just what I wanted to say with that.
 
@@ -271,7 +271,7 @@ commerce websites today go and build the shopping cart infrastructure from the g
 
 [00:38:52] We don't like, it's all abstracted now. And things like Lens for all of the social interactions and social graphs and profiles [00:39:00] and just being able to start and focus on the things that you're interested in. Awesome. DMs, encryption, like all the nasty bits about how all that works. Abstracted. Cool.
 
-[00:40:03] Matt Galligan - XMTP: Sure. Thank you. All right. Let's let's bring it bring it back around. I know that at least wanted to to talk a little bit about some of the newer stuff. I. Tap on one other thing for XMTP, which is some of the stuff that I sawover the weekend.
+[00:40:03] Matt Galligan - XMTP: Sure. Thank you. All right. Let's let's bring it bring it back around. I know that at least wanted to to talk a little bit about some of the newer stuff. I. Tap on one other thing for XMTP, which is some of the stuff that I saw over the weekend.
 
 [00:40:18] And then. Tap it over to Elise. But there's one thing about XMTP that is that I love, which is that this payload, these messages are extensible. That, at the outside it's all encrypted. And nobody knows what's in there. But once you open up these messages they can contain any sort of payload.
 

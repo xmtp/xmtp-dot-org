@@ -1,7 +1,7 @@
 ---
 slug: why-cant-i-leave-a-message-for-any-wallet-address-in-web3-introducing-youve-got-mail-an-idea-we-want-to-build-with-the-community
 hide_table_of_contents: true
-title: Why can't I leave a message for any wallet address in web3?
+title: Why can't I leave a message for any wallet address in web3? Introducing "You've Got Mail"
 date: 2022-06-24
 authors: shane
 description: Introducing "You've Got Mail" - An idea we want to build with the XMTP community
@@ -9,7 +9,7 @@ image: "media/CleanShot-2022-06-24-at-12.11.50@2x-1.png"
 ---
 import ReactPlayer from 'react-player'
 
-Introducing "You've Got Mail" - An idea we want to build with the XMTP community.
+An idea we want to build with the XMTP community.
 
 ![](media/CleanShot-2022-06-24-at-12.11.50@2x-1.png)
 

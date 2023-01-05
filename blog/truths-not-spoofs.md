@@ -20,7 +20,7 @@ _Token gating flow with an app on XMTP_
 
 <!--truncate-->
 
-@NftTopBest demonstrates one future for trustless messaging
+**@NftTopBest demonstrates one future for trustless messaging**
 
 ## Challenge
 

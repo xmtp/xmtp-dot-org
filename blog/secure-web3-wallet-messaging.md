@@ -24,7 +24,7 @@ Today's wallet apps are the portal into web3. We use them to transact, secure as
 And while they really do seem like a magical-do-everything-Swiss-Army-knife there's still one more trick that could be up their sleeve: securing _conversations_, not just transactions and assets.
 
 
-## Bringing wallet-to-wallet messaging to …wallets
+## Bringing wallet-to-wallet messaging to... wallets
 
 Wallet apps already securely store the keys necessary for users to transact in web3, so they're a natural fit for where encrypted messaging between blockchain accounts could take place. The demand and discussion around "wallet-to-wallet chat" has increased dramatically in recent months, but with all the complexity that goes into communication protocols, encrypting messages, and the full scope of messaging needs. it's no surprise that it has taken a while for wallets to adopt the necessary functionality. Until now, that is.
 
@@ -94,7 +94,7 @@ Encryption made easy
 The best part of this is that for wallets looking to add web3 messaging to their set of features, securing messages with XMTP means they can offer best-in-class encryption.
 
 
-## Messages wherever web3 takes you…
+## Messages wherever web3 takes you...
 
 Data ownership and portability are core web3 principles. It's how we can go from site-to-site and dapp-to-dapp in web3 without having to sign up through central authorities or services, and otherwise be locked into silos and walled gardens. Wallets enable us to bring our data and assets (transaction history, NFTs, etc.) along with, wherever we go in web3.
 
@@ -107,7 +107,7 @@ The XMTP SDK handles the secure retrieval and storage of a user's messages, and 
 Altogether, XMTP gives wallet apps the means to provide a streamlined, consistent messaging experience, meets users wherever they go, and unlocks new possibilities across web3.
 
 
-## How to get started with XMTP…
+## How to get started with XMTP...
 
 Here's a handful of helpful links to check out if you're keen to explore adding secure web3 messaging to your wallet app:
 

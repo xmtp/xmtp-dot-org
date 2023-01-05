@@ -25,7 +25,7 @@ Introducing XMTP to the Lens ecosystem means profiles will be able to privately 
 
 [![](media/lens-protocol-card.png)](https://lens.xyz/)
 
-We’re entering a new era for social, and a new way to think about communication within web3—one where users own their data, and can take their profile, graph, interactions, and communication wherever they want to. This shift is a logical expression of the inspiration we took from [Linkin Park’s Mike Shinoda when he talked about what it was like when Facebook cut him off from his audience and how web3 could solve this for all artists in the future](https://blog.xmtp.com/xmtp-origin-story/).
+We’re entering a new era for social, and a new way to think about communication within web3—one where users own their data, and can take their profile, graph, interactions, and communication wherever they want to. This shift is a logical expression of the inspiration we took from [Linkin Park’s Mike Shinoda when he talked about what it was like when Facebook cut him off from his audience and how web3 could solve this for all artists in the future](xmtp-origin-story).
 
 In the coming months, we look forward to helping more applications in adopting DMs across the Lensverse with XMTP. As with all other features supported by the Lens API, direct messages will be available to profiles and developers in any app built on the Lens Protocol.
 

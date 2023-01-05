@@ -18,7 +18,7 @@ ETH Online hackers build incredible apps across video chat, game security, and t
 
 <!--truncate-->
 
-ETHOnline just wrapped and, once again, the dev community showed up with an incredible range of high-quality projects.  Starting September 2nd and ending on the 28th, ETHOnline brought together 1,780 developers who built a total of 357 different projects, making it one of the biggest web3 events to date.
+[ETHOnline](https://online.ethglobal.com/) just wrapped and, once again, the dev community showed up with an incredible range of high-quality projects.  Starting September 2nd and ending on the 28th, ETHOnline brought together 1,780 developers who built a total of 357 different projects, making it one of the biggest web3 events to date.
 
 For XMTP, this event represented a new hackathon milestone: 50 projects used our protocol as part of their project–that’s one out of every seven submissions at the event. The quality and variety of projects blew us away as we saw how developers were finding creative and unique ways to integrate secure web3 messaging into their projects.
 
@@ -33,7 +33,7 @@ For example, take De-Chat’s use of video chat. By using XMTP as the messaging 
 
 De-chat showcases not only how messaging experiences will extend well beyond text but also how dApps can leverage several web3 protocols off the shelf to build rich user experiences.
 
-Get to know De-Chat:
+**Get to know De-Chat:**
 
 * Live demo: [https://de-chat.vercel.app/](https://de-chat.vercel.app/)
 * Github repo:
@@ -55,7 +55,7 @@ The team also emphasized that this doesn’t mean you need to sign every game mo
 
 GameJustu shows how developers can use encrypted messages to solve peer-to-peer scenarios that need an additional layer of security to create trust.
 
-Get to know GameJutsu:
+**Get to know GameJutsu:**
 
 * Live demo: [https://gamejutsu.app/](https://gamejutsu.app/)
 * Github repo:
@@ -74,6 +74,8 @@ _Cool side note: if a candidate passes the assessment, they are rewarded with no
 Obviously, messaging and communication are central to the Dehitas experience. Using XMTP, candidates and recruiters are given the ability to chat across stages of the assessment process, but also, given the sensitive nature of the personal data, XMTP’s end-to-end encrypted messages, ensure that communications are secure and personal information is safe.
 
 Furthermore, as Dehitas is leveraging decentralized solutions, it greatly reduces the cost of the platform services and makes hiring stronger talent more wildly available to companies across the world.
+
+**Get to know Dehitas:**
 
 * Live Demo: [https://demo.dehitas.xyz/](https://demo.dehitas.xyz/)
 * Github repo:
