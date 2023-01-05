@@ -450,6 +450,14 @@ main[class*='docMainContainer'] tr {
   padding-left: 0;
 }
 
+[itemprop*='headline'] {
+  font-size: 2.3rem !important;
+}
+
+[itemprop*='headline'] a {
+  text-decoration: none;
+}
+
 /* DocSearch override */
 .DocSearch-Commands li:not(:last-child) {
   display: none !important;
