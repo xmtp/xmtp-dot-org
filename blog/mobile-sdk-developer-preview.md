@@ -12,11 +12,9 @@ tags:
 - SDKs
 ---
 
-### This holiday season, we have an early gift for all the web3 developers out there.
+This holiday season, we have an early gift for all the web3 developers out there. Our mobile SDKs are now available in [Developer Preview](https://xmtp.org/sdks-and-tools) 🧑‍💻
 
 ![](media/blogGraphic.png)
-
-[Our mobile SDKs are now available in Developer Preview](https://xmtp.org/sdks-and-tools) 🧑‍💻
 
 <!--truncate-->
 

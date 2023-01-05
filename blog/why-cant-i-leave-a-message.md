@@ -9,13 +9,13 @@ image: "media/CleanShot-2022-06-24-at-12.11.50@2x-1.png"
 ---
 import ReactPlayer from 'react-player'
 
-### Introducing "You've Got Mail" - An idea we want to build with the XMTP community
+Introducing "You've Got Mail" - An idea we want to build with the XMTP community
 
 ![](media/CleanShot-2022-06-24-at-12.11.50@2x-1.png)
 
-Every day on Twitter & Discord people are trying to figure out how to reach a wallet address that they can't otherwise reach. The problem today is that there isn’t an established wallet-based inbox that everyone checks.
-
 <!--truncate-->
+
+Every day on Twitter & Discord people are trying to figure out how to reach a wallet address that they can't otherwise reach. The problem today is that there isn’t an established wallet-based inbox that everyone checks.
 
 We need a fun and lightweight way to leave messages for people and have simple ways to let them know there's a message waiting for them.
 

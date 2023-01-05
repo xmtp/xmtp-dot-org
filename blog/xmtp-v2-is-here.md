@@ -12,15 +12,15 @@ tags:
 ---
 import ReactPlayer from 'react-player'
 
-### The latest version brings conversation filtering and improvements to privacy
+The latest version brings conversation filtering and improvements to privacy
 
 <ReactPlayer width="100%" controls url='https://www.youtube.com/watch?v=8_ufTvYBdLo' />
+
+<!--truncate-->
 
 <br/>
 
 Over the past 12 months, we’ve met with hundreds of development teams using the XMTP protocol to build native web3 messaging.
-
-<!--truncate-->
 
 Whether it has been 2-person teams at a hackathon or the largest companies in web3, the feedback was unanimous: _deliver the highest standard in messaging security, while allowing me to build powerful end-user experiences in my app._
 

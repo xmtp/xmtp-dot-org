@@ -12,13 +12,13 @@ tags:
 - Spotlight
 ---
 
-### "Wow" is just about the best way we could sum up [@ETHGlobal](https://twitter.com/ETHGlobal)'s [#ETHSanFrancisco](https://twitter.com/hashtag/ETHSanFrancisco?src=hashtag_click).
+"Wow" is just about the best way we could sum up [@ETHGlobal](https://twitter.com/ETHGlobal)'s [#ETHSanFrancisco](https://twitter.com/hashtag/ETHSanFrancisco?src=hashtag_click).
 
 ![](media/ETHSF-Wrapup---Alt.png)
 
-30 teams built with XMTP, exhibiting a level of quality and novelty that blew us away. And top it off, two of them were event finalists.
-
 <!--truncate-->
+
+30 teams built with XMTP, exhibiting a level of quality and novelty that blew us away. And top it off, two of them were event finalists.
 
 Here were our top picks for our prizes:
 

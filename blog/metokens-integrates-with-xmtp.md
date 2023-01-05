@@ -12,13 +12,13 @@ tags:
 - Messaging
 ---
 
-### With XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.
+With XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.
 
 ![](media/meTokensShareSplit.png)
 
-What if every content creator, artist, solopreneur, trade artisan or independent professional could take their work into the market and be fully, fairly compensated through a direct connection with people who value their work?
-
 <!--truncate-->
+
+What if every content creator, artist, solopreneur, trade artisan or independent professional could take their work into the market and be fully, fairly compensated through a direct connection with people who value their work?
 
 meTokens has created an alternative to government-backed currencies that is both decentralized and trustless _and XMTP is thrilled to be a part of their solution._
 
