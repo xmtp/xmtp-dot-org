@@ -37,6 +37,16 @@
         "tags": "community",
         "selectors_key": "community"
       },
+      {
+        "url": "https://xmtp.org/built-with-xmtp/*",
+        "tags": "community",
+        "selectors_key": "community"
+      },
+      {
+        "url": "https://xmtp.org/blog/*",
+        "tags": "blog",
+        "selectors_key": "blog"
+      },
       "https://xmtp.org"
     ],
     "stop_urls": [],
@@ -126,11 +136,39 @@
         "lvl6": "article h6",
         "text": "article p, article li, article td:last-child"
       },
+      "built-with-xmtp": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "Community"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
       "sdks-and-tools": {
         "lvl0": {
           "selector": "",
           "global": true,
           "default_value": "SDKs and tools"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "blog": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "blog"
         },
         "lvl1": "article h1",
         "lvl2": "article h2",
