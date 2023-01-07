@@ -42,9 +42,9 @@ export const BLOG_DATA = [
   {
     tag: [tags.announcements, tags.developers, tags.sdks],
     title:
-      'XMTP mobile SDKs now in Developer Preview',
+      'Mobile SDKs in Developer Preview',
     content:
-      'This holiday season, we have an early gift for all the web3 developers out there. Our mobile SDKs are now available in Developer Preview 🧑‍💻',
+      'This holiday season, we have an early gift for all the web3 developers out there. XMTP mobile SDKs are now available in Developer Preview 🧑‍💻',
     user: {
       name: 'Peter Denton',
       date: '20 Dec 2022 · 2 min read',
