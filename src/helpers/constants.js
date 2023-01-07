@@ -22,26 +22,37 @@ export const HEADER_DATA = [
 ]
 
 const tags = {
-  developers: {
-    name: 'Developers',
-    url: 'https://blog.xmtp.com/tag/developers/',
-  },
-  lens: { name: 'Lens', url: 'https://blog.xmtp.com/tag/lens/' },
-  announcements: { name: 'Announcements', url: 'https://blog.xmtp.com/tag/announcements/' },
-  litepaper: { name: 'Litepaper', url: 'https://blog.xmtp.com/tag/litepaper/' },
-  messaging: { name: 'Messaging', url: 'https://blog.xmtp.com/tag/messaging/' },
-  spotlight: { name: 'Spotlight', url: 'https://blog.xmtp.com/tag/spotlight/' },
-  hackathon: {
-    name: 'Hackathon',
-    url: 'https://blog.xmtp.com/tag/hackathon/',
-  },
-  nfts: { name: 'NFTs', url: 'https://blog.xmtp.com/tag/nfts/' },
-  wallets: { name: 'Wallets', url: 'https://blog.xmtp.com/tag/wallets/' },
-  privacySecurity: { name: 'Privacy & Security', url: 'https://blog.xmtp.com/tag/privacy-security/' },
-  protocol: { name: 'Protocol', url: 'https://blog.xmtp.com/tag/protocol/' },
+  announcements: { name: 'Announcements', url: '/blog/tags/announcements/' },
+  awards: { name: 'Awards', url: '/blog/tags/awards/' },
+  company: { name: 'Company', url: '/blog/tags/company/' },
+  developers: { name: 'Developers', url: '/blog/tags/developers/' },
+  hackathon: { name: 'Hackathon', url: '/blog/tags/hackathon/' },
+  lens: { name: 'Lens', url: '/blog/tags/lens/' },
+  litepaper: { name: 'Litepaper', url: '/blog/tags/litepaper/' },
+  messaging: { name: 'Messaging', url: '/blog/tags/messaging/' },
+  nfts: { name: 'NFTs', url: '/blog/tags/nfts/' },
+  privacySecurity: { name: 'Privacy & Security', url: '/blog/tags/privacy-security/' },
+  protocol: { name: 'Protocol', url: '/blog/tags/protocol/' },
+  sdks: { name: 'SDKs', url: '/blog/tags/sd-ks' },
+  spotlight: { name: 'Spotlight', url: '/blog/tags/spotlight/' },
+  wallets: { name: 'Wallets', url: '/blog/tags/wallets/' },
 }
 
 export const BLOG_DATA = [
+  {
+    tag: [tags.announcements, tags.developers, tags.sdks],
+    title:
+      'XMTP mobile SDKs now in Developer Preview',
+    content:
+      'This holiday season, we have an early gift for all the web3 developers out there. Our mobile SDKs are now available in Developer Preview 🧑‍💻',
+    user: {
+      name: 'Peter Denton',
+      date: '20 Dec 2022 · 2 min read',
+      img: 'peter-denton.jpeg',
+      url: 'https://twitter.com/petermdenton'
+    },
+    url: '/blog/mobile-sdk-developer-preview',
+  },
   {
     tag: [tags.privacySecurity, tags.protocol, tags.announcements],
     title: 'XMTP v2 Is Here',
@@ -51,9 +62,9 @@ export const BLOG_DATA = [
       name: 'Matt Galligan',
       date: '06 Dec 2022 · 3 min read',
       img: 'matt-galligan.jpeg',
-      url: 'https://blog.xmtp.com/author/mg/'
+      url: 'https://twitter.com/mg'
     },
-    url: 'https://blog.xmtp.com/xmtp-v2-is-here/',
+    url: '/blog/xmtp-v2-is-here/',
   },
   {
     tag: [tags.developers, tags.spotlight, tags.messaging],
@@ -65,23 +76,9 @@ export const BLOG_DATA = [
       name: 'Peter Denton',
       date: '29 Nov 2022 · 2 min read',
       img: 'peter-denton.jpeg',
-      url: 'https://blog.xmtp.com/author/peter/'
+      url: 'https://twitter.com/petermdenton'
     },
-    url: 'https://blog.xmtp.com/metokens-integrates-with-xmtp/',
-  },
-  {
-    tag: [tags.developers, tags.hackathon, tags.spotlight],
-    title:
-      'ETH San Francisco Wrap-up',
-    content:
-      '"Wow" is just about the best way we could sum up ETHGlobal`s ETHSanFrancisco.',
-    user: {
-      name: 'Peter Denton',
-      date: '22 Nov 2022 · 3 min read',
-      img: 'peter-denton.jpeg',
-      url: 'https://blog.xmtp.com/author/peter/'
-    },
-    url: 'https://blog.xmtp.com/eth-sf-2022/',
+    url: '/blog/metokens-integrates-with-xmtp/',
   },
 ]
 
