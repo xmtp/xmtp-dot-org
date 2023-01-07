@@ -67,6 +67,13 @@ const exampleappcards = [
     theme: 'sunrise',
   },
   {
+    title: 'Push notification example server',
+    description: '🧑‍💻 Dev preview: A push notification example server written in Golang. A starting point to support notifications right in your app.',
+    firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-notification-server-go' },
+    logo: 'img/x-mark.svg',
+    theme: 'daylight',
+  },
+  {
     title: 'Awesome XMTP',
     description: 'Explore a growing list of GitHub repos for projects that use XMTP‍',
     firstLink: { name: 'Awesome XMTP', link: 'https://github.com/xmtp/awesome-xmtp' },
@@ -78,7 +85,7 @@ const exampleappcards = [
     description: 'Explore a curated showcase of apps built with XMTP‍',
     firstLink: { name: 'Built with XMTP', link: 'built-with-xmtp' },
     logo: 'img/x-mark.svg',
-    theme: 'daylight',
+    theme: 'sunrise',
   },
 ]
 

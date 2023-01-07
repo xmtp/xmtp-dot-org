@@ -82,6 +82,7 @@ export const BLOG_DATA = [
   },
 ]
 
+export const XMTP_NOTIF_SERVER_URL = 'https://api.github.com/repos/xmtp/example-notification-server-go'
 export const XMTP_JS_URL = 'https://api.github.com/repos/xmtp/xmtp-js'
 export const XMTP_FLUTTER_URL = 'https://api.github.com/repos/xmtp/xmtp-flutter'
 export const XMTP_IOS_URL = 'https://api.github.com/repos/xmtp/xmtp-ios'
