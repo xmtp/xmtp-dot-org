@@ -1,4 +1,4 @@
- [
+ ,d [
    {
       "name":"XMTP.chat",
       "href":"https://xmtp.chat",
@@ -82,7 +82,7 @@
       "name":"Plex",
       "href":"https://plexlabs.io",
       "image":"/img/builtWithXmtp/plexlabs.jpeg",
-      "description":"Plex allows brands to query relevant audiences, understand who they are based on on-chain/off-chain attributes, and engage them via XMTP messaging.",
+      "description":"Plex allows brands to query relevant audiences and understand who they are based on on- and off-chain attributes.",
       "twitter": "https://twitter.com/Plexlaboratory"
    },
    {
