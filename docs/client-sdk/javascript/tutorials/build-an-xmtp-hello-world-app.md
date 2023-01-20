@@ -19,9 +19,11 @@ As its name implies, the XMTP "hello world" app is intentionally barebones. Here
 
    ![MetaMask browser extension Signature request window showing an "XMTP: Enable Identity" message](img/connect-to-xmtp.png)<!--I think this is a dupe screenshot-->
 
-3. Send a preconfigured "gm" message to your connected blockchain account address.
+3. Send a preconfigured "gm" message to an XMTP message bot and receive a reply from the bot.
 
-   ![Screenshot of the hello world app running in a browser at localhost:3000 showing a connected Ethereum account address, a Send gm button, and a gm message below the button](img/send-gm.png)
+   ![Screenshot of the hello world app running in a browser at localhost:3000 showing a connected Ethereum account address, a Send gm button, a gm message from the connected address, and a reply message from the XMTP message bot](img/send-gm.png)
+
+<!--Currently, the XMTP message bot replies with the message displayed in the screenshot. We might want to shorten it a bit? Then the bot sends another message, unprompted. I think the bot should send the second message only after it receives another "gm" message from the app. We can refine the ChainJet workflow - just putting this comment here as an FYI about the behavior.-->
 
 The app includes only the code required to accomplish these steps and little else. This helps keep the codebase relatively bite-sized so that developers of all skill levels can ease into learning the basics of building a messaging app with XMTP.
 
@@ -235,6 +237,8 @@ Before starting this task, be sure to have a wallet app browser extension instal
 
    Your "hello world" app UI doesn't change. However, in your wallet app you can see that your account is now connected to your "hello world" app running at `localhost:3000`:
 
+   <!--for me, the MetaMask browser extension doesn't open on its own sometimes - I think it is when you start up the app and the address is already connected to localhost, for example. To make MetaMask display, I need to disconnect the adddress, reload the app, and then click Connect wallet.-->
+
    ![Screenshot of the MetaMask wallet app browser extension showing an account named Amal with an Ethereum account address with the last 4 characters 80d7 connected to localhost:3000](img/connect-wallet-prompt.png)
 
 8. Before you start the next section, stop the app running in your CLI. To do this, press **Ctrl+C**.
@@ -268,9 +272,11 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
 
    This code provides the XMTP functionality your "hello world" app needs to initiate the XMTP messaging API client and use it to communicate with the XMTP network to send and retrieve messages.
 
+   <!--The ChainJet workflow has the XMTP message bot on production - so the hw app needs to run on production. If we think this should be on dev, we need to switch the bot to work on dev.-->
+
    :::important
 
-   In this code block, `env: "dev"` connects your "hello world" app to the XMTP `dev` network. This means that the "gm" messages you send with the app are accessible using only apps that are connected to the XMTP `dev` network. To learn more about working with XMTP network environments, see [XMTP production and dev network environments](https://github.com/xmtp/xmtp-js#xmtp-production-and-dev-network-environments).
+   In this code block, `env: "production"` connects your "hello world" app to the XMTP `production` network. This means that the "gm" messages you send with the app are accessible using only apps that are connected to the XMTP `production` network. To learn more about working with XMTP network environments, see [XMTP production and dev network environments](https://github.com/xmtp/xmtp-js#xmtp-production-and-dev-network-environments).
 
    :::
 
@@ -296,7 +302,7 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
       const initClient = async (wallet) => {
         if (wallet && !providerState.client) {
           try {
-            const client = await Client.create(wallet, { env: "dev" });
+            const client = await Client.create(wallet, { env: "production" });
             setProviderState({
               ...providerState,
               client,
@@ -335,7 +341,7 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
           const convos = await client.conversations.list();
           Promise.all(
             convos.map(async (convo) => {
-              if (convo.peerAddress === walletAddress) {
+              if (convo.peerAddress === "0x937C0d4a6294cdfa575de17382c7076b579DC176") {
                 let messages = convoMessages.get(convo.peerAddress);
                 if (!messages) {
                   messages = await convo.messages();
@@ -464,7 +470,7 @@ Your "hello world" app uses a **Connect to XMTP** button to enable you to provid
 
 Now that the XMTP identity associated with your blockchain account is connected to the XMTP network, you can send and receive messages with XMTP.
 
-For simplicity, your "hello world" app enables you to send a preconfigured "gm" message (hello world) to your own already connected account. This makes it easy for you to immediately see the outcome of sending a message.
+For simplicity, your "hello world" app enables you to send a preconfigured "gm" message (hello world) to an XMTP message bot that is programmed to automatically reply to an address it receives a message from. This makes it easy for you to immediately see the outcome of sending a message.
 
 1. In the `my-app/src` directory, create a `hooks` directory. In the `hooks` directory, create a file named `useStreamMessages.js`.
 
@@ -478,7 +484,6 @@ For simplicity, your "hello world" app enables you to send a preconfigured "gm" 
     import { XmtpContext } from "../contexts/XmtpContext";
 
     const useStreamMessages = (peerAddress) => {
-      const { walletAddress } = useContext(WalletContext);
       const [providerState, setProviderState] = useContext(XmtpContext);
       const { client, convoMessages } = providerState;
       const [stream, setStream] = useState("");
@@ -527,20 +532,20 @@ For simplicity, your "hello world" app enables you to send a preconfigured "gm" 
           closeStream();
         };
         // eslint-disable-next-line
-      }, [convoMessages, walletAddress, conversation]);
+      }, [convoMessages, peerAddress, conversation]);
     };
 
     export default useStreamMessages;
     ```
 
-2. In the `my-app/src` directory, update the existing `App.js` file to add a `sendMessage` constant, which sends the **gm** message to the connected account. Then create the **Send gm** button UI element that, when clicked, uses `sendMessage` to send the **gm** message.
+2. In the `my-app/src` directory, update the existing `App.js` file to add a `sendMessage` constant, which sends the **gm XMTP bot!** message to the XMTP message bot. Then create the **Send gm** button UI element that, when clicked, uses `sendMessage` to send the **gm XMTP bot!** message.
 
    Also, enable the app to display existing messages and stream new messages using the `useStreamMessages` hook you just created.
 
-   To do this, copy this code block and paste it into the file, replacing all existing code. For reference, lines with code changes are highlighted.
+   To do this, copy this code block and paste it into the file, replacing all existing code. For reference, lines with code changes are highlighted. <!-- These highlighted line numbers below are off because the App.js code has changed quite a bit to provide the updated flow. Also, this code me change even more based on the fix to make existing messages display. So let's see how everything shakes out and then we can see which lines of code need to be higlighted.-->
 
     ```js {5,10-23,37,39-52} showLineNumbers
-    import { useContext } from "react";
+    import { useContext, useEffect, useState } from "react";
     import "./App.css";
     import { WalletContext } from "./contexts/WalletContext";
     import { XmtpContext } from "./contexts/XmtpContext";
@@ -548,21 +553,36 @@ For simplicity, your "hello world" app enables you to send a preconfigured "gm" 
 
     function App() {
       const { connectWallet, walletAddress, signer } = useContext(WalletContext);
-      const [providerState] = useContext(XmtpContext);
-      const { convoMessages,client } = providerState;
-      useStreamMessages(walletAddress);
+      const [providerState, setProviderState] = useContext(XmtpContext);
+      const { convoMessages, client } = providerState;
+      const [peerAddress] = useState("0x937C0d4a6294cdfa575de17382c7076b579DC176");
+      useStreamMessages(peerAddress);
 
       const sendMessage = async () => {
-        const message = "gm";
+        const message = "gm XMTP bot!";
         if (!client || !walletAddress) {
           return;
         }
-        const conversation = await client.conversations.newConversation(
-          walletAddress
-        );
+        const conversation = await client.conversations.newConversation(peerAddress);
         if (!conversation) return;
         await conversation.send(message);
       };
+
+      const [newMessages, setNewMessages] = useState([]);
+      useEffect(() => {
+        if (!convoMessages || !peerAddress) {
+          return;
+        }
+
+        let newMessages = convoMessages.get(peerAddress);
+
+        if (!newMessages) {
+          newMessages = [];
+          convoMessages.set(peerAddress, newMessages);
+        }
+
+        setNewMessages(newMessages);
+      }, [convoMessages, peerAddress]);
 
       return (
         <div className="App">
@@ -583,7 +603,7 @@ For simplicity, your "hello world" app enables you to send a preconfigured "gm" 
                   </button>
                   <div className="msg-container">
                     {convoMessages &&
-                      convoMessages.get(walletAddress)?.map((msg) => {
+                      convoMessages.get(peerAddress)?.map((msg) => {
                         return (
                           <div className="msg" key={msg.id}>
                             {msg.content}
@@ -608,13 +628,13 @@ For simplicity, your "hello world" app enables you to send a preconfigured "gm" 
 
    :::important
 
-   If you've used your connected account to send XMTP messages to itself on the XMTP `dev` network in the past, the messages appear in your "hello world" app.
+   If you've used your connected account to send XMTP messages to the XMTP message bot on the XMTP `production` network in the past, the messages appear in your "hello world" app.
 
    :::
 
    ![Screenshot of the hello world app running in a browser at localhost:3000 showing a connected Ethereum account address and a Send gm button](img/connected.png)
 
-4. Click **Send gm**. The **gm** message appears.
+4. Click **Send gm**. The sent **gm XMTP bot!** message appears. Within a few seconds, a message from the XMTP bot displays.
 
    ![Screenshot of the hello world app running in a browser at localhost:3000 showing a connected Ethereum account address, a Send gm button, and a gm message below the button](img/send-gm.png)
 
