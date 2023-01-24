@@ -67,25 +67,25 @@ All projects must propose a standard, tool, or concept that’s adopted by the c
 <details>
   <summary>Click for details</summary>
   <div>
-    <h3>XMTP concepts</h3>
+    <h4>XMTP concepts</h4>
       <p><a href="/docs/dev-concepts/introduction">XMTP development concepts</a></p>
-    <h3>Vision</h3>
+    <h4>Vision</h4>
       <p><a href="/vision/roadmap">XMTP roadmap</a></p>
-    <h3>Documentation</h3>
+    <h4>Documentation</h4>
       <p><a href="/docs/client-sdk/javascript/concepts/intro-to-sdk">JavaScript client SDK docs</a></p>
-    <h3>SDKs</h3>
+    <h4>SDKs</h4>
       <ul>
         <li><a href="https://github.com/xmtp/xmtp-js">JavaScript</a></li>
         <li><a href="https://github.com/xmtp/xmtp-ios">Swift/iOS</a></li>
         <li><a href="https://github.com/xmtp/xmtp-flutter">Flutter</a></li>
         <li>Kotlin/Android: Coming soon!</li>
       </ul>
-    <h3>Example apps</h3>
+    <h4>Example apps</h4>
       <ul>
         <li><a href="https://github.com/xmtp/xmtp-quickstart-react">React web app</a></li>
         <li><a href="https://github.com/xmtp/example-chat-react-native">React Native app</a></li>
       </ul>
-    <h3>Project showcase</h3>
+    <h4>Project showcase</h4>
       <ul>
         <li><a href="https://github.com/xmtp/awesome-xmtp">Awesome-xmtp projects</a></li>
         <li><a href="built-with-xmtp">Built with XMTP</a></li>
