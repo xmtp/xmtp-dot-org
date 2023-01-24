@@ -68,11 +68,11 @@ All projects must propose a standard, tool, or concept that’s adopted by the c
   <summary>Click for details</summary>
   <div>
     <h3>XMTP concepts</h3>
-      <p><a href="https://xmtp.org/docs/dev-concepts/introduction">XMTP development concepts</a></p>
+      <p><a href="/docs/dev-concepts/introduction">XMTP development concepts</a></p>
     <h3>Vision</h3>
-      <p><a href="https://xmtp.org/vision/roadmap">XMTP roadmap</a></p>
+      <p><a href="/vision/roadmap">XMTP roadmap</a></p>
     <h3>Documentation</h3>
-      <p><a href="https://xmtp.org/docs/client-sdk/javascript/concepts/intro-to-sdk">JavaScript client SDK reference docs</a></p>
+      <p><a href="/docs/client-sdk/javascript/concepts/intro-to-sdk">JavaScript client SDK docs</a></p>
     <h3>SDKs</h3>
       <ul>
         <li><a href="https://github.com/xmtp/xmtp-js">JavaScript</a></li>
@@ -88,7 +88,7 @@ All projects must propose a standard, tool, or concept that’s adopted by the c
     <h3>Project showcase</h3>
       <ul>
         <li><a href="https://github.com/xmtp/awesome-xmtp">Awesome-xmtp projects</a></li>
-        <li><a href="https://xmtp.org/built-with-xmtp">Built with XMTP</a></li>
+        <li><a href="built-with-xmtp">Built with XMTP</a></li>
       </ul>
   </div>
 </details>
@@ -170,13 +170,13 @@ All projects must propose a standard, tool, or concept that’s adopted by the c
     <p>Grants are up to $10K.</p>
     <br/>
     <p><strong>Q: Can we use XMTP branding for our project?</strong></p>
-    <p>Of course, please be sure to use official brand assets here: [https://xmtp.org/branding-assets](https://xmtp.org/branding-assets).</p>
+    <p>Of course, please be sure to use these <a href="https://xmtp.org/branding-assets">official XMTP branding assets</a>.</p>
     <br/>
     <p><strong>Q: What is the deadline to deliver?</strong></p>
     <p>Milestone dates are agreed upon by the project team and XMTP. They can be amended within reason.</p>
     <br/>
     <p><strong>Q: My grant was milestone based, how do I follow up once a milestone has been reached?</strong></p>
-    <p>You can fill in the form available at [Claim Subsequent Payments](https://13dm8uq1em4.typeform.com/to/QSpH8zK4) to notify us of your progress and unlock the next portion of your grant!</p>
+    <p>You can fill in the form available at <a href="https://13dm8uq1em4.typeform.com/to/QSpH8zK4">Claim Subsequent Payments</a> to notify us of your progress and unlock the next portion of your grant!</p>
   </div>
 </details>
 
