@@ -1,12 +1,19 @@
 ---
 sidebar_label: Grants
-sidebar_position: 3
+sidebar_position: 2
 toc_max_heading_level: 2
 ---
 
-# XMTP grants: Every big idea starts small
+# XMTP Grants program
 
-### 🚀 [Apply here!](https://13dm8uq1em4.typeform.com/to/rnG23NsI)
+<br/>
+
+:::tip Every big idea starts small
+
+[Apply here](https://forms.xmtp.org/grants-application)
+
+:::
+
 
 ## ✨ Mission
 
@@ -46,139 +53,143 @@ We are open to any and all ideas! Below are just a few categories of projects we
 
 ### 👨🏼‍💻 Developer tools
 
-- Plug & play notification server
+- Plug and play notification server
 - Web3 resolver library
 
 
 ### 👀 Unique features
 
 - Read receipts - opt-in, performant, performant
-- Personalizable conversation sorting & filtering
+- Personalizable conversation sorting and filtering
 
 :::note
 
-All projects must propose a standard, tool, or concept that’s adopted by the community. This involves collaborating via XMTP improvement proposals (XIPs) to create a public good.
+All projects must propose a standard, tool, or concept that’s adopted by the ecosystem. This involves collaborating with the community to create a public good. You can leverage [XIPs](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) to discuss proposals.
 
 :::
 
 
-## ✨ Resources and inspiration
-
-<details>
-  <summary>Click for details</summary>
-  <div>
-    <h4>XMTP concepts</h4>
-      <p><a href="/docs/dev-concepts/introduction">XMTP development concepts</a></p>
-    <h4>Vision</h4>
-      <p><a href="/vision/roadmap">XMTP roadmap</a></p>
-    <h4>Documentation</h4>
-      <p><a href="/docs/client-sdk/javascript/concepts/intro-to-sdk">JavaScript client SDK docs</a></p>
-    <h4>SDKs</h4>
-      <ul>
-        <li><a href="https://github.com/xmtp/xmtp-js">JavaScript</a></li>
-        <li><a href="https://github.com/xmtp/xmtp-ios">Swift/iOS</a></li>
-        <li><a href="https://github.com/xmtp/xmtp-flutter">Flutter</a></li>
-        <li>Kotlin/Android: Coming soon!</li>
-      </ul>
-    <h4>Example apps</h4>
-      <ul>
-        <li><a href="https://github.com/xmtp/xmtp-quickstart-react">React web app</a></li>
-        <li><a href="https://github.com/xmtp/example-chat-react-native">React Native app</a></li>
-      </ul>
-    <h4>Project showcase</h4>
-      <ul>
-        <li><a href="https://github.com/xmtp/awesome-xmtp">Awesome-xmtp projects</a></li>
-        <li><a href="built-with-xmtp">Built with XMTP</a></li>
-      </ul>
-  </div>
-</details>
-
-
 ## 🔍 Grant types
 
-<details>
-  <summary>Click for details</summary>
-  <div>
-    <p>We offer two types of grants: Micro grants and kickstarter grants.</p>
-    <h4>Micro grants (&lt;$5k)</h4>
-      <ul>
-        <li>Smaller project scope, faster review process</li>
-        <li>Examples:</li>
-        <ul>
-          <li>Opt-in, interoperable, performant read receipts</li>
-          <li>Rabbithole quest</li>
-        </ul>
-      </ul>
-    <h4>Kickstarter grants (&lt;$10K)</h4>
-    <ul>
-      <li>Bigger project scope, fast review process</li>
-      <li>Examples</li>
-      <ul>
-        <li>Cross-chain support or account abstraction</li>
-        <li>Portable & interoperable consent backpack</li>
-      </ul>
-    </ul>
-    <p>📣 If you are unsure, message us via XMTP at <code>grants.xmtp.eth</code> and we'll be happy to help you figure out the grant type that's right for you.</p>
-  </div>
-</details>
+We offer two types of grants: Micro grants and kickstarter grants.
+
+**Micro grants (<$5k):**
+
+- Smaller project scope, faster review process
+- Examples:
+    - Opt-in, interoperable, performant read receipts
+    - Rabbithole quest
+
+**Kickstarter grants (<$10K):**
+
+- Bigger project scope, fast review process
+- Examples:
+    - Cross-chain support or account abstraction
+    - Portable and interoperable consent backpack
+
+📣 If you are unsure, message us via XMTP at `grants.xmtp.eth` and we'll be happy to help you figure out the grant type that's right for you.
 
 
 ## 🎯 Evaluation criteria
 
-<details>
-  <summary>Click for details</summary>
-  <div>
-    <p>We love and encourage diversity of ideas in grant applications. This section lists the baseline expectations we have for all applications.</p>
-    <p>XMTP grants are <strong>not</strong> for:</p>
-    <ul>
-      <li><strong>Integrating with XMTP</strong>: Merely integrating with XMTP does not quality for a grant.</li>
-      <li><strong>Marketing budgets</strong>: Grant money should not be used towards promoting or advertising projects.</li>
-      <li><strong>Replacements for venture funding:</strong> Grants are not substitutions for a round of funding. They are aimed at enabling discrete projects that create a public good for the ecosystem.</li>
-      <li><strong>Free money</strong>: Please don’t abuse this system. Our program’s mission is to support people who believe in the potential of web3 messaging and want to contribute to building in the space.</li>
-      <li><strong>Stress relief</strong>: Our grants are not intended to extend your runway or alleviate financial stress. You should aim to build long-term in our ecosystem.</li>
-    </ul>
-    <p>Consider the following criteria if you’re uncertain whether your project qualifies for an XMTP grant:</p>
-    <ul>
-      <li><strong>Building in public</strong>: Not all projects require code, but they should be built in the spirit of open-sourcing your learnings (and code if appropriate) for everyone to learn from.</li>
-      <li><strong>Action > Perfection</strong>: Show us how you or your team have the skills and potential to bring the proposal to life.</li>
-      <li><strong>Definitive use case</strong>: Articulate your idea clearly on how your project uses XMTP and adds value to the ecosystem. Please do not try to overthink or overcomplicate it.</li>
-      <li><strong>Public good creation</strong>: Show clear connection between your proposal and the value it generates for the broader ecosystem.</li>
-      <li><strong>Collaborate</strong>: Be collaborative and open to offering support to other members of our community. Let’s grow together!</li>
-    </ul>
-  </div>
-</details>
+We love and encourage diversity of ideas in grant applications. This section lists the baseline expectations we have for all applications.
+
+XMTP Grants are **not** for:
+
+- **Integrating with XMTP**: Merely integrating with XMTP does not quality for a grant.
+- **Marketing budgets**: Grant money should not be used towards promoting or advertising projects.
+- **Replacements for venture funding:** Grants are not substitutions for a round of funding. They are aimed at enabling discrete projects that create a public good for the ecosystem.
+- **Free money**: Please don’t abuse this system. Our program’s mission is to support people who believe in the potential of web3 messaging and want to contribute to building in the space.
+- **Stress relief**: Our grants are not intended to extend your runway or alleviate financial stress. You should aim to build long-term in our ecosystem.
+
+Consider the following criteria if you’re uncertain whether your project qualifies for an XMTP grant:
+
+- **Building in public**: Not all projects require code, but they should be built in the spirit of open-sourcing your learnings (and code if appropriate) for everyone to learn from.
+- **Action > Perfection**: Show us how you or your team have the skills and potential to bring the proposal to life.
+- **Definitive use case:** Articulate your idea clearly on how your project uses XMTP and adds value to the ecosystem. Please do not try to overthink or overcomplicate it.
+- **Public Good creation**: Show clear connection between your proposal and the value it generates for the broader ecosystem.
+- **Collaborate**: Be collaborative and open to offering support to other members of our community. Let’s grow together!
 
 
 ## ❓ FAQ
 
-<details>
-  <summary>Click for details</summary>
-  <div>
-    <p><strong>Q: Any deadlines to keep in mind?</strong></p>
-    <p>Nope! We’re always on the lookout for cool ideas - so applications are accepted on a rolling basis.</p>
-    <br/>
-    <p><strong>Q: Will I hear back if my application is rejected?</strong></p>
-    <p>Yes, you will hear back either from us irrespective or whether your application is successful or not.</p>
-    <br/>
-    <p><strong>Q: I have not heard back on my application yet, can I get an update?</strong></p>
-    <p>Please check your XMTP inbox for the ENS (or EVM address) you shared with us in your application.</p>
-    <br/>
-    <p><strong>Q: When will I receive a decision for my application?</strong></p>
-    <p>We will get back to you within 3-4 weeks of your submission.</p>
-    <br/>
-    <p><strong>Q: How much money is the grant?</strong></p>
-    <p>Grants are up to $10K.</p>
-    <br/>
-    <p><strong>Q: Can we use XMTP branding for our project?</strong></p>
-    <p>Of course, please be sure to use these <a href="https://xmtp.org/branding-assets">official XMTP branding assets</a>.</p>
-    <br/>
-    <p><strong>Q: What is the deadline to deliver?</strong></p>
-    <p>Milestone dates are agreed upon by the project team and XMTP. They can be amended within reason.</p>
-    <br/>
-    <p><strong>Q: My grant was milestone based, how do I follow up once a milestone has been reached?</strong></p>
-    <p>You can fill in the form available at <a href="https://13dm8uq1em4.typeform.com/to/QSpH8zK4">Claim Subsequent Payments</a> to notify us of your progress and unlock the next portion of your grant!</p>
-  </div>
-</details>
+**Q: Any deadlines to keep in mind?**
+
+Nope! We’re always on the lookout for cool ideas - so applications are accepted on a rolling basis.
+
+<br/>
+
+**Q: Will I hear back if my application is rejected?**
+
+Yes, you will hear back either from us irrespective or whether your application is successful or not.
+
+<br/>
+
+**Q: I have not heard back on my application yet, can I get an update?**
+
+Please check your XMTP inbox for the ENS (or EVM address) you shared with us in your application.
+
+<br/>
+
+**Q: When will I receive a decision for my application?**
+
+We will get back to you within 3-4 weeks of your submission.
+
+<br/>
+
+**Q: How much money is the grant?**
+
+Grants are up to $10K.
+
+<br/>
+
+**Q: Can we use XMTP branding for our project?**
+
+Of course, please be sure to use these [official XMTP brand assets](https://xmtp.org/branding-assets).
+
+<br/>
+
+**Q: What is the deadline to deliver?**
+
+Milestone dates are agreed upon by the project team and XMTP. They can be amended within reason.
+
+<br/>
+
+**Q: How do I follow up once a milestone has been reached?**
+
+You can fill in the form available at [Claim Payments](https://forms.xmtp.org/grants-claim-payment) to notify us of your progress and unlock the next portion of your grant!
+
+
+## ✨ Resources and inspiration
+
+### XMTP concepts
+
+- [XMTP development concepts](/docs/dev-concepts/introduction)
+
+### Vision
+
+- [XMTP roadmap](/vision/roadmap)
+
+### Documentation
+
+- [JavaScript client SDK docs](/docs/client-sdk/javascript/concepts/intro-to-sdk)
+
+### SDKs
+
+- JavaScript: https://github.com/xmtp/xmtp-js
+- iOS: https://github.com/xmtp/xmtp-ios
+- Flutter: https://github.com/xmtp/xmtp-flutter
+- Kotlin: Coming soon!
+
+### Example apps
+
+- React web app: https://github.com/xmtp/xmtp-quickstart-react
+- React Native app: https://github.com/xmtp/example-chat-react-native
+
+### Project showcase
+
+- Awesome-xmtp projects: https://github.com/xmtp/awesome-xmtp
+- [Built with XMTP](built-with-xmtp)
 
 
 ## 💬 Contact us
@@ -191,4 +202,10 @@ All projects must propose a standard, tool, or concept that’s adopted by the c
 
 📬 DM us via XMTP at `grants.xmtp.eth` for anything else
 
-### [Apply here!](https://13dm8uq1em4.typeform.com/to/rnG23NsI) 🚀
+<br/>
+
+:::tip Every big idea starts small
+
+[Apply here](https://forms.xmtp.org/grants-application)
+
+:::

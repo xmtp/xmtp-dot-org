@@ -143,16 +143,16 @@ const config = {
                 <div class="subtext text-sm text-normal whitespace-pre-line">Join in and contribute to the XMTP community</div></div></div>`,
               },
               {
+                to: 'grants',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Rocket icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Grants</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Apply for a grant for a project that fosters ecosystem growth</div></div></div>`,
+              },
+              {
                 to: 'built-with-xmtp',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
                 <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
-              },
-              {
-                to: 'grants',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/x-new.svg" alt="XMTP mark icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Grants</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Apply for a grant for a project that fosters ecosystem growth</div></div></div>`,
               },
               {
                 to: 'community/code-of-conduct',
