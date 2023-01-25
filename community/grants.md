@@ -47,7 +47,7 @@ We are open to any and all ideas! Below are just a few categories of projects we
 
 ### 🧠 Protocol development
 
-- Cross-chain support (e.g. Solana)
+- Multi-chain support (e.g. Solana, Bitcoin, Tezos, etc)
 - Account abstraction
 
 
@@ -59,7 +59,7 @@ We are open to any and all ideas! Below are just a few categories of projects we
 
 ### 👀 Unique features
 
-- Read receipts - opt-in, performant, performant
+- Read receipts - opt-in, performant, interoperable
 - Personalizable conversation sorting and filtering
 
 :::note
