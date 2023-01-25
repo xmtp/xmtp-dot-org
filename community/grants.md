@@ -143,12 +143,6 @@ Grants are up to $10K.
 
 <br/>
 
-**Q: Can we use XMTP branding for our project?**
-
-Of course, please be sure to use these [official XMTP brand assets](https://xmtp.org/branding-assets).
-
-<br/>
-
 **Q: What is the deadline to deliver?**
 
 Milestone dates are agreed upon by the project team and XMTP. They can be amended within reason.
