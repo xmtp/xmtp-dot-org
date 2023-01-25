@@ -47,7 +47,7 @@ We are open to any and all ideas! Below are just a few categories of projects we
 
 ### 🧠 Protocol development
 
-- Cross-chain support (e.g. Solana)
+- Multi-chain support (e.g. Solana, Bitcoin, Tezos, etc)
 - Account abstraction
 
 
