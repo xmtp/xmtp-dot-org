@@ -97,7 +97,7 @@ We love and encourage diversity of ideas in grant applications. This section lis
 
 XMTP Grants are **not** for:
 
-- **Integrating with XMTP**: Merely integrating with XMTP does not quality for a grant.
+- **Integrating with XMTP**: Merely integrating with XMTP does not qualify for a grant.
 - **Marketing budgets**: Grant money should not be used towards promoting or advertising projects.
 - **Replacements for venture funding:** Grants are not substitutions for a round of funding. They are aimed at enabling discrete projects that create a public good for the ecosystem.
 - **Free money**: Please don’t abuse this system. Our program’s mission is to support people who believe in the potential of web3 messaging and want to contribute to building in the space.
