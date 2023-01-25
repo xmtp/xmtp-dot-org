@@ -60,7 +60,7 @@ We are open to any and all ideas! Below are just a few categories of projects we
 
 ### 👀 Unique features
 
-- Read receipts - opt-in, performant, performant
+- Read receipts - opt-in, performant, interoperable
 - Personalizable conversation sorting and filtering
 
 :::note
