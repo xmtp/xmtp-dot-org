@@ -2,7 +2,7 @@
 sidebar_label: Grants
 sidebar_position: 2
 toc_max_heading_level: 2
-image: /static/img/XMTP-Grant-Cover.png
+image: https://xmtp.org/img/XMTP-Grants_Cover.png
 ---
 
 # XMTP Grants program
