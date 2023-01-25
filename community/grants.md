@@ -18,7 +18,7 @@ image: https://github.com/xmtp/xmtp-dot-org/raw/main/static/img/XMTP-Grants_Cove
 
 ## ✨ Mission
 
-Support projects, ideas, and people building on XMTP to foster ecosystem growth.
+Support projects, ideas, and people building on XMTP to foster ecosystem growth. 
 
 
 ## 📜 Request for proposals
