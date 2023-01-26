@@ -5,7 +5,7 @@ title: Secure web3 messaging for wallet apps with XMTP
 date: 2022-09-12
 authors: mg
 description: How XMTP enables wallets to secure conversations, not just transactions and assets.
-image: ./media/secure-web3-messaging-post.png
+image: "media/secure-web3-messaging-post.png"
 tags:
 - Developers
 - Messaging

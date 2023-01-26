@@ -5,7 +5,7 @@ title: "HackFS x XMTP awards wrap-up: Decentralized Ticketing Platform, Optik fo
 date: 2022-08-01
 authors: peter
 description: HackFS by @ETHGlobal and @ProtocolLabs wrapped and, once again, the creativity and quality of the projects was outstanding.
-image: ./media/blogPost.png
+image: "media/blogPost.png"
 tags:
 - Developers
 - Hackathon
