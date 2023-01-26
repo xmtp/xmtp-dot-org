@@ -5,7 +5,7 @@ title: "Project Spotlight: Relay Receiver, a no-code wallet chat for websites"
 date: 2022-08-16
 authors: peter
 description: Facilitating user communication and overcoming one of web3’s biggest challenges. NFT sales, POAP events, DAO activities, etc all have very meaningful reasons why users would want to message each other, but sometimes the website has no chat function and there’s no way to find the user elsewhere.
-image: ./media/blogPost-16.png
+image: "media/blogPost-16.png"
 tags:
 - Developers
 - Spotlight

@@ -5,7 +5,7 @@ title: Why can't I leave a message for any wallet address in web3? Introducing "
 date: 2022-06-24
 authors: shane
 description: Introducing "You've Got Mail" - An idea we want to build with the XMTP community
-image: ./media/CleanShot-2022-06-24-at-12.11.50@2x-1.png
+image: "media/CleanShot-2022-06-24-at-12.11.50@2x-1.png"
 ---
 import ReactPlayer from 'react-player'
 
