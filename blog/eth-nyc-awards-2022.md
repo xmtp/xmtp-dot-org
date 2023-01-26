@@ -5,7 +5,7 @@ title: "ETH NYC awards wrap: OTC Swap for OpenSea, E2EE Chat via Intercom widget
 date: 2022-07-08
 authors: peter
 description: We just got back from ETH NYC and what a great event. 1,300 builders, 50 sponsors, so much energy…
-image: https://github.com/xmtp/xmtp-dot-org/raw/main/blog/media/eth-nyc-awards-graphic.png
+image: ./media/eth-nyc-awards-graphic.png
 tags:
 - Awards
 - Developers

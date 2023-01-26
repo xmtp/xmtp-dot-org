@@ -5,7 +5,7 @@ title: "OTC Swap: Building a message-based bartering system with OpenSea's Seapo
 date: 2022-07-15
 authors: peter
 description: How developer @0x_Yuzu built an application that enables buyers and sellers to barter on NFTs using OpenSea's Seaport and XMTP.
-image: "media/FeaturedGraphic-2.png"
+image: ./media/FeaturedGraphic-2.png
 tags:
 - Developers
 - Hackathon

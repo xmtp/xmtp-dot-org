@@ -5,7 +5,7 @@ title: Truths not spoofs
 date: 2022-08-05
 authors: peter
 description: In web3, token-gated messaging opens up a world where you can see verifiable transactions and facts about the sender that help you vet who you want to interact with.
-image: "media/blogGraphic-6.png"
+image: ./media/blogGraphic-6.png
 tags:
 - Developers
 - Hackathon
