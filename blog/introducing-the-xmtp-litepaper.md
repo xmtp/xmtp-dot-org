@@ -5,7 +5,7 @@ title: Introducing the XMTP Litepaper public draft
 date: 2022-08-31
 authors: mg
 description: A primer on XMTP—the secure web3 messaging protocol—why we're building it, how it works, and where we see it going in the future.
-image: "media/LitepaperAsset.png"
+image: ./media/LitepaperAsset.png
 tags:
 - Developers
 - Litepaper

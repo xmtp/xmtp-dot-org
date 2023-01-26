@@ -5,7 +5,7 @@ title: "How insights from Linkin Park's Mike Shinoda helped inspire the creation
 date: 2022-11-03T10:00
 authors: peter
 description: Check out XMTP co-founder Shane Mac as he shares how Linkin Park’s Mike Shinoda was a key inspiration for XMTP’s approach to web3 messaging.
-image: "media/xmtp-mike-shinoda-post.png"
+image: ./media/xmtp-mike-shinoda-post.png
 tags:
 - Announcements
 - Company

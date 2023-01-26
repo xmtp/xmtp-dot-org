@@ -16,7 +16,7 @@ tags:
 
 We just got back from [ETH NYC](https://ethglobal.com/) and what a great event. 1,300 builders, 50 sponsors, so much energy…
 
-![](./media/eth-nyc-awards-graphic.png)
+![](media/eth-nyc-awards-graphic.png)
 
 <!--truncate-->
 
