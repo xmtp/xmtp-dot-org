@@ -11,7 +11,7 @@ image: /img/XMTP-Grant-Cover.png
 
 :::tip Every big idea starts small
 
-[Apply here](https://forms.xmtp.org/grants-application)
+[Apply here](https://forms.xmtp.org/grants-application) 🚀
 
 :::
 
@@ -28,8 +28,8 @@ We are open to any and all ideas! Below are just a few categories of projects we
 
 ### 🎨 Custom content types
 
-- Media: Voicenotes, Images
-- URL link cards
+- Media: Attachements, Voicenotes, Images
+- Threading: Emoji reactions, Reply threads
 - Transactions and payments
 
 
@@ -72,7 +72,7 @@ All projects must propose a standard, tool, or concept that’s adopted by the e
 
 ## 🔍 Grant types
 
-We offer two types of grants: Micro grants and kickstarter grants.
+We offer two types of grants: Micro grants and Kickstarter grants.
 
 **Micro grants (<$5k):**
 
@@ -97,8 +97,9 @@ We love and encourage diversity of ideas in grant applications. This section lis
 
 XMTP Grants are **not** for:
 
-- **Integrating with XMTP**: Merely integrating with XMTP does not qualify for a grant. Grant projects must create public goods for the ecosystem.
+- **Integrating with XMTP**: Merely integrating with XMTP does not qualify for a grant. Grant projects must create public goods for the ecosystem. Check out the Request for Proposal section for ideas.
 - **Marketing budgets**: Grant money should not be used towards promoting or advertising projects.
+- **Travel budgets**: Grants are not meant to fund plane tickets, accommodation costs, and other travel expenses.
 - **Replacements for venture funding:** Grants are not substitutions for a round of funding. They are aimed at enabling discrete projects that create a public good for the ecosystem.
 - **Free money**: Please don’t abuse this system. Our program’s mission is to support people who believe in the potential of web3 messaging and want to contribute to building in the space.
 - **Stress relief**: Our grants are not intended to extend your runway or alleviate financial stress. You should aim to build long-term in our ecosystem.
@@ -111,6 +112,16 @@ Consider the following criteria if you’re uncertain whether your project quali
 - **Public Good creation**: Show clear connection between your proposal and the value it generates for the broader ecosystem.
 - **Collaborate**: Be collaborative and open to offering support to other members of our community. Let’s grow together!
 
+Example applications:
+
+Qualifies: a project that will introduce a novel feature (e.g. emoji reactions, read receipts, account abstraction, etc) and propose an XIP for a standard way to do it across different applications.
+Does not qualify: a project to integrate with XMTP to create a cool messaging app that doesn't create community resources (e.g. XIPs, dev tools, etc).
+
+:::note
+
+Building with XMTP is permissionless and grants are not a pre-requisite to integrate with XMTP. While we love and encourage a variety of integrations, grants are reserved for integrations that create public goods.
+
+:::
 
 ## ❓ FAQ
 
@@ -201,6 +212,6 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 :::tip Every big idea starts small
 
-[Apply here](https://forms.xmtp.org/grants-application)
+[Apply here](https://forms.xmtp.org/grants-application) 🚀
 
 :::
