@@ -9,7 +9,7 @@ Here are a few details about what we've shipped recently, what we're working on,
 
 ---
 
-## Planned 📆
+## Researching 🔬
 
 Scoping goals, requirements, and effort via research & proofs of concepts.
 
@@ -19,7 +19,21 @@ Users will be able to send messages to group chats and announcements channels, a
 
 ### Team inboxes
 
-Teams will be able to read and send encrypted DMs and announcements using a shared team identity that resolves to their ENS domain or Lens profile. The account admin will be able to delegate access to and revoke access from individual team user accounts.
+Teams will be able to read and send encrypted DMs and announcements using a shared team identity. The account admin will be able to delegate access to and revoke access from individual team user accounts.
+
+---
+
+## In progress 🏗️
+
+Projects in flight.
+
+### Network decentralization milestones
+
+XMTP Labs will specify a phased approach towards architectural and logical decentralization of the network.
+
+### Testnets for control plane sharding & topic replication
+
+In parallel with a longer term decentralization plan, we will also ship testnets implementing code that contributes to progressive decentralization.
 
 ### Compromise recovery
 
@@ -33,15 +47,9 @@ Users will be able to grant explicit permission for an app to use their account 
 
 Users will be able to store XMTP private keys in secure contexts such as wallet apps.
 
----
+### UI Kit & React Hooks SDK
 
-## In progress 🏗️
-
-Projects in flight.
-
-### Network decentralization milestones
-
-XMTP Labs will specify a phased approach towards architectural and logical decentralization of the network.
+Enable developers to focus on differentiating features by providing reusable messaging components via a UI kit & React Hooks SDK.
 
 ---
 
@@ -49,11 +57,11 @@ XMTP Labs will specify a phased approach towards architectural and logical decen
 
 A super early peek into what we're building. Ready for exploration, not adoption.
 
-### Push notifications
+### Message any address - Drops SDK
 
-Apps will be able to subscribe users to receive push notifications to their devices upon receiving new messages.
+Individuals will be able to send encrypted DMs and announcements to addresses that have not yet created XMTP identities. Recipients will be notified of these messages upon first connection to XMTP.
 
-- [Read more](https://github.com/xmtp/example-notification-server-go)
+- [Read more](https://github.com/xmtp/xmtp-memo-js)
 
 ---
 
@@ -69,11 +77,11 @@ Developers will be able to build mobile client apps in Flutter, React Native, an
 - [Read more: Swift](https://github.com/xmtp/xmtp-ios/issues/7)
 - [Read more: Flutter](https://github.com/xmtp/xmtp-flutter/issues/4)
 
-### Message any address
+### Push notifications - example server
 
-Individuals will be able to send encrypted DMs and announcements to addresses that have not yet created XMTP identities. Recipients will be notified of these messages upon first connection to XMTP.
+Apps will be able to subscribe users to receive push notifications to their devices upon receiving new messages.
 
-- [Read more](https://github.com/xmtp/xmtp-memo-js)
+- [Read more](https://github.com/xmtp/example-notification-server-go)
 
 ---
 
