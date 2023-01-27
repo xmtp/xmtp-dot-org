@@ -1,11 +1,11 @@
  [
    {
-      "name":"XMTP.chat",
+      "name":"XMTP Inbox",
       "href":"https://xmtp.chat",
       "image":"/img/builtWithXmtp/xmtp.svg",
       "bgColor": "",
-      "description":"XMTP.chat is an example chat application demonstrating the core capabilities of the XMTP client SDK.",
-      "github": "https://github.com/xmtp/example-chat-react",
+      "description":"XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
+      "github": "https://github.com/xmtp-labs/xmtp-inbox-web",
       "twitter": "https://twitter.com/xmtp_"
    },
    {
@@ -79,5 +79,3 @@
       "twitter": "https://twitter.com/polmaire"
    }
  ]
-
-

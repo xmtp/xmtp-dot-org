@@ -167,8 +167,8 @@ const EcosystemProjectsCardList = () => {
   )
 }
 
-// this provides the content in the cards in the Example Apps section on the SDKs and tools page
-const moretoolcards = [
+// this provides the content in the cards in the Status section on the SDKs and tools page
+const statuscards = [
   {
     title: 'XMTP status page',
     description: 'View the real-time status of the XMTP production network, XMTP dev network, and XMTP Chat app.',
@@ -178,11 +178,11 @@ const moretoolcards = [
   },
 ]
 
-// this provides the list of cards  in the Example Apps section on the SDKs and tools page
-const MoreToolsCardList = () => {
+// this provides the list of cards in the Status section on the SDKs and tools page
+const StatusCardList = () => {
   return (
     <div className="list-none grid grid-cols-1 md:grid-cols-2 px-0 gap-8 mb-8">
-      {moretoolcards.map((card) => (
+      {statuscards.map((card) => (
         <div className="relative group">
           <Card
             key={card.title}
@@ -243,4 +243,4 @@ export { DevToolsCardList };
 
 export { EcosystemProjectsCardList };
 
-export { MoreToolsCardList };
+export { StatusCardList };
