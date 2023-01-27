@@ -13,6 +13,7 @@ import {
   XMTP_JS_URL,
   XMTP_FLUTTER_URL,
   XMTP_IOS_URL,
+  XMTP_MEMO_URL,
   XMTP_REACT_NATIVE_URL,
   QUICKSTART_CHAT_URL,
   EXAMPLE_CHAT_URL,
@@ -61,6 +62,11 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     })
+    const responseMemo = await fetch(XMTP_MEMO_URL, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
     const responseChat = await fetch(EXAMPLE_CHAT_URL, {
       headers: {
         Authorization: customFields.personalToken,
@@ -77,6 +83,8 @@ export const MainContent = ({ styles }) => {
     if (dataRn && !dataRn.message) items = [...items, dataRn]
     const dataNotif = await responseNotif.json()
     if (dataNotif && !dataNotif.message) items = [...items, dataNotif]
+    const dataMemo = await responseMemo.json()
+    if (dataMemo && !dataMemo.message) items = [...items, dataMemo]
     const dataQuickChat = await responseQuickChat.json()
     if (dataQuickChat && !dataQuickChat.message) items = [...items, dataQuickChat]
     const dataChat = await responseChat.json()

@@ -82,11 +82,12 @@ export const BLOG_DATA = [
   },
 ]
 
-export const XMTP_NOTIF_SERVER_URL = 'https://api.github.com/repos/xmtp/example-notification-server-go'
 export const XMTP_JS_URL = 'https://api.github.com/repos/xmtp/xmtp-js'
 export const XMTP_FLUTTER_URL = 'https://api.github.com/repos/xmtp/xmtp-flutter'
 export const XMTP_IOS_URL = 'https://api.github.com/repos/xmtp/xmtp-ios'
 export const XMTP_REACT_NATIVE_URL = 'https://api.github.com/repos/xmtp/example-chat-react-native'
+export const XMTP_NOTIF_SERVER_URL = 'https://api.github.com/repos/xmtp/example-notification-server-go'
+export const XMTP_MEMO_URL = 'https://api.github.com/repos/xmtp/xmtp-memo-js'
 export const QUICKSTART_CHAT_URL = 'https://api.github.com/repos/xmtp/xmtp-quickstart-react'
 export const EXAMPLE_CHAT_URL = 'https://api.github.com/repos/xmtp/example-chat-react'
 
