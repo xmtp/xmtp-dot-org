@@ -74,7 +74,16 @@ To learn more about how you can contribute to XMTP, see [Contribute](contributin
 
 ## Example apps
 
-- Explore the [`example-chat-react` repo](https://github.com/xmtp/example-chat-react) on GitHub. This example React app demonstrates the core capabilities of the XMTP JavaScript SDK. You can customize and deploy the app if you want to.
-- XMTP Labs hosts deployments of the `example-chat-react` app to provide people with a way to try out a basic app built with XMTP.
+Check out these app repos you can use for guidance and inspiration when building with XMTP:
+
+- The [xmtp-quickstart-react repo](https://github.com/xmtp/xmtp-quickstart-react) provides the XMTP Quickstart React chat app, which demonstrates core capabilities of the XMTP client SDK. You can use the code in this repo to learn to build a basic messaging app.
+  - [Try the app](https://xmtp-quickstart-react.vercel.app/) connected to the XMTP `dev` network
+
+- The [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web) provides the XMTP Inbox chat app, which demonstrates core and advanced capabilities of the XMTP client SDK and showcases innovative ways of building with XMTP.
+  - [Try the app](https://dev.xmtp.chat/) connected to the XMTP `dev` network
   - [Try the app](https://xmtp.chat/) connected to the XMTP `production` network
-  - [Try the app](https://xmtp.vercel.app/) connected to the XMTP `dev` network
+
+For even more examples of apps built with XMTP, see:
+
+- [Awesome-xtmp](https://github.com/xmtp/awesome-xmtp)
+- [Built with XMTP](built-with-xmtp)
