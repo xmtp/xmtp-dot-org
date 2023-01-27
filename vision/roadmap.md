@@ -31,9 +31,9 @@ Projects in flight.
 
 XMTP Labs will specify a phased approach towards architectural and logical decentralization of the network.
 
-### Testnets for control plane sharding & topic replication
+### Private testnet - Phase 1
 
-In parallel with a longer term decentralization plan, we will also ship testnets implementing code that contributes to progressive decentralization.
+Implement control plane sharding and topic replication in a private test environment.
 
 ### Compromise recovery
 
@@ -79,7 +79,7 @@ Developers will be able to build mobile client apps in Flutter, React Native, an
 
 ### Push notifications - example server
 
-Apps will be able to subscribe users to receive push notifications to their devices upon receiving new messages.
+Apps will be able to leverage our example server to subscribe users for push notifications to their devices upon receiving new messages.
 
 - [Read more](https://github.com/xmtp/example-notification-server-go)
 
