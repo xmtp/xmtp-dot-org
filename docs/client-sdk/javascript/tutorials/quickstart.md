@@ -15,7 +15,7 @@ The [XMTP client SDK](https://github.com/xmtp/xmtp-js) for JavaScript (`xmtp-js`
 
 Build with `xmtp-js` to provide messaging between blockchain wallet addresses, delivering on use cases such as wallet-to-wallet messaging and dapp-to-wallet notifications.
 
-For a demonstration of the core concepts and capabilities of the `xmtp-js` client SDK, see the [example React app repo](https://github.com/xmtp/example-chat-react).
+For a demonstration of the core concepts and capabilities of the `xmtp-js` client SDK, see the [xmtp-quickstart-react repo](https://github.com/xmtp/xmtp-quickstart-react). For a demonstration of more advanced and innovative capabilities, see the [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web).
 
 `xmtp-js` has not undergone a formal security audit.
 

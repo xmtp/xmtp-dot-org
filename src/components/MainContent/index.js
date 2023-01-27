@@ -14,7 +14,6 @@ import {
   XMTP_IOS_URL,
   XMTP_REACT_NATIVE_URL,
   QUICKSTART_CHAT_URL,
-  EXAMPLE_CHAT_URL,
   CHAT_ITEM,
 } from '../../helpers/constants'
 import { BlogItem } from '../BlogItem'
@@ -55,11 +54,6 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     })
-    const responseChat = await fetch(EXAMPLE_CHAT_URL, {
-      headers: {
-        Authorization: customFields.personalToken,
-      },
-    })
 
     const dataXmtp = await responseXmtp.json()
     if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp]
@@ -71,8 +65,6 @@ export const MainContent = ({ styles }) => {
     if (dataRn && !dataRn.message) items = [...items, dataRn]
     const dataQuickChat = await responseQuickChat.json()
     if (dataQuickChat && !dataQuickChat.message) items = [...items, dataQuickChat]
-    const dataChat = await responseChat.json()
-    if (dataChat && !dataChat.message) items = [...items, dataChat]
 
     items = [...items, CHAT_ITEM]
     setSliderItems(items)
