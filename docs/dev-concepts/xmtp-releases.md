@@ -15,6 +15,6 @@ sidebar_position: 11
 
 ## Example apps
 
-- [XMTP Chat app updates](https://github.com/xmtp/example-chat-react/pulls?q=is%3Apr+is%3Aclosed) (`example-chat-react`)
+- [XMTP Inbox chat app updates](https://github.com/xmtp-labs/xmtp-inbox-web/issues?q=is%3Aissue+is%3Aclosed) (`xmtp-inbox-web`)
 
 - [XMTP Quickstart Chat app updates](https://github.com/xmtp/xmtp-quickstart-react/pulls?q=is%3Apr+is%3Aclosed) (`xmtp-quickstart-react`)
