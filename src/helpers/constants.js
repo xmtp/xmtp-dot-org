@@ -87,22 +87,13 @@ export const XMTP_FLUTTER_URL = 'https://api.github.com/repos/xmtp/xmtp-flutter'
 export const XMTP_IOS_URL = 'https://api.github.com/repos/xmtp/xmtp-ios'
 export const XMTP_REACT_NATIVE_URL = 'https://api.github.com/repos/xmtp/example-chat-react-native'
 export const QUICKSTART_CHAT_URL = 'https://api.github.com/repos/xmtp/xmtp-quickstart-react'
-export const EXAMPLE_CHAT_URL = 'https://api.github.com/repos/xmtp/example-chat-react'
 
 export const CHAT_ITEM = {
   id: '2534740',
-  full_name: 'Hosted XMTP Chat app',
+  full_name: 'Hosted XMTP Inbox chat app',
   description:
-    'Hosted example-react-app connected to the XMTP production network',
+    'Hosted xmtp-inbox-web app connected to the XMTP production network',
   text: 'Try it',
   html_url: 'https://xmtp.chat/',
-  icon: 'chat-icon.svg',
-}
-export const VERCEL_ITEM = {
-  id: '1768846',
-  full_name: 'Hosted example app on dev network',
-  description: 'Hosted example-react-app connected to the XMTP dev network',
-  text: 'Try it',
-  html_url: 'https://xmtp.vercel.app/',
   icon: 'chat-icon.svg',
 }
