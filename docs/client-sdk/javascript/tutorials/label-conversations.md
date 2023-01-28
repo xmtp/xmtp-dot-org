@@ -5,13 +5,13 @@ sidebar_position: 4
 
 # Use labels to differentiate multiple conversations between a pair of addresses
 
-With XMTP, a pair of blockchain account addresses can have multiple ongoing conversations. In addition, with XMTP, an app can display all conversations a user has, regardless of the app they used to create the conversation. This concept is known as a portable, or universal, inbox.
+With XMTP, a pair of blockchain account addresses can have multiple ongoing conversations. In addition, with XMTP, an app can display all conversations a user has, regardless of the app they used to create the conversation. This concept is known as an interoperable inbox.
 
 Alternatively, an app can implement conversation IDs and metadata to [filter conversations](filter-conversations). For example, a developer can choose to assign app-specific conversation IDs and metadata to filter and display only conversations created by their app.
 
-Apps that assign conversation IDs in this way have an effect on apps that use a portable inbox model. For example, a user might see multiple separate and ongoing conversations they are having with the same address, but originating in different apps.
+Apps that assign conversation IDs in this way have an effect on apps that use an interoperable inbox model. For example, a user might see multiple separate and ongoing conversations they are having with the same address, but originating in different apps.
 
-If you're using a portable inbox model for your app, you can display conversation labels based on conversation IDs and metadata to help clarify the user experience.
+If you're using an interoperable inbox model for your app, you can display conversation labels based on conversation IDs and metadata to help clarify the user experience.
 
 To illustrate this scenario, let's take a look at a couple of conversations between `amal.eth` and `bola.eth`.
 

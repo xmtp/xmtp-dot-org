@@ -81,7 +81,15 @@ const buildConversationId = (profileIdA: string, profileIdB: string) => {
 
 Now that you've built the Lens DM `conversationId` for your Lens app, your app can use it to filter and organize Lens conversations.
 
-You will filter for Lens conversations and then display their message previews.
+For example, you can use the Lens DM conversation ID as a filter to provide a UI in your app that displays Lens conversations only.
+
+:::tip Provide an "interoperable inbox"
+
+You might also want to provide a UI with no conversation ID filtering to display all conversations for a user. This enables your user to access and engage with all of their conversations, Lens and otherwise, without leaving your app. If you decide to provide a UI like this, you might want to use [conversation labeling](label-conversations).
+
+:::
+
+This section describes how to filter for Lens conversations and then display their message previews.
 
 Here is the **Messages** panel in Lenster using the Lens DM `conversationId` to filter and display a user's Lens conversations only, along with message previews:
 
@@ -224,7 +232,7 @@ To see how starting a conversation with a Lens profile is implemented in Lenster
 
 ## Stream new Lens DM conversations
 
-When building with XMTP to provide a chat experience in your Lens app, implement conversation streaming to ensure that your app can display new Lens conversations without requiring users to refresh your app first.
+When building with XMTP to provide a chat experience in your Lens app, implement conversation streaming to ensure that your app can detect when a new Lens conversation is starting without requiring users to refresh your app first.
 
 For example:
 
@@ -235,6 +243,8 @@ for await (const conversation of client.conversations.stream()) {
   }
 }
 ```
+
+Messages sent within a conversation are not returned by this method. Use the `conversations.streamAllMessages` to get all messages in the new Lens conversation.
 
 To see how conversation streaming is implemented in Lenster, see [`streamConversations`](https://github.com/lensterxyz/lenster/blob/c64636cbbc688aa118ad886f31316b0150d87916/src/components/utils/hooks/useMessagePreviews.tsx#L154) in `/src/components/utils/hooks/useMessagePreview.tsx` in the Lenster GitHub repo.
 
