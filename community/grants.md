@@ -114,8 +114,8 @@ Consider the following criteria if you’re uncertain whether your project quali
 
 Example applications:
 
-Qualifies: a project that will introduce a novel feature (e.g. emoji reactions, read receipts, account abstraction, etc) and propose an XIP for a standard way to do it across different applications.
-Does not qualify: a project to integrate with XMTP to create a cool messaging app that doesn't create community resources (e.g. XIPs, dev tools, etc).
+- Qualifies: a project that will introduce a novel feature (e.g. emoji reactions, read receipts, account abstraction, etc) and propose an XIP for a standard way to do it across different applications.
+- Does not qualify: a project to integrate with XMTP to create a cool messaging app that doesn't create community resources (e.g. XIPs, dev tools, etc).
 
 :::note
 
