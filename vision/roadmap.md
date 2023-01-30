@@ -79,7 +79,7 @@ Developers will be able to build mobile client apps in Flutter, React Native, an
 
 ### Push notifications - example server
 
-Apps will be able to leverage our example server to subscribe users for push notifications to their devices upon receiving new messages.
+Apps will be able to leverage an example server to subscribe users for push notifications to their devices upon receiving new messages.
 
 - [Read more](https://github.com/xmtp/example-notification-server-go)
 
