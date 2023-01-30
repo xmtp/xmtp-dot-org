@@ -10,6 +10,12 @@ peter:
   url: https://twitter.com/petermdenton
   image_url: https://blog.xmtp.com/content/images/size/w160/2022/07/ifnz5Ynt_400x400.jpeg
 
+rich:
+  name: Rich Bustos
+  title: Developer Relations at XMTP Labs
+  url: https://twitter.com/richrdbustos
+  image_url: ./media/rich-headshot.jpeg
+
 shane:
   name: Shane Mac
   title: Co-founder and President of XMTP Labs
