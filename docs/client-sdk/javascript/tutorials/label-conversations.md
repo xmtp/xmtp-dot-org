@@ -9,7 +9,7 @@ With XMTP, a pair of blockchain account addresses can have multiple ongoing conv
 
 Alternatively, an app can implement conversation IDs and metadata to [filter conversations](filter-conversations). For example, a developer can choose to assign app-specific conversation IDs and metadata to filter and display only conversations created by their app.
 
-Apps that assign conversation IDs in this way have an effect on apps that use an interoperable inbox model. For example, a user might see multiple separate and ongoing conversations they are having with the same address, but originating in different apps.
+Apps that assign conversation IDs in this way have an effect on apps that use an interoperable inbox model. For example, a user might see multiple separate and ongoing conversations they are having with the same address, but originating from contexts with different conversation IDs. For example, the conversations may have originated in different apps or may have different subject lines.
 
 If you're using an interoperable inbox model in your app, you can display conversation labels based on conversation IDs and metadata to help clarify the user experience.
 
