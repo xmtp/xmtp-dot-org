@@ -47,7 +47,7 @@ XMTP Labs is working toward a phased decentralization of the network and will sh
 
 ### What is the relationship between Waku and XMTP?
 
-XMTP currently uses the Waku protocol to relay messages between user client and network nodes. <!--change this to "between network nodes" once the gRPC work is complete. At that time, the waku dependency will be removed from xmtp-js - the user client-->
+XMTP currently uses the Waku protocol to relay messages between network nodes.
 
 Waku is an unopinionated transport layer built around the libp2p publish/subscribe model. Waku is intentionally open-ended when it comes to handling options like message encoding and encryption, which content topics to use, and how to create and manage encryption keys linked to blockchain account addresses.
 
