@@ -5,7 +5,7 @@ title: ETHSanFrancisco wrap-up
 date: 2022-11-22
 authors: peter
 description: Wow is just about the best way we could sum up ETHGlobal's ETHSanFrancisco.
-image: "media/ETHSF-Wrapup---Alt.png"
+image: ./media/ETHSF-Wrapup---Alt.png
 tags:
 - Developers
 - Hackathon
@@ -14,7 +14,7 @@ tags:
 
 "Wow" is just about the best way we could sum up [@ETHGlobal](https://twitter.com/ETHGlobal)'s [#ETHSanFrancisco](https://twitter.com/hashtag/ETHSanFrancisco?src=hashtag_click).
 
-![](media/ETHSF-Wrapup---Alt.png)
+![](./media/ETHSF-Wrapup---Alt.png)
 
 <!--truncate-->
 
