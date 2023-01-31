@@ -2,13 +2,13 @@ mg:
   name: Matt Galligan
   title: Co-founder and CEO of XMTP Labs
   url: https://twitter.com/mg
-  image_url: https://blog.xmtp.com/content/images/size/w160/2022/09/mg-headshot-crop.jpg
+  image_url: ./media/mg-headshot.jpeg
 
 peter:
   name: Peter Denton
   title: Head of Growth at XMTP Labs
   url: https://twitter.com/petermdenton
-  image_url: https://blog.xmtp.com/content/images/size/w160/2022/07/ifnz5Ynt_400x400.jpeg
+  image_url: ./media/peter-headshot.jpeg
 
 rich:
   name: Rich Bustos
@@ -20,10 +20,10 @@ shane:
   name: Shane Mac
   title: Co-founder and President of XMTP Labs
   url: https://twitter.com/shanemac
-  image_url: https://blog.xmtp.com/content/images/size/w160/2021/05/photo.jpg
+  image_url: ./media/shane-headshot.jpeg
 
 yash:
   name: Yash Lunagaria
   title: Product Manager at XMTP Labs
   url: https://twitter.com/yash_luna
-  image_url: https://avatars.githubusercontent.com/u/118013479?v=4
+  image_url: ./media/yash-headshot.jpeg
