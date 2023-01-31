@@ -5,7 +5,7 @@ title: meTokens integrates with XMTP
 date: 2022-11-29
 authors: peter
 description: With XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.
-image: "media/meTokensShareSplit.png"
+image: ./media/meTokensShareSplit.png
 tags:
 - Developers
 - Messaging
@@ -14,7 +14,7 @@ tags:
 
 With XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.
 
-![](media/meTokensShareSplit.png)
+![](./media/meTokensShareSplit.png)
 
 <!--truncate-->
 

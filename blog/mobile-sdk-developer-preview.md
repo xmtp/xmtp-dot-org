@@ -5,7 +5,7 @@ title: XMTP mobile SDKs now available in Developer Preview
 date: 2022-12-20
 authors: peter
 description: This holiday season, we have an early gift for all the web3 developers out there.
-image: "media/blogGraphic.png"
+image: ./media/blogGraphic.png
 tags:
 - Announcements
 - Developers
@@ -14,7 +14,7 @@ tags:
 
 This holiday season, we have an early gift for all the web3 developers out there. Our mobile SDKs are now available in [Developer Preview](/sdks-and-tools) 🧑‍💻
 
-![](media/blogGraphic.png)
+![](./media/blogGraphic.png)
 
 <!--truncate-->
 
