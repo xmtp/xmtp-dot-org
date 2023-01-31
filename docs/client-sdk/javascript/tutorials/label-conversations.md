@@ -11,7 +11,13 @@ Alternatively, an app can implement conversation IDs and metadata to [filter con
 
 Apps that assign conversation IDs in this way have an effect on apps that use an interoperable inbox model. For example, a user might see multiple separate and ongoing conversations they are having with the same address, but originating in different apps.
 
-If you're using an interoperable inbox model for your app, you can display conversation labels based on conversation IDs and metadata to help clarify the user experience.
+If you're using an interoperable inbox model in your app, you can display conversation labels based on conversation IDs and metadata to help clarify the user experience.
+
+:::tip
+
+When providing an interoperable inbox, display only one conversation per address pair and conversation ID combination. This ensures that the two addresses exchange messages using the same conversation topic.
+
+:::
 
 To illustrate this scenario, let's take a look at a couple of conversations between `amal.eth` and `bola.eth`.
 
@@ -23,7 +29,7 @@ To illustrate this scenario, let's take a look at a couple of conversations betw
 
 ![Mockup of App XYZ setting a conversation ID of app.xyz/dm and filtering conversations by it. The app displays amal.eth's inbox with a "Yes..." conversation from bola.eth](img/app-xyz.png)
 
-Let's then take a look at App 123, which doesn't filter conversations and displays all conversations for a user regardless of where the conversations were created. In this case, the inbox for `amal.eth` might look something like this:
+Let's then take a look at App 123, which doesn't filter by conversation ID and displays all conversations for a user. In this case, the inbox for `amal.eth` might look something like this:
 
 ![Mockup of App 123 with no conversation ID or filtering. The app displays amal.eth's inbox with two conversations with bola.eth: One "Hey..." and one "Yes..."](img/app-123.png)
 
@@ -32,8 +38,6 @@ This scenario may display a confusing user experience for `amal.eth`, surfacing 
 To help distinguish the multiple conversations `amal.eth` is having with the same address, you can implement labels, based on conversation IDs and metadata, that display for each conversation.
 
 ![Mockup of App 123 with no conversation ID or filtering, but with conversation ID and metadata-based labels implemented. The app displays amal.eth's inbox with two conversations with bola.eth: One labeled as app.abc: "Hey..." and one labeled as app.xyz: "Yes..."](img/app-123-convo-labels.png)
-
-These labels can help `amal.eth` recognize the source of each conversation with `bola.eth` and understand why multiple conversations are displaying.
 
 **To use labels to differentiate multiple conversations between a pair of addresses:**
 
