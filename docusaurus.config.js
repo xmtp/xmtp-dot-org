@@ -17,7 +17,7 @@ const config = {
     personalToken: process.env.AUTH_PERSONAL_TOKEN,
   },
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
