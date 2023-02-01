@@ -244,7 +244,7 @@ for await (const conversation of client.conversations.stream()) {
 }
 ```
 
-Messages sent within a conversation are not returned by this method. Use the `conversations.streamAllMessages` to get all messages in the new Lens conversation.
+Messages sent within a conversation are not returned by this method. Use `conversation.streamMessages()` to get all messages in the new Lens conversation.
 
 To see how conversation streaming is implemented in Lenster, see [`streamConversations`](https://github.com/lensterxyz/lenster/blob/c64636cbbc688aa118ad886f31316b0150d87916/src/components/utils/hooks/useMessagePreviews.tsx#L154) in `/src/components/utils/hooks/useMessagePreview.tsx` in the Lenster GitHub repo.
 
