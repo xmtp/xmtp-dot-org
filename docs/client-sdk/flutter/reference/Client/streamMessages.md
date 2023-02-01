@@ -11,8 +11,8 @@
 
 
 
-[Stream](https://api.flutter.dev/flutter/dart-async/Stream-class.html)&lt;[DecodedMessage](././DecodedMessage-class.md)> streamMessages
-([Conversation](././Conversation-class.md) conversation)
+[Stream](https://api.flutter.dev/flutter/dart-async/Stream-class.html)&lt;[DecodedMessage](../../xmtp/DecodedMessage-class.md)> streamMessages
+([Conversation](../../xmtp/Conversation-class.md) conversation)
 
 
 

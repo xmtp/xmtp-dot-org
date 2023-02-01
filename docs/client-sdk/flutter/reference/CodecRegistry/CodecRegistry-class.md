@@ -13,15 +13,15 @@
 
 
 <p>This is a registry of codecs for particular types.</p>
-<p>It knows how to apply the codecs to <a href="./CodecRegistry/decode.md">decode</a> or <a href="./CodecRegistry/encode.md">encode</a>
-<a href="https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html">xmtp.EncodedContent</a> to <a href="./DecodedContent-class.md">DecodedContent</a>..</p>
+<p>It knows how to apply the codecs to <a href="../xmtp/CodecRegistry/decode.md">decode</a> or <a href="../xmtp/CodecRegistry/encode.md">encode</a>
+<a href="https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html">xmtp.EncodedContent</a> to <a href="../xmtp/DecodedContent-class.md">DecodedContent</a>..</p>
 
 
 
 
 **Implemented types**
 
-- [Codec](./Codec-class.md)&lt;[DecodedContent](./DecodedContent-class.md)>
+- [Codec](../xmtp/Codec-class.md)&lt;[DecodedContent](../xmtp/DecodedContent-class.md)>
 
 
 
@@ -31,14 +31,14 @@
 
 ## Constructors
 
-[CodecRegistry](./CodecRegistry/CodecRegistry.md) ()
+[CodecRegistry](../xmtp/CodecRegistry/CodecRegistry.md) ()
 
    
 
 
 ## Properties
 
-##### [contentType](./CodecRegistry/contentType.md) &#8594; [ContentTypeId](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/ContentTypeId-class.html)
+##### [contentType](../xmtp/CodecRegistry/contentType.md) &#8594; [ContentTypeId](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/ContentTypeId-class.html)
 
 
 
@@ -71,7 +71,7 @@ _<span class="feature">read-only</span><span class="feature">inherited</span>_
 
 ## Methods
 
-##### [decode](./CodecRegistry/decode.md)([EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html) encoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[DecodedContent](./DecodedContent-class.md)>
+##### [decode](../xmtp/CodecRegistry/decode.md)([EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html) encoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[DecodedContent](../xmtp/DecodedContent-class.md)>
 
 
 
@@ -80,7 +80,7 @@ _<span class="feature">override</span>_
 
 
 
-##### [encode](./CodecRegistry/encode.md)([DecodedContent](./DecodedContent-class.md) decoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html)>
+##### [encode](../xmtp/CodecRegistry/encode.md)([DecodedContent](../xmtp/DecodedContent-class.md) decoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html)>
 
 
 
@@ -98,7 +98,7 @@ _<span class="feature">inherited</span>_
 
 
 
-##### [registerCodec](./CodecRegistry/registerCodec.md)([Codec](./Codec-class.md)&lt;[Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)> codec) void
+##### [registerCodec](../xmtp/CodecRegistry/registerCodec.md)([Codec](../xmtp/Codec-class.md)&lt;[Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)> codec) void
 
 
 

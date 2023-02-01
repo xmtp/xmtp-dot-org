@@ -13,8 +13,8 @@
 
 
 <p>This defines the interface for a content codec of a particular type <code>T</code>.
-It is responsible for knowing how to <a href="./Codec/encode.md">encode</a> the content <code>T</code>.
-And it is responsible for knowing how to <a href="./Codec/decode.md">decode</a> the <a href="https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html">EncodedContent</a>.</p>
+It is responsible for knowing how to <a href="../xmtp/Codec/encode.md">encode</a> the content <code>T</code>.
+And it is responsible for knowing how to <a href="../xmtp/Codec/decode.md">decode</a> the <a href="https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html">EncodedContent</a>.</p>
 
 
 
@@ -23,9 +23,9 @@ And it is responsible for knowing how to <a href="./Codec/decode.md">decode</a> 
 
 **Implementers**
 
-- [Client](./Client-class.md)
-- [CodecRegistry](./CodecRegistry-class.md)
-- [TextCodec](./TextCodec-class.md)
+- [Client](../xmtp/Client-class.md)
+- [CodecRegistry](../xmtp/CodecRegistry-class.md)
+- [TextCodec](../xmtp/TextCodec-class.md)
 
 
 
@@ -33,14 +33,14 @@ And it is responsible for knowing how to <a href="./Codec/decode.md">decode</a> 
 
 ## Constructors
 
-[Codec](./Codec/Codec.md) ()
+[Codec](../xmtp/Codec/Codec.md) ()
 
    
 
 
 ## Properties
 
-##### [contentType](./Codec/contentType.md) &#8594; [ContentTypeId](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/ContentTypeId-class.html)
+##### [contentType](../xmtp/Codec/contentType.md) &#8594; [ContentTypeId](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/ContentTypeId-class.html)
 
 
 
@@ -73,7 +73,7 @@ _<span class="feature">read-only</span><span class="feature">inherited</span>_
 
 ## Methods
 
-##### [decode](./Codec/decode.md)([EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html) encoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;T>
+##### [decode](../xmtp/Codec/decode.md)([EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html) encoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;T>
 
 
 
@@ -82,7 +82,7 @@ This is called to decode the content captured by <code>encoded</code>.
 
 
 
-##### [encode](./Codec/encode.md)(T decoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html)>
+##### [encode](../xmtp/Codec/encode.md)(T decoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html)>
 
 
 

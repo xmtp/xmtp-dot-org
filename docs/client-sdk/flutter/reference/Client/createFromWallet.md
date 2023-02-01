@@ -11,14 +11,14 @@
 
 
 
-[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Client](././Client-class.md)> createFromWallet
-([Api](././Api-class.md) api, [Signer](././Signer-class.md) wallet, {[List](https://api.flutter.dev/flutter/dart-core/List-class.html)&lt;[Codec](././Codec-class.md)&lt;[Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)>> customCodecs = const []})
+[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Client](../../xmtp/Client-class.md)> createFromWallet
+([Api](../../xmtp/Api-class.md) api, [Signer](../../xmtp/Signer-class.md) wallet, {[List](https://api.flutter.dev/flutter/dart-core/List-class.html)&lt;[Codec](../../xmtp/Codec-class.md)&lt;[Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)>> customCodecs = const []})
 
 
 
 
 
-<p>This creates a new <code>Client</code> instance using the <a href="././Signer-class.md">Signer</a> to
+<p>This creates a new <code>Client</code> instance using the <a href="../../xmtp/Signer-class.md">Signer</a> to
 trigger signature prompts to acquire user authentication keys.</p>
 
 

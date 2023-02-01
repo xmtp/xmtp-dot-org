@@ -16,7 +16,7 @@ _<span class="feature">final</span>_
 
 
 
-<p>When the <a href="././DecodedMessage/sender.md">sender</a> sent this message.</p>
+<p>When the <a href="../../xmtp/DecodedMessage/sender.md">sender</a> sent this message.</p>
 
 
 

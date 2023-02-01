@@ -12,7 +12,7 @@
 
 - @[override](https://api.flutter.dev/flutter/dart-core/override-constant.html)
 
-[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[DecodedContent](././DecodedContent-class.md)> decode
+[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[DecodedContent](../../xmtp/DecodedContent-class.md)> decode
 ([EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html) encoded)
 
 _<span class="feature">override</span>_

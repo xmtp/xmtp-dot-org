@@ -1,5 +1,5 @@
 ---
-title: Flutter client SDK
+title: Overview
 sidebar_position: 1
 ---
 
@@ -23,7 +23,7 @@ for Flutter applications written in dart.</p>
 
 ## Classes
 
-##### [Api](./xmtp/Api-class.md)
+##### [Api](../xmtp/Api-class.md)
 
 
 
@@ -52,23 +52,23 @@ metadata helpers (e.g. for setting the authorization token).
 
 
 
-##### [Client](./xmtp/Client-class.md)
+##### [Client](../xmtp/Client-class.md)
 
 
 
 This is the top-level entrypoint to the XMTP flutter SDK.
 
 
-##### [Codec](./xmtp/Codec-class.md)&lt;T extends [Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)>
+##### [Codec](../xmtp/Codec-class.md)&lt;T extends [Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)>
 
 
 
 This defines the interface for a content codec of a particular type <code>T</code>.
-It is responsible for knowing how to <a href="./xmtp/Codec/encode.md">encode</a> the content <code>T</code>.
-And it is responsible for knowing how to <a href="./xmtp/Codec/decode.md">decode</a> the <a href="https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html">EncodedContent</a>.
+It is responsible for knowing how to <a href="../xmtp/Codec/encode.md">encode</a> the content <code>T</code>.
+And it is responsible for knowing how to <a href="../xmtp/Codec/decode.md">decode</a> the <a href="https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html">EncodedContent</a>.
 
 
-##### [CodecRegistry](./xmtp/CodecRegistry-class.md)
+##### [CodecRegistry](../xmtp/CodecRegistry-class.md)
 
 
 
@@ -124,13 +124,13 @@ This is a registry of codecs for particular types.
 
 
 
-##### [Conversation](./xmtp/Conversation-class.md)
+##### [Conversation](../xmtp/Conversation-class.md)
 
 
 
 This represents an ongoing conversation.
-It can be provided to <a href="./xmtp/Client-class.md">Client</a> to <code>listMessages</code> and <code>sendMessage</code>.
-The <a href="./xmtp/Client-class.md">Client</a> also allows you to <code>streamMessages</code> from this <a href="./xmtp/Conversation-class.md">Conversation</a>.
+It can be provided to <a href="../xmtp/Client-class.md">Client</a> to <code>listMessages</code> and <code>sendMessage</code>.
+The <a href="../xmtp/Client-class.md">Client</a> also allows you to <code>streamMessages</code> from this <a href="../xmtp/Conversation-class.md">Conversation</a>.
 
 
 ##### [Cursor](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/Cursor-class.html)
@@ -140,14 +140,14 @@ The <a href="./xmtp/Client-class.md">Client</a> also allows you to <code>streamM
 
 
 
-##### [DecodedContent](./xmtp/DecodedContent-class.md)
+##### [DecodedContent](../xmtp/DecodedContent-class.md)
 
 
 
 This represents the result of decoding content.
 
 
-##### [DecodedMessage](./xmtp/DecodedMessage-class.md)
+##### [DecodedMessage](../xmtp/DecodedMessage-class.md)
 
 
 
@@ -428,11 +428,11 @@ It attempts to give uniform shape to v1 and v2 messages.
 
 
 
-##### [Signer](./xmtp/Signer-class.md)
+##### [Signer](../xmtp/Signer-class.md)
 
 
 
-Abstraction over a wallet with an <a href="./xmtp/Signer/address.md">address</a> that can <a href="./xmtp/Signer/signPersonalMessage.md">signPersonalMessage</a>s.
+Abstraction over a wallet with an <a href="../xmtp/Signer/address.md">address</a> that can <a href="../xmtp/Signer/signPersonalMessage.md">signPersonalMessage</a>s.
 
 
 ##### [SortDirection](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/SortDirection-class.html)
@@ -449,11 +449,11 @@ Abstraction over a wallet with an <a href="./xmtp/Signer/address.md">address</a>
 
 
 
-##### [TextCodec](./xmtp/TextCodec-class.md)
+##### [TextCodec](../xmtp/TextCodec-class.md)
 
 
 
-This is a basic text <a href="./xmtp/Codec-class.md">Codec</a> that supports UTF-8 encoding.
+This is a basic text <a href="../xmtp/Codec-class.md">Codec</a> that supports UTF-8 encoding.
 
 
 ##### [Token](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/Token-class.html)
@@ -481,18 +481,18 @@ This is a basic text <a href="./xmtp/Codec-class.md">Codec</a> that supports UTF
 
 ## Extensions
 
-##### [CredentialsToSigner](./xmtp/CredentialsToSigner.md)
+##### [CredentialsToSigner](../xmtp/CredentialsToSigner.md)
 
 
 
-This adds a helper to <a href="https://pub.dev/documentation/web3dart/2.6.1/credentials/Credentials-class.html">Credentials</a> to treat it as a <a href="./xmtp/Signer-class.md">Signer</a>.
+This adds a helper to <a href="https://pub.dev/documentation/web3dart/2.6.1/credentials/Credentials-class.html">Credentials</a> to treat it as a <a href="../xmtp/Signer-class.md">Signer</a>.
 
 
 
 
 ## Properties
 
-##### [contentTypeText](./xmtp/contentTypeText.md) &#8594; [ContentTypeId](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/ContentTypeId-class.html)
+##### [contentTypeText](../xmtp/contentTypeText.md) &#8594; [ContentTypeId](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/ContentTypeId-class.html)
 
 
 

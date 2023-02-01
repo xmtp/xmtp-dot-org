@@ -20,22 +20,22 @@ metadata helpers (e.g. for setting the authorization token).</p>
 
 ## Constructors
 
-[Api.create](./Api/Api.create.md) ({[String](https://api.flutter.dev/flutter/dart-core/String-class.html) host = 'dev.xmtp.network', [int](https://api.flutter.dev/flutter/dart-core/int-class.html) port = 5556, [bool](https://api.flutter.dev/flutter/dart-core/bool-class.html) isSecure = true, [bool](https://api.flutter.dev/flutter/dart-core/bool-class.html) debugLogRequests = kDebugMode, [String](https://api.flutter.dev/flutter/dart-core/String-class.html) appVersion = "dev/0.0.0-development"})
+[Api.create](../xmtp/Api/Api.create.md) ({[String](https://api.flutter.dev/flutter/dart-core/String-class.html) host = 'dev.xmtp.network', [int](https://api.flutter.dev/flutter/dart-core/int-class.html) port = 5556, [bool](https://api.flutter.dev/flutter/dart-core/bool-class.html) isSecure = true, [bool](https://api.flutter.dev/flutter/dart-core/bool-class.html) debugLogRequests = kDebugMode, [String](https://api.flutter.dev/flutter/dart-core/String-class.html) appVersion = "dev/0.0.0-development"})
 
    _factory_
 
-[Api.createAdvanced](./Api/Api.createAdvanced.md) ([ClientChannel](https://pub.dev/documentation/grpc/3.1.0/grpc_connection_interface/ClientChannel-class.html) channel, {[CallOptions](https://pub.dev/documentation/grpc/3.1.0/service_api/CallOptions-class.html)? options, [Iterable](https://api.flutter.dev/flutter/dart-core/Iterable-class.html)&lt;[ClientInterceptor](https://pub.dev/documentation/grpc/3.1.0/service_api/ClientInterceptor-class.html)>? interceptors, [String](https://api.flutter.dev/flutter/dart-core/String-class.html) appVersion = ""})
+[Api.createAdvanced](../xmtp/Api/Api.createAdvanced.md) ([ClientChannel](https://pub.dev/documentation/grpc/3.1.0/grpc_connection_interface/ClientChannel-class.html) channel, {[CallOptions](https://pub.dev/documentation/grpc/3.1.0/service_api/CallOptions-class.html)? options, [Iterable](https://api.flutter.dev/flutter/dart-core/Iterable-class.html)&lt;[ClientInterceptor](https://pub.dev/documentation/grpc/3.1.0/service_api/ClientInterceptor-class.html)>? interceptors, [String](https://api.flutter.dev/flutter/dart-core/String-class.html) appVersion = ""})
 
    _factory_
 
 
 ## Properties
 
-##### [client](./Api/client.md) &#8594; [MessageApiClient](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/MessageApiClient-class.html)
+##### [client](../xmtp/Api/client.md) &#8594; [MessageApiClient](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/MessageApiClient-class.html)
 
 
 
-
+  
 _<span class="feature">final</span>_
 
 
@@ -62,11 +62,11 @@ _<span class="feature">read-only</span><span class="feature">inherited</span>_
 
 ## Methods
 
-##### [clearAuthTokenProvider](./Api/clearAuthTokenProvider.md)() void
+##### [clearAuthTokenProvider](../xmtp/Api/clearAuthTokenProvider.md)() void
 
 
 
-
+  
 
 
 
@@ -80,20 +80,20 @@ _<span class="feature">inherited</span>_
 
 
 
-##### [setAuthTokenProvider](./Api/setAuthTokenProvider.md)([FutureOr](https://api.flutter.dev/flutter/dart-async/FutureOr-class.html)&lt;[String](https://api.flutter.dev/flutter/dart-core/String-class.html)> authTokenProvider()) void
+##### [setAuthTokenProvider](../xmtp/Api/setAuthTokenProvider.md)([FutureOr](https://api.flutter.dev/flutter/dart-async/FutureOr-class.html)&lt;[String](https://api.flutter.dev/flutter/dart-core/String-class.html)> authTokenProvider()) void
+
+
+
+  
 
 
 
 
+##### [terminate](../xmtp/Api/terminate.md)() [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;void>
 
 
 
-
-##### [terminate](./Api/terminate.md)() [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;void>
-
-
-
-
+  
 
 
 
@@ -117,3 +117,18 @@ _<span class="feature">inherited</span>_
 
 The equality operator.  
 _<span class="feature">inherited</span>_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

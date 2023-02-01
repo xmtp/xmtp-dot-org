@@ -21,7 +21,7 @@ _<span class="feature">override</span>_
 
 
 
-<p>This completes the implementation of the <a href="././Codec-class.md">Codec</a> interface.</p>
+<p>This completes the implementation of the <a href="../../xmtp/Codec-class.md">Codec</a> interface.</p>
 
 
 

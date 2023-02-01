@@ -12,14 +12,14 @@
 
 
 
-<p>This is a basic text <a href="./Codec-class.md">Codec</a> that supports UTF-8 encoding.</p>
+<p>This is a basic text <a href="../xmtp/Codec-class.md">Codec</a> that supports UTF-8 encoding.</p>
 
 
 
 **Inheritance**
 
 - [Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)
-- [Codec](./Codec-class.md)&lt;[String](https://api.flutter.dev/flutter/dart-core/String-class.html)>
+- [Codec](../xmtp/Codec-class.md)&lt;[String](https://api.flutter.dev/flutter/dart-core/String-class.html)>
 - TextCodec
 
 
@@ -31,14 +31,14 @@
 
 ## Constructors
 
-[TextCodec](./TextCodec/TextCodec.md) ()
+[TextCodec](../xmtp/TextCodec/TextCodec.md) ()
 
    
 
 
 ## Properties
 
-##### [contentType](./TextCodec/contentType.md) &#8594; [ContentTypeId](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/ContentTypeId-class.html)
+##### [contentType](../xmtp/TextCodec/contentType.md) &#8594; [ContentTypeId](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/ContentTypeId-class.html)
 
 
 
@@ -71,7 +71,7 @@ _<span class="feature">read-only</span><span class="feature">inherited</span>_
 
 ## Methods
 
-##### [decode](./TextCodec/decode.md)([EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html) encoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[String](https://api.flutter.dev/flutter/dart-core/String-class.html)>
+##### [decode](../xmtp/TextCodec/decode.md)([EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html) encoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[String](https://api.flutter.dev/flutter/dart-core/String-class.html)>
 
 
 
@@ -80,7 +80,7 @@ _<span class="feature">override</span>_
 
 
 
-##### [encode](./TextCodec/encode.md)([String](https://api.flutter.dev/flutter/dart-core/String-class.html) decoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html)>
+##### [encode](../xmtp/TextCodec/encode.md)([String](https://api.flutter.dev/flutter/dart-core/String-class.html) decoded) [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[EncodedContent](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/EncodedContent-class.html)>
 
 
 

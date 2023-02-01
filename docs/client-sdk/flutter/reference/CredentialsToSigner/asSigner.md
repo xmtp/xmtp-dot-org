@@ -11,7 +11,7 @@
 
 
 
-[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Signer](././Signer-class.md)> asSigner
+[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Signer](../../xmtp/Signer-class.md)> asSigner
 ()
 
 

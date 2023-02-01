@@ -16,7 +16,7 @@ _<span class="feature">final</span>_
 
 
 
-<p>This identifies the <a href="././DecodedMessage/content.md">content</a>'s type.</p>
+<p>This identifies the <a href="../../xmtp/DecodedMessage/content.md">content</a>'s type.</p>
 
 
 

@@ -11,8 +11,8 @@
 
 
 
-[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[DecodedMessage](././DecodedMessage-class.md)> sendMessage
-([Conversation](././Conversation-class.md) conversation, [Object](https://api.flutter.dev/flutter/dart-core/Object-class.html) content, {[ContentTypeId](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/ContentTypeId-class.html)? contentType})
+[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[DecodedMessage](../../xmtp/DecodedMessage-class.md)> sendMessage
+([Conversation](../../xmtp/Conversation-class.md) conversation, [Object](https://api.flutter.dev/flutter/dart-core/Object-class.html) content, {[ContentTypeId](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/ContentTypeId-class.html)? contentType})
 
 
 

@@ -11,7 +11,7 @@
 
 
 
-[Stream](https://api.flutter.dev/flutter/dart-async/Stream-class.html)&lt;[Conversation](././Conversation-class.md)> streamConversations
+[Stream](https://api.flutter.dev/flutter/dart-async/Stream-class.html)&lt;[Conversation](../../xmtp/Conversation-class.md)> streamConversations
 ()
 
 

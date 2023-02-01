@@ -11,8 +11,8 @@
 
 
 
-[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Client](././Client-class.md)> createFromKeys
-([Api](././Api-class.md) api, [PrivateKeyBundle](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/PrivateKeyBundle-class.html) keys, {[List](https://api.flutter.dev/flutter/dart-core/List-class.html)&lt;[Codec](././Codec-class.md)&lt;[Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)>> customCodecs = const []})
+[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Client](../../xmtp/Client-class.md)> createFromKeys
+([Api](../../xmtp/Api-class.md) api, [PrivateKeyBundle](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/PrivateKeyBundle-class.html) keys, {[List](https://api.flutter.dev/flutter/dart-core/List-class.html)&lt;[Codec](../../xmtp/Codec-class.md)&lt;[Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)>> customCodecs = const []})
 
 
 

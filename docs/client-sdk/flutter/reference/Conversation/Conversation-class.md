@@ -13,8 +13,8 @@
 
 
 <p>This represents an ongoing conversation.
-It can be provided to <a href="./Client-class.md">Client</a> to <code>listMessages</code> and <code>sendMessage</code>.
-The <a href="./Client-class.md">Client</a> also allows you to <code>streamMessages</code> from this <a href="./Conversation-class.md">Conversation</a>.</p>
+It can be provided to <a href="../xmtp/Client-class.md">Client</a> to <code>listMessages</code> and <code>sendMessage</code>.
+The <a href="../xmtp/Client-class.md">Client</a> also allows you to <code>streamMessages</code> from this <a href="../xmtp/Conversation-class.md">Conversation</a>.</p>
 <p>It attempts to give uniform shape to v1 and v2 conversations.</p>
 
 
@@ -22,18 +22,18 @@ The <a href="./Client-class.md">Client</a> also allows you to <code>streamMessag
 
 ## Constructors
 
-[Conversation.v1](./Conversation/Conversation.v1.md) ([DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html) createdAt, {required [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html) me, required [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html) peer})
+[Conversation.v1](../xmtp/Conversation/Conversation.v1.md) ([DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html) createdAt, {required [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html) me, required [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html) peer})
 
    
 
-[Conversation.v2](./Conversation/Conversation.v2.md) ([InvitationV1](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/InvitationV1-class.html) invite, [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html) createdAt, {required [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html) me, required [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html) peer})
+[Conversation.v2](../xmtp/Conversation/Conversation.v2.md) ([InvitationV1](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/InvitationV1-class.html) invite, [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html) createdAt, {required [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html) me, required [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html) peer})
 
    
 
 
 ## Properties
 
-##### [conversationId](./Conversation/conversationId.md) &#8594; [String](https://api.flutter.dev/flutter/dart-core/String-class.html)
+##### [conversationId](../xmtp/Conversation/conversationId.md) &#8594; [String](https://api.flutter.dev/flutter/dart-core/String-class.html)
 
 
 
@@ -43,7 +43,7 @@ _<span class="feature">final</span>_
 
 
 
-##### [createdAt](./Conversation/createdAt.md) &#8594; [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)
+##### [createdAt](../xmtp/Conversation/createdAt.md) &#8594; [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)
 
 
 
@@ -61,7 +61,7 @@ _<span class="feature">read-only</span><span class="feature">inherited</span>_
 
 
 
-##### [invite](./Conversation/invite.md) &#8594; [InvitationV1](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/InvitationV1-class.html)
+##### [invite](../xmtp/Conversation/invite.md) &#8594; [InvitationV1](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/InvitationV1-class.html)
 
 
 
@@ -71,7 +71,7 @@ _<span class="feature">final</span>_
 
 
 
-##### [me](./Conversation/me.md) &#8594; [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html)
+##### [me](../xmtp/Conversation/me.md) &#8594; [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html)
 
 
 
@@ -80,7 +80,7 @@ _<span class="feature">final</span>_
 
 
 
-##### [metadata](./Conversation/metadata.md) &#8594; [Map](https://api.flutter.dev/flutter/dart-core/Map-class.html)&lt;[String](https://api.flutter.dev/flutter/dart-core/String-class.html), [String](https://api.flutter.dev/flutter/dart-core/String-class.html)>
+##### [metadata](../xmtp/Conversation/metadata.md) &#8594; [Map](https://api.flutter.dev/flutter/dart-core/Map-class.html)&lt;[String](https://api.flutter.dev/flutter/dart-core/String-class.html), [String](https://api.flutter.dev/flutter/dart-core/String-class.html)>
 
 
 
@@ -90,7 +90,7 @@ _<span class="feature">final</span>_
 
 
 
-##### [peer](./Conversation/peer.md) &#8594; [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html)
+##### [peer](../xmtp/Conversation/peer.md) &#8594; [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html)
 
 
 
@@ -108,7 +108,7 @@ _<span class="feature">read-only</span><span class="feature">inherited</span>_
 
 
 
-##### [topic](./Conversation/topic.md) &#8594; [String](https://api.flutter.dev/flutter/dart-core/String-class.html)
+##### [topic](../xmtp/Conversation/topic.md) &#8594; [String](https://api.flutter.dev/flutter/dart-core/String-class.html)
 
 
 
@@ -118,7 +118,7 @@ _<span class="feature">final</span>_
 
 
 
-##### [version](./Conversation/version.md) &#8594; [Message_Version](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/Message_Version.html)
+##### [version](../xmtp/Conversation/version.md) &#8594; [Message_Version](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/Message_Version.html)
 
 
 
@@ -140,7 +140,7 @@ _<span class="feature">inherited</span>_
 
 
 
-##### [toString](./Conversation/toString.md)() [String](https://api.flutter.dev/flutter/dart-core/String-class.html)
+##### [toString](../xmtp/Conversation/toString.md)() [String](https://api.flutter.dev/flutter/dart-core/String-class.html)
 
 
 

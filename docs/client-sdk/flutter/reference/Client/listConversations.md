@@ -11,14 +11,14 @@
 
 
 
-[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[List](https://api.flutter.dev/flutter/dart-core/List-class.html)&lt;[Conversation](././Conversation-class.md)>> listConversations
+[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[List](https://api.flutter.dev/flutter/dart-core/List-class.html)&lt;[Conversation](../../xmtp/Conversation-class.md)>> listConversations
 ({[DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)? start, [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)? end, [int](https://api.flutter.dev/flutter/dart-core/int-class.html)? limit, [SortDirection](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/SortDirection-class.html)? sort = xmtp.SortDirection.SORT_DIRECTION_DESCENDING})
 
 
 
 
 
-<p>This lists all the <a href="././Conversation-class.md">Conversation</a>s for the user.</p>
+<p>This lists all the <a href="../../xmtp/Conversation-class.md">Conversation</a>s for the user.</p>
 <p>If <code>start</code> or <code>end</code> are specified then this will only list conversations
 created at or after <code>start</code> and at or before <code>end</code>.</p>
 <p>If <code>limit</code> is specified then this returns no more than <code>limit</code> conversations.</p>

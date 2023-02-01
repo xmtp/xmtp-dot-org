@@ -12,24 +12,24 @@
 
 
 
-<p>Abstraction over a wallet with an <a href="./Signer/address.md">address</a> that can <a href="./Signer/signPersonalMessage.md">signPersonalMessage</a>s.</p>
-<p>This is used by the <a href="./Client-class.md">Client</a> to prompt the user to sign messages.</p>
+<p>Abstraction over a wallet with an <a href="../xmtp/Signer/address.md">address</a> that can <a href="../xmtp/Signer/signPersonalMessage.md">signPersonalMessage</a>s.</p>
+<p>This is used by the <a href="../xmtp/Client-class.md">Client</a> to prompt the user to sign messages.</p>
 <p>The goal with this abstraction is to expose a minimal interface so that
-integrations can provide their own <a href="./Signer-class.md">Signer</a> as necessary.</p>
+integrations can provide their own <a href="../xmtp/Signer-class.md">Signer</a> as necessary.</p>
 
 
 
 
 ## Constructors
 
-[Signer.create](./Signer/Signer.create.md) ([String](https://api.flutter.dev/flutter/dart-core/String-class.html) address, [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Uint8List](https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html)> signPersonalMessage([String](https://api.flutter.dev/flutter/dart-core/String-class.html) text))
+[Signer.create](../xmtp/Signer/Signer.create.md) ([String](https://api.flutter.dev/flutter/dart-core/String-class.html) address, [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Uint8List](https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html)> signPersonalMessage([String](https://api.flutter.dev/flutter/dart-core/String-class.html) text))
 
    
 
 
 ## Properties
 
-##### [address](./Signer/address.md) &#8594; [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html)
+##### [address](../xmtp/Signer/address.md) &#8594; [EthereumAddress](https://pub.dev/documentation/web3dart/2.6.1/credentials/EthereumAddress-class.html)
 
 
 
@@ -56,7 +56,7 @@ _<span class="feature">read-only</span><span class="feature">inherited</span>_
 
 
 
-##### [signPersonalMessage](./Signer/signPersonalMessage.md) &#8594; [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Uint8List](https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html)> Function([String](https://api.flutter.dev/flutter/dart-core/String-class.html) text)
+##### [signPersonalMessage](../xmtp/Signer/signPersonalMessage.md) &#8594; [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Uint8List](https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html)> Function([String](https://api.flutter.dev/flutter/dart-core/String-class.html) text)
 
 
 

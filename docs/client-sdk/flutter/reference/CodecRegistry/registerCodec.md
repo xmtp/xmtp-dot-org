@@ -12,7 +12,7 @@
 
 
 void registerCodec
-([Codec](././Codec-class.md)&lt;[Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)> codec)
+([Codec](../../xmtp/Codec-class.md)&lt;[Object](https://api.flutter.dev/flutter/dart-core/Object-class.html)> codec)
 
 
 

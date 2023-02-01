@@ -14,7 +14,7 @@ on [Credentials](https://pub.dev/documentation/web3dart/2.6.1/credentials/Creden
 
 
 
-<p>This adds a helper to <a href="https://pub.dev/documentation/web3dart/2.6.1/credentials/Credentials-class.html">Credentials</a> to treat it as a <a href="./Signer-class.md">Signer</a>.</p>
+<p>This adds a helper to <a href="https://pub.dev/documentation/web3dart/2.6.1/credentials/Credentials-class.html">Credentials</a> to treat it as a <a href="../xmtp/Signer-class.md">Signer</a>.</p>
 
 
 
@@ -23,7 +23,7 @@ on [Credentials](https://pub.dev/documentation/web3dart/2.6.1/credentials/Creden
 
 ## Methods
 
-##### [asSigner](./CredentialsToSigner/asSigner.md)() [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Signer](./Signer-class.md)>
+##### [asSigner](../xmtp/CredentialsToSigner/asSigner.md)() [Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[Signer](../xmtp/Signer-class.md)>
 
 
 

@@ -11,8 +11,8 @@
 
 
 
-[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[List](https://api.flutter.dev/flutter/dart-core/List-class.html)&lt;[DecodedMessage](././DecodedMessage-class.md)>> listMessages
-([Conversation](././Conversation-class.md) conversation, {[DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)? start, [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)? end, [int](https://api.flutter.dev/flutter/dart-core/int-class.html)? limit, [SortDirection](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/SortDirection-class.html) sort = xmtp.SortDirection.SORT_DIRECTION_DESCENDING})
+[Future](https://api.flutter.dev/flutter/dart-async/Future-class.html)&lt;[List](https://api.flutter.dev/flutter/dart-core/List-class.html)&lt;[DecodedMessage](../../xmtp/DecodedMessage-class.md)>> listMessages
+([Conversation](../../xmtp/Conversation-class.md) conversation, {[DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)? start, [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)? end, [int](https://api.flutter.dev/flutter/dart-core/int-class.html)? limit, [SortDirection](https://pub.dev/documentation/xmtp_proto/0.0.1-development/xmtp_proto/SortDirection-class.html) sort = xmtp.SortDirection.SORT_DIRECTION_DESCENDING})
 
 
 
