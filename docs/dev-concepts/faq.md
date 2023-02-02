@@ -59,7 +59,7 @@ XMTP provides perceptibly real-time message delivery and retrieval. The network 
 
 ### How does network rate limiting work?
 
-Currently, there’s no rate limiting on the XMTP network.
+Currently, XMTP network nodes are configured to rate limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node.
 
 XMTP Labs is capable of rate limiting the network while we are the only node operators. Rate limiting is a consideration in our research into economic spam controls. Ultimately, rate limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
 
