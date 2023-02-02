@@ -440,7 +440,7 @@ The below code snippets does a few things:
    const chains = [ mainnet, polygon];
    // Wagmi client
    const { provider } = configureChains(chains, [
-     walletConnectProvider({ projectId: "e8f49836214e4121b3f011cb7c31b9e6" }),
+     walletConnectProvider({ projectId: "<YOUR_PROJECT_ID>" }),
    ]);
    const wagmiClient = createClient({
      autoConnect: true,
@@ -521,7 +521,7 @@ The below code snippets does a few things:
        <div className="container flex flex-col mt-8">
          <Web3Button/>
          <Web3Modal
-           projectId="e8f49836214e4121b3f011cb7c31b9e6"
+           projectId="<YOUR_PROJECT_ID>"
            ethereumClient={ethereumClient}
          />
 
