@@ -5,7 +5,7 @@ title: "Encode Club Livepeer wrap-up"
 date: 2023-02-02
 authors: rich
 description: "Next Video Build: Livepeer x XMTP awards wrap-up: DeUniversity’s education platform, Polyfans Messenger token-gated livestream, and Livopedia’s creator tools take top honors."
-image: ./media/blogPost.png
+image: ./media/Encode-Livepeer-Wrapup-cover.png
 tags:
 - Awards
 - Developers
@@ -16,7 +16,7 @@ import ReactPlayer from 'react-player'
 Next Video Build: Livepeer x XMTP awards wrap-up: DeUniversity’s education platform, Polyfans Messenger token-gated livestream, and Livopedia’s creator tools take top honors.
 
 <!--need image-->
-![](./media/blogPost.png)
+![](./media/Encode-Livepeer-Wrapup-cover.png)
 
 <!--truncate-->
 
