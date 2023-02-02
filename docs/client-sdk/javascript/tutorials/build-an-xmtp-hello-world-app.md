@@ -1,14 +1,14 @@
 ---
-sidebar_label: Build an XMTP hello world app
+sidebar_label: Build an XMTP "GM" app
 sidebar_position: 3
 ---
 
-# Build an XMTP "hello world" app
+# Build an XMTP "GM Bot!" app
 XMTP (Extensible Message Transport Protocol) is an open protocol and network for secure and private web3 messaging. For example, you can build an app with XMTP to send messages between blockchain accounts, including chat/DMs, alerts, announcements, and more.
 
-Use this tutorial to build an XMTP "hello world" messaging app. Building this app can help you learn some of the fundamental concepts involved in building with XMTP.
+Use this tutorial to build an XMTP "GM Bot" messaging app. Building this app can help you learn some of the fundamental concepts involved in building with XMTP.
 
-As its name implies, the XMTP "hello world" app is intentionally barebones. Here's what the app enables you to do:
+As its name implies, the XMTP "GM Bot" app is intentionally barebones. Here's what the app enables you to do:
 
 1. Connect your wallet( using [modal3web](https://web3modal.com/)) app to the "GM bot" app.
 2. Connect your blockchain account to the XMTP network using your wallet app.
@@ -24,13 +24,13 @@ Be sure to have these prerequisites in place before you start the tutorial:
 
 * Node (LTS version) and npm to install app requirements and dependencies
 
-* Access to Chrome, Firefox, or Brave. The "hello world" app is designed to work with these browsers.
+* Access to Chrome, Firefox, or Brave. The "GM Bot" app is designed to work with these browsers.
 
 * A wallet app browser extension installed, such as MetaMask or Coinbase Wallet, and an Ethereum account
 
 * For example, you can install the MetaMask wallet app browser extension and use it to create an Ethereum account you can use to send and receive XMTP messages. To learn more, see [How to create a MetaMask Wallet](https://myterablock.medium.com/how-to-create-or-import-a-metamask-wallet-a551fc2f5a6b).
 
-* Beyond the purposes of this "hello world" tutorial, XMTP can be used with more than just Ethereum accounts and Metamask or Coinbase Wallet. To learn more, see Wallet apps and blockchains supported by XMTP.*
+* Beyond the purposes of this "GM Bot" tutorial, XMTP can be used with more than just Ethereum accounts and Metamask or Coinbase Wallet. To learn more, see Wallet apps and blockchains supported by XMTP.*
 
 A code editor of your choice that you can use to build the app
 
@@ -80,7 +80,7 @@ The app opens at localhost:3000 in your default browser.
 
 ## Step 2. Build Connect wallet button
 
-Your "hello world" app needs a **Connect wallet** button that enables you to connect a wallet app, such as MetaMask.
+Your "GM Bot" app needs a **Connect wallet** button that enables you to connect a wallet app, such as MetaMask.
 
 This app uses [Web3Modal](https://web3modal.com/), [Ethers](https://docs.ethers.io/v5/single-page/), and [WAGMI](https://wagmi.sh/) to connect to commonly used wallet apps.
 
@@ -171,7 +171,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
 
 1. Install the [XMTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js).
 
-   The SDK provides an XMTP message API client that enables your "hello world" app to communicate with the XMTP network. In the `my-app` directory, run:
+   The SDK provides an XMTP message API client that enables your "GM Bot" app to communicate with the XMTP network. In the `my-app` directory, run:
 
    ```bash
    npm i --save @xmtp/xmtp-js
@@ -286,7 +286,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
 ## Step 4. Send GM to the bot, display messages, and stream new messages
 Now that the XMTP identity associated with your blockchain account is connected to the XMTP network, you can send and receive messages with XMTP.
 
-For simplicity, your "GM Bot" app enables you to send a preconfigured "gm" message (hello world) to an XMTP message bot that is programmed to automatically reply to an address it receives a message from. This makes it easy for you to immediately see the outcome of sending a message.
+For simplicity, your "GM Bot" app enables you to send a preconfigured "gm" message (GM Bot) to an XMTP message bot that is programmed to automatically reply to an address it receives a message from. This makes it easy for you to immediately see the outcome of sending a message.
 
 
 The below code snippets does a few things:
@@ -556,11 +556,11 @@ Congratulations on building your own XMTP app and sending and receiving your fir
 
 ## Learn more
 
-Now that you've had a "hello world" introduction to building with XMTP, here are some resources to help you continue building with XMTP:
+Now that you've had a "GM Bot" introduction to building with XMTP, here are some resources to help you continue building with XMTP:
 
 * Learn more about the [XMTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js), including more details about the XMTP functions used in the code samples in this tutorial. <!--XMTP functions? Hmmm... I'm talking about creating a client, listing convos, listing messages in convos, and streaming messages. What would you call these things as expressed in the code?-->
 
-* Explore XMTP chat apps with more features than the XMTP "hello world" app:
+* Explore XMTP chat apps with more features than the XMTP "GM Bot" app:
 
   * [XMTP Quickstart Chat app repo](https://github.com/xmtp/xmtp-quickstart-react)
 
