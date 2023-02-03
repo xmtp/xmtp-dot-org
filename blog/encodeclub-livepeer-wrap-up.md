@@ -1,7 +1,7 @@
 ---
 slug: encode-club-livepeer-wrap-up
 hide_table_of_contents: true
-title: "Encode Club Livepeer wrap-up"
+title: "Tuned In: Developers show the power of video + messaging with XMTP and Livepeer"
 date: 2023-02-02
 authors: rich
 description: "Next Video Build: Livepeer x XMTP awards wrap-up: DeUniversity’s education platform, Polyfans Messenger token-gated livestream, and Livopedia’s creator tools take top honors."
@@ -28,7 +28,7 @@ The results were awesome. Nearly 30% of the 88 teams competing built application
 
 **Here are the XMTP award winners:**
 
-## Best use - DeUniversity
+## Best use - DeUniversity 🥇
 
 DeUniversity is a completely decentralized university platform that allows users to create and enroll in courses, conduct live classes, interact with students, and solve problems using Livepeer and XMTP. Using XMTP, DeUniversity built messaging experiences allowing students to chat during live streams, DM professors with questions, as well as with other students over end-to-end encrypted chats that preserve privacy.
 
@@ -40,7 +40,7 @@ DeUniversity is a completely decentralized university platform that allows users
 
 ---
 
-## Best use - Polyfans Messenger
+## Best use - Polyfans Messenger 🥈
 
 Enabling new and unique business models for content creators is core to the mission of web3. Polyfans built a messenger on top of XMTP, Lens protocol, Livepeer, and IPFS, which allows fans to chat with creators using both text and video. Creators can then token-gate livestreams and receive payments in chat from fans, allowing streamers to start generating revenue from day 1, all through a completely decentralized service infrastructure.
 
@@ -52,7 +52,7 @@ Enabling new and unique business models for content creators is core to the miss
 
 ---
 
-## Best use - Livopedia
+## Best use - Livopedia 🥉
 
 Livopedia built a creator studio for content creators to make building and deploying revenue-generating video messaging applications easy. With Livopedia, content creators can both gate uploaded and hosted videos, as well as token-gate livestreams for their fans. Using XMTP, content creators can then broadcast messages when livestreams start, as well as chat with fans across the XMTP network, and even send video messages to specific users, embedded right in the chat experience.
 
