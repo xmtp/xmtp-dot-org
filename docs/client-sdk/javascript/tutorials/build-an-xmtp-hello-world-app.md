@@ -29,7 +29,7 @@ Be sure to have these prerequisites in place before you start the tutorial:
 * A wallet app browser extension installed, such as MetaMask or Coinbase Wallet, and an Ethereum account. For example, you can install the MetaMask wallet app browser extension and use it to create an Ethereum account you can use to send and receive XMTP messages. To learn more, see [How to create a MetaMask Wallet](https://myterablock.medium.com/how-to-create-or-import-a-metamask-wallet-a551fc2f5a6b).
     * Beyond the purposes of this "GM Bot" tutorial, XMTP can be used with more than just Ethereum accounts and Metamask or Coinbase Wallet. To learn more, see Wallet apps and blockchains supported by XMTP.
 
-A code editor of your choice that you can use to build the app
+* A code editor of your choice that you can use to build the app
 
 ## Step 1. Create a React + Typescript + Tailwind app
 
