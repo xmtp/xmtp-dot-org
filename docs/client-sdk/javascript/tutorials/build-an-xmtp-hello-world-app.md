@@ -544,7 +544,7 @@ The below code snippets does a few things:
    
    ```
 
-if all goes well, you should have an app that looks like this:
+If all goes well, you should have an app that looks like this:
 ![gif bot tutorial](img/gm-bot.gif)
 
 
