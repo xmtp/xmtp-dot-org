@@ -566,7 +566,7 @@ Now that you've had a "GM Bot" introduction to building with XMTP, here are some
 
     An example React chat app you can use as a developer tool to learn how to build a basic 1:1 chat app using the XMTP client SDK. The app is intentionally streamlined and unopinionated, making it a good quickstart launching point for building with XMTP.
 
-  * [XMTP Chat app repo](https://github.com/xmtp/example-chat-react)
+  * [XMTP Inbox chat app repo](https://github.com/xmtp-labs/xmtp-inbox-web)
 
     An example React chat app that demonstrates both basic and advanced capabilities of the XMTP client SDK, showcasing innovative ways of building with XMTP.
 
