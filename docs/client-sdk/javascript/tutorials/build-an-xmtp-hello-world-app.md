@@ -568,7 +568,7 @@ Now that you've had a "GM Bot" introduction to building with XMTP, here are some
 
   * [XMTP Chat app repo](https://github.com/xmtp/example-chat-react)
 
-    An example React chat app that demonstrates both basic and advanced features of the XMTP client SDK.
+    An example React chat app that demonstrates both basic and advanced capabilities of the XMTP client SDK, showcasing innovative ways of building with XMTP.
 
 * Learn about [XMTP development concepts](/docs/dev-concepts/introduction)
 
