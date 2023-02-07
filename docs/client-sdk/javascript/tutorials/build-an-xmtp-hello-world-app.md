@@ -3,12 +3,12 @@ sidebar_label: Build an XMTP "GM" app
 sidebar_position: 3
 ---
 
-# Build an XMTP "GM Bot!" app
+# Build an XMTP "GM!" app
 XMTP (Extensible Message Transport Protocol) is an open protocol and network for secure and private web3 messaging. For example, you can build an app with XMTP to send messages between blockchain accounts, including chat/DMs, alerts, announcements, and more.
 
-Use this tutorial to build an XMTP "GM Bot" messaging app. Building this app can help you learn some of the fundamental concepts involved in building with XMTP.
+Use this tutorial to build an XMTP "GM([Good Morning](https://nftska.com/gm-it-means-more-than-you-think-nft-terminology/))" messaging app. Building this app can help you learn some of the fundamental concepts involved in building with XMTP.
 
-As its name implies, the XMTP "GM Bot" app is intentionally barebones. Here's what the app enables you to do:
+As its name implies, the XMTP "GM" app is intentionally barebones. Here's what the app enables you to do:
 
 1. Connect your wallet( using [modal3web](https://web3modal.com/)) app to the "GM bot" app.
 2. Connect your blockchain account to the XMTP network using your wallet app.
@@ -143,7 +143,7 @@ export default App;
 ```
 
 :::important
-Because we are using Web3Modal, we are require to pass in a **<Project_ID>**
+Because we are using Web3Modal, we are required to pass in a **<Project_ID>**
 
 Head over to [WalletConnect Cloud](https://cloud.walletconnect.com/sign-in) to sign in or sign up. Create (or use an existing) project and copy its associated Project ID. You will need this in order to use Web3Modal v2.
 :::
@@ -291,9 +291,8 @@ The below code snippets does a few things:
 2. Retrieves and stores message in `messages`
 3. Streams new messages from yourself + bot and displays them
    ```tsx title="App.tsx" showLineNumbers
-   // highlight-next-line
-   import React, { useEffect, useState } from 'react';
-   import './App.css';
+   import React, { useEffect, useState } from "react";
+   import "./App.css";
    import {
      EthereumClient,
      modalConnectors,
@@ -303,14 +302,14 @@ The below code snippets does a few things:
    // highlight-next-line
    import { configureChains, createClient, useAccount } from "wagmi";
    import { mainnet, polygon } from "wagmi/chains";
-   import { fetchSigner } from '@wagmi/core'
+   import { fetchSigner } from "@wagmi/core";
    // highlight-next-line
-   import { Client, DecodedMessage, SortDirection} from '@xmtp/xmtp-js'
-   
+   import { Client, DecodedMessage, SortDirection } from "@xmtp/xmtp-js";
+
    // highlight-next-line
-   const PEER_ADDRESS = "0x937C0d4a6294cdfa575de17382c7076b579DC176" //bot address
-   
-   const chains = [ mainnet, polygon];
+   const PEER_ADDRESS = "0x937C0d4a6294cdfa575de17382c7076b579DC176"; //bot address
+
+   const chains = [mainnet, polygon];
    // Wagmi client
    const { provider } = configureChains(chains, [
      walletConnectProvider({ projectId: "<YOUR_PROJECT_ID>" }),
@@ -324,91 +323,93 @@ The below code snippets does a few things:
    const ethereumClient = new EthereumClient(wagmiClient, chains);
    // highlight-start
    type MessageListProps = {
-    msg: DecodedMessage[];
+     msg: DecodedMessage[];
    };
    // highlight-end
 
    function App() {
-     const { isConnected } = useAccount()
+     const { isConnected } = useAccount();
      // highlight-start
-     const [messages, setMessages] = useState<DecodedMessage[]>([]); 
+     const [messages, setMessages] = useState<DecodedMessage[]>([]);
      const [client, setClient] = useState<any>();
      const [xmtpClientAddress, setXmtpClientAddress] = useState<any>();
      // highlight-end
 
      // highlight-start
-     const initXmtp = async function() {
-       const signer = await fetchSigner()
-       const xmtp = await Client.create(signer, { env: "production" })
-       const conversation = await xmtp.conversations.newConversation(
-         PEER_ADDRESS
-       )
-      const messages = await conversation.messages({
-        direction: SortDirection.SORT_DIRECTION_DESCENDING
-      })
-    
-      setClient(conversation)
-      setMessages(messages)
-      setXmtpClientAddress(xmtp.address)
-      // highlight-end
-     }
+     const initXmtp = async function () {
+       const signer = await fetchSigner();
+       const xmtp = await Client.create(signer, { env: "production" });
+       const conversation = await xmtp.conversations.newConversation(PEER_ADDRESS);
+       const messages = await conversation.messages({
+         direction: SortDirection.SORT_DIRECTION_DESCENDING,
+       });
 
-	useEffect(() => {
-      if (xmtpClientAddress) {
-        const streamMessages = async () => {
-        const newStream = await client.streamMessages();
-        for await (const msg of newStream) {
-          setMessages(prevMessages => {
-            const messages = [...prevMessages];
-            messages.unshift(msg);
-            return messages;
-          });
-        }
-      };
-      streamMessages();
-    }
-  }, [client, xmtpClientAddress]);
+       setClient(conversation);
+       setMessages(messages);
+       setXmtpClientAddress(xmtp.address);
+       // highlight-end
+     };
+     // highlight-start
+     useEffect(() => {
+       if (xmtpClientAddress) {
+         const streamMessages = async () => {
+           const newStream = await client.streamMessages();
+           for await (const msg of newStream) {
+             setMessages((prevMessages) => {
+               const messages = [...prevMessages];
+               messages.unshift(msg);
+               return messages;
+             });
+           }
+         };
+         streamMessages();
+       }
+     }, [client, xmtpClientAddress]);
+     // highlight-end
 
+     // highlight-start
      const onSendMessage = async () => {
        const message = "gm XMTP bot!";
-         await client.send(message)
-     }
-  
+       await client.send(message);
+     };
+    // highlight-end
+
      // highlight-start
-     const MessageList: React.FC<MessageListProps> = ({ msg }) => {    
+     const MessageList: React.FC<MessageListProps> = ({ msg }) => {
        return (
-        <ul>
-          {msg.map((message, index) => (
-           <li key={index}>
-             {message.content}
-           </li>
-          ))}
-        </ul>
-       )
+         <ul>
+           {msg.map((message, index) => (
+             <li key={index}>{message.content}</li>
+           ))}
+         </ul>
+       );
      };
      // highlight-end
+
      return (
        <div className="App">
-         <Web3Button/>
+         <Web3Button />
          <Web3Modal
            projectId="<YOUR_PROJECT_ID>"
            ethereumClient={ethereumClient}
          />
-        // highlight-start
-         {isConnected && xmtpClientAddress &&
+         // highlight-start
+         {isConnected && xmtpClientAddress && (
            <>
              <MessageList msg={messages} />
              <button onClick={onSendMessage}>Send GM</button>
            </>
-         }
-        {isConnected && !xmtpClientAddress && 
-          <button onClick={initXmtp}>Connect to XMTP</button>}
-        // highlight-end
+         )}
+         {isConnected && !xmtpClientAddress && (
+           <button onClick={initXmtp}>Connect to XMTP</button>
+         )}
+         // highlight-end
        </div>
      );
    }
 
    export default App;
+
    ```
    When you run the code above, it should give you a blank skeleton like the picture below:
    ![barebone bot app](img/gm-bot-bare.png)
@@ -543,6 +544,10 @@ The below code snippets does a few things:
 
 If all goes well, you should have an app that looks like this:
 ![gif bot tutorial](img/gm-bot.gif)
+
+:::note
+Please remember to switch out `<YOUR_PROJECT_ID>` with a real `YOUR_PROJECT_ID` number that you created on [WalletConnect Cloud](https://cloud.walletconnect.com/sign-in).  
+:::
 
 
 
