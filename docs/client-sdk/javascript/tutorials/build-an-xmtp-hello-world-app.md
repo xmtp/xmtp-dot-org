@@ -421,9 +421,11 @@ The code snippets below do a few things:
    ## Step 5. Let's add some styles and make it look pretty!
    Okay, so now that we have all the functionality working, we are going to use Tailwind to pretty it up.
 
-   :::note
-   Please remember to switch out `<YOUR_PROJECT_ID>` with a real `YOUR_PROJECT_ID` number that you created on [WalletConnect Cloud](https://cloud.walletconnect.com/sign-in).  
-   :::
+:::note
+
+   Please remember to switch out `<YOUR_PROJECT_ID>` with a real `YOUR_PROJECT_ID` number that you created on [WalletConnect Cloud](https://cloud.walletconnect.com/sign-in).
+
+:::
 
 
    Below is the final code that you can copy and add to `App.tsx`
