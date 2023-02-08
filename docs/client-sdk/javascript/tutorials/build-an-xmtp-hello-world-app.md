@@ -60,7 +60,7 @@ content: [
 ],
 ```
 
-Next we need to add the Tailwind directives to the "src/index.css" file, add the following to the top of the file:
+Next we need to add the Tailwind directives to the `src/index.css` file, add the following to the top of the file:
 
 ```css title="src/index.css"
 @tailwind base;
@@ -94,11 +94,11 @@ In the `my-app` directory, run:
 ```bash
 npm install @web3modal/ethereum @web3modal/react wagmi ethers
 ```
-This adds the Web3Modal dependency to your `package.json`.
+This adds the Web3Modal, wagmi, and ethers dependency to your `package.json`.
 
 ### Create Web3Modal button
 
-All our code changes will be in `my-app/App.tsx` for ease-of-use
+All our code changes will be made in one file: `my-app/src/App.tsx`.
 
 For now, strip everything that is in the file and replace with: 
 
@@ -143,9 +143,9 @@ export default App;
 ```
 
 :::important
-Because we are using Web3Modal, we are required to pass in a **<Project_ID>**
+Because we are using Web3Modal, we are required to pass in a `<YOUR_PROJECT_ID>` value.
 
-Head over to [WalletConnect Cloud](https://cloud.walletconnect.com/sign-in) to sign in or sign up. Create (or use an existing) project and copy its associated Project ID. You will need this in order to use Web3Modal v2.
+Head over to [WalletConnect Cloud](https://cloud.walletconnect.com/sign-in) to sign in or sign up. Create (or use an existing) project and copy its associated Project ID. In your `App.tsx` code, replace both instances of `<YOUR_PROJECT_ID>` with this value. You will need this to use Web3Modal v2.
 :::
 
 Awesome! So we just added a Connect Wallet button to our app. 
@@ -177,7 +177,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
    This command adds the `@xmtp/xmtp-js` dependency to your `package.json`.
 
 
-2. Before we connect XMTP with our button, lets first create some conditons that only when our wallet is connected, we will show the connect to XMTP button.
+2. Before we connect XMTP with our button, let's first create some conditions that ensure that the app shows the  **Connect to XMTP** button only if a wallet is connected.
    ```tsx title="App.tsx" showLineNumbers
    import React from 'react';
    import './App.css';
@@ -224,7 +224,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
    ```
    So now, the "connect to XMTP" button should only show when your wallet is connected.
    
-3. Now, let's add a onClick handler when users click the button. This will initialize XMTP with your app.
+3. Now, let's add an onClick handler when users click the button. This will initialize XMTP with your app.
    ```tsx title="App.tsx" showLineNumbers
    import React from 'react';
    import './App.css';
@@ -276,7 +276,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
 
    export default App;
    ```
-   At this point, clicking Connect to XMTP will ask your wallet for a signature request. Below is an example of a MetaMask Signature request screen for signing to enable an XMTP identity.
+   At this point, clicking the **Connect to XMTP** button will ask your wallet for a signature request. Below is an example of a MetaMask Signature request screen for signing to enable an XMTP identity.
 
    So now that re created the connect wallet button and connecting to XMTP, lets put it all together and display and send messages next!
 
