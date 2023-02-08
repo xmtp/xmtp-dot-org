@@ -87,21 +87,21 @@ There are no message storage and retrieval-related fees incurred by developers f
 
 ### How does XMTP establish a secure and fraud-proof relationship between two identities?
 
-Blockchain accounts sign and advertise a set of keys that XMTP uses to establish a shared secret for encryption using another blockchain account’s keys. These keys attest to the authenticity of both accounts and are required to add messages to their conversation. No third-party apps or relayers are involved in this process.
+Blockchain accounts sign and advertise a set of keys to start using XMTP. These keys attest to the authenticity of both accounts. XMTP uses these keys to establish a shared secret between the blockchain accounts and uses it to generate a key used to encrypt an invitation for the blockchain accounts to start exchanging messages. No third-party apps or relayers are involved in this process.
 
-To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
+To learn more about these keys, see [Key generation and usage in XMTP][key-generation-and-usage].
 
 ### Does each blockchain account address have a corresponding XMTP identity?
 
-Yes. Each blockchain account address is represented by an XMTP identity key. This identity key is a part of a key bundle that only that the address can use to authenticate messages.
+Yes. Each blockchain account address is represented by an XMTP identity key. This identity key is a part of a key bundle that only the address that generated it can use to authenticate messages.
 
-To learn more about XMTP identities, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
+To learn more about XMTP identity keys, see [Key generation and usage in XMTP](key-generation-and-usage).
 
 ### Do apps built with XMTP need to decrypt messages with blockchain account private keys each time?
 
-When a user starts a new messaging session with an app built with XMTP, the user must sign with their blockchain account private key to decrypt their XMTP key bundle, which is then used for message decryption. A one-time signature is also required to create that key bundle, which includes an XMTP identity.
+When a user starts a new messaging session with an app built with XMTP, the user must sign with their blockchain account private key to decrypt their XMTP key bundle, which is then used for invitation and message decryption. A one-time signature is also required to create that key bundle, which includes an XMTP identity.
 
-To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
+To learn more about XMTP identity keys, see [Key generation and usage in XMTP](key-generation-and-usage).
 
 ## Storage
 
@@ -125,15 +125,17 @@ Have other questions or ideas about message storage? Post to the [XMTP discussio
 
 ### Which message formats and metadata does XMTP support?
 
-XMTP transports a message payload as a set of bytes that can represent any format that a developer wants to support, such as plaintext, JSON, or even non-text binary or media content. Currently, there are two basic content types available. These content types aim to establish broad compatibility among apps built with XMTP.
+XMTP transports a message payload as a set of bytes that can represent any format that a developer wants to support, such as plain text, JSON, or even non-text binary or media content. With XMTP, these message formats are refered to as content types.
 
-To learn more about content types, see [Content types](/docs/dev-concepts/content-types).
+Currently, there are two basic content types available: standard and custom. These content types aim to establish broad compatibility among apps built with XMTP.
 
 The XMTP community can propose and adopt standards for other content types, either informally or through a governance process.
 
-To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md).
+Message payloads also include references to timestamps. However, timestamps are not currently independently verified and can be set to any value by the sending app.
 
-Message payloads also include references to the sender and recipient identities and timestamps. However, timestamps are not currently independently verified and can be set to any value by the sending app.
+To learn more about content types, see [Content types](/docs/dev-concepts/content-types).
+
+To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md)
 
 Have other questions or ideas about message formats and metadata? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
@@ -141,7 +143,7 @@ Have other questions or ideas about message formats and metadata? Post to the [X
 
 No. However, the XMTP community can propose and adopt standards for a new content type that can support this use case and others.
 
-To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md).
+To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md)
 
 Have other questions or ideas about message attachments? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
@@ -179,6 +181,6 @@ The XMTP SDK currently requires you to use [ethers](https://ethers.org/) or anot
 
 ### Why does my app request a new signature for XMTP when I refresh my browser?
 
-The XMTP client provided by the SDK requires a user's signature in order to decrypt their XMTP message encryption keys. This process must be repeated when starting a new session since there is no secure place in the browser to persist decrypted keys. Based on developer and community feedback, we are researching more robust approaches to secure key management.
+The XMTP client provided by the SDK requires a user's signature to decrypt their XMTP message encryption keys. This process must be repeated when starting a new session since there is no secure place in the browser to persist decrypted keys. Based on developer and community feedback, we are researching more robust approaches to secure key management.
 
 To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
