@@ -287,7 +287,7 @@ For simplicity, your "GM Bot" app enables you to send a preconfigured "gm" messa
 
 
 The below code snippets does a few things:
-1. Creates a `MessagelList` component.
+1. Creates a `MessageList` component.
 2. Retrieves and stores message in `messages`
 3. Streams new messages from yourself + bot and displays them
    ```tsx title="App.tsx" showLineNumbers
