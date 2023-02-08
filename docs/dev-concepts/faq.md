@@ -127,7 +127,7 @@ Have other questions or ideas about message storage? Post to the [XMTP discussio
 
 XMTP transports a message payload as a set of bytes that can represent any format that a developer wants to support, such as plain text, JSON, or even non-text binary or media content. With XMTP, these message formats are refered to as content types.
 
-Currently, there are two basic content types available: standard and custom. These content types aim to establish broad compatibility among apps built with XMTP.
+Currently, there are two basic content types available. These content types aim to establish broad compatibility among apps built with XMTP.
 
 The XMTP community can propose and adopt standards for other content types, either informally or through a governance process.
 
@@ -157,7 +157,8 @@ XMTP enables developers to implement messaging features and UX paradigms that be
 
 Real-time chat is a core use case for XMTP and is demonstrated by the XMTP Inbox chat app.
 
-[Try the app](https://xmtp.chat/) connected to the XMTP `production` network
+- [Try the app](https://dev.xmtp.chat/) connected to the XMTP `dev` network
+- [Try the app](https://xmtp.chat/) connected to the XMTP production network
 
 To learn more about how the XMTP Inbox chat app is built, see the [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web).
 
@@ -171,7 +172,7 @@ Have other questions or ideas about group messaging? Post to the [XMTP discussio
 
 ### Which languages and environments does the XMTP SDK support?
 
-The XMTP SDK is written in TypeScript for JavaScript and TypeScript projects. It can be used with browser-based frontend frameworks like React and in Node.js.
+The XMTP SDK is [available for multiple languages](sdks-and-tools#sdks), including JavaScript, Flutter, and Swift.
 
 Have other questions or ideas for future language or environment support? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
@@ -181,6 +182,10 @@ The XMTP SDK currently requires you to use [ethers](https://ethers.org/) or anot
 
 ### Why does my app request a new signature for XMTP when I refresh my browser?
 
-The XMTP client provided by the SDK requires a user's signature to decrypt their XMTP message encryption keys. This process must be repeated when starting a new session since there is no secure place in the browser to persist decrypted keys. Based on developer and community feedback, we are researching more robust approaches to secure key management.
+The XMTP client provided by the SDK requires a user's signature to decrypt their keys needed for invitation and message encryption. This process must be repeated when starting a new session since there is no secure place in the browser to persist decrypted keys. 
 
-To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
+If you are using the JavaScript client SDK, you might consider [manually handling private key storage](/docs/client-sdk/javascript/tutorials/quickstart#manually-handling-private-key-storage), but only with the understanding that this approach requires the utmost care.
+
+Based on developer and community feedback, we are researching more robust approaches to secure key management.
+
+To learn more about these keys, see [Key generation and usage in XMTP][key-generation-and-usage].
