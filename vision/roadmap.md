@@ -57,11 +57,7 @@ Enable developers to focus on differentiating features by providing reusable mes
 
 A super early peek into what we're building. Ready for exploration, not adoption.
 
-### Message any address - Drops SDK
-
-Individuals will be able to send encrypted DMs and announcements to addresses that have not yet created XMTP identities. Recipients will be notified of these messages upon first connection to XMTP.
-
-- [Read more](https://github.com/xmtp/xmtp-memo-js)
+_There are no projects in this stage at this time._
 
 ---
 
