@@ -87,9 +87,11 @@ There are no message storage and retrieval-related fees incurred by developers f
 
 ### How does XMTP establish a secure and fraud-proof relationship between two identities?
 
-Blockchain accounts sign and advertise a set of keys to start using XMTP. These keys attest to the authenticity of both accounts. XMTP uses these keys to establish a shared secret between the blockchain accounts and uses it to generate a key used to encrypt an invitation for the blockchain accounts to start exchanging messages. No third-party apps or relayers are involved in this process.
+Blockchain accounts sign and advertise a set of keys to start using XMTP. These keys attest to the authenticity of both accounts. XMTP uses these keys to establish a shared secret between the blockchain accounts and uses it to generate a key used to encrypt an invitation that allows the blockchain accounts to start exchanging messages. No third-party apps or relayers are involved in this process.
 
 To learn more about these keys, see [Key generation and usage in XMTP][key-generation-and-usage].
+
+To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](/docs/dev-concepts/invitation-and-message-encryption).
 
 ### Does each blockchain account address have a corresponding XMTP identity?
 
@@ -102,6 +104,8 @@ To learn more about XMTP identity keys, see [Key generation and usage in XMTP](k
 When a user starts a new messaging session with an app built with XMTP, the user must sign with their blockchain account private key to decrypt their XMTP key bundle, which is then used for invitation and message decryption. A one-time signature is also required to create that key bundle, which includes an XMTP identity.
 
 To learn more about XMTP identity keys, see [Key generation and usage in XMTP](key-generation-and-usage).
+
+To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](/docs/dev-concepts/invitation-and-message-encryption).
 
 ## Storage
 
@@ -125,9 +129,9 @@ Have other questions or ideas about message storage? Post to the [XMTP discussio
 
 ### Which message formats and metadata does XMTP support?
 
-XMTP transports a message payload as a set of bytes that can represent any format that a developer wants to support, such as plain text, JSON, or even non-text binary or media content. With XMTP, these message formats are refered to as content types.
+XMTP transports a message payload as a set of bytes that can represent any format that a developer wants to support, such as plain text, JSON, or even non-text binary or media content. 
 
-Currently, there are two basic content types available. These content types aim to establish broad compatibility among apps built with XMTP.
+With XMTP, these message formats are called content types. Currently, there are two basic content types available. These content types aim to establish broad compatibility among apps built with XMTP.
 
 The XMTP community can propose and adopt standards for other content types, either informally or through a governance process.
 
@@ -158,7 +162,7 @@ XMTP enables developers to implement messaging features and UX paradigms that be
 Real-time chat is a core use case for XMTP and is demonstrated by the XMTP Inbox chat app.
 
 - [Try the app](https://dev.xmtp.chat/) connected to the XMTP `dev` network
-- [Try the app](https://xmtp.chat/) connected to the XMTP production network
+- [Try the app](https://xmtp.chat/) connected to the XMTP `production` network
 
 To learn more about how the XMTP Inbox chat app is built, see the [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web).
 
@@ -184,7 +188,7 @@ The XMTP SDK currently requires you to use [ethers](https://ethers.org/) or anot
 
 The XMTP client provided by the SDK requires a user's signature to decrypt their keys needed for invitation and message encryption. This process must be repeated when starting a new session since there is no secure place in the browser to persist decrypted keys. 
 
-If you are using the JavaScript client SDK, you might consider [manually handling private key storage](/docs/client-sdk/javascript/tutorials/quickstart#manually-handling-private-key-storage), but only with the understanding that this approach requires the utmost care.
+If you are using the JavaScript client SDK, you might consider [manually handling private key storage](/docs/client-sdk/javascript/tutorials/quickstart#manually-handling-private-key-storage), but only with the understanding that this approach **requires the utmost care**.
 
 Based on developer and community feedback, we are researching more robust approaches to secure key management.
 
