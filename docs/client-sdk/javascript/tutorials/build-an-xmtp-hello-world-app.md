@@ -187,7 +187,8 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
      walletConnectProvider,
    } from "@web3modal/ethereum";
    import { Web3Modal, Web3Button } from "@web3modal/react";
-   import { configureChains, createClient,} from "wagmi";
+   // highlight-next-line
+   import { configureChains, createClient, useAccount } from "wagmi";
    import { mainnet, polygon } from "wagmi/chains";
 
    const chains = [ mainnet, polygon];
@@ -234,7 +235,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
      walletConnectProvider,
    } from "@web3modal/ethereum";
    import { Web3Modal, Web3Button } from "@web3modal/react";
-   import { configureChains, createClient,} from "wagmi";
+   import { configureChains, createClient, useAccount} from "wagmi";
    import { mainnet, polygon } from "wagmi/chains";
    // highlight-start
    import { fetchSigner } from '@wagmi/core';
