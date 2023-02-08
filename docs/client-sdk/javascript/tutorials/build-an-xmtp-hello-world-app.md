@@ -277,7 +277,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
 
    export default App;
    ```
-   At this point, clicking the **Connect to XMTP** button will ask your wallet for a signature request. Below is an example of a MetaMask Signature request screen for signing to enable an XMTP identity.
+   At this point, clicking the **Connect to XMTP** button will ask your wallet for a signature request. Below is an example of a MetaMask Signature request screen for signing to create an XMTP identity.
    ![metamask signature](img/metamask_sig.png)
 
    So now that we created the **Connect Wallet** and **Connect to XMTP** button, let's put it all together and display and send messages next!
