@@ -94,7 +94,7 @@ In the `my-app` directory, run:
 ```bash
 npm install @web3modal/ethereum @web3modal/react wagmi ethers
 ```
-This adds the Web3Modal, wagmi, and ethers dependency to your `package.json`.
+This adds the Web3Modal, wagmi, and ethers dependencies to your `package.json`.
 
 ### Create Web3Modal button
 
