@@ -283,7 +283,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
 ## Step 4. Send GM to the bot, display messages, and stream new messages
 Now that the XMTP identity associated with your blockchain account is connected to the XMTP network, you can send and receive messages with XMTP.
 
-For simplicity, your "GM Bot" app enables you to send a preconfigured "gm" message (GM Bot) to an XMTP message bot that is programmed to automatically reply to an address it receives a message from. This makes it easy for you to immediately see the outcome of sending a message.
+For simplicity, your "GM Bot" app enables you to send a preconfigured "gm XMTP bot!" message to an XMTP message bot that is programmed to automatically reply to an address it receives a message from. This makes it easy for you to immediately see the outcome of sending a message.
 
 
 The code snippets below do a few things:
