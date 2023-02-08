@@ -87,7 +87,7 @@ Before starting this task, be sure to have a wallet app browser extension instal
 
 :::
 
-### Install Web3Modal.
+### Install Web3Modal
 
 In the `my-app` directory, run:
 
