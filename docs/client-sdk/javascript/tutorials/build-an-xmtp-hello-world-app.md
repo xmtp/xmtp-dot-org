@@ -278,7 +278,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
    ```
    At this point, clicking the **Connect to XMTP** button will ask your wallet for a signature request. Below is an example of a MetaMask Signature request screen for signing to enable an XMTP identity.
 
-   So now that re created the connect wallet button and connecting to XMTP, lets put it all together and display and send messages next!
+   So now that we created the **Connect Wallet** and **Connect to XMTP** button, let's put it all together and display and send messages next!
 
 ## Step 4. Send GM to the bot, display messages, and stream new messages
 Now that the XMTP identity associated with your blockchain account is connected to the XMTP network, you can send and receive messages with XMTP.
@@ -286,10 +286,10 @@ Now that the XMTP identity associated with your blockchain account is connected 
 For simplicity, your "GM Bot" app enables you to send a preconfigured "gm" message (GM Bot) to an XMTP message bot that is programmed to automatically reply to an address it receives a message from. This makes it easy for you to immediately see the outcome of sending a message.
 
 
-The below code snippets does a few things:
+The code snippets below do a few things:
 1. Creates a `MessageList` component.
-2. Retrieves and stores message in `messages`
-3. Streams new messages from yourself + bot and displays them
+2. Retrieves and stores message in `messages` array. 
+3. Streams new messages exchanged between you and the message bot and displays them.
    ```tsx title="App.tsx" showLineNumbers
    import React, { useEffect, useState } from "react";
    import "./App.css";
