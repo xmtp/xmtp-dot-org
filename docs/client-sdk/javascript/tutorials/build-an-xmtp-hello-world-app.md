@@ -222,7 +222,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
 
    export default App;
    ```
-   So now, the "connect to XMTP" button should only show when your wallet is connected.
+   So now, the **Connect to XMTP** button should only show when your wallet is connected.
    
 3. Now, let's add an onClick handler when users click the button. This will initialize XMTP with your app.
    ```tsx title="App.tsx" showLineNumbers
