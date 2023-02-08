@@ -148,7 +148,7 @@ Because we are using Web3Modal, we are required to pass in a `<YOUR_PROJECT_ID>`
 Head over to [WalletConnect Cloud](https://cloud.walletconnect.com/sign-in) to sign in or sign up. Create (or use an existing) project and copy its associated Project ID. In your `App.tsx` code, replace both instances of `<YOUR_PROJECT_ID>` with this value. You will need this to use Web3Modal v2.
 :::
 
-Awesome! So we just added a Connect Wallet button to our app. 
+Awesome! So we just added a **Connect Wallet** button to our app. 
 
 Let's move to the next step!
 
