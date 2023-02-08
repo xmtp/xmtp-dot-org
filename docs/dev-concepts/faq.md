@@ -31,6 +31,7 @@ Currently, XMTP Labs (the company) operates all of the network nodes in the two 
 
 Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes.
 
+<!--do we have an updated timeline for this shareout?-->
 XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months.
 
 ### Is XMTP a blockchain?
