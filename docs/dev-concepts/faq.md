@@ -90,9 +90,9 @@ There are no message storage and retrieval-related fees incurred by developers f
 
 Blockchain accounts sign and advertise a set of keys to start using XMTP. These keys attest to the authenticity of both accounts. XMTP uses these keys to establish a shared secret between the blockchain accounts and uses it to generate a key used to encrypt an invitation that allows the blockchain accounts to start exchanging messages. No third-party apps or relayers are involved in this process.
 
-To learn more about these keys, see [Key generation and usage in XMTP][key-generation-and-usage].
+To learn more about these keys, see [Key generation and usage in XMTP](key-generation-and-usage).
 
-To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](/docs/dev-concepts/invitation-and-message-encryption).
+To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](invitation-and-message-encryption).
 
 ### Does each blockchain account address have a corresponding XMTP identity?
 
@@ -106,7 +106,7 @@ When a user starts a new messaging session with an app built with XMTP, the user
 
 To learn more about XMTP identity keys, see [Key generation and usage in XMTP](key-generation-and-usage).
 
-To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](/docs/dev-concepts/invitation-and-message-encryption).
+To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](invitation-and-message-encryption).
 
 ## Storage
 
@@ -138,7 +138,7 @@ The XMTP community can propose and adopt standards for other content types, eith
 
 Message payloads also include references to timestamps. However, timestamps are not currently independently verified and can be set to any value by the sending app.
 
-To learn more about content types, see [Content types](/docs/dev-concepts/content-types).
+To learn more about content types, see [Content types](content-types).
 
 To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md)
 
@@ -177,7 +177,7 @@ Have other questions or ideas about group messaging? Post to the [XMTP discussio
 
 ### Which languages and environments does the XMTP SDK support?
 
-The XMTP SDK is [available for multiple languages](sdks-and-tools#sdks), including JavaScript, Flutter, and Swift.
+The XMTP SDK is [available for multiple languages](/sdks-and-tools#sdks), including JavaScript, Flutter, and Swift.
 
 Have other questions or ideas for future language or environment support? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
@@ -193,4 +193,4 @@ If you are using the JavaScript client SDK, you might consider [manually handlin
 
 Based on developer and community feedback, we are researching more robust approaches to secure key management.
 
-To learn more about these keys, see [Key generation and usage in XMTP][key-generation-and-usage].
+To learn more about these keys, see [Key generation and usage in XMTP](key-generation-and-usage).
