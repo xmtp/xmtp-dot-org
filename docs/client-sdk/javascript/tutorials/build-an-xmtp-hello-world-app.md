@@ -6,7 +6,7 @@ sidebar_position: 3
 # Build an XMTP "GM!" app
 XMTP (Extensible Message Transport Protocol) is an open protocol and network for secure and private web3 messaging. For example, you can build an app with XMTP to send messages between blockchain accounts, including chat/DMs, alerts, announcements, and more.
 
-Use this tutorial to build an XMTP "GM([Good Morning](https://nftska.com/gm-it-means-more-than-you-think-nft-terminology/))" messaging app. Building this app can help you learn some of the fundamental concepts involved in building with XMTP.
+Use this tutorial to build an XMTP "GM ([Good Morning](https://nftska.com/gm-it-means-more-than-you-think-nft-terminology/))" messaging app. Building this app can help you learn some of the fundamental concepts involved in building with XMTP.
 
 As its name implies, the XMTP "GM" app is intentionally barebones. Here's what the app enables you to do:
 
