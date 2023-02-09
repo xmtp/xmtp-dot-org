@@ -60,7 +60,7 @@ content: [
 ],
 ```
 
-Next we need to add the Tailwind directives to the `src/index.css` file, add the following to the top of the file:
+Next we need to add the Tailwind directives to the `src/index.css` file. To do this, add the following to the top of the file:
 
 ```css title="src/index.css"
 @tailwind base;
