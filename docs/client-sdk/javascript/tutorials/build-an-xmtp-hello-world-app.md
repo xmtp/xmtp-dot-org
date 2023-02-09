@@ -280,7 +280,7 @@ To learn more about creating and enabling an XMTP identity, see [Sign to send an
    At this point, clicking the **Connect to XMTP** button will ask your wallet for a signature request. Below is an example of a MetaMask Signature request screen for signing to create an XMTP identity.
    ![metamask signature](img/metamask_sig.png)
 
-   So now that we created the **Connect Wallet** and **Connect to XMTP** button, let's put it all together and display and send messages next!
+   So now that we created the **Connect Wallet** and **Connect to XMTP** buttons, let's put it all together and display and send messages next!
 
 ## Step 4. Send GM to the bot, display messages, and stream new messages
 Now that the XMTP identity associated with your blockchain account is connected to the XMTP network, you can send and receive messages with XMTP.
