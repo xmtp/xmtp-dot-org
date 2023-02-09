@@ -9,7 +9,7 @@ sidebar_position: 3
 
 ### What is XMTP Labs?
 
-XMTP Labs is a web3 software company that contributes to XMTP (Extensible Message Transport Protocol), an open network, protocol, and standards for secure messaging between blockchain accounts. 
+XMTP Labs is a web3 software company that contributes to XMTP (Extensible Message Transport Protocol), an open network, protocol, and standards for secure messaging between blockchain accounts.
 
 XMTP Labs employees work alongside other XMTP community members to build with and extend XMTP. Community contributions and participation are critical to the development and adoption of XMTP.
 
