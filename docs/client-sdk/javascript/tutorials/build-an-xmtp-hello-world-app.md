@@ -152,7 +152,7 @@ Awesome! So we just added a **Connect Wallet** button to our app.
 
 Let's move to the next step!
 
-## Step 3. Build a XMTP connect button
+## Step 3. Build an XMTP connect button
 
 To send and receive XMTP messages, you must create an XMTP identity associated with your blockchain account. An app built with XMTP must give the user a way to create this identity and use it to connect to the XMTP network. Specifically, the user must:
 
