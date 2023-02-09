@@ -10,7 +10,7 @@ Use this tutorial to build an XMTP "GM ([Good Morning](https://nftska.com/gm-it-
 
 As its name implies, the XMTP "GM" app is intentionally barebones. Here's what the app enables you to do:
 
-1. Connect your wallet( using [modal3web](https://web3modal.com/)) app to the "GM!" app.
+1. Connect your wallet app (using [web3modal](https://web3modal.com/)) to the "GM!" app.
 2. Connect your blockchain account to the XMTP network using your wallet app.
 3. Send a preconfigured "gm" message to an XMTP message bot and receive a reply from the bot.
 
