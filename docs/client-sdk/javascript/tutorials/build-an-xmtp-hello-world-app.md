@@ -100,7 +100,7 @@ This adds the Web3Modal, wagmi, and ethers dependencies to your `package.json`.
 
 All our code changes will be made in one file: `my-app/src/App.tsx`.
 
-For now, strip everything that is in the file and replace with: 
+For now, delete everything in the file and replace it with: 
 
 ```tsx title="App.tsx" showLineNumbers
 import React from 'react';
