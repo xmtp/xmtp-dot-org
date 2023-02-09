@@ -5,7 +5,7 @@ title: "XMTP / Lens Twitter Spaces replay"
 date: 2022-11-17
 authors: peter
 description: XMTP and Lens hosted a Twitter Spaces event on November 10 to dig into how developers can now use XMTP to add E2EE DMs into their Lens apps.
-image: "media/SpacesRecap.png"
+image: https://blog.xmtp.com/content/images/size/w1460/2022/11/SpacesRecap.png
 tags:
 - Developers
 - Lens

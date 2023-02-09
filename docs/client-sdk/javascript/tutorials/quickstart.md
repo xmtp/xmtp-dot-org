@@ -15,7 +15,7 @@ The [XMTP client SDK](https://github.com/xmtp/xmtp-js) for JavaScript (`xmtp-js`
 
 Build with `xmtp-js` to provide messaging between blockchain wallet addresses, delivering on use cases such as wallet-to-wallet messaging and dapp-to-wallet notifications.
 
-For a demonstration of the core concepts and capabilities of the `xmtp-js` client SDK, see the [example React app repo](https://github.com/xmtp/example-chat-react).
+For a demonstration of the core concepts and capabilities of the `xmtp-js` client SDK, see the [xmtp-quickstart-react repo](https://github.com/xmtp/xmtp-quickstart-react). For a demonstration of more advanced and innovative capabilities, see the [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web).
 
 `xmtp-js` has not undergone a formal security audit.
 
@@ -370,8 +370,10 @@ Message content can be optionally compressed using the `compression` option. The
 Content will be decompressed transparently on the receiving end. Note that `Client` enforces maximum content size. The default limit can be overridden through the `ClientOptions`. Consequently a message that would expand beyond that limit on the receiving end will fail to decode.
 
 ```ts
+import { Compression } from '@xmtp/xmtp-js'
+
 conversation.send('#'.repeat(1000), {
-  compression: 'deflate',
+  compression: Compression.COMPRESSION_DEFLATE,
 })
 ```
 
