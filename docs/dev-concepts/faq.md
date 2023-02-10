@@ -31,7 +31,6 @@ Currently, XMTP Labs (the company) operates all of the network nodes in the two 
 
 Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes.
 
-<!--do we have an updated timeline for this shareout?-->
 XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months.
 
 ### Is XMTP a blockchain?
@@ -88,7 +87,7 @@ There are no message storage and retrieval-related fees incurred by developers f
 
 ### How does XMTP establish a secure and fraud-proof relationship between two identities?
 
-Blockchain accounts sign and advertise a set of keys to start using XMTP. These keys attest to the authenticity of both accounts. XMTP uses these keys to establish a shared secret between the blockchain accounts and uses it to generate a key used to encrypt an invitation that allows the blockchain accounts to start exchanging messages. No third-party apps or relayers are involved in this process.
+Blockchain accounts sign and advertise a set of keys to start using XMTP. XMTP uses these keys to establish a shared secret between the blockchain accounts. It then uses the shared secret to generate a key used to encrypt an invitation that allows the blockchain accounts to start exchanging messages. No third-party apps or relayers are involved in this process.
 
 To learn more about these keys, see [Key generation and usage in XMTP](key-generation-and-usage).
 
@@ -100,13 +99,17 @@ Yes. Each blockchain account address is represented by an XMTP identity key. Thi
 
 To learn more about XMTP identity keys, see [Key generation and usage in XMTP](key-generation-and-usage).
 
-### Do apps built with XMTP need to decrypt messages with blockchain account private keys each time?
+### Why do apps built with XMTP require a user to sign with their blockchain account private keys each time they start a new messaging session?
 
-When a user starts a new messaging session with an app built with XMTP, the user must sign with their blockchain account private key to decrypt their XMTP key bundle, which is then used for invitation and message decryption. A one-time signature is also required to create that key bundle, which includes an XMTP identity.
+When a user starts a new messaging session, they must sign with their blockchain account private key to decrypt their XMTP key bundle. The key bundle is then used for invitation and message decryption.
 
-To learn more about XMTP identity keys, see [Key generation and usage in XMTP](key-generation-and-usage).
+Because there is no secure place in the browser to persist a decrypted key bundle, the app can use the bundle for the current session only. Once the user starts a new session, such as after refreshing their browser, they must sign again to decrypt their key bundle.
 
-To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](invitation-and-message-encryption).
+If you are using the JavaScript client SDK, you might consider [manually handling private key storage](/docs/client-sdk/javascript/tutorials/quickstart#manually-handling-private-key-storage), but only with the understanding that this approach **requires the utmost care**.
+
+Based on developer and community feedback, we are researching more robust approaches to secure key management.
+
+To learn more about these keys, see [Key generation and usage in XMTP](key-generation-and-usage).
 
 ## Storage
 
@@ -184,13 +187,3 @@ Have other questions or ideas for future language or environment support? Post t
 ### Which web3 libraries does the XMTP SDK require?
 
 The XMTP SDK currently requires you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/), such as [wagmi](https://wagmi.sh/).
-
-### Why does my app request a new signature for XMTP when I refresh my browser?
-
-The XMTP client provided by the SDK requires a user's signature to decrypt their keys needed for invitation and message encryption. This process must be repeated when starting a new session since there is no secure place in the browser to persist decrypted keys. 
-
-If you are using the JavaScript client SDK, you might consider [manually handling private key storage](/docs/client-sdk/javascript/tutorials/quickstart#manually-handling-private-key-storage), but only with the understanding that this approach **requires the utmost care**.
-
-Based on developer and community feedback, we are researching more robust approaches to secure key management.
-
-To learn more about these keys, see [Key generation and usage in XMTP](key-generation-and-usage).
