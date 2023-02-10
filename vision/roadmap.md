@@ -13,9 +13,9 @@ Here are a few details about what we've shipped recently, what we're working on,
 
 Scoping goals, requirements, and effort via research & proofs of concepts.
 
-### Group chat and announcements channels
+### Group chat
 
-Users will be able to send messages to group chats and announcements channels, and will retrieve messages from these channels separately from their DMs.
+Users will be able to send messages to group chats with 2+ participants.
 
 ### Team inboxes
 
