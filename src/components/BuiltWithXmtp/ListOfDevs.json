@@ -1,4 +1,4 @@
- [
+[
    {
       "name":"XMTP Inbox",
       "href":"https://xmtp.chat",
@@ -77,5 +77,20 @@
       "image":"/img/builtWithXmtp/walletroulette.png",
       "description":"Get matched with random web3 users and chat.",
       "twitter": "https://twitter.com/polmaire"
+   },
+   {
+      "name":"Plex",
+      "href":"https://plexlabs.io",
+      "image":"/img/builtWithXmtp/plexlabs.jpeg",
+      "description":"Plex allows brands to query relevant audiences and understand who they are based on on- and off-chain attributes.",
+      "twitter": "https://twitter.com/Plexlaboratory"
+   },
+   {
+      "name":"Atticc",
+      "href":"https://atticc.xyz/",
+      "image":"/img/builtWithXmtp/atticc.png",
+      "description":"Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
+      "twitter": "https://twitter.com/atticc_xyz",
+      "github": "https://github.com/Atticc"
    }
- ]
+]
