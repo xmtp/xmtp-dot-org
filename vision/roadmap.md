@@ -31,9 +31,9 @@ Projects in flight.
 
 XMTP Labs will specify a phased approach towards architectural and logical decentralization of the network.
 
-### Testnets for control plane sharding & topic replication
+### Private testnet - Phase 1
 
-In parallel with a longer term decentralization plan, we will also ship testnets implementing code that contributes to progressive decentralization.
+Implement control plane sharding and topic replication in a private test environment.
 
 ### Compromise recovery
 
@@ -57,11 +57,7 @@ Enable developers to focus on differentiating features by providing reusable mes
 
 A super early peek into what we're building. Ready for exploration, not adoption.
 
-### Message any address - Drops SDK
-
-Individuals will be able to send encrypted DMs and announcements to addresses that have not yet created XMTP identities. Recipients will be notified of these messages upon first connection to XMTP.
-
-- [Read more](https://github.com/xmtp/xmtp-memo-js)
+_There are no projects in this stage at this time._
 
 ---
 
@@ -79,7 +75,7 @@ Developers will be able to build mobile client apps in Flutter, React Native, an
 
 ### Push notifications - example server
 
-Apps will be able to subscribe users to receive push notifications to their devices upon receiving new messages.
+Apps will be able to leverage an example server to subscribe users for push notifications to their devices upon receiving new messages.
 
 - [Read more](https://github.com/xmtp/example-notification-server-go)
 

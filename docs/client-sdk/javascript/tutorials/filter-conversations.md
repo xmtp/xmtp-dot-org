@@ -11,9 +11,6 @@ With XMTP, a conversation is a set of messages sent between two blockchain accou
 
 For example, you can use conversation IDs and metadata to filter conversations by:
 
-* An app  
-Filter to display only conversations created by a specific app
-
 * A message type  
 Filter to display only conversations that are notifications or alerts, for example.
 
@@ -22,6 +19,9 @@ Filter to display only conversations with a specific subject line, as in email
 
 * An NFT  
 Filter to display only conversations about an NFT, such as price negotiations or shipping instructions
+
+* An app  
+Filter to display only conversations created by a specific app
 
 Conversation IDs are different from [content types](/docs/dev-concepts/content-types). Using a custom content type does not require that you use conversation IDs.
 

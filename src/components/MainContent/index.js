@@ -9,12 +9,13 @@ import { SliderItem } from '../SliderItem'
 import {
   HEADER_DATA,
   BLOG_DATA,
+  XMTP_NOTIF_SERVER_URL,
   XMTP_JS_URL,
   XMTP_FLUTTER_URL,
   XMTP_IOS_URL,
+  XMTP_MEMO_URL,
   XMTP_REACT_NATIVE_URL,
   QUICKSTART_CHAT_URL,
-  EXAMPLE_CHAT_URL,
   CHAT_ITEM,
 } from '../../helpers/constants'
 import { BlogItem } from '../BlogItem'
@@ -50,12 +51,17 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     })
+    const responseNotif = await fetch(XMTP_NOTIF_SERVER_URL, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
     const responseQuickChat = await fetch(QUICKSTART_CHAT_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
     })
-    const responseChat = await fetch(EXAMPLE_CHAT_URL, {
+    const responseMemo = await fetch(XMTP_MEMO_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
@@ -69,10 +75,12 @@ export const MainContent = ({ styles }) => {
     if (dataIos && !dataIos.message) items = [...items, dataIos]
     const dataRn = await responseRn.json()
     if (dataRn && !dataRn.message) items = [...items, dataRn]
+    const dataNotif = await responseNotif.json()
+    if (dataNotif && !dataNotif.message) items = [...items, dataNotif]
+    const dataMemo = await responseMemo.json()
+    if (dataMemo && !dataMemo.message) items = [...items, dataMemo]
     const dataQuickChat = await responseQuickChat.json()
     if (dataQuickChat && !dataQuickChat.message) items = [...items, dataQuickChat]
-    const dataChat = await responseChat.json()
-    if (dataChat && !dataChat.message) items = [...items, dataChat]
 
     items = [...items, CHAT_ITEM]
     setSliderItems(items)
@@ -238,7 +246,7 @@ export const MainContent = ({ styles }) => {
 
         <div className="my-0 relative grid grid-cols-1 lg:grid-cols-11">
           <div className="w-auto mr-6 mt-4 mb-6 lg:mb-0 col-span-2">
-            <p className="text-xl font-bold mb-2">SDK and tools</p>
+            <p className="text-xl font-bold mb-2">SDKs and tools</p>
             <small className="text-base">
               Build with XMTP using the SDK and dev tools
             </small>

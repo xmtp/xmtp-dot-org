@@ -47,7 +47,7 @@ XMTP Labs is working toward a phased decentralization of the network and will sh
 
 ### What is the relationship between Waku and XMTP?
 
-XMTP currently uses the Waku protocol to relay messages between user client and network nodes. <!--change this to "between network nodes" once the gRPC work is complete. At that time, the waku dependency will be removed from xmtp-js - the user client-->
+XMTP currently uses the Waku protocol to relay messages between network nodes.
 
 Waku is an unopinionated transport layer built around the libp2p publish/subscribe model. Waku is intentionally open-ended when it comes to handling options like message encoding and encryption, which content topics to use, and how to create and manage encryption keys linked to blockchain account addresses.
 
@@ -59,7 +59,7 @@ XMTP provides perceptibly real-time message delivery and retrieval. The network 
 
 ### How does network rate limiting work?
 
-Currently, there’s no rate limiting on the XMTP network.
+Currently, XMTP network nodes are configured to rate limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node.
 
 XMTP Labs is capable of rate limiting the network while we are the only node operators. Rate limiting is a consideration in our research into economic spam controls. Ultimately, rate limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
 
@@ -153,11 +153,11 @@ XMTP enables developers to implement messaging features and UX paradigms that be
 
 ### Does XMTP support real-time conversations?
 
-Real-time chat is a core use case for XMTP and is demonstrated by the XMTP Chat app.
+Real-time chat is a core use case for XMTP and is demonstrated by the XMTP Inbox chat app.
 
 [Try the app](https://xmtp.chat/) connected to the XMTP `production` network
 
-To learn more about how the XMTP Chat app is built, see the [example-chat-react repo](https://github.com/xmtp/example-chat-react).
+To learn more about how the XMTP Inbox chat app is built, see the [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web).
 
 ### Does XMTP support group messaging?
 

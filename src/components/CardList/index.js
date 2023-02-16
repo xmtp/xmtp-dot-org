@@ -17,14 +17,14 @@ const sdkcards = [
     description: '🧑‍💻 Dev preview: A Flutter implementation of an XMTP client for use with mobile apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-flutter' },
     logo: 'img/flutter.svg',
-    theme: 'daylight',
+    theme: 'sunrise',
   },
   {
     title: 'Swift client SDK',
     description: '🧑‍💻 Dev preview: A Swift implementation of an XMTP client for use with iOS apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-ios' },
     logo: 'img/swift.svg',
-    theme: 'sunrise',
+    theme: 'daylight',
   },
 ]
 
@@ -66,20 +66,6 @@ const exampleappcards = [
     logo: 'img/x-mark.svg',
     theme: 'sunrise',
   },
-  {
-    title: 'Awesome XMTP',
-    description: 'Explore a growing list of GitHub repos for projects that use XMTP‍',
-    firstLink: { name: 'Awesome XMTP', link: 'https://github.com/xmtp/awesome-xmtp' },
-    logo: 'img/x-mark.svg',
-    theme: 'midnight',
-  },
-  {
-    title: 'App showcase',
-    description: 'Explore a curated showcase of apps built with XMTP‍',
-    firstLink: { name: 'Built with XMTP', link: 'built-with-xmtp' },
-    logo: 'img/x-mark.svg',
-    theme: 'daylight',
-  },
 ]
 
 // this provides the list of cards  in the Example Apps section on the SDKs and tools page
@@ -103,8 +89,86 @@ const ExampleAppCardList = () => {
   )
 }
 
-// this provides the content in the cards in the Example Apps section on the SDKs and tools page
-const moretoolcards = [
+// this provides the content in the cards in the Developer tools section on the SDKs and tools page
+const devtoolcards = [
+  {
+    title: 'Push notification example server',
+    description: '🧑‍💻 Dev preview: A push notification example server written in Golang. A starting point to support notifications right in your app.',
+    firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-notification-server-go' },
+    logo: 'img/x-mark.svg',
+    theme: 'midnight',
+  },
+  {
+    title: 'Pre-registration messaging client SDK',
+    description: '👀 Pre-preview: A TypeScript implementation of an XMTP memo client that enables pre-registration messaging.',
+    firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-memo-js' },
+    logo: 'img/x-mark.svg',
+    theme: 'sunrise',
+  },
+]
+
+// this provides the list of cards in the Developer tools section on the SDKs and tools page
+const DevToolsCardList = () => {
+  return (
+    <div className="list-none grid grid-cols-1 md:grid-cols-2 px-0 gap-8 mb-8">
+      {devtoolcards.map((card) => (
+        <div className="relative group">
+          <Card
+            key={card.title}
+            title={card.title}
+            description={card.description}
+            firstLink={card.firstLink}
+            secondLink={card.secondLink}
+            logo={card.logo}
+            theme={card.theme}
+          />
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// this provides the content in the cards in the Ecosystem projects section on the SDKs and tools page
+const ecosystemprojectscards = [
+  {
+    title: 'Awesome XMTP',
+    description: 'Explore a growing list of GitHub repos for projects that use XMTP‍',
+    firstLink: { name: 'Awesome XMTP', link: 'https://github.com/xmtp/awesome-xmtp' },
+    logo: 'img/x-mark.svg',
+    theme: 'midnight',
+  },
+  {
+    title: 'App showcase',
+    description: 'Explore a curated showcase of apps built with XMTP‍',
+    firstLink: { name: 'Built with XMTP', link: 'built-with-xmtp' },
+    logo: 'img/x-mark.svg',
+    theme: 'sunrise',
+  },
+]
+
+// this provides the list of cards in the Ecosystem projects section on the SDKs and tools page
+const EcosystemProjectsCardList = () => {
+  return (
+    <div className="list-none grid grid-cols-1 md:grid-cols-2 px-0 gap-8 mb-8">
+      {ecosystemprojectscards.map((card) => (
+        <div className="relative group">
+          <Card
+            key={card.title}
+            title={card.title}
+            description={card.description}
+            firstLink={card.firstLink}
+            secondLink={card.secondLink}
+            logo={card.logo}
+            theme={card.theme}
+          />
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// this provides the content in the cards in the Status section on the SDKs and tools page
+const statuscards = [
   {
     title: 'XMTP status page',
     description: 'View the real-time status of the XMTP production network, XMTP dev network, and XMTP Chat app.',
@@ -114,11 +178,11 @@ const moretoolcards = [
   },
 ]
 
-// this provides the list of cards  in the Example Apps section on the SDKs and tools page
-const MoreToolsCardList = () => {
+// this provides the list of cards in the Status section on the SDKs and tools page
+const StatusCardList = () => {
   return (
     <div className="list-none grid grid-cols-1 md:grid-cols-2 px-0 gap-8 mb-8">
-      {moretoolcards.map((card) => (
+      {statuscards.map((card) => (
         <div className="relative group">
           <Card
             key={card.title}
@@ -175,4 +239,8 @@ export { SDKCardList };
 
 export { ExampleAppCardList };
 
-export { MoreToolsCardList };
+export { DevToolsCardList };
+
+export { EcosystemProjectsCardList };
+
+export { StatusCardList };
