@@ -5,7 +5,7 @@ toc_max_heading_level: 2
 image: /img/XMTP-Grant-Cover.png
 ---
 
-# XMTP Grants program
+# XMTP Grants: Inspiring public goods
 
 <br/>
 
@@ -18,7 +18,7 @@ image: /img/XMTP-Grant-Cover.png
 
 ## ✨ Mission
 
-Support projects, ideas, and people building on XMTP to foster ecosystem growth.
+Support projects, ideas, and people building on XMTP to foster ecosystem growth through public good creation.
 
 
 ## 📜 Request for proposals
@@ -95,6 +95,18 @@ We offer two types of grants: Micro grants and Kickstarter grants.
 
 We love and encourage diversity of ideas in grant applications. This section lists the baseline expectations we have for all applications.
 
+
+Example applications:
+
+- Qualifies: a project that will introduce a novel feature (e.g. emoji reactions, read receipts, account abstraction, etc) and propose an XIP for a standard way to do it across different applications.
+- Does not qualify: a project to integrate with XMTP to create a cool messaging app that doesn't create community resources (e.g. XIPs, dev tools, etc).
+
+:::note
+
+Building with XMTP is permissionless and grants are not a pre-requisite to integrate with XMTP. While we love and encourage a variety of integrations, grants are reserved for integrations that create public goods.
+
+:::
+
 XMTP Grants are **not** for:
 
 - **Integrating with XMTP**: Merely integrating with XMTP does not qualify for a grant. Grant projects must create public goods for the ecosystem. Check out the Request for Proposal section for ideas.
@@ -111,17 +123,6 @@ Consider the following criteria if you’re uncertain whether your project quali
 - **Definitive use case:** Articulate your idea clearly on how your project uses XMTP and adds value to the ecosystem. Please do not try to overthink or overcomplicate it.
 - **Public Good creation**: Show clear connection between your proposal and the value it generates for the broader ecosystem.
 - **Collaborate**: Be collaborative and open to offering support to other members of our community. Let’s grow together!
-
-Example applications:
-
-- Qualifies: a project that will introduce a novel feature (e.g. emoji reactions, read receipts, account abstraction, etc) and propose an XIP for a standard way to do it across different applications.
-- Does not qualify: a project to integrate with XMTP to create a cool messaging app that doesn't create community resources (e.g. XIPs, dev tools, etc).
-
-:::note
-
-Building with XMTP is permissionless and grants are not a pre-requisite to integrate with XMTP. While we love and encourage a variety of integrations, grants are reserved for integrations that create public goods.
-
-:::
 
 ## ❓ FAQ
 
