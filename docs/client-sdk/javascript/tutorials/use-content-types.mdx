@@ -19,21 +19,21 @@ Two standard content types come bundled with the XMTP client SDK:
 
    To learn more about this composite content type, see [XIP-9](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-9-composite-content-type.md).
 
-For standard content types, `xmtp.org` is the `authorityId`. Only standard content types adopted through the XMTP Improvement Proposal (XIP) process can use `xmtp.org` as their `authorityId`.
+For these standard content types, `xmtp.org` is the `authorityId` value. `xmtp.org` is reserved for use as the `authorityId` for standard content types. Standard content types are those that have been adopted through the [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) (XIP) process.
 
 :::caution
 
- A custom content type that you create for your app must not use `xmtp.org` as an `authorityId`. Instead, consider using a DNS domain or ENS name (e.g. uniswap.eth). 
+Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app.
 
 :::
 
 To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
 
-## Send plain text messages using the TextCodec standard content type
+## Send plain text messages using the `TextCodec` standard content type
 
 An app built with XMTP uses the `TextCodec` (plain text) standard content type by default. This means that if your app is sending plain text messages only, you don’t need to perform any additional steps related to content types.
 
-## Send multiple content types in a message using the CompositeCodec standard content type
+## Send multiple content types in a message using the `CompositeCodec` standard content type
 
 If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
 
@@ -67,7 +67,7 @@ You can use `xmtp-js` to specify and send a custom content type beyond the stand
 
 :::caution
 
- A custom content type that you create for your app must not use `xmtp.org` as an `authorityId`. Instead, consider using a DNS domain or ENS name (e.g. uniswap.eth). 
+Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. `xmtp.org` is reserved for use as the `authorityId` for standard content types only.
 
 :::
 
