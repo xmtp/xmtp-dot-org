@@ -282,7 +282,7 @@ const config = {
             items: [
               {
                 label: 'Built with XMTP',
-                href: 'built-with-xmtp',
+                to: 'built-with-xmtp',
               },
               {
                 label: 'Discussions',

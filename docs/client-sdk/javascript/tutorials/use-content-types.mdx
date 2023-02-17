@@ -2,27 +2,83 @@
 sidebar_label: Use content types
 sidebar_position: 4
 ---
-import Feedback from '/src/components/Feedback'
 
 # Use content types
 
 All messages in XMTP are encoded with a **content type** to ensure interoperability and consistency of experience across the XMTP network.
 
+Two standard content types come bundled with the XMTP client SDK:
+
+1. `xmtp.org/text:1.0`, which defines a **default** `TextCodec` for plain text content  
+
+   To learn more about this text content type, see [XIP-5](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#xmtporgtext).
+
+2. `xtmp.org/composite:1.0`, which defines an **optional** `CompositeCodec` for multiple content types in a single message  
+
+   To learn more about this composite content type, see [XIP-9](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-9-composite-content-type.md).
+
+For these standard content types, `xmtp.org` is the `authorityId` value. `xmtp.org` is reserved for use as the `authorityId` for standard content types. Standard content types are those that have been adopted through the [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) (XIP) process.
+
+:::caution
+
+Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. Instead, consider using a unique DNS domain or ENS name that can be widely recognized as belonging to your app. For example, `frenz.xyz`.
+
+:::
+
+To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
+
 To learn more about content types, see [Content types with XMTP](/docs/dev-concepts/content-types).
 
-Two predefined content types come bundled with the XMTP client SDK:
+## Send plain text messages using the `TextCodec` standard content type
 
-1. `xmtp.org/text:1.0`, which defines a **default** `TextCodec` for plaintext content
-2. `xtmp.org/composite:1.0`, which defines an **optional** `CompositeCodec` for multiple content types in a single message
+An app built with XMTP uses the `TextCodec` (plain text) standard content type by default. This means that if your app is sending plain text messages only, you don’t need to perform any additional steps related to content types.
 
-You can use `xmtp-js` to specify and send a custom content type beyond the predefined `TextCodec` and `CompositeCodec` content types.
+## Send multiple content types in a message using the `CompositeCodec` standard content type
+
+If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
+
+:::info
+
+While XMTP supports the `CompositeCodec` standard content type, the app reading the composite message must support the content types used in the composite message to be able to display them.
+
+:::
+
+### Import the `CompositeCodec` standard content type
+
+Import the `CompositeCodec` content type from the `xmtp-js` client SDK to make it available in your app. For example:
+
+```javascript
+import { CompositeCodec } from '@xmtp/xmtp-js'
+```
+
+### Tag a message with the `CompositeCodec` standard content type
+
+To enable a message API client to know to use the `CompositeCodec` content type to encode and decode a message, tag the message with the content type.
+
+To do this, pass the `CompositeCodec` content type as an option to the `Client.create()` method. This configures the message API client instance to use `CompositeCodec` when encoding and decoding messages. For example:
+
+```javascript
+const xmtp = Client.create(wallet, { codecs: [new CompositeCodec()] })
+```
+
+## Send a custom content type
+
+You can use `xmtp-js` to specify and send a custom content type beyond the standard `TextCodec` and `CompositeCodec` content types.
+
+:::caution
+
+Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. `xmtp.org` is reserved for use as the `authorityId` for standard content types only.
+
+:::
+
+To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
 
 **To send a custom content type:**
 
 1. Specify a custom content type to enable during client initialization.
 
     ```typescript
-    // Adding support for a fictional `xmtp.org/number` content type
+    // Adding support for a fictional `frenz.xyz/number` content type
     import { NumberCodec } from '@xmtp/xmtp-js'
     const xmtp = Client.create(wallet, { codecs: [new NumberCodec()] })
     ```
@@ -33,7 +89,7 @@ You can use `xmtp-js` to specify and send a custom content type beyond the prede
 
     This snippet registers the `NumberCodec` custom content type with the sending client. During the registration process, the sending client automatically associates the codec with the content type it says it supports. For example, `NumberCodec` might say that it supports the `ContentTypeNumber` content type.
 
-2. Send a message using the specified custom content type and fall-back plaintext.
+2. Send a message using the specified custom content type and fall-back plain text.
 
     ```typescript
     // Assuming NumberCodec can be used to encode numbers and is
@@ -44,13 +100,11 @@ You can use `xmtp-js` to specify and send a custom content type beyond the prede
     })
     ```
 
-    This example sends a message using the fictional "number" custom content type, including fall-back plaintext.
+    This example sends a message using the fictional "number" custom content type, including fall-back plain text.
 
-    The receiving client uses the `contentType` value of `ContentTypeNumber` to identify the content type of the `3.14` message sent through the `send` API. If the receiving client supports the content type, it displays the message. If it doesn't support the content type, it displays the fall-back plaintext.
+    The receiving client uses the `contentType` value of `ContentTypeNumber` to identify the content type of the `3.14` message sent through the `send` API. If the receiving client supports the content type, it displays the message. If it doesn't support the content type, it displays the fall-back plain text.
 
     To learn more about the `send` API, see [Sending messages](quickstart#sending-messages).
     <!--reference docs are now missing the pre-existing sendMessage topic: https://xmtp.org/docs/client-sdk/javascript/reference/classes/Client#sendmessage. We have an open eng issue to fix this. In the meantime,linking here.-->
 
-To learn more about sending new content types, see [Different content types](https://github.com/xmtp/xmtp-js/blob/4157fadd80bce80c8094135f3e47d3856515468f/README.md#different-types-of-content).
-
-<Feedback url="https://github.com/orgs/xmtp/discussions/categories/q-a"/>
+To learn more about sending custom content types, see [Different content types](https://github.com/xmtp/xmtp-js/blob/4157fadd80bce80c8094135f3e47d3856515468f/README.md#different-types-of-content).

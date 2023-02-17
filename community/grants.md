@@ -2,7 +2,7 @@
 sidebar_label: Grants
 sidebar_position: 2
 toc_max_heading_level: 2
-image: /img/XMTP-Grant-Cover.png
+image: https://github.com/xmtp/xmtp-dot-org/raw/main/static/img/XMTP-Grants_Cover.png
 ---
 
 # XMTP Grants: Inspiring public goods
@@ -48,7 +48,7 @@ We are open to any and all ideas! Below are just a few categories of projects we
 
 ### 🧠 Protocol development
 
-- Cross-chain support (e.g. Solana)
+- Multi-chain support (e.g. Solana, Bitcoin, Tezos, etc)
 - Account abstraction
 
 
