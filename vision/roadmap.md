@@ -95,7 +95,7 @@ Developers will be able to build mobile client apps in Flutter and Swift.
 
 Apps will be able to leverage an example server to subscribe users for push notifications to their devices upon receiving new messages.
 
-- [Push exampe server repo](https://github.com/xmtp/example-notification-server-go)
+- [Push example server repo](https://github.com/xmtp/example-notification-server-go)
 
 ---
 
