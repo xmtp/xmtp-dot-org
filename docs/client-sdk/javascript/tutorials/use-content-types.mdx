@@ -7,8 +7,6 @@ sidebar_position: 4
 
 All messages in XMTP are encoded with a **content type** to ensure interoperability and consistency of experience across the XMTP network.
 
-To learn more about content types, see [Content types with XMTP](/docs/dev-concepts/content-types).
-
 Two standard content types come bundled with the XMTP client SDK:
 
 1. `xmtp.org/text:1.0`, which defines a **default** `TextCodec` for plain text content  
@@ -29,6 +27,8 @@ Do not use `xmtp.org` as the `authorityId` for a custom content type that you cr
 
 To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
 
+To learn more about content types, see [Content types with XMTP](/docs/dev-concepts/content-types).
+
 ## Send plain text messages using the `TextCodec` standard content type
 
 An app built with XMTP uses the `TextCodec` (plain text) standard content type by default. This means that if your app is sending plain text messages only, you don’t need to perform any additional steps related to content types.
@@ -39,7 +39,7 @@ If you want your app to be able to send multiple content types; such as any comb
 
 :::info
 
-While XMTP supports the `CompositeCodec` standard content type, you must ensure that the app reading the composite message supports the content types used in the composite.
+While XMTP supports the `CompositeCodec` standard content type, the app reading the composite message must support the content types used in the composite message to be able to display them.
 
 :::
 
