@@ -65,6 +65,14 @@ const xmtp = Client.create(wallet, { codecs: [new CompositeCodec()] })
 
 You can use `xmtp-js` to specify and send a custom content type beyond the standard `TextCodec` and `CompositeCodec` content types.
 
+:::info
+
+Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
+
+:::
+
+If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
+
 :::caution
 
 Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. `xmtp.org` is reserved for use as the `authorityId` for standard content types only.
@@ -89,7 +97,7 @@ To learn more about `authorityId` and other parameters in a content type identif
 
     This snippet registers the `NumberCodec` custom content type with the sending client. During the registration process, the sending client automatically associates the codec with the content type it says it supports. For example, `NumberCodec` might say that it supports the `ContentTypeNumber` content type.
 
-2. Send a message using the specified custom content type and fall-back plain text.
+2. Send a message using the specified custom content type and fallback plain text.
 
     ```typescript
     // Assuming NumberCodec can be used to encode numbers and is
@@ -100,9 +108,9 @@ To learn more about `authorityId` and other parameters in a content type identif
     })
     ```
 
-    This example sends a message using the fictional "number" custom content type, including fall-back plain text.
+    This example sends a message using the fictional "number" custom content type, including fallback plain text.
 
-    The receiving client uses the `contentType` value of `ContentTypeNumber` to identify the content type of the `3.14` message sent through the `send` API. If the receiving client supports the content type, it displays the message. If it doesn't support the content type, it displays the fall-back plain text.
+    The receiving client uses the `contentType` value of `ContentTypeNumber` to identify the content type of the `3.14` message sent through the `send` API. If the receiving client supports the content type, it displays the message. If it doesn't support the content type, it displays the fallback plain text.
 
     To learn more about the `send` API, see [Sending messages](quickstart#sending-messages).
     <!--reference docs are now missing the pre-existing sendMessage topic: https://xmtp.org/docs/client-sdk/javascript/reference/classes/Client#sendmessage. We have an open eng issue to fix this. In the meantime,linking here.-->
