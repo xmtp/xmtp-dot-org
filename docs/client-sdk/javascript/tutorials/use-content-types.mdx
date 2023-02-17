@@ -67,6 +67,14 @@ You can use `xmtp-js` to specify and send a custom content type beyond the stand
 
 :::caution
 
+Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
+
+:::
+
+If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
+
+:::caution
+
 Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. `xmtp.org` is reserved for use as the `authorityId` for standard content types only.
 
 :::
@@ -106,13 +114,5 @@ To learn more about `authorityId` and other parameters in a content type identif
 
     To learn more about the `send` API, see [Sending messages](quickstart#sending-messages).
     <!--reference docs are now missing the pre-existing sendMessage topic: https://xmtp.org/docs/client-sdk/javascript/reference/classes/Client#sendmessage. We have an open eng issue to fix this. In the meantime,linking here.-->
-
-:::caution
-
-Your custom content type WILL NOT be supported by other apps and will display fallback text in them instead.
-
-:::
-
-If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your app.
 
 To learn more about sending custom content types, see [Different content types](https://github.com/xmtp/xmtp-js/blob/4157fadd80bce80c8094135f3e47d3856515468f/README.md#different-types-of-content).

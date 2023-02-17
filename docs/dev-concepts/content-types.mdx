@@ -37,12 +37,12 @@ For example, if you need a content type that isn't covered by a standard content
 
 :::caution
 
-Your custom content type WILL NOT be supported by other apps and will display fallback text in them instead.
+Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
 
 :::
 
-Fallback plain text is "alt text"-like description text that you can associate with a custom content type if you are concerned that a receiving app might not be able to handle the content. If the receiving app is unable to handle the custom content, it displays the fallback plain text instead.
+If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
 
-If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your app.
+Fallback plain text is "alt text"-like description text that you can associate with a custom content type if you are concerned that a receiving app might not be able to handle the content. If the receiving app is unable to handle the custom content, it displays the fallback plain text instead.
 
 To learn how to use custom content types when developing a client app, see [Use content types](/docs/client-sdk/javascript/tutorials/use-content-types).
