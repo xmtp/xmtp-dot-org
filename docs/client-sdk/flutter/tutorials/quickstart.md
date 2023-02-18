@@ -4,7 +4,7 @@ sidebar_position: 1
 toc_max_heading_level: 4
 ---
 
-# Quickstart for the XMTP client SDK for Flutter
+# Quickstart for the Flutter client SDK
 
 ![Test](https://github.com/xmtp/xmtp-flutter/actions/workflows/test.yml/badge.svg) ![Status](https://img.shields.io/badge/Project_Status-General_Availability-31CA54)
 
@@ -172,8 +172,11 @@ var listening = client.streamMessages(convo).listen((message) {
 await listening.cancel();
 ```
 
-> **Note**  
-> This package does not currently include the `streamAllMessages()` functionality from the [XMTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js) (xmtp-js).
+:::note
+
+This package does not currently include the `streamAllMessages()` functionality from the [XMTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js) (xmtp-js).
+
+:::
 
 ### Handling multiple conversations with the same blockchain address
 
@@ -255,7 +258,7 @@ await client.sendMessage(convo, 42, contentType: contentTypeInteger);
 
 This package currently does not support message content compression.
 
-## 🏗 **Breaking revisions**
+## Breaking revisions
 
 Because `xmtp-flutter` is in active development, you should expect breaking revisions that might require you to adopt the latest SDK release to enable your app to continue working as expected.
 
@@ -286,9 +289,12 @@ distinct from its XMTP identity on the `production` network, as are the messages
 these identities. In addition, XMTP identities and messages created on the `dev` network can't be
 accessed from or moved to the `production` network, and vice versa.
 
-> **Note**  
-> When you [create a client](#create-a-client), it connects to an XMTP `local`
+:::note
+
+When you [create a client](#create-a-client), it connects to an XMTP `local`
 environment by default. When you create the `Api` used by the `Client`, it must have a valid network `host`.
+
+:::
 
 Here are some best practices for when to use each environment:
 

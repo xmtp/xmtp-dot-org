@@ -16,6 +16,7 @@ const sdkcards = [
     title: 'Flutter client SDK',
     description: 'A Flutter implementation of an XMTP client for use with mobile apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-flutter' },
+    secondLink: { name: 'Docs', link: 'docs/client-sdk/flutter/tutorials/quickstart' },
     logo: 'img/flutter.svg',
     theme: 'sunrise',
   },
