@@ -25,9 +25,9 @@ Teams will be able to read and send encrypted DMs and announcements using a shar
 
 Users will be able to store their messaging data off-network.
 
-### Signal parity security
+### Implement Signal protocol
 
-xmtp-js SDK will achieve security parity with the Signal protocol for Direct Messages (DMs).
+xmtp-js SDK will achieve parity with the Signal protocol for security features like forward secrecy, post-compromise secrecy, and more.
 
 ### Account abstraction
 
@@ -43,9 +43,9 @@ Projects in flight.
 
 XMTP Labs will specify a phased approach towards architectural and logical decentralization of the network.
 
-### Testnets for control plane sharding & topic replication
+### Private testnet - Phase 1
 
-In parallel with a longer term decentralization plan, we will also ship testnets implementing code that contributes to progressive decentralization.
+Implement control plane sharding and topic replication in a private test environment.
 
 ### Compromise recovery
 
@@ -93,9 +93,9 @@ Developers will be able to build mobile client apps in Flutter and Swift.
 
 ### Push notifications - example server
 
-Apps will be able to subscribe users to receive push notifications to their devices upon receiving new messages.
+Apps will be able to leverage an example server to subscribe users for push notifications to their devices upon receiving new messages.
 
-- [Push exampe server repo](https://github.com/xmtp/example-notification-server-go)
+- [Push example server repo](https://github.com/xmtp/example-notification-server-go)
 
 ---
 
