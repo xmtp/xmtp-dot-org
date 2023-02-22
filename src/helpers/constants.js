@@ -26,6 +26,7 @@ const tags = {
   awards: { name: 'Awards', url: '/blog/tags/awards/' },
   company: { name: 'Company', url: '/blog/tags/company/' },
   developers: { name: 'Developers', url: '/blog/tags/developers/' },
+  grants: { name: 'Grants', url: '/blog/tags/grants/' },
   hackathon: { name: 'Hackathon', url: '/blog/tags/hackathon/' },
   lens: { name: 'Lens', url: '/blog/tags/lens/' },
   litepaper: { name: 'Litepaper', url: '/blog/tags/litepaper/' },
@@ -40,6 +41,33 @@ const tags = {
 
 export const BLOG_DATA = [
   {
+    tag: [tags.awards, tags.developers, tags.hackathon],
+    title: 'Developers show the power of video + messaging with XMTP and Livepeer',
+    content:
+      "Livepeer x XMTP awards wrap-up: DeUniversity's education platform, Polyfans Messenger token-gated livestream, and Livopedia's creator tools take top honors.",
+    user: {
+      name: 'Rich Bustos',
+      date: '02 Feb 2023 · 3 min read',
+      img: 'rich-headshot.jpeg',
+      url: 'https://twitter.com/richrdbustos'
+    },
+    url: '/blog/encode-club-livepeer-wrap-up/',
+  },
+  {
+    tag: [tags.announcements, tags.developers, tags.grants],
+    title:
+      'XMTP Grants: Every big idea starts small',
+    content:
+      'Announcing XMTP Grants! A program to nurture web3 messaging projects, support public good creation, and foster ecosystem growth.',
+    user: {
+      name: 'Yash Lunagaria',
+      date: '25 Jan 2023 · 2 min read',
+      img: 'yash-headshot.jpeg',
+      url: 'https://twitter.com/yash_luna'
+    },
+    url: '/blog/xmtp-grants-announcement/',
+  },
+  {
     tag: [tags.announcements, tags.developers, tags.sdks],
     title:
       'Mobile SDKs in Developer Preview',
@@ -52,33 +80,6 @@ export const BLOG_DATA = [
       url: 'https://twitter.com/petermdenton'
     },
     url: '/blog/mobile-sdk-developer-preview',
-  },
-  {
-    tag: [tags.privacySecurity, tags.protocol, tags.announcements],
-    title: 'XMTP v2 Is Here',
-    content:
-      'The latest version brings conversation filtering and improvements to privacy',
-    user: {
-      name: 'Matt Galligan',
-      date: '06 Dec 2022 · 3 min read',
-      img: 'matt-galligan.jpeg',
-      url: 'https://twitter.com/mg'
-    },
-    url: '/blog/xmtp-v2-is-here/',
-  },
-  {
-    tag: [tags.developers, tags.spotlight, tags.messaging],
-    title:
-      'meTokens Integrates with XMTP',
-    content:
-      'With XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.',
-    user: {
-      name: 'Peter Denton',
-      date: '29 Nov 2022 · 2 min read',
-      img: 'peter-denton.jpeg',
-      url: 'https://twitter.com/petermdenton'
-    },
-    url: '/blog/metokens-integrates-with-xmtp/',
   },
 ]
 
