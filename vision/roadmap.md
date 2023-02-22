@@ -25,9 +25,9 @@ Teams will be able to read and send encrypted DMs and announcements using a shar
 
 Users will be able to store their messaging data off-network.
 
-### Signal parity security
+### Implement Signal protocol
 
-xmtp-js SDK will achieve security parity with the Signal protocol for Direct Messages (DMs).
+xmtp-js SDK will achieve parity with the Signal protocol for security features like forward secrecy, post-compromise secrecy, and more.
 
 ### Account abstraction
 
