@@ -21,6 +21,18 @@ Users will be able to send messages to group chats with 2+ participants.
 
 Teams will be able to read and send encrypted DMs and announcements using a shared team identity. The account admin will be able to delegate access to and revoke access from individual team user accounts.
 
+### Post delivery storage
+
+Users will be able to store their messaging data off-network.
+
+### Implement Signal protocol
+
+xmtp-js SDK will achieve parity with the Signal protocol for security features like forward secrecy, post-compromise secrecy, and more.
+
+### Account abstraction
+
+Support account abstraction, enabling smart contract wallets and non-EVM addresses to be compatible with XMTP.
+
 ---
 
 ## In progress 🏗️
@@ -51,13 +63,20 @@ Users will be able to store XMTP private keys in secure contexts such as wallet 
 
 Enable developers to focus on differentiating features by providing reusable messaging components via a UI kit & React Hooks SDK.
 
+- [React SDK](https://github.com/xmtp/xmtp-react)
+
 ---
 
 ## Pre-Preview 👀
 
 A super early peek into what we're building. Ready for exploration, not adoption.
 
-_There are no projects in this stage at this time._
+### Mobile support for Android and React Native
+
+Developers will be able to build mobile client apps in Android and React Native.
+
+- [Android](https://github.com/xmtp/xmtp-android)
+- [React Native](https://github.com/xmtp/xmtp-js/issues/170)
 
 ---
 
@@ -65,31 +84,30 @@ _There are no projects in this stage at this time._
 
 Opportunity to test, validate, and provide feedback. We do not recommend usage in production apps just yet.
 
-### Mobile client support
+### Mobile support for Flutter and Swift
 
-Developers will be able to build mobile client apps in Flutter, React Native, and Swift.
+Developers will be able to build mobile client apps in Flutter and Swift.
 
-- [Read more: React Native](https://github.com/xmtp/xmtp-js/issues/170)
-- [Read more: Swift](https://github.com/xmtp/xmtp-ios/issues/7)
-- [Read more: Flutter](https://github.com/xmtp/xmtp-flutter/issues/4)
+- [Flutter](https://github.com/xmtp/xmtp-flutter/issues/4)
+- [Swift](https://github.com/xmtp/xmtp-ios/issues/7)
 
 ### Push notifications - example server
 
 Apps will be able to leverage an example server to subscribe users for push notifications to their devices upon receiving new messages.
 
-- [Read more](https://github.com/xmtp/example-notification-server-go)
+- [Push example server repo](https://github.com/xmtp/example-notification-server-go)
 
 ---
 
 ## General Availability ✅
 
-Ready for production use. Check out docs, tutorials, and quick-start examples.
+Ready for production use. Check out [docs](https://xmtp.org/docs/client-sdk/javascript/concepts/intro-to-sdk), [tutorials](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-an-xmtp-hello-world-app), and the [quickstart example](https://xmtp.org/docs/client-sdk/javascript/tutorials/quickstart).
 
 ### XMTP v2 (December 2022)
 
 #### Conversation filtering
 
-Developers can now group and filter conversations in a particular context, such as conversations originating from within their app.
+Developers can now group and filter conversations in a particular context using conversationId.
 
 #### Participant privacy
 
