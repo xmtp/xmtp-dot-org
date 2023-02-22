@@ -2,25 +2,47 @@
 sidebar_label: Content types
 sidebar_position: 4
 ---
-import Feedback from '/src/components/Feedback'
 
 # Content types with XMTP
 
-All messages in XMTP are encoded with a **content type** to ensure interoperability and consistency of experience across the XMTP network.
+When you build an app with XMTP, all messages are encoded with a content type to ensure that an XMTP message API client knows how to encode and decode messages, ensuring interoperability and consistent display of messages across apps.
 
-Message **payloads** are transported as a set of bytes. This means that payloads can carry any content type that a client supports, such as plain text, JSON, or even non-text binary or media content.
+In addition, message payloads are transported as a set of bytes. This means that payloads can carry any content type that a client supports, such as plain text, JSON, or even non-text binary or media content.
 
-Two standard content types come bundled with the XMTP client SDK:
+At a high level, there are two categories of content types with XMTP:
+
+- Standard
+- Custom
+
+## Standard content types
+
+A standard content type is one that has undergone the XMTP Request for Comment (XRC) process and has been adopted as an XMTP Improvement Proposal (XIP).
+
+To learn more about the XRC and XIP processes that enable a framework for community members to propose standards and achieve consensus about their adoption, see [XMTP Improvement Proposals (XIPs)](https://github.com/xmtp/XIPs#readme).
+
+Once adopted, a standard content type is bundled in XMTP client SDKs. A developer can then import the standard content type from an SDK for use in their app.
+
+Currently, two standard content types are bundled in XMTP client SDKs:
 
 - Text: Handles plain text
 - Composite: Handles multiple content types in a single message
 
-The XMTP client SDK adopted these standard content types through the [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) (XIP) process, which enables a [framework](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md) for community members to propose standards and achieve consensus about their adoption.
+To learn how to use standard content types when developing a client app, see [Use content types](/docs/client-sdk/javascript/tutorials/use-content-types).
 
-The SDK also allows developers to create custom content types and put them to immediate use without going through a formal XIP adoption process. Client apps can adopt these custom content types if they want to render those message types, but they can also rely on fall-back plain text.
+## Custom content types
 
-Fall-back plain text is "alt text"-like description text that you can associate with original content if you are concerned that the receiving client app might not be able to handle the original content. If the receiving client app is unable to handle the original content, it displays the fall-back plain text instead.
+Any developer building with XMTP can create a custom content type and immediately start using it in their app. Unlike a standard content type, use of a custom content type doesn't require prerequisite formal adoption through the XRC and XIP processes.
 
-To learn how to use standard and custom content types when developing a client app, see [Use content types](/docs/client-sdk/javascript/tutorials/use-content-types).
+For example, if you need a content type that isn't covered by a standard content type, you can create a custom content type and begin using it immediately in your app.
 
-<Feedback url="https://github.com/orgs/xmtp/discussions/categories/q-a"/>
+:::info
+
+Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
+
+:::
+
+If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
+
+Fallback plain text is "alt text"-like description text that you can associate with a custom content type if you are concerned that a receiving app might not be able to handle the content. If the receiving app is unable to handle the custom content, it displays the fallback plain text instead.
+
+To learn how to use custom content types when developing a client app, see [Use content types](/docs/client-sdk/javascript/tutorials/use-content-types).
