@@ -76,7 +76,7 @@ A super early peek into what we're building. Ready for exploration, not adoption
 Developers will be able to build mobile client apps in Android and React Native.
 
 - [Android](https://github.com/xmtp/xmtp-android)
-- [React Native](https://github.com/xmtp/xmtp-js/issues/170)
+- [React Native](https://github.com/xmtp/example-chat-react-native)
 
 ---
 
@@ -88,8 +88,8 @@ Opportunity to test, validate, and provide feedback. We do not recommend usage i
 
 Developers will be able to build mobile client apps in Flutter and Swift.
 
-- [Flutter](https://github.com/xmtp/xmtp-flutter/issues/4)
-- [Swift](https://github.com/xmtp/xmtp-ios/issues/7)
+- [Flutter](https://github.com/xmtp/xmtp-flutter)
+- [Swift](https://github.com/xmtp/xmtp-ios)
 
 ### Push notifications - example server
 
