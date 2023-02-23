@@ -124,13 +124,13 @@ const config = {
                 to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">JavaScript XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Build web3 messaging apps in JavaScript</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials and references for building web3 messaging apps in JavaScript</div></div></div>`,
               },
               {
                 to: 'docs/client-sdk/flutter/tutorials/quickstart',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/flutter-icon.svg" alt="Flutter icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Flutter XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Build web3 messaging apps in Flutter</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials and references for building web3 messaging apps in Flutter</div></div></div>`,
               },
               {
                 to: 'docs/dev-concepts/introduction',
