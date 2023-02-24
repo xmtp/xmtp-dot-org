@@ -8,9 +8,9 @@ const BuiltWithXmtp = () => {
 
 
   return (
-    <ul className="list-none grid grid-cols-1 md:grid-cols-2 gap-6 px-0">
+    <ul className="bwx list-none grid grid-cols-1 md:grid-cols-2 gap-6 px-0">
       {ListOfDevelopers.map(developer => 
-        <li className="relative group" key={developer.name}>
+        <li className="relative group mb-0" key={developer.name}>
           <a className="rounded border-solid rounded-md bg-white border-slate-200 dark:border-slate-600 flex justify-center py-6 mb-3" href={developer.href}>
             <img className="max-h-20 max-w-20 min-h-20" src={useBaseUrl(developer.image)} alt={"this is an image of the" + developer.name + " icon"}></img>
           </a>
