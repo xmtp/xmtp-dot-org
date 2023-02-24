@@ -552,8 +552,8 @@ main[class*='docMainContainer'] tr {
 }
 
 /* Overriding Docusaurus markdown styling */
-.markdown li + li,
-.markdown li > p {
+.markdown ul.bwx li + li,
+.markdown ul.bwx li > p {
   margin: 0;
 }
 

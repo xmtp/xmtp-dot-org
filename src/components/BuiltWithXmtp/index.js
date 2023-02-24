@@ -7,7 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl/';
 const BuiltWithXmtp = () => {
 
   return (
-    <ul className="list-none grid grid-cols-1 md:grid-cols-2 gap-6 px-0">
+    <ul className="bwx list-none grid grid-cols-1 md:grid-cols-2 gap-6 px-0">
       {ListOfDevelopers.map(developer => 
         <li className="relative group" key={developer.name}>
           <a className="rounded border-solid rounded-md bg-white border-slate-200 dark:border-slate-600 flex justify-center py-6 mb-3" href={developer.href}>
