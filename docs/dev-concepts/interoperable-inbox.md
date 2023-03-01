@@ -9,7 +9,7 @@ With apps built with XMTP, each user gets an interoperable inbox. This inbox pro
 
 For example, this means that you and a friend can each use your own preferred app to exchange messages.
 
-| Your friend using the Converse app to message you on the Orb app | You using the Orb app to message your friend on the Converse app |
+| Your friend using the [Converse app](https://getconverse.app/) to message you on the Orb app | You using the [Orb app](https://orb.ac/) to message your friend on the Converse app |
 |:-------------------------|:-------------------------|
 | ![](img/your-friend-in-converse.png) | ![](img/you-in-orb.png)|
 
