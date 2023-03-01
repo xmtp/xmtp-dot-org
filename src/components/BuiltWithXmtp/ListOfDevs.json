@@ -92,5 +92,12 @@
       "description":"Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
       "twitter": "https://twitter.com/atticc_xyz",
       "github": "https://github.com/Atticc"
+   },
+   {
+      "name":"Mintify",
+      "href":"https://mintify.xyz",
+      "image":"/img/builtWithXmtp/mintify.png",
+      "description":"Mintify is a multi-chain aggregator, analytics platform and terminal for trading NFT based economies.",
+      "twitter": "https://twitter.com/mintify"
    }
 ]
