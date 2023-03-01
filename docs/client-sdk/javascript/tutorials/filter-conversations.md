@@ -2,6 +2,9 @@
 sidebar_label: Filter conversations
 sidebar_position: 3
 ---
+import ButtrflyImageUrl from '/docs/client-sdk/javascript/tutorials/img/following-other-filters-buttrfly.jpeg';
+import LensterImageUrl from '/docs/client-sdk/javascript/tutorials/img/following-requested-filters-lenster.png';
+import OrbImageUrl from '/docs/client-sdk/javascript/tutorials/img/lens-w2w-filters-orb.jpeg';
 
 # Filter conversations using conversation IDs and metadata
 
@@ -22,6 +25,17 @@ Filter to display only conversations about an NFT, such as price negotiations or
 
 * An app  
 Filter to display only conversations created by a specific app
+
+Here are examples of conversation filters implemented in two apps built with XMTP:
+
+- **Following** and **Other** in the [Buttrfly](https://buttrfly.app/) app:  
+<img src={ButtrflyImageUrl} style={{width:"400px"}}/>
+
+- **Following** and **Requested** in the [Lenster](https://lenster.xyz/) app:  
+<img src={LensterImageUrl} style={{width:"400px"}}/>
+
+- **Lens**, **Wallet to wallet**, and **requests** in the [Orb](https://orb.ac/) app:  
+<img src={OrbImageUrl} style={{width:"400px"}}/>
 
 Conversation IDs are different from [content types](/docs/dev-concepts/content-types). Using a custom content type does not require that you use conversation IDs.
 
