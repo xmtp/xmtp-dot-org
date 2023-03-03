@@ -23,16 +23,6 @@ Treat the conversations and data in the cache with the utmost care. Compromise 
 
 :::
 
-## Create a persistent conversation cache constant
-
-Create a persistent conversation cache constant for use in your app.
-
-For example, see this code snippet from [`helpers/constants.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/helpers/constants.ts) in the example XMTP Inbox web app:
-
-```tsx
-export const CONVERSATION_CACHE_VERSION = 1;
-```
-
 ## Create a persistent conversation cache
 
 Enable your app to create the persistent conversation cache in its local storage. 
@@ -44,7 +34,8 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { ConversationExport } from "@xmtp/xmtp-js/dist/types/src/conversations/Conversation";
 import { getEnv } from "../helpers";
-import { CONVERSATION_CACHE_VERSION } from "../helpers/constants";
+
+export const CONVERSATION_CACHE_VERSION = 1;
 
 /**
  * The ConversationCache is a JSON serializable Zustand store that is persisted to LocalStorage
@@ -109,30 +100,22 @@ import { useConversationCache } from "../store/conversationCache";
 const setConversationCache = useConversationCache(
     (state) => state.setConversations,
   );
-const addToConversationCache = useConversationCache(
-    (state) => state.addConversation,
-  );
 
-for (const convo of convos) {
-        if (convo.peerAddress !== walletAddress) {
-          conversations.set(getConversationId(convo), convo);
-
-setConversations(new Map(conversations));
-      setLoadingConversations(false);
-      if (Notification.permission === "default") {
-        Notification.requestPermission();
+useEffect(() => {
+    const loadConversations = async () => {
+      if (!client) {
+        return
       }
+      const conversations = await client.conversations.list()
+      // ... save the conversations in your application here
+      
+      // Export the conversations so they can be cached
+      const convoExports = await client.conversations.export();
+      setConversationCache(walletAddress, convoExports);
+    }
 
-if (walletAddress) {
-        // Update the cache with the full conversation exports
-        const convoExports = await client.conversations.export();
-        setConversationCache(walletAddress, convoExports);
-      }
-
-if (walletAddress) {
-        // Add the newly streamed conversation to the cache
-        addToConversationCache(walletAddress, convo.export());
-      }
+    loadConversations()
+ }, [client, walletAddress])
 ```
 
 ## Preload conversations from the persistent cache to the message API client cache
