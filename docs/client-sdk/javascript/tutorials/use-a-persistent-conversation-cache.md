@@ -5,31 +5,31 @@ sidebar_position: 7
 
 # Use a persistent conversation cache to improve load time
 
-For a user with a large number of ongoing conversations, loading their conversation list in real-time can be a very expensive operation from the perspective of both bandwidth and CPU usage. This is because the message API client must download all of the [conversation invites](https://xmtp.org/docs/dev-concepts/invitation-and-message-encryption) and decrypt each one using X3DH before being able to display the conversations and their messages.
+For a user with a large number of ongoing conversations, loading their conversation list in real-time can be a very expensive operation from the perspective of both bandwidth and CPU usage. This is because the message API client must download all of the [conversation invites](/docs/dev-concepts/invitation-and-message-encryption) and decrypt each one using X3DH before being able to display the conversations and their messages.
 
-To improve conversation load time, you can use the XMTP SDK to export the unencrypted conversation list in a JSON serializable format to a persistent conversation cache. For example, you can use the Zustand [`persist` middleware](https://github.com/pmndrs/zustand/blob/main/docs/integrations/persisting-store-data.md) to create a conversation cache that you can persist to the browser’s `LocalStorage`.
+To improve conversation load time, you can use the XMTP SDK to export the unencrypted conversation list in a JSON serializable format to a persistent conversation cache. For example, you can use the Zustand [`persist` middleware](https://github.com/pmndrs/zustand/blob/main/docs/integrations/persisting-store-data.md) to create a conversation cache that you can persist to the browser's `LocalStorage`.
 
 :::info
 
-The process described in this tutorial will change soon. You can implement a persistent conversation cache as described here to address performance issues in your app now. However, please be prepared to update your app to use a different approach to be provided in the near future.
+You can implement a persistent conversation cache as described here to address performance issues in your app now. However, please be prepared to update your app to use a more streamlined approach that will be provided by a new major version of the XMTP SDK scheduled for release in Q2 2023.
 
 :::
 
-When your app creates a new message API client instance, the client can load its internal conversation cache from the browser’s persistent conversation cache.
+When your app creates a new message API client instance, the client can load its internal conversation cache from the browser's persistent conversation cache.
 
 :::warning
 
-Treat the conversations and data in the cache with the utmost care. Compromise of this data will allow an attacker to impersonate the user on the XMTP network. A compromised script in your app or browser extension could access this data if stored in `LocalStorage`.
+Treat the conversations in the cache with the utmost care. Compromise of these records will allow an attacker to read the user's messages on the XMTP network. A compromised script in your app or browser extension could access this data if stored in `LocalStorage`.
 
 :::
 
 ## Create a persistent conversation cache
 
-Enable your app to create the persistent conversation cache in its local storage. 
+Enable your app to create the persistent conversation cache in the browser's local storage. 
 
-For example, see [`/store/conversationCache.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/store/conversationCache.ts) in the example XMTP Inbox web app:
+For example:
 
-```tsx
+```tsx title="conversationCache.ts"
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { ConversationExport } from "@xmtp/xmtp-js/dist/types/src/conversations/Conversation";
@@ -86,15 +86,17 @@ export const useConversationCache = create<ConversationCache>()(
 );
 ```
 
-For the `getEnv` import, see [`helpers/index.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/helpers/index.ts) and [`helpers/env.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/helpers/env.ts) in the example XMTP Inbox web app repo.
+To learn more from an example implementation, see [`conversationCache.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/store/conversationCache.ts) in the XMTP Inbox web app repo.
+
+For the `getEnv` import, see helpers [`index.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/helpers/index.ts) and [`env.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/helpers/env.ts) in the XMTP Inbox web app repo.
 
 ## Add conversations to the persistent cache
 
 Add existing and new conversations to the persistent cache.
 
-For example, see these code snippets from [`hooks/useListConversations.tsx`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/hooks/useListConversations.tsx) in the example XMTP Inbox web app:
+For example:
 
-```tsx
+```tsx title="In useListConversations.tsx:"
 import { useConversationCache } from "../store/conversationCache";
 
 const setConversationCache = useConversationCache(
@@ -118,38 +120,49 @@ useEffect(() => {
  }, [client, walletAddress])
 ```
 
+To learn more from an example implementation, see the [`useListConversations.tsx`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/hooks/useListConversations.tsx) hook in the XMTP Inbox web app repo.
+
 ## Preload conversations from the persistent cache to the message API client cache
 
-Load conversations from the persistent cache to the client cache.
+Preload conversations from the persistent cache to the client cache.
 
-For example, see these code snippets from [`hooks/useInitXmtpClient.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/hooks/useInitXmtpClient.ts) in the example XMTP Inbox web app:
+For example:
 
-```tsx
-import { useAccount, useSigner } from "wagmi";
-import { address } from "../components/Address";
-import { useConversationCache } from '../store/conversationCache';
-
-const { address } = useAccount();
-
-const conversationExports = useConversationCache((state) => state.conversations[address]);
-
-if (conversationExports && conversationExports.length) {
-  // Preload the client with conversations from the cache
-  await xmtp.conversations.import(conversationExports);
-}
+```tsx title="In useInitXmtpClient.ts:"
+export const useCacheLoader = () => {
+  const client = useXmtpStore((state) => state.client);
+  const { address } = useAccount();
+  const conversationExports = useConversationCache(
+    (state) => state.conversations[client.address],
+  );
+  useEffect(() => {
+    if (!client) {
+      return;
+    }
+    const loadFromCache = async () => {
+      if (conversationExports && conversationExports.length) {
+        // Preload the client with conversations from the cache
+        await client.conversations.import(conversationExports);
+      }
+    };
+   loadFromCache()
+  }, [client]);
+};
 ```
 
-For the `address` import, see [`components/Address.tsx`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/dev/components/Address.tsx) in the XMTP Inbox web app repo.
+To learn more from an example implementation, see the [`useInitXmtpClient.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/hooks/useInitXmtpClient.ts) hook in the XMTP Inbox web app repo.
 
 ## Clear the persistent conversation cache
 
 Clear the persistent conversation cache upon wallet disconnect.
 
-For example, see this code snippet from [`helpers/keys.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/helpers/keys.ts) in the example XMTP Inbox web app:
+For example:
 
-```tsx
+```tsx title="In keys.ts:"
 export const wipeKeys = (walletAddress: string) => {
   // This will clear the conversation cache + the private keys
   localStorage.removeItem(buildLocalStorageKey(walletAddress));
 };
 ```
+
+To learn more from an example implementation, see the [`keys.ts`](https://github.com/xmtp-labs/xmtp-inbox-web/blob/main/helpers/keys.ts) helper in the XMTP Inbox web app repo.
