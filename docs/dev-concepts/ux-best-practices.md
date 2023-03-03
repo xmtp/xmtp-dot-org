@@ -11,6 +11,7 @@ import buttrflyfollowonly from '/docs/dev-concepts/img/buttrfly-follow-only.png'
 import pushnotifsettings from '/docs/dev-concepts/img/push-notif-settings.png';
 import pushnotifsdecrypted from '/docs/dev-concepts/img/push-notifs-decrypted.jpg';
 import badgingorb from '/docs/dev-concepts/img/badging-orb.jpg';
+import conversationlabels from '/docs/dev-concepts/img/conversation-labels.png';
 
 # UX best practices when building with XMTP
 
@@ -21,10 +22,12 @@ Consider these UX best practices when building your app with XMTP.
 
 - If needed, use XMTP brand assets provided here: [XMTP brand guidelines](https://github.com/xmtp/brand)
 
-- Provide ENS name resolution. For example, here is ENS name resolution in [xmtp.chat](https://xmtp.chat/):
+- Resolve popular namespaces such as ENS, .lens, cb id, and so forth. For example, here is ENS name resolution in [xmtp.chat](https://xmtp.chat/):
 
   <img src={ensnameresolution} style={{width:"400px"}}/>
-    
+
+  To achieve this functionality, consider using the [Everyname](https://www.everyname.xyz/) resolution service. 
+
 - Provide error messaging when a user enters an address in the **To** field and the address hasn't created an XMTP identity.
 
   <img src={noxmtpidentity} style={{width:"500px"}}/>
@@ -41,22 +44,27 @@ Consider these UX best practices when building your app with XMTP.
 - In your app onboarding flow, request user permission to display app-specific push notifications to reach users outside of an app session.
 
 
-## Conversation filtering and consent
+## Conversations
 
 - Provide an [interoperable inbox](/docs/dev-concepts/interoperable-inbox) UI in your app. This inbox enables your user to access and engage with all of their conversations without leaving your app. An interoperable inbox is the default state of [listing conversations](/docs/client-sdk/javascript/tutorials/quickstart#conversations). For example, here is an interoperable inbox in the [Orb app](https://orb.ac/):
 
   <img src={allinorb} style={{width:"400px"}}/>
 
-- Consider using conversation IDs to provide [filtered views of conversations](/docs/client-sdk/javascript/tutorials/filter-conversations). For example, here is the Orb app with conversations filtered to show Lens conversations only:
+- Use [conversation labels](/docs/client-sdk/javascript/tutorials/label-conversations) to provide context. For example, here is conversation labeling in an interoperable inbox helping the user understand the different origins of two conversations with the same address.
+
+    <img src={conversationlabels} style={{width:"400px"}}/>
+
+- Hide empty conversations.
+
+- For non-empty conversations between a pair of addresses with the same conversation ID, pick the earliest conversation and write to it, effectively abandoning the other conversations.
+
+- Consider using conversation IDs and metadata to provide [filtered views of conversations](/docs/client-sdk/javascript/tutorials/filter-conversations). For example, here is the Orb app with conversations filtered to show Lens conversations only:
 
     <img src={lensonlyorb} style={{width:"400px"}}/>
-
-- Provide client-side functionality that enables a user to grant/revoke consent for another user to message them.
 
 - Enable users to filter based on friends on a social graph, such as Lens, or a client-side grant/revoke list. For example, here is the [Buttrfly app](https://buttrfly.app/) displaying only conversations with Lens profiles you follow:
 
     <img src={buttrflyfollowonly} style={{width:"400px"}}/>
-
 
 ## Push notifications
 
