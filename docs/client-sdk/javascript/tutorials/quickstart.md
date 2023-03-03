@@ -202,6 +202,60 @@ for await (const conversation of stream) {
 }
 ```
 
+#### Hide empty conversations
+
+In some edge cases, apps might unintentionally create empty conversations. Displaying empty conversations in your app can create a confusing UX. For this reason, hide empty conversations.
+
+For example:
+
+```ts
+// Loop through each conversation and check if it is empty
+for (const conversation of conversations) {
+  const messages = conversation.getMessages();
+  if (messages.length === 0) {
+    // If the conversation is empty, hide it from the UI
+    conversation.hide();
+  }
+}
+```
+
+#### Handle multiple non-empty conversations with the same conversation ID
+
+In some edge cases, a race condition might cause the creation of multiple non-empty conversations with the same conversation ID and between the same pair of addresses.
+
+Displaying multiple separate conversations between the same pair of addresses in your app can create a confusing UX. For this reason, pick the earliest conversation and write to it, effectively abandoning the other conversations.
+
+```ts
+// Keep track of the earliest created conversation between the same pair of addresses
+const conversations = {};
+
+// Handle incoming messages
+client.on('message', (message) => {
+  // Check if the message is part of an existing conversation
+  const conversationId = message.getConversationId();
+  if (conversationId in conversations) {
+    // If the conversation already exists, add the message to it
+    conversations[conversationId].addMessage(message);
+  } else {
+    // If the conversation doesn't exist yet, create it and add the message to it
+    const conversation = client.createConversation(message.getTo(), message.getFrom());
+    conversation.addMessage(message);
+    conversations[conversationId] = conversation;
+
+    // Hide any other conversations with the same conversation ID
+    for (const otherConversationId in conversations) {
+      if (otherConversationId !== conversationId && otherConversationId.startsWith(conversationId)) {
+        // Add messages from the other conversation to the earliest conversation
+        const otherConversation = conversations[otherConversationId];
+        const messages = otherConversation.getMessages();
+        for (const otherMessage of messages) {
+          conversations[conversationId].addMessage(otherMessage);
+        }
+        // Hide the other conversation
+        otherConversation.hide();
+      }
+```
+
 #### Start a new conversation
 
 You can create a new conversation with any Ethereum address on the XMTP network.

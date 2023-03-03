@@ -54,9 +54,9 @@ Consider these UX best practices when building your app with XMTP.
 
     <img src={conversationlabels} style={{width:"400px"}}/>
 
-- Hide empty conversations.
+- [Hide empty conversations](/docs/client-sdk/javascript/tutorials/quickstart#hide-empty-conversations).
 
-- For multiple non-empty conversations with the same conversation ID and between the same pair of addresses, pick the earliest conversation and write to it, effectively abandoning the other conversations.
+- For multiple non-empty conversations with the same conversation ID and between the same pair of addresses, [pick the earliest conversation and write to it](/docs/client-sdk/javascript/tutorials/quickstart#handle-multiple-non-empty-conversations-with-the-same-conversation-id), effectively abandoning the other conversations.
 
 - Consider using conversation IDs and metadata to provide [filtered views of conversations](/docs/client-sdk/javascript/tutorials/filter-conversations). For example, here is the Orb app with conversations filtered to show Lens conversations only:
 
