@@ -159,7 +159,7 @@ attachment.mimeType // => "image/png",
 attachment.data // => [the PNG data]
 ```
 
-We can now do with this attachment as we pleas. Maybe we want to display it as an image.
+We can now do with this attachment as we please. Maybe we want to display it as an image.
 
 ```tsx
 const objectURL = URL.createObjectURL(
@@ -194,7 +194,7 @@ Let us know about it in the [XIPs](https://github.com/xmtp/xips) repository! Pro
 
 **Wrap up**
 
-So that's a quick introduction to the new `Attachment` and `RemoteAttachment` content types. If you're curious to see more, you can check out how how they were introduced into the XMTP SDKs:
+So that's a quick introduction to the new `Attachment` and `RemoteAttachment` content types. If you're curious to see more, you can check out how they were introduced into the XMTP SDKs:
 
 - [iOS SDK PR](https://github.com/xmtp/xmtp-ios/pull/68)
 - [JS SDK repo](https://github.com/xmtp/xmtp-js-content-types/tree/main/remote-attachment) You can add this package if you want to support these types.
