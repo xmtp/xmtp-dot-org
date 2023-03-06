@@ -30,7 +30,7 @@ Attachments are files! More specifically, attachments are objects that have:
 
 So now you can encode a file as an `Attachment`. "But hang on!" you say, "XMTP messages can only be up to 1MB in size." Well you got me there. Messages sent on the XMTP network can only be 1MB. That's an enormous amount of text. For reference, this is what 1MB of text looks like in TextEdit:
 
-<img alt="screenshot of 1mb of text" src="https://user-images.githubusercontent.com/483/222857433-99b2b492-d316-4cd1-a38d-660247a7ca49.png" title="i ain’t reading all that. i'm happy for u tho or sorry that happened">
+<img alt="screenshot of 1mb of text" src="https://user-images.githubusercontent.com/483/222857433-99b2b492-d316-4cd1-a38d-660247a7ca49.png" title="i ain’t reading all that. i'm happy for u tho or sorry that happened" />
 
 That's a lot of text! Probably too much for one message. Meanwhile, the screenshot is a PNG file that's over 3MB in size. Too big to send on the network.
 
