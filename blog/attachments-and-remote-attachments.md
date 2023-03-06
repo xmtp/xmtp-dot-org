@@ -171,7 +171,6 @@ const objectURL = URL.createObjectURL(
 const img = document.createElement('img')
 img.src = objectURL
 img.title = attachment.filename
-img.alt = message.
 ```
 
 ### Some questions
