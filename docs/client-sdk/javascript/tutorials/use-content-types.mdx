@@ -61,58 +61,141 @@ To do this, pass the `CompositeCodec` content type as an option to the `Client.c
 const xmtp = Client.create(wallet, { codecs: [new CompositeCodec()] })
 ```
 
+## Build a custom content type
+If you want to send a content type other than those supported by standard content types (plain text and composite messages), you must build a custom content type. This task uses a fictional `AudioCodec` custom content type to help illustrate the steps.
+
+1. Create an `AudioCodec` class that encodes and decodes the content type. We will put this in the file that creates the XMTP Client. 
+  ```javascript
+  import { Client, ContentTypeId } from '@xmtp/xmtp-js';
+
+  const ContentTypeAudioeKey = new ContentTypeId({
+    authorityId: 'xmtp.test',
+    typeId: 'audio-key',
+    versionMajor: 1,
+    versionMinor: 0,
+  })
+
+  class AudioCodec {
+    get contentType() {
+      return ContentTypeAudioeKey;
+    }
+
+    encode(key: string | undefined) {
+      return {
+        type: ContentTypeAudioeKey,
+        parameters: {},
+        content: new TextEncoder().encode(key)
+      };
+    }
+
+    decode(content: { content: any }) {
+      const uint8Array = content.content;
+      const key = new TextDecoder().decode(uint8Array);
+      return key;
+    }
+  }
+  ```
+
+2. Pass the `AudioCodec` content type as an option to the `Client.create() method`. 
+  ```javascript
+  const xmtp = await Client.create(null, {
+    env: 'dev',
+    codecs: [new AudioCodec()]
+  });
+  ```
+
+:::note
+
+  If you register a codec for a custom content type that is already in the default set, it will replace the original codec.
+
+:::
+
 ## Send a custom content type
 
-You can use `xmtp-js` to specify and send a custom content type beyond the standard `TextCodec` and `CompositeCodec` content types.
+Once you’ve built your custom content type, you can immediately start using it to tag and send messages. This task uses a fictional `AudioCodec` custom content type to help illustrate the steps. 
 
-:::info
+1. Register your ImageCodec custom content type with the message API client. For example:
 
-Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
+  ```javascript
+  import { Conversation, ContentTypeId } from '@xmtp/xmtp-js';
 
-:::
+  const ContentTypeVoiceKey = new ContentTypeId({
+    authorityId: 'xmtp.test',
+    typeId: 'audio-key',
+    versionMajor: 1,
+    versionMinor: 0
+  });
+  ```
+2. Send a message using the `send` method with `audioRecording` as the content(in byteArrays). 
 
-If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
+  For example, you can build the `AudioCodec` to encode `audioData` as a binary representation of the audio file. 
 
-:::caution
+  In this code sample, the message is tagged and sent with two options: `contentType` and `contentFallback`. The `contentType` option is set to `ContentTypeVoiceKey`, which enables the message API client to know to use the `AudioCodec` to encode and decode the content. The contentFallback option is set to 'This is an audio recording' to enable an app to display descriptive text if it is unable to handle the custom content type.
 
-Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. `xmtp.org` is reserved for use as the `authorityId` for standard content types only.
+  ```javascript
+  const audioRecording = 'xxxxxxx'; // audio recording in byteArrays
+  conversation.send(audioRecording, {
+    contentType: ContentTypeVoiceKey,
+    contentFallback: 'This is an audio recording'
+  })
+  ```
 
-:::
+  As a best practice, use the `contentFallback` option to provide an alt text-like plain text description that will display in place of the original content in the message if an app is unable to handle your custom (non-standard) content type.
 
-To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
+  If another developer wants to use your custom content type, they might be able to import it depending on how you build it.
 
-**To send a custom content type:**
+  If developers take interest in your custom content type, consider proposing it as a standard through the [XIP process](https://github.com/xmtp/XIPs#readme).
 
-1. Specify a custom content type to enable during client initialization.
+  :::info
 
-    ```typescript
-    // Adding support for a fictional `frenz.xyz/number` content type
-    import { NumberCodec } from '@xmtp/xmtp-js'
-    const xmtp = Client.create(wallet, { codecs: [new NumberCodec()] })
-    ```
+  Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
 
-    This example enables a fictional "number" custom content type in the form of `NumberCodec`.
+  :::
 
-    The predefined `TextCodec` content type supports numbers in a text string, such as `"Pi is the number 3.14."` However, `TextCodec` doesn't support a number outside a text string, such as `3.14`. To handle this number, you can specify this "number" custom content type.
+  If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
 
-    This snippet registers the `NumberCodec` custom content type with the sending client. During the registration process, the sending client automatically associates the codec with the content type it says it supports. For example, `NumberCodec` might say that it supports the `ContentTypeNumber` content type.
+  :::caution
 
-2. Send a message using the specified custom content type and fallback plain text.
+  Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. `xmtp.org` is reserved for use as the `authorityId` for standard content types only.
 
-    ```typescript
-    // Assuming NumberCodec can be used to encode numbers and is
-    // identified with ContentTypeNumber, you can use it as follows.
-    conversation.send(3.14, {
-      contentType: ContentTypeNumber,
-      contentFallback: '3.14'
-    })
-    ```
+  :::
 
-    This example sends a message using the fictional "number" custom content type, including fallback plain text.
+  To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
 
-    The receiving client uses the `contentType` value of `ContentTypeNumber` to identify the content type of the `3.14` message sent through the `send` API. If the receiving client supports the content type, it displays the message. If it doesn't support the content type, it displays the fallback plain text.
+## Display messages with a specific content type
 
-    To learn more about the `send` API, see [Sending messages](quickstart#sending-messages).
-    <!--reference docs are now missing the pre-existing sendMessage topic: https://xmtp.org/docs/client-sdk/javascript/reference/classes/Client#sendmessage. We have an open eng issue to fix this. In the meantime,linking here.-->
+The `contentTypeId` will be available for you to use, to distinguish what type of message the content is. 
 
-To learn more about sending custom content types, see [Different content types](https://github.com/xmtp/xmtp-js/blob/4157fadd80bce80c8094135f3e47d3856515468f/README.md#different-types-of-content).
+For example, if the content is an audio type, then: 
+
+```javascript
+const contentTypeId = message.contentType.typeId
+// contentTypeId is `audio-key`
+```
+
+If your app receives a message tagged as `audio-key` in the `contentTypeId`, which uses the `AudioCodec` for encoding and decoding content, to display the audio in your app you must write a conditional on your view layer to display the new audio message. 
+
+For example, let's say we have a `messageList.tsx` file that displays our messages. We can do the following:
+
+```jsx
+const TypeOfMessage = ({ message }: MessageTileProps): JSX.Element => {
+  const contentTypeId = message.contentType.typeId;
+  const isAudioMessage = contentTypeId === 'audio-key';
+
+  if (isAudioMessage) {
+    return (
+      <audio controls>
+        <source src={message.content} type="audio/mpeg" />
+      </audio>
+    );
+  } else if (message.error) {
+    return <div>{message.error.message}</div>;
+  } else {
+    return <Emoji text={message.content || ''} />;
+  }
+};
+```
+
+If your app is unable to handle a custom content type, then the  `contentFallback` option will automatically display. 
+
+For reference, you can checkout this [Github](https://github.com/xmtp-labs/xmtp-inbox-web/compare/dev...demo/content-type/voice-note) diff file on XMTP Inbox
