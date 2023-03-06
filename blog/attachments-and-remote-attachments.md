@@ -11,8 +11,6 @@ tags:
 - sdk
 ---
 
-### Some new content types
-
 Let's talk about some new content types for XMTP.
 
 What's a content type? A content type is a way to describe the *type* of *content* a message contains on XMTP. Out of the box, XMTP's SDKs support one content type: `text`.
