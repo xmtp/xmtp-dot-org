@@ -22,6 +22,7 @@ const config = {
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
+  scripts: [{src: 'https://plausible.io/js/script.outbound-links.js', async: true, defer: true, 'data-domain': 'xmtp.org'}],
   clientModules: [require.resolve('./src/css/tailwind.css')],
 
   presets: [
@@ -78,12 +79,6 @@ const config = {
         path: 'vision',
         routeBasePath: 'vision',
         sidebarPath: require.resolve('./sidebars/sidebars-vision.js'),
-      },
-    ],
-    [
-      'docusaurus-plugin-plausible',
-      {
-        domain: 'xmtp.org',
       },
     ],
   ],
