@@ -7,8 +7,9 @@ authors: eng
 image: "https://user-images.githubusercontent.com/483/222857433-99b2b492-d316-4cd1-a38d-660247a7ca49.png"
 description: "Introducing two new content types: Attachment and Remote Attachment."
 tags:
-- contentType
-- sdk
+- Content Types
+- SDKs
+- Developers
 ---
 
 Let's talk about some new content types for XMTP.
