@@ -64,7 +64,7 @@ const xmtp = Client.create(wallet, { codecs: [new CompositeCodec()] })
 ## Build a custom content type
 If you want to send a content type other than those supported by standard content types (plain text and composite messages), you must build a custom content type. This task uses a fictional `AudioCodec` custom content type to help illustrate the steps.
 
-1. Create an `AudioCodec` class that encodes and decodes the content type. We will put this in the file that creates the XMTP Client. 
+1. Create an `AudioCodec` class that encodes and decodes the content type. For example, you can put this in the file that creates an XMTP client. 
   ```javascript
   import { Client, ContentTypeId } from '@xmtp/xmtp-js';
 
