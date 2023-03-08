@@ -68,8 +68,8 @@ If you want to send a content type other than those supported by standard conten
   ```javascript
   import { Client, ContentTypeId } from '@xmtp/xmtp-js';
 
-  const ContentTypeAudioeKey = new ContentTypeId({
-    authorityId: 'xmtp.test',
+  const ContentTypeAudioKey = new ContentTypeId({
+    authorityId: 'your.domain'',
     typeId: 'audio-key',
     versionMajor: 1,
     versionMinor: 0,
@@ -77,12 +77,12 @@ If you want to send a content type other than those supported by standard conten
 
   class AudioCodec {
     get contentType() {
-      return ContentTypeAudioeKey;
+      return ContentTypeAudioKey;
     }
 
     encode(key: string | undefined) {
       return {
-        type: ContentTypeAudioeKey,
+        type: ContentTypeAudioKey,
         parameters: {},
         content: new TextEncoder().encode(key)
       };
