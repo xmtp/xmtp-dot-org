@@ -64,6 +64,15 @@ const xmtp = Client.create(wallet, { codecs: [new CompositeCodec()] })
 ## Build a custom content type
 If you want to send a content type other than those supported by standard content types (plain text and composite messages), you must build a custom content type. This task uses a fictional `AudioCodec` custom content type to help illustrate the steps.
 
+:::caution
+
+Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. `xmtp.org` is reserved for use as the `authorityId` for standard content types only.
+
+:::
+
+To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
+
+
 1. Create an `AudioCodec` class that encodes and decodes the content type. For example, you can put this in the file that creates an XMTP client. 
   ```javascript
   import { Client, ContentTypeId } from '@xmtp/xmtp-js';
@@ -159,14 +168,6 @@ If another app wants to display your custom content type, they must implement yo
   :::
 
   If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
-
-  :::caution
-
-  Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. `xmtp.org` is reserved for use as the `authorityId` for standard content types only.
-
-  :::
-
-  To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
 
 ## Display messages with a specific content type
 
