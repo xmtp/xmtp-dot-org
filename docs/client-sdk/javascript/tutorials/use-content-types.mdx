@@ -130,7 +130,7 @@ Once you’ve built your custom content type, you can immediately start using it
 
   For example, you can build the `AudioCodec` to encode `audioData` as a binary representation of the audio file. 
 
-  In this code sample, the message is tagged and sent with two options: `contentType` and `contentFallback`. The `contentType` option is set to `ContentTypeVoiceKey`, which enables the message API client to know to use the `AudioCodec` to encode and decode the content. The contentFallback option is set to 'This is an audio recording' to enable an app to display descriptive text if it is unable to handle the custom content type.
+  In this code sample, the message is tagged and sent with two options: `contentType` and `contentFallback`. The `contentType` option is set to `ContentTypeVoiceKey`, which enables the message API client to know to use the `AudioCodec` to encode and decode the content. The `contentFallback` option is set to 'This is an audio recording' to enable an app to display descriptive text if it is unable to handle the custom content type.
 
   ```javascript
   const audioRecording = 'xxxxxxx'; // audio recording in byteArrays
