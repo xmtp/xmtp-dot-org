@@ -142,7 +142,13 @@ Once you’ve built your custom content type, you can immediately start using it
 
   As a best practice, use the `contentFallback` option to provide an alt text-like plain text description that will display in place of the original content in the message if an app is unable to handle your custom (non-standard) content type.
 
-  If another developer wants to use your custom content type, they might be able to import it depending on how you build it.
+:::info
+
+Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
+
+:::
+
+If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
 
   If developers take interest in your custom content type, consider proposing it as a standard through the [XIP process](https://github.com/xmtp/XIPs#readme).
 
