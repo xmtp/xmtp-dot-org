@@ -179,7 +179,7 @@ const contentTypeId = message.contentType.typeId
 // contentTypeId is `audio-key`
 ```
 
-If your app receives a message tagged as `audio-key` in the `contentTypeId`, which uses the `AudioCodec` for encoding and decoding content, to display the audio in your app you must write a conditional on your view layer to display the new audio message. 
+Let's say your app receives a message tagged as `audio-key` in the `contentTypeId` and this content type uses the `AudioCodec` for encoding and decoding content. To display the audio message in your app, write a conditional in the view layer. 
 
 For example, in a `messageList.tsx` file that displays messages, you can do the following:
 
