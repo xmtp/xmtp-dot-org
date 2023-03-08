@@ -11,6 +11,7 @@ import buttrflyfollowonly from '/docs/dev-concepts/img/buttrfly-follow-only.png'
 import pushnotifsettings from '/docs/dev-concepts/img/push-notif-settings.png';
 import pushnotifsdecrypted from '/docs/dev-concepts/img/push-notifs-decrypted.jpg';
 import badgingorb from '/docs/dev-concepts/img/badging-orb.jpg';
+import unreadbadge from '/docs/dev-concepts/img/unread-badge.png';
 import conversationlabels from '/docs/dev-concepts/img/conversation-labels.png';
 
 # UX best practices when building with XMTP
@@ -81,8 +82,14 @@ Consider these UX best practices when building your app with XMTP.
 
 ## Badging
 
-- Display badges that indicate the presence of new notifications, messages, or conversations to help with engagement and interaction success. For example, here is an app icon badge showing the number of unread messages in the Orb app:
+- Display badges that indicate the presence of new notifications, messages, or conversations to help with engagement and interaction success. 
 
-    <img src={badgingorb} style={{width:"400px"}}/>
+  - Here is a conversation icon badge showing the presence of an unread message:
 
-- Unbadge conversations in which the user sent the latest message to avoid displaying unnecessary badges as users send messages across different apps. The action of sending the latest message implies that the user has seen the conversation.
+      <img src={unreadbadge} style={{width:"400px"}}/>
+
+      Along these lines, be sure to unbadge conversations in which the user sent the latest message to avoid displaying unnecessary badges as users send messages across different apps. The action of sending the latest message implies that the user has seen the conversation.
+
+  - Here is an app icon badge showing the number of unread messages in the Orb app:
+
+      <img src={badgingorb} style={{width:"400px"}}/>
