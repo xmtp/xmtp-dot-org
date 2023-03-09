@@ -18,7 +18,7 @@ A great way to start learning how to build an app with XMTP is to use one!
 
 **To start messaging with XMTP:**
 
-1. **Pick the identity** you want to use to message with XMTP.
+1. **Pick an identity** you want to use to message with XMTP.
 
     You can use an Ethereum address to start.
     
