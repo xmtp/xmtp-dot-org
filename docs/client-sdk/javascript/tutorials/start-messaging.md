@@ -36,10 +36,9 @@ A great way to start learning how to build an app with XMTP is to use one!
 
 3. **Send a message.**
 
-   To send a message to an address, it must have an XMTP identity already created on the network. Share this page with someone you want to message to help them get on the network. In the meantime, need someone to message? Try one of these addresses. The reply may not be instantaneous because these aren't 🤖🤖🤖.
-   - `hi.xmtp.eth`: An XMTP Labs team member will send you a message back.
+   To send a message to an address, it must have an XMTP identity already created on the network. Share this page with someone you want to message to help them get on the network. In the meantime, need someone to message? Try one of these addresses. The reply may not be instantaneous because we aren't 🤖🤖🤖.
    - `yashluna.eth`: Product manager at XMTP Labs
-   - ???
+   - `prxshant.eth`: Business development at XMTP Labs
 
 4. **Want to see the [interoperable inbox](/docs/dev-concepts/interoperable-inbox) in action?**
   
