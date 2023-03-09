@@ -1,6 +1,6 @@
 ---
 sidebar_label: Use a persistent conversation cache
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Use a persistent conversation cache to improve load time
