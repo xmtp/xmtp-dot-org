@@ -18,14 +18,14 @@ A great way to start learning how to build an app with XMTP is to use one!
 
 **To start messaging with XMTP:**
 
-1. **Pick an identity** you want to use to message with XMTP.
+1. **Pick the identity** you want to use to message with XMTP.
 
     You can use an Ethereum address to start.
     
-    If you have an [ENS name](https://ens.domains/) or [Lens handle](https://claim.lens.xyz/), you can use it instead. These human-readable web3 identities make it easier for you to share your address so others can message you.
+    If you have an [ENS name](https://ens.domains/) or [Lens handle](https://claim.lens.xyz/) associated with the address, you can tell people to use it to message you instead of using your full Ethereum address.
 
     Don’t have an Ethereum address? [Create a MetaMask wallet](https://metamask.io/) to get one.
-    
+
 2. **Pick an app.**
 
    - [Converse](https://getconverse.app/) (iOS): Works with Ethereum addresses, ENS names, and Lens handles
@@ -36,8 +36,9 @@ A great way to start learning how to build an app with XMTP is to use one!
 
 3. **Send a message.**
 
-   To send a message to an address, it must have an XMTP identity already created on the network. Share this page with someone you want to message to help them get on the network. In the meantime, need someone to message? Try one of these addresses:
-   - hi.xmtp.eth: An XMTP Labs team member will send you a message back. The reply may not be instantaneous because this isn't a 🤖.
+   To send a message to an address, it must have an XMTP identity already created on the network. Share this page with someone you want to message to help them get on the network. In the meantime, need someone to message? Try one of these addresses. The reply may not be instantaneous because these aren't 🤖🤖🤖.
+   - `hi.xmtp.eth`: An XMTP Labs team member will send you a message back.
+   - `yashluna.eth`: Product manager at XMTP Labs
    - ???
 
 4. **Want to see the [interoperable inbox](/docs/dev-concepts/interoperable-inbox) in action?**
