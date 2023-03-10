@@ -25,6 +25,7 @@ const tags = {
   announcements: { name: 'Announcements', url: '/blog/tags/announcements/' },
   awards: { name: 'Awards', url: '/blog/tags/awards/' },
   company: { name: 'Company', url: '/blog/tags/company/' },
+  contenttypes: { name: 'Content types', url: '/blog/tags/content-types/' },
   developers: { name: 'Developers', url: '/blog/tags/developers/' },
   grants: { name: 'Grants', url: '/blog/tags/grants/' },
   hackathon: { name: 'Hackathon', url: '/blog/tags/hackathon/' },
@@ -41,6 +42,34 @@ const tags = {
 
 export const BLOG_DATA = [
   {
+    tag: [tags.contenttypes, tags.developers, tags.sdks],
+    title:
+      'Some new content types',
+    content:
+      "Let's talk about some new content types for XMTP. What's a content type? A content type is a way to describe the type of content a message contains on XMTP.",
+    user: {
+      name: 'Engineering',
+      date: '06 Mar 2023 · 7 min read',
+      img: 'xmtp-icon.jpeg',
+      url: 'https://twitter.com/xmtp_'
+    },
+    url: '/blog/attachments-and-remote-attachments',
+  },
+  {
+    tag: [tags.developers, tags.messaging],
+    title:
+      'Secure web3 customer service and support with XMTP and ENS',
+    content:
+      "If you've been in the web3/crypto community for longer than an hour, you've probably seen a strange message that seems to accompany every Discord server.",
+    user: {
+      name: 'Matt Galligan',
+      date: '22 Feb 2023 · 8 min read',
+      img: 'matt-galligan.jpeg',
+      url: 'https://twitter.com/mg'
+    },
+    url: '/blog/secure-web3-customer-service-and-support-with-xmtp-and-ens',
+  },
+  {
     tag: [tags.awards, tags.developers, tags.hackathon],
     title: 'Developers show the power of video + messaging with XMTP and Livepeer',
     content:
@@ -52,34 +81,6 @@ export const BLOG_DATA = [
       url: 'https://twitter.com/richrdbustos'
     },
     url: '/blog/encode-club-livepeer-wrap-up/',
-  },
-  {
-    tag: [tags.announcements, tags.developers, tags.grants],
-    title:
-      'XMTP Grants: Every big idea starts small',
-    content:
-      'Announcing XMTP Grants! A program to nurture web3 messaging projects, support public good creation, and foster ecosystem growth.',
-    user: {
-      name: 'Yash Lunagaria',
-      date: '25 Jan 2023 · 2 min read',
-      img: 'yash-headshot.jpeg',
-      url: 'https://twitter.com/yash_luna'
-    },
-    url: '/blog/xmtp-grants-announcement/',
-  },
-  {
-    tag: [tags.announcements, tags.developers, tags.sdks],
-    title:
-      'Mobile SDKs in Developer Preview',
-    content:
-      'This holiday season, we have an early gift for all the web3 developers out there. XMTP mobile SDKs are now available in Developer Preview 🧑‍💻',
-    user: {
-      name: 'Peter Denton',
-      date: '20 Dec 2022 · 2 min read',
-      img: 'peter-denton.jpeg',
-      url: 'https://twitter.com/petermdenton'
-    },
-    url: '/blog/mobile-sdk-developer-preview',
   },
 ]
 
