@@ -25,7 +25,7 @@ const tags = {
   announcements: { name: 'Announcements', url: '/blog/tags/announcements/' },
   awards: { name: 'Awards', url: '/blog/tags/awards/' },
   company: { name: 'Company', url: '/blog/tags/company/' },
-  contenttypes: { name: 'Content types', url: '/blog/tags/content-types/' },
+  contenttypes: { name: 'Content Types', url: '/blog/tags/content-types/' },
   developers: { name: 'Developers', url: '/blog/tags/developers/' },
   grants: { name: 'Grants', url: '/blog/tags/grants/' },
   hackathon: { name: 'Hackathon', url: '/blog/tags/hackathon/' },
