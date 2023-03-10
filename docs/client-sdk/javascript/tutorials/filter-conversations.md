@@ -1,6 +1,6 @@
 ---
 sidebar_label: Filter conversations
-sidebar_position: 3
+sidebar_position: 5
 ---
 import ButtrflyImageUrl from '/docs/client-sdk/javascript/tutorials/img/following-other-filters-buttrfly.jpeg';
 import LensterImageUrl from '/docs/client-sdk/javascript/tutorials/img/following-requested-filters-lenster.png';
