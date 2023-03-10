@@ -20,7 +20,7 @@ Here's the thing though: messaging has been more than just text since way back i
 
 So we decided to propose some new content types: `Attachment` and `RemoteAttachment`. These new content types support rich media (images, videos, gifs, etc.) and will let you bring your messaging experience to the cutting edges of the early aughts.
 
-![](./media/XMTP-CONTENT-TYPES.jpg)
+![XMTP content types. Illustration of a hand holding a mobile phone with a chat app open with a soccer video and a photo of a mountain connected to and hovering above chat bubbles.](./media/XMTP-CONTENT-TYPES.jpg)
 
 <!--truncate-->
 
