@@ -36,13 +36,19 @@ A great way to start learning how to build an app with XMTP is to use one!
 
 3. **Send a message.**
 
-   To send a message to an address, it must have an XMTP identity already created on the network. Share this page with someone you want to message to help them get on the network. In the meantime, need someone to message? Try one of these addresses. The reply may not be instantaneous because we aren't 🤖🤖🤖.
-   - `yashluna.eth`: Product manager at XMTP Labs
-   - `prxshant.eth`: Business development at XMTP Labs
+   To send a message to an address, it must have an XMTP identity already created on the network. Share this page with someone you want to message to help them get on the network if they aren't already there.
+   
+   In the meantime, need someone to message with? Send a message to these addresses. Try using an ENS name to message one person (or bot) and an 0x Ethereum address to message another.   
+   - `gm.xmtp.eth` / `0x937C0d4a6294cdfa575de17382c7076b579DC176`  
+      Get an immediate response from the XMTP message bot
+   - `yashluna.eth` / `0xf220F05B4830095be149085041735F197ee3D5Aa`  
+      Product manager at XMTP Labs
+   - `prxshant.eth` / `0x4b70d04124c2996De29e0caa050A49822Faec6Cc`  
+      Business development at XMTP Labs
 
 4. **Want to see the [interoperable inbox](/docs/dev-concepts/interoperable-inbox) in action?**
   
-   Try a second app and see all of your conversations in both apps, regardless of the app you used to start them. This also means that you and a friend can each use your own preferred app to exchange messages.
+   Try a second app and see all your conversations in both apps, regardless of the app you used to start them. This also means you and a friend can each use your own preferred app to exchange messages.
     
    With XMTP, you own and control your messages and are always free to use the app that best suits your needs.
     
