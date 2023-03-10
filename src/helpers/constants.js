@@ -1,21 +1,21 @@
 export const HEADER_DATA = [
   {
-    title: 'Preview new SDKs and React Native app',
+    title: 'Start messaging with XMTP',
     subtitle:
-      'Try dev previews of Flutter and Swift client SDKs and an example React Native chat app',
-    url: 'sdks-and-tools',
-    icon: 'beaker-icon.svg',
+      'Use an app built with XMTP to start learning how to build one',
+    url: '/docs/client-sdk/javascript/tutorials/start-messaging',
+    icon: 'x-new.svg',
   },
   {
     title: 'Quickstart: Client SDK for JavaScript',
-    subtitle: 'Build apps and tools for messaging between blockchain accounts',
+    subtitle: 'Build apps and tools for blockchain account messaging',
     url: '/docs/client-sdk/javascript/tutorials/quickstart',
     icon: 'quickstart-icon.svg',
   },
   {
     title: 'Build Lens DMs with XMTP',
     subtitle:
-      'Learn how to build key XMTP chat features to provide direct messaging in a Lens app',
+      'Build key XMTP chat features to provide DMs in a Lens app',
     url: '/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app',
     icon: 'dms-icon.svg',
   },
