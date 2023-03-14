@@ -7,6 +7,12 @@ sidebar_position: 2
 
 Visit the [xmtp library](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html) on the pub.dev site to access the Flutter client SDK reference documentation.
 
+:::caution
+
+This SDK is in **Developer Preview** status and ready for you to start building. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+
+:::
+
 The reference documentation covers the following classes, properties, and enums provided by the SDK:
 
 | Classes        | Properties      | Enums              |

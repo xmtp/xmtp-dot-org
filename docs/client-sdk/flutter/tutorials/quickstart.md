@@ -6,13 +6,17 @@ toc_max_heading_level: 4
 
 # Quickstart for the Flutter client SDK
 
-![Test](https://github.com/xmtp/xmtp-flutter/actions/workflows/test.yml/badge.svg) ![Status](https://img.shields.io/badge/Project_Status-General_Availability-31CA54)
+![Test](https://github.com/xmtp/xmtp-flutter/actions/workflows/test.yml/badge.svg) ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 
 `xmtp-flutter` provides a Dart implementation of an XMTP message API client for use with Flutter apps.
 
 Use `xmtp-flutter` to build with XMTP to send messages between blockchain accounts, including DMs, notifications, announcements, and more.
 
-This SDK is in **General Availability** status and ready for use in production. 
+:::caution
+
+This SDK is in **Developer Preview** status and ready for you to start building. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+
+:::
 
 To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-flutter/issues) in the `xmtp-flutter` repo.
 
