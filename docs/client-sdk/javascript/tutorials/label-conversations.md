@@ -1,11 +1,11 @@
 ---
 sidebar_label: Label conversations
-sidebar_position: 4
+sidebar_position: 6
 ---
 
 # Use labels to differentiate multiple conversations between a pair of addresses
 
-With XMTP, a pair of blockchain account addresses can have multiple ongoing conversations. In addition, with XMTP, an app can display all conversations a user has, regardless of the app they used to create the conversation. This concept is known as an interoperable inbox.
+With XMTP, a pair of blockchain account addresses can have multiple ongoing conversations. In addition, with XMTP, an app can display all conversations a user has, regardless of the app they used to create the conversation. This concept is known as an [interoperable inbox](/docs/dev-concepts/interoperable-inbox).
 
 Alternatively, an app can implement conversation IDs and metadata to [filter conversations](filter-conversations). For example, a developer can choose to assign app-specific conversation IDs and metadata to filter and display only conversations created by their app.
 

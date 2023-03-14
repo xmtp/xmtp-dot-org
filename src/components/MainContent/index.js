@@ -334,12 +334,12 @@ export const MainContent = ({ styles }) => {
               Messages meet users where they are
             </h1>
             <p className="text-white text-base leading-6 text-center lg:max-w-[70%] mb-8">
-              Building with XMTP gives users a portable inbox that follows them
+              Building with XMTP gives users an interoperable inbox that follows them
               across web3, providing access to their messages using any app
               built with XMTP.
             </p>
             <Link
-              to="/docs/dev-concepts/introduction"
+              to="/docs/dev-concepts/interoperable-inbox"
               className="bg-white rounded-lg w-52 h-12 text-black font-bold text-base cursor-pointer border-0 flex justify-center items-center hover:no-underline hover:text-black"
             >
               Learn more

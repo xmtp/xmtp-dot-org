@@ -1,6 +1,6 @@
 ---
 sidebar_label: Build key XMTP chat features in a Lens app
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Build key XMTP chat features in a Lens app
@@ -85,7 +85,7 @@ For example, you can use the Lens DM conversation ID as a filter to provide a UI
 
 :::tip Provide an "interoperable inbox"
 
-You might also want to provide a UI with no conversation ID filtering to display all conversations for a user. This enables your user to access and engage with all of their conversations, Lens and otherwise, without leaving your app. If you decide to provide a UI like this, you might want to use [conversation labeling](label-conversations).
+You might also want to provide an [interoperable inbox](/docs/dev-concepts/interoperable-inbox) UI, which enables your user to access and engage with all of their conversations, Lens and otherwise, without leaving your app. **This is the default behavior when you list all conversations and don't apply filters.** If you decide to provide interoperable inboxes, you might want to use [labels](label-conversations) to help users parse their conversations.
 
 :::
 

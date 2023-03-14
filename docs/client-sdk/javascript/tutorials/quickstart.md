@@ -1,6 +1,6 @@
 ---
 sidebar_label: Quickstart
-sidebar_position: 1
+sidebar_position: 2
 toc_max_heading_level: 4
 ---
 
@@ -179,6 +179,11 @@ for (const conversation of allConversations) {
   await conversation.send('gm')
 }
 ```
+
+These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/dev-concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP. 
+
+You might choose to provide an additional filtered view of conversations. To learn more, see [Handling multiple conversations with the same blockchain address](#handling-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/client-sdk/javascript/tutorials/filter-conversations).
+
 
 #### Listen for new conversations
 
