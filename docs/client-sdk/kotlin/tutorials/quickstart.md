@@ -24,8 +24,6 @@ Follow along in the [tracking issue](https://github.com/xmtp/xmtp-android/issues
 
 To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/dev-concepts/faq).
 
-![x-red-sm](https://user-images.githubusercontent.com/510695/163488403-1fb37e86-c673-4b48-954e-8460ae4d4b05.png)
-
 ## Example app
 
 For a basic demonstration of the core concepts and capabilities of the `xmtp-android` client SDK, see the [Example app project](https://github.com/xmtp/xmtp-android/tree/main/example). This is currently a work in progress.
