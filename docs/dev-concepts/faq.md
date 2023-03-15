@@ -180,7 +180,7 @@ Have other questions or ideas about group messaging? Post to the [XMTP discussio
 
 ### Which languages and environments does the XMTP SDK support?
 
-The XMTP SDK is [available for multiple languages](/sdks-and-tools#sdks), including JavaScript, Flutter, and Swift.
+The XMTP SDK is [available for multiple languages](/sdks-and-tools#sdks), including JavaScript, Kotlin, Swift, and Dart.
 
 Have other questions or ideas for future language or environment support? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
