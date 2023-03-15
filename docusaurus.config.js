@@ -66,10 +66,19 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'flutter',
-        path: 'docs/client-sdk/flutter',
-        routeBasePath: 'docs/client-sdk/flutter',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-flutter.js'),
+        id: 'dart',
+        path: 'docs/client-sdk/dart',
+        routeBasePath: 'docs/client-sdk/dart',
+        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-dart.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'kotlin',
+        path: 'docs/client-sdk/kotlin',
+        routeBasePath: 'docs/client-sdk/kotlin',
+        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-kotlin.js'),
       },
     ],
     [
@@ -128,19 +137,25 @@ const config = {
                 to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">JavaScript XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials and reference for building web3 messaging apps in JavaScript</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials and reference for building apps in JavaScript</div></div></div>`,
               },
               {
-                to: 'docs/client-sdk/flutter/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/flutter-icon.svg" alt="Flutter icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Flutter XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building web3 messaging apps in Flutter</div></div></div>`,
+                to: 'docs/client-sdk/kotlin/tutorials/quickstart',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/kotlin-icon.svg" alt="Kotlin icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Kotlin XMTP client SDK</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building apps in Kotlin</div></div></div>`,
               },
               {
                 to: 'docs/client-sdk/swift/tutorials/quickstart',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/swift-icon.svg" alt="Swift icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Swift XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building web3 messaging apps in Swift</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building apps in Swift</div></div></div>`,
+              },
+              {
+                to: 'docs/client-sdk/dart/tutorials/quickstart',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/dart-icon.svg" alt="Dart icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dart XMTP client SDK</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building apps in Dart</div></div></div>`,
               },
               {
                 to: 'docs/dev-concepts/introduction',
@@ -231,12 +246,16 @@ const config = {
                 to: `/docs/client-sdk/javascript/concepts/intro-to-sdk`,
               },
               {
-                label: `Flutter`,
-                to: `/docs/client-sdk/flutter/tutorials/quickstart`,
+                label: `Kotlin`,
+                to: `/docs/client-sdk/kotlin/tutorials/quickstart`,
               },
               {
                 label: `Swift`,
                 to: `/docs/client-sdk/swift/tutorials/quickstart`,
+              },
+              {
+                label: `Dart`,
+                to: `/docs/client-sdk/dart/tutorials/quickstart`,
               },
             ],
           },

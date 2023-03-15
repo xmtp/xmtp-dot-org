@@ -4,7 +4,7 @@ sidebar_position: 2
 toc_max_heading_level: 4
 ---
 
-# Quickstart for the XMTP client SDK for JavaScript
+# Quickstart for the JavaScript client SDK
 
 ![Test](https://github.com/xmtp/xmtp-js/actions/workflows/test.yml/badge.svg)
 ![Lint](https://github.com/xmtp/xmtp-js/actions/workflows/lint.yml/badge.svg)

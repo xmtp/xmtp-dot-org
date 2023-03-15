@@ -4,7 +4,7 @@ sidebar_position: 1
 toc_max_heading_level: 4
 ---
 
-# Quickstart for the Flutter client SDK
+# Quickstart for the Dart client SDK
 
 ![Test](https://github.com/xmtp/xmtp-flutter/actions/workflows/test.yml/badge.svg) ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 
@@ -34,7 +34,7 @@ The example app includes a demonstration of how you might approach caching, or o
 
 ## Reference docs
 
-See the [xmtp library](https://pub.dev/documentation/xmtp/latest/xmtp/Client-class.html) for the Flutter client SDK reference documentation.
+See the [xmtp library](https://pub.dev/documentation/xmtp/latest/xmtp/Client-class.html) for the Dart client SDK reference documentation.
 
 ## Install with Dart Package Manager
 

@@ -3,9 +3,9 @@ sidebar_label: SDK reference
 sidebar_position: 2
 ---
 
-# Reference for the Flutter client SDK
+# Reference for the Dart client SDK
 
-Visit the [xmtp library](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html) on the pub.dev site to access the Flutter client SDK reference documentation.
+Visit the [xmtp library](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html) on the pub.dev site to access the Dart client SDK reference documentation.
 
 :::caution
 

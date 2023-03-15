@@ -7,9 +7,9 @@ export const HEADER_DATA = [
     icon: 'x-new.svg',
   },
   {
-    title: 'Quickstart: Client SDK for JavaScript',
-    subtitle: 'Build apps and tools for blockchain account messaging',
-    url: '/docs/client-sdk/javascript/tutorials/quickstart',
+    title: 'Start building with XMTP client SDKs',
+    subtitle: 'Build web3 messaging apps in JavaScript, Kotlin, Swift, & Dart',
+    url: '/sdks-and-tools',
     icon: 'quickstart-icon.svg',
   },
   {

@@ -10,23 +10,31 @@ const sdkcards = [
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-js' },
     secondLink: { name: 'Docs', link: 'docs/client-sdk/javascript/tutorials/quickstart' },
     logo: 'img/js.svg',
-    theme: 'midnight',
-  },
-  {
-    title: 'Flutter client SDK',
-    description: '🧑‍💻 Dev preview: A Flutter implementation of an XMTP client for use with mobile apps',
-    firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-flutter' },
-    secondLink: { name: 'Docs', link: 'docs/client-sdk/flutter/tutorials/quickstart' },
-    logo: 'img/flutter.svg',
     theme: 'sunrise',
   },
   {
+    title: 'Kotlin client SDK',
+    description: '🧑‍💻 Dev preview: A Kotlin implementation of an XMTP client for use with Android apps',
+    firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-android' },
+    secondLink: { name: 'Docs', link: 'docs/client-sdk/kotlin/tutorials/quickstart' },
+    logo: 'img/kotlin.svg',
+    theme: 'midnight',
+  },
+ {
     title: 'Swift client SDK',
     description: '🧑‍💻 Dev preview: A Swift implementation of an XMTP client for use with iOS apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-ios' },
     secondLink: { name: 'Docs', link: 'docs/client-sdk/swift/tutorials/quickstart' },
     logo: 'img/swift.svg',
     theme: 'daylight',
+  },
+  {
+    title: 'Dart client SDK',
+    description: '🧑‍💻 Dev preview: A Dart implementation of an XMTP client for use with mobile apps',
+    firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-flutter' },
+    secondLink: { name: 'Docs', link: 'docs/client-sdk/dart/tutorials/quickstart' },
+    logo: 'img/dart.svg',
+    theme: 'sunrise',
   },
 ]
 
@@ -59,14 +67,14 @@ const exampleappcards = [
     description: 'An example React chat app you can use to learn to build a basic messaging app using the XMTP client SDK',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-quickstart-react' },
     logo: 'img/x-mark.svg',
-    theme: 'midnight',
+    theme: 'sunrise',
   },
   {
     title: 'React Native example app',
     description: '🧑‍💻 Dev preview: An example chat app that demos how to integrate the XMTP client SDK for JavaScript into a React Native app',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-chat-react-native' },
     logo: 'img/x-mark.svg',
-    theme: 'sunrise',
+    theme: 'midnight',
   },
 ]
 
@@ -98,14 +106,14 @@ const devtoolcards = [
     description: '🧑‍💻 Dev preview: A push notification example server written in Golang. A starting point to support notifications right in your app.',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/example-notification-server-go' },
     logo: 'img/x-mark.svg',
-    theme: 'midnight',
+    theme: 'sunrise',
   },
   {
     title: 'Pre-registration messaging client SDK',
     description: '👀 Pre-preview: A TypeScript implementation of an XMTP memo client that enables pre-registration messaging.',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-memo-js' },
     logo: 'img/x-mark.svg',
-    theme: 'sunrise',
+    theme: 'midnight',
   },
 ]
 
@@ -137,14 +145,14 @@ const ecosystemprojectscards = [
     description: 'Explore a growing list of GitHub repos for projects that use XMTP‍',
     firstLink: { name: 'Awesome XMTP', link: 'https://github.com/xmtp/awesome-xmtp' },
     logo: 'img/x-mark.svg',
-    theme: 'midnight',
+    theme: 'sunrise',
   },
   {
     title: 'App showcase',
     description: 'Explore a curated showcase of apps built with XMTP‍',
     firstLink: { name: 'Built with XMTP', link: 'built-with-xmtp' },
     logo: 'img/x-mark.svg',
-    theme: 'sunrise',
+    theme: 'midnight',
   },
 ]
 
@@ -176,7 +184,7 @@ const statuscards = [
     description: 'View the real-time status of the XMTP production network, XMTP dev network, and XMTP Chat app.',
     firstLink: { name: 'View status page', link: 'https://status.xmtp.com/' },
     logo: 'img/x-mark.svg',
-    theme: 'midnight',
+    theme: 'sunrise',
   },
 ]
 
