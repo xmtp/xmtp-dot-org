@@ -275,8 +275,16 @@ const config = {
                 to: `/docs/dev-concepts/faq`,
               },
               {
+                label: `Interoperable inbox`,
+                to: `/docs/dev-concepts/interoperable-inbox`,
+              },
+              {
                 label: `Content types`,
                 to: `/docs/dev-concepts/content-types`,
+              },
+              {
+                label: `UX best practices`,
+                to: `/docs/dev-concepts/ux-best-practices`,
               },
               {
                 label: `Key generation and usage`,
@@ -297,6 +305,10 @@ const config = {
               {
                 label: `Contribute to XMTP`,
                 to: `/docs/dev-concepts/contributing`,
+              },
+              {
+                label: `Releases`,
+                to: `/docs/dev-concepts/xmtp-releases`,
               },
               {
                 label: `XMTP Improvement Proposals`,

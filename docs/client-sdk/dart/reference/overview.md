@@ -7,7 +7,7 @@ sidebar_position: 2
 
 Visit the [xmtp library](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html) on the pub.dev site to access the Dart client SDK reference documentation.
 
-:::caution
+:::important Important
 
 This SDK is in **Developer Preview** status and ready for you to start building. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
 
