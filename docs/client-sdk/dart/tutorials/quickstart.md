@@ -34,7 +34,11 @@ The example app includes a demonstration of how you might approach caching, or o
 
 ## Reference docs
 
-See the [xmtp library](https://pub.dev/documentation/xmtp/latest/xmtp/Client-class.html) for the Dart client SDK reference documentation.
+:::tip View the reference
+
+Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/Client-class.html)** on pub.dev.
+
+:::
 
 ## Install with Dart Package Manager
 
@@ -105,6 +109,10 @@ for (var convo in conversations) {
   await client.sendMessage(convo, 'gm');
 }
 ```
+
+These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an interoperable inbox, which enables a user to access all of their conversations in any app built with XMTP.
+
+You might choose to provide an additional filtered view of conversations. To learn more, see [Handling multiple conversations with the same blockchain address](#handling-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/client-sdk/javascript/tutorials/filter-conversations).
 
 ### Listen for new conversations
 
