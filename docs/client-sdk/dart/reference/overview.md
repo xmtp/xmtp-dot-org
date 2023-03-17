@@ -5,7 +5,9 @@ sidebar_position: 2
 
 # Reference for the Dart client SDK
 
-Visit the [xmtp library](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html) on the pub.dev site to access the Dart client SDK reference documentation.
+<br/>
+
+Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)** on the pub.dev site.
 
 :::important Important
 
