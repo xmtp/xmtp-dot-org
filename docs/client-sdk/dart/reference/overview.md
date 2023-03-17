@@ -5,9 +5,11 @@ sidebar_position: 2
 
 # Reference for the Dart client SDK
 
-<br/>
+:::tip View the reference
 
 Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)** on pub.dev.
+
+:::
 
 :::important Important
 
