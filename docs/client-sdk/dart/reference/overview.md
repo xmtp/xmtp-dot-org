@@ -7,7 +7,7 @@ sidebar_position: 2
 
 <br/>
 
-Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)** on the pub.dev site.
+Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)** on pub.dev.
 
 :::important Important
 
