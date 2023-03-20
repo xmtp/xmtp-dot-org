@@ -60,6 +60,6 @@ Ready to start building with XMTP? Check out some of these developer resources:
 
 - [Quickstart for the XMTP client SDK for JavaScript](quickstart)
 - [SDKs and tools](/sdks-and-tools)
-- [Built with XMTP](https://www.notion.so/Own-and-control-your-messages-19532aab75d8430581114cc8bf969ab2): Explore a showcase of apps built with XMTP
+- [Built with XMTP](/built-with-xmtp/): Explore a showcase of apps built with XMTP
 - [Awesome XMTP](https://github.com/xmtp/awesome-xmtp): A list of projects building with XMTP
 - [FAQ about XMTP](/docs/dev-concepts/faq)
