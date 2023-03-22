@@ -11,8 +11,9 @@ import {
   BLOG_DATA,
   XMTP_NOTIF_SERVER_URL,
   XMTP_JS_URL,
-  XMTP_FLUTTER_URL,
+  XMTP_ANDROID_URL,
   XMTP_IOS_URL,
+  XMTP_FLUTTER_URL,
   XMTP_MEMO_URL,
   XMTP_REACT_NATIVE_URL,
   QUICKSTART_CHAT_URL,
@@ -36,12 +37,17 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     })
-    const responseFlutter = await fetch(XMTP_FLUTTER_URL, {
+    const responseAndroid = await fetch(XMTP_ANDROID_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
     })
     const responseIos = await fetch(XMTP_IOS_URL, {
+      headers: {
+        Authorization: customFields.personalToken,
+      },
+    })
+    const responseFlutter = await fetch(XMTP_FLUTTER_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
@@ -69,10 +75,12 @@ export const MainContent = ({ styles }) => {
 
     const dataXmtp = await responseXmtp.json()
     if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp]
-    const dataFlutter = await responseFlutter.json()
-    if (dataFlutter && !dataFlutter.message) items = [...items, dataFlutter]
+    const dataAndroid = await responseAndroid.json()
+    if (dataAndroid && !dataAndroid.message) items = [...items, dataAndroid]
     const dataIos = await responseIos.json()
     if (dataIos && !dataIos.message) items = [...items, dataIos]
+    const dataFlutter = await responseFlutter.json()
+    if (dataFlutter && !dataFlutter.message) items = [...items, dataFlutter]
     const dataRn = await responseRn.json()
     if (dataRn && !dataRn.message) items = [...items, dataRn]
     const dataNotif = await responseNotif.json()
