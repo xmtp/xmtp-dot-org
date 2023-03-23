@@ -73,7 +73,9 @@ A super early peek into what we're building. Ready for exploration, not adoption
 
 ### Mobile support for React Native
 
-Developers will be able to build mobile client apps in [React Native](https://github.com/xmtp/xmtp-js/issues/170).
+Developers will be able to build mobile client apps in React Native.
+
+- [React Native](https://github.com/xmtp/xmtp-js/issues/170)
 
 ---
 
