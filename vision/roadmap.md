@@ -87,9 +87,9 @@ Opportunity to test, validate, and provide feedback. We do not recommend usage i
 
 Developers will be able to build mobile client apps in Kotlin, Swift, and Dart.
 
-- [Kotlin](https://github.com/xmtp/xmtp-android)
-- [Swift](https://github.com/xmtp/xmtp-ios/issues/7)
-- [Dart](https://github.com/xmtp/xmtp-flutter/issues/4)
+- [Kotlin](https://github.com/xmtp/xmtp-android) (Android)
+- [Swift](https://github.com/xmtp/xmtp-ios/issues/7) (iOS)
+- [Dart](https://github.com/xmtp/xmtp-flutter/issues/4) (Flutter)
 
 ### Push notifications - example server
 
