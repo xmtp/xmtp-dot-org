@@ -8,9 +8,10 @@ const { tailwindPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'XMTP: The open protocol and network for secure web3 messaging',
+  title: ' ', // Set an empty string to disable the site title repeating in the og title for all pages,
   tagline:
     'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more',
+  titleDelimiter: ' ', // Set an empty string to disable the | title delimiter,
   url: 'https://xmtp.org',
   customFields: {
     githubAPI: process.env.PUBLIC_URL,

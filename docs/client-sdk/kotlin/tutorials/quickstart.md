@@ -2,6 +2,7 @@
 sidebar_label: Quickstart
 sidebar_position: 1
 toc_max_heading_level: 4
+description: "xmtp-android provides a Kotlin implementation of an XMTP message API client for use with Android apps."
 ---
 
 # Quickstart for the Kotlin client SDK

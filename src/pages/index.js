@@ -19,7 +19,7 @@ function HomepageHeader() {
           </div>
         </Link>
         <h1 className="hero__title max-w-2xl text-4xl lg:text-5xl">
-          {siteConfig.title}
+        XMTP: The open protocol and network for secure web3 messaging
         </h1>
         <p className="hero__subtitle max-w-2xl text-lg lg:text-xl">
           {siteConfig.tagline}
@@ -49,7 +49,7 @@ export default function Home() {
   }, [])
 
   return (
-    <Layout title={`${siteConfig.title}`} description="Homepage">
+    <Layout title="XMTP: The open protocol and network for secure web3 messaging" description="Homepage">
       <HomepageHeader />
       <MainContent styles={styles} />
     </Layout>
