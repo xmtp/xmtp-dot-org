@@ -71,11 +71,10 @@ Enable developers to focus on differentiating features by providing reusable mes
 
 A super early peek into what we're building. Ready for exploration, not adoption.
 
-### Mobile support for Android and React Native
+### Mobile support for React Native
 
-Developers will be able to build mobile client apps in Android and React Native.
+Developers will be able to build mobile client apps in React Native.
 
-- [Android](https://github.com/xmtp/xmtp-android)
 - [React Native](https://github.com/xmtp/xmtp-js/issues/170)
 
 ---
@@ -84,12 +83,13 @@ Developers will be able to build mobile client apps in Android and React Native.
 
 Opportunity to test, validate, and provide feedback. We do not recommend usage in production apps just yet.
 
-### Mobile support for Flutter and Swift
+### Mobile support for Kotlin, Swift, and Dart
 
-Developers will be able to build mobile client apps in Flutter and Swift.
+Developers will be able to build mobile client apps in Kotlin, Swift, and Dart.
 
-- [Flutter](https://github.com/xmtp/xmtp-flutter/issues/4)
-- [Swift](https://github.com/xmtp/xmtp-ios/issues/7)
+- [Kotlin](https://github.com/xmtp/xmtp-android) (Android)
+- [Swift](https://github.com/xmtp/xmtp-ios/issues/7) (iOS)
+- [Dart](https://github.com/xmtp/xmtp-flutter/issues/4) (Flutter)
 
 ### Push notifications - example server
 
