@@ -17,6 +17,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 Here’s a list of high-level steps and considerations to help you get started building with XMTP.
 
+
 ## Try messaging with an app built with XMTP
 
 1. [**Start messaging with XMTP**](https://xmtp.org/docs/client-sdk/javascript/tutorials/start-messaging)
@@ -30,7 +31,7 @@ Here’s a list of high-level steps and considerations to help you get started b
         
     - `hi.xmtp.eth` (0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0)  
     
-        Message the XMTP Labs team and a human will reply, though not as immediately as gm.xmtp.eth! 🤖
+        Message the XMTP Labs team and a human will reply, though not as quickly as `gm.xmtp.eth`! 🤖
         
 
 ## Start building your app
@@ -49,7 +50,7 @@ Here’s a list of high-level steps and considerations to help you get started b
 
 3. **Want to provide DMs in a Lens app?**
 
-    See [Build key XMTP chat features in a Lens app](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app).
+    To learn how, see [Build key XMTP chat features in a Lens app](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app).
     
     Need a Lens handle? Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/)
     
@@ -58,10 +59,10 @@ Here’s a list of high-level steps and considerations to help you get started b
 5. **Explore example apps for implementation guidance and inspiration:**
 
     - [https://demo.xmtp.chat/](https://demo.xmtp.chat/)  
-    When you open the app, it creates a burner Ethereum account and connects it to the app. It also creates and enables an XMTP identity for the account. And you’re ready to send demo messages with XMTP! The burner account is “burned” as soon as the demo session ends.
+    When you open the app, it creates a burner Ethereum account and connects it to the app. The app also creates and enables an XMTP identity for the account. And you’re ready to send demo messages with XMTP! The burner account is “burned” as soon as the demo session ends.
         
     - [xmtp-quickstart-react](https://github.com/xmtp/xmtp-quickstart-react)  
-    An intentionally lightweight example app that you can use as a developer tool to learn how to build with XMTP.
+    An intentionally lightweight example app that you can use to learn how to build with XMTP.
         
     - [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)  
     An example app that showcases innovative ways of building with XMTP.
@@ -72,11 +73,14 @@ Here’s a list of high-level steps and considerations to help you get started b
     - [Awesome XMTP](https://github.com/xmtp/awesome-xmtp)  
     Explore a list of project repos using XMTP.
         
-6. **You probably have some great questions by now. Check out these resources:**
+6. **You probably have some great questions by now! Check out these resources:**
 
-    - [FAQ about XMTP](https://xmtp.org/docs/dev-concepts/faq)
-    - [Join and learn with the XMTP community](https://xmtp.org/community)
-    - [XMTP blog](https://xmtp.org/blog)
+    - [FAQ](faq)
+    - [Join and learn with the XMTP community](/community)
+    - [Blog](/blog)
+    - [Roadmap](/vision/roadmap)
+    - [Litepaper - public draft](/vision/litepaper)
+
 
 ## Refine your app
 
@@ -86,7 +90,7 @@ Here’s a list of high-level steps and considerations to help you get started b
     
 - **Want to speed up conversation load time?**  
 
-  For users with large numbers of conversations, loading conversations in real-time can be a very expensive operation. You can use a persistent conversation cache to improve load time. To learn more, see [Use a persistent conversation cache](https://xmtp.org/docs/client-sdk/javascript/tutorials/use-a-persistent-conversation-cache).
+  For users with large numbers of conversations, loading conversations in real-time can be a very expensive operation. You can [use a persistent conversation cache](/docs/client-sdk/javascript/tutorials/use-a-persistent-conversation-cache) to improve load time.
     
 - **Want to provide push notifications?**  
 
@@ -96,17 +100,16 @@ Here’s a list of high-level steps and considerations to help you get started b
     
 - **Want to filter conversations?**  
 
-  By default, building with XMTP SDKs lists all conversations a user has regardless of which app started the conversation. This concept is called an [interoperable inbox](https://xmtp.org/docs/dev-concepts/interoperable-inbox).
-
-    If you want to provide a filtered view of the user’s interoperable inbox, you can use filters. To learn more, see [Filter conversations](https://xmtp.org/docs/client-sdk/javascript/tutorials/filter-conversations).
+  By default, building with XMTP SDKs lists all conversations a user has regardless of which app started the conversation. This concept is called an [interoperable inbox](https://xmtp.org/docs/dev-concepts/interoperable-inbox). If you want to provide filtered views of the user’s interoperable inbox, you can [use conversation filters](/docs/client-sdk/javascript/tutorials/filter-conversations).
     
 - **Want to label conversations?**  
 
-  When you display a user’s full interoperable inbox, the user may see multiple ongoing conversations they are having with another address. To help clarify the UX for users, provide conversation labels. To learn more, see [Label conversations](https://xmtp.org/docs/client-sdk/javascript/tutorials/label-conversations).
+  When you display a user’s full interoperable inbox, the user may see multiple ongoing conversations they are having with another address. To help clarify the UX for users, [use conversation labels](/docs/client-sdk/javascript/tutorials/label-conversations).
     
 - **Want app feedback from XMTP Labs?**  
 
   Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/) with a link to your demo video or TestFlight.
+
 
 ## Launch your app
 
@@ -122,7 +125,7 @@ Here’s a list of high-level steps and considerations to help you get started b
 
   - See the [XMTP Brand Guidelines](https://github.com/xmtp/brand)
     
-- **Tag the XMTP Labs team to help amplify your launch.**
+- **Tag the XMTP Labs team to help amplify your launch**
 
   - [@xmtplabs](https://lenster.xyz/u/xmtplabs) on Lens
   - [@xmtp_](https://twitter.com/xmtp_) on Twitter
