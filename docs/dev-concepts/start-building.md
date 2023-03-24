@@ -7,20 +7,20 @@ sidebar_position: 2
 
 XMTP is an open protocol and network for secure web3 messaging. Developers build with XMTP client SDKs to provide messaging between blockchain accounts in their apps. The XMTP messaging API client takes care of:
 
-- [Authentication](https://xmtp.org/docs/dev-concepts/account-signatures) using an **XMTP identity that the user owns and controls**
+- [Authentication](account-signatures) using an **XMTP identity that the user owns and controls**
 
-- [End-to-end encryption](https://xmtp.org/docs/dev-concepts/invitation-and-message-encryption) of **messages that the user owns and controls**
+- [End-to-end encryption](invitation-and-message-encryption) of **messages that the user owns and controls**
 
-- Providing an **[interoperable inbox](https://xmtp.org/docs/dev-concepts/interoperable-inbox)** accessible across apps built with XMTP
+- Providing an **[interoperable inbox](interoperable-inbox)** accessible across apps built with XMTP
 
-- Relaying messages to the **progressively decentralized** [XMTP network](https://xmtp.org/docs/dev-concepts/architectural-overview#network-layer)
+- Relaying messages to the **progressively decentralized** [XMTP network](architectural-overview#network-layer)
 
 Here’s a list of high-level steps and considerations to help you get started building with XMTP.
 
 
 ## Try messaging with an app built with XMTP
 
-1. [**Start messaging with XMTP**](https://xmtp.org/docs/client-sdk/javascript/tutorials/start-messaging)
+1. [**Start messaging with XMTP**](/docs/client-sdk/javascript/tutorials/start-messaging)
     
     Use an app built with XMTP to start learning how to build one.
     
@@ -36,7 +36,7 @@ Here’s a list of high-level steps and considerations to help you get started b
 
 ## Start building your app
 
-1. [**Build a simple hello world app**](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-an-xmtp-hello-world-app)
+1. [**Build a simple hello world app**](/docs/client-sdk/javascript/tutorials/build-an-xmtp-hello-world-app)
     
     Get a feel for building with XMTP by building an app using 100% copy-and-paste commands and code.
     
@@ -46,15 +46,14 @@ Here’s a list of high-level steps and considerations to help you get started b
     - [xmtp-android](https://github.com/xmtp/xmtp-android)
     - [xmtp-ios](https://github.com/xmtp/xmtp-ios)
     - [xmtp-flutter](https://github.com/xmtp/xmtp-flutter)
-    - Create your own XMTP messaging bot using [xmtp-bot-starter](https://github.com/xmtp/xmtp-bot-starter)
 
 3. **Want to provide DMs in a Lens app?**
 
-    To learn how, see [Build key XMTP chat features in a Lens app](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app).
+    To learn how, see [Build key XMTP chat features in a Lens app](/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app).
     
     Need a Lens handle? Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/)
     
-4. [**Follow UX best practices**](https://xmtp.org/docs/dev-concepts/ux-best-practices)
+4. [**Follow UX best practices**](ux-best-practices)
 
 5. **Explore example apps for implementation guidance and inspiration:**
 
@@ -67,7 +66,7 @@ Here’s a list of high-level steps and considerations to help you get started b
     - [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)  
     An example app that showcases innovative ways of building with XMTP.
         
-    - [Built with XMTP](https://xmtp.org/built-with-xmtp)  
+    - [Built with XMTP](/built-with-xmtp/)  
     Explore a curated showcase of apps built with XMTP.
         
     - [Awesome XMTP](https://github.com/xmtp/awesome-xmtp)  
@@ -86,7 +85,7 @@ Here’s a list of high-level steps and considerations to help you get started b
 
 - **Want to provide more than plain text messages?**  
 
-  By default, building with XMTP SDKs supports plain text messages. If you’d like to provide other types of content in messages, you’ll use content types. To learn more, see [Content types](https://xmtp.org/docs/dev-concepts/content-types), [Use content types](https://xmtp.org/docs/client-sdk/javascript/tutorials/use-content-types), and [Some new content types](https://xmtp.org/blog/attachments-and-remote-attachments).
+  By default, building with XMTP SDKs supports plain text messages. If you’d like to provide other types of content in messages, you’ll use content types. To learn more, see [Content types](content-types), [Use content types](/docs/client-sdk/javascript/tutorials/use-content-types), and [Some new content types](/blog/attachments-and-remote-attachments).
     
 - **Want to speed up conversation load time?**  
 
@@ -100,7 +99,7 @@ Here’s a list of high-level steps and considerations to help you get started b
     
 - **Want to filter conversations?**  
 
-  By default, building with XMTP SDKs lists all conversations a user has regardless of which app started the conversation. This concept is called an [interoperable inbox](https://xmtp.org/docs/dev-concepts/interoperable-inbox). If you want to provide filtered views of the user’s interoperable inbox, you can [use conversation filters](/docs/client-sdk/javascript/tutorials/filter-conversations).
+  By default, building with XMTP SDKs lists all conversations a user has regardless of which app started the conversation. This concept is called an [interoperable inbox](interoperable-inbox). If you want to provide filtered views of the user’s interoperable inbox, you can [use conversation filters](/docs/client-sdk/javascript/tutorials/filter-conversations).
     
 - **Want to label conversations?**  
 
@@ -143,7 +142,7 @@ Here’s a list of high-level steps and considerations to help you get started b
 
 - **Have a public goods project you want to build that fosters XMTP ecosystem growth?**  
 
-  - Apply for an [XMTP grant](https://xmtp.org/grants).
+  - Apply for an [XMTP grant](/grants).
     
 - **Is there something your app needs that the protocol doesn’t currently support?**  
 
