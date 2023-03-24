@@ -11,12 +11,6 @@ Access the **[Dart client SDK reference documentation](https://pub.dev/documenta
 
 :::
 
-:::important Important
-
-This SDK is in **Developer Preview** status and ready for you to start building. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
-
-:::
-
 The reference documentation covers the following classes, properties, and enums provided by the SDK:
 
 | Classes        | Properties      | Enums              |
