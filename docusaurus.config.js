@@ -129,12 +129,6 @@ const config = {
         },
         items: [
           {
-            to: 'docs/dev-concepts/start-building',
-            position: 'right',
-            label: '⚡️ Start building ⚡️',
-            className: 'start-building_link',
-          },
-          {
             type: 'dropdown',
             label: 'Documentation',
             position: 'right',
@@ -232,6 +226,12 @@ const config = {
             position: 'right',
             label: 'Blog',
             activeBaseRegex: `/`,
+          },
+          {
+            to: 'docs/dev-concepts/start-building',
+            position: 'right',
+            label: '⚡️ Start building ⚡️',
+            className: 'start-building_link',
           },
           {
             href: 'https://github.com/xmtp',
