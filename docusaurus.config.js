@@ -132,6 +132,7 @@ const config = {
             to: 'docs/dev-concepts/start-building',
             position: 'right',
             label: '⚡️ Start building ⚡️',
+            className: 'start-building_link',
           },
           {
             type: 'dropdown',
@@ -270,6 +271,10 @@ const config = {
               {
                 label: `Intro to XMTP`,
                 to: `/docs/dev-concepts/introduction`,
+              },
+              {
+                label: `Start building`,
+                to: `/docs/dev-concepts/start-building`,
               },
               {
                 label: `Architectural overview`,
