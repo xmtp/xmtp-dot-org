@@ -229,6 +229,12 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
+            to: 'docs/dev-concepts/start-building',
+            position: 'right',
+            label: '⚡️ Start building ⚡️',
+            className: 'start-building_link',
+          },
+          {
             href: 'https://github.com/xmtp',
             title: 'Go to the XMTP GitHub repo',
             position: 'right',
@@ -266,6 +272,10 @@ const config = {
               {
                 label: `Intro to XMTP`,
                 to: `/docs/dev-concepts/introduction`,
+              },
+              {
+                label: `Start building`,
+                to: `/docs/dev-concepts/start-building`,
               },
               {
                 label: `Architectural overview`,
