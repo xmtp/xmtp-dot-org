@@ -11,8 +11,74 @@ Access the **[Swift client SDK reference documentation](https://pub.dev/document
 
 :::
 
-The reference documentation covers the following classes, properties, and enums provided by the SDK:
+The reference documentation covers the following classes, protocols, structures, variables, type aliases, and enumerations provided by the SDK.
 
-| Classes        | Properties      | Enums              |
-|:---------------|:----------------|:-------------------|
-| Api<br/>AuthData<br/>Ciphertext<br/>Ciphertext_Aes256gcmHkdfsha256<br/>Client<br/>Codec<br/>CodecRegistry<br/>Composite<br/>Composite_Part<br/>Compression<br/>ContactBundle<br/>ContactBundleV1<br/>ContactBundleV2<br/>ContentTypeId<br/>Conversation<br/>Cursor<br/>DecodedContent<br/>DecodedMessage<br/>EncodedContent<br/>EncryptedPrivateKeyBundle<br/>EncryptedPrivateKeyBundleV1<br/>Envelope<br/>IndexCursor<br/>InvitationV1<br/>InvitationV1_Aes256gcmHkdfsha256<br/>InvitationV1_Context<br/>Message<br/>MessageApiClient<br/>MessageApiServiceBase<br/>MessageHeaderV1<br/>MessageHeaderV2<br/>MessageV1<br/>MessageV2<br/>PagingInfo<br/>PrivateKey<br/>PrivateKey_Secp256k1<br/>PrivateKeyBundle<br/>PrivateKeyBundleV1<br/>PrivateKeyBundleV2<br/>PublicKey<br/>PublicKey_Secp256k1Uncompressed<br/>PublicKeyBundle<br/>PublishRequest<br/>PublishResponse<br/>QueryRequest<br/>QueryResponse<br/>SealedInvitation<br/>SealedInvitationHeaderV1<br/>SealedInvitationV1<br/>Signature<br/>Signature_ECDSACompact<br/>Signature_WalletECDSACompact<br/>SignedContent<br/>SignedPrivateKey<br/>SignedPrivateKey_Secp256k1<br/>SignedPublicKey<br/>SignedPublicKeyBundle<br/>SortDirection<br/>SubscribeRequest<br/>TextCodec<br/>Token<br/>UnsignedPublicKey<br/>UnsignedPublicKey_Secp256k1Uncompressed | contentTypeText | Ciphertext_Union<br/>Composite_Part_Element<br/>ContactBundle_Version<br/>Cursor_Cursor<br/>EncryptedPrivateKeyBundle_Version<br/>InvitationV1_Encryption<br/>Message_Version<br/>PrivateKey_Union<br/>PrivateKeyBundle_Version<br/>PublicKey_Union<br/>SealedInvitation_Version<br/>Signature_Union<br/>SignedPrivateKey_Union<br/>UnsignedPublicKey_Union |
+## Classes
+
+- Client
+- Conversations
+- Notifications_V1_NotificationsClient
+
+## Protocols
+
+- ContentCodec
+- Notifications_V1_NotificationsClientInterface
+- SigningKey
+
+## Structures
+
+- Attachment
+- AttachmentCodec
+- ClientOptions
+- Contacts
+- ConversationV1
+- ConversationV1Container
+- ConversationV2
+- ConversationV2Container
+- DecodedComposite
+- DecodedMessage
+- EncryptedEncodedContent
+- Notifications_V1_DeleteInstallationRequest
+- Notifications_V1_DeliveryMechanism
+- Notifications_V1_RegisterInstallationRequest
+- Notifications_V1_RegisterInstallationResponse
+- Notifications_V1_SubscribeRequest
+- Notifications_V1_UnsubscribeRequest
+- PreparedMessage
+- RemoteAttachment
+- RemoteAttachmentCodec
+- SendOptions
+- TextCodec
+- XMTPPush
+
+## Variables
+
+- let ContentTypeAttachment: ContentTypeID
+- let ContentTypeRemoteAttachment: ContentTypeID
+- let ContentTypeText: ContentTypeID
+
+## Type aliases
+
+- CipherText
+- ContentTypeID
+- EncodedContent
+- Envelope
+- InvitationV1
+- Message
+- PrivateKey
+- PrivateKeyBundle
+- PrivateKeyBundleV1
+- PrivateKeyBundleV2
+- SealedInvitationHeaderV1
+- Signature
+- SignedPrivateKey
+
+## Enumerations
+- AttachmentCodecError
+- Conversation
+- ConversationContainer
+- ConversationError
+- EncodedContentCompression
+- MessageVersion
+- RemoteAttachmentError
+- XMTPEnvironment
