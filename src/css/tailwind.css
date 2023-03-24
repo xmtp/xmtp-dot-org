@@ -354,6 +354,10 @@
   font-weight: 600;
 }
 
+.start-building_link {
+  font-weight: bold;
+}
+
 .table-of-contents__left-border {
   border: none;
   padding-left: 0;
