@@ -129,6 +129,11 @@ const config = {
         },
         items: [
           {
+            to: 'docs/dev-concepts/start-building',
+            position: 'right',
+            label: '⚡️ Start building ⚡️',
+          },
+          {
             type: 'dropdown',
             label: 'Documentation',
             position: 'right',
