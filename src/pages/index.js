@@ -49,7 +49,7 @@ export default function Home() {
   }, [])
 
   return (
-    <Layout title="XMTP: The open protocol for web3 messaging" description="Build with XMTP to send end-to-end encrypted messages between blockchain accounts">
+    <Layout title="XMTP: The web3 messaging network" description="Own and control your communication.">
       <HomepageHeader />
       <MainContent styles={styles} />
     </Layout>
