@@ -1,6 +1,7 @@
 ---
 sidebar_label: Start building
 sidebar_position: 2
+description: Use this list of high-level steps and considerations to start building with XMTP.
 ---
 
 # Start building with XMTP
@@ -15,7 +16,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 - Relaying messages to the **progressively decentralized** [XMTP network](architectural-overview#network-layer)
 
-Here’s a list of high-level steps and considerations to help you get started building with XMTP.
+Here’s a list of high-level steps and considerations to help you start building with XMTP.
 
 
 ## Try messaging with an app built with XMTP
