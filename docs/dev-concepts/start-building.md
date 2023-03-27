@@ -3,7 +3,7 @@ sidebar_label: Start building
 sidebar_position: 2
 ---
 
-# Get started building with XMTP
+# Start building with XMTP
 
 XMTP is an open protocol and network for secure web3 messaging. Developers build with XMTP client SDKs to provide messaging between blockchain accounts in their apps. The XMTP messaging API client takes care of:
 
