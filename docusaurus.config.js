@@ -8,9 +8,10 @@ const { tailwindPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'XMTP: The open protocol and network for secure web3 messaging',
+  title: ' ', // Set empty string to disable site title repeating in og title for all pages. Title, descr, and home page heading set in src/pages/index.js.
   tagline:
-    'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more',
+    'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more', // tagline on home page
+  titleDelimiter: ' ', // Set empty string to disable pipe delimiter in og title
   url: 'https://xmtp.org',
   customFields: {
     githubAPI: process.env.PUBLIC_URL,
@@ -127,7 +128,7 @@ const config = {
         defaultMode: 'light',
         disableSwitch: false,
       },
-      image: '/img/mobile-animation-bg.jpg',
+      image: 'img/xmtp-card.png',
       navbar: {
         title: '',
         logo: {
@@ -231,6 +232,12 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
+            to: 'docs/dev-concepts/start-building',
+            position: 'right',
+            label: '⚡️ Start building ⚡️',
+            className: 'start-building_link',
+          },
+          {
             href: 'https://github.com/xmtp',
             title: 'Go to the XMTP GitHub repo',
             position: 'right',
@@ -268,6 +275,10 @@ const config = {
               {
                 label: `Intro to XMTP`,
                 to: `/docs/dev-concepts/introduction`,
+              },
+              {
+                label: `Start building`,
+                to: `/docs/dev-concepts/start-building`,
               },
               {
                 label: `Architectural overview`,
