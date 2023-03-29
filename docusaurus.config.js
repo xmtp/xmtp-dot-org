@@ -22,7 +22,14 @@ const config = {
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
-  scripts: [{src: 'https://plausible.io/js/script.outbound-links.js', async: true, defer: true, 'data-domain': 'xmtp.org'}],
+  scripts: [
+    {
+      src: 'https://plausible.io/js/script.outbound-links.js',
+      async: true,
+      defer: true,
+      'data-domain': 'xmtp.org',
+    },
+  ],
   clientModules: [require.resolve('./src/css/tailwind.css')],
 
   presets: [
@@ -41,7 +48,8 @@ const config = {
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
         },
         blog: {
-          blogDescription: 'A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging',
+          blogDescription:
+            'A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging',
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
         },
@@ -78,7 +86,9 @@ const config = {
         id: 'kotlin',
         path: 'docs/client-sdk/kotlin',
         routeBasePath: 'docs/client-sdk/kotlin',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-kotlin.js'),
+        sidebarPath: require.resolve(
+          './sidebars/sidebars-client-sdk-kotlin.js'
+        ),
       },
     ],
     [
@@ -110,12 +120,11 @@ const config = {
     ],
   ],
 
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode:'light',
+        defaultMode: 'light',
         disableSwitch: false,
       },
       image: '/img/mobile-animation-bg.jpg',
@@ -207,12 +216,6 @@ const config = {
             label: 'Vision',
             position: 'right',
             items: [
-              {
-                to: 'vision/litepaper',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="Document icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Litepaper</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Read the public draft of the XMTP Litepaper</div></div></div>`,
-              },
               {
                 to: 'vision/roadmap',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="Map icon" /></div>
@@ -373,10 +376,6 @@ const config = {
           {
             title: 'Vision',
             items: [
-              {
-                label: 'Litepaper',
-                to: '/vision/litepaper',
-              },
               {
                 label: 'Roadmap',
                 to: '/vision/roadmap',

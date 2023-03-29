@@ -1,23 +1,20 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from 'react'
+import clsx from 'clsx'
+import styles from './styles.module.css'
 
 const FeatureList = [
   {
     title: 'What is XMTP?',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Learn about the protocol, network, case studies, litepaper, and more
-      </>
-    ),
+    description: <>Learn about the protocol, network, case studies, and more</>,
   },
   {
     title: 'Quickstart: Client SDK',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Get started building apps and tools for messaging between blockchain accounts
+        Get started building apps and tools for messaging between blockchain
+        accounts
       </>
     ),
   },
@@ -25,14 +22,12 @@ const FeatureList = [
     title: 'Development concepts',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
-      <>
-        Learn about content types, security, network nodes, and more
-      </>
+      <>Learn about content types, security, network nodes, and more</>
     ),
   },
-];
+]
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -43,7 +38,7 @@ function Feature({Svg, title, description}) {
         <p>{description}</p>
       </div>
     </div>
-  );
+  )
 }
 
 export default function HomepageFeatures() {
@@ -57,5 +52,5 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section>
-  );
+  )
 }
