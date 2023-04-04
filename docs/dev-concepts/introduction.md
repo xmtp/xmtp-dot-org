@@ -13,7 +13,7 @@ XMTP's extensible design enables a diverse set of use cases for sending message 
 - **App-to-user** notifications
 - **Creator-to-community** announcements
 
-Because the XMTP network persists messages, and those messages are tied to web3 identities as opposed to a specific client app, each web3 identity has a **portable inbox** of that it can access using any client app built with XMTP.
+Because the XMTP network persists messages, and those messages are tied to web3 identities as opposed to a specific client app, each web3 identity has an [**interoperable inbox**](interoperable-inbox) of that it can access using any client app built with XMTP.
 
 Developers can also build tools for decentralized apps (dapps), decentralized autonomous organizations (DAOs), creators, and protocols to re-engage users with web3 messaging.
 

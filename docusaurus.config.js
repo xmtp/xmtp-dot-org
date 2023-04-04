@@ -8,9 +8,10 @@ const { tailwindPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'XMTP: The open protocol and network for secure web3 messaging',
+  title: ' ', // Set empty string to disable site title repeating in og title for all pages. Title, descr, and home page heading set in src/pages/index.js.
   tagline:
-    'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more',
+    'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more', // tagline on home page
+  titleDelimiter: ' ', // Set empty string to disable pipe delimiter in og title
   url: 'https://xmtp.org',
   customFields: {
     githubAPI: process.env.PUBLIC_URL,
@@ -22,7 +23,14 @@ const config = {
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
-  scripts: [{src: 'https://plausible.io/js/script.outbound-links.js', async: true, defer: true, 'data-domain': 'xmtp.org'}],
+  scripts: [
+    {
+      src: 'https://plausible.io/js/script.outbound-links.js',
+      async: true,
+      defer: true,
+      'data-domain': 'xmtp.org',
+    },
+  ],
   clientModules: [require.resolve('./src/css/tailwind.css')],
 
   presets: [
@@ -41,7 +49,8 @@ const config = {
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
         },
         blog: {
-          blogDescription: 'A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging',
+          blogDescription:
+            'A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging',
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
         },
@@ -78,7 +87,9 @@ const config = {
         id: 'kotlin',
         path: 'docs/client-sdk/kotlin',
         routeBasePath: 'docs/client-sdk/kotlin',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-kotlin.js'),
+        sidebarPath: require.resolve(
+          './sidebars/sidebars-client-sdk-kotlin.js'
+        ),
       },
     ],
     [
@@ -110,15 +121,14 @@ const config = {
     ],
   ],
 
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode:'light',
+        defaultMode: 'light',
         disableSwitch: false,
       },
-      image: '/img/mobile-animation-bg.jpg',
+      image: 'img/xmtp-card.png',
       navbar: {
         title: '',
         logo: {
@@ -208,12 +218,6 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'vision/litepaper',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="Document icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Litepaper</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Read the public draft of the XMTP Litepaper</div></div></div>`,
-              },
-              {
                 to: 'vision/roadmap',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="Map icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Roadmap</div>
@@ -226,6 +230,12 @@ const config = {
             position: 'right',
             label: 'Blog',
             activeBaseRegex: `/`,
+          },
+          {
+            to: 'docs/dev-concepts/start-building',
+            position: 'right',
+            label: '⚡️ Start building ⚡️',
+            className: 'start-building_link',
           },
           {
             href: 'https://github.com/xmtp',
@@ -265,6 +275,10 @@ const config = {
               {
                 label: `Intro to XMTP`,
                 to: `/docs/dev-concepts/introduction`,
+              },
+              {
+                label: `Start building`,
+                to: `/docs/dev-concepts/start-building`,
               },
               {
                 label: `Architectural overview`,
@@ -373,10 +387,6 @@ const config = {
           {
             title: 'Vision',
             items: [
-              {
-                label: 'Litepaper',
-                to: '/vision/litepaper',
-              },
               {
                 label: 'Roadmap',
                 to: '/vision/roadmap',
