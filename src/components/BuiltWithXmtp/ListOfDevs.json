@@ -34,10 +34,10 @@
       "twitter": "https://twitter.com/meTokens"
    },
    {
-      "name":"Relay Receiver",
+      "name":"Relay",
       "href":"https://relay.cc/",
       "image":"/img/builtWithXmtp/relay.png",
-      "description":"Relay’s goal is to provide open-source tools and products on top of XMTP, and create the best place for web3 identities.",
+      "description":"Relay is the intersection of Ethereum-enabled OpenAI agents and wallet messaging.",
       "github": "https://github.com/relaycc",
       "twitter": "https://twitter.com/relay_eth"
    },
@@ -99,5 +99,21 @@
       "image":"/img/builtWithXmtp/mintify.png",
       "description":"Mintify is a multi-chain aggregator, analytics platform and terminal for trading NFT based economies.",
       "twitter": "https://twitter.com/mintify"
+   },
+   {
+      "name":"Pinsta",
+      "href":"https://pinsta.xyz/",
+      "image":"/img/builtWithXmtp/pinsta.png",
+      "description":"Decentralized image and video sharing service. Create Pin Boards to collect and discover rich media.",
+      "github": "https://github.com/jsonpreet/Pinsta",
+      "twitter": "https://twitter.com/PinstaApp"
+   },
+   {
+      "name":"ethOS",
+      "href":"https://www.ethosmobile.org/",
+      "image":"/img/builtWithXmtp/ethos-logo.jpeg",
+      "description":"The world's first Ethereum mobile operating system. A mobile OS built to be crypto native.",
+      "github": "https://github.com/EthereumPhone",
+      "twitter": "https://twitter.com/EthereumPhone"
    }
 ]
