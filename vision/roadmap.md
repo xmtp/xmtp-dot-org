@@ -107,7 +107,7 @@ Developers are able to build apps in JavaScript and React with the `xmtp-js` SDK
 - [Quickstart](/docs/client-sdk/javascript/tutorials/quickstart)
 - [Reference](/docs/client-sdk/javascript/reference/classes/Client)
 
-### Mobile support for Swift and Dart
+### Support for Swift mobile apps
 
 Developers are able to build mobile apps in Swift using the `xmtp-ios` SDK:
 
@@ -115,7 +115,9 @@ Developers are able to build mobile apps in Swift using the `xmtp-ios` SDK:
 - [Quickstart](/docs/client-sdk/swift/tutorials/quickstart)
 - [Reference](https://xmtp.github.io/xmtp-ios/documentation/xmtp/)
 
-Developers are able to build mobile apps in Dart using the `xmtp-flutter SDK:
+### Support for Dart mobile apps
+
+Developers are able to build mobile apps in Dart using the `xmtp-flutter` SDK:
 
 - [GitHub repo](https://github.com/xmtp/xmtp-flutter)
 - [Quickstart](/docs/client-sdk/dart/tutorials/quickstart)
