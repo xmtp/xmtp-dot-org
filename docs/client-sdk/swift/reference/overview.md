@@ -7,7 +7,7 @@ sidebar_position: 2
 
 :::tip View the reference
 
-Access the **[Swift client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)** on Swift Package Index.
+Access the **[Swift client SDK reference documentation](https://xmtp.github.io/xmtp-ios/documentation/xmtp/)**.
 
 :::
 

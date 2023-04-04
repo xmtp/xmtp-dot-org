@@ -15,7 +15,7 @@ Use `xmtp-ios` to build with XMTP to send messages between blockchain accounts, 
 
 This SDK is in **General Availability** status and ready for use in production. 
 
-To keep up with the latest SDK developments, see the [Releases tab](https://github.com/xmtp/xmtp-js/releases) in `xmtp-ios` repo.
+To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-ios/issues) in the `xmtp-ios` repo.
 
 To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/dev-concepts/faq).
 
@@ -23,7 +23,7 @@ To learn more about XMTP and get answers to frequently asked questions, see [FAQ
 
 :::tip View the reference
 
-Access the **[Swift client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/Client-class.html)** on Swift Package Index.
+Access the **[Swift client SDK reference documentation](https://xmtp.github.io/xmtp-ios/documentation/xmtp/)**.
 
 :::
 
