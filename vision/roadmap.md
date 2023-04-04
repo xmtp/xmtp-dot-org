@@ -83,13 +83,11 @@ Developers will be able to build mobile client apps in React Native.
 
 Opportunity to test, validate, and provide feedback. We do not recommend usage in production apps just yet.
 
-### Mobile support for Kotlin, Swift, and Dart
+### Mobile support for Kotlin
 
-Developers will be able to build mobile client apps in Kotlin, Swift, and Dart.
+Developers will be able to build mobile client apps in Kotlin:
 
 - [Kotlin](https://github.com/xmtp/xmtp-android) (Android)
-- [Swift](https://github.com/xmtp/xmtp-ios/issues/7) (iOS)
-- [Dart](https://github.com/xmtp/xmtp-flutter/issues/4) (Flutter)
 
 ### Push notifications - example server
 
@@ -101,7 +99,27 @@ Apps will be able to leverage an example server to subscribe users for push noti
 
 ## General Availability ✅
 
-Ready for production use. Check out [docs](https://xmtp.org/docs/client-sdk/javascript/concepts/intro-to-sdk), [tutorials](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-an-xmtp-hello-world-app), and the [quickstart example](https://xmtp.org/docs/client-sdk/javascript/tutorials/quickstart).
+### Support for JavaScript and React apps
+
+Developers are able to build apps in JavaScript and React with the `xmtp-js` SDK:
+
+- [GitHub repo](https://github.com/xmtp/xmtp-js)
+- [Quickstart](/docs/client-sdk/javascript/tutorials/quickstart)
+- [Reference](/docs/client-sdk/javascript/reference/classes/Client)
+
+### Mobile support for Swift and Dart
+
+Developers are able to build mobile apps in Swift using the `xmtp-ios` SDK:
+
+- [GitHub repo](https://github.com/xmtp/xmtp-ios)
+- [Quickstart](/docs/client-sdk/swift/tutorials/quickstart)
+- [Reference](https://xmtp.github.io/xmtp-ios/documentation/xmtp/)
+
+Developers are able to build mobile apps in Dart using the `xmtp-flutter SDK:
+
+- [GitHub repo](https://github.com/xmtp/xmtp-flutter)
+- [Quickstart](/docs/client-sdk/dart/tutorials/quickstart)
+- [Reference](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)
 
 ### XMTP v2 (December 2022)
 

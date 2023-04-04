@@ -27,7 +27,7 @@ For a basic demonstration of the core concepts and capabilities of the `xmtp-flu
 
 :::tip View the reference
 
-Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/Client-class.html)** on pub.dev.
+Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)** on pub.dev.
 
 :::
 
