@@ -83,11 +83,9 @@ Developers will be able to build mobile client apps in React Native.
 
 Opportunity to test, validate, and provide feedback. We do not recommend usage in production apps just yet.
 
-### Mobile support for Kotlin
+### Build Android apps in Kotlin
 
-Developers will be able to build mobile client apps in Kotlin:
-
-- [Kotlin](https://github.com/xmtp/xmtp-android) (Android)
+Developers will be able to build Android apps in Kotlin using the [xmtp-android](https://github.com/xmtp/xmtp-android) SDK.
 
 ### Push notifications - example server
 
@@ -99,29 +97,17 @@ Apps will be able to leverage an example server to subscribe users for push noti
 
 ## General Availability ✅
 
-### Support for JavaScript and React apps
+### Build JavaScript and React apps
 
-Developers are able to build apps in JavaScript and React with the `xmtp-js` SDK:
+Developers are able to build apps in JavaScript and React with the [`xmtp-js` SDK](/docs/client-sdk/javascript/tutorials/quickstart).
 
-- [GitHub repo](https://github.com/xmtp/xmtp-js)
-- [Quickstart](/docs/client-sdk/javascript/tutorials/quickstart)
-- [Reference](/docs/client-sdk/javascript/reference/classes/Client)
+### Build iOS apps in Swift
 
-### Support for Swift mobile apps
+Developers are able to build iOS apps in Swift using the [`xmtp-ios` SDK](/docs/client-sdk/swift/tutorials/quickstart).
 
-Developers are able to build mobile apps in Swift using the `xmtp-ios` SDK:
+### Build Flutter and mobile apps in Dart
 
-- [GitHub repo](https://github.com/xmtp/xmtp-ios)
-- [Quickstart](/docs/client-sdk/swift/tutorials/quickstart)
-- [Reference](https://xmtp.github.io/xmtp-ios/documentation/xmtp/)
-
-### Support for Dart mobile apps
-
-Developers are able to build mobile apps in Dart using the `xmtp-flutter` SDK:
-
-- [GitHub repo](https://github.com/xmtp/xmtp-flutter)
-- [Quickstart](/docs/client-sdk/dart/tutorials/quickstart)
-- [Reference](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)
+Developers are able to build Flutter and mobile apps in Dart using the [`xmtp-flutter` SDK](/docs/client-sdk/dart/tutorials/quickstart).
 
 ### XMTP v2 (December 2022)
 

@@ -153,19 +153,19 @@ const config = {
                 to: 'docs/client-sdk/kotlin/tutorials/quickstart',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/kotlin-icon.svg" alt="Kotlin icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Kotlin XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building apps in Kotlin</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building Android apps in Kotlin</div></div></div>`,
               },
               {
                 to: 'docs/client-sdk/swift/tutorials/quickstart',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/swift-icon.svg" alt="Swift icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Swift XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building apps in Swift</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building iOS apps in Swift</div></div></div>`,
               },
               {
                 to: 'docs/client-sdk/dart/tutorials/quickstart',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/dart-icon.svg" alt="Dart icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dart XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building apps in Dart</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building Flutter apps in Dart</div></div></div>`,
               },
               {
                 to: 'docs/dev-concepts/introduction',

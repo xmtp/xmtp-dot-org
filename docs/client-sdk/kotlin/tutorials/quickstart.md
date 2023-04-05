@@ -11,7 +11,7 @@ description: "xmtp-android provides a Kotlin implementation of an XMTP message A
 
 `xmtp-android` provides a Kotlin implementation of an XMTP message API client for use with Android apps.
 
-Use `xmtp-android` to build with XMTP to send messages between blockchain accounts, including DMs, notifications, announcements, and more.
+Use the [`xmtp-android` SDK](https://github.com/xmtp/xmtp-android) to build with XMTP to send messages between blockchain accounts, including DMs, notifications, announcements, and more.
 
 :::important Important
 

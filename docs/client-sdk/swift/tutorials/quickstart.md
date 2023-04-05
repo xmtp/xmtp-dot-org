@@ -11,7 +11,7 @@ description: "xmtp-ios provides a Swift implementation of an XMTP message API cl
 
 `xmtp-ios` provides a Swift implementation of an XMTP message API client for use with iOS apps.
 
-Use `xmtp-ios` to build with XMTP to send messages between blockchain accounts, including DMs, notifications, announcements, and more.
+Use the [`xmtp-ios` SDK](https://github.com/xmtp/xmtp-ios) to build with XMTP to send messages between blockchain accounts, including DMs, notifications, announcements, and more.
 
 This SDK is in **General Availability** status and ready for use in production. 
 
