@@ -2,22 +2,18 @@
 sidebar_label: Quickstart
 sidebar_position: 1
 toc_max_heading_level: 4
-description: "xmtp-flutter provides a Dart implementation of an XMTP message API client for use with Flutter apps."
+description: "xmtp-flutter provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps."
 ---
 
 # Quickstart for the Dart client SDK
 
-![Test](https://github.com/xmtp/xmtp-flutter/actions/workflows/test.yml/badge.svg) ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
+![Test](https://github.com/xmtp/xmtp-flutter/actions/workflows/test.yml/badge.svg) ![Status](https://img.shields.io/badge/Project_Status-General_Availability-31CA54)
 
-`xmtp-flutter` provides a Dart implementation of an XMTP message API client for use with Flutter apps.
+`xmtp-flutter` provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps.
 
-Use `xmtp-flutter` to build with XMTP to send messages between blockchain accounts, including DMs, notifications, announcements, and more.
+Use the [`xmtp-flutter` SDK](https://github.com/xmtp/xmtp-flutter) to build with XMTP to send messages between blockchain accounts, including DMs, notifications, announcements, and more.
 
-:::important Important
-
-This SDK is in **Developer Preview** status and ready for you to start building. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
-
-:::
+This SDK is in **General Availability** status and ready for use in production.
 
 To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-flutter/issues) in the `xmtp-flutter` repo.
 
@@ -27,17 +23,11 @@ To learn more about XMTP and get answers to frequently asked questions, see [FAQ
 
 For a basic demonstration of the core concepts and capabilities of the `xmtp-flutter` client SDK, see the [Example app project](https://github.com/xmtp/xmtp-flutter/tree/main/example).
 
-:::info Important
-
-The example app includes a demonstration of how you might approach caching, or offline storage. Be aware that the example app naively performs a full refresh very frequently, **which causes slowdowns**. The underlying `xmtp-flutter` client SDK itself has no performance issues. If you want to provide offline storage in your app, be sure to design your refresh strategies with app performance in mind. Future versions of the example app aim to make this aspect easier to manage.
-
-:::
-
 ## Reference docs
 
 :::tip View the reference
 
-Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/Client-class.html)** on pub.dev.
+Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)** on pub.dev.
 
 :::
 
@@ -113,7 +103,7 @@ for (var convo in conversations) {
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an interoperable inbox, which enables a user to access all of their conversations in any app built with XMTP.
 
-You might choose to provide an additional filtered view of conversations. To learn more, see [Handling multiple conversations with the same blockchain address](#handling-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/client-sdk/javascript/tutorials/filter-conversations).
+You might choose to provide an additional filtered view of conversations. To learn more, see [Handle multiple conversations with the same blockchain address](#handle-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/client-sdk/javascript/tutorials/filter-conversations).
 
 ### Listen for new conversations
 
@@ -144,7 +134,7 @@ consequently advertised their key bundle on the network.
 Messages are addressed using account addresses.
 
 The message content can be a plain text string. Or you can configure custom content types.
-See [Different types of content](#different-types-of-content).
+See [Handle different types of content](#handle-different-types-of-content).
 
 ```dart
 var convo = await client.newConversation("0x...");
@@ -197,7 +187,7 @@ This package does not currently include the `streamAllMessages()` functionality 
 
 :::
 
-### Handling multiple conversations with the same blockchain address
+### Handle multiple conversations with the same blockchain address
 
 With XMTP, you can have multiple ongoing conversations with the same blockchain address.
 For example, you might want to have a conversation scoped to your particular app, or even
@@ -226,19 +216,21 @@ var myConversations = conversations.where((c) =>
     c.conversationId.startsWith("my.example.com/"));
 ```
 
-## Different types of content
+## Handle different types of content
 
 When sending a message, you can specify the type of content. This allows you to specify different
 types of content than the default (a simple string, `ContentTypeText`).
 
+To learn more about content types, see [Content types with XMTP](/docs/dev-concepts/content-types).
+
 Support for other types of content can be added during client construction by registering additional `Codec`s, including a `customCodecs` parameter. Every codec declares a specific content type identifier,
-`ContentTypeId`, which is used to signal to the Client which codec should be used to process the
+`ContentTypeId`, which is used to signal to the client which codec should be used to process the
 content that is being sent or received. See [XIP-5](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md)
 for more details on codecs and content types.
 
 Codecs and content types may be proposed as interoperable standards through [XRCs](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-9-composite-content-type.md).
 If there is a concern that the recipient may not be able to handle a non-standard content type,
-the sender can use the contentFallback option to provide a string that describes the content being
+the sender can use the `contentFallback` option to provide a string that describes the content being
 sent. If the recipient fails to decode the original content, the fallback will replace it and can be
 used to inform the recipient what the original content was.
 
