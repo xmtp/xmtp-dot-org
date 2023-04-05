@@ -28,6 +28,11 @@
         "selectors_key": "swift-sdk-tutorials"
       },
       {
+        "url": "https://xmtp.org/docs/client-sdk/swift/reference/*",
+        "tags": "swift-sdk-reference",
+        "selectors_key": "swift-sdk-reference"
+      },
+      {
         "url": "https://xmtp.org/docs/client-sdk/dart/tutorials/*",
         "tags": "dart-sdk-tutorials",
         "selectors_key": "dart-sdk-tutorials"
@@ -138,6 +143,20 @@
           "selector": "",
           "global": true,
           "default_value": "Swift SDK tutorials"
+        },
+        "lvl1": "article h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+      },
+      "swift-sdk-reference": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "Swift SDK reference"
         },
         "lvl1": "article h1",
         "lvl2": "article h2",
