@@ -61,9 +61,7 @@ Users will be able to store XMTP private keys in secure contexts such as wallet 
 
 ### UI Kit & React Hooks SDK
 
-Enable developers to focus on differentiating features by providing reusable messaging components via a UI kit & React Hooks SDK.
-
-- [React SDK](https://github.com/xmtp/xmtp-react)
+Enable developers to focus on differentiating features by providing reusable messaging components via a [UI kit & React Hooks SDK](https://github.com/xmtp/xmtp-react).
 
 ---
 
@@ -73,9 +71,7 @@ A super early peek into what we're building. Ready for exploration, not adoption
 
 ### Mobile support for React Native
 
-Developers will be able to build mobile client apps in React Native.
-
-- [React Native](https://github.com/xmtp/xmtp-js/issues/170)
+Developers will be able to build mobile client apps in [React Native](https://github.com/xmtp/xmtp-js/issues/170).
 
 ---
 
@@ -85,7 +81,7 @@ Opportunity to test, validate, and provide feedback. We do not recommend usage i
 
 ### Build Android apps in Kotlin
 
-Developers will be able to build Android apps in Kotlin using the [xmtp-android](https://github.com/xmtp/xmtp-android) SDK.
+Developers will be able to build Android apps in Kotlin using the [xmtp-android SDK](https://github.com/xmtp/xmtp-android).
 
 ### Push notifications - example server
 
