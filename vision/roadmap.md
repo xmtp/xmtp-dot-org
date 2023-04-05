@@ -81,7 +81,7 @@ Opportunity to test, validate, and provide feedback. We do not recommend usage i
 
 ### Build Android apps in Kotlin
 
-Developers will be able to build Android apps in Kotlin using the [xmtp-android SDK](https://github.com/xmtp/xmtp-android).
+Developers will be able to build Android apps in Kotlin using the [`xmtp-android` SDK](https://github.com/xmtp/xmtp-android).
 
 ### Push notifications - example server
 
