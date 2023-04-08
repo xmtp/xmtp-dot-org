@@ -40,11 +40,11 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
     Use an app built with XMTP to start learning how to build one.
 
 2. **Need someone to send a test message to?**
-    - `gm.xmtp.eth` (0x937C0d4a6294cdfa575de17382c7076b579DC176)  
+    - `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)  
 
         Message this XMTP message bot to get an immediate automated reply.
 
-    - `hi.xmtp.eth` (0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0)  
+    - `hi.xmtp.eth` (`0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0`)  
 
         Message the XMTP Labs team and a human will reply, though not as quickly as `gm.xmtp.eth`! 🤖
 
