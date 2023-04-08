@@ -297,10 +297,6 @@ const config = {
                 to: `/docs/dev-concepts/content-types`,
               },
               {
-                label: `UX best practices`,
-                to: `/docs/dev-concepts/ux-best-practices`,
-              },
-              {
                 label: `Key generation and usage`,
                 to: `/docs/dev-concepts/key-generation-and-usage`,
               },
