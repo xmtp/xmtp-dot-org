@@ -101,14 +101,14 @@ Consider following these best practices when developing your app:
 
 - Set the `env` client option to `dev` while developing. Set it to `production` before you launch.
 
+- If you are building with the xmtp-js SDK, set the [`appVersion` client option](/docs/client-sdk/javascript/tutorials/quickstart#configuring-the-client).    
+
 - Paginate message history to help optimize time to load messages in a conversation.
 
 - Use [standard content types](content-types#standard-content-types) to ensure that message content sent using your app is interoperable with other apps.
   - By default, building with XMTP SDKs supports plain text messages. 
   - To send remote media attachments, see [Some new content types](/blog/attachments-and-remote-attachments).
   - To send custom content types, see [Build a custom content type](/docs/client-sdk/javascript/tutorials/use-content-types#build-a-custom-content-type).
-
-- If you are building with the xmtp-js SDK, set the `appVersion` client option.    
 
 - Enable your app to track privacy-preserving metrics to help you understand app usage. For example:
     - \# of active wallets: Wallets sending at least one message
