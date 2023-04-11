@@ -29,7 +29,7 @@ Here are just some of the chains supported by XMTP:
 
 <img src={avalanche} style={{width:"100px"}}/>
 
-[Avalanche](https://www.avax.com/) 
+[Avalanche: Contract Chain (C-Chain)](https://www.avax.com/)
 
 <img src={base} style={{width:"100px"}}/>
 
