@@ -66,7 +66,7 @@ XMTP uses a signature from the blockchain account to create and enable the XMTP 
 
 :::info Info
 
-The `xmtp-js` client is initialized using an `ethers.Signer` instance.
+XMTP client SDKs currently require you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/), such as [wagmi](https://wagmi.sh/).
 
 :::
 
@@ -76,4 +76,4 @@ You can generate multiple XMTP identities from the same wallet app by changing t
 
 :::
 
-To learn more about signatures, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
+To learn more about account signatures, see [Sign to send and receive messages using apps built with XMTP](account-signatures).
