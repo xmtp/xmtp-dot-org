@@ -24,39 +24,39 @@ For example, whether a user has their wallet app connected to Ethereum or an Eth
 
 Here are just some of the chains supported by XMTP:
 
-<img src={arbitrum} style={{width:"100px"}}/>
+<img src={arbitrum} style={{width:"100px"}} alt="Arbitrum logo"/>
 
 [Arbitrum](https://arbitrum.foundation/)
 
-<img src={avalanche} style={{width:"100px"}}/>
+<img src={avalanche} style={{width:"100px"}} alt="Avalanche logo"/>
 
 [Avalanche: Contract Chain (C-Chain)](https://www.avax.com/)
 
-<img src={base} style={{width:"100px"}}/>
+<img src={base} style={{width:"100px"}} alt="Base logo"/>
 
 [Base](https://base.org/) (Optimistic L2)
 
-<img src={bnbchain} style={{width:"100px"}}/>
+<img src={bnbchain} style={{width:"100px"}} alt="BNB Chain logo"/>
 
 [Build N Build (BNB) Chain](https://www.bnbchain.org/en)
 
-<img src={hermez} style={{width:"100px"}}/>
+<img src={hermez} style={{width:"100px"}} alt="Hermez logo"/>
 
 [Hermez](https://docs.hermez.io/Hermez_1.0/about/scalability/) zk-EVM
 
-<img src={linea} style={{width:"100px"}}/>
+<img src={linea} style={{width:"100px"}} alt="Linea logo"/>
 
 [Linea](https://linea.build/) zk-EVM
 
-<img src={optimism} style={{width:"100px"}}/>
+<img src={optimism} style={{width:"100px"}} alt="Optimism logo"/>
 
 [Optimism](https://www.optimism.io/)
 
-<img src={polygon} style={{width:"100px"}}/> 
+<img src={polygon} style={{width:"100px"}} alt="Polygon logo"/> 
 
 [Polygon](https://polygon.technology/)
 
-<img src={scroll} style={{width:"100px"}}/> 
+<img src={scroll} style={{width:"100px"}} alt="Scroll logo"/> 
 
 [Scroll](https://scroll.io/)
 
