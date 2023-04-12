@@ -2,15 +2,20 @@
 sidebar_label: Chain and wallet app support
 sidebar_position: 8
 ---
+import aptos from '/docs/dev-concepts/img/aptos-logo.png';
 import arbitrum from '/docs/dev-concepts/img/arbitrum-logo.png';
 import avalanche from '/docs/dev-concepts/img/avalanche-logo.png';
 import base from '/docs/dev-concepts/img/base-logo.png';
 import bnbchain from '/docs/dev-concepts/img/bnbchain-logo.png';
+import cosmos from '/docs/dev-concepts/img/cosmos-logo.png';
+import ethereum from '/docs/dev-concepts/img/ethereum-logo.png';
 import hermez from '/docs/dev-concepts/img/hermez-logo.png';
 import linea from '/docs/dev-concepts/img/linea-logo.png';
+import near from '/docs/dev-concepts/img/near-logo.png';
 import optimism from '/docs/dev-concepts/img/optimism-logo.png';
 import polygon from '/docs/dev-concepts/img/polygon-logo.png';
 import scroll from '/docs/dev-concepts/img/scroll-logo.png';
+import solana from '/docs/dev-concepts/img/solana-logo.png';
 
 # Chains and wallet apps supported by XMTP
 
@@ -23,6 +28,10 @@ XMTP works with externally owned accounts (EOAs) on Ethereum and Ethereum side-c
 For example, whether a user has their wallet app connected to Ethereum or an Ethereum side-chain or L2, their private key can generate and retrieve their XMTP key pair to give them access to XMTP.
 
 Here are just some of the chains supported by XMTP:
+
+<img src={aptos} style={{width:"100px"}} alt="Aptos logo"/>
+
+[Aptos](https://aptosfoundation.org/)
 
 <img src={arbitrum} style={{width:"100px"}} alt="Arbitrum logo"/>
 
@@ -38,7 +47,15 @@ Here are just some of the chains supported by XMTP:
 
 <img src={bnbchain} style={{width:"100px"}} alt="BNB Chain logo"/>
 
-[Build N Build (BNB) Chain](https://www.bnbchain.org/en)
+[Build N Build (BNB) Chain](https://www.bnbchain.org/)
+
+<img src={cosmos} style={{width:"100px"}} alt="Cosmos logo"/>
+
+[Cosmos](https://cosmos.network/)
+
+<img src={ethereum} style={{width:"100px"}} alt="Ethereum logo"/>
+
+[Ethereum](https://ethereum.org/)
 
 <img src={hermez} style={{width:"100px"}} alt="Hermez logo"/>
 
@@ -47,6 +64,10 @@ Here are just some of the chains supported by XMTP:
 <img src={linea} style={{width:"100px"}} alt="Linea logo"/>
 
 [Linea](https://linea.build/) zk-EVM
+
+<img src={near} style={{width:"100px"}} alt="Near logo"/>
+
+[Near](https://near.org/)
 
 <img src={optimism} style={{width:"100px"}} alt="Optimism logo"/>
 
@@ -59,6 +80,10 @@ Here are just some of the chains supported by XMTP:
 <img src={scroll} style={{width:"100px"}} alt="Scroll logo"/> 
 
 [Scroll](https://scroll.io/)
+
+<img src={solana} style={{width:"100px"}} alt="Solana logo"/> 
+
+[Solana](https://solana.com/)
 
 
 ## Wallet apps
