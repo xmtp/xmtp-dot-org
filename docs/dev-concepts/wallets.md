@@ -29,10 +29,6 @@ For example, whether a user has their wallet app connected to Ethereum or an Eth
 
 Here are just some of the chains supported by XMTP:
 
-<img src={aptos} style={{width:"100px"}} alt="Aptos logo"/>
-
-[Aptos](https://aptosfoundation.org/)
-
 <img src={arbitrum} style={{width:"100px"}} alt="Arbitrum logo"/>
 
 [Arbitrum](https://arbitrum.foundation/)
@@ -44,14 +40,6 @@ Here are just some of the chains supported by XMTP:
 <img src={base} style={{width:"100px"}} alt="Base logo"/>
 
 [Base](https://base.org/) (Optimistic L2)
-
-<img src={bnbchain} style={{width:"100px"}} alt="BNB Chain logo"/>
-
-[Build N Build (BNB) Chain](https://www.bnbchain.org/)
-
-<img src={cosmos} style={{width:"100px"}} alt="Cosmos logo"/>
-
-[Cosmos](https://cosmos.network/)
 
 <img src={ethereum} style={{width:"100px"}} alt="Ethereum logo"/>
 
@@ -65,10 +53,6 @@ Here are just some of the chains supported by XMTP:
 
 [Linea](https://linea.build/) zk-EVM
 
-<img src={near} style={{width:"100px"}} alt="Near logo"/>
-
-[Near](https://near.org/)
-
 <img src={optimism} style={{width:"100px"}} alt="Optimism logo"/>
 
 [Optimism](https://www.optimism.io/)
@@ -80,10 +64,6 @@ Here are just some of the chains supported by XMTP:
 <img src={scroll} style={{width:"100px"}} alt="Scroll logo"/> 
 
 [Scroll](https://scroll.io/)
-
-<img src={solana} style={{width:"100px"}} alt="Solana logo"/> 
-
-[Solana](https://solana.com/)
 
 
 ## Wallet apps
