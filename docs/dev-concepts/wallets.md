@@ -4,12 +4,13 @@ sidebar_position: 8
 ---
 import arbitrum from '/docs/dev-concepts/img/arbitrum-logo.png';
 import avalanche from '/docs/dev-concepts/img/avalanche-logo.png';
-import optimism from '/docs/dev-concepts/img/optimism-logo.png';
 import base from '/docs/dev-concepts/img/base-logo.png';
-import polygon from '/docs/dev-concepts/img/polygon-logo.png';
-import scroll from '/docs/dev-concepts/img/scroll-logo.png';
+import bnbchain from '/docs/dev-concepts/img/bnbchain-logo.png';
 import hermez from '/docs/dev-concepts/img/hermez-logo.png';
 import linea from '/docs/dev-concepts/img/linea-logo.png';
+import optimism from '/docs/dev-concepts/img/optimism-logo.png';
+import polygon from '/docs/dev-concepts/img/polygon-logo.png';
+import scroll from '/docs/dev-concepts/img/scroll-logo.png';
 
 # Chains and wallet apps supported by XMTP
 
@@ -25,7 +26,7 @@ Here are just some of the chains supported by XMTP:
 
 <img src={arbitrum} style={{width:"100px"}}/>
 
-[Arbitrum](https://arbitrum.foundation/) from OffChain Labs 
+[Arbitrum](https://arbitrum.foundation/)
 
 <img src={avalanche} style={{width:"100px"}}/>
 
@@ -33,15 +34,19 @@ Here are just some of the chains supported by XMTP:
 
 <img src={base} style={{width:"100px"}}/>
 
-[Base](https://base.org/) (Optimistic L2) from Coinbase
+[Base](https://base.org/) (Optimistic L2)
+
+<img src={bnbchain} style={{width:"100px"}}/>
+
+[Build N Build (BNB) Chain](https://www.bnbchain.org/en)
 
 <img src={hermez} style={{width:"100px"}}/>
 
-[Hermez](https://docs.hermez.io/Hermez_1.0/about/scalability/) zk-EVM from ConsenSys
+[Hermez](https://docs.hermez.io/Hermez_1.0/about/scalability/) zk-EVM
 
 <img src={linea} style={{width:"100px"}}/>
 
-[Linea](https://linea.build/) zk-EVM from ConsenSys
+[Linea](https://linea.build/) zk-EVM
 
 <img src={optimism} style={{width:"100px"}}/>
 
