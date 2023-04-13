@@ -32,4 +32,4 @@ So in the meantime, while we continue to build, we invite you to:
 
 * Read the [XMTP Litepaper](https://github.com/xmtp/litepaper)
 * Discuss it with us on [Twitter](https://twitter.com/xmtp_), [Discord](https://discord.gg/xmtp), and [GitHub Discussions](https://github.com/orgs/xmtp/discussions)
-* Check out the [XMTP docs](/docs/dev-concepts/introduction) to get started building
+* Check out the [XMTP docs](/docs/concepts/introduction) to get started building

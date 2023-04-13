@@ -53,7 +53,7 @@ By embedding conversation IDs within the encrypted payload and anonymizing walle
 
 “This important change protects users by preventing third parties from using public data to observe who is talking to whom in the network and mapping out a graph of conversations taking place over XMTP,” said Saul Carlin, Head of Product at XMTP Labs.
 
-You can go deep in [the supporting documentation](/docs/dev-concepts/architectural-overview#client-layer) for more technical details about the XMTP V2 negotiated topics that enable this improvement.
+You can go deep in [the supporting documentation](/docs/concepts/architectural-overview#client-layer) for more technical details about the XMTP V2 negotiated topics that enable this improvement.
 
 
 ## Improved developer transparency
@@ -73,7 +73,7 @@ We have published our [platform roadmap](/vision/roadmap) to give developers mor
 
 ### Deprecation date for pre-v7 versions of the SDK
 
-Update your app to use >=v7.0.0 of the X[MTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js) by Jan 8, 2023 to start exploring the new XMTP v2 use cases for your app. v7.0.0 clients are fully compatible with pre-v7.0.0 clients. Conversations established using XMTP v1 can continue as before. However, conversations using XMTP v2 will not be visible to pre-v7.0.0 clients. To learn more, see [Determining whether to use XMTP v2 or v1 topics](/docs/dev-concepts/architectural-overview#determining-whether-to-use-xmtp-v2-or-v1-topics).
+Update your app to use >=v7.0.0 of the X[MTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js) by Jan 8, 2023 to start exploring the new XMTP v2 use cases for your app. v7.0.0 clients are fully compatible with pre-v7.0.0 clients. Conversations established using XMTP v1 can continue as before. However, conversations using XMTP v2 will not be visible to pre-v7.0.0 clients. To learn more, see [Determining whether to use XMTP v2 or v1 topics](/docs/concepts/architectural-overview#determining-whether-to-use-xmtp-v2-or-v1-topics).
 
 To learn more about and discuss important deprecation details, see this [GitHub discussion](https://github.com/orgs/xmtp/discussions/17).
 
@@ -83,7 +83,7 @@ XMTP v2 came together after thousands of interactions with developers. It is inc
 
 Come build with XMTP at:
 
-- [XMTP documentation](/docs/dev-concepts/introduction)
+- [XMTP documentation](/docs/concepts/introduction)
 
 - GitHub repo: https://github.com/xmtp
 

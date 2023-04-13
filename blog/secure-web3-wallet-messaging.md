@@ -28,7 +28,7 @@ And while they really do seem like a magical-do-everything-Swiss-Army-knife ther
 
 Wallet apps already securely store the keys necessary for users to transact in web3, so they're a natural fit for where encrypted messaging between blockchain accounts could take place. The demand and discussion around "wallet-to-wallet chat" has increased dramatically in recent months, but with all the complexity that goes into communication protocols, encrypting messages, and the full scope of messaging needs. it's no surprise that it has taken a while for wallets to adopt the necessary functionality. Until now, that is.
 
-[XMTP](/docs/dev-concepts/introduction) takes all of the challenging messy bits of supporting messaging and makes it easy to add a variety of communications use cases, like chat, announcements, and notifications to wallet apps, dapps, etc.
+[XMTP](/docs/concepts/introduction) takes all of the challenging messy bits of supporting messaging and makes it easy to add a variety of communications use cases, like chat, announcements, and notifications to wallet apps, dapps, etc.
 
 
 ## Why do wallets need secure messaging?
@@ -39,7 +39,7 @@ It's hard to imagine an Internet before email, online communities before chat, o
 
 Wallets do make life super easy when it comes to signing into services by providing a "portable" identity, and not requiring a username and password. But what happens when that service or dapp wants to get back in touch with you? Maybe for something critically important. Well…you're probably out of luck.
 
-That's where XMTP comes in: the same wallets we use to transact and sign in can be used to send and receive messages. Messages in XMTP are encoded with an [open content format](/docs/dev-concepts/content-types), which opens the doors to many different presentation styles and use cases.
+That's where XMTP comes in: the same wallets we use to transact and sign in can be used to send and receive messages. Messages in XMTP are encoded with an [open content format](/docs/concepts/content-types), which opens the doors to many different presentation styles and use cases.
 
 All XMTP messages are end-to-end encrypted and are stored and delivered off-chain for scalability and to preserve privacy. They can be:
 
@@ -112,7 +112,7 @@ Altogether, XMTP gives wallet apps the means to provide a streamlined, consisten
 Here's a handful of helpful links to check out if you're keen to explore adding secure web3 messaging to your wallet app:
 
 * Come chat with the XMTP Labs team, and other developers building with XMTP in the project [Discord Server](https://discord.gg/xmtp)
-* Check out the [XMTP documentation](/docs/dev-concepts/introduction) for everything you need to get started
+* Check out the [XMTP documentation](/docs/concepts/introduction) for everything you need to get started
 * The [project's GitHub](https://github.com/xmtp) is home to the XMTP SDK, example chat app, and more…
 * Read the [XMTP Litepaper](https://github.com/xmtp/litepaper) to understand the motivation behind the project more deeply, as well as future plans
 * Follow [@xmtp_ on Twitter](https://twitter.com/xmtp_)

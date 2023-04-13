@@ -95,7 +95,7 @@ Apps will be able to leverage an example server to subscribe users for push noti
 
 ### Build JavaScript and React apps
 
-Developers are able to build apps in JavaScript and React with the [`xmtp-js` SDK](/docs/client-sdk/javascript/tutorials/quickstart).
+Developers are able to build apps in JavaScript and React with the [`xmtp-js` SDK](/docs/tutorials/quickstart).
 
 ### Build iOS apps in Swift
 
@@ -115,7 +115,7 @@ Developers can now group and filter conversations in a particular context using 
 
 Network clients responsible for relaying and storing messages can no longer observe the addresses of participants in ongoing conversations.
 
-_For more information about delivered features and fixes, see [XMTP releases and updates](/docs/dev-concepts/xmtp-releases)._
+_For more information about delivered features and fixes, see [XMTP releases and updates](/docs/concepts/xmtp-releases)._
 
 <!--
 ## Researching

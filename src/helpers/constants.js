@@ -3,7 +3,7 @@ export const HEADER_DATA = [
     title: 'Start messaging with XMTP',
     subtitle:
       'Use an app built with XMTP to start learning how to build one',
-    url: '/docs/client-sdk/javascript/tutorials/start-messaging',
+    url: '/docs/tutorials/start-messaging',
     icon: 'x-new.svg',
   },
   {
@@ -16,7 +16,7 @@ export const HEADER_DATA = [
     title: 'Build Lens DMs with XMTP',
     subtitle:
       'Build key XMTP chat features to provide DMs in a Lens app',
-    url: '/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app',
+    url: '/docs/tutorials/build-key-xmtp-chat-features-in-a-lens-app',
     icon: 'dms-icon.svg',
   },
 ]

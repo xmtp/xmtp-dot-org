@@ -38,14 +38,14 @@ const config = {
       'classic',
       {
         docs: {
-          path: 'docs/client-sdk/javascript',
+          path: 'docs/tutorials',
           id: 'default',
-          routeBasePath: 'docs/client-sdk/javascript',
+          routeBasePath: 'docs/tutorials',
           sidebarPath: require.resolve(
-            './sidebars/sidebars-client-sdk-javascript.js'
+            './sidebars/sidebars-tutorials.js'
           ),
-          showLastUpdateAuthor: true, // setting to false for now to resolve errors due to some new files not being tracked by git yet
-          showLastUpdateTime: true, // setting to false for now to resolve errors due to some new files not being tracked by git yet
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
         },
         blog: {
@@ -66,39 +66,19 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'swift',
-        path: 'docs/client-sdk/swift',
-        routeBasePath: 'docs/client-sdk/swift',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-swift.js'),
+        id: 'references',
+        path: 'docs/references',
+        routeBasePath: 'docs/references',
+        sidebarPath: require.resolve('./sidebars/sidebars-references.js'),
       },
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'dart',
-        path: 'docs/client-sdk/dart',
-        routeBasePath: 'docs/client-sdk/dart',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-dart.js'),
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'kotlin',
-        path: 'docs/client-sdk/kotlin',
-        routeBasePath: 'docs/client-sdk/kotlin',
-        sidebarPath: require.resolve(
-          './sidebars/sidebars-client-sdk-kotlin.js'
-        ),
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'dev-concepts',
-        path: 'docs/dev-concepts',
-        routeBasePath: '/docs/dev-concepts',
-        sidebarPath: require.resolve('./sidebars/sidebars.js'),
+        id: 'concepts',
+        path: 'docs/concepts',
+        routeBasePath: '/docs/concepts',
+        sidebarPath: require.resolve('./sidebars/sidebars-concepts.js'),
       },
     ],
     [
@@ -144,34 +124,22 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">JavaScript XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials and reference for building apps in JavaScript</div></div></div>`,
-              },
-              {
-                to: 'docs/client-sdk/kotlin/tutorials/quickstart',
+                to: 'docs/tutorials/quickstart',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/kotlin-icon.svg" alt="Kotlin icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Kotlin XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building Android apps in Kotlin</div></div></div>`,
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Tutorials</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn to build with XMTP</div></div></div>`,
               },
               {
-                to: 'docs/client-sdk/swift/tutorials/quickstart',
+                to: 'docs/references/javascript/classes/Client',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/swift-icon.svg" alt="Swift icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Swift XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building iOS apps in Swift</div></div></div>`,
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">SDK references</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">View xmtp-js, xmtp-flutter, and xmtp-ios SDK referencecs</div></div></div>`,
               },
               {
-                to: 'docs/client-sdk/dart/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/dart-icon.svg" alt="Dart icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dart XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building Flutter apps in Dart</div></div></div>`,
-              },
-              {
-                to: 'docs/dev-concepts/introduction',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/development-icon.svg" alt="Development concepts icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Development concepts</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about XMTP architecture, security, FAQ, and more</div></div></div>`,
+                to: 'docs/concepts/introduction',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Concepts</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Read about FAQ, architecture, key generation, encryption, and more</div></div></div>`,
               },
             ],
           },
@@ -232,7 +200,7 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'docs/dev-concepts/start-building',
+            to: 'docs/tutorials/start-building',
             position: 'right',
             label: '⚡️ Start building ⚡️',
             className: 'start-building_link',
@@ -249,80 +217,89 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Client SDKs',
+            title: 'Tutorials',
             items: [
               {
                 label: `JavaScript`,
-                to: `/docs/client-sdk/javascript/concepts/intro-to-sdk`,
-              },
-              {
-                label: `Kotlin`,
-                to: `/docs/client-sdk/kotlin/tutorials/quickstart`,
+                to: `/docs/references/javascript/classes/Client`,
               },
               {
                 label: `Swift`,
-                to: `/docs/client-sdk/swift/tutorials/quickstart`,
+                to: `/docs/references/swift/overview`,
               },
               {
                 label: `Dart`,
-                to: `/docs/client-sdk/dart/tutorials/quickstart`,
+                to: `/docs/references/dart/overview`,
               },
             ],
           },
           {
-            title: 'Development concepts',
+            title: 'SDK references',
+            items: [
+              {
+                label: `JavaScript`,
+                to: `/docs/references/javascript/classes/Client`,
+              },
+              {
+                label: `Swift`,
+                to: `/docs/references/swift/overview`,
+              },
+              {
+                label: `Dart`,
+                to: `/docs/references/dart/overview`,
+              },
+            ],
+          },
+          {
+            title: 'Concepts',
             items: [
               {
                 label: `Intro to XMTP`,
-                to: `/docs/dev-concepts/introduction`,
-              },
-              {
-                label: `Start building`,
-                to: `/docs/dev-concepts/start-building`,
+                to: `/docs/concepts/introduction`,
               },
               {
                 label: `Architectural overview`,
-                to: `/docs/dev-concepts/architectural-overview`,
+                to: `/docs/concepts/architectural-overview`,
               },
               {
                 label: `FAQ`,
-                to: `/docs/dev-concepts/faq`,
+                to: `/docs/concepts/faq`,
               },
               {
                 label: `Interoperable inbox`,
-                to: `/docs/dev-concepts/interoperable-inbox`,
+                to: `/docs/concepts/interoperable-inbox`,
               },
               {
                 label: `Content types`,
-                to: `/docs/dev-concepts/content-types`,
+                to: `/docs/concepts/content-types`,
               },
               {
                 label: `Key generation and usage`,
-                to: `/docs/dev-concepts/key-generation-and-usage`,
+                to: `/docs/concepts/key-generation-and-usage`,
               },
               {
                 label: `Invitation and message encryption`,
-                to: `/docs/dev-concepts/invitation-and-message-encryption`,
+                to: `/docs/concepts/invitation-and-message-encryption`,
               },
               {
                 label: `Wallet app and chain support`,
-                to: `/docs/dev-concepts/wallets`,
+                to: `/docs/concepts/wallets`,
               },
               {
                 label: `Account signatures`,
-                to: `/docs/dev-concepts/account-signatures`,
+                to: `/docs/concepts/account-signatures`,
               },
               {
                 label: `Contribute to XMTP`,
-                to: `/docs/dev-concepts/contributing`,
+                to: `/docs/concepts/contributing`,
               },
               {
                 label: `Releases`,
-                to: `/docs/dev-concepts/xmtp-releases`,
+                to: `/docs/concepts/xmtp-releases`,
               },
               {
                 label: `XMTP Improvement Proposals`,
-                to: `/docs/dev-concepts/xips`,
+                to: `/docs/concepts/xips`,
               },
             ],
           },
@@ -364,11 +341,11 @@ const config = {
               },
               {
                 label: 'Contribute to XMTP',
-                to: '/docs/dev-concepts/contributing',
+                to: '/docs/concepts/contributing',
               },
               {
                 label: 'XMTP Improvement Proposals',
-                to: '/docs/dev-concepts/xips',
+                to: '/docs/concepts/xips',
               },
               {
                 label: 'XMTP code of conduct',

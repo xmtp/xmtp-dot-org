@@ -8,7 +8,7 @@ const sdkcards = [
     title: 'JavaScript client SDK',
     description: 'A TypeScript implementation of an XMTP client for use with JavaScript and React apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-js' },
-    secondLink: { name: 'Docs', link: 'docs/client-sdk/javascript/tutorials/quickstart' },
+    secondLink: { name: 'Docs', link: 'docs/tutorials/quickstart' },
     logo: 'img/js.svg',
     theme: 'sunrise',
   },

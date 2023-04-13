@@ -15,7 +15,7 @@ tags:
 
 Today XMTP reaches a big milestone in our journey to build protocol for secure web3 messaging:
 
-**[Lens Protocol](https://lens.xyz/) has adopted [XMTP](/docs/dev-concepts/introduction) to provide a secure and private direct messaging layer for the entire Lens ecosystem.**
+**[Lens Protocol](https://lens.xyz/) has adopted [XMTP](/docs/concepts/introduction) to provide a secure and private direct messaging layer for the entire Lens ecosystem.**
 
 ![](./media/BLOG-LensAnnounce.png)
 
