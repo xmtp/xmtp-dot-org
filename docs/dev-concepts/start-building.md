@@ -99,11 +99,9 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 Ask questions and learn with others building with XMTP. Join the community on the platform that works best for you:
 
-- GitHub Discussions: [Join the discussion](https://github.com/orgs/xmtp/discussions)
-
 - Discord: [Chat with other builders](https://discord.gg/xmtp)
-
 - Twitter: [Follow @XMTP_](https://twitter.com/xmtp_)
+- GitHub Discussions: [Join the discussion](https://github.com/orgs/xmtp/discussions)
 
 
 ## Development best practices
@@ -140,9 +138,7 @@ Consider following these UX best practices.
   <img src={noxmtpidentity} style={{width:"450px"}}/>
     
 - Consider how your app performs against these performance benchmarks:
-    - Time to load conversation list: 8-15ms to decrypt invites per conversation.
-    
-      For users with large numbers of conversations, loading conversations in real-time can be a very expensive operation. You can [use a persistent conversation cache](/docs/client-sdk/javascript/tutorials/use-a-persistent-conversation-cache) to improve load time. 
+    - Time to load conversation list: 8-15ms to decrypt invites per conversation
     - Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
     - Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
 - Resolve popular namespaces such as ENS, .lens, cb id, and so forth. For example, here is ENS name resolution in [xmtp.chat](https://xmtp.chat/). To achieve this functionality, consider using the [Everyname](https://www.everyname.xyz/) resolution service.
