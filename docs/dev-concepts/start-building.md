@@ -194,6 +194,8 @@ Consider following these UX best practices.
     
     For Android apps, see [Enable the example app to send push notifications](https://github.com/xmtp/xmtp-android/blob/main/library/src/main/java/org/xmtp/android/library/push/README.md).
     
+    For iOS apps, see the `xmtp-ios` [example notification service](https://github.com/xmtp/xmtp-ios/tree/main/XMTPiOSExample) and [Handle push notifications](https://xmtp.org/docs/client-sdk/swift/tutorials/handle-push-notifications).
+
 - If you provide push notifications, provide a separate setting for enabling and disabling direct message push notifications. For example, if you’re building a Lens app, provide a setting for XMTP push notifications that’s separate from Lens push notifications for posts, comments, likes, and so forth. For example, here are push notification settings in the Orb app:
 
   <img src={pushnotifsettings} style={{width:"400px"}}/>
