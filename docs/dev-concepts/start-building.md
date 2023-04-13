@@ -14,6 +14,7 @@ import pushnotifsdecrypted from '/docs/dev-concepts/img/push-notifs-decrypted.jp
 import badgingorb from '/docs/dev-concepts/img/badging-orb.jpg';
 import unreadbadge from '/docs/dev-concepts/img/unread-badge.png';
 import conversationlabels from '/docs/dev-concepts/img/conversation-labels.png';
+import onboardingbot from '/docs/dev-concepts/img/onboarding-bot.png';
 
 # Start building with XMTP
 
@@ -90,9 +91,19 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 6. **You probably have some great questions by now! Check out these resources:**
 
     - [FAQ](faq)
-    - [Join and learn with the XMTP community](/community)
-    - [Blog](/blog)
     - [Roadmap](/vision/roadmap)
+    - [Blog](/blog)
+
+
+## Join the XMTP community
+
+Ask questions and learn with others building with XMTP. Join the community on the platform that works best for you:
+
+- GitHub Discussions: [Join the discussion](https://github.com/orgs/xmtp/discussions)
+
+- Discord: [Chat with other builders](https://discord.gg/xmtp)
+
+- Twitter: [Follow @XMTP_](https://twitter.com/xmtp_)
 
 
 ## Development best practices
@@ -149,6 +160,9 @@ Consider following these UX best practices.
     
 - In your app onboarding flow, request user permission to display app-specific push notifications to reach users outside of an app session.
 
+- Create your own message bot, such as `gm.yourappname.eth`, to provide a friendly app onboarding experience. For example, when a user sends a message to `gm.xmtp.eth`, a message bot built with [ChainJet](https://chainjet.io/) sends an automatic reply. You can configure your bot to provide onboarding information or an easy way for a user to send and receive their first messages with your app.
+
+  <img src={onboardingbot} style={{width:"600px"}}/>
 
 ### Conversations
 
