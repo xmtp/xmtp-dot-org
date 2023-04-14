@@ -27,7 +27,15 @@ XMTP works with externally owned accounts (EOAs) on Ethereum and Ethereum side-c
 
 For example, whether a user has their wallet app connected to Ethereum or an Ethereum side-chain or L2, their private key can generate and retrieve their XMTP key pair to give them access to XMTP.
 
-Here are just some of the chains supported by XMTP:
+Here are just a few of the chains supported by XMTP:
+
+:::tip
+
+XMTP is compatible with all EVM chains so this list isn't exhaustive. 
+
+In addition, XMTP is chain-agnostic so multi-chain support is possible. Want to propose a path to compatibility for other popular chains such as Bitcoin, Solana, or Tezos? Do it via an [XMTP grant](/grants)!
+
+:::
 
 <img src={arbitrum} style={{width:"100px"}} alt="Arbitrum logo"/>
 
@@ -40,6 +48,10 @@ Here are just some of the chains supported by XMTP:
 <img src={base} style={{width:"100px"}} alt="Base logo"/>
 
 [Base](https://base.org/) (Optimistic L2)
+
+<img src={bnbchain} style={{width:"100px"}}/>
+
+[Build N Build (BNB) Chain](https://www.bnbchain.org/)
 
 <img src={ethereum} style={{width:"100px"}} alt="Ethereum logo"/>
 
