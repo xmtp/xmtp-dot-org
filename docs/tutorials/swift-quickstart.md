@@ -1,6 +1,6 @@
 ---
 sidebar_label: Quickstart for Swift
-sidebar_position: 13
+sidebar_position: 5
 toc_max_heading_level: 4
 description: "xmtp-ios provides a Swift implementation of an XMTP message API client for use with iOS apps."
 ---

@@ -124,22 +124,22 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/kotlin-icon.svg" alt="Kotlin icon" /></div>
+                to: 'docs/tutorials/start-building',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/quickstart-icon.svg" alt="Kotlin icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Tutorials</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn to build with XMTP</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Build with XMTP</div></div></div>`,
               },
               {
                 to: 'docs/references/javascript/classes/Client',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/swift-icon.svg" alt="Swift icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="Swift icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">SDK references</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">View xmtp-js, xmtp-flutter, and xmtp-ios SDK referencecs</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">xmtp-js, xmtp-flutter, and xmtp-ios SDK references</div></div></div>`,
               },
               {
                 to: 'docs/concepts/introduction',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="JavaScript icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Concepts</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Read about FAQ, architecture, key generation, encryption, and more</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">FAQ, architecture, keys, encryption, and more</div></div></div>`,
               },
             ],
           },

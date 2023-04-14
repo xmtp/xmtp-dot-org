@@ -1,6 +1,6 @@
 ---
 sidebar_label: Label conversations
-sidebar_position: 9
+sidebar_position: 11
 ---
 
 # Use labels to differentiate multiple conversations between a pair of addresses
