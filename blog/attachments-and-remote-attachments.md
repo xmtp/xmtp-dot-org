@@ -1,7 +1,7 @@
 ---
 slug: attachments-and-remote-attachments
 hide_table_of_contents: true
-title: "Some new content types"
+title: "Introducing remote media attachments"
 date: 2023-03-06
 authors: eng
 image: "https://user-images.githubusercontent.com/483/222857433-99b2b492-d316-4cd1-a38d-660247a7ca49.png"

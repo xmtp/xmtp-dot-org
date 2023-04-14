@@ -11,6 +11,7 @@
 
 - [`CompositeCodec`](../classes/CompositeCodec.md)
 - [`TextCodec`](../classes/TextCodec.md)
+- [`TypingNotificationCodec`](../classes/TypingNotificationCodec.md)
 
 ## Properties
 
@@ -20,7 +21,7 @@
 
 #### Defined in
 
-[MessageContent.ts:45](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/MessageContent.ts#L45)
+[MessageContent.ts:45](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L45)
 
 ## Methods
 
@@ -41,7 +42,7 @@
 
 #### Defined in
 
-[MessageContent.ts:47](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/MessageContent.ts#L47)
+[MessageContent.ts:47](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L47)
 
 ___
 
@@ -62,4 +63,4 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:46](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/MessageContent.ts#L46)
+[MessageContent.ts:46](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L46)

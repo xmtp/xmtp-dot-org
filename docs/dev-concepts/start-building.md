@@ -14,6 +14,7 @@ import pushnotifsdecrypted from '/docs/dev-concepts/img/push-notifs-decrypted.jp
 import badgingorb from '/docs/dev-concepts/img/badging-orb.jpg';
 import unreadbadge from '/docs/dev-concepts/img/unread-badge.png';
 import conversationlabels from '/docs/dev-concepts/img/conversation-labels.png';
+import onboardingbot from '/docs/dev-concepts/img/onboarding-bot.png';
 
 # Start building with XMTP
 
@@ -90,9 +91,17 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 6. **You probably have some great questions by now! Check out these resources:**
 
     - [FAQ](faq)
-    - [Join and learn with the XMTP community](/community)
-    - [Blog](/blog)
     - [Roadmap](/vision/roadmap)
+    - [Blog](/blog)
+
+
+## Join the XMTP community
+
+Ask questions and learn with others building with XMTP. Join the community on the platform that works best for you:
+
+- Discord: [Chat with other builders](https://discord.gg/xmtp)
+- Twitter: [Follow @XMTP_](https://twitter.com/xmtp_)
+- GitHub Discussions: [Join the discussion](https://github.com/orgs/xmtp/discussions)
 
 
 ## Development best practices
@@ -129,9 +138,7 @@ Consider following these UX best practices.
   <img src={noxmtpidentity} style={{width:"450px"}}/>
     
 - Consider how your app performs against these performance benchmarks:
-    - Time to load conversation list: 8-15ms to decrypt invites per conversation.
-    
-      For users with large numbers of conversations, loading conversations in real-time can be a very expensive operation. You can [use a persistent conversation cache](/docs/client-sdk/javascript/tutorials/use-a-persistent-conversation-cache) to improve load time. 
+    - Time to load conversation list: 8-15ms to decrypt invites per conversation
     - Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
     - Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
 - Resolve popular namespaces such as ENS, .lens, cb id, and so forth. For example, here is ENS name resolution in [xmtp.chat](https://xmtp.chat/). To achieve this functionality, consider using the [Everyname](https://www.everyname.xyz/) resolution service.
@@ -149,6 +156,9 @@ Consider following these UX best practices.
     
 - In your app onboarding flow, request user permission to display app-specific push notifications to reach users outside of an app session.
 
+- Create your own message bot, such as `gm.yourappname.eth`, to provide a friendly app onboarding experience. For example, when a user sends a message to `gm.xmtp.eth`, a message bot built with [ChainJet](https://chainjet.io/) sends an automatic reply. You can configure your bot to provide onboarding information or an easy way for a user to send and receive their first messages with your app.
+
+  <img src={onboardingbot} style={{width:"600px"}}/>
 
 ### Conversations
 
@@ -180,6 +190,8 @@ Consider following these UX best practices.
     
     For Android apps, see [Enable the example app to send push notifications](https://github.com/xmtp/xmtp-android/blob/main/library/src/main/java/org/xmtp/android/library/push/README.md).
     
+    For iOS apps, see the `xmtp-ios` [example notification service](https://github.com/xmtp/xmtp-ios/tree/main/XMTPiOSExample) and [Handle push notifications](https://xmtp.org/docs/client-sdk/swift/tutorials/handle-push-notifications).
+
 - If you provide push notifications, provide a separate setting for enabling and disabling direct message push notifications. For example, if you’re building a Lens app, provide a setting for XMTP push notifications that’s separate from Lens push notifications for posts, comments, likes, and so forth. For example, here are push notification settings in the Orb app:
 
   <img src={pushnotifsettings} style={{width:"400px"}}/>

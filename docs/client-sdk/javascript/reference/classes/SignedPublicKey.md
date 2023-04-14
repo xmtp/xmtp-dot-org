@@ -1,27 +1,27 @@
 <!---->
-# Class: PublicKey
+# Class: SignedPublicKey
 
 ## Hierarchy
 
 - `UnsignedPublicKey`
 
-  ↳ **`PublicKey`**
+  ↳ **`SignedPublicKey`**
 
 ## Implements
 
-- `PublicKey`
+- `SignedPublicKey`
 
 ## Constructors
 
 ### constructor
 
-**new PublicKey**(`obj`)
+**new SignedPublicKey**(`obj`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `obj` | `PublicKey` |
+| `obj` | `SignedPublicKey` |
 
 #### Overrides
 
@@ -29,7 +29,7 @@ UnsignedPublicKey.constructor
 
 #### Defined in
 
-[crypto/PublicKey.ts:423](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L423)
+[crypto/PublicKey.ts:125](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L125)
 
 ## Properties
 
@@ -47,13 +47,23 @@ UnsignedPublicKey.createdNs
 
 ___
 
-### secp256k1Uncompressed
+### keyBytes
 
- **secp256k1Uncompressed**: `secp256k1Uncompressed`
+ **keyBytes**: `Uint8Array`
 
 #### Implementation of
 
-publicKey.PublicKey.secp256k1Uncompressed
+publicKey.SignedPublicKey.keyBytes
+
+#### Defined in
+
+[crypto/PublicKey.ts:122](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L122)
+
+___
+
+### secp256k1Uncompressed
+
+ **secp256k1Uncompressed**: `secp256k1Uncompressed`
 
 #### Inherited from
 
@@ -67,15 +77,15 @@ ___
 
 ### signature
 
- `Optional` **signature**: [`Signature`](Signature.md)
+ **signature**: [`Signature`](Signature.md)
 
 #### Implementation of
 
-publicKey.PublicKey.signature
+publicKey.SignedPublicKey.signature
 
 #### Defined in
 
-[crypto/PublicKey.ts:421](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L421)
+[crypto/PublicKey.ts:123](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L123)
 
 ## Accessors
 
@@ -87,17 +97,27 @@ publicKey.PublicKey.signature
 
 `Long`
 
-#### Implementation of
-
-publicKey.PublicKey.timestamp
-
-#### Overrides
+#### Inherited from
 
 UnsignedPublicKey.timestamp
 
 #### Defined in
 
-[crypto/PublicKey.ts:433](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L433)
+[crypto/PublicKey.ts:66](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L66)
+
+___
+
+### unsignedKey
+
+`get` **unsignedKey**(): `UnsignedPublicKey`
+
+#### Returns
+
+`UnsignedPublicKey`
+
+#### Defined in
+
+[crypto/PublicKey.ts:138](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L138)
 
 ## Methods
 
@@ -111,7 +131,7 @@ UnsignedPublicKey.timestamp
 
 #### Defined in
 
-[crypto/PublicKey.ts:437](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L437)
+[crypto/PublicKey.ts:173](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L173)
 
 ___
 
@@ -123,19 +143,19 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`PublicKey`](PublicKey.md) |
+| `other` | [`SignedPublicKey`](SignedPublicKey.md) |
 
 #### Returns
 
 `boolean`
 
-#### Inherited from
+#### Overrides
 
 UnsignedPublicKey.equals
 
 #### Defined in
 
-[crypto/PublicKey.ts:94](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L94)
+[crypto/PublicKey.ts:165](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L165)
 
 ___
 
@@ -193,23 +213,17 @@ UnsignedPublicKey.isFromLegacyKey
 
 ___
 
-### signWithWallet
+### signerKey
 
-**signWithWallet**(`wallet`): `Promise`<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `wallet` | [`Signer`](../interfaces/Signer.md) |
+**signerKey**(): `Promise`<`undefined` \| `UnsignedPublicKey`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<`undefined` \| `UnsignedPublicKey`\>
 
 #### Defined in
 
-[crypto/PublicKey.ts:445](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L445)
+[crypto/PublicKey.ts:146](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L146)
 
 ___
 
@@ -227,7 +241,21 @@ UnsignedPublicKey.toBytes
 
 #### Defined in
 
-[crypto/PublicKey.ts:480](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L480)
+[crypto/PublicKey.ts:178](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L178)
+
+___
+
+### toLegacyKey
+
+**toLegacyKey**(): [`PublicKey`](PublicKey.md)
+
+#### Returns
+
+[`PublicKey`](PublicKey.md)
+
+#### Defined in
+
+[crypto/PublicKey.ts:187](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L187)
 
 ___
 
@@ -282,21 +310,21 @@ ___
 
 ### walletSignatureAddress
 
-**walletSignatureAddress**(): `string`
+**walletSignatureAddress**(): `Promise`<`string`\>
 
 #### Returns
 
-`string`
+`Promise`<`string`\>
 
 #### Defined in
 
-[crypto/PublicKey.ts:466](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L466)
+[crypto/PublicKey.ts:153](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L153)
 
 ___
 
 ### fromBytes
 
-`Static` **fromBytes**(`bytes`): [`PublicKey`](PublicKey.md)
+`Static` **fromBytes**(`bytes`): [`SignedPublicKey`](SignedPublicKey.md)
 
 #### Parameters
 
@@ -306,7 +334,7 @@ ___
 
 #### Returns
 
-[`PublicKey`](PublicKey.md)
+[`SignedPublicKey`](SignedPublicKey.md)
 
 #### Overrides
 
@@ -314,4 +342,25 @@ UnsignedPublicKey.fromBytes
 
 #### Defined in
 
-[crypto/PublicKey.ts:484](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L484)
+[crypto/PublicKey.ts:183](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L183)
+
+___
+
+### fromLegacyKey
+
+`Static` **fromLegacyKey**(`legacyKey`, `signedByWallet?`): [`SignedPublicKey`](SignedPublicKey.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `legacyKey` | [`PublicKey`](PublicKey.md) |
+| `signedByWallet?` | `boolean` |
+
+#### Returns
+
+[`SignedPublicKey`](SignedPublicKey.md)
+
+#### Defined in
+
+[crypto/PublicKey.ts:204](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L204)

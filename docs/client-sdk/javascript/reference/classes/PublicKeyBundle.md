@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:59](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L59)
+[crypto/PublicKeyBundle.ts:100](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKeyBundle.ts#L100)
 
 ## Properties
 
@@ -33,7 +33,7 @@ publicKey.PublicKeyBundle.identityKey
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:56](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L56)
+[crypto/PublicKeyBundle.ts:97](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKeyBundle.ts#L97)
 
 ___
 
@@ -47,7 +47,7 @@ publicKey.PublicKeyBundle.preKey
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:57](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L57)
+[crypto/PublicKeyBundle.ts:98](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKeyBundle.ts#L98)
 
 ## Methods
 
@@ -67,7 +67,7 @@ publicKey.PublicKeyBundle.preKey
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:70](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L70)
+[crypto/PublicKeyBundle.ts:111](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKeyBundle.ts#L111)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:81](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L81)
+[crypto/PublicKeyBundle.ts:122](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKeyBundle.ts#L122)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:77](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L77)
+[crypto/PublicKeyBundle.ts:118](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKeyBundle.ts#L118)
 
 ___
 
@@ -115,4 +115,4 @@ ___
 
 #### Defined in
 
-[crypto/PublicKeyBundle.ts:85](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PublicKeyBundle.ts#L85)
+[crypto/PublicKeyBundle.ts:126](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKeyBundle.ts#L126)
