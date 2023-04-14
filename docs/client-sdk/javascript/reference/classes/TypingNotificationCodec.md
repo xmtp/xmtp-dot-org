@@ -1,15 +1,15 @@
 <!---->
-# Class: TextCodec
+# Class: TypingNotificationCodec
 
 ## Implements
 
-- [`ContentCodec`](../interfaces/ContentCodec.md)<`string`\>
+- [`ContentCodec`](../interfaces/ContentCodec.md)<[`TypingNotification`](../modules.md#typingnotification)\>
 
 ## Constructors
 
 ### constructor
 
-**new TextCodec**()
+**new TypingNotificationCodec**()
 
 ## Accessors
 
@@ -27,13 +27,13 @@
 
 #### Defined in
 
-[codecs/Text.ts:18](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Text.ts#L18)
+[codecs/TypingNotification.ts:23](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/TypingNotification.ts#L23)
 
 ## Methods
 
 ### decode
 
-**decode**(`content`): `string`
+**decode**(`content`): [`TypingNotification`](../modules.md#typingnotification)
 
 #### Parameters
 
@@ -43,7 +43,7 @@
 
 #### Returns
 
-`string`
+[`TypingNotification`](../modules.md#typingnotification)
 
 #### Implementation of
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[codecs/Text.ts:30](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Text.ts#L30)
+[codecs/TypingNotification.ts:39](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/TypingNotification.ts#L39)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `content` | `string` |
+| `content` | [`TypingNotification`](../modules.md#typingnotification) |
 
 #### Returns
 
@@ -75,4 +75,4 @@ ___
 
 #### Defined in
 
-[codecs/Text.ts:22](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Text.ts#L22)
+[codecs/TypingNotification.ts:27](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/TypingNotification.ts#L27)

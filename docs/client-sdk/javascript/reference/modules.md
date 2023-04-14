@@ -7,14 +7,14 @@ sidebar_position: 3
 
 ### ClientOptions
 
- **ClientOptions**: `NetworkOptions` & `KeyStoreOptions` & `ContentOptions` & `LegacyOptions`
+ **ClientOptions**: `Flatten`<[`NetworkOptions`](modules.md#networkoptions) & [`KeyStoreOptions`](modules.md#keystoreoptions) & [`ContentOptions`](modules.md#contentoptions) & [`LegacyOptions`](modules.md#legacyoptions) & `PreEventCallbackOptions`\>
 
 Aggregate type for client options. Optional properties are used when the default value is calculated on invocation, and are computed
 as needed by each function. All other defaults are specified in defaultOptions.
 
 #### Defined in
 
-[Client.ts:110](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L110)
+[Client.ts:168](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L168)
 
 ___
 
@@ -24,17 +24,58 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:24](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/codecs/Composite.ts#L24)
+[codecs/Composite.ts:24](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Composite.ts#L24)
 
 ___
 
-### Conversation
+### ContentOptions
 
- **Conversation**: `ConversationV1` \| `ConversationV2`
+ **ContentOptions**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `codecs` | [`ContentCodec`](interfaces/ContentCodec.md)<`any`\>[] | Allow configuring codecs for additional content types |
+| `maxContentSize` | `number` | Set the maximum content size in bytes that is allowed by the Client. Currently only checked when decompressing compressed content. |
 
 #### Defined in
 
-[conversations/Conversation.ts:352](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversation.ts#L352)
+[Client.ts:109](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L109)
+
+___
+
+### KeyStoreOptions
+
+ **KeyStoreOptions**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `keystoreProviders` | [`KeystoreProvider`](interfaces/KeystoreProvider.md)[] | Provide an array of KeystoreProviders. The client will attempt to use each one in sequence until one successfully returns a Keystore instance |
+| `persistConversations` | `boolean` | Enable the Keystore to persist conversations in the provided storage interface |
+| `privateKeyOverride?` | `Uint8Array` | Provide a XMTP PrivateKeyBundle encoded as a Uint8Array. A bundle can be retried using `Client.getKeys(...)` |
+
+#### Defined in
+
+[Client.ts:123](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L123)
+
+___
+
+### LegacyOptions
+
+ **LegacyOptions**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `publishLegacyContact?` | `boolean` |
+
+#### Defined in
+
+[Client.ts:141](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L141)
 
 ___
 
@@ -54,7 +95,7 @@ ___
 
 #### Defined in
 
-[Client.ts:45](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L45)
+[Client.ts:40](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L40)
 
 ___
 
@@ -64,7 +105,28 @@ ___
 
 #### Defined in
 
-[Message.ts:245](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L245)
+[Message.ts:229](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Message.ts#L229)
+
+___
+
+### NetworkOptions
+
+ **NetworkOptions**: `Object`
+
+Network startup options
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `apiUrl` | `string` \| `undefined` | apiUrl can be used to override the `env` flag and connect to a specific endpoint |
+| `appVersion?` | `string` | identifier that's included with API requests. For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`. Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
+| `env` | `XmtpEnv` | Specify which XMTP environment to connect to. (default: `dev`) |
+| `skipContactPublishing` | `boolean` | Skip publishing the user's contact bundle as part of Client startup. This flag should be used with caution, as we rely on contact publishing to let other users know your public key and periodically run migrations on this data with new SDK versions. Your application should have this flag set to `false` at least _some_ of the time. The most common use-case for setting this to `true` is cases where the Client instance is very short-lived. For example, spinning up a Client to decrypt a push notification. |
+
+#### Defined in
+
+[Client.ts:71](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L71)
 
 ___
 
@@ -74,7 +136,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKeyBundle.ts:232](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/crypto/PrivateKeyBundle.ts#L232)
+[crypto/PrivateKeyBundle.ts:414](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKeyBundle.ts#L414)
 
 ___
 
@@ -86,16 +148,63 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `compression?` | `xmtpEnvelope.Compression` |
+| `compression?` | `proto.Compression` |
 | `contentFallback?` | `string` |
 | `contentType?` | [`ContentTypeId`](classes/ContentTypeId.md) |
+| `ephemeral?` | `boolean` |
 | `timestamp?` | `Date` |
 
 #### Defined in
 
-[Client.ts:67](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L67)
+[Client.ts:57](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L57)
+
+___
+
+### TopicData
+
+ **TopicData**: `WithoutUndefined`<`keystore.TopicMap_TopicData`\>
+
+#### Defined in
+
+[keystore/interfaces.ts:71](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/interfaces.ts#L71)
+
+___
+
+### TypingNotification
+
+ **TypingNotification**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `isFinished` | `boolean` |
+| `timestamp` | `Date` |
+| `typerAddress` | `string` |
+
+#### Defined in
+
+[codecs/TypingNotification.ts:13](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/TypingNotification.ts#L13)
 
 ## Variables
+
+### ApiUrls
+
+ `Const` **ApiUrls**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `dev` | ``"https://dev.xmtp.network"`` |
+| `local` | ``"http://localhost:5555"`` |
+| `production` | ``"https://production.xmtp.network"`` |
+
+#### Defined in
+
+[ApiClient.ts:17](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/ApiClient.ts#L17)
+
+___
 
 ### Compression
 
@@ -103,7 +212,7 @@ ___
 
 #### Defined in
 
-[Client.ts:29](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Client.ts#L29)
+[Client.ts:30](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L30)
 
 ___
 
@@ -113,7 +222,7 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:15](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/codecs/Composite.ts#L15)
+[codecs/Composite.ts:15](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Composite.ts#L15)
 
 ___
 
@@ -123,7 +232,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:56](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/MessageContent.ts#L56)
+[MessageContent.ts:56](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L56)
 
 ___
 
@@ -133,7 +242,17 @@ ___
 
 #### Defined in
 
-[codecs/Text.ts:6](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/codecs/Text.ts#L6)
+[codecs/Text.ts:6](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Text.ts#L6)
+
+___
+
+### ContentTypeTypingNotification
+
+ `Const` **ContentTypeTypingNotification**: [`ContentTypeId`](classes/ContentTypeId.md)
+
+#### Defined in
+
+[codecs/TypingNotification.ts:6](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/TypingNotification.ts#L6)
 
 ___
 
@@ -143,9 +262,50 @@ ___
 
 #### Defined in
 
-[ApiClient.ts:7](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/ApiClient.ts#L7)
+[ApiClient.ts:9](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/ApiClient.ts#L9)
 
 ## Functions
+
+### buildDirectMessageTopic
+
+**buildDirectMessageTopic**(`sender`, `recipient`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sender` | `string` |
+| `recipient` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[utils/topic.ts:6](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/topic.ts#L6)
+
+___
+
+### buildDirectMessageTopicV2
+
+**buildDirectMessageTopicV2**(`randomString`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `randomString` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[utils/topic.ts:16](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/topic.ts#L16)
+
+___
 
 ### dateToNs
 
@@ -163,7 +323,72 @@ ___
 
 #### Defined in
 
-[utils.ts:110](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/utils.ts#L110)
+[utils/date.ts:3](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/date.ts#L3)
+
+___
+
+### decodeContent
+
+**decodeContent**(`contentBytes`, `client`): `Promise`<{ `content`: `any` ; `contentType`: [`ContentTypeId`](classes/ContentTypeId.md) ; `error`: `undefined` \| `Error`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `contentBytes` | `Uint8Array` |
+| `client` | [`Client`](classes/Client.md) |
+
+#### Returns
+
+`Promise`<{ `content`: `any` ; `contentType`: [`ContentTypeId`](classes/ContentTypeId.md) ; `error`: `undefined` \| `Error`  }\>
+
+#### Defined in
+
+[Message.ts:373](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Message.ts#L373)
+
+___
+
+### decrypt
+
+**decrypt**(`encrypted`, `secret`, `additionalData?`): `Promise`<`Uint8Array`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `encrypted` | `Ciphertext` \| [`Ciphertext`](classes/Ciphertext.md) |
+| `secret` | `Uint8Array` |
+| `additionalData?` | `Uint8Array` |
+
+#### Returns
+
+`Promise`<`Uint8Array`\>
+
+#### Defined in
+
+[crypto/encryption.ts:47](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/encryption.ts#L47)
+
+___
+
+### encrypt
+
+**encrypt**(`plain`, `secret`, `additionalData?`): `Promise`<[`Ciphertext`](classes/Ciphertext.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `plain` | `Uint8Array` |
+| `secret` | `Uint8Array` |
+| `additionalData?` | `Uint8Array` |
+
+#### Returns
+
+`Promise`<[`Ciphertext`](classes/Ciphertext.md)\>
+
+#### Defined in
+
+[crypto/encryption.ts:24](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/encryption.ts#L24)
 
 ___
 
@@ -183,7 +408,60 @@ ___
 
 #### Defined in
 
-[utils.ts:122](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/utils.ts#L122)
+[utils/date.ts:15](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/date.ts#L15)
+
+___
+
+### getRandomValues
+
+**getRandomValues**<`T`\>(`array`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends ``null`` \| `ArrayBufferView` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `array` | `T` |
+
+#### Returns
+
+`T`
+
+#### Defined in
+
+[crypto/utils.ts:4](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/utils.ts#L4)
+
+___
+
+### mapPaginatedStream
+
+**mapPaginatedStream**<`Out`\>(`gen`, `mapper`): `AsyncGenerator`<`Out`[]\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `Out` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `gen` | `AsyncGenerator`<`Envelope`[], `any`, `unknown`\> |
+| `mapper` | `EnvelopeMapper`<`Out`\> |
+
+#### Returns
+
+`AsyncGenerator`<`Out`[]\>
+
+#### Defined in
+
+[utils/async.ts:56](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/async.ts#L56)
 
 ___
 
@@ -203,7 +481,7 @@ ___
 
 #### Defined in
 
-[utils.ts:114](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/utils.ts#L114)
+[utils/date.ts:7](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/date.ts#L7)
 
 ___
 
@@ -223,4 +501,4 @@ ___
 
 #### Defined in
 
-[utils.ts:118](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/utils.ts#L118)
+[utils/date.ts:11](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/date.ts#L11)
