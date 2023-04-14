@@ -2,20 +2,16 @@
 sidebar_label: Chain and wallet app support
 sidebar_position: 8
 ---
-import aptos from '/docs/dev-concepts/img/aptos-logo.png';
 import arbitrum from '/docs/dev-concepts/img/arbitrum-logo.png';
 import avalanche from '/docs/dev-concepts/img/avalanche-logo.png';
 import base from '/docs/dev-concepts/img/base-logo.png';
 import bnbchain from '/docs/dev-concepts/img/bnbchain-logo.png';
-import cosmos from '/docs/dev-concepts/img/cosmos-logo.png';
 import ethereum from '/docs/dev-concepts/img/ethereum-logo.png';
 import hermez from '/docs/dev-concepts/img/hermez-logo.png';
 import linea from '/docs/dev-concepts/img/linea-logo.png';
-import near from '/docs/dev-concepts/img/near-logo.png';
 import optimism from '/docs/dev-concepts/img/optimism-logo.png';
 import polygon from '/docs/dev-concepts/img/polygon-logo.png';
 import scroll from '/docs/dev-concepts/img/scroll-logo.png';
-import solana from '/docs/dev-concepts/img/solana-logo.png';
 
 # Chains and wallet apps supported by XMTP
 
