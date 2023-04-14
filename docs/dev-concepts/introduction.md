@@ -68,12 +68,12 @@ Check out these app repos you can use for guidance and inspiration when building
 
 For even more examples of apps built with XMTP, see:
 
-- [Awesome-xtmp](https://github.com/xmtp/awesome-xmtp)
+- [Awesome XMTP](https://github.com/xmtp/awesome-xmtp)
 - [Built with XMTP](built-with-xmtp)
 
 ## Learn more
 
-Have more questions? See [FAQ about XTMP](faq)
+Have more questions? See [FAQ about XMTP](faq)
 
 Join and learn with the [XMTP Discord community](https://discord.gg/xmtp)
 
