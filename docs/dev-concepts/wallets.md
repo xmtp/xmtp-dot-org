@@ -27,9 +27,9 @@ Here are just a few of the chains supported by XMTP:
 
 :::tip
 
-XMTP is compatible with all EVM chains so this list isn't exhaustive. 
+XMTP is compatible with all EVM chains, so this list isn't exhaustive. 
 
-In addition, XMTP is chain-agnostic so multi-chain support is possible. Want to propose a path to compatibility for other popular chains such as Bitcoin, Solana, or Tezos? Do it via an [XMTP grant](/grants)!
+In addition, XMTP is chain-agnostic, so multi-chain support is possible. Want to propose a path to compatibility for other popular chains such as Bitcoin, Solana, or Tezos? Do it via an [XMTP grant](/grants)!
 
 :::
 
