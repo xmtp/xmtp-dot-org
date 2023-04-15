@@ -85,6 +85,10 @@ There are no message storage and retrieval-related fees incurred by developers f
 
 ## Security
 
+### Has XMTP undergone a security audit?
+
+Yes, read the comprehensive [XMTP security assessment](img/REP-final-20230207T000355Z.pdf) prepared by [CertiK](https://www.certik.com/company/about).
+
 ### How does XMTP establish a secure and fraud-proof relationship between two identities?
 
 Blockchain accounts sign and advertise a set of keys to start using XMTP. XMTP uses these keys to establish a shared secret between the blockchain accounts. It then uses the shared secret to generate a key used to encrypt an invitation that allows the blockchain accounts to start exchanging messages. No third-party apps or relayers are involved in this process.
