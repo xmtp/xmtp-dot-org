@@ -609,6 +609,11 @@ main[class*='docMainContainer'] tr {
   padding: 7px 11px;
   cursor: pointer;
   margin: 4px 11px;
+  transition-duration: 0.2s;
+}
+
+.navbar__button:hover {
+  background-color: #DC2626;
 }
 
 @media (max-width: 450px) {
