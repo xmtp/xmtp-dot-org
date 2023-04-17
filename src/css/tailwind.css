@@ -601,6 +601,16 @@ main[class*='docMainContainer'] tr {
   max-width: 100%;
 }
 
+.navbar__button {
+  color: white;
+  border: none;
+  background-color: #EF4444;
+  border-radius: 4px;
+  padding: 7px 11px;
+  cursor: pointer;
+  margin: 4px 11px;
+}
+
 @media (max-width: 450px) {
   .card-container {
     flex: 1 1 100%;
