@@ -111,7 +111,7 @@ const remoteAttachment: RemoteAttachment = {
   // These fields are used by clients to display some information about
   // the remote attachment before it is downloaded and decrypted.
   filename: attachment.filename,
-  contentLength: attachment.data.byteLength,
+  contentLength: attachment.data.byteLength,kjkj;k
 };
 ```
 
