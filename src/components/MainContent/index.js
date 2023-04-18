@@ -21,6 +21,7 @@ import {
 } from '../../helpers/constants'
 import { BlogItem } from '../BlogItem'
 import ALink from '../ALink'
+import FeedbackWidget from '../FeedbackWidget'
 
 export const MainContent = ({ styles }) => {
   const [sliderItems, setSliderItems] = useState(null)
@@ -88,7 +89,8 @@ export const MainContent = ({ styles }) => {
     const dataMemo = await responseMemo.json()
     if (dataMemo && !dataMemo.message) items = [...items, dataMemo]
     const dataQuickChat = await responseQuickChat.json()
-    if (dataQuickChat && !dataQuickChat.message) items = [...items, dataQuickChat]
+    if (dataQuickChat && !dataQuickChat.message)
+      items = [...items, dataQuickChat]
 
     items = [...items, CHAT_ITEM]
     setSliderItems(items)
@@ -117,7 +119,6 @@ export const MainContent = ({ styles }) => {
       document.documentElement.classList.remove('dark')
     }
   }, [colorMode])
-
 
   return (
     <>
@@ -221,7 +222,7 @@ export const MainContent = ({ styles }) => {
                     </div>
                   </dl>
 
-                  <Link
+                  <button
                     to="/docs/dev-concepts/start-building"
                     className="bg-red-500 text-white border-none rounded-lg py-3 px-5 font-bold text-base w-44 mt-10 h-12 cursor-pointer hover:bg-red-600 mb-14 xl:mb-0 block hover:no-underline hover:text-white"
                   >
@@ -230,7 +231,7 @@ export const MainContent = ({ styles }) => {
                       src="/img/xmtp-sm-icon.png"
                     />
                     Start building
-                  </Link>
+                  </button>
                 </div>
 
                 <div className="-mx-4 mt-10 lg:col-start-1 lg:mt-0">
@@ -342,8 +343,8 @@ export const MainContent = ({ styles }) => {
               Messages meet users where they are
             </h1>
             <p className="text-white text-base leading-6 text-center lg:max-w-[70%] mb-8">
-              Building with XMTP gives users an interoperable inbox that follows them
-              across web3, providing access to their messages using any app
+              Building with XMTP gives users an interoperable inbox that follows
+              them across web3, providing access to their messages using any app
               built with XMTP.
             </p>
             <Link
@@ -439,8 +440,7 @@ export const MainContent = ({ styles }) => {
             className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
           >
             <li className="col-span-1">
-              <ALink
-                to="https://github.com/orgs/xmtp/discussions">
+              <ALink to="https://github.com/orgs/xmtp/discussions">
                 <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                   <div>
                     <h1 className="text-xl font-bold mt-36 mb-1 text-black">
@@ -451,18 +451,16 @@ export const MainContent = ({ styles }) => {
                       discussion in the XMTP forum
                     </p>
                     <hr className="my-4 bg-black" />
-                    <p className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end"
-                    >
+                    <p className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end">
                       GitHub Discussions →
-                  </p>
+                    </p>
                   </div>
                 </div>
               </ALink>
             </li>
 
             <li className="col-span-1">
-              <ALink
-                to="https://discord.gg/xmtp">
+              <ALink to="https://discord.gg/xmtp">
                 <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                   <div>
                     <h1 className="text-xl font-bold mt-36 mb-1 text-white">
@@ -481,8 +479,7 @@ export const MainContent = ({ styles }) => {
             </li>
 
             <li className="col-span-1">
-              <ALink
-                to="https://twitter.com/xmtp_">
+              <ALink to="https://twitter.com/xmtp_">
                 <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#01A3EE] bg-no-repeat bg-[url('/img/twitter-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                   <div>
                     <h1 className="text-xl font-bold mt-36 mb-1 text-white">
@@ -492,7 +489,7 @@ export const MainContent = ({ styles }) => {
                       Keep up with the latest updates
                     </p>
                     <hr className="my-4 bg-white" />
-                    <p  className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end">
+                    <p className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end">
                       Twitter →
                     </p>
                   </div>
