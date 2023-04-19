@@ -234,10 +234,9 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'docs/dev-concepts/start-building',
+            type: 'html',
             position: 'right',
-            label: '⚡️ Start building ⚡️',
-            className: 'start-building_link',
+            value: '<button type="button" onClick="window.open(`/docs/dev-concepts/start-building`, `_self`);" class="navbar__button"><strong>Start building</strong></button>',
           },
           {
             href: 'https://github.com/xmtp',

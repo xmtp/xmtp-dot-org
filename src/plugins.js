@@ -30,10 +30,10 @@ const tailwindPlugin = (context, options) => {
         require('tailwindcss/nesting'),
         require('tailwindcss'),
         require('autoprefixer'),
-      ]
-      return postcssOptions
+      ];
+      return postcssOptions;
     },
-  }
-}
+  };
+};
 
-module.exports = { tailwindPlugin, webpackPlugin }
+module.exports = { tailwindPlugin, webpackPlugin };

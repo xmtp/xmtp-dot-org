@@ -14,7 +14,7 @@ as needed by each function. All other defaults are specified in defaultOptions.
 
 #### Defined in
 
-[Client.ts:168](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L168)
+[Client.ts:168](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L168)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:24](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Composite.ts#L24)
+[codecs/Composite.ts:24](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L24)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[Client.ts:109](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L109)
+[Client.ts:109](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L109)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[Client.ts:123](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L123)
+[Client.ts:123](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L123)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[Client.ts:141](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L141)
+[Client.ts:141](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L141)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[Client.ts:40](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L40)
+[Client.ts:40](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L40)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[Message.ts:229](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Message.ts#L229)
+[Message.ts:229](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L229)
 
 ___
 
@@ -126,7 +126,7 @@ Network startup options
 
 #### Defined in
 
-[Client.ts:71](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L71)
+[Client.ts:71](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L71)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKeyBundle.ts:414](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKeyBundle.ts#L414)
+[crypto/PrivateKeyBundle.ts:414](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKeyBundle.ts#L414)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[Client.ts:57](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L57)
+[Client.ts:57](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L57)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[keystore/interfaces.ts:71](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/interfaces.ts#L71)
+[keystore/interfaces.ts:71](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L71)
 
 ___
 
@@ -184,7 +184,7 @@ ___
 
 #### Defined in
 
-[codecs/TypingNotification.ts:13](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/TypingNotification.ts#L13)
+[codecs/TypingNotification.ts:13](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/TypingNotification.ts#L13)
 
 ## Variables
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-[ApiClient.ts:17](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/ApiClient.ts#L17)
+[ApiClient.ts:17](https://github.com/xmtp/xmtp-js/blob/36ff630/src/ApiClient.ts#L17)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-[Client.ts:30](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L30)
+[Client.ts:30](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L30)
 
 ___
 
@@ -222,7 +222,7 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:15](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Composite.ts#L15)
+[codecs/Composite.ts:15](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L15)
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:56](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L56)
+[MessageContent.ts:56](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L56)
 
 ___
 
@@ -242,7 +242,7 @@ ___
 
 #### Defined in
 
-[codecs/Text.ts:6](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Text.ts#L6)
+[codecs/Text.ts:6](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Text.ts#L6)
 
 ___
 
@@ -252,7 +252,7 @@ ___
 
 #### Defined in
 
-[codecs/TypingNotification.ts:6](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/TypingNotification.ts#L6)
+[codecs/TypingNotification.ts:6](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/TypingNotification.ts#L6)
 
 ___
 
@@ -262,7 +262,7 @@ ___
 
 #### Defined in
 
-[ApiClient.ts:9](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/ApiClient.ts#L9)
+[ApiClient.ts:9](https://github.com/xmtp/xmtp-js/blob/36ff630/src/ApiClient.ts#L9)
 
 ## Functions
 
@@ -283,7 +283,7 @@ ___
 
 #### Defined in
 
-[utils/topic.ts:6](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/topic.ts#L6)
+[utils/topic.ts:6](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/topic.ts#L6)
 
 ___
 
@@ -303,7 +303,7 @@ ___
 
 #### Defined in
 
-[utils/topic.ts:16](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/topic.ts#L16)
+[utils/topic.ts:16](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/topic.ts#L16)
 
 ___
 
@@ -323,7 +323,7 @@ ___
 
 #### Defined in
 
-[utils/date.ts:3](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/date.ts#L3)
+[utils/date.ts:3](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/date.ts#L3)
 
 ___
 
@@ -344,7 +344,7 @@ ___
 
 #### Defined in
 
-[Message.ts:373](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Message.ts#L373)
+[Message.ts:373](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L373)
 
 ___
 
@@ -366,7 +366,7 @@ ___
 
 #### Defined in
 
-[crypto/encryption.ts:47](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/encryption.ts#L47)
+[crypto/encryption.ts:40](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/encryption.ts#L40)
 
 ___
 
@@ -388,7 +388,7 @@ ___
 
 #### Defined in
 
-[crypto/encryption.ts:24](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/encryption.ts#L24)
+[crypto/encryption.ts:17](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/encryption.ts#L17)
 
 ___
 
@@ -408,33 +408,7 @@ ___
 
 #### Defined in
 
-[utils/date.ts:15](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/date.ts#L15)
-
-___
-
-### getRandomValues
-
-**getRandomValues**<`T`\>(`array`): `T`
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends ``null`` \| `ArrayBufferView` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `array` | `T` |
-
-#### Returns
-
-`T`
-
-#### Defined in
-
-[crypto/utils.ts:4](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/utils.ts#L4)
+[utils/date.ts:15](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/date.ts#L15)
 
 ___
 
@@ -461,7 +435,7 @@ ___
 
 #### Defined in
 
-[utils/async.ts:56](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/async.ts#L56)
+[utils/async.ts:56](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/async.ts#L56)
 
 ___
 
@@ -481,7 +455,7 @@ ___
 
 #### Defined in
 
-[utils/date.ts:7](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/date.ts#L7)
+[utils/date.ts:7](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/date.ts#L7)
 
 ___
 
@@ -501,4 +475,4 @@ ___
 
 #### Defined in
 
-[utils/date.ts:11](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/utils/date.ts#L11)
+[utils/date.ts:11](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/date.ts#L11)

@@ -39,4 +39,4 @@ as it will overwrite any XMTP identities already on the network
 
 #### Defined in
 
-[keystore/providers/KeyGeneratorKeystoreProvider.ts:18](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/providers/KeyGeneratorKeystoreProvider.ts#L18)
+[keystore/providers/KeyGeneratorKeystoreProvider.ts:18](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/providers/KeyGeneratorKeystoreProvider.ts#L18)

@@ -23,7 +23,7 @@ Keystores are instantiated using a `KeystoreProvider`
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:41](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L41)
+[keystore/InMemoryKeystore.ts:41](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L41)
 
 ## Properties
 
@@ -33,7 +33,7 @@ Keystores are instantiated using a `KeystoreProvider`
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:39](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L39)
+[keystore/InMemoryKeystore.ts:39](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L39)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:38](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L38)
+[keystore/InMemoryKeystore.ts:38](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L38)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:37](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L37)
+[keystore/InMemoryKeystore.ts:37](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L37)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:35](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L35)
+[keystore/InMemoryKeystore.ts:35](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L35)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:36](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L36)
+[keystore/InMemoryKeystore.ts:36](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L36)
 
 ## Methods
 
@@ -99,7 +99,7 @@ Create an XMTP auth token to be used as a header on XMTP API requests
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:153](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L153)
+[keystore/InMemoryKeystore.ts:153](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L153)
 
 ___
 
@@ -126,7 +126,7 @@ The returned invite payload must be sent to the network for the other party to b
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:265](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L265)
+[keystore/InMemoryKeystore.ts:265](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L265)
 
 ___
 
@@ -152,7 +152,7 @@ Decrypt a batch of V1 messages
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:52](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L52)
+[keystore/InMemoryKeystore.ts:52](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L52)
 
 ___
 
@@ -178,7 +178,7 @@ Decrypt a batch of V2 messages
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:83](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L83)
+[keystore/InMemoryKeystore.ts:83](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L83)
 
 ___
 
@@ -204,7 +204,7 @@ Encrypt a batch of V1 messages
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:121](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L121)
+[keystore/InMemoryKeystore.ts:121](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L121)
 
 ___
 
@@ -230,7 +230,7 @@ Encrypt a batch of V2 messages
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:161](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L161)
+[keystore/InMemoryKeystore.ts:161](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L161)
 
 ___
 
@@ -250,7 +250,7 @@ Get the account address of the wallet used to create the Keystore
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:356](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L356)
+[keystore/InMemoryKeystore.ts:356](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L356)
 
 ___
 
@@ -270,7 +270,7 @@ Export the private keys. May throw an error if the keystore implementation does 
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:352](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L352)
+[keystore/InMemoryKeystore.ts:352](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L352)
 
 ___
 
@@ -290,7 +290,7 @@ Get the `PublicKeyBundle` associated with the Keystore's private keys
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:348](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L348)
+[keystore/InMemoryKeystore.ts:348](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L348)
 
 ___
 
@@ -310,7 +310,7 @@ Get a list of V2 conversations
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:335](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L335)
+[keystore/InMemoryKeystore.ts:335](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L335)
 
 ___
 
@@ -330,7 +330,7 @@ ___
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:367](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L367)
+[keystore/InMemoryKeystore.ts:367](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L367)
 
 ___
 
@@ -356,7 +356,7 @@ Take a batch of invite messages and store the `TopicKeys` for later use in decry
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:200](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L200)
+[keystore/InMemoryKeystore.ts:200](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L200)
 
 ___
 
@@ -382,7 +382,7 @@ Sign the provided digest with either the `IdentityKey` or a specified `PreKey`
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:300](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L300)
+[keystore/InMemoryKeystore.ts:300](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L300)
 
 ___
 
@@ -403,4 +403,4 @@ ___
 
 #### Defined in
 
-[keystore/InMemoryKeystore.ts:48](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/InMemoryKeystore.ts#L48)
+[keystore/InMemoryKeystore.ts:48](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/InMemoryKeystore.ts#L48)
