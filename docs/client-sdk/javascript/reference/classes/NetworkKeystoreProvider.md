@@ -39,4 +39,4 @@ signature and instantiate a Keystore instance using the decrypted value.
 
 #### Defined in
 
-[keystore/providers/NetworkKeystoreProvider.ts:17](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/providers/NetworkKeystoreProvider.ts#L17)
+[keystore/providers/NetworkKeystoreProvider.ts:17](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/providers/NetworkKeystoreProvider.ts#L17)
