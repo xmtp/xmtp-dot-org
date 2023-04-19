@@ -5,7 +5,7 @@ title: "Test blog post"
 date: 2023-04-19
 authors: eng
 description: "Test blog post."
-image: ./media/Encode-Livepeer-Wrapup-cover.png
+image: ./media/test-Encode-Livepeer-Wrapup-cover.png
 tags:
 - Awards
 - Developers
@@ -14,7 +14,7 @@ tags:
 
 Test blog post.
 
-![](./media/Encode-Livepeer-Wrapup-cover.png)
+![](./media/test-Encode-Livepeer-Wrapup-cover.png)
 
 <!--truncate-->
 
