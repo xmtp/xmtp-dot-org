@@ -21,7 +21,7 @@ Should be created with `await Client.create(options)`
 
 #### Defined in
 
-[Client.ts:220](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L220)
+[Client.ts:220](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L220)
 
 ## Properties
 
@@ -31,7 +31,7 @@ Should be created with `await Client.create(options)`
 
 #### Defined in
 
-[Client.ts:214](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L214)
+[Client.ts:214](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L214)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[Client.ts:217](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L217)
+[Client.ts:217](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L217)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[Client.ts:215](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L215)
+[Client.ts:215](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L215)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[Client.ts:218](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L218)
+[Client.ts:218](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L218)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[Client.ts:204](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L204)
+[Client.ts:204](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L204)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[Client.ts:206](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L206)
+[Client.ts:206](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L206)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[Client.ts:207](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L207)
+[Client.ts:207](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L207)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[Client.ts:205](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L205)
+[Client.ts:205](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L205)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[Client.ts:209](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L209)
+[Client.ts:209](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L209)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[Client.ts:208](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L208)
+[Client.ts:208](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L208)
 
 ## Accessors
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[Client.ts:249](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L249)
+[Client.ts:249](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L249)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[Client.ts:245](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L245)
+[Client.ts:245](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L245)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-[Client.ts:253](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L253)
+[Client.ts:253](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L253)
 
 ## Methods
 
@@ -190,7 +190,7 @@ it checks that a PublicKeyBundle can be found for the given address
 
 #### Defined in
 
-[Client.ts:448](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L448)
+[Client.ts:448](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L448)
 
 **canMessage**(`peerAddress`): `Promise`<`boolean`[]\>
 
@@ -213,7 +213,7 @@ it checks that a PublicKeyBundle can be found for the given address
 
 #### Defined in
 
-[Client.ts:449](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L449)
+[Client.ts:449](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L449)
 
 ___
 
@@ -227,7 +227,7 @@ ___
 
 #### Defined in
 
-[Client.ts:329](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L329)
+[Client.ts:329](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L329)
 
 ___
 
@@ -250,7 +250,7 @@ client's codec registry
 
 #### Defined in
 
-[Client.ts:560](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L560)
+[Client.ts:560](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L560)
 
 ___
 
@@ -274,7 +274,7 @@ with the given options
 
 #### Defined in
 
-[Client.ts:576](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L576)
+[Client.ts:576](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L576)
 
 ___
 
@@ -294,7 +294,7 @@ ___
 
 #### Defined in
 
-[Client.ts:333](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L333)
+[Client.ts:333](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L333)
 
 ___
 
@@ -316,7 +316,7 @@ Used to force getUserContact fetch contact from the network.
 
 #### Defined in
 
-[Client.ts:443](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L443)
+[Client.ts:443](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L443)
 
 ___
 
@@ -342,7 +342,7 @@ See also [#canMessage].
 
 #### Defined in
 
-[Client.ts:370](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L370)
+[Client.ts:370](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L370)
 
 ___
 
@@ -364,7 +364,7 @@ Identical to getUserContact but for multiple peer addresses
 
 #### Defined in
 
-[Client.ts:394](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L394)
+[Client.ts:394](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L394)
 
 ___
 
@@ -384,7 +384,7 @@ ___
 
 #### Defined in
 
-[Client.ts:318](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L318)
+[Client.ts:318](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L318)
 
 ___
 
@@ -418,7 +418,7 @@ envelope will be discarded.
 
 #### Defined in
 
-[Client.ts:612](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L612)
+[Client.ts:612](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L612)
 
 ___
 
@@ -448,7 +448,7 @@ List messages on a given set of content topics, yielding one page at a time
 
 #### Defined in
 
-[Client.ts:646](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L646)
+[Client.ts:646](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L646)
 
 ___
 
@@ -468,7 +468,7 @@ ___
 
 #### Defined in
 
-[Client.ts:597](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L597)
+[Client.ts:597](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L597)
 
 ___
 
@@ -493,7 +493,7 @@ Primarily used internally
 
 #### Defined in
 
-[Client.ts:533](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L533)
+[Client.ts:533](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L533)
 
 ___
 
@@ -513,7 +513,7 @@ ___
 
 #### Defined in
 
-[Client.ts:353](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L353)
+[Client.ts:353](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L353)
 
 ___
 
@@ -536,7 +536,7 @@ messages of the given Content Type
 
 #### Defined in
 
-[Client.ts:549](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L549)
+[Client.ts:549](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L549)
 
 ___
 
@@ -556,7 +556,7 @@ ___
 
 #### Defined in
 
-[Client.ts:514](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L514)
+[Client.ts:514](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L514)
 
 ___
 
@@ -577,7 +577,7 @@ ___
 
 #### Defined in
 
-[Client.ts:472](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L472)
+[Client.ts:472](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L472)
 
 `Static` **canMessage**(`peerAddress`, `opts?`): `Promise`<`boolean`[]\>
 
@@ -594,7 +594,7 @@ ___
 
 #### Defined in
 
-[Client.ts:477](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L477)
+[Client.ts:477](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L477)
 
 ___
 
@@ -617,7 +617,7 @@ Create and start a client associated with given wallet.
 
 #### Defined in
 
-[Client.ts:263](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L263)
+[Client.ts:263](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L263)
 
 ___
 
@@ -647,7 +647,7 @@ messages.
 
 #### Defined in
 
-[Client.ts:296](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L296)
+[Client.ts:296](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L296)
 
 ___
 
@@ -668,4 +668,4 @@ ___
 
 #### Defined in
 
-[Client.ts:305](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/Client.ts#L305)
+[Client.ts:305](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L305)

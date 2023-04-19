@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[codecs/Composite.ts:35](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Composite.ts#L35)
+[codecs/Composite.ts:35](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L35)
 
 ## Methods
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[codecs/Composite.ts:55](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Composite.ts#L55)
+[codecs/Composite.ts:55](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L55)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:39](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Composite.ts#L39)
+[codecs/Composite.ts:39](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L39)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:83](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Composite.ts#L83)
+[codecs/Composite.ts:83](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L83)
 
 ___
 
@@ -119,4 +119,4 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:62](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/Composite.ts#L62)
+[codecs/Composite.ts:62](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L62)

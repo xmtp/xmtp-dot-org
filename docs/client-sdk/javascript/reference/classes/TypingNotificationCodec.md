@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[codecs/TypingNotification.ts:23](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/TypingNotification.ts#L23)
+[codecs/TypingNotification.ts:23](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/TypingNotification.ts#L23)
 
 ## Methods
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[codecs/TypingNotification.ts:39](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/TypingNotification.ts#L39)
+[codecs/TypingNotification.ts:39](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/TypingNotification.ts#L39)
 
 ___
 
@@ -75,4 +75,4 @@ ___
 
 #### Defined in
 
-[codecs/TypingNotification.ts:27](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/codecs/TypingNotification.ts#L27)
+[codecs/TypingNotification.ts:27](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/TypingNotification.ts#L27)

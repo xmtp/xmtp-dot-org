@@ -29,7 +29,7 @@ UnsignedPublicKey.constructor
 
 #### Defined in
 
-[crypto/PublicKey.ts:423](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L423)
+[crypto/PublicKey.ts:423](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L423)
 
 ## Properties
 
@@ -43,7 +43,7 @@ UnsignedPublicKey.createdNs
 
 #### Defined in
 
-[crypto/PublicKey.ts:44](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L44)
+[crypto/PublicKey.ts:44](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L44)
 
 ___
 
@@ -61,7 +61,7 @@ UnsignedPublicKey.secp256k1Uncompressed
 
 #### Defined in
 
-[crypto/PublicKey.ts:45](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L45)
+[crypto/PublicKey.ts:45](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L45)
 
 ___
 
@@ -75,7 +75,7 @@ publicKey.PublicKey.signature
 
 #### Defined in
 
-[crypto/PublicKey.ts:421](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L421)
+[crypto/PublicKey.ts:421](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L421)
 
 ## Accessors
 
@@ -97,7 +97,7 @@ UnsignedPublicKey.timestamp
 
 #### Defined in
 
-[crypto/PublicKey.ts:433](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L433)
+[crypto/PublicKey.ts:433](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L433)
 
 ## Methods
 
@@ -111,7 +111,7 @@ UnsignedPublicKey.timestamp
 
 #### Defined in
 
-[crypto/PublicKey.ts:437](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L437)
+[crypto/PublicKey.ts:437](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L437)
 
 ___
 
@@ -135,7 +135,7 @@ UnsignedPublicKey.equals
 
 #### Defined in
 
-[crypto/PublicKey.ts:94](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L94)
+[crypto/PublicKey.ts:94](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L94)
 
 ___
 
@@ -153,7 +153,7 @@ UnsignedPublicKey.generated
 
 #### Defined in
 
-[crypto/PublicKey.ts:57](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L57)
+[crypto/PublicKey.ts:57](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L57)
 
 ___
 
@@ -171,7 +171,7 @@ UnsignedPublicKey.getEthereumAddress
 
 #### Defined in
 
-[crypto/PublicKey.ts:102](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L102)
+[crypto/PublicKey.ts:102](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L102)
 
 ___
 
@@ -189,7 +189,7 @@ UnsignedPublicKey.isFromLegacyKey
 
 #### Defined in
 
-[crypto/PublicKey.ts:61](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L61)
+[crypto/PublicKey.ts:61](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L61)
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 #### Defined in
 
-[crypto/PublicKey.ts:445](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L445)
+[crypto/PublicKey.ts:445](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L445)
 
 ___
 
@@ -227,7 +227,7 @@ UnsignedPublicKey.toBytes
 
 #### Defined in
 
-[crypto/PublicKey.ts:480](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L480)
+[crypto/PublicKey.ts:480](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L480)
 
 ___
 
@@ -252,7 +252,7 @@ UnsignedPublicKey.verify
 
 #### Defined in
 
-[crypto/PublicKey.ts:73](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L73)
+[crypto/PublicKey.ts:73](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L73)
 
 ___
 
@@ -276,7 +276,7 @@ UnsignedPublicKey.verifyKey
 
 #### Defined in
 
-[crypto/PublicKey.ts:85](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L85)
+[crypto/PublicKey.ts:85](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L85)
 
 ___
 
@@ -290,7 +290,7 @@ ___
 
 #### Defined in
 
-[crypto/PublicKey.ts:466](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L466)
+[crypto/PublicKey.ts:466](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L466)
 
 ___
 
@@ -314,4 +314,4 @@ UnsignedPublicKey.fromBytes
 
 #### Defined in
 
-[crypto/PublicKey.ts:484](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PublicKey.ts#L484)
+[crypto/PublicKey.ts:484](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PublicKey.ts#L484)
