@@ -119,34 +119,27 @@ const config = {
         },
         items: [
           {
-            type: 'dropdown',
-            label: 'Documentation',
+            to: 'docs/tutorials/start-building',
             position: 'right',
-            items: [
-              {
-                to: 'docs/tutorials/start-building',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/quickstart-icon.svg" alt="Kotlin icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Tutorials</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Build with XMTP</div></div></div>`,
-              },
-              {
-                to: 'docs/references/javascript/classes/Client',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="Swift icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">SDK references</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">xmtp-js, xmtp-flutter, and xmtp-ios SDK references</div></div></div>`,
-              },
-              {
-                to: 'docs/concepts/introduction',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="JavaScript icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Concepts</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">FAQ, architecture, keys, encryption, and more</div></div></div>`,
-              },
-            ],
+            label: 'Tutorials',
+            activeBaseRegex: `/`,
           },
           {
-            to: 'sdks-and-tools', // To highlight the navbar item, you must link to a document, not a top-level directory
+            to: 'docs/references/sdks-and-tools',
             position: 'right',
-            label: 'SDKs and tools',
+            label: 'SDKs & tools',
+            activeBaseRegex: `/`,
+          },
+          {
+            to: 'docs/concepts/introduction',
+            position: 'right',
+            label: 'Concepts',
+            activeBaseRegex: `/`,
+          },
+          {
+            to: 'vision/roadmap',
+            position: 'right',
+            label: 'Roadmap',
             activeBaseRegex: `/`,
           },
           {
@@ -177,19 +170,6 @@ const config = {
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield with a check icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>
                  <div class="subtext text-sm text-normal whitespace-pre-line">Foster a safe and positive XMTP community experience</div></div></div>`,
-              },
-            ],
-          },
-          {
-            type: 'dropdown',
-            label: 'Vision',
-            position: 'right',
-            items: [
-              {
-                to: 'vision/roadmap',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="Map icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Roadmap</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about what's in store for XMTP in the months ahead</div></div></div>`,
               },
             ],
           },
