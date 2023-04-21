@@ -19,7 +19,7 @@ function HomepageHeader() {
           </div>
         </Link>
         <h1 className="hero__title max-w-2xl text-4xl lg:text-5xl">
-        XMTP: The open protocol and network for secure web3 messaging
+          XMTP: The open protocol and network for secure web3 messaging
         </h1>
         <p className="hero__subtitle max-w-2xl text-lg lg:text-xl">
           {siteConfig.tagline}
@@ -49,12 +49,16 @@ export default function Home() {
   }, [])
 
   return (
-    <Layout title="XMTP: The web3 messaging network" description="Own and control your communication.">
+    <Layout
+      title="XMTP: The web3 messaging network"
+      description="Own and control your communication."
+    >
       <HomepageHeader />
       <MainContent styles={styles} />
-      <div className="bg-black text-white xl:px-36 w-full flex">
+      {/* Temporarily removing from homepage */}
+      {/* <div className="bg-black text-white xl:px-36 w-full flex">
         <FeedbackWidget isRoot />
-      </div>
+      </div> */}
     </Layout>
   )
 }

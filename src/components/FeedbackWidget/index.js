@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { FaceFrownIcon, FaceSmileIcon } from '@heroicons/react/24/solid'
 import styles from './styles.module.css'
 import { options } from './utils'
@@ -20,7 +20,6 @@ const FeedbackWidgetHeader = ({ header, subheader }) => {
  * Renders the appropriate form to render to retrieve feedback.
  */
 export const FeedbackWidgetForm = ({
-  ref,
   isRoot,
   helpful,
   onSubmit,
@@ -31,7 +30,7 @@ export const FeedbackWidgetForm = ({
     <form onSubmit={onSubmit} className={styles.form}>
       <textarea
         autoFocus
-        ref={ref}
+        id="feedbackForm"
         className={`${styles.optionalField} ${styles.positiveOptionalField}`}
         maxLength={2000}
         placeholder="Optional. Want to share a bit more about what was helpful? Solved your issue? Easy to understand? Accurate? Something else?"
@@ -59,7 +58,7 @@ export const FeedbackWidgetForm = ({
             {currentOption === option && (
               <textarea
                 autoFocus
-                ref={ref}
+                id="feedbackForm"
                 className={styles.optionalField}
                 maxLength={2000}
                 placeholder="Optional, but can you provide a few more details to help us
@@ -118,14 +117,16 @@ const FeedbackWidget = ({ isRoot }) => {
     setOption(e.target.value)
   }
 
-  const ref = useRef()
-
   const onSubmit = (e) => {
     e.preventDefault()
+    // Necessary but temporary workaround
+    const extraFeedback = document.getElementById('feedbackForm')?.value
+    console.log('EXTRA FEEDBACK', extraFeedback)
+
     if (helpful === true) {
-      reportFeedback(true, null, ref?.current?.value)
+      reportFeedback(true, null, extraFeedback)
     } else if (helpful === false) {
-      reportFeedback(false, option, ref?.current?.value)
+      reportFeedback(false, option, extraFeedback)
     }
     // Resets helpful check as we no longer need the form to render.
     setHelpful(null)
@@ -171,7 +172,6 @@ const FeedbackWidget = ({ isRoot }) => {
         )}
         {(helpful === true || helpful === false) && (
           <FeedbackWidgetForm
-            ref={ref}
             isRoot={isRoot}
             helpful={helpful}
             onSubmit={onSubmit}
