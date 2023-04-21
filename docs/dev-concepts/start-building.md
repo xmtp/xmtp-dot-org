@@ -267,6 +267,8 @@ After your team has tested your app and reviewed the app best practices, message
 
 Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 
+- Register for the Polygon [dApp Store Kit](https://docs.dappstorekit.io/docs/how%20to%20use%20the%20dapp%20store%20kit/dapp-registry-management/), which enables developers to launch their own dApp stores and list any dApp, including their own. To learn more, see the [dApp Store Kit Wiki](https://polygontechnology.notion.site/dApp-Store-Kit-Wiki-a3a9e7518b80400589aee8164550838e).
+
 - Check out these launch posts for other apps built with XMTP:
     - [Orb](https://twitter.com/orbapp_/status/1618659601154715649?s=20)
     - [meTokens](https://twitter.com/meTokens/status/1597983759462436870?s=20&t=wHy9mBrNR5ri146CbhCMUw)
