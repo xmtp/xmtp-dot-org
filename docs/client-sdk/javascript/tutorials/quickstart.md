@@ -16,57 +16,21 @@ The [XMTP client SDK](https://github.com/xmtp/xmtp-js) for JavaScript (`xmtp-js`
 
 Build with `xmtp-js` to provide messaging between blockchain wallet addresses, delivering on use cases such as wallet-to-wallet messaging and dapp-to-wallet notifications.
 
-For a demonstration of the core concepts and capabilities of the `xmtp-js` client SDK, see the [xmtp-quickstart-react repo](https://github.com/xmtp/xmtp-quickstart-react). For a demonstration of more advanced and innovative capabilities, see the [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web).
-
-`xmtp-js` has not undergone a formal security audit.
+`xmtp-js` was included in a [security assessment](https://xmtp.org/assets/files/REP-final-20230207T000355Z-3825cbc68c115f4ec81f3b1d53a24fce.pdf) prepared by [Certik](https://www.certik.com/company/about).
 
 To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/dev-concepts/faq).
 
-## Breaking revisions
+## Example apps built with `xmtp-js`
 
-Because `xmtp-js` is in active development, you should expect breaking revisions that might require you to adopt the latest SDK release to enable your app to continue working as expected.
+- [XMTP Quickstart React app](https://github.com/xmtp/xmtp-quickstart-react): Provides a basic messaging app demonstrating core capabilities of the SDK. The app is intentionally built with lightweight code to help make it easier to parse and start learning to build with XMTP.
 
-XMTP communicates about breaking revisions in the [XMTP Discord community](https://discord.gg/xmtp), providing as much advance notice as possible. Additionally, breaking revisions in an `xmtp-js` release are described on the [Releases page](https://github.com/xmtp/xmtp-js/releases).
+- [XMTP Inbox app](https://github.com/xmtp-labs/xmtp-inbox-web): Provides a messaging app demonstrating core and advanced capabilities of the SDK. The app aims to showcase innovative ways of building with XMTP.
 
-### Deprecation schedule
+## Reference docs
 
-Older versions of the SDK will eventually be deprecated, which means:
+Access the `xmtp-js` client SDK [reference documentation](docs/client-sdk/javascript/reference/classes/Ciphertext.md).
 
-1. The network will not support and will eventually actively reject connections from clients using deprecated versions.
-2. Bugs will not be fixed in deprecated versions.
-
-The following table provides the deprecation schedule:
-
-| Announced &nbsp; | Effective &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Minimum version | Rationale |
-| ---------- | ---------- | --------------- | ----------------------------------------------------------------------------------------------------------------- |
-| 2022-08-18 | 2022-11-08 | v6.0.0 | The XMTP network will stop supporting the Waku/libp2p-based client interface in favor of the new GRPC-based interface. |
-
-Issues and PRs are welcome in accordance with XMTP [contribution guidelines](https://github.com/xmtp/xmtp-js/blob/main/CONTRIBUTING.md).
-
-## XMTP `production` and `dev` network environments
-
-XMTP provides both `production` and `dev` network environments to support the development phases of your project.
-
-The `production` and `dev` networks are completely separate and not interchangeable.
-For example, for a given blockchain account address, its XMTP identity on `dev` network is completely distinct from its XMTP identity on the `production` network, as are the messages associated with these identities. In addition, XMTP identities and messages created on the `dev` network can't be accessed from or moved to the `production` network, and vice versa.
-
-:::important
-
-When you [create a client](#creating-a-client), it connects to the XMTP `dev` environment by default. To learn how to use the `env` parameter to set your client's network environment, see [Configuring the client](#configuring-the-client).
-
-:::
-
-The `env` parameter accepts one of three valid values: `dev`, `production`, or `local`. Here are some best practices for when to use each environment:
-
-- `dev`: Use to have a client communicate with the `dev` network. As a best practice, set `env` to `dev` while developing and testing your app. Follow this best practice to isolate test messages to `dev` inboxes.
-
-- `production`: Use to have a client communicate with the `production` network. As a best practice, set `env` to `production` when your app is serving real users. Follow this best practice to isolate messages between real-world users to `production` inboxes.
-
-- `local`: Use to have a client communicate with an XMTP node you are running locally. For example, an XMTP node developer can set `env` to `local` to generate client traffic to test a node running locally.
-
-The `production` network is configured to store messages indefinitely. XMTP may occasionally delete messages and keys from the `dev` network, and will provide advance notice in the [XMTP Discord community](https://discord.gg/xmtp).
-
-## Installation
+## Install
 
 ```bash
 npm install @xmtp/xmtp-js
@@ -99,7 +63,7 @@ webpack: (config, { isServer }) => {
 
 ## Usage
 
-The message API revolves around a network message API client that allows retrieving and sending messages to other network participants. A client must be connected to a wallet on startup. If this is the very first time the client is created, the client will generate a key bundle that is used to encrypt and authenticate messages. The key bundle persists encrypted in the network using a wallet signature. The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys. All this happens transparently, without requiring any additional code.
+The [XMTP message API](/docs/dev-concepts/architectural-overview#network-layer) revolves around a network client that allows retrieving and sending messages to other network participants. A client must be connected to a wallet on startup. If this is the very first time the client is created, the client will generate a [key bundle](/docs/dev-concepts/key-generation-and-usage) that is used to [encrypt and authenticate messages](/docs/dev-concepts/invitation-and-message-encryption). The key bundle persists encrypted in the network using a [wallet signature](/docs/dev-concepts/account-signatures). The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys. All this happens transparently, without requiring any additional code.
 
 ```ts
 import { Client } from '@xmtp/xmtp-js'
@@ -125,7 +89,7 @@ for await (const message of await conversation.streamMessages()) {
 
 Currently, network nodes are configured to rate limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node. Rate limits can change at any time in the interest of maintaining network health.
 
-### Creating a client
+### Create a client
 
 A client is created with `Client.create(wallet: Signer): Promise<Client>` that requires passing in a connected wallet that implements the [Signer](https://github.com/xmtp/xmtp-js/blob/main/src/types/Signer.ts) interface. The client will request a wallet signature in two cases:
 
@@ -134,7 +98,7 @@ A client is created with `Client.create(wallet: Signer): Promise<Client>` that r
 
 :::important
 
-The client connects to the XMTP `dev` environment by default. [Use `ClientOptions`](#configuring-the-client) to change this and other parameters of the network connection.
+The client connects to the XMTP `dev` environment by default. [Use `ClientOptions`](#configure-the-client) to change this and other parameters of the network connection.
 
 :::
 
@@ -144,12 +108,13 @@ import { Client } from '@xmtp/xmtp-js'
 const xmtp = await Client.create(wallet)
 ```
 
-#### Configuring the client
+#### Configure the client
 
 The client's network connection and key storage method can be configured with these optional parameters of `Client.create`:
 
 | Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appVersion                | `undefined`                                                                       | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
 | env                       | `dev`                                                                             | Connect to the specified XMTP network environment. Valid values include `dev`, `production`, or `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                     |
 | apiUrl                    | `undefined`                                                                       | Manually specify an API URL to use. If specified, value of `env` will be ignored.                                                                                                                                                                                                                                                                                                                                                |
 | keystoreProviders         | `[StaticKeystoreProvider, NetworkKeystoreProvider, KeyGeneratorKeystoreProvider]` | Override the default behavior of how the Client creates a Keystore with a custom provider. This can be used to get the user's private keys from a different storage mechanism.                                                                                                                                                                                                                                                  |
@@ -157,9 +122,8 @@ The client's network connection and key storage method can be configured with th
 | skipContactPublishing     | `false`                                                                           | Do not publish the user's contact bundle to the network on Client creation. Designed to be used in cases where the Client session is short-lived (for example, decrypting a push notification), and where it is known that a Client instance has been instantiated with this flag set to false at some point in the past.                                                                                                        |
 | codecs                    | `[TextCodec]`                                                                     | Add codecs to support additional content types.                                                                                                                                                                                                                                                                                                                                                                                  |
 | maxContentSize            | `100M`                                                                            | Maximum message content size in bytes.                                                                                                                                                                                                                                                                                                                                                                                           |
-| appVersion                | `undefined`                                                                       | Add a client app version identifier that's included with API requests. For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`. Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
-| preCreateIdentityCallback | `undefined`                                                                       | `preCreateIdentityCallback` is a function that will be called immediately before a "Create Identity" wallet signature is requested from the user.                                                                                                                                                                                                                                                                                |
-| preEnableIdentityCallback | `undefined`                                                                       | `preEnableIdentityCallback` is a function that will be called immediately before an "Enable Identity" wallet signature is requested from the user.                                                                                                                                                                                                                                                                               |
+| preCreateIdentityCallback | `undefined`                                                                       | `preCreateIdentityCallback` is a function that will be called immediately before a [Create Identity](/docs/dev-concepts/account-signatures#sign-to-create-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                                                                                |
+| preEnableIdentityCallback | `undefined`                                                                       | `preEnableIdentityCallback` is a function that will be called immediately before an [Enable Identity](/docs/dev-concepts/account-signatures#sign-to-enable-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                                                                               |
 
 ### Conversations
 
@@ -174,7 +138,7 @@ const conversations = xmtp.conversations
 
 #### List existing conversations
 
-You can get a list of all conversations that have had 1 or more messages exchanged in the last 30 days.
+You can get a list of all conversations that have one or more messages.
 
 ```ts
 const allConversations = await xmtp.conversations.list()
@@ -187,14 +151,18 @@ for (const conversation of allConversations) {
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/dev-concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP. 
 
-You might choose to provide an additional filtered view of conversations. To learn more, see [Handling multiple conversations with the same blockchain address](#handling-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/client-sdk/javascript/tutorials/filter-conversations).
+You might choose to provide an additional filtered view of conversations. To learn more, see [Handle multiple conversations with the same blockchain address](#handle-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/client-sdk/javascript/tutorials/filter-conversations).
 
 
 #### Listen for new conversations
 
 You can also listen for new conversations being started in real-time. This will allow applications to display incoming messages from new contacts.
 
-_Warning: this stream will continue infinitely. To end the stream you can either break from the loop, or call `await stream.return()`_
+:::caution
+
+This stream will continue infinitely. To end the stream, you can either break from the loop or call `await stream.return()`.
+
+:::
 
 ```ts
 const stream = await xmtp.conversations.stream()
@@ -217,9 +185,9 @@ const newConversation = await xmtp.conversations.newConversation(
 )
 ```
 
-#### Sending messages
+#### Send messages
 
-To be able to send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network. Messages are addressed using wallet addresses. The message payload can be a plain string, but other types of content can be supported through the use of SendOptions (see [Different types of content](#different-types-of-content) for more details)
+To be able to send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network. Messages are addressed using wallet addresses. The message payload can be a plain string, but other types of content can be supported through the use of `SendOptions`. To learn more, see [Handle different types of content](#handle-different-types-of-content).
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
@@ -230,7 +198,7 @@ await conversation.send('Hello world')
 
 #### List messages in a conversation
 
-You can receive the complete message history in a conversation by calling `conversation.messages()`
+You can receive the complete message history in a conversation by calling `conversation.messages()`.
 
 ```ts
 for (const conversation of await xmtp.conversations.list()) {
@@ -246,7 +214,7 @@ for (const conversation of await xmtp.conversations.list()) {
 
 #### List messages in a conversation with pagination
 
-It may be helpful to retrieve and process the messages in a conversation page by page. You can do this by calling `conversation.messagesPaginated()` which will return an [AsyncGenerator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) yielding one page of results at a time. `conversation.messages()` uses this under the hood internally to gather all messages.
+It may be helpful to retrieve and process the messages in a conversation page by page. You can do this by calling `conversation.messagesPaginated()`, which will return an [AsyncGenerator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) yielding one page of results at a time. `conversation.messages()` uses this under the hood internally to gather all messages.
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
@@ -270,7 +238,7 @@ You can listen for any new messages (incoming or outgoing) in a conversation by 
 
 A successfully received message (that makes it through the decoding and decryption without throwing) can be trusted to be authentic, i.e. that it was sent by the owner of the `message.senderAddress` wallet and that it wasn't modified in transit. The `message.sent` timestamp can be trusted to have been set by the sender.
 
-The Stream returned by the `stream` methods is an asynchronous iterator and as such usable by a for-await-of loop. Note however that it is by its nature infinite, so any looping construct used with it will not terminate, unless the termination is explicitly initiated (by breaking the loop or by an external call to `Stream.return()`)
+The Stream returned by the `stream` methods is an asynchronous iterator and as such usable by a for-await-of loop. Note however that it is by its nature infinite, so any looping construct used with it will not terminate, unless the termination is explicitly initiated (by breaking the loop or by an external call to `Stream.return()`).
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
@@ -285,7 +253,28 @@ for await (const message of await conversation.streamMessages()) {
 }
 ```
 
-#### Checking if an address is on the network
+#### Listen for new messages in all conversations
+
+To listen for any new messages from all conversations, use `conversations.streamAllMessages()`.
+
+:::info 
+
+There is a chance this stream can miss messages if multiple new conversations are received in the time it takes to update the stream to include a new conversation.
+
+:::
+
+```ts
+
+for await (const message of await xmtp.conversations.streamAllMessages()) {
+  if (message.senderAddress === xmtp.address) {
+    // This message was sent from me
+    continue
+  }
+  console.log(`New message from ${message.senderAddress}: ${message.content}`)
+}
+```
+
+#### Check if an address is on the network
 
 If you would like to check and see if a blockchain address is registered on the network before instantiating a client instance, you can use `Client.canMessage`.
 
@@ -301,7 +290,7 @@ const isOnProdNetwork = await Client.canMessage(
 )
 ```
 
-#### Handling multiple conversations with the same blockchain address
+#### Handle multiple conversations with the same blockchain address
 
 With XMTP, you can have multiple ongoing conversations with the same blockchain address. For example, you might want to have a conversation scoped to your particular application, or even a conversation scoped to a particular item in your application.
 
@@ -348,16 +337,21 @@ for (const conversation of myAppConversations) {
 }
 ```
 
-#### Different types of content
+#### Handle different types of content
 
-All the send functions support `SendOptions` as an optional parameter. The `contentType` option allows specifying different types of content than the default simple string, which is identified with content type identifier `ContentTypeText`. Support for other types of content can be added by registering additional `ContentCodecs` with the `Client`. Every codec is associated with a content type identifier, `ContentTypeId`, which is used to signal to the client which codec should be used to process the content that is being sent or received. See [XIP-5](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md) for more details on codecs and content types.
+All send functions support `SendOptions` as an optional parameter. The `contentType` option allows specifying different types of content than the default simple string standard content type, which is identified with content type identifier `ContentTypeText`.
 
-Codecs and content types may be proposed as interoperable standards through [XRCs](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-9-composite-content-type.md). If there is a concern that the recipient may not be able to handle a non-standard content type, the sender can use the `contentFallback` option to provide a string that describes the content being sent. If the recipient fails to decode the original content, the fallback will replace it and can be used to inform the recipient what the original content was.
+To learn more about content types, see [Content types with XMTP](/docs/dev-concepts/content-types).
+
+Support for other types of content can be added by registering additional `ContentCodecs` with the `Client`. Every codec is associated with a content type identifier, `ContentTypeId`, which is used to signal to the client which codec should be used to process the content that is being sent or received.
+
+For example, see the [Codecs](https://github.com/xmtp/xmtp-js/tree/main/src/codecs) available in `xmtp-js`.
+
+If there is a concern that the recipient may not be able to handle a non-standard content type, the sender can use the `contentFallback` option to provide a string that describes the content being sent. If the recipient fails to decode the original content, the fallback will replace it and can be used to inform the recipient what the original content was.
 
 ```ts
 // Assuming we've loaded a fictional NumberCodec that can be used to encode numbers,
 // and is identified with ContentTypeNumber, we can use it as follows.
-
 xmtp.registerCodec:(new NumberCodec())
 conversation.send(3.14, {
   contentType: ContentTypeNumber,
@@ -373,6 +367,10 @@ import { CompositeCodec } from '@xmtp/xmtp-js'
 const xmtp = Client.create(wallet, { codecs: [new CompositeCodec()] })
 ```
 
+To learn more about how to build a custom content type, see [Build a custom content type](/docs/client-sdk/javascript/tutorials/use-content-types#build-a-custom-content-type).
+
+Custom codecs and content types may be proposed as interoperable standards through XRCs. To learn about the custom content type proposal process, see [XIP-5](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md).
+
 #### Compression
 
 Message content can be optionally compressed using the `compression` option. The value of the option is the name of the compression algorithm to use. Currently supported are `gzip` and `deflate`. Compression is applied to the bytes produced by the content codec.
@@ -387,7 +385,7 @@ conversation.send('#'.repeat(1000), {
 })
 ```
 
-#### Manually handling private key storage
+#### Manually handle private key storage
 
 The SDK will handle key storage for the user by encrypting the private key bundle using a signature generated from the wallet, and storing the encrypted payload on the XMTP network. This can be awkward for some server-side applications, where you may only want to give the application access to the XMTP keys but not your wallet keys. Mobile applications may also want to store keys in a secure enclave rather than rely on decrypting the remote keys on the network each time the application starts up.
 
@@ -403,9 +401,9 @@ const client = await Client.create(null, { privateKeyOverride: keys })
 
 The keys returned by `getKeys` should be treated with the utmost care as compromise of these keys will allow an attacker to impersonate the user on the XMTP network. Ensure these keys are stored somewhere secure and encrypted.
 
-#### Caching conversations
+#### Cache conversations
 
-When running in a browser, conversations are cached in `LocalStorage` by default. Running `client.conversations.list()` will update that cache and persist the results to the browsers `LocalStorage`. The data stored in `LocalStorage` is encrypted and signed using the Keystore's identity key so that attackers cannot read the sensitive contents or tamper with them.
+When running in a browser, conversations are cached in `LocalStorage` by default. Running `client.conversations.list()` will update that cache and persist the results to the browser's `LocalStorage`. The data stored in `LocalStorage` is encrypted and signed using the Keystore's identity key so that attackers cannot read the sensitive contents or tamper with them.
 
 To disable this behavior, set the `persistConversations` client option to `false`.
 
@@ -415,16 +413,46 @@ const clientWithNoCache = await Client.create(wallet, {
 })
 ```
 
-#### Under the hood
+## Breaking revisions
 
-Using `xmtp.conversations` hides the details of this, but for the curious this is how sending a message on XMTP works. The first message and first response between two parties is sent to three separate [Waku](https://rfc.vac.dev/spec/10/) content topics:
+Because `xmtp-js` is in active development, you should expect breaking revisions that might require you to adopt the latest SDK release to enable your app to continue working as expected.
 
-1. Sender's introduction topic
-2. Recipient's introduction topic
-3. Conversation topic shared by the sender and the recipient
+XMTP communicates about breaking revisions in the [XMTP Discord community](https://discord.gg/xmtp), providing as much advance notice as possible. Additionally, breaking revisions in an `xmtp-js` release are described on the [Releases page](https://github.com/xmtp/xmtp-js/releases).
 
-This is used to establish a shared secret and negotiate a topic to communicate on. Any following messages are sent to the conversation topic only.
+### Deprecation schedule
 
-The introduction topics allow the participants to reconstruct the list of conversations that they participate(d) in.
+Older versions of the SDK will eventually be deprecated, which means:
 
-The conversation topics carry the contents of the conversations.
+1. The network will not support and will eventually actively reject connections from clients using deprecated versions.
+2. Bugs will not be fixed in deprecated versions.
+
+The following table provides the deprecation schedule:
+
+| Announced &nbsp; | Effective &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Minimum version | Rationale |
+| ---------- | ---------- | --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| 2022-08-18 | 2022-11-08 | v6.0.0 | The XMTP network will stop supporting the Waku/libp2p-based client interface in favor of the new GRPC-based interface. |
+
+Issues and PRs are welcome in accordance with XMTP [contribution guidelines](https://github.com/xmtp/xmtp-js/blob/main/CONTRIBUTING.md).
+
+## XMTP `production` and `dev` network environments
+
+XMTP provides both `production` and `dev` network environments to support the development phases of your project.
+
+The `production` and `dev` networks are completely separate and not interchangeable.
+For example, for a given blockchain account address, its XMTP identity on `dev` network is completely distinct from its XMTP identity on the `production` network, as are the messages associated with these identities. In addition, XMTP identities and messages created on the `dev` network can't be accessed from or moved to the `production` network, and vice versa.
+
+:::important
+
+When you [create a client](#create-a-client), it connects to the XMTP `dev` environment by default. To learn how to use the `env` parameter to set your client's network environment, see [Configure the client](#configure-the-client).
+
+:::
+
+The `env` parameter accepts one of three valid values: `dev`, `production`, or `local`. Here are some best practices for when to use each environment:
+
+- `dev`: Use to have a client communicate with the `dev` network. As a best practice, set `env` to `dev` while developing and testing your app. Follow this best practice to isolate test messages to `dev` inboxes.
+
+- `production`: Use to have a client communicate with the `production` network. As a best practice, set `env` to `production` when your app is serving real users. Follow this best practice to isolate messages between real-world users to `production` inboxes.
+
+- `local`: Use to have a client communicate with an XMTP node you are running locally. For example, an XMTP node developer can set `env` to `local` to generate client traffic to test a node running locally.
+
+The `production` network is configured to store messages indefinitely. XMTP may occasionally delete messages and keys from the `dev` network, and will provide advance notice in the [XMTP Discord community](https://discord.gg/xmtp).
