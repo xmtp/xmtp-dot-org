@@ -21,11 +21,7 @@ To learn more about XMTP and get answers to frequently asked questions, see [FAQ
 
 ## Reference docs
 
-:::tip View the reference
-
-Access the **[Swift client SDK reference documentation](https://xmtp.github.io/xmtp-ios/documentation/xmtp/)**.
-
-:::
+Access the [Swift client SDK reference documentation](https://xmtp.github.io/xmtp-ios/documentation/xmtp/).
 
 ## Example app
 
@@ -71,7 +67,7 @@ for try await message in conversation.streamMessages() {
 A client is created with `Client.create(account: SigningKey) async throws -> Client` that requires passing in an object capable of creating signatures on your behalf. The client will request a signature in two cases:
 
 1. To sign the newly generated key bundle. This happens only the very first time when a key bundle is not found in storage.
-2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started, including the very first time).
+2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started, including the very first time.
 
 :::info Important
 
@@ -148,7 +144,7 @@ let conversations = try await client.conversations.list()
 
 ### List existing conversations
 
-You can get a list of all conversations that have had one or more messages exchanged in the last 30 days.
+You can get a list of all conversations that have one or more messages.
 
 ```swift
 let allConversations = try await client.conversations.list()
@@ -206,7 +202,7 @@ try await conversation.send(content: "Hello world")
 
 ### List messages in a conversation
 
-You can receive the complete message history in a conversation by calling `conversation.messages()`
+You can receive the complete message history in a conversation by calling `conversation.messages()`.
 
 ```swift
 for conversation in client.conversations.list() {
@@ -464,7 +460,7 @@ Beyond this, custom codecs and content types may be proposed as interoperable st
 
 Message content can be optionally compressed using the compression option. The value of the option is the name of the compression algorithm to use. Currently supported are gzip and deflate. Compression is applied to the bytes produced by the content codec.
 
-Content will be decompressed transparently on the receiving end. Note that Client enforces maximum content size. The default limit can be overridden through the ClientOptions. Consequently a message that would expand beyond that limit on the receiving end will fail to decode.
+Content will be decompressed transparently on the receiving end. Note that Client enforces maximum content size. The default limit can be overridden through the ClientOptions. Consequently, a message that would expand beyond that limit on the receiving end will fail to decode.
 
 ```swift
 try await conversation.send(text: '#'.repeat(1000), options: .init(compression: .gzip))

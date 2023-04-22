@@ -31,7 +31,7 @@ For a basic demonstration of the core concepts and capabilities of the `xmtp-and
 
 ## Install from Maven Central
 
-You can find the latest package version on [Maven Central](https://central.sonatype.com/artifact/org.xmtp/android/0.0.5/versions)
+You can find the latest package version on [Maven Central](https://central.sonatype.com/artifact/org.xmtp/android).
 
 ```gradle
     implementation 'org.xmtp:android:X.X.X'
@@ -67,10 +67,13 @@ conversation.streamMessages().collect {
 A client is created with `Client().create(account: SigningKey): Client` that requires passing in an object capable of creating signatures on your behalf. The client will request a signature in two cases:
 
 1. To sign the newly generated key bundle. This happens only the very first time when a key bundle is not found in storage.
-2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started, including the very first time).
+2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started, including the very first time.
 
-> **Note**  
-> The client connects to the XMTP `dev` environment by default. [Use `ClientOptions`](#configuring-the-client) to change this and other parameters of the network connection.
+:::important
+
+The client connects to the XMTP `dev` environment by default. [Use `ClientOptions`](#configure-the-client) to change this and other parameters of the network connection.
+
+:::
 
 ```kotlin
 // Create the client with a `SigningKey` from your app
@@ -78,7 +81,7 @@ val options = ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUC
 val client = Client().create(account = account, options = options)
 ```
 
-### Creating a client from saved keys
+### Create a client from saved keys
 
 You can save your keys from the client via the `privateKeyBundle` property:
 
@@ -115,8 +118,11 @@ val options = ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUC
 val client = Client().create(account = account, options = options)
 ```
 
-> **Note**  
-> The `apiUrl`, `keyStoreType`, `codecs`, `maxContentSize`, and `appVersion` parameters from the XMTP client SDK for JavaScript (xmtp-js) are not yet supported.
+:::note
+
+The `apiUrl`, `keyStoreType`, `codecs`, `maxContentSize`, and `appVersion` parameters from the XMTP client SDK for JavaScript (xmtp-js) are not yet supported.
+
+:::
 
 ## Handle conversations
 
@@ -130,7 +136,7 @@ val conversations = client.conversations.list()
 
 ### List existing conversations
 
-You can get a list of all conversations that have had one or more messages exchanged in the last 30 days.
+You can get a list of all conversations that have one or more messages.
 
 ```kotlin
 val allConversations = client.conversations.list()
@@ -167,19 +173,18 @@ val newConversation = client.conversations.newConversation("0x3F11b27F323b62B159
 
 ### Send messages
 
-To be able to send a message, the recipient must have already created a client at least once and consequently advertised their key bundle on the network. Messages are addressed using account addresses. The message payload must be a plain string.
-
-> **Note**  
-> Other types of content are currently not supported.
+To be able to send a message, the recipient must have already created a client at least once and consequently advertised their key bundle on the network. Messages are addressed using account addresses. In this example, the message payload is a plain string:
 
 ```kotlin
 val conversation = client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
 conversation.send(text = "Hello world")
 ```
 
+To learn about handling other content types, see [Handle different types of content](#handle-different-types-of-content).
+
 ### List messages in a conversation
 
-You can receive the complete message history in a conversation by calling `conversation.messages()`
+You can receive the complete message history in a conversation by calling `conversation.messages()`.
 
 ```kotlin
 for (conversation in client.conversations.list()) {
@@ -247,7 +252,7 @@ val myAppConversations = conversations.filter {
 }
 ```
 
-### Decoding a single message
+### Decode a single message
 
 You can decode a single `Envelope` from XMTP using the `decode` method:
 
@@ -282,9 +287,15 @@ decodedConversation.send(text = "hi")
 
 ### Handle different types of content
 
-All the send functions support SendOptions as an optional parameter. The contentType option allows specifying different types of content than the default simple string, which is identified with content type identifier ContentTypeText. Support for other types of content can be added by registering additional ContentCodecs with the Client. Every codec is associated with a content type identifier, ContentTypeId, which is used to signal to the Client which codec should be used to process the content that is being sent or received. See XIP-5 for more details on codecs and content types.
+All the send functions support `SendOptions` as an optional parameter. The `contentType` option allows specifying different types of content than the default simple string, which is identified with content type identifier `ContentTypeText`. 
 
-Codecs and content types may be proposed as interoperable standards through XRCs. If there is a concern that the recipient may not be able to handle a non-standard content type, the sender can use the contentFallback option to provide a string that describes the content being sent. If the recipient fails to decode the original content, the fallback will replace it and can be used to inform the recipient what the original content was.
+To learn more about content types, see [Content types with XMTP](/docs/dev-concepts/content-types).
+
+Support for other types of content can be added by registering additional `ContentCodecs` with the `Client`. Every codec is associated with a content type identifier, `ContentTypeId`, which is used to signal to the client which codec should be used to process the content that is being sent or received. 
+
+For example, to learn about the codecs available in `xmtp-android`, see [Use content types in your app](https://github.com/xmtp/xmtp-android/blob/main/library/src/main/java/org/xmtp/android/library/codecs/README.md).
+
+If there is a concern that the recipient may not be able to handle a non-standard content type, the sender can use the `contentFallback` option to provide a string that describes the content being sent. If the recipient fails to decode the original content, the fallback will replace it and can be used to inform the recipient what the original content was.
 
 ```kotlin
 // Assuming we've loaded a fictional NumberCodec that can be used to encode numbers,
@@ -295,13 +306,15 @@ val options = ClientOptions(api = ClientOptions.Api(contentType = ContentTypeNum
 aliceConversation.send(content = 3.14, options = options)
 ```
 
+Custom codecs and content types may be proposed as interoperable standards through XRCs. To learn about the custom content type proposal process, see [XIP-5](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md).
+
 ### Compression
 
 <!--provide kotlin details and code sample. showing swift for context of the kind of info you might want to provide. =)-->
 
 Message content can be optionally compressed using the compression option. The value of the option is the name of the compression algorithm to use. Currently supported are gzip and deflate. Compression is applied to the bytes produced by the content codec.
 
-Content will be decompressed transparently on the receiving end. Note that Client enforces maximum content size. The default limit can be overridden through the ClientOptions. Consequently a message that would expand beyond that limit on the receiving end will fail to decode.
+Content will be decompressed transparently on the receiving end. Note that `Client` enforces maximum content size. The default limit can be overridden through the `ClientOptions`. Consequently, a message that would expand beyond that limit on the receiving end will fail to decode.
 
 ```kotlin
 conversation.send(text = '#'.repeat(1000), options = ClientOptions.Api(compression = EncodedContentCompression.GZIP))
@@ -311,7 +324,7 @@ conversation.send(text = '#'.repeat(1000), options = ClientOptions.Api(compressi
 
 As a performance optimization, you may want to persist the list of conversations in your application outside of the SDK to speed up the first call to `client.conversations.list()`.
 
-The exported conversation list contains encryption keys for any V2 conversations included in the list. As such, you should treat it with the same care that you treat [private keys](#manually-handle-private-key-storage).
+The exported conversation list contains encryption keys for any V2 conversations included in the list. As such, you should treat it with the same care that you treat private keys.
 
 You can get a JSON serializable list of conversations by calling:
 
@@ -326,7 +339,7 @@ val conversations = JSON.parse(loadConversationsFromSomewhere())
 val client.importConversation(conversations)
 ```
 
-## 🏗 **Breaking revisions**
+## Breaking revisions
 
 Because `xmtp-android` is in active development, you should expect breaking revisions that might require you to adopt the latest SDK release to enable your app to continue working as expected.
 
@@ -354,8 +367,11 @@ XMTP provides both `production` and `dev` network environments to support the de
 The `production` and `dev` networks are completely separate and not interchangeable.
 For example, for a given blockchain account, its XMTP identity on `dev` network is completely distinct from its XMTP identity on the `production` network, as are the messages associated with these identities. In addition, XMTP identities and messages created on the `dev` network can't be accessed from or moved to the `production` network, and vice versa.
 
-> **Note**  
-> When you [create a client](#create-a-client), it connects to the XMTP `dev` environment by default. To learn how to use the `env` parameter to set your client's network environment, see [Configure the client](#configure-the-client).
+:::important
+
+When you [create a client](#create-a-client), it connects to the XMTP `dev` environment by default. To learn how to use the `env` parameter to set your client's network environment, see [Configure the client](#configure-the-client).
+
+:::
 
 The `env` parameter accepts one of three valid values: `dev`, `production`, or `local`. Here are some best practices for when to use each environment:
 
