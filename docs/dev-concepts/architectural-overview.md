@@ -1,6 +1,6 @@
 ---
 sidebar_label: Architectural overview
-sidebar_position: 2
+sidebar_position: 2.5
 toc_max_heading_level: 4
 ---
 import Feedback from '/src/components/Feedback'

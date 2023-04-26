@@ -1,21 +1,21 @@
 export const HEADER_DATA = [
   {
-    title: 'Preview new SDKs and React Native app',
+    title: 'Start messaging with XMTP',
     subtitle:
-      'Try dev previews of Flutter and Swift client SDKs and an example React Native chat app',
-    url: 'sdks-and-tools',
-    icon: 'beaker-icon.svg',
+      'Use an app built with XMTP to start learning how to build one',
+    url: '/docs/client-sdk/javascript/tutorials/start-messaging',
+    icon: 'x-new.svg',
   },
   {
-    title: 'Quickstart: Client SDK for JavaScript',
-    subtitle: 'Build apps and tools for messaging between blockchain accounts',
-    url: '/docs/client-sdk/javascript/tutorials/quickstart',
+    title: 'Start building with XMTP client SDKs',
+    subtitle: 'Build web3 messaging apps in JavaScript, Kotlin, Swift, & Dart',
+    url: '/sdks-and-tools',
     icon: 'quickstart-icon.svg',
   },
   {
     title: 'Build Lens DMs with XMTP',
     subtitle:
-      'Learn how to build key XMTP chat features to provide direct messaging in a Lens app',
+      'Build key XMTP chat features to provide DMs in a Lens app',
     url: '/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app',
     icon: 'dms-icon.svg',
   },
@@ -25,6 +25,7 @@ const tags = {
   announcements: { name: 'Announcements', url: '/blog/tags/announcements/' },
   awards: { name: 'Awards', url: '/blog/tags/awards/' },
   company: { name: 'Company', url: '/blog/tags/company/' },
+  contenttypes: { name: 'Content Types', url: '/blog/tags/content-types/' },
   developers: { name: 'Developers', url: '/blog/tags/developers/' },
   grants: { name: 'Grants', url: '/blog/tags/grants/' },
   hackathon: { name: 'Hackathon', url: '/blog/tags/hackathon/' },
@@ -41,6 +42,34 @@ const tags = {
 
 export const BLOG_DATA = [
   {
+    tag: [tags.contenttypes, tags.developers, tags.sdks],
+    title:
+      'Some new content types',
+    content:
+      "Let's talk about some new content types for XMTP. What's a content type? A content type is a way to describe the type of content a message contains on XMTP.",
+    user: {
+      name: 'Engineering',
+      date: '06 Mar 2023 · 7 min read',
+      img: 'xmtp-icon.jpeg',
+      url: 'https://twitter.com/xmtp_'
+    },
+    url: '/blog/attachments-and-remote-attachments',
+  },
+  {
+    tag: [tags.developers, tags.messaging],
+    title:
+      'Secure web3 customer service and support with XMTP and ENS',
+    content:
+      "If you've been in the web3/crypto community for longer than an hour, you've probably seen a strange message that seems to accompany every Discord server.",
+    user: {
+      name: 'Matt Galligan',
+      date: '22 Feb 2023 · 8 min read',
+      img: 'matt-galligan.jpeg',
+      url: 'https://twitter.com/mg'
+    },
+    url: '/blog/secure-web3-customer-service-and-support-with-xmtp-and-ens',
+  },
+  {
     tag: [tags.awards, tags.developers, tags.hackathon],
     title: 'Developers show the power of video + messaging with XMTP and Livepeer',
     content:
@@ -53,39 +82,12 @@ export const BLOG_DATA = [
     },
     url: '/blog/encode-club-livepeer-wrap-up/',
   },
-  {
-    tag: [tags.announcements, tags.developers, tags.grants],
-    title:
-      'XMTP Grants: Every big idea starts small',
-    content:
-      'Announcing XMTP Grants! A program to nurture web3 messaging projects, support public good creation, and foster ecosystem growth.',
-    user: {
-      name: 'Yash Lunagaria',
-      date: '25 Jan 2023 · 2 min read',
-      img: 'yash-headshot.jpeg',
-      url: 'https://twitter.com/yash_luna'
-    },
-    url: '/blog/xmtp-grants-announcement/',
-  },
-  {
-    tag: [tags.announcements, tags.developers, tags.sdks],
-    title:
-      'Mobile SDKs in Developer Preview',
-    content:
-      'This holiday season, we have an early gift for all the web3 developers out there. XMTP mobile SDKs are now available in Developer Preview 🧑‍💻',
-    user: {
-      name: 'Peter Denton',
-      date: '20 Dec 2022 · 2 min read',
-      img: 'peter-denton.jpeg',
-      url: 'https://twitter.com/petermdenton'
-    },
-    url: '/blog/mobile-sdk-developer-preview',
-  },
 ]
 
 export const XMTP_JS_URL = 'https://api.github.com/repos/xmtp/xmtp-js'
-export const XMTP_FLUTTER_URL = 'https://api.github.com/repos/xmtp/xmtp-flutter'
+export const XMTP_ANDROID_URL = 'https://api.github.com/repos/xmtp/xmtp-android'
 export const XMTP_IOS_URL = 'https://api.github.com/repos/xmtp/xmtp-ios'
+export const XMTP_FLUTTER_URL = 'https://api.github.com/repos/xmtp/xmtp-flutter'
 export const XMTP_REACT_NATIVE_URL = 'https://api.github.com/repos/xmtp/example-chat-react-native'
 export const XMTP_NOTIF_SERVER_URL = 'https://api.github.com/repos/xmtp/example-notification-server-go'
 export const XMTP_MEMO_URL = 'https://api.github.com/repos/xmtp/xmtp-memo-js'

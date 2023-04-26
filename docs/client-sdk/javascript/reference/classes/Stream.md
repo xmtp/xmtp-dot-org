@@ -33,7 +33,7 @@ As such can be used with constructs like for-await-of, yield*, array destructing
 
 #### Defined in
 
-[Stream.ts:28](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L28)
+[Stream.ts:28](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L28)
 
 ## Properties
 
@@ -43,7 +43,7 @@ As such can be used with constructs like for-await-of, yield*, array destructing
 
 #### Defined in
 
-[Stream.ts:24](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L24)
+[Stream.ts:24](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L24)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:17](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L17)
+[Stream.ts:17](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L17)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:19](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L19)
+[Stream.ts:19](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L19)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:21](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L21)
+[Stream.ts:21](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L21)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:16](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L16)
+[Stream.ts:16](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L16)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:26](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L26)
+[Stream.ts:26](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L26)
 
 ## Methods
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:106](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L106)
+[Stream.ts:106](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L106)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:42](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L42)
+[Stream.ts:42](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L42)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:131](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L131)
+[Stream.ts:131](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L131)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:146](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L146)
+[Stream.ts:146](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L146)
 
 ___
 
@@ -188,7 +188,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:114](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L114)
+[Stream.ts:114](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L114)
 
 ___
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-[Stream.ts:78](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L78)
+[Stream.ts:78](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L78)
 
 ___
 
@@ -231,4 +231,4 @@ ___
 
 #### Defined in
 
-[Stream.ts:94](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Stream.ts#L94)
+[Stream.ts:94](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Stream.ts#L94)

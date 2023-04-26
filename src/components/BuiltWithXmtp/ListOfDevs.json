@@ -1,12 +1,57 @@
 [
    {
-      "name":"XMTP Inbox",
-      "href":"https://xmtp.chat",
-      "image":"/img/builtWithXmtp/xmtp.svg",
-      "bgColor": "",
-      "description":"XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
-      "github": "https://github.com/xmtp-labs/xmtp-inbox-web",
-      "twitter": "https://twitter.com/xmtp_"
+      "name":"Atticc",
+      "href":"https://atticc.xyz/",
+      "image":"/img/builtWithXmtp/atticc.png",
+      "description":"Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
+      "twitter": "https://twitter.com/atticc_xyz",
+      "github": "https://github.com/Atticc"
+   },
+   {
+      "name":"Beep3r",
+      "href":"https://bb3.xyz/",
+      "image":"/img/builtWithXmtp/beeper.png",
+      "description":"Bringing back the joy of owning a 90s pager device and the original vision of twttr - text networks.",
+      "github": "https://github.com/FUTUREPRIMITIVEXYZ/bb3-beep3r",
+      "twitter": "https://twitter.com/bb3labs"
+   },
+   {
+      "name":"Boson App",
+      "href":"https://bosonapp.io/",
+      "image":"/img/builtWithXmtp/boson.png",
+      "description":"Tokenize, transfer, and trade any physical asset as an NFT.",
+      "github": "https://github.com/bosonprotocol",
+      "twitter": "https://twitter.com/BosonProtocol"
+   },
+   {
+      "name":"Buttrfly",
+      "href":"https://www.buttrfly.app/",
+      "image":"/img/builtWithXmtp/buttrfly-icon-rounded.png",
+      "description":"Decentralized social media app built for a mobile first experience on iOS. Built on Lens Protocol.",
+      "twitter": "https://twitter.com/buttrfly_app"
+   },
+   {
+      "name":"ethOS",
+      "href":"https://www.ethosmobile.org/",
+      "image":"/img/builtWithXmtp/ethos-logo.jpeg",
+      "description":"The world's first Ethereum mobile operating system. A mobile OS built to be crypto native.",
+      "github": "https://github.com/EthereumPhone",
+      "twitter": "https://twitter.com/EthereumPhone"
+   },
+   {
+      "name":"GameJutsu",
+      "href":"https://gamejutsu.app/",
+      "image":"/img/builtWithXmtp/gamejutsu.png",
+      "description":"A gaming app that uses end-to-end encrypted messages as signed game moves between players.",
+      "github": "https://github.com/chainhackers/GameJutsu",
+      "twitter": "https://twitter.com/ChainHackerClan"
+   },
+   {
+      "name":"Lensport",
+      "href":"https://lensport.io/",
+      "image":"/img/builtWithXmtp/lensport.png",
+      "description":"Discover, collect, and sell Lens Posts to invest in creators you support. Built on Lens Protocol.",
+      "twitter": "https://twitter.com/lensport_io"
    },
    {
       "name":"Lenster",
@@ -18,14 +63,6 @@
       "twitter": "https://twitter.com/lensterxyz"
    },
    {
-      "name":"Beep3r",
-      "href":"https://bb3.xyz/",
-      "image":"/img/builtWithXmtp/beeper.png",
-      "description":"Bringing back the joy of owning a 90s pager device and the original vision of twttr - text networks.",
-      "github": "https://github.com/FUTUREPRIMITIVEXYZ/bb3-beep3r",
-      "twitter": "https://twitter.com/bb3labs"
-   },
-   {
       "name":"meTokens",
       "href":"https://metokens.com/discover",
       "image":"/img/builtWithXmtp/meTokens2.svg",
@@ -34,49 +71,19 @@
       "twitter": "https://twitter.com/meTokens"
    },
    {
-      "name":"Relay Receiver",
-      "href":"https://relay.cc/",
-      "image":"/img/builtWithXmtp/relay.png",
-      "description":"Relay’s goal is to provide open-source tools and products on top of XMTP, and create the best place for web3 identities.",
-      "github": "https://github.com/relaycc",
-      "twitter": "https://twitter.com/relay_eth"
+      "name":"Mintify",
+      "href":"https://mintify.xyz",
+      "image":"/img/builtWithXmtp/mintify.png",
+      "description":"Mintify is a multi-chain aggregator, analytics platform and terminal for trading NFT based economies.",
+      "twitter": "https://twitter.com/mintify"
    },
    {
-      "name":"Lensport",
-      "href":"https://lensport.io/",
-      "image":"/img/builtWithXmtp/lensport.png",
-      "description":"Discover, collect, and sell Lens Posts to invest in creators you support. Built on Lens Protocol.",
-      "twitter": "https://twitter.com/lensport_io"
-   },
-   {
-      "name":"GameJutsu",
-      "href":"https://gamejutsu.app/",
-      "image":"/img/builtWithXmtp/gamejutsu.png",
-      "description":"A gaming app that uses end-to-end encrypted messages as signed game moves between players.",
-      "github": "https://github.com/chainhackers/GameJutsu",
-      "twitter": "https://twitter.com/ChainHackerClan"
-   },
-   {
-      "name":"Buttrfly",
-      "href":"https://www.buttrfly.app/",
-      "image":"/img/builtWithXmtp/buttrfly-icon-rounded.png",
-      "description":"Decentralized social media app built for a mobile first experience on iOS. Built on Lens Protocol.",
-      "twitter": "https://twitter.com/buttrfly_app"
-   },
-   {
-      "name":"Boson App",
-      "href":"https://bosonapp.io/",
-      "image":"/img/builtWithXmtp/boson.png",
-      "description":"Tokenize, transfer, and trade any physical asset as an NFT.",
-      "github": "https://github.com/bosonprotocol",
-      "twitter": "https://twitter.com/BosonProtocol"
-   },
-   {
-      "name":"Wallet Roullete",
-      "href":"https://walletroulette.xyz/",
-      "image":"/img/builtWithXmtp/walletroulette.png",
-      "description":"Get matched with random web3 users and chat.",
-      "twitter": "https://twitter.com/polmaire"
+      "name":"Pinsta",
+      "href":"https://pinsta.xyz/",
+      "image":"/img/builtWithXmtp/pinsta.png",
+      "description":"Decentralized image and video sharing service. Create Pin Boards to collect and discover rich media.",
+      "github": "https://github.com/jsonpreet/Pinsta",
+      "twitter": "https://twitter.com/PinstaApp"
    },
    {
       "name":"Plex",
@@ -86,18 +93,27 @@
       "twitter": "https://twitter.com/Plexlaboratory"
    },
    {
-      "name":"Atticc",
-      "href":"https://atticc.xyz/",
-      "image":"/img/builtWithXmtp/atticc.png",
-      "description":"Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
-      "twitter": "https://twitter.com/atticc_xyz",
-      "github": "https://github.com/Atticc"
+      "name":"Relay",
+      "href":"https://relay.cc/",
+      "image":"/img/builtWithXmtp/relay.png",
+      "description":"Relay is the intersection of Ethereum-enabled OpenAI agents and wallet messaging.",
+      "github": "https://github.com/relaycc",
+      "twitter": "https://twitter.com/relay_eth"
    },
    {
-      "name":"Mintify",
-      "href":"https://mintify.xyz",
-      "image":"/img/builtWithXmtp/mintify.png",
-      "description":"Mintify is a multi-chain aggregator, analytics platform and terminal for trading NFT based economies.",
-      "twitter": "https://twitter.com/mintify"
+      "name":"Wallet Roullete",
+      "href":"https://walletroulette.xyz/",
+      "image":"/img/builtWithXmtp/walletroulette.png",
+      "description":"Get matched with random web3 users and chat.",
+      "twitter": "https://twitter.com/polmaire"
+   },
+   {
+      "name":"XMTP Inbox",
+      "href":"https://xmtp.chat",
+      "image":"/img/builtWithXmtp/xmtp.svg",
+      "bgColor": "",
+      "description":"XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
+      "github": "https://github.com/xmtp-labs/xmtp-inbox-web",
+      "twitter": "https://twitter.com/xmtp_"
    }
 ]

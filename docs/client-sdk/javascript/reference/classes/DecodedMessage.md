@@ -5,17 +5,17 @@
 
 ### constructor
 
-**new DecodedMessage**(`__namedParameters`)
+**new DecodedMessage**(`«destructured»`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | [`DecodedMessage`](DecodedMessage.md) |
+| `«destructured»` | `Omit`<[`DecodedMessage`](DecodedMessage.md), ``"toBytes"``\> |
 
 #### Defined in
 
-[Message.ts:259](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L259)
+[Message.ts:244](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L244)
 
 ## Properties
 
@@ -25,7 +25,17 @@
 
 #### Defined in
 
-[Message.ts:256](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L256)
+[Message.ts:240](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L240)
+
+___
+
+### contentBytes
+
+ **contentBytes**: `Uint8Array`
+
+#### Defined in
+
+[Message.ts:242](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L242)
 
 ___
 
@@ -35,7 +45,7 @@ ___
 
 #### Defined in
 
-[Message.ts:253](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L253)
+[Message.ts:237](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L237)
 
 ___
 
@@ -45,17 +55,17 @@ ___
 
 #### Defined in
 
-[Message.ts:255](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L255)
+[Message.ts:239](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L239)
 
 ___
 
 ### conversation
 
- **conversation**: [`Conversation`](../modules.md#conversation)
+ **conversation**: [`Conversation`](../interfaces/Conversation.md)
 
 #### Defined in
 
-[Message.ts:254](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L254)
+[Message.ts:238](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L238)
 
 ___
 
@@ -65,7 +75,7 @@ ___
 
 #### Defined in
 
-[Message.ts:257](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L257)
+[Message.ts:241](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L241)
 
 ___
 
@@ -75,7 +85,7 @@ ___
 
 #### Defined in
 
-[Message.ts:248](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L248)
+[Message.ts:232](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L232)
 
 ___
 
@@ -85,7 +95,7 @@ ___
 
 #### Defined in
 
-[Message.ts:249](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L249)
+[Message.ts:233](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L233)
 
 ___
 
@@ -95,7 +105,7 @@ ___
 
 #### Defined in
 
-[Message.ts:251](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L251)
+[Message.ts:235](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L235)
 
 ___
 
@@ -105,7 +115,7 @@ ___
 
 #### Defined in
 
-[Message.ts:250](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L250)
+[Message.ts:234](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L234)
 
 ___
 
@@ -115,13 +125,48 @@ ___
 
 #### Defined in
 
-[Message.ts:252](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L252)
+[Message.ts:236](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L236)
 
 ## Methods
 
+### toBytes
+
+**toBytes**(): `Uint8Array`
+
+#### Returns
+
+`Uint8Array`
+
+#### Defined in
+
+[Message.ts:270](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L270)
+
+___
+
+### fromBytes
+
+`Static` **fromBytes**(`data`, `client`): `Promise`<[`DecodedMessage`](DecodedMessage.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `Uint8Array` |
+| `client` | [`Client`](Client.md) |
+
+#### Returns
+
+`Promise`<[`DecodedMessage`](DecodedMessage.md)\>
+
+#### Defined in
+
+[Message.ts:283](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L283)
+
+___
+
 ### fromV1Message
 
-`Static` **fromV1Message**(`message`, `content`, `contentType`, `contentTopic`, `conversation`, `error?`): [`DecodedMessage`](DecodedMessage.md)
+`Static` **fromV1Message**(`message`, `content`, `contentType`, `contentBytes`, `contentTopic`, `conversation`, `error?`): [`DecodedMessage`](DecodedMessage.md)
 
 #### Parameters
 
@@ -130,8 +175,9 @@ ___
 | `message` | `MessageV1` |
 | `content` | `any` |
 | `contentType` | [`ContentTypeId`](ContentTypeId.md) |
+| `contentBytes` | `Uint8Array` |
 | `contentTopic` | `string` |
-| `conversation` | [`Conversation`](../modules.md#conversation) |
+| `conversation` | [`Conversation`](../interfaces/Conversation.md) |
 | `error?` | `Error` |
 
 #### Returns
@@ -140,13 +186,13 @@ ___
 
 #### Defined in
 
-[Message.ts:283](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L283)
+[Message.ts:318](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L318)
 
 ___
 
 ### fromV2Message
 
-`Static` **fromV2Message**(`message`, `content`, `contentType`, `contentTopic`, `conversation`, `error?`): [`DecodedMessage`](DecodedMessage.md)
+`Static` **fromV2Message**(`message`, `content`, `contentType`, `contentTopic`, `contentBytes`, `conversation`, `senderAddress`, `error?`): [`DecodedMessage`](DecodedMessage.md)
 
 #### Parameters
 
@@ -156,7 +202,9 @@ ___
 | `content` | `any` |
 | `contentType` | [`ContentTypeId`](ContentTypeId.md) |
 | `contentTopic` | `string` |
-| `conversation` | [`Conversation`](../modules.md#conversation) |
+| `contentBytes` | `Uint8Array` |
+| `conversation` | [`Conversation`](../interfaces/Conversation.md) |
+| `senderAddress` | `string` |
 | `error?` | `Error` |
 
 #### Returns
@@ -165,4 +213,4 @@ ___
 
 #### Defined in
 
-[Message.ts:309](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/Message.ts#L309)
+[Message.ts:346](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L346)

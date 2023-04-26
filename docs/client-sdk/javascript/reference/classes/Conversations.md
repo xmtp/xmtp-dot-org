@@ -17,7 +17,7 @@ Conversations allows you to view ongoing 1:1 messaging sessions with another wal
 
 #### Defined in
 
-[conversations/Conversations.ts:21](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversations.ts#L21)
+[conversations/Conversations.ts:77](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L77)
 
 ## Properties
 
@@ -27,13 +27,101 @@ Conversations allows you to view ongoing 1:1 messaging sessions with another wal
 
 #### Defined in
 
-[conversations/Conversations.ts:20](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversations.ts#L20)
+[conversations/Conversations.ts:73](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L73)
+
+___
+
+### v1Cache
+
+ `Private` **v1Cache**: `ConversationCache`
+
+#### Defined in
+
+[conversations/Conversations.ts:74](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L74)
+
+___
+
+### v2Mutex
+
+ `Private` **v2Mutex**: `Mutex`
+
+#### Defined in
+
+[conversations/Conversations.ts:75](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L75)
 
 ## Methods
 
+### conversationReferenceToV2
+
+`Private` **conversationReferenceToV2**(`convoRef`): `ConversationV2`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `convoRef` | `ConversationReference` |
+
+#### Returns
+
+`ConversationV2`
+
+#### Defined in
+
+[conversations/Conversations.ts:199](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L199)
+
+___
+
+### createV2Convo
+
+`Private` **createV2Convo**(`recipient`, `context?`): `Promise`<`ConversationV2`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `recipient` | [`SignedPublicKeyBundle`](SignedPublicKeyBundle.md) |
+| `context?` | `InvitationContext` |
+
+#### Returns
+
+`Promise`<`ConversationV2`\>
+
+#### Defined in
+
+[conversations/Conversations.ts:495](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L495)
+
+___
+
+### decodeInvites
+
+`Private` **decodeInvites**(`envelopes`, `shouldThrow?`): `Promise`<`ConversationV2`[]\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `envelopes` | `Envelope`[] | `undefined` |
+| `shouldThrow` | `boolean` | `false` |
+
+#### Returns
+
+`Promise`<`ConversationV2`[]\>
+
+#### Defined in
+
+[conversations/Conversations.ts:162](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L162)
+
+___
+
 ### getIntroductionPeers
 
-`Private` **getIntroductionPeers**(): `Promise`<`Map`<`string`, `Date`\>\>
+`Private` **getIntroductionPeers**(`opts?`): `Promise`<`Map`<`string`, `Date`\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `opts?` | [`ListMessagesOptions`](../modules.md#listmessagesoptions) |
 
 #### Returns
 
@@ -41,7 +129,7 @@ Conversations allows you to view ongoing 1:1 messaging sessions with another wal
 
 #### Defined in
 
-[conversations/Conversations.ts:233](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversations.ts#L233)
+[conversations/Conversations.ts:383](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L383)
 
 ___
 
@@ -61,29 +149,73 @@ ___
 
 #### Defined in
 
-[conversations/Conversations.ts:365](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversations.ts#L365)
+[conversations/Conversations.ts:527](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L527)
+
+___
+
+### getV2ConversationsFromKeystore
+
+`Private` **getV2ConversationsFromKeystore**(): `Promise`<`ConversationV2`[]\>
+
+#### Returns
+
+`Promise`<`ConversationV2`[]\>
+
+#### Defined in
+
+[conversations/Conversations.ts:144](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L144)
 
 ___
 
 ### list
 
-**list**(): `Promise`<[`Conversation`](../modules.md#conversation)[]\>
+**list**(): `Promise`<[`Conversation`](../interfaces/Conversation.md)[]\>
 
-List all conversations with the current wallet found in the network, deduped by peer address
+List all conversations with the current wallet found in the network.
 
 #### Returns
 
-`Promise`<[`Conversation`](../modules.md#conversation)[]\>
+`Promise`<[`Conversation`](../interfaces/Conversation.md)[]\>
 
 #### Defined in
 
-[conversations/Conversations.ts:28](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversations.ts#L28)
+[conversations/Conversations.ts:86](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L86)
+
+___
+
+### listV1Conversations
+
+`Private` **listV1Conversations**(): `Promise`<[`Conversation`](../interfaces/Conversation.md)[]\>
+
+#### Returns
+
+`Promise`<[`Conversation`](../interfaces/Conversation.md)[]\>
+
+#### Defined in
+
+[conversations/Conversations.ts:98](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L98)
+
+___
+
+### listV2Conversations
+
+`Private` **listV2Conversations**(): `Promise`<[`Conversation`](../interfaces/Conversation.md)[]\>
+
+List all V2 conversations
+
+#### Returns
+
+`Promise`<[`Conversation`](../interfaces/Conversation.md)[]\>
+
+#### Defined in
+
+[conversations/Conversations.ts:117](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L117)
 
 ___
 
 ### newConversation
 
-**newConversation**(`peerAddress`, `context?`): `Promise`<[`Conversation`](../modules.md#conversation)\>
+**newConversation**(`peerAddress`, `context?`): `Promise`<[`Conversation`](../interfaces/Conversation.md)\>
 
 Creates a new conversation for the given address. Will throw an error if the peer is not found in the XMTP network
 
@@ -96,39 +228,37 @@ Creates a new conversation for the given address. Will throw an error if the pee
 
 #### Returns
 
-`Promise`<[`Conversation`](../modules.md#conversation)\>
+`Promise`<[`Conversation`](../interfaces/Conversation.md)\>
 
 #### Defined in
 
-[conversations/Conversations.ts:270](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversations.ts#L270)
+[conversations/Conversations.ts:427](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L427)
 
 ___
 
-### sendInvitation
+### saveInviteResponseToConversation
 
-`Private` **sendInvitation**(`recipient`, `invitation`, `created`): `Promise`<`SealedInvitation`\>
+`Private` **saveInviteResponseToConversation**(`«destructured»`): `ConversationV2`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `recipient` | [`SignedPublicKeyBundle`](SignedPublicKeyBundle.md) |
-| `invitation` | `InvitationV1` |
-| `created` | `Date` |
+| `«destructured»` | `SaveInvitesResponse_Response` |
 
 #### Returns
 
-`Promise`<`SealedInvitation`\>
+`ConversationV2`
 
 #### Defined in
 
-[conversations/Conversations.ts:335](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversations.ts#L335)
+[conversations/Conversations.ts:189](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L189)
 
 ___
 
 ### stream
 
-**stream**(): `Promise`<[`Stream`](Stream.md)<[`Conversation`](../modules.md#conversation)\>\>
+**stream**(): `Promise`<[`Stream`](Stream.md)<[`Conversation`](../interfaces/Conversation.md)\>\>
 
 Returns a stream of any newly created conversations.
 Will dedupe to not return the same conversation twice in the same stream.
@@ -136,11 +266,11 @@ Does not dedupe any other previously seen conversations
 
 #### Returns
 
-`Promise`<[`Stream`](Stream.md)<[`Conversation`](../modules.md#conversation)\>\>
+`Promise`<[`Stream`](Stream.md)<[`Conversation`](../interfaces/Conversation.md)\>\>
 
 #### Defined in
 
-[conversations/Conversations.ts:59](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversations.ts#L59)
+[conversations/Conversations.ts:216](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L216)
 
 ___
 
@@ -159,4 +289,24 @@ Callers should be aware the first messages in a newly created conversation are p
 
 #### Defined in
 
-[conversations/Conversations.ts:110](https://github.com/xmtp/xmtp-js/blob/b6e743a/src/conversations/Conversations.ts#L110)
+[conversations/Conversations.ts:264](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L264)
+
+___
+
+### updateV2Conversations
+
+**updateV2Conversations**(`startTime?`): `Promise`<`ConversationV2`[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `startTime?` | `Date` |
+
+#### Returns
+
+`Promise`<`ConversationV2`[]\>
+
+#### Defined in
+
+[conversations/Conversations.ts:151](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversations.ts#L151)

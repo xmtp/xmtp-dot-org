@@ -1,6 +1,6 @@
 ---
 sidebar_label: Roadmap
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Roadmap
@@ -61,9 +61,7 @@ Users will be able to store XMTP private keys in secure contexts such as wallet 
 
 ### UI Kit & React Hooks SDK
 
-Enable developers to focus on differentiating features by providing reusable messaging components via a UI kit & React Hooks SDK.
-
-- [React SDK](https://github.com/xmtp/xmtp-react)
+Enable developers to focus on differentiating features by providing reusable messaging components via a [UI kit & React Hooks SDK](https://github.com/xmtp/xmtp-react).
 
 ---
 
@@ -71,12 +69,9 @@ Enable developers to focus on differentiating features by providing reusable mes
 
 A super early peek into what we're building. Ready for exploration, not adoption.
 
-### Mobile support for Android and React Native
+### Mobile support for React Native
 
-Developers will be able to build mobile client apps in Android and React Native.
-
-- [Android](https://github.com/xmtp/xmtp-android)
-- [React Native](https://github.com/xmtp/xmtp-js/issues/170)
+Developers will be able to build mobile client apps in [React Native](https://github.com/xmtp/xmtp-js/issues/170).
 
 ---
 
@@ -84,12 +79,9 @@ Developers will be able to build mobile client apps in Android and React Native.
 
 Opportunity to test, validate, and provide feedback. We do not recommend usage in production apps just yet.
 
-### Mobile support for Flutter and Swift
+### Build Android apps in Kotlin
 
-Developers will be able to build mobile client apps in Flutter and Swift.
-
-- [Flutter](https://github.com/xmtp/xmtp-flutter/issues/4)
-- [Swift](https://github.com/xmtp/xmtp-ios/issues/7)
+Developers will be able to build Android apps in Kotlin using the [`xmtp-android` SDK](https://github.com/xmtp/xmtp-android).
 
 ### Push notifications - example server
 
@@ -101,7 +93,17 @@ Apps will be able to leverage an example server to subscribe users for push noti
 
 ## General Availability ✅
 
-Ready for production use. Check out [docs](https://xmtp.org/docs/client-sdk/javascript/concepts/intro-to-sdk), [tutorials](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-an-xmtp-hello-world-app), and the [quickstart example](https://xmtp.org/docs/client-sdk/javascript/tutorials/quickstart).
+### Build JavaScript and React apps
+
+Developers are able to build apps in JavaScript and React with the [`xmtp-js` SDK](/docs/client-sdk/javascript/tutorials/quickstart).
+
+### Build iOS apps in Swift
+
+Developers are able to build iOS apps in Swift using the [`xmtp-ios` SDK](/docs/client-sdk/swift/tutorials/quickstart).
+
+### Build Flutter and mobile apps in Dart
+
+Developers are able to build Flutter and mobile apps in Dart using the [`xmtp-flutter` SDK](/docs/client-sdk/dart/tutorials/quickstart).
 
 ### XMTP v2 (December 2022)
 

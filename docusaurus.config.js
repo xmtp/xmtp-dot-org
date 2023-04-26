@@ -8,9 +8,10 @@ const { tailwindPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'XMTP: The open protocol and network for secure web3 messaging',
+  title: ' ', // Set empty string to disable site title repeating in og title for all pages. Title, descr, and home page heading set in src/pages/index.js.
   tagline:
-    'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more',
+    'Build with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and more', // tagline on home page
+  titleDelimiter: ' ', // Set empty string to disable pipe delimiter in og title
   url: 'https://xmtp.org',
   customFields: {
     githubAPI: process.env.PUBLIC_URL,
@@ -18,10 +19,18 @@ const config = {
   },
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
+  scripts: [
+    {
+      src: 'https://plausible.io/js/script.outbound-links.js',
+      async: true,
+      defer: true,
+      'data-domain': 'xmtp.org',
+    },
+  ],
   clientModules: [require.resolve('./src/css/tailwind.css')],
 
   presets: [
@@ -40,7 +49,8 @@ const config = {
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
         },
         blog: {
-          blogDescription: 'A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging',
+          blogDescription:
+            'A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging',
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
         },
@@ -53,6 +63,35 @@ const config = {
 
   plugins: [
     tailwindPlugin,
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'swift',
+        path: 'docs/client-sdk/swift',
+        routeBasePath: 'docs/client-sdk/swift',
+        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-swift.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'dart',
+        path: 'docs/client-sdk/dart',
+        routeBasePath: 'docs/client-sdk/dart',
+        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-dart.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'kotlin',
+        path: 'docs/client-sdk/kotlin',
+        routeBasePath: 'docs/client-sdk/kotlin',
+        sidebarPath: require.resolve(
+          './sidebars/sidebars-client-sdk-kotlin.js'
+        ),
+      },
+    ],
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -80,23 +119,16 @@ const config = {
         sidebarPath: require.resolve('./sidebars/sidebars-vision.js'),
       },
     ],
-    [
-      'docusaurus-plugin-plausible',
-      {
-        domain: 'xmtp.org',
-      },
-    ],
   ],
-
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode:'light',
+        defaultMode: 'light',
         disableSwitch: false,
       },
-      image: '/img/mobile-animation-bg.jpg',
+      image: 'img/xmtp-card.png',
       navbar: {
         title: '',
         logo: {
@@ -113,15 +145,33 @@ const config = {
             items: [
               {
                 to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/client-icon.svg" alt="Client SDK icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Use the client SDK to build a web3 messaging solution</div></div></div>`,
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">JavaScript XMTP client SDK</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials and reference for building apps in JavaScript</div></div></div>`,
+              },
+              {
+                to: 'docs/client-sdk/kotlin/tutorials/quickstart',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/kotlin-icon.svg" alt="Kotlin icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Kotlin XMTP client SDK</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building Android apps in Kotlin</div></div></div>`,
+              },
+              {
+                to: 'docs/client-sdk/swift/tutorials/quickstart',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/swift-icon.svg" alt="Swift icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Swift XMTP client SDK</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building iOS apps in Swift</div></div></div>`,
+              },
+              {
+                to: 'docs/client-sdk/dart/tutorials/quickstart',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/dart-icon.svg" alt="Dart icon" /></div>
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dart XMTP client SDK</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building Flutter apps in Dart</div></div></div>`,
               },
               {
                 to: 'docs/dev-concepts/introduction',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/development-icon.svg" alt="Development concepts icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Development concepts</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about the protocol, architecture, security, FAQ, and more</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about XMTP architecture, security, FAQ, and more</div></div></div>`,
               },
             ],
           },
@@ -168,12 +218,6 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'vision/litepaper',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/document-text.svg" alt="Document icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Litepaper</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Read the public draft of the XMTP Litepaper</div></div></div>`,
-              },
-              {
                 to: 'vision/roadmap',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="Map icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Roadmap</div>
@@ -188,6 +232,11 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
+            type: 'html',
+            position: 'right',
+            value: '<button type="button" onClick="window.open(`/docs/dev-concepts/start-building`, `_self`);" class="navbar__button"><strong>Start building</strong></button>',
+          },
+          {
             href: 'https://github.com/xmtp',
             title: 'Go to the XMTP GitHub repo',
             position: 'right',
@@ -199,19 +248,23 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Client SDK',
+            title: 'Client SDKs',
             items: [
               {
-                label: `Concepts`,
+                label: `JavaScript`,
                 to: `/docs/client-sdk/javascript/concepts/intro-to-sdk`,
               },
               {
-                label: `Tutorials`,
-                to: `/docs/client-sdk/javascript/tutorials/quickstart`,
+                label: `Kotlin`,
+                to: `/docs/client-sdk/kotlin/tutorials/quickstart`,
               },
               {
-                label: `References`,
-                to: `/docs/client-sdk/javascript/reference/classes/Client`,
+                label: `Swift`,
+                to: `/docs/client-sdk/swift/tutorials/quickstart`,
+              },
+              {
+                label: `Dart`,
+                to: `/docs/client-sdk/dart/tutorials/quickstart`,
               },
             ],
           },
@@ -223,12 +276,20 @@ const config = {
                 to: `/docs/dev-concepts/introduction`,
               },
               {
+                label: `Start building`,
+                to: `/docs/dev-concepts/start-building`,
+              },
+              {
                 label: `Architectural overview`,
                 to: `/docs/dev-concepts/architectural-overview`,
               },
               {
                 label: `FAQ`,
                 to: `/docs/dev-concepts/faq`,
+              },
+              {
+                label: `Interoperable inbox`,
+                to: `/docs/dev-concepts/interoperable-inbox`,
               },
               {
                 label: `Content types`,
@@ -253,6 +314,10 @@ const config = {
               {
                 label: `Contribute to XMTP`,
                 to: `/docs/dev-concepts/contributing`,
+              },
+              {
+                label: `Releases`,
+                to: `/docs/dev-concepts/xmtp-releases`,
               },
               {
                 label: `XMTP Improvement Proposals`,
@@ -318,10 +383,6 @@ const config = {
             title: 'Vision',
             items: [
               {
-                label: 'Litepaper',
-                to: '/vision/litepaper',
-              },
-              {
                 label: 'Roadmap',
                 to: '/vision/roadmap',
               },
@@ -354,6 +415,7 @@ const config = {
         //... other Algolia params
       },
       prism: {
+        additionalLanguages: ['dart', 'swift', 'kotlin'],
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
