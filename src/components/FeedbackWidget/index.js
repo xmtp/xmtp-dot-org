@@ -3,6 +3,7 @@ import { FaceFrownIcon, FaceSmileIcon } from '@heroicons/react/24/solid'
 import styles from './styles.module.css'
 import { options } from './utils'
 import { reportFeedback } from './utils'
+import { useColorMode } from '@docusaurus/theme-common'
 
 /**
  * Renders the appropriate header for the feedback widget.
@@ -26,14 +27,19 @@ export const FeedbackWidgetForm = ({
   option,
   onOptionChange,
 }) => {
+  const { colorMode } = useColorMode()
+  const isDarkTheme = colorMode === 'dark'
+
   return helpful ? (
     <form onSubmit={onSubmit} className={styles.form}>
       <textarea
         autoFocus
         id="feedbackForm"
-        className={`${styles.optionalField} ${styles.positiveOptionalField}`}
+        className={`${styles.optionalField} ${styles.positiveOptionalField} ${
+          isDarkTheme ? styles.darkThemeOptionalField : ''
+        }`}
         maxLength={2000}
-        placeholder="Optional. Want to share a bit more about what was helpful? Solved your issue? Easy to understand? Accurate? Something else?"
+        placeholder="Optional. Want to let us know what was helpful? Solved your issue? Easy to understand? Something else?"
       ></textarea>
       <input className={styles.submit} type="submit" value="Submit" />
     </form>
@@ -45,7 +51,9 @@ export const FeedbackWidgetForm = ({
             <label className={styles.label} htmlFor={currentOption}>
               {currentOption}
               <input
-                className={`${styles.input} ${isRoot ? styles.inputDark : ''}`}
+                className={`${styles.input} ${
+                  isRoot || isDarkTheme ? styles.inputDark : ''
+                }`}
                 type="radio"
                 name="option"
                 value={currentOption}
@@ -59,10 +67,11 @@ export const FeedbackWidgetForm = ({
               <textarea
                 autoFocus
                 id="feedbackForm"
-                className={styles.optionalField}
+                className={`${styles.optionalField} ${
+                  isDarkTheme ? styles.darkThemeOptionalField : ''
+                }`}
                 maxLength={2000}
-                placeholder="Optional, but can you provide a few more details to help us
-                          understand the issue?"
+                placeholder="We'd love to know more about the issue so we can fix it. This is optional, but helpful."
               ></textarea>
             )}
           </div>
@@ -121,7 +130,6 @@ const FeedbackWidget = ({ isRoot }) => {
     e.preventDefault()
     // Necessary but temporary workaround
     const extraFeedback = document.getElementById('feedbackForm')?.value
-    console.log('EXTRA FEEDBACK', extraFeedback)
 
     if (helpful === true) {
       reportFeedback(true, null, extraFeedback)
@@ -141,7 +149,7 @@ const FeedbackWidget = ({ isRoot }) => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={`${isRoot ? styles.rootContainer : styles.container}`}>
       <div
         className={
           helpful === undefined
@@ -154,13 +162,10 @@ const FeedbackWidget = ({ isRoot }) => {
             helpful === null
               ? 'Thank you! Your feedback helps us improve the XMTP documentation.'
               : helpful === false
-              ? 'What went wrong? '
+              ? 'Sorry for the trouble. What went wrong?'
               : helpful === true
               ? 'What was helpful?'
               : 'Was the information on this page helpful?'
-          }
-          subheader={
-            helpful === false && 'Help us improve by providing feedback.'
           }
         />
 

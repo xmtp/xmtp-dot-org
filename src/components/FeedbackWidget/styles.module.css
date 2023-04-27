@@ -5,6 +5,20 @@
   margin-block: 16px;
 }
 
+/* For homepage only */
+.rootContainer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .optionContainer {
   display: flex;
   flex-direction: column;
@@ -128,11 +142,17 @@
   margin-bottom: 16px;
   margin-left: 36px;
   padding: 16px;
-  width: 100%;
 }
 
 .positiveOptionalField {
   margin-left: 0;
+  width: 100%;
+}
+
+.darkThemeOptionalField {
+  border: thin solid #444444;
+  color: #7f8497;
+  background-color: black;
 }
 
 .text {

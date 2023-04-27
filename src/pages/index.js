@@ -55,10 +55,9 @@ export default function Home() {
     >
       <HomepageHeader />
       <MainContent styles={styles} />
-      {/* Temporarily removing from homepage */}
-      {/* <div className="bg-black text-white xl:px-36 w-full flex">
+      <div className="bg-black">
         <FeedbackWidget isRoot />
-      </div> */}
+      </div>
     </Layout>
   )
 }

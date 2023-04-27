@@ -5,10 +5,10 @@ import { Client } from '@xmtp/xmtp-js'
  * Options when the user answers that the page was not helpful.
  */
 export const options = [
-  'Inaccurate information',
-  "Couldn't find the information I need",
+  'Inaccurate info',
+  "Couldn't find what I need",
   'Too complicated',
-  'Errors in code samples',
+  'Errors in code sample',
   'Broken link or typo',
   'Something else',
 ]
@@ -21,7 +21,7 @@ export async function reportFeedback(helpful, reason, extraInfo) {
   const client = await Client.create(wallet)
   await client.publishUserContact()
   const conversation = await client.conversations.newConversation(
-    '0x1314704982c0ad49dBa5D1D01fd44933143A5c5E'
+    '0x1852b55b3D59006Db4aAF4f9768b5c38def19156'
   )
   await conversation.send(
     JSON.stringify({
@@ -29,6 +29,7 @@ export async function reportFeedback(helpful, reason, extraInfo) {
       helpful,
       reason,
       extraInfo,
+      date: new Date().toLocaleDateString(),
     })
   )
 }
