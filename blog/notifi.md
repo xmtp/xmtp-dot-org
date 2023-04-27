@@ -1,9 +1,9 @@
 ---
 slug: notifi
 hide_table_of_contents: true
-title: "Breaking the Web2 Barrier: How XMTP and Notifi Are Bridging the Gap for Web3 Apps with Web2 Notifications"
+title: "Breaking the web2 barrier: How XMTP and Notifi are bridging the gap for web3 apps with web2 notifications"
 date: 2023-04-28
-authors: peter
+authors: rochelle
 description: "With Notifi, XMTP in-app messages can now trigger notifications to any web2 app, so devs can reliably reach their end-users without compromising on security."
 image: ./media/Breaking-the-Web2-Barrier-Post.jpg
 tags:
