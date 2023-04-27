@@ -22,7 +22,7 @@ At the most basic level, the architecture of XMTP includes three layers:
 
 ## Network layer
 
-The network layer provides the XMTP network which is comprised of **nodes** (computers) running XMTP node software.
+The network layer provides the XMTP network, which is composed of **nodes** (computers) running XMTP node software.
 
 The XMTP network enables any computer running XMTP node software to participate in the network. Currently, the node software is closed source and all nodes in the XMTP network are operated by XMTP Labs. XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months.
 
@@ -36,7 +36,7 @@ Currently, nodes are configured to rate limit high-volume publishing from messag
 
 Every **envelope** contains a payload, often encrypted, that is not observable by nodes. The payload could be a public key bundle, private key bundle, or a message created by a client app, but this information is opaque to nodes. Meaning is assigned to these envelopes in the [Client layer](#client-layer).
 
-Nodes can see envelope properties which help the nodes understand how to handle envelopes but the properties reveal nothing about message content. An example of an important envelope property is a **topic** name. A topic name is a required envelope property. A topic name helps a node understand where to relay and store the envelope. Each envelope belongs to exactly one topic.
+Nodes can see envelope properties which help the nodes understand how to handle envelopes, but the properties reveal nothing about message content. An example of an important envelope property is a **topic** name. A topic name is a required envelope property. A topic name helps a node understand where to relay and store the envelope. Each envelope belongs to exactly one topic.
 
 The primary responsibilities of an XMTP node are to:
 
@@ -73,63 +73,73 @@ To learn more, see [Content types](content-types).
 
 ### XMTP V2 topics and message presentation flow
 
-This section describes how topics and the message presentation flow work for the current version of the protocol, referred to as XMTP V2. Only client apps with XMTP client SDK >=v7.0.0 can use XMTP V2. To learn about how topics and flows work in XMTP V1, see [XMTP V1 topics and message presentation flow](#xmtp-v1-topics-and-message-presentation-flow).
+This section describes how topics and the message presentation flow work for the current version of the protocol, referred to as XMTP V2. Only client apps with XMTP client SDK >=v7.0.0 can use XMTP V2. To learn how topics and flows work in XMTP V1, see [XMTP V1 topics and message presentation flow](#xmtp-v1-topics-and-message-presentation-flow).
 
-In XMTP V2, clients use the following topics to perform their primary responsibilities:
-<!--update invite row to link to conversation filtering section in SDK readme once releases-->
-<table>
-   <tr>
-      <td><strong>Topic</strong>
-      </td>
-      <td><strong>Description</strong>
-      </td>
-      <td><strong>Example name</strong>
-      </td>
-   </tr>
-   <tr>
-      <td><strong>Contact</strong>
-      </td>
-      <td>A client uses a contact topic to advertise a user’s public key bundle on the XMTP network. The network advertises this public key bundle to enable other users to contact the user.
-      </td>
-      <td><code>contact-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38</code>
-      </td>
-   </tr>
-   <tr>
-      <td><strong>Invite</strong>
-      </td>
-      <td>
-         Clients use invite topics to initiate conversations between participants. The client sends an invitation to both the sender and recipient. The invitation includes no message content, but includes:
-         <ul>
-            <li>A randomly generated conversation topic name, which tells the client which conversation topic to use to send and retrieve messages.</li>
-            <li>Encrypted key material, which includes a shared secret for message encryption.</li>
-            <li>Invitations support custom <code>conversationIds</code> and other metadata. Clients can use these IDs and metadata to filter and organize conversations.</li>
-         </ul>
-      </td>
-      <td><code>invite-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38</code>
-      </td>
-   </tr>
-   <tr>
-      <td><strong>Conversation</strong>
-      </td>
-      <td>
-         Clients use conversation topics to store messages sent between two participants. Here are some key features of conversation topics:
-         <ul>
-            <li>Two participants can have multiple ongoing conversations using separate and multiple conversation topics.</li>
-            <li>The conversation topic name uses a random 32-byte alphanumeric string.</li>
-         </ul>
-      </td>
-      <td><code>m-XxBHrITqjd00nLMuTyaaGDvTLnviazU8</code>
-      </td>
-   </tr>
-   <tr>
-      <td><strong>Private store</strong>
-      </td>
-      <td>A client built with XMTP can choose to store its users' private key bundles locally or encrypted on the XMTP network. When required, a client uses a private store topic to store a user's private key bundle.
-      </td>
-      <td><code>privatestore-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38</code>
-      </td>
-   </tr>
-</table>
+In XMTP V2, clients use the following topics to perform their primary responsibilities.
+
+
+#### Contact topic
+
+A client uses a contact topic to advertise a user’s public key bundle on the XMTP network. The network advertises this public key bundle to enable other users to contact the user.
+
+The contact topic name uses this format: `contact-<account-address>`.
+
+For example, `contact-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38`.
+
+To learn more, see [Contacts](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#contacts) in the `xmtp/proto` repo.
+
+
+#### Invite topic
+
+Clients use invite topics to initiate conversations between participants. 
+
+The invite topic name uses this format: `invite-<account-address>`. 
+
+For example, `invite-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38`.
+
+The client sends an invitation to both the sender and recipient’s invite topic. The invitation includes no message content, but includes:
+
+- A randomly generated conversation topic name, which tells clients which conversation topic to use to send and retrieve messages.
+
+- Encrypted key material, which includes a shared secret for message encryption.
+
+- Support for optional custom [conversation IDs](/docs/client-sdk/javascript/tutorials/filter-conversations#set-a-conversation-id) and other [metadata](/docs/client-sdk/javascript/tutorials/filter-conversations#set-conversation-metadata). Clients can use these IDs and metadata to [filter](/docs/client-sdk/javascript/tutorials/filter-conversations) and [label](/docs/client-sdk/javascript/tutorials/filter-conversations) conversations.
+
+To learn more, see [Invitations](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#invitations) in the `xmtp/proto` repo.
+
+
+#### Conversation topic
+
+Clients use conversation topics to store messages exchanged between a pair of addresses. 
+
+A conversation topic is created for a pair of addresses when the first message is sent between them. Upon creation, a conversation topic can have an optional conversation ID and metadata. Metadata is considered only upon conversation topic creation. This information is provided by the invitation. 
+
+The conversation topic name uses this format provided by the invitation: `m-<random-32-byte-alphanumeric-string>`.
+
+For example, `m-XxBHrITqjd00nLMuTyaaGDvTLnviazU8`.
+
+A client uses the following logic to determine whether to create a new conversation topic or use an existing conversation topic between a pair of addresses:
+
+- If there is a `conversationId` defined, such as `conversationId = "lens.dev/0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x71C7656EC7ab88b098defB751B7401B5f6d8976F"`, the client checks if the `conversationId` exists:
+
+    - If the `conversationId` exists, the client uses the existing conversation topic. There can be only one conversation topic with a given conversation ID.
+
+    - If the `conversationId` doesn’t exist, the client creates a new conversation topic.
+
+- If there is no `conversationId` defined, whether it is an empty string (`conversationID = ""`) or it is null (no `conversationId` element present), the client creates a new conversation topic.
+
+A pair of addresses can have multiple conversation topics, each with a unique conversation ID.
+
+To learn more, see [Messages](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#messages) in the `xmtp/proto` repo.
+
+
+#### Private store topic
+
+A client built with XMTP can choose to store its users' private key bundles locally or encrypted on the XMTP network. When required, a client uses a private store topic to store a user's private key bundle.
+
+The private store topic name uses this format: `privatestore-<account-address>`.
+
+For example, `privatestore-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38`.
 
 This diagram shows how a client app uses these topics to present Bola with a message sent by Amal:
 
@@ -138,68 +148,65 @@ This diagram shows how a client app uses these topics to present Bola with a mes
 In this flow, the client app:
 
 1. Retrieves Bola’s private key bundle from the network. If one doesn’t exist, it creates it and stores it encrypted on the network in a private store topic, or locally.
-2. If one doesn't already exist, stores Bola’s public key bundle on the network in a contact topic, so others can message Bola.
+
+2. If one doesn't already exist, stores Bola’s public key bundle on the network in a contact topic so others can message Bola.
+
 3. Retrieves Amal's encrypted invitation to Bola from Bola’s invite topic. Uses Bola's private key and Amal's public key from the invitation header to decrypt the invitation and get the conversation topic name and shared secret.
+
 4. Uses the conversation topic name from the invitation to retrieve Amal's encrypted message to Bola.
+
 5. Uses the shared secret from the invitation to create an encryption key to decrypt Amal’s message and present it to Bola.
 
-<!--To learn more about keys, contacts, invitations, and messages, see Client Layer in The XMTP Protocol specifications.-->
+To learn more, see [Key generation and usage](/docs/dev-concepts/key-generation-and-usage) and [Invitation and message encryption](/docs/dev-concepts/invitation-and-message-encryption).
 
 
 ### XMTP V1 topics and message presentation flow
 
 This section describes how topics and the message presentation flow work for XMTP V1. To understand whether a client app will use XMTP V1 or V2, see [Determining whether to use XMTP V2 or V1 topics](#determining-whether-to-use-xmtp-v2-or-v1-topics).
 
-In XMTP V1, client apps use the following topics to perform their primary responsibilities:
+In XMTP V1, client apps use the following topics to perform their primary responsibilities.
 
-<table>
-   <tr>
-      <td><strong>Topic</strong>
-      </td>
-      <td><strong>Description</strong>
-      </td>
-      <td><strong>Example name</strong>
-      </td>
-   </tr>
-   <tr>
-      <td><strong>Contact</strong>
-      </td>
-      <td>A client uses a contact topic to advertise a user’s public key bundle on the XMTP network. The network advertises this public key bundle to enable other users to contact the user.
-      </td>
-      <td><code>contact-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38</code>
-      </td>
-   </tr>
-   <tr>
-      <td><strong>Intro</strong>
-      </td>
-      <td>Clients use intro topics to store the first message sent between two participants (blockchain accounts). This enables clients to know that messages exist in a given conversation topic.
-      </td>
-      <td><code>intro-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x357540a11BE08e9264c348b346d0C7dBB7df80d7</code>
-      </td>
-   </tr>
-   <tr>
-      <td><strong>Conversation</strong>
-      </td>
-      <td>
-         Clients use conversation topics to store messages sent between two participants. Here are some key features of conversation topics:
-         <ul>
-            <li>All messages between two participants are stored in a single conversation topic.</li>
-            <li>No support for conversation IDs or other conversation metadata.</li>
-            <li>The conversation topic name includes the blockchain account addresses of the participants, revealing some identifying information.</li>
-         </ul>
-      </td>
-      <td><code>dm-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x357540a11BE08e9264c348b346d0C7dBB7df80d7</code>
-      </td>
-   </tr>
-   <tr>
-      <td><strong>Private store</strong>
-      </td>
-      <td>A client built with XMTP can choose to store its users' private key bundles locally or encrypted on the XMTP network. When required, a client uses a private store topic to store a user's private key bundle.
-      </td>
-      <td><code>privatestore-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38</code>
-      </td>
-   </tr>
-</table>
+
+#### Contact topic
+
+A client uses a contact topic to advertise a user’s public key bundle on the XMTP network. The network advertises this public key bundle to enable other users to contact the user.
+
+The contact topic name uses this format: `contact-<account-address>`.
+
+For example, `contact-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38`.
+
+
+#### Intro topic
+
+Clients use intro topics to store the first message sent between two participants (blockchain accounts). This enables clients to know that messages exist in a given conversation topic. 
+
+The intro topic name uses this format: `intro-<participant-1-account-address>-<participant-2-account-address>`.
+
+For example, `intro-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x357540a11BE08e9264c348b346d0C7dBB7df80d7`.
+
+
+#### Conversation topic
+
+Clients use conversation topics to store messages sent between two participants. Here are some characteristics of conversation topics:
+
+- All messages between two participants are stored in a single conversation topic.
+
+- No support for conversation IDs or other conversation metadata.
+
+- The conversation topic name includes the blockchain account addresses of the participants, revealing some identifying information.
+
+The conversation topic name uses this format: `dm-<participant-1-account-address>-<participant-2-account-address>`.
+
+For example, `dm-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x357540a11BE08e9264c348b346d0C7dBB7df80d7`.
+
+
+#### Private store
+
+A client built with XMTP can choose to store its users' private key bundles locally or encrypted on the XMTP network. When required, a client uses a private store topic to store a user's private key bundle.	
+
+The private store topic name uses this format: `privatestore-<account-address>`.
+
+For example, `privatestore-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38`.
 
 This diagram shows how a client app uses these XMTP V1 topics to present Bola with a message sent by Amal:
 
@@ -208,9 +215,13 @@ This diagram shows how a client app uses these XMTP V1 topics to present Bola wi
 In this flow, the client app:
 
 1. Retrieves Bola’s private key bundle from the network. If one doesn’t exist, it creates it and stores it encrypted on the network in a private store topic, or locally.
+
 2. If one doesn't already exist, stores Bola’s public key bundle on the network in a contact topic, so others can message Bola.
+
 3. Retrieves Bola’s intro topic to see which conversations they have.
+
 4. Retrieves the messages between Bola and Amal from their direct message topic.
+
 5. Uses Bola’s private key and Amal’s public key to create a shared secret. Uses the shared secret to create an encryption key to decrypt Amal’s message and present it to Bola.
 
 For more details, see [Invitation and message encryption](invitation-and-message-encryption).
@@ -235,10 +246,14 @@ A developer can provide messaging between blockchain accounts in their app by bu
 With XMTP network interactions handled by the message API client, developers can focus on the user-related aspects of building client apps, such as:
 
 * User acquisition
+
 * User interface
+
 * User identity metadata
+
 * Inbox filtering  
-To learn about one developer's approach, see [Truths Not Spoofs](https://blog.xmtp.com/truths-not-spoofs/).
+To learn more, see [Filter conversations](/docs/client-sdk/javascript/tutorials/filter-conversations) and [Truths Not Spoofs](/blog/truths-not-spoofs), a post about one developer's approach to determining which messages display in an inbox based on blockchain data, including which tokens the sender owns.
+
 * Custom content types  
 To learn more, see [Content types](content-types).
 
