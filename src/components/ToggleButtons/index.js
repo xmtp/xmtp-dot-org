@@ -26,17 +26,19 @@ export default function ToggleButtons() {
   }, [])
 
   const scrollFunction = () => {
-    if (
-      document.body.scrollTop > 1000 ||
-      document.documentElement.scrollTop > 1000
-    ) {
-      scrollToTopBtnRef.current.style.display = 'grid'
-      darkModeBtnRef.current.style.transform = 'translateY(-4rem)'
-      darkModeBtnRef.current.style.transition = 'all 0.5s ease'
-    } else {
-      scrollToTopBtnRef.current.style.display = 'none'
-      darkModeBtnRef.current.style.transform = 'translateY(-0.76rem)'
-      darkModeBtnRef.current.style.transition = 'all 0.5s ease'
+    if (scrollToTopBtnRef.current && darkModeBtnRef.current) {
+      if (
+        document.body.scrollTop > 1000 ||
+        document.documentElement.scrollTop > 1000
+      ) {
+        scrollToTopBtnRef.current.style.display = 'grid'
+        darkModeBtnRef.current.style.transform = 'translateY(-4rem)'
+        darkModeBtnRef.current.style.transition = 'all 0.5s ease'
+      } else {
+        scrollToTopBtnRef.current.style.display = 'none'
+        darkModeBtnRef.current.style.transform = 'translateY(-0.76rem)'
+        darkModeBtnRef.current.style.transition = 'all 0.5s ease'
+      }
     }
   }
 

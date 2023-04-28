@@ -15,7 +15,7 @@
 
 #### Defined in
 
-[MessageContent.ts:10](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L10)
+[MessageContent.ts:10](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L10)
 
 ## Properties
 
@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[MessageContent.ts:5](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L5)
+[MessageContent.ts:5](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L5)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:6](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L6)
+[MessageContent.ts:6](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L6)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:7](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L7)
+[MessageContent.ts:7](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L7)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:8](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L8)
+[MessageContent.ts:8](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L8)
 
 ## Methods
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:21](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L21)
+[MessageContent.ts:21](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L21)
 
 ___
 
@@ -89,4 +89,4 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:17](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/MessageContent.ts#L17)
+[MessageContent.ts:17](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L17)

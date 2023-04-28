@@ -22,6 +22,12 @@ rich:
   url: https://twitter.com/richrdbustos
   image_url: ./media/rich-headshot.jpeg
 
+rochelle:
+  name: Rochelle Guillou
+  title: Content Strategy at XMTP Labs
+  url: https://twitter.com/RochelleSophie_
+  image_url: ./media/rochelle-headshot.jpeg
+
 shane:
   name: Shane Mac
   title: Co-founder of XMTP Labs

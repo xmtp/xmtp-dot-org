@@ -25,11 +25,7 @@ For a basic demonstration of the core concepts and capabilities of the `xmtp-flu
 
 ## Reference docs
 
-:::tip View the reference
-
-Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)** on pub.dev.
-
-:::
+Access the [Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html) on pub.dev.
 
 ## Install with Dart Package Manager
 
@@ -154,7 +150,7 @@ var messages = await alice.listMessages(convo,
 ### List messages in a conversation with pagination
 
 It may be helpful to retrieve and process the messages in a conversation page by page.
-You can do this by specifying `limit` and `end` which will return the specified number
+You can do this by specifying `limit` and `end`, which will return the specified number
 of messages sent before that time.
 
 ```dart
@@ -218,21 +214,11 @@ var myConversations = conversations.where((c) =>
 
 ## Handle different types of content
 
-When sending a message, you can specify the type of content. This allows you to specify different
-types of content than the default (a simple string, `ContentTypeText`).
+When sending a message, you can specify the type of content. This allows you to specify different types of content than the default (a simple string, `ContentTypeText`).
 
 To learn more about content types, see [Content types with XMTP](/docs/dev-concepts/content-types).
 
-Support for other types of content can be added during client construction by registering additional `Codec`s, including a `customCodecs` parameter. Every codec declares a specific content type identifier,
-`ContentTypeId`, which is used to signal to the client which codec should be used to process the
-content that is being sent or received. See [XIP-5](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md)
-for more details on codecs and content types.
-
-Codecs and content types may be proposed as interoperable standards through [XRCs](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-9-composite-content-type.md).
-If there is a concern that the recipient may not be able to handle a non-standard content type,
-the sender can use the `contentFallback` option to provide a string that describes the content being
-sent. If the recipient fails to decode the original content, the fallback will replace it and can be
-used to inform the recipient what the original content was.
+Support for other types of content can be added during client construction by registering additional `Codec`s, including a `customCodecs` parameter. Every codec declares a specific content type identifier, `ContentTypeId`, which is used to signal to the client which codec should be used to process the content that is being sent or received. 
 
 ```dart
 /// Example [Codec] for sending [int] values around.
@@ -264,6 +250,10 @@ var convo = await client.newConversation("0x...");
 await client.sendMessage(convo, "Hey here comes my favorite number:");
 await client.sendMessage(convo, 42, contentType: contentTypeInteger);
 ```
+
+If there is a concern that the recipient may not be able to handle a non-standard content type, the sender can use the `contentFallback` option to provide a string that describes the content being sent. If the recipient fails to decode the original content, the fallback will replace it and can be used to inform the recipient what the original content was.
+
+Codecs and content types may be proposed as interoperable standards through XRCs. To learn about the custom content type proposal process, see [XIP-5](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md).
 
 ## Compression
 

@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[crypto/PrivateKey.ts:312](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L312)
+[crypto/PrivateKey.ts:312](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L312)
 
 ## Properties
 
@@ -33,7 +33,7 @@ privateKey.PrivateKey.publicKey
 
 #### Defined in
 
-[crypto/PrivateKey.ts:310](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L310)
+[crypto/PrivateKey.ts:310](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L310)
 
 ___
 
@@ -47,7 +47,7 @@ privateKey.PrivateKey.secp256k1
 
 #### Defined in
 
-[crypto/PrivateKey.ts:309](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L309)
+[crypto/PrivateKey.ts:309](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L309)
 
 ___
 
@@ -61,7 +61,7 @@ privateKey.PrivateKey.timestamp
 
 #### Defined in
 
-[crypto/PrivateKey.ts:308](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L308)
+[crypto/PrivateKey.ts:308](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L308)
 
 ## Methods
 
@@ -83,7 +83,7 @@ privateKey.PrivateKey.timestamp
 
 #### Defined in
 
-[crypto/PrivateKey.ts:393](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L393)
+[crypto/PrivateKey.ts:393](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L393)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:382](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L382)
+[crypto/PrivateKey.ts:382](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L382)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:343](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L343)
+[crypto/PrivateKey.ts:343](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L343)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:403](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L403)
+[crypto/PrivateKey.ts:403](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L403)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:371](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L371)
+[crypto/PrivateKey.ts:371](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L371)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:348](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L348)
+[crypto/PrivateKey.ts:348](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L348)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:363](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L363)
+[crypto/PrivateKey.ts:363](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L363)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:408](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L408)
+[crypto/PrivateKey.ts:408](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L408)
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:413](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L413)
+[crypto/PrivateKey.ts:413](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L413)
 
 ___
 
@@ -247,4 +247,4 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKey.ts:326](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/crypto/PrivateKey.ts#L326)
+[crypto/PrivateKey.ts:326](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKey.ts#L326)

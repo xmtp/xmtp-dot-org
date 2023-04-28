@@ -4,7 +4,7 @@ require('dotenv').config()
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
-const { tailwindPlugin } = require('./src/plugins')
+const { tailwindPlugin, webpackPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -64,6 +64,8 @@ const config = {
 
   plugins: [
     tailwindPlugin,
+    // @ts-ignore
+    webpackPlugin,
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -250,10 +252,9 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'docs/dev-concepts/start-building',
+            type: 'html',
             position: 'right',
-            label: '⚡️ Start building ⚡️',
-            className: 'start-building_link',
+            value: '<button type="button" onClick="window.open(`/docs/dev-concepts/start-building`, `_self`);" class="navbar__button"><strong>Start building</strong></button>',
           },
           {
             href: 'https://github.com/xmtp',

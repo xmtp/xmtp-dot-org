@@ -39,4 +39,4 @@ the client to continue iterating through the `KeystoreProviders` list.
 
 #### Defined in
 
-[keystore/providers/StaticKeystoreProvider.ts:19](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/providers/StaticKeystoreProvider.ts#L19)
+[keystore/providers/StaticKeystoreProvider.ts:19](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/providers/StaticKeystoreProvider.ts#L19)
