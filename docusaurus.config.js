@@ -288,11 +288,11 @@ const config = {
             items: [
               {
                 label: 'SDKs',
-                to: 'sdks-and-tools#sdks',
+                to: '/docs/references/sdks-and-tools#sdks',
               },
               {
                 label: 'Example apps',
-                to: 'sdks-and-tools#example-apps',
+                to: '/docs/references/sdks-and-tools#example-apps',
               },
               {
                 label: 'XMTP status page',

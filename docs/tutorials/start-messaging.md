@@ -7,7 +7,7 @@ sidebar_position: 2
 
 XMTP is an open protocol and network for secure web3 messaging. 
 
-Developers build with [XMTP client SDKs](/sdks-and-tools) to provide messaging in their apps. The XMTP messaging API client takes care of:
+Developers build with [XMTP client SDKs](/docs/references/sdks-and-tools) to provide messaging in their apps. The XMTP messaging API client takes care of:
 
 - [Authentication](/docs/concepts/account-signatures) using an **XMTP identity that you own and control**
 - [End-to-end encryption](/docs/concepts/invitation-and-message-encryption) of **messages that you own and control**
@@ -54,12 +54,12 @@ A great way to start learning how to build an app with XMTP is to use one!
     
    | Your friend using the [Converse app](https://getconverse.app/) to message you on the Orb app | You using the [Orb app](https://orb.ac/) to message your friend on the Converse app |
    |:-------------------------|:-------------------------|
-   | ![](img/your-friend-in-converse.png) | ![](img/you-in-orb.png)|
+   | ![](build/img/your-friend-in-converse.png) | ![](build/img/you-in-orb.png)|
 
 Ready to start building with XMTP? Check out some of these developer resources:
 
 - [Quickstart for the XMTP client SDK for JavaScript](quickstart)
-- [SDKs and tools](/sdks-and-tools)
+- [SDKs and tools](/docs/references/sdks-and-tools)
 - [Built with XMTP](/built-with-xmtp/): Explore a showcase of apps built with XMTP
 - [Awesome XMTP](https://github.com/xmtp/awesome-xmtp): A list of projects building with XMTP
 - [FAQ about XMTP](/docs/concepts/faq)

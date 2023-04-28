@@ -12,7 +12,7 @@ tags:
 - SDKs
 ---
 
-This holiday season, we have an early gift for all the web3 developers out there. Our mobile SDKs are now available in [Developer Preview](/sdks-and-tools) 🧑‍💻
+This holiday season, we have an early gift for all the web3 developers out there. Our mobile SDKs are now available in [Developer Preview](/docs/references/sdks-and-tools) 🧑‍💻
 
 ![](./media/blogGraphic.png)
 

@@ -1,6 +1,6 @@
 ---
 sidebar_label: Start building
-sidebar_position: 1.5
+sidebar_position: 1
 description: Use this document as a map to build, launch, and maintain a best-in-class app with XMTP.
 ---
 import ensnameresolution from '/docs/concepts/img/ens-name-resolution.png';

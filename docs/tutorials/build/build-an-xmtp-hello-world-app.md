@@ -1,6 +1,6 @@
 ---
 sidebar_label: Build an XMTP "GM" app
-sidebar_position: 7
+sidebar_position: 1
 ---
 
 # Build an XMTP "GM!" app

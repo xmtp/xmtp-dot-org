@@ -9,7 +9,7 @@ export const HEADER_DATA = [
   {
     title: 'Start building with XMTP client SDKs',
     subtitle: 'Build web3 messaging apps in JavaScript, Kotlin, Swift, & Dart',
-    url: '/sdks-and-tools',
+    url: '/docs/references/sdks-and-tools',
     icon: 'quickstart-icon.svg',
   },
   {

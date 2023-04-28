@@ -15,7 +15,7 @@ XMTP Labs employees work alongside other XMTP community members to build with an
 
 ### Does XMTP Labs plan to build apps or are you focused 100% on the protocol?
 
-XMTP Labs is focused on serving developers. We build [SDKs, UI components, and example apps](/sdks-and-tools) that help developers build great experiences with XMTP.
+XMTP Labs is focused on serving developers. We build [SDKs, UI components, and example apps](/docs/references/sdks-and-tools) that help developers build great experiences with XMTP.
 
 ### Which wallet apps and blockchain accounts does XMTP work with?
 
@@ -180,7 +180,7 @@ Have other questions or ideas about group messaging? Post to the [XMTP discussio
 
 ### Which languages and environments does the XMTP SDK support?
 
-The XMTP SDK is [available for multiple languages](/sdks-and-tools#sdks), including JavaScript, Kotlin, Swift, and Dart.
+The XMTP SDK is [available for multiple languages](/docs/references/sdks-and-tools), including JavaScript, Kotlin, Swift, and Dart.
 
 Have other questions or ideas for future language or environment support? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 

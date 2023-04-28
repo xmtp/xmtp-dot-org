@@ -1,6 +1,6 @@
 ---
 sidebar_label: Quickstart for JavaScript
-sidebar_position: 3
+sidebar_position: 1
 toc_max_heading_level: 3
 description: "The XMTP client SDK for JavaScript (xmtp-js) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications."
 ---

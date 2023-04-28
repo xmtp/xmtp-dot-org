@@ -1,10 +1,10 @@
 ---
 sidebar_label: Filter conversations
-sidebar_position: 10
+sidebar_position: 5
 ---
-import ButtrflyImageUrl from '/docs/tutorials/img/following-other-filters-buttrfly.jpeg';
-import LensterImageUrl from '/docs/tutorials/img/following-requested-filters-lenster.png';
-import OrbImageUrl from '/docs/tutorials/img/lens-w2w-filters-orb.jpeg';
+import ButtrflyImageUrl from '/docs/tutorials/build/img/following-other-filters-buttrfly.jpeg';
+import LensterImageUrl from '/docs/tutorials/build/img/following-requested-filters-lenster.png';
+import OrbImageUrl from '/docs/tutorials/build/img/lens-w2w-filters-orb.jpeg';
 
 # Filter conversations using conversation IDs and metadata
 
