@@ -161,7 +161,7 @@ for conversation in allConversations {
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP.
 
-You might choose to provide an additional filtered view of conversations. To learn more, see [Handle multiple conversations with the same blockchain address](#handle-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/tutorials/filter-conversations).
+You might choose to provide an additional filtered view of conversations. To learn more, see [Handle multiple conversations with the same blockchain address](#handle-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/tutorials/build/filter-conversations).
 
 ### Listen for new conversations
 

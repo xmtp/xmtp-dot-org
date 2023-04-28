@@ -33,7 +33,7 @@ With XMTP, you own and control your messages and are always free to use the app 
 
 Developers build messaging into their apps using the **XMTP open protocol and standards**. This makes the messaging features in these apps interoperable, or able to exchange information. This is what enables **all apps built with XMTP to automatically provide interoperable inboxes** for users.
 
-To learn more about building with XMTP, see [Quickstart for the XMTP client SDK for JavaScript](https://xmtp.org/docs/tutorials/quickstart).
+To learn more about building with XMTP, see [Quickstart for the XMTP client SDK for JavaScript](/docs/tutorials/quickstarts/js-quickstart).
 
 ### You own and control your XMTP identity
 

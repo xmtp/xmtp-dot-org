@@ -95,15 +95,15 @@ Apps will be able to leverage an example server to subscribe users for push noti
 
 ### Build JavaScript and React apps
 
-Developers are able to build apps in JavaScript and React with the [`xmtp-js` SDK](/docs/tutorials/quickstart).
+Developers are able to build apps in JavaScript and React with the [`xmtp-js` SDK](/docs/tutorials/quickstarts/js-quickstart).
 
 ### Build iOS apps in Swift
 
-Developers are able to build iOS apps in Swift using the [`xmtp-ios` SDK](/docs/client-sdk/swift/tutorials/quickstart).
+Developers are able to build iOS apps in Swift using the [`xmtp-ios` SDK](/docs/tutorials/quickstarts/swift-quickstart).
 
 ### Build Flutter and mobile apps in Dart
 
-Developers are able to build Flutter and mobile apps in Dart using the [`xmtp-flutter` SDK](/docs/client-sdk/dart/tutorials/quickstart).
+Developers are able to build Flutter and mobile apps in Dart using the [`xmtp-flutter` SDK](/docs/tutorials/quickstarts/dart-quickstart).
 
 ### XMTP v2 (December 2022)
 

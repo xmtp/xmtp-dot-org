@@ -179,7 +179,7 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ### Documentation
 
-- [JavaScript client SDK docs](/docs/client-sdk/javascript/concepts/intro-to-sdk)
+- [JavaScript client SDK docs](/docs/references/javascript/classes/Client)
 
 ### SDKs
 

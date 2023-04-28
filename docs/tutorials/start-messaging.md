@@ -58,7 +58,7 @@ A great way to start learning how to build an app with XMTP is to use one!
 
 Ready to start building with XMTP? Check out some of these developer resources:
 
-- [Quickstart for the XMTP client SDK for JavaScript](quickstart)
+- [Quickstart for the XMTP client SDK for JavaScript](/docs/tutorials/quickstarts/js-quickstart)
 - [SDKs and tools](/docs/references/sdks-and-tools)
 - [Built with XMTP](/built-with-xmtp/): Explore a showcase of apps built with XMTP
 - [Awesome XMTP](https://github.com/xmtp/awesome-xmtp): A list of projects building with XMTP

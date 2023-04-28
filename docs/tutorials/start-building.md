@@ -25,13 +25,13 @@ Use this document as a map to build, launch, and maintain a best-in-class app wi
 
 XMTP is an open protocol and network for secure web3 messaging. Developers build with XMTP client SDKs to provide messaging between blockchain accounts in their apps. The XMTP messaging API client takes care of:
 
-- [Authentication](account-signatures) using an **XMTP identity that the user owns and controls**
+- [Authentication](/docs/concepts/account-signatures) using an **XMTP identity that the user owns and controls**
 
-- [End-to-end encryption](invitation-and-message-encryption) of **messages that the user owns and controls**
+- [End-to-end encryption](/docs/concepts/invitation-and-message-encryption) of **messages that the user owns and controls**
 
-- Providing an **[interoperable inbox](interoperable-inbox)** accessible across apps built with XMTP
+- Providing an **[interoperable inbox](/docs/concepts/interoperable-inbox)** accessible across apps built with XMTP
 
-- Relaying messages to the **progressively decentralized** [XMTP network](architectural-overview#network-layer)
+- Relaying messages to the **progressively decentralized** [XMTP network](/docs/concepts/architectural-overview#network-layer)
 
 
 ## Try messaging with XMTP
@@ -52,7 +52,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 ## Start building your app
 
-1. [**Build a simple hello world app**](/docs/tutorials/build-an-xmtp-hello-world-app)
+1. [**Build a simple hello world app**](/docs/tutorials/build/build-an-xmtp-hello-world-app)
 
     Get a feel for building with XMTP by building an app using 100% copy-and-paste commands and code.
 
@@ -67,7 +67,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 3. **Want to provide DMs in a Lens app?**
 
-    To learn how, see [Build key XMTP chat features in a Lens app](/docs/tutorials/build-key-xmtp-chat-features-in-a-lens-app).
+    To learn how, see [Build key XMTP chat features in a Lens app](/docs/tutorials/build/build-key-xmtp-chat-features-in-a-lens-app).
 
     Need a Lens handle? Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/)
 
@@ -90,7 +90,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 6. **You probably have some great questions by now! Check out these resources:**
 
-    - [FAQ](faq)
+    - [FAQ](/docs/concepts/faq)
     - [Roadmap](/vision/roadmap)
     - [Blog](/blog)
 
@@ -112,14 +112,14 @@ Consider following these best practices when developing your app:
 
 - Set the `env` client option to `dev` while developing. Set it to `production` before you launch.
 
-- If you are building with the xmtp-js SDK, set the [`appVersion` client option](/docs/tutorials/quickstart#configuring-the-client).    
+- If you are building with the xmtp-js SDK, set the [`appVersion` client option](/docs/tutorials/quickstarts/js-quickstart#configuring-the-client).    
 
 - Paginate message history to help optimize time to load messages in a conversation.
 
-- Use [standard content types](content-types#standard-content-types) to ensure that message content sent using your app is interoperable with other apps.
+- Use [standard content types](/docs/concepts/content-types#standard-content-types) to ensure that message content sent using your app is interoperable with other apps.
   - By default, building with XMTP SDKs supports plain text messages. 
   - To send remote media attachments, see [Some new content types](/blog/attachments-and-remote-attachments).
-  - To send custom content types, see [Build a custom content type](/docs/tutorials/use-content-types#build-a-custom-content-type).
+  - To send custom content types, see [Build a custom content type](/docs/tutorials/build/use-content-types#build-a-custom-content-type).
 
 - Enable your app to track privacy-preserving metrics to help you understand app usage. For example:
     - \# of active wallets: Wallets sending at least one message
@@ -141,8 +141,6 @@ Consider following these UX best practices.
     
 - Consider how your app performs against these performance benchmarks:
     - Time to load conversation list: 8-15ms to decrypt invites per conversation.
-    
-      For users with large numbers of conversations, loading conversations in real-time can be a very expensive operation. You can [use a persistent conversation cache](/docs/tutorials/use-a-persistent-conversation-cache) to improve load time. 
     - Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
     - Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
 - Resolve popular namespaces such as ENS, .lens, cb id, and so forth. For example, here is ENS name resolution in [xmtp.chat](https://xmtp.chat/). To achieve this functionality, consider using the [Everyname](https://www.everyname.xyz/) resolution service.
@@ -166,15 +164,15 @@ Consider following these UX best practices.
 
 ### Conversations
 
-- Provide an [interoperable inbox](https://xmtp.org/docs/concepts/interoperable-inbox) UI in your app. This inbox enables your user to access and engage with all of their conversations without leaving your app. An interoperable inbox is the default state of [listing conversations](https://xmtp.org/docs/tutorials/quickstart#conversations). For example, here is an interoperable inbox in the [Orb app](https://orb.ac/):
+- Provide an [interoperable inbox](/docs/concepts/interoperable-inbox) UI in your app. This inbox enables your user to access and engage with all of their conversations without leaving your app. An interoperable inbox is the default state of [listing conversations](/docs/tutorials/quickstarts/js-quickstart#conversations). For example, here is an interoperable inbox in the [Orb app](https://orb.ac/):
 
   <img src={allinorb} style={{width:"400px"}}/>
     
-- Use [conversation labels](https://xmtp.org/docs/tutorials/label-conversations) to provide context, especially in an interoperable inbox. For example, here is conversation labeling in an interoperable inbox helping the user understand the different origins of two conversations with the same address.
+- Use [conversation labels](/docs/tutorials/build/label-conversations) to provide context, especially in an interoperable inbox. For example, here is conversation labeling in an interoperable inbox helping the user understand the different origins of two conversations with the same address.
 
   <img src={conversationlabels} style={{width:"400px"}}/>
     
-- Consider using conversation IDs and metadata to provide [filtered views of conversations](https://xmtp.org/docs/tutorials/filter-conversations). For example, here is the Orb app with conversations filtered to show Lens conversations only:
+- Consider using conversation IDs and metadata to provide [filtered views of conversations](/docs/tutorials/build/filter-conversations). For example, here is the Orb app with conversations filtered to show Lens conversations only:
 
   <img src={lensonlyorb} style={{width:"400px"}}/>
     
@@ -194,7 +192,7 @@ Consider following these UX best practices.
     
     For Android apps, see [Enable the example app to send push notifications](https://github.com/xmtp/xmtp-android/blob/main/library/src/main/java/org/xmtp/android/library/push/README.md).
     
-    For iOS apps, see the `xmtp-ios` [example notification service](https://github.com/xmtp/xmtp-ios/tree/main/XMTPiOSExample) and [Handle push notifications](https://xmtp.org/docs/client-sdk/swift/tutorials/handle-push-notifications).
+    For iOS apps, see the `xmtp-ios` [example notification service](https://github.com/xmtp/xmtp-ios/tree/main/XMTPiOSExample) and [Handle push notifications](/docs/tutorials/build/handle-push-notifications).
 
 - If you provide push notifications, provide a separate setting for enabling and disabling direct message push notifications. For example, if you’re building a Lens app, provide a setting for XMTP push notifications that’s separate from Lens push notifications for posts, comments, likes, and so forth. For example, here are push notification settings in the Orb app:
 
