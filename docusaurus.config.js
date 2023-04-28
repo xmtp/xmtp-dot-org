@@ -4,7 +4,7 @@ require('dotenv').config()
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
-const { tailwindPlugin } = require('./src/plugins')
+const { tailwindPlugin, webpackPlugin } = require('./src/plugins')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -63,6 +63,8 @@ const config = {
 
   plugins: [
     tailwindPlugin,
+    // @ts-ignore
+    webpackPlugin,
     [
       '@docusaurus/plugin-content-docs',
       {
