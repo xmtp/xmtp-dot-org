@@ -184,19 +184,30 @@ Consider following these UX best practices.
 
 ### Push notifications
 
-- Provide push notifications.
-    
-    See the [example-notification-server-go](https://github.com/xmtp/example-notification-server-go) for an example push notification server written in Golang that you can use as a reference for how you might provide a server for your app.
-    
-    For Android apps, see [Enable the example app to send push notifications](https://github.com/xmtp/xmtp-android/blob/main/library/src/main/java/org/xmtp/android/library/push/README.md).
-    
-    For iOS apps, see the `xmtp-ios` [example notification service](https://github.com/xmtp/xmtp-ios/tree/main/XMTPiOSExample) and [Handle push notifications](https://xmtp.org/docs/client-sdk/swift/tutorials/handle-push-notifications).
+Push notifications can be a highly effective way to engage your users and increase app retention.
 
-- If you provide push notifications, provide a separate setting for enabling and disabling direct message push notifications. For example, if you’re building a Lens app, provide a setting for XMTP push notifications that’s separate from Lens push notifications for posts, comments, likes, and so forth. For example, here are push notification settings in the Orb app:
+- See the [example-notification-server-go](https://github.com/xmtp/example-notification-server-go) for an example push notification server written in Golang that you can use as a reference for how you might provide a server for your app.
+
+- In addition to providing push notifications for new messages, provide them for new conversations. To learn more, see [A practical guide to building a push notification client](https://github.com/xmtp/example-notification-server-go/blob/main/docs/notifications-client-guide.md). This guide is based on a React Native example, but can serve as a reference for how you might provide a notification client in your language of choice.
+
+- For Android apps, see [Enable the `xmtp-android` example app to send push notifications](https://github.com/xmtp/xmtp-android/blob/main/library/src/main/java/org/xmtp/android/library/push/README.md) to explore how you might enable push notifications for your own app built with the [`xmtp-android` SDK](https://github.com/xmtp/xmtp-android).
+    
+- For iOS apps, see the `xmtp-ios` example app and [notification service](https://github.com/xmtp/xmtp-ios/tree/main/XMTPiOSExample) to explore how you might enable push notifications for your own app built with the [xmtp-ios SDK](https://github.com/xmtp/xmtp-ios). 
+
+- Display push notifications only for messages sent **to** a user. In other words, do not send a push notification to a user about a message they sent. To do this, filter out messages sent by the user and don't send push notifications for them.
+
+   - For iOS apps, see [Handle push notifications](https://xmtp.org/docs/client-sdk/swift/tutorials/handle-push-notifications) to learn how to suppress these push notifications.
+
+    :::tip Submit your application early
+
+    To suppress these notifications, you must submit an application to Apple. The approval process can take 2-3 weeks or longer.
+
+    :::
+
+- Provide a separate setting for enabling and disabling direct message push notifications. For example, if you’re building a Lens app, provide a setting for XMTP push notifications that’s separate from Lens push notifications for posts, comments, likes, and so forth. For example, here are push notification settings in the Orb app:
 
   <img src={pushnotifsettings} style={{width:"400px"}}/>
-    
-- If you provide push notifications, display push notifications only for messages sent **to** a user. In other words, do not send a push notification to a user about a message they sent. To do this, filter out messages sent by the user and don't send push notifications for them.
+
 - Decrypt messages for push notifications so you can display the contents within the notification. For example, here is a decrypted push notification provided by the [Converse app](https://getconverse.app/).
 
   <img src={pushnotifsdecrypted} style={{width:"400px"}}/>
