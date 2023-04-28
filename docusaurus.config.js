@@ -44,8 +44,8 @@ const config = {
           sidebarPath: require.resolve(
             './sidebars/sidebars-client-sdk-javascript.js'
           ),
-          showLastUpdateAuthor: true, // setting to false for now to resolve errors due to some new files not being tracked by git yet
-          showLastUpdateTime: true, // setting to false for now to resolve errors due to some new files not being tracked by git yet
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
         },
         blog: {
@@ -53,6 +53,7 @@ const config = {
             'A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging',
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
+          editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
         },
         theme: {
           customCss: require.resolve('./src/css/tailwind.css'),
@@ -72,6 +73,9 @@ const config = {
         path: 'docs/client-sdk/swift',
         routeBasePath: 'docs/client-sdk/swift',
         sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-swift.js'),
+        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -81,6 +85,9 @@ const config = {
         path: 'docs/client-sdk/dart',
         routeBasePath: 'docs/client-sdk/dart',
         sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-dart.js'),
+        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -92,6 +99,9 @@ const config = {
         sidebarPath: require.resolve(
           './sidebars/sidebars-client-sdk-kotlin.js'
         ),
+        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -101,6 +111,9 @@ const config = {
         path: 'docs/dev-concepts',
         routeBasePath: '/docs/dev-concepts',
         sidebarPath: require.resolve('./sidebars/sidebars.js'),
+        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -110,6 +123,9 @@ const config = {
         path: 'community',
         routeBasePath: '/',
         sidebarPath: require.resolve('./sidebars/sidebars-community.js'),
+        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -119,6 +135,8 @@ const config = {
         path: 'vision',
         routeBasePath: 'vision',
         sidebarPath: require.resolve('./sidebars/sidebars-vision.js'),
+        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
+        showLastUpdateTime: true,
       },
     ],
   ],
