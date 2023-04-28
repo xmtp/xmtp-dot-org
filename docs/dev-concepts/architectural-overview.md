@@ -112,7 +112,9 @@ To learn more, see [Invitations](https://github.com/xmtp/proto/blob/main/PROTOCO
 
 Clients use conversation topics to store messages exchanged between a pair of addresses. 
 
-A conversation topic is created for a pair of addresses when the first message is sent between them. Upon creation, a conversation topic can have an optional conversation ID and metadata. Metadata is considered only upon conversation topic creation. This information is provided by the invitation. 
+A conversation topic is created for a pair of addresses when the first message is sent between them. 
+
+Upon creation, a conversation topic can have an optional conversation ID and metadata. This information is provided by the invitation. Metadata is considered only upon conversation topic creation.  
 
 The conversation topic name uses this format provided by the invitation: `m-<random-32-byte-alphanumeric-string>`.
 
