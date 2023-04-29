@@ -29,12 +29,20 @@ const sdkcards = [
     theme: 'daylight',
   },
   {
+    title: 'React client SDK',
+    description: '🧑‍💻 Dev preview: A TypeScript implementation of an XMTP client for use with React apps',
+    firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk' },
+    secondLink: { name: 'Docs', link: 'docs/client-sdk/react/tutorials/quickstart' },
+    logo: 'img/react.svg',
+    theme: 'sunrise',
+  },
+  {
     title: 'Dart client SDK',
     description: 'A Dart implementation of an XMTP client for use with Flutter and mobile apps',
     firstLink: { name: 'GitHub repo', link: 'https://github.com/xmtp/xmtp-flutter' },
     secondLink: { name: 'Docs', link: 'docs/client-sdk/dart/tutorials/quickstart' },
     logo: 'img/dart.svg',
-    theme: 'sunrise',
+    theme: 'midnight',
   },
 ]
 
