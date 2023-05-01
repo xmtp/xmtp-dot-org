@@ -13,7 +13,7 @@
 
 #### Defined in
 
-[keystore/persistence/LocalStoragePersistence.ts:6](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/persistence/LocalStoragePersistence.ts#L6)
+[keystore/persistence/LocalStoragePersistence.ts:6](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/LocalStoragePersistence.ts#L6)
 
 ## Properties
 
@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[keystore/persistence/LocalStoragePersistence.ts:5](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/persistence/LocalStoragePersistence.ts#L5)
+[keystore/persistence/LocalStoragePersistence.ts:5](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/LocalStoragePersistence.ts#L5)
 
 ## Methods
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[keystore/persistence/LocalStoragePersistence.ts:13](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/persistence/LocalStoragePersistence.ts#L13)
+[keystore/persistence/LocalStoragePersistence.ts:13](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/LocalStoragePersistence.ts#L13)
 
 ___
 
@@ -72,4 +72,4 @@ ___
 
 #### Defined in
 
-[keystore/persistence/LocalStoragePersistence.ts:21](https://github.com/xmtp/xmtp-js/blob/ff53c33/src/keystore/persistence/LocalStoragePersistence.ts#L21)
+[keystore/persistence/LocalStoragePersistence.ts:21](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/LocalStoragePersistence.ts#L21)

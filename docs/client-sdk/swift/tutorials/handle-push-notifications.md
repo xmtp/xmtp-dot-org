@@ -11,6 +11,12 @@ You can do this using the [com.apple.developer.usernotifications.filtering](http
 
 To use this entitlement, you must first receive permission from Apple. To request permission, use the app owner's Apple developer account to submit this application: [https://developer.apple.com/contact/request/notification-service](https://developer.apple.com/contact/request/notification-service).
 
+:::tip Submit your application early
+
+The approval process can take 2-3 weeks or longer.
+
+:::
+
 Here are some sample answers to help you complete the application:
 
 - **App name:** [Your app name]
