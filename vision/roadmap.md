@@ -73,7 +73,7 @@ Opportunity to test, validate, and provide feedback. We do not recommend usage i
 
 ### UI Kit & React Hooks SDK
 
-Enable developers to focus on differentiating features by providing reusable messaging components via a [UI kit & React Hooks SDK](https://github.com/xmtp/xmtp-web).
+Enable developers to focus on differentiating features by providing reusable messaging components via a [UI kit & React Hooks SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk).
 
 ### Build Android apps in Kotlin
 
