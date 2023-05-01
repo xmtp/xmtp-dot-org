@@ -55,14 +55,6 @@ Users will be able to recover their compromised XMTP identity by creating new pr
 
 Users will be able to grant explicit permission for an app to use their account across sessions and will be able to revoke this permission at any time.
 
-### Secure key storage alternatives
-
-Users will be able to store XMTP private keys in secure contexts such as wallet apps.
-
-### UI Kit & React Hooks SDK
-
-Enable developers to focus on differentiating features by providing reusable messaging components via a [UI kit & React Hooks SDK](https://github.com/xmtp/xmtp-react).
-
 ---
 
 ## Pre-Preview 👀
@@ -71,13 +63,17 @@ A super early peek into what we're building. Ready for exploration, not adoption
 
 ### Mobile support for React Native
 
-Developers will be able to build mobile client apps in [React Native](https://github.com/xmtp/xmtp-js/issues/170).
+Developers can start building mobile client apps in React Native using the [React Native SDK](https://github.com/xmtp/xmtp-react).
 
 ---
 
 ## Developer Preview 🧑‍💻
 
 Opportunity to test, validate, and provide feedback. We do not recommend usage in production apps just yet.
+
+### UI Kit & React Hooks SDK
+
+Enable developers to focus on differentiating features by providing reusable messaging components via a [UI kit & React Hooks SDK](https://github.com/xmtp/xmtp-web).
 
 ### Build Android apps in Kotlin
 
@@ -104,6 +100,10 @@ Developers are able to build iOS apps in Swift using the [`xmtp-ios` SDK](/docs/
 ### Build Flutter and mobile apps in Dart
 
 Developers are able to build Flutter and mobile apps in Dart using the [`xmtp-flutter` SDK](/docs/client-sdk/dart/tutorials/quickstart).
+
+### Secure key storage module
+ 
+The [Keystore module](https://github.com/xmtp/xmtp-js/releases/tag/v8.0.0) allows XMTP private keys to be stored in secure contexts such as wallet apps.
 
 ### XMTP v2 (December 2022)
 
