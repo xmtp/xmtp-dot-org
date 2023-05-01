@@ -103,7 +103,7 @@ Developers are able to build Flutter and mobile apps in Dart using the [`xmtp-fl
 
 ### Secure key storage module
  
-The [Keystore module](https://github.com/xmtp/xmtp-js/releases/tag/v8.0.0) allows XMTP private keys to be stored in secure contexts such as wallet apps.
+The [Keystore module](https://github.com/xmtp/xmtp-js/releases/tag/v8.0.0) allows XMTP private keys to be stored in persistent LocalStorage.
 
 ### XMTP v2 (December 2022)
 
