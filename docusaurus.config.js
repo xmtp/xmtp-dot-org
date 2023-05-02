@@ -253,17 +253,10 @@ const config = {
             ],
           },
           {
-            type: 'dropdown',
-            label: 'Vision',
+            to: 'vision/roadmap',
             position: 'right',
-            items: [
-              {
-                to: 'vision/roadmap',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map.svg" alt="Map icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Roadmap</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about what's in store for XMTP in the months ahead</div></div></div>`,
-              },
-            ],
+            label: 'Roadmap',
+            activeBaseRegex: `/`,
           },
           {
             to: 'blog',

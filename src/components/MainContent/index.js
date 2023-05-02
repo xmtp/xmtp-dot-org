@@ -14,8 +14,7 @@ import {
   XMTP_ANDROID_URL,
   XMTP_IOS_URL,
   XMTP_FLUTTER_URL,
-  XMTP_MEMO_URL,
-  XMTP_REACT_NATIVE_URL,
+  XMTP_WEB_URL,
   QUICKSTART_CHAT_URL,
   CHAT_ITEM,
 } from '../../helpers/constants'
@@ -52,7 +51,7 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     })
-    const responseRn = await fetch(XMTP_REACT_NATIVE_URL, {
+    const responseWeb = await fetch(XMTP_WEB_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
@@ -67,11 +66,6 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     })
-    const responseMemo = await fetch(XMTP_MEMO_URL, {
-      headers: {
-        Authorization: customFields.personalToken,
-      },
-    })
 
     const dataXmtp = await responseXmtp.json()
     if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp]
@@ -81,12 +75,10 @@ export const MainContent = ({ styles }) => {
     if (dataIos && !dataIos.message) items = [...items, dataIos]
     const dataFlutter = await responseFlutter.json()
     if (dataFlutter && !dataFlutter.message) items = [...items, dataFlutter]
-    const dataRn = await responseRn.json()
-    if (dataRn && !dataRn.message) items = [...items, dataRn]
+    const dataWeb = await responseWeb.json()
+    if (dataWeb && !dataWeb.message) items = [...items, dataWeb]
     const dataNotif = await responseNotif.json()
     if (dataNotif && !dataNotif.message) items = [...items, dataNotif]
-    const dataMemo = await responseMemo.json()
-    if (dataMemo && !dataMemo.message) items = [...items, dataMemo]
     const dataQuickChat = await responseQuickChat.json()
     if (dataQuickChat && !dataQuickChat.message) items = [...items, dataQuickChat]
 
