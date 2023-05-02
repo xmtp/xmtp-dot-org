@@ -7,7 +7,11 @@ sidebar_position: 11
 
 ## SDKs
 
-- [XMTP client SDK releases](https://github.com/xmtp/xmtp-js/releases) (`xmtp-js`)
+- [JavaScript SDK releases](https://github.com/xmtp/xmtp-js/releases) (`xmtp-js`)
+
+- [Swift SDK releases](https://github.com/xmtp/xmtp-ios/tags) (`xmtp-ios`)
+
+- [Dart SDK releases](https://github.com/xmtp/xmtp-flutter/tags) (`xmtp-flutter`)
 
 ## Protocol
 

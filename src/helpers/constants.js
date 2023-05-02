@@ -42,6 +42,19 @@ const tags = {
 
 export const BLOG_DATA = [
   {
+    tag: [tags.announcements, tags.developers, tags.messaging],
+    title: 'Breaking the web2 barrier: How XMTP and Notifi are bridging the gap for web3 apps with web2 notifications',
+    content:
+      "With Notifi, XMTP in-app messages can now trigger notifications to any web2 app, so devs can reliably reach their end-users without compromising on security.",
+    user: {
+      name: 'Rochelle Guillou',
+      date: '28 Apr 2023 · 3 min read',
+      img: 'rochelle-headshot.jpeg',
+      url: 'https://twitter.com/RochelleSophie_'
+    },
+    url: '/blog/notifi',
+  },
+  {
     tag: [tags.contenttypes, tags.developers, tags.sdks],
     title:
       'Some new content types',
@@ -69,28 +82,14 @@ export const BLOG_DATA = [
     },
     url: '/blog/secure-web3-customer-service-and-support-with-xmtp-and-ens',
   },
-  {
-    tag: [tags.awards, tags.developers, tags.hackathon],
-    title: 'Developers show the power of video + messaging with XMTP and Livepeer',
-    content:
-      "Livepeer x XMTP awards wrap-up: DeUniversity's education platform, Polyfans Messenger token-gated livestream, and Livopedia's creator tools take top honors.",
-    user: {
-      name: 'Rich Bustos',
-      date: '02 Feb 2023 · 3 min read',
-      img: 'rich-headshot.jpeg',
-      url: 'https://twitter.com/richrdbustos'
-    },
-    url: '/blog/encode-club-livepeer-wrap-up/',
-  },
 ]
 
 export const XMTP_JS_URL = 'https://api.github.com/repos/xmtp/xmtp-js'
 export const XMTP_ANDROID_URL = 'https://api.github.com/repos/xmtp/xmtp-android'
 export const XMTP_IOS_URL = 'https://api.github.com/repos/xmtp/xmtp-ios'
 export const XMTP_FLUTTER_URL = 'https://api.github.com/repos/xmtp/xmtp-flutter'
-export const XMTP_REACT_NATIVE_URL = 'https://api.github.com/repos/xmtp/example-chat-react-native'
+export const XMTP_WEB_URL = 'https://api.github.com/repos/xmtp/xmtp-web'
 export const XMTP_NOTIF_SERVER_URL = 'https://api.github.com/repos/xmtp/example-notification-server-go'
-export const XMTP_MEMO_URL = 'https://api.github.com/repos/xmtp/xmtp-memo-js'
 export const QUICKSTART_CHAT_URL = 'https://api.github.com/repos/xmtp/xmtp-quickstart-react'
 
 export const CHAT_ITEM = {
