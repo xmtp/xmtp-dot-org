@@ -11,7 +11,7 @@ Here are a few details about what we've shipped recently, what we're working on,
 
 ## Researching 🔬
 
-Scoping goals, requirements, and effort via research & proofs of concepts.
+Scoping goals, requirements, and effort via research and proofs of concepts.
 
 ### Group chat
 
@@ -41,7 +41,7 @@ Projects in flight.
 
 ### Network decentralization milestones
 
-XMTP Labs will specify a phased approach towards architectural and logical decentralization of the network.
+XMTP Labs will specify a phased approach toward architectural and logical decentralization of the network.
 
 ### Private testnet - Phase 1
 
@@ -55,14 +55,6 @@ Users will be able to recover their compromised XMTP identity by creating new pr
 
 Users will be able to grant explicit permission for an app to use their account across sessions and will be able to revoke this permission at any time.
 
-### Secure key storage alternatives
-
-Users will be able to store XMTP private keys in secure contexts such as wallet apps.
-
-### UI Kit & React Hooks SDK
-
-Enable developers to focus on differentiating features by providing reusable messaging components via a [UI kit & React Hooks SDK](https://github.com/xmtp/xmtp-react).
-
 ---
 
 ## Pre-Preview 👀
@@ -71,13 +63,17 @@ A super early peek into what we're building. Ready for exploration, not adoption
 
 ### Mobile support for React Native
 
-Developers will be able to build mobile client apps in [React Native](https://github.com/xmtp/xmtp-js/issues/170).
+Developers can start building mobile client apps in React Native using the [React Native SDK](https://github.com/xmtp/xmtp-react-native).
 
 ---
 
 ## Developer Preview 🧑‍💻
 
 Opportunity to test, validate, and provide feedback. We do not recommend usage in production apps just yet.
+
+### UI Kit & React Hooks SDK
+
+Enable developers to focus on differentiating features by providing reusable messaging components via a [UI kit & React Hooks SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk).
 
 ### Build Android apps in Kotlin
 
@@ -93,23 +89,29 @@ Apps will be able to leverage an example server to subscribe users for push noti
 
 ## General Availability ✅
 
+Ready for use in production apps.
+
 ### Build JavaScript and React apps
 
-Developers are able to build apps in JavaScript and React with the [`xmtp-js` SDK](/docs/client-sdk/javascript/tutorials/quickstart).
+Developers can build apps in JavaScript and React with the [`xmtp-js` SDK](/docs/client-sdk/javascript/tutorials/quickstart).
 
 ### Build iOS apps in Swift
 
-Developers are able to build iOS apps in Swift using the [`xmtp-ios` SDK](/docs/client-sdk/swift/tutorials/quickstart).
+Developers can build iOS apps in Swift using the [`xmtp-ios` SDK](/docs/client-sdk/swift/tutorials/quickstart).
 
 ### Build Flutter and mobile apps in Dart
 
-Developers are able to build Flutter and mobile apps in Dart using the [`xmtp-flutter` SDK](/docs/client-sdk/dart/tutorials/quickstart).
+Developers can build Flutter and mobile apps in Dart using the [`xmtp-flutter` SDK](/docs/client-sdk/dart/tutorials/quickstart).
+
+### Secure key storage module
+ 
+The [Keystore module](https://github.com/xmtp/xmtp-js/releases/tag/v8.0.0) allows XMTP private keys to be stored in persistent LocalStorage.
 
 ### XMTP v2 (December 2022)
 
 #### Conversation filtering
 
-Developers can now group and filter conversations in a particular context using conversationId.
+Developers can group and filter conversations in a particular context using conversationId.
 
 #### Participant privacy
 

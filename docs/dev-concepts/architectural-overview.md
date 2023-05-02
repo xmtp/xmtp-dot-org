@@ -3,7 +3,6 @@ sidebar_label: Architectural overview
 sidebar_position: 2.5
 toc_max_heading_level: 4
 ---
-import Feedback from '/src/components/Feedback'
 
 # Architectural overview of XMTP
 
@@ -78,7 +77,7 @@ This section describes how topics and the message presentation flow work for the
 In XMTP V2, clients use the following topics to perform their primary responsibilities.
 
 
-#### Contact topic
+#### Contact topic V2
 
 A client uses a contact topic to advertise a user’s public key bundle on the XMTP network. The network advertises this public key bundle to enable other users to contact the user.
 
@@ -89,7 +88,7 @@ For example, `contact-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38`.
 To learn more, see [Contacts](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#contacts) in the `xmtp/proto` repo.
 
 
-#### Invite topic
+#### Invite topic V2
 
 Clients use invite topics to initiate conversations between participants. 
 
@@ -108,7 +107,7 @@ The client sends an invitation to both the sender and recipient’s invite topic
 To learn more, see [Invitations](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#invitations) in the `xmtp/proto` repo.
 
 
-#### Conversation topic
+#### Conversation topic V2
 
 Clients use conversation topics to store messages exchanged between a pair of addresses. 
 
@@ -135,7 +134,7 @@ A pair of addresses can have multiple conversation topics, each with a unique co
 To learn more, see [Messages](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#messages) in the `xmtp/proto` repo.
 
 
-#### Private store topic
+#### Private store topic V2
 
 A client built with XMTP can choose to store its users' private key bundles locally or encrypted on the XMTP network. When required, a client uses a private store topic to store a user's private key bundle.
 
@@ -169,7 +168,7 @@ This section describes how topics and the message presentation flow work for XMT
 In XMTP V1, client apps use the following topics to perform their primary responsibilities.
 
 
-#### Contact topic
+#### Contact topic V1
 
 A client uses a contact topic to advertise a user’s public key bundle on the XMTP network. The network advertises this public key bundle to enable other users to contact the user.
 
@@ -178,7 +177,7 @@ The contact topic name uses this format: `contact-<account-address>`.
 For example, `contact-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38`.
 
 
-#### Intro topic
+#### Intro topic V1
 
 Clients use intro topics to store the first message sent between two participants (blockchain accounts). This enables clients to know that messages exist in a given conversation topic. 
 
@@ -187,7 +186,7 @@ The intro topic name uses this format: `intro-<participant-1-account-address>-<p
 For example, `intro-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x357540a11BE08e9264c348b346d0C7dBB7df80d7`.
 
 
-#### Conversation topic
+#### Conversation topic V1
 
 Clients use conversation topics to store messages sent between two participants. Here are some characteristics of conversation topics:
 
@@ -202,7 +201,7 @@ The conversation topic name uses this format: `dm-<participant-1-account-address
 For example, `dm-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x357540a11BE08e9264c348b346d0C7dBB7df80d7`.
 
 
-#### Private store
+#### Private store V1
 
 A client built with XMTP can choose to store its users' private key bundles locally or encrypted on the XMTP network. When required, a client uses a private store topic to store a user's private key bundle.	
 
