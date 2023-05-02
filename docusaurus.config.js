@@ -133,7 +133,7 @@ const config = {
           {
             to: 'docs/concepts/introduction',
             position: 'right',
-            label: 'Concepts',
+            label: 'Key concepts',
             activeBaseRegex: `/`,
           },
           {
