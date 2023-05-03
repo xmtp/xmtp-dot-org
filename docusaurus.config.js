@@ -321,6 +321,10 @@ const config = {
                 to: `/docs/dev-concepts/faq`,
               },
               {
+                label: `Works with XMTP`,
+                to: `/docs/dev-concepts/works-with-xmtp`,
+              },
+              {
                 label: `Interoperable inbox`,
                 to: `/docs/dev-concepts/interoperable-inbox`,
               },
@@ -335,10 +339,6 @@ const config = {
               {
                 label: `Invitation and message encryption`,
                 to: `/docs/dev-concepts/invitation-and-message-encryption`,
-              },
-              {
-                label: `Wallet app and chain support`,
-                to: `/docs/dev-concepts/wallets`,
               },
               {
                 label: `Account signatures`,
