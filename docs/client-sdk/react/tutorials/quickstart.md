@@ -14,7 +14,7 @@ This SDK is in **Developer Preview** status and ready for you to start building 
 
 However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
 
-To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-web/issues) in the the `xmtp-web` repo.
+To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-web/issues) in the `xmtp-web` repo.
 
 To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/dev-concepts/faq).
 
@@ -112,7 +112,11 @@ To use any of the included components, you must also include their styles. To do
 import "@xmtp/react-sdk/styles.css";
 ```
 
-**Note:** The included styles contain normalizations of elements globally.
+:::note
+
+The included styles contain normalizations of elements globally.
+
+:::
 
 ### Add the provider
 
@@ -141,8 +145,8 @@ To learn more about this process, see [Create a client](https://github.com/xmtp/
 **Type**
 
 ```ts
-import { Client } from "@xmtp/xmtp-js";
-import type { ClientOptions, Signer } from "@xmtp/xmtp-js";
+import { Client } from "@xmtp/react-sdk";
+import type { ClientOptions, Signer } from "@xmtp/react-sdk";
 
 const useClient: ({
   options,
@@ -202,9 +206,8 @@ To learn more, see [Manually handle private key storage](https://github.com/xmtp
 **Example**
 
 ```tsx
-import { Client } from "@xmtp/xmtp-js";
-import type { Signer } from "@xmtp/xmtp-js";
-import { useClient } from "@xmtp/react-sdk";
+import { Client, useClient } from "@xmtp/react-sdk";
+import type { Signer } from "@xmtp/react-sdk";
 
 export const CreateClientWithKeys: React.FC<{ signer: Signer }> = ({ signer }) => {
   const { initialize } = useClient({ signer });
@@ -233,7 +236,7 @@ The `useConversations` hook fetches all conversations with the current wallet on
 **Type**
 
 ```ts
-import type { Conversation } from "@xmtp/xmtp-js";
+import type { Conversation } from "@xmtp/react-sdk";
 
 const useConversations: () => {
   conversations: Conversation[];
@@ -270,7 +273,7 @@ The `useStreamConversations` hook listens for new conversations in real-time and
 **Type**
 
 ```ts
-import type { Conversation } from "@xmtp/xmtp-js";
+import type { Conversation } from "@xmtp/react-sdk";
 
 const useStreamConversations: (
   onConversation: (conversation: Conversation) => void,
@@ -284,7 +287,7 @@ const useStreamConversations: (
 ```tsx
 import { useCallback, useState } from "react";
 import { useStreamConversations } from "@xmtp/react-sdk";
-import type { Conversation } from "@xmtp/xmtp-js";
+import type { Conversation } from "@xmtp/react-sdk";
 
 export const NewConversations: React.FC = () => {
   // track streamed conversations
@@ -321,7 +324,7 @@ The `useStartConversation` hook starts a new conversation and sends an initial m
 
 ```ts
 import type { InvitationContext } from "@xmtp/xmtp-js/dist/types/src/Invitation";
-import type { Conversation, SendOptions } from "@xmtp/xmtp-js";
+import type { Conversation, SendOptions } from "@xmtp/react-sdk";
 
 const useStartConversation: <T = string>(
   options?: InvitationContext,
@@ -379,7 +382,7 @@ The `useSendMessage` hook sends a new message into a conversation.
 **Type**
 
 ```ts
-import type { Conversation, SendOptions } from "@xmtp/xmtp-js";
+import type { Conversation, SendOptions } from "@xmtp/react-sdk";
 
 const useSendMessage: <T = string>(
   conversation: Conversation,
@@ -391,7 +394,7 @@ const useSendMessage: <T = string>(
 
 ```tsx
 import { MessageInput, useSendMessage } from "@xmtp/react-sdk";
-import type { Conversation } from "@xmtp/xmtp-js";
+import type { Conversation } from "@xmtp/react-sdk";
 import { useCallback, useState } from "react";
 
 export const SendMessage: React.FC<{ conversation: Conversation }> = ({
@@ -426,24 +429,40 @@ import type {
   Conversation,
   DecodedMessage,
   ListMessagesOptions,
-} from "@xmtp/xmtp-js";
+} from "@xmtp/react-sdk";
+export type UseMessagesOptions = ListMessagesOptions & {
+  /**
+   * Callback function to execute when new messages are fetched
+   */
+  onMessages?: (
+    messages: DecodedMessage[],
+    options: ListMessagesOptions,
+  ) => void;
+};
 
 const useMessages: (
   conversation?: Conversation,
-  options?: ListMessagesOptions,
+  options?: UseMessagesOptions,
 ) => {
   error: unknown;
+  hasMore: boolean;
   isLoading: boolean;
   messages: DecodedMessage[];
-  hasMore: boolean;
+  next: () => Promise<DecodedMessage[]>;
 };
 ```
+
+:::important
+
+It's important to memoize the `options` argument so that the hook doesn't fetch messages endlessly.
+
+:::
 
 **Example**
 
 ```tsx
 import { ConversationMessages, useMessages } from "@xmtp/react-sdk";
-import type { Conversation, DecodedMessage } from "@xmtp/xmtp-js";
+import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
 
 export const Messages: React.FC<{
   conversation: Conversation;
@@ -468,6 +487,55 @@ export const Messages: React.FC<{
 };
 ```
 
+#### Page through messages
+
+If a conversation has a lot of messages, it's more performant to page through them rather than fetching them all at once. This can be accomplished by using the `limit` option to limit the number of messages to fetch at a time.
+
+**Example**
+
+```tsx
+import { ConversationMessages, useMessages } from "@xmtp/react-sdk";
+import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
+export const PagedMessages: React.FC<{
+  conversation: Conversation;
+}> = ({ conversation }) => {
+  // it's important to memoize the options so that messages are not
+  // fetched continuously
+  const options = useMemo(
+    () => ({
+      limit: 20,
+    }),
+    [],
+  );
+  const { error, isLoading, messages, next } = useMessages(
+    conversation,
+    options,
+  );
+  const handleClick = useCallback(() => {
+    // fetch next page of messages
+    next();
+  }, [next]);
+  if (error) {
+    return "An error occurred while loading messages";
+  }
+  if (isLoading) {
+    return "Loading messages...";
+  }
+  return (
+    <>
+      <ConversationMessages
+        isLoading={isLoading}
+        messages={messages}
+        clientAddress={conversation?.clientAddress ?? ""}
+      />
+      <button type="button" onClick={handleClick}>
+        Load more messages
+      </button>
+    </>
+  );
+};
+```
+
 ### Listen for new messages in a conversation
 
 The `useStreamMessages` hook streams new conversation messages on mount and exposes an error state.
@@ -475,7 +543,7 @@ The `useStreamMessages` hook streams new conversation messages on mount and expo
 **Type**
 
 ```ts
-import type { Conversation, DecodedMessage } from "@xmtp/xmtp-js";
+import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
 
 const useStreamMessages: (
   conversation: Conversation,
@@ -489,7 +557,7 @@ const useStreamMessages: (
 
 ```tsx
 import { useStreamMessages } from "@xmtp/react-sdk";
-import type { Conversation, DecodedMessage } from "@xmtp/xmtp-js";
+import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
 import { useCallback, useEffect, useState } from "react";
 
 export const StreamMessages: React.FC<{
@@ -531,7 +599,7 @@ The `useStreamAllMessages` hook streams new messages from all conversations on m
 **Type**
 
 ```ts
-import type { DecodedMessage } from "@xmtp/xmtp-js";
+import type { DecodedMessage } from "@xmtp/react-sdk";
 
 const useStreamAllMessages: (onMessage: (message: DecodedMessage) => void) => {
   error: unknown;
@@ -542,7 +610,7 @@ const useStreamAllMessages: (onMessage: (message: DecodedMessage) => void) => {
 
 ```tsx
 import { useStreamAllMessages } from "@xmtp/react-sdk";
-import type { DecodedMessage } from "@xmtp/xmtp-js";
+import type { DecodedMessage } from "@xmtp/react-sdk";
 import { useCallback, useState } from "react";
 
 export const StreamAllMessages: React.FC = () => {
@@ -597,6 +665,8 @@ const useCanMessage: () => {
 **Example**
 
 ```tsx
+import { useCanMessage } from "@xmtp/react-sdk";
+
 export const CanMessage: React.FC = () => {
   const [peerAddress, setPeerAddress] = useState("");
   const [isOnNetwork, setIsOnNetwork] = useState(false);
@@ -677,8 +747,11 @@ XMTP provides both `production` and `dev` network environments to support the de
 The `production` and `dev` networks are completely separate and not interchangeable.
 For example, for a given blockchain account, its XMTP identity on `dev` network is completely distinct from its XMTP identity on the `production` network, as are the messages associated with these identities. In addition, XMTP identities and messages created on the `dev` network can't be accessed from or moved to the `production` network, and vice versa.
 
-> **Important:**  
-> When you [create a client](#create-a-client), it connects to the XMTP `dev` environment by default. To learn how to use the `env` parameter to set your client's network environment, see [Configure the client](#configure-the-client).
+:::important
+
+When you [create a client](#create-a-client), it connects to the XMTP `dev` environment by default. To learn how to use the `env` parameter to set your client's network environment, see [Configure the client](#configure-the-client).
+
+:::
 
 The `env` parameter accepts one of three valid values: `dev`, `production`, or `local`. Here are some best practices for when to use each environment:
 
