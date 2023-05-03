@@ -29,9 +29,9 @@ Have you built with a tool that works well with XMTP? Let's add it to this page.
 To connect web3 wallets to your app:
 
 - [Thirdweb](https://thirdweb.com/)
-    - Reference implementation in [XMTP React Native example app](https://github.com/xmtp/xmtp-react-native/blob/main/example/src/AuthView.tsx#L7)
+    - Example implementation in the [XMTP React Native example app](https://github.com/xmtp/xmtp-react-native/blob/main/example/src/AuthView.tsx#L7)
 - [WalletConnect](https://walletconnect.com/)
-    - Reference implementation in [XMTP Inbox Web app](https://github.com/xmtp-labs/xmtp-inbox-web)
+    - Example implementation in the [XMTP Inbox Web app](https://github.com/xmtp-labs/xmtp-inbox-web)
 - [wagmi](https://wagmi.sh/)
 
 XMTP client SDKs require you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/). These wallet connection tools provide this capability.
@@ -50,7 +50,7 @@ To build message bots to help with testing and user onboarding experiences:
 To store encrypted and encoded message payload content:
 
 - [web3.storage](https://web3.storage/)
-    - Reference implementation: [`xmtp-js` remote content types](https://github.com/xmtp/xmtp-js-content-types)
+    - Example implementation in [`xmtp-js` remote content types](https://github.com/xmtp/xmtp-js-content-types)
     - Tutorial: [Introducing remote media attachments](/blog/attachments-and-remote-attachments)
 
 
@@ -59,7 +59,7 @@ To store encrypted and encoded message payload content:
 To support decentralized identity management and DiD resolution:
 
 - [Ethereum Name Service](https://ens.domains/) (ENS)
-    - Reference implementation: [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)
+    - Example implementation in [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)
 - [Coinbase cb.id](https://help.coinbase.com/en/wallet/managing-account/coinbase-ens-support)
 - [Everyname](https://www.everyname.xyz/) resolution service
 
@@ -67,10 +67,10 @@ To support decentralized identity management and DiD resolution:
 ## Decentralized social
 
 - [Lens](https://www.lens.xyz/)
-    - Reference implementation: [Lenster](https://github.com/lensterxyz/lenster)
+    - Example implementation in [Lenster](https://github.com/lensterxyz/lenster)
     - Tutorial: [Build key XMTP chat features in a Lens app](/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app)
 - [CyberConnect](https://link3.to/cyberconnect)
-    - Reference implementation: [CyberConnect & XMTP Integration Demo App](https://github.com/cyberconnecthq/cc-xmtp-chatapp)
+    - Example implementation in the [CyberConnect & XMTP Integration Demo App](https://github.com/cyberconnecthq/cc-xmtp-chatapp)
     - Tutorial: [Build messaging for CyberConnect profiles](/docs/client-sdk/javascript/tutorials/build-messaging-for-cyberconnect-profiles)
 
 
@@ -88,7 +88,7 @@ XMTP can be used with EVM-compatible wallet apps that support ECDSA signing on t
 - [Coinbase Wallet](https://www.coinbase.com/wallet)
 - [MetaMask](https://metamask.io/)
 - [Rainbow Wallet](https://rainbow.me/)
-- Most wallet in the [WalletConnect network](https://explorer.walletconnect.com/?type=wallet)
+- Most wallets in the [WalletConnect network](https://explorer.walletconnect.com/?type=wallet)
 
 The XMTP SDK **does not** include a wallet app abstraction, as XMTP assumes that developers have a way to obtain a wallet app connection.
 
