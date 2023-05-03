@@ -19,7 +19,7 @@ Developers can also build tools for decentralized apps (dapps), decentralized au
 
 XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets), though XMTP itself does not use EVMs. XMTP also works with other web3 identities that apps built with XMTP can derive from Ethereum accounts, such as ENS names and Lens profiles.
 
-To learn more, see [Chains and wallet apps supported by XMTP](wallets).
+To learn more, see [Works with XMTP](works-with-xmtp).
 
 XMTP’s primary contributor, XMTP Labs, is funded by some of the industry’s top venture capital funds, including a16z Crypto and Coinbase Ventures.
 
@@ -31,8 +31,8 @@ Here are some key considerations as you explore building with XMTP for secure we
 |:---|:---|
 | **Message direction** | Bidirectional |
 | **Participant identities** | Any EVM blockchain EOA (externally owned account) can send a message to any other EVM blockchain EOA that has advertised its XMTP identity on the network. |
-| **Chain focus** | Chain-agnostic, but currently requires an EVM blockchain account. <br /><br /> To learn more, see [Chains and wallet apps supported by XMTP](wallets). |
-| **Wallet app compatibility** | EVM-compatible wallets capable of signing with private keys, such as MetaMask, Coinbase Wallet, and Rainbow Wallet. <br /><br /> To learn more, see [Chains and wallet apps supported by XMTP](wallets). |
+| **Chain focus** | Chain-agnostic, but currently requires an EVM blockchain account. <br /><br /> To learn more, see [Chains](works-with-xmtp#chains). |
+| **Wallet app compatibility** | EVM-compatible wallets capable of signing with private keys, such as MetaMask, Coinbase Wallet, and Rainbow Wallet. <br /><br /> To learn more, see [Wallet apps](works-with-xmtp#wallet-apps). |
 | **Authentication** | An XMTP-specific key bundle derived from a blockchain account address signature is used to authenticate a user identity. <br /><br /> To learn more about these key bundles, see [Key generation and usage](/docs/dev-concepts/key-generation-and-usage). |
 | **Message encryption** | Messages are encrypted individually by default and are readable by message participants only. <br /><br /> To learn more about message encryption, see [Invitation and message encryption](invitation-and-message-encryption). |
 | **Message delivery** | Messages are immediately relayed by XMTP nodes, using the Waku protocol. <br /><br /> To learn more, see [Network layer](architectural-overview#network-layer). |

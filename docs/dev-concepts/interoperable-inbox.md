@@ -1,6 +1,6 @@
 ---
 sidebar_label: Interoperable inbox
-sidebar_position: 3
+sidebar_position: 3.2
 ---
 
 # Messages meet users where they are: The XMTP interoperable inbox
