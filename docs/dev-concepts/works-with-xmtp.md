@@ -41,7 +41,6 @@ XMTP client SDKs require you to use [ethers](https://ethers.org/) or another web
 
 To build message bots to help with testing and user onboarding experiences:
 
-- [ChainJet](https://chainjet.io/)
 - [XMTP Bot Starter](https://github.com/xmtp/xmtp-bot-starter)
 
 
@@ -54,14 +53,13 @@ To store encrypted and encoded message payload content:
     - Tutorial: [Introducing remote media attachments](/blog/attachments-and-remote-attachments)
 
 
-## Decentralized identifiers and resolution services
+## Decentralized identifiers
 
-To support decentralized identity management and DiD resolution:
+To support decentralized identity management:
 
 - [Ethereum Name Service](https://ens.domains/) (ENS)
     - Example implementation in [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)
 - [Coinbase cb.id](https://help.coinbase.com/en/wallet/managing-account/coinbase-ens-support)
-- [Everyname](https://www.everyname.xyz/) resolution service
 
 
 ## Decentralized social
