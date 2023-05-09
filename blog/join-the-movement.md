@@ -5,7 +5,7 @@ title: "Join the movement: own your conversations with Converse"
 date: 2023-05-09
 authors: rochelle
 description: "Discover the WhatsApp for web3: end-to-end encrypted messages between wallets, that only you own and can take with you anywhere."
-image: ./media/Breaking-the-Web2-Barrier-Post.jpg
+image: ./media/CONVERSE-BLOG.jpg
 tags:
 - Built with XMTP
 - Developers
@@ -17,7 +17,7 @@ tags:
 
 Discover the WhatsApp for web3: end-to-end encrypted messages between wallets, that only you own and can take with you anywhere. 
 
-[insert banner image]
+![CONVERSE-BLOG.jpg](./media/CONVERSE-BLOG.jpg)
 
 <!--truncate-->
 
