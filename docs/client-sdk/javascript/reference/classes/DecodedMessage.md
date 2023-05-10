@@ -15,7 +15,7 @@
 
 #### Defined in
 
-[Message.ts:244](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L244)
+[Message.ts:244](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L244)
 
 ## Properties
 
@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[Message.ts:240](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L240)
+[Message.ts:240](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L240)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[Message.ts:242](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L242)
+[Message.ts:242](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L242)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[Message.ts:237](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L237)
+[Message.ts:237](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L237)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[Message.ts:239](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L239)
+[Message.ts:239](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L239)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[Message.ts:238](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L238)
+[Message.ts:238](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L238)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[Message.ts:241](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L241)
+[Message.ts:241](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L241)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[Message.ts:232](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L232)
+[Message.ts:232](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L232)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[Message.ts:233](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L233)
+[Message.ts:233](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L233)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[Message.ts:235](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L235)
+[Message.ts:235](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L235)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[Message.ts:234](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L234)
+[Message.ts:234](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L234)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[Message.ts:236](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L236)
+[Message.ts:236](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L236)
 
 ## Methods
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[Message.ts:270](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L270)
+[Message.ts:270](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L270)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[Message.ts:283](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L283)
+[Message.ts:283](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L283)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `message` | `MessageV1` |
+| `message` | [`MessageV1`](MessageV1.md) |
 | `content` | `any` |
 | `contentType` | [`ContentTypeId`](ContentTypeId.md) |
 | `contentBytes` | `Uint8Array` |
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[Message.ts:318](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L318)
+[Message.ts:318](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L318)
 
 ___
 
@@ -198,7 +198,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `message` | `MessageV2` |
+| `message` | [`MessageV2`](MessageV2.md) |
 | `content` | `any` |
 | `contentType` | [`ContentTypeId`](ContentTypeId.md) |
 | `contentTopic` | `string` |
@@ -213,4 +213,4 @@ ___
 
 #### Defined in
 
-[Message.ts:346](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L346)
+[Message.ts:346](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L346)

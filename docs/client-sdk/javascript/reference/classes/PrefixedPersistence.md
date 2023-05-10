@@ -16,7 +16,7 @@
 
 #### Defined in
 
-[keystore/persistence/PrefixedPersistence.ts:7](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/PrefixedPersistence.ts#L7)
+[keystore/persistence/PrefixedPersistence.ts:7](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/PrefixedPersistence.ts#L7)
 
 ## Properties
 
@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[keystore/persistence/PrefixedPersistence.ts:5](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/PrefixedPersistence.ts#L5)
+[keystore/persistence/PrefixedPersistence.ts:5](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/PrefixedPersistence.ts#L5)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/PrefixedPersistence.ts:4](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/PrefixedPersistence.ts#L4)
+[keystore/persistence/PrefixedPersistence.ts:4](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/PrefixedPersistence.ts#L4)
 
 ## Methods
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/PrefixedPersistence.ts:20](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/PrefixedPersistence.ts#L20)
+[keystore/persistence/PrefixedPersistence.ts:20](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/PrefixedPersistence.ts#L20)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/PrefixedPersistence.ts:12](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/PrefixedPersistence.ts#L12)
+[keystore/persistence/PrefixedPersistence.ts:12](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/PrefixedPersistence.ts#L12)
 
 ___
 
@@ -97,4 +97,4 @@ ___
 
 #### Defined in
 
-[keystore/persistence/PrefixedPersistence.ts:16](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/PrefixedPersistence.ts#L16)
+[keystore/persistence/PrefixedPersistence.ts:16](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/PrefixedPersistence.ts#L16)

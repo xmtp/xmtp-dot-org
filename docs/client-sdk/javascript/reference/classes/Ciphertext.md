@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[crypto/Ciphertext.ts:14](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Ciphertext.ts#L14)
+[crypto/Ciphertext.ts:14](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Ciphertext.ts#L14)
 
 ## Properties
 
@@ -33,7 +33,7 @@ ciphertext.Ciphertext.aes256GcmHkdfSha256
 
 #### Defined in
 
-[crypto/Ciphertext.ts:12](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Ciphertext.ts#L12)
+[crypto/Ciphertext.ts:12](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Ciphertext.ts#L12)
 
 ## Methods
 
@@ -47,7 +47,7 @@ ciphertext.Ciphertext.aes256GcmHkdfSha256
 
 #### Defined in
 
-[crypto/Ciphertext.ts:36](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Ciphertext.ts#L36)
+[crypto/Ciphertext.ts:36](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Ciphertext.ts#L36)
 
 ___
 
@@ -67,4 +67,4 @@ ___
 
 #### Defined in
 
-[crypto/Ciphertext.ts:40](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Ciphertext.ts#L40)
+[crypto/Ciphertext.ts:40](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Ciphertext.ts#L40)

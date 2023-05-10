@@ -13,20 +13,20 @@ The wallet address connected to the client
 
 #### Defined in
 
-[conversations/Conversation.ts:45](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L45)
+[conversations/Conversation.ts:45](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L45)
 
 ___
 
 ### context
 
- `Optional` **context**: `InvitationContext`
+ `Optional` **context**: [`InvitationContext`](../modules.md#invitationcontext)
 
 Optional field containing the `conversationId` and `metadata` for V2 conversations.
 Will always be undefined on V1 conversations
 
 #### Defined in
 
-[conversations/Conversation.ts:66](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L66)
+[conversations/Conversation.ts:66](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L66)
 
 ___
 
@@ -38,7 +38,7 @@ Timestamp the conversation was created at
 
 #### Defined in
 
-[conversations/Conversation.ts:61](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L61)
+[conversations/Conversation.ts:61](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L61)
 
 ___
 
@@ -50,7 +50,7 @@ A unique identifier for ephemeral envelopes for a conversation.
 
 #### Defined in
 
-[conversations/Conversation.ts:53](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L53)
+[conversations/Conversation.ts:53](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L53)
 
 ___
 
@@ -62,7 +62,7 @@ The wallet address of the other party in the conversation
 
 #### Defined in
 
-[conversations/Conversation.ts:57](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L57)
+[conversations/Conversation.ts:57](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L57)
 
 ___
 
@@ -74,7 +74,7 @@ A unique identifier for a conversation. Each conversation is stored on the netwo
 
 #### Defined in
 
-[conversations/Conversation.ts:49](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L49)
+[conversations/Conversation.ts:49](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L49)
 
 ## Methods
 
@@ -97,7 +97,7 @@ returning a `DecodedMessage` instance.
 
 #### Defined in
 
-[conversations/Conversation.ts:92](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L92)
+[conversations/Conversation.ts:92](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L92)
 
 ___
 
@@ -129,7 +129,7 @@ const messages = await conversation.messages({
 
 #### Defined in
 
-[conversations/Conversation.ts:81](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L81)
+[conversations/Conversation.ts:81](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L81)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[conversations/Conversation.ts:85](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L85)
+[conversations/Conversation.ts:85](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L85)
 
 ___
 
@@ -175,7 +175,7 @@ of the message that will be sent.
 
 #### Defined in
 
-[conversations/Conversation.ts:123](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L123)
+[conversations/Conversation.ts:123](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L123)
 
 ___
 
@@ -203,7 +203,7 @@ await conversation.send('Hello world') // returns a `DecodedMessage` instance
 
 #### Defined in
 
-[conversations/Conversation.ts:114](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L114)
+[conversations/Conversation.ts:114](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L114)
 
 ___
 
@@ -229,7 +229,7 @@ for await (const message of await conversation.streamEphemeral()) {
 
 #### Defined in
 
-[conversations/Conversation.ts:141](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L141)
+[conversations/Conversation.ts:141](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L141)
 
 ___
 
@@ -254,4 +254,4 @@ for await (const message of await conversation.stream()) {
 
 #### Defined in
 
-[conversations/Conversation.ts:105](https://github.com/xmtp/xmtp-js/blob/36ff630/src/conversations/Conversation.ts#L105)
+[conversations/Conversation.ts:105](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/conversations/Conversation.ts#L105)
