@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[codecs/Composite.ts:35](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L35)
+[codecs/Composite.ts:35](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/codecs/Composite.ts#L35)
 
 ## Methods
 
@@ -40,7 +40,7 @@
 | Name | Type |
 | :------ | :------ |
 | `content` | [`EncodedContent`](../interfaces/EncodedContent.md) |
-| `codecs` | `CodecRegistry` |
+| `codecs` | [`CodecRegistry`](../interfaces/CodecRegistry.md) |
 
 #### Returns
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[codecs/Composite.ts:55](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L55)
+[codecs/Composite.ts:55](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/codecs/Composite.ts#L55)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `content` | [`Composite`](../modules.md#composite) |
-| `codecs` | `CodecRegistry` |
+| `codecs` | [`CodecRegistry`](../interfaces/CodecRegistry.md) |
 
 #### Returns
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:39](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L39)
+[codecs/Composite.ts:39](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/codecs/Composite.ts#L39)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `content` | `Composite_Part` |
-| `codecs` | `CodecRegistry` |
+| `codecs` | [`CodecRegistry`](../interfaces/CodecRegistry.md) |
 
 #### Returns
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:83](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L83)
+[codecs/Composite.ts:83](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/codecs/Composite.ts#L83)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `content` | [`Composite`](../modules.md#composite) |
-| `codecs` | `CodecRegistry` |
+| `codecs` | [`CodecRegistry`](../interfaces/CodecRegistry.md) |
 
 #### Returns
 
@@ -119,4 +119,4 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:62](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L62)
+[codecs/Composite.ts:62](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/codecs/Composite.ts#L62)

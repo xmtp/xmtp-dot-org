@@ -30,4 +30,4 @@ It is typically used once on application startup to bootstrap the Keystore and l
 
 #### Defined in
 
-[keystore/providers/interfaces.ts:17](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/providers/interfaces.ts#L17)
+[keystore/providers/interfaces.ts:17](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/providers/interfaces.ts#L17)
