@@ -124,36 +124,36 @@ const config = {
             label: 'Documentation',
             items: [
               {
-                to: 'docs/tutorials/start-building',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
+                to: 'docs/tutorials/get-started/start-building',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/tutorials-icon.svg" alt="List icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Tutorials</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Join in and contribute to the XMTP community</div></div></div>`,
+                <div class="subtext text-sm text-normal whitespace-pre-line">Step-by-step guides to building with XMTP</div></div></div>`,
               },
               {
                 to: 'docs/references/sdks-and-tools',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Rocket icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/sdks-icon.svg" alt="Lightning icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">SDKs and tools</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Apply for a grant for a project that fosters ecosystem growth</div></div></div>`,
+                <div class="subtext text-sm text-normal whitespace-pre-line">SDKs, SDK references, and developer tools</div></div></div>`,
               },
               {
                 to: 'docs/concepts/introduction',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/puzzle-icon.svg" alt="Concepts icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Key concepts</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
+                <div class="subtext text-sm text-normal whitespace-pre-line">Architecture, content types, keys, messages, and more</div></div></div>`,
               },
               {
-                to: 'docs/concepts/faq',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">FAQ</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
-              },
-              {
-                to: 'docs/concepts/faq',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                to: 'docs/concepts/changelog',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/changelog-icon.svg" alt="Megaphone icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Changelog</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
+                <div class="subtext text-sm text-normal whitespace-pre-line">Latest release info for SDKs and dev tools</div></div></div>`,
               },
             ],
+          },
+          {
+            to: 'docs/concepts/faq',
+            position: 'right',
+            label: 'FAQ',
+            activeBaseRegex: `/`,
           },
           {
             to: 'vision/roadmap',
@@ -199,15 +199,9 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'docs/tutorials/start-building',
+            to: 'docs/tutorials/get-started/start-building',
             position: 'right',
             label: '⚡️ Start building ⚡️',
-            className: 'start-building_link',
-          },
-          {
-            to: 'docs/tutorials/start-building',
-            position: 'right',
-            label: '⚡️ Launch xmtp.chat ⚡️',
             className: 'start-building_link',
           },
           {

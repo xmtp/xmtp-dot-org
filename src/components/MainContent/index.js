@@ -222,7 +222,7 @@ export const MainContent = ({ styles }) => {
                   </dl>
 
                   <Link
-                    to="/docs/tutorials/start-building"
+                    to="/docs/tutorials/get-started/start-building"
                     className="bg-red-500 text-white border-none rounded-lg py-3 px-5 font-bold text-base w-44 mt-10 h-12 cursor-pointer hover:bg-red-600 mb-14 xl:mb-0 block hover:no-underline hover:text-white"
                   >
                     <img

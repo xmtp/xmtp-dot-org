@@ -54,7 +54,7 @@ A great way to start learning how to build an app with XMTP is to use one!
     
    | Your friend using the [Converse app](https://getconverse.app/) to message you on the Orb app | You using the [Orb app](https://orb.ac/) to message your friend on the Converse app |
    |:-------------------------|:-------------------------|
-   | ![](build/img/your-friend-in-converse.png) | ![](build/img/you-in-orb.png)|
+   | ![](img/your-friend-in-converse.png) | ![](img/you-in-orb.png)|
 
 Ready to start building with XMTP? Check out some of these developer resources:
 

@@ -36,7 +36,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 ## Try messaging with XMTP
 
-1. [**Start messaging with XMTP**](/docs/tutorials/start-messaging)
+1. [**Start messaging with XMTP**](/docs/tutorials/get-started/start-messaging)
 
     Use an app built with XMTP to start learning how to build one.
 
