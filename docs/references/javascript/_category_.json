@@ -1,6 +1,6 @@
 {
-  "label": "xmtp-js SDK reference",
-  "position": 1.5,
-  "collapsible": false,
-  "collapsed": false,
+  "label": "JavaScript SDK reference (xmtp-js)",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": true,
 }

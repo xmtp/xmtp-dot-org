@@ -224,11 +224,11 @@ const config = {
               },
               {
                 label: `Swift`,
-                to: `/docs/references/swift/overview`,
+                to: `/docs/references/swift-sdk-reference`,
               },
               {
                 label: `Dart`,
-                to: `/docs/references/dart/overview`,
+                to: `/docs/references/dart-sdk-reference`,
               },
             ],
           },
@@ -241,11 +241,11 @@ const config = {
               },
               {
                 label: `Swift`,
-                to: `/docs/references/swift/overview`,
+                to: `/docs/references/swift-sdk-reference`,
               },
               {
                 label: `Dart`,
-                to: `/docs/references/dart/overview`,
+                to: `/docs/references/dart-sdk-reference`,
               },
             ],
           },

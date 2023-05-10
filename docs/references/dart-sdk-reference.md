@@ -1,6 +1,6 @@
 ---
-sidebar_label: SDK reference
-sidebar_position: 2
+sidebar_label: Dart SDK reference (xmtp-flutter)
+sidebar_position: 4
 ---
 
 # Reference for the Dart client SDK

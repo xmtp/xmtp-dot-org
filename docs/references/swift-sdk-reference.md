@@ -1,6 +1,6 @@
 ---
-sidebar_label: SDK reference
-sidebar_position: 2
+sidebar_label: Swift SDK reference (xmtp-ios)
+sidebar_position: 3
 ---
 
 # Reference for the Swift client SDK
