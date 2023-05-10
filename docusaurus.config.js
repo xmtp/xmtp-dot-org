@@ -222,6 +222,18 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
+            to: 'changelog', // To highlight the navbar item, you must link to a document, not a top-level directory
+            position: 'right',
+            label: 'Changelog',
+            activeBaseRegex: `/`,
+          },
+          {
+            to: 'vision/roadmap',
+            position: 'right',
+            label: 'Roadmap',
+            activeBaseRegex: `/`,
+          },
+          {
             type: 'dropdown',
             position: 'right',
             label: 'Community',
@@ -251,12 +263,6 @@ const config = {
                  <div class="subtext text-sm text-normal whitespace-pre-line">Foster a safe and positive XMTP community experience</div></div></div>`,
               },
             ],
-          },
-          {
-            to: 'vision/roadmap',
-            position: 'right',
-            label: 'Roadmap',
-            activeBaseRegex: `/`,
           },
           {
             to: 'blog',
