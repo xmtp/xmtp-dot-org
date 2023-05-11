@@ -117,7 +117,7 @@ Developers can group and filter conversations in a particular context using conv
 
 Network clients responsible for relaying and storing messages can no longer observe the addresses of participants in ongoing conversations.
 
-_For more information about delivered features and fixes, see [XMTP releases and updates](/docs/dev-concepts/xmtp-releases)._
+_For more information about delivered features and fixes, see the [Changelog](/changelog)._
 
 <!--
 ## Researching
