@@ -178,7 +178,7 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">JavaScript XMTP client SDK</div>
                  <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials and reference for building apps in JavaScript</div></div></div>`,
