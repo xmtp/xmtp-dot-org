@@ -22,9 +22,13 @@ To learn more about XMTP and get answers to frequently asked questions, see [FAQ
 
 ## Example apps built with `xmtp-js`
 
-- [XMTP Quickstart React app](https://github.com/xmtp/xmtp-quickstart-react): Provides a basic messaging app demonstrating core capabilities of the SDK. The app is intentionally built with lightweight code to help make it easier to parse and start learning to build with XMTP.
+- **XMTP Quickstart React app**: Provides a basic messaging app demonstrating core capabilities of the SDK. The app is intentionally built with lightweight code to help make it easier to parse and start learning to build with XMTP.
+  - [Try the app](https://xmtp-quickstart-react.vercel.app/)
+  - [View the repo](https://github.com/xmtp/xmtp-quickstart-react)
 
-- [XMTP Inbox app](https://github.com/xmtp-labs/xmtp-inbox-web): Provides a messaging app demonstrating core and advanced capabilities of the SDK. The app aims to showcase innovative ways of building with XMTP.
+- **XMTP Inbox app**: Provides a messaging app demonstrating core and advanced capabilities of the SDK. The app aims to showcase innovative ways of building with XMTP.
+  - [Try the app](https://xmtp.chat/inbox)
+  - [View the repo](https://github.com/xmtp-labs/xmtp-inbox-web)
 
 ## Reference docs
 

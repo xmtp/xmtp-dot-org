@@ -28,7 +28,7 @@ Create an XMTP auth token to be used as a header on XMTP API requests
 
 #### Defined in
 
-[keystore/interfaces.ts:48](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L48)
+[keystore/interfaces.ts:48](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L48)
 
 ___
 
@@ -51,7 +51,7 @@ The returned invite payload must be sent to the network for the other party to b
 
 #### Defined in
 
-[keystore/interfaces.ts:42](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L42)
+[keystore/interfaces.ts:42](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L42)
 
 ___
 
@@ -73,7 +73,7 @@ Decrypt a batch of V1 messages
 
 #### Defined in
 
-[keystore/interfaces.ts:19](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L19)
+[keystore/interfaces.ts:19](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L19)
 
 ___
 
@@ -95,7 +95,7 @@ Decrypt a batch of V2 messages
 
 #### Defined in
 
-[keystore/interfaces.ts:23](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L23)
+[keystore/interfaces.ts:23](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L23)
 
 ___
 
@@ -117,7 +117,7 @@ Encrypt a batch of V1 messages
 
 #### Defined in
 
-[keystore/interfaces.ts:27](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L27)
+[keystore/interfaces.ts:27](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L27)
 
 ___
 
@@ -139,7 +139,7 @@ Encrypt a batch of V2 messages
 
 #### Defined in
 
-[keystore/interfaces.ts:31](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L31)
+[keystore/interfaces.ts:31](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L31)
 
 ___
 
@@ -155,7 +155,7 @@ Get the account address of the wallet used to create the Keystore
 
 #### Defined in
 
-[keystore/interfaces.ts:68](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L68)
+[keystore/interfaces.ts:68](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L68)
 
 ___
 
@@ -171,7 +171,7 @@ Export the private keys. May throw an error if the keystore implementation does 
 
 #### Defined in
 
-[keystore/interfaces.ts:64](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L64)
+[keystore/interfaces.ts:64](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L64)
 
 ___
 
@@ -187,7 +187,7 @@ Get the `PublicKeyBundle` associated with the Keystore's private keys
 
 #### Defined in
 
-[keystore/interfaces.ts:60](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L60)
+[keystore/interfaces.ts:60](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L60)
 
 ___
 
@@ -203,7 +203,7 @@ Get a list of V2 conversations
 
 #### Defined in
 
-[keystore/interfaces.ts:56](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L56)
+[keystore/interfaces.ts:56](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L56)
 
 ___
 
@@ -225,7 +225,7 @@ Take a batch of invite messages and store the `TopicKeys` for later use in decry
 
 #### Defined in
 
-[keystore/interfaces.ts:35](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L35)
+[keystore/interfaces.ts:35](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L35)
 
 ___
 
@@ -247,4 +247,4 @@ Sign the provided digest with either the `IdentityKey` or a specified `PreKey`
 
 #### Defined in
 
-[keystore/interfaces.ts:52](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L52)
+[keystore/interfaces.ts:52](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L52)

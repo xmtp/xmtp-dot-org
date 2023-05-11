@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[keystore/persistence/interface.ts:2](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/interface.ts#L2)
+[keystore/persistence/interface.ts:2](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/interface.ts#L2)
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 #### Defined in
 
-[keystore/persistence/interface.ts:3](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/interface.ts#L3)
+[keystore/persistence/interface.ts:3](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/interface.ts#L3)

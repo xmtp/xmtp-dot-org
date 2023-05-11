@@ -24,7 +24,7 @@ A third party with access to the underlying store could write malicious data usi
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:20](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L20)
+[keystore/persistence/EncryptedPersistence.ts:20](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L20)
 
 ## Properties
 
@@ -34,7 +34,7 @@ A third party with access to the underlying store could write malicious data usi
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:15](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L15)
+[keystore/persistence/EncryptedPersistence.ts:15](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L15)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:16](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L16)
+[keystore/persistence/EncryptedPersistence.ts:16](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L16)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:17](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L17)
+[keystore/persistence/EncryptedPersistence.ts:17](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L17)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:18](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L18)
+[keystore/persistence/EncryptedPersistence.ts:18](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L18)
 
 ## Methods
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:48](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L48)
+[keystore/persistence/EncryptedPersistence.ts:48](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L48)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:60](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L60)
+[keystore/persistence/EncryptedPersistence.ts:60](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L60)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:43](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L43)
+[keystore/persistence/EncryptedPersistence.ts:43](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L43)
 
 ___
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:30](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L30)
+[keystore/persistence/EncryptedPersistence.ts:30](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L30)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:54](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L54)
+[keystore/persistence/EncryptedPersistence.ts:54](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L54)
 
 ___
 
@@ -193,4 +193,4 @@ ___
 
 #### Defined in
 
-[keystore/persistence/EncryptedPersistence.ts:38](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/persistence/EncryptedPersistence.ts#L38)
+[keystore/persistence/EncryptedPersistence.ts:38](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/persistence/EncryptedPersistence.ts#L38)

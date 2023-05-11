@@ -8,7 +8,7 @@ toc_max_heading_level: 4
 
 ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 
-This package provides the XMTP client SDK for React apps written in TypeScript.
+This package provides the [XMTP client SDK for React apps](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) written in TypeScript.
 
 This SDK is in **Developer Preview** status and ready for you to start building with.
 

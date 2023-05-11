@@ -13,7 +13,7 @@
 
 #### Defined in
 
-[types/Signer.ts:2](https://github.com/xmtp/xmtp-js/blob/36ff630/src/types/Signer.ts#L2)
+[types/Signer.ts:2](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/types/Signer.ts#L2)
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 #### Defined in
 
-[types/Signer.ts:3](https://github.com/xmtp/xmtp-js/blob/36ff630/src/types/Signer.ts#L3)
+[types/Signer.ts:3](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/types/Signer.ts#L3)
