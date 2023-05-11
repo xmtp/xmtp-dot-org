@@ -8,7 +8,7 @@ export const HEADER_DATA = [
   },
   {
     title: 'Start building with XMTP client SDKs',
-    subtitle: 'Build web3 messaging apps in JavaScript, Kotlin, Swift, & Dart',
+    subtitle: 'Build web3 messaging apps in React, JS, Kotlin, Swift, & Dart',
     url: '/sdks-and-tools',
     icon: 'quickstart-icon.svg',
   },
@@ -24,6 +24,7 @@ export const HEADER_DATA = [
 const tags = {
   announcements: { name: 'Announcements', url: '/blog/tags/announcements/' },
   awards: { name: 'Awards', url: '/blog/tags/awards/' },
+  builtwithxmtp: { name: 'Built with XMTP', url: '/blog/tags/built-with-xmtp/' },
   company: { name: 'Company', url: '/blog/tags/company/' },
   contenttypes: { name: 'Content Types', url: '/blog/tags/content-types/' },
   developers: { name: 'Developers', url: '/blog/tags/developers/' },
@@ -41,6 +42,20 @@ const tags = {
 }
 
 export const BLOG_DATA = [
+  {
+    tag: [tags.builtwithxmtp, tags.developers, tags.messaging, tags.nfts],
+    title:
+      'Join the movement: own your conversations with Converse',
+    content:
+      "Discover the WhatsApp for web3: end-to-end encrypted messages between wallets, that only you own and can take with you anywhere.",
+    user: {
+      name: 'Rochelle Guillou',
+      date: '9 May 2023 · 4 min read',
+      img: 'rochelle-headshot.jpeg',
+      url: 'https://twitter.com/RochelleSophie_'
+    },
+    url: '/blog/join-the-movement',
+  },
   {
     tag: [tags.announcements, tags.developers, tags.messaging],
     title: 'Breaking the web2 barrier: How XMTP and Notifi are bridging the gap for web3 apps with web2 notifications',
@@ -67,20 +82,6 @@ export const BLOG_DATA = [
       url: 'https://twitter.com/xmtp_'
     },
     url: '/blog/attachments-and-remote-attachments',
-  },
-  {
-    tag: [tags.developers, tags.messaging],
-    title:
-      'Secure web3 customer service and support with XMTP and ENS',
-    content:
-      "If you've been in the web3/crypto community for longer than an hour, you've probably seen a strange message that seems to accompany every Discord server.",
-    user: {
-      name: 'Matt Galligan',
-      date: '22 Feb 2023 · 8 min read',
-      img: 'matt-galligan.jpeg',
-      url: 'https://twitter.com/mg'
-    },
-    url: '/blog/secure-web3-customer-service-and-support-with-xmtp-and-ens',
   },
 ]
 
