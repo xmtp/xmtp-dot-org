@@ -355,10 +355,6 @@ const config = {
                 to: `/docs/dev-concepts/contributing`,
               },
               {
-                label: `Releases`,
-                to: `/docs/dev-concepts/xmtp-releases`,
-              },
-              {
                 label: `XMTP Improvement Proposals`,
                 to: `/docs/dev-concepts/xips`,
               },
