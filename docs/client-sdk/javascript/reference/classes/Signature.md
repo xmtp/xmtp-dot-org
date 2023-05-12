@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[crypto/Signature.ts:65](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Signature.ts#L65)
+[crypto/Signature.ts:58](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Signature.ts#L58)
 
 ## Properties
 
@@ -33,7 +33,7 @@ signature.Signature.ecdsaCompact
 
 #### Defined in
 
-[crypto/Signature.ts:61](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Signature.ts#L61)
+[crypto/Signature.ts:54](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Signature.ts#L54)
 
 ___
 
@@ -47,7 +47,7 @@ signature.Signature.walletEcdsaCompact
 
 #### Defined in
 
-[crypto/Signature.ts:63](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Signature.ts#L63)
+[crypto/Signature.ts:56](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Signature.ts#L56)
 
 ## Methods
 
@@ -67,7 +67,7 @@ signature.Signature.walletEcdsaCompact
 
 #### Defined in
 
-[crypto/Signature.ts:110](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Signature.ts#L110)
+[crypto/Signature.ts:111](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Signature.ts#L111)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[crypto/Signature.ts:92](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Signature.ts#L92)
+[crypto/Signature.ts:85](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Signature.ts#L85)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[crypto/Signature.ts:78](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Signature.ts#L78)
+[crypto/Signature.ts:71](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Signature.ts#L71)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[crypto/Signature.ts:120](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Signature.ts#L120)
+[crypto/Signature.ts:121](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Signature.ts#L121)
 
 ___
 
@@ -141,4 +141,4 @@ ___
 
 #### Defined in
 
-[crypto/Signature.ts:124](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/Signature.ts#L124)
+[crypto/Signature.ts:125](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/Signature.ts#L125)

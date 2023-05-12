@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[MessageContent.ts:45](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L45)
+[MessageContent.ts:45](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/MessageContent.ts#L45)
 
 ## Methods
 
@@ -34,7 +34,7 @@
 | Name | Type |
 | :------ | :------ |
 | `content` | [`EncodedContent`](EncodedContent.md) |
-| `registry` | `CodecRegistry` |
+| `registry` | [`CodecRegistry`](CodecRegistry.md) |
 
 #### Returns
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[MessageContent.ts:47](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L47)
+[MessageContent.ts:47](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/MessageContent.ts#L47)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `content` | `T` |
-| `registry` | `CodecRegistry` |
+| `registry` | [`CodecRegistry`](CodecRegistry.md) |
 
 #### Returns
 
@@ -63,4 +63,4 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:46](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L46)
+[MessageContent.ts:46](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/MessageContent.ts#L46)

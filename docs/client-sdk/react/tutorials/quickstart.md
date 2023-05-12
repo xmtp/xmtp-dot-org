@@ -8,7 +8,7 @@ toc_max_heading_level: 4
 
 ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 
-This package provides the XMTP client SDK for React apps written in TypeScript.
+This package provides the [XMTP client SDK for React apps](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) written in TypeScript.
 
 This SDK is in **Developer Preview** status and ready for you to start building with.
 
@@ -66,21 +66,6 @@ The Node Buffer API must be polyfilled in some cases. To do so, add the `buffer`
 import { Buffer } from "buffer";
 
 window.Buffer = window.Buffer ?? Buffer;
-```
-
-### Next.js
-
-Next.js may have issues with processing ES Modules when importing `@xmtp/react-sdk`. If you experience any problems, you can disable ESM imports by updating your config.
-
-`next.config.js`:
-
-```js
-const nextConfig = {
-  experimental: {
-    // disable ESM imports
-    esmExternals: false,
-  },
-};
 ```
 
 ## Developing
@@ -323,8 +308,11 @@ The `useStartConversation` hook starts a new conversation and sends an initial m
 **Type**
 
 ```ts
-import type { InvitationContext } from "@xmtp/xmtp-js/dist/types/src/Invitation";
-import type { Conversation, SendOptions } from "@xmtp/react-sdk";
+import type {
+  Conversation,
+  InvitationContext,
+  SendOptions,
+} from "@xmtp/react-sdk";
 
 const useStartConversation: <T = string>(
   options?: InvitationContext,

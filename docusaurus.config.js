@@ -178,7 +178,7 @@ const config = {
             position: 'right',
             items: [
               {
-                to: 'docs/client-sdk/javascript/concepts/intro-to-sdk',
+                to: 'docs/client-sdk/javascript/tutorials/quickstart',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
                  <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">JavaScript XMTP client SDK</div>
                  <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials and reference for building apps in JavaScript</div></div></div>`,
@@ -222,6 +222,18 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
+            to: 'changelog', // To highlight the navbar item, you must link to a document, not a top-level directory
+            position: 'right',
+            label: 'Changelog',
+            activeBaseRegex: `/`,
+          },
+          {
+            to: 'vision/roadmap',
+            position: 'right',
+            label: 'Roadmap',
+            activeBaseRegex: `/`,
+          },
+          {
             type: 'dropdown',
             position: 'right',
             label: 'Community',
@@ -251,12 +263,6 @@ const config = {
                  <div class="subtext text-sm text-normal whitespace-pre-line">Foster a safe and positive XMTP community experience</div></div></div>`,
               },
             ],
-          },
-          {
-            to: 'vision/roadmap',
-            position: 'right',
-            label: 'Roadmap',
-            activeBaseRegex: `/`,
           },
           {
             to: 'blog',
@@ -347,10 +353,6 @@ const config = {
               {
                 label: `Contribute to XMTP`,
                 to: `/docs/dev-concepts/contributing`,
-              },
-              {
-                label: `Releases`,
-                to: `/docs/dev-concepts/xmtp-releases`,
               },
               {
                 label: `XMTP Improvement Proposals`,

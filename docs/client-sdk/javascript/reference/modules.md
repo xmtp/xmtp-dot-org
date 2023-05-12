@@ -14,7 +14,7 @@ as needed by each function. All other defaults are specified in defaultOptions.
 
 #### Defined in
 
-[Client.ts:168](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L168)
+[Client.ts:168](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Client.ts#L168)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:24](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L24)
+[codecs/Composite.ts:24](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/codecs/Composite.ts#L24)
 
 ___
 
@@ -41,7 +41,24 @@ ___
 
 #### Defined in
 
-[Client.ts:109](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L109)
+[Client.ts:109](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Client.ts#L109)
+
+___
+
+### InvitationContext
+
+ **InvitationContext**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `conversationId` | `string` |
+| `metadata` | { `[k: string]`: `string`;  } |
+
+#### Defined in
+
+[Invitation.ts:11](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Invitation.ts#L11)
 
 ___
 
@@ -59,7 +76,7 @@ ___
 
 #### Defined in
 
-[Client.ts:123](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L123)
+[Client.ts:123](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Client.ts#L123)
 
 ___
 
@@ -75,7 +92,7 @@ ___
 
 #### Defined in
 
-[Client.ts:141](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L141)
+[Client.ts:141](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Client.ts#L141)
 
 ___
 
@@ -95,17 +112,17 @@ ___
 
 #### Defined in
 
-[Client.ts:40](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L40)
+[Client.ts:40](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Client.ts#L40)
 
 ___
 
 ### Message
 
- **Message**: `MessageV1` \| `MessageV2`
+ **Message**: [`MessageV1`](classes/MessageV1.md) \| [`MessageV2`](classes/MessageV2.md)
 
 #### Defined in
 
-[Message.ts:229](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L229)
+[Message.ts:229](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L229)
 
 ___
 
@@ -126,7 +143,7 @@ Network startup options
 
 #### Defined in
 
-[Client.ts:71](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L71)
+[Client.ts:71](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Client.ts#L71)
 
 ___
 
@@ -136,7 +153,7 @@ ___
 
 #### Defined in
 
-[crypto/PrivateKeyBundle.ts:414](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/PrivateKeyBundle.ts#L414)
+[crypto/PrivateKeyBundle.ts:248](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/PrivateKeyBundle.ts#L248)
 
 ___
 
@@ -156,7 +173,7 @@ ___
 
 #### Defined in
 
-[Client.ts:57](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L57)
+[Client.ts:57](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Client.ts#L57)
 
 ___
 
@@ -166,7 +183,7 @@ ___
 
 #### Defined in
 
-[keystore/interfaces.ts:71](https://github.com/xmtp/xmtp-js/blob/36ff630/src/keystore/interfaces.ts#L71)
+[keystore/interfaces.ts:71](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/keystore/interfaces.ts#L71)
 
 ___
 
@@ -184,7 +201,7 @@ ___
 
 #### Defined in
 
-[codecs/TypingNotification.ts:13](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/TypingNotification.ts#L13)
+[codecs/TypingNotification.ts:13](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/codecs/TypingNotification.ts#L13)
 
 ## Variables
 
@@ -202,7 +219,7 @@ ___
 
 #### Defined in
 
-[ApiClient.ts:17](https://github.com/xmtp/xmtp-js/blob/36ff630/src/ApiClient.ts#L17)
+[ApiClient.ts:17](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/ApiClient.ts#L17)
 
 ___
 
@@ -212,7 +229,7 @@ ___
 
 #### Defined in
 
-[Client.ts:30](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Client.ts#L30)
+[Client.ts:30](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Client.ts#L30)
 
 ___
 
@@ -222,7 +239,7 @@ ___
 
 #### Defined in
 
-[codecs/Composite.ts:15](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Composite.ts#L15)
+[codecs/Composite.ts:15](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/codecs/Composite.ts#L15)
 
 ___
 
@@ -232,7 +249,7 @@ ___
 
 #### Defined in
 
-[MessageContent.ts:56](https://github.com/xmtp/xmtp-js/blob/36ff630/src/MessageContent.ts#L56)
+[MessageContent.ts:56](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/MessageContent.ts#L56)
 
 ___
 
@@ -242,7 +259,7 @@ ___
 
 #### Defined in
 
-[codecs/Text.ts:6](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/Text.ts#L6)
+[codecs/Text.ts:6](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/codecs/Text.ts#L6)
 
 ___
 
@@ -252,7 +269,7 @@ ___
 
 #### Defined in
 
-[codecs/TypingNotification.ts:6](https://github.com/xmtp/xmtp-js/blob/36ff630/src/codecs/TypingNotification.ts#L6)
+[codecs/TypingNotification.ts:6](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/codecs/TypingNotification.ts#L6)
 
 ___
 
@@ -262,9 +279,29 @@ ___
 
 #### Defined in
 
-[ApiClient.ts:9](https://github.com/xmtp/xmtp-js/blob/36ff630/src/ApiClient.ts#L9)
+[ApiClient.ts:9](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/ApiClient.ts#L9)
 
 ## Functions
+
+### buildContentTopic
+
+**buildContentTopic**(`name`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[utils/topic.ts:3](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/topic.ts#L3)
+
+___
 
 ### buildDirectMessageTopic
 
@@ -283,7 +320,7 @@ ___
 
 #### Defined in
 
-[utils/topic.ts:6](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/topic.ts#L6)
+[utils/topic.ts:6](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/topic.ts#L6)
 
 ___
 
@@ -303,7 +340,87 @@ ___
 
 #### Defined in
 
-[utils/topic.ts:16](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/topic.ts#L16)
+[utils/topic.ts:16](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/topic.ts#L16)
+
+___
+
+### buildUserContactTopic
+
+**buildUserContactTopic**(`walletAddr`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `walletAddr` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[utils/topic.ts:20](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/topic.ts#L20)
+
+___
+
+### buildUserIntroTopic
+
+**buildUserIntroTopic**(`walletAddr`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `walletAddr` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[utils/topic.ts:25](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/topic.ts#L25)
+
+___
+
+### buildUserInviteTopic
+
+**buildUserInviteTopic**(`walletAddr`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `walletAddr` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[utils/topic.ts:30](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/topic.ts#L30)
+
+___
+
+### buildUserPrivateStoreTopic
+
+**buildUserPrivateStoreTopic**(`addrPrefixedKey`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `addrPrefixedKey` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[utils/topic.ts:34](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/topic.ts#L34)
 
 ___
 
@@ -323,7 +440,27 @@ ___
 
 #### Defined in
 
-[utils/date.ts:3](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/date.ts#L3)
+[utils/date.ts:3](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/date.ts#L3)
+
+___
+
+### decodeContactBundle
+
+**decodeContactBundle**(`bytes`): [`PublicKeyBundle`](classes/PublicKeyBundle.md) \| [`SignedPublicKeyBundle`](classes/SignedPublicKeyBundle.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `bytes` | `Uint8Array` |
+
+#### Returns
+
+[`PublicKeyBundle`](classes/PublicKeyBundle.md) \| [`SignedPublicKeyBundle`](classes/SignedPublicKeyBundle.md)
+
+#### Defined in
+
+[ContactBundle.ts:5](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/ContactBundle.ts#L5)
 
 ___
 
@@ -344,7 +481,7 @@ ___
 
 #### Defined in
 
-[Message.ts:373](https://github.com/xmtp/xmtp-js/blob/36ff630/src/Message.ts#L373)
+[Message.ts:373](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/Message.ts#L373)
 
 ___
 
@@ -366,7 +503,7 @@ ___
 
 #### Defined in
 
-[crypto/encryption.ts:40](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/encryption.ts#L40)
+[crypto/encryption.ts:40](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/encryption.ts#L40)
 
 ___
 
@@ -388,7 +525,7 @@ ___
 
 #### Defined in
 
-[crypto/encryption.ts:17](https://github.com/xmtp/xmtp-js/blob/36ff630/src/crypto/encryption.ts#L17)
+[crypto/encryption.ts:17](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/crypto/encryption.ts#L17)
 
 ___
 
@@ -408,7 +545,7 @@ ___
 
 #### Defined in
 
-[utils/date.ts:15](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/date.ts#L15)
+[utils/date.ts:15](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/date.ts#L15)
 
 ___
 
@@ -435,7 +572,7 @@ ___
 
 #### Defined in
 
-[utils/async.ts:56](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/async.ts#L56)
+[utils/async.ts:56](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/async.ts#L56)
 
 ___
 
@@ -455,7 +592,7 @@ ___
 
 #### Defined in
 
-[utils/date.ts:7](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/date.ts#L7)
+[utils/date.ts:7](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/date.ts#L7)
 
 ___
 
@@ -475,4 +612,4 @@ ___
 
 #### Defined in
 
-[utils/date.ts:11](https://github.com/xmtp/xmtp-js/blob/36ff630/src/utils/date.ts#L11)
+[utils/date.ts:11](https://github.com/xmtp/xmtp-js/blob/ff16daf/src/utils/date.ts#L11)
