@@ -17,9 +17,9 @@ import scroll from '/docs/dev-concepts/img/scroll-logo.png';
 
 In the spirit of web3 composability, here are **just a few** of the building blocks that work well with XMTP. Building your app with these tools can help you deliver and distribute an app—faster and with quality.
 
-:::tip Have a tool to add to the list?
+:::tip
 
-Have you built with a tool that works well with XMTP? Let's add it to this page. Share your experience with `prxshant.eth` on [xmtp.chat](https://xmtp.chat/inbox) or using the [feedback widget](#feedback-widget) at the bottom of this page.
+**This list is not exhaustive** and is just a starting point. A highly extensible protocol like XMTP can work with more tools than those listed in each section.
 
 :::
 
@@ -34,7 +34,7 @@ To connect web3 wallets to your app:
     - Example implementation in the [XMTP Inbox Web app](https://github.com/xmtp-labs/xmtp-inbox-web)
 - [wagmi](https://wagmi.sh/)
 
-XMTP client SDKs require you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/). These wallet connection tools provide this capability.
+XMTP client SDKs require you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/). These wallet connection tools, as well as others, provide this capability.
 
 
 ## Message bots
@@ -60,6 +60,7 @@ To support decentralized identity management:
 - [Ethereum Name Service](https://ens.domains/) (ENS)
     - Example implementation in [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)
 - [Coinbase cb.id](https://help.coinbase.com/en/wallet/managing-account/coinbase-ens-support)
+- [Lens](https://www.lens.xyz/)
 
 
 ## Decentralized social
@@ -97,19 +98,15 @@ A user can generate multiple XMTP identities from the same wallet app by changin
 
 ## Chains
 
-XMTP works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s. Because all Ethereum Virtual Machine (EVM) chains share the same Ethereum wallet and address format and XMTP messages are stored off-chain, XMTP is interoperable across EVM chains, including testnets. XMTP itself does not use EVMs.
+XMTP works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s. 
+
+Because all Ethereum Virtual Machine (EVM) chains share the same Ethereum wallet and address format and XMTP messages are stored off-chain, XMTP is interoperable across EVM chains, including testnets. (XMTP itself does not use EVMs.) 
 
 For example, whether a user has their wallet app connected to Ethereum or an Ethereum side-chain or L2, their private key can generate and retrieve their XMTP key pair to give them access to XMTP.
 
+XMTP is also chain-agnostic, so multi-chain support is possible. 
+
 Here are **just a few** of the chains supported by XMTP:
-
-:::tip
-
-XMTP is compatible with all EVM chains, so **this list isn't exhaustive**. 
-
-In addition, XMTP is chain-agnostic, so multi-chain support is possible. Want to propose a path to compatibility for other popular chains such as Aptos, Bitcoin, Cosmos, Flow, Hedera Hashgraph, Polkadot, Solana, Starkware, Stellar, Sui, and Tezos? Do it via an [XMTP grant](/grants)!
-
-:::
 
 <img src={arbitrum} style={{width:"100px"}} alt="Arbitrum logo"/>
 
@@ -151,4 +148,11 @@ In addition, XMTP is chain-agnostic, so multi-chain support is possible. Want to
 
 [Scroll](https://scroll.io/)
 
-<a id="feedback-widget"></a>
+
+:::tip
+
+Want to propose a path to compatibility for other popular chains such as Aptos, Bitcoin, Cosmos, Flow, Hedera Hashgraph, Polkadot, Solana, Starkware, Stellar, Sui, and Tezos? Do it via an [XMTP grant](/grants)!
+
+Have you built with a tool that works well with XMTP? Let's add it to this page. Share your experience with `prxshant.eth` on [xmtp.chat](https://xmtp.chat/inbox) or using the feedback widget at the bottom of this page.
+
+:::
