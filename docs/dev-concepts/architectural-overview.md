@@ -1,6 +1,6 @@
 ---
-sidebar_label: Architectural overview
-sidebar_position: 2.5
+sidebar_label: Architecture
+sidebar_position: 2
 toc_max_heading_level: 4
 ---
 

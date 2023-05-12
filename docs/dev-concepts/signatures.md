@@ -1,6 +1,6 @@
 ---
 sidebar_label: Account signatures
-sidebar_position: 9
+sidebar_position: 8
 slug: account-signatures
 ---
 

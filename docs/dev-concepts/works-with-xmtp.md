@@ -1,6 +1,6 @@
 ---
 sidebar_label: Works with XMTP
-sidebar_position: 3.1
+sidebar_position: 9
 ---
 import arbitrum from '/docs/dev-concepts/img/arbitrum-logo.png';
 import avalanche from '/docs/dev-concepts/img/avalanche-logo.png';

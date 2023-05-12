@@ -1,5 +1,5 @@
 ---
-sidebar_label: Key generation and usage
+sidebar_label: Keys
 sidebar_position: 6
 ---
 

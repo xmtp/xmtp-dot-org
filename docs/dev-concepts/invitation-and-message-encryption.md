@@ -1,5 +1,5 @@
 ---
-sidebar_label: Invitation and message encryption
+sidebar_label: Encryption
 sidebar_position: 7
 ---
 

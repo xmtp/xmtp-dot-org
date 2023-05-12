@@ -38,9 +38,9 @@ const config = {
       'classic',
       {
         docs: {
-          path: 'docs/client-sdk/javascript',
+          path: 'docs',
           id: 'default',
-          routeBasePath: 'docs/client-sdk/javascript',
+          routeBasePath: 'docs',
           sidebarPath: require.resolve(
             './sidebars/sidebars-client-sdk-javascript.js'
           ),
@@ -66,70 +66,6 @@ const config = {
     tailwindPlugin,
     // @ts-ignore
     webpackPlugin,
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'swift',
-        path: 'docs/client-sdk/swift',
-        routeBasePath: 'docs/client-sdk/swift',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-swift.js'),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'dart',
-        path: 'docs/client-sdk/dart',
-        routeBasePath: 'docs/client-sdk/dart',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-dart.js'),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'kotlin',
-        path: 'docs/client-sdk/kotlin',
-        routeBasePath: 'docs/client-sdk/kotlin',
-        sidebarPath: require.resolve(
-          './sidebars/sidebars-client-sdk-kotlin.js'
-        ),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'react',
-        path: 'docs/client-sdk/react',
-        routeBasePath: 'docs/client-sdk/react',
-        sidebarPath: require.resolve(
-          './sidebars/sidebars-client-sdk-react.js'
-        ),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'dev-concepts',
-        path: 'docs/dev-concepts',
-        routeBasePath: '/docs/dev-concepts',
-        sidebarPath: require.resolve('./sidebars/sidebars.js'),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -173,47 +109,10 @@ const config = {
         },
         items: [
           {
-            type: 'dropdown',
-            label: 'Documentation',
+            to: 'docs/introduction', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
-            items: [
-              {
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">JavaScript XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials and reference for building apps in JavaScript</div></div></div>`,
-              },
-              {
-                to: 'docs/client-sdk/kotlin/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/kotlin-icon.svg" alt="Kotlin icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Kotlin XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building Android apps in Kotlin</div></div></div>`,
-              },
-              {
-                to: 'docs/client-sdk/swift/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/swift-icon.svg" alt="Swift icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Swift XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building iOS apps in Swift</div></div></div>`,
-              },
-              {
-                to: 'docs/client-sdk/react/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/react-icon.svg" alt="React icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">React XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building apps in React</div></div></div>`,
-              },
-              {
-                to: 'docs/client-sdk/dart/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/dart-icon.svg" alt="Dart icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dart XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building Flutter apps in Dart</div></div></div>`,
-              },
-              {
-                to: 'docs/dev-concepts/introduction',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/development-icon.svg" alt="Development concepts icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Development concepts</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about XMTP architecture, security, FAQ, and more</div></div></div>`,
-              },
-            ],
+            label: 'Documentation',
+            activeBaseRegex: `/`,
           },
           {
             to: 'sdks-and-tools', // To highlight the navbar item, you must link to a document, not a top-level directory
