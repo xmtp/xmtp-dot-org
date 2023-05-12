@@ -68,21 +68,6 @@ import { Buffer } from "buffer";
 window.Buffer = window.Buffer ?? Buffer;
 ```
 
-### Next.js
-
-Next.js may have issues with processing ES Modules when importing `@xmtp/react-sdk`. If you experience any problems, you can disable ESM imports by updating your config.
-
-`next.config.js`:
-
-```js
-const nextConfig = {
-  experimental: {
-    // disable ESM imports
-    esmExternals: false,
-  },
-};
-```
-
 ## Developing
 
 Run `yarn dev` to build the SDK on changes and launch Storybook.
@@ -323,8 +308,11 @@ The `useStartConversation` hook starts a new conversation and sends an initial m
 **Type**
 
 ```ts
-import type { InvitationContext } from "@xmtp/xmtp-js/dist/types/src/Invitation";
-import type { Conversation, SendOptions } from "@xmtp/react-sdk";
+import type {
+  Conversation,
+  InvitationContext,
+  SendOptions,
+} from "@xmtp/react-sdk";
 
 const useStartConversation: <T = string>(
   options?: InvitationContext,
