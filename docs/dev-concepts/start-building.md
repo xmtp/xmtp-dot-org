@@ -116,8 +116,6 @@ Consider following these best practices when developing your app:
 
 - If you are building with the xmtp-js SDK, set the [`appVersion` client option](/docs/client-sdk/javascript/tutorials/quickstart#configuring-the-client).    
 
-- Paginate message history to help optimize time to load messages in a conversation.
-
 - Use [standard content types](content-types#standard-content-types) to ensure that message content sent using your app is interoperable with other apps.
   - By default, building with XMTP SDKs supports plain text messages. 
   - To send remote media attachments, see [Some new content types](/blog/attachments-and-remote-attachments).
@@ -127,6 +125,56 @@ Consider following these best practices when developing your app:
     - \# of active wallets: Wallets sending at least one message
     - \# of active conversations: Conversations with at least one message
     - \# of returning conversations: Conversations with at least one message per participant
+
+## Performance best practices
+
+Follow these guidelines to optimize your app’s performance.
+
+### For JavaScript
+
+Using the JavaScript client SDK (`xmtp-js`):
+
+- [Upgrade to ≥v9.0.0](https://github.com/xmtp/xmtp-js/releases/tag/v9.0.0), which provides a 10x smaller web bundle size.
+- [Cache conversations](/docs/client-sdk/javascript/tutorials/quickstart#cache-conversations)
+- [Page through messages](/docs/client-sdk/javascript/tutorials/quickstart#list-messages-in-a-conversation-with-pagination)
+- [Compress messages](https://xmtp.org/docs/client-sdk/javascript/tutorials/quickstart#compression)
+- [Serialize decoded messages](https://github.com/xmtp/xmtp-js/releases/tag/v8.0.0)
+
+### For Kotlin
+
+Using the Kotlin client SDK (`xmtp-android`):
+
+- [Cache conversations](/docs/client-sdk/kotlin/tutorials/quickstart#cache-conversations)
+- [Page through messages](/docs/client-sdk/kotlin/tutorials/quickstart#list-messages-in-a-conversation-with-pagination)
+- [Compress messages](/docs/client-sdk/kotlin/tutorials/quickstart#compression)
+
+### For Swift
+
+Using the Swift client SDK (`xmtp-ios`):
+
+- [Page through messages](/docs/client-sdk/swift/tutorials/quickstart#list-messages-in-a-conversation-with-pagination)
+- [Compress messages](/docs/client-sdk/swift/tutorials/quickstart#compression)
+
+### For Dart
+
+Using the Dart client SDK (`xmtp-flutter`):
+
+- [Page through messages](/docs/client-sdk/dart/tutorials/quickstart#list-messages-in-a-conversation-with-pagination)
+- [Compress messages](/docs/client-sdk/dart/tutorials/quickstart#compression)
+
+### For React
+
+Usign the React client SDK (`react-sdk`):
+
+- [Page through messages](/docs/client-sdk/react/tutorials/quickstart#page-through-messages)
+
+### Benchmarks
+
+Consider how your app performs against these performance benchmarks:
+
+- Time to load conversation list: 8-15ms to decrypt invites per conversation
+- Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
+- Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
 
 
 ## UX best practices
@@ -140,11 +188,7 @@ Consider following these UX best practices.
 - Provide error messaging when a user enters an address in the **To** field and the address hasn't created an XMTP identity.
 
   <img src={noxmtpidentity} style={{width:"450px"}}/>
-    
-- Consider how your app performs against these performance benchmarks:
-    - Time to load conversation list: 8-15ms to decrypt invites per conversation
-    - Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
-    - Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
+
 - Resolve popular namespaces such as ENS, .lens, cb id, and so forth. For example, here is ENS name resolution in [xmtp.chat](https://xmtp.chat/). To achieve this functionality, consider using the [Everyname](https://www.everyname.xyz/) resolution service.
 
   <img src={ensnameresolution} style={{width:"400px"}}/>
