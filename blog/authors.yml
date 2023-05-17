@@ -10,6 +10,12 @@ mg:
   url: https://twitter.com/mg
   image_url: http://github.com/galligan.png
 
+fabri:
+  name: Fabri
+  title: Developer Relations at XMTP Labs
+  url: https://twitter.com/fabriguespe
+  image_url: ./media/fabri.JPG
+
 peter:
   name: Peter Denton
   title: Head of Growth at XMTP Labs
