@@ -133,7 +133,7 @@ Different approaches to long-term message storage are currently being researched
 
 Have other questions or ideas about message storage? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
-## Message formats
+## Messages
 
 ### Which message formats and metadata does XMTP support?
 
@@ -153,11 +153,22 @@ Have other questions or ideas about message formats and metadata? Post to the [X
 
 ### Does XMTP support message attachments?
 
-No. However, the XMTP community can propose and adopt standards for a new content type that can support this use case and others.
+Yes, via two XMTP improvement proposals that are currently in review status:
 
-To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md)
+- [XIP-15](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-15-attachment-content-type.md): Attachment content type
+- [XIP-17](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md): Remote attachment content type
 
-Have other questions or ideas about message attachments? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+To learn more about how to implement message attachments in your app, see:
+
+- For apps using the JavaScript client SDK (`xmtp-js`), see [Introducing remote media attachments](/blog/attachments-and-remote-attachments).
+
+- For apps using the Swift client SDK (`xmtp-ios`), see [Send a remote attachment](https://github.com/xmtp/xmtp-ios#configure-content-types).
+
+### Does XMTP support deleting and editing messages?
+
+Not currently. However, XMTP Labs is exploring ways to support message deletion and editing.
+
+Have other questions or ideas about support for message deletion and editing? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
 ## Message patterns
 
