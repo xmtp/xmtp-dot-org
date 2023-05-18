@@ -7,13 +7,12 @@
       "github": "",
       "twitter": "https://twitter.com/orbapp_"
    },
-   
    {
       "name":"Converse",
       "href":"https://getconverse.app",
-      "image":"/img/builtWithXmtp/converse.png",
+      "image":"/img/builtWithXmtp/converse-logo.jpg",
       "bgColor": "bg-[#8B5CF6]",
-      "description":"We're reinventing messaging, starting with web3",
+      "description":"We're reinventing messaging, starting with web3.",
       "twitter": "https://twitter.com/converseapp_"
    },
    {
@@ -32,7 +31,6 @@
       "description":"Decentralized social media app built for a mobile first experience on iOS. Built on Lens Protocol.",
       "twitter": "https://twitter.com/buttrfly_app"
    },
-   
    {
       "name":"Relay",
       "href":"https://relay.cc/",
@@ -96,5 +94,5 @@
       "description":"Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
       "twitter": "https://twitter.com/atticc_xyz",
       "github": "https://github.com/Atticc"
-   },
+   }
 ]
