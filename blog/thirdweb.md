@@ -1,7 +1,7 @@
 ---
-slug: thirdbweb-wallet-upload
+slug: thirdbweb-wallet-remote-attachments
 hide_table_of_contents: true
-title: "Introducing Wallet SDK and Sending remote storage"
+title: "How to send remote attachments with XMTP & Thirdwallet SDKs"
 date: 2023-05-12
 authors: fabri
 image: "./media/xmtp-thirdweb/hero.png"
@@ -260,3 +260,8 @@ const remoteURL = (attachment) => {
   return <img src={attachment.url} width={200} className="imageurl" alt={attachment.filename} />;
 };
 ```
+That was easy! Now you can send and receive messages with attachments using XMTP and Thirdweb.
+
+### Conclusion
+
+Web3 messaging is moving forward a robust set of features and possibilites like any other messaging app, but with the added benefit of being portable and encrypted. Is exciting to be part of this new era of messaging and we hope you can join us in this journey.
