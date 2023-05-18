@@ -33,6 +33,10 @@ xmtp-js SDK will achieve parity with the Signal protocol for security features l
 
 Support account abstraction, enabling smart contract wallets and non-EVM addresses to be compatible with XMTP.
 
+### Deleting and editing messages
+
+Users will be able to delete and edit messages.
+
 ---
 
 ## In progress 🏗️
