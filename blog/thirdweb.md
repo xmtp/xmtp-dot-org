@@ -3,7 +3,7 @@ slug: thirdbweb-wallet-upload
 hide_table_of_contents: true
 title: "Introducing Wallet SDK and Sending remote storage"
 date: 2023-05-12
-authors: eng
+authors: fabri
 image: "./media/xmtp-thirdweb/hero.png"
 description: "Sending remote attachments with XMTP"
 tags:
