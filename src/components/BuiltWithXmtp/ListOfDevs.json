@@ -27,7 +27,7 @@
    {
       "name":"Chainjet",
       "href":"https://chainjet.io/",
-      "image":"/img/builtWithXmtp/cj.jpg",
+      "image":"/img/builtWithXmtp/cj.jpg", 
       "description":"ChainJet empowers entrepreneurs and communities to build Web3 automations without coding.",
       "twitter": "https://twitter.com/chainjetio",
       "github": "https://github.com/chainjet/platform"
