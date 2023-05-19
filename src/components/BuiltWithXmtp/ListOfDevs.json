@@ -27,7 +27,7 @@
    {
       "name":"Chainjet",
       "href":"https://chainjet.io/",
-      "image":"/img/builtWithXmtp/chainjet.png",
+      "image":"/img/builtWithXmtp/cj.jpg",
       "description":"ChainJet empowers entrepreneurs and communities to build Web3 automations without coding.",
       "twitter": "https://twitter.com/chainjetio",
       "github": "https://github.com/chainjet/platform"
@@ -106,7 +106,7 @@
    {
       "name":"Qrolli",
       "href":"https://qrolli.com/",
-      "image":"/img/builtWithXmtp/qrolli.png",
+      "image":"/img/builtWithXmtp/qrolli.jpg",
       "description":"Qrolli The Future of User-Owned Social Media.",
       "twitter": "https://twitter.com/atticc_xyz"
    },
