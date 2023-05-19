@@ -278,7 +278,7 @@ const config = {
           {
             type: 'html',
             position: 'right',
-            value: '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Launch demo</strong></button>',
+            value: '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try app</strong></button>',
           },
           {
             href: 'https://github.com/xmtp',
