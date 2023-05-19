@@ -25,6 +25,14 @@
       "twitter": "https://twitter.com/lensterxyz"
    },
    {
+      "name":"Chainjet",
+      "href":"https://chainjet.io/",
+      "image":"/img/builtWithXmtp/chainjet.png",
+      "description":"ChainJet empowers entrepreneurs and communities to build Web3 automations without coding.",
+      "twitter": "https://twitter.com/chainjetio",
+      "github": "https://github.com/chainjet/platform"
+   },
+   {
       "name":"Buttrfly",
       "href":"https://www.buttrfly.app/",
       "image":"/img/builtWithXmtp/buttrfly-icon-rounded.png",
@@ -94,5 +102,19 @@
       "description":"Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
       "twitter": "https://twitter.com/atticc_xyz",
       "github": "https://github.com/Atticc"
+   },
+   {
+      "name":"Qrolli",
+      "href":"https://qrolli.com/",
+      "image":"/img/builtWithXmtp/qrolli.png",
+      "description":"Qrolli The Future of User-Owned Social Media.",
+      "twitter": "https://twitter.com/atticc_xyz"
+   },
+   {
+      "name":"AbsoluteLabs",
+      "href":"https://absolutelabs.io/",
+      "image":"/img/builtWithXmtp/absolute.svg",
+      "description":"Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
+      "twitter": "https://twitter.com/absolute_labs"
    }
 ]
