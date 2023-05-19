@@ -1,7 +1,7 @@
 ---
 slug: thirdbweb-wallet-remote-attachments
 hide_table_of_contents: true
-title: "How to send remote attachments with XMTP & Thirdwallet SDKs"
+title: "How to send remote attachments with XMTP & Thirdweb SDKs"
 date: 2023-05-12
 authors: fabri
 image: "./media/xmtp-thirdweb/hero.png"
