@@ -1,7 +1,7 @@
 ---
 slug: thirdbweb-wallet-remote-attachments
 hide_table_of_contents: true
-title: "How to send remote attachments with XMTP & Thirdwallet SDKs"
+title: "How to send remote attachments with XMTP & Thirdweb SDKs"
 date: 2023-05-12
 authors: fabri
 image: "./media/xmtp-thirdweb/hero.png"
@@ -44,6 +44,13 @@ StorageSDK handles the complexities of decentralized file management for you. No
 This repository demonstrates the implementation of these concepts within a simple chat app.
 
 [GitHub repo](https://github.com/fabriguespe/xmtp-thirdweb-js) 
+
+Next, run the app:
+```tsx
+npm run dev
+//or
+yarn dev
+```
 
 #### Learning Objectives:
 - Setting up the ConnectWallet button
@@ -123,11 +130,19 @@ const initXmtp = async function () {
 In this case we are going to use our GM Bot and we are going to use the XMTP instance for creating the conversation and in case it exists it will bring its message history.
 
 ```tsx
-const newConversation = async function (xmtp,addressTo) {
-  const conversation = await xmtp.conversations.newConversation(addressTo);
-  convRef.current = conversation;
-  const messages = await conversation.messages();
-  setMessages(messages);
+const newConversation = async function (xmtp_client,addressTo) {
+  //Checks if the address is on the network
+  if(xmtp_client.canMessage(addressTo)){
+    //Creates a new conversation with the address
+    const conversation = await xmtp_client.conversations.newConversation(addressTo);
+    convRef.current = conversation;
+    //Loads the messages of the conversation
+    const messages = await conversation.messages();
+    setMessages(messages);
+  }else{
+    console.log("cant message because is not on the network.");
+    //cant message because is not on the network.
+  }
 };
   ```
 
@@ -164,10 +179,11 @@ For large attachments above 1MB, use the `RemoteAttachmentCodec`. The codec will
 Thirdweb's SDK will upload the image file to IPFS and return the file's URL.
 
 ```tsx
-  const uploadUrl = await upload({
-    data: [file],
-    options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
-  });
+const uploadUrl = await upload({
+  data: [file],
+  options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
+});
+//uploadUrl[0] contains the URL of the uploaded file
 ```
 
 ```tsx
