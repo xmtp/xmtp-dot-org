@@ -345,6 +345,12 @@ for (const conversation of myAppConversations) {
 
 You can send a broadcast message (1:many message or announcement) with XMTP. The recipient sees the message as a DM from the sending wallet address.
 
+:::tip
+
+If your app stores a signature to read and send XMTP messages on behalf of a user, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature. For example disclosure text and UI patterns, see [Disclose signature storage](/docs/dev-concepts/start-building#disclose-signature-storage).
+
+:::
+
 1. Use the bulk query `canMessage` method to identify the wallet addresses that are activated on the XMTP network.
 2. Send the message to all of the activated wallet addresses.
 
