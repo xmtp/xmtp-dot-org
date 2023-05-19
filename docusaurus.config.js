@@ -273,7 +273,12 @@ const config = {
           {
             type: 'html',
             position: 'right',
-            value: '<button type="button" onClick="window.open(`/docs/dev-concepts/start-building`, `_self`);" class="navbar__button"><strong>Start building</strong></button>',
+            value: '<button type="button" onClick="window.open(`/docs/dev-concepts/start-building`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
+          },
+          {
+            type: 'html',
+            position: 'right',
+            value: '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try app</strong></button>',
           },
           {
             href: 'https://github.com/xmtp',
