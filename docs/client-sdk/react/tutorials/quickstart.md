@@ -1,6 +1,6 @@
 ---
-sidebar_label: Quickstart
-sidebar_position: 2
+sidebar_label: SDK quickstart
+sidebar_position: 1
 toc_max_heading_level: 4
 ---
 
@@ -23,10 +23,6 @@ To learn more about XMTP and get answers to frequently asked questions, see [FAQ
 ### Hooks
 
 These hooks are mostly bindings to the [`xmtp-js` SDK](https://github.com/xmtp/xmtp-js) that expose the underlying data in a React way.
-
-### Components
-
-These ready-made components can help you quickly build a chat app.
 
 ## Requirements
 
@@ -68,40 +64,7 @@ import { Buffer } from "buffer";
 window.Buffer = window.Buffer ?? Buffer;
 ```
 
-## Developing
-
-Run `yarn dev` to build the SDK on changes and launch Storybook.
-
-## Useful commands
-
-- `yarn build`: Builds the SDK
-- `yarn clean`: Removes `node_modules`, `lib`, and `.turbo` folders
-- `yarn dev`: Launches Storybook for SDK components
-- `yarn format`: Runs prettier format and write changes
-- `yarn format:check`: Runs prettier format check
-- `yarn lint`: Runs ESLint
-- `yarn test`: Runs all unit tests
-- `yarn typecheck`: Runs `tsc`
-
-## Example app
-
-For a basic demonstration of the core concepts and capabilities of the React SDK, see the [React quickstart example app](https://github.com/xmtp/xmtp-web/tree/main/examples/react-quickstart).
-
 ## Usage
-
-### Include styles
-
-To use any of the included components, you must also include their styles. To do so, import the styles from the package into your project.
-
-```ts
-import "@xmtp/react-sdk/styles.css";
-```
-
-:::note
-
-The included styles contain normalizations of elements globally.
-
-:::
 
 ### Add the provider
 
@@ -131,19 +94,18 @@ To learn more about this process, see [Create a client](https://github.com/xmtp/
 
 ```ts
 import { Client } from "@xmtp/react-sdk";
-import type { ClientOptions, Signer } from "@xmtp/react-sdk";
 
-const useClient: ({
-  options,
-  signer,
-}: {
-  options?: ClientOptions;
+type InitClientArgs = {
+  keys?: Uint8Array;
+  options?: Partial<ClientOptions>;
   signer?: Signer | null;
-}) => {
+};
+
+const useClient: () => {
   client: Client | undefined;
   disconnect: () => void;
   error: unknown;
-  initialize: (keys?: Uint8Array) => Promise<void>;
+  initialize: (args?: InitClientArgs) => Promise<void>;
   isLoading: boolean;
 };
 ```
@@ -152,10 +114,10 @@ const useClient: ({
 
 ```tsx
 export const CreateClient: React.FC<{ signer: Signer }> = ({ signer }) => {
-  const { client, error, isLoading, initialize } = useClient({ signer });
+  const { client, error, isLoading, initialize } = useClient();
 
   const handleConnect = useCallback(async () => {
-    await initialize();
+    await initialize({ signer });
   }, [initialize]);
 
   if (error) {
@@ -195,7 +157,7 @@ import { Client, useClient } from "@xmtp/react-sdk";
 import type { Signer } from "@xmtp/react-sdk";
 
 export const CreateClientWithKeys: React.FC<{ signer: Signer }> = ({ signer }) => {
-  const { initialize } = useClient({ signer });
+  const { initialize } = useClient();
 
   // initialize client on mount
   useEffect(() => {
@@ -203,7 +165,7 @@ export const CreateClientWithKeys: React.FC<{ signer: Signer }> = ({ signer }) =
       // get the keys using a valid Signer
       const keys = await Client.getKeys(signer);
       // create a client using keys returned from getKeys
-      await initialize(keys);
+      await initialize({ keys, signer });
     };
     void init();
   }, []);
@@ -237,14 +199,15 @@ export const ListConversations: React.FC = () => {
   const { conversations, error, isLoading } = useConversations();
 
   if (error) {
-    return "An error occurred while fetching conversations";
+    return "An error occurred while loading conversations";
+  }
+
+  if (isLoading) {
+    return "Loading conversations...";
   }
 
   return (
-    <ConversationPreviewList
-      isLoading={isLoading}
-      conversations={conversations}
-    />
+    ...
   );
 };
 ```
@@ -326,39 +289,57 @@ const useStartConversation: <T = string>(
 **Example**
 
 ```tsx
-import {
-  MessageInput,
-  isValidAddress,
-  useStartConversation,
-} from "@xmtp/react-sdk";
+import { isValidAddress, useStartConversation } from "@xmtp/react-sdk";
 import { useCallback, useState } from "react";
 
 export const StartConversation: React.FC = () => {
   const [peerAddress, setPeerAddress] = useState("");
+  const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const startConversation = useStartConversation();
 
-  const handleChange = useCallback((updatedValue: string) => {
-    setPeerAddress(updatedValue);
-  }, []);
+  const handleAddressChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setPeerAddress(e.target.value);
+    },
+    [],
+  );
+
+  const handleMessageChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setMessage(e.target.value);
+    },
+    [],
+  );
 
   const handleStartConversation = useCallback(
-    async (message: string) => {
-      if (peerAddress) {
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      if (peerAddress && message) {
         setIsLoading(true);
         const conversation = await startConversation(peerAddress, message);
         setIsLoading(false);
       }
     },
-    [peerAddress, startConversation],
+    [message, peerAddress, startConversation],
   );
 
   return (
-    <MessageInput
-      isDisabled={isLoading || !isValidAddress(peerAddress) || isError}
-      onSubmit={handleStartConversation}
-    />
+    <form onSubmit={handleStartConversation}>
+      <input
+        name="addressInput"
+        type="text"
+        onChange={handleAddressChange}
+        disabled={isLoading}
+      />
+      <input
+        name="messageInput"
+        type="text"
+        onChange={handleMessageChange}
+        disabled={isLoading || !isValidAddress(peerAddress)}
+      />
+    </form>
   );
 };
 ```
@@ -381,26 +362,60 @@ const useSendMessage: <T = string>(
 **Example**
 
 ```tsx
-import { MessageInput, useSendMessage } from "@xmtp/react-sdk";
+import { useSendMessage } from "@xmtp/react-sdk";
 import type { Conversation } from "@xmtp/react-sdk";
 import { useCallback, useState } from "react";
 
 export const SendMessage: React.FC<{ conversation: Conversation }> = ({
   conversation,
 }) => {
+  const [peerAddress, setPeerAddress] = useState("");
+  const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
   const sendMessage = useSendMessage(conversation);
 
-  const handleSendMessage = useCallback(
-    async (message: string) => {
-      setIsSending(true);
-      await sendMessage(message);
-      setIsSending(false);
+  const handleAddressChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setPeerAddress(e.target.value);
     },
-    [sendMessage],
+    [],
   );
 
-  return <MessageInput isDisabled={isSending} onSubmit={handleSendMessage} />;
+  const handleMessageChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setMessage(e.target.value);
+    },
+    [],
+  );
+
+  const handleSendMessage = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      if (peerAddress && isValidAddress(peerAddress) && message) {
+        setIsLoading(true);
+        await sendMessage(message);
+        setIsLoading(false);
+      }
+    },
+    [message, peerAddress, sendMessage],
+  );
+
+  return (
+    <form onSubmit={handleSendMessage}>
+      <input
+        name="addressInput"
+        type="text"
+        onChange={handleAddressChange}
+        disabled={isSending}
+      />
+      <input
+        name="messageInput"
+        type="text"
+        onChange={handleMessageChange}
+        disabled={isSending}
+      />
+    </form>
+  );
 };
 ```
 
@@ -418,6 +433,7 @@ import type {
   DecodedMessage,
   ListMessagesOptions,
 } from "@xmtp/react-sdk";
+
 export type UseMessagesOptions = ListMessagesOptions & {
   /**
    * Callback function to execute when new messages are fetched
@@ -449,7 +465,7 @@ It's important to memoize the `options` argument so that the hook doesn't fetch 
 **Example**
 
 ```tsx
-import { ConversationMessages, useMessages } from "@xmtp/react-sdk";
+import { useMessages } from "@xmtp/react-sdk";
 import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
 
 export const Messages: React.FC<{
@@ -466,11 +482,7 @@ export const Messages: React.FC<{
   }
 
   return (
-    <ConversationMessages
-      isLoading={isLoading}
-      messages={messages}
-      clientAddress={conversation?.clientAddress ?? ""}
-    />
+    ...
   );
 };
 ```
@@ -482,40 +494,35 @@ If a conversation has a lot of messages, it's more performant to page through th
 **Example**
 
 ```tsx
-import { ConversationMessages, useMessages } from "@xmtp/react-sdk";
+import { useMessages } from "@xmtp/react-sdk";
 import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
+
 export const PagedMessages: React.FC<{
   conversation: Conversation;
 }> = ({ conversation }) => {
-  // it's important to memoize the options so that messages are not
-  // fetched continuously
-  const options = useMemo(
-    () => ({
-      limit: 20,
-    }),
-    [],
-  );
   const { error, isLoading, messages, next } = useMessages(
     conversation,
-    options,
+    options: {
+      limit: 20,
+    },
   );
+
   const handleClick = useCallback(() => {
     // fetch next page of messages
     next();
   }, [next]);
+
   if (error) {
     return "An error occurred while loading messages";
   }
+
   if (isLoading) {
     return "Loading messages...";
   }
+
   return (
     <>
-      <ConversationMessages
-        isLoading={isLoading}
-        messages={messages}
-        clientAddress={conversation?.clientAddress ?? ""}
-      />
+      ...
       <button type="button" onClick={handleClick}>
         Load more messages
       </button>
@@ -662,12 +669,12 @@ export const CanMessage: React.FC = () => {
 
   const { canMessage } = useCanMessage();
 
-  const handleChange = useCallback((updatedValue: string) => {
-    setPeerAddress(updatedValue);
+  const handleAddressChange = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+    setPeerAddress(e.target.value);
   }, []);
 
-  useEffect(() => {
-    const checkAddress = async () => {
+  const handleCheckAddress = useCallback(async (e: FormEvent) => {
+      e.preventDefault();
       if (isValidAddress(peerAddress)) {
         setIsLoading(true);
         setIsOnNetwork(await canMessage(peerAddress));
@@ -677,35 +684,35 @@ export const CanMessage: React.FC = () => {
       }
     };
     void checkAddress();
-  }, [canMessage, peerAddress]);
-
-  let subtext: string | undefined;
-  let isError = false;
-  if (peerAddress === "") {
-    subtext = "Enter a 0x wallet address";
-  } else if (isLoading) {
-    subtext = "Finding address on the XMTP network...";
-  } else if (!isValidAddress(peerAddress)) {
-    subtext = "Please enter a valid 0x wallet address";
-  } else if (!isOnNetwork) {
-    subtext =
-      "Sorry, we can't message this address because its owner hasn't used it with XMTP yet";
-    isError = true;
-  }
+  }, [peerAddress]);
 
   return (
-    <AddressInput
-      subtext={subtext}
-      value={peerAddress}
-      onChange={handleChange}
-      isError={isError}
-      avatarUrlProps={{
-        address: isOnNetwork ? peerAddress : "",
-      }}
-    />
+    <form onSubmit={handleCheckAddress}>
+      <input
+        name="addressInput"
+        type="text"
+        onChange={handleAddressChange}
+        disabled={isLoading}
+      />
+    </form>
   );
 };
 ```
+
+## Developing
+
+Run `yarn dev` to build the SDK and watch for changes, which will trigger a rebuild.
+
+## Useful commands
+
+- `yarn build`: Builds the SDK
+- `yarn clean`: Removes `node_modules`, `lib`, and `.turbo` folders
+- `yarn dev`: Builds the SDK and watches for changes, which will trigger a rebuild
+- `yarn format`: Runs prettier format and write changes
+- `yarn format:check`: Runs prettier format check
+- `yarn lint`: Runs ESLint
+- `yarn test`: Runs all unit tests
+- `yarn typecheck`: Runs `tsc`
 
 ## Breaking revisions
 

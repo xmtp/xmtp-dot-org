@@ -198,8 +198,8 @@ const config = {
               {
                 to: 'docs/client-sdk/react/tutorials/quickstart',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/react-icon.svg" alt="React icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">React XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building apps in React</div></div></div>`,
+                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">React XMTP client SDK and components</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials for building apps in React</div></div></div>`,
               },
               {
                 to: 'docs/client-sdk/dart/tutorials/quickstart',
