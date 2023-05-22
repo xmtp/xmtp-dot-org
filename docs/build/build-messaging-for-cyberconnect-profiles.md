@@ -1,6 +1,6 @@
 ---
-sidebar_label: Build messaging for CyberConnect profiles
-sidebar_position: 2
+sidebar_label: Build CyberConnect DMs
+sidebar_position: 3
 ---
 
 # Build messaging for CyberConnect profiles

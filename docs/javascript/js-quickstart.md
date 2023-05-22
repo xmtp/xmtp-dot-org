@@ -1,6 +1,6 @@
 ---
-sidebar_label: JavaScript SDK quickstart
-sidebar_position: 5
+sidebar_label: Quickstart
+sidebar_position: 1
 toc_max_heading_level: 4
 description: "The XMTP client SDK for JavaScript (xmtp-js) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications."
 ---
@@ -32,7 +32,7 @@ To learn more about XMTP and get answers to frequently asked questions, see [FAQ
 
 ## Reference docs
 
-Access the `xmtp-js` client SDK [reference documentation](docs/references/js-reference/classes/Ciphertext.md).
+Access the `xmtp-js` client SDK [reference documentation](/docs/javascript/js-reference/classes/Ciphertext).
 
 ## Install
 

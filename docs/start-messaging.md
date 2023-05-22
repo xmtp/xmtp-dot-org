@@ -1,6 +1,6 @@
 ---
 sidebar_label: Try messaging
-sidebar_position: 1.5
+sidebar_position: 2
 ---
 
 # Start messaging with XMTP

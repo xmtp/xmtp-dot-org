@@ -1,9 +1,9 @@
 ---
-sidebar_label: Notifications
+sidebar_label: Handle push notifications (Swift)
 sidebar_position: 11
 ---
 
-# Handle push notifications
+# Handle push notifications for Swift/iOS
 
 When building an iOS app with XMTP, you might want to suppress certain Apple push notifications. For example, you should suppress push notifications for a user's own messages.
 

@@ -1,5 +1,5 @@
 ---
-sidebar_label: Swift SDK reference
+sidebar_label: Reference
 sidebar_position: 2
 ---
 

@@ -1,7 +1,6 @@
 {
-    "label": "Concepts",
-    "position": 9,
+    "label": "Kotlin SDK",
+    "position": 4,
     "collapsible": false,
     "collapsed": false
-  }
-  
+}

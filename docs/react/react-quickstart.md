@@ -1,10 +1,10 @@
 ---
-sidebar_label: React SDK quickstart
+sidebar_label: Hooks quickstart
 sidebar_position: 1
 toc_max_heading_level: 4
 ---
 
-# Quickstart for the XMTP React SDK
+# React SDK hooks quickstart
 
 ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 
