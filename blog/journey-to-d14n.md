@@ -32,7 +32,7 @@ Decentralization means two things:
 1. XMTPD (this is the software that nodes run to be a part of the network) removed 3rd party Waku integrations for handling message relay (how messages propagate or gossip through the network). 
 2. XMTP Labs are now providing those attributes directly with XMTPD which sets XMTP Labs up to continue validating implementations and methods for creating a truly decentralized network.
 3. XMTPD is currently experimental but anyone can run a testnet node today with it. 
-4. Once [Phase 1: Data Plane](#phase-1-data-plane) of decentralization is complete, XMTP Labs can onboard a trusted node operator partner to run a testnet node.
+4. Once [Phase 1: Data plane](#phase-1-data-plane) of decentralization is complete, XMTP Labs can onboard a trusted node operator partner to run a testnet node.
 
 ## What does it mean that we’re building in public?
     
@@ -44,7 +44,7 @@ Decentralization means two things:
 
 There are five phases to decentralization. We are currently in phase 1. 
 
-### Phase 1: Data Plane
+### Phase 1: Data plane
         
 This phase validates that XMTPD supports a reliable method for data replication between nodes, authorization of senders while maintaining user privacy, and a logic for retaining and pruning data held by the nodes. 
         
@@ -53,7 +53,7 @@ This phase validates that XMTPD supports a reliable method for data replication 
 - Onboard the first trusted external node operator on testnet.
 - Implement data retention and eviction.
 
-### Phase 2: Control Plane
+### Phase 2: Control plane
         
 This phase introduces smart contracts to provide stronger consistency for managing controls such as postage fees, advertised identities, or staking in the network.
 
@@ -62,7 +62,7 @@ This phase introduces smart contracts to provide stronger consistency for managi
 - Implement initial full node registration and staking via Consensus Contract.
 - Implement and deploy Contacts Contract for managing advertised contacts.
 
-### Phase 3: Consensus and Economic Mechanisms
+### Phase 3: Consensus and economic mechanisms
         
 This phase introduces ways for node operators to be paid which incentivizes them run a node
 
@@ -70,7 +70,7 @@ This phase introduces ways for node operators to be paid which incentivizes them
 - Implement fee pooling and rewards distribution.
 - Implement refundable fees.
 
-### Phase 4: Token and Public Mainnet
+### Phase 4: Token and public mainnet
         
 This phase is taking all of the testing from the previous phases and flipping the switch to make it public in prod for the world, including the XMTP token.
 
@@ -84,7 +84,7 @@ This phase introduces sharding to help the network scale efficiently.
 
 ## When will node providers be able to permissionlessly join the production network?
 
-Once XMTP Labs completes [phase 4](#phase-4-token-and-public-mainnet). The timeline is still TBD but we’re looking at roughly a two-year time horizon.
+Once XMTP Labs completes [Phase 4: Token and public mainnet](#phase-4-token-and-public-mainnet). The timeline is still TBD but we’re looking at roughly a two-year time horizon.
 
 ## Are there any risks with being too centralized? Too decentralized?
 
@@ -97,11 +97,11 @@ Once XMTP Labs completes [phase 4](#phase-4-token-and-public-mainnet). The timel
 
 ## What do you actually need in order to run a node?
 
-1. After XMTP Labs completes Phase 1: Data Plane, another party can run a node by running XMTPD on their server. This phase means XMTPD has:
+1. After XMTP Labs completes [Phase 1: Data plane](#phase-1-data-plane), another party can run a node by running XMTPD on their server. This phase means XMTPD has:
 
     1. A reliable method for replicating data between nodes that ensures strong eventual consistency, data integrity, and efficient synchronization (validating Merkle-CRDT in Q2 checks this box)
     
-2. After XMTP Labs completes Phase 3: Consensus and Economic Mechanisms, another party will be incentivized to run a node. This phase means the network has:
+2. After XMTP Labs completes [Phase 3: Consensus and economic mechanisms](#phase-3-consensus-and-economic-mechanisms), another party will be incentivized to run a node. This phase means the network has:
     1. Methods for incentivizing and rewarding node operators for keeping the network secure and consistent through consensus.
 
 ## What’s the incentive for running a node?
