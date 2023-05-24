@@ -251,6 +251,36 @@ Push notifications can be a highly effective way to engage your users and increa
       <img src={badgingorb} style={{width:"200px"}}/>
 
 
+## Performance best practices
+
+Follow these guidelines to optimize your app’s performance.
+
+### Architecture
+
+Architect your app to use a local storage mechanism, such as app storage or a local database, to serve as the primary source of truth for message data.
+
+Build your app to:
+
+1. Initially retrieve and store existing message data to local storage, making the data accessible with little performance burden.
+2. Asynchronously load new and updated message data from the network as needed.
+
+### Cache the conversation list
+
+Caching the conversation list can improve performance of `client.conversations.list()` by up to 90%.
+
+### Page through messages
+
+Page through mesages instead of fetching them all at the same time.
+
+### Compress message content
+
+Compress message content using a supported compression algorithm.
+
+### Serialize and securely store decoded messages
+
+
+
+
 ## Test your app
 
 Test your app before going live. Here's a list of recommended test cases.
