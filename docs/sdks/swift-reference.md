@@ -1,6 +1,6 @@
 ---
-sidebar_label: Reference
-sidebar_position: 2
+sidebar_label: Swift SDK reference
+sidebar_position: 5
 ---
 
 # Reference for the Swift client SDK

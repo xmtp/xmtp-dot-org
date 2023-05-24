@@ -1,5 +1,5 @@
 ---
-sidebar_label: Build CyberConnect DMs
+sidebar_label: CyberConnect DMs
 sidebar_position: 3
 ---
 

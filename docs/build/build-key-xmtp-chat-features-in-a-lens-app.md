@@ -1,5 +1,5 @@
 ---
-sidebar_label: Build Lens DMs
+sidebar_label: Lens DMs
 sidebar_position: 2
 ---
 

@@ -1,6 +1,6 @@
 ---
-sidebar_label: 'Build a hello world app'
-sidebar_position: 4
+sidebar_label: 'Hello world app'
+sidebar_position: 8
 ---
 
 # Build an XMTP "GM!" app

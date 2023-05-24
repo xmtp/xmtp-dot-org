@@ -1,5 +1,5 @@
 ---
-sidebar_label: Hooks quickstart
+sidebar_label: React SDK hooks quickstart
 sidebar_position: 1
 toc_max_heading_level: 4
 ---

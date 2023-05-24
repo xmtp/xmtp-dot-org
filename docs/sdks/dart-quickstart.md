@@ -1,6 +1,6 @@
 ---
-sidebar_label: Quickstart
-sidebar_position: 1
+sidebar_label: Dartk SDK quickstart
+sidebar_position: 6
 toc_max_heading_level: 4
 description: "xmtp-flutter provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps."
 ---

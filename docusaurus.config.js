@@ -115,12 +115,6 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'sdks-and-tools', // To highlight the navbar item, you must link to a document, not a top-level directory
-            position: 'right',
-            label: 'SDKs and tools',
-            activeBaseRegex: `/`,
-          },
-          {
             to: 'changelog', // To highlight the navbar item, you must link to a document, not a top-level directory
             position: 'right',
             label: 'Changelog',
@@ -142,6 +136,37 @@ const config = {
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Join in and contribute</div>
                 <div class="subtext text-sm text-normal whitespace-pre-line">Join in and contribute to the XMTP community</div></div></div>`,
+              },
+              {
+                to: 'grants',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Rocket icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Grants</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Apply for a grant for a project that fosters ecosystem growth</div></div></div>`,
+              },
+              {
+                to: 'built-with-xmtp',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
+              },
+              {
+                to: 'community/code-of-conduct',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield with a check icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Foster a safe and positive XMTP community experience</div></div></div>`,
+              },
+            ],
+          },
+          {
+            type: 'dropdown',
+            position: 'right',
+            label: 'Resources',
+            items: [
+              {
+                to: '/docs/dev-concepts/faq',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">FAQ</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">FAQ</div></div></div>`,
               },
               {
                 to: 'grants',

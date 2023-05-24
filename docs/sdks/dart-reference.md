@@ -1,6 +1,6 @@
 ---
-sidebar_label: Reference
-sidebar_position: 2
+sidebar_label: Dart SDK reference
+sidebar_position: 7
 ---
 
 # Reference for the Dart client SDK

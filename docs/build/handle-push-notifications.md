@@ -1,6 +1,6 @@
 ---
-sidebar_label: Handle push notifications (Swift)
-sidebar_position: 11
+sidebar_label: Push notifications (Swift)
+sidebar_position: 7
 ---
 
 # Handle push notifications for Swift/iOS
