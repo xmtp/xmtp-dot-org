@@ -13,8 +13,8 @@ mg:
 montez:
   name: Montez
   title: Product Manager at XMTP Labs
-  url: https://twitter.com/mg
-  image_url: http://github.com/galligan.png
+  url: https://twitter.com/xmtp_
+  image_url: ./media/montez.png
 
 fabri:
   name: Fabri
