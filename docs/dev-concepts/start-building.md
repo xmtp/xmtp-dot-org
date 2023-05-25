@@ -116,8 +116,6 @@ Consider following these best practices when developing your app:
 
 - If you are building with the xmtp-js SDK, set the [`appVersion` client option](/docs/client-sdk/javascript/tutorials/quickstart#configuring-the-client).    
 
-- Paginate message history to help optimize time to load messages in a conversation.
-
 - Use [standard content types](content-types#standard-content-types) to ensure that message content sent using your app is interoperable with other apps.
   - By default, building with XMTP SDKs supports plain text messages. 
   - To send remote media attachments, see [Some new content types](/blog/attachments-and-remote-attachments).
@@ -257,7 +255,7 @@ Follow these guidelines to optimize your app’s performance.
 
 ### Architecture
 
-Architect your app to use a local storage mechanism, such as app storage or a local database, to serve as the primary source of truth for message data.
+Architect your app to use a local storage mechanism, such as persistent app storage or a local database, to serve as the primary source of truth for message data.
 
 Build your app to:
 
@@ -268,18 +266,41 @@ Build your app to:
 
 Caching the conversation list can improve performance of `client.conversations.list()` by up to 90%.
 
+- Use the JavaScript client SDK (`xmtp-js`) to [cache the conversation list](https://xmtp.org/docs/client-sdk/javascript/tutorials/quickstart#cache-conversations)
+- Use the Kotlin client SDK (`xmtp-android`) to [cache the conversation list](https://xmtp.org/docs/client-sdk/kotlin/tutorials/quickstart#cache-conversations).
+
+### Cache message histories
+
+Serialize securely stored `DecodedMessage` histories, avoiding the need to download and decrypt the same message on every session.
+
+- Use the JavaScript client SDK (`xmtp-js`) to [serialize securely stored decoded message histories](https://github.com/xmtp/xmtp-js/releases/tag/v8.0.0)
+
 ### Page through messages
 
-Page through mesages instead of fetching them all at the same time.
+Page through messages in a conversation instead of fetching them all at the same time.
+
+- Use the JavaScript client SDK (`xmtp-js`) to [page through messages](https://xmtp.org/docs/client-sdk/javascript/tutorials/quickstart#list-messages-in-a-conversation-with-pagination)
+- Use the Kotlin client SDK (`xmtp-android`) to [page through messages](https://xmtp.org/docs/client-sdk/kotlin/tutorials/quickstart#list-messages-in-a-conversation-with-pagination).
+- Use the Swift client SDK (`xmtp-ios`) to [page through messages](https://xmtp.org/docs/client-sdk/swift/tutorials/quickstart#list-messages-in-a-conversation-with-pagination).
+- Use the React client SDK (`react-sdk`) to [page through messages](https://xmtp.org/docs/client-sdk/react/tutorials/quickstart#page-through-messages).
+- Use the Dart client SDK (`xmtp-flutter`) to [page through messages](https://xmtp.org/docs/client-sdk/dart/tutorials/quickstart#list-messages-in-a-conversation-with-pagination).
 
 ### Compress message content
 
 Compress message content using a supported compression algorithm.
 
-### Serialize and securely store decoded messages
+- Use the JavaScript client SDK (`xmtp-js`) to [compress messages](https://xmtp.org/docs/client-sdk/javascript/tutorials/quickstart#compression)
+- Use the Kotlin client SDK (`xmtp-android`) to [compress messages](https://xmtp.org/docs/client-sdk/kotlin/tutorials/quickstart#compression).
+- Use the Swift client SDK (`xmtp-ios`) to [compress messages](https://xmtp.org/docs/client-sdk/swift/tutorials/quickstart#compression).
+- Use the Dart client SDK (`xmtp-flutter`) to [compress messages](https://xmtp.org/docs/client-sdk/dart/tutorials/quickstart#compression).
 
+### Check performance benchmarks
 
+Consider how your app performs against these performance benchmarks:
 
+- Time to load conversation list: 8-15ms to decrypt invites per conversation
+- Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
+- Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
 
 ## Test your app
 
