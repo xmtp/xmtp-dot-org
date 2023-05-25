@@ -1,58 +1,59 @@
 ---
 slug: thirdbweb-wallet-remote-attachments
 hide_table_of_contents: true
-title: "How to send remote attachments with XMTP & Thirdwallet SDKs"
+title: 'How to send remote attachments with XMTP & Thirdweb SDKs'
 date: 2023-05-12
 authors: fabri
-image: "./media/xmtp-thirdweb/hero.png"
-description: "Sending remote attachments with XMTP"
+image: './media/xmtp-thirdweb/hero.png'
+description: 'Sending remote attachments with XMTP'
 tags:
-- Content Types
-- SDKs
-- Media
-- Test
-- Developers
-- WalletSDK
-- Thirdweb
+  - Content Types
+  - SDKs
+  - Media
+  - Test
+  - Developers
+  - WalletSDK
+  - Thirdweb
 ---
 
 ![thirdweb.jpg](./media/xmtp-thirdweb/hero.png)
 
-
-### Introduction
-
-Creating an effective 'Connect Wallet' flow is a challenging aspect of Web3 development. Thankfully, the team at Thirdweb has developed an excellent SDK, simplifying this process and enabling a superior wallet experience for your users.
+Follow these steps to start sending image attachments to wallets within your chat app. Our sample app includes everything you need to connect to wallets with thirdweb's WalletSDK, use XMTP's remote attachments, and upload larger files to thirdweb's storage.
 
 <!--truncate-->
 
 ### Concepts
 
-#### Thirdweb WalletSDK
-The WalletSDK is a development kit that grants developers access to a comprehensive selection of wallets, ranging from custodial to MPC to smart contracts.
-[Read more](https://twitter.com/thirdweb/status/1654191962751389697)
+### Thirdweb WalletSDK
 
-#### XMTP Content-Types
-Content types are a way to describe the *type* of *content* a message contains on XMTP. Out of the box, XMTP's SDKs support one content type: `text`. 
+The WalletSDK is a development kit that grants developers access to a comprehensive selection of wallets, ranging from custodial to MPC to smart contracts.
+[Read more](https://portal.thirdweb.com/wallet)
+
+### XMTP Content-Types
+
+Content types are a way to describe the _type_ of _content_ a message contains on XMTP. Out of the box, XMTP's SDKs support one content type: `text`.
 [Read more](https://xmtp.org/docs/dev-concepts/content-types)
 
-#### Thirdweb storage
+### Thirdweb storage
+
 StorageSDK handles the complexities of decentralized file management for you. No need to worry about fetching from multiple IPFS gateways, handling file and metadata upload formats, etc.
-[Read more](https://thirdweb.com/storage)
+[Read more](https://portal.thirdweb.com/storage)
 
 ### Demo App
 
 This repository demonstrates the implementation of these concepts within a simple chat app.
 
-[GitHub repo](https://github.com/fabriguespe/xmtp-thirdweb-js) 
+[GitHub repo](https://github.com/fabriguespe/xmtp-thirdweb-js)
 
-Next, run the app:
 ```tsx
+git clone git@github.com:fabriguespe/xmtp-thirdweb-js.git
+cd xmtp-thirdweb-js
+npm install
 npm run dev
-//or
-yarn dev
 ```
 
-#### Learning Objectives:
+### Learning Objectives:
+
 - Setting up the ConnectWallet button
 - Signing in with XMTP
 - Loading a conversation
@@ -61,6 +62,7 @@ yarn dev
 - Receiving attachments
 
 ### Getting Started
+
 The first step involves creating and configuring the Next.js application.
 
 To generate a new Next.js app, execute the following command in your terminal:
@@ -79,176 +81,185 @@ npx create-next-app xmtp-thirdweb
 Next, navigate into the newly created directory and install the necessary dependencies for using XMTP and Thirdweb:
 
 ```tsx
-npm install @thirdweb-dev/react @thirdweb-dev/sdk @xmtp/xmtp-js xmtp-content-type-remote-attachment 
+npm install @thirdweb-dev/react @thirdweb-dev/sdk @xmtp/xmtp-js xmtp-content-type-remote-attachment
 ```
 
-#### Setting up the ConnectWallet button
+### Setting up the ConnectWallet button
+
 ![](./media/xmtp-thirdweb/wallet.png)
 
 Begin by wrapping the app with `ThirdwebProvider`, then use the `ConnectWallet` component to establish wallet connectivity.
 
-
 ```tsx
 <ThirdwebProvider activeChain="goerli">
-        <Home/>
+  <Home />
 </ThirdwebProvider>
 ```
+
 ```tsx
 //Just one line of code to connect to wallet
 <ConnectWallet theme="light" />
 ```
+
 ```tsx
 //After logging in, we can use thirweb hooks to see the wallet
-const address = useAddress();
-const signer = useSigner();
+const address = useAddress()
+const signer = useSigner()
 ```
 
-That's it! Next, proceed with signing in to XMTP.
+That’s it! Next, proceed with signing in to XMTP.
 
-#### Signing in with XMTP
+### Signing in with XMTP
+
 ![](./media/xmtp-thirdweb/xmtp-sign.png)
+
 Create a new XMTP instance and register the content types your chat app will utilize.
 
 ```tsx
 // Function to initialize the XMTP client
 const initXmtp = async function () {
   // Create the XMTP client
-  const xmtp = await Client.create(signer, { env: "production" });
+  const xmtp = await Client.create(signer, { env: 'production' })
   // Register the codecs. AttachmentCodec is for local attachments (<1MB)
-  xmtp.registerCodec(new AttachmentCodec());
+  xmtp.registerCodec(new AttachmentCodec())
   //RemoteAttachmentCodec is for remote attachments (>1MB) using thirdweb storage
-  xmtp.registerCodec(new RemoteAttachmentCodec());
+  xmtp.registerCodec(new RemoteAttachmentCodec())
   //Create or load conversation with Gm bot
-  newConversation(xmtp,PEER_ADDRESS);
+  newConversation(xmtp, PEER_ADDRESS)
   // Set the XMTP client in state for later use
-  setXmtpConnected(!!xmtp.address);
+  setXmtpConnected(!!xmtp.address)
+  //Set the client in the ref
+  clientRef.current = xmtp
 }
 ```
 
-#### Loading a conversation
+### Loading a conversation
 
-In this case we are going to use our GM Bot and we are going to use the XMTP instance for creating the conversation and in case it exists it will bring its message history.
+In this case, we will use our GM Bot and the XMTP instance to create the conversation. If the conversation already exists, it will retrieve its message history.
 
 ```tsx
-const newConversation = async function (xmtp_client,addressTo) {
+const newConversation = async function (xmtp_client, addressTo) {
   //Checks if the address is on the network
-  if(xmtp_client.canMessage(addressTo)){
+  if (xmtp_client.canMessage(addressTo)) {
     //Creates a new conversation with the address
-    const conversation = await xmtp_client.conversations.newConversation(addressTo);
-    convRef.current = conversation;
+    const conversation = await xmtp_client.conversations.newConversation(
+      addressTo
+    )
+    convRef.current = conversation
     //Loads the messages of the conversation
-    const messages = await conversation.messages();
-    setMessages(messages);
-  }else{
-    console.log("cant message because is not on the network.");
+    const messages = await conversation.messages()
+    setMessages(messages)
+  } else {
+    console.log('cant message because is not on the network.')
     //cant message because is not on the network.
   }
-};
-  ```
+}
+```
 
-
-#### Sending a message
+### Sending a message
 
 Text messages require neither codec nor encryption. They can be sent as they are.
 
 ```tsx
 const onSendMessage = async (value) => {
-  return convRef.send(value);
-};
+  return convRef.send(value)
+}
 ```
+
 Small attachments below 1MB can be sent using the AttachmentCodec. The codec will automatically encrypt the attachment and upload it to the XMTP network.
 
 ```tsx
 // Function to handle sending a small file attachment
-const handleSmallFile = async () => {
-  const blob = new Blob([image], { type: "image/png" });
-  let imgArray = new Uint8Array(await blob.arrayBuffer());
-
-  const attachment = {
-    filename: image.name,
-    mimeType: 'image/png',
-    data: imgArray
-  };
-  await convRef.send(attachment, { contentType: ContentTypeAttachment });
-};
-```
-
-#### Send a remote attachment
-For large attachments above 1MB, use the `RemoteAttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the Thirdweb network.
-
-Thirdweb's SDK will upload the image file to IPFS and return the file's URL.
-
-```tsx
-const uploadUrl = await upload({
-  data: [file],
-  options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
-});
-//uploadUrl[0] contains the URL of the uploaded file
-```
-
-```tsx
-// Function to handle sending a large file attachment
-const handleLargeFile = async (file) => {
-  setIsLoading(true);
-
-  setLoadingText("Uploading to ThirdWeb Storage...");
-  //Image is uploaded to IPFS and returns the file's URL in `uploadUrl[0]`
-  const uploadUrl = await upload({
-    data: [file],
-    options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
-  });
-  setLoadingText(uploadUrl[0]);
+const handleSmallFile = async (file) => {
+  // Convert the file to a Uint8Array
+  const blob = new Blob([file], { type: file.type })
+  let imgArray = new Uint8Array(await blob.arrayBuffer())
 
   const attachment = {
     filename: file.name,
-    mimeType: 'image/png',
-    data: new TextEncoder().encode(file.name)
-  };
-  
-  const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
-    attachment, 
-    new AttachmentCodec()
-  );
-
-  const remoteAttachment = {
-    url: uploadUrl[0],
-    contentDigest: encryptedAttachment.digest,
-    salt: encryptedAttachment.salt,
-    nonce: encryptedAttachment.nonce,
-    secret: encryptedAttachment.secret,
-    scheme: "https://",
-    filename: attachment.filename,
-    contentLength: attachment.data.byteLength,
-  };
-
-  setLoadingText("Sending...");
-  await convRef.send(remoteAttachment, {
-    contentType: ContentTypeRemoteAttachment,
-    contentFallback: file.name
-  });
-};
+    mimeType: file.type,
+    data: imgArray,
+  }
+  await conversation.send(attachment, { contentType: ContentTypeAttachment })
+}
 ```
 
+### Send a remote attachment
 
-#### Receiving attachments
+For large attachments above 1MB, use the `RemoteAttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the Thirdweb network. For uploading bigger files we are going to first encrypt them and then upload them to the IPFS network via the Thirdweb SDK.
+
+1. Encrypt the file
+
+```tsx
+//Loadfile is a helper function to convert the file to a Uint8Array
+const imgData = await loadFile(file)
+
+const attachment = {
+  filename: file.name,
+  mimeType: file.type,
+  data: imgData,
+}
+
+const attachmentCodec = new AttachmentCodec()
+const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
+  attachment,
+  attachmentCodec
+)
+```
+
+2. Next we are going to upload the file to the IPFS network via the Thirdweb SDK.
+
+```tsx
+const uploadUrl = await upload({
+  //encryptedAttachment.payload.buffer is a Uint8Array
+  //We need to convert it to a File to upload it to the IPFS network
+  data: [new File([encryptedAttachment.payload.buffer], file.name)],
+  options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
+})
+
+//uploadUrl[0] is the IPFS hash of the encrypted file
+uploadUrl[0]
+```
+
+3. Finally we will use the encrypted file's URL to send it to the XMTP network using XMTP ContentTypeRemoteAttachment.
+
+```tsx
+const remoteAttachment = {
+  url: uploadUrl[0],
+  contentDigest: encryptedAttachment.digest,
+  salt: encryptedAttachment.salt,
+  nonce: encryptedAttachment.nonce,
+  secret: encryptedAttachment.secret,
+  scheme: 'https://',
+  filename: attachment.filename,
+  contentLength: attachment.data.byteLength,
+}
+
+const message = await conversation.send(remoteAttachment, {
+  contentType: ContentTypeRemoteAttachment,
+  contentFallback: 'a screenshot of over 1MB',
+})
+```
+
+### Receiving attachments
 
 In the parent component, add a listener that will fetch new messages from a stream.
 
 ```tsx
 // Function to stream new messages in the conversation
 const streamMessages = async () => {
-  const newStream = await convRef.current.streamMessages();
+  const newStream = await convRef.current.streamMessages()
   for await (const msg of newStream) {
-    const exists = messages.find(m => m.id === msg.id);
+    const exists = messages.find((m) => m.id === msg.id)
     if (!exists) {
-      setMessages(prevMessages => {
-        const msgsnew = [...prevMessages, msg];
-        return msgsnew;
-      });
+      setMessages((prevMessages) => {
+        const msgsnew = [...prevMessages, msg]
+        return msgsnew
+      })
     }
   }
-};
-streamMessages();
+}
+streamMessages()
 ```
 
 Render these messages in the child component using a `Blob` for attachments.
@@ -256,28 +267,43 @@ Render these messages in the child component using a `Blob` for attachments.
 ```tsx
 if (message.contentType.sameAs(ContentTypeAttachment)) {
   // Handle ContentTypeAttachment
-  return objectURL(message.content);
+  return objectURL(message.content)
 }
 // Function to render a local attachment as an image
 const objectURL = (attachment) => {
-  const blob = new Blob([attachment.data], { type: attachment.mimeType });
-  return <img src={URL.createObjectURL(blob)} width={200} className="imageurl" alt={attachment.filename} />;
-};
+  const blob = new Blob([attachment.data], { type: attachment.mimeType })
+  return (
+    <img
+      src={URL.createObjectURL(blob)}
+      width={200}
+      className="imageurl"
+      alt={attachment.filename}
+    />
+  )
+}
 ```
-With remote storage, simply point the URL in your HTML.
+
+With remote storage is s different story because uploading and decrypting the file is resource consuming. We need to use the `RemoteAttachmentCodec` to decrypt the file and then render it. In the future we will dive into performance improvements.
 
 ```tsx
-if (message.contentType.sameAs(ContentTypeRemoteAttachment)) {
-  // Handle ContentTypeRemoteAttachment
-  return remoteURL(message.content);
+// This method receives the message.content as attachment, the xmtp client and the RemoteAttachmentCodec
+export const deloadFile = async (attachment, client, RemoteAttachmentCodec) => {
+  return RemoteAttachmentCodec.load(attachment, client)
+    .then((decryptedAttachment) => {
+      // Create a blob URL from the decrypted attachment data
+      const blob = new Blob([decryptedAttachment.data], {
+        type: decryptedAttachment.mimeType,
+      })
+      return URL.createObjectURL(blob)
+    })
+    .catch((error) => {
+      console.error('Failed to load and decrypt remote attachment:', error)
+    })
 }
-// Function to render a remote attachment URL as an image
-const remoteURL = (attachment) => {
-  return <img src={attachment.url} width={200} className="imageurl" alt={attachment.filename} />;
-};
 ```
+
 That was easy! Now you can send and receive messages with attachments using XMTP and Thirdweb.
 
-### Conclusion
+### Join us on Discord
 
-Web3 messaging is moving forward a robust set of features and possibilites like any other messaging app, but with the added benefit of being portable and encrypted. Is exciting to be part of this new era of messaging and we hope you can join us in this journey.
+We're excited to be partnering with Thirdweb to bring you better solutions for serving and reaching your end-users. [Stay tuned](https://discord.com/invite/xmtp) for more guides coming soon!
