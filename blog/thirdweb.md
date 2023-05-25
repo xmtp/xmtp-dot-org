@@ -207,7 +207,6 @@ const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
   attachmentCodec
 )
 ```
-
 2. Next we are going to upload the file to the IPFS network via the Thirdweb SDK.
 
 ```tsx

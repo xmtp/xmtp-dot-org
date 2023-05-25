@@ -152,6 +152,25 @@ Consider following these UX best practices.
 - When displaying .eth names, look for and display an ENS avatar. When displaying .lens names, look for and display a Lens profile photo. Use blockies for raw 0x addresses.
 
 
+### Disclose signature storage
+
+- If your app stores a signature to read and send XMTP messages on behalf of a user, such as in a [broadcast message](/docs/client-sdk/javascript/tutorials/quickstart#send-a-broadcast-message) use case, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature.
+
+  For example:
+
+  - Before connection:
+
+    > You’ll be prompted to provide a signature that gives this app permission to read and send XMTP messages on your behalf. The signature will be securely stored and accessed only to execute your workflows. You’ll be able to revoke permission at any time using the Delete signature option that will appear here.
+
+    ![](img/sig-store-disclosure-connect.png)
+
+  - After connection:
+
+    > The signature you provided gives this app permission to read and send XMTP messages on your behalf. The signature is securely stored and accessed only to execute your workflows. Click **Delete signature** to revoke this permission and delete the signature from storage.
+
+    ![](img/sig-store-disclosure-delete.png)
+
+
 ### Onboarding
 
 - In your app onboarding flow, enable your users to activate XMTP DMs. User access to DMs can help with app engagement and re-engagement. For example, here is a prompt to activate XMTP DMs in the onboarding flow to [claim a Lens handle](https://claim.lens.xyz/):
@@ -163,6 +182,7 @@ Consider following these UX best practices.
 - Create your own message bot, such as `gm.yourappname.eth`, to provide a friendly app onboarding experience. For example, when a user sends a message to `gm.xmtp.eth`, a message bot built with [ChainJet](https://chainjet.io/) sends an automatic reply. You can configure your bot to provide onboarding information or an easy way for a user to send and receive their first messages with your app.
 
   <img src={onboardingbot} style={{width:"600px"}}/>
+
 
 ### Conversations
 
