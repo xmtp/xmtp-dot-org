@@ -45,9 +45,10 @@ This repository demonstrates the implementation of these concepts within a simpl
 
 [GitHub repo](https://github.com/fabriguespe/xmtp-thirdweb-js)
 
-```
+```tsx
 git clone git@github.com:fabriguespe/xmtp-thirdweb-js.git
 cd xmtp-thirdweb-js
+npm install
 npm run dev
 ```
 
