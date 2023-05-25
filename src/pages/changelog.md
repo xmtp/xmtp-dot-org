@@ -12,6 +12,10 @@ This changelog provides information about release milestones for XMTP SDKs, deve
 
 #### May 2023
 
+## [JavaScript client SDK](https://github.com/xmtp/xmtp-js) v9.1.0 released (xmtp-js)
+
+This release implemented deterministic [XMTP v2 conversation topics](https://xmtp.org/docs/dev-concepts/architectural-overview#conversation-topic-v2). This feature addresses a possible, but improbable, scenario in which two conversation topics are unintentionally created between two wallet addresses, causing unexpected conversation fragmentation. Upgrade now to get this feature that provides a **forward-only fix**. **[Read the release notes](https://github.com/xmtp/xmtp-js/releases/tag/v9.1.0)** (May 24)
+
 ## [JavaScript client SDK](https://github.com/xmtp/xmtp-js) v9.0.0 released (xmtp-js)
 
 This release refactored the build process for `xmtp-js`, reducing the web bundle size by 10x, from 962 KB to 95 KB. **[Read the release notes](https://github.com/xmtp/xmtp-js/releases/tag/v9.0.0)** (May 9)
