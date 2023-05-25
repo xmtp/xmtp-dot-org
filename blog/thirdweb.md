@@ -176,7 +176,7 @@ const handleSmallFile = async () => {
 
   const attachment = {
     filename: image.name,
-    mimeType: 'image/png',
+    mimeType: image.type
     data: imgArray,
   }
   await convRef.send(attachment, { contentType: ContentTypeAttachment })
