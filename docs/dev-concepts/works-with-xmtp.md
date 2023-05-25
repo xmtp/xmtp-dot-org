@@ -61,6 +61,7 @@ To support decentralized identity management:
     - Example implementation in [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)
 - [Coinbase cb.id](https://help.coinbase.com/en/wallet/managing-account/coinbase-ens-support)
 - [Lens](https://www.lens.xyz/)
+- [Everyname](https://everyname.xyz) - Name and Address Middleware Protocol
 
 
 ## Decentralized social
