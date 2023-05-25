@@ -135,6 +135,7 @@ const initXmtp = async function () {
 
 ### Loading a conversation
 
+
 In this case, we will use our GM Bot and the XMTP instance to create the conversation. If the conversation already exists, it will retrieve its message history.
 
 ```tsx

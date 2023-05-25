@@ -185,9 +185,15 @@ Real-time chat is a core use case for XMTP and is demonstrated by the XMTP Inbox
 
 To learn more about how the XMTP Inbox chat app is built, see the [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web).
 
+### Does XMTP support broadcast messaging?
+
+XMTP natively supports one-to-one messaging. One-to-many broadcast messages, or announcements, can be constructed using the XMTP SDK. 
+
+To learn more, see [Send a broadcast message](/docs/client-sdk/javascript/tutorials/quickstart#send-a-broadcast-message).
+
 ### Does XMTP support group messaging?
 
-XMTP natively supports one-to-one messaging. One-to-many and group messaging can be constructed using the XMTP SDK. Based on developer and community feedback, we are researching native support for these use cases.
+XMTP natively supports one-to-one messaging. Group messaging can be constructed using the XMTP SDK. Based on developer and community feedback, we are researching native support for these use cases.
 
 Have other questions or ideas about group messaging? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
