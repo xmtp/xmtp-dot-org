@@ -8,6 +8,7 @@ image: './media/xmtp-thirdweb/hero.png'
 description: 'Sending remote attachments with XMTP'
 tags:
   - Content Types
+  - Encryption
   - SDKs
   - Media
   - Test
@@ -135,7 +136,6 @@ const initXmtp = async function () {
 
 ### Loading a conversation
 
-
 In this case, we will use our GM Bot and the XMTP instance to create the conversation. If the conversation already exists, it will retrieve its message history.
 
 ```tsx
@@ -171,16 +171,17 @@ Small attachments below 1MB can be sent using the AttachmentCodec. The codec wil
 
 ```tsx
 // Function to handle sending a small file attachment
-const handleSmallFile = async () => {
-  const blob = new Blob([image], { type: 'image/png' })
+const handleSmallFile = async (file) => {
+  // Convert the file to a Uint8Array
+  const blob = new Blob([file], { type: file.type })
   let imgArray = new Uint8Array(await blob.arrayBuffer())
 
   const attachment = {
-    filename: image.name,
-    mimeType: image.type
+    filename: file.name,
+    mimeType: file.type,
     data: imgArray,
   }
-  await convRef.send(attachment, { contentType: ContentTypeAttachment })
+  await conversation.send(attachment, { contentType: ContentTypeAttachment })
 }
 ```
 
@@ -206,7 +207,6 @@ const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
   attachmentCodec
 )
 ```
-
 2. Next we are going to upload the file to the IPFS network via the Thirdweb SDK.
 
 ```tsx
