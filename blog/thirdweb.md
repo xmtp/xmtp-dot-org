@@ -45,12 +45,10 @@ This repository demonstrates the implementation of these concepts within a simpl
 
 [GitHub repo](https://github.com/fabriguespe/xmtp-thirdweb-js)
 
-Next, run the app:
-
 ```
+git clone git@github.com:fabriguespe/xmtp-thirdweb-js.git
+cd xmtp-thirdweb-js
 npm run dev
-//or
-yarn dev
 ```
 
 ### Learning Objectives:
@@ -136,7 +134,7 @@ const initXmtp = async function () {
 
 ### Loading a conversation
 
-In this case, we are going to use our GM Bot and we will use the XMTP instance for creating the conversation and in case it exists it will bring its message history.
+In this case, we will use our GM Bot and the XMTP instance to create the conversation. If the conversation already exists, it will retrieve its message history.
 
 ```tsx
 const newConversation = async function (xmtp_client, addressTo) {
@@ -217,7 +215,7 @@ const uploadUrl = await upload({
   options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
 })
 
-//uploadUrl[0] is the IPFS hash of the ecnrypted file
+//uploadUrl[0] is the IPFS hash of the encrypted file
 uploadUrl[0]
 ```
 
@@ -283,7 +281,7 @@ const objectURL = (attachment) => {
 }
 ```
 
-With remote storage is different because fetching and decrypting the file maybe slow. We need to use the `RemoteAttachmentCodec` to decrypt the file and then render it. On the future we will dive into performance improvements.
+With remote storage is different because uploading and decrypting the file is resource consuming. We need to use the `RemoteAttachmentCodec` to decrypt the file and then render it. In the future we will dive into performance improvements.
 
 ```tsx
 // This method receives the message.content as attachment, the xmtp client and the RemoteAttachmentCodec
