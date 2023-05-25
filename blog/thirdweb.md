@@ -170,16 +170,17 @@ Small attachments below 1MB can be sent using the AttachmentCodec. The codec wil
 
 ```tsx
 // Function to handle sending a small file attachment
-const handleSmallFile = async () => {
-  const blob = new Blob([image], { type: 'image/png' })
+const handleSmallFile = async (file) => {
+  // Convert the file to a Uint8Array
+  const blob = new Blob([file], { type: file.type })
   let imgArray = new Uint8Array(await blob.arrayBuffer())
 
   const attachment = {
-    filename: image.name,
-    mimeType: image.type
+    filename: file.name,
+    mimeType: file.type,
     data: imgArray,
   }
-  await convRef.send(attachment, { contentType: ContentTypeAttachment })
+  await conversation.send(attachment, { contentType: ContentTypeAttachment })
 }
 ```
 
