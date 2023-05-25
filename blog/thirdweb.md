@@ -281,7 +281,7 @@ const objectURL = (attachment) => {
 }
 ```
 
-With remote storage is different because uploading and decrypting the file is resource consuming. We need to use the `RemoteAttachmentCodec` to decrypt the file and then render it. In the future we will dive into performance improvements.
+With remote storage is s different story because uploading and decrypting the file is resource consuming. We need to use the `RemoteAttachmentCodec` to decrypt the file and then render it. In the future we will dive into performance improvements.
 
 ```tsx
 // This method receives the message.content as attachment, the xmtp client and the RemoteAttachmentCodec
