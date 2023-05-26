@@ -6,7 +6,8 @@ toc_max_heading_level: 4
 
 # Changelog for XMTP
 
-This changelog provides information about release milestones for XMTP SDKs, developer tools, and node software.
+This changelog provides information about release milestones for XMTP SDKs, developer tools, and node software. For future milestones, see the [Roadmap](/vision/roadmap).
+
 
 ---
 
