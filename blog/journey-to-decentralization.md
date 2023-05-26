@@ -99,4 +99,4 @@ XMTP Labs is taking a phased approach toward architectural and logical decentral
 
 Have any questions or feedback? Send a note to `feedback.xmtp.chat` using [xmtp.chat](https://xmtp.chat/).
 
-_To follow the XMTP network on its path to decentralization, see the [Decentralization roadmap](/vision/roadmap#decentralization-roadmap)._
+_To follow the XMTP network on its path to decentralization, see the [Decentralization roadmap](/roadmap#decentralization-roadmap)._

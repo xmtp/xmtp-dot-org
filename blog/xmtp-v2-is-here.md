@@ -68,7 +68,7 @@ We have published a [Protocol and Network Overview](https://github.com/xmtp/prot
 
 ### Platform Roadmap
 
-We have published our [platform roadmap](/vision/roadmap) to give developers more transparency on upcoming SDK support and features like push notifications and decentralization milestones.
+We have published our [platform roadmap](/roadmap) to give developers more transparency on upcoming SDK support and features like push notifications and decentralization milestones.
 
 
 ### Deprecation date for pre-v7 versions of the SDK
