@@ -95,7 +95,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 6. **You probably have some great questions by now! Check out these resources:**
 
     - [FAQ](faq)
-    - [Roadmap](/vision/roadmap)
+    - [Roadmap](/roadmap)
     - [Blog](/blog)
 
 
