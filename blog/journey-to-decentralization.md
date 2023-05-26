@@ -97,4 +97,6 @@ XMTP Labs is taking a phased approach toward architectural and logical decentral
 
     Node operators earn token rewards and fees for driving consensus of the network and facilitating any transactions between network participants
 
+Have any questions or feedback? Send a note to `feedback.xmtp.chat` using [xmtp.chat](https://xmtp.chat/).
+
 _To follow the XMTP network on its path to decentralization, see the [Decentralization roadmap](/vision/roadmap#decentralization-roadmap)._
