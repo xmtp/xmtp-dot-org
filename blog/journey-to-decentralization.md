@@ -24,7 +24,7 @@ XMTP Labs is taking a phased approach toward architectural and logical decentral
     2. Decentralization helps us fulfill this vision by creating a network that is self-governed (no central party is making the decisions) and permissionless (operators, developers, and users can participate in the network as they see fit) all while keeping user data secure, private, and portable.
 
 3. **Why is `xmtpd` (XMTP daemon) such a crucial milestone for us?** 
-    1. XMTPD (this is the software that nodes run to be a part of the network) allows XMTP Labs to experiment with first-party alternative methods by removing third-party Waku integrations for handling message relay (how messages propagate or gossip through the network). 
+    1. XMTPD (this is the software that nodes run to be a part of the network) allows XMTP Labs to experiment with Merkle-CRDT based replication and message relay (how messages propagate or gossip through the network).
     2. XMTP Labs is now providing those attributes directly with XMTPD which sets XMTP Labs up to continue validating implementations and methods for creating a decentralized network.
     3. XMTPD is currently experimental but anyone can run a testnet node today with it. 
     4. Once Phase 1: Data Plane of decentralization is complete, XMTP Labs can onboard a trusted node operator partner to run a testnet node.
