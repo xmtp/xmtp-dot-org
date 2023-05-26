@@ -1,4 +1,6 @@
 ---
+sidebar_label: Changelog
+sidebar_position: 2.5
 hide_table_of_contents: false
 toc_min_heading_level: 4
 toc_max_heading_level: 4

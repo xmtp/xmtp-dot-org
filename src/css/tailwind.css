@@ -601,10 +601,25 @@ main[class*='docMainContainer'] tr {
   max-width: 100%;
 }
 
-.navbar__button {
+.navbar__sbbutton {
   color: white;
   border: none;
   background-color: #EF4444;
+  border-radius: 4px;
+  padding: 7px 11px;
+  cursor: pointer;
+  margin: 4px 0px 4px 11px;
+  transition-duration: 0.2s;
+}
+
+.navbar__sbbutton:hover {
+  background-color: #DC2626;
+}
+
+.navbar__chatbutton {
+  color: white;
+  border: none;
+  background-color: #4F45E4;
   border-radius: 4px;
   padding: 7px 11px;
   cursor: pointer;
@@ -612,8 +627,8 @@ main[class*='docMainContainer'] tr {
   transition-duration: 0.2s;
 }
 
-.navbar__button:hover {
-  background-color: #DC2626;
+.navbar__chatbutton:hover {
+  background-color: #5A2895;
 }
 
 @media (max-width: 450px) {
