@@ -10,10 +10,11 @@ tags:
 - Developers
 - Spotlight
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Facilitating user communication and overcoming one of web3’s biggest challenges. NFT sales, POAP events, DAO activities, etc all have very meaningful reasons why users would want to message each other, but sometimes the website has no chat function and there’s no way to find the user elsewhere.
 
-![](./media/blogPost-16.png)
+![Project Spotlight: Relay card](./media/blogPost-16.png)
 
 <!--truncate-->
 
@@ -61,9 +62,9 @@ Given the interoperability of messages on the XMTP network, users can then acces
 
 ### Check out the Relay and XMTP SDKs
 
-[![](media/relaycc-repo-card.png)](https://github.com/relaycc/sybil-interface-receiver)
+[![sybil-interface-receiver repo card](media/relaycc-repo-card.png)](https://github.com/relaycc/sybil-interface-receiver)
 
-[![](media/xmtp-js-repo-card.png)](https://github.com/xmtp/xmtp-js)
+[![xmtp-js repo card](media/xmtp-js-repo-card.png)](https://github.com/xmtp/xmtp-js)
 
 
 ### Learn more about Relay
@@ -77,3 +78,6 @@ Given the interoperability of messages on the XMTP network, users can then acces
 - Message them through Relay at [relay.cc/seanwbren.eth](https://relay.cc/seanwbren.eth).
 
 You can read more about the [launch of Relay Receiver here](https://mirror.xyz/relaycc.eth/3ciz14Fs5Tw61zbh5Lr-WCPvpuuOB5NRCdwq6wEM7bY).
+
+<br/>
+<FeedbackWidget />

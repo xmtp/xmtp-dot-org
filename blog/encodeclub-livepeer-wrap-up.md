@@ -12,11 +12,11 @@ tags:
 - Hackathon
 ---
 import ReactPlayer from 'react-player'
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Next Video Build: Livepeer x XMTP awards wrap-up: DeUniversity’s education platform, Polyfans Messenger token-gated livestream, and Livopedia’s creator tools take top honors.
 
-<!--need image-->
-![](./media/Encode-Livepeer-Wrapup-cover.png)
+![Encode-Livepeer-Wrapup-cover.png](./media/Encode-Livepeer-Wrapup-cover.png)
 
 <!--truncate-->
 
@@ -78,3 +78,6 @@ For more information about XMTP and Livepeer, check out the links below:
 - 👾 Discord - [https://discord.gg/xmtp](https://discord.gg/xmtp)
 - 🐦 Twitter - [https://twitter.com/xmtp_](https://twitter.com/xmtp_)
 - 📖 Careers at XMTP Labs - [https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
+
+<br/>
+<FeedbackWidget />

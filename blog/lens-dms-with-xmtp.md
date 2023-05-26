@@ -12,18 +12,19 @@ tags:
 - Lens
 - Spotlight
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Today XMTP reaches a big milestone in our journey to build protocol for secure web3 messaging:
 
 **[Lens Protocol](https://lens.xyz/) has adopted [XMTP](/docs/dev-concepts/introduction) to provide a secure and private direct messaging layer for the entire Lens ecosystem.**
 
-![](./media/BLOG-LensAnnounce.png)
+![Introducing DMs with Lens + XMTP card](./media/BLOG-LensAnnounce.png)
 
 <!--truncate-->
 
 Introducing XMTP to the Lens ecosystem means profiles will be able to privately and securely send end-to-end encrypted direct messages to one another, starting in [Lenster](https://lenster.xyz/). This brings web3 social closer to feature parity with its predecessor and is a big step forward for Lens users, and anyone who cares about private, secure messaging.
 
-[![](media/lens-protocol-card.png)](https://lens.xyz/)
+[![Lens Protocol website card](media/lens-protocol-card.png)](https://lens.xyz/)
 
 We’re entering a new era for social, and a new way to think about communication within web3—one where users own their data, and can take their profile, graph, interactions, and communication wherever they want to. This shift is a logical expression of the inspiration we took from [Linkin Park’s Mike Shinoda when he talked about what it was like when Facebook cut him off from his audience and how web3 could solve this for all artists in the future](xmtp-origin-story).
 
@@ -45,4 +46,7 @@ For those just now discovering XMTP (Extensible Message Transport Protocol), it�
 
 Learn more about the Lens DMs with XMTP [in our Discord](https://discord.gg/xmtp). If you’re a developer, you can [get started implementing DMs into your Lens app here](https://xmtp.to/lens-quickstart).
 
-[![](media/build-key-xmtp-features-doc-card.png)](https://xmtp.to/lens-quickstart)
+[![build-key-xmtp-features-doc-card.png](media/build-key-xmtp-features-doc-card.png)](https://xmtp.to/lens-quickstart)
+
+<br/>
+<FeedbackWidget />

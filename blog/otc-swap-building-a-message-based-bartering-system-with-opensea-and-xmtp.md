@@ -13,10 +13,11 @@ tags:
 - NFTs
 ---
 import ReactPlayer from 'react-player'
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 How developer [@0x_Yuzu](https://twitter.com/0x_Yuzu) built an application that enables buyers and sellers to barter on NFTs using OpenSea's Seaport and XMTP.
 
-![](./media/FeaturedGraphic-2.png)
+![Seaport and XMTP card](./media/FeaturedGraphic-2.png)
 
 <!--truncate-->
 
@@ -89,3 +90,6 @@ Using XMTP’s [SDK](https://github.com/xmtp) and the [Seaport Protocol](https:/
 - **XMTP-JS**, a client implementation for JavaScript applications: [https://github.com/xmtp/xmtp-js](https://github.com/xmtp/xmtp-js)
 
 - **Relay**, a chat UI built with XMTP messaging: [https://relay.cc](https://relay.cc/)
+
+<br/>
+<FeedbackWidget />

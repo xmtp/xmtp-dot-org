@@ -1,6 +1,7 @@
 ---
 sidebar_label: Filter conversations
 sidebar_position: 5
+description: Learn how to use conversation IDs and metadata to filter conversations in your app.
 ---
 import ButtrflyImageUrl from '/docs/client-sdk/javascript/tutorials/img/following-other-filters-buttrfly.jpeg';
 import LensterImageUrl from '/docs/client-sdk/javascript/tutorials/img/following-requested-filters-lenster.png';

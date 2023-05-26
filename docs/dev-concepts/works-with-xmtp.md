@@ -1,6 +1,7 @@
 ---
 sidebar_label: Works with XMTP
 sidebar_position: 3.1
+description: "Here are just a few of the composable building blocks of web3 that work well with XMTP."
 ---
 import arbitrum from '/docs/dev-concepts/img/arbitrum-logo.png';
 import avalanche from '/docs/dev-concepts/img/avalanche-logo.png';

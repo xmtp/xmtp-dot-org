@@ -2,13 +2,14 @@
 sidebar_label: SDK quickstart
 sidebar_position: 1
 toc_max_heading_level: 4
+description: "This package provides the XMTP client SDK for React apps, including React hooks."
 ---
 
 # Quickstart for the XMTP React SDK
 
 ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 
-This package provides the [XMTP client SDK for React apps](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) written in TypeScript.
+This package provides the [XMTP client SDK for React apps](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk).
 
 This SDK is in **Developer Preview** status and ready for you to start building with.
 

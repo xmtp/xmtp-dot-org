@@ -8,10 +8,11 @@ description: Introducing "You've Got Mail" - An idea we want to build with the X
 image: ./media/CleanShot-2022-06-24-at-12.11.50@2x-1.png
 ---
 import ReactPlayer from 'react-player'
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 An idea we want to build with the XMTP community.
 
-![](./media/CleanShot-2022-06-24-at-12.11.50@2x-1.png)
+![XMTP card](./media/CleanShot-2022-06-24-at-12.11.50@2x-1.png)
 
 <!--truncate-->
 
@@ -55,4 +56,7 @@ P.S. Right now messages can only be sent to addresses that have used XMTP, but w
 
 P.P.S. Here's my incredible design UX for the landing page :)
 
-![](media/CleanShot-2022-06-22-at-14.21.34@2x.png)
+![hand-drawn design for the you've got mail landing page](media/CleanShot-2022-06-22-at-14.21.34@2x.png)
+
+<br/>
+<FeedbackWidget />

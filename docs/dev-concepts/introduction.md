@@ -1,6 +1,7 @@
 ---
 sidebar_label: Introduction
 sidebar_position: 1
+description: "XMTP is an open protocol, network, and standards for secure, private web3 messaging."
 ---
 
 # Introduction to XMTP

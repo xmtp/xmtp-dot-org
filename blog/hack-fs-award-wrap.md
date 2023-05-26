@@ -11,10 +11,11 @@ tags:
 - Hackathon
 ---
 import ReactPlayer from 'react-player'
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 [HackFS](https://fs.ethglobal.com/) by [@ETHGlobal](https://twitter.com/ETHGlobal) and [@ProtocolLabs](https://twitter.com/protocollabs) wrapped and, once again, the creativity and quality of the projects was outstanding.
 
-![](./media/blogPost.png)
+![HackFS awards wrap card](./media/blogPost.png)
 
 <!--truncate-->
 
@@ -34,7 +35,7 @@ After hearing countless stories about scams in the online ticketing process, thi
 * Development team: @[arthurka_eth](https://twitter.com/arthurka_eth), @[tenzin_rose](https://twitter.com/tenzin_rose)
 * Github repo:
 
-[![](media/arthurka-repo-card.png)](https://github.com/arthurka-o/decentralized-ticket-platform)
+[![arthurka-repo-card.png](media/arthurka-repo-card.png)](https://github.com/arthurka-o/decentralized-ticket-platform)
 
 
 ## Best Use - Optik  🥈
@@ -48,7 +49,7 @@ Optik is a web3-enabled video conferencing application. The platform provides a 
 * Development team: @[felixfpx](https://twitter.com/felixfpx), @[Dominichackett](https://twitter.com/Dominichackett), @[east9th](https://twitter.com/east9th)
 * Github repo:
 
-[![](media/optik-repo-card.png)](https://github.com/felixpx/hackfs)
+[![optik-repo-card.png](media/optik-repo-card.png)](https://github.com/felixpx/hackfs)
 
 
 ## Best Use - GhostShare 🥉
@@ -62,7 +63,7 @@ GhostShare is a service for sharing files in a private and decentralized way. Th
 * Development team: @[JorisZierold](https://twitter.com/JorisZierold), @[jorgeolmos86](https://twitter.com/jorgeolmos86)
 * Github repo:
 
-[![](media/ghostshare-repo-card.png)](https://github.com/Ghostshare)
+[![ghostshare-repo-card.png](media/ghostshare-repo-card.png)](https://github.com/Ghostshare)
 
 
 ## Honorable Mention - Self Sovereign Health Records 🙌
@@ -76,7 +77,7 @@ SSHR is a dapp that enables users to privately store and share their own electro
 * Development team: @[0xblitzordd](https://twitter.com/0xblitzordd), @[thinkbynumbers](https://twitter.com/thinkbynumbers), @[BrahmaSen](https://twitter.com/BrahmaSen)
 * Github repo:
 
-[![](media/sshr-repo-card.png)](https://github.com/yash-deore/sshr-hackfs)
+[![sshr-repo-card.png](media/sshr-repo-card.png)](https://github.com/yash-deore/sshr-hackfs)
 
 
 ## Honorable Mention - Supercluster 🙌
@@ -90,7 +91,7 @@ Supercluster is a Dapp that allows content creators to create private IPFS netwo
 * Development team: @[dysntr](https://twitter.com/dysntr), @[KaiHuang](https://twitter.com/KaiHuang), @[_gov218](https://twitter.com/_gov218), & CompositeFellow
 * Github repo:
 
-[![](media/supercluster-repo-card.png)](https://github.com/dysntr/supercluster)
+[![supercluster-repo-card.png](media/supercluster-repo-card.png)](https://github.com/dysntr/supercluster)
 
 We were so impressed by the above projects, and as we [shared on Twitter](https://twitter.com/xmtp_/status/1552304059289182209?s=20&t=noc0FU0wpTrl2ClkFn0_pA) this week, there were so many other creative ideas. [Take a look](https://twitter.com/xmtp_/status/1552304059289182209?s=20&t=noc0FU0wpTrl2ClkFn0_pA) for yourself and let us know how you are thinking about web3 messaging.
 
@@ -103,3 +104,6 @@ We were so impressed by the above projects, and as we [shared on Twitter](https:
 * 🐦 XMTP Official Twitter -[ https://twitter.com/xmtp_](https://twitter.com/xmtp_)
 * 🌐 XMTP Website -[ https://xmtp.com/](https://xmtp.com/)
 * 📖 Careers at XMTP Labs -[ https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
+
+<br/>
+<FeedbackWidget />

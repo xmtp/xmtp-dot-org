@@ -2,6 +2,7 @@
 sidebar_label: Architectural overview
 sidebar_position: 2.5
 toc_max_heading_level: 4
+description: "Learn about the architecture of XMTP and how it supports messaging between blockchain accounts."
 ---
 
 # Architectural overview of XMTP

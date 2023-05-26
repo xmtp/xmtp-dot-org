@@ -2,6 +2,7 @@
 sidebar_label: Components quickstart
 sidebar_position: 2
 toc_max_heading_level: 4
+description: "This package provides React components for building React apps with XMTP."
 ---
 
 # Quickstart for XMTP React components

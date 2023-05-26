@@ -1,6 +1,7 @@
 ---
 sidebar_label: Label conversations
 sidebar_position: 6
+description: Learn how to display conversation labels based on conversation IDs and metadata to help clarify the user experience.
 ---
 
 # Use labels to differentiate multiple conversations between a pair of addresses

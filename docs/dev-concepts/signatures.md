@@ -2,6 +2,7 @@
 sidebar_label: Account signatures
 sidebar_position: 9
 slug: account-signatures
+description: "Learn about what it means to sign to create and enable your XMTP identity."
 ---
 
 # Sign to send and receive messages using apps built with XMTP

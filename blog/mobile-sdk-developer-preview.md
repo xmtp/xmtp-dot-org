@@ -11,10 +11,11 @@ tags:
 - Developers
 - SDKs
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 This holiday season, we have an early gift for all the web3 developers out there. Our mobile SDKs are now available in [Developer Preview](/sdks-and-tools) 🧑‍💻
 
-![](./media/blogGraphic.png)
+![mobile sdk developer preview card](./media/blogGraphic.png)
 
 <!--truncate-->
 
@@ -31,3 +32,6 @@ Check out the repos:
 - [Swift](https://github.com/xmtp/xmtp-ios)
 - [Flutter](https://github.com/xmtp/xmtp-flutter)
 - [React Native](https://github.com/xmtp/example-chat-react-native)
+
+<br/>
+<FeedbackWidget />

@@ -12,10 +12,11 @@ tags:
 - Privacy & Security
 - Wallets
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 How XMTP enables wallets to secure conversations, not just transactions and assets.
 
-![](./media/secure-web3-messaging-post.png)
+![secure-web3-messaging-post.png](./media/secure-web3-messaging-post.png)
 
 <!--truncate-->
 
@@ -118,3 +119,6 @@ Here's a handful of helpful links to check out if you're keen to explore adding 
 * Follow [@xmtp_ on Twitter](https://twitter.com/xmtp_)
 * Feel free to send me a message personally, [@mg on Twitter](https://twitter.com/mg)
 * Come join the XMTP Labs team and mission, [check out our jobs page](https://blog.xmtp.com/careers/)
+
+<br/>
+<FeedbackWidget />

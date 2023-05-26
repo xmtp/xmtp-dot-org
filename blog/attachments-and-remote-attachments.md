@@ -11,6 +11,7 @@ tags:
 - SDKs
 - Developers
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Let's talk about some new content types for XMTP.
 
@@ -211,3 +212,6 @@ Additional reading:
 - [The introduction of Content Types in XIP 5](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md)
 - [The introduction of the Remote Attachment content type](https://github.com/xmtp/XIPs/pull/18)
 - [The introduction of filename/contentLength to remote attachments](https://github.com/xmtp/XIPs/pull/19)
+
+<br/>
+<FeedbackWidget />
