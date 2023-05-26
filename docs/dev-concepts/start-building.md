@@ -114,12 +114,14 @@ Consider following these best practices when developing your app:
 
 - Set the `env` client option to `dev` while developing. Set it to `production` before you launch.
 
-- If you are building with the xmtp-js SDK, set the [`appVersion` client option](/docs/client-sdk/javascript/tutorials/quickstart#configuring-the-client).    
+- If you are building with the JavaScript client SDK (`xmtp-js`), set the [`appVersion` client option](/docs/client-sdk/javascript/tutorials/quickstart#configuring-the-client).    
+
+- To optimize rendering performance on the web, render only what the user can see, instead of rendering everything. For example, if you are building with the React client SDK (`react-sdk`), use virtualized lists for conversations and messages (e.g. `react-virtuoso`).
 
 - Use [standard content types](content-types#standard-content-types) to ensure that message content sent using your app is interoperable with other apps.
   - By default, building with XMTP SDKs supports plain text messages. 
-  - To send remote media attachments, see [Some new content types](/blog/attachments-and-remote-attachments).
-  - To send custom content types, see [Build a custom content type](/docs/client-sdk/javascript/tutorials/use-content-types#build-a-custom-content-type).
+  - To send remote media attachments, see [Introducing remote media attachments](/blog/attachments-and-remote-attachments).
+  - To send custom content types, see [Build a custom content type](/docs/client-sdk/javascript/tutorials/use-content-types#build-a-custom-content-type). If you are using custom content types, be sure to provide [fallback text](https://xmtp.org/docs/dev-concepts/content-types#custom-content-types). A receiving app that can't handle the custom content can display the fallback plain text description instead.
 
 - Enable your app to track privacy-preserving metrics to help you understand app usage. For example:
     - \# of active wallets: Wallets sending at least one message
@@ -268,14 +270,14 @@ Caching the conversation list can improve performance of `client.conversations.l
 
 - Use the JavaScript client SDK (`xmtp-js`) to [cache the conversation list](https://xmtp.org/docs/client-sdk/javascript/tutorials/quickstart#cache-conversations)
 - Use the Kotlin client SDK (`xmtp-android`) to [cache the conversation list](https://xmtp.org/docs/client-sdk/kotlin/tutorials/quickstart#cache-convers`ations)
-- With the React client SDK (`react-sdk`), enable the conversation cache when initializing the client and use virtualized lists for conversations (e.g. `react-virtuoso`)
+- With the React client SDK (`react-sdk`), enable the conversation cache when initializing the client
 
 ### Cache message histories
 
 Serialize securely stored `DecodedMessage` histories, avoiding the need to download and decrypt the same message on every session.
 
 - Use the JavaScript client SDK (`xmtp-js`) to [serialize securely stored decoded message histories](https://github.com/xmtp/xmtp-js/releases/tag/v8.0.0)
-- With the React client SDK (`react-sdk`), use virtualized lists for messages (e.g. `react-virtuoso`) and message caching with the `useCachedMessages` hook
+- With the React client SDK (`react-sdk`), use message caching with the `useCachedMessages` hook
 
 ### Page through messages
 
