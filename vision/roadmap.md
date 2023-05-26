@@ -11,14 +11,14 @@ Timelines are estimates and subject to change. For information about delivered f
 
 ### Q2
 
-- Group chat
+- Group chat - experimental/Pre-Preview
 - Media attachments, reactions, and replies
-- React Native SDK
+- React Native SDK - Developer Preview
 
 ### Q3
 
-- Android SDK
-- React SDK
+- Android SDK - GA
+- React SDK - GA
 - Secret conversations: A new conversation type with additional Signal-level security properties such as forward secrecy and expiring message history
 
 ### Q4
