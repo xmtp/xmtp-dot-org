@@ -175,7 +175,7 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ### Vision
 
-- [XMTP roadmap](/vision/roadmap)
+- [XMTP roadmap](/roadmap)
 
 ### Documentation
 

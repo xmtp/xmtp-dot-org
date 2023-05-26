@@ -142,17 +142,6 @@ const config = {
         showLastUpdateTime: true,
       },
     ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'vision',
-        path: 'vision',
-        routeBasePath: 'vision',
-        sidebarPath: require.resolve('./sidebars/sidebars-vision.js'),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateTime: true,
-      },
-    ],
   ],
 
   themeConfig:
@@ -228,7 +217,7 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'vision/roadmap',
+            to: 'roadmap',
             position: 'right',
             label: 'Roadmap',
             activeBaseRegex: `/`,
@@ -424,7 +413,7 @@ const config = {
             items: [
               {
                 label: 'Roadmap',
-                to: '/vision/roadmap',
+                to: 'roadmap',
               },
             ],
           },
