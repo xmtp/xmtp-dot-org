@@ -1,10 +1,10 @@
 ---
-sidebar_label: React SDK hooks quickstart
+sidebar_label: React SDK quickstart
 sidebar_position: 1
 toc_max_heading_level: 4
 ---
 
-# React SDK hooks quickstart
+# Quickstart for React SDK hooks and components
 
 ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 

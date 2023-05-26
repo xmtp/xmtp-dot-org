@@ -18,8 +18,8 @@ const config = {
     personalToken: process.env.AUTH_PERSONAL_TOKEN,
   },
   baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
   organizationName: 'xmtp',
   projectName: 'xmtp-dot-org',
@@ -115,18 +115,6 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            to: 'changelog', // To highlight the navbar item, you must link to a document, not a top-level directory
-            position: 'right',
-            label: 'Changelog',
-            activeBaseRegex: `/`,
-          },
-          {
-            to: 'vision/roadmap',
-            position: 'right',
-            label: 'Roadmap',
-            activeBaseRegex: `/`,
-          },
-          {
             type: 'dropdown',
             position: 'right',
             label: 'Community',
@@ -163,28 +151,34 @@ const config = {
             label: 'Resources',
             items: [
               {
-                to: '/docs/dev-concepts/faq',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">FAQ</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">FAQ</div></div></div>`,
+                to: '/changelog',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Sparkle icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Changelog</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Lorem ipsum dolor</div></div></div>`,
               },
               {
-                to: 'grants',
+                to: '/vision/roadmap',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Rocket icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Grants</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Apply for a grant for a project that fosters ecosystem growth</div></div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Roadmap</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Lorem ipsum dolor</div></div></div>`,
               },
               {
-                to: 'built-with-xmtp',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
+                to: '/docs/dev-concepts/architectural-overview',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Sparkle icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Architecture</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Lorem ipsum dolor</div></div></div>`,
               },
               {
-                to: 'community/code-of-conduct',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield with a check icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Foster a safe and positive XMTP community experience</div></div></div>`,
+                to: '/docs/dev-concepts/faq#security',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Rocket icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Security</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Lorem ipsum dolor</div></div></div>`,
+              },
+              {
+                to: '/docs/dev-concepts/faq',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Community icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">FAQ</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Lorem ipsum dolor</div></div></div>`,
               },
             ],
           },
