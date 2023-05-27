@@ -62,7 +62,7 @@ To support decentralized identity management:
 - [Coinbase cb.id](https://help.coinbase.com/en/wallet/managing-account/coinbase-ens-support)
 - [Lens](https://www.lens.xyz/)
 - [Everyname](https://everyname.xyz)
-    - Name and Address Middleware Protocol. Example implementation in [xmtp-inbox-web](https://github.com/johannafransn/xmtp-inbox-web/commit/dd2425fe03548248e62ef265e8c930d13af91e4f)
+    - Name and Address Middleware Protocol to resolve any onchain name service. Example implementation in [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web/pull/284)
 
 
 ## Decentralized social
