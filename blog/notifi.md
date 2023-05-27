@@ -12,6 +12,7 @@ tags:
 - Messaging
 ---
 import ReactPlayer from 'react-player'
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 With Notifi, XMTP in-app messages can now trigger notifications to any web2 app, so devs can reliably reach their end-users without compromising on security.
 
@@ -54,3 +55,6 @@ You can fork the XMTP example app and Notifi experience repo shown in the exampl
 **Learn more about Notifi:**
 
 Notifi simplifies and prioritizes communication across messaging channels within the web3 ecosystem. Notifi is re-imaging how to eliminate distractions in the real world and help boost engagements between projects and users with support for multichannel communications. The Notifi platform enables teams to access the most relevant and highest-priority communications for increased focus, a productive workforce, and happier customers. The platform is being designed with simple APIs for easy integration, customizable experiences, and advanced features for dApps and Web3 applications. **[https://www.notifi.network/](https://www.notifi.network/)**
+
+<br/>
+<FeedbackWidget />

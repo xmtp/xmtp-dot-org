@@ -12,6 +12,7 @@ tags:
 - Messaging
 ---
 import ReactPlayer from 'react-player'
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 XMTP and Lens hosted a Twitter Spaces event on November 10 to dig into how developers can now use XMTP to add E2EE DMs into their Lens apps.
 
@@ -298,3 +299,6 @@ commerce websites today go and build the shopping cart infrastructure from the g
 [00:43:42] Matt Galligan - XMTP: Yeah. Awesome. Thanks for that, Elise. And I know that the Lens folks have to drop, and we are at our time. Just wanted to say thanks to everybody that joined us today. By all means, if anybody wants to follow up you can reach us, directly on any of our socials XMTP.org Lens.xyz. Reach out to us.
 
 [00:44:02] Let's go build together. I think the Lens tagline is, Let's fucking grow. This was really. Thanks everybody.
+
+<br/>
+<FeedbackWidget />

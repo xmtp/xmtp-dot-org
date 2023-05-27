@@ -11,10 +11,11 @@ tags:
 - Litepaper
 - Messaging
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 A primer on XMTP—the secure web3 messaging protocol—why we're building it, how it works, and where we see it going in the future.
 
-![](./media/LitepaperAsset.png)
+![litepaper card](./media/LitepaperAsset.png)
 
 <!--truncate-->
 
@@ -33,3 +34,6 @@ So in the meantime, while we continue to build, we invite you to:
 * Read the [XMTP Litepaper](https://github.com/xmtp/litepaper)
 * Discuss it with us on [Twitter](https://twitter.com/xmtp_), [Discord](https://discord.gg/xmtp), and [GitHub Discussions](https://github.com/orgs/xmtp/discussions)
 * Check out the [XMTP docs](/docs/dev-concepts/introduction) to get started building
+
+<br/>
+<FeedbackWidget />

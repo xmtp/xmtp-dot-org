@@ -11,10 +11,11 @@ tags:
 - Developers
 - Grants
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Announcing XMTP Grants! A program to nurture web3 messaging projects, support public good creation, and foster ecosystem growth.
 
-![](./media/XMTP-Grants-Cover.png)
+![XMTP-Grants-Cover.png](./media/XMTP-Grants-Cover.png)
 
 <!--truncate-->
 
@@ -27,3 +28,6 @@ While we’re open to any and all proposals, some ideas we’re especially excit
 The future of web3 messaging is in the hands of developers like you, and we want to do our part in supporting you in your efforts to build something great. Apply for the XMTP Grants program today and join the community of developers building on XMTP.
 
 Apply today at [grants.xmtp.org](https://grants.xmtp.org/)! Let’s build the future of messaging together 🤝
+
+<br/>
+<FeedbackWidget />

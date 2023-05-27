@@ -296,6 +296,10 @@ const config = {
                 to: `/docs/client-sdk/swift/tutorials/quickstart`,
               },
               {
+                label: `React`,
+                to: `/docs/client-sdk/react/tutorials/quickstart`,
+              },
+              {
                 label: `Dart`,
                 to: `/docs/client-sdk/dart/tutorials/quickstart`,
               },
@@ -341,6 +345,10 @@ const config = {
                 to: `/docs/dev-concepts/invitation-and-message-encryption`,
               },
               {
+                label: `Algorithms in use`,
+                to: `/docs/dev-concepts/algorithms-in-use`,
+              },
+              {
                 label: `Account signatures`,
                 to: `/docs/dev-concepts/account-signatures`,
               },
@@ -364,6 +372,14 @@ const config = {
               {
                 label: 'Example apps',
                 to: 'sdks-and-tools#example-apps',
+              },
+              {
+                label: 'Developer tools',
+                to: 'sdks-and-tools#developer-tools',
+              },
+              {
+                label: 'Ecosystem projects',
+                to: '/sdks-and-tools#ecosystem-projects',
               },
               {
                 label: 'XMTP status page',

@@ -12,10 +12,11 @@ tags:
 - Spotlight
 ---
 import ReactPlayer from 'react-player'
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Inspiration comes from everywhere in web3. Check out XMTP co-founder Shane Mac as he shares how Linkin Park’s Mike Shinoda was a key inspiration for XMTP’s approach to web3 messaging.
 
-![](./media/xmtp-mike-shinoda-post.png)
+![xmtp-mike-shinoda-post.png](./media/xmtp-mike-shinoda-post.png)
 
 <!--truncate-->
 
@@ -30,3 +31,6 @@ Inspiration comes from everywhere in web3. Check out XMTP co-founder Shane Mac a
 Check out how [XMTP is delivering secure direct messages with the Lens API](lens-dms-with-xmtp/).
 
 What do you think of this? Get in touch!
+
+<br/>
+<FeedbackWidget />

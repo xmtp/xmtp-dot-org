@@ -1,6 +1,7 @@
 ---
 sidebar_label: Build an XMTP "GM" app
 sidebar_position: 4
+description: Build this app to learn some of the fundamental concepts involved in building with XMTP.
 ---
 
 # Build an XMTP "GM!" app

@@ -27,7 +27,9 @@ const tags = {
   builtwithxmtp: { name: 'Built with XMTP', url: '/blog/tags/built-with-xmtp/' },
   company: { name: 'Company', url: '/blog/tags/company/' },
   contenttypes: { name: 'Content Types', url: '/blog/tags/content-types/' },
+  decentralization: { name: 'Decentralization', url: '/blog/tags/decentralization/' },
   developers: { name: 'Developers', url: '/blog/tags/developers/' },
+  encryption: { name: 'Encryption', url: '/blog/tags/encryption/' },
   grants: { name: 'Grants', url: '/blog/tags/grants/' },
   hackathon: { name: 'Hackathon', url: '/blog/tags/hackathon/' },
   lens: { name: 'Lens', url: '/blog/tags/lens/' },
@@ -43,6 +45,33 @@ const tags = {
 
 export const BLOG_DATA = [
   {
+    tag: [tags.decentralization],
+    title: 'XMTP: The journey to decentralization',
+    content:
+      "XMTP Labs is taking a phased approach toward architectural and logical decentralization of the network. The mission is to make sure the network is permissionless: owned by infrastructure providers and users that choose to participate, which can be anyone.",
+    user: {
+      name: 'Montez',
+      date: '26 May 2023 · 5 min read',
+      img: 'montez.png',
+      url: 'https://twitter.com/xmtp_'
+    },
+    url: '/blog/journey-to-decentralization',
+  },
+  {
+    tag: [tags.contenttypes, tags.developers, tags.encryption, tags.sdks],
+    title:
+      'Send remote attachments with Thirdweb & XMTP SDKs',
+    content:
+      "Follow these steps to start sending image attachments to wallets within your chat app. Our sample app includes everything you need to connect to wallets with thirdweb's WalletSDK, use XMTP's remote attachments, and upload larger files to thirdweb's storage.",
+    user: {
+      name: 'fabri',
+      date: '12 May 2023 · 7 min read',
+      img: 'fabri.jpeg',
+      url: 'https://twitter.com/fabriguespe'
+    },
+    url: '/blog/thirdbweb-wallet-remote-attachments',
+  },
+  {
     tag: [tags.builtwithxmtp, tags.developers, tags.messaging, tags.nfts],
     title:
       'Join the movement: own your conversations with Converse',
@@ -55,33 +84,6 @@ export const BLOG_DATA = [
       url: 'https://twitter.com/RochelleSophie_'
     },
     url: '/blog/join-the-movement',
-  },
-  {
-    tag: [tags.announcements, tags.developers, tags.messaging],
-    title: 'Breaking the web2 barrier: How XMTP and Notifi are bridging the gap for web3 apps with web2 notifications',
-    content:
-      "With Notifi, XMTP in-app messages can now trigger notifications to any web2 app, so devs can reliably reach their end-users without compromising on security.",
-    user: {
-      name: 'Rochelle Guillou',
-      date: '28 Apr 2023 · 3 min read',
-      img: 'rochelle-headshot.jpeg',
-      url: 'https://twitter.com/RochelleSophie_'
-    },
-    url: '/blog/notifi',
-  },
-  {
-    tag: [tags.contenttypes, tags.developers, tags.sdks],
-    title:
-      'Some new content types',
-    content:
-      "Let's talk about some new content types for XMTP. What's a content type? A content type is a way to describe the type of content a message contains on XMTP.",
-    user: {
-      name: 'Engineering',
-      date: '06 Mar 2023 · 7 min read',
-      img: 'xmtp-icon.jpeg',
-      url: 'https://twitter.com/xmtp_'
-    },
-    url: '/blog/attachments-and-remote-attachments',
   },
 ]
 

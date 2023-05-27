@@ -8,6 +8,7 @@ description: "XMTP Labs is taking a phased approach toward architectural and log
 tags:
 - Decentralization
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 XMTP Labs is taking a phased approach toward architectural and logical decentralization of the network. The mission is to make sure the network is permissionless: owned by infrastructure providers and users that choose to participate, which can be anyone. Taking it further, these permissionless infrastructure providers and users will become symbiotic, since one can’t exist without the other. 
 
@@ -97,6 +98,7 @@ XMTP Labs is taking a phased approach toward architectural and logical decentral
 
     Node operators earn token rewards and fees for driving consensus of the network and facilitating any transactions between network participants
 
-Have any questions or feedback? Send a note to `feedback.xmtp.chat` using [xmtp.chat](https://xmtp.chat/).
-
 _To follow the XMTP network on its path to decentralization, see the [Decentralization roadmap](/roadmap#decentralization-roadmap)._
+
+<br/>
+<FeedbackWidget />

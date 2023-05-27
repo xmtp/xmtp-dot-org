@@ -12,6 +12,7 @@ tags:
 - Messaging
 - NFTs
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 In web3, token-gated messaging opens up a world where you can see verifiable transactions and facts about the sender that help you vet who you want to interact with.
 
@@ -72,4 +73,7 @@ This proof-of-concept enables any web3 developer to:
 
 See for yourself at @NftTopBest’s project [repo](https://github.com/NftTopBest/example-chat-react-gitcoin-hackathon/pull/1):
 
-[![](media/nft-top-best-repo-card.png)](https://github.com/NftTopBest/example-chat-react-gitcoin-hackathon/pull/1)
+[![nft-top-best-repo-card.png](media/nft-top-best-repo-card.png)](https://github.com/NftTopBest/example-chat-react-gitcoin-hackathon/pull/1)
+
+<br/>
+<FeedbackWidget />

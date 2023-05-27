@@ -1,6 +1,7 @@
 ---
 sidebar_label: Build key XMTP chat features in a Lens app
 sidebar_position: 3
+description: Build messaging into your Lens app with the flexibility to provide a variety of user experiences.
 ---
 
 # Build key XMTP chat features in a Lens app

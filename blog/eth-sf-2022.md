@@ -11,10 +11,11 @@ tags:
 - Hackathon
 - Spotlight
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 "Wow" is just about the best way we could sum up [@ETHGlobal](https://twitter.com/ETHGlobal)'s [#ETHSanFrancisco](https://twitter.com/hashtag/ETHSanFrancisco?src=hashtag_click).
 
-![](./media/ETHSF-Wrapup---Alt.png)
+![ETHSF-Wrapup card](./media/ETHSF-Wrapup---Alt.png)
 
 <!--truncate-->
 
@@ -35,9 +36,9 @@ Also an event finalist! NFT beeper with XMTP as the message relay to broadcast m
 
 ### Check out the repo:
 
-[![](media/beep3r-repo-card.png)](https://github.com/FUTUREPRIMITIVEXYZ/bb3-beep3r)
+[![beep3r-repo-card.png](media/beep3r-repo-card.png)](https://github.com/FUTUREPRIMITIVEXYZ/bb3-beep3r)
 
-![](media/FhS69XDUUAABfRF.jpeg)
+![beep3r team on stage](media/FhS69XDUUAABfRF.jpeg)
 
 
 ## Torpedo for Best Use 🥇
@@ -49,7 +50,7 @@ A crypto marketplace for trading cloud compute. The team used XMTP as an E2EE tr
 
 [@ketan_jog](https://twitter.com/ketan_jog) [@jayendra_ram](https://twitter.com/jayendra_ram) [@AnthonyZhou101](https://twitter.com/AnthonyZhou101)
 
-![](media/FhS69z4VIAAkdbK.jpeg)
+![Torpedo team](media/FhS69z4VIAAkdbK.jpeg)
 
 
 ## Relay for Runner Up 🥈
@@ -64,7 +65,7 @@ A web3 Zapier which can automate notifications on EVM chains. With Relay, users 
 
 ### Check out the repo:
 
-[![](media/relay-repo-card.png)](https://github.com/agxmbhir/relay)
+[![relay-repo-card.png](media/relay-repo-card.png)](https://github.com/agxmbhir/relay)
 
 
 ## PreshMail for Runner Up 🥈
@@ -79,7 +80,7 @@ PreshMail allows users to be paid to receive messages through XMTP. It has a dyn
 
 ### Check out the repo:
 
-[![](media/preshmail-repo-card.png)](https://github.com/Omegachads)
+[![preshmail-repo-card.png](media/preshmail-repo-card.png)](https://github.com/Omegachads)
 
 
 ## Decentral Couch with an Honorable Mention 🥉
@@ -94,9 +95,9 @@ Also an event finalist and [@0xPolygon](https://twitter.com/0xPolygon) winner. A
 
 ### Check out the repo:
 
-[![](media/decentralcouch-repo-card.png)](https://github.com/jeffzwang/ethsf)
+[![decentralcouch-repo-card.png](media/decentralcouch-repo-card.png)](https://github.com/jeffzwang/ethsf)
 
-![](media/FhS6-fUUUAIJ-3O.jpeg)
+![Decentral Couch team on stage](media/FhS6-fUUUAIJ-3O.jpeg)
 
 
 ## GameChat got an Honorable Mention 🥉
@@ -111,7 +112,7 @@ A web3-native gaming chat client which used zero-knowledge proofs to allow playe
 
 ### Check out the repo:
 
-[![](media/gamechat-repo-card.png)](https://github.com/orgs/ethsfX22/repositories)
+[![gamechat-repo-card.png](media/gamechat-repo-card.png)](https://github.com/orgs/ethsfX22/repositories)
 
 
 ## Confi with an Honorable Mention 🥉
@@ -126,7 +127,7 @@ A platform that helps sexual assault victims remain anonymous, aided by end-to-e
 
 ### Check out the repo:
 
-[![](media/confi-repo-card.png)](https://github.com/SaraGabriela/Confi)
+[![confi-repo-card.png](media/confi-repo-card.png)](https://github.com/SaraGabriela/Confi)
 
 
 Altogether it was an incredible event. With 1,700 devs across 34 countries, [#ETHSanFrancisco](https://twitter.com/hashtag/ETHSanFrancisco?src=hashtag_click) was the largest IRL [@ETHGlobal](https://twitter.com/ETHGlobal) event yet!
@@ -134,3 +135,6 @@ Altogether it was an incredible event. With 1,700 devs across 34 countries, [#ET
 Developers continued to amaze us, building apps on XMTP that went far beyond DMs, chat, and obvious messaging use cases.
 
 Awesome work everyone!
+
+<br/>
+<FeedbackWidget />

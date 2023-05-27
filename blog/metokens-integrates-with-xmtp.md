@@ -11,10 +11,11 @@ tags:
 - Messaging
 - Spotlight
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 With XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.
 
-![](./media/meTokensShareSplit.png)
+![meTokens x XMTP card](./media/meTokensShareSplit.png)
 
 <!--truncate-->
 
@@ -33,7 +34,7 @@ meTokens Labs has built the bridge between creators and patrons who want to purc
 
 To help fulfill this vision, **meTokens Labs has developed an XMTP client to enable tokenized-chat.** The meTokens XMTP chat client allows creators to filter their inbox by their stakeholders, collaborators or patrons, and have those individuals appear at the top of your inbox.
 
-![](media/pasted-image-0.png)
+![meTokens Inbox](media/pasted-image-0.png)
 
 meTokens’ founder Chris Robison fills in the story this way,
 
@@ -52,3 +53,6 @@ meTokens could revolutionize the Creator Economy. The mission of meTokens is to 
 
 - [Mint a meToken!](http://www.metokens.com/)
 - [Join meTokens Discord](https://discord.gg/eXSRUQbGKK)
+
+<br/>
+<FeedbackWidget />

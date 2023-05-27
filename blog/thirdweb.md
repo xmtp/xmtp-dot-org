@@ -16,6 +16,7 @@ tags:
   - WalletSDK
   - Thirdweb
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 ![thirdweb.jpg](./media/xmtp-thirdweb/hero.png)
 
@@ -87,7 +88,7 @@ npm install @thirdweb-dev/react @thirdweb-dev/sdk @xmtp/xmtp-js xmtp-content-typ
 
 ### Setting up the ConnectWallet button
 
-![](./media/xmtp-thirdweb/wallet.png)
+![thirdweb Connect Wallet button](./media/xmtp-thirdweb/wallet.png)
 
 Begin by wrapping the app with `ThirdwebProvider`, then use the `ConnectWallet` component to establish wallet connectivity.
 
@@ -112,7 +113,7 @@ That’s it! Next, proceed with signing in to XMTP.
 
 ### Signing in with XMTP
 
-![](./media/xmtp-thirdweb/xmtp-sign.png)
+![Connect to XMTP button](./media/xmtp-thirdweb/xmtp-sign.png)
 
 Create a new XMTP instance and register the content types your chat app will utilize.
 
@@ -307,3 +308,6 @@ That was easy! Now you can send and receive messages with attachments using XMTP
 ### Join us on Discord
 
 We're excited to be partnering with Thirdweb to bring you better solutions for serving and reaching your end-users. [Stay tuned](https://discord.com/invite/xmtp) for more guides coming soon!
+
+<br/>
+<FeedbackWidget />

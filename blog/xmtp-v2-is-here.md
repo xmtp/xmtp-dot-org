@@ -11,6 +11,7 @@ tags:
 - Protocol
 ---
 import ReactPlayer from 'react-player'
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 The latest version brings conversation filtering and improvements to privacy.
 
@@ -90,3 +91,6 @@ Come build with XMTP at:
 - Discord: https://discord.gg/xmtp
 
 - Careers at XMTP Labs: https://blog.xmtp.com/careers/
+
+<br/>
+<FeedbackWidget />

@@ -13,10 +13,11 @@ tags:
 - Messaging
 - Privacy & Security
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 We just got back from [ETH NYC](https://ethglobal.com/) and what a great event. 1,300 builders, 50 sponsors, so much energy…
 
-![](./media/eth-nyc-awards-graphic.png)
+![eth-nyc-awards-graphic.png](./media/eth-nyc-awards-graphic.png)
 
 <!--truncate-->
 
@@ -31,13 +32,13 @@ We’re highlighting 3 hackathon submissions so you can see some examples of end
 
 Merchants and customers need systems that eliminate fraud in a verified/ trusted chat. The Market3 demo showcased how both buyer and seller will have E2EE chats through an Intercom-type widget.
 
-![alt_text](media/market3-2.png)
+![market3 screen](media/market3-2.png)
 
 * Development team: [@RealKevinYang ](https://twitter.com/RealKevinYang), [@zihuajliu](https://twitter.com/zihuajliu)
 * Live demo: [https://www.loom.com/share/21c1bf50846b4d25a2e0886a59057386](https://www.loom.com/share/21c1bf50846b4d25a2e0886a59057386)
 * Github repo:
 
-[![](media/openmagic-repo-card.png)](https://github.com/openmagic-io/openmagic-community-marketplace-demo)
+[![openmagic-repo-card.png](media/openmagic-repo-card.png)](https://github.com/openmagic-io/openmagic-community-marketplace-demo)
 
 ---
 
@@ -50,13 +51,13 @@ OTC Swap showed that it’s possible for buyers and sellers to have an experienc
 
 OTC Swap was able to accomplish this in eight hours by combining XMTP, [OpenSea Seaport](https://opensea.io/blog/announcements/launching-seaport-saving-the-community-millions-in-fees/), IPFS, and EPNS.
 
-![alt_text](media/image--1--1-2.png)
+![OTC Swap screen](media/image--1--1-2.png)
 
 * Development team: [@0x_Yuzu](https://twitter.com/0x_Yuzu)
 * Live demo:[ https://otc-swap.vercel.app/](https://otc-swap.vercel.app/)
 * Github repo:
 
-[![](media/otcswap-repo-card.png)](https://github.com/Aqrare/eth-nyc)
+[![otcswap-repo-card.png](media/otcswap-repo-card.png)](https://github.com/Aqrare/eth-nyc)
 
 ---
 
@@ -65,14 +66,14 @@ OTC Swap was able to accomplish this in eight hours by combining XMTP, [OpenSea 
 
 Burn My Wallet created a "kill switch" for a stolen wallet. When a user reports their wallet as stolen, Burn My Wallet creates a non-transferable token that marks the wallet hacked. This means applications will have a source of truth for the wallet status.  Messaging apps using XMTP can integrate the Burn My Wallet API, and easily check if wallets have been hacked. One user benefit is that this will automatically lock the conversation of the hacked wallet to prevent any spoofing or sharing of sensitive information.
 
-![alt_text](media/burnmywallet-3.png)
+![burn my wallet screen](media/burnmywallet-3.png)
 
 * Development team: [@NikitaVarabei](https://twitter.com/NikitaVarabei), [@erinleelikes](https://twitter.com/erinleelikes)
 * Live demo:[ https://burnmywallet.com/](https://burnmywallet.com/)
 * Docs [https://docs.burnmywallet.com/](https://docs.burnmywallet.com/)
 * Github repo:
 
-[![](media/burnmywallet-repo-card.png)](https://github.com/NikitaVr/burnmywallet)
+[![burnmywallet-repo-card.png](media/burnmywallet-repo-card.png)](https://github.com/NikitaVr/burnmywallet)
 
 ---
 
@@ -83,3 +84,6 @@ Burn My Wallet created a "kill switch" for a stolen wallet. When a user reports 
 * 🐦 XMTP Official Twitter - [https://twitter.com/xmtp_](https://twitter.com/xmtp_)
 * 🌐 XMTP Website - [https://xmtp.com/](https://xmtp.com/)
 * 📖 Careers at XMTP Labs - [https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
+
+<br/>
+<FeedbackWidget />

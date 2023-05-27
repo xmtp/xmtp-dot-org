@@ -12,6 +12,7 @@ tags:
 - Messaging
 - NFTs
 ---
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 # Join the movement: own your conversations with Converse
 
@@ -50,3 +51,6 @@ With XMTP, the possibilities for building and nurturing relationships way surpas
 Picture having every major NFT marketplace, wallet, defi, and gamefi app communicating with each other, in a way that is secure and private. That’s the global network we’re building. It’s a whole movement, and you can join it today with Converse: the WhatsApp for web3. 
 
 [Download the Converse app](https://getconverse.app/) and put in any 0x, .eth, or .lens address to start a new message!
+
+<br/>
+<FeedbackWidget />
