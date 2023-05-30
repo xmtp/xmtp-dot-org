@@ -37,7 +37,7 @@ Timelines are estimates and subject to change. For information about delivered f
 
 ### Long term (~6 months)
 
-- Third-party operators can run xmtpd nodes that participate in the XMTP network
-- Incentivization in limited testnet: node rewards and economic spam control
+- Limited public testnet: Third-party operators can run `xmtpd` nodes that participate in the XMTP network
+- v1 economic model, including universal consent
 
 To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
