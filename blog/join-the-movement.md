@@ -34,7 +34,7 @@ A portable inbox if you will, that is tied to your web3 identity.
 
 Converse partnered with XMTP to build their app because both of our teams believe that users should be the ones to own their conversations. We own our keys, our crypto... and now it’s time we own our digital relationships.
 
-The XMTP protocol allows for secure and private messaging between wallets, so anyone can join the network without having to share their digital life. What’s more — [your inbox becomes interoperable](/docs/dev-concepts/interoperable-inbox), which means you can start a conversation on one app — let’s say [Lenster](https://lenster.xyz/) — and pick it back up in another — e.g. the [new Converse Messenger](https://getconverse.app/) you just downloaded. 
+The XMTP protocol allows for secure and private messaging between wallets, so anyone can join the network without having to share their digital life. What’s more — [your inbox becomes interoperable](/docs/concepts/interoperable-inbox), which means you can start a conversation on one app — let’s say [Lenster](https://lenster.xyz/) — and pick it back up in another — e.g. the [new Converse Messenger](https://getconverse.app/) you just downloaded. 
 
 > “It’s clear that people want to own their communications and their identity. They want it to be private and secure, and they want to be able to take it with them and not have it in the hands of a centralized, single company. We think the shift to that reality is very powerful and puts power and ownership in the hands of the people at a level we’ve never seen on the internet. Empowering that change is why we started XMTP. ” ~ Shane Mac, Co-Founder and CEO at XMTP
 

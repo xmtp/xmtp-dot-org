@@ -1,0 +1,27 @@
+---
+sidebar_label: Algorithms
+sidebar_position: 8
+---
+
+# Algorithms in use
+
+XMTP supports the replacement and expansion of supported algorithms in a backward-compatible manner.
+
+Supported algorithms are selected based on fairly pragmatic criteria. For example, the algorithm must be:
+
+* Tried and true and in widespread use
+* Well-supported in desirable XMTP client app languages, such as JavaScript
+* Available in standard browser APIs, rather than via third-party dependencies
+
+XMTP also aims to reuse existing algorithms, looking to well-known and standard algorithms with trustworthy implementations.
+
+As such, XMTP's cryptographic primitives are built around the standard [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto) and the [@noble libraries](https://www.npmjs.com/package/@noble/secp256k1), using components of Signal's X3DH protocol for secure offline communication.
+
+Specifically, XMTP's participant authentication and message encryption algorithm choices include:
+
+* EC Public/Private Keys (secp256k1)
+* ECDSA signatures and signing of public keys (ECDSA and EIP-191)
+* Shared secret derivation (ECDH/X3DH)
+* Authenticated symmetric encryption (AEAD: AES-256-GCM)
+* Symmetric key derivation (HKDF-SHA-256)
+* X3DH-style key bundles ([X3DH Key Agreement Protocol](https://signal.org/docs/specifications/x3dh/))

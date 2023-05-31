@@ -171,7 +171,7 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ### XMTP concepts
 
-- [XMTP development concepts](/docs/dev-concepts/introduction)
+- [XMTP development concepts](/docs/introduction)
 
 ### Vision
 
@@ -179,7 +179,7 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ### Documentation
 
-- [JavaScript client SDK docs](/docs/client-sdk/javascript/concepts/intro-to-sdk)
+- [Start building with XMTP](/docs/build/start-building)
 
 ### SDKs
 

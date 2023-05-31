@@ -34,7 +34,7 @@ The WalletSDK is a development kit that grants developers access to a comprehens
 ### XMTP Content-Types
 
 Content types are a way to describe the _type_ of _content_ a message contains on XMTP. Out of the box, XMTP's SDKs support one content type: `text`.
-[Read more](https://xmtp.org/docs/dev-concepts/content-types)
+[Read more](https://xmtp.org/docs/concepts/content-types)
 
 ### Thirdweb storage
 

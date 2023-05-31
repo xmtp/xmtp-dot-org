@@ -18,7 +18,7 @@ export default function PrimaryMenuWrapper(props) {
           {colorMode === 'dark' ? (
             <>
               <img
-                src="/img/icons/dark.svg"
+                src="/img/dark.svg"
                 onClick={() => handleMode('light')}
                 alt="Change color mode dark icon"
               />
@@ -27,7 +27,7 @@ export default function PrimaryMenuWrapper(props) {
             <>
               <img
                 className="invert"
-                src="/img/icons/light.svg"
+                src="/img/light.svg"
                 onClick={() => handleMode('dark')}
                 alt="Change color mode light icon"
               />

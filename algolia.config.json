@@ -8,7 +8,7 @@
         "selectors_key": "javascript-sdk-concepts"
       },
       {
-        "url": "https://xmtp.org/docs/client-sdk/javascript/tutorials/*",
+        "url": "https://xmtp.org/docs/build/*",
         "tags": "javascript-sdk-tutorials",
         "selectors_key": "javascript-sdk-tutorials"
       },
@@ -48,7 +48,7 @@
         "selectors_key": "dart-sdk-reference"
       },
       {
-        "url": "https://xmtp.org/docs/dev-concepts/*",
+        "url": "https://xmtp.org/docs/concepts/*",
         "tags": "dev-concepts",
         "selectors_key": "dev-concepts"
       },
@@ -63,7 +63,7 @@
         "selectors_key": "roadmap"
       },
       {
-        "url": "https://xmtp.org/sdks-and-tools",
+        "url": "https://xmtp.org/docs/introduction#xmtp-sdks-and-example-apps",
         "tags": "sdks-and-tools",
         "selectors_key": "sdks-and-tools"
       },
