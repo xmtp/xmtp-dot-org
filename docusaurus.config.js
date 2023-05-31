@@ -141,31 +141,31 @@ const config = {
                 to: 'docs/changelog',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Changelog</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Latest releases for SDKs, dev tools, and node software</div></div></div>`,
+                <div class="subtext text-sm text-normal whitespace-pre-line">Latest releases</div></div></div>`,
               },
               {
                 to: 'roadmap',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map-icon.svg" alt="Map icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Roadmap</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Future feature and decentralization milestones</div></div></div>`,
+                <div class="subtext text-sm text-normal whitespace-pre-line">Future features and decentralization milestones</div></div></div>`,
               },
               {
                 to: 'docs/concepts/architectural-overview',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/block-icon.svg" alt="Sparkle icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Architecture</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Architecture of the network and client layers of XMTP</div></div></div>`,
+                <div class="subtext text-sm text-normal whitespace-pre-line">Architecture of the XTMP network and client layers</div></div></div>`,
               },
               {
                 to: 'docs/concepts/faq#security',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/lock-closed-icon.svg" alt="Lock icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Security</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Overview of the security features of XMTP</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Overview of XMTP security</div></div></div>`,
               },
               {
                 to: 'docs/concepts/faq',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/question-mark-icon.svg" alt="Shield with a check icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">FAQ</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">FAQ about the network, fees, storage, and more</div></div></div>`,
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Network, fees, storage, message patterns, and more</div></div></div>`,
               },
             ],
           },
