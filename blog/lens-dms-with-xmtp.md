@@ -7,11 +7,12 @@ authors: mg
 description: Lens Protocol has adopted XMTP to provide a secure and private direct messaging layer for the entire Lens ecosystem.
 image: ./media/BLOG-LensAnnounce.png
 tags:
-- Announcements
-- Developers
-- Lens
-- Spotlight
+  - Announcements
+  - Developers
+  - Lens
+  - Spotlight
 ---
+
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Today XMTP reaches a big milestone in our journey to build protocol for secure web3 messaging:

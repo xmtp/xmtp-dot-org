@@ -2,7 +2,7 @@
 sidebar_label: Account signatures
 sidebar_position: 7
 slug: account-signatures
-description: "Learn about what it means to sign to create and enable your XMTP identity."
+description: 'Learn about what it means to sign to create and enable your XMTP identity.'
 ---
 
 # Sign to send and receive messages using apps built with XMTP
@@ -31,17 +31,17 @@ More precisely, two things happen:
 
 1. XMTP generates a set of keys that you need to send and receive messages on the XMTP network.
 
-    These keys are XMTP-specific and different from your account keys. XMTP generates the keys as proxies for your account keys because XMTP can’t (and shouldn’t) use your account keys directly.
+   These keys are XMTP-specific and different from your account keys. XMTP generates the keys as proxies for your account keys because XMTP can’t (and shouldn’t) use your account keys directly.
 
-    These XMTP keys include a public key, which is displayed as a hexadecimal string in the **Message** section of the signature request window.
+   These XMTP keys include a public key, which is displayed as a hexadecimal string in the **Message** section of the signature request window.
 
-    This XMTP public key is directly tied to your XMTP identity and is stored and advertised on the XMTP network and provides the information others need to message with you.
+   This XMTP public key is directly tied to your XMTP identity and is stored and advertised on the XMTP network and provides the information others need to message with you.
 
-    To learn more about these keys, see [Key generation and usage](key-generation-and-usage).
+   To learn more about these keys, see [Key generation and usage](key-generation-and-usage).
 
 2. You sign a message containing your XMTP identity using your account keys.
 
-    This signature establishes a relationship between your XMTP identity and your account and enables anyone to verify that your XMTP identity is authentic and controlled by the account you used to sign it.
+   This signature establishes a relationship between your XMTP identity and your account and enables anyone to verify that your XMTP identity is authentic and controlled by the account you used to sign it.
 
 Once you’ve successfully signed to create an XMTP identity, you’ll never be prompted to do it again for the same account.
 

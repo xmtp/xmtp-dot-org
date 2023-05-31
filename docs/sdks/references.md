@@ -55,6 +55,7 @@ The reference documentation covers the following classes, interfaces, type alias
 - Signer
 
 ### Type Aliases
+
 - ClientOptions
 - Composite
 - ContentOptions
@@ -97,7 +98,6 @@ The reference documentation covers the following classes, interfaces, type alias
 - mapPaginatedStream
 - nsToDate
 - toNanoString
-
 
 ## Swift client SDK reference
 
@@ -170,6 +170,7 @@ The reference documentation covers the following classes, protocols, structures,
 - SignedPrivateKey
 
 ### Enumerations
+
 - AttachmentCodecError
 - Conversation
 - ConversationContainer
@@ -178,7 +179,6 @@ The reference documentation covers the following classes, protocols, structures,
 - MessageVersion
 - RemoteAttachmentError
 - XMTPEnvironment
-
 
 ## Dart client SDK reference
 
@@ -258,7 +258,7 @@ The reference documentation covers the following classes, properties, and enums 
 
 ### Properties
 
-- contentTypeText	
+- contentTypeText
 
 ### Enums
 

@@ -41,9 +41,7 @@ const config = {
           path: 'docs',
           id: 'default',
           routeBasePath: 'docs',
-          sidebarPath: require.resolve(
-            './sidebars/sidebars.js'
-          ),
+          sidebarPath: require.resolve('./sidebars/sidebars.js'),
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
@@ -162,7 +160,7 @@ const config = {
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/lock-closed-icon.svg" alt="Lock icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Security</div>
                  <div class="subtext text-sm text-normal whitespace-pre-line">Overview of the security features of XMTP</div></div></div>`,
-              },              
+              },
               {
                 to: 'docs/concepts/faq',
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/question-mark-icon.svg" alt="Shield with a check icon" /></div>
@@ -180,12 +178,14 @@ const config = {
           {
             type: 'html',
             position: 'right',
-            value: '<button type="button" onClick="window.open(`/docs/build/start-building`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
+            value:
+              '<button type="button" onClick="window.open(`/docs/build/start-building`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
           },
           {
             type: 'html',
             position: 'right',
-            value: '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try app</strong></button>',
+            value:
+              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try app</strong></button>',
           },
           {
             href: 'https://github.com/xmtp',

@@ -1,8 +1,9 @@
 ---
 sidebar_label: Works with XMTP
 sidebar_position: 9
-description: "Here are just a few of the composable building blocks of web3 that work well with XMTP."
+description: 'Here are just a few of the composable building blocks of web3 that work well with XMTP.'
 ---
+
 import arbitrum from '/docs/concepts/img/arbitrum-logo.png';
 import avalanche from '/docs/concepts/img/avalanche-logo.png';
 import base from '/docs/concepts/img/base-logo.png';
@@ -24,19 +25,17 @@ In the spirit of web3 composability, here are **just a few** of the building blo
 
 :::
 
-
 ## Wallet connection
 
 To connect web3 wallets to your app:
 
 - [Thirdweb](https://thirdweb.com/)
-    - Example implementation in the [XMTP React Native example app](https://github.com/xmtp/xmtp-react-native/blob/main/example/src/AuthView.tsx#L7)
+  - Example implementation in the [XMTP React Native example app](https://github.com/xmtp/xmtp-react-native/blob/main/example/src/AuthView.tsx#L7)
 - [WalletConnect](https://walletconnect.com/)
-    - Example implementation in the [XMTP Inbox Web app](https://github.com/xmtp-labs/xmtp-inbox-web)
+  - Example implementation in the [XMTP Inbox Web app](https://github.com/xmtp-labs/xmtp-inbox-web)
 - [wagmi](https://wagmi.sh/)
 
 XMTP client SDKs require you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/). These wallet connection tools, as well as others, provide this capability.
-
 
 ## Message bots
 
@@ -44,42 +43,37 @@ To build message bots to help with testing and user onboarding experiences:
 
 - [XMTP Bot Starter](https://github.com/xmtp/xmtp-bot-starter)
 
-
 ## Storage
 
 To store encrypted and encoded message payload content:
 
 - [web3.storage](https://web3.storage/)
-    - Example implementation in [`xmtp-js` remote content types](https://github.com/xmtp/xmtp-js-content-types)
-    - Tutorial: [Introducing remote media attachments](/blog/attachments-and-remote-attachments)
-
+  - Example implementation in [`xmtp-js` remote content types](https://github.com/xmtp/xmtp-js-content-types)
+  - Tutorial: [Introducing remote media attachments](/blog/attachments-and-remote-attachments)
 
 ## Decentralized identifiers
 
 To support decentralized identity management:
 
 - [Ethereum Name Service](https://ens.domains/) (ENS)
-    - Example implementation in [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)
+  - Example implementation in [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)
 - [Coinbase cb.id](https://help.coinbase.com/en/wallet/managing-account/coinbase-ens-support)
 - [Lens](https://www.lens.xyz/)
-
 
 ## Decentralized social
 
 - [Lens](https://www.lens.xyz/)
-    - Example implementation in [Lenster](https://github.com/lensterxyz/lenster)
-    - Tutorial: [Build key XMTP chat features in a Lens app](/docs/build/build-key-xmtp-chat-features-in-a-lens-app)
+  - Example implementation in [Lenster](https://github.com/lensterxyz/lenster)
+  - Tutorial: [Build key XMTP chat features in a Lens app](/docs/build/build-key-xmtp-chat-features-in-a-lens-app)
 - [CyberConnect](https://link3.to/cyberconnect)
-    - Example implementation in the [CyberConnect & XMTP Integration Demo App](https://github.com/cyberconnecthq/cc-xmtp-chatapp)
-    - Tutorial: [Build messaging for CyberConnect profiles](/docs/build/build-messaging-for-cyberconnect-profiles)
-
+  - Example implementation in the [CyberConnect & XMTP Integration Demo App](https://github.com/cyberconnecthq/cc-xmtp-chatapp)
+  - Tutorial: [Build messaging for CyberConnect profiles](/docs/build/build-messaging-for-cyberconnect-profiles)
 
 ## Decentralized app store
 
 To launch your own dApp stores and list any dApp, including your own:
 
 - Polygon [dApp Store Kit](https://docs.dappstorekit.io/docs/how%20to%20use%20the%20dapp%20store%20kit/dapp-registry-management/)
-
 
 ## Wallet apps
 
@@ -96,16 +90,15 @@ XMTP uses a signature from the blockchain account to [create and enable the XMTP
 
 A user can generate multiple XMTP identities from the same wallet app by changing to a different blockchain account.
 
-
 ## Chains
 
-XMTP works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s. 
+XMTP works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s.
 
-Because all Ethereum Virtual Machine (EVM) chains share the same Ethereum wallet and address format and XMTP messages are stored off-chain, XMTP is interoperable across EVM chains, including testnets. (XMTP itself does not use EVMs.) 
+Because all Ethereum Virtual Machine (EVM) chains share the same Ethereum wallet and address format and XMTP messages are stored off-chain, XMTP is interoperable across EVM chains, including testnets. (XMTP itself does not use EVMs.)
 
 For example, whether a user has their wallet app connected to Ethereum or an Ethereum side-chain or L2, their private key can generate and retrieve their XMTP key pair to give them access to XMTP.
 
-XMTP is also chain-agnostic, so multi-chain support is possible. 
+XMTP is also chain-agnostic, so multi-chain support is possible.
 
 Here are **just a few** of the chains supported by XMTP:
 
@@ -141,14 +134,13 @@ Here are **just a few** of the chains supported by XMTP:
 
 [Optimism](https://www.optimism.io/)
 
-<img src={polygon} style={{width:"100px"}} alt="Polygon logo"/> 
+<img src={polygon} style={{width:"100px"}} alt="Polygon logo"/>
 
 [Polygon](https://polygon.technology/)
 
-<img src={scroll} style={{width:"100px"}} alt="Scroll logo"/> 
+<img src={scroll} style={{width:"100px"}} alt="Scroll logo"/>
 
 [Scroll](https://scroll.io/)
-
 
 :::tip
 

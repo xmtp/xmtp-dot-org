@@ -1,7 +1,7 @@
 ---
 sidebar_label: FAQ
 sidebar_position: 1
-description: "Get answers to the most frequently asked questions about XMTP."
+description: 'Get answers to the most frequently asked questions about XMTP.'
 ---
 
 # FAQ about XMTP
@@ -138,7 +138,7 @@ Have other questions or ideas about message storage? Post to the [XMTP discussio
 
 ### Which message formats and metadata does XMTP support?
 
-XMTP transports a message payload as a set of bytes that can represent any format that a developer wants to support, such as plain text, JSON, or even non-text binary or media content. 
+XMTP transports a message payload as a set of bytes that can represent any format that a developer wants to support, such as plain text, JSON, or even non-text binary or media content.
 
 With XMTP, these message formats are called content types. Currently, there are two basic content types available. These content types aim to establish broad compatibility among apps built with XMTP.
 
@@ -188,7 +188,7 @@ To learn more about how the XMTP Inbox chat app is built, see the [xmtp-inbox-we
 
 ### Does XMTP support broadcast messaging?
 
-XMTP natively supports one-to-one messaging. One-to-many broadcast messages, or announcements, can be constructed using the XMTP SDK. 
+XMTP natively supports one-to-one messaging. One-to-many broadcast messages, or announcements, can be constructed using the XMTP SDK.
 
 To learn more, see [Send a broadcast message](/docs/sdks/js-quickstart#send-a-broadcast-message).
 

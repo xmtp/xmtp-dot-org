@@ -1,7 +1,7 @@
 ---
 sidebar_label: Interoperable inbox
 sidebar_position: 4
-description: "With XMTP, each user gets an interoperable inbox that provides access to all of their XMTP messages."
+description: 'With XMTP, each user gets an interoperable inbox that provides access to all of their XMTP messages.'
 ---
 
 # Messages meet users where they are: The XMTP interoperable inbox
@@ -11,8 +11,8 @@ With apps built with XMTP, each user gets an interoperable inbox. This inbox pro
 For example, this means that you and a friend can each use your own preferred app to exchange messages.
 
 | Your friend using the [Converse app](https://getconverse.app/) to message you on the Orb app | You using the [Orb app](https://orb.ac/) to message your friend on the Converse app |
-|:-------------------------|:-------------------------|
-| ![your-friend-in-converse-app.png](img/your-friend-in-converse.png) | ![you-in-orb-app.png](img/you-in-orb.png)|
+| :------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| ![your-friend-in-converse-app.png](img/your-friend-in-converse.png)                          | ![you-in-orb-app.png](img/you-in-orb.png)                                           |
 
 Love the UX of an app? Use it.
 

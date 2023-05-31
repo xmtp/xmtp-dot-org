@@ -39,6 +39,7 @@ This scenario may display a confusing user experience for `amal.eth`, surfacing 
 To help distinguish the multiple conversations `amal.eth` is having with the same address, you can implement labels, based on conversation IDs and metadata, that display for each conversation.
 
 ![Mockup of App ABC123 with no conversation ID or filtering, but with conversation ID and metadata-based labels implemented. The app displays amal.eth's inbox with two conversations with bola.eth: One labeled as OpenTea - NFT #888: "You selling this?" and one labeled as Lens Fren - Following: "What's up?"](img/app-abc123-convo-labels.png)
+
 <!--source figma: https://www.figma.com/file/CLbhKAxtqVGHg5dzlTZDDT/conversation-id-tagging?node-id=0%3A1&t=SsLx2y6TrDheLdU3-1-->
 
 **To use labels to differentiate multiple conversations between a pair of addresses:**
@@ -53,11 +54,10 @@ const conversationId = conversation?.context?.conversationId
 
 // Example conversationId = app.abc/dm/0x123-0x456
 
-const domain = conversationId.split("/")[0]
+const domain = conversationId.split('/')[0]
 
 // In this case, the domain is app.abc, which provides the conversation label
 ```
-
 
 ## Learn more
 

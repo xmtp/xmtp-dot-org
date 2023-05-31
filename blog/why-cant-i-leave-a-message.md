@@ -7,6 +7,7 @@ authors: shane
 description: Introducing "You've Got Mail" - An idea we want to build with the XMTP community
 image: ./media/CleanShot-2022-06-24-at-12.11.50@2x-1.png
 ---
+
 import ReactPlayer from 'react-player'
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
@@ -44,7 +45,7 @@ Here are the bullet points of how we'd think about the problem and v1 for this s
 - The branded NFT could be that a message is waiting for you on Youvegotmail.xyz (simple description on this that says: “Leave a message for any wallet, then chat. You have 4 messages waiting for you.”
 - When the recipient visits the site, they can read all the messages they’ve received over XMTP.
 - We joked that the website could feel very retro, classic, late 90s, ugly blues like AOL, AOL sounds. Like [this](https://winworldpc.com/product/aol-instant-messenge/10) or [this](https://poolsuite.net/) or [this](https://www.youtube.com/watch?v=dFuUCpBbbHw).
-- The site could be inspired by https://haveibeenpwned.com/  - go to it, insert your email, and see if you’ve been pwned. This should be the fun and eye-opening part of Youvegotmail.xyz and you can simply click “Do I have messages” or “Send or leave a message to any wallet address”
+- The site could be inspired by https://haveibeenpwned.com/ - go to it, insert your email, and see if you’ve been pwned. This should be the fun and eye-opening part of Youvegotmail.xyz and you can simply click “Do I have messages” or “Send or leave a message to any wallet address”
 
 We want to help someone build this idea, have fun with it, and make it their own. We will support product UX, design, and awareness when it is ready!
 

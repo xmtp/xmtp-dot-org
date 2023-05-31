@@ -1,15 +1,16 @@
 ---
 slug: hack-fs-award-wrap
 hide_table_of_contents: true
-title: "HackFS x XMTP awards wrap-up: Decentralized Ticketing Platform, Optik for video conferencing, and GhostShare for file sharing"
+title: 'HackFS x XMTP awards wrap-up: Decentralized Ticketing Platform, Optik for video conferencing, and GhostShare for file sharing'
 date: 2022-08-01
 authors: peter
 description: HackFS by @ETHGlobal and @ProtocolLabs wrapped and, once again, the creativity and quality of the projects was outstanding.
 image: ./media/blogPost.png
 tags:
-- Developers
-- Hackathon
+  - Developers
+  - Hackathon
 ---
+
 import ReactPlayer from 'react-player'
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
@@ -23,8 +24,7 @@ It’s exciting to see developers continue to adopt XMTP messaging in their proj
 
 Here are the XMTP Labs award winners.
 
-
-## Best Use - Decentralized Ticketing Platform  🥇
+## Best Use - Decentralized Ticketing Platform 🥇
 
 After hearing countless stories about scams in the online ticketing process, this team set out to build a solution. While there are many centralized solutions to this problem, they often charge high fees to both buyers and sellers. The team came up with a decentralized ticketing solution that enables any user to create an event for which the participants can buy tickets in the form of NFTs. Event organizers can broadcast messages to the ticketholders using the XMTP protocol.
 
@@ -32,13 +32,12 @@ After hearing countless stories about scams in the online ticketing process, thi
 
 <br/>
 
-* Development team: @[arthurka_eth](https://twitter.com/arthurka_eth), @[tenzin_rose](https://twitter.com/tenzin_rose)
-* Github repo:
+- Development team: @[arthurka_eth](https://twitter.com/arthurka_eth), @[tenzin_rose](https://twitter.com/tenzin_rose)
+- Github repo:
 
 [![arthurka-repo-card.png](media/arthurka-repo-card.png)](https://github.com/arthurka-o/decentralized-ticket-platform)
 
-
-## Best Use - Optik  🥈
+## Best Use - Optik 🥈
 
 Optik is a web3-enabled video conferencing application. The platform provides a place for DAO contributors, teams, and groups to host meetings, online events, and more. Optik allows teams to set up public or allow list-only video conference calls, store recordings of these videos on IPFS, mint POAPs directly within the video conference, and more. XMTP is used to share invitations among meeting participants.
 
@@ -46,11 +45,10 @@ Optik is a web3-enabled video conferencing application. The platform provides a 
 
 <br/>
 
-* Development team: @[felixfpx](https://twitter.com/felixfpx), @[Dominichackett](https://twitter.com/Dominichackett), @[east9th](https://twitter.com/east9th)
-* Github repo:
+- Development team: @[felixfpx](https://twitter.com/felixfpx), @[Dominichackett](https://twitter.com/Dominichackett), @[east9th](https://twitter.com/east9th)
+- Github repo:
 
 [![optik-repo-card.png](media/optik-repo-card.png)](https://github.com/felixpx/hackfs)
-
 
 ## Best Use - GhostShare 🥉
 
@@ -60,11 +58,10 @@ GhostShare is a service for sharing files in a private and decentralized way. Th
 
 <br/>
 
-* Development team: @[JorisZierold](https://twitter.com/JorisZierold), @[jorgeolmos86](https://twitter.com/jorgeolmos86)
-* Github repo:
+- Development team: @[JorisZierold](https://twitter.com/JorisZierold), @[jorgeolmos86](https://twitter.com/jorgeolmos86)
+- Github repo:
 
 [![ghostshare-repo-card.png](media/ghostshare-repo-card.png)](https://github.com/Ghostshare)
-
 
 ## Honorable Mention - Self Sovereign Health Records 🙌
 
@@ -74,11 +71,10 @@ SSHR is a dapp that enables users to privately store and share their own electro
 
 <br/>
 
-* Development team: @[0xblitzordd](https://twitter.com/0xblitzordd), @[thinkbynumbers](https://twitter.com/thinkbynumbers), @[BrahmaSen](https://twitter.com/BrahmaSen)
-* Github repo:
+- Development team: @[0xblitzordd](https://twitter.com/0xblitzordd), @[thinkbynumbers](https://twitter.com/thinkbynumbers), @[BrahmaSen](https://twitter.com/BrahmaSen)
+- Github repo:
 
 [![sshr-repo-card.png](media/sshr-repo-card.png)](https://github.com/yash-deore/sshr-hackfs)
-
 
 ## Honorable Mention - Supercluster 🙌
 
@@ -88,8 +84,8 @@ Supercluster is a Dapp that allows content creators to create private IPFS netwo
 
 <br/>
 
-* Development team: @[dysntr](https://twitter.com/dysntr), @[KaiHuang](https://twitter.com/KaiHuang), @[_gov218](https://twitter.com/_gov218), & CompositeFellow
-* Github repo:
+- Development team: @[dysntr](https://twitter.com/dysntr), @[KaiHuang](https://twitter.com/KaiHuang), @[\_gov218](https://twitter.com/_gov218), & CompositeFellow
+- Github repo:
 
 [![supercluster-repo-card.png](media/supercluster-repo-card.png)](https://github.com/dysntr/supercluster)
 
@@ -97,13 +93,12 @@ We were so impressed by the above projects, and as we [shared on Twitter](https:
 
 ---
 
-
 ## Have an idea you’re working on? Connect with us.
 
-* 👾 Official Discord Access  -[ https://xmtp.typeform.com/early-access](https://xmtp.typeform.com/early-access)
-* 🐦 XMTP Official Twitter -[ https://twitter.com/xmtp_](https://twitter.com/xmtp_)
-* 🌐 XMTP Website -[ https://xmtp.com/](https://xmtp.com/)
-* 📖 Careers at XMTP Labs -[ https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
+- 👾 Official Discord Access -[ https://xmtp.typeform.com/early-access](https://xmtp.typeform.com/early-access)
+- 🐦 XMTP Official Twitter -[ https://twitter.com/xmtp\_](https://twitter.com/xmtp_)
+- 🌐 XMTP Website -[ https://xmtp.com/](https://xmtp.com/)
+- 📖 Careers at XMTP Labs -[ https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
 
 <br/>
 <FeedbackWidget />

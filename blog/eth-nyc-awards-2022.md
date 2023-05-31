@@ -1,18 +1,19 @@
 ---
 slug: eth-nyc-awards-2022
 hide_table_of_contents: true
-title: "ETH NYC awards wrap: OTC Swap for OpenSea, E2EE Chat via Intercom widget, and a kill switch “Burn My Wallet” for hacked wallets"
+title: 'ETH NYC awards wrap: OTC Swap for OpenSea, E2EE Chat via Intercom widget, and a kill switch “Burn My Wallet” for hacked wallets'
 date: 2022-07-08
 authors: peter
 description: We just got back from ETH NYC and what a great event. 1,300 builders, 50 sponsors, so much energy…
 image: ./media/eth-nyc-awards-graphic.png
 tags:
-- Awards
-- Developers
-- Hackathon
-- Messaging
-- Privacy & Security
+  - Awards
+  - Developers
+  - Hackathon
+  - Messaging
+  - Privacy & Security
 ---
+
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 We just got back from [ETH NYC](https://ethglobal.com/) and what a great event. 1,300 builders, 50 sponsors, so much energy…
@@ -27,21 +28,19 @@ We’re highlighting 3 hackathon submissions so you can see some examples of end
 
 ---
 
-
 ## Market3 & Walletscan - 1st place 🥇
 
 Merchants and customers need systems that eliminate fraud in a verified/ trusted chat. The Market3 demo showcased how both buyer and seller will have E2EE chats through an Intercom-type widget.
 
 ![market3 screen](media/market3-2.png)
 
-* Development team: [@RealKevinYang ](https://twitter.com/RealKevinYang), [@zihuajliu](https://twitter.com/zihuajliu)
-* Live demo: [https://www.loom.com/share/21c1bf50846b4d25a2e0886a59057386](https://www.loom.com/share/21c1bf50846b4d25a2e0886a59057386)
-* Github repo:
+- Development team: [@RealKevinYang ](https://twitter.com/RealKevinYang), [@zihuajliu](https://twitter.com/zihuajliu)
+- Live demo: [https://www.loom.com/share/21c1bf50846b4d25a2e0886a59057386](https://www.loom.com/share/21c1bf50846b4d25a2e0886a59057386)
+- Github repo:
 
 [![openmagic-repo-card.png](media/openmagic-repo-card.png)](https://github.com/openmagic-io/openmagic-community-marketplace-demo)
 
 ---
-
 
 ## OTC Swap - 2nd place 🥈
 
@@ -53,37 +52,35 @@ OTC Swap was able to accomplish this in eight hours by combining XMTP, [OpenSea 
 
 ![OTC Swap screen](media/image--1--1-2.png)
 
-* Development team: [@0x_Yuzu](https://twitter.com/0x_Yuzu)
-* Live demo:[ https://otc-swap.vercel.app/](https://otc-swap.vercel.app/)
-* Github repo:
+- Development team: [@0x_Yuzu](https://twitter.com/0x_Yuzu)
+- Live demo:[ https://otc-swap.vercel.app/](https://otc-swap.vercel.app/)
+- Github repo:
 
 [![otcswap-repo-card.png](media/otcswap-repo-card.png)](https://github.com/Aqrare/eth-nyc)
 
 ---
 
-
 ## Burn My Wallet - 3rd place 🥉
 
-Burn My Wallet created a "kill switch" for a stolen wallet. When a user reports their wallet as stolen, Burn My Wallet creates a non-transferable token that marks the wallet hacked. This means applications will have a source of truth for the wallet status.  Messaging apps using XMTP can integrate the Burn My Wallet API, and easily check if wallets have been hacked. One user benefit is that this will automatically lock the conversation of the hacked wallet to prevent any spoofing or sharing of sensitive information.
+Burn My Wallet created a "kill switch" for a stolen wallet. When a user reports their wallet as stolen, Burn My Wallet creates a non-transferable token that marks the wallet hacked. This means applications will have a source of truth for the wallet status. Messaging apps using XMTP can integrate the Burn My Wallet API, and easily check if wallets have been hacked. One user benefit is that this will automatically lock the conversation of the hacked wallet to prevent any spoofing or sharing of sensitive information.
 
 ![burn my wallet screen](media/burnmywallet-3.png)
 
-* Development team: [@NikitaVarabei](https://twitter.com/NikitaVarabei), [@erinleelikes](https://twitter.com/erinleelikes)
-* Live demo:[ https://burnmywallet.com/](https://burnmywallet.com/)
-* Docs [https://docs.burnmywallet.com/](https://docs.burnmywallet.com/)
-* Github repo:
+- Development team: [@NikitaVarabei](https://twitter.com/NikitaVarabei), [@erinleelikes](https://twitter.com/erinleelikes)
+- Live demo:[ https://burnmywallet.com/](https://burnmywallet.com/)
+- Docs [https://docs.burnmywallet.com/](https://docs.burnmywallet.com/)
+- Github repo:
 
 [![burnmywallet-repo-card.png](media/burnmywallet-repo-card.png)](https://github.com/NikitaVr/burnmywallet)
 
 ---
 
-
 ## Got an idea you’re working on? Connect with us.
 
-* 👾 Official Discord Access - [https://xmtp.typeform.com/early-access](https://xmtp.typeform.com/early-access)
-* 🐦 XMTP Official Twitter - [https://twitter.com/xmtp_](https://twitter.com/xmtp_)
-* 🌐 XMTP Website - [https://xmtp.com/](https://xmtp.com/)
-* 📖 Careers at XMTP Labs - [https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
+- 👾 Official Discord Access - [https://xmtp.typeform.com/early-access](https://xmtp.typeform.com/early-access)
+- 🐦 XMTP Official Twitter - [https://twitter.com/xmtp\_](https://twitter.com/xmtp_)
+- 🌐 XMTP Website - [https://xmtp.com/](https://xmtp.com/)
+- 📖 Careers at XMTP Labs - [https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
 
 <br/>
 <FeedbackWidget />

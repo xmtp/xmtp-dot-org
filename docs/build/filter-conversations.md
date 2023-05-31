@@ -3,6 +3,7 @@ sidebar_label: Filter conversations
 sidebar_position: 4
 description: Learn how to use conversation IDs and metadata to filter conversations in your app.
 ---
+
 import ButtrflyImageUrl from '/docs/build/img/following-other-filters-buttrfly.jpeg';
 import LensterImageUrl from '/docs/build/img/following-requested-filters-lenster.png';
 import OrbImageUrl from '/docs/build/img/lens-w2w-filters-orb.jpeg';
@@ -31,30 +32,30 @@ Before we get started, here are some key points about conversation IDs and metad
 
 You can use conversation IDs and metadata to filter conversations by:
 
-* A message type  
-Filter to display only conversations that are notifications or alerts, for example
+- A message type  
+  Filter to display only conversations that are notifications or alerts, for example
 
-* A subject line  
-Filter to display only conversations with a specific subject line, as in email
+- A subject line  
+  Filter to display only conversations with a specific subject line, as in email
 
-* An NFT  
-Filter to display only conversations about an NFT, such as price negotiations or shipping instructions
+- An NFT  
+  Filter to display only conversations about an NFT, such as price negotiations or shipping instructions
 
-* An app  
-Filter to display only conversations created by a specific app
+- An app  
+  Filter to display only conversations created by a specific app
 
 ## Example implementations
 
 Here are examples of conversation filters implemented in a few apps built with XMTP:
 
 - **Following** and **Other** in the [Buttrfly](https://buttrfly.app/) app:  
-<img src={ButtrflyImageUrl} style={{width:"300px"}}/>
+  <img src={ButtrflyImageUrl} style={{width:"300px"}}/>
 
 - **Following** and **Requested** in the [Lenster](https://lenster.xyz/) app:  
-<img src={LensterImageUrl} style={{width:"300px"}}/>
+  <img src={LensterImageUrl} style={{width:"300px"}}/>
 
 - **Lens**, **Wallet to wallet**, and **requests** in the [Orb](https://orb.ac/) app:  
-<img src={OrbImageUrl} style={{width:"300px"}}/>
+  <img src={OrbImageUrl} style={{width:"300px"}}/>
 
 ## Set a conversation ID
 
@@ -80,7 +81,6 @@ const conversation1 = await xmtp.conversations.newConversation(
 
 This `conversationId` indicates that these conversations are notification messages created by `mydomain.xyz`, for example. The `mydomain.xyz/notif` conversation ID can then be used to display only notification messages created by the app.
 
-
 ## Set conversation metadata
 
 In addition to setting a conversation ID when creating a conversation, you can set metadata to use as an additional filter or to assign useful context to the conversation. Conversation metadata is private and encrypted.
@@ -101,7 +101,6 @@ const conversation2 = await xmtp.conversations.newConversation(
   }
 )
 ```
-
 
 ## Filter conversations by ID and metadata
 
@@ -136,7 +135,6 @@ for (const conversation of myAppConversations) {
   }
 }
 ```
-
 
 ## Learn more
 

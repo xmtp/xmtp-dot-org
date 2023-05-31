@@ -7,11 +7,12 @@ authors: peter
 description: In web3, token-gated messaging opens up a world where you can see verifiable transactions and facts about the sender that help you vet who you want to interact with.
 image: ./media/blogGraphic-6.png
 tags:
-- Developers
-- Hackathon
-- Messaging
-- NFTs
+  - Developers
+  - Hackathon
+  - Messaging
+  - NFTs
 ---
+
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 In web3, token-gated messaging opens up a world where you can see verifiable transactions and facts about the sender that help you vet who you want to interact with.
@@ -33,7 +34,6 @@ Email providers like Gmail trade users _some_ protection by reading emails and p
 
 Walled-garden messaging apps are no better. Users can create fake identities, populate fake profiles, and easily impersonate real users with little to no friction.
 
-
 ### Token-gated chat in web3 tackles these problems head-on
 
 In web3, token-gated messaging opens up a world where you can see verifiable transactions and facts about the sender that help you vet who you want to interact with. Web3-native messaging platforms are introducing new forms of spam and phishing, though. Spammers are becoming more sophisticated about using blockchain data to socially engineer scams targeting wallet owners. Check out [@cifelse](https://twitter.com/cifelse)’s [thread](https://twitter.com/cifelse/status/1531587121752195072?s=20&t=BFN75Rmgb5ebiJ8O7PCJIQ) (“...file under phishing sites, terrible, and pathetic.”)
@@ -41,7 +41,6 @@ In web3, token-gated messaging opens up a world where you can see verifiable tra
 Applications can protect users with rules-based message acceptance and train consumers on truths not spoofs. In the end, this is better for consumers and, fortunately, there are ways developers can address this problem directly in their apps.
 
 As part of the ETH Shanghai hackathon, XMTP Labs [sponsored a bounty](https://gitcoin.co/issue/xmtp-labs/ethshanghai-2022/2/100028892) to demonstrate how a token-gated inbox can mitigate the problem of spam. We also encouraged developers to use other open source protocols alongside XMTP to build solutions that leverage the composability of web3.
-
 
 ## Solution
 
@@ -55,11 +54,10 @@ The same solution could also be applied at the **application** level by develope
 
 Here are a few ideas that show how developers can use this approach:
 
-* A social dapp could stand up token-gated, direct messaging for members of any NFT community.
-* An NFT marketplace could restrict messages to only users who have listed or purchased NFTs on their marketplace.
-* A standalone wallet-to-wallet messaging application could give its users simple controls to define who they want to receive messages from. They could even let users create multiple sets of rules for different sets of recipients they are interested in receiving messages from.
-* A web3 conference organizer could enable post-event messaging between attendees using a proof of attendance protocol (POAP) as a gating mechanism.
-
+- A social dapp could stand up token-gated, direct messaging for members of any NFT community.
+- An NFT marketplace could restrict messages to only users who have listed or purchased NFTs on their marketplace.
+- A standalone wallet-to-wallet messaging application could give its users simple controls to define who they want to receive messages from. They could even let users create multiple sets of rules for different sets of recipients they are interested in receiving messages from.
+- A web3 conference organizer could enable post-event messaging between attendees using a proof of attendance protocol (POAP) as a gating mechanism.
 
 ## Results
 
@@ -67,9 +65,9 @@ By using XMTP’s [messaging SDK](https://github.com/xmtp) and [Lit Protocol](ht
 
 This proof-of-concept enables any web3 developer to:
 
-* Build spam-resistant native web3 messaging into their application in a few hours.
-* Allow their users to set custom rules controlling what messages appear in their inboxes.
-* Allow their applications to set global rules controlling which messages to display to users.
+- Build spam-resistant native web3 messaging into their application in a few hours.
+- Allow their users to set custom rules controlling what messages appear in their inboxes.
+- Allow their applications to set global rules controlling which messages to display to users.
 
 See for yourself at @NftTopBest’s project [repo](https://github.com/NftTopBest/example-chat-react-gitcoin-hackathon/pull/1):
 

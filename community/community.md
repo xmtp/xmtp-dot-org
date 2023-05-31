@@ -23,15 +23,15 @@ Chat with the XMTP community. Say 👋, join a dev hangout, or get support.
 
 Keep up with the latest news and insights from XMTP.
 
-[Follow @XMTP_](https://twitter.com/xmtp_)
+[Follow @XMTP\_](https://twitter.com/xmtp_)
 
 ## Open source XMTP projects
 
 Contribute to XMTP open source projects to help improve the SDKs, developer tools, protocol, and documentation.
 
-* [View XMTP JavaScript SDK open issues](https://github.com/xmtp/xmtp-js/issues)
-* [View XMTP Quickstart Chat app open issues](https://github.com/xmtp/xmtp-quickstart-react/issues)
-* [Contribute to XMTP documentation](https://github.com/xmtp/xmtp-dot-org#readme)
+- [View XMTP JavaScript SDK open issues](https://github.com/xmtp/xmtp-js/issues)
+- [View XMTP Quickstart Chat app open issues](https://github.com/xmtp/xmtp-quickstart-react/issues)
+- [Contribute to XMTP documentation](https://github.com/xmtp/xmtp-dot-org#readme)
 
 ### 🐞 Bugs
 

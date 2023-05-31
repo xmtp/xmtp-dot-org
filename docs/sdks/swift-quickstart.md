@@ -2,7 +2,7 @@
 sidebar_label: Swift SDK quickstart
 sidebar_position: 2
 toc_max_heading_level: 4
-description: "xmtp-ios provides a Swift implementation of an XMTP message API client for use with iOS apps."
+description: 'xmtp-ios provides a Swift implementation of an XMTP message API client for use with iOS apps.'
 ---
 
 # Quickstart for the Swift client SDK
@@ -13,7 +13,7 @@ description: "xmtp-ios provides a Swift implementation of an XMTP message API cl
 
 Use the [`xmtp-ios` SDK](https://github.com/xmtp/xmtp-ios) to build with XMTP to send messages between blockchain accounts, including DMs, notifications, announcements, and more.
 
-This SDK is in **General Availability** status and ready for use in production. 
+This SDK is in **General Availability** status and ready for use in production.
 
 To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-ios/issues) in the `xmtp-ios` repo.
 
@@ -108,9 +108,9 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 
 You can configure the client's network connection and key storage method with these optional parameters of `Client.create`:
 
-| Parameter | Default | Description |
+| Parameter | Default | Description                                                                                                                                                                                                                                                                     |
 | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| env       | `dev`   | Connect to the specified XMTP network environment. Valid values include `.dev`, `.production`, or `.local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).        |
+| env       | `dev`   | Connect to the specified XMTP network environment. Valid values include `.dev`, `.production`, or `.local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments). |
 
 #### Configure `env`
 
@@ -313,11 +313,11 @@ try await decodedConversation.send(text: "hi")
 
 ## Handle different content types
 
-All of the send functions support `SendOptions` as an optional parameter. The `contentType` option allows specifying different types of content other than the default simple string standard content type, which is identified with content type identifier `ContentTypeText`. 
+All of the send functions support `SendOptions` as an optional parameter. The `contentType` option allows specifying different types of content other than the default simple string standard content type, which is identified with content type identifier `ContentTypeText`.
 
 To learn more about content types, see [Content types with XMTP](/docs/concepts/content-types).
 
-Support for other content types can be added by registering additional `ContentCodec`s with the client. Every codec is associated with a content type identifier, `ContentTypeID`, which is used to signal to the client which codec should be used to process the content that is being sent or received. 
+Support for other content types can be added by registering additional `ContentCodec`s with the client. Every codec is associated with a content type identifier, `ContentTypeID`, which is used to signal to the client which codec should be used to process the content that is being sent or received.
 
 For example, see the [Codecs](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs) available in `xmtp-ios`.
 
@@ -403,7 +403,7 @@ try await conversation.send(
 )
 ```
 
-Note that we’re using `contentFallback` to enable clients that don't support these content types to still display something. For cases where clients *do* support these types, they can use the content fallback as alt text for accessibility purposes.
+Note that we’re using `contentFallback` to enable clients that don't support these content types to still display something. For cases where clients _do_ support these types, they can use the content fallback as alt text for accessibility purposes.
 
 #### Receive a remote attachment
 
@@ -481,9 +481,9 @@ Older versions of the SDK will eventually be deprecated, which means:
 
 The following table provides the deprecation schedule.
 
-| Announced  | Effective  | Minimum Version | Rationale                                                                                                         |
-| ---------- | ---------- | --------------- | ----------------------------------------------------------------------------------------------------------------- |
-| There are no deprecations scheduled for `xmtp-ios` at this time. |  |          |  |
+| Announced                                                        | Effective | Minimum Version | Rationale |
+| ---------------------------------------------------------------- | --------- | --------------- | --------- |
+| There are no deprecations scheduled for `xmtp-ios` at this time. |           |                 |           |
 
 Bug reports, feature requests, and PRs are welcome in accordance with these [contribution guidelines](https://github.com/xmtp/xmtp-ios/blob/main/CONTRIBUTING.md).
 

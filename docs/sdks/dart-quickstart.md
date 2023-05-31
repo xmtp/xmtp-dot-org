@@ -2,7 +2,7 @@
 sidebar_label: Dart SDK quickstart
 sidebar_position: 3
 toc_max_heading_level: 4
-description: "xmtp-flutter provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps."
+description: 'xmtp-flutter provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps.'
 ---
 
 # Quickstart for the Dart XMTP client SDK
@@ -55,6 +55,7 @@ The client has two constructors: `createFromWallet` and `createFromKeys`.
 
 The first time a user uses a new device, they should call `createFromWallet`. This will prompt them
 to sign a message to do one of the following:
+
 - Create a new identity (if they're new)
 - Enable their existing identity (if they've used XMTP before)
 
@@ -218,7 +219,7 @@ When sending a message, you can specify the type of content. This allows you to 
 
 To learn more about content types, see [Content types with XMTP](/docs/concepts/content-types).
 
-Support for other types of content can be added during client construction by registering additional `Codec`s, including a `customCodecs` parameter. Every codec declares a specific content type identifier, `ContentTypeId`, which is used to signal to the client which codec should be used to process the content that is being sent or received. 
+Support for other types of content can be added during client construction by registering additional `Codec`s, including a `customCodecs` parameter. Every codec declares a specific content type identifier, `ContentTypeId`, which is used to signal to the client which codec should be used to process the content that is being sent or received.
 
 ```dart
 /// Example [Codec] for sending [int] values around.
@@ -274,9 +275,9 @@ Older versions of the SDK will eventually be deprecated, which means:
 
 The following table provides the deprecation schedule.
 
-| Announced  | Effective  | Minimum Version | Rationale                                                                                                         |
-| ---------- | ---------- | --------------- | ----------------------------------------------------------------------------------------------------------------- |
-| There are no deprecations scheduled for `xmtp-flutter` at this time. |  |          |  |
+| Announced                                                            | Effective | Minimum Version | Rationale |
+| -------------------------------------------------------------------- | --------- | --------------- | --------- |
+| There are no deprecations scheduled for `xmtp-flutter` at this time. |           |                 |           |
 
 Bug reports, feature requests, and PRs are welcome in accordance with these [contribution guidelines](https://github.com/xmtp/xmtp-flutter/blob/main/CONTRIBUTING.md).
 

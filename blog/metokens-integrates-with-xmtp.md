@@ -7,10 +7,11 @@ authors: peter
 description: With XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.
 image: ./media/meTokensShareSplit.png
 tags:
-- Developers
-- Messaging
-- Spotlight
+  - Developers
+  - Messaging
+  - Spotlight
 ---
+
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 With XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.
@@ -27,7 +28,6 @@ While other “social tokens” are intended for celebrities and influencers, me
 
 All the while, creators benefit from having a community of stakeholders who have a vested interest in their success - it’s like having a DAO that focuses entirely on coordinating to help creators achieve their goals and dreams.
 
-
 ## meTokens introduces tokenized chat
 
 meTokens Labs has built the bridge between creators and patrons who want to purchase future credits to their work, while also offering speculators a means of contributing to a creators’ growth through capital contributions.
@@ -38,8 +38,7 @@ To help fulfill this vision, **meTokens Labs has developed an XMTP client to ena
 
 meTokens’ founder Chris Robison fills in the story this way,
 
->When the meTokens team began building our core protocol last summer, we strongly felt our first application ought to be tokenized-chat. We envisioned a world where every inbound message would include a payment or stake to grow your market cap. XMTP emerged later that summer and more than met our requirements. We connected with Shane, Matt, and Peter shortly after and felt both relief and excitement to know that we could finally build a future where you are delighted to see each and every message that appears in your inbox.
-
+> When the meTokens team began building our core protocol last summer, we strongly felt our first application ought to be tokenized-chat. We envisioned a world where every inbound message would include a payment or stake to grow your market cap. XMTP emerged later that summer and more than met our requirements. We connected with Shane, Matt, and Peter shortly after and felt both relief and excitement to know that we could finally build a future where you are delighted to see each and every message that appears in your inbox.
 
 ### What next for meTokens?
 

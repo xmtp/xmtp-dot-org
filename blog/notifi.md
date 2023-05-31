@@ -1,16 +1,17 @@
 ---
 slug: notifi
 hide_table_of_contents: true
-title: "Breaking the web2 barrier: How XMTP and Notifi are bridging the gap for web3 apps with web2 notifications"
+title: 'Breaking the web2 barrier: How XMTP and Notifi are bridging the gap for web3 apps with web2 notifications'
 date: 2023-04-28
 authors: rochelle
-description: "With Notifi, XMTP in-app messages can now trigger notifications to any web2 app, so devs can reliably reach their end-users without compromising on security."
+description: 'With Notifi, XMTP in-app messages can now trigger notifications to any web2 app, so devs can reliably reach their end-users without compromising on security.'
 image: ./media/Breaking-the-Web2-Barrier-Post.jpg
 tags:
-- Announcements
-- Developers
-- Messaging
+  - Announcements
+  - Developers
+  - Messaging
 ---
+
 import ReactPlayer from 'react-player'
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
@@ -44,7 +45,7 @@ Watch the demo:
 
 **Want to test out this experience for your own app?**
 
-You can fork the XMTP example app and Notifi experience repo shown in the example above. Both are available as open-source examples on [GitHub here.](https://github.com/nimesh-notifi/xmtp-inbox-web/commit/a08e906f13bda56461a78aba5818a6687dbfcfc6) 
+You can fork the XMTP example app and Notifi experience repo shown in the example above. Both are available as open-source examples on [GitHub here.](https://github.com/nimesh-notifi/xmtp-inbox-web/commit/a08e906f13bda56461a78aba5818a6687dbfcfc6)
 
 **Get Started Building with XMTP!**
 
