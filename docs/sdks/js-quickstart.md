@@ -5,7 +5,7 @@ toc_max_heading_level: 4
 description: "The XMTP client SDK for JavaScript (xmtp-js) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications."
 ---
 
-# Quickstart for the JavaScript client SDK
+# Quickstart for the JavaScript XMTP client SDK
 
 ![Test](https://github.com/xmtp/xmtp-js/actions/workflows/test.yml/badge.svg)
 ![Lint](https://github.com/xmtp/xmtp-js/actions/workflows/lint.yml/badge.svg)

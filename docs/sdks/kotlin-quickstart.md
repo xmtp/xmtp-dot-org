@@ -5,7 +5,7 @@ toc_max_heading_level: 4
 description: "xmtp-android provides a Kotlin implementation of an XMTP message API client for use with Android apps."
 ---
 
-# Quickstart for the Kotlin client SDK
+# Quickstart for the Kotlin XMTP client SDK
 
 ![Test](https://github.com/xmtp/xmtp-android/actions/workflows/test.yml/badge.svg) ![Lint](https://github.com/xmtp/xmtp-android/actions/workflows/lint.yml/badge.svg) ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 

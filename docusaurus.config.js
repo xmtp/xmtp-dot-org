@@ -206,20 +206,20 @@ const config = {
                 to: `/docs/sdks/js-quickstart`,
               },
               {
-                label: `Kotlin`,
-                to: `/docs/sdks/kotlin-quickstart`,
-              },
-              {
                 label: `Swift`,
                 to: `/docs/sdks/swift-quickstart`,
               },
               {
-                label: `React`,
-                to: `/docs/sdks/react-quickstart`,
-              },
-              {
                 label: `Dart`,
                 to: `/docs/sdks/dart-quickstart`,
+              },
+              {
+                label: `Kotlin`,
+                to: `/docs/sdks/kotlin-quickstart`,
+              },
+              {
+                label: `React`,
+                to: `/docs/sdks/react-quickstart`,
               },
               {
                 label: `SDK references`,

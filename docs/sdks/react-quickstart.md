@@ -1,15 +1,17 @@
 ---
 sidebar_label: React SDK hooks and components quickstart
-sidebar_position: 2
+sidebar_position: 5
 toc_max_heading_level: 4
-description: "This package provides the XMTP client SDK for React apps, including React hooks."
+description: "These packages provide the XMTP client SDK for React apps, including React hooks and components."
 ---
 
-# Quickstart for the XMTP React SDK hooks and components
+# Quickstart for the React XMTP client SDK hooks and components
+
+## React SDK hooks
 
 ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 
-This package provides the [XMTP client SDK for React apps](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk).
+This package provides the [XMTP client SDK for React apps](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk), including React hooks that provide ready-made logic for interacting with the XMTP network and work well with these [React components](#react-components).
 
 This SDK is in **Developer Preview** status and ready for you to start building with.
 
@@ -19,18 +21,18 @@ To keep up with the latest SDK developments, see the [Issues tab](https://github
 
 To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/concepts/faq).
 
-## What's inside?
+### What's inside?
 
 ### Hooks
 
 These hooks are mostly bindings to the [`xmtp-js` SDK](https://github.com/xmtp/xmtp-js) that expose the underlying data in a React way.
 
-## Requirements
+### Requirements
 
 - Node 16.10+
 - React 16.14+
 
-## Install
+### Install
 
 ```bash
 # npm
@@ -43,17 +45,17 @@ pnpm install @xmtp/react-sdk@preview
 yarn add @xmtp/react-sdk@preview
 ```
 
-### Create React App
+#### Create React App
 
 Requires the Buffer polyfill. See below.
 
 If you see a lot of warnings related to source maps, see [this issue](https://github.com/facebook/create-react-app/discussions/11767) to learn more.
 
-### Vite
+#### Vite
 
 Requires the Buffer polyfill. See below.
 
-### Buffer polyfill
+#### Buffer polyfill
 
 The Node Buffer API must be polyfilled in some cases. To do so, add the `buffer` dependency to your project and then polyfill it in your entry file.
 
@@ -65,9 +67,9 @@ import { Buffer } from "buffer";
 window.Buffer = window.Buffer ?? Buffer;
 ```
 
-## Usage
+### Usage
 
-### Add the provider
+#### Add the provider
 
 To use the provided hooks, you must wrap your app with an `XMTPProvider`. This gives the hooks access to the XMTP client.
 
@@ -83,7 +85,7 @@ createRoot(document.getElementById("root") as HTMLElement).render(
 );
 ```
 
-### Create a client
+#### Create a client
 
 The `useClient` hook allows you to initialize, disconnect, and access the XMTP client instance. It also exposes the error and loading states of the client.
 
@@ -141,11 +143,11 @@ export const CreateClient: React.FC<{ signer: Signer }> = ({ signer }) => {
 };
 ```
 
-#### Configure the client
+##### Configure the client
 
 To learn more about client configuration options, see [Configure the client](https://github.com/xmtp/xmtp-js#configure-the-client) in the `xmtp-js` SDK docs.
 
-#### Create a client with private keys
+##### Create a client with private keys
 
 Manually handling private keys is not recommended unless a use case requires it.
 
@@ -177,7 +179,7 @@ export const CreateClientWithKeys: React.FC<{ signer: Signer }> = ({ signer }) =
 };
 ```
 
-### List existing conversations
+#### List existing conversations
 
 The `useConversations` hook fetches all conversations with the current wallet on mount. It also exposes error and loading states.
 
@@ -215,7 +217,7 @@ export const ListConversations: React.FC = () => {
 
 To learn more, see [List existing conversations](https://github.com/xmtp/xmtp-js#list-existing-conversations) in the `xmtp-js` SDK docs.
 
-### Listen for new conversations
+#### Listen for new conversations
 
 The `useStreamConversations` hook listens for new conversations in real-time and calls the passed callback when a new conversation is created. It also exposes an error state.
 
@@ -265,7 +267,7 @@ export const NewConversations: React.FC = () => {
 
 To learn more, see [Listen for new conversations](https://github.com/xmtp/xmtp-js#listen-for-new-conversations) in the `xmtp-js` SDK docs.
 
-### Start a new conversation
+#### Start a new conversation
 
 The `useStartConversation` hook starts a new conversation and sends an initial message to it.
 
@@ -345,7 +347,7 @@ export const StartConversation: React.FC = () => {
 };
 ```
 
-### Send messages
+#### Send messages
 
 The `useSendMessage` hook sends a new message into a conversation.
 
@@ -422,7 +424,7 @@ export const SendMessage: React.FC<{ conversation: Conversation }> = ({
 
 To learn more, see [Send messages](https://github.com/xmtp/xmtp-js#send-messages) in the `xmtp-js` SDK docs.
 
-### List messages in a conversation
+#### List messages in a conversation
 
 The `useMessages` hook fetches a list of all messages within a conversation on mount. It also exposes loading and error states and whether there are more messages based on the options passed.
 
@@ -488,7 +490,7 @@ export const Messages: React.FC<{
 };
 ```
 
-#### Page through messages
+##### Page through messages
 
 If a conversation has a lot of messages, it's more performant to page through them rather than fetching them all at once. This can be accomplished by using the `limit` option to limit the number of messages to fetch at a time.
 
@@ -532,7 +534,7 @@ export const PagedMessages: React.FC<{
 };
 ```
 
-### Listen for new messages in a conversation
+#### Listen for new messages in a conversation
 
 The `useStreamMessages` hook streams new conversation messages on mount and exposes an error state.
 
@@ -588,7 +590,7 @@ export const StreamMessages: React.FC<{
 
 To learn more, see [Listen for new messages in a conversation](https://github.com/xmtp/xmtp-js#listen-for-new-messages-in-a-conversation) in the `xmtp-js` SDK docs.
 
-### Listen for new messages in all conversations
+#### Listen for new messages in all conversations
 
 The `useStreamAllMessages` hook streams new messages from all conversations on mount and exposes an error state.
 
@@ -633,7 +635,7 @@ export const StreamAllMessages: React.FC = () => {
 
 To learn more, see [Listen for new messages in all conversations](https://github.com/xmtp/xmtp-js#listen-for-new-messages-in-all-conversations) in the `xmtp-js` SDK docs.
 
-### Check if an address is on the network
+#### Check if an address is on the network
 
 The `useCanMessage` hook exposes both the client and static instances of the `canMessage` method. To check if a blockchain address is registered on the network before instantiating a client instance, use the `canMessageStatic` export.
 
@@ -700,11 +702,11 @@ export const CanMessage: React.FC = () => {
 };
 ```
 
-## Developing
+### Developing
 
 Run `yarn dev` to build the SDK and watch for changes, which will trigger a rebuild.
 
-## Useful commands
+### Useful commands
 
 - `yarn build`: Builds the SDK
 - `yarn clean`: Removes `node_modules`, `lib`, and `.turbo` folders
@@ -715,15 +717,88 @@ Run `yarn dev` to build the SDK and watch for changes, which will trigger a rebu
 - `yarn test`: Runs all unit tests
 - `yarn typecheck`: Runs `tsc`
 
+
+## React components
+
+![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
+
+This package provides [React components](https://github.com/xmtp/xmtp-web/tree/main/packages/react-components) for building React apps with XMTP. These components provide common the building blocks of a chat app and pair well with the [React SDK hooks](#react-sdk-hooks). The package also provides a Storybook that outlines each component's API, use cases, and design that you can use as an interactive learning tool.
+
+These components are in **Developer Preview** status and ready for you to start building with.
+
+However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+
+To keep up with the latest component developments, see the [Issues tab](https://github.com/xmtp/xmtp-web/issues) in the `xmtp-web` repo.
+
+To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/concepts/faq).
+
+### What's inside?
+
+#### Components
+
+These ready-made components can help you quickly build a chat app with XMTP.
+
+### Requirements
+
+- Node 16.10+
+- React 16.14+
+
+### Install
+
+```bash
+# npm
+npm install @xmtp/react-components@preview
+
+# pnpm
+pnpm install @xmtp/react-components@preview
+
+# yarn
+yarn add @xmtp/react-components@preview
+```
+
+### Usage
+
+#### Include styles
+
+To use any of the included components, you must also include their styles. To do so, import the styles from the package into your project.
+
+```ts
+import "@xmtp/react-components/styles.css";
+```
+
+:::important
+
+The included styles contain normalizations of elements globally.
+
+:::
+
+### Developing
+
+Run `yarn dev` to build the package and watch for changes, which will trigger a rebuild.
+
+### Useful commands
+
+- `yarn build`: Builds the package
+- `yarn clean`: Removes `node_modules`, `lib`, and `.turbo` folders
+- `yarn dev`: Builds the package and watches for changes, which will trigger a rebuild
+- `yarn format`: Runs prettier format and write changes
+- `yarn format:check`: Runs prettier format check
+- `yarn lint`: Runs ESLint
+- `yarn storybook`: Launches Storybook for the React components
+- `yarn test`: Runs all unit tests
+- `yarn typecheck`: Runs `tsc`
+
+
 ## Breaking revisions
 
-Because this SDK is in active development, you should expect breaking revisions that might require you to adopt the latest SDK release to enable your app to continue working as expected.
+Because these packages are in active development, you should expect breaking revisions that might require you to adopt the latest release to enable your app to continue working as expected.
 
 XMTP communicates about breaking revisions in the [XMTP Discord community](https://discord.gg/xmtp), providing as much advance notice as possible. Additionally, breaking revisions in a release are described on the [Releases page](https://github.com/xmtp/xmtp-react/releases).
 
+
 ## Deprecation
 
-Older versions of the SDK will eventually be deprecated, which means:
+Older versions of these packages will eventually be deprecated, which means:
 
 1. The network will not support and eventually actively reject connections from clients using deprecated versions.
 2. Bugs will not be fixed in deprecated versions.
@@ -732,9 +807,10 @@ The following table provides the deprecation schedule.
 
 | Announced                                                      | Effective | Minimum Version | Rationale |
 | -------------------------------------------------------------- | --------- | --------------- | --------- |
-| There are no deprecations scheduled for this SDK at this time. |           |                 |           |
+| There are no deprecations scheduled for these packages at this time. |           |                 |           |
 
 Bug reports, feature requests, and PRs are welcome in accordance with these [contribution guidelines](https://github.com/xmtp/xmtp-react/blob/main/CONTRIBUTING.md).
+
 
 ## XMTP `production` and `dev` network environments
 
@@ -758,100 +834,3 @@ The `env` parameter accepts one of three valid values: `dev`, `production`, or `
 - `local`: Use to have a client communicate with an XMTP node you are running locally. For example, an XMTP node developer can set `env` to `local` to generate client traffic to test a node running locally.
 
 The `production` network is configured to store messages indefinitely. XMTP may occasionally delete messages and keys from the `dev` network, and will provide advance notice in the [XMTP Discord community](https://discord.gg/xmtp).
-
-
-
----
-sidebar_label: React SDK components quickstart
-sidebar_position: 3
-toc_max_heading_level: 4
-description: "This package provides React components for building React apps with XMTP."
----
-
-# Quickstart for XMTP React components
-
-![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
-
-This package provides [React components](https://github.com/xmtp/xmtp-web/tree/main/packages/react-components) for building React apps with XMTP.
-
-These components are in **Developer Preview** status and ready for you to start building with.
-
-However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
-
-To keep up with the latest component developments, see the [Issues tab](https://github.com/xmtp/xmtp-web/issues) in the `xmtp-web` repo.
-
-To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/concepts/faq).
-
-## What's inside?
-
-### Components
-
-These ready-made components can help you quickly build a chat app with XMTP.
-
-## Requirements
-
-- Node 16.10+
-- React 16.14+
-
-## Install
-
-```bash
-# npm
-npm install @xmtp/react-components@preview
-
-# pnpm
-pnpm install @xmtp/react-components@preview
-
-# yarn
-yarn add @xmtp/react-components@preview
-```
-
-## Usage
-
-### Include styles
-
-To use any of the included components, you must also include their styles. To do so, import the styles from the package into your project.
-
-```ts
-import "@xmtp/react-components/styles.css";
-```
-
-:::important
-
-The included styles contain normalizations of elements globally.
-
-:::
-
-## Developing
-
-Run `yarn dev` to build the package and watch for changes, which will trigger a rebuild.
-
-## Useful commands
-
-- `yarn build`: Builds the package
-- `yarn clean`: Removes `node_modules`, `lib`, and `.turbo` folders
-- `yarn dev`: Builds the package and watches for changes, which will trigger a rebuild
-- `yarn format`: Runs prettier format and write changes
-- `yarn format:check`: Runs prettier format check
-- `yarn lint`: Runs ESLint
-- `yarn storybook`: Launches Storybook for the React components
-- `yarn test`: Runs all unit tests
-- `yarn typecheck`: Runs `tsc`
-
-## Breaking revisions
-
-Because this package is in active development, you should expect breaking revisions that might require you to adopt the latest release to enable your app to continue working as expected.
-
-XMTP communicates about breaking revisions in the [XMTP Discord community](https://discord.gg/xmtp), providing as much advance notice as possible. Additionally, breaking revisions in a release are described on the [Releases page](https://github.com/xmtp/xmtp-react/releases).
-
-## Deprecation
-
-Older versions of this package will eventually be deprecated, which means bugs will not be fixed in deprecated versions.
-
-The following table provides the deprecation schedule.
-
-| Announced                                                      | Effective | Minimum Version | Rationale |
-| -------------------------------------------------------------- | --------- | --------------- | --------- |
-| There are no deprecations scheduled for this SDK at this time. |           |                 |           |
-
-Bug reports, feature requests, and PRs are welcome in accordance with these [contribution guidelines](https://github.com/xmtp/xmtp-react/blob/main/CONTRIBUTING.md).
