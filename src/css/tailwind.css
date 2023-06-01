@@ -532,8 +532,18 @@ main[class*='docMainContainer'] tr {
 
 /* Markdown */
 
+/*Fabris changes*/
+/*
+10 = 0.625rem
+15 = 0.938rem
+20= 1.25rem
+23= 1.5rem
+30=1.875rem
+*/
+
 .markdown h1 {
-  font-size: 2.25rem;
+  font-size: 1.875rem;
+  margin-bottom: 15px;
 }
 
 .markdown h1:first-child {
@@ -541,14 +551,17 @@ main[class*='docMainContainer'] tr {
 }
 
 .markdown h2 {
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-top: 1.5rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 
 .markdown h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 
 .markdown table th {
@@ -667,14 +680,7 @@ main[class*='docMainContainer'] tr {
   }
 }
 
-/*Fabris changes*/
-/*
-10 = 0.625
-15 = 0.938
-20=1.25
-23= 1.5
-30=1.875
-*/
+/*general g=text*/
 p,
 tr {
   line-height: 21px;
@@ -682,21 +688,14 @@ tr {
   font-size: 15px;
 }
 
-.markdown h1 {
-  font-size: 30px;
-  margin-bottom: 15px;
+.theme-doc-breadcrumbs {
+  display: none;
 }
-.markdown h2 {
-  font-size: 23px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.markdown h3 {
-  font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
+/*blog padding*/
 .col--3 nav ul li {
   padding-right: 10px;
 }
+/*blog bulllet points
+ul li a:before {
+  content: '• ';
+}*/
