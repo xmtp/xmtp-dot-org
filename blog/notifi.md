@@ -38,7 +38,7 @@ It means web3 apps can tap the ubiquitous network email enabled, without comprom
 
 Watch the demo:
 
-<ReactPlayer width="100%" controls url='https://www.youtube.com/watch?v=WqnCd-kGqzg' />
+<ReactPlayer width="100%" controls url='https://youtu.be/z7qGT5kXbdc' />
 
 <br/>
 
