@@ -27,7 +27,7 @@ Timelines are estimates and subject to change. For information about delivered f
 
 ## Decentralization roadmap
 
-🎉 Anyone can now try running the [experimental `xmtpd` node software](https://github.com/xmtp/xmtpd) and be a part of the journey to decentralizing XMTP! In the future, `xmtpd` might replace the node software currently running the XMTP network. 
+🎉 Anyone can now try running the [experimental `xmtpd` node software](https://github.com/xmtp/xmtpd) and be a part of the journey to decentralizing XMTP! In the future, `xmtpd` might replace the node software currently running the XMTP network.
 
 ### Near term (~3 months)
 
