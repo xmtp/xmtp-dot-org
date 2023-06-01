@@ -1,0 +1,503 @@
+[
+  {
+    "title": "Buttrfly",
+    "url": "https://buttrfly.app/",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/16296ec4-cb79-457d-8079-1eab1569896e/buttrfly-icon_%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=49600e82536700bea5230a1caac5c6db3f95bb2689c4ec8652f0b7d914d913c5&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.316Z"
+      }
+    },
+    "cover": null,
+    "description": "Web3 Social Explorer",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "category": "Messaging 💬"
+  },
+  {
+    "title": "Converse",
+    "url": "https://getconverse.app/",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/85349664-8bc4-4fd8-a7ac-f49388eb15a3/xX6qdU43_400x400.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=29a83c1fc7eb898d19dcd54d83f0eed0b609a71a061efbf83e6da5ad42d56bf5&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.315Z"
+      }
+    },
+    "cover": null,
+    "description": "Own your conversations.",
+    "partner": false,
+    "featured": true,
+    "curated": true,
+    "category": "Messaging 💬"
+  },
+  {
+    "title": "Decentral Couch",
+    "url": "https://ethglobal.com/showcase/decentral-couch-g1xtk",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f86860f3-03cd-4c09-b1ed-faa7479f556b/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=7e14540d92798d3022c0630685a70f43d81fa64739f389304eef0e601885cf31&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.317Z"
+      }
+    },
+    "cover": null,
+    "description": "Decentral couch helps crypto natives find crash-pads when they travel. It is designed to be as decentralized as possible, by leveraging decentralized storage and messaging, as well as Zk-identity and badges to make private but verifiable reputation.",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "ETHSanFransisco2022",
+    "category": "Messaging 💬"
+  },
+  {
+    "title": "GameChat",
+    "url": "https://ethglobal.com/showcase/gamechat-4p5qj",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/345929f4-dff7-4dbc-b2b9-04d91bfb0ab6/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=a144471470a29a2a2f7dcaa9aa634bb2c17dfb645f3a0df59fb25cba16cbc16e&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.318Z"
+      }
+    },
+    "cover": null,
+    "description": "GameChat is a web3-native chat client implementation to enable gamers to chat with other gamers while enforcing identity claims using ZK",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "ETHSanFransisco2022",
+    "category": "Messaging 💬"
+  },
+  {
+    "title": "Lenster",
+    "url": "https://lenster.xyz/",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/54241d6a-b82e-475d-96a3-538bf62f7a11/favicon-32x32.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=faa10e4c12c1f936f9c245cd59f43d26f3635c0b72cfffbd0fdd8ba8dc760cd5&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.318Z"
+      }
+    },
+    "cover": null,
+    "description": "Lenster is a composable, decentralized, and permissionless social media webapp built with Lens Protocol.",
+    "partner": false,
+    "featured": true,
+    "curated": true,
+    "category": "Messaging 💬"
+  },
+  {
+    "title": "Orb",
+    "url": "https://orb.ac/",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/20b6a7b2-73e1-433a-ad20-052a75cec3be/uthjq-0D_400x400.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=e29987799a5daf14187dd1d8e7904c98150d700919b516af45c2106d7820a528&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.318Z"
+      }
+    },
+    "cover": null,
+    "description": "Super App for Social Media.",
+    "partner": false,
+    "featured": true,
+    "curated": true,
+    "category": "Messaging 💬"
+  },
+  {
+    "title": "Pinsta",
+    "url": "https://pinsta.xyz/",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f1ac602a-56cd-48de-802c-899f38ad724d/6DpYo2bH_400x400.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=4b3eb549fd18edbefec00cd353f60d039003a4530d1f8ab9905e16927eab69cf&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.321Z"
+      }
+    },
+    "cover": null,
+    "description": "Decentralized image and video sharing service. Create Pin Boards to collect and discover rich media.",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "category": "Messaging 💬"
+  },
+  {
+    "title": "Voice",
+    "url": "https://ethglobal.com/showcase/audiox-huq8u",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/63683ea4-b39b-428d-99a9-af5455ffe600/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=bf7247d3ca67ab642e5c8e0c5e977571e1a050f461e32f8167efa89a35cfece1&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.320Z"
+      }
+    },
+    "cover": null,
+    "description": "Audio Call Dapp where user can connect with other people for audio call from wallet",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "HACKFS 2022",
+    "category": "Messaging 💬"
+  },
+  {
+    "title": "Web Inbox",
+    "url": "https://xmtp.chat/",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e08a9295-10bd-474e-930c-1ea0653d059f/favicon_%281%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=98950aefeaaec30b9cc38e74a0a2fc85e34f9d20d600be414873c7c8d7f446b9&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.317Z"
+      }
+    },
+    "cover": null,
+    "description": "XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
+    "partner": false,
+    "featured": true,
+    "curated": true,
+    "category": "Messaging 💬"
+  },
+  {
+    "title": "AbsoluteLabs",
+    "url": "https://absolutelabs.io/",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d249f90c-cecd-467c-a3a9-11c34a214073/cropped-favicon-absolute-labs-32x32.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=d7db5d1ec2f1996310ad085373d105014ae5115ca5bc8d7446121e01c968f4e0&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.381Z"
+      }
+    },
+    "cover": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f355640f-c391-4385-82a2-cef4d7a5e267/CleanShot_2023-05-25_at_20.10.562x.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=5d0548ef10904559bb82cf39cf36a941df49f1789f36a8254dcf647f5eeb47be&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.311Z"
+      }
+    },
+    "description": "Reach wallets with custom flows",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "category": "Marketing 📣"
+  },
+  {
+    "title": "IDENTI3",
+    "url": "https://ethglobal.com/showcase/identi3-u8rs7",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/60f7307d-75cc-4fb5-88d3-399fd80a066d/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=c4e23e70d53e7081d1a35499c43d271a942d7ed802a836100c5804292a328d0f&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.335Z"
+      }
+    },
+    "cover": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a9d7de7e-b163-47d7-a608-a57d97546380/CleanShot_2023-05-25_at_20.03.472x.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=33fc2d250b998c3776c0b63b4b3ae95117c08540858f9965993def5131b91405&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.302Z"
+      }
+    },
+    "description": "Communicate with your subscription customers",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "HACKFS 2022",
+    "category": "Marketing 📣"
+  },
+  {
+    "title": "Supercluster",
+    "url": "https://ethglobal.com/showcase/supercluster-t9x45",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8e91f00d-2f46-4d6f-af2b-3d767d94cb5b/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=822831bc77bd303236d947abe7f29741da15a7934c39abef899fc538675d1777&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.360Z"
+      }
+    },
+    "cover": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4a167944-0c0a-4d36-9b3f-4c4b00a8fba6/CleanShot_2023-05-25_at_20.06.032x.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=32951ddd14ca408edcde3fdf1b23bbce8924417a94604e4b1d2fc61bf1a39328&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.314Z"
+      }
+    },
+    "description": "Message NFT owners",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "HACKFS 2022",
+    "category": "Marketing 📣"
+  },
+  {
+    "title": "Ticketing",
+    "url": "https://ethglobal.com/showcase/decentralized-ticketing-platform-ok5fe",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f2e9653e-19d5-40c2-9036-7d39683e9486/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=790e2455bb6bcc7c1b8184f8346c22a60ef4777ba0595967b91980fffeae6d85&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.350Z"
+      }
+    },
+    "cover": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d9296b8c-99e1-459c-8932-38fc32205e09/CleanShot_2023-05-25_at_20.07.242x.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=4cd2a7c5072aa71a34140c63fb61eff8aef185313d50f7c1ebe167ac1cd2b285&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.308Z"
+      }
+    },
+    "description": "Broadcast messages to all attendees",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "HACKFS 2022",
+    "category": "Marketing 📣"
+  },
+  {
+    "title": "Build3r",
+    "url": "https://ethglobal.com/showcase/build3r-awy06",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/42f8160c-d652-4a91-a742-3751472af2d9/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=315a2cbde7ff4008147d81fd538b45e1a642bec14bd316b3c9607dd6dc5dd95d&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.320Z"
+      }
+    },
+    "cover": null,
+    "description": "Offer customer support through NFT ownership",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "HACKFS 2022",
+    "category": "Support 📞"
+  },
+  {
+    "title": "Relay",
+    "url": "https://relay.cc/",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/78f25437-c140-4ed9-89d1-bef1648436e7/GDKU1jjV_400x400.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=f2195abb008d936c2861682eff3248f68894df8bea03aac31125a51ba53aa96e&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.322Z"
+      }
+    },
+    "cover": null,
+    "description": "Relay is the intersection of Ethereum-enabled OpenAI agents and wallet messaging.",
+    "partner": false,
+    "featured": true,
+    "curated": true,
+    "category": "Support 📞"
+  },
+  {
+    "title": "0xrelay",
+    "url": "https://ethglobal.com/showcase/0xrelay-fwosy",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b3b53966-f8c4-4329-bb5b-dbf0d985d06c/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=f0b76d39bb36dcd98a1a7577b1787492bea72522abbe74fe7d3a852dff4cc237&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.322Z"
+      }
+    },
+    "cover": null,
+    "description": "0xrelay enables creators to connect with their fans by sending messages to Ethereum wallet addresses off-chain!",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "ETHSanFransisco2022",
+    "category": "Hacks 🥷🏻"
+  },
+  {
+    "title": "ChromeExt",
+    "url": "https://ethglobal.com/showcase/chromeext-chatonweb3withtokengatingcontent-mq751",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7dd8b017-4c60-4ede-ad29-f69d55c307af/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=f0405804c61f54a046f305b2df24e8117c6fa965e48920b1d7eee96cff5d36a0&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.318Z"
+      }
+    },
+    "cover": null,
+    "description": "XMTP web3 chat improvement that with chrome notification, token gating and NFT unlocking widget in chat box ;)",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "HACKFS 2022",
+    "category": "Hacks 🥷🏻"
+  },
+  {
+    "title": "GhostShare",
+    "url": "https://ethglobal.com/showcase/ghostshare-z7c3y",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b4f5a348-decf-4652-a1bc-8c5d466d268a/CleanShot_2023-05-17_at_13.01.232x.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=9159361f8257cc6d6fdda6b9ba8739303e4597c554df112da6ee635a9d8eecf0&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.316Z"
+      }
+    },
+    "cover": null,
+    "description": "Ghostshare is the service you use to share a file in a private and decentralized way!",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "HACKFS 2022",
+    "category": "Hacks 🥷🏻"
+  },
+  {
+    "title": "Mephisto",
+    "url": "https://ethglobal.com/showcase/mephisto-3ix35",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/56a5c8aa-a020-4148-8c6c-cbd61c2b85f6/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=877542a26abb524e6173a1c438be6a39017d3f5883797f23dd6b6be2ada469f1&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.316Z"
+      }
+    },
+    "cover": null,
+    "description": "Mephisto is a trustless deadman's switch for private key transmission via xmtp to provide automatic inheritance of assets to beneficiaries or recovery of a lost wallet to a backup address.",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "ETHSanFransisco2022",
+    "category": "Hacks 🥷🏻"
+  },
+  {
+    "title": "PreshMail",
+    "url": "https://ethglobal.com/showcase/preshmail-rnuzb",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ca9d58e6-589e-4f62-8197-b87b23090d4b/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=cf3ba30051dc5d912c8fed467a995f8cdbd0441bd02845ec472af9fc648f36b1&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.319Z"
+      }
+    },
+    "cover": null,
+    "description": "A composable chat app at built on top of Lens and XMTP that democratizes and monetize your attention!",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "ETHSanFransisco2022",
+    "category": "Hacks 🥷🏻"
+  },
+  {
+    "title": "Relay",
+    "url": "https://ethglobal.com/showcase/relay-85njt",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fcbe937a-9ca3-496c-b801-d7804c602a63/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=5cb7e535b9594debb768e0532b3f3c73fbf378316288cac9e32e150ec5c174c4&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.321Z"
+      }
+    },
+    "cover": null,
+    "description": "Zapier for web3. Automate notifications on EVM compatible chains for triggers like specific prices, liquidation percentages, changes in owners, and more. Get a notification to your XMTP account when the trigger crosses your desired value.",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "ETHSanFransisco2022",
+    "category": "Hacks 🥷🏻"
+  },
+  {
+    "title": "Streamseed",
+    "url": "https://ethglobal.com/showcase/streamseed-mrbi9",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f4b9f19d-166d-4415-aa1c-91f14fbaf291/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=28340eff8fb200e1d41816287f2b9b140e1822eb3221d7640f034004b88e1eba&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.320Z"
+      }
+    },
+    "cover": null,
+    "description": "Self-custodial streaming and chatting platform for citizen journalists and content creators.",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "ETHSanFransisco2022",
+    "category": "Hacks 🥷🏻"
+  },
+  {
+    "title": "FriendShape",
+    "url": "https://ethglobal.com/showcase/friendshape-hyrna",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1a5244a0-92bd-4c09-a671-856aef101dc1/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=b142dd194c0a81d79499d76e94adbb992428740c134067d16fe3a2b776c65605&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.318Z"
+      }
+    },
+    "cover": null,
+    "description": "FriendShape is a game in which players connect with each other to form edges in a social graph, in order to draw a graph that represents a picture that they are given as a target.",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "ETHSanFransisco2022",
+    "category": "Fun 🔥"
+  },
+  {
+    "title": "GameJutsu",
+    "url": "https://ethglobal.com/showcase/gamejutsu-0u4en",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a1228ebe-6708-4746-9299-b5eddb776211/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=a29c328a38ca70cd66829181a09a3f6cb718180ecfa876a29914f7d833bf5f6c&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.322Z"
+      }
+    },
+    "cover": null,
+    "description": "Gaming framework taking care of the on-chain / off-chain communication balance",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "ETHOnline2022",
+    "category": "Fun 🔥"
+  },
+  {
+    "title": "P2P Games",
+    "url": "https://ethglobal.com/showcase/p2p-games-19vqx",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7845493a-f575-4b1b-8c63-dd0b2beb63b6/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=04082b304250413e321af439875a43ee687066d471434513aca385b5804f5211&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.316Z"
+      }
+    },
+    "cover": null,
+    "description": "P2P Gaming platform, find and play by using ENS or Eth address",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "ETHSanFransisco2022",
+    "category": "Fun 🔥"
+  },
+  {
+    "title": "Wallet Roullete",
+    "url": "https://walletroulette.xyz/",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/776facf8-8a87-49d9-ae2f-e2491e83bd0c/favicon-32x32.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=cf95a190cf81e6172cb00bf011aab824c3f1be3f811d28420ee30b3890010e01&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.319Z"
+      }
+    },
+    "cover": null,
+    "description": "Connect with fellow web3 people",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "category": "Fun 🔥"
+  },
+  {
+    "title": "Zinder",
+    "url": "https://ethglobal.com/showcase/zinder-match-nomads-through-poaps-js3py",
+    "icon": {
+      "type": "file",
+      "file": {
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c2105ab5-d0fc-493f-8505-08281ba807f0/favicon_%282%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=6346107bf975c638b4a70fdd06d6e87fc4b63f52a0f9672a8a262e2ad170902e&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-05-28T01:19:25.315Z"
+      }
+    },
+    "cover": null,
+    "description": "Message potential friends who hold a lot of poaps like you",
+    "partner": false,
+    "featured": false,
+    "curated": true,
+    "hackathon": "HACKFS 2022",
+    "category": "Fun 🔥"
+  }
+]
