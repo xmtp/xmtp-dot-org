@@ -28,7 +28,7 @@
 }
 
 [class*='toggleButton'] {
-  display: none!important;
+  display: none !important;
 }
 
 @media (min-width: 1480px) {
