@@ -1,16 +1,17 @@
 ---
 slug: secure-web3-customer-service-and-support-with-xmtp-and-ens
 hide_table_of_contents: true
-title: "Secure web3 customer service and support with XMTP and ENS"
+title: 'Secure web3 customer service and support with XMTP and ENS'
 date: 2023-02-22
 authors: mg
-description: "If you’ve been in the web3/crypto community for longer than an hour, you’ve probably seen a strange message that seems to accompany every Discord server."
+description: 'If you’ve been in the web3/crypto community for longer than an hour, you’ve probably seen a strange message that seems to accompany every Discord server.'
 image: ./media/ens-xmtp.jpg
 tags:
-- Developers
-- Messaging
+  - Developers
+  - Messaging
 ---
-import DocusaurusImageUrl from './media/messages-ens-relaycc-eth.png';
+
+import DocusaurusImageUrl from './media/messages-ens-relaycc-eth.png'
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 ![ens and xmtp card](./media/ens-xmtp.jpg)
@@ -41,7 +42,7 @@ Associating ENS names to messaging accounts makes these interactions even more s
 
 ### How ENS enables a more trustworthy identity for communication
 
-As a decentralized identity protocol built on Ethereum, names registered with ENS enable us to have a high degree of certainty about their owners, and any history they may carry. In the aforementioned example, the `gm` subdomain is a part of the ENS name  `xmtp.eth`, which can be checked to see the account that currently owns it. In the [ENS app](https://app.ens.domains/name/xmtp.eth/details) we see the following:
+As a decentralized identity protocol built on Ethereum, names registered with ENS enable us to have a high degree of certainty about their owners, and any history they may carry. In the aforementioned example, the `gm` subdomain is a part of the ENS name `xmtp.eth`, which can be checked to see the account that currently owns it. In the [ENS app](https://app.ens.domains/name/xmtp.eth/details) we see the following:
 
 ![xmtp-eth.png](./media/xmtp-eth.png)
 
@@ -99,12 +100,12 @@ Below you can see the same exchange that we presented from the Relay website, bu
 
 ![Chat via XMTP.png](./media/Chat_via_XMTP.jpg)
 
-<img src={DocusaurusImageUrl} style={{width:"400px"}}/>
+<img src={DocusaurusImageUrl} style={{ width: '400px' }} />
 
 ## How to get started
 
 1. Set up a wallet account for your project that you’d like to use for secure customer service and support
-    1. Note: this will need to be an EOA, not a smart contract wallet.
+   1. Note: this will need to be an EOA, not a smart contract wallet.
 2. Set up an [ENS subdomain](https://docs.ens.domains/dapp-developer-guide/managing-names#creating-subdomains) and point it to the new blockchain account, making sure to also set the [reverse resolution](https://docs.ens.domains/dapp-developer-guide/managing-names#configuring-reverse-resolution) address
 3. Open [xmtp.chat](http://xmtp.chat) and sign in with that account to establish its messaging keys
 4. Tell others about your new address and start messaging!
@@ -119,5 +120,5 @@ If you just want to try out messaging with a brand or a bot, here are some optio
 - Ask bots trained on web3 projects over at [relay.cc](http://relay.cc)
 - Head to [xmtp.chat](http://xmtp.chat) and message `hi.xmtp.eth` and someone from the XMTP Labs team will say hi (though the response may not be instantaneous…we aren’t robots after all 🤖)
 
-<br/>
+<br />
 <FeedbackWidget />

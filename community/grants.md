@@ -15,16 +15,13 @@ image: https://github.com/xmtp/xmtp-dot-org/raw/main/static/img/XMTP-Grants_Cove
 
 :::
 
-
 ## ✨ Mission
 
 Support projects, ideas, and people building on XMTP to foster ecosystem growth through public good creation.
 
-
 ## 📜 Request for proposals
 
 We are open to any and all ideas! Below are just a few categories of projects we are particularly excited about.
-
 
 ### 🎨 Custom content types
 
@@ -32,31 +29,26 @@ We are open to any and all ideas! Below are just a few categories of projects we
 - Threading: Emoji reactions, Reply threads
 - Transactions and payments
 
-
 ### 💾 Novel applications
 
 - Rabbithole Quest
 - Gitcoin messaging
 - Pay to message
 
-
 ### 🎒 Portable consent backpack
 
 - Follow
 - Block/spam
-
 
 ### 🧠 Protocol development
 
 - Multi-chain support (e.g. Solana, Bitcoin, Tezos, etc)
 - Account abstraction
 
-
 ### 👨🏼‍💻 Developer tools
 
 - Plug and play notification server
 - Web3 resolver library
-
 
 ### 👀 Unique features
 
@@ -69,7 +61,6 @@ All projects must propose a standard, tool, or concept that’s adopted by the e
 
 :::
 
-
 ## 🔍 Grant types
 
 We offer two types of grants: Micro grants and Kickstarter grants.
@@ -78,23 +69,21 @@ We offer two types of grants: Micro grants and Kickstarter grants.
 
 - Smaller project scope, faster review process
 - Examples:
-    - Opt-in, interoperable, performant read receipts
-    - Rabbithole quest
+  - Opt-in, interoperable, performant read receipts
+  - Rabbithole quest
 
 **Kickstarter grants (<$10K):**
 
 - Bigger project scope, fast review process
 - Examples:
-    - Cross-chain support or account abstraction
-    - Portable and interoperable consent backpack
+  - Cross-chain support or account abstraction
+  - Portable and interoperable consent backpack
 
 📣 If you are unsure, message us via XMTP at `grants.xmtp.eth` and we'll be happy to help you figure out the grant type that's right for you.
-
 
 ## 🎯 Evaluation criteria
 
 We love and encourage diversity of ideas in grant applications. This section lists the baseline expectations we have for all applications.
-
 
 Example applications:
 
@@ -166,12 +155,11 @@ Milestone dates are agreed upon by the project team and XMTP. They can be amende
 
 You can fill in the form available at [Claim Payments](https://forms.xmtp.org/grants-claim-payment) to notify us of your progress and unlock the next portion of your grant!
 
-
 ## ✨ Resources and inspiration
 
 ### XMTP concepts
 
-- [XMTP development concepts](/docs/dev-concepts/introduction)
+- [XMTP development concepts](/docs/introduction)
 
 ### Vision
 
@@ -179,7 +167,7 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ### Documentation
 
-- [JavaScript client SDK docs](/docs/client-sdk/javascript/concepts/intro-to-sdk)
+- [Start building with XMTP](/docs/build/start-building)
 
 ### SDKs
 
@@ -197,7 +185,6 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 - Awesome-xmtp projects: https://github.com/xmtp/awesome-xmtp
 - [Built with XMTP](built-with-xmtp)
-
 
 ## 💬 Contact us
 

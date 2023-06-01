@@ -6,10 +6,11 @@ date: 2022-12-06
 authors: mg
 description: The latest version brings conversation filtering and improvements to privacy.
 tags:
-- Announcements
-- Privacy & Security
-- Protocol
+  - Announcements
+  - Privacy & Security
+  - Protocol
 ---
+
 import ReactPlayer from 'react-player'
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
@@ -31,7 +32,6 @@ After 12 months of work, **we are excited to announce XMTP Protocol v2.**
 
 But building an interoperable messaging network has its own set of challenges for app developers. Users like to be able to access messages from anywhere across the network, but want messaging experiences tailored to the app they are currently using.
 
-
 ## Introducing conversation and metadata filtering
 
 With XMTP v2, app developers now have protocol-native support to filter messages using conversation IDs and metadata. This opens up scenarios such as:
@@ -47,34 +47,29 @@ Conversation filtering not only makes message retrieval dramatically more effici
 
 Conversation IDs are embedded within the encrypted payload of an XMTP envelope, meaning that adding a conversation ID does not affect privacy at the network layer at all—and is only visible to clients that can decrypt the messages.
 
-
 ## Increased participant privacy
 
 By embedding conversation IDs within the encrypted payload and anonymizing wallet addresses, XMTP v2 strips messages of any public metadata that might identify the participants in a conversation.
 
 “This important change protects users by preventing third parties from using public data to observe who is talking to whom in the network and mapping out a graph of conversations taking place over XMTP,” said Saul Carlin, Head of Product at XMTP Labs.
 
-You can go deep in [the supporting documentation](/docs/dev-concepts/architectural-overview#client-layer) for more technical details about the XMTP V2 negotiated topics that enable this improvement.
-
+You can go deep in [the supporting documentation](/docs/concepts/architectural-overview#client-layer) for more technical details about the XMTP V2 negotiated topics that enable this improvement.
 
 ## Improved developer transparency
 
 Beyond the features that XMTP protocol v2 introduces, we have also improved the transparency of how the XMTP protocol, SDKs and applications work together.
 
-
 ### XMTP Protocol & Network Overview
 
 We have published a [Protocol and Network Overview](https://github.com/xmtp/proto/blob/main/PROTOCOL.md) document on GitHub to help developers understand the core architecture of XMTP v2.
-
 
 ### Platform Roadmap
 
 We have published our [platform roadmap](/roadmap) to give developers more transparency on upcoming SDK support and features like push notifications and decentralization milestones.
 
-
 ### Deprecation date for pre-v7 versions of the SDK
 
-Update your app to use >=v7.0.0 of the X[MTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js) by Jan 8, 2023 to start exploring the new XMTP v2 use cases for your app. v7.0.0 clients are fully compatible with pre-v7.0.0 clients. Conversations established using XMTP v1 can continue as before. However, conversations using XMTP v2 will not be visible to pre-v7.0.0 clients. To learn more, see [Determining whether to use XMTP v2 or v1 topics](/docs/dev-concepts/architectural-overview#determining-whether-to-use-xmtp-v2-or-v1-topics).
+Update your app to use >=v7.0.0 of the X[MTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js) by Jan 8, 2023 to start exploring the new XMTP v2 use cases for your app. v7.0.0 clients are fully compatible with pre-v7.0.0 clients. Conversations established using XMTP v1 can continue as before. However, conversations using XMTP v2 will not be visible to pre-v7.0.0 clients. To learn more, see [Determining whether to use XMTP v2 or v1 topics](/docs/concepts/architectural-overview#determining-whether-to-use-xmtp-v2-or-v1-topics).
 
 To learn more about and discuss important deprecation details, see this [GitHub discussion](https://github.com/orgs/xmtp/discussions/17).
 
@@ -84,7 +79,7 @@ XMTP v2 came together after thousands of interactions with developers. It is inc
 
 Come build with XMTP at:
 
-- [XMTP documentation](/docs/dev-concepts/introduction)
+- [XMTP documentation](/docs/introduction)
 
 - GitHub repo: https://github.com/xmtp
 

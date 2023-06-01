@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # Roadmap for XMTP
 
-Timelines are estimates and subject to change. For information about delivered features and fixes, see the [Changelog](/changelog).
+Timelines are estimates and subject to change. For information about delivered features and fixes, see the [Changelog](/docs/changelog).
 
 ## Features roadmap
 

@@ -1,15 +1,16 @@
 ---
 slug: project-spotlight-relay-receiver
 hide_table_of_contents: true
-title: "Project Spotlight: Relay Receiver, a no-code wallet chat for websites"
+title: 'Project Spotlight: Relay Receiver, a no-code wallet chat for websites'
 date: 2022-08-16
 authors: peter
 description: Facilitating user communication and overcoming one of web3’s biggest challenges. NFT sales, POAP events, DAO activities, etc all have very meaningful reasons why users would want to message each other, but sometimes the website has no chat function and there’s no way to find the user elsewhere.
 image: ./media/blogPost-16.png
 tags:
-- Developers
-- Spotlight
+  - Developers
+  - Spotlight
 ---
+
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Facilitating user communication and overcoming one of web3’s biggest challenges. NFT sales, POAP events, DAO activities, etc all have very meaningful reasons why users would want to message each other, but sometimes the website has no chat function and there’s no way to find the user elsewhere.
@@ -22,11 +23,9 @@ XMTP Labs is focused on helping developers build incredible messaging experience
 
 The pace of change is intense, though, and it’s hard to keep up with all the new products and innovation. As a way to help raise awareness of the good work, we’re introducing **Project Spotlight**, an initiative to highlight and get to know the dapps building with XMTP.
 
-
 ### There is a big problem in web3
 
 Facilitating user communication and overcoming one of web3’s biggest challenges. NFT sales, POAP events, DAO activities, etc all have very meaningful reasons why users would want to message each other, but sometimes the website has no chat function and there’s no way to find the user elsewhere. The absence of messaging has been one of the biggest challenges for web3 as users need the ability to reach other users.
-
 
 ### **Meet Relay**
 
@@ -42,10 +41,9 @@ You can see a screenshot of the Relay Receiver widget in action below.
 
 It’s still early days, and already you can see three common use-cases for Receiver:
 
-* Lets web3 sites enable their users to easily chat, connect, and conduct business without having to build their own chat and database.
-* Lets web2 sites become web3 integrated and offer features to wallet users, saving a lot of work with sign-in flow to their UI.
-* Has Intercom-like functionality with Receiver Pro, establishing support agent workflows for interacting with web3 users (with chat bot support coming soon!)
-
+- Lets web3 sites enable their users to easily chat, connect, and conduct business without having to build their own chat and database.
+- Lets web2 sites become web3 integrated and offer features to wallet users, saving a lot of work with sign-in flow to their UI.
+- Has Intercom-like functionality with Receiver Pro, establishing support agent workflows for interacting with web3 users (with chat bot support coming soon!)
 
 ### How it works (technically) with XMTP
 
@@ -59,13 +57,11 @@ Given the interoperability of messages on the XMTP network, users can then acces
 
 ---
 
-
 ### Check out the Relay and XMTP SDKs
 
 [![sybil-interface-receiver repo card](media/relaycc-repo-card.png)](https://github.com/relaycc/sybil-interface-receiver)
 
 [![xmtp-js repo card](media/xmtp-js-repo-card.png)](https://github.com/xmtp/xmtp-js)
-
 
 ### Learn more about Relay
 

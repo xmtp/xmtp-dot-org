@@ -7,11 +7,12 @@ authors: mg
 description: How XMTP enables wallets to secure conversations, not just transactions and assets.
 image: ./media/secure-web3-messaging-post.png
 tags:
-- Developers
-- Messaging
-- Privacy & Security
-- Wallets
+  - Developers
+  - Messaging
+  - Privacy & Security
+  - Wallets
 ---
+
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 How XMTP enables wallets to secure conversations, not just transactions and assets.
@@ -24,13 +25,11 @@ Today's wallet apps are the portal into web3. We use them to transact, secure as
 
 And while they really do seem like a magical-do-everything-Swiss-Army-knife there's still one more trick that could be up their sleeve: securing _conversations_, not just transactions and assets.
 
-
 ## Bringing wallet-to-wallet messaging to... wallets
 
 Wallet apps already securely store the keys necessary for users to transact in web3, so they're a natural fit for where encrypted messaging between blockchain accounts could take place. The demand and discussion around "wallet-to-wallet chat" has increased dramatically in recent months, but with all the complexity that goes into communication protocols, encrypting messages, and the full scope of messaging needs. it's no surprise that it has taken a while for wallets to adopt the necessary functionality. Until now, that is.
 
-[XMTP](/docs/dev-concepts/introduction) takes all of the challenging messy bits of supporting messaging and makes it easy to add a variety of communications use cases, like chat, announcements, and notifications to wallet apps, dapps, etc.
-
+[XMTP](/docs/introduction) takes all of the challenging messy bits of supporting messaging and makes it easy to add a variety of communications use cases, like chat, announcements, and notifications to wallet apps, dapps, etc.
 
 ## Why do wallets need secure messaging?
 
@@ -40,17 +39,16 @@ It's hard to imagine an Internet before email, online communities before chat, o
 
 Wallets do make life super easy when it comes to signing into services by providing a "portable" identity, and not requiring a username and password. But what happens when that service or dapp wants to get back in touch with you? Maybe for something critically important. Well…you're probably out of luck.
 
-That's where XMTP comes in: the same wallets we use to transact and sign in can be used to send and receive messages. Messages in XMTP are encoded with an [open content format](/docs/dev-concepts/content-types), which opens the doors to many different presentation styles and use cases.
+That's where XMTP comes in: the same wallets we use to transact and sign in can be used to send and receive messages. Messages in XMTP are encoded with an [open content format](/docs/concepts/content-types), which opens the doors to many different presentation styles and use cases.
 
 All XMTP messages are end-to-end encrypted and are stored and delivered off-chain for scalability and to preserve privacy. They can be:
 
-* Direct messages such as a proposed negotiation for an NFT you own, or a simple chat between owners of ENS domains, e.g. `alice.eth` talking to `bob.eth`, all cryptographically verifiable
-* User support, where a project can chat privately with its users, in a way that can't be forged, spoofed, or snooped on, and using verifiable and recognizable identities to improve trust and reduce phishing, e.g. `support.xmtp.eth`
-* Notifications, alerting an account to something timely and important, such as an impending domain renewal, or DeFi loan position liquidation
-* Group chat (soon), enabling discussions with communities formed around on-chain activity or ownership
+- Direct messages such as a proposed negotiation for an NFT you own, or a simple chat between owners of ENS domains, e.g. `alice.eth` talking to `bob.eth`, all cryptographically verifiable
+- User support, where a project can chat privately with its users, in a way that can't be forged, spoofed, or snooped on, and using verifiable and recognizable identities to improve trust and reduce phishing, e.g. `support.xmtp.eth`
+- Notifications, alerting an account to something timely and important, such as an impending domain renewal, or DeFi loan position liquidation
+- Group chat (soon), enabling discussions with communities formed around on-chain activity or ownership
 
 Whatever the use case, adding XMTP adds extensive benefits for wallet users, and helps the web3 ecosystem as a whole by removing today's communication barrier.
-
 
 ## Wallets powering dapp re-engagement
 
@@ -61,7 +59,6 @@ Notifications and emails are the lifeblood of so many products on the web—and 
 As dapps, platforms, and protocols adopt secure web3 messaging to re-engage their users, wallet apps can become an even more critical hub in a user's journey—all through a simple integration with XMTP.
 
 We’ve spent the past year building with the [developer community](https://discord.gg/xmtp) and the tools to drive re-engagement, which will bring tons of value to wallet apps and dapp developers from day one.
-
 
 ## Wallet connections made easy and flexible
 
@@ -75,13 +72,12 @@ Once the wallet creates a signature to initiate their blockchain account with XM
 
 ```javascript
 const conversation = await xmtp.conversations.newConversation(
-'0x2b0d29ffa81fa6bf35d31db7c3bc11a5913b45ef'
+  '0x2b0d29ffa81fa6bf35d31db7c3bc11a5913b45ef'
 )
 await conversation.send('Hello world')
 ```
 
 Everything else to send the message is seamlessly handled by the XMTP SDK, including content encoding and encryption, relay to the XMTP network, and storage for later retrieval by the recipient. It's also worth noting just how much happens behind the scenes for message encryption, an otherwise complex, multi-step process.
-
 
 ## Encryption made easy
 
@@ -93,7 +89,6 @@ The XMTP SDK handles all of the complex bits of establishing a secure connection
 Encryption made easy
 
 The best part of this is that for wallets looking to add web3 messaging to their set of features, securing messages with XMTP means they can offer best-in-class encryption.
-
 
 ## Messages wherever web3 takes you...
 
@@ -107,18 +102,17 @@ The XMTP SDK handles the secure retrieval and storage of a user's messages, and 
 
 Altogether, XMTP gives wallet apps the means to provide a streamlined, consistent messaging experience, meets users wherever they go, and unlocks new possibilities across web3.
 
-
 ## How to get started with XMTP...
 
 Here's a handful of helpful links to check out if you're keen to explore adding secure web3 messaging to your wallet app:
 
-* Come chat with the XMTP Labs team, and other developers building with XMTP in the project [Discord Server](https://discord.gg/xmtp)
-* Check out the [XMTP documentation](/docs/dev-concepts/introduction) for everything you need to get started
-* The [project's GitHub](https://github.com/xmtp) is home to the XMTP SDK, example chat app, and more…
-* Read the [XMTP Litepaper](https://github.com/xmtp/litepaper) to understand the motivation behind the project more deeply, as well as future plans
-* Follow [@xmtp_ on Twitter](https://twitter.com/xmtp_)
-* Feel free to send me a message personally, [@mg on Twitter](https://twitter.com/mg)
-* Come join the XMTP Labs team and mission, [check out our jobs page](https://blog.xmtp.com/careers/)
+- Come chat with the XMTP Labs team, and other developers building with XMTP in the project [Discord Server](https://discord.gg/xmtp)
+- Check out the [XMTP documentation](/docs/introduction) for everything you need to get started
+- The [project's GitHub](https://github.com/xmtp) is home to the XMTP SDK, example chat app, and more…
+- Read the [XMTP Litepaper](https://github.com/xmtp/litepaper) to understand the motivation behind the project more deeply, as well as future plans
+- Follow [@xmtp\_ on Twitter](https://twitter.com/xmtp_)
+- Feel free to send me a message personally, [@mg on Twitter](https://twitter.com/mg)
+- Come join the XMTP Labs team and mission, [check out our jobs page](https://blog.xmtp.com/careers/)
 
 <br/>
 <FeedbackWidget />

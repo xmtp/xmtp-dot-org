@@ -1,22 +1,22 @@
 export const HEADER_DATA = [
   {
-    title: 'Start messaging with XMTP',
+    title: 'Try messaging with XMTP',
     subtitle:
       'Use an app built with XMTP to start learning how to build one',
-    url: '/docs/client-sdk/javascript/tutorials/start-messaging',
+    url: '/docs/start-messaging',
     icon: 'x-new.svg',
   },
   {
     title: 'Start building with XMTP client SDKs',
     subtitle: 'Build web3 messaging apps in React, JS, Kotlin, Swift, & Dart',
-    url: '/sdks-and-tools',
+    url: '/docs/introduction#xmtp-sdks-and-example-apps',
     icon: 'quickstart-icon.svg',
   },
   {
     title: 'Build Lens DMs with XMTP',
     subtitle:
       'Build key XMTP chat features to provide DMs in a Lens app',
-    url: '/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app',
+    url: '/docs/build/build-key-xmtp-chat-features-in-a-lens-app',
     icon: 'dms-icon.svg',
   },
 ]

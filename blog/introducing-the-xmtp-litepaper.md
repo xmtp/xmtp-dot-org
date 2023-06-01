@@ -7,10 +7,11 @@ authors: mg
 description: A primer on XMTP—the secure web3 messaging protocol—why we're building it, how it works, and where we see it going in the future.
 image: ./media/LitepaperAsset.png
 tags:
-- Developers
-- Litepaper
-- Messaging
+  - Developers
+  - Litepaper
+  - Messaging
 ---
+
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 A primer on XMTP—the secure web3 messaging protocol—why we're building it, how it works, and where we see it going in the future.
@@ -31,9 +32,9 @@ Over the coming weeks and months, we'll be sharing in-depth explorations of the 
 
 So in the meantime, while we continue to build, we invite you to:
 
-* Read the [XMTP Litepaper](https://github.com/xmtp/litepaper)
-* Discuss it with us on [Twitter](https://twitter.com/xmtp_), [Discord](https://discord.gg/xmtp), and [GitHub Discussions](https://github.com/orgs/xmtp/discussions)
-* Check out the [XMTP docs](/docs/dev-concepts/introduction) to get started building
+- Read the [XMTP Litepaper](https://github.com/xmtp/litepaper)
+- Discuss it with us on [Twitter](https://twitter.com/xmtp_), [Discord](https://discord.gg/xmtp), and [GitHub Discussions](https://github.com/orgs/xmtp/discussions)
+- Check out the [XMTP docs](/docs/introduction) to get started building
 
 <br/>
 <FeedbackWidget />

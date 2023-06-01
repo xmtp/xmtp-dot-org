@@ -1,16 +1,17 @@
 ---
 slug: xmtp-lens-twitter-spaces-replay
 hide_table_of_contents: true
-title: "XMTP / Lens Twitter Spaces replay"
+title: 'XMTP / Lens Twitter Spaces replay'
 date: 2022-11-17
 authors: peter
 description: XMTP and Lens hosted a Twitter Spaces event on November 10 to dig into how developers can now use XMTP to add E2EE DMs into their Lens apps.
 image: https://blog.xmtp.com/content/images/size/w1460/2022/11/SpacesRecap.png
 tags:
-- Developers
-- Lens
-- Messaging
+  - Developers
+  - Lens
+  - Messaging
 ---
+
 import ReactPlayer from 'react-player'
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
@@ -134,7 +135,7 @@ the great things about Lens is that it's a super, super flexible system.
 
 [00:19:00] So there is like a complete shift in the. Paradigm of actually how we approach, the curation, the experiences. Because you are in open networks and in open networks, you really have to listen to the users and be aligned with their values. And I think that's the biggest game changer.
 
-[00:19:18] Matt Galligan - XMTP:  It's really incredible to lean in on the this sort of permissionless building and building any front end that you would care to on top of.Of this protocol, the, I know that earlier this week you were tweeting out about Lenster. Really getting into the spotlight on, on GitHub, Lenster being one of the front ends to the Lens protocol and where Lens DMs have been deployed.
+[00:19:18] Matt Galligan - XMTP: It's really incredible to lean in on the this sort of permissionless building and building any front end that you would care to on top of.Of this protocol, the, I know that earlier this week you were tweeting out about Lenster. Really getting into the spotlight on, on GitHub, Lenster being one of the front ends to the Lens protocol and where Lens DMs have been deployed.
 
 [00:19:43] First you the the developer behind it is awesome and we certainly had a great time in helping on building out the DMs. But the coolest thing about this is that here you have Lenster do XYZ as one place to to go to it. I just came back from East San Francisco Hackathon where Lens was also there.
 
@@ -252,7 +253,7 @@ the great things about Lens is that it's a super, super flexible system.
 
 [00:36:28] Stani Kulechov - Lens: Yeah I really love the reme that pull, because it's like a concept where, you can create a meme not necessarily use an old template, but like actual new meme.
 
-[00:36:38] And then once you create it, anyone can come and actually remix that meme and select collection fees. So effectively you can actually you can monetize by creating memes and getting remixed and also sharing that revenue with other  creators. There's also another interesting platform called Memester.
+[00:36:38] And then once you create it, anyone can come and actually remix that meme and select collection fees. So effectively you can actually you can monetize by creating memes and getting remixed and also sharing that revenue with other creators. There's also another interesting platform called Memester.
 
 [00:36:55] So that's just recently launched Memester.xyz.
 

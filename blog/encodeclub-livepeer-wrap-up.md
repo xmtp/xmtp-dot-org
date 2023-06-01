@@ -1,16 +1,17 @@
 ---
 slug: encode-club-livepeer-wrap-up
 hide_table_of_contents: true
-title: "Tuned In: Developers show the power of video + messaging with XMTP and Livepeer"
+title: 'Tuned In: Developers show the power of video + messaging with XMTP and Livepeer'
 date: 2023-02-02
 authors: rich
-description: "Next Video Build: Livepeer x XMTP awards wrap-up: DeUniversity’s education platform, Polyfans Messenger token-gated livestream, and Livopedia’s creator tools take top honors."
+description: 'Next Video Build: Livepeer x XMTP awards wrap-up: DeUniversity’s education platform, Polyfans Messenger token-gated livestream, and Livopedia’s creator tools take top honors.'
 image: ./media/Encode-Livepeer-Wrapup-cover.png
 tags:
-- Awards
-- Developers
-- Hackathon
+  - Awards
+  - Developers
+  - Hackathon
 ---
+
 import ReactPlayer from 'react-player'
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
@@ -76,7 +77,7 @@ For more information about XMTP and Livepeer, check out the links below:
 **Have a video idea you’re working on? Connect with us and let us know.**
 
 - 👾 Discord - [https://discord.gg/xmtp](https://discord.gg/xmtp)
-- 🐦 Twitter - [https://twitter.com/xmtp_](https://twitter.com/xmtp_)
+- 🐦 Twitter - [https://twitter.com/xmtp\_](https://twitter.com/xmtp_)
 - 📖 Careers at XMTP Labs - [https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
 
 <br/>

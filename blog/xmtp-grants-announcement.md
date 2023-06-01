@@ -1,16 +1,17 @@
 ---
 slug: xmtp-grants-announcement
 hide_table_of_contents: true
-title: "XMTP Grants: Every big idea starts small"
+title: 'XMTP Grants: Every big idea starts small'
 date: 2023-01-25
 authors: yash
 description: Announcing XMTP Grants! A program to nurture web3 messaging projects, support public good creation, and foster ecosystem growth.
 image: ./media/XMTP-Grants-Cover.png
 tags:
-- Announcements
-- Developers
-- Grants
+  - Announcements
+  - Developers
+  - Grants
 ---
+
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Announcing XMTP Grants! A program to nurture web3 messaging projects, support public good creation, and foster ecosystem growth.

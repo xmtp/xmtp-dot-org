@@ -214,7 +214,7 @@ export const MainContent = ({ styles }) => {
                   </dl>
 
                   <Link
-                    to="/docs/dev-concepts/start-building"
+                    to="/docs/build/start-building"
                     className="bg-red-500 text-white border-none rounded-lg py-3 px-5 font-bold text-base w-44 mt-10 h-12 cursor-pointer hover:bg-red-600 mb-14 xl:mb-0 block hover:no-underline hover:text-white"
                   >
                     <img
@@ -305,7 +305,7 @@ export const MainContent = ({ styles }) => {
               <div className="bg-neutral-800/50 absolute hidden lg:grid justify-center items-center w-full h-full z-10">
                 <img
                   onClick={handleReplay}
-                  src="/img/icons/play-icon.svg"
+                  src="/img/play-icon.svg"
                   alt="play button"
                   className="w-14 cursor-pointer hover:invert"
                 />
@@ -339,7 +339,7 @@ export const MainContent = ({ styles }) => {
               built with XMTP.
             </p>
             <Link
-              to="/docs/dev-concepts/interoperable-inbox"
+              to="/docs/concepts/interoperable-inbox"
               className="bg-white rounded-lg w-52 h-12 text-black font-bold text-base cursor-pointer border-0 flex justify-center items-center hover:no-underline hover:text-black"
             >
               Learn more

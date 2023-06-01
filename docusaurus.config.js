@@ -38,12 +38,10 @@ const config = {
       'classic',
       {
         docs: {
-          path: 'docs/client-sdk/javascript',
+          path: 'docs',
           id: 'default',
-          routeBasePath: 'docs/client-sdk/javascript',
-          sidebarPath: require.resolve(
-            './sidebars/sidebars-client-sdk-javascript.js'
-          ),
+          routeBasePath: 'docs',
+          sidebarPath: require.resolve('./sidebars/sidebars.js'),
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
@@ -66,70 +64,6 @@ const config = {
     tailwindPlugin,
     // @ts-ignore
     webpackPlugin,
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'swift',
-        path: 'docs/client-sdk/swift',
-        routeBasePath: 'docs/client-sdk/swift',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-swift.js'),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'dart',
-        path: 'docs/client-sdk/dart',
-        routeBasePath: 'docs/client-sdk/dart',
-        sidebarPath: require.resolve('./sidebars/sidebars-client-sdk-dart.js'),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'kotlin',
-        path: 'docs/client-sdk/kotlin',
-        routeBasePath: 'docs/client-sdk/kotlin',
-        sidebarPath: require.resolve(
-          './sidebars/sidebars-client-sdk-kotlin.js'
-        ),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'react',
-        path: 'docs/client-sdk/react',
-        routeBasePath: 'docs/client-sdk/react',
-        sidebarPath: require.resolve(
-          './sidebars/sidebars-client-sdk-react.js'
-        ),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'dev-concepts',
-        path: 'docs/dev-concepts',
-        routeBasePath: '/docs/dev-concepts',
-        sidebarPath: require.resolve('./sidebars/sidebars.js'),
-        editUrl: 'https://github.com/xmtp/xmtp-dot-org/tree/main',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -162,64 +96,9 @@ const config = {
         },
         items: [
           {
-            type: 'dropdown',
+            to: 'docs/introduction',
+            position: 'right',
             label: 'Documentation',
-            position: 'right',
-            items: [
-              {
-                to: 'docs/client-sdk/javascript/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/javascript-icon.svg" alt="JavaScript icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">JavaScript XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials and reference for building apps in JavaScript</div></div></div>`,
-              },
-              {
-                to: 'docs/client-sdk/kotlin/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/kotlin-icon.svg" alt="Kotlin icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Kotlin XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial for building Android apps in Kotlin</div></div></div>`,
-              },
-              {
-                to: 'docs/client-sdk/swift/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/swift-icon.svg" alt="Swift icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Swift XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building iOS apps in Swift</div></div></div>`,
-              },
-              {
-                to: 'docs/client-sdk/react/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/react-icon.svg" alt="React icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">React XMTP client SDK and components</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorials for building apps in React</div></div></div>`,
-              },
-              {
-                to: 'docs/client-sdk/dart/tutorials/quickstart',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/dart-icon.svg" alt="Dart icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dart XMTP client SDK</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Tutorial and reference for building Flutter apps in Dart</div></div></div>`,
-              },
-              {
-                to: 'docs/dev-concepts/introduction',
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/development-icon.svg" alt="Development concepts icon" /></div>
-                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Development concepts</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Learn about XMTP architecture, security, FAQ, and more</div></div></div>`,
-              },
-            ],
-          },
-          {
-            to: 'sdks-and-tools', // To highlight the navbar item, you must link to a document, not a top-level directory
-            position: 'right',
-            label: 'SDKs and tools',
-            activeBaseRegex: `/`,
-          },
-          {
-            to: 'changelog', // To highlight the navbar item, you must link to a document, not a top-level directory
-            position: 'right',
-            label: 'Changelog',
-            activeBaseRegex: `/`,
-          },
-          {
-            to: 'roadmap',
-            position: 'right',
-            label: 'Roadmap',
             activeBaseRegex: `/`,
           },
           {
@@ -254,6 +133,43 @@ const config = {
             ],
           },
           {
+            type: 'dropdown',
+            position: 'right',
+            label: 'Resources',
+            items: [
+              {
+                to: 'docs/changelog',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Changelog</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Latest releases</div></div></div>`,
+              },
+              {
+                to: 'roadmap',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map-icon.svg" alt="Map icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Roadmap</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Future features and decentralization milestones</div></div></div>`,
+              },
+              {
+                to: 'docs/concepts/architectural-overview',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/block-icon.svg" alt="Sparkle icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Architecture</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Architecture of the XTMP network and client layers</div></div></div>`,
+              },
+              {
+                to: 'docs/concepts/faq#security',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/lock-closed-icon.svg" alt="Lock icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Security</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Overview of XMTP security</div></div></div>`,
+              },
+              {
+                to: 'docs/concepts/faq',
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/question-mark-icon.svg" alt="Shield with a check icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">FAQ</div>
+                 <div class="subtext text-sm text-normal whitespace-pre-line">Network, fees, storage, message patterns, and more</div></div></div>`,
+              },
+            ],
+          },
+          {
             to: 'blog',
             position: 'right',
             label: 'Blog',
@@ -262,12 +178,14 @@ const config = {
           {
             type: 'html',
             position: 'right',
-            value: '<button type="button" onClick="window.open(`/docs/dev-concepts/start-building`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
+            value:
+              '<button type="button" onClick="window.open(`/docs/build/start-building`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
           },
           {
             type: 'html',
             position: 'right',
-            value: '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try app</strong></button>',
+            value:
+              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try app</strong></button>',
           },
           {
             href: 'https://github.com/xmtp',
@@ -281,109 +199,125 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Client SDKs',
+            title: 'SDKs',
             items: [
               {
                 label: `JavaScript`,
-                to: `/docs/client-sdk/javascript/concepts/intro-to-sdk`,
-              },
-              {
-                label: `Kotlin`,
-                to: `/docs/client-sdk/kotlin/tutorials/quickstart`,
+                to: `/docs/sdks/js-quickstart`,
               },
               {
                 label: `Swift`,
-                to: `/docs/client-sdk/swift/tutorials/quickstart`,
-              },
-              {
-                label: `React`,
-                to: `/docs/client-sdk/react/tutorials/quickstart`,
+                to: `/docs/sdks/swift-quickstart`,
               },
               {
                 label: `Dart`,
-                to: `/docs/client-sdk/dart/tutorials/quickstart`,
+                to: `/docs/sdks/dart-quickstart`,
+              },
+              {
+                label: `Kotlin`,
+                to: `/docs/sdks/kotlin-quickstart`,
+              },
+              {
+                label: `React`,
+                to: `/docs/sdks/react-quickstart`,
+              },
+              {
+                label: `SDK references`,
+                to: `/docs/sdks/references`,
               },
             ],
           },
           {
-            title: 'Development concepts',
+            title: 'Build',
             items: [
               {
-                label: `Intro to XMTP`,
-                to: `/docs/dev-concepts/introduction`,
-              },
-              {
                 label: `Start building`,
-                to: `/docs/dev-concepts/start-building`,
+                to: `/docs/build/start-building`,
               },
               {
-                label: `Architectural overview`,
-                to: `/docs/dev-concepts/architectural-overview`,
+                label: `Lens DMs`,
+                to: `/docs/build/build-key-xmtp-chat-features-in-a-lens-app`,
               },
               {
-                label: `FAQ`,
-                to: `/docs/dev-concepts/faq`,
+                label: `CyberConnect DMs`,
+                to: `/docs/build/build-messaging-for-cyberconnect-profiles`,
               },
               {
-                label: `Works with XMTP`,
-                to: `/docs/dev-concepts/works-with-xmtp`,
+                label: `Filter conversations`,
+                to: `/docs/build/filter-conversations`,
               },
               {
-                label: `Interoperable inbox`,
-                to: `/docs/dev-concepts/interoperable-inbox`,
+                label: `Label conversations`,
+                to: `/docs/build/label-conversations`,
               },
               {
                 label: `Content types`,
-                to: `/docs/dev-concepts/content-types`,
+                to: `/docs/build/use-content-types`,
               },
               {
-                label: `Key generation and usage`,
-                to: `/docs/dev-concepts/key-generation-and-usage`,
+                label: `Push notifications (Swift/iOS)`,
+                to: `/docs/build/handle-push-notifications`,
               },
               {
-                label: `Invitation and message encryption`,
-                to: `/docs/dev-concepts/invitation-and-message-encryption`,
+                label: `Hello world app`,
+                to: `/docs/build/build-an-xmtp-hello-world-app`,
               },
               {
-                label: `Algorithms in use`,
-                to: `/docs/dev-concepts/algorithms-in-use`,
-              },
-              {
-                label: `Account signatures`,
-                to: `/docs/dev-concepts/account-signatures`,
-              },
-              {
-                label: `Contribute to XMTP`,
-                to: `/docs/dev-concepts/contributing`,
-              },
-              {
-                label: `XMTP Improvement Proposals`,
-                to: `/docs/dev-concepts/xips`,
+                label: 'Changelog',
+                to: '/docs/changelog',
               },
             ],
           },
           {
-            title: 'SDKs and tools',
+            title: 'Concepts',
             items: [
               {
-                label: 'SDKs',
-                to: 'sdks-and-tools#sdks',
+                label: `Intro to XMTP`,
+                to: `/docs/introduction`,
               },
               {
-                label: 'Example apps',
-                to: 'sdks-and-tools#example-apps',
+                label: `FAQ`,
+                to: `/docs/concepts/faq`,
               },
               {
-                label: 'Developer tools',
-                to: 'sdks-and-tools#developer-tools',
+                label: `Architecture`,
+                to: `/docs/concepts/architectural-overview`,
               },
               {
-                label: 'Ecosystem projects',
-                to: '/sdks-and-tools#ecosystem-projects',
+                label: `Content types`,
+                to: `/docs/concepts/content-types`,
               },
               {
-                label: 'XMTP status page',
-                href: 'https://status.xmtp.com/',
+                label: `Interoperable inbox`,
+                to: `/docs/concepts/interoperable-inbox`,
+              },
+              {
+                label: `Keys`,
+                to: `/docs/concepts/key-generation-and-usage`,
+              },
+              {
+                label: `Encryption`,
+                to: `/docs/concepts/invitation-and-message-encryption`,
+              },
+              {
+                label: `Account signatures`,
+                to: `/docs/concepts/account-signatures`,
+              },
+              {
+                label: `Algorithms`,
+                to: `/docs/concepts/algorithms-in-use`,
+              },
+              {
+                label: `Works with XMTP`,
+                to: `/docs/concepts/works-with-xmtp`,
+              },
+              {
+                label: `Contribute`,
+                to: `/docs/concepts/contributing`,
+              },
+              {
+                label: `XIPs`,
+                to: `/docs/concepts/xips`,
               },
             ],
           },
@@ -391,12 +325,20 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'Join in and contribute',
+                to: 'community',
+              },
+              {
+                label: 'Grants',
+                to: 'grants',
+              },
+              {
                 label: 'Built with XMTP',
                 to: 'built-with-xmtp',
               },
               {
-                label: 'Discussions',
-                href: 'https://github.com/orgs/xmtp/discussions',
+                label: 'Code of conduct',
+                to: '/community/code-of-conduct',
               },
               {
                 label: 'Discord',
@@ -407,16 +349,8 @@ const config = {
                 href: 'https://twitter.com/xmtp_',
               },
               {
-                label: 'Contribute to XMTP',
-                to: '/docs/dev-concepts/contributing',
-              },
-              {
-                label: 'XMTP Improvement Proposals',
-                to: '/docs/dev-concepts/xips',
-              },
-              {
-                label: 'XMTP code of conduct',
-                to: '/community/code-of-conduct',
+                label: 'GitHub Discussions',
+                href: 'https://github.com/orgs/xmtp/discussions',
               },
               {
                 label: 'Careers at XMTP Labs',
@@ -425,11 +359,31 @@ const config = {
             ],
           },
           {
-            title: 'Vision',
+            title: 'Resources',
             items: [
+              {
+                label: 'Changelog',
+                to: '/docs/changelog',
+              },
               {
                 label: 'Roadmap',
                 to: 'roadmap',
+              },
+              {
+                label: 'Architecture',
+                to: '/docs/concepts/architectural-overview',
+              },
+              {
+                label: 'Security',
+                to: '/docs/concepts/faq#security',
+              },
+              {
+                label: 'FAQ',
+                to: '/docs/concepts/faq',
+              },
+              {
+                label: 'XMTP status page',
+                href: 'https://status.xmtp.com/',
               },
             ],
           },

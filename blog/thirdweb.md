@@ -16,6 +16,7 @@ tags:
   - WalletSDK
   - Thirdweb
 ---
+
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 ![thirdweb.jpg](./media/xmtp-thirdweb/hero.png)
@@ -34,7 +35,7 @@ The WalletSDK is a development kit that grants developers access to a comprehens
 ### XMTP Content-Types
 
 Content types are a way to describe the _type_ of _content_ a message contains on XMTP. Out of the box, XMTP's SDKs support one content type: `text`.
-[Read more](https://xmtp.org/docs/dev-concepts/content-types)
+[Read more](https://xmtp.org/docs/concepts/content-types)
 
 ### Thirdweb storage
 
@@ -208,6 +209,7 @@ const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
   attachmentCodec
 )
 ```
+
 2. Next we are going to upload the file to the IPFS network via the Thirdweb SDK.
 
 ```tsx

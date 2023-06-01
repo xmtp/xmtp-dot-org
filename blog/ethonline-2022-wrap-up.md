@@ -1,16 +1,17 @@
 ---
 slug: ethonline-2022-wrap-up
 hide_table_of_contents: true
-title: "ETHOnline Wrap Up: De-Chat, GameJutsu, and Dehitas Take Top Honors"
+title: 'ETHOnline Wrap Up: De-Chat, GameJutsu, and Dehitas Take Top Honors'
 date: 2022-10-05
 authors: peter
 description: ETH Online hackers build incredible apps across video chat, game security, and talent platforms using XMTP.
 image: ./media/ETHOnlineBlog.png
 tags:
-- Developers
-- Hackathon
-- Messaging
+  - Developers
+  - Hackathon
+  - Messaging
 ---
+
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 ETH Online hackers build incredible apps across video chat, game security, and talent platforms using XMTP.
@@ -19,12 +20,11 @@ ETH Online hackers build incredible apps across video chat, game security, and t
 
 <!--truncate-->
 
-[ETHOnline](https://online.ethglobal.com/) just wrapped and, once again, the dev community showed up with an incredible range of high-quality projects.  Starting September 2nd and ending on the 28th, ETHOnline brought together 1,780 developers who built a total of 357 different projects, making it one of the biggest web3 events to date.
+[ETHOnline](https://online.ethglobal.com/) just wrapped and, once again, the dev community showed up with an incredible range of high-quality projects. Starting September 2nd and ending on the 28th, ETHOnline brought together 1,780 developers who built a total of 357 different projects, making it one of the biggest web3 events to date.
 
 For XMTP, this event represented a new hackathon milestone: 50 projects used our protocol as part of their project–that’s one out of every seven submissions at the event. The quality and variety of projects blew us away as we saw how developers were finding creative and unique ways to integrate secure web3 messaging into their projects.
 
 With XMTP Labs as a sponsor of the event, we were able to pick a few projects that impressed us and award them for their work on their projects. Here is our selection of
-
 
 ## Best Use - De-Chat 🥇
 
@@ -36,15 +36,14 @@ De-chat showcases not only how messaging experiences will extend well beyond tex
 
 **Get to know De-Chat:**
 
-* Live demo: [https://de-chat.vercel.app/](https://de-chat.vercel.app/)
-* Github repo:
+- Live demo: [https://de-chat.vercel.app/](https://de-chat.vercel.app/)
+- Github repo:
 
 [![dechat-repo-card.png](media/dechat-repo-card.png)](https://github.com/De-Chat)
 
 ---
 
-
-## Best Use - GameJutsu  🥈
+## Best Use - GameJutsu 🥈
 
 It’s no secret that on-chain game development is hard, but deciding what goes on-chain is harder. If developers add in the extra complexity around how to keep the game cheat-proof and secure when it comes to off-chain client communications, you can see why many developers spend time with issues that have nothing to do with their game logic.
 
@@ -58,11 +57,10 @@ GameJustu shows how developers can use encrypted messages to solve peer-to-peer 
 
 **Get to know GameJutsu:**
 
-* Live demo: [https://gamejutsu.app/](https://gamejutsu.app/)
-* Github repo:
+- Live demo: [https://gamejutsu.app/](https://gamejutsu.app/)
+- Github repo:
 
 [![chainhackers-repo-card.png](media/chainhackers-repo-card.png)](https://github.com/ChainHackers)
-
 
 ## Best Use - Dehitas 🥉
 
@@ -78,8 +76,8 @@ Furthermore, as Dehitas is leveraging decentralized solutions, it greatly reduce
 
 **Get to know Dehitas:**
 
-* Live Demo: [https://demo.dehitas.xyz/](https://demo.dehitas.xyz/)
-* Github repo:
+- Live Demo: [https://demo.dehitas.xyz/](https://demo.dehitas.xyz/)
+- Github repo:
 
 [![dehitas-repo-card.png](media/dehitas-repo-card.png)](https://github.com/Lampros-Tech/hireverse/tree/development)
 
@@ -89,7 +87,7 @@ These are just a few of the submissions that utilized XMTP in their ETHOnline sh
 
 Are you building something amazing with XMTP? [We’d love to know about it](https://twitter.com/xmtp_).
 
-Want to learn about how to add secure web3 messaging to our project? Check out the [Quickstart for the XMTP client SDK for JavaScript](/docs/client-sdk/javascript/tutorials/quickstart).
+Want to learn about how to add secure web3 messaging to your project? Check out [Start building with XMTP](/docs/build/start-building).
 
 <br/>
 <FeedbackWidget />

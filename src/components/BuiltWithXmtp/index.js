@@ -17,10 +17,10 @@ const BuiltWithXmtp = () => {
           <p className="text-base dark:text-neutral-300 line-clamp-3 mt-0 h-20">{developer.description}</p>
           <div className='flex items-center'>
               {developer.github && (
-                <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center mr-2"  href={developer.github}>GitHub<img src={useBaseUrl('/img/icons/github-icon-black.svg')} className="ml-2"/></a>
+                <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center mr-2"  href={developer.github}>GitHub<img src={useBaseUrl('/img/github-icon-black.svg')} className="ml-2"/></a>
               )}
               | 
-              <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center ml-2 before:content-[|]" href={developer.twitter}>Twitter<img src={useBaseUrl('/img/icons/twitter-icon-blue.svg')} className="ml-2" alt="" /></a>
+              <a className="mb-2 mt-1 text-base font-semibold text-red-500 flex align-center ml-2 before:content-[|]" href={developer.twitter}>Twitter<img src={useBaseUrl('/img/twitter-icon-blue.svg')} className="ml-2" alt="" /></a>
           </div>
         </li>
       )}
