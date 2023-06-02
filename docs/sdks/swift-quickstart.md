@@ -1,11 +1,11 @@
 ---
-sidebar_label: Swift SDK quickstart
+sidebar_label: Swift
 sidebar_position: 2
 toc_max_heading_level: 4
 description: 'xmtp-ios provides a Swift implementation of an XMTP message API client for use with iOS apps.'
 ---
 
-# Quickstart for the Swift client SDK
+# Quickstart for the Swift XMTP client SDK
 
 ![Lint](https://github.com/xmtp/xmtp-ios/actions/workflows/lint.yml/badge.svg) ![Status](https://img.shields.io/badge/Project_Status-General_Availability-31CA54)
 
@@ -21,7 +21,11 @@ To learn more about XMTP and get answers to frequently asked questions, see [FAQ
 
 ## Reference docs
 
+:::tip View the reference
+
 Access the [Swift client SDK reference documentation](https://xmtp.github.io/xmtp-ios/documentation/xmtp/).
+
+:::
 
 ## Example app
 

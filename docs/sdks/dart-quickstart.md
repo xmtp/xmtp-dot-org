@@ -1,5 +1,5 @@
 ---
-sidebar_label: Dart SDK quickstart
+sidebar_label: Dart
 sidebar_position: 3
 toc_max_heading_level: 4
 description: 'xmtp-flutter provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps.'
@@ -25,7 +25,11 @@ For a basic demonstration of the core concepts and capabilities of the `xmtp-flu
 
 ## Reference docs
 
+:::tip View the reference
+
 Access the [Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html) on pub.dev.
+
+:::
 
 ## Install with Dart Package Manager
 

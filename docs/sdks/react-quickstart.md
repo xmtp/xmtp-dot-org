@@ -1,5 +1,5 @@
 ---
-sidebar_label: React SDK hooks and components quickstart
+sidebar_label: React hooks and UI components
 sidebar_position: 5
 toc_max_heading_level: 4
 description: "These packages provide the XMTP client SDK for React apps, including React hooks and components."
