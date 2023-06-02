@@ -57,10 +57,12 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 2. **Ready to build your own app? Start with an XMTP client SDK:**
 
-   - [xmtp-js](https://github.com/xmtp/xmtp-js)
-   - [xmtp-android](https://github.com/xmtp/xmtp-android)
-   - [xmtp-ios](https://github.com/xmtp/xmtp-ios)
-   - [xmtp-flutter](https://github.com/xmtp/xmtp-flutter)
+   - [JavaScript](/docs/sdks/js-quickstart)
+   - [Swift](/docs/sdks/swift-quickstart)
+   - [Dart](/docs/sdks/dart-quickstart)
+   - [Kotlin](/docs/sdks/kotlin-quickstart)
+   - [React](/docs/sdks/react-quickstart)
+   - [React Native](/docs/sdks/rn-quickstart)
 
   Be sure to watch relevant repos to be notified about new releases, which might include breaking changes and migration steps. You can also join the [XMTP Discord](https://discord.gg/xmtp) to receive these types of notifications.
 

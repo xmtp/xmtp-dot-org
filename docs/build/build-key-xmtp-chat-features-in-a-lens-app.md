@@ -39,7 +39,7 @@ Here's an overview of the steps typically required to build a basic chat app wit
 8. Stream new conversations  
    **🌿 Lens DMs: Stream new Lens DM conversations**
 
-To learn more about building this full list of chat features with XMTP, in a Lens app or otherwise, see the [README](https://github.com/xmtp/xmtp-js#readme) in the XMTP client SDK for JavaScript repo.
+To learn more about building this full list of chat features with XMTP, in a Lens app or otherwise, see the [Quickstart for the JavaScript XMTP client SDK](/docs/sdks/js-quickstart).
 
 ## Prerequisites
 
@@ -251,4 +251,4 @@ To see how conversation streaming is implemented in Lenster, see [`streamConvers
 
 ## Learn more
 
-To learn more about building with XMTP, in a Lens app or otherwise, see the [README](https://github.com/xmtp/xmtp-js#readme) in the XMTP client SDK for JavaScript repo.
+To learn more about building with XMTP, in a Lens app or otherwise, see the [Quickstart for the JavaScript XMTP client SDK](/docs/sdks/js-quickstart).

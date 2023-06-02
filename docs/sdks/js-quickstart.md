@@ -7,14 +7,14 @@ description: 'The XMTP client SDK for JavaScript (xmtp-js) provides a TypeScript
 
 # Quickstart for the JavaScript XMTP client SDK
 
+![Status](https://img.shields.io/badge/Project_Status-General_Availability-brightgreen)
 ![Test](https://github.com/xmtp/xmtp-js/actions/workflows/test.yml/badge.svg)
 ![Lint](https://github.com/xmtp/xmtp-js/actions/workflows/lint.yml/badge.svg)
 ![Build](https://github.com/xmtp/xmtp-js/actions/workflows/build.yml/badge.svg)
-![Status](https://img.shields.io/badge/Project_Status-General_Availability-brightgreen)
 
-The [XMTP client SDK](https://github.com/xmtp/xmtp-js) for JavaScript (`xmtp-js`) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications.
+The [JavaScript XMTP client SDK](https://github.com/xmtp/xmtp-js) (`xmtp-js`) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications.
 
-Build with `xmtp-js` to provide messaging between blockchain wallet addresses, delivering on use cases such as wallet-to-wallet messaging and dapp-to-wallet notifications.
+Build with this SDK to provide messaging between blockchain wallet addresses, including DMs, notifications, announcements, and more.
 
 `xmtp-js` was included in a [security assessment](https://xmtp.org/assets/files/REP-final-20230207T000355Z-3825cbc68c115f4ec81f3b1d53a24fce.pdf) prepared by [Certik](https://www.certik.com/company/about).
 
