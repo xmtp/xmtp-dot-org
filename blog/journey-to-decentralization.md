@@ -70,9 +70,9 @@ XMTP Labs is taking a phased approach toward architectural and logical decentral
      - Implement fee pooling and rewards distribution.
      - Implement refundable fees.
 
-   - **Phase 4: Token and public mainnet**
+   - **Phase 4: Public mainnet**
 
-     This phase is taking all of the testing from the previous phases and flipping the switch to make it public in prod for the world, including the XMTP token.
+     This phase is taking all of the testing from the previous phases and flipping the switch to make it public in prod for the world.
 
      - Release the public mainnet.
 
