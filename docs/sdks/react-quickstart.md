@@ -1,21 +1,25 @@
 ---
-sidebar_label: React hooks and UI components
+sidebar_label: React
 sidebar_position: 5
 toc_max_heading_level: 4
 description: "These packages provide the XMTP client SDK for React apps, including React hooks and components."
 ---
 
-# Quickstart for the React XMTP client SDK hooks and components
+# Quickstart for the React XMTP client SDK hooks and UI components
 
 ## React SDK hooks
 
 ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 
-This package provides the [XMTP client SDK for React apps](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk), including React hooks that provide ready-made logic for interacting with the XMTP network and work well with these [React components](#react-components).
+This package provides the [React XMTP client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk), including React hooks that provide ready-made logic for interacting with the XMTP network and work well with these [React components](#react-components).
 
-This SDK is in **Developer Preview** status and ready for you to start building with.
+Build with this SDK to provide messaging between blockchain wallet addresses, including DMs, notifications, announcements, and more.
 
-However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+:::caution Important
+
+This SDK is in **Developer Preview** status and ready for you to start building with. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+
+:::
 
 To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-web/issues) in the `xmtp-web` repo.
 
@@ -718,25 +722,27 @@ Run `yarn dev` to build the SDK and watch for changes, which will trigger a rebu
 - `yarn typecheck`: Runs `tsc`
 
 
-## React components
+## React UI components
 
 ![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
 
-This package provides [React components](https://github.com/xmtp/xmtp-web/tree/main/packages/react-components) for building React apps with XMTP. These components provide common the building blocks of a chat app and pair well with the [React SDK hooks](#react-sdk-hooks). The package also provides a Storybook that outlines each component's API, use cases, and design that you can use as an interactive learning tool.
+This package provides [React UI components](https://github.com/xmtp/xmtp-web/tree/main/packages/react-components) for building React apps with XMTP.
 
-These components are in **Developer Preview** status and ready for you to start building with.
+:::caution Important
 
-However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+These components are in **Developer Preview** status and ready for you to start building with. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+
+:::
 
 To keep up with the latest component developments, see the [Issues tab](https://github.com/xmtp/xmtp-web/issues) in the `xmtp-web` repo.
-
-To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/concepts/faq).
 
 ### What's inside?
 
 #### Components
 
-These ready-made components can help you quickly build a chat app with XMTP.
+These ready-made UI components provide building blocks that can help you quickly a chat app with XMTP. These components pair well with the [React SDK hooks](#react-sdk-hooks). 
+
+The package also provides a Storybook that outlines each component's API, use cases, and design that you can use as an interactive learning tool.
 
 ### Requirements
 
