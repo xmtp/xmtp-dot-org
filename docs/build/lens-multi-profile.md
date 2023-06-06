@@ -8,19 +8,19 @@ title: Building Lens Multi-Profile chat with XMTP
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Integrating multiple profiles with Lens
+# Integrating Multiple Profiles with Lens
 
-When building with XMTP, a conversation is a set of messages between two participants. This participants are identified only through wallet addresses. eg
+When building with XMTP, a conversation comprises a set of messages exchanged between two participants. These participants are identified solely through their wallet addresses.
 
-Web3 is based on values such as decentralization, privacy, and freedom. This means that users can have multiple seudinomous identities. The thesis goes that users should be able to have multiple identities and use them as they see fit, being able to switch between them, display different information, and interact with different people.
+Web3 is founded on values such as decentralization, portability and ownership. These principles allow users to maintain multiple pseudonymous identities. The idea is that users should be able to possess multiple identities, switch between them as they please, display varying information, and interact with different individuals.
 
 ### Lens Profiles
 
-In the context of Lens Protocol, each identity is represented as Profile NFT. Because the core values of lens are permissionless and portable, you are able to hold multiple profiles or identities and use them across different applications an platforms.
+In the context of the Lens Protocol, each identity is represented as a Profile NFT. Given that the core values of Lens are permissionless and portable, you can hold multiple profiles or identities and use them across different applications and platforms.
 
 :::info Default Profile
 
-Because an address can hold multiple profiles and there are address-based interactions such as follow or collect, the default profile variable allows the owner to select one profile as its default. This gives interfaces the ability to shape how such interactions are displayed based on the default profile rather than just an address. [Read more](https://docs.lens.xyz/docs/get-default-profile)
+Because an address can hold multiple profiles and there are address-based interactions such as follow or collect, the default profile variable allows the owner to select one profile as their default. This functionality gives interfaces the ability to shape how such interactions are displayed based on the default profile, rather than just an address. Read more
 :::
 
 ### Start a conversation with a Lens profile
