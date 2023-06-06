@@ -6,7 +6,7 @@ description: Follow these guidelines to optimize your app’s performance.
 
 import perfArchitecture from '/docs/build/img/performance-architecture.jpeg';
 
-# Performance and XMTP
+# Optimize performance in your app built with XMTP
 
 Follow these guidelines to optimize your app’s performance.
 
