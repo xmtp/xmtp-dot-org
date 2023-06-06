@@ -1,7 +1,7 @@
 ---
-sidebar_label: Lens DMs
-sidebar_position: 2
-description: Build messaging into your Lens app with the flexibility to provide a variety of user experiences.
+sidebar_label: Lens Multi Profile
+sidebar_position: 3
+description: Building multi profile Lens apps with XMTP
 ---
 
 # Build key XMTP chat features in a Lens app

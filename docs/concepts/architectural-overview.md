@@ -114,20 +114,6 @@ The conversation topic name uses this format provided by the invitation: `m-<ran
 
 For example, `m-XxBHrITqjd00nLMuTyaaGDvTLnviazU8`.
 
-A client uses the following logic to determine whether to create a new conversation topic or use an existing conversation topic between a pair of addresses:
-
-- If there is a `conversationId` defined, such as `conversationId = "lens.dev/0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x71C7656EC7ab88b098defB751B7401B5f6d8976F"`, the client checks if the `conversationId` exists:
-
-  - If the `conversationId` exists, the client uses the existing conversation topic. There can be only one conversation topic with a given conversation ID.
-
-  - If the `conversationId` doesn’t exist, the client creates a new conversation topic.
-
-- If there is no `conversationId` defined, whether it is an empty string (`conversationID = ""`) or it is null (no `conversationId` element present), the client creates a new conversation topic.
-
-A pair of addresses can have multiple conversation topics, each with a unique conversation ID.
-
-To learn more, see [Messages](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#messages) in the `xmtp/proto` repo.
-
 #### Private store topic V2
 
 A client built with XMTP can choose to store its users' private key bundles locally or encrypted on the XMTP network. When required, a client uses a private store topic to store a user's private key bundle.

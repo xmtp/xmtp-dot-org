@@ -14,7 +14,6 @@ import pushnotifsettings from '/docs/concepts/img/push-notif-settings.png';
 import pushnotifsdecrypted from '/docs/concepts/img/push-notifs-decrypted.jpg';
 import badgingorb from '/docs/concepts/img/badging-orb.jpg';
 import unreadbadge from '/docs/concepts/img/unread-badge.png';
-import conversationlabels from '/docs/concepts/img/conversation-labels.png';
 import onboardingbot from '/docs/concepts/img/onboarding-bot.png';
 
 # Start building with XMTP
@@ -184,20 +183,8 @@ Consider following these UX best practices.
 
   <img src={allinorb} style={{width:"400px"}}/>
 
-- Use [conversation labels](/docs/build/label-conversations) to provide context, especially in an interoperable inbox. For example, here is conversation labeling in an interoperable inbox helping the user understand the different origins of two conversations with the same address.
-
-  <img src={conversationlabels} style={{width:"400px"}}/>
-
-- Consider using conversation IDs and metadata to provide [filtered views of conversations](/docs/build/filter-conversations). For example, here is the Orb app with conversations filtered to show Lens conversations only:
-
-  <img src={lensonlyorb} style={{width:"400px"}}/>
-
-- Enable users to filter based on friends on a social graph, such as Lens, or a client-side grant/revoke list. For example, here is the [Buttrfly app](https://buttrfly.app/) displaying only conversations with Lens profiles you follow:
-
-  <img src={buttrflyfollowonly} style={{width:"400px"}}/>
-
 - Hide empty conversations.
-- For multiple non-empty conversations with the same conversation ID and between the same pair of addresses, pick the earliest conversation and write to it, effectively abandoning the other conversations.
+
 
 ### Push notifications
 

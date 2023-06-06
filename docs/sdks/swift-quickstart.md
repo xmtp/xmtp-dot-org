@@ -157,7 +157,6 @@ for conversation in allConversations {
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP.
 
-You might choose to provide an additional filtered view of conversations. To learn more, see [Handle multiple conversations with the same blockchain address](#handle-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/build/filter-conversations).
 
 ### Listen for new conversations
 
@@ -242,37 +241,6 @@ for try await message in conversation.streamMessages() {
 }
 ```
 
-### Handle multiple conversations with the same blockchain address
-
-With XMTP, you can have multiple ongoing conversations with the same blockchain address. For example, you might want to have a conversation scoped to your particular app, or even a conversation scoped to a particular item in your app.
-
-To accomplish this, you can pass a context with a `conversationId` when you are creating a conversation. We recommend conversation IDs start with a domain, to help avoid unwanted collisions between your app and other apps on the XMTP network.
-
-```swift
-// Start a scoped conversation with ID mydomain.xyz/foo
-let conversation1 = try await client.conversations.newConversation(
-  with: "0x3F11b27F323b62B159D2642964fa27C46C841897",
-  context: .init(conversationID: "mydomain.xyz/foo")
-)
-
-// Start a scoped conversation with ID mydomain.xyz/bar. And add some metadata
-let conversation2 = try await client.conversations.newConversation(
-  with: "0x3F11b27F323b62B159D2642964fa27C46C841897",
-  context: .init(conversationID: "mydomain.xyz/bar", metadata: ["title": "Bar conversation"])
-)
-
-// Get all the conversations
-let conversations = try await client.conversations.list()
-
-// Filter for the ones from your app
-let myAppConversations = conversations.filter {
-  guard let conversationID = $0.context?.conversationID else {
-    return false
-  }
-
-  return conversationID.hasPrefix("mydomain.xyz/")
-}
-```
 
 ### Decode a single message
 

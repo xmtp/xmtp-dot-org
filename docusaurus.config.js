@@ -243,14 +243,6 @@ const config = {
                 to: `/docs/build/build-messaging-for-cyberconnect-profiles`,
               },
               {
-                label: `Filter conversations`,
-                to: `/docs/build/filter-conversations`,
-              },
-              {
-                label: `Label conversations`,
-                to: `/docs/build/label-conversations`,
-              },
-              {
                 label: `Content types`,
                 to: `/docs/build/use-content-types`,
               },
