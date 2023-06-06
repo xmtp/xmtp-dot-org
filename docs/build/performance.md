@@ -4,6 +4,8 @@ sidebar_position: 8
 description: Follow these guidelines to optimize your app’s performance.
 ---
 
+import perfArchitecture from '/docs/build/img/performance-architecture.jpeg';
+
 # Performance and XMTP
 
 Follow these guidelines to optimize your app’s performance.
@@ -12,7 +14,7 @@ Follow these guidelines to optimize your app’s performance.
 
 If you're building a production-grade app, be sure to use an architecture that includes a local cache backed by an XMTP SDK.
 
-![](img/performance-architecture.jpeg)
+<img src={perfArchitecture} style={{width:"500px"}}/>
 
 Use the XMTP SDK to initially retrieve existing message data from the XMTP network and place it in the local cache. Asynchronously load new and updated message data as needed.
 
