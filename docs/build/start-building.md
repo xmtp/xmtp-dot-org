@@ -144,9 +144,9 @@ Consider following these UX best practices.
   - Time to load conversation list: 8-15ms to decrypt invites per conversation
   - Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
   - Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
-- Resolve popular namespaces such as ENS, .lens, cb id, and so forth. For example, here is ENS name resolution in [xmtp.chat](https://xmtp.chat/). To achieve this functionality, consider using the [Everyname](https://www.everyname.xyz/) resolution service.
+- Resolve popular namespaces such as ENS, UNS, .lens, cb id, and so forth. To learn more, see [Identity resolution](/docs/build/identity-resolution).
 
-  <img src={ensnameresolution} style={{width:"400px"}}/>
+  ![Entering prxshant.eth in a to field and having it resolve to 0x4b70d04124c2996De29e0caa050A49822Faec6Cc](img/id-resolution.gif)
 
 - When displaying .eth names, look for and display an ENS avatar. When displaying .lens names, look for and display a Lens profile photo. Use blockies for raw 0x addresses.
 
