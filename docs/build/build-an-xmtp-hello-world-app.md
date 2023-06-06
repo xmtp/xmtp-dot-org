@@ -1,6 +1,6 @@
 ---
 sidebar_label: Hello world app
-sidebar_position: 8
+sidebar_position: 9
 description: Build this app to learn some of the fundamental concepts involved in building with XMTP.
 ---
 
