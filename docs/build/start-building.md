@@ -248,14 +248,21 @@ Push notifications can be a highly effective way to engage your users and increa
 
 Follow these guidelines to optimize your app’s performance.
 
-### Architecture
+### Use local storage
 
-Architect your app to use a local storage mechanism, such as persistent app storage or a local database, to serve as the primary source of truth for message data.
+If you're building a production-grade app, be sure to use an architecture that includes a local database backed by an XMTP SDK.
 
-Build your app to:
+![](img/performance-architecture.jpeg)
 
-1. Initially retrieve and store existing message data to local storage, making the data accessible with little performance burden.
-2. Asynchronously load new and updated message data from the network as needed.
+Use the XMTP SDK to initially retrieve existing message data from the XMTP network and place it in local storage. Asynchronously load new and updated message data as needed.
+
+Build your app to get message data from local storage.
+
+For example, use the XMTP SDK to get conversation lists from the XMTP network. Store the conversation lists in local storage. Build your app to get conversation lists from local storage.
+
+When building native iOS and Android mobile apps, you can use the device's encrypted container as local storage to store decrypted data.
+
+When building web apps, you can use the browser `localStorage` as local storage to store **encrypted** data, decrypting data each time before display.
 
 ### Cache the conversation list
 
