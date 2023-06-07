@@ -104,7 +104,6 @@ for (var convo in conversations) {
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an interoperable inbox, which enables a user to access all of their conversations in any app built with XMTP.
 
-You might choose to provide an additional filtered view of conversations. To learn more, see [Handle multiple conversations with the same blockchain address](#handle-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/build/filter-conversations).
 
 ### Listen for new conversations
 
@@ -187,35 +186,6 @@ await listening.cancel();
 This package does not currently include the `streamAllMessages()` functionality from the [XMTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js) (xmtp-js).
 
 :::
-
-### Handle multiple conversations with the same blockchain address
-
-With XMTP, you can have multiple ongoing conversations with the same blockchain address.
-For example, you might want to have a conversation scoped to your particular app, or even
-a conversation scoped to a particular item in your app.
-
-To accomplish this, you can pass a context with a conversationId when you are creating
-a conversation. We recommend conversation IDs start with a domain, to help avoid unwanted collisions
-between your app and other apps on the XMTP network.
-
-```dart
-var friend = "0x123..."; // my friend's address
-
-var workTalk = await client.newConversation(
-  friend,
-  conversationId: "my.example.com/work",
-  metadata: {"title": "Work Talk"},
-);
-var playTalk = await client.newConversation(
-  friend,
-  conversationId: "my.example.com/play",
-  metadata: {"title": "Play Talk"},
-);
-
-var conversations = await client.listConversations();
-var myConversations = conversations.where((c) =>
-    c.conversationId.startsWith("my.example.com/"));
-```
 
 ## Handle different types of content
 

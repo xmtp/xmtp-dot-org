@@ -160,7 +160,6 @@ for (const conversation of allConversations) {
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP.
 
-You might choose to provide an additional filtered view of conversations. To learn more, see [Handle multiple conversations with the same blockchain address](#handle-multiple-conversations-with-the-same-blockchain-address) and [Filter conversations using conversation IDs and metadata](/docs/build/filter-conversations).
 
 #### Listen for new conversations
 
@@ -297,52 +296,6 @@ const isOnProdNetwork = await Client.canMessage(
 )
 ```
 
-#### Handle multiple conversations with the same blockchain address
-
-With XMTP, you can have multiple ongoing conversations with the same blockchain address. For example, you might want to have a conversation scoped to your particular application, or even a conversation scoped to a particular item in your application.
-
-To accomplish this, just set the `conversationId` when you are creating a conversation. We recommend conversation IDs start with a domain, to help avoid unwanted collisions between your application and other apps on the XMTP network.
-
-```ts
-// Start a scoped conversation with ID mydomain.xyz/foo
-const conversation1 = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897',
-  {
-    conversationId: 'mydomain.xyz/foo',
-  }
-)
-
-// Start a scoped conversation with ID mydomain.xyz/bar. And add some metadata
-const conversation2 = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897',
-  {
-    conversationId: 'mydomain.xyz/bar',
-    metadata: {
-      title: 'Bar conversation',
-    },
-  }
-)
-
-// Get all the conversations
-const conversations = await xmtp.conversations.list()
-// Filter for the ones from your application
-const myAppConversations = conversations.filter(
-  (convo) =>
-    convo.context?.conversationId &&
-    convo.context.conversationId.startsWith('mydomain.xyz/')
-)
-
-for (const conversation of myAppConversations) {
-  const conversationId = conversation.context?.conversationId
-  if (conversationId === 'mydomain.xyz/foo') {
-    await conversation.send('foo')
-  }
-  if (conversationId === 'mydomain.xyz/bar') {
-    await conversation.send('bar')
-    console.log(conversation.context?.metadata.title)
-  }
-}
-```
 
 #### Send a broadcast message
 

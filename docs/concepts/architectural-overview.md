@@ -2,7 +2,7 @@
 sidebar_label: Architecture
 sidebar_position: 2
 toc_max_heading_level: 4
-description: 'Learn about the architecture of XMTP and how it supports messaging between blockchain accounts.'
+description: "Learn about the architecture of XMTP and how it supports messaging between blockchain accounts."
 ---
 
 # Architectural overview of XMTP
@@ -94,11 +94,9 @@ For example, `invite-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38`.
 
 The client sends an invitation to both the sender and recipient’s invite topic. The invitation includes no message content, but includes:
 
-- A randomly generated conversation topic name, which tells clients which conversation topic to use to send and retrieve messages.
+- A randomly generated conversation topic name, which tells clients which conversation topic to use to send and retrieve messages
 
 - Encrypted key material, which includes a shared secret for message encryption.
-
-- Support for optional custom [conversation IDs](/docs/build/filter-conversations#set-a-conversation-id) and other [metadata](/docs/build/filter-conversations#set-conversation-metadata). Clients can use these IDs and metadata to [filter](/docs/build/filter-conversations) and [label](/docs/build/filter-conversations) conversations.
 
 To learn more, see [Invitations](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#invitations) in the `xmtp/proto` repo.
 
@@ -108,25 +106,9 @@ Clients use conversation topics to store messages exchanged between a pair of ad
 
 A conversation topic is created for a pair of addresses when the first message is sent between them.
 
-Upon creation, a conversation topic can have an optional conversation ID and metadata. This information is provided by the invitation. Metadata is considered only upon conversation topic creation.
-
 The conversation topic name uses this format provided by the invitation: `m-<random-32-byte-alphanumeric-string>`.
 
 For example, `m-XxBHrITqjd00nLMuTyaaGDvTLnviazU8`.
-
-A client uses the following logic to determine whether to create a new conversation topic or use an existing conversation topic between a pair of addresses:
-
-- If there is a `conversationId` defined, such as `conversationId = "lens.dev/0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x71C7656EC7ab88b098defB751B7401B5f6d8976F"`, the client checks if the `conversationId` exists:
-
-  - If the `conversationId` exists, the client uses the existing conversation topic. There can be only one conversation topic with a given conversation ID.
-
-  - If the `conversationId` doesn’t exist, the client creates a new conversation topic.
-
-- If there is no `conversationId` defined, whether it is an empty string (`conversationID = ""`) or it is null (no `conversationId` element present), the client creates a new conversation topic.
-
-A pair of addresses can have multiple conversation topics, each with a unique conversation ID.
-
-To learn more, see [Messages](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#messages) in the `xmtp/proto` repo.
 
 #### Private store topic V2
 
@@ -182,8 +164,6 @@ Clients use conversation topics to store messages sent between two participants.
 
 - All messages between two participants are stored in a single conversation topic.
 
-- No support for conversation IDs or other conversation metadata.
-
 - The conversation topic name includes the blockchain account addresses of the participants, revealing some identifying information.
 
 The conversation topic name uses this format: `dm-<participant-1-account-address>-<participant-2-account-address>`.
@@ -238,8 +218,7 @@ With XMTP network interactions handled by the message API client, developers can
 
 - User identity metadata
 
-- Inbox filtering  
-  To learn more, see [Filter conversations](/docs/build/filter-conversations) and [Truths Not Spoofs](/blog/truths-not-spoofs), a post about one developer's approach to determining which messages display in an inbox based on blockchain data, including which tokens the sender owns.
+- Inbox filtering
 
 - Custom content types  
   To learn more, see [Content types](content-types).
