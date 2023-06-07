@@ -98,8 +98,6 @@ The client sends an invitation to both the sender and recipient’s invite topic
 
 - Encrypted key material, which includes a shared secret for message encryption.
 
-- Support for optional custom [conversation IDs](/docs/build/filter-conversations#set-a-conversation-id) and other [metadata](/docs/build/filter-conversations#set-conversation-metadata). Clients can use these IDs and metadata to [filter](/docs/build/filter-conversations) and [label](/docs/build/filter-conversations) conversations.
-
 To learn more, see [Invitations](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#invitations) in the `xmtp/proto` repo.
 
 #### Conversation topic V2
@@ -113,20 +111,6 @@ Upon creation, a conversation topic can have an optional conversation ID and met
 The conversation topic name uses this format provided by the invitation: `m-<random-32-byte-alphanumeric-string>`.
 
 For example, `m-XxBHrITqjd00nLMuTyaaGDvTLnviazU8`.
-
-A client uses the following logic to determine whether to create a new conversation topic or use an existing conversation topic between a pair of addresses:
-
-- If there is a `conversationId` defined, such as `conversationId = "lens.dev/0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38-0x71C7656EC7ab88b098defB751B7401B5f6d8976F"`, the client checks if the `conversationId` exists:
-
-  - If the `conversationId` exists, the client uses the existing conversation topic. There can be only one conversation topic with a given conversation ID.
-
-  - If the `conversationId` doesn’t exist, the client creates a new conversation topic.
-
-- If there is no `conversationId` defined, whether it is an empty string (`conversationID = ""`) or it is null (no `conversationId` element present), the client creates a new conversation topic.
-
-A pair of addresses can have multiple conversation topics, each with a unique conversation ID.
-
-To learn more, see [Messages](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#messages) in the `xmtp/proto` repo.
 
 #### Private store topic V2
 
@@ -238,8 +222,7 @@ With XMTP network interactions handled by the message API client, developers can
 
 - User identity metadata
 
-- Inbox filtering  
-  To learn more, see [Filter conversations](/docs/build/filter-conversations) and [Truths Not Spoofs](/blog/truths-not-spoofs), a post about one developer's approach to determining which messages display in an inbox based on blockchain data, including which tokens the sender owns.
+- Inbox filtering
 
 - Custom content types  
   To learn more, see [Content types](content-types).

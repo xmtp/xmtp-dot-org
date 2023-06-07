@@ -64,7 +64,7 @@ To support decentralized identity management:
 
 - [Lens](https://www.lens.xyz/)
   - Example implementation in [Lenster](https://github.com/lensterxyz/lenster)
-  - Tutorial: [Build key XMTP chat features in a Lens app](/docs/build/build-key-xmtp-chat-features-in-a-lens-app)
+  - Tutorial: [Build Lens multi-profile chat with XMTP](/docs/build/lens-multi-profile)
 - [CyberConnect](https://link3.to/cyberconnect)
   - Example implementation in the [CyberConnect & XMTP Integration Demo App](https://github.com/cyberconnecthq/cc-xmtp-chatapp)
   - Tutorial: [Build messaging for CyberConnect profiles](/docs/build/build-messaging-for-cyberconnect-profiles)

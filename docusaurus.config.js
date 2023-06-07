@@ -235,20 +235,16 @@ const config = {
                 to: `/docs/build/start-building`,
               },
               {
-                label: `Lens DMs`,
-                to: `/docs/build/build-key-xmtp-chat-features-in-a-lens-app`,
+                label: `Build a quickstart app`,
+                to: `/docs/build/quickstart-app`,
               },
               {
                 label: `CyberConnect DMs`,
                 to: `/docs/build/build-messaging-for-cyberconnect-profiles`,
               },
               {
-                label: `Filter conversations`,
-                to: `/docs/build/filter-conversations`,
-              },
-              {
-                label: `Label conversations`,
-                to: `/docs/build/label-conversations`,
+                label: `Lens multi-profile chat`,
+                to: `/docs/build/lens-multi-profile`,
               },
               {
                 label: `Content types`,
@@ -257,10 +253,6 @@ const config = {
               {
                 label: `Push notifications (Swift/iOS)`,
                 to: `/docs/build/handle-push-notifications`,
-              },
-              {
-                label: `Hello world app`,
-                to: `/docs/build/build-an-xmtp-hello-world-app`,
               },
               {
                 label: 'Changelog',

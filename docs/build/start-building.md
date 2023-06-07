@@ -14,7 +14,6 @@ import pushnotifsettings from '/docs/concepts/img/push-notif-settings.png';
 import pushnotifsdecrypted from '/docs/concepts/img/push-notifs-decrypted.jpg';
 import badgingorb from '/docs/concepts/img/badging-orb.jpg';
 import unreadbadge from '/docs/concepts/img/unread-badge.png';
-import conversationlabels from '/docs/concepts/img/conversation-labels.png';
 import onboardingbot from '/docs/concepts/img/onboarding-bot.png';
 
 # Start building with XMTP
@@ -51,7 +50,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 ## Start building your app
 
-1. [**Build a simple hello world app**](/docs/build/build-an-xmtp-hello-world-app)
+1. [**Build a quickstart app**](/docs/build/quickstart-app)
 
    Get a feel for building with XMTP by building an app using 100% copy-and-paste commands and code.
 
@@ -72,7 +71,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 4. **Want to provide DMs in a Lens app?**
 
-   To learn how, see [Build key XMTP chat features in a Lens app](/docs/build/build-key-xmtp-chat-features-in-a-lens-app).
+   To learn how, see [Build Lens multi-profile chat with XMTP](/docs/build/lens-multi-profile).
 
    Need a Lens handle? Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/)
 
@@ -186,20 +185,8 @@ Consider following these UX best practices.
 
   <img src={allinorb} style={{width:"400px"}}/>
 
-- Use [conversation labels](/docs/build/label-conversations) to provide context, especially in an interoperable inbox. For example, here is conversation labeling in an interoperable inbox helping the user understand the different origins of two conversations with the same address.
-
-  <img src={conversationlabels} style={{width:"400px"}}/>
-
-- Consider using conversation IDs and metadata to provide [filtered views of conversations](/docs/build/filter-conversations). For example, here is the Orb app with conversations filtered to show Lens conversations only:
-
-  <img src={lensonlyorb} style={{width:"400px"}}/>
-
-- Enable users to filter based on friends on a social graph, such as Lens, or a client-side grant/revoke list. For example, here is the [Buttrfly app](https://buttrfly.app/) displaying only conversations with Lens profiles you follow:
-
-  <img src={buttrflyfollowonly} style={{width:"400px"}}/>
-
 - Hide empty conversations.
-- For multiple non-empty conversations with the same conversation ID and between the same pair of addresses, pick the earliest conversation and write to it, effectively abandoning the other conversations.
+
 
 ### Push notifications
 
