@@ -8,6 +8,8 @@ image: "./media/everyname.png"
 description: "Resolve identities using the Everyname API"
 ---
 
+![](./media/everyname.png)
+
 # Resolve identities in your app built with XMTP
 
 When you build with XMTP, there’s no cold start for your app and your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
@@ -23,7 +25,7 @@ As a UX best practice, build your app to enable a user to enter a domain name in
 
 For example, a user should be able to enter `prxshant.eth` in your To field and have your app forward-resolve and display its associated wallet address `0x4b70d04124c2996De29e0caa050A49822Faec6Cc`.
 
-![Entering prxshant.eth in a to field and having it resolve to 0x4b70d04124c2996De29e0caa050A49822Faec6Cc](img/id-resolution.gif)
+![Entering prxshant.eth in a to field and having it resolve to 0x4b70d04124c2996De29e0caa050A49822Faec6Cc](./media/id-resolution.gif)
 
 And certainly, your app should also be able to accept a raw wallet address and reverse-resolve and display the associated domain name, if available.
 

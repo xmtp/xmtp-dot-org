@@ -1,11 +1,11 @@
 import React from "react";
-import ListOfDevelopers from "./ListofGuides.json";
+import ListOfTutorials from "./ListOfTutorials.json";
 import useBaseUrl from "@docusaurus/useBaseUrl/";
 
 const Tutorials = () => {
   return (
     <ul className="bwx-guides list-none grid grid-cols-1 md:grid-cols-2 gap-6 px-0">
-      {ListOfDevelopers.map((developer) => (
+      {ListOfTutorials.map((developer) => (
         <li className="relative group" key={developer.name}>
           <a className="flex justify-center " href={developer.href}>
             <img
