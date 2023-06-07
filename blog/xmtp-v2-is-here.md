@@ -32,14 +32,6 @@ After 12 months of work, **we are excited to announce XMTP Protocol v2.**
 
 But building an interoperable messaging network has its own set of challenges for app developers. Users like to be able to access messages from anywhere across the network, but want messaging experiences tailored to the app they are currently using.
 
-## Increased participant privacy
-
-By embedding conversation IDs within the encrypted payload and anonymizing wallet addresses, XMTP v2 strips messages of any public metadata that might identify the participants in a conversation.
-
-“This important change protects users by preventing third parties from using public data to observe who is talking to whom in the network and mapping out a graph of conversations taking place over XMTP,” said Saul Carlin, Head of Product at XMTP Labs.
-
-You can go deep in [the supporting documentation](/docs/concepts/architectural-overview#client-layer) for more technical details about the XMTP V2 negotiated topics that enable this improvement.
-
 ## Improved developer transparency
 
 Beyond the features that XMTP protocol v2 introduces, we have also improved the transparency of how the XMTP protocol, SDKs and applications work together.
