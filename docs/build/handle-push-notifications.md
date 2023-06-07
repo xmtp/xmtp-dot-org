@@ -1,5 +1,5 @@
 ---
-sidebar_label: Push notifications (Swift/iOS)
+sidebar_label: Push notifications
 sidebar_position: 7
 ---
 
