@@ -236,38 +236,7 @@ To learn how to optimize your app’s performance, see [Performance](/docs/build
 
 ## Test your app
 
-Test your app before going live. Here's a list of recommended test cases.
-
-Be sure to test using different devices (mobile, desktop), browsers, and window sizes.
-
-If helpful for testing, you can create your own message bot, such as `gm.yourappname.eth`, using [ChainJet](https://chainjet.io/). You can use the message bot to receive and send test messages, as well as provide a friendly app onboarding experience. If needed, you can also [use these XMTP addresses](#try-messaging-with-xmtp) for testing.
-
-### Wallet connection
-
-- Connect your preexisting wallet
-- Connect a new wallet using “get a wallet” functionality
-- Disconnect your wallet
-- Reconnect your wallet after disconnection
-
-### Identity
-
-- Verify that your ENS domain appears
-- Verify that your ENS avatar appears
-- Verify that your recipient’s ENS domain appears
-- Verify that your recipient’s ENS avatar appears
-
-### Message
-
-- Start a new conversation with an 0x address as the recipient
-- Start a new conversation with an ENS address as the recipient
-- Send a short message (<10 characters)
-- Send a medium message (<200 characters)
-- Send a long message (>200 characters)
-- Receive a short message (<10 characters)
-- Receive a medium message (<200 characters)
-- Receive a long message (>200 characters)
-- Scroll through the conversation list
-- Scroll through a conversation
+Test your app before going live. For some testing tips and guidelines, see [Test your app](test-your-app).
 
 ## Get pre-launch feedback
 

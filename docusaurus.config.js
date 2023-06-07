@@ -239,16 +239,24 @@ const config = {
                 to: `/docs/developer-quickstart`,
               },
               {
-                label: `Integrating-Multiple-Profiles-with-Lens`,
-                to: `/blog/Integrating-Multiple-Profiles-with-Lens`,
-              },
-              {
                 label: `Content types`,
                 to: `/docs/build/use-content-types`,
               },
               {
                 label: `Push notifications (Swift/iOS)`,
                 to: `/docs/build/handle-push-notifications`,
+              },
+              {
+                label: `Performance`,
+                to: `/docs/build/performance`,
+              },
+              {
+                label: `Test`,
+                to: `/docs/build/test-your-app`,
+              },
+              {
+                label: `Use cases`,
+                to: `/docs/build/use-cases`,
               },
               {
                 label: "Changelog",
