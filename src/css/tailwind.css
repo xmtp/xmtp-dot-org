@@ -728,5 +728,35 @@ ul li a:before {
 }
 
 .bwx-guides li a img {
-  object-fit: cover;
+  object-fit: contain;
+  height: 210px !important;
+}
+.bwx-guides li h4 {
+  font-size: 1rem;
+}
+/* */
+
+/*TOP NAV*/
+.navbar__item .dropdown__menu {
+  width: auto;
+  text-align: left;
+}
+.navbar__item .subtext {
+  display: none;
+}
+.dropdown__menu .text-base {
+  font-size: 15px !important;
+  padding: 0px !important;
+}
+.dropdown__link {
+  padding-bottom: 0px !important;
+  padding-top: 5px !important;
+}
+.dropdown__menu {
+  margin: 0px !important;
+  box-shadow: none;
+}
+.navbar__client__dropdown__icon {
+  max-width: 10%;
+  margin-right: 5px;
 }

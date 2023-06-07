@@ -8,11 +8,13 @@ image: "./media/everyname.png"
 description: "Resolve identities using the Everyname API"
 ---
 
-![](./media/everyname.png)
+![](./media/uc-everyname.png)
 
 # Resolve identities in your app built with XMTP
 
 When you build with XMTP, there’s no cold start for your app and your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
+
+<!--truncate-->
 
 XMTP’s interoperability and composability help ensure that the network can continue to grow and bring messaging to every identity—via your app.
 

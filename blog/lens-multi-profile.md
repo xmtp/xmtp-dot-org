@@ -5,7 +5,7 @@ title: Integrating Multiple Profiles with Lens
 date: 2022-11-29
 authors: fabri
 description: Integrating Multiple Profiles with Lens
-image: ./media/lens-blog.jpeg
+image: ./media/uc-lens.png
 tags:
   - Developers
   - Messaging
@@ -15,7 +15,7 @@ tags:
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-![lens](./media/lens-blog.jpeg)
+![lens](./media/uc-lens.png)
 
 # Integrating Multiple Profiles with Lens
 
