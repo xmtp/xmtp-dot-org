@@ -2,7 +2,7 @@
 sidebar_label: Architecture
 sidebar_position: 2
 toc_max_heading_level: 4
-description: 'Learn about the architecture of XMTP and how it supports messaging between blockchain accounts.'
+description: "Learn about the architecture of XMTP and how it supports messaging between blockchain accounts."
 ---
 
 # Architectural overview of XMTP
@@ -94,7 +94,7 @@ For example, `invite-0x458dd9C5bf4d4E8f80Ba88923E3b94FD028CEe38`.
 
 The client sends an invitation to both the sender and recipient’s invite topic. The invitation includes no message content, but includes:
 
-- A randomly generated conversation topic name, which tells clients which conversation topic to use to send and retrieve messages.
+- A randomly generated conversation topic name, which tells clients which conversation topic to use to send and retrieve messages
 
 - Encrypted key material, which includes a shared secret for message encryption.
 
@@ -105,8 +105,6 @@ To learn more, see [Invitations](https://github.com/xmtp/proto/blob/main/PROTOCO
 Clients use conversation topics to store messages exchanged between a pair of addresses.
 
 A conversation topic is created for a pair of addresses when the first message is sent between them.
-
-Upon creation, a conversation topic can have an optional conversation ID and metadata. This information is provided by the invitation. Metadata is considered only upon conversation topic creation.
 
 The conversation topic name uses this format provided by the invitation: `m-<random-32-byte-alphanumeric-string>`.
 
