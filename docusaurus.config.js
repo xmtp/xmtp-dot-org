@@ -236,15 +236,11 @@ const config = {
               },
               {
                 label: `Build a quickstart app`,
-                to: `/docs/build/quickstart-app`,
+                to: `/docs/developer-quickstart`,
               },
               {
-                label: `CyberConnect DMs`,
-                to: `/docs/build/build-messaging-for-cyberconnect-profiles`,
-              },
-              {
-                label: `Lens multi-profile chat`,
-                to: `/docs/build/lens-multi-profile`,
+                label: `Integrating-Multiple-Profiles-with-Lens`,
+                to: `/blog/Integrating-Multiple-Profiles-with-Lens`,
               },
               {
                 label: `Content types`,

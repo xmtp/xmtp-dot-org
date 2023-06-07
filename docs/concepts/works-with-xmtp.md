@@ -1,7 +1,7 @@
 ---
 sidebar_label: Works with XMTP
 sidebar_position: 9
-description: 'Here are just a few of the composable building blocks of web3 that work well with XMTP.'
+description: "Here are just a few of the composable building blocks of web3 that work well with XMTP."
 ---
 
 import arbitrum from '/docs/concepts/img/arbitrum-logo.png';
@@ -64,10 +64,10 @@ To support decentralized identity management:
 
 - [Lens](https://www.lens.xyz/)
   - Example implementation in [Lenster](https://github.com/lensterxyz/lenster)
-  - Tutorial: [Build Lens multi-profile chat with XMTP](/docs/build/lens-multi-profile)
+  - Tutorial: [Integrating Multiple Profiles with Lens](/blog/Integrating-Multiple-Profiles-with-Lens)
 - [CyberConnect](https://link3.to/cyberconnect)
   - Example implementation in the [CyberConnect & XMTP Integration Demo App](https://github.com/cyberconnecthq/cc-xmtp-chatapp)
-  - Tutorial: [Build messaging for CyberConnect profiles](/docs/build/build-messaging-for-cyberconnect-profiles)
+  - Tutorial: [Build messaging for CyberConnect profiles](https://cyberconnect.hashnode.dev/integrating-xmtp-into-cyberconnect-a-guide)
 
 ## Decentralized app store
 
