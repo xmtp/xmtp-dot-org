@@ -727,7 +727,6 @@ ul li a:before {
   height: 210px !important;
 }
 
-.bwx-guides .rounded img {
+.bwx-guides a img {
   object-fit: cover;
-  margin: 0px !important;
 }
