@@ -1,7 +1,15 @@
 ---
-sidebar_label: Multiple Profiles with Lens
-sidebar_position: 3
+slug: Integrating-Multiple-Profiles-with-Lens
+hide_table_of_contents: true
+title: Integrating Multiple Profiles with Lens
+date: 2022-11-29
+authors: peter
 description: Integrating Multiple Profiles with Lens
+image: ./media/meTokensShareSplit.png
+tags:
+  - Developers
+  - Messaging
+  - Spotlight
 ---
 
 import Tabs from "@theme/Tabs";
@@ -24,13 +32,13 @@ Because an address can hold multiple profiles and there are address-based intera
 
 ### Start a conversation with a Lens profile
 
+![Screenshot showing a search for a Lens profile in the New message panel in Lenster](./media/search-for-lens-profile.png)
+
 When building with XMTP, you must provide a way to start a conversation between the user and the wallet address they want to message.
 
 For a Lens app, you want to enable the user to start a conversation with a Lens profile only.
 
 Here is the **New message** modal in Lenster, providing a field where users can search for the Lens profile they want to message:
-
-![Screenshot showing a search for a Lens profile in the New message panel in Lenster](img/search-for-lens-profile.png)
 
 1. Set the Lens domain prefix to `lens.dev/dm`
 2. Construct the conversation ID based on profile pairs
@@ -113,7 +121,7 @@ Now that you've built the Lens DM `conversationId` for your Lens app, your app c
 
 Here is the **Messages** panel in Lenster using the Lens DM `conversationId` to filter and display a user's Lens conversations only, along with message previews:
 
-![Screenshot showing the Messages panel in Lenster with a set of three conversations with preview messages highlighted](img//filter-for-lens-convos.png)
+![Screenshot showing the Messages panel in Lenster with a set of three conversations with preview messages highlighted](./media/filter-for-lens-convos.png)
 
 **To filter for Lens conversations and then display messages in a conversation:**
 
