@@ -8,7 +8,7 @@ import perfArchitecture from '/docs/build/img/performance-architecture.jpeg';
 
 # Optimize performance in your app built with XMTP
 
-Follow these guidelines to optimize your app’s performance.
+Follow these guidelines to optimize your app’s performance. To learn about testing your app's performance, see [Test your app](test-your-app).
 
 ## Use a local cache
 
@@ -59,30 +59,3 @@ Compress message content using a supported compression algorithm.
 - Use the Kotlin client SDK (`xmtp-android`) to [compress messages](/docs/sdks/kotlin-quickstart#compression)
 - Use the Swift client SDK (`xmtp-ios`) to [compress messages](/docs/sdks/swift-quickstart#compression)
 - Use the Dart client SDK (`xmtp-flutter`) to [compress messages](/docs/sdks/dart-quickstart#compression)
-
-## Check performance benchmarks
-
-Consider how your app performs against these performance benchmarks:
-
-- Time to load conversation list: 8-15ms to decrypt invites per conversation
-- Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
-- Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
-
-## Create a test wallet
-
-It's important to test your app's performance when handling a wallet address with more than just a few conversations and messages. To do this, you can use the `xmtp-debug` repo to easily populate a test wallet with _X_ number of conversations, each with _Y_ number of messages, on the XMTP network of your choice.
-
-1. Get a test wallet address.
-2. Run `git clone https://github.com/xmtp/xmtp-debug.git`.
-3. Run `cd xmtp-debug`.
-4. Run `npm i`.
-5. Run `npm start -- --env=dev fill-conversation-list $TEST_WALLET_ADDRESS $NUM_CONVERSATIONS $NUM_MESSAGES_PER_CONVERSATION`. 
-
-    For example, run `npm start -- --env=dev fill-conversation-list 0x78b97401850c335abf936C41F4D7a38A2F92D1D2 500 1` to populate test wallet `0x78b97401850c335abf936C41F4D7a38A2F92D1D2` with 500 conversations, each with 1 message, on the XMTP `dev` network.
-
-Try testing the performance of your app using test wallets with the following conversation and message data:
-
-- 500 conversations, each with 1 message
-- 1 conversation with 500 messages
-
-Populating test wallets might cause you to hit the XMTP network rate limit. If this happens, wait 5 minutes and try again.
