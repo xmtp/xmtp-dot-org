@@ -16,7 +16,7 @@ For a reference implementation of image attachments, see the [xmtp.chat](http://
 
 XMTP messages have a size limit of 1 MB and most attachment types will exceed this size. As a result, you must store attachments in a remote location outside of the XMTP network.
 
-You can use storage options such as Web3 Storage, ThirdWeb Storeage, s3 buckets, and others. Another option you have is to allow your users to provide their own storage token.
+You can use storage options such as Web3 Storage, ThirdWeb Storage, s3 buckets, and others. Another option is to allow your users to provide their own storage token.
 
 The [xmtp.chat](http://xmtp.chat) reference implementation uses Web3 Storage, with XMTP Labs hosting with our own token. We wanted to use a decentralized solution, which made Web3 Storage a good choice. Hosting with our own token reduces user friction, but we cap uploads at 5 MB. In the future, [xmtp.chat](http://xmtp.chat) might give users the option to provide their own token if they want to upload larger file sizes or keep their images beyond a certain timeframe. 
 
@@ -28,7 +28,7 @@ Automatically loading attachments from untrusted users can have negative securit
 
 :::
 
-A more secure pattern you might want to use is requiring the user to click a “Click to load” CTA before loading an attachment. After the attachment has been loaded, it can be pulled from a cache. This requires one more click for the user, but provides greater security.
+A more secure pattern you might want to use is to require the user to click a “Click to load” CTA before loading an attachment. After the attachment has been loaded, it can be pulled from a cache. This pattern requires one more click for the user, but provides greater security.
 
 The [xmtp.chat](http://xmtp.chat) reference implementation intentionally demonstrates both patterns for your reference:
 
@@ -61,7 +61,7 @@ To make your app more performant when loading attachments, consider caching thes
 
 The [xmtp.chat](http://xmtp.chat) reference implementation does this using Dexie, but there are other options as well.
 
-Note that when caching attachments, you must reset the cache after the client changes. This is because the client is used to generate the attachment URL that gets added to cache originally.
+Note that when caching attachments, you must reset the cache after the client changes. This is because the client is used to generate the attachment URL that gets added to the cache originally.
 
 ## Build support for message attachments
 
