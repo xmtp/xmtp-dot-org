@@ -3,9 +3,9 @@ slug: Integrating-Multiple-Profiles-with-Lens
 hide_table_of_contents: true
 title: Integrating Multiple Profiles with Lens
 date: 2022-11-29
-authors: peter
+authors: fabri
 description: Integrating Multiple Profiles with Lens
-image: ./media/meTokensShareSplit.png
+image: ./media/lens-blog.jpeg
 tags:
   - Developers
   - Messaging
@@ -14,6 +14,8 @@ tags:
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+
+![lens](./media/lens-blog.jpeg)
 
 # Integrating Multiple Profiles with Lens
 

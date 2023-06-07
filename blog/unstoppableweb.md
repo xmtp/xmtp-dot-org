@@ -1,27 +1,20 @@
 ---
-slug: thirdbweb-wallet-remote-attachments
+slug: unstoppableweb
 hide_table_of_contents: true
-title: "How to send remote attachments with XMTP & Thirdweb SDKs"
-date: 2023-05-12
+title: "Add Unstoppable Resolution to your XMTP application"
+date: 2023-06-07
 authors: fabri
-image: "./media/xmtp-thirdweb/hero.png"
-description: "Sending remote attachments with XMTP"
-tags:
-  - Content Types
-  - Encryption
-  - SDKs
-  - Media
-  - Test
-  - Developers
-  - WalletSDK
-  - Thirdweb
+image: "./media/uns.png"
+description: "Add Unstoppable Resolution to your XMTP applicationP"
 ---
 
-# Add Unstoppable Resolution to your XMTP application
+![thirdweb.jpg](./media/uns.png)
 
 Creating seamless user experiences in decentralized applications (dApps) is vital for the growth and widespread adoption of Web3. Unstoppable Domains is one such solution that greatly improves the user experience by offering blockchain-based domains. These domains simplify cryptocurrency transactions, enable easy user logins for dApps, games, and metaverses, and even offer a way to create and host censorship-resistant websites.
 
 Best of all, once an Unstoppable Domain is minted on the blockchain, it belongs to the user forever without any renewal fees. Today, we'll walk you through the process of adding Unstoppable Domain support into your XMTP application.
+
+<!--truncate-->
 
 ## **Prerequisites[](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app#prerequisites)**
 
@@ -122,7 +115,7 @@ const domain = await resolution.addr(name, "ETH");
 
 To complete the Unstoppable Domains integration, it’s important to convert the wallet addresses on the page into their respective domains. Using the [XMTP.chat](https://xmtp.chat/inbox) inbox as an example, we’ll want to reverse resolve the connected wallet address as well as the message previews.
 
-![CleanShot 2023-06-04 at 19.30.56@2x.png](./media/uns-img1.png)
+![CleanShot 2023-06-04 at 19.30.56@2x.png](./media/uns-img2.png)
 
 To do this, we’ll want to implement a function similar to the below which will attempt to resolve the wallet address to a domain. We’ll display the wallet address if the function returns null, otherwise display the domain.
 

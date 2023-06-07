@@ -25,14 +25,14 @@
     "name": "Integrating Multiple Profiles with Lens",
     "image": "https://pbs.twimg.com/profile_banners/1478109975406858245/1683208304/1500x500",
     "description": " Integrating Multiple Profiles with Lens.",
-    "href": "https://www.lens.xyz/apps",
-    "twitter": "https://twitter.com/lensterxyz"
+    "href": "https://www.lens.xyz",
+    "twitter": "https://twitter.com/LensProtocol"
   },
   {
-    "name": "Lenster",
-    "image": "/img/builtWithXmtp/lenster.svg",
-    "description": " Integrating Multiple Profiles with Lens.",
-    "href": "https://lenster.xyz",
-    "twitter": "https://twitter.com/lensterxyz"
+    "name": "Add Unstoppable Resolution to your XMTP application",
+    "image": "/assets/images/uns-c1a63a30fe2615841d6d9046a91e509e.png",
+    "description": " Add Unstoppable Resolution to your XMTP application.",
+    "href": "https://unstoppabledomains.com/",
+    "twitter": "https://twitter.com/unstoppableweb"
   }
 ]
