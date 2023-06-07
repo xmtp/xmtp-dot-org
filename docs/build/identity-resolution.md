@@ -5,7 +5,7 @@ sidebar_position: 5.5
 
 # Resolve identities in your app built with XMTP
 
-When you build with XMTP, there’s no cold start for your app and your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
+When you build with XMTP, there’s no cold start for your app and your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities. 
 
 XMTP’s interoperability and composability help ensure that the network can continue to grow and bring messaging to every identity—via your app.
 
@@ -73,24 +73,23 @@ For reverse resolution, send a GET request with a wallet address and network. Fo
 import {} from "dotenv/config";
 import axios from "axios";
 
-const axios = require("axios");
+const axios = require('axios');
 let config = {
-  method: "get",
+  method: 'get',
   maxBodyLength: Infinity,
-  url: "https://api.everyname.xyz/reverse?address=0x7E0b0363404751346930AF92C80D1fef932Cc48a&network=lens",
-  headers: {
-    Accept: "application/json",
-    "api-key": "process.env.EVERYNAME_KEY",
-  },
+  url: 'https://api.everyname.xyz/reverse?address=0x7E0b0363404751346930AF92C80D1fef932Cc48a&network=lens',
+  headers: { 
+    'Accept': 'application/json', 
+    'api-key': 'process.env.EVERYNAME_KEY'
+  }
 };
-axios
-  .request(config)
-  .then((response) => {
-    console.log(JSON.stringify(response.data));
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+axios.request(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
 ```
 
 The response provides the associated domain name, if available. For example:
