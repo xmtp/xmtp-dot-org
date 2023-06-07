@@ -719,14 +719,3 @@ ul li a:before {
 .tabs-container .margin-top--md {
   margin: 0px !important;
 }
-/*image turtorials*/
-.bwx-guides li {
-  margin: 0px !important;
-}
-.bwx-guides li a {
-  height: 210px !important;
-}
-
-.bwx-guides li a img {
-  object-fit: cover;
-}

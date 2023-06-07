@@ -50,7 +50,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 ## Start building your app
 
-1. [**Build a quickstart app**](/docs/developer-quickstart)
+1. [**Build a quickstart app**](/docs/build/quickstart-app)
 
    Get a feel for building with XMTP by building an app using 100% copy-and-paste commands and code.
 
@@ -63,15 +63,15 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
    - [React](/docs/sdks/react-quickstart)
    - [React Native](/docs/sdks/rn-quickstart)
 
-Be sure to watch relevant repos to be notified about new releases, which might include breaking changes and migration steps. You can also join the [XMTP Discord](https://discord.gg/xmtp) to receive these types of notifications.
+  Be sure to watch relevant repos to be notified about new releases, which might include breaking changes and migration steps. You can also join the [XMTP Discord](https://discord.gg/xmtp) to receive these types of notifications.
 
 3. **Learn about what [works with XMTP](/docs/concepts/works-with-xmtp)**
 
    Building your app with these composable building blocks can help you deliver and distribute your XMTP app—faster and with quality.
 
-4. **Want to provide Multi Profile in a Lens app?**
+4. **Want to provide DMs in a Lens app?**
 
-   To learn how, see [Integrating Multiple Profiles with Lens](/blog/Integrating-Multiple-Profiles-with-Lens).
+   To learn how, see [Build Lens multi-profile chat with XMTP](/docs/build/lens-multi-profile).
 
    Need a Lens handle? Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/)
 
@@ -186,6 +186,7 @@ Consider following these UX best practices.
   <img src={allinorb} style={{width:"400px"}}/>
 
 - Hide empty conversations.
+
 
 ### Push notifications
 
