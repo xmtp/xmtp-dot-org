@@ -62,10 +62,11 @@ To learn more about nodes, see [Network layer](/docs/concepts/architectural-over
 XMTP client SDKs are available for:
 
 - [JavaScript](/docs/sdks/js-quickstart)
-- [React](/docs/sdks/react-quickstart)
-- [Kotlin](/docs/sdks/kotlin-quickstart) (Android)
 - [Swift](/docs/sdks/swift-quickstart) (iOS)
 - [Dart](/docs/sdks/dart-quickstart) (Flutter)
+- [Kotlin](/docs/sdks/kotlin-quickstart) (Android)
+- [React](/docs/sdks/react-quickstart)
+- [React Native](/docs/sdks/rn-quickstart)
 
 To learn about other SDKs in the works, see the [Roadmap](/roadmap).
 
@@ -74,7 +75,6 @@ To learn about other SDKs in the works, see the [Roadmap](/roadmap).
 Check out these example apps you can use for guidance and inspiration when building with XMTP:
 
 - The [xmtp-quickstart-react repo](https://github.com/xmtp/xmtp-quickstart-react) provides the XMTP Quickstart React chat app, which demonstrates core capabilities of the XMTP client SDK. You can use the code in this repo to learn to build a basic messaging app.
-
   - [Try the app](https://xmtp-quickstart-react.vercel.app/) connected to the XMTP `dev` network
 
 - The [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web) provides the XMTP Inbox chat app, which demonstrates core and advanced capabilities of the XMTP client SDK and showcases innovative ways of building with XMTP.

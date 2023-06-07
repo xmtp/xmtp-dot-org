@@ -9,7 +9,7 @@ There are many ways to participate in the XMTP community, whether you are buildi
 
 ## 🛠 SDK access
 
-Explore the [XMTP JavaScript SDK](https://github.com/xmtp/xmtp-js) on GitHub.
+Explore the [XMTP client SDKs](/docs/introduction#xmtp-sdks-and-example-apps).
 
 ## ❔ Questions
 
@@ -17,11 +17,11 @@ Have questions? Get help from the [XMTP Discord community](https://discord.gg/xm
 
 ## 🐞 Bugs
 
-Report a bug by creating an issue in the [related XMTP GitHub repo](https://github.com/xmtp/). Please confirm that there isn't an existing open issue about the bug and include detailed steps to reproduce the bug.
+Report a bug by creating an issue in the related XMTP GitHub repo. Please confirm that there isn't an existing open issue about the bug and include detailed steps to reproduce the bug.
 
 ## ✨ Feature requests
 
-Request features by creating an issue in the [related XMTP GitHub repo](https://github.com/xmtp/). Please confirm there isn't an existing open issue requesting the feature. Let us know which use cases the feature can unlock so that we can investigate and prioritize.
+Request features by creating an issue in the related XMTP GitHub repo. Please confirm there isn't an existing open issue requesting the feature. Let us know which use cases the feature can unlock so that we can investigate and prioritize.
 
 ## 🔀 Pull requests
 

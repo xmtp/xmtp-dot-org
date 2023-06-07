@@ -5,6 +5,8 @@ sidebar_position: 7
 
 # References for XMTP client SDKs
 
+<br/>
+
 ## JavaScript client SDK reference
 
 :::tip View the reference
@@ -12,6 +14,30 @@ sidebar_position: 7
 Access the **[JavaScript client SDK reference documentation](https://xmtp-js.pages.dev/modules)**.
 
 :::
+
+<br/>
+
+## Swift client SDK reference
+
+:::tip View the reference
+
+Access the **[Swift client SDK reference documentation](https://xmtp.github.io/xmtp-ios/documentation/xmtp/)**.
+
+:::
+
+<br/>
+
+## Dart client SDK reference
+
+:::tip View the reference
+
+Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)** on pub.dev.
+
+:::
+
+<br/>
+
+## JavaScript reference details
 
 The reference documentation covers the following classes, interfaces, type aliases, variables, and functions.
 
@@ -99,13 +125,7 @@ The reference documentation covers the following classes, interfaces, type alias
 - nsToDate
 - toNanoString
 
-## Swift client SDK reference
-
-:::tip View the reference
-
-Access the **[Swift client SDK reference documentation](https://xmtp.github.io/xmtp-ios/documentation/xmtp/)**.
-
-:::
+## Swift reference details
 
 The reference documentation covers the following classes, protocols, structures, variables, type aliases, and enumerations provided by the SDK.
 
@@ -180,13 +200,7 @@ The reference documentation covers the following classes, protocols, structures,
 - RemoteAttachmentError
 - XMTPEnvironment
 
-## Dart client SDK reference
-
-:::tip View the reference
-
-Access the **[Dart client SDK reference documentation](https://pub.dev/documentation/xmtp/latest/xmtp/xmtp-library.html)** on pub.dev.
-
-:::
+## Dart reference details
 
 The reference documentation covers the following classes, properties, and enums provided by the SDK:
 
