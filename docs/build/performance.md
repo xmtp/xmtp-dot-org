@@ -67,3 +67,15 @@ Consider how your app performs against these performance benchmarks:
 - Time to load conversation list: 8-15ms to decrypt invites per conversation
 - Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
 - Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
+
+## Create a test wallet
+
+It's important to test your app's performance when handling a wallet address with more than just a few conversations and messages. To do this, you can use the `xmtp-debug` repo to easily populate a test wallet with _X_ number of conversations, each with _Y_ number of messages, on the XMTP network of your choice.
+
+1. Get a test wallet address.
+2. Run `git clone https://github.com/xmtp/xmtp-debug.git`.
+3. Run `cd xmtp-debug`.
+4. Run `npm i`.
+5. Run `npm start -- --env=dev fill-conversation-list $TEST_WALLET_ADDRESS $NUM_CONVERSATIONS $NUM_MESSAGES_PER_CONVERSATION`. 
+
+    For example, to create 500 conversations, each with 1 message, for wallet address 0x78b97401850c335abf936C41F4D7a38A2F92D1D2, on the XMTP `dev` network, run `npm start -- --env=dev fill-conversation-list 0x78b97401850c335abf936C41F4D7a38A2F92D1D2 500 1`.
