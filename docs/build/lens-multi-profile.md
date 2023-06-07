@@ -1,13 +1,13 @@
 ---
-sidebar_label: Lens multi-profile chat
+sidebar_label: Multiple Profiles with Lens
 sidebar_position: 3
-description: Integrating multiple profiles with Lens
+description: Integrating Multiple Profiles with Lens
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Build Lens multi-profile chat with XMTP
+# Integrating Multiple Profiles with Lens
 
 When building with XMTP, a conversation comprises a set of messages exchanged between two participants. These participants are identified solely through their wallet addresses.
 
