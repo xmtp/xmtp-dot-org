@@ -6,9 +6,9 @@ description: Follow these guidelines to optimize your app’s performance.
 
 import perfArchitecture from '/docs/build/img/performance-architecture.jpeg';
 
-# Optimize performance in your app built with XMTP
+# Optimize performance of your app built with XMTP
 
-Follow these guidelines to optimize your app’s performance.
+Follow these guidelines to optimize your app’s performance. To learn about testing your app's performance, see [Test your app](test-your-app).
 
 ## Use a local cache
 
@@ -59,11 +59,3 @@ Compress message content using a supported compression algorithm.
 - Use the Kotlin client SDK (`xmtp-android`) to [compress messages](/docs/sdks/kotlin-quickstart#compression)
 - Use the Swift client SDK (`xmtp-ios`) to [compress messages](/docs/sdks/swift-quickstart#compression)
 - Use the Dart client SDK (`xmtp-flutter`) to [compress messages](/docs/sdks/dart-quickstart#compression)
-
-## Check performance benchmarks
-
-Consider how your app performs against these performance benchmarks:
-
-- Time to load conversation list: 8-15ms to decrypt invites per conversation
-- Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
-- Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
