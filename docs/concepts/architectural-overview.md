@@ -164,8 +164,6 @@ Clients use conversation topics to store messages sent between two participants.
 
 - All messages between two participants are stored in a single conversation topic.
 
-- No support for conversation IDs or other conversation metadata.
-
 - The conversation topic name includes the blockchain account addresses of the participants, revealing some identifying information.
 
 The conversation topic name uses this format: `dm-<participant-1-account-address>-<participant-2-account-address>`.
