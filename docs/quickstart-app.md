@@ -1,10 +1,10 @@
 ---
-sidebar_label: Quickstart app
-sidebar_position: 2
+sidebar_label: Developer Quickstart
+sidebar_position: 3
 description: Build this quickstart app to learn some of the fundamental concepts involved in building with XMTP.
 ---
 
-# Build a quickstart app
+# Developer Quickstart
 
 XMTP (Extensible Message Transport Protocol) is an open protocol and network for secure and private web3 messaging. For example, you can build an app with XMTP to send messages between blockchain accounts, including chat/DMs, alerts, announcements, and more.
 
@@ -27,7 +27,6 @@ npm run dev
 - Signing in with XMTP
 - Loading a conversation
 - Sending a message
-
 
 ### Install dependencies
 
@@ -70,16 +69,10 @@ Now that we have the wrapper we can add a button that will sign our user in with
 ```
 
 ```tsx
-
-
 // Function to initialize the XMTP client
 const initXmtp = async function () {
   // Create the XMTP client
   const xmtp = await Client.create(signer, { env: "production" });
-  // Register the codecs. AttachmentCodec is for local attachments (<1MB)
-  xmtp.registerCodec(new AttachmentCodec());
-  //RemoteAttachmentCodec is for remote attachments (>1MB) using thirdweb storage
-  xmtp.registerCodec(new RemoteAttachmentCodec());
   //Create or load conversation with Gm bot
   newConversation(xmtp, PEER_ADDRESS);
   // Set the XMTP client in state for later use
@@ -130,35 +123,17 @@ const onMessage = useCallback((message) => {
 useStreamMessages(conversation, onMessage);
 ```
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 ### Optional: Save keys
 
 We are going to use a help file to storage our keys and save from re-signing to xmtp each time
 
-```tsx
-const ENCODING = "binary";
-
-export const buildLocalStorageKey = (walletAddress: string) =>
-  walletAddress ? `xmtp:${"dev"}:keys:${walletAddress}` : "";
-
-export const loadKeys = (walletAddress: string): Uint8Array | null => {
-  const val = localStorage.getItem(buildLocalStorageKey(walletAddress));
-  return val ? Buffer.from(val, ENCODING) : null;
-};
-
-export const storeKeys = (walletAddress: string, keys: Uint8Array) => {
-  localStorage.setItem(
-    buildLocalStorageKey(walletAddress),
-    Buffer.from(keys).toString(ENCODING),
-  );
-};
-
-export const wipeKeys = (walletAddress: string) => {
-  // This will clear the conversation cache + the private keys
-  localStorage.removeItem(buildLocalStorageKey(walletAddress));
-};
-```
-
 Then in our main app we can use them for initiating the client
+
+<Tabs>
+<TabItem value="js" label="JavaScript" default>
 
 ```tsx
 //options
@@ -186,3 +161,21 @@ const initXmtpWithKeys = async () => {
   await initialize({ keys, options: clientOptions, signer });
 };
 ```
+
+</TabItem>
+<TabItem value="helper" label="Helpers" default>
+
+```tsx
+// Filter for Lens conversations
+const allConversations = await client.conversations.list();
+const lensConversations = allConversations.filter((conversation) =>
+  conversation.context?.conversationId.startsWith("lens.dev/dm/")
+);
+// Optionally filter for only conversations including your currently selected profile
+const myProfileConversations = lensConversations.filter((conversation) =>
+  conversation.context?.conversationId.includes(myProfile.id)
+);
+```
+
+</TabItem>
+</Tabs>
