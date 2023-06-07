@@ -50,7 +50,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 ## Start building your app
 
-1. [**Build a simple hello world app**](/docs/build/build-an-xmtp-hello-world-app)
+1. [**Build a quickstart app**](/docs/build/quickstart-app)
 
    Get a feel for building with XMTP by building an app using 100% copy-and-paste commands and code.
 
@@ -71,7 +71,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 4. **Want to provide DMs in a Lens app?**
 
-   To learn how, see [Build key XMTP chat features in a Lens app](/docs/build/build-key-xmtp-chat-features-in-a-lens-app).
+   To learn how, see [Build Lens multi-profile chat with XMTP](/docs/build/lens-multi-profile).
 
    Need a Lens handle? Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/)
 

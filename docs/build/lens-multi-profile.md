@@ -1,14 +1,13 @@
 ---
-sidebar_label: Lens Multi-Profile
+sidebar_label: Lens multi-profile chat
 sidebar_position: 3
 description: Integrating multiple profiles with Lens
-title: Building Lens Multi-Profile chat with XMTP
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Integrating Multiple Profiles with Lens
+# Build Lens multi-profile chat with XMTP
 
 When building with XMTP, a conversation comprises a set of messages exchanged between two participants. These participants are identified solely through their wallet addresses.
 
@@ -243,7 +242,7 @@ const fetchProfiles = async () => {
 fetchProfiles();
 ```
 
-### Lenster
+## Lenster
 
 To see how starting a conversation with a Lens profile is implemented in Lenster, see [`createNewConversation`](https://github.com/lensterxyz/lenster/blob/3596386dfd0fac3d4297ebe98885e8d79fcda311/src/components/utils/hooks/useGetConversation.tsx#L30) in `/src/components/utils/hooks/useGetConversation.tsx` in the Lenster GitHub repo.
 

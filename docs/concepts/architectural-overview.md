@@ -98,8 +98,6 @@ The client sends an invitation to both the sender and recipient’s invite topic
 
 - Encrypted key material, which includes a shared secret for message encryption.
 
-- Support for optional custom [conversation IDs](/docs/build/filter-conversations#set-a-conversation-id) and other [metadata](/docs/build/filter-conversations#set-conversation-metadata). Clients can use these IDs and metadata to [filter](/docs/build/filter-conversations) and [label](/docs/build/filter-conversations) conversations.
-
 To learn more, see [Invitations](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#invitations) in the `xmtp/proto` repo.
 
 #### Conversation topic V2
@@ -224,8 +222,7 @@ With XMTP network interactions handled by the message API client, developers can
 
 - User identity metadata
 
-- Inbox filtering  
-  To learn more, see [Filter conversations](/docs/build/filter-conversations) and [Truths Not Spoofs](/blog/truths-not-spoofs), a post about one developer's approach to determining which messages display in an inbox based on blockchain data, including which tokens the sender owns.
+- Inbox filtering
 
 - Custom content types  
   To learn more, see [Content types](content-types).

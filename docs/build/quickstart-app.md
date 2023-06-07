@@ -1,14 +1,14 @@
 ---
-sidebar_label: Quickstart
+sidebar_label: Quickstart app
 sidebar_position: 2
-description: Build this app to learn some of the fundamental concepts involved in building with XMTP.
+description: Build this quickstart app to learn some of the fundamental concepts involved in building with XMTP.
 ---
 
-# Quickstart App
+# Build a quickstart app
 
 XMTP (Extensible Message Transport Protocol) is an open protocol and network for secure and private web3 messaging. For example, you can build an app with XMTP to send messages between blockchain accounts, including chat/DMs, alerts, announcements, and more.
 
-### Demo App
+### Demo app
 
 This repository demonstrates the implementation of these concepts within a simple chat app.
 
@@ -21,7 +21,7 @@ npm install
 npm run dev
 ```
 
-### Learning Objectives:
+### Learning objectives:
 
 - Setting up the ConnectWallet button
 - Signing in with XMTP
@@ -35,7 +35,7 @@ npm run dev
 npm install @xmtp/js @thirdweb-dev/react
 ```
 
-### Configuring the client
+### Configure the client
 
 First we need to initialize XMTP client using as signer our wallet connection of choice.
 
@@ -130,7 +130,7 @@ const onMessage = useCallback((message) => {
 useStreamMessages(conversation, onMessage);
 ```
 
-### (optional): Save keys
+### Optional: Save keys
 
 We are going to use a help file to storage our keys and save from re-signing to xmtp each time
 

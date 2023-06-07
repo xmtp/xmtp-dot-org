@@ -13,10 +13,10 @@ export const HEADER_DATA = [
     icon: 'quickstart-icon.svg',
   },
   {
-    title: 'Build Lens DMs with XMTP',
+    title: 'Build Lens DMs',
     subtitle:
-      'Build key XMTP chat features to provide DMs in a Lens app',
-    url: '/docs/build/build-key-xmtp-chat-features-in-a-lens-app',
+      'Build Lens multi-profile chat with XMTP',
+    url: '/docs/build/lens-multi-profile',
     icon: 'dms-icon.svg',
   },
 ]
