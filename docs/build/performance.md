@@ -78,4 +78,11 @@ It's important to test your app's performance when handling a wallet address wit
 4. Run `npm i`.
 5. Run `npm start -- --env=dev fill-conversation-list $TEST_WALLET_ADDRESS $NUM_CONVERSATIONS $NUM_MESSAGES_PER_CONVERSATION`. 
 
-    For example, to create 500 conversations, each with 1 message, for wallet address 0x78b97401850c335abf936C41F4D7a38A2F92D1D2, on the XMTP `dev` network, run `npm start -- --env=dev fill-conversation-list 0x78b97401850c335abf936C41F4D7a38A2F92D1D2 500 1`.
+    For example, run `npm start -- --env=dev fill-conversation-list 0x78b97401850c335abf936C41F4D7a38A2F92D1D2 500 1` to populate test wallet `0x78b97401850c335abf936C41F4D7a38A2F92D1D2` with 500 conversations, each with 1 message, on the XMTP `dev` network.
+
+Try testing the performance of your app using test wallets with the following conversation and message data:
+
+- 500 conversations, each with 1 message
+- 1 conversation with 500 messages
+
+Populating test wallets might cause you to hit the XMTP network rate limit. If this happens, wait 5 minutes and try again.
