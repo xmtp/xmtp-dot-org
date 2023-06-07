@@ -18,7 +18,7 @@ If you're building a production-grade app, be sure to use an architecture that i
 
 Use the XMTP SDK to initially retrieve existing message data from the XMTP network and place it in the local cache. Asynchronously load new and updated message data as needed.
 
-Build your app to get message data from the local cache.
+Build your app to get message data from the local cache. 
 
 For example, use the XMTP SDK to get conversation lists from the XMTP network. Store the conversation lists in the local cache. Build your app to get conversation lists from the local cache.
 
