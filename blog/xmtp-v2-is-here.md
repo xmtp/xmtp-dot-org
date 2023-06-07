@@ -28,24 +28,9 @@ Whether it has been 2-person teams at a hackathon or the largest companies in we
 
 After 12 months of work, **we are excited to announce XMTP Protocol v2.**
 
-“With XMTP v2, we’ve doubled down on our commitment to building the most secure, privacy-preserving communications protocol,” said Matt Galligan, CEO of XMTP Labs. “These enhancements deliver on XMTP’s promise of interoperability and help to ensure users fully own and control their communications.”
+“With XMTP v2, we’ve doubled down on our commitment to building the most secure, privacy-preserving communications protocol,” said Matt Galligan, CEO of XMTP Labs. “These enhancements deliver on XMTP’s promise of interoperability and help to ensure users fully own and control their communications.”.
 
 But building an interoperable messaging network has its own set of challenges for app developers. Users like to be able to access messages from anywhere across the network, but want messaging experiences tailored to the app they are currently using.
-
-## Introducing conversation and metadata filtering
-
-With XMTP v2, app developers now have protocol-native support to filter messages using conversation IDs and metadata. This opens up scenarios such as:
-
-- Displaying only conversations created by a specific app
-- Filtering for a message type, such as notifications or alerts for example
-- Searching for conversations with a specific subject line, as in email
-- Scoping the conversation to a specific NFT, such as price negotiations
-
-Conversation filtering not only makes message retrieval dramatically more efficient, but also greatly reduces the complexity for developers in handling messaging payloads.
-
-"Before conversation IDs, developers were "hacking" content types to create a way to filter messages that necessitated filtering ALL messages within a conversation. Now, with support for multiple conversations, a dev can create a conversation between two addresses for messages created in their app and assign an app-specific conversation ID to the conversation." said Nicholas Molnar, Staff Software Engineer for XMTP Labs.
-
-Conversation IDs are embedded within the encrypted payload of an XMTP envelope, meaning that adding a conversation ID does not affect privacy at the network layer at all—and is only visible to clients that can decrypt the messages.
 
 ## Increased participant privacy
 
