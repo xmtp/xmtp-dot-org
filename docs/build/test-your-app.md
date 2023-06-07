@@ -1,5 +1,5 @@
 ---
-sidebar_label: Testing
+sidebar_label: Test
 sidebar_position: 9
 description: Use these tips and guidelines to test your app before going live.
 ---
@@ -14,21 +14,21 @@ Here's a list of recommended test cases.
 
 Be sure to test using different devices (mobile, desktop), browsers, window sizes, and inbox sizes.
 
-### Test wallet connection
+### Wallet connection
 
 - Connect your preexisting wallet
 - Connect a new wallet using “get a wallet” functionality
 - Disconnect your wallet
 - Reconnect your wallet after disconnection
 
-### Test identity resolution
+### Identity resolution
 
 - Verify that your ENS domain appears
 - Verify that your ENS avatar appears
 - Verify that your recipient’s ENS domain appears
 - Verify that your recipient’s ENS avatar appears
 
-### Test messaging
+### Messaging
 
 - Start a new conversation with an 0x address as the recipient
 - Start a new conversation with an ENS address as the recipient
@@ -43,7 +43,7 @@ Be sure to test using different devices (mobile, desktop), browsers, window size
 
 Need an address to message? See [Use test message bots and addresses](#use-test-message-bots-and-addresses)
 
-### Test performance
+### Performance
 
 Test your app's performance against these performance benchmarks:
 
