@@ -10,7 +10,7 @@ Use the `RemoteAttachmentCodec` from the `xmtp-content-type-remote-attachment` p
 
 This document provides a step-by-step guide to providing message attachments in your app, as well as key considerations to think about when building this functionality.
 
-For a reference implementation of image attachments, see the [xmtp.chat](https://xmtp.chat) example app. 
+For a reference implementation of image attachments, see the [xmtp.chat](https://xmtp.chat) example app.
 
 ## Storage considerations
 
@@ -18,7 +18,7 @@ XMTP messages have a size limit of 1 MB and most attachment types will exceed th
 
 You can use storage options such as Web3 Storage, ThirdWeb Storage, S3 buckets, and others. Another option is to allow your users to provide their own storage credentials for one of these services.
 
-The [xmtp.chat](https://xmtp.chat) reference implementation uses Web3 Storage, with XMTP Labs hosting with our own token. We wanted to use a decentralized solution, which made Web3 Storage a good choice. Hosting with our own token reduces user friction, but we cap uploads at 5 MB. In the future, [xmtp.chat](https://xmtp.chat) might give users the option to provide their own token if they want to upload larger file sizes or keep their images beyond a certain timeframe. 
+The [xmtp.chat](https://xmtp.chat) reference implementation uses Web3 Storage, with XMTP Labs hosting with our own token. We wanted to use a decentralized solution, which made Web3 Storage a good choice. Hosting with our own token reduces user friction, but we cap uploads at 5 MB. In the future, [xmtp.chat](https://xmtp.chat) might give users the option to provide their own token if they want to upload larger file sizes or keep their images beyond a certain timeframe.
 
 ## Security considerations
 
@@ -43,7 +43,7 @@ Automatically loading attachments from untrusted users can have negative privacy
 
 :::
 
-Specifically, autoloading attachments enables the owner of the server where the attachment is stored to see user information such as IP address, user agent, and so forth. 
+Specifically, autoloading attachments enables the owner of the server where the attachment is stored to see user information such as IP address, user agent, and so forth.
 
 When you require a user to click a CTA to load the attachment, the server doesn't need to know any user-related information. Instead, the user is in control of the process and can retrieve the attachment without revealing any personal information.
 
@@ -59,11 +59,11 @@ There are a few considerations worth mentioning on the UI side:
 The [xmtp.chat](https://xmtp.chat) reference implementation includes the following error handling states, which you might want to consider for your app as well:
 
 - File size limit exceeded  
-    If your app enforces a file size limit, provide error handling when the size limit is exceeded.
+   If your app enforces a file size limit, provide error handling when the size limit is exceeded.
 - Unsupported file type  
-    Provide error handling when a user attempts to attach an unsupported file type.
+   Provide error handling when a user attempts to attach an unsupported file type.
 - Error sending an attachment  
-    Provide this general error handling to cover other errors when sending an attachment.
+   Provide this general error handling to cover other errors when sending an attachment.
 
 To help users avoid these error states in the first place, consider providing UI text that proactively lets users know about file size limits and supported file types.
 
@@ -92,11 +92,11 @@ Use the `RemoteAttachmentCodec` package to enable your app to send and receive
 Message attachments are files. More specifically, attachments are objects that have:
 
 - `filename`  
-    Most files have names, at least the most common file types.
+   Most files have names, at least the most common file types.
 - `mimeType`  
-    What kind of file is it? You can often assume this from the file extension, but it's nice to have a specific field for it. [Here's a list of common mime types.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+   What kind of file is it? You can often assume this from the file extension, but it's nice to have a specific field for it. [Here's a list of common mime types.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
 - `data`  
-    What is this file's data? Most files have data. If the file doesn't have data then it's probably not the most interesting thing to send.
+   What is this file's data? Most files have data. If the file doesn't have data then it's probably not the most interesting thing to send.
 
 Because XMTP messages can only be up to 1MB in size, we need to store the attachment somewhere other than the XMTP network. In other words, we need to store it in a remote location.
 
@@ -133,7 +133,7 @@ Use the `RemoteAttachmentCodec.encodeEncrypted` to encrypt the attachment:
 
 const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
   attachment,
-  new AttachmentCodec(),
+  new AttachmentCodec()
 );
 ```
 
@@ -164,10 +164,7 @@ export default class Upload implements Filelike {
   }
 }
 
-const upload = new Upload(
-  "uploadIdOfYourChoice",
-  encryptedEncoded.payload,
-);
+const upload = new Upload("uploadIdOfYourChoice", encryptedEncoded.payload);
 
 const web3Storage = new Web3Storage({
   token: process.env.NEXT_PUBLIC_WEB3_STORAGE_TOKEN as string,
@@ -200,7 +197,7 @@ Now that you have a remote attachment, you can send it:
 
 ```tsx
 await sendMessageFromHook(remoteAttachment, {
-  contentFallback: "[Attachment] Cannot display {{FILENAME}}. This app does not support attachments yet."
+  contentFallback: "[Attachment] Cannot display ${remoteAttachment.filename}. This app does not support attachments yet."
   contentType: ContentTypeRemoteAttachment,
 });
 ```
@@ -214,7 +211,7 @@ Now that you can receive a remote attachment, you need a way to receive a remote
 ```tsx
 const attachment: Attachment = await RemoteAttachmentCodec.load(
   content,
-  client,
+  client
 );
 ```
 
