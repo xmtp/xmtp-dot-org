@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import { useColorMode } from '@docusaurus/theme-common'
-import ThemedImage from '@theme/ThemedImage'
-import useBaseUrl from '@docusaurus/useBaseUrl'
-import { Link } from 'react-router-dom'
-import { HeaderBox } from '../HeaderBox'
-import { SliderItem } from '../SliderItem'
+import React, { useEffect, useRef, useState } from "react";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { useColorMode } from "@docusaurus/theme-common";
+import ThemedImage from "@theme/ThemedImage";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import { Link } from "react-router-dom";
+import { HeaderBox } from "../HeaderBox";
+import { SliderItem } from "../SliderItem";
 import {
   HEADER_DATA,
   BLOG_DATA,
@@ -17,99 +17,99 @@ import {
   XMTP_WEB_URL,
   QUICKSTART_CHAT_URL,
   CHAT_ITEM,
-} from '../../helpers/constants'
-import { BlogItem } from '../BlogItem'
-import ALink from '../ALink'
+} from "../../helpers/constants";
+import { BlogItem } from "../BlogItem";
+import ALink from "../ALink";
 
 export const MainContent = ({ styles }) => {
-  const [sliderItems, setSliderItems] = useState(null)
-  const { colorMode } = useColorMode()
+  const [sliderItems, setSliderItems] = useState(null);
+  const { colorMode } = useColorMode();
   const {
     siteConfig: { customFields },
-  } = useDocusaurusContext()
-  const videoRef = useRef(null)
-  const [showReplayBtn, setShowReplayBtn] = useState(false)
+  } = useDocusaurusContext();
+  const videoRef = useRef(null);
+  const [showReplayBtn, setShowReplayBtn] = useState(false);
   const userAction = async () => {
-    let items = []
+    let items = [];
     const responseXmtp = await fetch(XMTP_JS_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
-    })
+    });
     const responseAndroid = await fetch(XMTP_ANDROID_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
-    })
+    });
     const responseIos = await fetch(XMTP_IOS_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
-    })
+    });
     const responseFlutter = await fetch(XMTP_FLUTTER_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
-    })
+    });
     const responseWeb = await fetch(XMTP_WEB_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
-    })
+    });
     const responseNotif = await fetch(XMTP_NOTIF_SERVER_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
-    })
+    });
     const responseQuickChat = await fetch(QUICKSTART_CHAT_URL, {
       headers: {
         Authorization: customFields.personalToken,
       },
-    })
+    });
 
-    const dataXmtp = await responseXmtp.json()
-    if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp]
-    const dataAndroid = await responseAndroid.json()
-    if (dataAndroid && !dataAndroid.message) items = [...items, dataAndroid]
-    const dataIos = await responseIos.json()
-    if (dataIos && !dataIos.message) items = [...items, dataIos]
-    const dataFlutter = await responseFlutter.json()
-    if (dataFlutter && !dataFlutter.message) items = [...items, dataFlutter]
-    const dataWeb = await responseWeb.json()
-    if (dataWeb && !dataWeb.message) items = [...items, dataWeb]
-    const dataNotif = await responseNotif.json()
-    if (dataNotif && !dataNotif.message) items = [...items, dataNotif]
-    const dataQuickChat = await responseQuickChat.json()
-    if (dataQuickChat && !dataQuickChat.message) items = [...items, dataQuickChat]
+    const dataXmtp = await responseXmtp.json();
+    if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp];
+    const dataAndroid = await responseAndroid.json();
+    if (dataAndroid && !dataAndroid.message) items = [...items, dataAndroid];
+    const dataIos = await responseIos.json();
+    if (dataIos && !dataIos.message) items = [...items, dataIos];
+    const dataFlutter = await responseFlutter.json();
+    if (dataFlutter && !dataFlutter.message) items = [...items, dataFlutter];
+    const dataWeb = await responseWeb.json();
+    if (dataWeb && !dataWeb.message) items = [...items, dataWeb];
+    const dataNotif = await responseNotif.json();
+    if (dataNotif && !dataNotif.message) items = [...items, dataNotif];
+    const dataQuickChat = await responseQuickChat.json();
+    if (dataQuickChat && !dataQuickChat.message)
+      items = [...items, dataQuickChat];
 
-    items = [...items, CHAT_ITEM]
-    setSliderItems(items)
-  }
+    items = [...items, CHAT_ITEM];
+    setSliderItems(items);
+  };
 
   const handleReplay = () => {
-    setShowReplayBtn(false)
-    videoRef.current.play()
-  }
+    setShowReplayBtn(false);
+    videoRef.current.play();
+  };
 
   useEffect(() => {
-    userAction()
+    userAction();
     videoRef.current.onended = () => {
-      setShowReplayBtn(true)
-    }
-  }, [])
+      setShowReplayBtn(true);
+    };
+  }, []);
 
   useEffect(() => {
     if (
-      localStorage.getItem('theme') === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
+      localStorage.getItem("theme") === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
-      document.documentElement.classList.add('dark')
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove("dark");
     }
-  }, [colorMode])
-
+  }, [colorMode]);
 
   return (
     <>
@@ -215,13 +215,13 @@ export const MainContent = ({ styles }) => {
 
                   <Link
                     to="/docs/build/start-building"
-                    className="bg-red-500 text-white border-none rounded-lg py-3 px-5 font-bold text-base w-44 mt-10 h-12 cursor-pointer hover:bg-red-600 mb-14 xl:mb-0 block hover:no-underline hover:text-white"
+                    className=" text-white border-none rounded-lg py-3 px-5 font-bold text-base w-44 mt-10 h-12 cursor-pointer hover:bg-red-600 mb-14 xl:mb-0 block hover:no-underline hover:text-white"
                   >
                     <img
                       className="w-5 h-5 mr-2 align-middle"
                       src="/img/xmtp-sm-icon.png"
                     />
-                    Start building
+                    Use cases
                   </Link>
                 </div>
 
@@ -254,18 +254,18 @@ export const MainContent = ({ styles }) => {
           <div className="col-span-9 grid grid-cols-10 relative">
             <div
               className={`hidden -scale-x-100 lg:grid absolute -left-12 h-32 justify-center arrow-icon w-20 items-center ${
-                sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
+                sliderItems && sliderItems?.length > 3 ? "" : "2xl:hidden"
               }`}
             >
               <ThemedImage
                 onClick={() => {
                   document.getElementsByClassName(
-                    'inner-div'
-                  )[0].scrollLeft -= 360
+                    "inner-div"
+                  )[0].scrollLeft -= 360;
                 }}
                 sources={{
-                  light: useBaseUrl('/img/right-arrow.svg'),
-                  dark: useBaseUrl('/img/right-arrow-dark.svg'),
+                  light: useBaseUrl("/img/right-arrow.svg"),
+                  dark: useBaseUrl("/img/right-arrow-dark.svg"),
                 }}
                 alt="arrow"
                 className="cursor-pointer w-12"
@@ -280,18 +280,18 @@ export const MainContent = ({ styles }) => {
             </div>
             <div
               className={`arrow-icon w-24 h-32 absolute right-0 items-center justify-center hidden lg:grid ${
-                sliderItems && sliderItems?.length > 3 ? '' : '2xl:hidden'
+                sliderItems && sliderItems?.length > 3 ? "" : "2xl:hidden"
               }`}
             >
               <ThemedImage
                 onClick={() => {
                   document.getElementsByClassName(
-                    'inner-div'
-                  )[0].scrollLeft += 360
+                    "inner-div"
+                  )[0].scrollLeft += 360;
                 }}
                 sources={{
-                  light: useBaseUrl('/img/right-arrow.svg'),
-                  dark: useBaseUrl('/img/right-arrow-dark.svg'),
+                  light: useBaseUrl("/img/right-arrow.svg"),
+                  dark: useBaseUrl("/img/right-arrow-dark.svg"),
                 }}
                 className="cursor-pointer w-12"
                 alt="arrow"
@@ -334,8 +334,8 @@ export const MainContent = ({ styles }) => {
               Messages meet users where they are
             </h1>
             <p className="text-white text-base leading-6 text-center lg:max-w-[70%] mb-8">
-              Building with XMTP gives users an interoperable inbox that follows them
-              across web3, providing access to their messages using any app
+              Building with XMTP gives users an interoperable inbox that follows
+              them across web3, providing access to their messages using any app
               built with XMTP.
             </p>
             <Link
@@ -431,8 +431,7 @@ export const MainContent = ({ styles }) => {
             className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
           >
             <li className="col-span-1">
-              <ALink
-                to="https://github.com/orgs/xmtp/discussions">
+              <ALink to="https://github.com/orgs/xmtp/discussions">
                 <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                   <div>
                     <h1 className="text-xl font-bold mt-36 mb-1 text-black">
@@ -443,18 +442,16 @@ export const MainContent = ({ styles }) => {
                       discussion in the XMTP forum
                     </p>
                     <hr className="my-4 bg-black" />
-                    <p className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end"
-                    >
+                    <p className="leading-6 text-right font-semibold text-black hover:text-black flex justify-end">
                       GitHub Discussions →
-                  </p>
+                    </p>
                   </div>
                 </div>
               </ALink>
             </li>
 
             <li className="col-span-1">
-              <ALink
-                to="https://discord.gg/xmtp">
+              <ALink to="https://discord.gg/xmtp">
                 <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#394AF2] bg-no-repeat bg-[url('/img/discord-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                   <div>
                     <h1 className="text-xl font-bold mt-36 mb-1 text-white">
@@ -473,8 +470,7 @@ export const MainContent = ({ styles }) => {
             </li>
 
             <li className="col-span-1">
-              <ALink
-                to="https://twitter.com/xmtp_">
+              <ALink to="https://twitter.com/xmtp_">
                 <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#01A3EE] bg-no-repeat bg-[url('/img/twitter-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                   <div>
                     <h1 className="text-xl font-bold mt-36 mb-1 text-white">
@@ -484,7 +480,7 @@ export const MainContent = ({ styles }) => {
                       Keep up with the latest updates
                     </p>
                     <hr className="my-4 bg-white" />
-                    <p  className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end">
+                    <p className="leading-6 text-right font-semibold text-white hover:text-white flex justify-end">
                       Twitter →
                     </p>
                   </div>
@@ -495,5 +491,5 @@ export const MainContent = ({ styles }) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
