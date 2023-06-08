@@ -175,6 +175,38 @@ const config = {
             label: "Blog",
             activeBaseRegex: `/`,
           },
+          /* {
+            type: "dropdown",
+            position: "right",
+            label: "Use cases",
+            items: [
+              {
+                to: "docs/use-cases",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,
+              },
+              {
+                to: "docs/use-cases",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Finance</div></div>`,
+              },
+              {
+                to: "docs/use-cases",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
+              },
+              {
+                to: "docs/use-cases",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
+              },
+              {
+                to: "docs/use-cases",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
+              },
+            ],
+          },*/
           {
             type: "html",
             position: "right",
@@ -231,16 +263,12 @@ const config = {
             title: "Build",
             items: [
               {
-                label: `Start building`,
-                to: `/docs/build/start-building`,
-              },
-              {
                 label: `Build a quickstart app`,
                 to: `/docs/developer-quickstart`,
               },
               {
                 label: `Content types`,
-                to: `/docs/build/use-content-types`,
+                to: `/docs/concepts/content-types`,
               },
               {
                 label: `Push notifications (Swift/iOS)`,

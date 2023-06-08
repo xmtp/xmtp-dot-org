@@ -1,6 +1,6 @@
 ---
 sidebar_label: Identity resolution
-sidebar_position: 5.5
+sidebar_position: 5
 ---
 
 # Resolve identities in your app built with XMTP

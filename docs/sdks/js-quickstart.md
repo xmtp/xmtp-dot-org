@@ -2,7 +2,7 @@
 sidebar_label: JavaScript
 sidebar_position: 1
 toc_max_heading_level: 4
-description: 'The XMTP client SDK for JavaScript (xmtp-js) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications.'
+description: "The XMTP client SDK for JavaScript (xmtp-js) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications."
 ---
 
 # Quickstart for the JavaScript XMTP client SDK
@@ -64,10 +64,10 @@ In `next.config.js`:
 ```js
 webpack: (config, { isServer }) => {
   if (!isServer) {
-    config.resolve.fallback.fs = false
+    config.resolve.fallback.fs = false;
   }
-  return config
-}
+  return config;
+};
 ```
 
 ## Usage
@@ -75,24 +75,24 @@ webpack: (config, { isServer }) => {
 The [XMTP message API](/docs/concepts/architectural-overview#network-layer) revolves around a network client that allows retrieving and sending messages to other network participants. A client must be connected to a wallet on startup. If this is the very first time the client is created, the client will generate a [key bundle](/docs/concepts/key-generation-and-usage) that is used to [encrypt and authenticate messages](/docs/concepts/invitation-and-message-encryption). The key bundle persists encrypted in the network using a [wallet signature](/docs/concepts/account-signatures). The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys. All this happens transparently, without requiring any additional code.
 
 ```ts
-import { Client } from '@xmtp/xmtp-js'
-import { Wallet } from 'ethers'
+import { Client } from "@xmtp/xmtp-js";
+import { Wallet } from "ethers";
 
 // You'll want to replace this with a wallet from your application
-const wallet = Wallet.createRandom()
+const wallet = Wallet.createRandom();
 // Create the client with your wallet. This will connect to the XMTP development network by default
-const xmtp = await Client.create(wallet)
+const xmtp = await Client.create(wallet);
 // Start a conversation with XMTP
 const conversation = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
+  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+);
 // Load all messages in the conversation
-const messages = await conversation.messages()
+const messages = await conversation.messages();
 // Send a message
-await conversation.send('gm')
+await conversation.send("gm");
 // Listen for new messages in the conversation
 for await (const message of await conversation.streamMessages()) {
-  console.log(`[${message.senderAddress}]: ${message.content}`)
+  console.log(`[${message.senderAddress}]: ${message.content}`);
 }
 ```
 
@@ -112,9 +112,9 @@ The client connects to the XMTP `dev` environment by default. [Use `ClientOption
 :::
 
 ```ts
-import { Client } from '@xmtp/xmtp-js'
+import { Client } from "@xmtp/xmtp-js";
 // Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet)
+const xmtp = await Client.create(wallet);
 ```
 
 #### Configure the client
@@ -139,10 +139,10 @@ The client's network connection and key storage method can be configured with th
 Most of the time, when interacting with the network, you'll want to do it through `conversations`. Conversations are between two wallets.
 
 ```ts
-import { Client } from '@xmtp/xmtp-js'
+import { Client } from "@xmtp/xmtp-js";
 // Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet)
-const conversations = xmtp.conversations
+const xmtp = await Client.create(wallet);
+const conversations = xmtp.conversations;
 ```
 
 #### List existing conversations
@@ -150,16 +150,15 @@ const conversations = xmtp.conversations
 You can get a list of all conversations that have one or more messages.
 
 ```ts
-const allConversations = await xmtp.conversations.list()
+const allConversations = await xmtp.conversations.list();
 // Say gm to everyone you've been chatting with
 for (const conversation of allConversations) {
-  console.log(`Saying GM to ${conversation.peerAddress}`)
-  await conversation.send('gm')
+  console.log(`Saying GM to ${conversation.peerAddress}`);
+  await conversation.send("gm");
 }
 ```
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP.
-
 
 #### Listen for new conversations
 
@@ -172,13 +171,13 @@ This stream will continue infinitely. To end the stream, you can either break fr
 :::
 
 ```ts
-const stream = await xmtp.conversations.stream()
+const stream = await xmtp.conversations.stream();
 for await (const conversation of stream) {
-  console.log(`New conversation started with ${conversation.peerAddress}`)
+  console.log(`New conversation started with ${conversation.peerAddress}`);
   // Say hello to your new friend
-  await conversation.send('Hi there!')
+  await conversation.send("Hi there!");
   // Break from the loop to stop listening
-  break
+  break;
 }
 ```
 
@@ -188,8 +187,8 @@ You can create a new conversation with any Ethereum address on the XMTP network.
 
 ```ts
 const newConversation = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
+  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+);
 ```
 
 #### Send messages
@@ -198,9 +197,9 @@ To be able to send a message, the recipient must have already started their clie
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
-await conversation.send('Hello world')
+  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+);
+await conversation.send("Hello world");
 ```
 
 #### List messages in a conversation
@@ -214,8 +213,8 @@ for (const conversation of await xmtp.conversations.list()) {
     // Only show messages from last 24 hours
     startTime: new Date(new Date().setDate(new Date().getDate() - 1)),
     endTime: new Date(),
-  }
-  const messagesInConversation = await conversation.messages(opts)
+  };
+  const messagesInConversation = await conversation.messages(opts);
 }
 ```
 
@@ -225,16 +224,16 @@ It may be helpful to retrieve and process the messages in a conversation page by
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
+  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+);
 
 for await (const page of conversation.messagesPaginated({ pageSize: 25 })) {
   for (const msg of page) {
     // Breaking from the outer loop will stop the client from requesting any further pages
-    if (msg.content === 'gm') {
-      return
+    if (msg.content === "gm") {
+      return;
     }
-    console.log(msg.content)
+    console.log(msg.content);
   }
 }
 ```
@@ -249,14 +248,14 @@ The Stream returned by the `stream` methods is an asynchronous iterator and as s
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
+  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+);
 for await (const message of await conversation.streamMessages()) {
   if (message.senderAddress === xmtp.address) {
     // This message was sent from me
-    continue
+    continue;
   }
-  console.log(`New message from ${message.senderAddress}: ${message.content}`)
+  console.log(`New message from ${message.senderAddress}: ${message.content}`);
 }
 ```
 
@@ -274,9 +273,9 @@ There is a chance this stream can miss messages if multiple new conversations ar
 for await (const message of await xmtp.conversations.streamAllMessages()) {
   if (message.senderAddress === xmtp.address) {
     // This message was sent from me
-    continue
+    continue;
   }
-  console.log(`New message from ${message.senderAddress}: ${message.content}`)
+  console.log(`New message from ${message.senderAddress}: ${message.content}`);
 }
 ```
 
@@ -285,15 +284,15 @@ for await (const message of await xmtp.conversations.streamAllMessages()) {
 If you would like to check and see if a blockchain address is registered on the network before instantiating a client instance, you can use `Client.canMessage`.
 
 ```ts
-import { Client } from '@xmtp/xmtp-js'
+import { Client } from "@xmtp/xmtp-js";
 
 const isOnDevNetwork = await Client.canMessage(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
+  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+);
 const isOnProdNetwork = await Client.canMessage(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897',
-  { env: 'production' }
-)
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
+  { env: "production" }
+);
 ```
 
 #### Handle different types of content
@@ -322,11 +321,11 @@ Additional codecs can be configured through the `ClientOptions` parameter of `Cl
 
 ```ts
 // Adding support for `xmtp.org/composite` content type
-import { CompositeCodec } from '@xmtp/xmtp-js'
-const xmtp = Client.create(wallet, { codecs: [new CompositeCodec()] })
+import { CompositeCodec } from "@xmtp/xmtp-js";
+const xmtp = Client.create(wallet, { codecs: [new CompositeCodec()] });
 ```
 
-To learn more about how to build a custom content type, see [Build a custom content type](/docs/build/use-content-types#build-a-custom-content-type).
+To learn more about how to build a custom content type, see [Build a custom content type](/docs/concepts/content-types#build-a-custom-content-type).
 
 Custom codecs and content types may be proposed as interoperable standards through XRCs. To learn about the custom content type proposal process, see [XIP-5](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md).
 
@@ -337,11 +336,11 @@ Message content can be optionally compressed using the `compression` option. The
 Content will be decompressed transparently on the receiving end. Note that `Client` enforces maximum content size. The default limit can be overridden through the `ClientOptions`. Consequently a message that would expand beyond that limit on the receiving end will fail to decode.
 
 ```ts
-import { Compression } from '@xmtp/xmtp-js'
+import { Compression } from "@xmtp/xmtp-js";
 
-conversation.send('#'.repeat(1000), {
+conversation.send("#".repeat(1000), {
   compression: Compression.COMPRESSION_DEFLATE,
-})
+});
 ```
 
 #### Manually handle private key storage
@@ -351,11 +350,11 @@ The SDK will handle key storage for the user by encrypting the private key bundl
 You can export the unencrypted key bundle using the static method `Client.getKeys`, save it somewhere secure, and then provide those keys at a later time to initialize a new client using the exported XMTP identity.
 
 ```ts
-import { Client } from '@xmtp/xmtp-js'
+import { Client } from "@xmtp/xmtp-js";
 // Get the keys using a valid Signer. Save them somewhere secure.
-const keys = await Client.getKeys(wallet)
+const keys = await Client.getKeys(wallet);
 // Create a client using keys returned from getKeys
-const client = await Client.create(null, { privateKeyOverride: keys })
+const client = await Client.create(null, { privateKeyOverride: keys });
 ```
 
 The keys returned by `getKeys` should be treated with the utmost care as compromise of these keys will allow an attacker to impersonate the user on the XMTP network. Ensure these keys are stored somewhere secure and encrypted.
@@ -369,7 +368,7 @@ To disable this behavior, set the `persistConversations` client option to `false
 ```ts
 const clientWithNoCache = await Client.create(wallet, {
   persistConversations: false,
-})
+});
 ```
 
 ## Breaking revisions
