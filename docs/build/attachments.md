@@ -10,7 +10,7 @@ Use the `RemoteAttachmentCodec` from the `xmtp-content-type-remote-attachment` p
 
 This document provides a step-by-step guide to providing message attachments in your app, as well as key considerations to think about when building this functionality.
 
-For a reference implementation of image attachments, see the [xmtp.chat](http://xmtp.chat) example app. 
+For a reference implementation of image attachments, see the [xmtp.chat](https://xmtp.chat) example app. 
 
 ## Storage considerations
 
@@ -18,7 +18,7 @@ XMTP messages have a size limit of 1 MB and most attachment types will exceed th
 
 You can use storage options such as Web3 Storage, ThirdWeb Storage, S3 buckets, and others. Another option is to allow your users to provide their own storage credentials for one of these services.
 
-The [xmtp.chat](https://xmtp.chat) reference implementation uses Web3 Storage, with XMTP Labs hosting with our own token. We wanted to use a decentralized solution, which made Web3 Storage a good choice. Hosting with our own token reduces user friction, but we cap uploads at 5 MB. In the future, [xmtp.chat](http://xmtp.chat) might give users the option to provide their own token if they want to upload larger file sizes or keep their images beyond a certain timeframe. 
+The [xmtp.chat](https://xmtp.chat) reference implementation uses Web3 Storage, with XMTP Labs hosting with our own token. We wanted to use a decentralized solution, which made Web3 Storage a good choice. Hosting with our own token reduces user friction, but we cap uploads at 5 MB. In the future, [xmtp.chat](https://xmtp.chat) might give users the option to provide their own token if they want to upload larger file sizes or keep their images beyond a certain timeframe. 
 
 ## Security considerations
 
@@ -35,6 +35,18 @@ The [xmtp.chat](https://xmtp.chat) reference implementation intentionally demons
 - Less secure: Attachments under 5 MB autoload
 - More secure: Attachments ofer 5 MB require a "Click to load" on first load
 
+## Privacy considerations
+
+:::caution
+
+Automatically loading attachments from untrusted users can have negative privacy implications. Be sure to consider this before enabling attachments to autoload in your app.
+
+:::
+
+Specifically, autoloading attachments enables the owner of the server where the attachment is stored to see user information such as IP address, user agent, and so forth. 
+
+When you require a user to click a CTA to load the attachment, the server doesn't need to know any user-related information. Instead, the user is in control of the process and can retrieve the attachment without revealing any personal information.
+
 ## UI considerations
 
 There are a few considerations worth mentioning on the UI side:
@@ -44,7 +56,7 @@ There are a few considerations worth mentioning on the UI side:
 - Provide a loading state, as attachments can be slower to send than a message with just text. You might choose to optimistically send attachments or display a loading state.
 - Provide fallback text that displays for the recipient if they are using an app that doesn't yet support attachments.
 
-The [xmtp.chat](http://xmtp.chat) reference implementation includes the following error handling states, which you might want to consider for your app as well:
+The [xmtp.chat](https://xmtp.chat) reference implementation includes the following error handling states, which you might want to consider for your app as well:
 
 - File size limit exceeded  
     If your app enforces a file size limit, provide error handling when the size limit is exceeded.
@@ -59,13 +71,13 @@ To help users avoid these error states in the first place, consider providing UI
 
 To make your app more performant when loading attachments, consider caching these image URLs after the first load.
 
-The [xmtp.chat](http://xmtp.chat) reference implementation does this using Dexie, but there are other options as well.
+The [xmtp.chat](https://xmtp.chat) reference implementation does this using Dexie, but there are other options as well.
 
-Note that when caching attachments, you must reset the cache after the client changes. This is because the client is used to generate the attachment URL that gets added to the cache originally.
+Note that when caching attachments, you must reset the cache after the client changes.
 
 ## Build support for message attachments
 
-As you go through the steps and code samples in this section, consider viewing the [xmtp.chat](http://xmtp.chat) reference implementation in parallel to see the features in context.
+As you go through the steps and code samples in this section, consider viewing the [xmtp.chat](https://xmtp.chat) reference implementation in parallel to see the features in context.
 
 ### Install the package
 
