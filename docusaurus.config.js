@@ -263,28 +263,48 @@ const config = {
             title: "Build",
             items: [
               {
+                label: `Start building`,
+                to: `/docs/build/start-building`,
+              },
+              {
                 label: `Build a quickstart app`,
                 to: `/docs/developer-quickstart`,
               },
               {
-                label: `Content types`,
-                to: `/docs/concepts/content-types`,
+                label: `Identity resolution`,
+                to: `/docs/build/identity-resolution`,
               },
               {
-                label: `Push notifications (Swift/iOS)`,
+                label: `Attachments`,
+                to: `/docs/build/attachments`,
+              },
+              {
+                label: `Group chats`,
+                to: `/docs/build/groupchats`,
+              },
+              {
+                label: `Push notifications`,
                 to: `/docs/build/handle-push-notifications`,
+              },
+              {
+                label: `Broadcast`,
+                to: `/docs/build/broadcast`,
+              },
+              {
+                label: `Bots`,
+                to: `/docs/build/bots`,
               },
               {
                 label: `Performance`,
                 to: `/docs/build/performance`,
               },
               {
-                label: `Test`,
-                to: `/docs/build/test-your-app`,
-              },
-              {
                 label: `Use cases`,
                 to: `/docs/build/use-cases`,
+              },
+              {
+                label: `Test`,
+                to: `/docs/build/test-your-app`,
               },
               {
                 label: "Changelog",
