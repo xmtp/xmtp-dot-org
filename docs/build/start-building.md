@@ -120,7 +120,7 @@ Consider following these best practices when developing your app:
 
   - By default, building with XMTP SDKs supports plain text messages.
   - To send remote media attachments, see [Introducing remote media attachments](/blog/attachments-and-remote-attachments).
-  - To send custom content types, see [Build a custom content type](/docs/build/use-content-types#build-a-custom-content-type). If you are using custom content types, be sure to provide [fallback text](/docs/concepts/content-types#custom-content-types). A receiving app that can't handle the custom content can display the fallback plain text description instead.
+  - To send custom content types, see [Build a custom content type](/docs/concepts/content-types#build-a-custom-content-type). If you are using custom content types, be sure to provide [fallback text](/docs/concepts/content-types#custom-content-types). A receiving app that can't handle the custom content can display the fallback plain text description instead.
 
 - Enable your app to track privacy-preserving metrics to help you understand app usage. For example:
   - \# of active wallets: Wallets sending at least one message
@@ -151,7 +151,7 @@ Consider following these UX best practices.
 
 ### Disclose signature storage
 
-- If your app stores a signature to read and send XMTP messages on behalf of a user, such as in a [broadcast message](/docs/sdks/js-quickstart#send-a-broadcast-message) use case, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature.
+- If your app stores a signature to read and send XMTP messages on behalf of a user, such as in a [broadcast message](/docs/build/broadcast) use case, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature.
 
   For example:
 
