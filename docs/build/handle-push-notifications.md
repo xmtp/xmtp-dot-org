@@ -1,6 +1,6 @@
 ---
 sidebar_label: Push notifications
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Push notifications
