@@ -1,6 +1,6 @@
 ---
 sidebar_label: Attachments
-sidebar_position: 3
+sidebar_position: 7
 description: Support image, video, and document message attachments in your app
 ---
 
