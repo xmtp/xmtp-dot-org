@@ -66,64 +66,6 @@ for try await message in conversation.streamMessages() {
 }
 ```
 
-## Create a client
-
-A client is created with `Client.create(account: SigningKey) async throws -> Client` that requires passing in an object capable of creating signatures on your behalf. The client will request a signature in two cases:
-
-1. To sign the newly generated key bundle. This happens only the very first time when a key bundle is not found in storage.
-2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started, including the very first time.
-
-:::info Important
-
-The client connects to the XMTP `dev` environment by default. [Use `ClientOptions`](#configure-the-client) to change this and other parameters of the network connection.
-
-:::
-
-```swift
-import XMTP
-
-// Create the client with a `SigningKey` from your app
-let client = try await Client.create(account: account, options: .init(api: .init(env: .production)))
-```
-
-### Creating a client from saved keys
-
-You can save your keys from the client via the `privateKeyBundle` property:
-
-```swift
-// Create the client with a `SigningKey` from your app
-let client = try await Client.create(account: account, options: .init(api: .init(env: .production)))
-
-// Get the key bundle
-let keys = client.privateKeyBundle
-
-// Serialize the key bundle and store it somewhere safe
-let keysData = try keys.serializedData()
-```
-
-Once you have those keys, you can create a new client with `Client.from`:
-
-```swift
-let keys = try PrivateKeyBundle(serializedData: keysData)
-let client = try Client.from(bundle: keys, options: .init(api: .init(env: .production)))
-```
-
-### Configure the client
-
-You can configure the client's network connection and key storage method with these optional parameters of `Client.create`:
-
-| Parameter | Default | Description                                                                                                                                                                                                                                                                     |
-| --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| env       | `dev`   | Connect to the specified XMTP network environment. Valid values include `.dev`, `.production`, or `.local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments). |
-
-#### Configure `env`
-
-```swift
-// Configure the client to use the `production` network
-let clientOptions = ClientOptions(api: .init(env: .production))
-let client = try await Client.create(account: account, options: clientOptions)
-```
-
 ## Configure content types
 
 You can use custom content types by calling `Client.register`. The SDK comes with two commonly used content type codecs, `AttachmentCodec` and `RemoteAttachmentCodec`:

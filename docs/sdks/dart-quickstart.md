@@ -53,43 +53,6 @@ var api = xmtp.Api.create();
 var client = await xmtp.Client.createFromWallet(api, wallet);
 ```
 
-## Create a client
-
-The client has two constructors: `createFromWallet` and `createFromKeys`.
-
-The first time a user uses a new device, they should call `createFromWallet`. This will prompt them
-to sign a message to do one of the following:
-
-- Create a new identity (if they're new)
-- Enable their existing identity (if they've used XMTP before)
-
-When this succeeds, it configures the client with a bundle of `keys` that can be stored securely on
-the device.
-
-```dart
-var api = xmtp.Api.create();
-var client = await Client.createFromWallet(api, wallet);
-await mySecureStorage.save(client.keys.writeToBuffer());
-```
-
-The second time a user launches the app they should call `createFromKeys`
-using the stored `keys` from their previous session.
-
-```dart
-var stored = await mySecureStorage.load();
-var keys = xmtp.PrivateKeyBundle.fromBuffer(stored);
-var api = xmtp.Api.create();
-var client = await Client.createFromKeys(api, keys);
-```
-
-### Configure the client
-
-You can configure the client environment when you call `Api.create()`.
-
-By default, it will connect to a `local` XMTP network.
-For important details about connecting to environments,
-see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).
-
 ### List existing conversations
 
 You can list existing conversations and send them messages.

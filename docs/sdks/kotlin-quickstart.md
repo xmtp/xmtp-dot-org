@@ -62,68 +62,6 @@ conversation.streamMessages().collect {
 }
 ```
 
-## Create a client
-
-A client is created with `Client().create(account: SigningKey): Client` that requires passing in an object capable of creating signatures on your behalf. The client will request a signature in two cases:
-
-1. To sign the newly generated key bundle. This happens only the very first time when a key bundle is not found in storage.
-2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started, including the very first time.
-
-:::important
-
-The client connects to the XMTP `dev` environment by default. [Use `ClientOptions`](#configure-the-client) to change this and other parameters of the network connection.
-
-:::
-
-```kotlin
-// Create the client with a `SigningKey` from your app
-val options = ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
-val client = Client().create(account = account, options = options)
-```
-
-### Create a client from saved keys
-
-You can save your keys from the client via the `privateKeyBundle` property:
-
-```kotlin
-// Create the client with a `SigningKey` from your app
-val options = ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
-val client = Client().create(account = account, options = options)
-
-// Get the key bundle
-val keys = client.privateKeyBundleV1
-
-// Serialize the key bundle and store it somewhere safe
-val serializedKeys = PrivateKeyBundleV1Builder.encodeData(v1)
-```
-
-Once you have those keys, you can create a new client with `Client().buildFrom()`:
-
-```kotlin
-val keys = PrivateKeyBundleV1Builder.fromEncodedData(serializedKeys)
-val client = Client().buildFrom(bundle = keys, options = options)
-```
-
-### Configure the client
-
-You can configure the client's network connection and key storage method with these optional parameters of `Client.create`:
-
-| Parameter | Default | Description                                                                                                                                                                                                                                                                           |
-| --------- | ------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| env       | `DEV`   | Connect to the specified XMTP network environment. Valid values include `DEV`, `.PRODUCTION`, or `LOCAL`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments). |
-
-```kotlin
-// Configure the client to use the `production` network
-val options = ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
-val client = Client().create(account = account, options = options)
-```
-
-:::note
-
-The `apiUrl`, `keyStoreType`, `codecs`, `maxContentSize`, and `appVersion` parameters from the XMTP client SDK for JavaScript (xmtp-js) are not yet supported.
-
-:::
-
 ## Handle conversations
 
 Most of the time, when interacting with the network, you'll want to do it through `conversations`. Conversations are between two accounts.
