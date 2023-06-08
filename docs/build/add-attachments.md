@@ -16,9 +16,9 @@ For a reference implementation of image attachments, see the [xmtp.chat](http://
 
 XMTP messages have a size limit of 1 MB and most attachment types will exceed this size. As a result, you must store attachments in a remote location outside of the XMTP network.
 
-You can use storage options such as Web3 Storage, ThirdWeb Storage, s3 buckets, and others. Another option is to allow your users to provide their own storage token.
+You can use storage options such as Web3 Storage, ThirdWeb Storage, S3 buckets, and others. Another option is to allow your users to provide their own storage credentials for one of these services.
 
-The [xmtp.chat](http://xmtp.chat) reference implementation uses Web3 Storage, with XMTP Labs hosting with our own token. We wanted to use a decentralized solution, which made Web3 Storage a good choice. Hosting with our own token reduces user friction, but we cap uploads at 5 MB. In the future, [xmtp.chat](http://xmtp.chat) might give users the option to provide their own token if they want to upload larger file sizes or keep their images beyond a certain timeframe. 
+The [xmtp.chat](https://xmtp.chat) reference implementation uses Web3 Storage, with XMTP Labs hosting with our own token. We wanted to use a decentralized solution, which made Web3 Storage a good choice. Hosting with our own token reduces user friction, but we cap uploads at 5 MB. In the future, [xmtp.chat](http://xmtp.chat) might give users the option to provide their own token if they want to upload larger file sizes or keep their images beyond a certain timeframe. 
 
 ## Security considerations
 
@@ -30,7 +30,7 @@ Automatically loading attachments from untrusted users can have negative securit
 
 A more secure pattern you might want to use is to require the user to click a “Click to load” CTA before loading an attachment. After the attachment has been loaded, it can be pulled from a cache. This pattern requires one more click for the user, but provides greater security.
 
-The [xmtp.chat](http://xmtp.chat) reference implementation intentionally demonstrates both patterns for your reference:
+The [xmtp.chat](https://xmtp.chat) reference implementation intentionally demonstrates both patterns for your reference:
 
 - Less secure: Attachments under 5 MB autoload
 - More secure: Attachments ofer 5 MB require a "Click to load" on first load
@@ -106,10 +106,10 @@ Once you have the attachment object created, you can also create a preview for w
 
 ```tsx
 URL.createObjectURL(
-              new Blob([Buffer.from(somePNGData)], {
-                type: attachment.mimeType,
-              }),
-            ),
+    new Blob([Buffer.from(somePNGData)], {
+    type: attachment.mimeType,
+  }),
+),
 ```
 
 ### Encrypt the attachment
@@ -120,9 +120,9 @@ Use the `RemoteAttachmentCodec.encodeEncrypted` to encrypt the attachment:
 // Encode the attachment and encrypt that encoded content
 
 const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
-          attachment,
-          new AttachmentCodec(),
-        );
+  attachment,
+  new AttachmentCodec(),
+);
 ```
 
 ### Upload the encrypted attachment
@@ -153,13 +153,13 @@ export default class Upload implements Filelike {
 }
 
 const upload = new Upload(
-          "uploadIdOfYourChoice",
-          encryptedEncoded.payload,
-        );
+  "uploadIdOfYourChoice",
+  encryptedEncoded.payload,
+);
 
 const web3Storage = new Web3Storage({
-          token: process.env.NEXT_PUBLIC_WEB3_STORAGE_TOKEN as string,
-        });
+  token: process.env.NEXT_PUBLIC_WEB3_STORAGE_TOKEN as string,
+});
 
 const cid = await web3Storage.put([upload]);
 const url = `https://${cid}.ipfs.w3s.link/uploadIdOfYourChoice`;
@@ -188,9 +188,9 @@ Now that you have a remote attachment, you can send it:
 
 ```tsx
 await sendMessageFromHook(remoteAttachment, {
-            contentFallback: "[Attachment] Cannot display {{FILENAME}}. This app does not support attachments yet."
-            contentType: ContentTypeRemoteAttachment,
-          });
+  contentFallback: "[Attachment] Cannot display {{FILENAME}}. This app does not support attachments yet."
+  contentType: ContentTypeRemoteAttachment,
+});
 ```
 
 Note that we’re using `contentFallback` to enable clients that don't support these content types to still display something. For cases where clients *do* support these types, they can use the content fallback as alt text for accessibility purposes.
@@ -201,9 +201,9 @@ Now that you can receive a remote attachment, you need a way to receive a remote
 
 ```tsx
 const attachment: Attachment = await RemoteAttachmentCodec.load(
-            content,
-            client,
-          );
+  content,
+  client,
+);
 ```
 
 You now have the original attachment:
