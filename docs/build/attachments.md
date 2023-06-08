@@ -33,7 +33,7 @@ A more secure pattern you might want to use is to require the user to click a â€
 The [xmtp.chat](https://xmtp.chat) reference implementation intentionally demonstrates both patterns for your reference:
 
 - Less secure: Attachments under 5 MB autoload
-- More secure: Attachments ofer 5 MB require a "Click to load" on first load
+- More secure: Attachments over 5 MB require a "Click to load" on first load
 
 ## Privacy considerations
 
