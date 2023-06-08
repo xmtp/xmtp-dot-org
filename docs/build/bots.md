@@ -50,7 +50,7 @@ By default, the bot connects to the `dev` network. If you want to connect to pro
 
 ## More bot resources
 
-- Want to use a GUI to create a message bot? Check out [chainjet.io](chainjet.io).
+- Want to use a GUI to create a message bot? Check out [chainjet.io](https://chainjet.io/).
 
 - Need someone to send a test message to? Try these addresses:
 
