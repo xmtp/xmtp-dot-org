@@ -325,7 +325,7 @@ import { CompositeCodec } from "@xmtp/xmtp-js";
 const xmtp = Client.create(wallet, { codecs: [new CompositeCodec()] });
 ```
 
-To learn more about how to build a custom content type, see [Build a custom content type](/docs/build/use-content-types#build-a-custom-content-type).
+To learn more about how to build a custom content type, see [Build a custom content type](/docs/concepts/content-types#build-a-custom-content-type).
 
 Custom codecs and content types may be proposed as interoperable standards through XRCs. To learn about the custom content type proposal process, see [XIP-5](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md).
 
