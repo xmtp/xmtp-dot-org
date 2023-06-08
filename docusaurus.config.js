@@ -240,7 +240,7 @@ const config = {
               },
               {
                 label: `Content types`,
-                to: `/docs/build/use-content-types`,
+                to: `/docs/concepts/content-types`,
               },
               {
                 label: `Push notifications (Swift/iOS)`,
