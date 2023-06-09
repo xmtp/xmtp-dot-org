@@ -16,7 +16,7 @@ The XMTP message API revolves around a network client that allows retrieving a
 
 :::important Important
 
-A tab with an 🟡 means it provides information about an XMTP SDK that's in **Developer Preview** status. The SDK is ready to start building with, however we **do not** recommend using it in production apps. SDKs in this status may change based on feedback.
+A tab marked with **beta** means it provides information about an XMTP SDK in beta status. The SDK is ready to start building with, however we **do not** recommend using it in production apps because it may change based on feedback.
 
 :::
 
@@ -86,7 +86,7 @@ When you create the `Api` used by the `Client`, it must have a valid network `ho
 - `local`: `host: "127.0.0.1"`
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin 🟡" default>
+<TabItem value="kotlin" label="Kotlin - beta" default>
 
 A client is created with `Client().create(account: SigningKey): Client` that requires passing in an object capable of creating signatures on your behalf.
 
@@ -100,7 +100,7 @@ val client = Client().create(account = account, options = options)
 ```
 
 </TabItem>
-<TabItem value="react" label="React 🟡" default>
+<TabItem value="react" label="React - beta" default>
 
 The `useClient` hook allows you to initialize, disconnect, and access the XMTP client instance. It also exposes the error and loading states of the client.
 
@@ -211,7 +211,7 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin 🟡" default>
+<TabItem value="kotlin" label="Kotlin - beta" default>
 
 You can save your keys from the client via the `privateKeyBundle` property:
 
@@ -238,7 +238,7 @@ val client = Client().buildFrom(bundle = keys, options = options)
 ```
 
 </TabItem>
-<TabItem value="react" label="React 🟡" default>
+<TabItem value="react" label="React - beta" default>
 
 **Example**
 
@@ -289,7 +289,7 @@ const isOnProdNetwork = await Client.canMessage(
 ```
 
 </TabItem>
-<TabItem value="react" label="React 🟡" default>
+<TabItem value="react" label="React - beta" default>
 
 The `useCanMessage` hook exposes both the client and static instances of the `canMessage` method. To check if a blockchain address is registered on the network before instantiating a client instance, use the `canMessageStatic` export.
 
@@ -404,7 +404,7 @@ By default, it will connect to a `local` XMTP network.
 For important details about connecting to environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin 🟡" default>
+<TabItem value="kotlin" label="Kotlin - beta" default>
 
 | Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -429,7 +429,7 @@ The `apiUrl`, `keyStoreType`, `codecs`, and `maxContentSize` parameters from the
 :::
 
 </TabItem>
-<TabItem value="react" label="React 🟡" default>
+<TabItem value="react" label="React - beta" default>
 
 | Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
