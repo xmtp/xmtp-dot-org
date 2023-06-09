@@ -7,13 +7,11 @@ description: 'xmtp-ios provides a Swift implementation of an XMTP message API cl
 
 # Quickstart for the Swift XMTP client SDK
 
-![Status](https://img.shields.io/badge/Project_Status-General_Availability-31CA54) ![Lint](https://github.com/xmtp/xmtp-ios/actions/workflows/lint.yml/badge.svg) 
+![Status](https://img.shields.io/badge/Project_Status-Production-31CA54) ![Lint](https://github.com/xmtp/xmtp-ios/actions/workflows/lint.yml/badge.svg) 
 
 The [Swift XMTP client SDK](https://github.com/xmtp/xmtp-ios) (`xmtp-ios`) provides a Swift implementation of an XMTP message API client for use with iOS apps.
 
 Build with this SDK to provide messaging between blockchain wallet addresses, including DMs, notifications, announcements, and more.
-
-This SDK is in **General Availability** status and ready for use in production.
 
 To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-ios/issues) in the `xmtp-ios` repo.
 

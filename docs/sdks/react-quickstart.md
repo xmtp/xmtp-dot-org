@@ -9,7 +9,7 @@ description: "These packages provide the XMTP client SDK for React apps, includi
 
 ## React SDK hooks
 
-![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
+![Status](https://img.shields.io/badge/Project_Status-Beta-yellow)
 
 This package provides the [React XMTP client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk), including React hooks that provide ready-made logic for interacting with the XMTP network and work well with these [React components](#react-components).
 
@@ -17,7 +17,7 @@ Build with this SDK to provide messaging between blockchain wallet addresses, in
 
 :::caution Important
 
-This SDK is in **Developer Preview** status and ready for you to start building with. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+This SDK is in **beta** status and ready for you to start building with. However, we do **not** recommend using beta software in production apps. Software in this status may change based on feedback.
 
 :::
 
@@ -724,13 +724,13 @@ Run `yarn dev` to build the SDK and watch for changes, which will trigger a rebu
 
 ## React UI components
 
-![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
+![Status](https://img.shields.io/badge/Project_Status-Beta-yellow)
 
 This package provides [React UI components](https://github.com/xmtp/xmtp-web/tree/main/packages/react-components) for building React apps with XMTP.
 
 :::caution Important
 
-These components are in **Developer Preview** status and ready for you to start building with. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+These components are in **beta** status and ready for you to start building with. However, we do **not** recommend using beta software in production apps. Software in this status may change based on feedback.
 
 :::
 
