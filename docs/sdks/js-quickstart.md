@@ -243,22 +243,6 @@ for await (const message of await xmtp.conversations.streamAllMessages()) {
 }
 ```
 
-#### Check if an address is on the network
-
-If you would like to check and see if a blockchain address is registered on the network before instantiating a client instance, you can use `Client.canMessage`.
-
-```ts
-import { Client } from "@xmtp/xmtp-js";
-
-const isOnDevNetwork = await Client.canMessage(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897"
-);
-const isOnProdNetwork = await Client.canMessage(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897",
-  { env: "production" }
-);
-```
-
 #### Handle different types of content
 
 All send functions support `SendOptions` as an optional parameter. The `contentType` option allows specifying different types of content than the default simple string standard content type, which is identified with content type identifier `ContentTypeText`.

@@ -14,29 +14,29 @@ The XMTP message API revolves around a network client that allows retrieving a
 1. To sign the newly generated key bundle. This happens only the very first time when key bundle is not found in storage.
 2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started (including the very first time).
 
+## Create a client
+
 :::important
 
-The client connects to a default XMTP environment by default. [Use client configuration options](#configure-the-client) to change this and other parameters of the network connection.
+For JavaScript, Swift, Kotlin, and React SDKs, the client connects to the XMTP `dev` environment by default. For Dart, the cilent connects to the `local` environment by default. [Use client configuration options](#configure-the-client) to change this and other parameters of a client's network connection.
 
 :::
-
-## Create a client
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
 
-A client is created with `Client.create(wallet: Signer): Promise<Client>` that requires passing in a connected wallet that implements the [Signer](https://github.com/xmtp/xmtp-js/blob/main/src/types/Signer.ts) interface. 
+A client is created with `Client.create(wallet: Signer): Promise<Client>` that requires passing in a connected wallet that implements the [Signer](https://github.com/xmtp/xmtp-js/blob/main/src/types/Signer.ts) interface.
 
 ```ts
-import { Client } from "@xmtp/xmtp-js";
+import { Client } from '@xmtp/xmtp-js'
 // Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet);
+const xmtp = await Client.create(wallet)
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift" default>
 
-A client is created with `Client.create(account: SigningKey) async throws -> Client` that requires passing in an object capable of creating signatures on your behalf. 
+A client is created with `Client.create(account: SigningKey) async throws -> Client` that requires passing in an object capable of creating signatures on your behalf.
 
 ```swift
 import XMTP
@@ -51,10 +51,7 @@ let client = try await Client.create(account: account, options: .init(api: .init
 The client has two constructors: `createFromWallet` and `createFromKeys`.
 
 The first time a user uses a new device, they should call `createFromWallet`. This will prompt them
-to sign a message to do one of the following:
-
-- Create a new identity (if they're new)
-- Enable their existing identity (if they've used XMTP before)
+to sign a message to do one of the following: Create a new identity (if they're new) or enable their existing identity (if they've used XMTP before)
 
 When this succeeds, it configures the client with a bundle of `keys` that can be stored securely on
 the device.
@@ -75,6 +72,12 @@ var api = xmtp.Api.create();
 var client = await Client.createFromKeys(api, keys);
 ```
 
+When you create the `Api` used by the `Client`, it must have a valid network `host`.
+
+- `dev`: `host: "dev.xmtp.network"`
+- `production`: `host: "production.xmtp.network"`
+- `local`: `host: "127.0.0.1"`
+
 </TabItem>
 <TabItem value="kotlin" label="Kotlin" default>
 
@@ -82,7 +85,8 @@ A client is created with `Client().create(account: SigningKey): Client` that req
 
 ```kotlin
 // Create the client with a `SigningKey` from your app
-val options = ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
+val options =
+    ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
 val client = Client().create(account = account, options = options)
 ```
 
@@ -98,39 +102,39 @@ To learn more about this process, see [Create a client](https://github.com/xmtp/
 **Type**
 
 ```ts
-import { Client } from "@xmtp/react-sdk";
+import { Client } from '@xmtp/react-sdk'
 
 type InitClientArgs = {
-  keys?: Uint8Array;
-  options?: Partial<ClientOptions>;
-  signer?: Signer | null;
-};
+  keys?: Uint8Array
+  options?: Partial<ClientOptions>
+  signer?: Signer | null
+}
 
 const useClient: () => {
-  client: Client | undefined;
-  disconnect: () => void;
-  error: unknown;
-  initialize: (args?: InitClientArgs) => Promise<void>;
-  isLoading: boolean;
-};
+  client: Client | undefined
+  disconnect: () => void
+  error: unknown
+  initialize: (args?: InitClientArgs) => Promise<void>
+  isLoading: boolean
+}
 ```
 
 **Example**
 
 ```tsx
 export const CreateClient: React.FC<{ signer: Signer }> = ({ signer }) => {
-  const { client, error, isLoading, initialize } = useClient();
+  const { client, error, isLoading, initialize } = useClient()
 
   const handleConnect = useCallback(async () => {
-    await initialize({ signer });
-  }, [initialize]);
+    await initialize({ signer })
+  }, [initialize])
 
   if (error) {
-    return "An error occurred while initializing the client";
+    return 'An error occurred while initializing the client'
   }
 
   if (isLoading) {
-    return "Awaiting signatures...";
+    return 'Awaiting signatures...'
   }
 
   if (!client) {
@@ -138,11 +142,11 @@ export const CreateClient: React.FC<{ signer: Signer }> = ({ signer }) => {
       <button type="button" onClick={handleConnect}>
         Connect to XMTP
       </button>
-    );
+    )
   }
 
-  return "Connected to XMTP";
-};
+  return 'Connected to XMTP'
+}
 ```
 
 </TabItem>
@@ -164,11 +168,11 @@ The SDK will handle key storage for the user by encrypting the private key bundl
 You can export the unencrypted key bundle using the static method `Client.getKeys`, save it somewhere secure, and then provide those keys at a later time to initialize a new client using the exported XMTP identity.
 
 ```ts
-import { Client } from "@xmtp/xmtp-js";
+import { Client } from '@xmtp/xmtp-js'
 // Get the keys using a valid Signer. Save them somewhere secure.
-const keys = await Client.getKeys(wallet);
+const keys = await Client.getKeys(wallet)
 // Create a client using keys returned from getKeys
-const client = await Client.create(null, { privateKeyOverride: keys });
+const client = await Client.create(null, { privateKeyOverride: keys })
 ```
 
 The keys returned by `getKeys` should be treated with the utmost care as compromise of these keys will allow an attacker to impersonate the user on the XMTP network. Ensure these keys are stored somewhere secure and encrypted.
@@ -203,7 +207,8 @@ You can save your keys from the client via the `privateKeyBundle` property:
 
 ```kotlin
 // Create the client with a `SigningKey` from your app
-val options = ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
+val options =
+    ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
 val client = Client().create(account = account, options = options)
 
 // Get the key bundle
@@ -245,6 +250,96 @@ export const CreateClientWithKeys: React.FC<{ signer: Signer }> = ({ signer }) =
 
   return (
     ...
+  );
+};
+```
+
+</TabItem>
+</Tabs>
+
+## Check if an address is on the network
+
+You might want to check if a blockchain address is registered on the network before instantiating a client instance.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript" default>
+
+```ts
+import { Client } from '@xmtp/xmtp-js'
+
+const isOnDevNetwork = await Client.canMessage(
+  '0x3F11b27F323b62B159D2642964fa27C46C841897'
+)
+const isOnProdNetwork = await Client.canMessage(
+  '0x3F11b27F323b62B159D2642964fa27C46C841897',
+  { env: 'production' }
+)
+```
+
+</TabItem>
+<TabItem value="react" label="React" default>
+
+The `useCanMessage` hook exposes both the client and static instances of the `canMessage` method. To check if a blockchain address is registered on the network before instantiating a client instance, use the `canMessageStatic` export.
+
+**Type**
+
+```ts
+type NetworkOptions = {
+  env: 'local' | 'dev' | 'production'
+  apiUrl: string | undefined
+  appVersion?: string
+}
+
+const useCanMessage: () => {
+  canMessage: {
+    (peerAddress: string): Promise<boolean>
+    (peerAddress: string[]): Promise<boolean[]>
+  }
+  canMessageStatic: {
+    (peerAddress: string, opts?: Partial<NetworkOptions>): Promise<boolean>
+    (peerAddress: string[], opts?: Partial<NetworkOptions>): Promise<boolean[]>
+  }
+}
+```
+
+**Example**
+
+```tsx
+import { useCanMessage } from "@xmtp/react-sdk";
+
+export const CanMessage: React.FC = () => {
+  const [peerAddress, setPeerAddress] = useState("");
+  const [isOnNetwork, setIsOnNetwork] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const { canMessage } = useCanMessage();
+
+  const handleAddressChange = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+    setPeerAddress(e.target.value);
+  }, []);
+
+  const handleCheckAddress = useCallback(async (e: FormEvent) => {
+      e.preventDefault();
+      if (isValidAddress(peerAddress)) {
+        setIsLoading(true);
+        setIsOnNetwork(await canMessage(peerAddress));
+        setIsLoading(false);
+      } else {
+        setIsOnNetwork(false);
+      }
+    };
+    void checkAddress();
+  }, [peerAddress]);
+
+  return (
+    <form onSubmit={handleCheckAddress}>
+      <input
+        name="addressInput"
+        type="text"
+        onChange={handleAddressChange}
+        disabled={isLoading}
+      />
+    </form>
   );
 };
 ```
@@ -299,16 +394,17 @@ For important details about connecting to environments, see [XMTP `production` a
 </TabItem>
 <TabItem value="kotlin" label="Kotlin" default>
 
-| Parameter | Default | Description                                                                                                                                                                                                                                                                           |
-| --------- | ------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| env       | `DEV`   | Connect to the specified XMTP network environment. Valid values include `DEV`, `.PRODUCTION`, or `LOCAL`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments). |
-| appVersion                | `undefined`                                                                       | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
+| Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| env        | `DEV`       | Connect to the specified XMTP network environment. Valid values include `DEV`, `.PRODUCTION`, or `LOCAL`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                            |
+| appVersion | `undefined` | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
 
 **Configure `env`**
 
 ```kotlin
 // Configure the client to use the `production` network
-val options = ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
+val options =
+    ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
 val client = Client().create(account = account, options = options)
 ```
 

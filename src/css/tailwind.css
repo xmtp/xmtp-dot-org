@@ -764,3 +764,20 @@ ul li a:before {
 :root {
   --doc-sidebar-width: 230px !important;
 }
+
+/*tabbed code samples*/
+.tabs-container p{
+  padding:15px;
+  margin:0px !important;
+  font-size:14px;
+  line-height:20px;
+  border-left:2px solid var(--ifm-pre-background);
+  }
+  .tabs {
+    background: var(--ifm-pre-background);
+    border: solid rgba(0, 0, 0, 0.1);
+  }
+  .tabs-container{
+  background: var(--ifm-pre-background);
+  
+  }
