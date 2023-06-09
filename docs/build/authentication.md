@@ -14,13 +14,19 @@ The XMTP message API revolves around a network client that allows retrieving a
 1. To sign the newly generated key bundle. This happens only the very first time when key bundle is not found in storage.
 2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started (including the very first time).
 
-## Create a client
+:::important Important
 
-:::important
-
-For JavaScript, Swift, Kotlin, and React SDKs, the client connects to the XMTP `dev` environment by default. For Dart, the cilent connects to the `local` environment by default. [Use client configuration options](#configure-the-client) to change this and other parameters of a client's network connection.
+A tab with an 🟡 means it provides information about an XMTP SDK that's in **Developer Preview** status. The SDK is ready to start building with, however we **do not** recommend using it in production apps. SDKs in this status may change based on feedback.
 
 :::
+
+## Create a client
+
+For JavaScript, Swift, Kotlin, and React SDKs, the client connects to the XMTP `dev` environment by default. 
+
+For Dart, the cilent connects to the `local` environment by default. 
+
+[Use client configuration options](#configure-the-client) to change this and other parameters of a client's network connection.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
@@ -42,7 +48,8 @@ A client is created with `Client.create(account: SigningKey) async throws -> Cli
 import XMTP
 
 // Create the client with a `SigningKey` from your app
-let client = try await Client.create(account: account, options: .init(api: .init(env: .production)))
+let client = try await Client.create(
+  account: account, options: .init(api: .init(env: .production)))
 ```
 
 </TabItem>
@@ -79,19 +86,21 @@ When you create the `Api` used by the `Client`, it must have a valid network `ho
 - `local`: `host: "127.0.0.1"`
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin" default>
+<TabItem value="kotlin" label="Kotlin 🟡" default>
 
 A client is created with `Client().create(account: SigningKey): Client` that requires passing in an object capable of creating signatures on your behalf.
 
 ```kotlin
 // Create the client with a `SigningKey` from your app
 val options =
-    ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
+    ClientOptions(
+        api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true)
+    )
 val client = Client().create(account = account, options = options)
 ```
 
 </TabItem>
-<TabItem value="react" label="React" default>
+<TabItem value="react" label="React 🟡" default>
 
 The `useClient` hook allows you to initialize, disconnect, and access the XMTP client instance. It also exposes the error and loading states of the client.
 
@@ -184,7 +193,8 @@ You can save your keys from the client via the `privateKeyBundle` property:
 
 ```swift
 // Create the client with a `SigningKey` from your app
-let client = try await Client.create(account: account, options: .init(api: .init(env: .production)))
+let client = try await Client.create(
+  account: account, options: .init(api: .init(env: .production)))
 
 // Get the key bundle
 let keys = client.privateKeyBundle
@@ -201,14 +211,16 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin" default>
+<TabItem value="kotlin" label="Kotlin 🟡" default>
 
 You can save your keys from the client via the `privateKeyBundle` property:
 
 ```kotlin
 // Create the client with a `SigningKey` from your app
 val options =
-    ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
+    ClientOptions(
+        api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true)
+    )
 val client = Client().create(account = account, options = options)
 
 // Get the key bundle
@@ -226,7 +238,7 @@ val client = Client().buildFrom(bundle = keys, options = options)
 ```
 
 </TabItem>
-<TabItem value="react" label="React" default>
+<TabItem value="react" label="React 🟡" default>
 
 **Example**
 
@@ -277,7 +289,7 @@ const isOnProdNetwork = await Client.canMessage(
 ```
 
 </TabItem>
-<TabItem value="react" label="React" default>
+<TabItem value="react" label="React 🟡" default>
 
 The `useCanMessage` hook exposes both the client and static instances of the `canMessage` method. To check if a blockchain address is registered on the network before instantiating a client instance, use the `canMessageStatic` export.
 
@@ -392,7 +404,7 @@ By default, it will connect to a `local` XMTP network.
 For important details about connecting to environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin" default>
+<TabItem value="kotlin" label="Kotlin 🟡" default>
 
 | Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -404,7 +416,9 @@ For important details about connecting to environments, see [XMTP `production` a
 ```kotlin
 // Configure the client to use the `production` network
 val options =
-    ClientOptions(api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true))
+    ClientOptions(
+        api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true)
+    )
 val client = Client().create(account = account, options = options)
 ```
 
@@ -415,7 +429,7 @@ The `apiUrl`, `keyStoreType`, `codecs`, and `maxContentSize` parameters from the
 :::
 
 </TabItem>
-<TabItem value="react" label="React" default>
+<TabItem value="react" label="React 🟡" default>
 
 | Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
