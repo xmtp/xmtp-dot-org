@@ -98,42 +98,6 @@ for await (const message of await conversation.streamMessages()) {
 
 Currently, network nodes are configured to rate limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node. Rate limits can change at any time in the interest of maintaining network health.
 
-### Create a client
-
-A client is created with `Client.create(wallet: Signer): Promise<Client>` that requires passing in a connected wallet that implements the [Signer](https://github.com/xmtp/xmtp-js/blob/main/src/types/Signer.ts) interface. The client will request a wallet signature in two cases:
-
-1. To sign the newly generated key bundle. This happens only the very first time when key bundle is not found in storage.
-2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started (including the very first time).
-
-:::important
-
-The client connects to the XMTP `dev` environment by default. [Use `ClientOptions`](#configure-the-client) to change this and other parameters of the network connection.
-
-:::
-
-```ts
-import { Client } from "@xmtp/xmtp-js";
-// Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet);
-```
-
-#### Configure the client
-
-The client's network connection and key storage method can be configured with these optional parameters of `Client.create`:
-
-| Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| appVersion                | `undefined`                                                                       | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
-| env                       | `dev`                                                                             | Connect to the specified XMTP network environment. Valid values include `dev`, `production`, or `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                             |
-| apiUrl                    | `undefined`                                                                       | Manually specify an API URL to use. If specified, value of `env` will be ignored.                                                                                                                                                                                                                                                                                                                                                        |
-| keystoreProviders         | `[StaticKeystoreProvider, NetworkKeystoreProvider, KeyGeneratorKeystoreProvider]` | Override the default behavior of how the Client creates a Keystore with a custom provider. This can be used to get the user's private keys from a different storage mechanism.                                                                                                                                                                                                                                                           |
-| persistConversations      | `true`                                                                            | Maintain a cache of previously seen V2 conversations in the storage provider (defaults to `LocalStorage`).                                                                                                                                                                                                                                                                                                                               |
-| skipContactPublishing     | `false`                                                                           | Do not publish the user's contact bundle to the network on Client creation. Designed to be used in cases where the Client session is short-lived (for example, decrypting a push notification), and where it is known that a Client instance has been instantiated with this flag set to false at some point in the past.                                                                                                                |
-| codecs                    | `[TextCodec]`                                                                     | Add codecs to support additional content types.                                                                                                                                                                                                                                                                                                                                                                                          |
-| maxContentSize            | `100M`                                                                            | Maximum message content size in bytes.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| preCreateIdentityCallback | `undefined`                                                                       | `preCreateIdentityCallback` is a function that will be called immediately before a [Create Identity](/docs/concepts/account-signatures#sign-to-create-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                     |
-| preEnableIdentityCallback | `undefined`                                                                       | `preEnableIdentityCallback` is a function that will be called immediately before an [Enable Identity](/docs/concepts/account-signatures#sign-to-enable-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                    |
-
 ### Conversations
 
 Most of the time, when interacting with the network, you'll want to do it through `conversations`. Conversations are between two wallets.
@@ -279,22 +243,6 @@ for await (const message of await xmtp.conversations.streamAllMessages()) {
 }
 ```
 
-#### Check if an address is on the network
-
-If you would like to check and see if a blockchain address is registered on the network before instantiating a client instance, you can use `Client.canMessage`.
-
-```ts
-import { Client } from "@xmtp/xmtp-js";
-
-const isOnDevNetwork = await Client.canMessage(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897"
-);
-const isOnProdNetwork = await Client.canMessage(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897",
-  { env: "production" }
-);
-```
-
 #### Handle different types of content
 
 All send functions support `SendOptions` as an optional parameter. The `contentType` option allows specifying different types of content than the default simple string standard content type, which is identified with content type identifier `ContentTypeText`.
@@ -342,22 +290,6 @@ conversation.send("#".repeat(1000), {
   compression: Compression.COMPRESSION_DEFLATE,
 });
 ```
-
-#### Manually handle private key storage
-
-The SDK will handle key storage for the user by encrypting the private key bundle using a signature generated from the wallet, and storing the encrypted payload on the XMTP network. This can be awkward for some server-side applications, where you may only want to give the application access to the XMTP keys but not your wallet keys. Mobile applications may also want to store keys in a secure enclave rather than rely on decrypting the remote keys on the network each time the application starts up.
-
-You can export the unencrypted key bundle using the static method `Client.getKeys`, save it somewhere secure, and then provide those keys at a later time to initialize a new client using the exported XMTP identity.
-
-```ts
-import { Client } from "@xmtp/xmtp-js";
-// Get the keys using a valid Signer. Save them somewhere secure.
-const keys = await Client.getKeys(wallet);
-// Create a client using keys returned from getKeys
-const client = await Client.create(null, { privateKeyOverride: keys });
-```
-
-The keys returned by `getKeys` should be treated with the utmost care as compromise of these keys will allow an attacker to impersonate the user on the XMTP network. Ensure these keys are stored somewhere secure and encrypted.
 
 #### Cache conversations
 

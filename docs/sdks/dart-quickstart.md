@@ -53,43 +53,6 @@ var api = xmtp.Api.create();
 var client = await xmtp.Client.createFromWallet(api, wallet);
 ```
 
-## Create a client
-
-The client has two constructors: `createFromWallet` and `createFromKeys`.
-
-The first time a user uses a new device, they should call `createFromWallet`. This will prompt them
-to sign a message to do one of the following:
-
-- Create a new identity (if they're new)
-- Enable their existing identity (if they've used XMTP before)
-
-When this succeeds, it configures the client with a bundle of `keys` that can be stored securely on
-the device.
-
-```dart
-var api = xmtp.Api.create();
-var client = await Client.createFromWallet(api, wallet);
-await mySecureStorage.save(client.keys.writeToBuffer());
-```
-
-The second time a user launches the app they should call `createFromKeys`
-using the stored `keys` from their previous session.
-
-```dart
-var stored = await mySecureStorage.load();
-var keys = xmtp.PrivateKeyBundle.fromBuffer(stored);
-var api = xmtp.Api.create();
-var client = await Client.createFromKeys(api, keys);
-```
-
-### Configure the client
-
-You can configure the client environment when you call `Api.create()`.
-
-By default, it will connect to a `local` XMTP network.
-For important details about connecting to environments,
-see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).
-
 ### List existing conversations
 
 You can list existing conversations and send them messages.
@@ -254,32 +217,3 @@ The following table provides the deprecation schedule.
 | There are no deprecations scheduled for `xmtp-flutter` at this time. |           |                 |           |
 
 Bug reports, feature requests, and PRs are welcome in accordance with these [contribution guidelines](https://github.com/xmtp/xmtp-flutter/blob/main/CONTRIBUTING.md).
-
-## XMTP `production` and `dev` network environments
-
-XMTP provides both `production` and `dev` network environments to support the development phases of your project.
-
-The `production` and `dev` networks are completely separate and not interchangeable.
-For example, for a given blockchain account, its XMTP identity on `dev` network is completely
-distinct from its XMTP identity on the `production` network, as are the messages associated with
-these identities. In addition, XMTP identities and messages created on the `dev` network can't be
-accessed from or moved to the `production` network, and vice versa.
-
-:::note
-
-When you [create a client](#create-a-client), it connects to an XMTP `local`
-environment by default. When you create the `Api` used by the `Client`, it must have a valid network `host`.
-
-:::
-
-Here are some best practices for when to use each environment:
-
-- `dev` (`host: "dev.xmtp.network"`): Use to have a client communicate with the `dev` network. As a best practice, use `dev` while developing and testing your app. Follow this best practice to isolate test messages to `dev` inboxes.
-
-- `production` (`host: "production.xmtp.network"`): Use to have a client communicate with the `production` network. As a best practice, use `production` when your app is serving real users. Follow this best practice to isolate messages between real-world users to `production` inboxes.
-
-- `local` (`host: "127.0.0.1"`, default): Use to have a client communicate with an XMTP node you are running locally. For example, an XMTP node developer can use `local` to generate client traffic to test a node running locally.
-
-The `production` network is configured to store messages indefinitely.
-XMTP may occasionally delete messages and keys from the `dev` network, and will provide
-advance notice in the [XMTP Discord community](https://discord.gg/xmtp).
