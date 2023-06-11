@@ -9,7 +9,7 @@ description: "These packages provide the XMTP client SDK for React apps, includi
 
 ## React SDK hooks
 
-![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
+![Status](https://img.shields.io/badge/Project_Status-Beta-yellow)
 
 This package provides the [React XMTP client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk), including React hooks that provide ready-made logic for interacting with the XMTP network and work well with these [React components](#react-components).
 
@@ -17,7 +17,7 @@ Build with this SDK to provide messaging between blockchain wallet addresses, in
 
 :::caution Important
 
-This SDK is in **Developer Preview** status and ready for you to start building with. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+This SDK is in **beta** status and ready for you to start building with. However, we do **not** recommend using beta software in production apps. Software in this status may change based on feedback.
 
 :::
 
@@ -87,100 +87,6 @@ createRoot(document.getElementById("root") as HTMLElement).render(
     </XMTPProvider>
   </StrictMode>,
 );
-```
-
-#### Create a client
-
-The `useClient` hook allows you to initialize, disconnect, and access the XMTP client instance. It also exposes the error and loading states of the client.
-
-The hook requires passing in a connected wallet that implements the [Signer](https://github.com/xmtp/xmtp-js/blob/main/src/types/Signer.ts) interface.
-
-To learn more about this process, see [Create a client](https://github.com/xmtp/xmtp-js#create-a-client) in the `xmtp-js` SDK docs.
-
-**Type**
-
-```ts
-import { Client } from "@xmtp/react-sdk";
-
-type InitClientArgs = {
-  keys?: Uint8Array;
-  options?: Partial<ClientOptions>;
-  signer?: Signer | null;
-};
-
-const useClient: () => {
-  client: Client | undefined;
-  disconnect: () => void;
-  error: unknown;
-  initialize: (args?: InitClientArgs) => Promise<void>;
-  isLoading: boolean;
-};
-```
-
-**Example**
-
-```tsx
-export const CreateClient: React.FC<{ signer: Signer }> = ({ signer }) => {
-  const { client, error, isLoading, initialize } = useClient();
-
-  const handleConnect = useCallback(async () => {
-    await initialize({ signer });
-  }, [initialize]);
-
-  if (error) {
-    return "An error occurred while initializing the client";
-  }
-
-  if (isLoading) {
-    return "Awaiting signatures...";
-  }
-
-  if (!client) {
-    return (
-      <button type="button" onClick={handleConnect}>
-        Connect to XMTP
-      </button>
-    );
-  }
-
-  return "Connected to XMTP";
-};
-```
-
-##### Configure the client
-
-To learn more about client configuration options, see [Configure the client](https://github.com/xmtp/xmtp-js#configure-the-client) in the `xmtp-js` SDK docs.
-
-##### Create a client with private keys
-
-Manually handling private keys is not recommended unless a use case requires it.
-
-To learn more, see [Manually handle private key storage](https://github.com/xmtp/xmtp-js#manually-handle-private-key-storage) in the `xmtp-js` SDK docs.
-
-**Example**
-
-```tsx
-import { Client, useClient } from "@xmtp/react-sdk";
-import type { Signer } from "@xmtp/react-sdk";
-
-export const CreateClientWithKeys: React.FC<{ signer: Signer }> = ({ signer }) => {
-  const { initialize } = useClient();
-
-  // initialize client on mount
-  useEffect(() => {
-    const init = async () => {
-      // get the keys using a valid Signer
-      const keys = await Client.getKeys(signer);
-      // create a client using keys returned from getKeys
-      await initialize({ keys, signer });
-    };
-    void init();
-  }, []);
-
-  return (
-    ...
-  );
-};
 ```
 
 #### List existing conversations
@@ -639,73 +545,6 @@ export const StreamAllMessages: React.FC = () => {
 
 To learn more, see [Listen for new messages in all conversations](https://github.com/xmtp/xmtp-js#listen-for-new-messages-in-all-conversations) in the `xmtp-js` SDK docs.
 
-#### Check if an address is on the network
-
-The `useCanMessage` hook exposes both the client and static instances of the `canMessage` method. To check if a blockchain address is registered on the network before instantiating a client instance, use the `canMessageStatic` export.
-
-**Type**
-
-```ts
-type NetworkOptions = {
-  env: "local" | "dev" | "production";
-  apiUrl: string | undefined;
-  appVersion?: string;
-};
-
-const useCanMessage: () => {
-  canMessage: {
-    (peerAddress: string): Promise<boolean>;
-    (peerAddress: string[]): Promise<boolean[]>;
-  };
-  canMessageStatic: {
-    (peerAddress: string, opts?: Partial<NetworkOptions>): Promise<boolean>;
-    (peerAddress: string[], opts?: Partial<NetworkOptions>): Promise<boolean[]>;
-  };
-};
-```
-
-**Example**
-
-```tsx
-import { useCanMessage } from "@xmtp/react-sdk";
-
-export const CanMessage: React.FC = () => {
-  const [peerAddress, setPeerAddress] = useState("");
-  const [isOnNetwork, setIsOnNetwork] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const { canMessage } = useCanMessage();
-
-  const handleAddressChange = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
-    setPeerAddress(e.target.value);
-  }, []);
-
-  const handleCheckAddress = useCallback(async (e: FormEvent) => {
-      e.preventDefault();
-      if (isValidAddress(peerAddress)) {
-        setIsLoading(true);
-        setIsOnNetwork(await canMessage(peerAddress));
-        setIsLoading(false);
-      } else {
-        setIsOnNetwork(false);
-      }
-    };
-    void checkAddress();
-  }, [peerAddress]);
-
-  return (
-    <form onSubmit={handleCheckAddress}>
-      <input
-        name="addressInput"
-        type="text"
-        onChange={handleAddressChange}
-        disabled={isLoading}
-      />
-    </form>
-  );
-};
-```
-
 ### Developing
 
 Run `yarn dev` to build the SDK and watch for changes, which will trigger a rebuild.
@@ -724,13 +563,13 @@ Run `yarn dev` to build the SDK and watch for changes, which will trigger a rebu
 
 ## React UI components
 
-![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow)
+![Status](https://img.shields.io/badge/Project_Status-Beta-yellow)
 
 This package provides [React UI components](https://github.com/xmtp/xmtp-web/tree/main/packages/react-components) for building React apps with XMTP.
 
 :::caution Important
 
-These components are in **Developer Preview** status and ready for you to start building with. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+These components are in **beta** status and ready for you to start building with. However, we do **not** recommend using beta software in production apps. Software in this status may change based on feedback.
 
 :::
 
@@ -816,27 +655,3 @@ The following table provides the deprecation schedule.
 | There are no deprecations scheduled for these packages at this time. |           |                 |           |
 
 Bug reports, feature requests, and PRs are welcome in accordance with these [contribution guidelines](https://github.com/xmtp/xmtp-react/blob/main/CONTRIBUTING.md).
-
-
-## XMTP `production` and `dev` network environments
-
-XMTP provides both `production` and `dev` network environments to support the development phases of your project.
-
-The `production` and `dev` networks are completely separate and not interchangeable.
-For example, for a given blockchain account, its XMTP identity on `dev` network is completely distinct from its XMTP identity on the `production` network, as are the messages associated with these identities. In addition, XMTP identities and messages created on the `dev` network can't be accessed from or moved to the `production` network, and vice versa.
-
-:::important
-
-When you [create a client](#create-a-client), it connects to the XMTP `dev` environment by default. To learn how to use the `env` parameter to set your client's network environment, see [Configure the client](#configure-the-client).
-
-:::
-
-The `env` parameter accepts one of three valid values: `dev`, `production`, or `local`. Here are some best practices for when to use each environment:
-
-- `dev`: Use to have a client communicate with the `dev` network. As a best practice, set `env` to `dev` while developing and testing your app. Follow this best practice to isolate test messages to `dev` inboxes.
-
-- `production`: Use to have a client communicate with the `production` network. As a best practice, set `env` to `production` when your app is serving real users. Follow this best practice to isolate messages between real-world users to `production` inboxes.
-
-- `local`: Use to have a client communicate with an XMTP node you are running locally. For example, an XMTP node developer can set `env` to `local` to generate client traffic to test a node running locally.
-
-The `production` network is configured to store messages indefinitely. XMTP may occasionally delete messages and keys from the `dev` network, and will provide advance notice in the [XMTP Discord community](https://discord.gg/xmtp).

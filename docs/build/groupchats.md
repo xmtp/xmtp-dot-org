@@ -11,7 +11,7 @@ Use the information in this section to **experiment** with providing group cha
 This section refers to both `GroupConversation` and `GroupChat`:
 
 :::caution Important
-This feature is in **Pre-Preview** status and ready for you to start experimenting with. We do **not** recommend using Pre-Preview features in production apps. Software in this status will change as we iterate based on feedback.
+This feature is in **alpha** status and ready for you to start experimenting with. We do **not** recommend using alpha features in production apps. Software in this status will change as we iterate based on feedback.
 :::
 
 - `GroupConversation` is similar to `ConversationV1` or `ConversationV2` provided by the SDK. These conversations are just a way to send and receive messages.

@@ -8,22 +8,28 @@ Timelines are estimates and subject to change. For information about delivered f
 
 ## Features roadmap
 
+Features typically follow this release cycle:
+
+- Alpha: Super early peek into the feature being built. Not ready for use in production apps.
+- Beta: Opportunity to test, validate, and provide feedback. Not ready for use in production apps.
+- Production: Ready for use in production apps.
+
 ### Q2
 
-- Group chat - experimental/Pre-Preview
-- Media attachments, reactions, and replies
-- React Native SDK - Developer Preview
+- Group chat (alpha)
+- Media attachments, reactions, and replies (production)
+- React Native SDK (beta)
 
 ### Q3
 
-- Android SDK - GA
-- React SDK - GA
-- Secret conversations: A new conversation type with additional Signal-level security properties such as forward secrecy and expiring message history
+- Android SDK (production)
+- React SDK (production)
+- Secret conversations: A new conversation type with additional Signal-level security properties such as forward secrecy and expiring message history (alpha)
 
 ### Q4
 
-- Read receipts
-- Portable preferences, such as blocklists, allowlists, etc.
+- Read receipts (alpha)
+- Portable preferences, such as blocklists, allowlists, etc. (alpha)
 
 ## Decentralization roadmap
 
