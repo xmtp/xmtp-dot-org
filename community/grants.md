@@ -182,7 +182,6 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ### Project showcase
 
-- Awesome-xmtp projects: https://github.com/xmtp/awesome-xmtp
 - [Built with XMTP](built-with-xmtp)
 
 ## 💬 Contact us

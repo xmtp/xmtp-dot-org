@@ -197,7 +197,7 @@ Push notifications can be a highly effective way to engage your users and increa
 
 - Display push notifications only for messages sent **to** a user. In other words, do not send a push notification to a user about a message they sent. To do this, filter out messages sent by the user and don't send push notifications for them.
 
-  - For iOS apps, see [Handle push notifications](/docs/build/handle-push-notifications) to learn how to suppress these push notifications.
+  - For iOS apps, see [Handle push notifications](/docs/build/notifications) to learn how to suppress these push notifications.
 
   :::tip Submit your application early
 
@@ -271,10 +271,6 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 - Have your app added to [Built with XMTP](/built-with-xmtp)
 
   - [Submit this form](https://forms.gle/p1VgVtkoGfHXANXt5)
-
-- Have your project repo added to [awesome-xmtp](https://github.com/xmtp/awesome-xmtp)
-
-  - [Create a PR](https://github.com/xmtp/awesome-xmtp)
 
 - Create a commemorative NFT for your launch to reward early users
 

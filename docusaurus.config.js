@@ -108,33 +108,33 @@ const config = {
             items: [
               {
                 to: "built-with-xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">✨</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
                 <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
               },
               {
                 to: "/use-cases/messaging",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">💬</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,
               },
               {
                 to: "/use-cases/finance",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">💰</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Finance</div></div>`,
               },
               {
                 to: "/use-cases/marketing",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">📣</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
               },
               {
                 to: "/use-cases/support",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">📞</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
               },
               {
                 to: "/use-cases/commerce",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">🛍️</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
               },
             ],
@@ -181,39 +181,13 @@ const config = {
             position: "right",
             label: "Blog",
             activeBaseRegex: `/`,
-          },
-          /* {
-            type: "dropdown",
+          } /*
+          {
+            type: "html",
             position: "right",
-            label: "Use cases",
-            items: [
-              {
-                to: "docs/use-cases",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,
-              },
-              {
-                to: "docs/use-cases",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Finance</div></div>`,
-              },
-              {
-                to: "docs/use-cases",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
-              },
-              {
-                to: "docs/use-cases",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
-              },
-              {
-                to: "docs/use-cases",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
-              },
-            ],
-          },*/
+            value:
+              ' <button type="button" onClick=\'window.open("https://discord.com/invite/xmtp", "_self");\' class="navbar__discord-button"> <img src="/img/discord.svg" alt="Discord logo" class="discord-logo" /> <strong>Join our Discord</strong>  </button>',
+          },*/,
           {
             type: "html",
             position: "right",
@@ -283,7 +257,7 @@ const config = {
               },
               {
                 label: `Push notifications`,
-                to: `/docs/build/handle-push-notifications`,
+                to: `/docs/build/notifications`,
               },
               {
                 label: `Broadcast`,
