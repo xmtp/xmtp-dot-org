@@ -65,7 +65,7 @@ XMTP can be used with EVM-compatible wallet apps that support ECDSA signing on t
 
 The XMTP SDK **does not** include a wallet app abstraction, as XMTP assumes that developers have a way to obtain a wallet app connection.
 
-XMTP uses a signature from the blockchain account to [create and enable the XMTP identity](account-signatures). Specifically, XMTP identities must be generated from and associated with an Ethereum account's public address and private key. As such, a connected wallet app must be present to generate the signature and initialize the API client in the client app.
+XMTP uses a signature from the blockchain account to [create and enable the XMTP identity](/docs/concepts/account-signatures). Specifically, XMTP identities must be generated from and associated with an Ethereum account's public address and private key. As such, a connected wallet app must be present to generate the signature and initialize the API client in the client app.
 
 A user can generate multiple XMTP identities from the same wallet app by changing to a different blockchain account.
 

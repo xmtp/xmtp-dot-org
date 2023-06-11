@@ -22,7 +22,7 @@ XMTP Labs is focused on serving developers. We build [SDKs, UI components, and e
 
 XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts, though XMTP itself does not use EVMs.
 
-To learn more, see [Wallet apps](/docs/concepts/works-with-xmtp#wallet-apps).
+To learn more, see [Wallet apps](/docs/build/dev-faqs#wallet-apps).
 
 ## Network
 
