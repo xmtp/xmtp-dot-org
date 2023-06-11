@@ -272,10 +272,6 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 
   - [Submit this form](https://forms.gle/p1VgVtkoGfHXANXt5)
 
-- Have your project repo added to [awesome-xmtp](https://github.com/xmtp/awesome-xmtp)
-
-  - [Create a PR](https://github.com/xmtp/awesome-xmtp)
-
 - Create a commemorative NFT for your launch to reward early users
 
 ## Keep in touch post-launch
