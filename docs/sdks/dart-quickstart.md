@@ -2,12 +2,10 @@
 sidebar_label: Dart
 sidebar_position: 3
 toc_max_heading_level: 4
-description: 'xmtp-flutter provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps.'
+description: "xmtp-flutter provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps."
 ---
 
 # Quickstart for the Dart XMTP client SDK
-
-![Status](https://img.shields.io/badge/Project_Status-Production-31CA54) ![Test](https://github.com/xmtp/xmtp-flutter/actions/workflows/test.yml/badge.svg)
 
 The [Dart XMTP client SDK](https://github.com/xmtp/xmtp-flutter) (`xmtp-flutter`) provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps.
 
@@ -64,7 +62,6 @@ for (var convo in conversations) {
 ```
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an interoperable inbox, which enables a user to access all of their conversations in any app built with XMTP.
-
 
 ### Listen for new conversations
 

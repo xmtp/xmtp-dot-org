@@ -7,11 +7,6 @@ description: "The XMTP client SDK for JavaScript (xmtp-js) provides a TypeScript
 
 # Quickstart for the JavaScript XMTP client SDK
 
-![Status](https://img.shields.io/badge/Project_Status-Production-brightgreen)
-![Test](https://github.com/xmtp/xmtp-js/actions/workflows/test.yml/badge.svg)
-![Lint](https://github.com/xmtp/xmtp-js/actions/workflows/lint.yml/badge.svg)
-![Build](https://github.com/xmtp/xmtp-js/actions/workflows/build.yml/badge.svg)
-
 The [JavaScript XMTP client SDK](https://github.com/xmtp/xmtp-js) (`xmtp-js`) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications.
 
 Build with this SDK to provide messaging between blockchain wallet addresses, including DMs, notifications, announcements, and more.
@@ -20,7 +15,7 @@ Build with this SDK to provide messaging between blockchain wallet addresses, in
 
 To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/concepts/faq).
 
-## Example apps built with `xmtp-js`
+### Example apps built with `xmtp-js`
 
 - **XMTP Quickstart React app**: Provides a basic messaging app demonstrating core capabilities of the SDK. The app is intentionally built with lightweight code to help make it easier to parse and start learning to build with XMTP.
 
@@ -43,31 +38,6 @@ Access the `xmtp-js` client SDK [reference documentation](https://xmtp-js.pages.
 
 ```bash
 npm install @xmtp/xmtp-js
-```
-
-Additional configuration is required in React environments due to the removal of polyfills from Webpack 5.
-
-### Create React App
-
-Use `react-scripts` prior to version `5.0.0`. For example:
-
-```bash
-npx create-react-app my-app --scripts-version 4.0.2
-```
-
-Or downgrade after creating your app.
-
-### Next.js
-
-In `next.config.js`:
-
-```js
-webpack: (config, { isServer }) => {
-  if (!isServer) {
-    config.resolve.fallback.fs = false;
-  }
-  return config;
-};
 ```
 
 ## Usage

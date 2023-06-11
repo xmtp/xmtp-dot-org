@@ -2,12 +2,10 @@
 sidebar_label: Swift
 sidebar_position: 2
 toc_max_heading_level: 4
-description: 'xmtp-ios provides a Swift implementation of an XMTP message API client for use with iOS apps.'
+description: "xmtp-ios provides a Swift implementation of an XMTP message API client for use with iOS apps."
 ---
 
 # Quickstart for the Swift XMTP client SDK
-
-![Status](https://img.shields.io/badge/Project_Status-Production-31CA54) ![Lint](https://github.com/xmtp/xmtp-ios/actions/workflows/lint.yml/badge.svg) 
 
 The [Swift XMTP client SDK](https://github.com/xmtp/xmtp-ios) (`xmtp-ios`) provides a Swift implementation of an XMTP message API client for use with iOS apps.
 
@@ -101,7 +99,6 @@ for conversation in allConversations {
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP.
 
-
 ### Listen for new conversations
 
 You can also listen for new conversations being started in real-time. This will allow apps to display incoming messages from new contacts.
@@ -184,7 +181,6 @@ for try await message in conversation.streamMessages() {
   print("New message from \(message.senderAddress): \(message.body)")
 }
 ```
-
 
 ### Decode a single message
 

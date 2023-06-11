@@ -7,8 +7,6 @@ description: "xmtp-android provides a Kotlin implementation of an XMTP message A
 
 # Quickstart for the Kotlin XMTP client SDK
 
-![Status](https://img.shields.io/badge/Project_Status-Beta-yellow) ![Test](https://github.com/xmtp/xmtp-android/actions/workflows/test.yml/badge.svg) ![Lint](https://github.com/xmtp/xmtp-android/actions/workflows/lint.yml/badge.svg)
-
 The [Kotlin XMTP client SDK](https://github.com/xmtp/xmtp-android) (`xmtp-android`) provides a Kotlin implementation of an XMTP message API client for use with Android apps.
 
 Build with this SDK to provide messaging between blockchain wallet addresses, including DMs, notifications, announcements, and more.
@@ -57,7 +55,7 @@ val messages = conversation.messages()
 // Send a message
 conversation.send(text = "gm")
 // Listen for new messages in the conversation
-conversation.streamMessages().collect { 
+conversation.streamMessages().collect {
     print("${message.senderAddress}: ${message.body}")
 }
 ```
@@ -86,7 +84,6 @@ for (conversation in allConversations) {
 ```
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP.
-
 
 ### Listen for new conversations
 
@@ -155,7 +152,7 @@ conversation.streamMessages().collect {
     if (it.senderAddress == client.address) {
         // This message was sent from me
     }
-    
+
     print("New message from ${it.senderAddress}: ${it.body}")
 }
 ```
@@ -195,11 +192,11 @@ decodedConversation.send(text = "hi")
 
 ### Handle different types of content
 
-All the send functions support `SendOptions` as an optional parameter. The `contentType` option allows specifying different types of content than the default simple string, which is identified with content type identifier `ContentTypeText`. 
+All the send functions support `SendOptions` as an optional parameter. The `contentType` option allows specifying different types of content than the default simple string, which is identified with content type identifier `ContentTypeText`.
 
 To learn more about content types, see [Content types with XMTP](/docs/concepts/content-types).
 
-Support for other types of content can be added by registering additional `ContentCodecs` with the `Client`. Every codec is associated with a content type identifier, `ContentTypeId`, which is used to signal to the client which codec should be used to process the content that is being sent or received. 
+Support for other types of content can be added by registering additional `ContentCodecs` with the `Client`. Every codec is associated with a content type identifier, `ContentTypeId`, which is used to signal to the client which codec should be used to process the content that is being sent or received.
 
 For example, to learn about the codecs available in `xmtp-android`, see [Use content types in your app](https://github.com/xmtp/xmtp-android/blob/main/library/src/main/java/org/xmtp/android/library/codecs/README.md).
 
@@ -262,8 +259,8 @@ Older versions of the SDK will eventually be deprecated, which means:
 
 The following table provides the deprecation schedule.
 
-| Announced  | Effective  | Minimum Version | Rationale                                                                                                         |
-| ---------- | ---------- | --------------- | ----------------------------------------------------------------------------------------------------------------- |
-| There are no deprecations scheduled for `xmtp-android` at this time. |  |          |  |
+| Announced                                                            | Effective | Minimum Version | Rationale |
+| -------------------------------------------------------------------- | --------- | --------------- | --------- |
+| There are no deprecations scheduled for `xmtp-android` at this time. |           |                 |           |
 
 Bug reports, feature requests, and PRs are welcome in accordance with these [contribution guidelines](https://github.com/xmtp/xmtp-android/blob/main/CONTRIBUTING.md).
