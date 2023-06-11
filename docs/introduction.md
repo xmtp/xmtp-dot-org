@@ -86,7 +86,6 @@ Check out these example apps you can use for guidance and inspiration when build
 
 For even more examples of apps built with XMTP, see these ecosystem projects:
 
-- [Awesome XMTP](https://github.com/xmtp/awesome-xmtp)
 - [Built with XMTP](built-with-xmtp)
 
 ## Learn more

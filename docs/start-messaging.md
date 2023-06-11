@@ -63,5 +63,4 @@ Ready to start building with XMTP? Check out some of these developer resources:
 - [Start building with XMTP](/docs/build/start-building)
 - [SDKs and tools](/docs/introduction#xmtp-sdks-and-example-apps)
 - [Built with XMTP](/built-with-xmtp/): Explore a showcase of apps built with XMTP
-- [Awesome XMTP](https://github.com/xmtp/awesome-xmtp): A list of projects building with XMTP
 - [FAQ about XMTP](/docs/concepts/faq)

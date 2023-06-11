@@ -1,6 +1,6 @@
 ---
 sidebar_label: Bots
-sidebar_position: 11
+sidebar_position: 3
 ---
 
 # Create an XMTP message bot
@@ -54,10 +54,10 @@ By default, the bot connects to the `dev` network. If you want to connect to pro
 
 - Need someone to send a test message to? Try these addresses:
 
-    - `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
-    
-        Message this XMTP message bot to get an immediate automated reply.
-    
-    - `hi.xmtp.eth` (`0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0`)
-    
-        Message the XMTP Labs team and a human will reply, though not as quickly as `gm.xmtp.eth`! 🤖
+  - `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
+
+    Message this XMTP message bot to get an immediate automated reply.
+
+  - `hi.xmtp.eth` (`0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0`)
+
+    Message the XMTP Labs team and a human will reply, though not as quickly as `gm.xmtp.eth`! 🤖

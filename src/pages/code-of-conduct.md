@@ -1,7 +1,6 @@
 ---
 sidebar_label: Code of conduct
-sidebar_position: 4
-slug: community/code-of-conduct
+sidebar_position: 5
 ---
 
 # XMTP code of conduct

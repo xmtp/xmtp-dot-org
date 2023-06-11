@@ -104,20 +104,8 @@ const config = {
           {
             type: "dropdown",
             position: "right",
-            label: "Community",
+            label: "Use cases",
             items: [
-              {
-                to: "community",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Join in and contribute</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Join in and contribute to the XMTP community</div></div></div>`,
-              },
-              {
-                to: "grants",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Rocket icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Grants</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Apply for a grant for a project that fosters ecosystem growth</div></div></div>`,
-              },
               {
                 to: "built-with-xmtp",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
@@ -125,10 +113,29 @@ const config = {
                 <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
               },
               {
-                to: "community/code-of-conduct",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield with a check icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Foster a safe and positive XMTP community experience</div></div></div>`,
+                to: "/use-cases/messaging",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,
+              },
+              {
+                to: "/use-cases/finance",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Finance</div></div>`,
+              },
+              {
+                to: "/use-cases/marketing",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
+              },
+              {
+                to: "/use-cases/support",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
+              },
+              {
+                to: "/use-cases/commerce",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/concepts-icon.svg" alt="Sparkle icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
               },
             ],
           },
@@ -137,12 +144,6 @@ const config = {
             position: "right",
             label: "Resources",
             items: [
-              {
-                to: "docs/changelog",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/gift-icon.svg" alt="Gift icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Changelog</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Latest releases</div></div></div>`,
-              },
               {
                 to: "roadmap",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map-icon.svg" alt="Map icon" /></div>
@@ -162,10 +163,16 @@ const config = {
                  <div class="subtext text-sm text-normal whitespace-pre-line">Overview of XMTP security</div></div></div>`,
               },
               {
-                to: "docs/concepts/faq",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/question-mark-icon.svg" alt="Shield with a check icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">FAQ</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Network, fees, storage, message patterns, and more</div></div></div>`,
+                to: "/docs/contribute",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Contribute to the XMTP community</div></div></div>`,
+              },
+              {
+                to: "grants",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Rocket icon"/></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Grants</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Apply for a grant for a project that fosters ecosystem growth</div></div></div>`,
               },
             ],
           },
@@ -263,14 +270,6 @@ const config = {
             title: "Build",
             items: [
               {
-                label: `Start building`,
-                to: `/docs/build/start-building`,
-              },
-              {
-                label: `Build a quickstart app`,
-                to: `/docs/developer-quickstart`,
-              },
-              {
                 label: `Identity resolution`,
                 to: `/docs/build/identity-resolution`,
               },
@@ -288,41 +287,17 @@ const config = {
               },
               {
                 label: `Broadcast`,
-                to: `/docs/build/broadcast`,
+                to: `/tutorials/broadcast`,
               },
               {
                 label: `Bots`,
-                to: `/docs/build/bots`,
-              },
-              {
-                label: `Performance`,
-                to: `/docs/build/performance`,
-              },
-              {
-                label: `Use cases`,
-                to: `/docs/use-cases`,
-              },
-              {
-                label: `Test`,
-                to: `/docs/build/test-your-app`,
-              },
-              {
-                label: "Changelog",
-                to: "/docs/changelog",
+                to: `/tutorials/bots`,
               },
             ],
           },
           {
             title: "Concepts",
             items: [
-              {
-                label: `Intro to XMTP`,
-                to: `/docs/introduction`,
-              },
-              {
-                label: `FAQ`,
-                to: `/docs/concepts/faq`,
-              },
               {
                 label: `Architecture`,
                 to: `/docs/concepts/architectural-overview`,
@@ -352,10 +327,6 @@ const config = {
                 to: `/docs/concepts/algorithms-in-use`,
               },
               {
-                label: `Contribute`,
-                to: `/docs/concepts/contributing`,
-              },
-              {
                 label: `XIPs`,
                 to: `/docs/concepts/xips`,
               },
@@ -365,8 +336,8 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Join in and contribute",
-                to: "community",
+                label: "Contribute",
+                to: "/docs/contribute",
               },
               {
                 label: "Grants",
@@ -378,7 +349,7 @@ const config = {
               },
               {
                 label: "Code of conduct",
-                to: "/community/code-of-conduct",
+                to: "code-of-conduct",
               },
               {
                 label: "Discord",
@@ -391,10 +362,6 @@ const config = {
               {
                 label: "GitHub Discussions",
                 href: "https://github.com/orgs/xmtp/discussions",
-              },
-              {
-                label: "Careers at XMTP Labs",
-                href: "https://blog.xmtp.com/careers/",
               },
             ],
           },
@@ -422,8 +389,12 @@ const config = {
                 to: "/docs/concepts/faq",
               },
               {
-                label: "XMTP status page",
+                label: "Status page",
                 href: "https://status.xmtp.com/",
+              },
+              {
+                label: "Careers",
+                href: "https://blog.xmtp.com/careers/",
               },
             ],
           },

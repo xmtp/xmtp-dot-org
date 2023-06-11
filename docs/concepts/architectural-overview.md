@@ -223,4 +223,4 @@ With XMTP network interactions handled by the message API client, developers can
 - Custom content types  
   To learn more, see [Content types](content-types).
 
-Developers can also help shape XMTP by participating in [XMTP Improvement Proposals (XIPs)](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) and [contributing](contributing) to XMTP SDKs and tools.
+Developers can also help shape XMTP by participating in [XMTP Improvement Proposals (XIPs)](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) and [contributing](/docs/contribute) to XMTP SDKs and tools.

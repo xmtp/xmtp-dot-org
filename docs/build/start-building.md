@@ -89,9 +89,6 @@ Be sure to watch relevant repos to be notified about new releases, which might i
    - [Built with XMTP](/built-with-xmtp/)  
      Explore a curated showcase of apps built with XMTP.
 
-   - [Awesome XMTP](https://github.com/xmtp/awesome-xmtp)  
-     Explore a list of project repos using XMTP.
-
 6. **You probably have some great questions by now! Check out these resources:**
 
    - [FAQ](/docs/concepts/faq)
@@ -151,7 +148,7 @@ Consider following these UX best practices.
 
 ### Disclose signature storage
 
-- If your app stores a signature to read and send XMTP messages on behalf of a user, such as in a [broadcast message](/docs/build/broadcast) use case, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature.
+- If your app stores a signature to read and send XMTP messages on behalf of a user, such as in a [broadcast message](/tutorials/broadcast) use case, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature.
 
   For example:
 
@@ -283,7 +280,7 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 
 ## Keep in touch post-launch
 
-- Keep in touch using the [XMTP community platform](/community) that works best for you. This helps ensure that you hear about the latest SDK and content type releases, as well as upgrade and deprecation notices.
+- Keep in touch using the [XMTP community](https://discord.com/invite/xmtp) that works best for you. This helps ensure that you hear about the latest SDK and content type releases, as well as upgrade and deprecation notices.
 
 - Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/) to share your app metrics. Let’s test hypotheses and learn together to help ensure interaction success and improve XMTP for all.
 
