@@ -6,22 +6,22 @@
   },
   {
     "name": "Resolve identities using the Everyname API",
-    "image": "/assets/images/everyname-d724f2843548656ee35a215a06c9b364.png",
+    "image": "img/uc-everyname.png",
     "href": "/blog/everyname-resolution"
   },
   {
     "name": "How to send remote attachments with XMTP & Thirdweb SDKs",
-    "image": "/assets/images/hero-6278782df60d268e6a2e11d98e8414bb.png",
+    "image": "img/uc-thirdweb.png",
     "href": "/blog/thirdbweb-wallet-remote-attachments"
   },
   {
     "name": "Integrating Multiple Profiles with Lens",
-    "image": "/assets/images/uc-lens-a293586c53f252b7756e3d5f07503888.png",
+    "image": "img/uc-lens.png",
     "href": "/blog/Integrating-Multiple-Profiles-with-Lens"
   },
   {
     "name": "Add Unstoppable Resolution to your XMTP application",
-    "image": "/assets/images/uc-uns-d17819edff2aa5a8c84a66135231572e.png",
+    "image": "/img/uc-uns.png",
     "href": "https://unstoppabledomains.com/"
   }
 ]

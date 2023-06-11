@@ -4,14 +4,16 @@ import useBaseUrl from "@docusaurus/useBaseUrl/";
 
 const Tutorials = () => {
   return (
-    <div className="chain-list">
+    <div className="chain-list-blog">
       {ListOfTutorials.map((developer) => (
-        <div className="chain-item-3" key={developer.name}>
+        <div className="chain-item-blog" key={developer.name}>
           <img
             src={useBaseUrl(developer.image)}
             alt={"this is an image of the" + developer.name + " icon"}
           ></img>
-          <a>{developer.name}</a>
+          <h3>
+            <a href={developer.href}>{developer.name}</a>
+          </h3>
         </div>
       ))}
     </div>

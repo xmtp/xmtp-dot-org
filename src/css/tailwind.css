@@ -803,24 +803,28 @@ ul li a:before {
   text-align: center;
 }
 
-.chain-item-3 {
-  display: flex;
-  flex-direction: column;
-  width: calc(50% - 20px); /* 20% for 5 columns, subtracting margin */
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  text-align: center;
-}
-
-.chain-item-3 a {
-  text-align: left;
-  margin-left: 5px;
-}
 .chain-item img {
   max-width: 80px; /* 20% smaller than before */
   margin-bottom: 10px;
 }
+/*blog*/
+
+.chain-list-blog {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  text-align: left !important;
+}
+
+.chain-item-blog {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 20px); /* 20% for 5 columns, subtracting margin */
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 /*discord*/
 .navbar__discord-button {
   color: white;
