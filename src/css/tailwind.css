@@ -821,3 +821,23 @@ ul li a:before {
   max-width: 80px; /* 20% smaller than before */
   margin-bottom: 10px;
 }
+/*discord*/
+.navbar__discord-button {
+  color: white;
+  border: none;
+  background-color: #5865f2; /* Discord's blurple color */
+  border-radius: 4px;
+  padding: 2px 11px;
+  cursor: pointer;
+  margin: 4px 0px 4px 11px;
+  transition-duration: 0.2s;
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.discord-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}

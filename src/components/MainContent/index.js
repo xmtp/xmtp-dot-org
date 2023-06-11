@@ -212,17 +212,6 @@ export const MainContent = ({ styles }) => {
                       </dd>
                     </div>
                   </dl>
-
-                  <Link
-                    to="/docs/build/start-building"
-                    className="bg-red-500 text-white border-none rounded-lg py-3 px-5 font-bold text-base w-44 mt-10 h-12 cursor-pointer hover:bg-red-600 mb-14 xl:mb-0 block hover:no-underline hover:text-white"
-                  >
-                    <img
-                      className="w-5 h-5 mr-2 align-middle"
-                      src="/img/xmtp-sm-icon.png"
-                    />
-                    Start building
-                  </Link>
                 </div>
 
                 <div className="-mx-4 mt-10 lg:col-start-1 lg:mt-0">
