@@ -300,7 +300,7 @@ const config = {
               },
               {
                 label: `Use cases`,
-                to: `/docs/build/use-cases`,
+                to: `/docs/use-cases`,
               },
               {
                 label: `Test`,
@@ -350,10 +350,6 @@ const config = {
               {
                 label: `Algorithms`,
                 to: `/docs/concepts/algorithms-in-use`,
-              },
-              {
-                label: `Works with XMTP`,
-                to: `/docs/concepts/works-with-xmtp`,
               },
               {
                 label: `Contribute`,
