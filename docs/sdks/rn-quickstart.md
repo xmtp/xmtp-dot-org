@@ -7,7 +7,7 @@ description: "These packages provide the XMTP client SDK for React apps, includi
 
 # Quickstart for the React Native XMTP client SDK
 
-![Status](https://img.shields.io/badge/Project_Status-Pre--Preview-red) ![Lint](https://github.com/xmtp/xmtp-android/actions/workflows/lint.yml/badge.svg)
+![Status](https://img.shields.io/badge/Project_Status-Alpha-red) ![Lint](https://github.com/xmtp/xmtp-android/actions/workflows/lint.yml/badge.svg)
 
 The [React Native XMTP client SDK](https://github.com/xmtp/xmtp-react-native) (`xmtp-react-native`) provides a package you can use to build with XMTP in a React Native or Expo app.
 
@@ -15,7 +15,7 @@ Build with this SDK to provide messaging between blockchain wallet addresses, in
 
 :::caution Important
 
-This SDK is in **Pre-Preview** status and ready for you to start experimenting with. However, we do **not** recommend using Pre-Preview software in production apps. Software in this status will change as we add features and iterate based on feedback.
+This SDK is in **alpha** status and ready for you to start experimenting with. However, we do **not** recommend using alpha software in production apps. Software in this status will change as we add features and iterate based on feedback.
 
 :::
 

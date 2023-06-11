@@ -7,13 +7,11 @@ description: 'xmtp-ios provides a Swift implementation of an XMTP message API cl
 
 # Quickstart for the Swift XMTP client SDK
 
-![Status](https://img.shields.io/badge/Project_Status-General_Availability-31CA54) ![Lint](https://github.com/xmtp/xmtp-ios/actions/workflows/lint.yml/badge.svg) 
+![Status](https://img.shields.io/badge/Project_Status-Production-31CA54) ![Lint](https://github.com/xmtp/xmtp-ios/actions/workflows/lint.yml/badge.svg) 
 
 The [Swift XMTP client SDK](https://github.com/xmtp/xmtp-ios) (`xmtp-ios`) provides a Swift implementation of an XMTP message API client for use with iOS apps.
 
 Build with this SDK to provide messaging between blockchain wallet addresses, including DMs, notifications, announcements, and more.
-
-This SDK is in **General Availability** status and ready for use in production.
 
 To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-ios/issues) in the `xmtp-ios` repo.
 
@@ -64,64 +62,6 @@ try await conversation.send(content: "gm")
 for try await message in conversation.streamMessages() {
   print("\(message.senderAddress): \(message.body)")
 }
-```
-
-## Create a client
-
-A client is created with `Client.create(account: SigningKey) async throws -> Client` that requires passing in an object capable of creating signatures on your behalf. The client will request a signature in two cases:
-
-1. To sign the newly generated key bundle. This happens only the very first time when a key bundle is not found in storage.
-2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started, including the very first time.
-
-:::info Important
-
-The client connects to the XMTP `dev` environment by default. [Use `ClientOptions`](#configure-the-client) to change this and other parameters of the network connection.
-
-:::
-
-```swift
-import XMTP
-
-// Create the client with a `SigningKey` from your app
-let client = try await Client.create(account: account, options: .init(api: .init(env: .production)))
-```
-
-### Creating a client from saved keys
-
-You can save your keys from the client via the `privateKeyBundle` property:
-
-```swift
-// Create the client with a `SigningKey` from your app
-let client = try await Client.create(account: account, options: .init(api: .init(env: .production)))
-
-// Get the key bundle
-let keys = client.privateKeyBundle
-
-// Serialize the key bundle and store it somewhere safe
-let keysData = try keys.serializedData()
-```
-
-Once you have those keys, you can create a new client with `Client.from`:
-
-```swift
-let keys = try PrivateKeyBundle(serializedData: keysData)
-let client = try Client.from(bundle: keys, options: .init(api: .init(env: .production)))
-```
-
-### Configure the client
-
-You can configure the client's network connection and key storage method with these optional parameters of `Client.create`:
-
-| Parameter | Default | Description                                                                                                                                                                                                                                                                     |
-| --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| env       | `dev`   | Connect to the specified XMTP network environment. Valid values include `.dev`, `.production`, or `.local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments). |
-
-#### Configure `env`
-
-```swift
-// Configure the client to use the `production` network
-let clientOptions = ClientOptions(api: .init(env: .production))
-let client = try await Client.create(account: account, options: clientOptions)
 ```
 
 ## Configure content types
@@ -458,26 +398,3 @@ The following table provides the deprecation schedule.
 | There are no deprecations scheduled for `xmtp-ios` at this time. |           |                 |           |
 
 Bug reports, feature requests, and PRs are welcome in accordance with these [contribution guidelines](https://github.com/xmtp/xmtp-ios/blob/main/CONTRIBUTING.md).
-
-## XMTP `production` and `dev` network environments
-
-XMTP provides both `production` and `dev` network environments to support the development phases of your project.
-
-The `production` and `dev` networks are completely separate and not interchangeable.
-For example, for a given blockchain account, its XMTP identity on `dev` network is completely distinct from its XMTP identity on the `production` network, as are the messages associated with these identities. In addition, XMTP identities and messages created on the `dev` network can't be accessed from or moved to the `production` network, and vice versa.
-
-:::info Important
-
-When you [create a client](#create-a-client), it connects to the XMTP `dev` environment by default. To learn how to use the `env` parameter to set your client's network environment, see [Configure the client](#configure-the-client).
-
-:::
-
-The `env` parameter accepts one of three valid values: `dev`, `production`, or `local`. Here are some best practices for when to use each environment:
-
-- `dev`: Use to have a client communicate with the `dev` network. As a best practice, set `env` to `dev` while developing and testing your app. Follow this best practice to isolate test messages to `dev` inboxes.
-
-- `production`: Use to have a client communicate with the `production` network. As a best practice, set `env` to `production` when your app is serving real users. Follow this best practice to isolate messages between real-world users to `production` inboxes.
-
-- `local`: Use to have a client communicate with an XMTP node you are running locally. For example, an XMTP node developer can set `env` to `local` to generate client traffic to test a node running locally.
-
-The `production` network is configured to store messages indefinitely. XMTP may occasionally delete messages and keys from the `dev` network, and will provide advance notice in the [XMTP Discord community](https://discord.gg/xmtp).
