@@ -7,7 +7,7 @@ description: "xmtp-android provides a Kotlin implementation of an XMTP message A
 
 # Quickstart for the Kotlin XMTP client SDK
 
-![Status](https://img.shields.io/badge/Project_Status-Developer_Preview-yellow) ![Test](https://github.com/xmtp/xmtp-android/actions/workflows/test.yml/badge.svg) ![Lint](https://github.com/xmtp/xmtp-android/actions/workflows/lint.yml/badge.svg)
+![Status](https://img.shields.io/badge/Project_Status-Beta-yellow) ![Test](https://github.com/xmtp/xmtp-android/actions/workflows/test.yml/badge.svg) ![Lint](https://github.com/xmtp/xmtp-android/actions/workflows/lint.yml/badge.svg)
 
 The [Kotlin XMTP client SDK](https://github.com/xmtp/xmtp-android) (`xmtp-android`) provides a Kotlin implementation of an XMTP message API client for use with Android apps.
 
@@ -15,7 +15,7 @@ Build with this SDK to provide messaging between blockchain wallet addresses, in
 
 :::caution Important
 
-This SDK is in **Developer Preview** status and ready for you to start building. However, we do **not** recommend using Developer Preview software in production apps. Software in this status may change based on feedback.
+This SDK is in **beta** status and ready for you to start building. However, we do **not** recommend using beta software in production apps. Software in this status may change based on feedback.
 
 :::
 

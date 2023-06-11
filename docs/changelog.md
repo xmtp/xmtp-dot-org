@@ -8,7 +8,7 @@ sidebar_position: 6
 
 # Changelog for XMTP
 
-This changelog provides information about release milestones for XMTP SDKs, developer tools, and node software. For future milestones, see the [Roadmap](/roadmap).
+This changelog provides information about release milestones for XMTP SDKs, developer tools, and node software. For information about future milestones and release status definitions, see the [Roadmap](/roadmap).
 
 ---
 
@@ -26,7 +26,7 @@ This release refactored the build process for `xmtp-js`, reducing the web bundle
 
 Provides `xmtpd` (XMTP daemon), an **experimental** version of XMTP node software. Making this repo public marks a crucial milestone in XMTP's progressive decentralized journey. **[Run an experimental node](https://github.com/xmtp/xmtpd/blob/main/README.md)** (May 9)
 
-## [React client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) is in Developer Preview
+## [React client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) is in Beta
 
 Provides the XMTP client SDK for React apps written in TypeScript, making it easier and faster for web apps to integrate messaging via hooks and plug-n-play components. **[Read the announcement](https://twitter.com/xmtp_/status/1654176551565692928)** (May 4)
 
@@ -56,11 +56,11 @@ This release provides:
 
 Provides tools to help you build a bot on the XMTP network. (Apr 11)
 
-## [Swift client SDK](https://github.com/xmtp/xmtp-ios) is GA (xmtp-ios)
+## [Swift client SDK](https://github.com/xmtp/xmtp-ios) is Production Ready (xmtp-ios)
 
 Provides a Swift implementation of an XMTP message API client for use with iOS apps. (Apr 10)
 
-## [Dart client SDK](https://github.com/xmtp/xmtp-flutter) is GA (xmtp-flutter)
+## [Dart client SDK](https://github.com/xmtp/xmtp-flutter) is Production Ready (xmtp-flutter)
 
 Provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps. (Apr 10)
 
@@ -68,11 +68,11 @@ Provides a Dart implementation of an XMTP message API client for use with Flutte
 
 #### Mar 2023
 
-## [React Native client SDK repo](https://github.com/xmtp/xmtp-react-native) is public and in Pre-Preview (xmtp-react-native)
+## [React Native client SDK repo](https://github.com/xmtp/xmtp-react-native) is public and in Alpha (xmtp-react-native)
 
 Provides a package you can use to build with XMTP in a React Native or Expo app. (Mar 29)
 
-## [Kotlin client SDK](https://github.com/xmtp/xmtp-android) is in Developer Preview (xmtp-android)
+## [Kotlin client SDK](https://github.com/xmtp/xmtp-android) is in Beta (xmtp-android)
 
 Provides a Kotlin implementation of an XMTP message API client for use with Android apps. (Mar 15)
 
@@ -100,11 +100,11 @@ Demonstrates core and advanced capabilities of the [JavaScript client SDK](https
 
 #### Dec 2022
 
-## [Swift client SDK repo](https://github.com/xmtp/xmtp-ios) is public and in Developer Preview (xmtp-ios)
+## [Swift client SDK repo](https://github.com/xmtp/xmtp-ios) is public and in Beta (xmtp-ios)
 
 Provides a Swift implementation of an XMTP message API client for use with iOS apps. (Dec 20)
 
-## [Dart client SDK repo](https://github.com/xmtp/xmtp-flutter) is public and in Developer Preview (xmtp-flutter)
+## [Dart client SDK repo](https://github.com/xmtp/xmtp-flutter) is public and in Beta (xmtp-flutter)
 
 Provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps. (Dec 20)
 
@@ -116,7 +116,7 @@ The latest version of XMTP brings conversation filtering and improvements to pri
 
 #### Nov 2022
 
-## [Example XMTP push notifications server](https://github.com/xmtp/example-notification-server-go) in Developer Preview (example-notification-server-go)
+## [Example XMTP push notifications server](https://github.com/xmtp/example-notification-server-go) in Beta (example-notification-server-go)
 
 Provides an example push notification server, written in Golang. (Nov 18)
 

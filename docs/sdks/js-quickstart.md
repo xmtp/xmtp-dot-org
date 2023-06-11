@@ -7,7 +7,7 @@ description: "The XMTP client SDK for JavaScript (xmtp-js) provides a TypeScript
 
 # Quickstart for the JavaScript XMTP client SDK
 
-![Status](https://img.shields.io/badge/Project_Status-General_Availability-brightgreen)
+![Status](https://img.shields.io/badge/Project_Status-Production-brightgreen)
 ![Test](https://github.com/xmtp/xmtp-js/actions/workflows/test.yml/badge.svg)
 ![Lint](https://github.com/xmtp/xmtp-js/actions/workflows/lint.yml/badge.svg)
 ![Build](https://github.com/xmtp/xmtp-js/actions/workflows/build.yml/badge.svg)
