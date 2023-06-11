@@ -1,7 +1,7 @@
 ---
 sidebar_label: Interoperable inbox
 sidebar_position: 4
-description: 'With XMTP, each user gets an interoperable inbox that provides access to all of their XMTP messages.'
+description: "With XMTP, each user gets an interoperable inbox that provides access to all of their XMTP messages."
 ---
 
 # Messages meet users where they are: The XMTP interoperable inbox
@@ -53,4 +53,3 @@ To learn more about message encryption, see [Invitation and message encryption](
 To explore the ecosystem of apps built with XMTP, see:
 
 - [Built with XMTP](/built-with-xmtp): A curated showcase of apps built with XMTP‍
-- [Awesome XMTP](https://github.com/xmtp/awesome-xmtp): A growing list of GitHub repos for projects built with XMTP‍

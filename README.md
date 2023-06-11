@@ -26,10 +26,10 @@ See a bug on the `xmtp.org` website or in the documentation? [Open a bug report]
 
 Examples of bugs include things like:
 
-  - Inaccurate or confusing documentation
-  - Spelling or grammatical errors
-  - Broken links or images
-  - Broken or confusing website functionality
+- Inaccurate or confusing documentation
+- Spelling or grammatical errors
+- Broken links or images
+- Broken or confusing website functionality
 
 If you open a bug and want to work on it, comment on the issue to let us know.
 
@@ -105,7 +105,7 @@ A PR is a request to add (or pull) your content updates into the project and pub
 
 7. When you create a PR, the `xmtp.org` team receives a notification to [review it](#what-to-expect).
 
-_The guidance in this section is inspired by the following public sector information licensed under the Open Government Licence v3.0: [Propose a content change using GitHub](https://design-system.service.gov.uk/community/propose-a-content-change-using-github/) by the GOV.UK Design System._
+_The guidance in this section is inspired by the following public sector information licensed under the Open Government Licence v3.0: [Propose a content change using GitHub](https://design-system.service.gov.uk/use-casespropose-a-content-change-using-github/) by the GOV.UK Design System._
 
 ## Set up a local environment
 
@@ -141,17 +141,17 @@ As you make and save changes to markdown files, the website automatically update
 
 1. Run this command to generate static website content into the `build` directory.
 
-    ```bash
-    $ npm run build
-    ```
+   ```bash
+   $ npm run build
+   ```
 
 2. Run this command to start a local server to view the static website content generated to the `build` directory.
 
-    ```bash
-    $ npm run serve
-    ```
+   ```bash
+   $ npm run serve
+   ```
 
-    The command opens the website at http://localhost:3000/ in your default browser.
+   The command opens the website at http://localhost:3000/ in your default browser.
 
 Note that any changes you save to markdown files aren't reflected in this static build because the command serves the website from the `build` directory, not the editable markdown files.
 

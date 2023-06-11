@@ -1,7 +1,6 @@
 ---
 sidebar_label: Grants
-sidebar_position: 2
-toc_max_heading_level: 2
+sidebar_position: 6
 image: https://github.com/xmtp/xmtp-dot-org/raw/main/static/img/XMTP-Grants_Cover.png
 ---
 
