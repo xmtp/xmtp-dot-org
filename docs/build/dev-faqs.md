@@ -26,6 +26,7 @@ To connect web3 wallets to your app:
 
 - [Thirdweb](https://thirdweb.com/)
   - Example implementation in the [XMTP React Native example app](https://github.com/xmtp/xmtp-react-native/blob/main/example/src/AuthView.tsx#L7)
+  - Example implementation in the [XMTP React JS example app](/blog/thirdbweb-wallet-remote-attachments)
 - [WalletConnect](https://walletconnect.com/)
   - Example implementation in the [XMTP Inbox Web app](https://github.com/xmtp-labs/xmtp-inbox-web)
 - [wagmi](https://wagmi.sh/)

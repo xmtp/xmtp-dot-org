@@ -257,7 +257,7 @@ const config = {
               },
               {
                 label: `Push notifications`,
-                to: `/docs/build/handle-push-notifications`,
+                to: `/docs/build/notifications`,
               },
               {
                 label: `Broadcast`,
