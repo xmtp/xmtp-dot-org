@@ -1,7 +1,7 @@
 ---
 sidebar_label: FAQ
 sidebar_position: 1
-description: 'Get answers to the most frequently asked questions about XMTP.'
+description: "Get answers to the most frequently asked questions about XMTP."
 ---
 
 # FAQ about XMTP
@@ -191,21 +191,3 @@ To learn more about how the XMTP Inbox chat app is built, see the [xmtp-inbox-we
 XMTP natively supports one-to-one messaging. One-to-many broadcast messages, or announcements, can be constructed using the XMTP SDK.
 
 To learn more, see [Send a broadcast message](/docs/build/broadcast).
-
-### Does XMTP support group messaging?
-
-XMTP natively supports one-to-one messaging. Group messaging can be constructed using the XMTP SDK. Based on developer and community feedback, we are researching native support for these use cases.
-
-Have other questions or ideas about group messaging? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
-
-## SDK
-
-### Which languages and environments does the XMTP SDK support?
-
-The XMTP SDK is [available for multiple languages](/docs/introduction#xmtp-sdks-and-example-apps#sdks), including JavaScript, Kotlin, Swift, and Dart.
-
-Have other questions or ideas for future language or environment support? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
-
-### Which web3 libraries does the XMTP SDK require?
-
-The XMTP SDK currently requires you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/), such as [wagmi](https://wagmi.sh/).

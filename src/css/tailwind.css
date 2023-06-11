@@ -700,8 +700,7 @@ ul li a:before {
   content: '• ';
 }*/
 
-/*Fabri*/
-
+/*Tabs*/
 .tabs {
   background: rgb(246, 247, 248);
   border: solid rgba(0, 0, 0, 0.1);
@@ -718,6 +717,24 @@ ul li a:before {
 }
 .tabs-container .margin-top--md {
   margin: 0px !important;
+}
+.tabs-container p {
+  padding: 15px;
+  margin: 0px !important;
+  font-size: 14px;
+  line-height: 20px;
+  background: var(--ifm-pre-background);
+  border-left: 2px solid var(--ifm-pre-background);
+}
+.tabs-container ul {
+  background: var(--ifm-pre-background);
+  font-size: 14px;
+  margin: 0px !important;
+  line-height: 20px;
+}
+.tabs {
+  background: var(--ifm-pre-background);
+  border: solid rgba(0, 0, 0, 0.1);
 }
 /*image turtorials*/
 .bwx-guides li {
@@ -763,4 +780,30 @@ ul li a:before {
 /*SIDEBAR*/
 :root {
   --doc-sidebar-width: 230px !important;
+}
+
+/*blockchain logos*/
+.chain-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.chain-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(20% - 20px); /* 20% for 5 columns, subtracting margin */
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+}
+
+.chain-item img {
+  max-width: 70px; /* 20% smaller than before */
+  margin-bottom: 10px;
 }

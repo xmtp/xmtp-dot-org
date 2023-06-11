@@ -1,6 +1,7 @@
 ---
-sidebar_label: Works with XMTP
-sidebar_position: 9
+sidebar_label: Dev FAQ's
+title: Developer FAQ's
+sidebar_position: 15
 description: "Here are just a few of the composable building blocks of web3 that work well with XMTP."
 ---
 
@@ -19,13 +20,7 @@ import scroll from '/docs/concepts/img/scroll-logo.png';
 
 In the spirit of web3 composability, here are **just a few** of the building blocks that work well with XMTP. Building your app with these tools can help you deliver and distribute an app—faster and with quality.
 
-:::tip
-
-**This list is not exhaustive** and is just a starting point. A highly extensible protocol like XMTP can work with more tools than those listed in each section.
-
-:::
-
-## Wallet connection
+## What wallet connection tools work with XMTP?
 
 To connect web3 wallets to your app:
 
@@ -37,30 +32,20 @@ To connect web3 wallets to your app:
 
 XMTP client SDKs require you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/). These wallet connection tools, as well as others, provide this capability.
 
-## Message bots
-
-To build message bots to help with testing and user onboarding experiences:
-
-- [XMTP Bot Starter](https://github.com/xmtp/xmtp-bot-starter)
-
 ## Storage
 
 To store encrypted and encoded message payload content:
 
+- [IPFS](https://ipfs.io/)
 - [web3.storage](https://web3.storage/)
+
   - Example implementation in [`xmtp-js` remote content types](https://github.com/xmtp/xmtp-js-content-types)
   - Tutorial: [Introducing remote media attachments](/blog/attachments-and-remote-attachments)
 
-## Decentralized identifiers
+- [ThirdwebStorage](https://portal.thirdweb.com/storage)
+  - Tutorial: [How to send remote attachments with XMTP & Thirdweb SDKs](/blog/thirdbweb-wallet-remote-attachments)
 
-To support decentralized identity management:
-
-- [Ethereum Name Service](https://ens.domains/) (ENS)
-  - Example implementation in [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)
-- [Coinbase cb.id](https://help.coinbase.com/en/wallet/managing-account/coinbase-ens-support)
-- [Lens](https://www.lens.xyz/)
-
-## Decentralized social
+## Does XTMP works with Social
 
 - [Lens](https://www.lens.xyz/)
   - Example implementation in [Lenster](https://github.com/lensterxyz/lenster)
@@ -68,12 +53,6 @@ To support decentralized identity management:
 - [CyberConnect](https://link3.to/cyberconnect)
   - Example implementation in the [CyberConnect & XMTP Integration Demo App](https://github.com/cyberconnecthq/cc-xmtp-chatapp)
   - Tutorial: [Build messaging for CyberConnect profiles](https://cyberconnect.hashnode.dev/integrating-xmtp-into-cyberconnect-a-guide)
-
-## Decentralized app store
-
-To launch your own dApp stores and list any dApp, including your own:
-
-- Polygon [dApp Store Kit](https://docs.dappstorekit.io/docs/how%20to%20use%20the%20dapp%20store%20kit/dapp-registry-management/)
 
 ## Wallet apps
 
@@ -102,50 +81,59 @@ XMTP is also chain-agnostic, so multi-chain support is possible.
 
 Here are **just a few** of the chains supported by XMTP:
 
-<img src={arbitrum} style={{width:"100px"}} alt="Arbitrum logo"/>
+<div class="chain-list" >
+  <div class="chain-item">
+      <img src={arbitrum} style={{width:"100px"}} alt="Arbitrum logo"/>
+      <a href="https://arbitrum.foundation/">Arbitrum</a>
+  </div>
+    <div class="chain-item">
+      <img src={avalanche} style={{width:"100px"}} alt="Avalanche logo"/>
+      <a href="https://www.avax.com/">Avalanche</a>
+  </div>
+    <div class="chain-item">
+      <img src={base} style={{width:"100px"}} alt="Base logo"/>
+      <a href="https://base.org/">Base</a>
+  </div>
+    <div class="chain-item">
+  <img src={bnbchain} style={{width:"100px"}}/>
+      <a href="https://www.bnbchain.org/">(BNB) Chain</a>
+  </div>
+    <div class="chain-item">
+      <img src={ethereum} style={{width:"100px"}} alt="Ethereum logo"/>
+      <a href="https://ethereum.org//">Ethereum</a>
+  </div>
+    <div class="chain-item">
+      <img src={hermez} style={{width:"100px"}} alt="Hermez logo"/>
+      <a href="https://docs.hermez.io/Hermez_1.0/about/scalability/">Hermez</a>
+  </div>
+    <div class="chain-item">
+      <img src={linea} style={{width:"100px"}} alt="Linea logo"/>
+      <a href="https://linea.build/">zk-EVM</a>
+  </div>
+    <div class="chain-item">
+      <img src={optimism} style={{width:"100px"}} alt="Optimism logo"/>
+      <a href="https://www.optimism.io/">Optimism</a>
+  </div>
+    <div class="chain-item">
+      <img src={polygon} style={{width:"100px"}} alt="Polygon logo"/>
+      <a href="https://polygon.technology/">Polygon</a>
 
-[Arbitrum](https://arbitrum.foundation/)
+  </div>
+    <div class="chain-item">
+      <img src={scroll} style={{width:"100px"}} alt="Scroll logo"/>
+      <a href="https://www.scroll.io/">Scroll</a>
 
-<img src={avalanche} style={{width:"100px"}} alt="Avalanche logo"/>
+  </div>
+</div>
 
-[Avalanche: Contract Chain (C-Chain)](https://www.avax.com/)
+## SDK
 
-<img src={base} style={{width:"100px"}} alt="Base logo"/>
+### Which languages and environments does the XMTP SDK support?
 
-[Base](https://base.org/) (Optimistic L2)
+The XMTP SDK is [available for multiple languages](/docs/introduction#xmtp-sdks-and-example-apps#sdks), including JavaScript, Kotlin, Swift, and Dart.
 
-<img src={bnbchain} style={{width:"100px"}}/>
+Have other questions or ideas for future language or environment support? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
-[Build N Build (BNB) Chain](https://www.bnbchain.org/)
+### Which web3 libraries does the XMTP SDK require?
 
-<img src={ethereum} style={{width:"100px"}} alt="Ethereum logo"/>
-
-[Ethereum](https://ethereum.org/)
-
-<img src={hermez} style={{width:"100px"}} alt="Hermez logo"/>
-
-[Hermez](https://docs.hermez.io/Hermez_1.0/about/scalability/) zk-EVM
-
-<img src={linea} style={{width:"100px"}} alt="Linea logo"/>
-
-[Linea](https://linea.build/) zk-EVM
-
-<img src={optimism} style={{width:"100px"}} alt="Optimism logo"/>
-
-[Optimism](https://www.optimism.io/)
-
-<img src={polygon} style={{width:"100px"}} alt="Polygon logo"/>
-
-[Polygon](https://polygon.technology/)
-
-<img src={scroll} style={{width:"100px"}} alt="Scroll logo"/>
-
-[Scroll](https://scroll.io/)
-
-:::tip
-
-Want to propose a path to compatibility for other popular chains such as Aptos, Bitcoin, Cosmos, Flow, Hedera Hashgraph, Polkadot, Solana, Starkware, Stellar, Sui, and Tezos? Do it via an [XMTP grant](/grants)!
-
-Have you built with a tool that works well with XMTP? Let's add it to this page. Share your experience with `prxshant.eth` on [xmtp.chat](https://xmtp.chat/inbox) or using the feedback widget at the bottom of this page.
-
-:::
+The XMTP SDK currently requires you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/), such as [wagmi](https://wagmi.sh/).
