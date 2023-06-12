@@ -5,11 +5,9 @@ toc_max_heading_level: 4
 description: "These packages provide the XMTP client SDK for React apps, including React hooks and components."
 ---
 
-# Quickstart for the React XMTP client SDK hooks and UI components
+# Quickstart for React SDK hooks and UI components
 
 ## React SDK hooks
-
-![Status](https://img.shields.io/badge/Project_Status-Beta-yellow)
 
 This package provides the [React XMTP client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk), including React hooks that provide ready-made logic for interacting with the XMTP network and work well with these [React components](#react-components).
 
@@ -85,7 +83,7 @@ createRoot(document.getElementById("root") as HTMLElement).render(
     <XMTPProvider>
       <App />
     </XMTPProvider>
-  </StrictMode>,
+  </StrictMode>
 );
 ```
 
@@ -137,7 +135,7 @@ The `useStreamConversations` hook listens for new conversations in real-time and
 import type { Conversation } from "@xmtp/react-sdk";
 
 const useStreamConversations: (
-  onConversation: (conversation: Conversation) => void,
+  onConversation: (conversation: Conversation) => void
 ) => {
   error: unknown;
 };
@@ -191,11 +189,11 @@ import type {
 } from "@xmtp/react-sdk";
 
 const useStartConversation: <T = string>(
-  options?: InvitationContext,
+  options?: InvitationContext
 ) => (
   peerAddress: string,
   message: T,
-  sendOptions?: SendOptions,
+  sendOptions?: SendOptions
 ) => Promise<Conversation | undefined>;
 ```
 
@@ -216,14 +214,14 @@ export const StartConversation: React.FC = () => {
     (e: ChangeEvent<HTMLInputElement>) => {
       setPeerAddress(e.target.value);
     },
-    [],
+    []
   );
 
   const handleMessageChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
       setMessage(e.target.value);
     },
-    [],
+    []
   );
 
   const handleStartConversation = useCallback(
@@ -235,7 +233,7 @@ export const StartConversation: React.FC = () => {
         setIsLoading(false);
       }
     },
-    [message, peerAddress, startConversation],
+    [message, peerAddress, startConversation]
   );
 
   return (
@@ -268,7 +266,7 @@ import type { Conversation, SendOptions } from "@xmtp/react-sdk";
 
 const useSendMessage: <T = string>(
   conversation: Conversation,
-  options?: SendOptions,
+  options?: SendOptions
 ) => (message: T, optionsOverride?: SendOptions) => Promise<void>;
 ```
 
@@ -291,14 +289,14 @@ export const SendMessage: React.FC<{ conversation: Conversation }> = ({
     (e: ChangeEvent<HTMLInputElement>) => {
       setPeerAddress(e.target.value);
     },
-    [],
+    []
   );
 
   const handleMessageChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
       setMessage(e.target.value);
     },
-    [],
+    []
   );
 
   const handleSendMessage = useCallback(
@@ -310,7 +308,7 @@ export const SendMessage: React.FC<{ conversation: Conversation }> = ({
         setIsLoading(false);
       }
     },
-    [message, peerAddress, sendMessage],
+    [message, peerAddress, sendMessage]
   );
 
   return (
@@ -353,13 +351,13 @@ export type UseMessagesOptions = ListMessagesOptions & {
    */
   onMessages?: (
     messages: DecodedMessage[],
-    options: ListMessagesOptions,
+    options: ListMessagesOptions
   ) => void;
 };
 
 const useMessages: (
   conversation?: Conversation,
-  options?: UseMessagesOptions,
+  options?: UseMessagesOptions
 ) => {
   error: unknown;
   hasMore: boolean;
@@ -455,7 +453,7 @@ import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
 
 const useStreamMessages: (
   conversation: Conversation,
-  onMessage: (message: DecodedMessage) => void,
+  onMessage: (message: DecodedMessage) => void
 ) => {
   error: unknown;
 };
@@ -560,10 +558,7 @@ Run `yarn dev` to build the SDK and watch for changes, which will trigger a rebu
 - `yarn test`: Runs all unit tests
 - `yarn typecheck`: Runs `tsc`
 
-
 ## React UI components
-
-![Status](https://img.shields.io/badge/Project_Status-Beta-yellow)
 
 This package provides [React UI components](https://github.com/xmtp/xmtp-web/tree/main/packages/react-components) for building React apps with XMTP.
 
@@ -579,7 +574,7 @@ To keep up with the latest component developments, see the [Issues tab](https://
 
 #### Components
 
-These ready-made UI components provide building blocks that can help you quickly a chat app with XMTP. These components pair well with the [React SDK hooks](#react-sdk-hooks). 
+These ready-made UI components provide building blocks that can help you quickly a chat app with XMTP. These components pair well with the [React SDK hooks](#react-sdk-hooks).
 
 The package also provides a Storybook that outlines each component's API, use cases, and design that you can use as an interactive learning tool.
 
@@ -633,13 +628,11 @@ Run `yarn dev` to build the package and watch for changes, which will trigger a 
 - `yarn test`: Runs all unit tests
 - `yarn typecheck`: Runs `tsc`
 
-
 ## Breaking revisions
 
 Because these packages are in active development, you should expect breaking revisions that might require you to adopt the latest release to enable your app to continue working as expected.
 
 XMTP communicates about breaking revisions in the [XMTP Discord community](https://discord.gg/xmtp), providing as much advance notice as possible. Additionally, breaking revisions in a release are described on the [Releases page](https://github.com/xmtp/xmtp-react/releases).
-
 
 ## Deprecation
 
@@ -650,8 +643,8 @@ Older versions of these packages will eventually be deprecated, which means:
 
 The following table provides the deprecation schedule.
 
-| Announced                                                      | Effective | Minimum Version | Rationale |
-| -------------------------------------------------------------- | --------- | --------------- | --------- |
+| Announced                                                            | Effective | Minimum Version | Rationale |
+| -------------------------------------------------------------------- | --------- | --------------- | --------- |
 | There are no deprecations scheduled for these packages at this time. |           |                 |           |
 
 Bug reports, feature requests, and PRs are welcome in accordance with these [contribution guidelines](https://github.com/xmtp/xmtp-react/blob/main/CONTRIBUTING.md).

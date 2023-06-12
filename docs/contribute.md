@@ -3,7 +3,7 @@ sidebar_label: Contribute
 sidebar_position: 5
 ---
 
-# Contribute contribute to the XMTP community
+# Contribute to the XMTP community
 
 There are many ways to participate in the XMTP community, whether you are building with XMTP, working on improving the protocol, or simply interested in learning more about XMTP.
 

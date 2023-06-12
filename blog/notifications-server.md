@@ -5,11 +5,13 @@ title: "Setup Guide for XMTP Notification Server"
 date: 2023-11-06
 authors: fabri
 description: "Setup Guide for XMTP Notification Server on macOS."
-image: ./media/notifications/cmd3.png
+image: ./media/notifications/bells.png
 tags:
   - Notifications
   - Server
 ---
+
+![](./media/notifications/bells.png)
 
 # Setup Guide for XMTP Notification Server on macOS
 
