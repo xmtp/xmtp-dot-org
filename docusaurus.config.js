@@ -108,38 +108,38 @@ const config = {
             items: [
               {
                 to: "built-with-xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">✨</div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/sparkles-icon.svg" alt="Sparkles icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
                 <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
               },
               {
                 to: "/docs/use-cases/guides",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">📚</div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/book-icon.svg" alt="Book icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Guides</div></div>`,
               },
               {
                 to: "/docs/use-cases/messaging",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">💬</div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/messaging-icon.svg" alt="Messaging icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,
               },
               {
                 to: "/docs/use-cases/finance",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">💰</div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Finance</div></div>`,
               },
               {
                 to: "/docs/use-cases/marketing",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">📣</div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Marketing icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
               },
               {
                 to: "/docs/use-cases/support",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">📞</div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/support-icon.svg" alt="Support icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
               },
               {
                 to: "/docs/use-cases/commerce",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">🛍️</div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/commerce-icon.svg" alt="Commerce icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
               },
             ],
