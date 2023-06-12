@@ -148,7 +148,7 @@ Consider following these UX best practices.
 
 ### Disclose signature storage
 
-- If your app stores a signature to read and send XMTP messages on behalf of a user, such as in a [broadcast message](/tutorials/broadcast) use case, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature.
+- If your app stores a signature to read and send XMTP messages on behalf of a user, such as in a [broadcast message](/docs/build/broadcast) use case, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature.
 
   For example:
 

@@ -1,9 +1,7 @@
 ---
 hide_table_of_contents: false
-toc_min_heading_level: 4
-toc_max_heading_level: 4
 sidebar_label: Changelog
-sidebar_position: 6
+sidebar_position: 10
 ---
 
 # Changelog for XMTP

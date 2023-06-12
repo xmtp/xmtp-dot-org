@@ -1,7 +1,5 @@
 ---
-sidebar_label: Grants
-sidebar_position: 6
-image: https://github.com/xmtp/xmtp-dot-org/raw/main/static/img/XMTP-Grants_Cover.png
+hide_table_of_contents: true
 ---
 
 # XMTP Grants: Inspiring public goods

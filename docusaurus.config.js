@@ -102,6 +102,12 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
+            to: "/built-with-xmtp",
+            position: "right",
+            label: "Built With XMTP",
+            activeBaseRegex: `/`,
+          } /*
+          {
             type: "dropdown",
             position: "right",
             label: "Use cases",
@@ -143,7 +149,7 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
               },
             ],
-          },
+          },*/,
           {
             type: "dropdown",
             position: "right",
@@ -186,24 +192,23 @@ const config = {
             position: "right",
             label: "Blog",
             activeBaseRegex: `/`,
-          } /*
-          {
+          },
+          /* {
             type: "html",
             position: "right",
             value:
-              ' <button type="button" onClick=\'window.open("https://discord.com/invite/xmtp", "_self");\' class="navbar__discord-button"> <img src="/img/discord.svg" alt="Discord logo" class="discord-logo" /> <strong>Join our Discord</strong>  </button>',
-          },*/,
+              '<button type="button" onClick="window.open(`/docs/build/start-building`, `_self`);" class="navbar__chatbutton"><strong>Join our discord</strong></button>',
+          } 
           {
             type: "html",
             position: "right",
             value:
               '<button type="button" onClick="window.open(`/docs/build/start-building`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
-          },
-          {
+          },*/ {
             type: "html",
             position: "right",
             value:
-              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try app</strong></button>',
+              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__sbbutton"><strong>Try app</strong></button>',
           },
           {
             href: "https://github.com/xmtp",
@@ -266,11 +271,11 @@ const config = {
               },
               {
                 label: `Broadcast`,
-                to: `/tutorials/broadcast`,
+                to: `/docs/build/broadcast`,
               },
               {
                 label: `Bots`,
-                to: `/tutorials/bots`,
+                to: `/docs/build/bots`,
               },
             ],
           },

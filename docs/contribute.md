@@ -1,6 +1,6 @@
 ---
 sidebar_label: Contribute
-sidebar_position: 5
+sidebar_position: 8
 ---
 
 # Contribute to the XMTP community
