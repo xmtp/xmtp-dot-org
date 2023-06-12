@@ -373,7 +373,9 @@ export const MainContent = ({ styles }) => {
               </Link>
             </button>
           </div>
+
           <div className="flex justify-evenly mt-12 flex-wrap">
+            {/*
             <div className="flex w-full sm:w-auto justify-center mb-10 mx-6">
               <img
                 src="/img/Gitcoin.svg"
@@ -408,17 +410,19 @@ export const MainContent = ({ styles }) => {
                 alt="Relay icon"
                 className="flex-1 object-none"
               />
-            </div>
+            </div>*/}
           </div>
         </div>
       </main>
 
       <div className="bg-black -mt-48">
         <div className="max-w-screen-max mx-auto pt-56 pb-16 px-4">
-          <ul
+          {/* <ul
             role="list"
             className="-mt-2 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
           >
+          
+       
             <li className="col-span-1">
               <ALink to="https://github.com/orgs/xmtp/discussions">
                 <div className="max-h-[300px] rounded-lg relative group px-6 pb-6 pt-6 bg-[#F3F4F6] bg-no-repeat bg-[url('/img/github-bg.jpg')] bg-contain bg-right-top focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
@@ -476,7 +480,7 @@ export const MainContent = ({ styles }) => {
                 </div>
               </ALink>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </>

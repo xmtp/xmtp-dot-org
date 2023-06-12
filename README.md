@@ -105,7 +105,7 @@ A PR is a request to add (or pull) your content updates into the project and pub
 
 7. When you create a PR, the `xmtp.org` team receives a notification to [review it](#what-to-expect).
 
-_The guidance in this section is inspired by the following public sector information licensed under the Open Government Licence v3.0: [Propose a content change using GitHub](https://design-system.service.gov.uk/use-casespropose-a-content-change-using-github/) by the GOV.UK Design System._
+_The guidance in this section is inspired by the following public sector information licensed under the Open Government Licence v3.0: [Propose a content change using GitHub](https://design-system.service.gov.uk/use-cases/propose-a-content-change-using-github/) by the GOV.UK Design System._
 
 ## Set up a local environment
 
