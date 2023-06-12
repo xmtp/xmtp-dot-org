@@ -28,13 +28,11 @@ Perform this setup to understand how you might want to enable push notifications
 
 1. Create an FCM project.
 
-2. Add the example app to the FCM project. This generates a `google-services.json` file that you need in subsequent steps.
+2. Generate FCM credentials, which you need to run the example notification server. To do this, from the FCM dashboard, click the gear icon next to **Project Overview** and select **Project settings**. Select **Service accounts**. Select **Go** and click **Generate new private key**.
 
-3. Add the `google-services.json` file to the example app's project as described in the FCM project creation process.
+3. This will download a JSON file containing your service account credentials. e.g. `xmtp-web-firebase-adminsdk-sd34dsd-d34dcdf3.json`
 
-4. Generate FCM credentials, which you need to run the example notification server. To do this, from the FCM dashboard, click the gear icon next to **Project Overview** and select **Project settings**. Select **Service accounts**. Select **Go** and click **Generate new private key**.
-
-5. Get the FCM project ID and FCM credentials you created earlier and run:
+4. Get the FCM project ID and FCM credentials you created earlier and run:
 
    ```bash
      YOURFCMJSON=`cat YOURFIREBASEADMINFROMSTEP4.json`
@@ -52,7 +50,7 @@ Perform this setup to understand how you might want to enable push notifications
    --fcm-project-id="YOURFCMPROJECTID"
    ```
 
-6. You should now be able to see push notifications coming across the local network.
+5. You should now be able to see push notifications coming across the local network.
 
 ## React Native
 

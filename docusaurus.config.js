@@ -113,6 +113,11 @@ const config = {
                 <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
               },
               {
+                to: "/guides",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">📚</div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Guides</div></div>`,
+              },
+              {
                 to: "/use-cases/messaging",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">💬</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,

@@ -1,8 +1,18 @@
 [
   {
-    "name": "Integrating XMTP into CyberConnect: A Guide",
-    "image": "img/uc-cyber.png",
-    "href": "https://cyberconnect.hashnode.dev/integrating-xmtp-into-cyberconnect-a-guide"
+    "name": "Create a notification client in React",
+    "image": "/img/uc-bells.png",
+    "href": "/blog/create-notification-client-react"
+  },
+  {
+    "name": "Setup Guide for XMTP Notification Server",
+    "image": "/img/uc-bells.png",
+    "href": "/blog/setting-up-push-notification-server"
+  },
+  {
+    "name": "Add Unstoppable Resolution to your XMTP application",
+    "image": "/img/uc-uns.png",
+    "href": "/blog/unstoppableweb"
   },
   {
     "name": "Resolve identities using the Everyname API",
@@ -20,8 +30,8 @@
     "href": "/blog/Integrating-Multiple-Profiles-with-Lens"
   },
   {
-    "name": "Add Unstoppable Resolution to your XMTP application",
-    "image": "/img/uc-uns.png",
-    "href": "https://unstoppabledomains.com/"
+    "name": "Integrating XMTP into CyberConnect: A Guide",
+    "image": "img/uc-cyber.png",
+    "href": "https://cyberconnect.hashnode.dev/integrating-xmtp-into-cyberconnect-a-guide"
   }
 ]

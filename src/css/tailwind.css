@@ -859,3 +859,7 @@ code:not([class]) {
   padding-right: 0.3rem;
   font-size: 0.8rem;
 }
+/*navbar*/
+.navbar {
+  border-bottom: 1px solid grey;
+}

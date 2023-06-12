@@ -84,7 +84,7 @@ const initXmtp = async function () {
 
 ### Load conversation and messages
 
-Now using our hooks we are going to use the state to listen whan XMTP is connected.
+Now using our hooks we are going to use the state to listen when XMTP is connected.
 
 Later we are going to load our conversations and we are going to simulate starting a conversation with one of our bots
 
