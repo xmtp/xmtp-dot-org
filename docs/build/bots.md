@@ -1,6 +1,6 @@
 ---
 sidebar_label: Bots
-sidebar_position: 3
+sidebar_position: 10
 ---
 
 # Create an XMTP message bot

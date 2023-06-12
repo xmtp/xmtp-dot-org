@@ -190,4 +190,4 @@ To learn more about how the XMTP Inbox chat app is built, see the [xmtp-inbox-we
 
 XMTP natively supports one-to-one messaging. One-to-many broadcast messages, or announcements, can be constructed using the XMTP SDK.
 
-To learn more, see [Send a broadcast message](/tutorials/broadcast).
+To learn more, see [Send a broadcast message](/docs/build/broadcast).

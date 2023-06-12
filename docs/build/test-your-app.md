@@ -1,6 +1,6 @@
 ---
 sidebar_label: Test
-sidebar_position: 14
+sidebar_position: 18
 description: Use these tips and guidelines to test your app before going live.
 ---
 
@@ -66,22 +66,22 @@ It's important to test your app's performance when handling a wallet address wit
 2. Run `git clone https://github.com/xmtp/xmtp-debug.git`.
 3. Run `cd xmtp-debug`.
 4. Run `npm i`.
-5. Run `npm start -- --env=dev fill-conversation-list $TEST_WALLET_ADDRESS $NUM_CONVERSATIONS $NUM_MESSAGES_PER_CONVERSATION`. 
+5. Run `npm start -- --env=dev fill-conversation-list $TEST_WALLET_ADDRESS $NUM_CONVERSATIONS $NUM_MESSAGES_PER_CONVERSATION`.
 
-    For example, run `npm start -- --env=dev fill-conversation-list 0x78b97401850c335abf936C41F4D7a38A2F92D1D2 500 1` to populate test wallet `0x78b97401850c335abf936C41F4D7a38A2F92D1D2` with 500 conversations, each with 1 message, on the XMTP `dev` network.
+   For example, run `npm start -- --env=dev fill-conversation-list 0x78b97401850c335abf936C41F4D7a38A2F92D1D2 500 1` to populate test wallet `0x78b97401850c335abf936C41F4D7a38A2F92D1D2` with 500 conversations, each with 1 message, on the XMTP `dev` network.
 
 Populating test wallets might cause you to hit the XMTP network rate limit. If this happens, wait 5 minutes and try again.
 
 ## Use test message bots and addresses
 
-If helpful for testing, you can create your own message bot, such as `gm.yourappname.eth`, using [ChainJet](https://chainjet.io/) or the [XMTP Bot Starter](https://github.com/xmtp/xmtp-bot-starter). You can use the message bot to receive and send test messages. 
+If helpful for testing, you can create your own message bot, such as `gm.yourappname.eth`, using [ChainJet](https://chainjet.io/) or the [XMTP Bot Starter](https://github.com/xmtp/xmtp-bot-starter). You can use the message bot to receive and send test messages.
 
 If needed, you can also use these addresses for testing:
 
 - gm.xmtp.eth (0x937C0d4a6294cdfa575de17382c7076b579DC176)
 
-    Message this XMTP message bot to get an immediate automated reply.
+  Message this XMTP message bot to get an immediate automated reply.
 
 - hi.xmtp.eth (0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0)
 
-    Message the XMTP Labs team and a human will reply, though not as quickly as gm.xmtp.eth! 🤖
+  Message the XMTP Labs team and a human will reply, though not as quickly as gm.xmtp.eth! 🤖

@@ -113,32 +113,32 @@ const config = {
                 <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
               },
               {
-                to: "/guides",
+                to: "/docs/use-cases/guides",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">📚</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Guides</div></div>`,
               },
               {
-                to: "/use-cases/messaging",
+                to: "/docs/use-cases/messaging",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">💬</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,
               },
               {
-                to: "/use-cases/finance",
+                to: "/docs/use-cases/finance",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">💰</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Finance</div></div>`,
               },
               {
-                to: "/use-cases/marketing",
+                to: "/docs/use-cases/marketing",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">📣</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
               },
               {
-                to: "/use-cases/support",
+                to: "/docs/use-cases/support",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">📞</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
               },
               {
-                to: "/use-cases/commerce",
+                to: "/docs/use-cases/commerce",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon">🛍️</div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
               },
@@ -186,24 +186,29 @@ const config = {
             position: "right",
             label: "Blog",
             activeBaseRegex: `/`,
-          } /*
-          {
+          },
+          /* {
             type: "html",
             position: "right",
             value:
-              ' <button type="button" onClick=\'window.open("https://discord.com/invite/xmtp", "_self");\' class="navbar__discord-button"> <img src="/img/discord.svg" alt="Discord logo" class="discord-logo" /> <strong>Join our Discord</strong>  </button>',
-          },*/,
+              '<button type="button" onClick="window.open(`/docs/build/start-building`, `_self`);" class="navbar__chatbutton"><strong>Join our discord</strong></button>',
+          } 
           {
             type: "html",
             position: "right",
             value:
               '<button type="button" onClick="window.open(`/docs/build/start-building`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
-          },
-          {
+          },*/ {
             type: "html",
             position: "right",
             value:
-              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try app</strong></button>',
+              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__sbbutton"><strong>Try app</strong></button>',
+          },
+          {
+            href: "https://discord.com/invite/xmtp",
+            title: "Go to the Discord",
+            position: "right",
+            className: "header-discord-link",
           },
           {
             href: "https://github.com/xmtp",
@@ -266,11 +271,11 @@ const config = {
               },
               {
                 label: `Broadcast`,
-                to: `/tutorials/broadcast`,
+                to: `/docs/build/broadcast`,
               },
               {
                 label: `Bots`,
-                to: `/tutorials/bots`,
+                to: `/docs/build/bots`,
               },
             ],
           },

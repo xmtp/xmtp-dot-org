@@ -1,7 +1,7 @@
 ---
 sidebar_label: Dev FAQ's
 title: Developer FAQ's
-sidebar_position: 15
+sidebar_position: 20
 description: "Here are just a few of the composable building blocks of web3 that work well with XMTP."
 ---
 

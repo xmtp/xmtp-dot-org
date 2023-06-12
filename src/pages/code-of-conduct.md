@@ -1,6 +1,5 @@
 ---
-sidebar_label: Code of conduct
-sidebar_position: 5
+hide_table_of_contents: true
 ---
 
 # XMTP code of conduct
