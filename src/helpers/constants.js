@@ -2,7 +2,7 @@ export const HEADER_DATA = [
   {
     title: "Try messaging with XMTP",
     subtitle: "Use an app built with XMTP to start learning how to build one",
-    url: "/start-messaging",
+    url: "/start-building",
     icon: "x-new.svg",
   },
   {

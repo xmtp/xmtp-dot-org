@@ -33,7 +33,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 ## Try messaging with XMTP
 
-1. [**Start messaging with XMTP**](/docs/start-messaging)
+1. [**Start messaging with XMTP**](/start-building)
 
    Use an app built with XMTP to start learning how to build one.
 
@@ -49,11 +49,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 ## Start building your app
 
-1. [**Build a simple hello world app**](/docs/build/build-an-xmtp-hello-world-app)
-
-   Get a feel for building with XMTP by building an app using 100% copy-and-paste commands and code.
-
-2. **Ready to build your own app? Start with an XMTP client SDK:**
+1. **Ready to build your own app? Start with an XMTP client SDK:**
 
    - [xmtp-js](https://github.com/xmtp/xmtp-js)
    - [xmtp-android](https://github.com/xmtp/xmtp-android)
@@ -62,13 +58,13 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 Be sure to watch relevant repos to be notified about new releases, which might include breaking changes and migration steps. You can also join the [XMTP Discord](https://discord.gg/xmtp) to receive these types of notifications.
 
-3. **Learn about what [works with XMTP](/docs/concepts/works-with-xmtp)**
+3. **Learn about what [works with XMTP](/docs/build/dev-faqs)**
 
    Building your app with these composable building blocks can help you deliver and distribute your XMTP app—faster and with quality.
 
 4. **Want to provide DMs in a Lens app?**
 
-   To learn how, see [Build key XMTP chat features in a Lens app](/docs/build/build-key-xmtp-chat-features-in-a-lens-app).
+   To learn how, see [Build key XMTP chat features in a Lens app](/blog/Integrating-Multiple-Profiles-with-Lens).
 
    Need a Lens handle? Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/)
 
@@ -113,11 +109,11 @@ Consider following these best practices when developing your app:
 
 - To optimize rendering performance on the web, render only what the user can see, instead of rendering everything. For example, if you are building with the React client SDK (`react-sdk`), use virtualized lists for conversations and messages (e.g. `react-virtuoso`).
 
-- Use [standard content types](/docs/concepts/content-types#standard-content-types) to ensure that message content sent using your app is interoperable with other apps.
+- Use [standard content types](/docs/concepts/content-types) to ensure that message content sent using your app is interoperable with other apps.
 
   - By default, building with XMTP SDKs supports plain text messages.
   - To send remote media attachments, see [Introducing remote media attachments](/blog/attachments-and-remote-attachments).
-  - To send custom content types, see [Build a custom content type](/docs/build/use-content-types#build-a-custom-content-type). If you are using custom content types, be sure to provide [fallback text](/docs/concepts/content-types#custom-content-types). A receiving app that can't handle the custom content can display the fallback plain text description instead.
+  - To send custom content types, see [Build a custom content type](/docs/concepts/content-types). If you are using custom content types, be sure to provide [fallback text](/docs/concepts/content-types#custom-content-types). A receiving app that can't handle the custom content can display the fallback plain text description instead.
 
 - Enable your app to track privacy-preserving metrics to help you understand app usage. For example:
   - \# of active wallets: Wallets sending at least one message
@@ -182,14 +178,6 @@ Consider following these UX best practices.
 
   <img src={allinorb} style={{width:"400px"}}/>
 
-- Use [conversation labels](/docs/build/label-conversations) to provide context, especially in an interoperable inbox. For example, here is conversation labeling in an interoperable inbox helping the user understand the different origins of two conversations with the same address.
-
-  <img src={conversationlabels} style={{width:"400px"}}/>
-
-- Consider using conversation IDs and metadata to provide [filtered views of conversations](/docs/build/filter-conversations). For example, here is the Orb app with conversations filtered to show Lens conversations only:
-
-  <img src={lensonlyorb} style={{width:"400px"}}/>
-
 - Enable users to filter based on friends on a social graph, such as Lens, or a client-side grant/revoke list. For example, here is the [Buttrfly app](https://buttrfly.app/) displaying only conversations with Lens profiles you follow:
 
   <img src={buttrflyfollowonly} style={{width:"400px"}}/>
@@ -210,7 +198,7 @@ Push notifications can be a highly effective way to engage your users and increa
 
 - Display push notifications only for messages sent **to** a user. In other words, do not send a push notification to a user about a message they sent. To do this, filter out messages sent by the user and don't send push notifications for them.
 
-  - For iOS apps, see [Handle push notifications](/docs/build/handle-push-notifications) to learn how to suppress these push notifications.
+  - For iOS apps, see [Handle push notifications](/docs/build/notifications) to learn how to suppress these push notifications.
 
   :::tip Submit your application early
 
@@ -375,7 +363,7 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 
 ## Keep in touch post-launch
 
-- Keep in touch using the [XMTP community platform](/community) that works best for you. This helps ensure that you hear about the latest SDK and content type releases, as well as upgrade and deprecation notices.
+- Keep in touch using the [XMTP community platform](https://discord.com/invite/xmtp) that works best for you. This helps ensure that you hear about the latest SDK and content type releases, as well as upgrade and deprecation notices.
 
 - Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/) to share your app metrics. Let’s test hypotheses and learn together to help ensure interaction success and improve XMTP for all.
 
