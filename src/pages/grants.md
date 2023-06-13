@@ -164,7 +164,7 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ### Documentation
 
-- [Start building with XMTP](/docs/start-building)
+- [Start building with XMTP](/start-building)
 
 ### SDKs
 

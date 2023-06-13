@@ -73,7 +73,7 @@ Have more questions? See [FAQ about XMTP](/docs/concepts/faq)
 
 Join and learn with the [XMTP Discord community](https://discord.gg/xmtp)
 
-Ready to build with XMTP? [Start here](/docs/start-building)
+Ready to build with XMTP? [Start here](/start-building)
 
 # Try messaging with XMTP
 
