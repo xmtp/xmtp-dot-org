@@ -6,13 +6,13 @@ description: Follow these guidelines to create group chats
 
 # Provide group chats with XMTP
 
-Use the information in this section to **experiment** with providing group chat in your app.
-
-This section refers to both `GroupConversation` and `GroupChat`:
-
 :::caution Important
-This feature is in **alpha** status and ready for you to start experimenting with. We do **not** recommend using alpha features in production apps. Software in this status will change as we iterate based on feedback.
+This feature is in **alpha** status and ready for you to start experimenting with. Is only available on the `beta` branch, but we're excited to share it with you and get your feedback.
 :::
+
+```bash
+git clone -b beta https://github.com/xmtp/xmtp-js.git
+```
 
 - `GroupConversation` is similar to `ConversationV1` or `ConversationV2` provided by the SDK. These conversations are just a way to send and receive messages.
 - `GroupChat` is a wrapper around `GroupConversation` that knows about things like group chat titles, keeping the group chat member list in sync, and basically handling any richer features beyond just sending and receiving messages.
