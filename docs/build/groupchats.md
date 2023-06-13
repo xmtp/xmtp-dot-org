@@ -4,7 +4,7 @@ sidebar_position: 8
 description: Follow these guidelines to create group chats
 ---
 
-# Group chats
+# Provide group chats with XMTP
 
 Use the information in this section to **experiment** with providing group chat in your app.
 
