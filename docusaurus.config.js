@@ -411,7 +411,7 @@ const config = {
       },
       prism: {
         additionalLanguages: ["dart", "swift", "kotlin"],
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
