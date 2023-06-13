@@ -10,13 +10,28 @@ XMTP (Extensible Message Transport Protocol) is an open protocol and network for
 
 ### Demo App
 
-This repository demonstrates the implementation of these concepts within a simple chat app.
+The first step involves creating and configuring the Next.js application.
 
-[GitHub repo](https://github.com/fabriguespe/xmtp-quickstart-js)
+To generate a new Next.js app, execute the following command in your terminal:
 
 ```tsx
-git clone git@github.com:fabriguespe/xmtp-quickstart-js.git
-cd xmtp-quickstart-js
+npx create-next-app xmtp-quickstart-nextjs
+
+✔ Would you like to use TypeScript with this project? Yes
+✔ Would you like to use ESLint with this project? Yes
+✔ Would you like to use Tailwind CSS with this project?  Yes
+✔ Would you like to use `src/` directory with this project? No
+✔ Use App Router (recommended)? Yes
+✔ Would you like to customize the default import alias? No
+```
+
+This repository demonstrates the implementation of these concepts within a simple chat app.
+
+[GitHub repo](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
+
+```tsx
+git clone git@github.com:fabriguespe/xmtp-quickstart-nextjs.git
+cd xmtp-quickstart-nextjs
 npm install
 npm run dev
 ```
@@ -31,7 +46,7 @@ npm run dev
 ### Install dependencies
 
 ```bash
-npm install @xmtp/js @thirdweb-dev/react
+npm install @xmtp/xmtp-js @thirdweb-dev/react
 ```
 
 ### Configuring the client
