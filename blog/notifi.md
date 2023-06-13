@@ -1,10 +1,10 @@
 ---
 slug: notifi
 hide_table_of_contents: true
-title: 'Breaking the web2 barrier: How XMTP and Notifi are bridging the gap for web3 apps with web2 notifications'
+title: "Breaking the web2 barrier: How XMTP and Notifi are bridging the gap for web3 apps with web2 notifications"
 date: 2023-04-28
 authors: rochelle
-description: 'With Notifi, XMTP in-app messages can now trigger notifications to any web2 app, so devs can reliably reach their end-users without compromising on security.'
+description: "With Notifi, XMTP in-app messages can now trigger notifications to any web2 app, so devs can reliably reach their end-users without compromising on security."
 image: ./media/Breaking-the-Web2-Barrier-Post.jpg
 tags:
   - Announcements
@@ -49,7 +49,7 @@ You can fork the XMTP example app and Notifi experience repo shown in the exampl
 
 **Get Started Building with XMTP!**
 
-[Start building with XMTP](/docs/build/start-building)
+[Start building with XMTP](/docs/start-building)
 
 [Explore SDKs and tools that help you build with XMTP](/docs/introduction#xmtp-sdks-and-example-apps)
 

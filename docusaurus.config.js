@@ -108,7 +108,7 @@ const config = {
             items: [
               {
                 to: "built-with-xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/sparkles-icon.svg" alt="Sparkles icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="Sparkles icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
                 <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
               },
@@ -191,18 +191,19 @@ const config = {
             type: "html",
             position: "right",
             value:
-              '<button type="button" onClick="window.open(`/docs/build/start-building`, `_self`);" class="navbar__chatbutton"><strong>Join our discord</strong></button>',
+              '<button type="button" onClick="window.open(`/docs/start-building`, `_self`);" class="navbar__chatbutton"><strong>Join our discord</strong></button>',
           } 
           {
             type: "html",
             position: "right",
             value:
-              '<button type="button" onClick="window.open(`/docs/build/start-building`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
-          },*/ {
-            type: "html",
+              '<button type="button" onClick="window.open(`/docs/start-building`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
+          },*/
+          {
+            href: "/built-with-xmtp",
+            title: "Built with XMTP",
             position: "right",
-            value:
-              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__sbbutton"><strong>Try app</strong></button>',
+            className: "header-xmtp-link",
           },
           {
             href: "https://discord.com/invite/xmtp",
