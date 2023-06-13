@@ -140,3 +140,12 @@ const onMessage = useCallback((message) => {
 }, []);
 useStreamMessages(conversation, onMessage);
 ```
+
+### Other quickstart repos
+
+- [Hooks Getting started](https://github.com/fabriguespe/xmtp-hooks-quickstart)
+- [Quickstart React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
+- [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
+- [Quickstart NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
+- [Quickstart ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs)
+- [Notification Client](https://github.com/fabriguespe/xmtp-firebase-push-notifications)

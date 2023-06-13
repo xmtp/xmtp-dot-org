@@ -9,7 +9,7 @@ You can send a broadcast message (1:many message or announcement) with XMTP. The
 
 :::tip
 
-If your app stores a signature to read and send XMTP messages on behalf of a user, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature. For example disclosure text and UI patterns, see [Disclose signature storage](/docs/build/start-building#disclose-signature-storage).
+If your app stores a signature to read and send XMTP messages on behalf of a user, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature. For example disclosure text and UI patterns, see [Disclose signature storage](/start-building#disclose-signature-storage).
 
 :::
 

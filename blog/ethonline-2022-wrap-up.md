@@ -1,7 +1,7 @@
 ---
 slug: ethonline-2022-wrap-up
 hide_table_of_contents: true
-title: 'ETHOnline Wrap Up: De-Chat, GameJutsu, and Dehitas Take Top Honors'
+title: "ETHOnline Wrap Up: De-Chat, GameJutsu, and Dehitas Take Top Honors"
 date: 2022-10-05
 authors: peter
 description: ETH Online hackers build incredible apps across video chat, game security, and talent platforms using XMTP.
@@ -87,7 +87,7 @@ These are just a few of the submissions that utilized XMTP in their ETHOnline sh
 
 Are you building something amazing with XMTP? [We’d love to know about it](https://twitter.com/xmtp_).
 
-Want to learn about how to add secure web3 messaging to your project? Check out [Start building with XMTP](/docs/build/start-building).
+Want to learn about how to add secure web3 messaging to your project? Check out [Start building with XMTP](/start-building).
 
 <br/>
 <FeedbackWidget />

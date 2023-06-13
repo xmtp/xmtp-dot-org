@@ -1,7 +1,5 @@
 ---
-sidebar_label: Try messaging
-sidebar_position: 2
-description: A great way to start learning how to build an app with XMTP is to use one!
+hide_table_of_contents: true
 ---
 
 # Try messaging with XMTP
@@ -54,13 +52,9 @@ A great way to start learning how to build an app with XMTP is to use one!
 
    With XMTP, you own and control your messages and are always free to use the app that best suits your needs.
 
-   | Your friend using the [Converse app](https://getconverse.app/) to message you on the Orb app | You using the [Orb app](https://orb.ac/) to message your friend on the Converse app |
-   | :------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
-   | ![your-friend-in-converse-app.png](concepts/img/your-friend-in-converse.png)                 | ![you-in-orb-app.png](concepts/img/you-in-orb.png)                                  |
-
 Ready to start building with XMTP? Check out some of these developer resources:
 
-- [Start building with XMTP](/docs/build/start-building)
+- [Start building with XMTP](/start-building)
 - [SDKs and tools](/docs/introduction#xmtp-sdks-and-example-apps)
 - [Built with XMTP](/built-with-xmtp/): Explore a showcase of apps built with XMTP
 - [FAQ about XMTP](/docs/concepts/faq)

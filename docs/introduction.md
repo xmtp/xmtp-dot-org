@@ -24,27 +24,6 @@ To learn more, see [Works with XMTP](/docs/build/dev-faqs).
 
 XMTP’s primary contributor, XMTP Labs, is funded by some of the industry’s top venture capital funds, including a16z Crypto and Coinbase Ventures.
 
-## XMTP at a glance
-
-Here are some key considerations as you explore building with XMTP for secure web3 messaging:
-
-| Consideration                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| :------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Message direction**                  | Bidirectional                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **Participant identities**             | Any EVM blockchain EOA (externally owned account) can send a message to any other EVM blockchain EOA that has advertised its XMTP identity on the network.                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **Chain focus**                        | Chain-agnostic, but currently requires an EVM blockchain account. <br /><br /> To learn more, see [Chains](/docs/build/dev-faqs#chains).                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **Wallet app compatibility**           | EVM-compatible wallets capable of signing with private keys, such as MetaMask, Coinbase Wallet, and Rainbow Wallet. <br /><br /> To learn more, see [Wallet apps](/docs/build/dev-faqs#wallet-apps).                                                                                                                                                                                                                                                                                                                                                                      |
-| **Authentication**                     | An XMTP-specific key bundle derived from a blockchain account address signature is used to authenticate a user identity. <br /><br /> To learn more about these key bundles, see [Key generation and usage](/docs/concepts/key-generation-and-usage).                                                                                                                                                                                                                                                                                                                     |
-| **Message encryption**                 | Messages are encrypted individually by default and are readable by message participants only. <br /><br /> To learn more about message encryption, see [Invitation and message encryption](/docs/concepts/invitation-and-message-encryption).                                                                                                                                                                                                                                                                                                                             |
-| **Message delivery**                   | Messages are immediately relayed by XMTP nodes, using the Waku protocol. <br /><br /> To learn more, see [Network layer](/docs/concepts/architectural-overview#network-layer).                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Message storage**                    | Messages are stored off-chain in the XMTP network, with all nodes currently hosted by XMTP Labs. <br /><br /> XMTP Labs is working toward a phased decentralization of the network. To learn more see, [XMTP: The journey to decentalization](/blog/journey-to-decentralization).                                                                                                                                                                                                                                                                                         |
-| **Supported content types**            | Plain text messages as a standard content type, but custom content types are supported as well. <br /><br /> To learn more, see [Content types](/docs/concepts/content-types).                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Adoption of standard content types** | Open, extensible, and community-governed via XIP-5 (XMTP Improvement Proposal-5). <br /><br /> To learn more, see [XIP-5 Message Content Types](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-5-message-content-types.md).                                                                                                                                                                                                                                                                                                                                              |
-| **Implementation**                     | Any app built with the XMTP client SDK can send or receive messages. <br /><br /> To learn more, see [XMTP client SDKs](#client-sdks).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **Receiving messages**                 | Any frontend built with the XMTP client SDK can receive messages. <br /><br /> To learn more, see [XMTP client SDKs](#client-sdks).                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **Message cost**                       | Most messaging incurs no fee. As XMTP decentralizes, messaging between participants that opt-in will remain free, while unsolicited messages will often incur fees or see token staking requirements. <!--<br /><br /> To learn more, see Will XMTP have gas fees?-->                                                                                                                                                                                                                                                                                                     |
-| **Decentralization**                   | XMTP network nodes are run by XMTP Labs at this time. In the future, network node software will be open sourced and anyone will be welcome to operate a node. <br /><br /> Client implementation is permissionless, nor is permission required to access and develop with the SDK. Permission isn't required to connect to the XMTP network to send/receive messages on behalf of users. <br /><br /> XMTP Labs is working toward a phased decentralization of the network. To learn more see, [XMTP: The journey to decentalization](/blog/journey-to-decentralization). |
-
 ## Protocol overview
 
 A user can send and receive encrypted XMTP messages using an app with an embedded XMTP **client**, authenticating using a wallet signature. XMTP network **nodes** persist the user's messages
@@ -94,4 +73,61 @@ Have more questions? See [FAQ about XMTP](/docs/concepts/faq)
 
 Join and learn with the [XMTP Discord community](https://discord.gg/xmtp)
 
-Ready to build with XMTP? [Start here](/docs/build/start-building)
+Ready to build with XMTP? [Start here](/start-building)
+
+# Try messaging with XMTP
+
+XMTP is an open protocol and network for secure web3 messaging.
+
+Developers build with [XMTP client SDKs](/docs/introduction#xmtp-sdks-and-example-apps) to provide messaging in their apps. The XMTP messaging API client takes care of:
+
+- [Authentication](/docs/concepts/account-signatures) using an **XMTP identity that you own and control**
+- [End-to-end encryption](/docs/concepts/invitation-and-message-encryption) of **messages that you own and control**
+- Providing an **[interoperable inbox](/docs/concepts/interoperable-inbox)** accessible across apps built with XMTP
+- Relaying messages to the **progressively decentralized** [XMTP network](/docs/concepts/architectural-overview#network-layer)
+
+A great way to start learning how to build an app with XMTP is to use one!
+
+**To start messaging with XMTP:**
+
+1. **Pick an identity** you want to use to message with XMTP.
+
+   You can use an Ethereum address to start.
+
+   If you have an [ENS name](https://ens.domains/) or [Lens handle](https://claim.lens.xyz/) associated with the address, you can tell people to use it to message you instead of using your full Ethereum address.
+
+   Don’t have an Ethereum address? [Create a MetaMask wallet](https://metamask.io/) to get one.
+
+2. **Pick an app.**
+
+   - [Converse](https://getconverse.app/) (iOS): Works with Ethereum addresses, ENS names, and Lens handles
+   - [XMTP Inbox](https://xmtp.chat/) (web): Works with Ethereum addresses and ENS names
+   - [Buttrfly](https://buttrfly.app/) (iOS): Works with Lens handles
+   - [Lenster](https://lenster.xyz/) (web): Works with Lens handles
+   - [Orb](https://orb.ac/) (ios and Android): Works with Lens handles
+
+3. **Send a message.**
+
+   To send a message to an address, it must have an XMTP identity already created on the network. Share this page with someone you want to message to help them get on the network if they aren't already there.
+
+   In the meantime, need someone to message with? Send a message to these addresses. Try using an ENS name to message one person (or bot) and an 0x Ethereum address to message another.
+
+   - `gm.xmtp.eth` / `0x937C0d4a6294cdfa575de17382c7076b579DC176`  
+      Get an immediate response from the XMTP message bot
+   - `yashluna.eth` / `0xf220F05B4830095be149085041735F197ee3D5Aa`  
+      Product manager at XMTP Labs
+   - `prxshant.eth` / `0x4b70d04124c2996De29e0caa050A49822Faec6Cc`  
+      Business development at XMTP Labs
+
+4. **Want to see the [interoperable inbox](/docs/concepts/interoperable-inbox) in action?**
+
+   Try a second app and see all your conversations in both apps, regardless of the app you used to start them. This also means you and a friend can each use your own preferred app to exchange messages.
+
+   With XMTP, you own and control your messages and are always free to use the app that best suits your needs.
+
+Ready to start building with XMTP? Check out some of these developer resources:
+
+- [Start building with XMTP](/start-building)
+- [SDKs and tools](/docs/introduction#xmtp-sdks-and-example-apps)
+- [Built with XMTP](/built-with-xmtp/): Explore a showcase of apps built with XMTP
+- [FAQ about XMTP](/docs/concepts/faq)
