@@ -31,7 +31,7 @@ npm run dev
 ### Install dependencies
 
 ```bash
-npm install @xmtp/js @thirdweb-dev/react
+npm install @xmtp/xmtp-js @thirdweb-dev/react
 ```
 
 ### Configuring the client
