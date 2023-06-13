@@ -4,6 +4,8 @@ sidebar_position: 16
 description: Follow these guidelines to optimize your app’s performance.
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 import perfArchitecture from '/docs/build/img/performance-architecture.jpeg';
 
 # Optimize performance of your app built with XMTP
@@ -30,9 +32,7 @@ When building web apps, you can use the browser `localStorage` as the local cach
 
 Caching the conversation list can improve performance of `client.conversations.list()` by up to 90%.
 
-- Use the JavaScript client SDK (`xmtp-js`) to [cache the conversation list](/docs/sdks/js-quickstart#cache-conversations)
-- Use the Kotlin client SDK (`xmtp-android`) to [cache the conversation list](/docs/sdks/kotlin-quickstart#cache-conversations)
-- With the React client SDK (`react-sdk`), enable the conversation cache when initializing the client
+To learn more, see [Cache the conversation list](conversations#cache-the-conversation-list).
 
 ## Cache message histories
 
@@ -43,19 +43,53 @@ Serialize securely stored `DecodedMessage` histories, avoiding the need to downl
 
 ## Page through messages
 
-Page through messages in a conversation instead of fetching them all at the same time.
+Page through messages in a conversation instead of fetching them all at the same time. 
 
-- Use the JavaScript client SDK (`xmtp-js`) to [page through messages](/docs/sdks/js-quickstart#list-messages-in-a-conversation-with-pagination)
-- Use the Kotlin client SDK (`xmtp-android`) to [page through messages](/docs/sdks/kotlin-quickstart#list-messages-in-a-conversation-with-pagination)
-- Use the Swift client SDK (`xmtp-ios`) to [page through messages](/docs/sdks/swift-quickstart#list-messages-in-a-conversation-with-pagination)
-- Use the React client SDK (`react-sdk`) to [page through messages](/docs/sdks/react-quickstart#page-through-messages)
-- Use the Dart client SDK (`xmtp-flutter`) to [page through messages](/docs/sdks/dart-quickstart#list-messages-in-a-conversation-with-pagination)
+To learn more, see [List messages in a conversation with pagination](messages#list-messages-in-a-conversation-with-pagination).
 
 ## Compress message content
 
 Compress message content using a supported compression algorithm.
 
-- Use the JavaScript client SDK (`xmtp-js`) to [compress messages](/docs/sdks/js-quickstart#compression)
-- Use the Kotlin client SDK (`xmtp-android`) to [compress messages](/docs/sdks/kotlin-quickstart#compression)
-- Use the Swift client SDK (`xmtp-ios`) to [compress messages](/docs/sdks/swift-quickstart#compression)
-- Use the Dart client SDK (`xmtp-flutter`) to [compress messages](/docs/sdks/dart-quickstart#compression)
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript" default>
+
+Message content can be optionally compressed using the `compression` option. The value of the option is the name of the compression algorithm to use. Currently supported are `gzip` and `deflate`. Compression is applied to the bytes produced by the content codec.
+
+Content will be decompressed transparently on the receiving end. Note that `Client` enforces maximum content size. The default limit can be overridden through the `ClientOptions`. Consequently a message that would expand beyond that limit on the receiving end will fail to decode.
+
+```ts
+import { Compression } from "@xmtp/xmtp-js";
+
+conversation.send("#".repeat(1000), {
+  compression: Compression.COMPRESSION_DEFLATE,
+});
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift" default>
+
+Message content can be optionally compressed using the compression option. The value of the option is the name of the compression algorithm to use. Currently supported are gzip and deflate. Compression is applied to the bytes produced by the content codec.
+
+Content will be decompressed transparently on the receiving end. Note that Client enforces maximum content size. The default limit can be overridden through the ClientOptions. Consequently, a message that would expand beyond that limit on the receiving end will fail to decode.
+
+```swift
+try await conversation.send(text: '#'.repeat(1000), options: .init(compression: .gzip))
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin - beta" default>
+
+Message content can be optionally compressed using the compression option. The value of the option is the name of the compression algorithm to use. Currently supported are gzip and deflate. Compression is applied to the bytes produced by the content codec.
+
+Content will be decompressed transparently on the receiving end. Note that `Client` enforces maximum content size. The default limit can be overridden through the `ClientOptions`. Consequently, a message that would expand beyond that limit on the receiving end will fail to decode.
+
+```kotlin
+conversation.send(
+    text = '#'.repeat(1000),
+    options = ClientOptions.Api(compression = EncodedContentCompression.GZIP)
+)
+```
+
+</TabItem>
+</Tabs>

@@ -3,7 +3,7 @@ sidebar_label: Broadcast
 sidebar_position: 9
 ---
 
-# Send a broadcast message
+# Send a broadcast message with XMTP
 
 You can send a broadcast message (1:many message or announcement) with XMTP. The recipient sees the message as a DM from the sending wallet address.
 
