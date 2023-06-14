@@ -187,18 +187,16 @@ const config = {
             label: "Blog",
             activeBaseRegex: `/`,
           },
-          /* {
-            type: "html",
-            position: "right",
-            value:
-              '<button type="button" onClick="window.open(`/start-building`, `_self`);" class="navbar__chatbutton"><strong>Join our discord</strong></button>',
-          } 
           {
-            type: "html",
-            position: "right",
-            value:
-              '<button type="button" onClick="window.open(`/start-building`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
-          },*/
+            type: 'html',
+            position: 'right',
+            value: '<button type="button" onClick="window.open(`/docs/build/get-started`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
+          },
+          {
+            type: 'html',
+            position: 'right',
+            value: '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
+          },
           {
             href: "/built-with-xmtp",
             title: "Built with XMTP",
