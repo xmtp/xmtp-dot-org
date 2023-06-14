@@ -16,6 +16,7 @@ The XMTP message API revolves around a network client that allows retrieving a
 
 ## Create a client
 
+
 A client is created that requires passing in a connected wallet that implements the [Signer](https://github.com/xmtp/xmtp-js/blob/main/src/types/Signer.ts) interface.
 [Use client configuration options](#configure-the-client) to change parameters of a client's network connection.
 
