@@ -1,6 +1,6 @@
 ---
-sidebar_label: Developers FAQ
-title: Developers FAQ
+sidebar_label: Developer FAQ
+title: Developer FAQ
 sidebar_position: 3
 description: "Here are just a few of the composable building blocks of web3 that work well with XMTP."
 ---
@@ -16,7 +16,7 @@ import optimism from '/docs/concepts/img/optimism-logo.png';
 import polygon from '/docs/concepts/img/polygon-logo.png';
 import scroll from '/docs/concepts/img/scroll-logo.png';
 
-# Dev FAQ's
+# Developer FAQ
 
 In the spirit of web3 composability, here are **just a few** of the building blocks that work well with XMTP. Building your app with these tools can help you deliver and distribute an app—faster and with quality.
 

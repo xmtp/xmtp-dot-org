@@ -8,67 +8,29 @@ description: "XMTP is an open protocol, network, and standards for secure, priva
 
 XMTP (Extensible Message Transport Protocol) is an open protocol, network, and standards for secure, private web3 messaging.
 
-XMTP's extensible design enables a diverse set of use cases for sending message data between web3 identities. For example, building with an [XMTP client SDK](/docs/introduction#xmtp-sdks-and-example-apps), developers can enhance their apps with:
+## Why XMTP?
 
-- **User-to-user** direct messages
-- **App-to-user** notifications
-- **Creator-to-community** announcements
+Developers build with [XMTP client SDKs](/docs/sdks/js-quickstart.md) to provide messaging between blockchain accounts in their apps. The XMTP messaging API client takes care of:
 
-Because the XMTP network persists messages, and those messages are tied to web3 identities as opposed to a specific client app, each web3 identity has an [**interoperable inbox**](/docs/concepts/interoperable-inbox) that it can access using any client app built with XMTP.
+- [Authentication](/docs/concepts/account-signatures) using an **XMTP identity that the user owns and controls**
 
-Developers can also build tools for decentralized apps (dapps), decentralized autonomous organizations (DAOs), creators, and protocols to re-engage users with web3 messaging.
+- [End-to-end encryption](/docs/concepts/invitation-and-message-encryption) of **messages that the user owns and controls**
 
-XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets), though XMTP itself does not use EVMs. XMTP also works with other web3 identities that apps built with XMTP can derive from Ethereum accounts, such as ENS names and Lens profiles.
+- Providing an **[interoperable inbox](/docs/concepts/interoperable-inbox)** accessible across apps built with XMTP
 
-To learn more, see [Works with XMTP](/docs/dev-faqs).
+- Relaying messages to the **progressively decentralized** [XMTP network](/docs/concepts/architectural-overview#network-layer)
 
-XMTP’s primary contributor, XMTP Labs, is funded by some of the industry’s top venture capital funds, including a16z Crypto and Coinbase Ventures.
+## Use cases
 
-## Protocol overview
+XMTP's extensible design enables a diverse set of use cases for sending message data between web3 identities. For example, building with an XMTP client SDK, developers can enhance their apps with:
 
-A user can send and receive encrypted XMTP messages using an app with an embedded XMTP **client**, authenticating using a wallet signature. XMTP network **nodes** persist the user's messages
+- User-to-user [direct messages](/docs/build/get-started)
+- App-to-user [notifications](/docs/build/notifications)
+- Creator-to-community [announcements](/docs/tutorials/broadcast)
 
-Clients and nodes are implemented as [Waku2](https://rfc.vac.dev/spec/10/) peers but with XMTP-specific functions and capabilities.
-
-To learn more about clients, see [Client layer](/docs/concepts/architectural-overview#client-layer).
-
-To learn more about nodes, see [Network layer](/docs/concepts/architectural-overview#network-layer).
-
-## XMTP SDKs and example apps
-
-### Client SDKs
-
-XMTP client SDKs are available for:
-
-- [JavaScript](/docs/sdks/js-quickstart)
-- [Swift](/docs/sdks/swift-quickstart) (iOS)
-- [Dart](/docs/sdks/dart-quickstart) (Flutter)
-- [Kotlin](/docs/sdks/kotlin-quickstart) (Android)
-- [React](/docs/sdks/react-quickstart)
-- [React Native](/docs/sdks/rn-quickstart)
-
-To learn about other SDKs in the works, see the [Roadmap](/roadmap).
-
-### Example apps
-
-- The [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web) provides the XMTP Inbox chat app, which demonstrates core and advanced capabilities of the XMTP client SDK and showcases innovative ways of building with XMTP.
-  - [Try the app](https://dev.xmtp.chat/) connected to the XMTP `dev` network
-  - [Try the app](https://xmtp.chat/) connected to the XMTP `production` network
-
-### Ecosystem projects
-
-For even more examples of apps built with XMTP, see [Built with XMTP](built-with-xmtp).
+To learn more, see [Use cases](/docs/use-cases/guides.mdx).
 
 ## Try messaging with XMTP
-
-XMTP is an open protocol and network for secure web3 messaging.
-
-Developers build with [XMTP client SDKs](/docs/introduction#xmtp-sdks-and-example-apps) to provide messaging in their apps. The XMTP messaging API client takes care of:
-
-- [Authentication](/docs/concepts/account-signatures) using an **XMTP identity that you own and control**
-- [End-to-end encryption](/docs/concepts/invitation-and-message-encryption) of **messages that you own and control**
-- Providing an **[interoperable inbox](/docs/concepts/interoperable-inbox)** accessible across apps built with XMTP
-- Relaying messages to the **progressively decentralized** [XMTP network](/docs/concepts/architectural-overview#network-layer)
 
 A great way to start learning how to build an app with XMTP is to use one!
 
@@ -78,17 +40,19 @@ A great way to start learning how to build an app with XMTP is to use one!
 
    You can use an Ethereum address to start.
 
-   If you have an [ENS name](https://ens.domains/) or [Lens handle](https://claim.lens.xyz/) associated with the address, you can tell people to use it to message you instead of using your full Ethereum address.
+   If you have an [ENS name](https://ens.domains/), [UNS name](https://unstoppabledomains.com/), or [Lens handle](https://claim.lens.xyz/) associated with the address, you can tell people to use it to message you instead of using your full Ethereum address.
 
    Don’t have an Ethereum address? [Create a MetaMask wallet](https://metamask.io/) to get one.
 
 2. **Pick an app.**
 
    - [Converse](https://getconverse.app/) (iOS): Works with Ethereum addresses, ENS names, and Lens handles
-   - [XMTP Inbox](https://xmtp.chat/) (web): Works with Ethereum addresses and ENS names
+   - [XMTP Inbox](https://xmtp.chat/) (web): Works with Ethereum addresses, ENS names, and UNS names.
    - [Buttrfly](https://buttrfly.app/) (iOS): Works with Lens handles
    - [Lenster](https://lenster.xyz/) (web): Works with Lens handles
    - [Orb](https://orb.ac/) (ios and Android): Works with Lens handles
+
+   To explore more apps build with XMTP, see [Built with XMTP](/built-with-xmtp).
 
 3. **Send a message.**
 
@@ -108,3 +72,19 @@ A great way to start learning how to build an app with XMTP is to use one!
    Try a second app and see all your conversations in both apps, regardless of the app you used to start them. This also means you and a friend can each use your own preferred app to exchange messages.
 
    With XMTP, you own and control your messages and are always free to use the app that best suits your needs.
+
+## Works with XMTP
+
+XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets), though XMTP itself does not use EVMs. XMTP also works with other web3 identities that apps built with XMTP can derive from Ethereum accounts, such as ENS names and Lens profiles.
+
+To learn more, see [Works with XMTP](/docs/dev-faqs).
+
+## Protocol overview
+
+A user can send and receive encrypted XMTP messages using an app with an embedded XMTP **client**, authenticating using a wallet signature. XMTP network **nodes** persist the user's messages.
+
+Clients and nodes are implemented as [Waku2](https://rfc.vac.dev/spec/10/) peers but with XMTP-specific functions and capabilities.
+
+To learn more about clients, see [Client layer](/docs/concepts/architectural-overview#client-layer).
+
+To learn more about nodes, see [Network layer](/docs/concepts/architectural-overview#network-layer).
