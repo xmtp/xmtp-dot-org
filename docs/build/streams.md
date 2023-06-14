@@ -7,7 +7,7 @@ description: Learn how to stream new conversations and messages
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Stream conversations and messages with XMTP
+# Stream conversations and messages
 
 XMTP supports real-time message delivery and retrieval. Once you initially retrieve existing conversations, you can listen for a real-time stream of new conversations and messages.
 
@@ -73,50 +73,26 @@ client.conversations.stream().collect {
 </TabItem>
 <TabItem value="react" label="React - beta" default>
 
-The `useStreamConversations` hook listens for new conversations in real-time and calls the passed callback when a new conversation is created. It also exposes an error state.
-
-**Type**
-
-```ts
-import type { Conversation } from "@xmtp/react-sdk";
-
-const useStreamConversations: (
-  onConversation: (conversation: Conversation) => void
-) => {
-  error: unknown;
-};
-```
-
-**Example**
-
 ```tsx
+//The `useStreamConversations` hook listens for new conversations in real-time and calls the passed callback when a new conversation is created. It also exposes an error state.
+
 import { useCallback, useState } from "react";
 import { useStreamConversations } from "@xmtp/react-sdk";
-import type { Conversation } from "@xmtp/react-sdk";
 
-export const NewConversations: React.FC = () => {
-  // track streamed conversations
-  const [streamedConversations, setStreamedConversations] = useState<
-    Conversation[]
-  >([]);
+// track streamed conversations
+const [streamedConversations, setStreamedConversations] = useState<
+  Conversation[]
+>([]);
 
-  // callback to handle incoming conversations
-  const onConversation = useCallback(
-    (conversation: Conversation) => {
-      setStreamedConversations((prev) => [...prev, conversation]);
-    },
-    [],
-  );
-  const { error } = useStreamConversations(onConversation);
+// callback to handle incoming conversations
+const onConversation = useCallback((conversation: Conversation) => {
+  setStreamedConversations((prev) => [...prev, conversation]);
+}, []);
+const { error } = useStreamConversations(onConversation);
 
-  if (error) {
-    return "An error occurred while streaming conversations";
-  }
-
-  return (
-    ...
-  );
-};
+if (error) {
+  return "An error occurred while streaming conversations";
+}
 ```
 
 </TabItem>
@@ -124,16 +100,13 @@ export const NewConversations: React.FC = () => {
 
 ## Listen for new messages in a conversation
 
-Listen for any new incoming or outgoing messages in a conversation.
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
-
 You can listen for any new messages (incoming or outgoing) in a conversation by calling `conversation.streamMessages()`.
 
 A successfully received message (that makes it through the decoding and decryption without throwing) can be trusted to be authentic, i.e. that it was sent by the owner of the `message.senderAddress` wallet and that it wasn't modified in transit. The `message.sent` timestamp can be trusted to have been set by the sender.
 
-The Stream returned by the `stream` methods is an asynchronous iterator and as such usable by a for-await-of loop. Note however that it is by its nature infinite, so any looping construct used with it will not terminate, unless the termination is explicitly initiated (by breaking the loop or by an external call to `Stream.return()`).
+The Stream returned by the `stream` methods is an asynchronous iterator and as such usable by a for-await-of loop. Note however that it is by its nature infinite, so any looping construct used with it will not terminate, unless the termination is explicitly initiated (by breaking the loop or by an external call to `return`).
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript" default>
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
@@ -150,12 +123,6 @@ for await (const message of await conversation.streamMessages()) {
 
 </TabItem>
 <TabItem value="swift" label="Swift" default>
-
-You can listen for any new messages (incoming or outgoing) in a conversation by calling `conversation.streamMessages()`.
-
-A successfully received message (that makes it through the decoding and decryption without throwing) can be trusted to be authentic. Authentic means that it was sent by the owner of the `message.senderAddress` account and that it wasn't modified in transit. The `message.sent` timestamp can be trusted to have been set by the sender.
-
-The stream returned by the `stream` methods is an asynchronous iterator and as such is usable by a for-await-of loop. Note however that it is by its nature infinite, so any looping construct used with it will not terminate, unless the termination is explicitly initiated (by breaking the loop).
 
 ```swift
 let conversation = try await client.conversations.newConversation(
@@ -174,14 +141,6 @@ for try await message in conversation.streamMessages() {
 </TabItem>
 <TabItem value="dart" label="Dart" default>
 
-You can listen for any new messages (incoming or outgoing) in a conversation by calling
-`client.streamMessages(convo)`.
-
-A successfully received message (that makes it through the decoding and decryption) can be trusted
-to be authentic. Authentic means that it was sent by the owner of the `message.sender` account and
-that it wasn't modified in transit. The `message.sentAt` time can be trusted to have been set by
-the sender.
-
 ```dart
 var listening = client.streamMessages(convo).listen((message) {
   debugPrint('${message.sender}> ${message.content}');
@@ -192,12 +151,6 @@ await listening.cancel();
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin - beta" default>
-
-You can listen for any new messages (incoming or outgoing) in a conversation by calling `conversation.streamMessages()`.
-
-A successfully received message (that makes it through the decoding and decryption without throwing) can be trusted to be authentic. Authentic means that it was sent by the owner of the `message.senderAddress` account and that it wasn't modified in transit. The `message.sent` timestamp can be trusted to have been set by the sender.
-
-The flow returned by the `stream` methods is an asynchronous data stream that sequentially emits values and completes normally or with an exception.
 
 ```kotlin
 val conversation =
@@ -215,56 +168,16 @@ conversation.streamMessages().collect {
 </TabItem>
 <TabItem value="react" label="React - beta" default>
 
-The `useStreamMessages` hook streams new conversation messages on mount and exposes an error state.
-
-**Type**
-
-```ts
-import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
-
-const useStreamMessages: (
-  conversation: Conversation,
-  onMessage: (message: DecodedMessage) => void
-) => {
-  error: unknown;
-};
-```
-
-**Example**
-
 ```tsx
 import { useStreamMessages } from "@xmtp/react-sdk";
-import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
-import { useCallback, useEffect, useState } from "react";
 
-export const StreamMessages: React.FC<{
-  conversation: Conversation;
-}> = ({
-  conversation,
-}) => {
-  // track streamed messages
-  const [streamedMessages, setStreamedMessages] = useState<DecodedMessage[]>(
-    [],
-  );
-
-  // callback to handle incoming messages
-  const onMessage = useCallback(
-    (message: DecodedMessage) => {
-      setStreamedMessages((prev) => [...prev, message]);
-    },
-    [streamedMessages],
-  );
-
-  useStreamMessages(conversation, onMessage);
-
-  useEffect(() => {
-    setStreamedMessages([]);
-  }, [conversation]);
-
-  return (
-    ...
-  );
-};
+const onMessage = useCallback((message) => {
+  setHistory((prevMessages) => {
+    const msgsnew = [...prevMessages, message];
+    return msgsnew;
+  });
+}, []);
+useStreamMessages(conversation, onMessage);
 ```
 
 </TabItem>
@@ -281,9 +194,7 @@ There is a chance this stream can miss messages if multiple new conversations ar
 <Tabs>
 <TabItem value="js" label="JavaScript" default>
 
-To listen for any new messages from all conversations, use `conversations.streamAllMessages()`.
-
-```ts
+```jsx
 for await (const message of await xmtp.conversations.streamAllMessages()) {
   if (message.senderAddress === xmtp.address) {
     // This message was sent from me
@@ -296,26 +207,9 @@ for await (const message of await xmtp.conversations.streamAllMessages()) {
 </TabItem>
 <TabItem value="react" label="React - beta" default>
 
-The `useStreamAllMessages` hook streams new messages from all conversations on mount and exposes an error state.
-
-**Type**
-
-```ts
-import type { DecodedMessage } from "@xmtp/react-sdk";
-
-const useStreamAllMessages: (onMessage: (message: DecodedMessage) => void) => {
-  error: unknown;
-};
-```
-
-**Example**
-
 ```tsx
 import { useStreamAllMessages } from "@xmtp/react-sdk";
-import type { DecodedMessage } from "@xmtp/react-sdk";
-import { useCallback, useState } from "react";
 
-export const StreamAllMessages: React.FC = () => {
   // track streamed messages
   const [streamedMessages, setStreamedMessages] = useState<DecodedMessage[]>(
     [],

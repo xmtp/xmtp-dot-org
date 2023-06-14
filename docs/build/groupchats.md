@@ -72,7 +72,6 @@ Enable a member of a group chat to change the group chat title by sending a mess
 
 ```jsx
 import { ContentTypeGroupChatTitleChanged } from '@xmtp/xmtp-js'
-import type { GroupChatTitleChanged } from '@xmtp/xmtp-js'
 
 const
 ```
