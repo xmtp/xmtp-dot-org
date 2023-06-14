@@ -751,6 +751,8 @@ ul li a:before {
   padding: 0px !important;
   margin: 0px !important;
   border: 0px !important;
+  border-top-right-radius: var(--ifm-code-border-radius);
+  border-top-left-radius: var(--ifm-code-border-radius);
 }
 .tabs-container pre {
   border-top-left-radius: 0px !important;
