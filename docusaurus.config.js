@@ -162,7 +162,7 @@ const config = {
                 <div class="subtext text-sm text-normal whitespace-pre-line">Architecture of the XTMP network and client layers</div></div></div>`,
               },
               {
-                to: "docs/concepts/faq#security",
+                to: "docs/faq#security",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/lock-closed-icon.svg" alt="Lock icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Security</div>
                  <div class="subtext text-sm text-normal whitespace-pre-line">Overview of XMTP security</div></div></div>`,
@@ -272,11 +272,11 @@ const config = {
               },
               {
                 label: `Broadcast`,
-                to: `/docs/build/broadcast`,
+                to: `/docs/use-cases/broadcast`,
               },
               {
                 label: `Bots`,
-                to: `/docs/build/bots`,
+                to: `/docs/use-cases/bots`,
               },
             ],
           },
@@ -367,11 +367,11 @@ const config = {
               },
               {
                 label: "Security",
-                to: "/docs/concepts/faq#security",
+                to: "/docs/faq#security",
               },
               {
                 label: "FAQ",
-                to: "/docs/concepts/faq",
+                to: "/docs/faq",
               },
               {
                 label: "Status page",

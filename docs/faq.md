@@ -22,7 +22,7 @@ XMTP Labs is focused on serving developers. We build [SDKs, UI components, and e
 
 XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts, though XMTP itself does not use EVMs.
 
-To learn more, see [Wallet apps](/docs/build/dev-faqs#wallet-apps).
+To learn more, see [Wallet apps](/docs/dev-faqs#wallet-apps).
 
 ## Network
 
@@ -88,21 +88,21 @@ There are no message storage and retrieval-related fees incurred by developers f
 
 ### Has XMTP undergone a security audit?
 
-Yes, read the comprehensive [XMTP security assessment](img/REP-final-20230207T000355Z.pdf) prepared by [CertiK](https://www.certik.com/company/about).
+Yes, read the comprehensive [XMTP security assessment](/img/REP-final-20230207T000355Z.pdf) prepared by [CertiK](https://www.certik.com/company/about).
 
 ### How does XMTP establish a secure and fraud-proof relationship between two identities?
 
 Blockchain accounts sign and advertise a set of keys to start using XMTP. XMTP uses these keys to establish a shared secret between the blockchain accounts. It then uses the shared secret to generate a key used to encrypt an invitation that allows the blockchain accounts to start exchanging messages. No third-party apps or relayers are involved in this process.
 
-To learn more about these keys, see [Key generation and usage in XMTP](key-generation-and-usage).
+To learn more about these keys, see [Key generation and usage in XMTP](/docs/concepts/key-generation-and-usage).
 
-To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](invitation-and-message-encryption).
+To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](/docs/concepts/invitation-and-message-encryption).
 
 ### Does each blockchain account address have a corresponding XMTP identity?
 
 Yes. Each blockchain account address is represented by an XMTP identity key. This identity key is a part of a key bundle that only the address that generated it can use to authenticate messages.
 
-To learn more about XMTP identity keys, see [Key generation and usage in XMTP](key-generation-and-usage).
+To learn more about XMTP identity keys, see [Key generation and usage in XMTP](/docs/concepts/key-generation-and-usage).
 
 ### Why do apps built with XMTP require a user to sign with their blockchain account private keys each time they start a new messaging session?
 
@@ -114,7 +114,7 @@ If you are using the JavaScript client SDK, you might consider [manually handlin
 
 Based on developer and community feedback, we are researching more robust approaches to secure key management.
 
-To learn more about these keys, see [Key generation and usage in XMTP](key-generation-and-usage).
+To learn more about these keys, see [Key generation and usage in XMTP](/docs/concepts/key-generation-and-usage).
 
 ## Storage
 
@@ -146,7 +146,7 @@ The XMTP community can propose and adopt standards for other content types, eith
 
 Message payloads also include references to timestamps. However, timestamps are not currently independently verified and can be set to any value by the sending app.
 
-To learn more about content types, see [Content types](content-types).
+To learn more about content types, see [Content types](/docs/concepts/content-types).
 
 To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md)
 
@@ -190,4 +190,4 @@ To learn more about how the XMTP Inbox chat app is built, see the [xmtp-inbox-we
 
 XMTP natively supports one-to-one messaging. One-to-many broadcast messages, or announcements, can be constructed using the XMTP SDK.
 
-To learn more, see [Send a broadcast message](/docs/build/broadcast).
+To learn more, see [Send a broadcast message](/docs/use-cases/broadcast).

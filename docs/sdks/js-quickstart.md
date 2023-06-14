@@ -13,7 +13,7 @@ Build with this SDK to provide messaging between blockchain wallet addresses, in
 
 `xmtp-js` was included in a [security assessment](https://xmtp.org/assets/files/REP-final-20230207T000355Z-3825cbc68c115f4ec81f3b1d53a24fce.pdf) prepared by [Certik](https://www.certik.com/company/about).
 
-To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/concepts/faq).
+To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/faq).
 
 ### Example apps built with `xmtp-js`
 

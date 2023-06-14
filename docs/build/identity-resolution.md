@@ -106,6 +106,6 @@ The response provides the associated domain name, if available. For example:
 
 To learn more about Everyname, see [Introduction](https://docs.everyname.xyz/api/introduction).
 
-To learn about wallet addresses and chains that are compatible with XMTP, see [Chains](/docs/build/dev-faqs#chains).
+To learn about wallet addresses and chains that are compatible with XMTP, see [Chains](/docs/dev-faqs#chains).
 
-To learn about name services, or decentralized IDs, that work with XMTP, see [Decentralized identifiers](/docs/build/dev-faqs#decentralized-identifiers).
+To learn about name services, or decentralized IDs, that work with XMTP, see [Decentralized identifiers](/docs/dev-faqs#decentralized-identifiers).

@@ -58,7 +58,7 @@ XMTP is an open protocol and network for secure web3 messaging. Developers build
 
 Be sure to watch relevant repos to be notified about new releases, which might include breaking changes and migration steps. You can also join the [XMTP Discord](https://discord.gg/xmtp) to receive these types of notifications.
 
-3. **Learn about what [works with XMTP](/docs/build/dev-faqs)**
+3. **Learn about what [works with XMTP](/docs/dev-faqs)**
 
    Building your app with these composable building blocks can help you deliver and distribute your XMTP app—faster and with quality.
 
@@ -87,7 +87,7 @@ Be sure to watch relevant repos to be notified about new releases, which might i
 
 6. **You probably have some great questions by now! Check out these resources:**
 
-   - [FAQ](/docs/concepts/faq)
+   - [FAQ](/docs/faq)
    - [Roadmap](/roadmap)
    - [Blog](/blog)
 

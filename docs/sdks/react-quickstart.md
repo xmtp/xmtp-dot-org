@@ -21,7 +21,7 @@ This SDK is in **beta** status and ready for you to start building with. However
 
 To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-web/issues) in the `xmtp-web` repo.
 
-To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/concepts/faq).
+To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/faq).
 
 ### What's inside?
 

@@ -21,7 +21,7 @@ Specifically, while push notifications should work with the current SDK, we are 
 
 Follow along in the [tracking issue](https://github.com/xmtp/xmtp-android/issues/1) for updates.
 
-To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/concepts/faq).
+To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/faq).
 
 ## Example app
 
