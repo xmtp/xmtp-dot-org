@@ -8,6 +8,8 @@ image: "./media/everyname.png"
 description: "Resolve identities using the Everyname API"
 ---
 
+import FeedbackWidget from '/src/components/FeedbackWidget'
+
 ![](./media/uc-everyname.png)
 
 # Resolve identities in your app built with XMTP
@@ -118,3 +120,6 @@ To learn more about Everyname, see [Introduction](https://docs.everyname.xyz/api
 To learn about wallet addresses and chains that are compatible with XMTP, see [Chains](/docs/dev-faqs#chains).
 
 To learn about name services, or decentralized IDs, that work with XMTP, see [Decentralized identifiers](/docs/dev-faqs#decentralized-identifiers).
+
+<br/>
+<FeedbackWidget />

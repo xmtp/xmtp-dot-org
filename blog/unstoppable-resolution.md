@@ -8,6 +8,8 @@ image: "./media/uc-uns.png"
 description: "Add Unstoppable Resolution to your XMTP applicationP"
 ---
 
+import FeedbackWidget from '/src/components/FeedbackWidget'
+
 ![thirdweb.jpg](./media/uc-uns.png)
 
 Creating seamless user experiences in decentralized applications (dApps) is vital for the growth and widespread adoption of Web3. Unstoppable Domains is one such solution that greatly improves the user experience by offering blockchain-based domains. These domains simplify cryptocurrency transactions, enable easy user logins for dApps, games, and metaverses, and even offer a way to create and host censorship-resistant websites.
@@ -194,3 +196,6 @@ useEffect(() => {
 **Learn more**
 
 To learn more about Building with Unstoppable Domains, see the Developer Portal on the Unstoppable Domains website.
+
+<br/>
+<FeedbackWidget />

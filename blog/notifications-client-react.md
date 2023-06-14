@@ -2,7 +2,7 @@
 slug: create-notification-client-react
 hide_table_of_contents: true
 title: "Create a notification client in React"
-date: 2023-11-06
+date: 2023-06-11
 authors: fabri
 description: "Setup Guide for XMTP Notification Client in React."
 image: ./media/notifications/bells.png
@@ -10,6 +10,8 @@ tags:
   - Notifications
   - Server
 ---
+
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 ![](./media/notifications/bells.png)
 
@@ -182,3 +184,6 @@ This is probably the right approach for Android, but on iOS runs the risk of get
 - You probably will want to set up a per-address [notification channel](https://developer.android.com/develop/ui/views/notifications/channels&sa=D&source=docs&ust=1670358576222497&usg=AOvVaw0Iw1wSN2CR-pPhCX5tCLQF) for Android. This will make it easier for users to filter certain notification types in their app-level settings.
 - [Requiring the device to be unlocked before displaying the notification](https://developer.android.com/develop/ui/views/notifications#ActionsRequireUnlockedDevice) likely makes the most sense from a privacy perspective, but that's your product decision.
 - [Expandable notifications](https://developer.android.com/develop/ui/views/notifications/expanded) feel like a superior UX.
+
+<br/>
+<FeedbackWidget />
