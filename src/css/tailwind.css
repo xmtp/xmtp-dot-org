@@ -678,7 +678,7 @@ main[class*="docMainContainer"] tr {
   border-radius: 4px;
   padding: 7px 11px;
   cursor: pointer;
-  margin: 4px 11px;
+  margin: 4px 0px 4px 11px;
   transition-duration: 0.2s;
 }
 
