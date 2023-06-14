@@ -52,7 +52,7 @@ A great way to start learning how to build an app with XMTP is to use one!
    - [Lenster](https://lenster.xyz/) (web): Works with Lens handles
    - [Orb](https://orb.ac/) (ios and Android): Works with Lens handles
 
-   To explore more apps build with XMTP, see [Built with XMTP](/built-with-xmtp).
+   To explore more apps built with XMTP, see [Built with XMTP](/built-with-xmtp).
 
 3. **Send a message.**
 
