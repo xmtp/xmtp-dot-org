@@ -1,10 +1,5 @@
 [
   {
-    "name": "Create a notification client in React",
-    "image": "/img/uc-bells.png",
-    "href": "/blog/create-notification-client-react"
-  },
-  {
     "name": "Setup Guide for XMTP Notification Server",
     "image": "/img/uc-bells.png",
     "href": "/blog/setting-up-push-notification-server"
