@@ -152,3 +152,9 @@ useStreamMessages(conversation, onMessage);
 - [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
 - [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
 - [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
+
+## Need to send a test message?
+
+Message this XMTP message bot to get an immediate automated reply:
+
+- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)

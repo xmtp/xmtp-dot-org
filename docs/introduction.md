@@ -51,12 +51,6 @@ To learn about other SDKs in the works, see the [Roadmap](/roadmap).
 
 ### Example apps
 
-Check out these example apps you can use for guidance and inspiration when building with XMTP:
-
-- The [xmtp-quickstart-react repo](https://github.com/xmtp/xmtp-quickstart-react) provides the XMTP Quickstart React chat app, which demonstrates core capabilities of the XMTP client SDK. You can use the code in this repo to learn to build a basic messaging app.
-
-  - [Try the app](https://xmtp-quickstart-react.vercel.app/) connected to the XMTP `dev` network
-
 - The [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web) provides the XMTP Inbox chat app, which demonstrates core and advanced capabilities of the XMTP client SDK and showcases innovative ways of building with XMTP.
   - [Try the app](https://dev.xmtp.chat/) connected to the XMTP `dev` network
   - [Try the app](https://xmtp.chat/) connected to the XMTP `production` network

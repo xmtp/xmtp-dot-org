@@ -286,14 +286,17 @@ npm i @xmtp/react-native-sdk
 </TabItem>
 </Tabs>
 
-## Example apps
+### Quickstarts 🏁
 
-- [Swift](https://github.com/xmtp/xmtp-ios/tree/main/XMTPiOSExample/XMTPiOSExample)
-- [JavaScript](https://github.com/fabriguespe/xmtp-js-quickstart)
-- [Dart](https://github.com/xmtp/xmtp-flutter/tree/main/example)
-- [React hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart) - beta
-- [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/example) - beta
-- [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart) - alpha
+- [NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
+- [ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs)
+- [Dart](https://github.com/xmtp/xmtp-android)
+- [Kotlin](https://github.com/xmtp/xmtp-flutter)
+- [Swift](https://github.com/xmtp/xmtp-ios)
+- [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
+- [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
+- [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
+- [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
 
 ## Need to send a test message?
 
