@@ -4,7 +4,7 @@ sidebar_position: 8
 description: Follow these guidelines to create group chats
 ---
 
-# Provide group chats with XMTP
+# Group Chats
 
 :::caution Important
 This feature is in **alpha** status and ready for you to start experimenting with. Is only available on the `beta` branch, but we're excited to share it with you and get your feedback.

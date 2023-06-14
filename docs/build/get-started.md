@@ -9,11 +9,11 @@ import TabItem from "@theme/TabItem";
 
 # Get started with XMTP
 
-The [XMTP message API](/docs/concepts/architectural-overview#network-layer) revolves around a network client that allows retrieving and sending messages to other network participants. 
+The [XMTP message API](/docs/concepts/architectural-overview#network-layer) revolves around a network client that allows retrieving and sending messages to other network participants.
 
-A client must be connected to a wallet on startup. If this is the very first time the client is created, the client will generate a [key bundle](/docs/concepts/key-generation-and-usage) that is used to [encrypt and authenticate messages](/docs/concepts/invitation-and-message-encryption). 
+A client must be connected to a wallet on startup. If this is the very first time the client is created, the client will generate a [key bundle](/docs/concepts/key-generation-and-usage) that is used to [encrypt and authenticate messages](/docs/concepts/invitation-and-message-encryption).
 
-The key bundle persists encrypted in the network using a [wallet signature](/docs/concepts/account-signatures). The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys. 
+The key bundle persists encrypted in the network using a [wallet signature](/docs/concepts/account-signatures). The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys.
 
 All this happens transparently, without requiring any additional code.
 
@@ -23,24 +23,24 @@ All this happens transparently, without requiring any additional code.
 <TabItem value="js" label="JavaScript" default>
 
 ```tsx
-import { Client } from '@xmtp/xmtp-js'
-import { Wallet } from 'ethers'
+import { Client } from "@xmtp/xmtp-js";
+import { Wallet } from "ethers";
 
 // You'll want to replace this with a wallet from your application
-const wallet = Wallet.createRandom()
+const wallet = Wallet.createRandom();
 // Create the client with your wallet. This will connect to the XMTP development network by default
-const xmtp = await Client.create(wallet)
+const xmtp = await Client.create(wallet);
 // Start a conversation with XMTP
 const conversation = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
+  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+);
 // Load all messages in the conversation
-const messages = await conversation.messages()
+const messages = await conversation.messages();
 // Send a message
-await conversation.send('gm')
+await conversation.send("gm");
 // Listen for new messages in the conversation
 for await (const message of await conversation.streamMessages()) {
-  console.log(`[${message.senderAddress}]: ${message.content}`)
+  console.log(`[${message.senderAddress}]: ${message.content}`);
 }
 ```
 
@@ -151,14 +151,9 @@ const { conversations } = useConversations();
 const startConversation = useStartConversation();
 const { canMessage } = useCanMessage();
 
-
 //Initialize
 {
-  !isConnected && (
-    <button onClick={initXmtp}>
-      Connect to XMTP
-    </button>
-  );
+  !isConnected && <button onClick={initXmtp}>Connect to XMTP</button>;
 }
 
 const initXmtp = async () => {
@@ -166,9 +161,9 @@ const initXmtp = async () => {
 };
 
 // Start a conversation with XMTP
-const add='0x3F11b27F323b62B159D2642964fa27C46C841897'
+const add = "0x3F11b27F323b62B159D2642964fa27C46C841897";
 if (await canMessage(add)) {
-      const conversation = await startConversation(add, "hi");
+  const conversation = await startConversation(add, "hi");
 }
 
 //Stream messages
@@ -187,19 +182,52 @@ useStreamMessages(conversation, onMessage);
 </TabItem>
 <TabItem value="rn" label="React Native - alpha" default>
 
-```js
+```jsx
 import { Client, Conversation, DecodedMessage } from '@xmtp/react-native-sdk';
-return (
-    <SafeAreaView >
-      <View style={{ width: '100%', flexDirection: 'row', alignItems: 'center' }}>
-        <Text selectable={true} style={{ marginTop: 32, width: '100%', textAlign: 'center' }}>{addressText}</Text>
-      </View>
-      { connected ? <Button title="Refresh Conversations" onPress={getConversations()} /> : <Button title="Connect Random Wallet" onPress={connectRandomWallet()} /> }
-      { connected ? <ConversationList /> : null }
-      { messages ? <ConversationModal onClose={() => setMessages(null)} /> : null }
-    </SafeAreaView>
-  );
+
+const [addressText, setAddressText] = useState("No Connected Address");
+const [connected, setConnected] = useState(false);
+const [client, setClient] = useState<Client | undefined>(undefined);
+const [conversations, setConversations] = useState<Conversation[] | undefined>(undefined);
+const [messages, setMessages] = useState<DecodedMessage[] | undefined>(undefined);
+const [conversation, setConversation] = useState<Conversation | undefined>(undefined);
+
+function connectRandomWallet() {
+  return async () => {
+    // NOTE: react-native-sdk testing
+    const client = await Client.createRandom('dev')
+    setClient(client);
+    const rnSDKAddress = await client.address;
+    // const address: string = await callIntoWebview("connectRandomWallet");
+    setAddressText('react-native-sdk npm address: ' + rnSDKAddress);
+    setConnected(true);
+    getConversations();
+  };
 }
+
+function getConversations() {
+  return async () => {
+    const conversations = await client?.conversations.list();
+    setConversations(conversations);
+  };
+}
+
+function getMessages(conversation: Conversation) {
+  return async () => {
+    const messages = await conversation?.messages();
+    setConversation(conversation);
+    setMessages(messages);
+  };
+}
+
+function sendMessage(message: string) {
+  return async () => {
+    await conversation?.send(message);
+    getMessages(conversation!!);
+  };
+}
+
+
 ```
 
 </TabItem>
@@ -219,9 +247,9 @@ npm install @xmtp/js
 </TabItem>
 <TabItem value="swift" label="Swift" default>
 
-Use Xcode to add to the project (**File** > **Add Packages…**) or add this to your `Package.swift file`: 
+Use Xcode to add to the project (**File** > **Add Packages…**) or add this to your `Package.swift file`:
 
-```
+```bash
 .package(url: "https://github.com/xmtp/xmtp-ios", branch: "main")
 ```
 
@@ -237,7 +265,7 @@ flutter pub add xmtp
 
 You can find the latest package version on [Maven Central](https://central.sonatype.com/artifact/org.xmtp/android/0.0.5/versions).
 
-```
+```bash
 implementation 'org.xmtp:android:X.X.X'
 ```
 
@@ -266,8 +294,9 @@ npm i @xmtp/react-native-sdk
 - [React hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart) - beta
 - [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/example) - beta
 - [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart) - alpha
-- [Remote attachments](https://github.com/fabriguespe/xmtp-thirdweb-js)
 
 ## Need to send a test message?
-    
-Message this XMTP message bot to get an immediate automated reply: `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
+
+Message this XMTP message bot to get an immediate automated reply:
+
+- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)

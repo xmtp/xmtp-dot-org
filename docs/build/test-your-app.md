@@ -4,7 +4,7 @@ sidebar_position: 18
 description: Use these tips and guidelines to test your app before going live.
 ---
 
-# Test your app built with XMTP
+# Test your app
 
 Be sure to test your app before going live.
 

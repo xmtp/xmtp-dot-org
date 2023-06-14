@@ -8,7 +8,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import perfArchitecture from '/docs/build/img/performance-architecture.jpeg';
 
-# Optimize performance of your app built with XMTP
+# Optimize performance of your app
 
 Follow these guidelines to optimize your app’s performance. To learn about testing your app's performance, see [Test your app](test-your-app).
 
@@ -43,7 +43,7 @@ Serialize securely stored `DecodedMessage` histories, avoiding the need to downl
 
 ## Page through messages
 
-Page through messages in a conversation instead of fetching them all at the same time. 
+Page through messages in a conversation instead of fetching them all at the same time.
 
 To learn more, see [List messages in a conversation with pagination](messages#list-messages-in-a-conversation-with-pagination).
 

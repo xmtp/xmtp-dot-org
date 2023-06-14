@@ -7,7 +7,7 @@ description: Learn how to send and list messages
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Send and list messages with XMTP
+# Send and list messages
 
 Messages are addressed using wallet addresses.
 
@@ -115,10 +115,13 @@ Use an XMTP SDK to prepare a message before sending it. This will encrypt and pa
 const preparedTextMessage = await conversation.prepareMessage(messageText);
 
 // custom content type
-const preparedCustomContentMessage = await conversation.prepareMessage(customContent, {
-  contentType,
-  contentFallback: "This content can't be displayed on this client."
-});
+const preparedCustomContentMessage = await conversation.prepareMessage(
+  customContent,
+  {
+    contentType,
+    contentFallback: "This content can't be displayed on this client.",
+  }
+);
 ```
 
 </TabItem>
