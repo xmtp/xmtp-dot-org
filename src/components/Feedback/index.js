@@ -1,7 +1,7 @@
-import React from 'react'
-import ALink from '../ALink'
+import React from "react";
+import ALink from "../ALink";
 
-const Feedback = ({url}) => {
+const Feedback = ({ url }) => {
   return (
     <ALink
       to="https://github.com/orgs/xmtp/discussions/categories/q-a"
@@ -10,7 +10,7 @@ const Feedback = ({url}) => {
       <img src="/img/question-icon.svg" className="mr-1.5" />
       Questions? Give us feedback
     </ALink>
-  )
-}
+  );
+};
 
-export default Feedback
+export default Feedback;
