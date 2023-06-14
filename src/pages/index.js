@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
-import Layout from '@theme/Layout'
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import styles from './index.module.css'
-import { MainContent } from '../components/MainContent'
-import './custom.css'
-import { Link } from 'react-router-dom'
-import FeedbackWidget from '../components/FeedbackWidget'
+import React, { useEffect } from "react";
+import Layout from "@theme/Layout";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import styles from "./index.module.css";
+import { MainContent } from "../components/MainContent";
+import "./custom.css";
+import { Link } from "react-router-dom";
+import FeedbackWidget from "../components/FeedbackWidget";
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext()
+  const { siteConfig } = useDocusaurusContext();
 
   return (
     <header className="homepageHeader px-0 pt-12 lg:pt-16 h-[504px] bg-cover border-0 border-b border-solid border-b-black">
@@ -26,27 +26,27 @@ function HomepageHeader() {
         </p>
       </div>
     </header>
-  )
+  );
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext()
+  const { siteConfig } = useDocusaurusContext();
 
   useEffect(() => {
-    if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'light')
+    if (!localStorage.getItem("theme")) localStorage.setItem("theme", "light");
     if (
-      localStorage.getItem('theme') === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
+      localStorage.getItem("theme") === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
-      document.documentElement.classList.add('dark')
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove("dark");
     }
 
-    const element = document.getElementsByClassName('main-wrapper')[0]
-    element.style.background = 'none'
-  }, [])
+    const element = document.getElementsByClassName("main-wrapper")[0];
+    element.style.background = "none";
+  }, []);
 
   return (
     <Layout
@@ -55,9 +55,6 @@ export default function Home() {
     >
       <HomepageHeader />
       <MainContent styles={styles} />
-      <div className="bg-black">
-        <FeedbackWidget isRoot />
-      </div>
     </Layout>
-  )
+  );
 }

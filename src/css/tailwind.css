@@ -931,4 +931,25 @@ code:not([class]) {
   .col {
     flex-basis: 50%;
   }
+  .bg-black {
+    display: none;
+  }
+  .header-xmtp-link,
+  .header-github-link,
+  .header-discord-link {
+    display: none;
+  }
+  .flexbar {
+    width: 100%;
+    border-top: 1px solid lightgrey;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  .flexbar div {
+    margin-bottom: 5px;
+  }
+  .flexbar img {
+    width: 20px;
+    margin-right: 20px;
+  }
 }
