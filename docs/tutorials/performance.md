@@ -1,12 +1,12 @@
 ---
 sidebar_label: Performance
-sidebar_position: 16
+sidebar_position: 1
 description: Follow these guidelines to optimize your app’s performance.
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import perfArchitecture from '/docs/build/img/performance-architecture.jpeg';
+import perfArchitecture from '/docs/tutorials/img/performance-architecture.jpeg';
 
 # Optimize performance of your app
 
@@ -32,7 +32,7 @@ When building web apps, you can use the browser `localStorage` as the local cach
 
 Caching the conversation list can improve performance of `client.conversations.list()` by up to 90%.
 
-To learn more, see [Cache the conversation list](conversations#cache-the-conversation-list).
+To learn more, see [Cache the conversation list](/docs/build/conversations#cache-the-conversation-list).
 
 ## Cache message histories
 
@@ -45,7 +45,7 @@ Serialize securely stored `DecodedMessage` histories, avoiding the need to downl
 
 Page through messages in a conversation instead of fetching them all at the same time.
 
-To learn more, see [List messages in a conversation with pagination](messages#list-messages-in-a-conversation-with-pagination).
+To learn more, see [List messages in a conversation with pagination](/docs/build/messages#list-messages-in-a-conversation-with-pagination).
 
 ## Compress message content
 
