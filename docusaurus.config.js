@@ -264,7 +264,7 @@ const config = {
               },
               {
                 label: `Group chats`,
-                to: `/docs/build/groupchats`,
+                to: `/docs/build/group-chats`,
               },
               {
                 label: `Push notifications`,
