@@ -926,3 +926,9 @@ code:not([class]) {
     display: none;
   }
 }
+/*footer cols*/
+@media (max-width: 799px) {
+  .col {
+    flex-basis: 50%;
+  }
+}
