@@ -107,12 +107,6 @@ const config = {
             label: "Use cases",
             items: [
               {
-                to: "built-with-xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="Sparkles icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
-              },
-              {
                 to: "/docs/use-cases/guides",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/book-icon.svg" alt="Book icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Guides</div></div>`,
@@ -149,6 +143,12 @@ const config = {
             position: "right",
             label: "Resources",
             items: [
+              {
+                to: "built-with-xmtp",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="Sparkles icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
+              },
               {
                 to: "roadmap",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map-icon.svg" alt="Map icon" /></div>

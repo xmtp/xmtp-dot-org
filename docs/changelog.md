@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: false
 sidebar_label: Changelog
-sidebar_position: 10
+sidebar_position: 24
 ---
 
 # Changelog for XMTP
