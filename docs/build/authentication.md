@@ -24,7 +24,7 @@ A tab marked with **beta** means it provides information about an XMTP SDK in be
 
 For JavaScript, Swift, Kotlin, and React SDKs, the client connects to the XMTP `dev` environment by default. 
 
-For Dart, the cilent connects to the `local` environment by default. 
+For Dart, the client connects to the `local` environment by default. 
 
 [Use client configuration options](#configure-the-client) to change this and other parameters of a client's network connection.
 

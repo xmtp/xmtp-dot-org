@@ -22,7 +22,7 @@ We are open to any and all ideas! Below are just a few categories of projects we
 
 ### 🎨 Custom content types
 
-- Media: Attachements, Voicenotes, Images
+- Media: Attachments, Voicenotes, Images
 - Threading: Emoji reactions, Reply threads
 - Transactions and payments
 
