@@ -1,20 +1,38 @@
 ---
-slug: unstoppableweb
+slug: xmtp-apps-can-reach-unstoppable-domains
 hide_table_of_contents: true
-title: "Add Unstoppable Resolution to your XMTP application"
-date: 2023-06-07
+title: "XMTP Apps Can Reach Unstoppable Domains"
+date: 2023-14-07
 authors: fabri
-image: "./media/uc-uns.png"
-description: "Add Unstoppable Resolution to your XMTP applicationP"
+image: "/img/uc-uns.png"
+description: "XMTP Apps Can Reach Unstoppable Domains"
 ---
 
-![thirdweb.jpg](./media/uc-uns.png)
+![thirdweb.jpg](/img/uc-uns.png)
 
-Creating seamless user experiences in decentralized applications (dApps) is vital for the growth and widespread adoption of Web3. Unstoppable Domains is one such solution that greatly improves the user experience by offering blockchain-based domains. These domains simplify cryptocurrency transactions, enable easy user logins for dApps, games, and metaverses, and even offer a way to create and host censorship-resistant websites.
+# XMTP Apps Can Reach Unstoppable Domains
 
-Best of all, once an Unstoppable Domain is minted on the blockchain, it belongs to the user forever without any renewal fees. Today, we'll walk you through the process of adding Unstoppable Domain support into your XMTP application.
+<style>
+
+</style>
+
+:::danger GIVEAWAY ALERT
+The first 100 people who message 'xmtp-discount.x' on @converseapp will get 20% off their Unstoppable Domain 😎 We'll also give one lucky winner a $500 USDC prize on Friday! Stay tuned on Converse for updates.
+
+[**Download Converse Here**](https://getconverse.app/)
+:::
+
+—
+
+Our goal at XMTP is to enable apps to message any identity. Support already exists for ENS and Lens: just by inputting someone’s web3 username, the inbox will find the wallet address it’s connected to and connect you to that person.
+
+Today we’re excited to be adding support for Unstoppable Domains as well, thereby growing the XMTP network by more than two million new IDs. Owning our conversations is directly tied to owning our digital identities, and our partnership with Unstoppable Domains enables just that.
 
 <!--truncate-->
+
+Creating seamless user experiences in decentralized applications (dApps) is vital for the growth and widespread adoption of Web3. [Unstoppable Domains](https://unstoppabledomains.com/) is one such solution that greatly improves the user experience by offering blockchain-based domains. These domains simplify cryptocurrency transactions, enable easy user logins for dApps, games, and metaverses, and even offer a way to create and host censorship-resistant websites.
+
+Best of all, once an Unstoppable Domain is minted on the blockchain, it belongs to the user forever without any renewal fees.Today, we'll walk you through the process of adding Unstoppable Domain support to your XMTP app.
 
 ## **Prerequisites[](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app#prerequisites)**
 
@@ -27,7 +45,7 @@ This tutorial requires that you have the following prerequisites in place:
 npm i --save @unstoppabledomains/resolution
 ```
 
-Instantiate the library using your own RPC, such as Infura. Create a `resolution` variable that we are going to use many times across the application.
+Instantiate the library using your own RPC, such as Infura. Create a `resolution` variable that we are going to use many times across the app.
 
 ```jsx
 // Importing the Resolution library from @unstoppabledomains/resolution
@@ -57,7 +75,7 @@ const resolution = new Resolution({
 
 ## **Resolve User Inputs[](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app#filter-for-lens-conversations-and-display-message-previews)**
 
-When building with XMTP, you must provide a way to start a conversation between the user and the wallet address they want to message. As suggested above, an Enter a Wallet Address field. We’ll want to check the user input to see if its a valid Unstoppable Domain and, if it is, resolve it.
+When building with XMTP, you need to provide a way to initiate a conversation between the sender and the recipient's wallet addresses. As suggested above, include an "Enter a Wallet Address" field. It's important to validate user input to check if it's a valid Unstoppable Domain. If it is, you can resolve it.
 
 To check if the input is a Valid Unstoppable Domain, we can use the `.isSupportedDomain` function within the library.
 
@@ -117,7 +135,7 @@ To complete the Unstoppable Domains integration, it’s important to convert the
 
 ![CleanShot 2023-06-04 at 19.30.56@2x.png](./media/uns-img2.png)
 
-To do this, we’ll want to implement a function similar to the below which will attempt to resolve the wallet address to a domain. We’ll display the wallet address if the function returns null, otherwise display the domain.
+To do this, we’ll want to implement a function similar to the one below which will attempt to resolve the wallet address to a domain. Display the wallet address if the function returns null, otherwise display the domain.
 
 ```jsx
 const domain = await resolution.reverse(address);
@@ -127,9 +145,9 @@ To achieve this for the message previews, we can iterate through the existing li
 
 ### Performance
 
-An optional step to limit calls to your RPC is to cache the above results into local storage. To do this, we’ll want to implement a function similar to the below hook which will both set and get a storage item based on their respective key. On error, it will fallback to the default value we set during the function call.
+An optional step to limit calls to your RPC is to cache the above results into local storage. To do this, we’ll want to implement a function similar to the below hook, which will both set and get a storage item based on their respective key. On error, it will fallback to the default value we set during the function call.
 
-An example of tying everything together for a **react app** message preview could look like the below.
+Here is an example of tying everything together for a **react app** message preview:
 
 ```jsx
 // Importing hooks from React
@@ -193,4 +211,8 @@ useEffect(() => {
 
 **Learn more**
 
-To learn more about Building with Unstoppable Domains, see the Developer Portal on the Unstoppable Domains website.
+To learn more about Building with Unstoppable Domains, see the [Developer Portal](https://docs.unstoppabledomains.com/) on the Unstoppable Domains website.
+
+### **Join us on Discord[](https://xmtp.org/blog/thirdbweb-wallet-remote-attachments#join-us-on-discord)**
+
+We're excited to be partnering with Unstoppable Domains to bring you better solutions for serving and reaching your end-users. [Stay tuned](https://discord.com/invite/xmtp) for more guides coming soon!
