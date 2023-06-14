@@ -114,11 +114,3 @@ A great way to start learning how to build an app with XMTP is to use one!
    Try a second app and see all your conversations in both apps, regardless of the app you used to start them. This also means you and a friend can each use your own preferred app to exchange messages.
 
    With XMTP, you own and control your messages and are always free to use the app that best suits your needs.
-
-Ready to start building with XMTP? Check out some of these developer resources:
-
-- [Start building with XMTP](/start-building)
-- [SDKs and tools](/docs/introduction#xmtp-sdks-and-example-apps)
-- [Built with XMTP](/built-with-xmtp/): Explore a showcase of apps built with XMTP
-- [FAQ about XMTP](/docs/concepts/faq)
-- [XMTP Discord community](https://discord.gg/xmtp)
