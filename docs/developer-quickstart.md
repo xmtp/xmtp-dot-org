@@ -141,11 +141,20 @@ const onMessage = useCallback((message) => {
 useStreamMessages(conversation, onMessage);
 ```
 
-### Other quickstart repos
+### Quickstarts 🏁
 
-- [Hooks Getting started](https://github.com/fabriguespe/xmtp-hooks-quickstart)
-- [Quickstart React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
+- [NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
+- [ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs)
+- [Dart](https://github.com/xmtp/xmtp-android)
+- [Kotlin](https://github.com/xmtp/xmtp-flutter)
+- [Swift](https://github.com/xmtp/xmtp-ios)
+- [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
+- [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
 - [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
-- [Quickstart NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
-- [Quickstart ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs)
-- [Notification Client](https://github.com/fabriguespe/xmtp-firebase-push-notifications)
+- [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
+
+## Need to send a test message?
+
+Message this XMTP message bot to get an immediate automated reply:
+
+- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)

@@ -1,18 +1,18 @@
-import React from 'react'
-import Footer from '@theme-original/Footer'
-import { useColorMode } from '@docusaurus/theme-common'
-import { Link } from 'react-router-dom'
-import ALink from '../../components/ALink'
-import ToggleButtons from '../../components/ToggleButtons'
+import React from "react";
+import Footer from "@theme-original/Footer";
+import { useColorMode } from "@docusaurus/theme-common";
+import { Link } from "react-router-dom";
+import ALink from "../../components/ALink";
+import ToggleButtons from "../../components/ToggleButtons";
 
 export default function FooterWrapper(props) {
-  const { colorMode } = useColorMode()
+  const { colorMode } = useColorMode();
   return (
     <>
       <Footer {...props} />
       <div className={`bg-black px-4 ${colorMode}`}>
         <div className="h-px bg-white max-w-screen-max mx-auto" />
-        <div className="flex justify-center flex-wrap md:justify-between items-center h-auto md:h-32 max-w-screen-max mx-auto mt-9 md:mt-0 mb-20 md:mb-0 text-center md:text-inherit flex-col md:flex-row">
+        <div className="flex justify-center flex-wrap md:justify-between items-center h-auto footerfino max-w-screen-max mx-auto mt-9 md:mt-0 mb-20 md:mb-0 text-center md:text-inherit flex-col md:flex-row">
           <Link to="/">
             <img
               alt="XMTP icon"
@@ -63,5 +63,5 @@ export default function FooterWrapper(props) {
       </div>
       <ToggleButtons />
     </>
-  )
+  );
 }

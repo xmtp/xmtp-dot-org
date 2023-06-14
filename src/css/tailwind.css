@@ -947,6 +947,10 @@ code:not([class]) {
     padding-top: 10px;
     margin-top: 10px;
   }
+  .flexbar a {
+    text-decoration: none !important;
+    color: inherit;
+  }
   .flexbar div {
     margin-bottom: 5px;
   }
@@ -954,4 +958,19 @@ code:not([class]) {
     width: 20px;
     margin-right: 20px;
   }
+}
+.footerfino {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+table tr,
+table code {
+  font-size: 12px !important;
+  line-height: 20px !important;
+  padding: 0px !important;
+}
+table code {
+  font-size: 10px !important;
+  padding: 1px !important;
 }
