@@ -3,7 +3,7 @@ sidebar_label: Bots
 sidebar_position: 10
 ---
 
-# Create an XMTP message bot
+# Create a message bot
 
 Use the [XMTP Bot Starter project](https://github.com/xmtp/xmtp-bot-starter) to create message bot on the XMTP network.
 
