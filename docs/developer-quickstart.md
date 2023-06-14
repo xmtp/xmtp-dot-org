@@ -1,6 +1,6 @@
 ---
 sidebar_label: Developer Quickstart
-sidebar_position: 3
+sidebar_position: 2
 description: Build this quickstart app to learn some of the fundamental concepts involved in building with XMTP.
 ---
 

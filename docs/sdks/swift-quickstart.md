@@ -13,7 +13,7 @@ Build with this SDK to provide messaging between blockchain wallet addresses, in
 
 To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-ios/issues) in the `xmtp-ios` repo.
 
-To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/concepts/faq).
+To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/faq).
 
 ## Reference docs
 

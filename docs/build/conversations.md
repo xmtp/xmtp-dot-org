@@ -45,7 +45,7 @@ val conversations = client.conversations.list()
 
 ## Start a new conversation
 
-You can create a new conversation with any address activated on the XMTP network. To learn more about supported addresses, see [Chains](/docs/build/dev-faqs#chains).
+You can create a new conversation with any address activated on the XMTP network. To learn more about supported addresses, see [Chains](/docs/dev-faqs#chains).
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>

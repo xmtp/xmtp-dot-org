@@ -20,7 +20,7 @@ Developers can also build tools for decentralized apps (dapps), decentralized au
 
 XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets), though XMTP itself does not use EVMs. XMTP also works with other web3 identities that apps built with XMTP can derive from Ethereum accounts, such as ENS names and Lens profiles.
 
-To learn more, see [Works with XMTP](/docs/build/dev-faqs).
+To learn more, see [Works with XMTP](/docs/dev-faqs).
 
 XMTP’s primary contributor, XMTP Labs, is funded by some of the industry’s top venture capital funds, including a16z Crypto and Coinbase Ventures.
 

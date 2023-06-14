@@ -107,12 +107,6 @@ const config = {
             label: "Use cases",
             items: [
               {
-                to: "built-with-xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="Sparkles icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
-              },
-              {
                 to: "/docs/use-cases/guides",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/book-icon.svg" alt="Book icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Guides</div></div>`,
@@ -150,6 +144,12 @@ const config = {
             label: "Resources",
             items: [
               {
+                to: "built-with-xmtp",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="Sparkles icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
+              },
+              {
                 to: "roadmap",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map-icon.svg" alt="Map icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Roadmap</div>
@@ -162,7 +162,7 @@ const config = {
                 <div class="subtext text-sm text-normal whitespace-pre-line">Architecture of the XTMP network and client layers</div></div></div>`,
               },
               {
-                to: "docs/concepts/faq#security",
+                to: "docs/faq#security",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/lock-closed-icon.svg" alt="Lock icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Security</div>
                  <div class="subtext text-sm text-normal whitespace-pre-line">Overview of XMTP security</div></div></div>`,
@@ -272,11 +272,11 @@ const config = {
               },
               {
                 label: `Broadcast`,
-                to: `/docs/build/broadcast`,
+                to: `/docs/use-cases/broadcast`,
               },
               {
                 label: `Bots`,
-                to: `/docs/build/bots`,
+                to: `/docs/use-cases/bots`,
               },
             ],
           },
@@ -367,11 +367,11 @@ const config = {
               },
               {
                 label: "Security",
-                to: "/docs/concepts/faq#security",
+                to: "/docs/faq#security",
               },
               {
                 label: "FAQ",
-                to: "/docs/concepts/faq",
+                to: "/docs/faq",
               },
               {
                 label: "Status page",
