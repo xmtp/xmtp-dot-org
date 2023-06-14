@@ -1,5 +1,5 @@
 ---
-slug: xmtp-apps-can-reach-unstoppable-domains
+slug: unstoppableweb
 hide_table_of_contents: true
 title: "XMTP Apps Can Reach Unstoppable Domains"
 date: 2023-14-07
