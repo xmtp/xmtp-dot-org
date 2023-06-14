@@ -3,7 +3,7 @@ sidebar_label: Identity resolution
 sidebar_position: 6
 ---
 
-# Resolve identities in your app built with XMTP
+# Resolve identities in your app built
 
 When you build with XMTP, there’s no cold start for your app and your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
 
