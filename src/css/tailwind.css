@@ -745,12 +745,12 @@ ul li a:before {
 }*/
 
 /*Tabs*/
+
 .tabs {
   background: rgb(246, 247, 248);
-  border: 0px;
   padding: 0px !important;
   margin: 0px !important;
-  border: 0px;
+  border: 0px !important;
 }
 .tabs-container pre {
   border-top-left-radius: 0px !important;
