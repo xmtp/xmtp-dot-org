@@ -82,82 +82,12 @@ val newConversation =
 </TabItem>
 <TabItem value="react" label="React - beta" default>
 
-The `useStartConversation` hook starts a new conversation and sends an initial message to it.
-
-**Type**
-
-```ts
-import type {
-  Conversation,
-  InvitationContext,
-  SendOptions,
-} from "@xmtp/react-sdk";
-
-const useStartConversation: <T = string>(
-  options?: InvitationContext
-) => (
-  peerAddress: string,
-  message: T,
-  sendOptions?: SendOptions
-) => Promise<Conversation | undefined>;
-```
-
-**Example**
-
 ```tsx
-import { isValidAddress, useStartConversation } from "@xmtp/react-sdk";
-import { useCallback, useState } from "react";
-
-export const StartConversation: React.FC = () => {
-  const [peerAddress, setPeerAddress] = useState("");
-  const [message, setMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const startConversation = useStartConversation();
-
-  const handleAddressChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      setPeerAddress(e.target.value);
-    },
-    []
-  );
-
-  const handleMessageChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      setMessage(e.target.value);
-    },
-    []
-  );
-
-  const handleStartConversation = useCallback(
-    async (e: React.FormEvent) => {
-      e.preventDefault();
-      if (peerAddress && message) {
-        setIsLoading(true);
-        const conversation = await startConversation(peerAddress, message);
-        setIsLoading(false);
-      }
-    },
-    [message, peerAddress, startConversation]
-  );
-
-  return (
-    <form onSubmit={handleStartConversation}>
-      <input
-        name="addressInput"
-        type="text"
-        onChange={handleAddressChange}
-        disabled={isLoading}
-      />
-      <input
-        name="messageInput"
-        type="text"
-        onChange={handleMessageChange}
-        disabled={isLoading || !isValidAddress(peerAddress)}
-      />
-    </form>
-  );
-};
+const startConversation = useStartConversation();
+const convv = await startConversation(
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
+  "hi"
+);
 ```
 
 </TabItem>
@@ -165,7 +95,7 @@ export const StartConversation: React.FC = () => {
 
 ## List existing conversations
 
-You can get a list of all conversations that have one or more messages. 
+You can get a list of all conversations that have one or more messages.
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP.
 
@@ -215,41 +145,21 @@ for (conversation in allConversations) {
     conversation.send(text = "gm")
 }
 ```
+
 </TabItem>
 <TabItem value="react" label="React - beta" default>
 
-The `useConversations` hook fetches all conversations with the current wallet on mount. It also exposes error and loading states.
-
-**Type**
-
-```ts
-import type { Conversation } from "@xmtp/react-sdk";
-
-const useConversations: () => {
-  conversations: Conversation[];
-  error: unknown;
-  isLoading: boolean;
-};
-```
-
-**Example**
-
 ```tsx
-export const ListConversations: React.FC = () => {
-  const { conversations, error, isLoading } = useConversations();
+const { conversations, error, isLoading } = useConversations();
 
-  if (error) {
-    return "An error occurred while loading conversations";
-  }
-
-  if (isLoading) {
-    return "Loading conversations...";
-  }
-
-  return (
-    ...
-  );
-};
+{
+  conversations.map((conversation, index) => (
+    <div key={index}>
+      {conversation?.peerAddress}-{conversation.context?.conversationId}-
+      {JSON.stringify(conversation.context?.metadata)}
+    </div>
+  ));
+}
 ```
 
 </TabItem>
@@ -257,14 +167,12 @@ export const ListConversations: React.FC = () => {
 
 ## Cache the conversation list
 
-Caching the conversation list can improve performance of `client.conversations.list()` by up to 90%.
+When running in a browser, conversations are cached in `LocalStorage` by default. Running `client.conversations.list()` will update that cache and persist the results to the browser's `LocalStorage`. The data stored in `LocalStorage` is encrypted and signed using the Keystore's identity key so that attackers cannot read the sensitive contents or tamper with them. Caching the conversation list can improve performance by up to 90%.
+
+To disable this behavior, set the `persistConversations` client option to `false`.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
-
-When running in a browser, conversations are cached in `LocalStorage` by default. Running `client.conversations.list()` will update that cache and persist the results to the browser's `LocalStorage`. The data stored in `LocalStorage` is encrypted and signed using the Keystore's identity key so that attackers cannot read the sensitive contents or tamper with them.
-
-To disable this behavior, set the `persistConversations` client option to `false`.
 
 ```ts
 const clientWithNoCache = await Client.create(wallet, {
@@ -274,12 +182,6 @@ const clientWithNoCache = await Client.create(wallet, {
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin - beta" default>
-
-As a performance optimization, you may want to persist the list of conversations in your application outside of the SDK to speed up the first call to `client.conversations.list()`.
-
-The exported conversation list contains encryption keys for any V2 conversations included in the list. As such, you should treat it with the same care that you treat private keys.
-
-You can get a JSON serializable list of conversations by calling:
 
 ```kotlin
 val client = Client().create(wallet)
@@ -295,7 +197,12 @@ val client.importConversation(conversations)
 </TabItem>
 <TabItem value="react" label="React - beta" default>
 
-With the React client SDK (`react-sdk`), enable the conversation cache when initializing the client
+```jsx
+const options = {
+  persistConversations: false,
+};
+await initialize({ signer, options });
+```
 
 </TabItem>
 </Tabs>

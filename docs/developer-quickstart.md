@@ -6,9 +6,20 @@ description: Build this quickstart app to learn some of the fundamental concepts
 
 # Developer Quickstart
 
-XMTP (Extensible Message Transport Protocol) is an open protocol and network for secure and private web3 messaging. For example, you can build an app with XMTP to send messages between blockchain accounts, including chat/DMs, alerts, announcements, and more.
+In this tutorial we are going to build a simple chat app using XMTP and NextJS. We are going to be chatting to a bot for simplicity. The bot is going to be a simple echo bot that will reply with the same message we send.
 
 ### Demo App
+
+[<div class="div-header-github-link"></div> xmtp-quickstart-nextjs](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
+
+```tsx
+git clone git@github.com:fabriguespe/xmtp-quickstart-nextjs.git
+cd xmtp-quickstart-nextjs
+npm install
+npm run dev
+```
+
+### Getting started
 
 The first step involves creating and configuring the Next.js application.
 
@@ -23,17 +34,6 @@ npx create-next-app xmtp-quickstart-nextjs
 ✔ Would you like to use `src/` directory with this project? No
 ✔ Use App Router (recommended)? Yes
 ✔ Would you like to customize the default import alias? No
-```
-
-This repository demonstrates the implementation of these concepts within a simple chat app.
-
-[GitHub repo](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
-
-```tsx
-git clone git@github.com:fabriguespe/xmtp-quickstart-nextjs.git
-cd xmtp-quickstart-nextjs
-npm install
-npm run dev
 ```
 
 ### Learning Objectives:

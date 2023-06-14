@@ -15,7 +15,7 @@ The message payload can be a plain string, but you can configure custom content 
 
 ## Send messages
 
-To send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network. 
+To send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
@@ -57,77 +57,12 @@ conversation.send(text = "Hello world")
 </TabItem>
 <TabItem value="react" label="React - beta" default>
 
-The `useSendMessage` hook sends a new message into a conversation.
-
-**Type**
-
-```ts
-import type { Conversation, SendOptions } from "@xmtp/react-sdk";
-
-const useSendMessage: <T = string>(
-  conversation: Conversation,
-  options?: SendOptions
-) => (message: T, optionsOverride?: SendOptions) => Promise<void>;
-```
-
-**Example**
-
 ```tsx
 import { useSendMessage } from "@xmtp/react-sdk";
-import type { Conversation } from "@xmtp/react-sdk";
-import { useCallback, useState } from "react";
 
-export const SendMessage: React.FC<{ conversation: Conversation }> = ({
-  conversation,
-}) => {
-  const [peerAddress, setPeerAddress] = useState("");
-  const [message, setMessage] = useState("");
-  const [isSending, setIsSending] = useState(false);
-  const sendMessage = useSendMessage(conversation);
+const sendMessage = useSendMessage(conversation);
 
-  const handleAddressChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      setPeerAddress(e.target.value);
-    },
-    []
-  );
-
-  const handleMessageChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      setMessage(e.target.value);
-    },
-    []
-  );
-
-  const handleSendMessage = useCallback(
-    async (e: React.FormEvent) => {
-      e.preventDefault();
-      if (peerAddress && isValidAddress(peerAddress) && message) {
-        setIsLoading(true);
-        await sendMessage(message);
-        setIsLoading(false);
-      }
-    },
-    [message, peerAddress, sendMessage]
-  );
-
-  return (
-    <form onSubmit={handleSendMessage}>
-      <input
-        name="addressInput"
-        type="text"
-        onChange={handleAddressChange}
-        disabled={isSending}
-      />
-      <input
-        name="messageInput"
-        type="text"
-        onChange={handleMessageChange}
-        disabled={isSending}
-      />
-    </form>
-  );
-};
+await sendMessage(message);
 ```
 
 </TabItem>
@@ -182,68 +117,17 @@ for (conversation in client.conversations.list()) {
 </TabItem>
 <TabItem value="react" label="React - beta" default>
 
-The `useMessages` hook fetches a list of all messages within a conversation on mount. It also exposes loading and error states and whether there are more messages based on the options passed.
-
-**Type**
-
-```ts
-import type {
-  Conversation,
-  DecodedMessage,
-  ListMessagesOptions,
-} from "@xmtp/react-sdk";
-
-export type UseMessagesOptions = ListMessagesOptions & {
-  /**
-   * Callback function to execute when new messages are fetched
-   */
-  onMessages?: (
-    messages: DecodedMessage[],
-    options: ListMessagesOptions
-  ) => void;
-};
-
-const useMessages: (
-  conversation?: Conversation,
-  options?: UseMessagesOptions
-) => {
-  error: unknown;
-  hasMore: boolean;
-  isLoading: boolean;
-  messages: DecodedMessage[];
-  next: () => Promise<DecodedMessage[]>;
-};
-```
-
-:::important
-
-It's important to memoize the `options` argument so that the hook doesn't fetch messages endlessly.
-
-:::
-
-**Example**
-
 ```tsx
 import { useMessages } from "@xmtp/react-sdk";
-import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
 
-export const Messages: React.FC<{
-  conversation: Conversation;
-}> = ({ conversation }) => {
-  const { error, messages, isLoading } = useMessages(conversation);
+const [conversation, setConversation] = useState(null);
+const { messages } = useMessages(conversation);
 
-  if (error) {
-    return "An error occurred while loading messages";
+useEffect(() => {
+  if (messages) {
+    console.log("Loaded message history:", messages.length);
   }
-
-  if (isLoading) {
-    return "Loading messages...";
-  }
-
-  return (
-    ...
-  );
-};
+}, [messages]);
 ```
 
 </TabItem>
@@ -315,46 +199,29 @@ val nextPage = conversation.messages(limit = 25, before = messages[0].sent)
 </TabItem>
 <TabItem value="react" label="React - beta" default>
 
-Use the `limit` option to limit the number of messages to fetch at a time.
-
-**Example**
-
 ```tsx
 import { useMessages } from "@xmtp/react-sdk";
 import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
 
-export const PagedMessages: React.FC<{
-  conversation: Conversation;
-}> = ({ conversation }) => {
-  const { error, isLoading, messages, next } = useMessages(
-    conversation,
-    options: {
-      limit: 20,
-    },
-  );
+const { error, isLoading, messages, next } = useMessages(
+  conversation,
+  options: {
+    limit: 20,
+  },
+);
+const handleClick = useCallback(() => {
+  // fetch next page of messages
+  next();
+}, [next]);
 
-  const handleClick = useCallback(() => {
-    // fetch next page of messages
-    next();
-  }, [next]);
 
-  if (error) {
-    return "An error occurred while loading messages";
-  }
-
-  if (isLoading) {
-    return "Loading messages...";
-  }
-
-  return (
-    <>
-      ...
-      <button type="button" onClick={handleClick}>
-        Load more messages
-      </button>
-    </>
-  );
-};
+return (
+  <>
+    <button type="button" onClick={handleClick}>
+      Load more messages
+    </button>
+  </>
+);
 ```
 
 </TabItem>
