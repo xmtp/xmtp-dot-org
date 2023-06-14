@@ -272,11 +272,11 @@ const config = {
               },
               {
                 label: `Broadcast`,
-                to: `/docs/use-cases/broadcast`,
+                to: `/docs/tutorials/broadcast`,
               },
               {
                 label: `Bots`,
-                to: `/docs/use-cases/bots`,
+                to: `/docs/tutorials/bots`,
               },
             ],
           },

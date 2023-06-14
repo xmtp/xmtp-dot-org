@@ -1,6 +1,6 @@
 ---
 sidebar_label: Test
-sidebar_position: 18
+sidebar_position: 20
 description: Use these tips and guidelines to test your app before going live.
 ---
 

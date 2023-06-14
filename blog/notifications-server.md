@@ -2,7 +2,7 @@
 slug: setting-up-push-notification-server
 hide_table_of_contents: true
 title: "Setup Guide for XMTP Notification Server"
-date: 2023-11-06
+date: 2023-06-11
 authors: fabri
 description: "Setup Guide for XMTP Notification Server on macOS."
 image: ./media/notifications/bells.png
@@ -10,6 +10,8 @@ tags:
   - Notifications
   - Server
 ---
+
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 ![](./media/notifications/bells.png)
 
@@ -124,3 +126,6 @@ Congratulations! You have successfully setup the XMTP Notification Server. You c
   git checkout main
   git reset --hard origin/main
   ```
+
+<br/>
+<FeedbackWidget />

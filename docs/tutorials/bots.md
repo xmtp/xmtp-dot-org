@@ -1,6 +1,6 @@
 ---
 sidebar_label: Bots
-sidebar_position: 2
+sidebar_position: 15
 ---
 
 # Create a message bot
