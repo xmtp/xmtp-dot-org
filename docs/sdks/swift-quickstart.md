@@ -5,7 +5,7 @@ toc_max_heading_level: 4
 description: "xmtp-ios provides a Swift implementation of an XMTP message API client for use with iOS apps."
 ---
 
-# Quickstart for the Swift XMTP client SDK
+# Swift SDK
 
 The [Swift XMTP client SDK](https://github.com/xmtp/xmtp-ios) (`xmtp-ios`) provides a Swift implementation of an XMTP message API client for use with iOS apps.
 
@@ -33,33 +33,6 @@ Use Xcode to add to the project (**File** > **Add Packages…**) or add this to 
 
 ```swift
 .package(url: "https://github.com/xmtp/xmtp-ios", branch: "main")
-```
-
-## Usage overview
-
-The XMTP message API revolves around a message API client (client) that allows retrieving and sending messages to other XMTP network participants. A client must connect to a wallet app on startup. If this is the very first time the client is created, the client will generate a key bundle that is used to encrypt and authenticate messages. The key bundle persists encrypted in the network using an account signature. The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys. All of this happens transparently, without requiring any additional code.
-
-```swift
-import XMTP
-
-// You'll want to replace this with a wallet from your application.
-let account = try PrivateKey.generate()
-
-// Create the client with your wallet. This will connect to the XMTP `dev` network by default.
-// The account is anything that conforms to the `XMTP.SigningKey` protocol.
-let client = try await Client.create(account: account)
-
-// Start a conversation with XMTP
-let conversation = try await client.conversations.newConversation(with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
-
-// Load all messages in the conversation
-let messages = try await conversation.messages()
-// Send a message
-try await conversation.send(content: "gm")
-// Listen for new messages in the conversation
-for try await message in conversation.streamMessages() {
-  print("\(message.senderAddress): \(message.body)")
-}
 ```
 
 ## Configure content types

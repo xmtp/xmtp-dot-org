@@ -4,7 +4,7 @@ sidebar_position: 7
 description: Support image, video, and document message attachments in your app
 ---
 
-# Support message attachments in your app built
+# Attachments
 
 Use the `RemoteAttachmentCodec` from the `xmtp-content-type-remote-attachment` package to support message attachments in your app—including images, videos, gifs, and documents.
 
