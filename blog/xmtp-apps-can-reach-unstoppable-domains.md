@@ -2,7 +2,7 @@
 slug: unstoppableweb
 hide_table_of_contents: true
 title: "XMTP Apps Can Reach Unstoppable Domains"
-date: 2023-14-07
+date: 2023-06-15
 authors: fabri
 image: "/img/uc-uns.png"
 description: "XMTP Apps Can Reach Unstoppable Domains"
@@ -11,10 +11,6 @@ description: "XMTP Apps Can Reach Unstoppable Domains"
 ![thirdweb.jpg](/img/uc-uns.png)
 
 # XMTP Apps Can Reach Unstoppable Domains
-
-<style>
-
-</style>
 
 :::danger GIVEAWAY ALERT
 The first 100 people who message 'xmtp-discount.x' on @converseapp will get 20% off their Unstoppable Domain 😎 We'll also give one lucky winner a $500 USDC prize on Friday! Stay tuned on Converse for updates.
