@@ -5,7 +5,7 @@ toc_max_heading_level: 4
 description: "xmtp-flutter provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps."
 ---
 
-# Quickstart for the Dart XMTP client SDK
+# Dart SDK
 
 The [Dart XMTP client SDK](https://github.com/xmtp/xmtp-flutter) (`xmtp-flutter`) provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps.
 
@@ -34,20 +34,6 @@ flutter pub add xmtp
 ```
 
 To see more options, check out the [verified XMTP Dart package](https://pub.dev/packages/xmtp/install).
-
-## Usage overview
-
-The XMTP message API revolves around a message API client (client) that allows retrieving and sending messages to other XMTP network participants. A client must connect to a wallet app on startup. If this is the very first time the client is created, the client will generate a key bundle that is used to encrypt and authenticate messages. The key bundle persists encrypted in the network using an account signature. The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys. All of this happens transparently, without requiring any additional code.
-
-```dart
-import 'package:xmtp/xmtp.dart' as xmtp;
-import 'package:web3dart/credentials.dart';
-import 'dart:math';
-
-var wallet = EthPrivateKey.createRandom(Random.secure());
-var api = xmtp.Api.create();
-var client = await xmtp.Client.createFromWallet(api, wallet);
-```
 
 ## Handle different types of content
 

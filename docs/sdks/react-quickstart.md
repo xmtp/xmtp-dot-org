@@ -5,7 +5,7 @@ toc_max_heading_level: 3
 description: "These packages provide the XMTP client SDK for React apps, including React hooks and components."
 ---
 
-# Quickstart for React SDK hooks and UI components
+# React SDK hooks and UI components
 
 ## React SDK hooks
 
@@ -91,17 +91,6 @@ createRoot(document.getElementById("root") as HTMLElement).render(
 
 Run `yarn dev` to build the SDK and watch for changes, which will trigger a rebuild.
 
-### Useful commands
-
-- `yarn build`: Builds the SDK
-- `yarn clean`: Removes `node_modules`, `lib`, and `.turbo` folders
-- `yarn dev`: Builds the SDK and watches for changes, which will trigger a rebuild
-- `yarn format`: Runs prettier format and write changes
-- `yarn format:check`: Runs prettier format check
-- `yarn lint`: Runs ESLint
-- `yarn test`: Runs all unit tests
-- `yarn typecheck`: Runs `tsc`
-
 ## React UI components
 
 This package provides [React UI components](https://github.com/xmtp/xmtp-web/tree/main/packages/react-components) for building React apps with XMTP.
@@ -140,8 +129,6 @@ pnpm install @xmtp/react-components@preview
 yarn add @xmtp/react-components@preview
 ```
 
-### Usage
-
 #### Include styles
 
 To use any of the included components, you must also include their styles. To do so, import the styles from the package into your project.
@@ -159,18 +146,6 @@ The included styles contain normalizations of elements globally.
 ### Developing
 
 Run `yarn dev` to build the package and watch for changes, which will trigger a rebuild.
-
-### Useful commands
-
-- `yarn build`: Builds the package
-- `yarn clean`: Removes `node_modules`, `lib`, and `.turbo` folders
-- `yarn dev`: Builds the package and watches for changes, which will trigger a rebuild
-- `yarn format`: Runs prettier format and write changes
-- `yarn format:check`: Runs prettier format check
-- `yarn lint`: Runs ESLint
-- `yarn storybook`: Launches Storybook for the React components
-- `yarn test`: Runs all unit tests
-- `yarn typecheck`: Runs `tsc`
 
 ## Breaking revisions
 

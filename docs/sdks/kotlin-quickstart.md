@@ -5,7 +5,7 @@ toc_max_heading_level: 4
 description: "xmtp-android provides a Kotlin implementation of an XMTP message API client for use with Android apps."
 ---
 
-# Quickstart for the Kotlin XMTP client SDK
+# Kotlin SDK
 
 The [Kotlin XMTP client SDK](https://github.com/xmtp/xmtp-android) (`xmtp-android`) provides a Kotlin implementation of an XMTP message API client for use with Android apps.
 
@@ -31,33 +31,8 @@ For a basic demonstration of the core concepts and capabilities of the `xmtp-and
 
 You can find the latest package version on [Maven Central](https://central.sonatype.com/artifact/org.xmtp/android).
 
-```gradle
-    implementation 'org.xmtp:android:X.X.X'
-```
-
-## Usage overview
-
-The XMTP message API revolves around a message API client (client) that allows retrieving and sending messages to other XMTP network participants. A client must connect to a wallet app on startup. If this is the very first time the client is created, the client will generate a key bundle that is used to encrypt and authenticate messages. The key bundle persists encrypted in the network using an account signature. The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys. All of this happens transparently, without requiring any additional code.
-
-```kotlin
-// You'll want to replace this with a wallet from your application.
-val account = PrivateKeyBuilder()
-
-// Create the client with your wallet. This will connect to the XMTP `dev` network by default.
-// The account is anything that conforms to the `XMTP.SigningKey` protocol.
-val client = Client().create(account = account)
-
-// Start a conversation with XMTP
-val conversation = client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
-
-// Load all messages in the conversation
-val messages = conversation.messages()
-// Send a message
-conversation.send(text = "gm")
-// Listen for new messages in the conversation
-conversation.streamMessages().collect {
-    print("${message.senderAddress}: ${message.body}")
-}
+```bash
+implementation 'org.xmtp:android:X.X.X'
 ```
 
 ## Handle different types of content

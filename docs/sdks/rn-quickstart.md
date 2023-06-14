@@ -5,7 +5,7 @@ toc_max_heading_level: 4
 description: "These packages provide the XMTP client SDK for React apps, including React hooks and components."
 ---
 
-# Quickstart for the React Native XMTP client SDK
+# React Native SDK
 
 The [React Native XMTP client SDK](https://github.com/xmtp/xmtp-react-native) (`xmtp-react-native`) provides a package you can use to build with XMTP in a React Native or Expo app.
 

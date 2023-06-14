@@ -97,7 +97,7 @@ if (isLoading) {
 </TabItem>
 </Tabs>
 
-## Create a client from saved private keys
+#### Create a client from saved private keys
 
 You can export the unencrypted key bundle using the static method `getKeys`, save it somewhere secure, and then provide those keys at a later time to initialize a new client using the exported XMTP identity.
 
@@ -105,7 +105,6 @@ You can export the unencrypted key bundle using the static method `getKeys`, sav
 <TabItem value="js" label="JavaScript" default>
 
 ```ts
-import { Client } from "@xmtp/xmtp-js";
 // Get the keys using a valid Signer. Save them somewhere secure.
 const keys = await Client.getKeys(wallet);
 // Create a client using keys returned from getKeys
@@ -290,7 +289,7 @@ The `apiUrl`, `keyStoreType`, `codecs`, and `maxContentSize` parameters from the
 </TabItem>
 </Tabs>
 
-## XMTP `environments`
+## Environments
 
 XMTP identity on `dev` network is completely distinct from its XMTP identity on the `production` network, as are the messages associated with these identities.
 

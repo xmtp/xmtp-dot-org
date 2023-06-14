@@ -5,7 +5,7 @@ toc_max_heading_level: 4
 description: "The XMTP client SDK for JavaScript (xmtp-js) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications."
 ---
 
-# Quickstart for the JavaScript XMTP client SDK
+# JavaScript SDK
 
 The [JavaScript XMTP client SDK](https://github.com/xmtp/xmtp-js) (`xmtp-js`) provides a TypeScript implementation of an XMTP message API client (client) for use with JavaScript and React applications.
 
@@ -39,34 +39,6 @@ Access the `xmtp-js` client SDK [reference documentation](https://xmtp-js.pages.
 ```bash
 npm install @xmtp/xmtp-js
 ```
-
-## Usage
-
-The [XMTP message API](/docs/concepts/architectural-overview#network-layer) revolves around a network client that allows retrieving and sending messages to other network participants. A client must be connected to a wallet on startup. If this is the very first time the client is created, the client will generate a [key bundle](/docs/concepts/key-generation-and-usage) that is used to [encrypt and authenticate messages](/docs/concepts/invitation-and-message-encryption). The key bundle persists encrypted in the network using a [wallet signature](/docs/concepts/account-signatures). The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys. All this happens transparently, without requiring any additional code.
-
-```ts
-import { Client } from "@xmtp/xmtp-js";
-import { Wallet } from "ethers";
-
-// You'll want to replace this with a wallet from your application
-const wallet = Wallet.createRandom();
-// Create the client with your wallet. This will connect to the XMTP development network by default
-const xmtp = await Client.create(wallet);
-// Start a conversation with XMTP
-const conversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897"
-);
-// Load all messages in the conversation
-const messages = await conversation.messages();
-// Send a message
-await conversation.send("gm");
-// Listen for new messages in the conversation
-for await (const message of await conversation.streamMessages()) {
-  console.log(`[${message.senderAddress}]: ${message.content}`);
-}
-```
-
-Currently, network nodes are configured to rate limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node. Rate limits can change at any time in the interest of maintaining network health.
 
 ## Handle different types of content
 
