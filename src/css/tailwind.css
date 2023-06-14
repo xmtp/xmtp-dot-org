@@ -747,7 +747,14 @@ ul li a:before {
 /*Tabs*/
 .tabs {
   background: rgb(246, 247, 248);
-  border: solid rgba(0, 0, 0, 0.1);
+  border: 0px;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: 0px;
+}
+.tabs-container pre {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
 }
 .tabs .tabs__item {
   padding-top: 8px !important;
@@ -779,6 +786,10 @@ ul li a:before {
 .tabs {
   background: var(--ifm-pre-background);
   border: solid rgba(0, 0, 0, 0.1);
+}
+
+.tabs__item:hover {
+  border-radius: 0px;
 }
 /*image turtorials*/
 .bwx-guides li {
