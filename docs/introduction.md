@@ -63,19 +63,9 @@ Check out these example apps you can use for guidance and inspiration when build
 
 ### Ecosystem projects
 
-For even more examples of apps built with XMTP, see these ecosystem projects:
+For even more examples of apps built with XMTP, see [Built with XMTP](built-with-xmtp).
 
-- [Built with XMTP](built-with-xmtp)
-
-## Learn more
-
-Have more questions? See [FAQ about XMTP](/docs/concepts/faq)
-
-Join and learn with the [XMTP Discord community](https://discord.gg/xmtp)
-
-Ready to build with XMTP? [Start here](/start-building)
-
-# Try messaging with XMTP
+## Try messaging with XMTP
 
 XMTP is an open protocol and network for secure web3 messaging.
 
@@ -131,3 +121,4 @@ Ready to start building with XMTP? Check out some of these developer resources:
 - [SDKs and tools](/docs/introduction#xmtp-sdks-and-example-apps)
 - [Built with XMTP](/built-with-xmtp/): Explore a showcase of apps built with XMTP
 - [FAQ about XMTP](/docs/concepts/faq)
+- [XMTP Discord community](https://discord.gg/xmtp)
