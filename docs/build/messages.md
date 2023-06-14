@@ -201,7 +201,6 @@ val nextPage = conversation.messages(limit = 25, before = messages[0].sent)
 
 ```tsx
 import { useMessages } from "@xmtp/react-sdk";
-import type { Conversation, DecodedMessage } from "@xmtp/react-sdk";
 
 const { error, isLoading, messages, next } = useMessages(
   conversation,
@@ -216,11 +215,11 @@ const handleClick = useCallback(() => {
 
 
 return (
-  <>
+
     <button type="button" onClick={handleClick}>
       Load more messages
     </button>
-  </>
+
 );
 ```
 
