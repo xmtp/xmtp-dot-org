@@ -254,7 +254,7 @@ const config = {
             items: [
               {
                 label: `Identity resolution`,
-                to: `/docs/build/identity-resolution`,
+                to: `/docs/tutorials/identity-resolution`,
               },
               {
                 label: `Attachments`,

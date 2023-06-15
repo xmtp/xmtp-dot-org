@@ -1,6 +1,6 @@
 ---
 sidebar_label: Broadcast
-sidebar_position: 10
+sidebar_position: 5
 ---
 
 # Send a broadcast message

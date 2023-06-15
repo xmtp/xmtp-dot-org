@@ -1,6 +1,6 @@
 ---
 sidebar_label: Optimistic sending
-sidebar_position: 5
+sidebar_position: 2
 ---
 
 import Tabs from "@theme/Tabs";

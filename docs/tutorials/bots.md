@@ -1,11 +1,11 @@
 ---
-sidebar_label: Bots
-sidebar_position: 15
+sidebar_label: Chat bots
+sidebar_position: 6
 ---
 
-# Create a message bot
+# Create a chat bot
 
-Use the [XMTP Bot Starter project](https://github.com/xmtp/xmtp-bot-starter) to create message bot on the XMTP network.
+Use the [XMTP Bot Starter project](https://github.com/xmtp/xmtp-bot-starter) to create chat bot on the XMTP network.
 
 :::caution Important
 
@@ -50,13 +50,13 @@ By default, the bot connects to the `dev` network. If you want to connect to pro
 
 ## More bot resources
 
-- Want to use a GUI to create a message bot? Check out [chainjet.io](https://chainjet.io/).
+- Want to use a GUI to create a chat bot? Check out [chainjet.io](https://chainjet.io/).
 
 - Need someone to send a test message to? Try these addresses:
 
   - `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
 
-    Message this XMTP message bot to get an immediate automated reply.
+    Message this XMTP chat bot to get an immediate automated reply.
 
   - `hi.xmtp.eth` (`0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0`)
 
