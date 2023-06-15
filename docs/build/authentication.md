@@ -1,5 +1,5 @@
 ---
-sidebar_label: Authentication
+sidebar_label: Auth
 sidebar_position: 2
 description: Learn how to create and configure an XMTP client
 ---
@@ -7,7 +7,7 @@ description: Learn how to create and configure an XMTP client
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Authentication
+# Build authentication with XMTP
 
 The XMTP message API revolves around a network client that allows retrieving and sending messages to other network participants. A client must be connected to a wallet on startup. The client will request a wallet signature in two cases:
 
