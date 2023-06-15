@@ -1,5 +1,5 @@
 ---
-sidebar_label: Get started
+sidebar_label: Start
 sidebar_position: 1
 description: "Get started building apps with XMTP."
 ---

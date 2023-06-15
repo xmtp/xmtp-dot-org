@@ -7,7 +7,7 @@ description: Learn how to send and list messages
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Send and list messages
+# Send and list messages with XMTP
 
 Messages are addressed using wallet addresses.
 

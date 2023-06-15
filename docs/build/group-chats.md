@@ -1,13 +1,13 @@
 ---
-sidebar_label: Group chats
+sidebar_label: Groups
 sidebar_position: 8
 description: Follow these guidelines to create group chats
 ---
 
-# Group Chats
+# Build group chat with XMTP
 
 :::caution Important
-This feature is in **alpha** status and ready for you to start experimenting with. Is only available on the `beta` branch, but we're excited to share it with you and get your feedback.
+This feature is in **alpha** status and ready for you to start experimenting with. However, we do **not** recommend using alpha software in production apps. The feature is available on the `beta` branch only, but we're excited to share it with you and get your feedback.
 :::
 
 ```bash
