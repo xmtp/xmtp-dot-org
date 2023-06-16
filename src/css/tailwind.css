@@ -859,10 +859,18 @@ ul li a:before {
   cursor: pointer;
   text-align: center;
 }
-
 .chain-item img {
+  width: 100%;
   max-width: 80px; /* 20% smaller than before */
   margin-bottom: 10px;
+}
+@media (max-width: 799px) {
+  .chain-item {
+    width: calc(25% - 0px); /* 20% for 5 columns, subtracting margin */
+  }
+  .chain-item a {
+    font-size: 12px;
+  }
 }
 /*blog*/
 

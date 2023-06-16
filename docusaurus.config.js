@@ -127,14 +127,19 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Automation</div></div>`,
               },
               {
+                to: "/docs/use-cases/support",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/support-icon.svg" alt="Automation icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
+              },
+              {
+                to: "/docs/use-cases/commerce",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/commerce-icon.svg" alt="Automation icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
+              },
+              {
                 to: "/docs/use-cases/finance",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeFi</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/messaging",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="XMTP icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">View all</div></div>`,
               },
             ],
           },
@@ -188,14 +193,16 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            type: 'html',
-            position: 'right',
-            value: '<button type="button" onClick="window.open(`/docs/build/get-started`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
+            type: "html",
+            position: "right",
+            value:
+              '<button type="button" onClick="window.open(`/docs/build/get-started`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
           },
           {
-            type: 'html',
-            position: 'right',
-            value: '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
+            type: "html",
+            position: "right",
+            value:
+              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
           },
           {
             href: "/built-with-xmtp",
