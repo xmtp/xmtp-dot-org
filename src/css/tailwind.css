@@ -663,7 +663,6 @@ main[class*="docMainContainer"] tr {
   border-radius: 4px;
   padding: 7px 11px;
   cursor: pointer;
-  margin: 4px 0px 4px 11px;
   transition-duration: 0.2s;
 }
 
@@ -678,7 +677,6 @@ main[class*="docMainContainer"] tr {
   border-radius: 4px;
   padding: 7px 11px;
   cursor: pointer;
-  margin: 4px 0px 4px 11px;
   transition-duration: 0.2s;
 }
 
@@ -877,7 +875,7 @@ ul li a:before {
   .chain-item {
     width: calc(25% - 0px); /* 20% for 5 columns, subtracting margin */
   }
-  .chain-item a {
+  .chain-item span {
     font-size: 12px;
   }
 }
