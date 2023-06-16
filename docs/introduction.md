@@ -28,7 +28,7 @@ XMTP's extensible design enables a diverse set of use cases for sending message 
 - App-to-user [notifications](/docs/build/notifications)
 - Creator-to-community [announcements](/docs/tutorials/broadcast)
 
-To learn more, see [Use cases](/docs/use-cases/guides.mdx).
+To learn more, see [Use cases](/docs/use-cases/messaging).
 
 ## Try messaging with XMTP
 
