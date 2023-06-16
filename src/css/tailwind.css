@@ -15,7 +15,7 @@
   :root {
     /* Docusaurus themeing*/
     --ifm-navbar-height: auto;
-    --ifm-navbar-padding-vertical: 0px;
+    --ifm-navbar-padding-vertical: 3px;
     /* Docusaurus color */
     --ifm-color-primary: #5a2895;
     --ifm-color-primary-dark: #512486;
