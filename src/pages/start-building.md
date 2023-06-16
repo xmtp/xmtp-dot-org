@@ -73,7 +73,7 @@ Be sure to watch relevant repos to be notified about new releases, which might i
    - [https://demo.xmtp.chat/](https://demo.xmtp.chat/)  
      When you open the app, it creates a sandbox Ethereum account and connects it to the app. The app also creates and enables an XMTP identity for the account. And you're ready to send demo messages with XMTP! The sandbox account is deleted as soon as the demo session ends.
 
-   - [xmtp-quickstart-react](https://github.com/xmtp/xmtp-quickstart-react)  
+   - [xmtp-react](https://github.com/xmtp/xmtp-react)  
      An intentionally lightweight example app that you can use to learn how to build with XMTP.
 
    - [xmtp-inbox-web](https://github.com/xmtp-labs/xmtp-inbox-web)  
@@ -105,7 +105,7 @@ Consider following these best practices when developing your app:
 
 - Set the `env` client option to `dev` while developing. Set it to `production` before you launch.
 
-- If you are building with the JavaScript client SDK (`xmtp-js`), set the [`appVersion` client option](/docs/sdks/js-quickstart#configure-the-client).
+- If you are building with the JavaScript client SDK (`xmtp-js`), set the [`appVersion` client option](/docs/sdks/js#configure-the-client).
 
 - To optimize rendering performance on the web, render only what the user can see, instead of rendering everything. For example, if you are building with the React client SDK (`react-sdk`), use virtualized lists for conversations and messages (e.g. `react-virtuoso`).
 
@@ -144,7 +144,7 @@ Consider following these UX best practices.
 
 ### Disclose signature storage
 
-- If your app stores a signature to read and send XMTP messages on behalf of a user, such as in a [broadcast message](/docs/sdks/js-quickstart#send-a-broadcast-message) use case, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature.
+- If your app stores a signature to read and send XMTP messages on behalf of a user, such as in a [broadcast message](/docs/sdks/js#send-a-broadcast-message) use case, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature.
 
   For example:
 
@@ -174,7 +174,7 @@ Consider following these UX best practices.
 
 ### Conversations
 
-- Provide an [interoperable inbox](/docs/concepts/interoperable-inbox) UI in your app. This inbox enables your user to access and engage with all of their conversations without leaving your app. An interoperable inbox is the default state of [listing conversations](/docs/sdks/js-quickstart#conversations). For example, here is an interoperable inbox in the [Orb app](https://orb.ac/):
+- Provide an [interoperable inbox](/docs/concepts/interoperable-inbox) UI in your app. This inbox enables your user to access and engage with all of their conversations without leaving your app. An interoperable inbox is the default state of [listing conversations](/docs/sdks/js#conversations). For example, here is an interoperable inbox in the [Orb app](https://orb.ac/):
 
   <img src={allinorb} style={{width:"400px"}}/>
 
@@ -245,8 +245,8 @@ Build your app to:
 
 Caching the conversation list can improve performance of `client.conversations.list()` by up to 90%.
 
-- Use the JavaScript client SDK (`xmtp-js`) to [cache the conversation list](/docs/sdks/js-quickstart#cache-conversations)
-- Use the Kotlin client SDK (`xmtp-android`) to [cache the conversation list](/docs/sdks/kotlin-quickstart#cache-conversations)
+- Use the JavaScript client SDK (`xmtp-js`) to [cache the conversation list](/docs/sdks/js#cache-conversations)
+- Use the Kotlin client SDK (`xmtp-android`) to [cache the conversation list](/docs/sdks/kotlin#cache-conversations)
 - With the React client SDK (`react-sdk`), enable the conversation cache when initializing the client
 
 ### Cache message histories
@@ -260,20 +260,20 @@ Serialize securely stored `DecodedMessage` histories, avoiding the need to downl
 
 Page through messages in a conversation instead of fetching them all at the same time.
 
-- Use the JavaScript client SDK (`xmtp-js`) to [page through messages](/docs/sdks/js-quickstart#list-messages-in-a-conversation-with-pagination)
-- Use the Kotlin client SDK (`xmtp-android`) to [page through messages](/docs/sdks/kotlin-quickstart#list-messages-in-a-conversation-with-pagination)
-- Use the Swift client SDK (`xmtp-ios`) to [page through messages](/docs/sdks/swift-quickstart#list-messages-in-a-conversation-with-pagination)
-- Use the React client SDK (`react-sdk`) to [page through messages](/docs/sdks/react-quickstart#page-through-messages)
-- Use the Dart client SDK (`xmtp-flutter`) to [page through messages](/docs/sdks/dart-quickstart#list-messages-in-a-conversation-with-pagination)
+- Use the JavaScript client SDK (`xmtp-js`) to [page through messages](/docs/sdks/js#list-messages-in-a-conversation-with-pagination)
+- Use the Kotlin client SDK (`xmtp-android`) to [page through messages](/docs/sdks/kotlin#list-messages-in-a-conversation-with-pagination)
+- Use the Swift client SDK (`xmtp-ios`) to [page through messages](/docs/sdks/swift#list-messages-in-a-conversation-with-pagination)
+- Use the React client SDK (`react-sdk`) to [page through messages](/docs/sdks/react#page-through-messages)
+- Use the Dart client SDK (`xmtp-flutter`) to [page through messages](/docs/sdks/dart#list-messages-in-a-conversation-with-pagination)
 
 ### Compress message content
 
 Compress message content using a supported compression algorithm.
 
-- Use the JavaScript client SDK (`xmtp-js`) to [compress messages](/docs/sdks/js-quickstart#compression)
-- Use the Kotlin client SDK (`xmtp-android`) to [compress messages](/docs/sdks/kotlin-quickstart#compression)
-- Use the Swift client SDK (`xmtp-ios`) to [compress messages](/docs/sdks/swift-quickstart#compression)
-- Use the Dart client SDK (`xmtp-flutter`) to [compress messages](/docs/sdks/dart-quickstart#compression)
+- Use the JavaScript client SDK (`xmtp-js`) to [compress messages](/docs/sdks/js#compression)
+- Use the Kotlin client SDK (`xmtp-android`) to [compress messages](/docs/sdks/kotlin#compression)
+- Use the Swift client SDK (`xmtp-ios`) to [compress messages](/docs/sdks/swift#compression)
+- Use the Dart client SDK (`xmtp-flutter`) to [compress messages](/docs/sdks/dart#compression)
 
 ### Check performance benchmarks
 
