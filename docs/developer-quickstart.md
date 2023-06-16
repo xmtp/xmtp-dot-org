@@ -38,8 +38,8 @@ npx create-next-app xmtp-quickstart-nextjs
 
 ### Learning Objectives:
 
-- Setting up the ConnectWallet button
-- Signing in with XMTP
+- Connect wallet button
+- Authenticate with XMTP
 - Loading a conversation
 - Sending a message
 

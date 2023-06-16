@@ -867,7 +867,10 @@ ul li a:before {
   margin-bottom: 10px;
 }
 .six .chain-item {
-  width: calc(16% - 20px); /* 20% for 5 columns, subtracting margin */
+  width: calc(16.4% - 20px); /* 20% for 5 columns, subtracting margin */
+}
+.six .chain-item img {
+  max-height: 66px;
 }
 .seven .chain-item {
   width: calc(14% - 20px); /* 20% for 5 columns, subtracting margin */
@@ -1003,6 +1006,7 @@ table code {
 .discord .theme-admonition a {
   color: white;
   background: #5865f2;
+  border: 0px;
 }
 .discord .theme-admonition svg {
   display: none;
