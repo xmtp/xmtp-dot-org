@@ -853,6 +853,7 @@ ul li a:before {
   align-items: center;
   width: calc(20% - 20px); /* 20% for 5 columns, subtracting margin */
   margin: 10px;
+  border-radius: 5px;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -863,11 +864,17 @@ ul li a:before {
   max-width: 80px; /* 20% smaller than before */
   margin-bottom: 10px;
 }
+.six .chain-item {
+  width: calc(16% - 20px); /* 20% for 5 columns, subtracting margin */
+}
 .seven .chain-item {
   width: calc(14% - 20px); /* 20% for 5 columns, subtracting margin */
 }
 .seven .chain-item img {
   width: 70%;
+}
+.chain-item span {
+  font-size: 14px;
 }
 @media (max-width: 799px) {
   .seven .chain-item {

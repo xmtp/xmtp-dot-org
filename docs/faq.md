@@ -110,7 +110,7 @@ When a user starts a new messaging session, they must sign with their blockchain
 
 Because there is no secure place in the browser to persist a decrypted key bundle, the app can use the bundle for the current session only. Once the user starts a new session, such as after refreshing their browser, they must sign again to decrypt their key bundle.
 
-If you are using the JavaScript client SDK, you might consider [manually handling private key storage](/docs/sdks/js-quickstart#manually-handling-private-key-storage), but only with the understanding that this approach **requires the utmost care**.
+If you are using the JavaScript client SDK, you might consider [manually handling private key storage](/docs/sdks/js#manually-handling-private-key-storage), but only with the understanding that this approach **requires the utmost care**.
 
 Based on developer and community feedback, we are researching more robust approaches to secure key management.
 

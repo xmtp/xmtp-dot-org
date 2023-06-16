@@ -232,23 +232,23 @@ const config = {
             items: [
               {
                 label: `JavaScript`,
-                to: `/docs/sdks/js-quickstart`,
+                to: `/docs/sdks/js`,
               },
               {
                 label: `Swift`,
-                to: `/docs/sdks/swift-quickstart`,
+                to: `/docs/sdks/swift`,
               },
               {
                 label: `Dart`,
-                to: `/docs/sdks/dart-quickstart`,
+                to: `/docs/sdks/dart`,
               },
               {
                 label: `Kotlin`,
-                to: `/docs/sdks/kotlin-quickstart`,
+                to: `/docs/sdks/kotlin`,
               },
               {
                 label: `React`,
-                to: `/docs/sdks/react-quickstart`,
+                to: `/docs/sdks/react`,
               },
               {
                 label: `SDK references`,
