@@ -166,7 +166,7 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 - [Start building with XMTP](/start-building)
 
-### SDKs
+#### SDKs
 
 - JavaScript: https://github.com/xmtp/xmtp-js
 - iOS: https://github.com/xmtp/xmtp-ios
