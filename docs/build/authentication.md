@@ -1,5 +1,5 @@
 ---
-sidebar_label: Auth
+sidebar_label: Authentication
 sidebar_position: 2
 description: Learn how to create and configure an XMTP client
 ---

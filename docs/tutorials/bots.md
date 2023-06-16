@@ -3,7 +3,7 @@ sidebar_label: Chat bots
 sidebar_position: 6
 ---
 
-# Create a chat bot
+# Build a chat bot
 
 Use the [XMTP Bot Starter project](https://github.com/xmtp/xmtp-bot-starter) to create chat bot on the XMTP network.
 

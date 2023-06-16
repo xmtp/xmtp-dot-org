@@ -107,19 +107,14 @@ const config = {
             label: "Use cases",
             items: [
               {
-                to: "/docs/use-cases/guides",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/book-icon.svg" alt="Book icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Guides</div></div>`,
-              },
-              {
                 to: "/docs/use-cases/messaging",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/messaging-icon.svg" alt="Messaging icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Chat apps</div></div>`,
               },
               {
-                to: "/docs/use-cases/finance",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Finance</div></div>`,
+                to: "/docs/use-cases/deso",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/social-icon.svg" alt="Social icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeSo</div></div>`,
               },
               {
                 to: "/docs/use-cases/marketing",
@@ -127,14 +122,19 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
               },
               {
-                to: "/docs/use-cases/support",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/support-icon.svg" alt="Support icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
+                to: "/docs/use-cases/automation",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/chip-icon.svg" alt="Automation icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Automation</div></div>`,
               },
               {
-                to: "/docs/use-cases/commerce",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/commerce-icon.svg" alt="Commerce icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
+                to: "/docs/use-cases/finance",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeFi</div></div>`,
+              },
+              {
+                to: "/docs/use-cases/messaging",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="XMTP icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">View all</div></div>`,
               },
             ],
           },

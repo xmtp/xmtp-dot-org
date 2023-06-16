@@ -13,11 +13,6 @@ function HomepageHeader() {
   return (
     <header className="homepageHeader px-0 pt-12 lg:pt-16 h-[504px] bg-cover border-0 border-b border-solid border-b-black">
       <div className="container text-left py-0 px-4 m-auto max-w-screen-max">
-        <Link to="blog/attachments-and-remote-attachments">
-          <div className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-3 lg:mb-4 w-fit">
-            🖼️ Introducing remote media attachments »
-          </div>
-        </Link>
         <h1 className="hero__title max-w-2xl text-4xl lg:text-5xl">
           XMTP: The open protocol and network for secure web3 messaging
         </h1>
