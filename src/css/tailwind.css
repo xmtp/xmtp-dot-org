@@ -864,7 +864,16 @@ ul li a:before {
   max-width: 80px; /* 20% smaller than before */
   margin-bottom: 10px;
 }
+.seven .chain-item {
+  width: calc(14% - 20px); /* 20% for 5 columns, subtracting margin */
+}
+.seven .chain-item img {
+  width: 70%;
+}
 @media (max-width: 799px) {
+  .seven .chain-item {
+    width: calc(25% - 0px); /* 20% for 5 columns, subtracting margin */
+  }
   .chain-item {
     width: calc(25% - 0px); /* 20% for 5 columns, subtracting margin */
   }
