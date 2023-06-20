@@ -27,8 +27,10 @@ To connect web3 wallets to your app:
 - [Thirdweb](https://thirdweb.com/)
   - Example implementation in the [XMTP React Native example app](https://github.com/xmtp/xmtp-react-native/blob/main/example/src/AuthView.tsx#L7)
   - Example implementation in the [XMTP React JS example app](/blog/thirdbweb-wallet-remote-attachments)
-- [WalletConnect](https://walletconnect.com/)
+- [RainbowKit](https://www.rainbowkit.com/)
   - Example implementation in the [XMTP Inbox Web app](https://github.com/xmtp-labs/xmtp-inbox-web)
+  - Support for WalletConnect v2 is now standard in RainbowKit. To learn how to upgrade, see [Migrating to WalletConnect v2](https://www.rainbowkit.com/guides/walletconnect-v2).
+- [WalletConnect](https://walletconnect.com/)
 - [wagmi](https://wagmi.sh/)
 
 XMTP client SDKs require you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/). These wallet connection tools, as well as others, provide this capability.
