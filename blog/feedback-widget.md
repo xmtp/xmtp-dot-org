@@ -3,7 +3,7 @@ hide_table_of_contents: true
 title: "Build a feedback widget for your website—using XMTP"
 date: 2023-06-15
 authors: jha
-image: "./media/feedback-widget/feedback-widget.gif"
+image: "./media/feedback-widget/XMTP_FEEDBACK-WIDGET.jpg"
 description: "Introducing two new content types: Attachment and Remote Attachment."
 tags:
   - Messaging
@@ -20,6 +20,8 @@ import daria from './media/feedback-widget/daria-and-her-doggo.gif';
 I have a feeling that most of you reading this have experienced that magic when collaboration, innovation, and plain ol' FUN converge in a project you're working on. 
 
 We felt that 🔥 recently and thought we'd share the journey with you, along with some code for the tool we built.
+
+![Feedback widget post card](./media/feedback-widget/XMTP_FEEDBACK-WIDGET-BLOG.jpg)
 
 <!--truncate-->
 
