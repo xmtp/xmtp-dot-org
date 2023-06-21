@@ -7,7 +7,7 @@ description: Learn how to stream new conversations and messages
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Stream conversations and messages
+# Stream conversations and messages with XMTP
 
 XMTP supports real-time message delivery and retrieval. Once you initially retrieve existing conversations, you can listen for a real-time stream of new conversations and messages.
 

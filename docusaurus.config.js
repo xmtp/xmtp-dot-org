@@ -107,19 +107,14 @@ const config = {
             label: "Use cases",
             items: [
               {
-                to: "/docs/use-cases/guides",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/book-icon.svg" alt="Book icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Guides</div></div>`,
-              },
-              {
                 to: "/docs/use-cases/messaging",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/messaging-icon.svg" alt="Messaging icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Chat apps</div></div>`,
               },
               {
-                to: "/docs/use-cases/finance",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Finance</div></div>`,
+                to: "/docs/use-cases/deso",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/social-icon.svg" alt="Social icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeSo</div></div>`,
               },
               {
                 to: "/docs/use-cases/marketing",
@@ -127,14 +122,24 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
               },
               {
+                to: "/docs/use-cases/automation",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/chip-icon.svg" alt="Automation icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Automation</div></div>`,
+              },
+              {
                 to: "/docs/use-cases/support",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/support-icon.svg" alt="Support icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/support-icon.svg" alt="Automation icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
               },
               {
                 to: "/docs/use-cases/commerce",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/commerce-icon.svg" alt="Commerce icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/commerce-icon.svg" alt="Automation icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
+              },
+              {
+                to: "/docs/use-cases/finance",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeFi</div></div>`,
               },
             ],
           },
@@ -188,14 +193,16 @@ const config = {
             activeBaseRegex: `/`,
           },
           {
-            type: 'html',
-            position: 'right',
-            value: '<button type="button" onClick="window.open(`/docs/build/get-started`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
+            type: "html",
+            position: "right",
+            value:
+              '<button type="button" onClick="window.open(`/docs/build/get-started`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
           },
           {
-            type: 'html',
-            position: 'right',
-            value: '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
+            type: "html",
+            position: "right",
+            value:
+              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
           },
           {
             href: "/built-with-xmtp",
@@ -225,23 +232,23 @@ const config = {
             items: [
               {
                 label: `JavaScript`,
-                to: `/docs/sdks/js-quickstart`,
+                to: `/docs/sdks/js`,
               },
               {
                 label: `Swift`,
-                to: `/docs/sdks/swift-quickstart`,
+                to: `/docs/sdks/swift`,
               },
               {
                 label: `Dart`,
-                to: `/docs/sdks/dart-quickstart`,
+                to: `/docs/sdks/dart`,
               },
               {
                 label: `Kotlin`,
-                to: `/docs/sdks/kotlin-quickstart`,
+                to: `/docs/sdks/kotlin`,
               },
               {
                 label: `React`,
-                to: `/docs/sdks/react-quickstart`,
+                to: `/docs/sdks/react`,
               },
               {
                 label: `SDK references`,

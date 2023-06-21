@@ -45,9 +45,9 @@ XMTP Labs is also fully aligned with the Lens community’s commitment to decent
 
 For those just now discovering XMTP (Extensible Message Transport Protocol), it’s a messaging protocol that has been thoughtfully designed and purpose-built to bring secure communication to web3. XMTP enables fully end-to-end encrypted messaging between blockchain accounts such that only the participants of a conversation would be able to decrypt and read messages. Participants in a conversation can also be guaranteed that the profiles or accounts they’re communicating with are genuine, and their messages authentic, which will also help to combat some of the scams prevalent in today’s social networks.
 
-Learn more about the Lens DMs with XMTP [in our Discord](https://discord.gg/xmtp). If you’re a developer, you can [get started implementing DMs into your Lens app here](https://xmtp.to/lens-quickstart).
+Learn more about the Lens DMs with XMTP [in our Discord](https://discord.gg/xmtp). If you’re a developer, you can [get started implementing DMs into your Lens app here](https://xmtp.org/lens-quickstart).
 
-[![build-key-xmtp-features-doc-card.png](media/build-key-xmtp-features-doc-card.png)](https://xmtp.to/lens-quickstart)
+[![build-key-xmtp-features-doc-card.png](media/build-key-xmtp-features-doc-card.png)](https://xmtp.org/lens-quickstart)
 
 <br/>
 <FeedbackWidget />

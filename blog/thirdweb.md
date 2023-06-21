@@ -57,7 +57,7 @@ npm run dev
 
 ### Learning Objectives:
 
-- Setting up the ConnectWallet button
+- Connect wallet button
 - Signing in with XMTP
 - Loading a conversation
 - Sending a message

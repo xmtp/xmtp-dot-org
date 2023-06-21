@@ -32,7 +32,7 @@ Currently, XMTP Labs (the company) operates all of the network nodes in the two 
 
 Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes.
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more see, [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
+XMTP Labs is working toward a phased decentralization of the network. To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
 
 ### Is XMTP a blockchain?
 
@@ -44,7 +44,7 @@ XMTP Labs is researching various consensus protocols that would allow the networ
 
 Yes, you will be able to run a node.
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more see, [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
+XMTP Labs is working toward a phased decentralization of the network. To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
 
 ### What is the relationship between Waku and XMTP?
 
@@ -53,6 +53,10 @@ XMTP currently uses the Waku protocol to relay messages between network nodes.
 Waku is an unopinionated transport layer built around the libp2p publish/subscribe model. Waku is intentionally open-ended when it comes to handling options like message encoding and encryption, which content topics to use, and how to create and manage encryption keys linked to blockchain account addresses.
 
 XMTP provides a standardized approach to addressing these options, focusing on maximizing compatibility across apps and ensuring message security and deliverability, while also enabling as many developers as possible to use XMTP to build interoperable messaging apps.
+
+### How do XMTP clients communicate with XMTP nodes?
+
+Clients communicate with XMTP nodes through a gRPC (or JSON/HTTP) [message API](https://github.com/xmtp/proto/blob/main/proto/message_api/v1/message_api.proto).
 
 ### What is the expected network latency for message delivery and retrieval?
 
@@ -110,7 +114,7 @@ When a user starts a new messaging session, they must sign with their blockchain
 
 Because there is no secure place in the browser to persist a decrypted key bundle, the app can use the bundle for the current session only. Once the user starts a new session, such as after refreshing their browser, they must sign again to decrypt their key bundle.
 
-If you are using the JavaScript client SDK, you might consider [manually handling private key storage](/docs/sdks/js-quickstart#manually-handling-private-key-storage), but only with the understanding that this approach **requires the utmost care**.
+If you are using the JavaScript client SDK, you might consider [manually handling private key storage](/docs/sdks/js#manually-handling-private-key-storage), but only with the understanding that this approach **requires the utmost care**.
 
 Based on developer and community feedback, we are researching more robust approaches to secure key management.
 

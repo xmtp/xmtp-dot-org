@@ -31,15 +31,15 @@ npx create-next-app xmtp-quickstart-nextjs
 ✔ Would you like to use TypeScript with this project? Yes
 ✔ Would you like to use ESLint with this project? Yes
 ✔ Would you like to use Tailwind CSS with this project?  Yes
-✔ Would you like to use `src/` directory with this project? No
-✔ Use App Router (recommended)? Yes
+✔ Would you like to use `src/` directory with this project? Yes
+✔ Would you like to use experimental `app/` directory with this project? No
 ✔ Would you like to customize the default import alias? No
 ```
 
 ### Learning Objectives:
 
-- Setting up the ConnectWallet button
-- Signing in with XMTP
+- Connect wallet button
+- Authenticate with XMTP
 - Loading a conversation
 - Sending a message
 
@@ -152,6 +152,11 @@ useStreamMessages(conversation, onMessage);
 - [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
 - [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
 - [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
+
+### Example apps
+
+- [React web app](https://github.com/xmtp/xmtp-quickstart-react)
+- [React Native app](https://github.com/xmtp/example-chat-react-native)
 
 #### Need to send a test message?
 

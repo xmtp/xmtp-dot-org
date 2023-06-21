@@ -1,31 +1,33 @@
 ---
-sidebar_label: Finance
-sidebar_position: 12
+sidebar_label: DeFi
+sidebar_position: 5
 ---
 
 import metokens from "./img/metokens.png";
-import attic from "./img/atticc.png";
 
-# Finance
+# Decentralized finance
 
-With the rise of decentralized finance (DeFi), privacy and secure communication become even more critical. XMTP can provide a secure layer for transaction confirmations, notifications, and other communications within DeFi platforms.
+With the rise of DeFi, privacy and secure communications become even more critical. XMTP can provide a secure layer for transaction confirmations, notifications, and other communications within DeFi platforms.
 
 <div class="chain-list">
-  <div class="chain-item">
-    <img src={metokens} style={{ width: "100px" }} alt="Arbitrum logo" />
-    <a href="https://metokens.com/">meTokens</a>
-  </div>
-  <div class="chain-item">
-    <img src={attic} style={{ width: "100px" }} alt="Avalanche logo" />
-    <a href="https://atticc.xyz/">Atticc</a>
-  </div>
+  <a href="https://metokens.com/" class="chain-item">
+    <img src={metokens} />
+    <span>meTokens</span>
+  </a>
 </div>
 
-#### Inspiration:
+#### Inspiration
 
 - Token transfers
 - Swaps
 - Money requests
 - Minting NFTs
 - Gated requests
-- On-ramp / off ramp
+- NFT transfers
+- On-ramp / off-ramp
+
+### Use cases
+
+import Usecases from "@site/src/components/Use-cases";
+
+<Usecases />

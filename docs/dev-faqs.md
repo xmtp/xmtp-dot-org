@@ -27,8 +27,10 @@ To connect web3 wallets to your app:
 - [Thirdweb](https://thirdweb.com/)
   - Example implementation in the [XMTP React Native example app](https://github.com/xmtp/xmtp-react-native/blob/main/example/src/AuthView.tsx#L7)
   - Example implementation in the [XMTP React JS example app](/blog/thirdbweb-wallet-remote-attachments)
-- [WalletConnect](https://walletconnect.com/)
+- [RainbowKit](https://www.rainbowkit.com/)
   - Example implementation in the [XMTP Inbox Web app](https://github.com/xmtp-labs/xmtp-inbox-web)
+  - Support for WalletConnect v2 is now standard in RainbowKit. To learn how to upgrade, see [Migrating to WalletConnect v2](https://www.rainbowkit.com/guides/walletconnect-v2).
+- [WalletConnect](https://walletconnect.com/)
 - [wagmi](https://wagmi.sh/)
 
 XMTP client SDKs require you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/). These wallet connection tools, as well as others, provide this capability.
@@ -83,48 +85,46 @@ XMTP is also chain-agnostic, so multi-chain support is possible.
 Here are **just a few** of the chains supported by XMTP:
 
 <div class="chain-list" >
-  <div class="chain-item">
-      <img src={arbitrum} style={{width:"100px"}} alt="Arbitrum logo"/>
-      <a href="https://arbitrum.foundation/">Arbitrum</a>
-  </div>
-    <div class="chain-item">
-      <img src={avalanche} style={{width:"100px"}} alt="Avalanche logo"/>
-      <a href="https://www.avax.com/">Avalanche</a>
-  </div>
-    <div class="chain-item">
-      <img src={base} style={{width:"100px"}} alt="Base logo"/>
-      <a href="https://base.org/">Base</a>
-  </div>
-    <div class="chain-item">
-  <img src={bnbchain} style={{width:"100px"}}/>
-      <a href="https://www.bnbchain.org/">(BNB) Chain</a>
-  </div>
-    <div class="chain-item">
-      <img src={ethereum} style={{width:"100px"}} alt="Ethereum logo"/>
-      <a href="https://ethereum.org//">Ethereum</a>
-  </div>
-    <div class="chain-item">
-      <img src={hermez} style={{width:"100px"}} alt="Hermez logo"/>
-      <a href="https://docs.hermez.io/Hermez_1.0/about/scalability/">Hermez</a>
-  </div>
-    <div class="chain-item">
-      <img src={linea} style={{width:"100px"}} alt="Linea logo"/>
-      <a href="https://linea.build/">zk-EVM</a>
-  </div>
-    <div class="chain-item">
-      <img src={optimism} style={{width:"100px"}} alt="Optimism logo"/>
-      <a href="https://www.optimism.io/">Optimism</a>
-  </div>
-    <div class="chain-item">
-      <img src={polygon} style={{width:"100px"}} alt="Polygon logo"/>
-      <a href="https://polygon.technology/">Polygon</a>
-
-  </div>
-    <div class="chain-item">
-      <img src={scroll} style={{width:"100px"}} alt="Scroll logo"/>
-      <a href="https://www.scroll.io/">Scroll</a>
-
-  </div>
+  <a href="https://arbitrum.foundation/"  class="chain-item">
+      <img src={arbitrum} />
+      <a >Arbitrum</a>
+  </a>
+    <a href="https://www.avax.com/" class="chain-item">
+      <img src={avalanche} />
+      <a >Avalanche</a>
+  </a>
+    <a href="https://base.org/" class="chain-item">
+      <img src={base} />
+      <a >Base</a>
+  </a>
+    <a href="https://www.bnbchain.org/" class="chain-item">
+      <img src={bnbchain}/>
+      <a >(BNB) Chain</a>
+  </a>
+    <a href="https://ethereum.org//" class="chain-item">
+      <img src={ethereum} />
+      <a >Ethereum</a>
+  </a>
+    <a href="https://docs.hermez.io/Hermez_1.0/about/scalability/" class="chain-item">
+      <img src={hermez} />
+      <a >Hermez</a>
+  </a>
+    <a href="https://linea.build/" class="chain-item">
+      <img src={linea}/>
+      <a >zk-EVM</a>
+  </a>
+    <a href="https://www.optimism.io/" class="chain-item">
+      <img src={optimism} />
+      <a >Optimism</a>
+  </a>
+    <a href="https://polygon.technology/" class="chain-item">
+      <img src={polygon} />
+      <a >Polygon</a>
+  </a>
+    <a href="https://www.scroll.io/" class="chain-item">
+      <img src={scroll} />
+      <a >Scroll</a>
+  </a>
 </div>
 
 ## SDK

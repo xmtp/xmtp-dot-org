@@ -1,5 +1,5 @@
 ---
-sidebar_label: Get started
+sidebar_label: Start
 sidebar_position: 1
 description: "Get started building apps with XMTP."
 ---
@@ -297,6 +297,11 @@ npm i @xmtp/react-native-sdk
 - [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
 - [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
 - [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
+
+### Example apps
+
+- [React web app](https://github.com/xmtp/xmtp-quickstart-react)
+- [React Native app](https://github.com/xmtp/example-chat-react-native)
 
 #### Need to send a test message?
 

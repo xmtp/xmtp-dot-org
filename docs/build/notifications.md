@@ -1,9 +1,9 @@
 ---
-sidebar_label: Push notifications
+sidebar_label: Notifications
 sidebar_position: 8
 ---
 
-# Push Notifications
+# Build push notifications with XMTP
 
 Push notifications can be a highly effective way to engage your users and increase app retention.
 
