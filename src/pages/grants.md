@@ -160,7 +160,7 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ### Documentation
 
-- [Start building with XMTP](/docs)
+- [Start building with XMTP](/docs/build/get-started)
 
 ### Example apps
 
