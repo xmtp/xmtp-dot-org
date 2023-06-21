@@ -91,6 +91,6 @@ The following table provides the deprecation schedule:
 
 | Announced &nbsp; | Effective &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Minimum version | Rationale                                                                                                              |
 | ---------------- | ------------------------------------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| 2022-08-18       | 2022-11-08                                                                      | v6.0.0          | The XMTP network will stop supporting the Waku/libp2p-based client interface in favor of the new GRPC-based interface. |
+| 2022-08-18       | 2022-11-08                                                                      | v6.0.0          | The XMTP network will stop supporting the Waku/libp2p-based client interface in favor of the new gRPC-based interface. |
 
 Issues and PRs are welcome in accordance with XMTP [contribution guidelines](https://github.com/xmtp/xmtp-js/blob/main/CONTRIBUTING.md).

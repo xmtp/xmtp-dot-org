@@ -112,10 +112,6 @@ To learn more, see [Works with XMTP](/docs/dev-faqs).
 
 ### Protocol overview
 
-A user can send and receive encrypted XMTP messages using an app with an embedded XMTP **client**, authenticating using a wallet signature. XMTP network **nodes** persist the user's messages.
+A user can send and receive encrypted XMTP messages using an app with an embedded XMTP [**client**](/docs/concepts/architectural-overview#client-layer), authenticating using a wallet signature. XMTP network [**nodes**](/docs/concepts/architectural-overview#network-layer) transport and persist the user's messages.
 
-Clients and nodes are implemented as [Waku2](https://rfc.vac.dev/spec/10/) peers but with XMTP-specific functions and capabilities.
-
-To learn more about clients, see [Client layer](/docs/concepts/architectural-overview#client-layer).
-
-To learn more about nodes, see [Network layer](/docs/concepts/architectural-overview#network-layer).
+For the protocol specification, see [The XMTP Protocol](https://github.com/xmtp/proto/blob/main/PROTOCOL.md) in the `proto` GitHub repo.
