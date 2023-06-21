@@ -154,24 +154,13 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ## ✨ Resources and inspiration
 
-### XMTP concepts
-
-- [XMTP development concepts](/docs/introduction)
-
 ### Vision
 
 - [XMTP roadmap](/roadmap)
 
 ### Documentation
 
-- [Start building with XMTP](/start-building)
-
-#### SDKs
-
-- JavaScript: https://github.com/xmtp/xmtp-js
-- iOS: https://github.com/xmtp/xmtp-ios
-- Flutter: https://github.com/xmtp/xmtp-flutter
-- Kotlin: Coming soon!
+- [Start building with XMTP](/docs)
 
 ### Example apps
 
