@@ -4,7 +4,7 @@ title: "Build a feedback widget for your website—using XMTP"
 date: 2023-06-22
 authors: jha
 image: "./media/feedback-widget/XMTP_FEEDBACK-WIDGET.jpg"
-description: "Introducing two new content types: Attachment and Remote Attachment."
+description: "Learn about the 🚫🍪 feedback widget we built—using XMTP."
 tags:
   - Messaging
   - Developers
