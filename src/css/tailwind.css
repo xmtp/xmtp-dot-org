@@ -818,6 +818,8 @@ ul li a:before {
 .navbar__item .dropdown__menu {
   width: auto;
   text-align: left;
+  padding: 1rem 0.5rem;
+  border: 1px solid #e1e1e1;
 }
 .navbar__item .subtext {
   display: none;

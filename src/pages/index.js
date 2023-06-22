@@ -15,9 +15,10 @@ function HomepageHeader() {
     <header className="homepageHeader px-0 pt-40 md:pt-0 h-[600px] md:h-[770px] bg-[length:1000px_auto] md:bg-[length:1560px_auto] bg-bottom bg-no-repeat flex flex-col justify-center items-center">
         
         <div className="main-carousel">
-            <div className="absolute bottom-28 md:bottom-0">
-              <img src="/img/leftPhone.png" className="w-[522px] leftPhone"></img>
-            </div>
+
+          <div className="absolute bottom-28 md:bottom-0">
+            <img src="/img/leftPhone.png" className="w-[522px] leftPhone"></img>
+          </div>
           
           <div className="carousel-cell">
             <div className="absolute bottom-28 md:bottom-0 right-0">
@@ -85,6 +86,30 @@ function HomepageHeader() {
   );
 }
 
+function HomepageLogos() {
+  const { siteConfig } = useDocusaurusContext();
+
+  return (
+
+  <div class="py-24 sm:py-0">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+        <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-cyberconnect.svg" alt="CyberConnect" width="206" height="32"></img>
+        <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-lens.svg" alt="Lens" width="72" height="24"></img>
+        <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="/img/logo-ens.svg" alt="ENS" width="109" height="42"></img>
+        <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="/img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" width="150" height="40"></img>
+      </div>
+      <div class="mt-12 flex justify-center">
+        <p class="relative rounded-full bg-gray-50 px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/5">
+          <span class="hidden md:inline">We just launched an unforgettable partnership with a big company.</span>
+          <a href="#" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span> Read more <span aria-hidden="true">&rarr;</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+);
+}
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
@@ -129,6 +154,7 @@ export default function Home() {
       description="Own and control your communication."
     >
       <HomepageHeader />
+      <HomepageLogos />
       <MainContent styles={styles} />
     </Layout>
   );
