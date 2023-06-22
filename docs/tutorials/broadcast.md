@@ -9,7 +9,7 @@ You can send a broadcast message (1:many message or announcement) with XMTP. The
 
 :::tip
 
-If your app stores a signature to read and send XMTP messages on behalf of a user, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature. For example disclosure text and UI patterns, see [Disclose signature storage](/start-building#disclose-signature-storage).
+If your app stores a signature to read and send XMTP messages on behalf of a user, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature. For example disclosure text and UI patterns, see [Disclose signature storage](#disclose-signature-storage).
 
 :::
 
@@ -51,3 +51,21 @@ async function main() {
 }
 main();
 ```
+
+## Disclose signature storage
+
+- If your app stores a signature to read and send XMTP messages on behalf of a user, such as in a broadcast message, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature.
+
+  For example:
+
+  - Before connection:
+
+    > You’ll be prompted to provide a signature that gives this app permission to read and send XMTP messages on your behalf. The signature will be securely stored and accessed only to execute your workflows. You’ll be able to revoke permission at any time using the Delete signature option that will appear here.
+
+    ![Signature storage disclosure before connection](/img/sig-store-disclosure-connect.png)
+
+  - After connection:
+
+    > The signature you provided gives this app permission to read and send XMTP messages on your behalf. The signature is securely stored and accessed only to execute your workflows. Click **Delete signature** to revoke this permission and delete the signature from storage.
+
+    ![Signature storage disclosure and delete after connection](/img/sig-store-disclosure-delete.png)

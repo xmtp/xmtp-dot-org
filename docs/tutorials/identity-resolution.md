@@ -22,6 +22,8 @@ For example, a user should be able to enter `prxshant.eth` in your To field and 
 
 And certainly, your app should also be able to accept a raw wallet address and reverse-resolve and display the associated domain name, if available.
 
+When displaying names, also look for and display its associated avator. For example, when displaying `.lens` names, look for and display a Lens profile photo. Display blockies as avatars for raw 0x addresses.
+
 ## Resolve identities using the Everyname API
 
 To resolve identities in your app, consider using [Everyname](https://www.everyname.xyz/), which provides forward and reverse identity resolution for many name services.
