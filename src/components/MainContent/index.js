@@ -114,23 +114,6 @@ export const MainContent = ({ styles }) => {
   return (
     <>
       <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto px-0 xl:px-4`}>
-        <div>
-          <ul
-            role="list"
-            className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
-          >
-            {HEADER_DATA.map(({ title, subtitle, url, icon }) => (
-              <HeaderBox
-                key={title}
-                title={title}
-                subtitle={subtitle}
-                url={url}
-                styles={styles}
-                icon={icon}
-              />
-            ))}
-          </ul>
-        </div>
 
         <div>
           <div className="relative min-h-[630px]">

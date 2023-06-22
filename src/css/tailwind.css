@@ -63,7 +63,7 @@
     --ifm-footer-background-color: #171717;
     --backdrop-mobile-menu: rgba(255, 255, 255, 0.95);
     --nav-search-border-color: #d4d4d4;
-    --header-back-img: url("/img/background.jpg");
+    --header-back-img: url("/img/home_bg.jpg");
     --header-bg-color: white;
     --header-box-background: #fff;
     --toc-link-color: #525252;
@@ -87,7 +87,7 @@
     --shadow-color: rgb(0 0 0 / 85%);
     --backdrop-mobile-menu: rgba(0, 0, 0, 0.95);
     --nav-search-border-color: #444444;
-    --header-back-img: url("/img/dark-background.jpg");
+    --header-back-img: url("/img/home_bg.jpg");
     --header-bg-color: black;
     --header-box-background: #171717;
     --dropdown-subtext-color: #cbd5e1;
@@ -390,6 +390,9 @@ body {
 .homepageHeader {
   background-image: var(--header-back-img);
   background-color: var(--header-bg-color);
+  width: 100%;
+  max-width: 1560px;
+  margin: 0 auto;
 }
 
 .table-of-contents__link {
@@ -945,7 +948,7 @@ code:not([class]) {
 }
 /*navbar*/
 .navbar {
-  border-bottom: 1px solid grey;
+  /* border-bottom: 1px solid grey; */
 }
 /*MOBILE NAV*/
 @media (max-width: 799px) {
@@ -1012,4 +1015,121 @@ table code {
 }
 .discord .theme-admonition img {
   height: 10px;
+}
+
+.main-carousel {
+  width: 100%;
+  max-width: 1920px;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 41.25rem;
+  text-align: center;
+
+  h1 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  h4 {
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: normal;
+  }
+}
+
+/*! Flickity v2.3.0
+https://flickity.metafizzy.co
+---------------------------------------------- */
+.flickity-enabled{position:relative}.flickity-enabled:focus{outline:0}.flickity-viewport{overflow:hidden;position:relative;height:100%}.flickity-slider{position:absolute;width:100%;height:100%}.flickity-enabled.is-draggable{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.flickity-enabled.is-draggable .flickity-viewport{cursor:move;cursor:-webkit-grab;cursor:grab}.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down{cursor:-webkit-grabbing;cursor:grabbing}.flickity-button{position:absolute;background:hsla(0,0%,100%,.75);border:none;color:#333}.flickity-button:hover{background:#fff;cursor:pointer}.flickity-button:focus{outline:0;box-shadow:0 0 0 5px #19f}.flickity-button:active{opacity:.6}.flickity-button:disabled{opacity:.3;cursor:auto;pointer-events:none}.flickity-button-icon{fill:currentColor}.flickity-prev-next-button{top:50%;width:44px;height:44px;border-radius:50%;transform:translateY(-50%)}.flickity-prev-next-button.previous{left:10px}.flickity-prev-next-button.next{right:10px}.flickity-rtl .flickity-prev-next-button.previous{left:auto;right:10px}.flickity-rtl .flickity-prev-next-button.next{right:auto;left:10px}.flickity-prev-next-button .flickity-button-icon{position:absolute;left:20%;top:20%;width:60%;height:60%}.flickity-page-dots{position:absolute;width:100%;bottom:-25px;padding:0;margin:0;list-style:none;text-align:center;line-height:1}.flickity-rtl .flickity-page-dots{direction:rtl}.flickity-page-dots .dot{display:inline-block;width:10px;height:10px;margin:0 8px;background:#333;border-radius:50%;opacity:.25;cursor:pointer}.flickity-page-dots .dot.is-selected{opacity:1}
+
+/* flickity-fade */
+
+.flickity-enabled.is-fade .flickity-slider > * {
+  pointer-events: none;
+  z-index: 0;
+}
+
+.flickity-enabled.is-fade .flickity-slider > .is-selected {
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.is-selected h1 span {
+  -webkit-animation-name: titleFade;
+  -webkit-animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+
+.is-selected .rightPhone {
+  -webkit-animation-name: slideUp, titleFade;
+  -webkit-animation-duration: 1s, 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+
+/* @keyframes titleAnimation {
+  0% { 
+    background-position: 0;
+  }
+  60% { 
+      background-position: 500px;
+    }
+  100% { 
+    background-position: 500px;
+  }
+} */
+
+@keyframes titleFade {
+  0% { 
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    margin-bottom: -2rem;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .rightPhone {
+    width: 450px;
+  }
+  .leftPhone {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .rightPhone {
+    width: 400px;
+  }
+  .leftPhone {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 720px) {  
+  .is-selected h1, .is-selected h1 span {
+    font-size: 40px;
+  }
+  .is-selected h4 {
+    font-size: 1.25em;
+    width: 90%;
+  }
+  .rightPhone {
+    width: 250px;
+  }
+  .leftPhone {
+    width: 240px;
+  }
 }

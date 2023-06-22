@@ -30,6 +30,24 @@ const config = {
       defer: true,
       "data-domain": "xmtp.org",
     },
+    {
+      src: "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js",
+      async: true,
+      defer: true,
+      "data-domain": "xmtp.org",
+    },
+    {
+      src: "https://unpkg.com/flickity-fade@1/flickity-fade.js",
+      async: true,
+      defer: true,
+      "data-domain": "xmtp.org",
+    },
+    {
+      src: "https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js",
+      async: true,
+      defer: true,
+      "data-domain": "xmtp.org",
+    },
   ],
   clientModules: [require.resolve("./src/css/tailwind.css")],
 
