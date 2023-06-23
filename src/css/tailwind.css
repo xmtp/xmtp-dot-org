@@ -1013,7 +1013,13 @@ table code {
 .discord .theme-admonition img {
   height: 10px;
 }
-/*WDGET*/
+/*NAVIGATION AND WIDGET*/
 .theme-last-updated{
   display:none;
+}
+.pagination-nav{
+  border-top:1px solid;
+}
+.pagination-nav__link{
+  border:0px
 }
