@@ -40,7 +40,7 @@ Beyond the features that XMTP protocol v2 introduces, we have also improved the 
 
 We have published a [Protocol and Network Overview](https://github.com/xmtp/proto/blob/main/PROTOCOL.md) document on GitHub to help developers understand the core architecture of XMTP v2.
 
-### Platform Roadmap
+### Platform roadmap
 
 We have published our [platform roadmap](/roadmap) to give developers more transparency on upcoming SDK support and features like push notifications and decentralization milestones.
 
