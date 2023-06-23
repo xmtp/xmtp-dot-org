@@ -10,11 +10,9 @@ description: "Resolve Identities Using the Everyname API"
 
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
-![](./media/everyname.jpg)
-
-# Resolve identities in your app built with XMTP
-
 When you build with XMTP, there’s no cold start for your app or your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
+
+![](./media/everyname.jpg)
 
 <!--truncate-->
 
@@ -117,11 +115,11 @@ The response provides the associated domain name, if available. For example:
 
 #### Learn more
 
-To learn more about Building with Everyname, see their [Developer Portal](https://docs.everyname.xyz/api/introduction)
+To learn more about building with Everyname, see their [Developer Portal](https://docs.everyname.xyz/api/introduction)
 
 ### Join us on Discord
 
-We're excited to be partnering with Unstoppable Domains to bring you better solutions for serving and reaching your end-users. Stay tuned for more guides coming soon!
+We're excited to be partnering with Everyname to bring you better solutions for serving and reaching your end users. [Stay tuned](https://discord.gg/xmtp) for more guides coming soon!
 
 <br/>
 <FeedbackWidget />
