@@ -148,6 +148,7 @@ export default function Home() {
         pageDots: false,
         wrapAround: true,
         fade: true,
+        accessibility: false,
         pauseAutoPlayOnHover: false,
       });
       var flkty = new Flickity( '.main-carousel', {
