@@ -1,20 +1,18 @@
 ---
 slug: everyname-resolution
 hide_table_of_contents: true
-title: "Resolve identities using the Everyname API"
-date: 2023-06-07
+title: "Resolve Identities Using the Everyname API"
+date: 2023-06-21
 authors: fabri
-image: "./media/everyname.png"
-description: "Resolve identities using the Everyname API"
+image: "./media/everyname.jpg"
+description: "Resolve Identities Using the Everyname API"
 ---
 
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
-![](./media/uc-everyname.png)
+When you build with XMTP, there’s no cold start for your app or your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
 
-# Resolve identities in your app built with XMTP
-
-When you build with XMTP, there’s no cold start for your app and your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
+![](./media/everyname.jpg)
 
 <!--truncate-->
 
@@ -115,11 +113,13 @@ The response provides the associated domain name, if available. For example:
 }
 ```
 
-To learn more about Everyname, see [Introduction](https://docs.everyname.xyz/api/introduction).
+#### Learn more
 
-To learn about wallet addresses and chains that are compatible with XMTP, see [Chains](/docs/dev-faqs#chains).
+To learn more about building with Everyname, see their [Developer Portal](https://docs.everyname.xyz/api/introduction)
 
-To learn about name services, or decentralized IDs, that work with XMTP, see [Decentralized identifiers](/docs/dev-faqs#decentralized-identifiers).
+### Join us on Discord
+
+We're excited to be partnering with Everyname to bring you better solutions for serving and reaching your end users. [Stay tuned](https://discord.gg/xmtp) for more guides coming soon!
 
 <br/>
 <FeedbackWidget />

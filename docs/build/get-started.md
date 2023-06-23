@@ -298,6 +298,11 @@ npm i @xmtp/react-native-sdk
 - [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
 - [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
 
+### Example apps
+
+- [React web app](https://github.com/xmtp/xmtp-quickstart-react)
+- [React Native app](https://github.com/xmtp/example-chat-react-native)
+
 #### Need to send a test message?
 
 Message this XMTP message bot to get an immediate automated reply:

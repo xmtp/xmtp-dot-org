@@ -11,7 +11,7 @@ import { useColorMode } from '@docusaurus/theme-common'
 const FeedbackWidgetHeader = ({ header, subheader }) => {
   return (
     <p className={styles.text}>
-      <strong>{header}</strong>
+      <strong>{header}<br></br><small style={{color:'grey'}}>powered by XMTP</small></strong>
       {subheader}
     </p>
   )

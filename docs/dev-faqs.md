@@ -2,7 +2,7 @@
 sidebar_label: Developer FAQ
 title: Developer FAQ
 sidebar_position: 3
-description: "Here are just a few of the composable building blocks of web3 that work well with XMTP."
+description: "Answers to frequently asked questions about developing with XMTP."
 ---
 
 import arbitrum from '/docs/concepts/img/arbitrum-logo.png';
@@ -15,25 +15,38 @@ import linea from '/docs/concepts/img/linea-logo.png';
 import optimism from '/docs/concepts/img/optimism-logo.png';
 import polygon from '/docs/concepts/img/polygon-logo.png';
 import scroll from '/docs/concepts/img/scroll-logo.png';
+import activatedmsscreen from '/docs/concepts/img/activate-dms-screen.png';
 
-# Developer FAQ
+# Developer FAQ for XMTP
+
+Answers to frequently asked questions about developing with XMTP.
+
+## What works with XMTP?
 
 In the spirit of web3 composability, here are **just a few** of the building blocks that work well with XMTP. Building your app with these tools can help you deliver and distribute an app—faster and with quality.
 
-## What wallet connection tools work with XMTP?
+:::tip
+
+This list is not exhaustive and is just a starting point. A highly extensible protocol like XMTP can work with more tools than those listed in each section.
+
+:::
+
+### Wallet connection
 
 To connect web3 wallets to your app:
 
 - [Thirdweb](https://thirdweb.com/)
   - Example implementation in the [XMTP React Native example app](https://github.com/xmtp/xmtp-react-native/blob/main/example/src/AuthView.tsx#L7)
   - Example implementation in the [XMTP React JS example app](/blog/thirdbweb-wallet-remote-attachments)
-- [WalletConnect](https://walletconnect.com/)
+- [RainbowKit](https://www.rainbowkit.com/)
   - Example implementation in the [XMTP Inbox Web app](https://github.com/xmtp-labs/xmtp-inbox-web)
+  - Support for WalletConnect v2 is now standard in RainbowKit. To learn how to upgrade, see [Migrating to WalletConnect v2](https://www.rainbowkit.com/guides/walletconnect-v2).
+- [WalletConnect](https://walletconnect.com/)
 - [wagmi](https://wagmi.sh/)
 
 XMTP client SDKs require you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/). These wallet connection tools, as well as others, provide this capability.
 
-## Storage
+### Storage
 
 To store encrypted and encoded message payload content:
 
@@ -46,7 +59,7 @@ To store encrypted and encoded message payload content:
 - [ThirdwebStorage](https://portal.thirdweb.com/storage)
   - Tutorial: [How to send remote attachments with XMTP & Thirdweb SDKs](/blog/thirdbweb-wallet-remote-attachments)
 
-## Does XTMP works with Social
+### Decentralized social
 
 - [Lens](https://www.lens.xyz/)
   - Example implementation in [Lenster](https://github.com/lensterxyz/lenster)
@@ -55,7 +68,13 @@ To store encrypted and encoded message payload content:
   - Example implementation in the [CyberConnect & XMTP Integration Demo App](https://github.com/cyberconnecthq/cc-xmtp-chatapp)
   - Tutorial: [Build messaging for CyberConnect profiles](https://cyberconnect.hashnode.dev/integrating-xmtp-into-cyberconnect-a-guide)
 
-## Wallet apps
+### Decentralized app store
+
+To launch your own dApp stores and list any dApp, including your own:
+
+- Polygon [dApp Store Kit](https://docs.dappstorekit.io/docs/how%20to%20use%20the%20dapp%20store%20kit/dapp-registry-management/)
+
+### Wallet apps
 
 XMTP can be used with EVM-compatible wallet apps that support ECDSA signing on the secp256k1 elliptic curve. These include common wallet apps such as:
 
@@ -70,7 +89,7 @@ XMTP uses a signature from the blockchain account to [create and enable the XMTP
 
 A user can generate multiple XMTP identities from the same wallet app by changing to a different blockchain account.
 
-## Chains
+### Chains
 
 XMTP works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s.
 
@@ -125,14 +144,32 @@ Here are **just a few** of the chains supported by XMTP:
   </a>
 </div>
 
-## SDK
+:::tip
 
-### Which languages and environments does the XMTP SDK support?
+Want to propose a path to compatibility for other popular chains such as Aptos, Bitcoin, Cosmos, Flow, Hedera Hashgraph, Polkadot, Solana, Starkware, Stellar, Sui, and Tezos? Do it via an [XMTP grant](/grants)!
+
+Have you built with a tool that works well with XMTP? Let's add it to this page. Share your experience with `prxshant.eth` on [xmtp.chat](https://xmtp.chat/inbox) or using the feedback widget at the bottom of this page.
+
+:::
+
+## Which languages and environments does the XMTP SDK support?
 
 The XMTP SDK is [available for multiple languages](/docs/introduction#xmtp-sdks-and-example-apps#sdks), including JavaScript, Kotlin, Swift, and Dart.
 
 Have other questions or ideas for future language or environment support? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
-### Which web3 libraries does the XMTP SDK require?
+## Which web3 libraries does the XMTP SDK require?
 
 The XMTP SDK currently requires you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/), such as [wagmi](https://wagmi.sh/).
+
+## Where can I get official XMTP brand assets?
+
+See the [XMTP brand guidelines](https://github.com/xmtp/brand) GitHub repo.
+
+## How should I handle the XMTP onboarding flow in my app?
+
+In your app onboarding flow, enable your users to activate XMTP DMs. User access to DMs can help with app engagement and re-engagement. For example, here is a prompt to activate XMTP DMs in the onboarding flow to [claim a Lens handle](https://claim.lens.xyz/):
+
+<img src={activatedmsscreen} style={{width:"500px"}}/>
+
+In your app onboarding flow, request user permission to display app-specific push notifications to reach users outside of an app session.
