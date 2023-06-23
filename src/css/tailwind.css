@@ -1013,3 +1013,7 @@ table code {
 .discord .theme-admonition img {
   height: 10px;
 }
+/*WDGET*/
+.theme-doc-footer{
+  display:none;
+}
