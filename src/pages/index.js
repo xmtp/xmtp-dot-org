@@ -14,11 +14,11 @@ function HomepageHeader() {
   return (
     <header className="homepageHeader px-0 pt-40 md:pt-0 h-[600px] md:h-[770px] bg-[length:1000px_auto] md:bg-[length:1560px_auto] bg-bottom bg-no-repeat flex flex-col justify-center items-center">
         
-        <div className="main-carousel slideFade">
+        <div className="main-carousel">
 
           <div className="absolute bottom-28 md:bottom-0">
-            <img src="/img/leftPhone.png" className="w-[522px] leftPhone slideFade block dark:hidden"></img>
-            <img src="/img/leftPhone-dark.png" className="w-[522px] leftPhone slideFade hidden dark:block"></img>
+            <img src="/img/leftPhone.png" className="w-[522px] leftPhone block dark:hidden"></img>
+            <img src="/img/leftPhone-dark.png" className="w-[522px] leftPhone hidden dark:block"></img>
           </div>
           
           <div className="carousel-cell">
