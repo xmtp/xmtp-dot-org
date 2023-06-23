@@ -42,12 +42,6 @@ const config = {
       defer: true,
       "data-domain": "xmtp.org",
     },
-    {
-      src: "https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js",
-      async: true,
-      defer: true,
-      "data-domain": "xmtp.org",
-    },
   ],
   clientModules: [require.resolve("./src/css/tailwind.css")],
 

@@ -12,17 +12,19 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <header className="homepageHeader px-0 pt-40 md:pt-0 h-[600px] md:h-[770px] bg-[length:1000px_auto] md:bg-[length:1560px_auto] bg-bottom bg-no-repeat flex flex-col justify-center items-center">
+    <header className="homepageHeader slideFade px-0 pt-40 md:pt-0 h-[600px] md:h-[770px] bg-[length:1000px_auto] md:bg-[length:1560px_auto] bg-bottom bg-no-repeat flex flex-col justify-center items-center">
         
         <div className="main-carousel">
 
           <div className="absolute bottom-28 md:bottom-0">
-            <img src="/img/leftPhone.png" className="w-[522px] leftPhone"></img>
+            <img src="/img/leftPhone.png" className="w-[522px] leftPhone slideFade block dark:hidden"></img>
+            <img src="/img/leftPhone-dark.png" className="w-[522px] leftPhone slideFade hidden dark:block"></img>
           </div>
           
           <div className="carousel-cell">
             <div className="absolute bottom-28 md:bottom-0 right-0">
-              <img src="/img/rightPhone1.png" className="w-[510px] rightPhone"></img>
+              <img src="/img/rightPhone1.png" className="w-[510px] rightPhone block dark:hidden"></img>
+              <img src="/img/rightPhone1-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
             <div className="flex flex-col justify-center items-center">
               <h1>XMTP delivers<br />
@@ -37,7 +39,8 @@ function HomepageHeader() {
           
           <div className="carousel-cell">
             <div className="absolute bottom-28 md:bottom-0 right-0">
-              <img src="/img/rightPhone2.png" className="w-[510px] rightPhone"></img>
+              <img src="/img/rightPhone2.png" className="w-[510px] rightPhone block dark:hidden"></img>
+              <img src="/img/rightPhone2-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
             <div className="flex flex-col justify-center items-center">
               <h1>XMTP delivers<br />
@@ -52,7 +55,8 @@ function HomepageHeader() {
           
           <div className="carousel-cell">
             <div className="absolute bottom-28 md:bottom-0 right-0">
-              <img src="/img/rightPhone3.png" className="w-[510px] rightPhone"></img>
+              <img src="/img/rightPhone3.png" className="w-[510px] rightPhone block dark:hidden"></img>
+              <img src="/img/rightPhone3-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
             <div className="flex flex-col justify-center items-center">
               <h1>XMTP delivers<br />
@@ -67,7 +71,8 @@ function HomepageHeader() {
           
           <div className="carousel-cell">
             <div className="absolute bottom-28 md:bottom-0 right-0">
-              <img src="/img/rightPhone4.png" className="w-[510px] rightPhone"></img>
+              <img src="/img/rightPhone4.png" className="w-[510px] rightPhone block dark:hidden"></img>
+              <img src="/img/rightPhone4-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
             <div className="flex flex-col justify-center items-center">
               <h1>XMTP delivers<br />
@@ -92,8 +97,8 @@ function HomepageLogos() {
   return (
 
   <div class="py-24 sm:py-0">
-    <div class="mx-auto max-w-[1440px] px-6 lg:px-8">
-      <div class="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+    <div class="mx-auto max-w-[1440px] px-6 lg:px-8 block dark:hidden">
+      <div class="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-6">
         <a href="https://xmtp.org/docs/tutorials/cyberconnect"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-cyberconnect.svg" alt="CyberConnect" width="206" height="32"></img></a>
         <a href="https://xmtp.org/docs/tutorials/lens-multiprofile"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-lens.svg" alt="Lens" width="72" height="24"></img></a>
         <a href="https://xmtp.org/blog/join-the-movement"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-converse.svg" alt="Converse App" width="132" height="40"></img></a>
@@ -101,13 +106,30 @@ function HomepageLogos() {
         <a href="https://xmtp.org/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" width="150" height="40"></img></a>
       </div>
       <div class="mt-8 flex justify-center">
-        <p class="relative rounded-full bg-indigo-50 hover:bg-indigo-100 hover:drop-shadow transition px-6 py-1.5 text-sm leading-6 text-gray-800 ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
+        <p class="relative rounded-full bg-indigo-50 dark:bg-indigo-800 hover:bg-indigo-100 hover:drop-shadow transition px-6 py-1.5 text-sm leading-6 text-gray-800 dark:text-white ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
+          <span class="md:inline font-medium mr-2">🎉 We just launched an unforgettable partnership with a big company</span>
+          <a href="#" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-[1440px] px-6 lg:px-8 hidden dark:block">
+      <div class="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-6">
+        <a href="https://xmtp.org/docs/tutorials/cyberconnect"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-cyberconnect-dark.svg" alt="CyberConnect" width="206" height="32"></img></a>
+        <a href="https://xmtp.org/docs/tutorials/lens-multiprofile"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-lens-dark.svg" alt="Lens" width="72" height="24"></img></a>
+        <a href="https://xmtp.org/blog/join-the-movement"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-converse-dark.svg" alt="Converse App" width="132" height="40"></img></a>
+        <a href="https://xmtp.org/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-ens-dark.svg" alt="ENS" width="109" height="42"></img></a>
+        <a href="https://xmtp.org/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-unstoppabledomains-dark.svg" alt="Unstoppable Domains" width="150" height="40"></img></a>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <p class="relative rounded-full bg-indigo-50 dark:bg-indigo-800 hover:bg-indigo-100 hover:drop-shadow transition px-6 py-1.5 text-sm leading-6 text-gray-800 dark:text-white ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
           <span class="md:inline font-medium mr-2">🎉 We just launched an unforgettable partnership with a big company</span>
           <a href="#" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
         </p>
       </div>
     </div>
   </div>
+  
 );
 }
 
@@ -125,7 +147,8 @@ export default function Home() {
         prevNextButtons: false,
         pageDots: false,
         wrapAround: true,
-        fade: true
+        fade: true,
+        pauseAutoPlayOnHover: false,
       });
       var flkty = new Flickity( '.main-carousel', {
     });

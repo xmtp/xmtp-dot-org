@@ -63,7 +63,7 @@
     --ifm-footer-background-color: #171717;
     --backdrop-mobile-menu: rgba(255, 255, 255, 0.95);
     --nav-search-border-color: #d4d4d4;
-    --header-back-img: url("/img/home_bg.jpg");
+    --header-back-img: url("/img/home_bg.png");
     --header-bg-color: white;
     --header-box-background: #fff;
     --toc-link-color: #525252;
@@ -87,7 +87,7 @@
     --shadow-color: rgb(0 0 0 / 85%);
     --backdrop-mobile-menu: rgba(0, 0, 0, 0.95);
     --nav-search-border-color: #444444;
-    --header-back-img: url("/img/home_bg.jpg");
+    --header-back-img: url("/img/home_bg-dark.png");
     --header-bg-color: black;
     --header-box-background: #171717;
     --dropdown-subtext-color: #cbd5e1;
@@ -1072,17 +1072,12 @@ https://flickity.metafizzy.co
   animation-iteration-count: 1;
 }
 
-/* @keyframes titleAnimation {
-  0% { 
-    background-position: 0;
-  }
-  60% { 
-      background-position: 500px;
-    }
-  100% { 
-    background-position: 500px;
-  }
-} */
+.slideFade {
+  -webkit-animation-name: slideUp, titleFade;
+  -webkit-animation-duration: 1s, 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
 
 @keyframes titleFade {
   0% { 
