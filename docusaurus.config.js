@@ -42,7 +42,7 @@ const config = {
           id: "default",
           routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars/sidebars.js"),
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
           editUrl: "https://github.com/xmtp/xmtp-dot-org/edit/main",
         },

@@ -1014,9 +1014,6 @@ table code {
   height: 10px;
 }
 /*NAVIGATION AND WIDGET*/
-.theme-last-updated{
-  display:none;
-}
 .pagination-nav{
   border-top:1px solid;
 }
