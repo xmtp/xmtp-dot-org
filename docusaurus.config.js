@@ -44,14 +44,14 @@ const config = {
           sidebarPath: require.resolve("./sidebars/sidebars.js"),
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          editUrl: "https://github.com/xmtp/xmtp-dot-org/tree/main",
+          editUrl: "https://github.com/xmtp/xmtp-dot-org/edit/main",
         },
         blog: {
           blogDescription:
             "A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging",
           blogSidebarTitle: "All posts",
           blogSidebarCount: "ALL",
-          editUrl: "https://github.com/xmtp/xmtp-dot-org/tree/main",
+          editUrl: "https://github.com/xmtp/xmtp-dot-org/edit/main",
         },
         theme: {
           customCss: require.resolve("./src/css/tailwind.css"),
