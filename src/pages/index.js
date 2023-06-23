@@ -101,8 +101,8 @@ function HomepageLogos() {
         <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" width="150" height="40"></img>
       </div>
       <div class="mt-12 flex justify-center">
-        <p class="relative rounded-full bg-gray-50 px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/5">
-          <span class="hidden md:inline">🎉 We just launched an unforgettable partnership with a big company.</span>
+        <p class="relative rounded-full bg-gray-50 px-4 py-1.5 text-sm leading-6 text-gray-800 ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
+          <span class="md:inline">We just launched an unforgettable partnership with a big company.</span>
           <a href="#" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span> Read more <span aria-hidden="true">&rarr;</span></a>
         </p>
       </div>

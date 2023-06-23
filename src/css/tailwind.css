@@ -818,7 +818,7 @@ ul li a:before {
 .navbar__item .dropdown__menu {
   width: auto;
   text-align: left;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
   border: 1px solid #e1e1e1;
 }
 .navbar__item .subtext {
@@ -838,7 +838,7 @@ ul li a:before {
 }
 .navbar__client__dropdown__icon {
   max-width: 10%;
-  margin-right: 5px;
+  margin-right: 12px;
 }
 /*SIDEBAR*/
 :root {
