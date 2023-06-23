@@ -29,7 +29,7 @@ function HomepageHeader() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">reach to wallets</span>
               </h1>
               <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
-              <button className="bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
+              <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
                 <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
               </button>
             </div>
@@ -44,7 +44,7 @@ function HomepageHeader() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">payments in apps</span>
               </h1>
               <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
-              <button className="bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
+              <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
                 <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
               </button>
             </div>
@@ -59,7 +59,7 @@ function HomepageHeader() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">portability in apps</span>
               </h1>
               <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
-              <button className="bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
+              <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
                 <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
               </button>
             </div>
@@ -74,7 +74,7 @@ function HomepageHeader() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">secure messaging</span>
               </h1>
               <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
-              <button className="bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
+              <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
                 <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
               </button>
             </div>
@@ -93,17 +93,17 @@ function HomepageLogos() {
 
   <div class="py-24 sm:py-0">
     <div class="mx-auto max-w-[1440px] px-6 lg:px-8">
-      <div class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-6">
+      <div class="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">
         <a href="https://xmtp.org/docs/tutorials/cyberconnect"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-cyberconnect.svg" alt="CyberConnect" width="206" height="32"></img></a>
         <a href="https://xmtp.org/docs/tutorials/lens-multiprofile"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-lens.svg" alt="Lens" width="72" height="24"></img></a>
         <a href="https://xmtp.org/blog/join-the-movement"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-converse.svg" alt="Converse App" width="132" height="40"></img></a>
         <a href="https://xmtp.org/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-ens.svg" alt="ENS" width="109" height="42"></img></a>
         <a href="https://xmtp.org/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" width="150" height="40"></img></a>
       </div>
-      <div class="mt-12 flex justify-center">
-        <p class="relative rounded-full bg-gray-50 px-4 py-1.5 text-sm leading-6 text-gray-800 ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
-          <span class="md:inline">We just launched an unforgettable partnership with a big company.</span>
-          <a href="#" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span> Read more <span aria-hidden="true">&rarr;</span></a>
+      <div class="mt-8 flex justify-center">
+        <p class="relative rounded-full bg-indigo-50 hover:bg-indigo-100 hover:drop-shadow transition px-6 py-1.5 text-sm leading-6 text-gray-800 ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
+          <span class="md:inline font-medium mr-2">🎉 We just launched an unforgettable partnership with a big company</span>
+          <a href="#" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
         </p>
       </div>
     </div>
@@ -131,8 +131,15 @@ export default function Home() {
     });
 
     flkty.on( 'select', function( index ) {
-
     });
+
+    document.onreadystatechange = function() {
+      if (document.readyState !== "complete") {
+          document.querySelector(".main-carousel").style.visibility = "hidden";
+      } else {
+          document.querySelector(".main-carousel").style.visibility = "visible";
+      }
+    };
 
     if (!localStorage.getItem("theme")) localStorage.setItem("theme", "light");
     if (
