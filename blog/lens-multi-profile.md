@@ -61,7 +61,7 @@ const buildConversationId = (profileIdA: string, profileIdB: string) => {
 
 :::caution Important
 
-Building multi profile experiences is optional. Allowing users to have the different conversations with multiple profiles can make the experience inconsistent outside the Lens ecosystem.
+Building multi-profile experiences is optional. Allowing users to have different conversations with multiple profiles can make the experience inconsistent outside the Lens ecosystem.
 :::
 
 You can assign a conversation ID to conversations and then use the ID to filter and organize conversations as needed. You set the `conversationId` when your app creates a conversation.

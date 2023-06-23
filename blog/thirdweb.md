@@ -19,9 +19,9 @@ tags:
 
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
-![thirdweb.jpg](./media/xmtp-thirdweb/hero.png)
+Follow these steps to start sending image attachments to wallets within your chat app. Our sample app includes everything you need to connect to wallets with Thirdweb's WalletSDK, use XMTP's remote attachments, and upload larger files to Thirdweb's storage.
 
-Follow these steps to start sending image attachments to wallets within your chat app. Our sample app includes everything you need to connect to wallets with thirdweb's WalletSDK, use XMTP's remote attachments, and upload larger files to thirdweb's storage.
+![thirdweb.jpg](./media/xmtp-thirdweb/hero.png)
 
 <!--truncate-->
 
@@ -32,7 +32,7 @@ Follow these steps to start sending image attachments to wallets within your cha
 The WalletSDK is a development kit that grants developers access to a comprehensive selection of wallets, ranging from custodial to MPC to smart contracts.
 [Read more](https://portal.thirdweb.com/wallet)
 
-### XMTP Content-Types
+### XMTP content types
 
 Content types are a way to describe the _type_ of _content_ a message contains on XMTP. Out of the box, XMTP's SDKs support one content type: `text`.
 [Read more](https://xmtp.org/docs/concepts/content-types)
@@ -42,20 +42,20 @@ Content types are a way to describe the _type_ of _content_ a message contains o
 StorageSDK handles the complexities of decentralized file management for you. No need to worry about fetching from multiple IPFS gateways, handling file and metadata upload formats, etc.
 [Read more](https://portal.thirdweb.com/storage)
 
-### Demo App
+### Demo app
 
 This repository demonstrates the implementation of these concepts within a simple chat app.
 
 [GitHub repo](https://github.com/fabriguespe/xmtp-thirdweb-js)
 
-```tsx
+```bash
 git clone git@github.com:fabriguespe/xmtp-thirdweb-js.git
 cd xmtp-thirdweb-js
 npm install
 npm run dev
 ```
 
-### Learning Objectives:
+### Learning objectives
 
 - Connect wallet button
 - Signing in with XMTP
@@ -64,13 +64,13 @@ npm run dev
 - Sending a remote attachment
 - Receiving attachments
 
-### Getting Started
+### Get started
 
 The first step involves creating and configuring the Next.js application.
 
 To generate a new Next.js app, execute the following command in your terminal:
 
-```tsx
+```bash
 npx create-next-app xmtp-thirdweb
 
 ✔ Would you like to use TypeScript with this project? Yes
@@ -83,11 +83,11 @@ npx create-next-app xmtp-thirdweb
 
 Next, navigate into the newly created directory and install the necessary dependencies for using XMTP and Thirdweb:
 
-```tsx
+```bash
 npm install @thirdweb-dev/react @thirdweb-dev/sdk @xmtp/xmtp-js xmtp-content-type-remote-attachment
 ```
 
-### Setting up the ConnectWallet button
+### Set up the ConnectWallet button
 
 ![thirdweb Connect Wallet button](./media/xmtp-thirdweb/wallet.png)
 
@@ -112,7 +112,7 @@ const signer = useSigner();
 
 That’s it! Next, proceed with signing in to XMTP.
 
-### Signing in with XMTP
+### Sign in with XMTP
 
 ![Connect to XMTP button](./media/xmtp-thirdweb/xmtp-sign.png)
 
@@ -136,7 +136,7 @@ const initXmtp = async function () {
 };
 ```
 
-### Loading a conversation
+### Load a conversation
 
 In this case, we will use our GM Bot and the XMTP instance to create the conversation. If the conversation already exists, it will retrieve its message history.
 
@@ -159,7 +159,7 @@ const newConversation = async function (xmtp_client, addressTo) {
 };
 ```
 
-### Sending a message
+### Send a message
 
 Text messages require neither codec nor encryption. They can be sent as they are.
 
@@ -169,7 +169,7 @@ const onSendMessage = async (value) => {
 };
 ```
 
-Small attachments below 1MB can be sent using the AttachmentCodec. The codec will automatically encrypt the attachment and upload it to the XMTP network.
+Attachments smaller than 1MB can be sent using the `AttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the XMTP network.
 
 ```tsx
 // Function to handle sending a small file attachment
@@ -189,62 +189,62 @@ const handleSmallFile = async (file) => {
 
 ### Send a remote attachment
 
-For large attachments above 1MB, use the `RemoteAttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the Thirdweb network. For uploading bigger files we are going to first encrypt them and then upload them to the IPFS network via the Thirdweb SDK.
+Attachments larger than 1MB can be sent using the `RemoteAttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the Thirdweb network. For uploading bigger files, we are going to first encrypt them and then upload them to the IPFS network via the Thirdweb SDK.
 
 1. Encrypt the file
 
-```tsx
-//Loadfile is a helper function to convert the file to a Uint8Array
-const imgData = await loadFile(file);
+  ```tsx
+  //Loadfile is a helper function to convert the file to a Uint8Array
+  const imgData = await loadFile(file);
 
-const attachment = {
-  filename: file.name,
-  mimeType: file.type,
-  data: imgData,
-};
+  const attachment = {
+    filename: file.name,
+    mimeType: file.type,
+    data: imgData,
+  };
 
-const attachmentCodec = new AttachmentCodec();
-const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
-  attachment,
-  attachmentCodec
-);
-```
+  const attachmentCodec = new AttachmentCodec();
+  const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
+    attachment,
+    attachmentCodec
+  );
+  ```
 
 2. Next we are going to upload the file to the IPFS network via the Thirdweb SDK.
 
-```tsx
-const uploadUrl = await upload({
-  //encryptedAttachment.payload.buffer is a Uint8Array
-  //We need to convert it to a File to upload it to the IPFS network
-  data: [new File([encryptedAttachment.payload.buffer], file.name)],
-  options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
-});
+  ```tsx
+  const uploadUrl = await upload({
+    //encryptedAttachment.payload.buffer is a Uint8Array
+    //We need to convert it to a File to upload it to the IPFS network
+    data: [new File([encryptedAttachment.payload.buffer], file.name)],
+    options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
+  });
 
-//uploadUrl[0] is the IPFS hash of the encrypted file
-uploadUrl[0];
-```
+  //uploadUrl[0] is the IPFS hash of the encrypted file
+  uploadUrl[0];
+  ```
 
-3. Finally we will use the encrypted file's URL to send it to the XMTP network using XMTP ContentTypeRemoteAttachment.
+3. Finally, we will use the encrypted file's URL to send it to the XMTP network using XMTP `ContentTypeRemoteAttachment`.
 
-```tsx
-const remoteAttachment = {
-  url: uploadUrl[0],
-  contentDigest: encryptedAttachment.digest,
-  salt: encryptedAttachment.salt,
-  nonce: encryptedAttachment.nonce,
-  secret: encryptedAttachment.secret,
-  scheme: "https://",
-  filename: attachment.filename,
-  contentLength: attachment.data.byteLength,
-};
+  ```tsx
+  const remoteAttachment = {
+    url: uploadUrl[0],
+    contentDigest: encryptedAttachment.digest,
+    salt: encryptedAttachment.salt,
+    nonce: encryptedAttachment.nonce,
+    secret: encryptedAttachment.secret,
+    scheme: "https://",
+    filename: attachment.filename,
+    contentLength: attachment.data.byteLength,
+  };
 
-const message = await conversation.send(remoteAttachment, {
-  contentType: ContentTypeRemoteAttachment,
-  contentFallback: "a screenshot of over 1MB",
-});
-```
+  const message = await conversation.send(remoteAttachment, {
+    contentType: ContentTypeRemoteAttachment,
+    contentFallback: "a screenshot of over 1MB",
+  });
+  ```
 
-### Receiving attachments
+### Receive attachments
 
 In the parent component, add a listener that will fetch new messages from a stream.
 
@@ -286,7 +286,7 @@ const objectURL = (attachment) => {
 };
 ```
 
-With remote storage is s different story because uploading and decrypting the file is resource consuming. We need to use the `RemoteAttachmentCodec` to decrypt the file and then render it. In the future we will dive into performance improvements.
+Remote storage is a different story because uploading and decrypting files is resource-consuming. We need to use the `RemoteAttachmentCodec` to decrypt the file and then render it. In the future, we will dive into performance improvements.
 
 ```tsx
 // This method receives the message.content as attachment, the xmtp client and the RemoteAttachmentCodec
@@ -309,7 +309,7 @@ That was easy! Now you can send and receive messages with attachments using XMTP
 
 ### Join us on Discord
 
-We're excited to be partnering with Thirdweb to bring you better solutions for serving and reaching your end-users. [Stay tuned](https://discord.com/invite/xmtp) for more guides coming soon!
+We're excited to partner with Thirdweb to bring you better solutions for serving and reaching your end users. [Stay tuned](https://discord.com/invite/xmtp) for more guides coming soon!
 
 <br/>
 <FeedbackWidget />
