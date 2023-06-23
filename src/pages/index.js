@@ -157,14 +157,6 @@ export default function Home() {
     flkty.on( 'select', function( index ) {
     });
 
-    document.onreadystatechange = function() {
-      if (document.readyState !== "complete") {
-          document.querySelector(".main-carousel").style.visibility = "hidden";
-      } else {
-          document.querySelector(".main-carousel").style.visibility = "visible";
-      }
-    };
-
     if (!localStorage.getItem("theme")) localStorage.setItem("theme", "light");
     if (
       localStorage.getItem("theme") === "dark" ||
