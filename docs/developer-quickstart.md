@@ -26,7 +26,7 @@ The first step involves creating and configuring the Next.js application.
 To generate a new Next.js app, execute the following command in your terminal:
 
 ```bash
-npx create-next-app xmtp-quickstart-nextjs
+npx create-next-app my-app
 
 ✔ Would you like to use TypeScript with this project? Yes
 ✔ Would you like to use ESLint with this project? Yes
