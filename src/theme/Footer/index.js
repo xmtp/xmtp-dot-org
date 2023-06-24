@@ -28,7 +28,7 @@ export default function FooterWrapper(props) {
                 CC BY 4.0
               </ALink>
             </span>
-            {/* <Link
+            <Link
               to="/privacy"
               className="mx-8 text-semibold text-sm text-red-600 hover:text-red-600 hover:no-underline my-8 md:my-0">
               Privacy policy
@@ -37,7 +37,7 @@ export default function FooterWrapper(props) {
               to="/terms"
               className="text-sm text-red-600 hover:text-red-600 hover:no-underline">
               Term of service
-            </Link>*/}
+            </Link>
           </div>
           <div className="flex w-[139px] justify-between">
             <ALink to="https://github.com/xmtp">

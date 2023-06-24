@@ -359,7 +359,7 @@ const config = {
               {
                 label: `Culture`,
                 href: `https://blog.xmtp.com/blog/`,
-              },
+              } /*
               {
                 label: `Privacy policy`,
                 to: `/privacy`,
@@ -367,7 +367,7 @@ const config = {
               {
                 label: `Terms of service`,
                 to: `/terms`,
-              },
+              },*/,
               {
                 label: "Careers at XMTP Labs",
                 href: "https://blog.xmtp.com/careers/",
