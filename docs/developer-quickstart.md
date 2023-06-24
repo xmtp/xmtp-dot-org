@@ -8,21 +8,9 @@ description: Build this quickstart app to learn some of the fundamental concepts
 
 In this tutorial we are going to build a simple chat app using XMTP and NextJS. We are going to be chatting to a bot for simplicity. The bot is going to be a simple echo bot that will reply with the same message we send.
 
-### Quickstarts 🏁
-
-- [NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
-- [ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs)
-- [Dart](https://github.com/xmtp/xmtp-android)
-- [Kotlin](https://github.com/xmtp/xmtp-flutter)
-- [Swift](https://github.com/xmtp/xmtp-ios)
-- [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
-- [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
-- [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
-- [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
-
 ### NextJS Example
 
-If you want to just clone the repo and get it working follow this commands. If you want to do it from scratch jump to the[#getting-started](#getting-started) section below.
+If you want to just clone the repo and get it working follow this commands. If you want to do it from scratch jump to the [#getting-started](#getting-started) section below.
 
 [<div class="div-header-github-link"></div> xmtp-quickstart-nextjs](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
 
@@ -154,6 +142,18 @@ const onMessage = useCallback((message) => {
 }, []);
 useStreamMessages(conversation, onMessage);
 ```
+
+### Quickstarts 🏁
+
+- [NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
+- [ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs)
+- [Dart](https://github.com/xmtp/xmtp-android)
+- [Kotlin](https://github.com/xmtp/xmtp-flutter)
+- [Swift](https://github.com/xmtp/xmtp-ios)
+- [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
+- [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
+- [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
+- [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
 
 ### Example apps
 

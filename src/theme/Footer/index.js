@@ -24,23 +24,20 @@ export default function FooterWrapper(props) {
             <span className="text-sm">
               <ALink
                 className="ml-2 text-white hover:text-white"
-                to="https://creativecommons.org/licenses/by/4.0/"
-              >
+                to="https://creativecommons.org/licenses/by/4.0/">
                 CC BY 4.0
               </ALink>
             </span>
-            <Link
+            {/* <Link
               to="/privacy"
-              className="mx-8 text-semibold text-sm text-red-600 hover:text-red-600 hover:no-underline my-8 md:my-0"
-            >
+              className="mx-8 text-semibold text-sm text-red-600 hover:text-red-600 hover:no-underline my-8 md:my-0">
               Privacy policy
             </Link>
             <Link
               to="/terms"
-              className="text-sm text-red-600 hover:text-red-600 hover:no-underline"
-            >
+              className="text-sm text-red-600 hover:text-red-600 hover:no-underline">
               Term of service
-            </Link>
+            </Link>*/}
           </div>
           <div className="flex w-[139px] justify-between">
             <ALink to="https://github.com/xmtp">

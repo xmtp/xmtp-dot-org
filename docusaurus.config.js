@@ -256,105 +256,41 @@ const config = {
               },
             ],
           },
+
           {
-            title: "Build",
+            title: "Use cases",
             items: [
               {
-                label: `Identity resolution`,
-                to: `/docs/tutorials/identity-resolution`,
+                label: "Messaging",
+                to: "/docs/use-cases/messaging",
               },
               {
-                label: `Attachments`,
-                to: `/docs/build/attachments`,
+                label: "Social",
+                to: "/docs/use-cases/deso",
               },
               {
-                label: `Group chats`,
-                to: `/docs/build/group-chats`,
+                label: "Marketing",
+                to: "/docs/use-cases/marketing",
               },
               {
-                label: `Push notifications`,
-                to: `/docs/build/notifications`,
+                label: "Automation",
+                to: "/docs/use-cases/automation",
               },
               {
-                label: `Broadcast`,
-                to: `/docs/tutorials/broadcast`,
+                label: "Support",
+                to: "/docs/use-cases/support",
               },
               {
-                label: `Bots`,
-                to: `/docs/tutorials/bots`,
+                label: "Commerce",
+                to: "/docs/use-cases/commerce",
+              },
+              {
+                label: "Defi",
+                to: "/docs/use-cases/finance",
               },
             ],
           },
-          {
-            title: "Concepts",
-            items: [
-              {
-                label: `Architecture`,
-                to: `/docs/concepts/architectural-overview`,
-              },
-              {
-                label: `Content types`,
-                to: `/docs/concepts/content-types`,
-              },
-              {
-                label: `Interoperable inbox`,
-                to: `/docs/concepts/interoperable-inbox`,
-              },
-              {
-                label: `Keys`,
-                to: `/docs/concepts/key-generation-and-usage`,
-              },
-              {
-                label: `Encryption`,
-                to: `/docs/concepts/invitation-and-message-encryption`,
-              },
-              {
-                label: `Account signatures`,
-                to: `/docs/concepts/account-signatures`,
-              },
-              {
-                label: `Algorithms`,
-                to: `/docs/concepts/algorithms-in-use`,
-              },
-              {
-                label: `XIPs`,
-                to: `/docs/concepts/xips`,
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Contribute",
-                to: "/docs/contribute",
-              },
-              {
-                label: "Grants",
-                to: "grants",
-              },
-              {
-                label: "Built with XMTP",
-                to: "built-with-xmtp",
-              },
-              {
-                label: "Code of conduct",
-                to: "code-of-conduct",
-              },
-              {
-                label: "Discord",
-                href: "https://discord.gg/xmtp",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/xmtp_",
-              },
-              {
-                label: "GitHub Discussions",
-                href: "https://github.com/orgs/xmtp/discussions",
-              },
-            ],
-          },
+
           {
             title: "Resources",
             items: [
@@ -371,20 +307,82 @@ const config = {
                 to: "/docs/faq#security",
               },
               {
-                label: "FAQ",
+                label: "FAQs",
                 to: "/docs/faq",
+              },
+              {
+                label: "Dev FAQs",
+                to: "/docs/dev-faqs",
+              },
+              {
+                label: "Status page",
+                href: "https://status.xmtp.com/",
+              },
+            ],
+          },
+          {
+            title: "Community",
+            items: [
+              {
+                label: "Code of conduct",
+                to: "code-of-conduct",
+              },
+              {
+                label: "Contribute",
+                to: "/docs/contribute",
+              },
+              {
+                label: "Grants",
+                to: "grants",
+              },
+              {
+                label: "Built with XMTP",
+                to: "built-with-xmtp",
+              },
+              {
+                label: "Discord",
+                href: "https://discord.gg/xmtp",
+              },
+              {
+                label: "Github",
+                href: "https://github.com/xmtp",
+              },
+              {
+                label: "GitHub Discussions",
+                href: "https://github.com/orgs/xmtp/discussions",
+              },
+            ],
+          },
+          {
+            title: "About us",
+            items: [
+              {
+                label: `Culture`,
+                href: `https://blog.xmtp.com/blog/`,
+              },
+              {
+                label: `Privacy policy`,
+                to: `/privacy`,
+              },
+              {
+                label: `Terms of service`,
+                to: `/terms`,
+              },
+              {
+                label: "Careers",
+                href: "https://blog.xmtp.com/careers/",
               },
               {
                 label: "Brand assets",
                 href: "https://github.com/xmtp/brand",
               },
               {
-                label: "Status page",
-                href: "https://status.xmtp.com/",
+                label: "Twitter",
+                href: "https://twitter.com/xmtp_",
               },
               {
-                label: "Careers at XMTP Labs",
-                href: "https://blog.xmtp.com/careers/",
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/company/xmtp-labs",
               },
             ],
           },
