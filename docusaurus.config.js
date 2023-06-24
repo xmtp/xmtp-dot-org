@@ -367,10 +367,6 @@ const config = {
                 to: "roadmap",
               },
               {
-                label: "Architecture",
-                to: "/docs/concepts/architectural-overview",
-              },
-              {
                 label: "Security",
                 to: "/docs/faq#security",
               },
