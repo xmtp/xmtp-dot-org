@@ -1,7 +1,7 @@
 ---
 slug: unstoppableweb
 hide_table_of_contents: true
-title: "XMTP Apps Can Reach Unstoppable Domains"
+title: "XMTP apps can reach Unstoppable Domains"
 date: 2023-06-15
 authors: fabri
 image: "/img/uc-uns.png"
