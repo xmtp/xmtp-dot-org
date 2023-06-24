@@ -17,8 +17,9 @@ The key bundle persists encrypted in the network using a [wallet signature](/do
 
 All this happens transparently, without requiring any additional code.
 
-## Usage
+### Overview
 
+This is an overview of the core concepts and lines of code neeeded to use XMTP successfully.
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
 
@@ -32,7 +33,7 @@ const wallet = Wallet.createRandom();
 const xmtp = await Client.create(wallet);
 // Start a conversation with XMTP
 const conversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
 );
 // Load all messages in the conversation
 const messages = await conversation.messages();

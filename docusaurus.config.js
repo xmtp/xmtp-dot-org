@@ -232,27 +232,27 @@ const config = {
             items: [
               {
                 label: `JavaScript`,
-                to: `/docs/sdks/js`,
+                href: "https://github.com/xmtp/xmtp-js",
               },
               {
                 label: `Swift`,
-                to: `/docs/sdks/swift`,
+                href: `https://github.com/xmtp/xmtp-ios`,
               },
               {
                 label: `Dart`,
-                to: `/docs/sdks/dart`,
+                href: `https://github.com/xmtp/xmtp-flutter`,
               },
               {
                 label: `Kotlin`,
-                to: `/docs/sdks/kotlin`,
+                href: `https://github.com/xmtp/xmtp-android`,
               },
               {
                 label: `React`,
-                to: `/docs/sdks/react`,
+                href: `https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk`,
               },
               {
-                label: `SDK references`,
-                to: `/docs/sdks/references`,
+                label: `React Native`,
+                href: `https://github.com/xmtp/xmtp-react-native`,
               },
             ],
           },

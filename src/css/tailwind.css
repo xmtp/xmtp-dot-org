@@ -1014,9 +1014,13 @@ table code {
   height: 10px;
 }
 /*NAVIGATION AND WIDGET*/
-.pagination-nav{
-  border-top:1px solid;
+.pagination-nav {
+  border-top: 1px solid;
 }
-.pagination-nav__link{
-  border:0px
+.pagination-nav__link {
+  border: 0px;
+}
+/*last updated*/
+.theme-last-updated small {
+  display: none;
 }
