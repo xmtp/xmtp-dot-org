@@ -19,7 +19,7 @@ This project is **alpha** status and ready for you to start experimenting with. 
 
 ```typescript
 // TODO: this isn't actually published yet.
-import run from "xmtp-bot-starter";
+import run from "@xmtp/bot-starter";
 
 // Call `run` with a handler function. The handler function is called
 // with a HandlerContext
