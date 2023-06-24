@@ -332,10 +332,6 @@ const config = {
                 to: "/docs/contribute",
               },
               {
-                label: "Grants",
-                to: "grants",
-              },
-              {
                 label: "Built with XMTP",
                 to: "built-with-xmtp",
               },
@@ -354,7 +350,7 @@ const config = {
             ],
           },
           {
-            title: "About us",
+            title: "XMTP Labs",
             items: [
               {
                 label: `Culture`,
@@ -383,6 +379,10 @@ const config = {
               {
                 label: "LinkedIn",
                 href: "https://www.linkedin.com/company/xmtp-labs",
+              },
+              {
+                label: "Grants",
+                to: "grants",
               },
             ],
           },
