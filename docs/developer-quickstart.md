@@ -10,6 +10,8 @@ In this tutorial we are going to build a simple chat app using XMTP and NextJS. 
 
 ### Demo App
 
+If you want to just clone the repo and get it working follow this commands. If you want to do it from scratch jump to [#getting-started](#getting-started)
+
 [<div class="div-header-github-link"></div> xmtp-quickstart-nextjs](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
 
 ```bash
