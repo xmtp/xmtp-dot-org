@@ -261,7 +261,7 @@ const config = {
             title: "Use cases",
             items: [
               {
-                label: "Messaging",
+                label: "Chat",
                 to: "/docs/use-cases/messaging",
               },
               {
