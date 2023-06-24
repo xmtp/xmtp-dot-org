@@ -379,11 +379,15 @@ const config = {
                 to: "/docs/faq",
               },
               {
+                label: "Brand assets",
+                href: "https://github.com/xmtp/brand",
+              },
+              {
                 label: "Status page",
                 href: "https://status.xmtp.com/",
               },
               {
-                label: "Careers",
+                label: "Careers at XMTP Labs",
                 href: "https://blog.xmtp.com/careers/",
               },
             ],
