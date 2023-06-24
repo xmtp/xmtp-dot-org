@@ -13,8 +13,6 @@ Build with this SDK to provide messaging between blockchain wallet addresses, in
 
 To keep up with the latest SDK developments, see the [Issues tab](https://github.com/xmtp/xmtp-flutter/issues) in the `xmtp-flutter` repo.
 
-To learn more about XMTP and get answers to frequently asked questions, see [FAQ about XMTP](/docs/faq).
-
 ## Example app
 
 For a basic demonstration of the core concepts and capabilities of the `xmtp-flutter` client SDK, see the [Example app project](https://github.com/xmtp/xmtp-flutter/tree/main/example).
