@@ -165,3 +165,7 @@ useStreamMessages(conversation, onMessage);
 Message this XMTP message bot to get an immediate automated reply:
 
 - `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
+
+## Troubleshooting
+
+- If you get into issues with Buffer and polyfills check out our react quickstart fix [here](https://github.com/fabriguespe/xmtp-quickstart-reactjs#trouble-shooting)
