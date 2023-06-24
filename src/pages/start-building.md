@@ -7,6 +7,25 @@ hide_table_of_contents: true
 Use this document as a map to build, launch, and maintain a best-in-class app with XMTP.
 
 ## Intro to XMTP
+=======
+## Why XMTP?
+
+XMTP is an open protocol and network for secure messaging. Developers build with XMTP client SDKs to provide messaging between blockchain accounts in their apps. The XMTP messaging API client takes care of:
+
+- [Authentication](/docs/concepts/account-signatures) using an **XMTP identity that the user owns and controls**
+
+- [End-to-end encryption](/docs/concepts/invitation-and-message-encryption) of **messages that the user owns and controls**
+
+- Providing an **[interoperable inbox](/docs/concepts/interoperable-inbox)** accessible across apps built with XMTP
+
+- Relaying messages to the **progressively decentralized** [XMTP network](/docs/concepts/architectural-overview#network-layer)
+
+## Try messaging with XMTP
+
+1. [**Start messaging with XMTP**](/start-building)
+
+   Use an app built with XMTP to start learning how to build one.
+>>>>>>> main
 
 - [Why XMTP?](/docs/introduction)
 

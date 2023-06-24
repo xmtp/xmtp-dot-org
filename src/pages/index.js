@@ -46,8 +46,7 @@ export default function Home() {
   return (
     <Layout
       title="XMTP: The web3 messaging network"
-      description="Own and control your communication."
-    >
+      description="Own and control your communication.">
       <HomepageHeader />
       <MainContent styles={styles} />
     </Layout>

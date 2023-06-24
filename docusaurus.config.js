@@ -42,16 +42,16 @@ const config = {
           id: "default",
           routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars/sidebars.js"),
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
-          editUrl: "https://github.com/xmtp/xmtp-dot-org/tree/main",
+          editUrl: "https://github.com/xmtp/xmtp-dot-org/edit/main",
         },
         blog: {
           blogDescription:
-            "A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging",
+            "A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure messaging",
           blogSidebarTitle: "All posts",
           blogSidebarCount: "ALL",
-          editUrl: "https://github.com/xmtp/xmtp-dot-org/tree/main",
+          editUrl: "https://github.com/xmtp/xmtp-dot-org/edit/main",
         },
         theme: {
           customCss: require.resolve("./src/css/tailwind.css"),
@@ -379,11 +379,15 @@ const config = {
                 to: "/docs/faq",
               },
               {
+                label: "Brand assets",
+                href: "https://github.com/xmtp/brand",
+              },
+              {
                 label: "Status page",
                 href: "https://status.xmtp.com/",
               },
               {
-                label: "Careers",
+                label: "Careers at XMTP Labs",
                 href: "https://blog.xmtp.com/careers/",
               },
             ],

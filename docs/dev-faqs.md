@@ -104,43 +104,43 @@ Here are **just a few** of the chains supported by XMTP:
 <div class="chain-list" >
   <a href="https://arbitrum.foundation/"  class="chain-item">
       <img src={arbitrum} />
-      <a >Arbitrum</a>
+      <span>Arbitrum</span>
   </a>
     <a href="https://www.avax.com/" class="chain-item">
       <img src={avalanche} />
-      <a >Avalanche</a>
+      <span>Avalanche</span>
   </a>
     <a href="https://base.org/" class="chain-item">
       <img src={base} />
-      <a >Base</a>
+      <span>Base</span>
   </a>
     <a href="https://www.bnbchain.org/" class="chain-item">
       <img src={bnbchain}/>
-      <a >(BNB) Chain</a>
+      <span>(BNB) Chain</span>
   </a>
     <a href="https://ethereum.org//" class="chain-item">
       <img src={ethereum} />
-      <a >Ethereum</a>
+      <span>Ethereum</span>
   </a>
     <a href="https://docs.hermez.io/Hermez_1.0/about/scalability/" class="chain-item">
       <img src={hermez} />
-      <a >Hermez</a>
+      <span>Hermez</span>
   </a>
     <a href="https://linea.build/" class="chain-item">
       <img src={linea}/>
-      <a >zk-EVM</a>
+      <span>zk-EVM</span>
   </a>
     <a href="https://www.optimism.io/" class="chain-item">
       <img src={optimism} />
-      <a >Optimism</a>
+      <span>Optimism</span>
   </a>
     <a href="https://polygon.technology/" class="chain-item">
       <img src={polygon} />
-      <a >Polygon</a>
+      <span>Polygon</span>
   </a>
     <a href="https://www.scroll.io/" class="chain-item">
       <img src={scroll} />
-      <a >Scroll</a>
+      <span>Scroll</span>
   </a>
 </div>
 
