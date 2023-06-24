@@ -7,7 +7,9 @@ hide_table_of_contents: true
 Use this document as a map to build, launch, and maintain a best-in-class app with XMTP.
 
 ## Intro to XMTP
+
 =======
+
 ## Why XMTP?
 
 XMTP is an open protocol and network for secure messaging. Developers build with XMTP client SDKs to provide messaging between blockchain accounts in their apps. The XMTP messaging API client takes care of:
@@ -25,7 +27,8 @@ XMTP is an open protocol and network for secure messaging. Developers build with
 1. [**Start messaging with XMTP**](/start-building)
 
    Use an app built with XMTP to start learning how to build one.
->>>>>>> main
+
+   > > > > > > > main
 
 - [Why XMTP?](/docs/introduction)
 
@@ -33,7 +36,7 @@ XMTP is an open protocol and network for secure messaging. Developers build with
 
 ## Start building your app
 
-- Start with an [XMTP client SDK](/docs/sdks/js)
+- Start with an [XMTP client SDK](/docs/build/get-started)
 
 - Learn to [build basic messaging](/docs/build/get-started) features
 
@@ -49,9 +52,9 @@ XMTP is an open protocol and network for secure messaging. Developers build with
 
 You probably have some great questions by now! Check out these resources:
 
-   - [Dev FAQ](/docs/dev-faqs) and [protocol FAQ](/docs/faq)
-   - [Roadmap](/roadmap)
-   - [Blog](/blog)
+- [Dev FAQ](/docs/dev-faqs) and [protocol FAQ](/docs/faq)
+- [Roadmap](/roadmap)
+- [Blog](/blog)
 
 ## Join the XMTP community
 
