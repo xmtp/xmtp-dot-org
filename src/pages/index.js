@@ -14,7 +14,7 @@ function HomepageHeader() {
     <header className="homepageHeader px-0 pt-12 lg:pt-16 h-[504px] bg-cover border-0 border-b border-solid border-b-black">
       <div className="container text-left py-0 px-4 m-auto max-w-screen-max">
         <h1 className="hero__title max-w-2xl text-4xl lg:text-5xl">
-          XMTP: The open protocol and network for secure web3 messaging
+          XMTP: The open protocol and network for secure messaging
         </h1>
         <p className="hero__subtitle max-w-2xl text-lg lg:text-xl">
           {siteConfig.tagline}
@@ -46,8 +46,7 @@ export default function Home() {
   return (
     <Layout
       title="XMTP: The web3 messaging network"
-      description="Own and control your communication."
-    >
+      description="Own and control your communication.">
       <HomepageHeader />
       <MainContent styles={styles} />
     </Layout>

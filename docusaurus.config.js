@@ -48,7 +48,7 @@ const config = {
         },
         blog: {
           blogDescription:
-            "A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging",
+            "A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure messaging",
           blogSidebarTitle: "All posts",
           blogSidebarCount: "ALL",
           editUrl: "https://github.com/xmtp/xmtp-dot-org/edit/main",

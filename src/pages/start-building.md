@@ -21,7 +21,7 @@ Use this document as a map to build, launch, and maintain a best-in-class app wi
 
 ## Why XMTP?
 
-XMTP is an open protocol and network for secure web3 messaging. Developers build with XMTP client SDKs to provide messaging between blockchain accounts in their apps. The XMTP messaging API client takes care of:
+XMTP is an open protocol and network for secure messaging. Developers build with XMTP client SDKs to provide messaging between blockchain accounts in their apps. The XMTP messaging API client takes care of:
 
 - [Authentication](/docs/concepts/account-signatures) using an **XMTP identity that the user owns and controls**
 
