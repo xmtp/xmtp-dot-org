@@ -1,7 +1,7 @@
 ---
 slug: everyname-resolution
 hide_table_of_contents: true
-title: "Resolve Identities Using the Everyname API"
+title: "Resolve identities using the Everyname API"
 date: 2023-06-21
 authors: fabri
 image: "./media/everyname.jpg"

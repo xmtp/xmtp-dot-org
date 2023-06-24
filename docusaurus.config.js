@@ -42,7 +42,7 @@ const config = {
           id: "default",
           routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars/sidebars.js"),
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
           editUrl: "https://github.com/xmtp/xmtp-dot-org/edit/main",
         },
@@ -379,11 +379,15 @@ const config = {
                 to: "/docs/faq",
               },
               {
+                label: "Brand assets",
+                href: "https://github.com/xmtp/brand",
+              },
+              {
                 label: "Status page",
                 href: "https://status.xmtp.com/",
               },
               {
-                label: "Careers",
+                label: "Careers at XMTP Labs",
                 href: "https://blog.xmtp.com/careers/",
               },
             ],
