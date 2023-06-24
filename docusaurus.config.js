@@ -369,7 +369,7 @@ const config = {
                 to: `/terms`,
               },
               {
-                label: "Careers",
+                label: "Careers at XMTP Labs",
                 href: "https://blog.xmtp.com/careers/",
               },
               {
