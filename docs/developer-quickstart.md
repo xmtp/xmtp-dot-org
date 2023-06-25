@@ -160,4 +160,81 @@ Message this XMTP message bot to get an immediate automated reply:
 
 #### Troubleshooting
 
-- If you get into issues with `Buffer` and `polyfills` check out our react quickstart fix [here](https://github.com/fabriguespe/xmtp-quickstart-reactjs#trouble-shooting)
+If you get into issues with `Buffer` and `polyfills` check out our fix below:
+
+1. Install buffer dependency
+
+```bash
+npm i buffer
+```
+
+2. Create a new file `polyfills.js` in the root of your project
+
+```tsx
+import { Buffer } from "buffer";
+
+window.Buffer = window.Buffer ?? Buffer;
+```
+
+3. Import it into your main file on the first line
+
+- ReacJS: `index.js` or `index.tsx`
+- VueJS: `main.js`
+- NuxtJS: `app.vue`
+
+```tsx
+import "./polyfills";
+```
+
+4. Update config files
+
+- Webpack: `vue.config.js` or `webpack.config.js`:
+
+```jsx
+const webpack = require("webpack");
+
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        Buffer: ["buffer", "Buffer"],
+      }),
+    ],
+  },
+  transpileDependencies: true,
+};
+```
+
+- Vite: `vite.config.js`:
+
+```jsx
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import { Buffer } from "buffer";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  define: {
+    global: {
+      Buffer: Buffer,
+    },
+  },
+});
+```
+
+- NuxtJS: `nuxt.config.js`:
+
+```tsx
+export default {
+  build: {
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.node = {
+          Buffer: true,
+        };
+      }
+    },
+  },
+};
+```
