@@ -866,6 +866,11 @@ ul li a:before {
   max-width: 80px; /* 20% smaller than before */
   margin-bottom: 10px;
 }
+
+.chain-item .svg {
+  max-width: 10px; /* 20% smaller than before */
+  margin-bottom: 0px;
+}
 .six .chain-item {
   width: calc(16.4% - 20px); /* 20% for 5 columns, subtracting margin */
 }

@@ -8,42 +8,54 @@ const SDKs = () => {
         target="_blank"
         className="chain-item">
         <img src={"/img/js.svg"} />
-        <span>JavaScript</span>
+        <span>
+          JavaScript <img src="/img/el.svg" className="svg" />
+        </span>
       </a>
       <a
         target="_blank"
         href="https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk"
         className="chain-item">
         <img src={"/img/react.svg"} />
-        <span>React</span>
+        <span>
+          React <img src="/img/el.svg" className="svg" />
+        </span>
       </a>
       <a
         target="_blank"
         href="https://github.com/xmtp/xmtp-ios"
         className="chain-item">
         <img src={"/img/swift.svg"} />
-        <span>Swift </span>
+        <span>
+          Swift <img src="/img/el.svg" className="svg" />
+        </span>
       </a>
       <a
         target="_blank"
         href="https://github.com/xmtp/xmtp-flutter"
         className="chain-item">
         <img src={"/img/dart.svg"} />
-        <span>Dart</span>
+        <span>
+          Dart <img src="/img/el.svg" className="svg" />
+        </span>
       </a>
       <a
         target="_blank"
         href="https://github.com/xmtp/xmtp-android"
         className="chain-item">
         <img src={"/img/kotlin.svg"} />
-        <span>Kotlin</span>
+        <span>
+          Kotlin <img src="/img/el.svg" className="svg" />
+        </span>
       </a>
       <a
         target="_blank"
         href="https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk"
         className="chain-item">
         <img src={"/img/react.svg"} />
-        <span>React Native</span>
+        <span>
+          React Native <img src="/img/el.svg" className="svg" />
+        </span>
       </a>
     </div>
   );
