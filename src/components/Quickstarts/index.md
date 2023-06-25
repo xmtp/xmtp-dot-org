@@ -1,7 +1,7 @@
 ### Quickstarts 🏁
 
 - [ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs) / [NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs) / [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
-- [VueJS](https://github.com/fabriguespe/xmtp-quickstart-vuejs) / [NuxtJS](https://github.com/fabriguespe/xmtp-quickstart-vuejs)
+- [VueJS](https://github.com/fabriguespe/xmtp-quickstart-vuejs) / [NuxtJS](https://github.com/fabriguespe/xmtp-quickstart-nuxtjs)
 - [Dart](https://github.com/xmtp/xmtp-android)
 - [Kotlin](https://github.com/xmtp/xmtp-flutter)
 - [Swift](https://github.com/xmtp/xmtp-ios)
