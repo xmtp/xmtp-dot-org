@@ -33,6 +33,25 @@ Because XMTP messages can only be up to 1MB in size, we need to store the attach
 
 End-to-end encryption must apply not only to XMTP messages, but to message attachments as well. For this reason, we need to encrypt the attachment before we store it.
 
+## Import and register codecs
+
+```tsx
+// Import the codecs we're going to use
+import {
+  AttachmentCodec,
+  RemoteAttachmentCodec,
+} from "xmtp-content-type-remote-attachment";
+```
+
+```tsx
+// Create the XMTP client
+const xmtp = await Client.create(signer);
+// Register the codecs. AttachmentCodec is for local attachments (<1MB)
+xmtp.registerCodec(new AttachmentCodec());
+//RemoteAttachmentCodec is for remote attachments (>1MB) using thirdweb storage
+xmtp.registerCodec(new RemoteAttachmentCodec());
+```
+
 ## Create an attachment object
 
 ```tsx
@@ -64,7 +83,7 @@ Use the `RemoteAttachmentCodec.encodeEncrypted` to encrypt the attachment:
 
 const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
   attachment,
-  new AttachmentCodec()
+  new AttachmentCodec(),
 );
 ```
 
@@ -142,7 +161,7 @@ Now that you can receive a remote attachment, you need a way to receive a remote
 ```tsx
 const attachment: Attachment = await RemoteAttachmentCodec.load(
   content,
-  client
+  client,
 );
 ```
 
@@ -153,6 +172,8 @@ attachment.filename // => "screenshot.png"
 attachment.mimeType // => "image/png",
 attachment.data // => [the PNG data]
 ```
+
+## Storage considerations
 
 ## Storage considerations
 

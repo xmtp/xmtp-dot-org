@@ -1,11 +1,11 @@
 ---
 slug: attachments-and-remote-attachments
 hide_table_of_contents: true
-title: 'Introducing remote media attachments'
+title: "Introducing remote media attachments"
 date: 2023-03-06
 authors: eng
-image: 'https://user-images.githubusercontent.com/483/222857433-99b2b492-d316-4cd1-a38d-660247a7ca49.png'
-description: 'Introducing two new content types: Attachment and Remote Attachment.'
+image: "https://user-images.githubusercontent.com/483/222857433-99b2b492-d316-4cd1-a38d-660247a7ca49.png"
+description: "Introducing two new content types: Attachment and Remote Attachment."
 tags:
   - Content Types
   - SDKs
@@ -13,6 +13,11 @@ tags:
 ---
 
 import FeedbackWidget from '/src/components/FeedbackWidget'
+
+:::caution Deprecated
+This tutorial may be outdated. Check out the latest [documentation on Attachments](/docs/build/attachments).
+
+:::
 
 Let's talk about some new content types for XMTP.
 
@@ -63,25 +68,25 @@ The first thing we need to do is encrypt it. The new [xmtp-content-type-remote-a
 import {
   AttachmentCodec,
   RemoteAttachmentCodec,
-} from 'xmtp-content-type-remote-attachment'
+} from "xmtp-content-type-remote-attachment";
 
 // Encode the attachment and encrypt that encoded content
 const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
   attachment,
-  new AttachmentCodec()
-)
+  new AttachmentCodec(),
+);
 ```
 
 So now we have some encrypted encoded content. You can upload this payload anywhere where it will be accessible via an HTTPS GET request. Let's use web3.storage:
 
 ```tsx
 const web3Storage = new Web3Storage({
-  token: 'your token here, not one i accidentally committed and had to revoke',
-})
+  token: "your token here, not one i accidentally committed and had to revoke",
+});
 
-const upload = new Upload('XMTPEncryptedContent', encryptedEncoded.payload)
-const cid = await web3Storage.put([upload])
-const url = `https://${cid}.ipfs.w3s.link/XMTPEncryptedContent`
+const upload = new Upload("XMTPEncryptedContent", encryptedEncoded.payload);
+const cid = await web3Storage.put([upload]);
+const url = `https://${cid}.ipfs.w3s.link/XMTPEncryptedContent`;
 ```
 
 _([Upload](https://github.com/xmtp-labs/xmtp-inbox-web/blob/5b45e05efbe0b0f49c17d66d7547be2c13a51eab/hooks/useSendMessage.ts#L15-L33) is a small class that implements Web3Storage's `Filelike` interface for uploading)_
@@ -108,13 +113,13 @@ const remoteAttachment: RemoteAttachment = {
 
   // For now, all remote attachments MUST be fetchable via HTTPS GET requests.
   // We're investigating IPFS here among other options.
-  scheme: 'https://',
+  scheme: "https://",
 
   // These fields are used by clients to display some information about
   // the remote attachment before it is downloaded and decrypted.
   filename: attachment.filename,
   contentLength: attachment.data.byteLength,
-}
+};
 ```
 
 Awesome. We have a `RemoteAttachment`! Let's send that to our best friend.
@@ -122,8 +127,8 @@ Awesome. We have a `RemoteAttachment`! Let's send that to our best friend.
 ```tsx
 await conversation.messages.send(remoteAttachment, {
   contentType: ContentTypeRemoteAttachment,
-  contentFallback: 'a screenshot of 1MB of text',
-})
+  contentFallback: "a screenshot of 1MB of text",
+});
 ```
 
 Note that we’re using `contentFallback` here to allow clients that do not support these content types to still show something. For cases where clients _do_ support these types, the content fallback can be used as alt text for accessibility purposes.
@@ -134,15 +139,15 @@ Note that we’re using `contentFallback` here to allow clients that do not supp
 
 ```tsx
 // Assume `loadLastMessage` is a thing you have
-const message: DecodedMessage = await loadLastMessage()
+const message: DecodedMessage = await loadLastMessage();
 
 if (!message.contentType.sameAs(ContentTypeRemoteAttachment)) {
   // We do not have a remote attachment. A topic for another blog post.
-  return
+  return;
 }
 
 // We've got a remote attachment.
-const remoteAttachment: RemoteAttachment = message.content
+const remoteAttachment: RemoteAttachment = message.content;
 ```
 
 Ok great, we've got a remote attachment object. Let's download, decrypt, and decode that attachment:
@@ -150,16 +155,16 @@ Ok great, we've got a remote attachment object. Let's download, decrypt, and dec
 ```tsx
 const attachment: Attachment = await RemoteAttachmentCodec.load(
   remoteAttachment,
-  client // <- Your XMTP Client instance
-)
+  client, // <- Your XMTP Client instance
+);
 ```
 
 Now we've got our original attachment we made a hundred lines ago:
 
 ```tsx
-attachment.filename // => "screenshot.png"
-attachment.mimeType // => "image/png",
-attachment.data // => [the PNG data]
+attachment.filename; // => "screenshot.png"
+attachment.mimeType; // => "image/png",
+attachment.data; // => [the PNG data]
 ```
 
 We can now do with this attachment as we please. Maybe we want to display it as an image.
@@ -168,12 +173,12 @@ We can now do with this attachment as we please. Maybe we want to display it as 
 const objectURL = URL.createObjectURL(
   new Blob([Buffer.from(attachment.data)], {
     type: attachment.mimeType,
-  })
-)
+  }),
+);
 
-const img = document.createElement('img')
-img.src = objectURL
-img.title = attachment.filename
+const img = document.createElement("img");
+img.src = objectURL;
+img.title = attachment.filename;
 ```
 
 ### Some questions

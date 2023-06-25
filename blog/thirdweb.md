@@ -19,6 +19,11 @@ tags:
 
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
+:::caution Deprecated
+This tutorial may be outdated. Check out the latest [documentation on Attachments](/docs/build/attachments).
+
+:::
+
 Follow these steps to start sending image attachments to wallets within your chat app. Our sample app includes everything you need to connect to wallets with Thirdweb's WalletSDK, use XMTP's remote attachments, and upload larger files to Thirdweb's storage.
 
 ![thirdweb.jpg](./media/xmtp-thirdweb/hero.png)
@@ -146,7 +151,7 @@ const newConversation = async function (xmtp_client, addressTo) {
   if (xmtp_client.canMessage(addressTo)) {
     //Creates a new conversation with the address
     const conversation = await xmtp_client.conversations.newConversation(
-      addressTo
+      addressTo,
     );
     convRef.current = conversation;
     //Loads the messages of the conversation
@@ -193,56 +198,56 @@ Attachments larger than 1MB can be sent using the `RemoteAttachmentCodec`. The c
 
 1. Encrypt the file
 
-  ```tsx
-  //Loadfile is a helper function to convert the file to a Uint8Array
-  const imgData = await loadFile(file);
+```tsx
+//Loadfile is a helper function to convert the file to a Uint8Array
+const imgData = await loadFile(file);
 
-  const attachment = {
-    filename: file.name,
-    mimeType: file.type,
-    data: imgData,
-  };
+const attachment = {
+  filename: file.name,
+  mimeType: file.type,
+  data: imgData,
+};
 
-  const attachmentCodec = new AttachmentCodec();
-  const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
-    attachment,
-    attachmentCodec
-  );
-  ```
+const attachmentCodec = new AttachmentCodec();
+const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
+  attachment,
+  attachmentCodec,
+);
+```
 
 2. Next we are going to upload the file to the IPFS network via the Thirdweb SDK.
 
-  ```tsx
-  const uploadUrl = await upload({
-    //encryptedAttachment.payload.buffer is a Uint8Array
-    //We need to convert it to a File to upload it to the IPFS network
-    data: [new File([encryptedAttachment.payload.buffer], file.name)],
-    options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
-  });
+```tsx
+const uploadUrl = await upload({
+  //encryptedAttachment.payload.buffer is a Uint8Array
+  //We need to convert it to a File to upload it to the IPFS network
+  data: [new File([encryptedAttachment.payload.buffer], file.name)],
+  options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
+});
 
-  //uploadUrl[0] is the IPFS hash of the encrypted file
-  uploadUrl[0];
-  ```
+//uploadUrl[0] is the IPFS hash of the encrypted file
+uploadUrl[0];
+```
 
 3. Finally, we will use the encrypted file's URL to send it to the XMTP network using XMTP `ContentTypeRemoteAttachment`.
 
-  ```tsx
-  const remoteAttachment = {
-    url: uploadUrl[0],
-    contentDigest: encryptedAttachment.digest,
-    salt: encryptedAttachment.salt,
-    nonce: encryptedAttachment.nonce,
-    secret: encryptedAttachment.secret,
-    scheme: "https://",
-    filename: attachment.filename,
-    contentLength: attachment.data.byteLength,
-  };
+```tsx
+const remoteAttachment = {
+  url: uploadUrl[0],
+  contentDigest: encryptedAttachment.digest,
+  salt: encryptedAttachment.salt,
+  nonce: encryptedAttachment.nonce,
+  secret: encryptedAttachment.secret,
+  scheme: "https://",
+  filename: attachment.filename,
+  contentLength: attachment.data.byteLength,
+};
 
-  const message = await conversation.send(remoteAttachment, {
-    contentType: ContentTypeRemoteAttachment,
-    contentFallback: "a screenshot of over 1MB",
-  });
-  ```
+const message = await conversation.send(remoteAttachment, {
+  contentType: ContentTypeRemoteAttachment,
+  contentFallback: "a screenshot of over 1MB",
+});
+```
 
 ### Receive attachments
 
