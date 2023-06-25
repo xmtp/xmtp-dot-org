@@ -143,17 +143,9 @@ const onMessage = useCallback((message) => {
 useStreamMessages(conversation, onMessage);
 ```
 
-### Quickstarts 🏁
+import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
-- [NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
-- [ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs)
-- [Dart](https://github.com/xmtp/xmtp-android)
-- [Kotlin](https://github.com/xmtp/xmtp-flutter)
-- [Swift](https://github.com/xmtp/xmtp-ios)
-- [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
-- [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
-- [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
-- [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
+<Quickstarts />
 
 ### Example apps
 
