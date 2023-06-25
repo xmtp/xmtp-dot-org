@@ -1,5 +1,5 @@
 ---
-sidebar_label: Start
+sidebar_label: Get started
 sidebar_position: 1
 description: "Get started building apps with XMTP."
 ---
@@ -296,8 +296,12 @@ import Quickstarts from "@site/src/components/Quickstarts/index.md";
 - [React web app](https://github.com/xmtp/xmtp-quickstart-react)
 - [React Native app](https://github.com/xmtp/example-chat-react-native)
 
-#### Need to send a test message?
+### Need to send a test message?
 
 Message this XMTP message bot to get an immediate automated reply:
 
 - `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
+
+### Troubleshooting
+
+- If you get into issues with `Buffer` and `polyfills` check out our [troubleshoot tips](/docs/developer-quickstart#troubleshooting)
