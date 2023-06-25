@@ -11,12 +11,12 @@
   },
   {
     "name": "Resolve identities using the Everyname API",
-    "image": "img/uc-everyname.png",
+    "image": "/img/everyname.jpg",
     "href": "/blog/everyname-resolution"
   },
   {
     "name": "How to send remote attachments with XMTP & Thirdweb SDKs",
-    "image": "img/uc-thirdweb.png",
+    "image": "/img/uc-thirdweb.png",
     "href": "/blog/thirdbweb-wallet-remote-attachments"
   },
   {
