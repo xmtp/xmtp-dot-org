@@ -26,7 +26,7 @@ A client is created that requires passing in a connected wallet that implements 
 ```ts
 import { Client } from "@xmtp/xmtp-js";
 // Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet);
+const xmtp = await Client.create(wallet, { env: "dev" });
 ```
 
 </TabItem>
@@ -185,7 +185,7 @@ You might want to check if a blockchain address is registered on the network bef
 ```ts
 const isOnProdNetwork = await Client.canMessage(
   "0x3F11b27F323b62B159D2642964fa27C46C841897",
-  { env: "production" }
+  { env: "production" },
 );
 ```
 

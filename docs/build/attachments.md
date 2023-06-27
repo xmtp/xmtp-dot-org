@@ -45,7 +45,7 @@ import {
 
 ```tsx
 // Create the XMTP client
-const xmtp = await Client.create(signer);
+const xmtp = await Client.create(signer, { env: "dev" });
 // Register the codecs. AttachmentCodec is for local attachments (<1MB)
 xmtp.registerCodec(new AttachmentCodec());
 //RemoteAttachmentCodec is for remote attachments (>1MB) using thirdweb storage

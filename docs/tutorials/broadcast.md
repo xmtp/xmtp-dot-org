@@ -26,7 +26,7 @@ async function main() {
   //Create a random wallet for example purposes. On the frontend you should replace it with the user's wallet (metamask, rainbow, etc)
   const wallet = ethers.Wallet.createRandom();
   //Initialize the xmtp client
-  const xmtp = await Client.create(wallet);
+  const xmtp = await Client.create(wallet, { env: "dev" });
   console.log("Broadcasting from: ", xmtp.address);
 
   //In this example we are going to broadcast to the GM_BOT wallet (already activated) and a random wallet (not activated)
