@@ -730,7 +730,7 @@ p,
 tr {
   line-height: 21px;
   margin-bottom: 15px !important;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .theme-doc-breadcrumbs {
@@ -998,12 +998,10 @@ code:not([class]) {
 
 table tr,
 table code {
-  font-size: 12px !important;
   line-height: 20px !important;
   padding: 0px !important;
 }
 table code {
-  font-size: 10px !important;
   padding: 1px !important;
 }
 .discord .theme-admonition,
