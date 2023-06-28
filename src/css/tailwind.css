@@ -772,6 +772,7 @@ ul li a:before {
 .tabs-container .margin-top--md {
   margin: 0px !important;
 }
+
 .tabs-container p {
   padding: 15px;
   /*margin: 0px !important;*/
@@ -832,6 +833,17 @@ ul li a:before {
   border: 1px solid #4d45db;
   border-radius: 10px;
 }
+
+/*margin fix*/
+
+.tabs-container p {
+  margin-bottom: 0px !important;
+}
+
+.bigTab p {
+  margin-bottom: 15px !important;
+}
+
 /*image turtorials*/
 .bwx-guides li {
   margin: 0px !important;
