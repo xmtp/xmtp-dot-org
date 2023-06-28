@@ -253,6 +253,8 @@ Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to
 
 ![](./img/airstack-ai.png)
 
+### Reverse resolution
+
 For example, if you like to get the web3 identity of a user, e.g. all the web3 identities of the `0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045` address, then you can simply type:
 
 ```bash
@@ -293,6 +295,38 @@ With this query, you can get all web3 identities of the given user wallet, which
           "profileName": "vitalik.lens"
         }
       ]
+    }
+  }
+}
+```
+
+### Identity resolution
+
+Get the address of a Lens domain.
+
+Prompt:
+
+```
+get the wallet address of fabri.lens
+```
+
+Auto generated query:
+
+```json
+query {
+  Wallet(input: {identity: "fabri.lens", blockchain: ethereum}) {
+    addresses
+  }
+}
+```
+
+Json output
+
+```json
+{
+  "data": {
+    "Wallet": {
+      "addresses": ["0x7e0b0363404751346930af92c80d1fef932cc48a"]
     }
   }
 }
