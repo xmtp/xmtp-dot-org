@@ -18,8 +18,6 @@ You can listen for new conversations being started in real-time. This enables ap
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
 
-**Caution**: This stream will continue infinitely. To end the stream, you can either break from the loop, or call `await stream.return()`.
-
 ```ts
 const stream = await xmtp.conversations.stream();
 for await (const conversation of stream) {
@@ -27,14 +25,14 @@ for await (const conversation of stream) {
   // Say hello to your new friend
   await conversation.send("Hi there!");
   // Break from the loop to stop listening
+  //This stream will continue infinitely. To end the stream,
+  //You can either break from the loop, or call `await stream.return()`.
   break;
 }
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift" default>
-
-**Caution**: This stream will continue infinitely. To end the stream, break from the loop.
 
 ```swift
 for try await conversation in client.conversations.stream() {
@@ -44,6 +42,7 @@ for try await conversation in client.conversations.stream() {
   try await conversation.send(content: "Hi there!")
 
   // Break from the loop to stop listening
+  //This stream will continue infinitely
   break
 }
 ```
@@ -110,7 +109,7 @@ The Stream returned by the `stream` methods is an asynchronous iterator and as s
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
 );
 for await (const message of await conversation.streamMessages()) {
   if (message.senderAddress === xmtp.address) {

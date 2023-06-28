@@ -774,16 +774,16 @@ ul li a:before {
 }
 .tabs-container p {
   padding: 15px;
-  margin: 0px !important;
+  /*margin: 0px !important;*/
   font-size: 14px;
   line-height: 20px;
   background: var(--ifm-pre-background);
   border-left: 2px solid var(--ifm-pre-background);
 }
+
 .tabs-container ul {
   background: var(--ifm-pre-background);
   font-size: 14px;
-  margin: 0px !important;
   line-height: 20px;
 }
 .tabs {
@@ -793,6 +793,44 @@ ul li a:before {
 
 .tabs__item:hover {
   border-radius: 0px;
+}
+/* big tabs*/
+
+.tabs-container .bigTab ul {
+  background: white !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+.tabs.bigTab {
+  background: inherit;
+  border: 1px solid red !important;
+}
+.tabs.bigTab .tabs__item {
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+  font-size: 14px !important;
+  line-height: 12px !important;
+}
+.tabs.bigTab {
+  background: inherit;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: 0px !important;
+  border-top-right-radius: var(--ifm-code-border-radius);
+  border-top-left-radius: var(--ifm-code-border-radius);
+  margin-bottom: 10px !important;
+}
+.tabs-container .bigTab p {
+  padding: inherit;
+  margin: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background: inherit;
+  border-left: inherit;
+}
+.bigTab .tabs__item--active {
+  border: 1px solid #4d45db;
+  border-radius: 10px;
 }
 /*image turtorials*/
 .bwx-guides li {
@@ -809,7 +847,6 @@ ul li a:before {
 .bwx-guides li h4 {
   font-size: 1rem;
 }
-/* */
 
 /*TOP NAV*/
 .navbar__item .dropdown__menu {

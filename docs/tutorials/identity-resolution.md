@@ -3,6 +3,9 @@ sidebar_label: Identity resolution
 sidebar_position: 3
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Resolve identities in your app
 
 When you build with XMTP, there’s no cold start for your app and your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
@@ -24,7 +27,10 @@ And certainly, your app should also be able to accept a raw wallet address and r
 
 When displaying names, also look for and display its associated avator. For example, when displaying `.lens` names, look for and display a Lens profile photo. Display blockies as avatars for raw 0x addresses.
 
-## Resolve identities using the Everyname API
+## Resolve identities
+
+<Tabs className="bigTab">
+<TabItem value="everyname" className="bigTab" label="Everyname" default>
 
 To resolve identities in your app, consider using [Everyname](https://www.everyname.xyz/), which provides forward and reverse identity resolution for many name services.
 
@@ -106,17 +112,16 @@ The response provides the associated domain name, if available. For example:
 }
 ```
 
-To learn more about Everyname, see [Introduction](https://docs.everyname.xyz/api/introduction).
+### Learn more
 
-To learn about wallet addresses and chains that are compatible with XMTP, see [Chains](/docs/dev-faqs#chains).
+To learn more about building with Everyname, see their [Developer Portal](https://docs.everyname.xyz/api/introduction).
 
-To learn about name services, or decentralized IDs, that work with XMTP, see [Decentralized identifiers](/docs/dev-faqs#decentralized-identifiers).
-
-## Resolve Unstoppable Domains
+</TabItem>
+<TabItem value="uns" className="bigTab" label="Unstoppable Domains" >
 
 [Unstoppable Domains](https://unstoppabledomains.com/) offer blockchain-based domains. These domains simplify cryptocurrency transactions, enable easier user logins for dApps, games, and metaverses. They also provide a way to create and host censorship-resistant websites.
 
-Once an Unstoppable Domain is minted on the blockchain, it belongs to the user forever without any renewal fees. 
+Once an Unstoppable Domain is minted on the blockchain, it belongs to the user forever without any renewal fees.
 
 Use this tutorial to learn how to add Unstoppable Domain support to your app built with XMTP.
 
@@ -229,72 +234,77 @@ const domain = await resolution.reverse(address);
 
 To achieve this for the message previews, iterate through the existing list of conversations and resolve each one individually.
 
-### Performance
+### Learn more
 
-An optional step to limit calls to your RPC is to cache the above results into local storage. To do this, implement a function similar to the below hook, which will both set and get a storage item based on their respective key. On error, it will fallback to the default value you set during the function call.
+To learn more about building with Unstoppable Domains , see their [Developer Portal](https://docs.unstoppabledomains.com/).
 
-Here is an example of tying everything together for a **React app** message preview:
+</TabItem>
+<TabItem value="airstack" className="bigTab" label="Airstack" >
 
-```jsx
-// Importing hooks from React
-import { useEffect, useState } from "react";
+In this tutorial, you will learn how to use Airstack as a universal resolver to resolve various web3 identities (e.g. Farcaster, Lens, and ENS) and Ethereum addresses to other web3 identities and integrate them into your React application.
 
-// This is a custom React hook that wraps around LocalStorage functionalities
-// It allows you to store, retrieve and manipulate a piece of data in LocalStorage
-// in a react way (i.e., using state and effects)
-export const useLocalStorage = (
-  key: string | undefined, // The key of the item to be saved in the LocalStorage
-  defaultValue: string | null // The default value to be used when the value of the given key is not found
-) => {
-  // Initializing the state with the value from LocalStorage or the default value
-  const [value, setValue] = useState(() => {
-    let currentValue;
+### Prerequisites
 
-    try {
-      // Trying to parse the JSON value of the item in the LocalStorage
-      currentValue = JSON.parse(
-        localStorage.getItem(key || "") || String(defaultValue)
-      );
-    } catch (error) {
-      // If an error occurred (probably due to invalid JSON), the default value is used
-      currentValue = defaultValue;
+- An Airstack account
+- Node v.16+
+- Basic Knowledge of GraphQL
+
+Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to build a GraphQL query to fulfill your use case easily.
+
+![](./img/airstack-ai.png)
+
+For example, if you like to get the web3 identity of a user, e.g. all the web3 identities of the `0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045` address, then you can simply type:
+
+```bash
+For the 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 address, get all web3 identities
+```
+
+After clicking enter, the Airstack AI will output a GraphQL query that will fetch the web3 identities of the given address that will look as follows:
+
+```json
+query MyQuery {
+  Wallet(
+    input: {
+      identity: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+      blockchain: ethereum
     }
-
-    return currentValue;
-  });
-
-  // This useEffect hook saves the current value to LocalStorage every time it changes
-  useEffect(() => {
-    localStorage.setItem(key || "", JSON.stringify(value));
-  }, [value, key]);
-
-  // The state and the setter function are returned so they can be used by the caller
-  return [value, setValue];
-};
-
-// Using the custom hook to manage the username preview
-// The key is the peer address and the default value is an empty string
-const [previewUnsName, setPreviewUnsName] = useLocalStorage(
-  convo?.peerAddress,
-  ""
-);
-
-// This effect hook checks whether the peer address is valid and the username preview is empty
-// If both conditions are met, it fetches the username from the UNS and sets it
-useEffect(() => {
-  const getUns = async () => {
-    if (isValidWalletAddress(convo?.peerAddress) && previewUnsName === "") {
-      const name = await fetchUnsName(convo?.peerAddress);
-      // If a name was fetched successfully, it is used; otherwise, null is set
-      name ? setPreviewUnsName(name) : setPreviewUnsName(null);
+  ) {
+    socials {
+      dappName
+      profileName
     }
-  };
+  }
+}
+```
 
-  // The function is called immediately
-  getUns();
-}, [convo?.peerAddress]); // This effect runs every time the peer address changes
+With this query, you can get all web3 identities of the given user wallet, which will include the wallet address, Farcaster username and Lens profile.
+
+```json
+{
+  "data": {
+    "Wallet": {
+      "socials": [
+        {
+          "dappName": "farcaster",
+          "profileName": "vbuterin"
+        },
+        {
+          "dappName": "lens",
+          "profileName": "vitalik.lens"
+        }
+      ]
+    }
+  }
+}
 ```
 
 ### Learn more
 
-To learn more about building with Unstoppable Domains, see the Unstoppable Domains [Developer Portal](https://docs.unstoppabledomains.com/).
+To learn more about building with Unstoppable Domains , see their [Developer Portal](https://docs.airstack.xyz/airstack-docs-and-faqs/).
+
+</TabItem>
+</Tabs>
+
+To learn about wallet addresses and chains that are compatible with XMTP, see [Chains](/docs/dev-faqs#chains).
+
+To learn about name services, or decentralized IDs, that work with XMTP, see [Decentralized identifiers](/docs/dev-faqs#decentralized-identifiers).
