@@ -13,7 +13,7 @@ As you go through the steps and code samples in this section, consider viewing t
 ## Install the package
 
 ```bash
-npm i xmtp-content-type-remote-attachment
+npm i @xmtp/xmtp-content-type-remote-attachment
 ```
 
 ## Send a remote attachment
@@ -172,8 +172,6 @@ attachment.filename // => "screenshot.png"
 attachment.mimeType // => "image/png",
 attachment.data // => [the PNG data]
 ```
-
-## Storage considerations
 
 ## Storage considerations
 
