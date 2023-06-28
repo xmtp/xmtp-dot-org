@@ -791,9 +791,6 @@ ul li a:before {
   border: solid rgba(0, 0, 0, 0.1);
 }
 
-.tabs__item:hover {
-  border-radius: 0px;
-}
 /* big tabs*/
 
 .tabs-container .bigTab ul {
@@ -804,6 +801,9 @@ ul li a:before {
 .tabs.bigTab {
   background: inherit;
   border: 1px solid red !important;
+}
+.tabs:not(.bigTab) .tabs__item:hover {
+  border-radius: 0px;
 }
 .tabs.bigTab .tabs__item {
   padding-top: 18px !important;
