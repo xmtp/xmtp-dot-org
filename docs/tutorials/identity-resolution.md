@@ -240,11 +240,6 @@ To learn more about building with Unstoppable Domains , see their [Developer Por
 
 </TabItem>
 
-### Learn more
-
-To learn more about building with Airstack , see their [Developer Portal](https://docs.airstack.xyz/airstack-docs-and-faqs/).
-
-</TabItem>
 </Tabs>
 
 To learn about wallet addresses and chains that are compatible with XMTP, see [Chains](/docs/dev-faqs#chains).
