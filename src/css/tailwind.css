@@ -1116,12 +1116,16 @@ https://flickity.metafizzy.co
 }
 
 @media only screen and (max-width: 720px) {  
+  .main-carousel {
+    padding-top: 1em;
+  }
+  
   .is-selected h1, .is-selected h1 span {
-    font-size: 40px;
+    font-size: 36px;
   }
   .is-selected h4 {
-    font-size: 1.25em;
-    width: 90%;
+    font-size: 1.2em;
+    width: 85%;
   }
   .rightPhone {
     width: 250px;
