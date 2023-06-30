@@ -30,7 +30,7 @@ Let’s take a closer look at what’s new on this update of the documentation o
 
 XMTP's commitment to interoperability and accessibility is reflected in their multi-SDK approach. Now the documentation simplified, making it language agnostic, while highlighting consistency in the SDKs through tabbed code sections.
 
-![CleanShot 2023-06-15 at 21.25.59@2x.png](./media/docsv2/CleanShot_2023-06-15_at_21.25.592x.png)
+![CleanShot 2023-06-15 at 21.25.59@2x.png](./media/docsv2/code.jpeg)
 
 ## **Core Concepts for Building with XMTP 🏗**
 
