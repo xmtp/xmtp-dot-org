@@ -71,8 +71,6 @@ Here’s what we’ve got:
 
 We've organized XMTP around various use cases in Finance, Commerce, Marketing, Automation, Support, and more. Draw inspiration and see how XMTP can be the backbone of your creative solutions.
 
-![CleanShot 2023-06-20 at 16.12.21@2x.png](./media/docsv2/CleanShot_2023-06-20_at_16.12.212x.png)
-
 - **[Messaging](https://xmtp.org/docs/use-cases/messaging) 💬**: Unlock the future of Messaging and build secure peer-to-peer apps or team platforms with end-to-end encryption, media attachments, group chats, and more. Communication reimagined!
 - **[DeSo](https://xmtp.org/docs/use-cases/deso) 🌿**: Step into the world of Decentralized Social, like Lens Protocol apps did using XMTP. Discover new friends, create groups, share memes, and enjoy a world of possibilities.
 - **[Marketing](https://xmtp.org/docs/use-cases/marketing) 📣**: Send secure newsletters to wallet owners, reach NFT collectors & token holders. Engage and analyze with confidence.
