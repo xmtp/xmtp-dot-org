@@ -178,12 +178,6 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>
                 <div class="subtext text-sm text-normal whitespace-pre-line">Contribute to the XMTP community</div></div></div>`,
               },
-              {
-                to: "grants",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Rocket icon"/></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Grants</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Apply for a grant for a project that fosters ecosystem growth</div></div></div>`,
-              },
             ],
           },
           {
@@ -301,10 +295,6 @@ const config = {
               {
                 label: "Roadmap",
                 to: "roadmap",
-              },
-              {
-                label: "Grants",
-                to: "grants",
               },
               {
                 label: "Security",
