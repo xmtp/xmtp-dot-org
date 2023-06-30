@@ -5,6 +5,58 @@ sidebar_position: 10
 
 # Prepare to launch your app built with XMTP
 
+## Quality checklist run through
+
+### Interoperable inbox
+
+Your app provides an [interoperable inbox](/docs/concepts/interoperable-inbox) with the following characteristics:
+
+- [ ]  New conversations created on your app should have `conversationID = "null"`
+- [ ]  Display all conversations with `conversationID = "null"`
+- [ ]  [Bonus] Display all conversations with non-null `conversationID` like `Lens.dev`, `GetConverse.app`, etc.
+- [ ]  [Bonus] UI is intuitive and enables the user to understand the `conversationID`, if necessary
+- [ ]  [Bonus] Provide inbox filters. Do not use tabs.
+
+### Performance
+
+Create a test wallet with ~2000 conversations and 1000 messages per conversation for the following performance tests. [Testing Guidance](https://xmtp.org/docs/tutorials/test-your-app)
+
+- [ ]  Use a local database to cache as recommended [here](https://xmtp.org/docs/tutorials/performance)
+- [ ]  For cold start (first load):
+    - [ ]  Test wallet interactive in <15 sec
+    - [ ]  Display ‘importing conversations’ and a progress bar
+- [ ]  For Warm cache (all other loads & refreshes):
+    - [ ]  Test wallet interactive in <1 sec
+
+### UX
+
+- [ ]  Navigating between conversations is smooth, fast, and intuitive
+- [ ]  Sending messages works as expected
+- [ ]  New conversations can be created
+- [ ]  Conversation list is displayed and easily navigable
+- [ ]  [Bonus] Has optimistic sending
+
+### Resolution
+
+- [ ]  Has identity resolution and reverse resolution support for ENS
+- [ ]  [Bonus] Has identity resolution and reverse resolution support for UNS, cb.id, .lens, Cyberconnect
+
+### Bugs & reliability
+
+- [ ]  Does not create duplicate conversations
+- [ ]  Does not show duplicate conversations; show most recent conversation for duplicates
+- [ ]  Does not crash frequently
+- [ ]  Does not have obvious or critical bugs
+
+### SDK version
+
+- [ ]  Does the integration use the latest SDK? If not, what features is it missing?
+
+### Attachments
+
+- [ ]  [Bonus] Support images
+- [ ]  [Bonus] Has a GIF pick
+
 ## Get pre-launch feedback
 
 Preparing to launch? Be sure to:
