@@ -320,7 +320,7 @@ export const MainContent = ({ styles }) => {
         </div>
 
         <div>
-          <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
+          <div className="relative mx-auto max-w-8xl divide-y divide-gray-200 sm:mt-8">
             <div>
               <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white color-white">
                 Latest from XMTP

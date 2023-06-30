@@ -108,7 +108,7 @@ function HomepageLogos() {
       </div>
       <div class="mt-8 flex justify-center">
         <p class="relative rounded-full bg-indigo-50 dark:bg-indigo-800 hover:bg-indigo-100 hover:drop-shadow transition px-6 py-1.5 text-sm leading-6 text-gray-800 dark:text-white ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
-          <span class="md:inline font-medium mr-2">🎉 We just launched an unforgettable partnership with a big company</span>
+          <span class="leading-4 md:inline font-medium mr-2">🎉 We just launched an unforgettable partnership with a big company</span>
           <a href="#" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
         </p>
       </div>
@@ -167,9 +167,16 @@ export default function Home() {
         accessibility: false,
         pauseAutoPlayOnHover: false,
         imagesLoaded: true,
+        on: {
+          ready: function() {
+            this.off('uiChange', this.stopPlayer);
+            this.off('pointerDown', this.stopPlayer);
+          }
+        },
       });
+
       var flkty = new Flickity( '.main-carousel', {
-    });
+      });
 
     flkty.on( 'select', function( index ) {
     });
