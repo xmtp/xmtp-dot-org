@@ -36,7 +36,7 @@ export default function FooterWrapper(props) {
             <Link
               to="/terms"
               className="text-sm text-red-600 hover:text-red-600 hover:no-underline">
-              Term of service
+              Terms of service
             </Link>
           </div>
           <div className="flex w-[139px] justify-between">

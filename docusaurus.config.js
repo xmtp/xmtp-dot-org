@@ -265,7 +265,7 @@ const config = {
                 to: "/docs/use-cases/messaging",
               },
               {
-                label: "Social",
+                label: "DeSo",
                 to: "/docs/use-cases/deso",
               },
               {
@@ -285,7 +285,7 @@ const config = {
                 to: "/docs/use-cases/commerce",
               },
               {
-                label: "Defi",
+                label: "DeFi",
                 to: "/docs/use-cases/finance",
               },
             ],
@@ -303,16 +303,24 @@ const config = {
                 to: "roadmap",
               },
               {
+                label: "Grants",
+                to: "grants",
+              },
+              {
                 label: "Security",
                 to: "/docs/faq#security",
               },
               {
-                label: "FAQs",
+                label: "Protocol FAQ",
                 to: "/docs/faq",
               },
               {
-                label: "Dev FAQs",
+                label: "Dev FAQ",
                 to: "/docs/dev-faqs",
+              },
+              {
+                label: "Brand assets",
+                href: "https://github.com/xmtp/brand",
               },
               {
                 label: "Status page",
@@ -340,49 +348,20 @@ const config = {
                 href: "https://discord.gg/xmtp",
               },
               {
-                label: "Github",
-                href: "https://github.com/xmtp",
+                label: "Twitter",
+                href: "https://twitter.com/xmtp_",
               },
               {
                 label: "GitHub Discussions",
                 href: "https://github.com/orgs/xmtp/discussions",
               },
-            ],
-          },
-          {
-            title: "XMTP Labs",
-            items: [
               {
-                label: `Culture`,
-                href: `https://blog.xmtp.com/blog/`,
-              } /*
-              {
-                label: `Privacy policy`,
-                to: `/privacy`,
+                label: "GitHub",
+                href: "https://github.com/xmtp",
               },
-              {
-                label: `Terms of service`,
-                to: `/terms`,
-              },*/,
               {
                 label: "Careers at XMTP Labs",
                 href: "https://blog.xmtp.com/careers/",
-              },
-              {
-                label: "Brand assets",
-                href: "https://github.com/xmtp/brand",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/xmtp_",
-              },
-              {
-                label: "LinkedIn",
-                href: "https://www.linkedin.com/company/xmtp-labs",
-              },
-              {
-                label: "Grants",
-                to: "grants",
               },
             ],
           },
