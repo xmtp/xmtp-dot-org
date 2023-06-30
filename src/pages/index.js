@@ -96,7 +96,7 @@ function HomepageLogos() {
 
   return (
 
-  <div class="py-24 sm:py-0">
+  <div class="pt-12 md:py-0">
     <div class="mx-auto max-w-[1440px] px-6 lg:px-8 block dark:hidden">
       <div class="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-8 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-6">
         <a href="https://xmtp.org/docs/tutorials/cyberconnect"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-cyberconnect.svg" alt="CyberConnect" width="206" height="32"></img></a>
