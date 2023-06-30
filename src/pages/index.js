@@ -143,9 +143,9 @@ export default function Home() {
     
     document.onreadystatechange = function() {
       if (document.readyState !== "complete") {
-          document.querySelector(".main-carousel").style.visibility = "hidden";
+          document.querySelector("header.homepageHeader").style.visibility = "hidden";
       } else {
-          document.querySelector(".main-carousel").style.visibility = "visible";
+          document.querySelector("header.homepageHeader").style.visibility = "visible";
       }
   };
   },
