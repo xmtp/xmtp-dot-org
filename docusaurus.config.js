@@ -20,7 +20,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
-  favicon: "img/favicon.png",
+  favicon: "img/favi.png",
   organizationName: "xmtp",
   projectName: "xmtp-dot-org",
   scripts: [
@@ -85,7 +85,7 @@ const config = {
         defaultMode: "light",
         disableSwitch: false,
       },
-      image: "img/xmtp-new.png",
+      image: "img/xmtp-new.jpeg",
       navbar: {
         title: "",
         logo: {
