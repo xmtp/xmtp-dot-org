@@ -1041,6 +1041,7 @@ table code {
   font-weight: normal;
 }
 
+
 /*! Flickity v2.3.0
 https://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -1119,11 +1120,10 @@ https://flickity.metafizzy.co
   .main-carousel {
     padding-top: 1em;
   }
-  
-  .is-selected h1, .is-selected h1 span {
+  .main-carousel h1, .main-carousel h1 span {
     font-size: 36px;
   }
-  .is-selected h4 {
+  .main-carousel h4 {
     font-size: 1.2em;
     width: 85%;
   }

@@ -141,6 +141,19 @@ export default function Home() {
 
   useEffect(() => {
     
+    document.onreadystatechange = function() {
+      if (document.readyState !== "complete") {
+          document.querySelector(".main-carousel").style.visibility = "hidden";
+      } else {
+          document.querySelector(".main-carousel").style.visibility = "visible";
+      }
+  };
+  },
+
+  []);
+
+  useEffect(() => {
+    
     var elem = document.querySelector('.main-carousel');
       var flkty = new Flickity( elem, {
         cellSelector: '.carousel-cell',
@@ -153,6 +166,7 @@ export default function Home() {
         fade: true,
         accessibility: false,
         pauseAutoPlayOnHover: false,
+        imagesLoaded: true,
       });
       var flkty = new Flickity( '.main-carousel', {
     });
