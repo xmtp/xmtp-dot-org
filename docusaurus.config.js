@@ -85,7 +85,7 @@ const config = {
         defaultMode: "light",
         disableSwitch: false,
       },
-      image: "img/xmtp-card.png",
+      image: "img/xmtp-new.png",
       navbar: {
         title: "",
         logo: {
