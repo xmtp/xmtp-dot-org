@@ -3,9 +3,9 @@ sidebar_label: CLI Starter
 sidebar_position: 6
 ---
 
-# CLI Starter
+# Build an XMTP CLI tool
 
-Starter project for building an XMTP CLI. You can also check out the [github repo](https://github.com/xmtp/cli-starter)
+Use this starter project to build an XMTP CLI tool. You can also check out the [GitHub repo](https://github.com/xmtp/cli-starter)
 
 ### Prerequisites
 
@@ -13,7 +13,7 @@ Starter project for building an XMTP CLI. You can also check out the [github rep
 
 ### Installation
 
-1. `npm i` in this folder
+1. Run `npm i` in this folder
 2. Run `npm run watch` in your terminal, and leave it running as you complete this exercise
 3. Ensure that installation succeeded by running `./xmtp --help` in another terminal window
 4. Initialize with a random wallet by running `./xmtp init`
@@ -28,7 +28,7 @@ Starter project for building an XMTP CLI. You can also check out the [github rep
 
 ### Send a message to an address
 
-In `src/index.ts` you will see a command already defined:
+In `src/index.ts`, you will see a command already defined:
 
 ```ts
   .command(
@@ -46,21 +46,21 @@ In `src/index.ts` you will see a command already defined:
 
 We want the user to be able to send the contents of the `message` argument to the specified `address`.
 
-To start, you'll need to create an instance of the XMTP SDK, using the provided `loadWallet()` helper.
+To start, you'll need to create an instance of the XMTP SDK using the provided `loadWallet()` helper.
 
 ```ts
 const { env, message, address } = argv;
 const client = await Client.create(loadWallet(), { env });
 ```
 
-To send a message, you'll need to create a conversation instance and then send that message to the conversaiton.
+To send a message, you'll need to create a conversation instance and then send that message to the conversation.
 
 ```ts
 const conversation = await client.conversations.newConversation(address);
 const sent = await conversation.send(message);
 ```
 
-So, putting it all together the command will look like:
+So, putting it all together, the command will look like this:
 
 ```ts
   .command(
@@ -89,7 +89,7 @@ So, putting it all together the command will look like:
 
 ### List all messages from an address
 
-The next command we are going to implement is `list-messages`. The starter looks like
+The next command we are going to implement is `list-messages`. The starter looks like this:
 
 ```ts
 .command(
@@ -102,20 +102,20 @@ The next command we are going to implement is `list-messages`. The starter looks
   )
 ```
 
-Load the Client the same as before, and then load the conversation with the supplied address
+Load the Client the same as before, and then load the conversation with the supplied address:
 
 ```ts
 const client = await Client.create(loadWallet(), { env });
 const convo = await client.conversations.newConversation(address);
 ```
 
-Get all the messages in the conversation with
+Get all the messages in the conversation with:
 
 ```ts
 const messages = await convo.messages();
 ```
 
-You can then render them prettily with the supplied renderer component
+You can then render them prettily with the supplied renderer component:
 
 ```ts
 const title = `Messages between ${truncateEthAddress(
@@ -124,7 +124,7 @@ const title = `Messages between ${truncateEthAddress(
 render(<MessageList title={title} messages={messages} />);
 ```
 
-The completed command will look like:
+The completed command will look like this:
 
 ```ts
 .command(
@@ -155,7 +155,7 @@ The completed command will look like:
 
 To stream messages from an address, we'll want to use a stateful React component. This will require doing some work in the command, as well as the Ink component
 
-The starter command in `index.tsx` should look like
+The starter command in `index.tsx` should look like this:
 
 ```ts
   .command(
@@ -186,7 +186,7 @@ const client = await Client.create(loadWallet(), { env });
 const stream = await client.conversations.streamAllMessages();
 ```
 
-Then we will pass that stream to the component with something like
+Then we will pass that stream to the component with something like this:
 
 ```ts
 render(<MessageStream stream={stream} title={`Streaming all messages`} />);
@@ -252,7 +252,11 @@ The starter for this command should look like:
 
 You can implement this challenge by combining what you learned from listing all messages in a conversation and rendering a message stream.
 
-Hint: You can get a message stream from a `Conversation` by using the method `conversation.stream()`
+:::tip
+
+You can get a message stream from a `Conversation` by using the method `conversation.stream()`.
+
+:::
 
 #### Verify it works
 

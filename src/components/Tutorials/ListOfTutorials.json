@@ -1,11 +1,11 @@
 [
   {
-    "name": "Setup Guide for XMTP Notification Server",
+    "name": "Set up an XMTP push notification server",
     "image": "/img/uc-bells.png",
     "href": "/blog/setting-up-push-notification-server"
   },
   {
-    "name": "Add Unstoppable Resolution to your XMTP application",
+    "name": "Support Unstoppable Domains resolution",
     "image": "/img/uc-uns.png",
     "href": "/blog/unstoppableweb"
   },
@@ -15,18 +15,58 @@
     "href": "/blog/everyname-resolution"
   },
   {
-    "name": "How to send remote attachments with XMTP & Thirdweb SDKs",
+    "name": "Send remote attachments with Thirdweb",
     "image": "/img/uc-thirdweb.png",
     "href": "/blog/thirdbweb-wallet-remote-attachments"
   },
   {
-    "name": "Integrating Multiple Profiles with Lens",
+    "name": "Optimize performance of your app",
+    "image": "img/perf-arch-cover.png",
+    "href": "/docs/tutorials/performance"
+  },
+  {
+    "name": "Optimistically send messages",
+    "image": "img/with-opt-sending-cover.jpg",
+    "href": "/docs/tutorials/optimistic-sending"
+  },
+  {
+    "name": "Resolve identities in your app",
+    "image": "img/id-res-cover.jpg",
+    "href": "/docs/tutorials/identity-resolution"
+  },
+  {
+    "name": "Send a broadcast message",
+    "image": "img/broadcast-cover.jpg",
+    "href": "/docs/tutorials/broadcast"
+  },
+  {
+    "name": "Build a chat bot",
+    "image": "img/bot-cover.jpg",
+    "href": "/docs/tutorials/bots"
+  },
+  {
+    "name": "Build an XMTP CLI tool",
+    "image": "img/cli-cover.jpg",
+    "href": "/docs/tutorials/cli"
+  },
+  {
+    "name": "Integrate multiple profiles with Lens",
     "image": "img/uc-lens.png",
     "href": "/blog/Integrating-Multiple-Profiles-with-Lens"
   },
   {
-    "name": "Integrating XMTP into CyberConnect: A Guide",
+    "name": "Integrate XMTP into CyberConnect",
     "image": "img/uc-cyber.png",
     "href": "https://cyberconnect.hashnode.dev/integrating-xmtp-into-cyberconnect-a-guide"
+  },
+  {
+    "name": "Test your app",
+    "image": "img/test-cover.png",
+    "href": "/docs/tutorials/test-your-app"
+  },
+  {
+    "name": "Prepare to launch your app",
+    "image": "img/launch-cover.jpg",
+    "href": "/docs/tutorials/launch"
   }
 ]
