@@ -59,12 +59,6 @@
     "description": "Discover, collect, and sell Lens Posts to invest in creators you support. Built on Lens Protocol."
   },
   {
-    "name": "meTokens",
-    "href": "https://metokens.com/discover",
-    "image": "/img/builtWithXmtp/metokens.png",
-    "description": "meTokens is a protocol built on Ethereum that allows creators and builders to issue their own personal token."
-  },
-  {
     "name": "Pinsta",
     "href": "https://pinsta.xyz/",
     "image": "/img/builtWithXmtp/pinsta.png",

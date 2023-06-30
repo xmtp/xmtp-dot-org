@@ -1,5 +1,5 @@
 ---
-sidebar_label: CLI Starter
+sidebar_label: CLI starter
 sidebar_position: 6
 ---
 

@@ -6,10 +6,9 @@ hide_table_of_contents: true
 
 <br/>
 
-:::tip Every big idea starts small
+:::caution XMTP Grants
 
-[Apply here](https://forms.xmtp.org/grants-application) 🚀
-
+We are no longer accepting applications for XMTP Grants. Make sure to follow us on [Twitter](https://twitter.com/xmtp_) for updates on when applications will be available again
 :::
 
 ## ✨ Mission
@@ -182,9 +181,3 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 📬 DM us via XMTP at `grants.xmtp.eth` for anything else
 
 <br/>
-
-:::tip Every big idea starts small
-
-[Apply here](https://forms.xmtp.org/grants-application) 🚀
-
-:::
