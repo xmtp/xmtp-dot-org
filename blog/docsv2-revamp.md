@@ -7,9 +7,7 @@ authors: fabri
 description: Say hello to a seamless journey for building chat apps
 image: ./media/docsv2/hero.png
 tags:
-  - Developers
-  - Hackathon
-  - Canada
+  - Docs
 ---
 
 ![](./media/docsv2/hero.png)
