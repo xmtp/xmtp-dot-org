@@ -100,4 +100,6 @@ Discover a hub dedicated to hackathons that is updated ad-hoc, providing a centr
 
 https://xmtp.org/docs/hackathons
 
+### **Conclusion 🏁**
+
 We owe a huge thanks to the incredible XMTP community and the exceptional team behind the protocol. Building this documentation has been an absolute joy! We can’t wait to see the innovative chat apps you’ll create with XMTP 🚀
