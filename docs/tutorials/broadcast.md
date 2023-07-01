@@ -7,9 +7,9 @@ sidebar_position: 5
 
 You can send a broadcast message (1:many message or announcement) with XMTP. The recipient sees the message as a DM from the sending wallet address.
 
-:::tip
+:::tip Best practice
 
-If your app stores a signature to read and send XMTP messages on behalf of a user, be sure to let users know. As a best practice, your app should also provide a way for a user to delete their signature. For example disclosure text and UI patterns, see [Disclose signature storage](#disclose-signature-storage).
+Be sure to [disclose signature storage](#disclose-signature-storage) and enable users to [opt-in to receive broadcast messages](#enable-users-to-opt-in-to-receive-broadcast-messages).
 
 :::
 
@@ -69,3 +69,17 @@ main();
     > The signature you provided gives this app permission to read and send XMTP messages on your behalf. The signature is securely stored and accessed only to execute your workflows. Click **Delete signature** to revoke this permission and delete the signature from storage.
 
     ![Signature storage disclosure and delete after connection](/img/sig-store-disclosure-delete.png)
+
+## Enable users to opt-in to receive broadcast messages
+
+Before sending broadcast messages to a user, ensure they've agreed to receive the messages.
+
+For example, during onboarding, let the user know that by connecting their wallet account to your app, they are agreeing to receive messages from you. Here is some example text you can build upon:
+
+> By connecting your wallet account with this app, you are agreeing to receive broadcast messages from &lt;your app name&gt;. These messages may include updates and promotions.
+>
+> You can unsubscribe from broadcast messages by replying with `STOP`.
+>
+> We value your privacy and will use your address only for sending broadcast messages.
+>
+> By proceeding with the connection, you agree to receive broadcast messages from &lt;your app name&gt;.
