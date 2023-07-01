@@ -794,7 +794,7 @@ ul li a:before {
 
 /* big tabs*/
 
-.tabs-container .bigTab ul {
+.tabs-container .bigTab > ul {
   background: white !important;
   font-size: inherit !important;
   line-height: inherit !important;
@@ -803,10 +803,10 @@ ul li a:before {
   background: inherit;
   border: 1px solid red !important;
 }
-.tabs:not(.bigTab) .tabs__item:hover {
+.tabs:not(.bigTab) > .tabs__item:hover {
   border-radius: 0px;
 }
-.tabs.bigTab .tabs__item {
+.tabs.bigTab > .tabs__item {
   padding-top: 18px !important;
   padding-bottom: 18px !important;
   font-size: 14px !important;
@@ -819,9 +819,8 @@ ul li a:before {
   border: 0px !important;
   border-top-right-radius: var(--ifm-code-border-radius);
   border-top-left-radius: var(--ifm-code-border-radius);
-  margin-bottom: 10px !important;
 }
-.tabs-container .bigTab p {
+.tabs-container .bigTab > p {
   padding: inherit;
   margin: inherit;
   font-size: inherit;
@@ -829,18 +828,17 @@ ul li a:before {
   background: inherit;
   border-left: inherit;
 }
-.bigTab .tabs__item--active {
+.bigTab > .tabs__item--active {
   border: 1px solid #4d45db;
   border-radius: 10px;
 }
-
 /*margin fix*/
 
 .tabs-container p {
   margin-bottom: 0px !important;
 }
 
-.bigTab p {
+.bigTab > p {
   margin-bottom: 15px !important;
 }
 
@@ -1075,4 +1073,22 @@ table code {
 /*last updated*/
 .theme-last-updated small {
   display: none;
+}
+
+/*branded tabs*/
+.lensicons li:nth-child(3)::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/farcaster.png") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.lensicons li:nth-child(1)::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/ens.ico") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
 }

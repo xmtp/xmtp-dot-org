@@ -1,6 +1,7 @@
 ---
 sidebar_label: Identity resolution
 sidebar_position: 3
+hide_table_of_contents: true
 ---
 
 import Tabs from "@theme/Tabs";
@@ -30,13 +31,529 @@ When displaying names, also look for and display its associated avator. For exam
 ## Resolve identities
 
 <Tabs className="bigTab">
-<TabItem value="everyname" className="bigTab" label="Everyname" default>
+<TabItem value="airstack" className="bigTab" label="Airstack" default>
+
+In this tutorial, you will learn how to use Airstack as a universal resolver to resolve various web3 identities (e.g. Farcaster, Lens, and ENS) and Ethereum addresses to other web3 identities. Airstack provides json APIs and SDKs for React and Python.
+
+To access the Airstack APIs, use https://api.airstack.xyz/gql as your json endpoint.
+
+### Prerequisites
+
+- [An Airstack account](https://app.airstack.xyz) (free)
+- Basic Knowledge of json
+
+### 🤖 AI Natural Language
+
+Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to build a json query to fulfill your use case easily.
+
+In the tutorial below, the  indicates the AI prompt.
+
+![](./img/airstack-ai.png)
+
+### Reverse resolution
+
+For example, if you would like to get the web3 identity of a user, e.g. all the web3 socials and ENS of the `0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045` address, then you can simply type into the AI prompt:
+
+```bash
+For the 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 address, get all web3 socials and ENS
+```
+
+After clicking enter, the Airstack AI will output a json query that will fetch the web3 identities of the given address that will look as follows:
+
+<Tabs>
+<TabItem value="request" label="Query" >
+
+With this query, you can get all web3 identities of the given user wallet, which will include the wallet address, ENS names, , Farcaster username and Lens profile.
+
+```graphql
+query web3Data {
+  Wallet(
+    input: {
+      identity: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+      blockchain: ethereum
+    }
+  ) {
+    socials {
+      dappName
+      profileName
+    }
+    primaryDomain {
+      name
+    }
+    domains {
+      name
+    }
+  }
+}
+```
+
+</TabItem>
+<TabItem value="response" label="Response" >
+
+```graphql
+{
+  "data": {
+    "Wallet": {
+      "socials": [
+        {
+          "dappName": "farcaster",
+          "profileName": "vbuterin"
+        },
+        {
+          "dappName": "lens",
+          "profileName": "vitalik.lens"
+        }
+      ],
+      "primaryDomain": {
+        "name": "satoshinart.eth"
+      },
+      "domains": [
+        {
+          "name": "quantumexchange.eth"
+        },
+        {
+          "name": "7860000.eth"
+        },
+        {
+          "name": "brianshaw.eth"
+        },
+        {
+          "name": "vbuterin.stateofus.eth"
+        },
+        {
+          "name": "quantumsmartcontracts.eth"
+        },
+        {
+          "name": "openegp.eth"
+        },
+        {
+          "name": "vitalik.cannafam.eth"
+        },
+        {
+          "name": "quantumdapps.eth"
+        },
+        {
+          "name": "vitalik.soy.eth"
+        },
+        {
+          "name": "satoshinart.eth"
+        }
+      ]
+    }
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+The same query can be done starting from an ENS, Lens or Farcaster to resolve the other identities at-once. Example:
+
+```bash
+For vitalik.eth, get all web3 socials and ENS
+```
+
+After clicking enter, the Airstack AI will output a json query that will fetch the web3 identities of the given address that will look as follows:
+
+<Tabs>
+<TabItem value="request" label="Query" >
+
+With this query, you can get all web3 identities of the given user wallet, which will include the wallet address, ENS names, , Farcaster username and Lens profile.
+
+```graphql
+query vitalikSocialsAndENS {
+  Wallet(input: { identity: "vitalik.eth", blockchain: ethereum }) {
+    socials {
+      dappName
+      profileName
+      profileCreatedAtBlockTimestamp
+      userAssociatedAddresses
+    }
+    primaryDomain {
+      name
+      owner
+      resolvedAddress
+      isPrimary
+    }
+    domains {
+      name
+      owner
+      resolvedAddress
+    }
+  }
+}
+```
+
+</TabItem>
+<TabItem value="response" label="Response" >
+
+```graphql
+{
+  "data": {
+    "Wallet": {
+      "socials": [
+        {
+          "dappName": "farcaster",
+          "profileName": "vbuterin",
+          "profileCreatedAtBlockTimestamp": "2022-11-18T20:44:00Z",
+          "userAssociatedAddresses": [
+            "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+            "0xadd746be46ff36f10c81d6e3ba282537f4c68077"
+          ]
+        },
+        {
+          "dappName": "lens",
+          "profileName": "vitalik.lens",
+          "profileCreatedAtBlockTimestamp": "2022-11-12T11:05:35Z",
+          "userAssociatedAddresses": [
+            "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+          ]
+        }
+      ],
+      "primaryDomain": {
+        "name": "satoshinart.eth",
+        "owner": "0x7e36c90f1b11a9ab48b2426f1247a0754a19a741",
+        "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+        "isPrimary": true
+      },
+      "domains": [
+        {
+          "name": "quantumexchange.eth",
+          "owner": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+        },
+        {
+          "name": "7860000.eth",
+          "owner": "0xd6e510fc09227a837d43448a761e5597a8361e04",
+          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+        },
+        {
+          "name": "brianshaw.eth",
+          "owner": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+        },
+        {
+          "name": "vbuterin.stateofus.eth",
+          "owner": "0xb1edfe0273e46d4368e8032408cc87d3ed86ce36",
+          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+        },
+        {
+          "name": "quantumsmartcontracts.eth",
+          "owner": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+        },
+        {
+          "name": "openegp.eth",
+          "owner": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+        },
+        {
+          "name": "vitalik.cannafam.eth",
+          "owner": "0xdcbf49bdb92b2aa84de4e428fd5b2c9c58412bc5",
+          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+        },
+        {
+          "name": "quantumdapps.eth",
+          "owner": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+        },
+        {
+          "name": "vitalik.soy.eth",
+          "owner": "0xdcbf49bdb92b2aa84de4e428fd5b2c9c58412bc5",
+          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+        },
+        {
+          "name": "satoshinart.eth",
+          "owner": "0x7e36c90f1b11a9ab48b2426f1247a0754a19a741",
+          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+        }
+      ]
+    }
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Identity resolution
+
+Get the address of a ENS domain, Lens handle or Farcaster user
+
+<Tabs className="lensicons">
+
+<TabItem value="ens" label="ENS" >
+
+AI Prompt:
+
+```bash
+get the wallet address of vitalik.eth
+```
+
+<Tabs>
+<TabItem value="request" label="Query" >
+
+```graphql
+query {
+  Wallet(input: { identity: "vitalik.eth", blockchain: ethereum }) {
+    addresses
+  }
+}
+```
+
+</TabItem>
+<TabItem value="response" label="Json Output" >
+
+```graphql
+{
+  "data": {
+    "Wallet": {
+      "addresses": ["0xd8da6bf26964af9d7eed9e03e53415d37aa96045"]
+    }
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="lens" label="Lens 🌿" >
+
+AI Prompt:
+
+```bash
+get the wallet address of fabri.lens
+```
+
+<Tabs>
+<TabItem value="request" label="Query" >
+
+```graphql
+query {
+  Wallet(input: { identity: "fabri.lens", blockchain: ethereum }) {
+    addresses
+  }
+}
+```
+
+</TabItem>
+<TabItem value="response" label="Json Output" >
+
+```graphql
+{
+  "data": {
+    "Wallet": {
+      "addresses": ["0x7e0b0363404751346930af92c80d1fef932cc48a"]
+    }
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="farcaster" label="Farcaster" >
+
+AI Prompt:
+
+```bash
+get the wallet address of Farcaster user vbuterin
+```
+
+<Tabs>
+<TabItem value="request" label="Query" >
+
+```graphql
+query {
+  Wallet(input: { identity: "fc_fname:vbuterin", blockchain: ethereum }) {
+    addresses
+  }
+}
+```
+
+</TabItem>
+<TabItem value="response" label="Json Output" >
+
+```graphql
+{
+  "data": {
+    "Wallet": {
+      "addresses": [
+        "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+        "0xadd746be46ff36f10c81d6e3ba282537f4c68077"
+      ]
+    }
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+</Tabs>
+
+#### Get the Lens name of a Farcaster user
+
+AI Prompt:
+
+```bash
+For Farcaster user vbuterin, fetch their Lens name
+```
+
+<Tabs>
+<TabItem value="request" label="Request" >
+
+```graphql
+query {
+  Wallet(input: { identity: "fc_fname:vbuterin", blockchain: ethereum }) {
+    socials {
+      dappName
+      profileName
+    }
+  }
+}
+```
+
+</TabItem>
+<TabItem value="response" label="Response" >
+
+```graphql
+{
+  "data": {
+    "Wallet": {
+      "socials": [
+        {
+          "dappName": "farcaster",
+          "profileName": "vbuterin"
+        },
+        {
+          "dappName": "lens",
+          "profileName": "vitalik.lens"
+        }
+      ]
+    }
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Bulk resolution queries
+
+If you have multiple inputs to call the same query, you can use Airstack to make a **single bulk query call** to get all the response more efficiently instead of making multiple calls with each individual input.
+
+To create a bulk query, your query will need to have a filter input with the comparison operations of `_in` or `_nin`. A quick look at how it looks in the [Airstack Explorer](https://app.airstack.xyz/explorer) is shown below with the `resolveAddress`.
+
+<div style={{width:'50%'}}>
+
+![](./img/airstack-bulk.png)
+
+</div>
+
+These two comparison operations accept an array of inputs. `_in` filters responses where the specified field's value is within the provided array of values. On the other hand, `_nin` filters responses where the specified field's value is not within the provided array of values.
+
+For example, if you were to create a bulk query to fetch the ENS of an array of `resolvedAddress`, then you can utilize `_in` filter input to accept an array of `resolvedAddress` and get all the ENS names held all address in the `resolvedAddress` array by in a single call. The bulk query for this will look as follows:
+
+<Tabs>
+<TabItem value="request" label="Query" >
+
+```graphql
+query FetchBulkENS($resolvedAddresses: [Address!]) {
+  Domains(
+    input: {
+      filter: {
+        isPrimary: { _eq: true }
+        resolvedAddress: { _in: $resolvedAddresses }
+      }
+      blockchain: ethereum
+      limit: 200
+    }
+  ) {
+    Domain {
+      name
+      resolvedAddress
+    }
+  }
+}
+```
+
+</TabItem>
+<TabItem value="variables" label="Variables" >
+
+```graphql
+{
+  "resolvedAddresses": [
+    "0xD9C4475E2dd89a9a0aD0C1E9a1e1bb28Df7BA298",
+    "0x2F60D2BB84Eb8df6951F7215ef035eF052BA2725",
+    "0xB0CCf43adA6CBaA26dcf4907117b496d49f74242",
+    "0xD1EAeFBeFFD4106A1A166CD26a1Fe23140D6a42e",
+    "0x07e522bd635710e752343387b006BB7047663d77"
+  ]
+}
+```
+
+</TabItem>
+<TabItem value="response" label="Json Output" >
+
+```graphql
+{
+  "data": {
+    "Domains": {
+      "Domain": [
+        {
+          "name": "jamiedubs.eth",
+          "resolvedAddress": "0xd9c4475e2dd89a9a0ad0c1e9a1e1bb28df7ba298"
+        },
+        {
+          "name": "billzh.eth",
+          "resolvedAddress": "0xd1eaefbeffd4106a1a166cd26a1fe23140d6a42e"
+        },
+        {
+          "name": "sean420.eth",
+          "resolvedAddress": "0x07e522bd635710e752343387b006bb7047663d77"
+        },
+        {
+          "name": "logonaut.eth",
+          "resolvedAddress": "0xb0ccf43ada6cbaa26dcf4907117b496d49f74242"
+        },
+        {
+          "name": "chopan.eth",
+          "resolvedAddress": "0x2f60d2bb84eb8df6951f7215ef035ef052ba2725"
+        }
+      ]
+    }
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Learn more
+
+- API References https://docs.airstack.xyz/
+- SDKs https://app.airstack.xyz/sdks
+
+#### Resolving POAPs, NFTs
+
+- POAPs https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-poaps
+- NFTs https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-nfts
+
+</TabItem>
+<TabItem value="everyname" className="bigTab" label="Everyname" >
 
 To resolve identities in your app, consider using [Everyname](https://www.everyname.xyz/), which provides forward and reverse identity resolution for many name services.
 
 ### Forward resolution using Everyname
 
 For forward resolution, send a GET request with a domain name, or handle. For example:
+
+<Tabs>
+<TabItem value="request" label="Request" >
 
 ```jsx
 import {} from "dotenv/config";
@@ -62,7 +579,8 @@ axios
   });
 ```
 
-The response provides the associated wallet address. For example:
+</TabItem>
+<TabItem value="response" label="Response" >
 
 ```jsx
 {
@@ -73,9 +591,15 @@ The response provides the associated wallet address. For example:
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ### Reverse resolution using Everyname
 
 For reverse resolution, send a GET request with a wallet address and network. For example:
+
+<Tabs>
+<TabItem value="request" label="Request" >
 
 ```jsx
 import {} from "dotenv/config";
@@ -101,7 +625,8 @@ axios
   });
 ```
 
-The response provides the associated domain name, if available. For example:
+</TabItem>
+<TabItem value="response" label="Response" >
 
 ```jsx
 {
@@ -111,6 +636,9 @@ The response provides the associated domain name, if available. For example:
   "name": "fabri.lens"
 }
 ```
+
+</TabItem>
+</Tabs>
 
 ### Learn more
 
@@ -237,471 +765,6 @@ To achieve this for the message previews, iterate through the existing list of c
 ### Learn more
 
 To learn more about building with Unstoppable Domains , see their [Developer Portal](https://docs.unstoppabledomains.com/).
-
-</TabItem>
-<TabItem value="airstack" className="bigTab" label="Airstack" >
-
-In this tutorial, you will learn how to use Airstack as a universal resolver to resolve various web3 identities (e.g. Farcaster, Lens, and ENS) and Ethereum addresses to other web3 identities. Airstack provides json APIs and SDKs for React and Python.
-
-To access the Airstack APIs, use https://api.airstack.xyz/gql as your json endpoint.
-
-### Prerequisites
-
-- [An Airstack account](https://app.airstack.xyz) (free)
-- Basic Knowledge of json
-
-### 🤖 AI Natural Language
-
-Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to build a json query to fulfill your use case easily.
-
-In the tutorial below, the  indicates the AI prompt.
-
-![](./img/airstack-ai.png)
-
-### Reverse resolution
-
-For example, if you would like to get the web3 identity of a user, e.g. all the web3 socials and ENS of the `0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045` address, then you can simply type into the AI prompt:
-
-```json
-For the 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 address, get all web3 socials and ENS
-
-```
-
-After clicking enter, the Airstack AI will output a json query that will fetch the web3 identities of the given address that will look as follows:
-
-```json
-query web3Data {
-  Wallet(
-    input: {
-      identity: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
-      blockchain: ethereum
-    }
-  ) {
-    socials {
-      dappName
-      profileName
-    }
-    primaryDomain {
-      name
-    }
-    domains {
-      name
-    }
-  }
-}
-```
-
-With this query, you can get all web3 identities of the given user wallet, which will include the wallet address, ENS names, , Farcaster username and Lens profile.
-
-```json
-{
-  "data": {
-    "Wallet": {
-      "socials": [
-        {
-          "dappName": "farcaster",
-          "profileName": "vbuterin"
-        },
-        {
-          "dappName": "lens",
-          "profileName": "vitalik.lens"
-        }
-      ],
-      "primaryDomain": {
-        "name": "satoshinart.eth"
-      },
-      "domains": [
-        {
-          "name": "quantumexchange.eth"
-        },
-        {
-          "name": "7860000.eth"
-        },
-        {
-          "name": "brianshaw.eth"
-        },
-        {
-          "name": "vbuterin.stateofus.eth"
-        },
-        {
-          "name": "quantumsmartcontracts.eth"
-        },
-        {
-          "name": "openegp.eth"
-        },
-        {
-          "name": "vitalik.cannafam.eth"
-        },
-        {
-          "name": "quantumdapps.eth"
-        },
-        {
-          "name": "vitalik.soy.eth"
-        },
-        {
-          "name": "satoshinart.eth"
-        }
-      ]
-    }
-  }
-}
-```
-
-The same query can be done starting from an ENS, Lens or Farcaster to resolve the other identities at-once. Example:
-
-```json
-For vitalik.eth, get all web3 socials and ENS
-
-```
-
-After clicking enter, the Airstack AI will output a json query that will fetch the web3 identities of the given address that will look as follows:
-
-```json
-query vitalikSocialsAndENS {
-  Wallet(input: { identity: "vitalik.eth", blockchain: ethereum }) {
-    socials {
-      dappName
-      profileName
-      profileCreatedAtBlockTimestamp
-      userAssociatedAddresses
-    }
-    primaryDomain {
-      name
-      owner
-      resolvedAddress
-      isPrimary
-    }
-    domains {
-      name
-      owner
-      resolvedAddress
-    }
-  }
-}
-```
-
-With this query, you can get all web3 identities of the given user wallet, which will include the wallet address, ENS names, , Farcaster username and Lens profile.
-
-```json
-{
-  "data": {
-    "Wallet": {
-      "socials": [
-        {
-          "dappName": "farcaster",
-          "profileName": "vbuterin",
-          "profileCreatedAtBlockTimestamp": "2022-11-18T20:44:00Z",
-          "userAssociatedAddresses": [
-            "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-            "0xadd746be46ff36f10c81d6e3ba282537f4c68077"
-          ]
-        },
-        {
-          "dappName": "lens",
-          "profileName": "vitalik.lens",
-          "profileCreatedAtBlockTimestamp": "2022-11-12T11:05:35Z",
-          "userAssociatedAddresses": [
-            "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-          ]
-        }
-      ],
-      "primaryDomain": {
-        "name": "satoshinart.eth",
-        "owner": "0x7e36c90f1b11a9ab48b2426f1247a0754a19a741",
-        "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-        "isPrimary": true
-      },
-      "domains": [
-        {
-          "name": "quantumexchange.eth",
-          "owner": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-        },
-        {
-          "name": "7860000.eth",
-          "owner": "0xd6e510fc09227a837d43448a761e5597a8361e04",
-          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-        },
-        {
-          "name": "brianshaw.eth",
-          "owner": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-        },
-        {
-          "name": "vbuterin.stateofus.eth",
-          "owner": "0xb1edfe0273e46d4368e8032408cc87d3ed86ce36",
-          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-        },
-        {
-          "name": "quantumsmartcontracts.eth",
-          "owner": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-        },
-        {
-          "name": "openegp.eth",
-          "owner": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-        },
-        {
-          "name": "vitalik.cannafam.eth",
-          "owner": "0xdcbf49bdb92b2aa84de4e428fd5b2c9c58412bc5",
-          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-        },
-        {
-          "name": "quantumdapps.eth",
-          "owner": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-        },
-        {
-          "name": "vitalik.soy.eth",
-          "owner": "0xdcbf49bdb92b2aa84de4e428fd5b2c9c58412bc5",
-          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-        },
-        {
-          "name": "satoshinart.eth",
-          "owner": "0x7e36c90f1b11a9ab48b2426f1247a0754a19a741",
-          "resolvedAddress": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
-        }
-      ]
-    }
-  }
-}
-```
-
-### Identity resolution
-
-**Get the address of a Lens domain.**
-
-AI Prompt:
-
-```bash
-get the wallet address of fabri.lens
-
-```
-
-Auto generated query:
-
-```json
-query {
-  Wallet(input: { identity: "fabri.lens", blockchain: ethereum }) {
-    addresses
-  }
-}
-```
-
-Json output
-
-```json
-{
-  "data": {
-    "Wallet": {
-      "addresses": ["0x7e0b0363404751346930af92c80d1fef932cc48a"]
-    }
-  }
-}
-```
-
-**Get the address of a Farcaster user:**
-
-AI Prompt:
-
-```bash
-get the wallet address of Farcaster user vbuterin
-
-```
-
-Auto generated query:
-
-```json
-query {
-  Wallet(input: { identity: "fc_fname:vbuterin", blockchain: ethereum }) {
-    addresses
-  }
-}
-```
-
-Json output
-
-```json
-{
-  "data": {
-    "Wallet": {
-      "addresses": [
-        "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-        "0xadd746be46ff36f10c81d6e3ba282537f4c68077"
-      ]
-    }
-  }
-}
-```
-
-**Get the address of an ENS:**
-
-AI Prompt:
-
-```bash
-get the wallet address of vitalik.eth
-
-```
-
-Auto generated query:
-
-```json
-query {
-  Wallet(input: { identity: "vitalik.eth", blockchain: ethereum }) {
-    addresses
-  }
-}
-```
-
-Json output
-
-```json
-{
-  "data": {
-    "Wallet": {
-      "addresses": ["0xd8da6bf26964af9d7eed9e03e53415d37aa96045"]
-    }
-  }
-}
-```
-
-**Get the Lens name of a Farcaster user**
-
-AI Prompt:
-
-```bash
-For Farcaster user vbuterin, fetch their Lens name
-
-```
-
-Auto generated query:
-
-```json
-query {
-  Wallet(input: { identity: "fc_fname:vbuterin", blockchain: ethereum }) {
-    socials {
-      dappName
-      profileName
-    }
-  }
-}
-```
-
-Json output
-
-```json
-{
-  "data": {
-    "Wallet": {
-      "socials": [
-        {
-          "dappName": "farcaster",
-          "profileName": "vbuterin"
-        },
-        {
-          "dappName": "lens",
-          "profileName": "vitalik.lens"
-        }
-      ]
-    }
-  }
-}
-```
-
-### Bulk resolution queries
-
-If you have multiple inputs to call the same query, you can use Airstack to make a **single bulk query call** to get all the response more efficiently instead of making multiple calls with each individual input.
-
-To create a bulk query, your query will need to have a filter input with the comparison operations of `_in` or `_nin`. A quick look at how it looks in the [Airstack Explorer](https://app.airstack.xyz/explorer) is shown below with the `resolveAddress`.
-
-![](./img/airstack-bulk.png)
-
-These two comparison operations accept an array of inputs. `_in` filters responses where the specified field's value is within the provided array of values. On the other hand, `_nin` filters responses where the specified field's value is not within the provided array of values.
-
-For example, if you were to create a bulk query to fetch the ENS of an array of `resolvedAddress`, then you can utilize `_in` filter input to accept an array of `resolvedAddress` and get all the ENS names held all address in the `resolvedAddress` array by in a single call. The bulk query for this will look as follows:
-
-```json
-query FetchBulkENS($resolvedAddresses: [Address!]) {
-  Domains(
-    input: {
-      filter: {
-        isPrimary: { _eq: true }
-        resolvedAddress: { _in: $resolvedAddresses }
-      }
-      blockchain: ethereum
-      limit: 200
-    }
-  ) {
-    Domain {
-      name
-      resolvedAddress
-    }
-  }
-}
-```
-
-with variables that can be set into an array of addresses as follows:
-
-```json
-{
-  "resolvedAddresses": [
-    "0xD9C4475E2dd89a9a0aD0C1E9a1e1bb28Df7BA298",
-    "0x2F60D2BB84Eb8df6951F7215ef035eF052BA2725",
-    "0xB0CCf43adA6CBaA26dcf4907117b496d49f74242",
-    "0xD1EAeFBeFFD4106A1A166CD26a1Fe23140D6a42e",
-    "0x07e522bd635710e752343387b006BB7047663d77"
-  ]
-}
-```
-
-Json output
-
-```json
-{
-  "data": {
-    "Domains": {
-      "Domain": [
-        {
-          "name": "jamiedubs.eth",
-          "resolvedAddress": "0xd9c4475e2dd89a9a0ad0c1e9a1e1bb28df7ba298"
-        },
-        {
-          "name": "billzh.eth",
-          "resolvedAddress": "0xd1eaefbeffd4106a1a166cd26a1fe23140d6a42e"
-        },
-        {
-          "name": "sean420.eth",
-          "resolvedAddress": "0x07e522bd635710e752343387b006bb7047663d77"
-        },
-        {
-          "name": "logonaut.eth",
-          "resolvedAddress": "0xb0ccf43ada6cbaa26dcf4907117b496d49f74242"
-        },
-        {
-          "name": "chopan.eth",
-          "resolvedAddress": "0x2f60d2bb84eb8df6951f7215ef035ef052ba2725"
-        }
-      ]
-    }
-  }
-}
-```
-
-### Resolving POAPs, NFTs
-
-- POAPs https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-poaps
-- NFTs https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-nfts
-
-### Resolving Token Transfers
-
-- https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-token-transfers
-
----
-
-**API References** https://docs.airstack.xyz/.
-
-\***\*SDKs\*\*** https://app.airstack.xyz/sdks
 
 </TabItem>
 </Tabs>
