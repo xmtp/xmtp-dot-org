@@ -46,8 +46,6 @@ To access the Airstack APIs, use https://api.airstack.xyz/gql as your json endpo
 
 Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to build a json query to fulfill your use case easily.
 
-In the tutorial below, the  indicates the AI prompt.
-
 <div className="nopadding" style={{width:'80%'}}  >
 
 ![](./img/airstack-ai.png)
