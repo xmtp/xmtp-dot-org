@@ -1094,5 +1094,5 @@ table code {
 }
 
 .nopadding p {
-  padding: 0px;
+  padding: 0px !important;
 }
