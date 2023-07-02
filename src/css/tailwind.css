@@ -1111,7 +1111,7 @@ table code {
 
 @media (max-width: 799px) {
   .nopadding {
-    margin: 0px;
+    margin-left: 0px;
     border-radius: 5px;
     width: 90% !important;
   }
