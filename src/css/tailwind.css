@@ -1096,3 +1096,14 @@ table code {
 .nopadding p {
   padding: 0px !important;
 }
+.nopadding {
+  padding: 0;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.nopadding img {
+  display: block;
+}

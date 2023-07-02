@@ -450,7 +450,7 @@ If you have multiple inputs to call the same query, you can use Airstack to make
 
 To create a bulk query, your query will need to have a filter input with the comparison operations of `_in` or `_nin`. A quick look at how it looks in the [Airstack Explorer](https://app.airstack.xyz/explorer) is shown below with the `resolveAddress`.
 
-<div className="nopadding" style={{width:'50%'}}  >
+<div className="nopadding" style={{width:'30%'}}  >
 
 ![](./img/airstack-bulk.png)
 
