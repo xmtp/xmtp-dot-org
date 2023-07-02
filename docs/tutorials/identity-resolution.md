@@ -537,13 +537,13 @@ query FetchBulkENS($resolvedAddresses: [Address!]) {
 
 ### Learn more
 
-- API References https://docs.airstack.xyz/
-- SDKs https://app.airstack.xyz/sdks
+- [API References](https://docs.airstack.xyz/)
+- [SDKs](https://app.airstack.xyz/sdks)
 
 #### Resolving POAPs, NFTs
 
-- POAPs https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-poaps
-- NFTs https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-nfts
+- [POAPs](https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-poaps)
+- [NFTs](https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-nfts)
 
 </TabItem>
 <TabItem value="everyname" className="bigTab" label="Everyname" >
