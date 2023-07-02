@@ -1093,11 +1093,7 @@ table code {
   margin-left: 5px;
 }
 
-.nopadding p {
-  padding: 0px !important;
-}
 .nopadding {
-  padding: 0;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   border-radius: 15px;
@@ -1106,4 +1102,17 @@ table code {
 
 .nopadding img {
   display: block;
+  margin: 0px;
+}
+
+.nopadding p {
+  padding: 0px !important;
+}
+
+@media (max-width: 799px) {
+  .nopadding {
+    margin: 0px;
+    border-radius: 5px;
+    width: 90% !important;
+  }
 }

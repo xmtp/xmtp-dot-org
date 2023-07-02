@@ -22,7 +22,11 @@ As a UX best practice, build your app to enable a user to enter a domain name in
 
 For example, a user should be able to enter `prxshant.eth` in your To field and have your app forward-resolve and display its associated wallet address `0x4b70d04124c2996De29e0caa050A49822Faec6Cc`.
 
+<div className="nopadding" style={{width:'50%'}}  >
+
 ![Entering prxshant.eth in a to field and having it resolve to 0x4b70d04124c2996De29e0caa050A49822Faec6Cc](img/id-resolution.gif)
+
+</div>
 
 And certainly, your app should also be able to accept a raw wallet address and reverse-resolve and display the associated domain name, if available.
 
@@ -46,7 +50,7 @@ To access the Airstack APIs, use https://api.airstack.xyz/gql as your json endpo
 
 Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to build a json query to fulfill your use case easily.
 
-<div className="nopadding" style={{width:'80%'}}  >
+<div className="nopadding" style={{width:'90%'}}  >
 
 ![](./img/airstack-ai.png)
 
@@ -748,13 +752,21 @@ const domain = await resolution.addr(name, "ETH");
 //If there is no address associated with the domain or the domain is not valid, the above functions will return null or false respectively.
 ```
 
+<div className="nopadding" style={{width:'50%'}}  >
+
 ![CleanShot 2023-06-04 at 19.29.24@2x.png](img/uns-img1.png)
+
+</div>
 
 ### Reverse resolve wallet addresses
 
 To complete the Unstoppable Domains integration, it’s important to convert the wallet addresses on the page into their respective domains. Using the [XMTP.chat](https://xmtp.chat/inbox) inbox as an example, you'll want to reverse resolve the connected wallet address as well as the message previews.
 
+<div className="nopadding" style={{width:'80%'}}  >
+
 ![CleanShot 2023-06-04 at 19.30.56@2x.png](img/uns-img2.png)
+
+</div>
 
 To do this, implement a function similar to the one below which will attempt to resolve the wallet address to a domain. Display the wallet address if the function returns null, otherwise display the domain.
 
