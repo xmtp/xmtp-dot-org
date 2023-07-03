@@ -382,7 +382,7 @@ const config = {
         //... other Algolia params
       },
       prism: {
-        additionalLanguages: ["dart", "swift", "kotlin"],
+        additionalLanguages: ["dart", "swift", "kotlin", "graphql"],
         theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
       },
