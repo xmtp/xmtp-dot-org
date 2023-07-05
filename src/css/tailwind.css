@@ -660,6 +660,7 @@ main[class*="docMainContainer"] tr {
 }
 
 .navbar__sbbutton {
+  font-size: 0.8em;
   color: white;
   border: none;
   background-color: #ef4444;
@@ -667,6 +668,7 @@ main[class*="docMainContainer"] tr {
   padding: 7px 11px;
   cursor: pointer;
   transition-duration: 0.2s;
+  margin: 1em 0 0 1.25em;
 }
 
 .navbar__sbbutton:hover {
@@ -674,6 +676,7 @@ main[class*="docMainContainer"] tr {
 }
 
 .navbar__chatbutton {
+  font-size: 0.8em;
   color: white;
   border: none;
   background-color: #4f45e4;
@@ -681,6 +684,7 @@ main[class*="docMainContainer"] tr {
   padding: 7px 11px;
   cursor: pointer;
   transition-duration: 0.2s;
+  margin: 1em 0 1.25em 1.25em;
 }
 
 .navbar__chatbutton:hover {
@@ -1023,7 +1027,7 @@ code:not([class]) {
   .flexbar {
     width: 100%;
     border-top: 1px solid lightgrey;
-    padding-top: 10px;
+    padding-top: 16px;
     margin-top: 10px;
   }
   .flexbar a {
@@ -1031,7 +1035,7 @@ code:not([class]) {
     color: inherit;
   }
   .flexbar div {
-    margin-bottom: 5px;
+    margin-bottom: 16px;
   }
   .flexbar img {
     width: 20px;
