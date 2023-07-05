@@ -60,7 +60,7 @@ main();
   >
   > Also be sure to provide users with a way to unsubscribe from your broadcast messages, such as by replying to a broadcast message with `STOP`.
 
-- **If your app stores a signature to read and send XMTP messages on behalf of a customer**, such as in a broadcast message, be sure to let your customers know. Ideally, your app should also periodically auto-delete signatures and provide a way for a customer to manually revoke their signature. For example, you can provide this guidance as a part of the XMTP connection flow. Here's some example text and UX you can build upon:
+- **If your app stores a signature to read and send XMTP messages on behalf of your customer**, such as in a broadcast message, be sure to let your customer know. Ideally, your app should also periodically auto-delete signatures and provide a way for a customer to manually revoke their signature. For example, you can provide this guidance as a part of the XMTP connection flow. Here's some example text and UX you can build upon:
 
   For example:
 
@@ -74,4 +74,4 @@ main();
 
     > The signature you provided gives this app permission to read and send XMTP messages on your behalf. The signature is securely stored and accessed only to execute your workflows. Click **Delete signature** to revoke this permission and delete the signature from storage.
 
-    ![Signature storage disclosure and delete after connection](/img/sig-store-disclosure-delete.png)
+    ![Signature storage disclosure and delete after connection](/img/sig-store-disclosure-delete.png) 
