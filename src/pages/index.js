@@ -44,23 +44,7 @@ function HomepageHeader() {
             </div>
             <div className="flex flex-col justify-center items-center">
               <h1>XMTP delivers<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">payments in apps</span>
-              </h1>
-              <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
-              <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
-                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
-              </button>
-            </div>
-          </div>
-          
-          <div className="carousel-cell">
-            <div className="absolute bottom-28 md:bottom-0 right-0">
-              <img src="/img/rightPhone3.png" className="w-[510px] rightPhone block dark:hidden"></img>
-              <img src="/img/rightPhone3-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <h1>XMTP delivers<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">portability in apps</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">payments in chat</span>
               </h1>
               <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
               <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
@@ -77,6 +61,22 @@ function HomepageHeader() {
             <div className="flex flex-col justify-center items-center">
               <h1>XMTP delivers<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">secure messaging</span>
+              </h1>
+              <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
+              <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
+                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
+              </button>
+            </div>
+          </div>
+          
+          <div className="carousel-cell">
+            <div className="absolute bottom-28 md:bottom-0 right-0">
+              <img src="/img/rightPhone3.png" className="w-[510px] rightPhone block dark:hidden"></img>
+              <img src="/img/rightPhone3-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <h1>XMTP delivers<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">portability across apps</span>
               </h1>
               <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
               <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
