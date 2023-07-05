@@ -114,7 +114,7 @@ const config = {
               {
                 to: "/docs/use-cases/deso",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/social-icon.svg" alt="Social icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeSo</div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Web3 social</div></div>`,
               },
               {
                 to: "/docs/use-cases/marketing",
@@ -259,7 +259,7 @@ const config = {
                 to: "/docs/use-cases/messaging",
               },
               {
-                label: "DeSo",
+                label: "Web3 social",
                 to: "/docs/use-cases/deso",
               },
               {
