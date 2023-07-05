@@ -48,19 +48,19 @@ main();
 
 ## Best practices for broadcast messages
 
-- **If your app sends broadcast messages to users**, be sure to get user consent before sending them broadcast messages. For example, you can request this consent during onboarding. Here's some example text you can build upon:
+- **If your app sends broadcast messages to your users**, be sure to get user consent before sending them broadcast messages. For example, you can request this consent during onboarding. Here's some example text you can build upon:
 
   > By connecting your wallet account with this app, you agree to receive broadcast messages from &lt;your app name&gt;. These messages will include promotions and news about the app. We value your privacy and will use your address only for sending these broadcast messages.
   >
   > You can unsubscribe from broadcast messages by replying with `STOP`.
 
-- **If your app allows customers to send broadcast messages to their users**, be sure to advise your customers to get their users' consent before sending them broadcast messages. For example, you can provide this guidance during onboarding. Here's some example text you can build upon:
+- **If your app allows your customers to send broadcast messages to their users**, be sure to advise your customers to get their users' consent before sending them broadcast messages. For example, you can provide this guidance during onboarding. Here's some example text you can build upon:
 
   > By signing up to use this app, you agree to get consent from your users before sending them broadcast messages using this platform. When requesting user consent, let users know what kinds of message content they can expect to receive and how you'll use their contact information.
   >
   > Also be sure to provide users with a way to unsubscribe from your broadcast messages, such as by replying to a broadcast message with `STOP`.
 
-- **If your app stores a signature to read and send XMTP messages on behalf of a user**, such as in a broadcast message, be sure to let users know. Ideally, your app should also periodically auto-delete user signatures and provide a way for a user to manually revoke their signature. For example, you can provide this guidance as a part of the XMTP connection flow. Here's some example text and UX you can build upon:
+- **If your app stores a signature to read and send XMTP messages on behalf of a customer**, such as in a broadcast message, be sure to let your customers know. Ideally, your app should also periodically auto-delete signatures and provide a way for a customer to manually revoke their signature. For example, you can provide this guidance as a part of the XMTP connection flow. Here's some example text and UX you can build upon:
 
   For example:
 

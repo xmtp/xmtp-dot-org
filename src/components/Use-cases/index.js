@@ -9,7 +9,7 @@ const Usecases = () => {
       </a>
       <a href="/docs/use-cases/deso" className="chain-item">
         <img src={"/img/social-icon.svg"} />
-        <span>DeSo</span>
+        <span>Web3 social</span>
       </a>
       <a href="/docs/use-cases/marketing" className="chain-item">
         <img src={"/img/marketing-icon.svg"} />
