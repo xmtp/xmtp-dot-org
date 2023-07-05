@@ -3,17 +3,21 @@ sidebar_label: Launch your app
 sidebar_position: 10
 ---
 
-# Prepare to launch your app built with XMTP
+# Prepare and launch your app built with XMTP
 
-## Quality checklist run through
+Use this guide to prepare your app for a successful launch.
+
+## Check the quality of your app
+
+Before getting pre-launch feedback, review your app against this quality checklist.
 
 ### Interoperable inbox
 
 Your app provides an [interoperable inbox](/docs/concepts/interoperable-inbox) with the following characteristics:
 
-- [ ]  New conversations created on your app should have `conversationID = "null"`
-- [ ]  Display all conversations with `conversationID = "null"`
-- [ ]  [Bonus] Display all conversations with non-null `conversationID` like `Lens.dev`, `GetConverse.app`, etc.
+- [ ]  New conversations created using your app should have `conversationId = "null"`
+- [ ]  Display all conversations with `conversationId = "null"`
+- [ ]  [Bonus] Display all conversations with non-null `conversationId`, such as `Lens.dev`, `GetConverse.app`, etc.
 - [ ]  [Bonus] UI is intuitive and enables the user to understand the `conversationID`, if necessary
 - [ ]  [Bonus] Provide inbox filters. Do not use tabs.
 
@@ -61,7 +65,6 @@ Create a test wallet with ~2000 conversations and 1000 messages per conversation
 
 Preparing to launch? Be sure to:
 
-- Follow the development and UX best practices provided in the documentation of the XMTP features you included in your app
 - Run through these [recommended test cases](test-your-app)
 - Revisit these [performance guidelines](performance)
 - Enable your app to track privacy-preserving metrics to help you understand app usage. For example:
