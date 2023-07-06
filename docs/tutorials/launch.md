@@ -9,7 +9,7 @@ Use this guide to prepare your app for a successful launch. 🚀
 
 ## Quality checklist
 
-Before launching, review your app against this quality checklist.
+Before launching, review your app against this quality checklist. Meet the criteria in this checklist to help ensure you launch a best-in-class app built with XMTP.
 
 ### Interoperable inbox
 
