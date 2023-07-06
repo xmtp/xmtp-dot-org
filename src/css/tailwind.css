@@ -668,7 +668,6 @@ main[class*="docMainContainer"] tr {
   padding: 7px 11px;
   cursor: pointer;
   transition-duration: 0.2s;
-  margin: 1em 0 0 1.25em;
 }
 
 .navbar__sbbutton:hover {
@@ -684,7 +683,6 @@ main[class*="docMainContainer"] tr {
   padding: 7px 11px;
   cursor: pointer;
   transition-duration: 0.2s;
-  margin: 1em 0 1.25em 1.25em;
 }
 
 .navbar__chatbutton:hover {
@@ -1010,6 +1008,17 @@ code:not([class]) {
   .menu__link .subtext {
     display: none;
   }
+
+  .navbar__sbbutton {
+    font-size: 0.8em;
+    margin: 1em 0 0 1.25em;
+  }
+
+  .navbar__chatbutton {
+    font-size: 0.8em;
+    margin: 1em 0 1.25em 1.25em;
+  }
+
 }
 /*footer cols*/
 @media (max-width: 799px) {
