@@ -912,6 +912,7 @@ ul li a:before {
   width: 100%;
   max-width: 80px; /* 20% smaller than before */
   margin-bottom: 10px;
+  min-height: 80px;
 }
 
 .chain-item .svg {
