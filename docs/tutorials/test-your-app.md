@@ -51,7 +51,6 @@ Start by [creating a test wallet](https://xmtp.org/docs/tutorials/test-your-app#
 
 - For a cold start (first load):
     - Test that the app is interactive in <15 sec
-    - Display an "Importing conversations" status message and a progress bar
 - For a warm cache (subsequent loads and refreshes):
     - Test that the app is interactive in <1 sec
 - Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
