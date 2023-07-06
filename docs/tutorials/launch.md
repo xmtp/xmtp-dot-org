@@ -5,11 +5,11 @@ sidebar_position: 10
 
 # Prepare and launch your app built with XMTP
 
-Use this guide to prepare your app for a successful launch.
+Use this guide to prepare your app for a successful launch. 🚀
 
-## Check the quality of your app
+## Quality checklist
 
-Before getting pre-launch feedback, review your app against this quality checklist.
+Before launching, review your app against this quality checklist.
 
 ### Interoperable inbox
 
@@ -23,14 +23,11 @@ Your app provides an [interoperable inbox](/docs/concepts/interoperable-inbox) w
 
 ### Performance
 
-Create a test wallet with ~2000 conversations and 1000 messages per conversation for the following performance tests. [Testing Guidance](https://xmtp.org/docs/tutorials/test-your-app)
+- [ ]  [Use a local cache](/docs/tutorials/performance)
 
-- [ ]  Use a local database to cache as recommended [here](https://xmtp.org/docs/tutorials/performance)
-- [ ]  For cold start (first load):
-    - [ ]  Test wallet interactive in <15 sec
-    - [ ]  Display ‘importing conversations’ and a progress bar
-- [ ]  For Warm cache (all other loads & refreshes):
-    - [ ]  Test wallet interactive in <1 sec
+### Test your app
+
+- [ ]  Test your app [against these test cases](/docs/tutorials/test-your-app)
 
 ### UX
 
@@ -38,41 +35,41 @@ Create a test wallet with ~2000 conversations and 1000 messages per conversation
 - [ ]  Sending messages works as expected
 - [ ]  New conversations can be created
 - [ ]  Conversation list is displayed and easily navigable
-- [ ]  [Bonus] Has optimistic sending
+- [ ]  [Bonus] Provides [optimistic sending](/docs/tutorials/optimistic-sending)
 
 ### Resolution
 
-- [ ]  Has identity resolution and reverse resolution support for ENS
-- [ ]  [Bonus] Has identity resolution and reverse resolution support for UNS, cb.id, .lens, Cyberconnect
+- [ ]  Provides forward and reverse [identity resolution](/docs/tutorials/identity-resolution) support for ENS
+- [ ]  [Bonus] Provides forward and reverse identity resolution support for UNS, cb.id, .lens, Cyberconnect
 
-### Bugs & reliability
+### Bugs and reliability
 
 - [ ]  Does not create duplicate conversations
-- [ ]  Does not show duplicate conversations; show most recent conversation for duplicates
+- [ ]  Does not show duplicate conversations. For duplicates, show the most recent conversation only.
 - [ ]  Does not crash frequently
 - [ ]  Does not have obvious or critical bugs
 
 ### SDK version
 
-- [ ]  Does the integration use the latest SDK? If not, what features is it missing?
+- [ ]  Uses the latest [XMTP client SDK](/docs/introduction#sdks). If not, which features is the app missing?
 
 ### Attachments
 
-- [ ]  [Bonus] Support images
-- [ ]  [Bonus] Has a GIF pick
+- [ ]  [Bonus] Supports images
+- [ ]  [Bonus] Provides a GIF picker
 
-## Need more feedback?
+### Metrics
 
-Preparing to launch? Be sure to:
+Enable your app to track privacy-preserving metrics to help you understand app usage. For example:
+- [ ]  \# of active wallets: Wallets sending at least one message
+- [ ]  \# of active conversations: Conversations with at least one message
+- [ ]  \# of returning conversations: Conversations with at least one message per participant
 
-- Run through these [recommended test cases](test-your-app)
-- Revisit these [performance guidelines](performance)
-- Enable your app to track privacy-preserving metrics to help you understand app usage. For example:
-  - \# of active wallets: Wallets sending at least one message
-  - \# of active conversations: Conversations with at least one message
-  - \# of returning conversations: Conversations with at least one message per participant
+## Want more feedback?
 
-After your team has tested your app and reviewed the app best practices, message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/) to get pre-launch feedback from XMTP Labs. Provide a link to a preview app, TestFlight, or demo video.
+Want more feedback after your team has run through the [quality checklist](#check-the-quality-of-your-app)?
+
+Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/) to get pre-launch feedback from XMTP Labs. Provide a link to a preview app, TestFlight, or demo video.
 
 ## Launch your app
 
