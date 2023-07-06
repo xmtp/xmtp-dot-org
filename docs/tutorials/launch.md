@@ -61,7 +61,7 @@ Create a test wallet with ~2000 conversations and 1000 messages per conversation
 - [ ]  [Bonus] Support images
 - [ ]  [Bonus] Has a GIF pick
 
-## Get pre-launch feedback
+## Need more feedback?
 
 Preparing to launch? Be sure to:
 
