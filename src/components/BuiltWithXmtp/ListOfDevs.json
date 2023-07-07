@@ -31,13 +31,6 @@
     "twitter": "https://twitter.com/chainjetio"
   },
   {
-    "name": "Holder",
-    "href": "https://holder.xyz/",
-    "image": "/img/builtWithXmtp/holder-logo.jpg",
-    "description": "Holder is a web3 CRM and marketing automation platform that powers customer engagement for the tokenized world.",
-    "twitter": "https://twitter.com/holderxyz"
-  },
-  {
     "name": "Buttrfly",
     "href": "https://www.buttrfly.app/",
     "image": "/img/builtWithXmtp/buttrfly-icon-rounded.png",
@@ -83,18 +76,25 @@
     "twitter": "https://twitter.com/PinstaApp"
   },
   {
+    "name": "AbsoluteLabs",
+    "href": "https://absolutelabs.io/",
+    "image": "/img/builtWithXmtp/absolute-logo.jpg",
+    "description": "Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
+    "twitter": "https://twitter.com/absolute_labs"
+  },
+  {
+    "name": "Holder",
+    "href": "https://holder.xyz/",
+    "image": "/img/builtWithXmtp/holder-logo.jpg",
+    "description": "Holder is a web3 CRM and marketing automation platform that powers customer engagement for the tokenized world.",
+    "twitter": "https://twitter.com/holderxyz"
+  },
+  {
     "name": "XMTP Inbox",
     "href": "https://xmtp.chat",
     "image": "/img/builtWithXmtp/xmtp.svg",
     "bgColor": "",
     "description": "XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
     "github": "https://github.com/xmtp-labs/xmtp-inbox-web"
-  },
-  {
-    "name": "AbsoluteLabs",
-    "href": "https://absolutelabs.io/",
-    "image": "/img/builtWithXmtp/absolute-logo.jpg",
-    "description": "Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
-    "twitter": "https://twitter.com/absolute_labs"
   }
 ]
