@@ -31,6 +31,13 @@
     "twitter": "https://twitter.com/chainjetio"
   },
   {
+    "name": "Holder",
+    "href": "https://holder.xyz/",
+    "image": "/img/builtWithXmtp/holder-logo.jpg",
+    "description": "Holder is a web3 CRM and marketing automation platform that powers customer engagement for the tokenized world.",
+    "twitter": "https://twitter.com/holderxyz"
+  },
+  {
     "name": "Buttrfly",
     "href": "https://www.buttrfly.app/",
     "image": "/img/builtWithXmtp/buttrfly-icon-rounded.png",
@@ -47,7 +54,7 @@
   {
     "name": "ethOS",
     "href": "https://www.ethosmobile.org/",
-    "image": "/img/builtWithXmtp/ethos-logo.jpeg",
+    "image": "/img/builtWithXmtp/ethos-logo.png",
     "description": "The world's first Ethereum mobile operating system. A mobile OS built to be crypto native.",
     "github": "https://github.com/EthereumPhone",
     "twitter": "https://twitter.com/EthereumPhone"
@@ -55,7 +62,7 @@
   {
     "name": "Boson App",
     "href": "https://bosonapp.io/",
-    "image": "/img/builtWithXmtp/boson.png",
+    "image": "/img/builtWithXmtp/boson-logo.jpg",
     "description": "Tokenize, transfer, and trade any physical asset as an NFT.",
     "github": "https://github.com/bosonprotocol",
     "twitter": "https://twitter.com/BosonProtocol"
@@ -70,7 +77,7 @@
   {
     "name": "Pinsta",
     "href": "https://pinsta.xyz/",
-    "image": "/img/builtWithXmtp/pinsta.png",
+    "image": "/img/builtWithXmtp/pinsta-logo.jpg",
     "description": "Decentralized image and video sharing service. Create Pin Boards to collect and discover rich media.",
     "github": "https://github.com/PinstaApp/Pinsta",
     "twitter": "https://twitter.com/PinstaApp"
@@ -86,7 +93,7 @@
   {
     "name": "AbsoluteLabs",
     "href": "https://absolutelabs.io/",
-    "image": "/img/builtWithXmtp/absolute.png",
+    "image": "/img/builtWithXmtp/absolute-logo.jpg",
     "description": "Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
     "twitter": "https://twitter.com/absolute_labs"
   }

@@ -12,7 +12,7 @@ const BuiltWithXmtp = () => {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">Built with XMTP</h1>
-            <p className="text-lg leading-7 text-gray-600">Hundreds of awesome projects, people, and partners rely on XMTP.<br />Come build with us!</p>
+            <p className="text-lg leading-7 text-gray-600">Hundreds of awesome projects, people, and partners rely on XMTP.<br /><strong>Come build with us!</strong></p>
           </div>
           <div className="mx-auto mt-4 max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
@@ -29,7 +29,7 @@ const BuiltWithXmtp = () => {
             <div className="flex-shrink-0">
               <a href={developer.href} target="_blank" className="rounded rounded-md flex justify-center py-0 mb-4">
                 <img
-                  className="h-16 w-16 max-h-16 max-w-16 rounded-xl"
+                  className="h-16 w-16 max-h-16 max-w-16 rounded-2xl"
                   src={useBaseUrl(developer.image)}
                   alt={"this is an image of the" + developer.name + " icon"}
                 ></img>
@@ -46,17 +46,17 @@ const BuiltWithXmtp = () => {
               <div className='flex items-center space-x-3'>
                 {developer.href && (
                     <a className="text-base font-semibold text-red-500 flex align-center"  href={developer.href} target="_blank">
-                      <div className="website-icon h-6 w-6"></div>
+                      <div className="website-icon h-5 w-5"></div>
                     </a>
                   )}
                 {developer.github && (
                     <a className="text-base font-semibold text-red-500 flex align-center"  href={developer.github} target="_blank">
-                      <div className="github-icon h-6 w-6"></div>
+                      <div className="github-icon h-5 w-5"></div>
                     </a>
                   )}
                   {developer.twitter && (
                     <a className="text-base font-semibold text-red-500 flex align-center" href={developer.twitter} target="_blank">
-                      <div className="twitter-icon h-6 w-6"></div>
+                      <div className="twitter-icon h-5 w-5"></div>
                     </a>
                   )}
               </div>
