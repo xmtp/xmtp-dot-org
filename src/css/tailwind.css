@@ -189,7 +189,6 @@ body {
 }
 
 .builder-bg {
-  background-color:red;
   background-image: urL("/img/bwx-bg-light.png");
   background-size: cover;
   background-repeat: no-repeat;
