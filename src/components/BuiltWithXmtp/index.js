@@ -7,12 +7,12 @@ const BuiltWithXmtp = () => {
   return (
     <div>
     
-      <div className="relative isolate overflow-hidden px-6 py-16 sm:py-24 mb-8 bg-color bg-gray-100">
-      <img src="/img/bwx-bg-light.png" alt="" className="bg-gray-900 absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"></img>
+      <div className="relative isolate overflow-hidden px-6 py-16 sm:py-24 mb-8 bg-color bg-gray-100 built">
+        <div className="bg-gray-900 absolute inset-0 -z-10 h-full w-full builder-bg"></div>
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">Built with XMTP</h1>
-            <p className="text-lg leading-7 text-gray-600">Hundreds of awesome projects, people, and partners rely on XMTP. Come build with us!</p>
+            <p className="text-lg leading-7 text-gray-600">Hundreds of awesome projects, people, and partners rely on XMTP.<br />Come build with us!</p>
           </div>
           <div className="mx-auto mt-4 max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
@@ -24,7 +24,7 @@ const BuiltWithXmtp = () => {
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {ListOfDevelopers.map((developer) => (
-          <div className="relative flex items-top space-x-4 rounded-lg border border-gray-400 bg-white px-6 py-2 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400" key={developer.name}>
+          <div className="relative flex items-top space-x-4 rounded-lg border border-gray-400 px-6 py-4 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400" key={developer.name}>
             
             <div className="flex-shrink-0">
               <a href={developer.href} target="_blank" className="rounded rounded-md flex justify-center py-0 mb-4">
@@ -36,18 +36,36 @@ const BuiltWithXmtp = () => {
               </a>
             </div>
 
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 flex-1 builder">
               <a href={developer.href} target="_blank" className="focus:outline-none">
-                <span className="absolute inset-0" aria-hidden="true"></span>
-                <h5 className="text-lg font-bold text-gray-900 mb-0">{developer.name}</h5>
+                <h5 className="text-lg font-bold text-gray-900 dark:text-white mb-0">{developer.name}</h5>
               </a>
-                <p className="text-base text-gray-500">{developer.description}</p>
+                <p className="text-base text-gray-400">{developer.description}</p>
+
+
+              <div className='flex items-center space-x-3'>
+                {developer.href && (
+                    <a className="text-base font-semibold text-red-500 flex align-center"  href={developer.href} target="_blank">
+                      <div className="website-icon h-6 w-6"></div>
+                    </a>
+                  )}
+                {developer.github && (
+                    <a className="text-base font-semibold text-red-500 flex align-center"  href={developer.github} target="_blank">
+                      <div className="github-icon h-6 w-6"></div>
+                    </a>
+                  )}
+                  {developer.twitter && (
+                    <a className="text-base font-semibold text-red-500 flex align-center" href={developer.twitter} target="_blank">
+                      <div className="twitter-icon h-6 w-6"></div>
+                    </a>
+                  )}
+              </div>
             </div>
 
           </div>
         ))}
 
-        <div className="relative flex items-top space-x-4 rounded-lg border border-gray-400 bg-white px-6 py-2 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400">
+        <div className="relative flex items-top space-x-4 rounded-lg border border-gray-400 px-6 py-4 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400">
           
           <div className="flex-shrink-0">
             <a className="rounded rounded-md flex justify-center py-0 mb-4">
@@ -59,7 +77,6 @@ const BuiltWithXmtp = () => {
 
           <div className="min-w-0 flex-1">
             <a href="https://forms.gle/p1VgVtkoGfHXANXt5" target="_blank" className="focus:outline-none">
-              <span className="absolute inset-0" aria-hidden="true"></span>
               <h5 className="text-lg font-bold text-gray-900 mb-0">Get Featured!</h5>
             </a>
               <p className="text-base text-gray-500">Have a project building on XMTP? Want your profile updated? <a href="https://forms.gle/p1VgVtkoGfHXANXt5" target="_blank">Share your details</a> and we'll follow up.</p>
