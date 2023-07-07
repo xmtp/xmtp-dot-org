@@ -894,7 +894,6 @@ ul li a:before {
   margin: 0;
   padding: 0;
 }
-
 .chain-item {
   display: flex;
   flex-direction: column;
@@ -907,6 +906,9 @@ ul li a:before {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   text-align: center;
+}
+.white .chain-item {
+  background-color: white;
 }
 .chain-item img {
   width: 100%;
