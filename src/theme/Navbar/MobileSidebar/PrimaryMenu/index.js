@@ -24,7 +24,7 @@ export default function PrimaryMenuWrapper(props) {
             href="https://discord.com/invite/xmtp"
             className="pl-3 grid items-center"
           >
-            Join our discord
+            Join the discord
           </a>
           <img src="/img/discord-color.svg" className="w-10" />
         </div>
