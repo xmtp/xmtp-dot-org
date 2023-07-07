@@ -55,7 +55,7 @@ Your app provides an [interoperable inbox](/docs/concepts/interoperable-inbox) w
 
 ### Attachments
 
-- [ ]  [Bonus] Supports images
+- [ ]  [Bonus] Provides [image attachments](/docs/build/attachments)
 - [ ]  [Bonus] Provides a GIF picker
 
 ### Metrics
@@ -67,7 +67,7 @@ Enable your app to track privacy-preserving metrics to help you understand app u
 
 ## Want more feedback?
 
-Want more feedback after your team has run through the [quality checklist](#check-the-quality-of-your-app)?
+Want more feedback after your team has run through the [quality checklist](#quality-checklist)?
 
 Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/) to get pre-launch feedback from XMTP Labs. Provide a link to a preview app, TestFlight, or demo video.
 
