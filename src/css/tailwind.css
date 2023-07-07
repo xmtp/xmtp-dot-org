@@ -375,6 +375,8 @@ body {
   background-color: black;
   padding-left: 0;
   padding-right: 0;
+  padding-top: 5em;
+  padding-bottom: 3em;
 }
 
 .footer .container {
@@ -1096,8 +1098,8 @@ code:not([class]) {
   }
 }
 .footerfino {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 table tr,
