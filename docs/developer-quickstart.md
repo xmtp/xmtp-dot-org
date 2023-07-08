@@ -68,6 +68,25 @@ export default function Index() {
 }
 ```
 
+```jsx
+// Function to load the existing messages in a conversation
+const newConversation = async function (xmtp_client, addressTo) {
+  //Creates a new conversation with the address
+  if (await xmtp_client?.canMessage(PEER_ADDRESS)) {
+    const conversation = await xmtp_client.conversations.newConversation(
+      addressTo,
+    );
+    convRef.current = conversation;
+    //Loads the messages of the conversation
+    const messages = await conversation.messages();
+    setMessages(messages);
+  } else {
+    console.log("cant message because is not on the network.");
+    //cant message because is not on the network.
+  }
+};
+```
+
 ### Display connect with XMTP
 
 Now that we have the wrapper we can add a button that will sign our user in with XMTP.
