@@ -282,6 +282,10 @@ const config = {
                 label: "DeFi",
                 to: "/docs/use-cases/finance",
               },
+              {
+                label: "Gaming",
+                to: "/docs/use-cases/gaming",
+              },
             ],
           },
 
