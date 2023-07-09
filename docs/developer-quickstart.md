@@ -90,7 +90,7 @@ Now that we have the wrapper we can add a button that will sign our user in with
 // Function to initialize the XMTP clients
 const initXmtp = async function () {
   // Create the XMTP client
-  const xmtp = await Client.create(signer, { env: "dev" });
+  const xmtp = await Client.create(signer, { env: "production" });
   //Create or load conversation with Gm bot
   newConversation(xmtp, PEER_ADDRESS);
   // Set the XMTP client in state for later use
