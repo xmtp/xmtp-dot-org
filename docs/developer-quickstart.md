@@ -86,7 +86,7 @@ Now that we have the wrapper we can add a button that will sign our user in with
 ```
 
 ```tsx
-// Function to initialize the XMTP client
+// Function to initialize the XMTP clients
 const initXmtp = async function () {
   // Create the XMTP client
   const xmtp = await Client.create(signer, { env: "dev" });
