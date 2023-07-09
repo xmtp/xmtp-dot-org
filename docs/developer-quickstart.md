@@ -48,7 +48,7 @@ npx create-next-app my-app
 ### Install dependencies
 
 ```bash
-npm install @xmtp/xmtp-js @thirdweb-dev/react
+npm install  @thirdweb-dev/react @xmtp/xmtp-js
 ```
 
 ### Configuring the client
