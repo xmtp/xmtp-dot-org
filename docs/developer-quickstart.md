@@ -44,6 +44,7 @@ npx create-next-app my-app
 - Authenticate with XMTP
 - Loading a conversation
 - Sending a message
+- Listen for messages
 
 ### Install dependencies
 
