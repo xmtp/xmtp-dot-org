@@ -105,6 +105,7 @@ const initXmtp = async function () {
 const newConversation = async function (xmtp_client, addressTo) {
   //Creates a new conversation with the address
   if (await xmtp_client?.canMessage(PEER_ADDRESS)) {
+    //if you try with a non-enabled wallet is going to fail 0x1234567890123456789012345678901234567890
     const conversation = await xmtp_client.conversations.newConversation(
       addressTo,
     );
