@@ -15,7 +15,7 @@ const Usecases = () => {
         <img src={"/img/marketing-icon.svg"} />
         <span>Marketing</span>
       </a>
-      <a href="/docs/use-cases/finance" className="chain-item">
+      <a href="/docs/use-cases/defi" className="chain-item">
         <img src={"/img/finance-icon.svg"} />
         <span>DeFi</span>
       </a>
