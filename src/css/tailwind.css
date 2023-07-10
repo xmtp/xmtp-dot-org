@@ -131,8 +131,8 @@ body {
     no-repeat;
   content: "";
   display: flex;
-  height: 24px;
-  width: 30px;
+  height: 22px;
+  width: 28px;
 }
 
 .div-header-github-link:before {
@@ -178,6 +178,62 @@ body {
 
 .min-h-20 {
   min-height: 5rem;
+}
+
+[data-theme="dark"] h5 {
+  color: white;
+}
+
+[data-theme="dark"] .built p {
+  color: white;
+}
+
+.builder-bg {
+  background-image: urL("/img/bwx-bg-light.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-theme="dark"] .builder-bg {
+  background-image: urL("/img/bwx-bg-dark.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.website-icon {
+  background-image: urL("/img/globe-black.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-theme="dark"] .website-icon {
+  background-image: urL("/img/globe-white.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.github-icon {
+  background-image: urL("/img/github-icon-black.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-theme="dark"] .github-icon {
+  background-image: urL("/img/github-icon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.twitter-icon {
+  background-image: urL("/img/twitter-icon-black.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-theme="dark"] .twitter-icon {
+  background-image: urL("/img/twitter-icon-white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Override Docusaurus styling*/
@@ -319,6 +375,8 @@ body {
   background-color: black;
   padding-left: 0;
   padding-right: 0;
+  padding-top: 5em;
+  padding-bottom: 3em;
 }
 
 .footer .container {
@@ -484,7 +542,7 @@ main[class*="docMainContainer"] tr {
 }
 
 [class*="mdxPageWrapper"] {
-  max-width: 55%;
+  max-width: 65%;
   margin-left: var(--doc-sidebar-width);
 }
 
@@ -1057,8 +1115,8 @@ code:not([class]) {
   }
 }
 .footerfino {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 table tr,

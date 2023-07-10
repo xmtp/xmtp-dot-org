@@ -204,12 +204,6 @@ const config = {
               '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
           },
           {
-            href: "/built-with-xmtp",
-            title: "Built with XMTP",
-            position: "right",
-            className: "header-xmtp-link",
-          },
-          {
             href: "https://discord.com/invite/xmtp",
             title: "Go to the Discord",
             position: "right",
