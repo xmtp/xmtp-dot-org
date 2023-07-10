@@ -152,7 +152,13 @@ await sendMessageFromHook(remoteAttachment, {
 });
 ```
 
-Note that we’re using `contentFallback` to enable clients that don't support these content types to still display something. For cases where clients *do* support these types, they can use the content fallback as alt text for accessibility purposes.
+As shown in the example above, you **must** provide a `contentFallback` value. Use it to provide an alt text-like description of the original content. Providing a `contentFallback` value enables clients that don't support the content type to still display something meaningful. 
+
+:::caution
+
+If you don't provide a `contentFallback` value, clients that don't support the content type will display an empty message. This results in a poor user experience and breaks interoperability.
+
+:::
 
 ## Download, decrypt, and decode the attachment
 
