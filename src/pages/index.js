@@ -30,7 +30,7 @@ function HomepageHeader() {
               <h1>XMTP delivers<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">reach to wallets</span>
               </h1>
-              <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
+              <h4 className="w-[460px] leading-7">Build apps that communicate with <br></br>every wallet in the world.</h4>
               <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
                 <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
               </button>
@@ -46,7 +46,7 @@ function HomepageHeader() {
               <h1>XMTP delivers<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">payments in chat</span>
               </h1>
-              <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
+              <h4 className="w-[460px] leading-7">Build apps that communicate with <br></br>every wallet in the world.</h4>
               <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
                 <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
               </button>
@@ -62,7 +62,7 @@ function HomepageHeader() {
               <h1>XMTP delivers<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">secure messaging</span>
               </h1>
-              <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
+              <h4 className="w-[460px] leading-7">Build apps that communicate with <br></br>every wallet in the world.</h4>
               <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
                 <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
               </button>
@@ -78,7 +78,7 @@ function HomepageHeader() {
               <h1>XMTP delivers<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">portability across apps</span>
               </h1>
-              <h4 className="w-[460px]">Build apps that communicate with every wallet in the world.</h4>
+              <h4 className="w-[460px] leading-7">Build apps that communicate with <br></br>every wallet in the world.</h4>
               <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
                 <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
               </button>
