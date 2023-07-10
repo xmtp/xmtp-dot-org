@@ -117,8 +117,7 @@ export const MainContent = ({ styles }) => {
         <div>
           <ul
             role="list"
-            className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
-          >
+            className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0">
             {HEADER_DATA.map(({ title, subtitle, url, icon }) => (
               <HeaderBox
                 key={title}
@@ -148,8 +147,7 @@ export const MainContent = ({ styles }) => {
                   <span className="text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                     <ALink
                       to="https://github.com/orgs/xmtp/discussions"
-                      className="text-red-500 font-bold"
-                    >
+                      className="text-red-500 font-bold">
                       Join the discussion
                     </ALink>
                   </span>
@@ -219,13 +217,11 @@ export const MainContent = ({ styles }) => {
                   <link
                     rel="preload"
                     href="/img/build-xmtp-dark.png"
-                    as="image"
-                  ></link>
+                    as="image"></link>
                   <link
                     rel="preload"
                     href="/img/build-xmtp.png"
-                    as="image"
-                  ></link>
+                    as="image"></link>
                   <div className="build-xmtp-img"></div>
                 </div>
               </div>
@@ -244,12 +240,11 @@ export const MainContent = ({ styles }) => {
             <div
               className={`hidden -scale-x-100 lg:grid absolute -left-12 h-32 justify-center arrow-icon w-20 items-center ${
                 sliderItems && sliderItems?.length > 3 ? "" : "2xl:hidden"
-              }`}
-            >
+              }`}>
               <ThemedImage
                 onClick={() => {
                   document.getElementsByClassName(
-                    "inner-div"
+                    "inner-div",
                   )[0].scrollLeft -= 360;
                 }}
                 sources={{
@@ -270,12 +265,11 @@ export const MainContent = ({ styles }) => {
             <div
               className={`arrow-icon w-24 h-32 absolute right-0 items-center justify-center hidden lg:grid ${
                 sliderItems && sliderItems?.length > 3 ? "" : "2xl:hidden"
-              }`}
-            >
+              }`}>
               <ThemedImage
                 onClick={() => {
                   document.getElementsByClassName(
-                    "inner-div"
+                    "inner-div",
                   )[0].scrollLeft += 360;
                 }}
                 sources={{
@@ -305,8 +299,7 @@ export const MainContent = ({ styles }) => {
               ref={videoRef}
               autoPlay="autoplay"
               muted
-              playsInline
-            >
+              playsInline>
               <source src="/img/animation.mp4" type="video/mp4" />
               Your browser does not support HTML video.
             </video>
@@ -329,8 +322,7 @@ export const MainContent = ({ styles }) => {
             </p>
             <Link
               to="/docs/concepts/interoperable-inbox"
-              className="bg-white rounded-lg w-52 h-12 text-black font-bold text-base cursor-pointer border-0 flex justify-center items-center hover:no-underline hover:text-black"
-            >
+              className="bg-white rounded-lg w-52 h-12 text-black font-bold text-base cursor-pointer border-0 flex justify-center items-center hover:no-underline hover:text-black">
               Learn more
             </Link>
           </div>
@@ -343,8 +335,6 @@ export const MainContent = ({ styles }) => {
                 Latest from XMTP
               </h2>
             </div>
-
-            <hr className="my-4 bg-black dark:bg-neutral-500" />
 
             <div className="grid gap-16 mt-8 gap-y-8 md:grid-cols-3 md:gap-x-5 md:gap-y-12">
               {BLOG_DATA.map((items) => (
@@ -367,8 +357,7 @@ export const MainContent = ({ styles }) => {
               <img src="/img/xmtp-sm-icon.png" className="w-5 h-5 mr-2.5" />
               <Link
                 className="hover:no-underline text-white hover:text-white"
-                to="built-with-xmtp"
-              >
+                to="built-with-xmtp">
                 View app showcase
               </Link>
             </button>
