@@ -1000,10 +1000,10 @@ ul li a:before {
   font-size: 14px;
 }
 @media (max-width: 799px) {
-  .six .chain-item,
-  .seven .chain-item,
   .chain-item {
-    width: calc(20% - 0px); /* 20% for 5 columns, subtracting margin */
+    width: calc(
+      20% - 0px
+    ) !important; /* 20% for 5 columns, subtracting margin */
   }
   .chain-item span {
     font-size: 12px;
