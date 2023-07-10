@@ -44,11 +44,12 @@ npx create-next-app my-app
 - Authenticate with XMTP
 - Loading a conversation
 - Sending a message
+- Listen for messages
 
 ### Install dependencies
 
 ```bash
-npm install @xmtp/xmtp-js @thirdweb-dev/react
+npm install  @thirdweb-dev/react @xmtp/xmtp-js
 ```
 
 ### Configuring the client
@@ -86,16 +87,36 @@ Now that we have the wrapper we can add a button that will sign our user in with
 ```
 
 ```tsx
-// Function to initialize the XMTP client
+// Function to initialize the XMTP clients
 const initXmtp = async function () {
   // Create the XMTP client
-  const xmtp = await Client.create(signer, { env: "dev" });
+  const xmtp = await Client.create(signer, { env: "production" });
   //Create or load conversation with Gm bot
   newConversation(xmtp, PEER_ADDRESS);
   // Set the XMTP client in state for later use
   setIsOnNetwork(!!xmtp.address);
   //Set the client in the ref
   clientRef.current = xmtp;
+};
+```
+
+```jsx
+// Function to load the existing messages in a conversation
+const newConversation = async function (xmtp_client, addressTo) {
+  //Creates a new conversation with the address
+  if (await xmtp_client?.canMessage(addressTo)) {
+    //if you try with a non-enabled wallet is going to fail 0x1234567890123456789012345678901234567890
+    const conversation = await xmtp_client.conversations.newConversation(
+      addressTo,
+    );
+    convRef.current = conversation;
+    //Loads the messages of the conversation
+    const messages = await conversation.messages();
+    setMessages(messages);
+  } else {
+    console.log("cant message because is not on the network.");
+    //cant message because is not on the network.
+  }
 };
 ```
 

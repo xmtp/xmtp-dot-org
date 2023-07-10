@@ -26,6 +26,7 @@ const tags = {
     name: "Built with XMTP",
     url: "/blog/tags/built-with-xmtp/",
   },
+  canada: { name: "Canada", url: "/blog/tags/canada/" },
   company: { name: "Company", url: "/blog/tags/company/" },
   contenttypes: { name: "Content Types", url: "/blog/tags/content-types/" },
   decentralization: {
@@ -33,6 +34,7 @@ const tags = {
     url: "/blog/tags/decentralization/",
   },
   developers: { name: "Developers", url: "/blog/tags/developers/" },
+  docs: { name: "Docs", url: "/blog/tags/docs/" },
   encryption: { name: "Encryption", url: "/blog/tags/encryption/" },
   grants: { name: "Grants", url: "/blog/tags/grants/" },
   hackathon: { name: "Hackathon", url: "/blog/tags/hackathon/" },
@@ -52,43 +54,43 @@ const tags = {
 
 export const BLOG_DATA = [
   {
-    tag: [tags.decentralization],
-    title: "XMTP: The journey to decentralization",
+    tag: [tags.decentralization, tags.docs],
+    title: "Say hello to a seamless journey for building chat apps",
     content:
-      "XMTP Labs is taking a phased approach toward architectural and logical decentralization of the network. The mission is to make sure the network is permissionless: owned by infrastructure providers and users that choose to participate, which can be anyone.",
+      "We are incredibly excited to announce the launch of the completely revamped XMTP developer documentation!",
     user: {
-      name: "Montez",
-      date: "26 May 2023 · 5 min read",
-      img: "montez.png",
-      url: "https://twitter.com/xmtp_",
-    },
-    url: "/blog/journey-to-decentralization",
-  },
-  {
-    tag: [tags.contenttypes, tags.developers, tags.encryption, tags.sdks],
-    title: "Send remote attachments with Thirdweb & XMTP SDKs",
-    content:
-      "Follow these steps to start sending image attachments to wallets within your chat app. Our sample app includes everything you need to connect to wallets with thirdweb's WalletSDK, use XMTP's remote attachments, and upload larger files to thirdweb's storage.",
-    user: {
-      name: "fabri",
-      date: "12 May 2023 · 7 min read",
+      name: "Fabri",
+      date: "1 Jul 2023 · 4 min read",
       img: "fabri.jpeg",
       url: "https://twitter.com/fabriguespe",
     },
-    url: "/blog/thirdbweb-wallet-remote-attachments",
+    url: "/blog/docsv2",
   },
   {
-    tag: [tags.builtwithxmtp, tags.developers, tags.messaging, tags.nfts],
-    title: "Join the movement: own your conversations with Converse",
+    tag: [tags.developers, tags.hackathon, tags.canada],
+    title: "ETH Waterloo Winning Apps",
     content:
-      "Discover the WhatsApp for web3: end-to-end encrypted messages between wallets, that only you own and can take with you anywhere.",
+      "Last Saturday, we had the incredible opportunity to attend ETH Waterloo. For those who may not know, Vitalik went to college in Waterloo, and the first ETH Global event was also held there.",
     user: {
-      name: "Rochelle Guillou",
-      date: "9 May 2023 · 4 min read",
-      img: "rochelle-headshot.jpeg",
-      url: "https://twitter.com/RochelleSophie_",
+      name: "Fabri",
+      date: "30 Jun 2023 · 3 min read",
+      img: "fabri.jpeg",
+      url: "https://twitter.com/fabriguespe",
     },
-    url: "/blog/join-the-movement",
+    url: "/blog/eth-waterloo-2023",
+  },
+  {
+    tag: [tags.developers, tags.messaging],
+    title: "Build a feedback widget for your website",
+    content:
+      "I have a feeling that most of you reading this have experienced that magic when collaboration, innovation, and plain ol' FUN converge in a project you're working on.",
+    user: {
+      name: "J-Ha",
+      date: "22 Jun 2023 · 4 min read",
+      img: "jhaaaa.jpeg",
+      url: "https://twitter.com/j_ha",
+    },
+    url: "/blog/feedback-widget",
   },
 ];
 
