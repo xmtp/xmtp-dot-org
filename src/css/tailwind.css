@@ -730,7 +730,7 @@ main[class*="docMainContainer"] tr {
 /*general g=text*/
 p,
 tr {
-  line-height: 21px;
+  line-height: 24px;
   margin-bottom: 15px !important;
   font-size: 16px;
 }
@@ -908,10 +908,10 @@ ul li a:before {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   text-align: center;
-}
+} /*
 .white .chain-item {
   background-color: white;
-}
+}*/
 .chain-item img {
   width: 100%;
   max-width: 80px; /* 20% smaller than before */
@@ -928,6 +928,9 @@ ul li a:before {
 }
 .seven .chain-item {
   width: calc(14% - 20px); /* 20% for 5 columns, subtracting margin */
+}
+.eight .chain-item {
+  width: calc(12% - 20px); /* 20% for 5 columns, subtracting margin */
 }
 .six .chain-item img {
   max-height: 66px;
@@ -1021,7 +1024,6 @@ code:not([class]) {
     font-size: 0.8em;
     margin: 1em 0 1.25em 1.25em;
   }
-
 }
 /*footer cols*/
 @media (max-width: 799px) {

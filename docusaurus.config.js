@@ -137,9 +137,14 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
               },
               {
-                to: "/docs/use-cases/finance",
+                to: "/docs/use-cases/defi",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeFi</div></div>`,
+              },
+              {
+                to: "/docs/use-cases/gaming",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Gaming</div></div>`,
               },
             ],
           },
@@ -280,7 +285,11 @@ const config = {
               },
               {
                 label: "DeFi",
-                to: "/docs/use-cases/finance",
+                to: "/docs/use-cases/defi",
+              },
+              {
+                label: "Gaming",
+                to: "/docs/use-cases/gaming",
               },
             ],
           },

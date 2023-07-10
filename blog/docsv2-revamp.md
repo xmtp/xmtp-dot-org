@@ -74,8 +74,9 @@ We've organized XMTP around various use cases in Finance, Commerce, Marketing, A
 - **[Marketing](https://xmtp.org/docs/use-cases/marketing) 📣**: Send secure newsletters to wallet owners, reach NFT collectors & token holders. Engage and analyze with confidence.
 - **[Support](https://xmtp.org/docs/use-cases/support) ☎️**: Redefine customer support and engage in finance transactions on chat, automate with AI bots, and streamline DAO operations - all through secure channels.
 - **[Commerce](https://xmtp.org/docs/use-cases/commerce) 🛍️**: Enhance e-commerce with encrypted communication between buyers and sellers.
-- **[DeFi](https://xmtp.org/docs/use-cases/finance) 🏦**: Empower Decentralized Finance by sending secure transaction confirmations, notifications, token transfers, NFT minting, etc.
-- [**Automation**](https://xmtp.org/docs/use-cases/automation) 🤖: Employ secure messaging for web3 automation tools, including triggers, notifications, and customer service bots.
+- **[DeFi](https://xmtp.org/docs/use-cases/defi) 🏦**: Empower Decentralized Finance by sending secure transaction confirmations, notifications, token transfers, NFT minting, etc.
+- **[Automation](https://xmtp.org/docs/use-cases/automation) 🤖**: Employ secure messaging for web3 automation tools, including triggers, notifications, and customer service bots.
+- **[Gaming](https://xmtp.org/docs/use-cases/gaming) 🎮**: Create secure and immersive gaming experiences with real-time messaging, multiplayer group chats, in-game notifications, and more.
 
 ## **Tutorials: The Developer’s Arsenal 🛠**
 
