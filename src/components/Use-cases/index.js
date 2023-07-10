@@ -32,7 +32,7 @@ const Usecases = () => {
         <span>Commerce</span>
       </a>
       <a href="/docs/use-cases/gaming" className="chain-item">
-        <img src={"/img/commerce-icon.svg"} />
+        <img src={"/img/smile.svg"} />
         <span>Gaming</span>
       </a>
     </div>
