@@ -1,11 +1,11 @@
 [
   {
-    "name": "Orb",
-    "href": "https://orb.ac/",
-    "image": "/img/builtWithXmtp/orb-logo.jpeg",
-    "description": "Experience ownership and control of your identity, content, and monetization on this decentralized social media platform.",
+    "name": "Coinbase Wallet",
+    "href": "https://www.coinbase.com/wallet",
+    "image": "/img/builtWithXmtp/cbw.png",
+    "description": "Your key to the world of crypto. Manage all of your crypto, NFTs, multiple wallets, and messages in one place.",
     "github": "",
-    "twitter": "https://twitter.com/orbapp_"
+    "twitter": "https://twitter.com/CoinbaseWallet"
   },
   {
     "name": "Converse",
@@ -13,6 +13,14 @@
     "image": "/img/builtWithXmtp/converse.png",
     "description": "We're reinventing messaging, starting with web3.",
     "twitter": "https://twitter.com/converseapp_"
+  },
+  {
+    "name": "Orb",
+    "href": "https://orb.ac/",
+    "image": "/img/builtWithXmtp/orb-logo.jpeg",
+    "description": "Experience ownership and control of your identity, content, and monetization on this decentralized social media platform.",
+    "github": "",
+    "twitter": "https://twitter.com/orbapp_"
   },
   {
     "name": "Lenster",
@@ -68,14 +76,6 @@
     "twitter": "https://twitter.com/lensport_io"
   },
   {
-    "name": "Pinsta",
-    "href": "https://pinsta.xyz/",
-    "image": "/img/builtWithXmtp/pinsta-logo.jpg",
-    "description": "Decentralized image and video sharing service. Create Pin Boards to collect and discover rich media.",
-    "github": "https://github.com/PinstaApp/Pinsta",
-    "twitter": "https://twitter.com/PinstaApp"
-  },
-  {
     "name": "AbsoluteLabs",
     "href": "https://absolutelabs.io/",
     "image": "/img/builtWithXmtp/absolute-logo.jpg",
@@ -88,6 +88,14 @@
     "image": "/img/builtWithXmtp/holder-logo.jpg",
     "description": "Holder is a web3 CRM and marketing automation platform that powers customer engagement for the tokenized world.",
     "twitter": "https://twitter.com/holderxyz"
+  },
+  {
+    "name": "Pinsta",
+    "href": "https://pinsta.xyz/",
+    "image": "/img/builtWithXmtp/pinsta-logo.jpg",
+    "description": "Decentralized image and video sharing service. Create Pin Boards to collect and discover rich media.",
+    "github": "https://github.com/PinstaApp/Pinsta",
+    "twitter": "https://twitter.com/PinstaApp"
   },
   {
     "name": "XMTP Inbox",
