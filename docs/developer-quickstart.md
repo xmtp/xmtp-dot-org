@@ -122,7 +122,7 @@ const newConversation = async function (xmtp_client, addressTo) {
 
 ### Listen to messages
 
-We are going to use the state to listen when XMTP is connected.
+We are going to use the `useEffect` hook to listen to new messages.
 
 ```tsx
 useEffect(() => {
