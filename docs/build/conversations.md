@@ -17,7 +17,7 @@ Most of the time, when interacting with the network, you'll want to do it throug
 ```ts
 import { Client } from "@xmtp/xmtp-js";
 // Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet);
+const xmtp = await Client.create(wallet, { env: "dev" });
 const conversations = xmtp.conversations;
 ```
 
@@ -52,7 +52,7 @@ You can create a new conversation with any address activated on the XMTP network
 
 ```ts
 const newConversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
 );
 ```
 
@@ -86,7 +86,7 @@ val newConversation =
 const startConversation = useStartConversation();
 const convv = await startConversation(
   "0x3F11b27F323b62B159D2642964fa27C46C841897",
-  "hi"
+  "hi",
 );
 ```
 
@@ -97,7 +97,9 @@ const convv = await startConversation(
 
 You can get a list of all conversations that have one or more messages.
 
-These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP.
+These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP. 
+
+To provide a user-friendly cold start (first load), display a "Loading conversations" status message and a progress bar.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
@@ -184,12 +186,12 @@ const clientWithNoCache = await Client.create(wallet, {
 <TabItem value="kotlin" label="Kotlin - beta" default>
 
 ```kotlin
-val client = Client().create(wallet)
+val client = Client().create(wallet, { env: "dev" })
 val conversations = client.conversations.export()
 saveConversationsSomewhere(JSON.stringify(conversations))
 // To load the conversations in a new SDK instance you can run:
 
-val client = Client.create(wallet)
+val client = Client.create(wallet, { env: "dev" })
 val conversations = JSON.parse(loadConversationsFromSomewhere())
 val client.importConversation(conversations)
 ```

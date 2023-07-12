@@ -6,10 +6,9 @@ hide_table_of_contents: true
 
 <br/>
 
-:::tip Every big idea starts small
+:::caution XMTP Grants
 
-[Apply here](https://forms.xmtp.org/grants-application) 🚀
-
+We are no longer accepting applications for XMTP Grants. Make sure to follow us on [Twitter](https://twitter.com/xmtp_) for updates on when applications will be available again
 :::
 
 ## ✨ Mission
@@ -154,24 +153,13 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ## ✨ Resources and inspiration
 
-### XMTP concepts
-
-- [XMTP development concepts](/docs/introduction)
-
 ### Vision
 
 - [XMTP roadmap](/roadmap)
 
 ### Documentation
 
-- [Start building with XMTP](/start-building)
-
-#### SDKs
-
-- JavaScript: https://github.com/xmtp/xmtp-js
-- iOS: https://github.com/xmtp/xmtp-ios
-- Flutter: https://github.com/xmtp/xmtp-flutter
-- Kotlin: Coming soon!
+- [Start building with XMTP](/docs/build/get-started)
 
 ### Example apps
 
@@ -193,9 +181,3 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 📬 DM us via XMTP at `grants.xmtp.eth` for anything else
 
 <br/>
-
-:::tip Every big idea starts small
-
-[Apply here](https://forms.xmtp.org/grants-application) 🚀
-
-:::

@@ -7,6 +7,10 @@ sidebar_position: 16
 
 There are many ways to participate in the XMTP community, whether you are building with XMTP, working on improving the protocol, or simply interested in learning more about XMTP.
 
+## XMTP grants
+
+Have a public goods project you want to build that fosters XMTP ecosystem growth? Apply for an [XMTP grant](/grants).
+
 ## GitHub Discussions
 
 Have a question? Want to discuss an idea or protocol improvement? Start or join a discussion in the XMTP GitHub Discussions forum.
@@ -25,13 +29,9 @@ Keep up with the latest news and insights from XMTP.
 
 [Follow @XMTP\_](https://twitter.com/xmtp_)
 
-## Open source XMTP projects
+## Open source projects
 
-Contribute to XMTP open source projects to help improve the SDKs, developer tools, protocol, and documentation.
-
-- [View XMTP JavaScript SDK open issues](https://github.com/xmtp/xmtp-js/issues)
-- [View XMTP Quickstart Chat app open issues](https://github.com/xmtp/xmtp-quickstart-react/issues)
-- [Contribute to XMTP documentation](https://github.com/xmtp/xmtp-dot-org#readme)
+XMTP welcomes contributions to any of the public repos in the [XMTP](https://github.com/xmtp) and [XMTP Labs](https://github.com/xmtp-labs) GitHub orgs.
 
 ### 🐞 Bugs
 
@@ -45,8 +45,14 @@ Request features by creating an issue in the [related XMTP GitHub repo](https://
 
 We encourage pull requests (PRs) from the community, but we suggest that you start with a feature request or a post to [XMTP GitHub Discussions](https://github.com/orgs/xmtp/discussions), just to do a temperature check. For example, if the PR involves a major change to the XMTP protocol, it must be fleshed out as an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) before work begins.
 
+If your PR to a repo in the [XMTP](https://github.com/xmtp) or [XMTP Labs](https://github.com/xmtp-labs) GitHub org is meerged, you're eligible to claim this [XMTP contributor POAP](https://www.gitpoap.io/gp/1042).
+
 ## XMTP Improvement Proposals
 
 XMTP Improvement Proposals (XIPs) propose and document updates to XMTP, which may become standards for XMTP clients and applications to adopt.
 
-[Learn more and participate](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md)
+Is there something your app needs that the protocol doesn’t currently support? Consider creating an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-0-purpose-process.md) (XIP). 
+
+Here’s a [template](https://github.com/xmtp/XIPs/blob/main/xip-template.md) you can use to create one.
+
+Take a look at [existing XIPs](https://github.com/xmtp/XIPs/tree/main/XIPs). XIPs are meant to reflect the needs of the XMTP developer community and benefit from your input and expertise.

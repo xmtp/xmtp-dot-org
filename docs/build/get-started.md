@@ -1,5 +1,5 @@
 ---
-sidebar_label: Start
+sidebar_label: Get started
 sidebar_position: 1
 description: "Get started building apps with XMTP."
 ---
@@ -17,8 +17,9 @@ The key bundle persists encrypted in the network using a [wallet signature](/do
 
 All this happens transparently, without requiring any additional code.
 
-## Usage
+### Overview
 
+This is an overview of the core concepts and lines of code neeeded to use XMTP successfully.
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
 
@@ -29,10 +30,10 @@ import { Wallet } from "ethers";
 // You'll want to replace this with a wallet from your application
 const wallet = Wallet.createRandom();
 // Create the client with your wallet. This will connect to the XMTP development network by default
-const xmtp = await Client.create(wallet);
+const xmtp = await Client.create(wallet, { env: "dev" });
 // Start a conversation with XMTP
 const conversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
 );
 // Load all messages in the conversation
 const messages = await conversation.messages();
@@ -286,20 +287,21 @@ npm i @xmtp/react-native-sdk
 </TabItem>
 </Tabs>
 
-### Quickstarts 🏁
+import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
-- [NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
-- [ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs)
-- [Dart](https://github.com/xmtp/xmtp-android)
-- [Kotlin](https://github.com/xmtp/xmtp-flutter)
-- [Swift](https://github.com/xmtp/xmtp-ios)
-- [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
-- [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
-- [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
-- [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
+<Quickstarts />
 
-#### Need to send a test message?
+### Example apps
+
+- [React web app](https://github.com/xmtp/xmtp-quickstart-react)
+- [React Native app](https://github.com/xmtp/example-chat-react-native)
+
+### Need to send a test message?
 
 Message this XMTP message bot to get an immediate automated reply:
 
 - `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
+
+### Troubleshooting
+
+- If you get into issues with `Buffer` and `polyfills` check out our [troubleshoot tips](/docs/developer-quickstart#troubleshooting)

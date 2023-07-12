@@ -21,6 +21,8 @@ In the context of the Lens Protocol, each identity is represented as a Profile N
 Because an address can hold multiple profiles and there are address-based interactions such as follow or collect, the default profile variable allows the owner to select one profile as their default. This functionality gives interfaces the ability to shape how such interactions are displayed based on the default profile, rather than just an address. [Read more](https://docs.lens.xyz/docs/get-default-profile)
 :::
 
+Need a Lens handle? Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/)
+
 ## Start a conversation with a Lens profile
 
 ![Screenshot showing a search for a Lens profile in the New message panel in Lenster](img/search-for-lens-profile.png)

@@ -8,7 +8,9 @@ description: Build this quickstart app to learn some of the fundamental concepts
 
 In this tutorial we are going to build a simple chat app using XMTP and NextJS. We are going to be chatting to a bot for simplicity. The bot is going to be a simple echo bot that will reply with the same message we send.
 
-### Demo App
+### NextJS Example
+
+If you want to just clone the repo and get it working follow this commands. If you want to do it from scratch jump to the [#getting-started](#getting-started) section below.
 
 [<div class="div-header-github-link"></div> xmtp-quickstart-nextjs](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
 
@@ -26,7 +28,7 @@ The first step involves creating and configuring the Next.js application.
 To generate a new Next.js app, execute the following command in your terminal:
 
 ```bash
-npx create-next-app xmtp-quickstart-nextjs
+npx create-next-app my-app
 
 ✔ Would you like to use TypeScript with this project? Yes
 ✔ Would you like to use ESLint with this project? Yes
@@ -40,13 +42,14 @@ npx create-next-app xmtp-quickstart-nextjs
 
 - Connect wallet button
 - Authenticate with XMTP
-- Loading a conversation
+- Create a conversation
 - Sending a message
+- Listen for messages
 
 ### Install dependencies
 
 ```bash
-npm install @xmtp/xmtp-js @thirdweb-dev/react
+npm install  @thirdweb-dev/react @xmtp/xmtp-js
 ```
 
 ### Configuring the client
@@ -84,7 +87,7 @@ Now that we have the wrapper we can add a button that will sign our user in with
 ```
 
 ```tsx
-// Function to initialize the XMTP client
+// Function to initialize the XMTP clients
 const initXmtp = async function () {
   // Create the XMTP client
   const xmtp = await Client.create(signer, { env: "production" });
@@ -97,11 +100,29 @@ const initXmtp = async function () {
 };
 ```
 
-### Load conversation and messages
+```jsx
+// Function to load the existing messages in a conversation
+const newConversation = async function (xmtp_client, addressTo) {
+  //Creates a new conversation with the address
+  if (await xmtp_client?.canMessage(addressTo)) {
+    //if you try with a non-enabled wallet is going to fail 0x1234567890123456789012345678901234567890
+    const conversation = await xmtp_client.conversations.newConversation(
+      addressTo,
+    );
+    convRef.current = conversation;
+    //Loads the messages of the conversation
+    const messages = await conversation.messages();
+    setMessages(messages);
+  } else {
+    console.log("cant message because is not on the network.");
+    //cant message because is not on the network.
+  }
+};
+```
 
-Now using our hooks we are going to use the state to listen when XMTP is connected.
+### Listen to messages
 
-Later we are going to load our conversations and we are going to simulate starting a conversation with one of our bots
+We are going to use the `useEffect` hook to listen to new messages.
 
 ```tsx
 useEffect(() => {
@@ -124,37 +145,98 @@ useEffect(() => {
 }, [messages, isOnNetwork]);
 ```
 
-### Listen to conversations
+import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
-In your component initialize the hook to listen to conversations
+<Quickstarts />
 
-```tsx
-const [history, setHistory] = useState(null);
-const { messages } = useMessages(conversation);
-// Stream messages
-const onMessage = useCallback((message) => {
-  setHistory((prevMessages) => {
-    const msgsnew = [...prevMessages, message];
-    return msgsnew;
-  });
-}, []);
-useStreamMessages(conversation, onMessage);
-```
+### Example apps
 
-### Quickstarts 🏁
-
-- [NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs)
-- [ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs)
-- [Dart](https://github.com/xmtp/xmtp-android)
-- [Kotlin](https://github.com/xmtp/xmtp-flutter)
-- [Swift](https://github.com/xmtp/xmtp-ios)
-- [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
-- [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
-- [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions)
-- [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
+- [React web app](https://github.com/xmtp/xmtp-quickstart-react)
+- [React Native app](https://github.com/xmtp/example-chat-react-native)
 
 #### Need to send a test message?
 
 Message this XMTP message bot to get an immediate automated reply:
 
 - `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
+
+#### Troubleshooting
+
+If you get into issues with `Buffer` and `polyfills` check out our fix below:
+
+1. Install buffer dependency
+
+```bash
+npm i buffer
+```
+
+2. Create a new file `polyfills.js` in the root of your project
+
+```tsx
+import { Buffer } from "buffer";
+
+window.Buffer = window.Buffer ?? Buffer;
+```
+
+3. Import it into your main file on the first line
+
+- ReacJS: `index.js` or `index.tsx`
+- VueJS: `main.js`
+- NuxtJS: `app.vue`
+
+```tsx
+import "./polyfills";
+```
+
+4. Update config files
+
+- Webpack: `vue.config.js` or `webpack.config.js`:
+
+```jsx
+const webpack = require("webpack");
+
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        Buffer: ["buffer", "Buffer"],
+      }),
+    ],
+  },
+  transpileDependencies: true,
+};
+```
+
+- Vite: `vite.config.js`:
+
+```jsx
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import { Buffer } from "buffer";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  define: {
+    global: {
+      Buffer: Buffer,
+    },
+  },
+});
+```
+
+- NuxtJS: `nuxt.config.js`:
+
+```tsx
+export default {
+  build: {
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.node = {
+          Buffer: true,
+        };
+      }
+    },
+  },
+};
+```

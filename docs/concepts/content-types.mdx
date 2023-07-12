@@ -196,11 +196,11 @@ conversation.send(audioRecording, {
 });
 ```
 
-As a best practice, use the `contentFallback` option to provide an alt text-like plain text description that will display in place of the original content in the message if an app is unable to handle your custom (non-standard) content type.
+As shown in the example above, you **must** provide a `contentFallback` value. Use it to provide an alt text-like description of the original content. Providing a `contentFallback` value enables clients that don't support your custom (non-standard) content type to still display something meaningful. This is especially important because your custom content type **will not** automatically be supported by other apps. 
 
-:::info
+:::caution
 
-Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
+If you don't provide a `contentFallback` value, clients that don't support your custom content type will display an empty message. This results in a poor user experience and breaks interoperability.
 
 :::
 

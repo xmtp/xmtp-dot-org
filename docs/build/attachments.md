@@ -13,7 +13,7 @@ As you go through the steps and code samples in this section, consider viewing t
 ## Install the package
 
 ```bash
-npm i xmtp-content-type-remote-attachment
+npm i @xmtp/xmtp-content-type-remote-attachment
 ```
 
 ## Send a remote attachment
@@ -32,6 +32,25 @@ Message attachments are files. More specifically, attachments are objects that h
 Because XMTP messages can only be up to 1MB in size, we need to store the attachment somewhere other than the XMTP network. In other words, we need to store it in a remote location.
 
 End-to-end encryption must apply not only to XMTP messages, but to message attachments as well. For this reason, we need to encrypt the attachment before we store it.
+
+## Import and register codecs
+
+```tsx
+// Import the codecs we're going to use
+import {
+  AttachmentCodec,
+  RemoteAttachmentCodec,
+} from "xmtp-content-type-remote-attachment";
+```
+
+```tsx
+// Create the XMTP client
+const xmtp = await Client.create(signer, { env: "dev" });
+// Register the codecs. AttachmentCodec is for local attachments (<1MB)
+xmtp.registerCodec(new AttachmentCodec());
+//RemoteAttachmentCodec is for remote attachments (>1MB) using thirdweb storage
+xmtp.registerCodec(new RemoteAttachmentCodec());
+```
 
 ## Create an attachment object
 
@@ -64,7 +83,7 @@ Use the `RemoteAttachmentCodec.encodeEncrypted` to encrypt the attachment:
 
 const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
   attachment,
-  new AttachmentCodec()
+  new AttachmentCodec(),
 );
 ```
 
@@ -133,7 +152,13 @@ await sendMessageFromHook(remoteAttachment, {
 });
 ```
 
-Note that we’re using `contentFallback` to enable clients that don't support these content types to still display something. For cases where clients *do* support these types, they can use the content fallback as alt text for accessibility purposes.
+As shown in the example above, you **must** provide a `contentFallback` value. Use it to provide an alt text-like description of the original content. Providing a `contentFallback` value enables clients that don't support the content type to still display something meaningful. 
+
+:::caution
+
+If you don't provide a `contentFallback` value, clients that don't support the content type will display an empty message. This results in a poor user experience and breaks interoperability.
+
+:::
 
 ## Download, decrypt, and decode the attachment
 
@@ -142,7 +167,7 @@ Now that you can receive a remote attachment, you need a way to receive a remote
 ```tsx
 const attachment: Attachment = await RemoteAttachmentCodec.load(
   content,
-  client
+  client,
 );
 ```
 

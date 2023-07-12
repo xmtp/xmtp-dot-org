@@ -131,8 +131,8 @@ body {
     no-repeat;
   content: "";
   display: flex;
-  height: 24px;
-  width: 30px;
+  height: 22px;
+  width: 28px;
 }
 
 .div-header-github-link:before {
@@ -178,6 +178,62 @@ body {
 
 .min-h-20 {
   min-height: 5rem;
+}
+
+[data-theme="dark"] h5 {
+  color: white;
+}
+
+[data-theme="dark"] .built p {
+  color: white;
+}
+
+.builder-bg {
+  background-image: urL("/img/bwx-bg-light.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-theme="dark"] .builder-bg {
+  background-image: urL("/img/bwx-bg-dark.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.website-icon {
+  background-image: urL("/img/globe-black.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-theme="dark"] .website-icon {
+  background-image: urL("/img/globe-white.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.github-icon {
+  background-image: urL("/img/github-icon-black.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-theme="dark"] .github-icon {
+  background-image: urL("/img/github-icon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.twitter-icon {
+  background-image: urL("/img/twitter-icon-black.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-theme="dark"] .twitter-icon {
+  background-image: urL("/img/twitter-icon-white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Override Docusaurus styling*/
@@ -319,6 +375,8 @@ body {
   background-color: black;
   padding-left: 0;
   padding-right: 0;
+  padding-top: 5em;
+  padding-bottom: 3em;
 }
 
 .footer .container {
@@ -487,7 +545,7 @@ main[class*="docMainContainer"] tr {
 }
 
 [class*="mdxPageWrapper"] {
-  max-width: 55%;
+  max-width: 65%;
   margin-left: var(--doc-sidebar-width);
 }
 
@@ -663,6 +721,7 @@ main[class*="docMainContainer"] tr {
 }
 
 .navbar__sbbutton {
+  font-size: 0.8em;
   color: white;
   border: none;
   background-color: #ef4444;
@@ -677,6 +736,7 @@ main[class*="docMainContainer"] tr {
 }
 
 .navbar__chatbutton {
+  font-size: 0.8em;
   color: white;
   border: none;
   background-color: #4f45e4;
@@ -731,9 +791,9 @@ main[class*="docMainContainer"] tr {
 /*general g=text*/
 p,
 tr {
-  line-height: 21px;
+  line-height: 24px;
   margin-bottom: 15px !important;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .theme-doc-breadcrumbs {
@@ -775,18 +835,19 @@ ul li a:before {
 .tabs-container .margin-top--md {
   margin: 0px !important;
 }
+
 .tabs-container p {
   padding: 15px;
-  margin: 0px !important;
+  /*margin: 0px !important;*/
   font-size: 14px;
   line-height: 20px;
   background: var(--ifm-pre-background);
   border-left: 2px solid var(--ifm-pre-background);
 }
+
 .tabs-container ul {
   background: var(--ifm-pre-background);
   font-size: 14px;
-  margin: 0px !important;
   line-height: 20px;
 }
 .tabs {
@@ -794,9 +855,56 @@ ul li a:before {
   border: solid rgba(0, 0, 0, 0.1);
 }
 
-.tabs__item:hover {
+/* big tabs*/
+
+.tabs-container .bigTab > ul {
+  background: white !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+.tabs.bigTab {
+  background: inherit;
+  border: 1px solid red !important;
+}
+.tabs:not(.bigTab) > .tabs__item:hover {
   border-radius: 0px;
 }
+.tabs.bigTab > .tabs__item {
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+  font-size: 14px !important;
+  line-height: 12px !important;
+}
+.tabs.bigTab {
+  background: inherit;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: 0px !important;
+  border-top-right-radius: var(--ifm-code-border-radius);
+  border-top-left-radius: var(--ifm-code-border-radius);
+}
+.tabs-container .bigTab > p {
+  padding: inherit;
+  margin: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background: inherit;
+  border-left: inherit;
+}
+.bigTab > .tabs__item--active {
+  border: 1px solid #4d45db;
+  border-radius: 10px;
+}
+/*margin fix*/
+
+.tabs-container p {
+  margin-bottom: 0px !important;
+}
+
+.bigTab > p {
+  margin-bottom: 15px !important;
+}
+
 /*image turtorials*/
 .bwx-guides li {
   margin: 0px !important;
@@ -812,7 +920,6 @@ ul li a:before {
 .bwx-guides li h4 {
   font-size: 1rem;
 }
-/* */
 
 /*TOP NAV*/
 .navbar__item .dropdown__menu {
@@ -852,7 +959,6 @@ ul li a:before {
   margin: 0;
   padding: 0;
 }
-
 .chain-item {
   display: flex;
   flex-direction: column;
@@ -865,17 +971,29 @@ ul li a:before {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   text-align: center;
-}
+} /*
+.white .chain-item {
+  background-color: white;
+}*/
 .chain-item img {
   width: 100%;
   max-width: 80px; /* 20% smaller than before */
   margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.chain-item .svg {
+  max-width: 10px; /* 20% smaller than before */
+  margin-bottom: 0px;
 }
 .six .chain-item {
   width: calc(16.4% - 20px); /* 20% for 5 columns, subtracting margin */
 }
 .seven .chain-item {
   width: calc(14% - 20px); /* 20% for 5 columns, subtracting margin */
+}
+.eight .chain-item {
+  width: calc(12% - 20px); /* 20% for 5 columns, subtracting margin */
 }
 .six .chain-item img {
   max-height: 66px;
@@ -887,10 +1005,10 @@ ul li a:before {
   font-size: 14px;
 }
 @media (max-width: 799px) {
-  .six .chain-item,
-  .seven .chain-item,
   .chain-item {
-    width: calc(20% - 0px); /* 20% for 5 columns, subtracting margin */
+    width: calc(
+      20% - 0px
+    ) !important; /* 20% for 5 columns, subtracting margin */
   }
   .chain-item span {
     font-size: 12px;
@@ -959,6 +1077,16 @@ code:not([class]) {
   .menu__link .subtext {
     display: none;
   }
+
+  .navbar__sbbutton {
+    font-size: 0.8em;
+    margin: 1em 0 0 1.25em;
+  }
+
+  .navbar__chatbutton {
+    font-size: 0.8em;
+    margin: 1em 0 1.25em 1.25em;
+  }
 }
 /*footer cols*/
 @media (max-width: 799px) {
@@ -976,7 +1104,7 @@ code:not([class]) {
   .flexbar {
     width: 100%;
     border-top: 1px solid lightgrey;
-    padding-top: 10px;
+    padding-top: 16px;
     margin-top: 10px;
   }
   .flexbar a {
@@ -984,7 +1112,7 @@ code:not([class]) {
     color: inherit;
   }
   .flexbar div {
-    margin-bottom: 5px;
+    margin-bottom: 16px;
   }
   .flexbar img {
     width: 20px;
@@ -992,18 +1120,16 @@ code:not([class]) {
   }
 }
 .footerfino {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 table tr,
 table code {
-  font-size: 12px !important;
   line-height: 20px !important;
   padding: 0px !important;
 }
 table code {
-  font-size: 10px !important;
   padding: 1px !important;
 }
 .discord .theme-admonition,

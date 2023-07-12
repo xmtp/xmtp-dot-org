@@ -1,7 +1,7 @@
 ---
 slug: unstoppableweb
 hide_table_of_contents: true
-title: "XMTP Apps Can Reach Unstoppable Domains"
+title: "XMTP apps can reach Unstoppable Domains"
 date: 2023-06-15
 authors: fabri
 image: "/img/uc-uns.png"
@@ -9,8 +9,6 @@ description: "XMTP Apps Can Reach Unstoppable Domains"
 ---
 
 ![thirdweb.jpg](/img/uc-uns.png)
-
-# XMTP Apps Can Reach Unstoppable Domains
 
 :::danger GIVEAWAY ALERT
 The first 100 people who message 'xmtp-discount.x' on @converseapp will get 20% off their Unstoppable Domain 😎 We'll also give one lucky winner a $500 USDC prize on Friday! Stay tuned on Converse for updates.
@@ -30,14 +28,14 @@ Creating seamless user experiences in decentralized applications (dApps) is vita
 
 Best of all, once an Unstoppable Domain is minted on the blockchain, it belongs to the user forever without any renewal fees.Today, we'll walk you through the process of adding Unstoppable Domain support to your XMTP app.
 
-## **Prerequisites[](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app#prerequisites)**
+## Prerequisites
 
 This tutorial requires that you have the following prerequisites in place:
 
 - An XMTP empowered app built with the [XMTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js)
 - Add the Unstoppable Domains SDK
 
-```jsx
+```bash
 npm i --save @unstoppabledomains/resolution
 ```
 
@@ -69,7 +67,7 @@ const resolution = new Resolution({
 });
 ```
 
-## **Resolve User Inputs[](https://xmtp.org/docs/client-sdk/javascript/tutorials/build-key-xmtp-chat-features-in-a-lens-app#filter-for-lens-conversations-and-display-message-previews)**
+## Resolve user inputs
 
 When building with XMTP, you need to provide a way to initiate a conversation between the sender and the recipient's wallet addresses. As suggested above, include an "Enter a Wallet Address" field. It's important to validate user input to check if it's a valid Unstoppable Domain. If it is, you can resolve it.
 
@@ -125,7 +123,7 @@ const domain = await resolution.addr(name, "ETH");
 
 ![CleanShot 2023-06-04 at 19.29.24@2x.png](./media/uns-img1.png)
 
-### Reverse Resolve Wallet Addresses
+### Reverse resolve wallet addresses
 
 To complete the Unstoppable Domains integration, it’s important to convert the wallet addresses on the page into their respective domains. Using the [XMTP.chat](https://xmtp.chat/inbox) inbox as an example, we’ll want to reverse resolve the connected wallet address as well as the message previews.
 
@@ -207,8 +205,8 @@ useEffect(() => {
 
 **Learn more**
 
-To learn more about Building with Unstoppable Domains, see the [Developer Portal](https://docs.unstoppabledomains.com/) on the Unstoppable Domains website.
+To learn more about building with Unstoppable Domains, see the [Developer Portal](https://docs.unstoppabledomains.com/) on the Unstoppable Domains website.
 
-### **Join us on Discord[](https://xmtp.org/blog/thirdbweb-wallet-remote-attachments#join-us-on-discord)**
+### Join us on Discord
 
-We're excited to be partnering with Unstoppable Domains to bring you better solutions for serving and reaching your end-users. [Stay tuned](https://discord.com/invite/xmtp) for more guides coming soon!
+We're excited to be partnering with Unstoppable Domains to bring you better solutions for serving and reaching your end users. [Stay tuned](https://discord.com/invite/xmtp) for more guides coming soon!

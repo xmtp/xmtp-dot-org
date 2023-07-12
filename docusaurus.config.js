@@ -20,7 +20,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
-  favicon: "img/favicon.png",
+  favicon: "img/favi.png",
   organizationName: "xmtp",
   projectName: "xmtp-dot-org",
   scripts: [
@@ -52,16 +52,16 @@ const config = {
           id: "default",
           routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars/sidebars.js"),
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
-          editUrl: "https://github.com/xmtp/xmtp-dot-org/tree/main",
+          editUrl: "https://github.com/xmtp/xmtp-dot-org/edit/main",
         },
         blog: {
           blogDescription:
-            "A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure web3 messaging",
+            "A blog about XMTP (Extensible Message Transport Protocol), the open protocol and network for secure messaging",
           blogSidebarTitle: "All posts",
           blogSidebarCount: "ALL",
-          editUrl: "https://github.com/xmtp/xmtp-dot-org/tree/main",
+          editUrl: "https://github.com/xmtp/xmtp-dot-org/edit/main",
         },
         theme: {
           customCss: require.resolve("./src/css/tailwind.css"),
@@ -95,7 +95,7 @@ const config = {
         defaultMode: "light",
         disableSwitch: false,
       },
-      image: "img/xmtp-card.png",
+      image: "img/xmtp-new.jpeg",
       navbar: {
         title: "",
         logo: {
@@ -124,7 +124,7 @@ const config = {
               {
                 to: "/docs/use-cases/deso",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/social-icon.svg" alt="Social icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeSo</div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Web3 social</div></div>`,
               },
               {
                 to: "/docs/use-cases/marketing",
@@ -147,9 +147,14 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
               },
               {
-                to: "/docs/use-cases/finance",
+                to: "/docs/use-cases/defi",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeFi</div></div>`,
+              },
+              {
+                to: "/docs/use-cases/gaming",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/smile.svg" alt="Smile icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Gaming</div></div>`,
               },
             ],
           },
@@ -188,12 +193,6 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>
                 <div class="subtext text-sm text-normal whitespace-pre-line">Contribute to the XMTP community</div></div></div>`,
               },
-              {
-                to: "grants",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/rocket.svg" alt="Rocket icon"/></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Grants</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Apply for a grant for a project that fosters ecosystem growth</div></div></div>`,
-              },
             ],
           },
           {
@@ -213,12 +212,6 @@ const config = {
             position: "right",
             value:
               '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
-          },
-          {
-            href: "/built-with-xmtp",
-            title: "Built with XMTP",
-            position: "right",
-            className: "header-xmtp-link",
           },
           {
             href: "https://discord.com/invite/xmtp",
@@ -242,93 +235,99 @@ const config = {
             items: [
               {
                 label: `JavaScript`,
-                to: `/docs/sdks/js`,
+                href: "https://github.com/xmtp/xmtp-js",
               },
               {
                 label: `Swift`,
-                to: `/docs/sdks/swift`,
+                href: `https://github.com/xmtp/xmtp-ios`,
               },
               {
                 label: `Dart`,
-                to: `/docs/sdks/dart`,
+                href: `https://github.com/xmtp/xmtp-flutter`,
               },
               {
                 label: `Kotlin`,
-                to: `/docs/sdks/kotlin`,
+                href: `https://github.com/xmtp/xmtp-android`,
               },
               {
                 label: `React`,
-                to: `/docs/sdks/react`,
+                href: `https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk`,
               },
               {
-                label: `SDK references`,
-                to: `/docs/sdks/references`,
-              },
-            ],
-          },
-          {
-            title: "Build",
-            items: [
-              {
-                label: `Identity resolution`,
-                to: `/docs/tutorials/identity-resolution`,
-              },
-              {
-                label: `Attachments`,
-                to: `/docs/build/attachments`,
-              },
-              {
-                label: `Group chats`,
-                to: `/docs/build/group-chats`,
-              },
-              {
-                label: `Push notifications`,
-                to: `/docs/build/notifications`,
-              },
-              {
-                label: `Broadcast`,
-                to: `/docs/tutorials/broadcast`,
-              },
-              {
-                label: `Bots`,
-                to: `/docs/tutorials/bots`,
+                label: `React Native`,
+                href: `https://github.com/xmtp/xmtp-react-native`,
               },
             ],
           },
+
           {
-            title: "Concepts",
+            title: "Use cases",
             items: [
               {
-                label: `Architecture`,
-                to: `/docs/concepts/architectural-overview`,
+                label: "Chat",
+                to: "/docs/use-cases/messaging",
               },
               {
-                label: `Content types`,
-                to: `/docs/concepts/content-types`,
+                label: "Web3 social",
+                to: "/docs/use-cases/deso",
               },
               {
-                label: `Interoperable inbox`,
-                to: `/docs/concepts/interoperable-inbox`,
+                label: "Marketing",
+                to: "/docs/use-cases/marketing",
               },
               {
-                label: `Keys`,
-                to: `/docs/concepts/key-generation-and-usage`,
+                label: "Automation",
+                to: "/docs/use-cases/automation",
               },
               {
-                label: `Encryption`,
-                to: `/docs/concepts/invitation-and-message-encryption`,
+                label: "Support",
+                to: "/docs/use-cases/support",
               },
               {
-                label: `Account signatures`,
-                to: `/docs/concepts/account-signatures`,
+                label: "Commerce",
+                to: "/docs/use-cases/commerce",
               },
               {
-                label: `Algorithms`,
-                to: `/docs/concepts/algorithms-in-use`,
+                label: "DeFi",
+                to: "/docs/use-cases/defi",
               },
               {
-                label: `XIPs`,
-                to: `/docs/concepts/xips`,
+                label: "Gaming",
+                to: "/docs/use-cases/gaming",
+              },
+            ],
+          },
+
+          {
+            title: "Resources",
+            items: [
+              {
+                label: "Changelog",
+                to: "/docs/changelog",
+              },
+              {
+                label: "Roadmap",
+                to: "roadmap",
+              },
+              {
+                label: "Security",
+                to: "/docs/faq#security",
+              },
+              {
+                label: "Protocol FAQ",
+                to: "/docs/faq",
+              },
+              {
+                label: "Dev FAQ",
+                to: "/docs/dev-faqs",
+              },
+              {
+                label: "Brand assets",
+                href: "https://github.com/xmtp/brand",
+              },
+              {
+                label: "Status page",
+                href: "https://status.xmtp.com/",
               },
             ],
           },
@@ -336,20 +335,16 @@ const config = {
             title: "Community",
             items: [
               {
+                label: "Code of conduct",
+                to: "code-of-conduct",
+              },
+              {
                 label: "Contribute",
                 to: "/docs/contribute",
               },
               {
-                label: "Grants",
-                to: "grants",
-              },
-              {
                 label: "Built with XMTP",
                 to: "built-with-xmtp",
-              },
-              {
-                label: "Code of conduct",
-                to: "code-of-conduct",
               },
               {
                 label: "Discord",
@@ -363,37 +358,12 @@ const config = {
                 label: "GitHub Discussions",
                 href: "https://github.com/orgs/xmtp/discussions",
               },
-            ],
-          },
-          {
-            title: "Resources",
-            items: [
               {
-                label: "Changelog",
-                to: "/docs/changelog",
+                label: "GitHub",
+                href: "https://github.com/xmtp",
               },
               {
-                label: "Roadmap",
-                to: "roadmap",
-              },
-              {
-                label: "Architecture",
-                to: "/docs/concepts/architectural-overview",
-              },
-              {
-                label: "Security",
-                to: "/docs/faq#security",
-              },
-              {
-                label: "FAQ",
-                to: "/docs/faq",
-              },
-              {
-                label: "Status page",
-                href: "https://status.xmtp.com/",
-              },
-              {
-                label: "Careers",
+                label: "Careers at XMTP Labs",
                 href: "https://blog.xmtp.com/careers/",
               },
             ],
@@ -425,7 +395,7 @@ const config = {
         //... other Algolia params
       },
       prism: {
-        additionalLanguages: ["dart", "swift", "kotlin"],
+        additionalLanguages: ["dart", "swift", "kotlin", "graphql"],
         theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
       },

@@ -93,3 +93,7 @@ conversation.send(
 
 </TabItem>
 </Tabs>
+
+## Optimize web rendering
+
+To optimize rendering performance on the web, render only what the user can see, instead of rendering everything. For example, if you are building with the React client SDK (`react-sdk`), use virtualized lists for conversations and messages (e.g. `react-virtuoso`).

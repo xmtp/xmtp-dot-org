@@ -3,6 +3,8 @@ sidebar_label: Chat bots
 sidebar_position: 6
 ---
 
+import onboardingbot from '/docs/concepts/img/onboarding-bot.png';
+
 # Build a chat bot
 
 Use the [XMTP Bot Starter project](https://github.com/xmtp/xmtp-bot-starter) to create chat bot on the XMTP network.
@@ -17,7 +19,7 @@ This project is **alpha** status and ready for you to start experimenting with. 
 
 ```typescript
 // TODO: this isn't actually published yet.
-import run from "xmtp-bot-starter";
+import run from "@xmtp/bot-starter";
 
 // Call `run` with a handler function. The handler function is called
 // with a HandlerContext
@@ -51,6 +53,10 @@ By default, the bot connects to the `dev` network. If you want to connect to pro
 ## More bot resources
 
 - Want to use a GUI to create a chat bot? Check out [chainjet.io](https://chainjet.io/).
+
+  For example, when a user sends a message to `gm.xmtp.eth`, a message bot built with ChainJet sends an automatic reply. You can configure your bot to provide onboarding information or an easy way for a user to send and receive their first messages with your app.
+
+  <img src={onboardingbot} style={{width:"600px"}}/>
 
 - Need someone to send a test message to? Try these addresses:
 

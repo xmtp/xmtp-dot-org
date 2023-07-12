@@ -6,6 +6,7 @@ description: Learn how to create and configure an XMTP client
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import noxmtpidentity from '/docs/concepts/img/no-xmtp-identity.png';
 
 # Build authentication with XMTP
 
@@ -25,7 +26,7 @@ A client is created that requires passing in a connected wallet that implements 
 ```ts
 import { Client } from "@xmtp/xmtp-js";
 // Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet);
+const xmtp = await Client.create(wallet, { env: "dev" });
 ```
 
 </TabItem>
@@ -184,7 +185,7 @@ You might want to check if a blockchain address is registered on the network bef
 ```ts
 const isOnProdNetwork = await Client.canMessage(
   "0x3F11b27F323b62B159D2642964fa27C46C841897",
-  { env: "production" }
+  { env: "production" },
 );
 ```
 
@@ -201,9 +202,15 @@ if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
 </TabItem>
 </Tabs>
 
+Be sure to provide error messaging when a user enters an address in the **To** field and the address hasn't yet created an XMTP identity.
+
+<img src={noxmtpidentity} style={{width:"450px"}}/>
+
 ## Configure the client
 
 Configure a client's network connection and other options using these client creation parameters:
+
+Set the `env` client option to `dev` while developing. Set it to `production` before you launch.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
