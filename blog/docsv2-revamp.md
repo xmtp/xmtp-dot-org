@@ -51,7 +51,7 @@ On top of this all external sources where updated. Sources like Readme’s and i
 
 import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
-<Quickstarts />
+<Quickstarts/>
 
 ## **Use Cases to Spark Your Imagination 💡**
 
