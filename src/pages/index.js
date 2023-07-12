@@ -32,7 +32,7 @@ function HomepageHeader() {
               </h1>
               <h4 className="w-[460px] leading-7">Build apps that communicate with <br></br>every wallet in the world.</h4>
               <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
-                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
+                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Explore Apps</a>
               </button>
             </div>
           </div>
@@ -48,7 +48,7 @@ function HomepageHeader() {
               </h1>
               <h4 className="w-[460px] leading-7">Build apps that communicate with <br></br>every wallet in the world.</h4>
               <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
-                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
+                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Explore Apps</a>
               </button>
             </div>
           </div>
@@ -64,7 +64,7 @@ function HomepageHeader() {
               </h1>
               <h4 className="w-[460px] leading-7">Build apps that communicate with <br></br>every wallet in the world.</h4>
               <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
-                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
+                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Explore Apps</a>
               </button>
             </div>
           </div>
@@ -80,7 +80,7 @@ function HomepageHeader() {
               </h1>
               <h4 className="w-[460px] leading-7">Build apps that communicate with <br></br>every wallet in the world.</h4>
               <button className="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
-                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Start building</a>
+                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img><a class="hover:no-underline text-white hover:text-white" href="/built-with-xmtp">Explore Apps</a>
               </button>
             </div>
           </div>
@@ -99,34 +99,34 @@ function HomepageLogos() {
   <div class="pt-16 md:py-0">
     <div class="mx-auto max-w-[1440px] px-6 lg:px-8 block dark:hidden">
       <div class="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-8 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-6">
-        <a href="https://xmtp.org/docs/tutorials/cyberconnect"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-cyberconnect.svg" alt="CyberConnect" width="206" height="32"></img></a>
-        <a href="https://xmtp.org/docs/tutorials/lens-multiprofile"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-lens.svg" alt="Lens" width="72" height="24"></img></a>
-        <a href="#"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-4web-light.svg" alt="4th Web" width="129" height="23"></img></a>
-        <a href="https://xmtp.org/blog/join-the-movement"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-converse.svg" alt="Converse App" width="132" height="40"></img></a>
-        <a href="https://xmtp.org/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-ens.svg" alt="ENS" width="109" height="42"></img></a>
-        <a href="https://xmtp.org/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" width="150" height="40"></img></a>
+        <a href="/docs/tutorials/cyberconnect"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-cyberconnect.svg" alt="CyberConnect" width="206" height="32"></img></a>
+        <a href="/docs/tutorials/lens-multiprofile"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-lens.svg" alt="Lens" width="72" height="24"></img></a>
+        <a href="#"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-coinbase.svg" alt="Coinbase" width="129" height="23"></img></a>
+        <a href="/blog/join-the-movement"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-converse.svg" alt="Converse App" width="132" height="40"></img></a>
+        <a href="/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-ens.svg" alt="ENS" width="109" height="42"></img></a>
+        <a href="/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" width="150" height="40"></img></a>
       </div>
       <div class="mt-8 flex justify-center">
         <p class="relative rounded-full bg-indigo-50 dark:bg-indigo-800 hover:bg-indigo-100 hover:drop-shadow transition px-6 py-1.5 text-sm leading-6 text-gray-800 dark:text-white ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
-          <span class="leading-4 md:inline font-medium mr-2">🎉 We just launched an unforgettable partnership with a big company</span>
-          <a href="#" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+          <span class="leading-4 md:inline font-semibold mr-2">🎉 Coinbase Wallet is the first wallet to launch messaging with XMTP</span>
+          <a href="/blog/coinbasewallet" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
         </p>
       </div>
     </div>
 
     <div class="mx-auto max-w-[1440px] px-6 lg:px-8 hidden dark:block">
       <div class="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-6">
-        <a href="https://xmtp.org/docs/tutorials/cyberconnect"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-cyberconnect-dark.svg" alt="CyberConnect" width="206" height="32"></img></a>
-        <a href="https://xmtp.org/docs/tutorials/lens-multiprofile"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-lens-dark.svg" alt="Lens" width="72" height="24"></img></a>
-        <a href="#"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-4web-dark.svg" alt="4th Web" width="129" height="23"></img></a>
-        <a href="https://xmtp.org/blog/join-the-movement"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-converse-dark.svg" alt="Converse App" width="132" height="40"></img></a>
-        <a href="https://xmtp.org/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-ens-dark.svg" alt="ENS" width="109" height="42"></img></a>
-        <a href="https://xmtp.org/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-unstoppabledomains-dark.svg" alt="Unstoppable Domains" width="150" height="40"></img></a>
+        <a href="/docs/tutorials/cyberconnect"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-cyberconnect-dark.svg" alt="CyberConnect" width="206" height="32"></img></a>
+        <a href="/docs/tutorials/lens-multiprofile"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-lens-dark.svg" alt="Lens" width="72" height="24"></img></a>
+        <a href="#"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-coinbase-dark.svg" alt="Coinbase" width="129" height="23"></img></a>
+        <a href="/blog/join-the-movement"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-converse-dark.svg" alt="Converse App" width="132" height="40"></img></a>
+        <a href="/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-ens-dark.svg" alt="ENS" width="109" height="42"></img></a>
+        <a href="/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-unstoppabledomains-dark.svg" alt="Unstoppable Domains" width="150" height="40"></img></a>
       </div>
       <div class="mt-8 flex justify-center">
         <p class="relative rounded-full bg-indigo-50 dark:bg-indigo-800 hover:bg-indigo-100 hover:drop-shadow transition px-6 py-1.5 text-sm leading-6 text-gray-800 dark:text-white ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
-          <span class="md:inline font-medium mr-2">🎉 We just launched an unforgettable partnership with a big company</span>
-          <a href="#" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+          <span class="md:inline font-semibold mr-2">🎉 Coinbase Wallet is the first wallet to launch messaging with XMTP</span>
+          <a href="/blog/coinbasewallet" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
         </p>
       </div>
     </div>
