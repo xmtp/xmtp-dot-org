@@ -21,7 +21,7 @@ Coinbase Wallet has officially joined the XMTP network! Now every app built with
 
 Finally, *we can reach the wallet*.
 
-<ReactPlayer width="100%" controls url='/img/sm-cbw-messaging-final.mp4' />
+<ReactPlayer width="100%" controls url='/img/cbw-messaging-final.mp4' muted playing="true" />
 
 <br/>
 
@@ -45,7 +45,7 @@ Coinbase Wallet built its inbox using XMTP to ensure that:
 
 Scan the QR code below to unlock messaging in your Coinbase Wallet app. If you don't have the Coinbase Wallet app yet, the QR code will redirect you to download it.
 
-![Reach users through Coinbase Wallet and XMTP](./media/XMTP_CBW-Pilot-Blog_QR.jpg)
+![Reach users through Coinbase Wallet and XMTP](./media/XMTP_CBW-Pilot-Blog_QR.jpeg)
 
 Scanning this QR code will redirect you to message `gm.xmtp.eth` – which, if you do, will qualify you to receive a commemorative NFT!
 
