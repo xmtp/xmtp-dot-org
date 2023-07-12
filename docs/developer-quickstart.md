@@ -42,7 +42,7 @@ npx create-next-app my-app
 
 - Connect wallet button
 - Authenticate with XMTP
-- Loading a conversation
+- Create a conversation
 - Sending a message
 - Listen for messages
 
@@ -120,11 +120,9 @@ const newConversation = async function (xmtp_client, addressTo) {
 };
 ```
 
-### Load conversation and messages
+### Listen to messages
 
-Now using our hooks we are going to use the state to listen when XMTP is connected.
-
-Later we are going to load our conversations and we are going to simulate starting a conversation with one of our bots
+We are going to use the `useEffect` hook to listen to new messages.
 
 ```tsx
 useEffect(() => {
@@ -145,23 +143,6 @@ useEffect(() => {
     streamMessages();
   }
 }, [messages, isOnNetwork]);
-```
-
-### Listen to conversations
-
-In your component initialize the hook to listen to conversations
-
-```tsx
-const [history, setHistory] = useState(null);
-const { messages } = useMessages(conversation);
-// Stream messages
-const onMessage = useCallback((message) => {
-  setHistory((prevMessages) => {
-    const msgsnew = [...prevMessages, message];
-    return msgsnew;
-  });
-}, []);
-useStreamMessages(conversation, onMessage);
 ```
 
 import Quickstarts from "@site/src/components/Quickstarts/index.md";
