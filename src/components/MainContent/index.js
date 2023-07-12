@@ -115,23 +115,6 @@ export const MainContent = ({ styles }) => {
     <>
       <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto px-0 xl:px-4`}>
         <div>
-          <ul
-            role="list"
-            className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0">
-            {HEADER_DATA.map(({ title, subtitle, url, icon }) => (
-              <HeaderBox
-                key={title}
-                title={title}
-                subtitle={subtitle}
-                url={url}
-                styles={styles}
-                icon={icon}
-              />
-            ))}
-          </ul>
-        </div>
-
-        <div>
           <div className="relative min-h-[630px]">
             <div className="mt-12 sm:mt-16">
               <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
@@ -329,7 +312,7 @@ export const MainContent = ({ styles }) => {
         </div>
 
         <div>
-          <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
+          <div className="relative mx-auto max-w-8xl divide-y divide-gray-200 mt-8">
             <div>
               <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white color-white">
                 Latest from XMTP
@@ -344,7 +327,7 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-16 mb-10  max-w-screen-max border border-solid border-black bg-white mx-0 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
+        <div className="flex flex-col mt-16 mb-20  max-w-screen-max border border-solid border-black bg-white mx-0 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-12">
           <div className="flex justify-center flex-col items-center mt-12 text-center">
             <h1 className="text-black text-4xl sm:text-3xl font-bold mb-4">
               Join a community of builders
