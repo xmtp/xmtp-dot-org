@@ -12,8 +12,8 @@ tags:
   - Wallets
 ---
 
-import FeedbackWidget from '/src/components/FeedbackWidget'
 import ReactPlayer from 'react-player'
+import FeedbackWidget from '/src/components/FeedbackWidget'
 
 *No more cold starts: plug into the XMTP network to reach users where they are.*
 
@@ -21,7 +21,7 @@ Coinbase Wallet has officially joined the XMTP network! Now every app built with
 
 Finally, *we can reach the wallet*.
 
-<ReactPlayer width="100%" controls url="/img/CBW-Messaging-Final.mp4" />
+<ReactPlayer width="100%" controls url='/img/sm-cbw-messaging-final.mp4' />
 
 <br/>
 
