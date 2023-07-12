@@ -161,11 +161,6 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 - [Start building with XMTP](/docs/build/get-started)
 
-### Example apps
-
-- React web app: https://github.com/xmtp/xmtp-quickstart-react
-- React Native app: https://github.com/xmtp/example-chat-react-native
-
 ### Project showcase
 
 - [Built with XMTP](built-with-xmtp)
