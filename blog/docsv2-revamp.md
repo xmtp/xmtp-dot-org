@@ -49,21 +49,9 @@ All documentation in a single Left Nav. It's like the chapters of a book, ensuri
 
 On top of this all external sources where updated. Sources like Readme’s and independent pages that point only to the Docs, preventing outdated content from appearing again. This ensures everyone interacting with XMTP gets the latest and best experience, always.
 
-## **Developer Quickstarts 🚀**
+import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
-A set of Quickstarts is now at your fingertips to take you from 0 to 1 in no time. Whether you're an expert or a beginner, in just 5-10 minutes you can have a sample app up and running in your preferred language.
-
-https://xmtp.org/docs/developer-quickstart
-
-Here’s what we’ve got:
-
-- [ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs) / [NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs) / [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
-- [VueJS](https://github.com/fabriguespe/xmtp-quickstart-vuejs) / [NuxtJS](https://github.com/fabriguespe/xmtp-quickstart-nuxtjs)
-- [Dart](https://github.com/xmtp/xmtp-android)
-- [Kotlin](https://github.com/xmtp/xmtp-flutter)
-- [Swift](https://github.com/xmtp/xmtp-ios)
-- [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
-- [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions) / [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
+<Quickstarts/>
 
 ## **Use Cases to Spark Your Imagination 💡**
 
