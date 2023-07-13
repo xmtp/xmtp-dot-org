@@ -19,7 +19,7 @@ All this happens transparently, without requiring any additional code.
 
 ### Overview
 
-This is an overview of the core concepts and lines of code neeeded to use XMTP successfully.
+This is an overview of the core concepts and lines of code needed to use XMTP successfully.
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
 
