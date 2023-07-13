@@ -1,21 +1,18 @@
 ---
-slug: coinbase
 hide_table_of_contents: true
-title: A New Era for Communication Coinbase Wallet Launches with the XMTP Network
+title: "A new era for communication: Coinbase Wallet launches with the XMTP network"
 date: 2023-07-13
 authors: shane
-description: A New Era for Communication Coinbase Wallet Launches with the XMTP Network
+description: "Anyone in the world can now send free global payments with a private and secure text message. This is just the beginning of individuals having more control, privacy, and ownership over their assets, identity, and now communication."
 image: ./media/cb/hero.jpg
 tags:
-  - Wallet
-  - Coinbase
+  - Wallets
+  - Coinbase Wallet
 ---
 
-![](./media/cb/hero.jpg)
-
-# A New Era for Communication: Coinbase Wallet Launches with the XMTP Network
-
 Anyone in the world can now send free global payments with a private and secure text message. This is just the beginning of individuals having more control, privacy, and ownership over their assets, identity, and now communication.
+
+![new era for communication blog post card](./media/cb/hero.jpg)
 
 <!--truncate-->
 
@@ -43,4 +40,4 @@ Today, we are not just launching a product; we're unveiling the future of commun
 
 Say hello, I'd love to hear from you.
 
-_Shane Mac - Co-founder of XMTP_
+_Shane Mac_
