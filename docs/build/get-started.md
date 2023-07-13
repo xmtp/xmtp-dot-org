@@ -242,7 +242,7 @@ To start with XMTP, install the XMTP client SDK:
 <TabItem value="js" label="JavaScript" default>
 
 ```bash
-npm install @xmtp/js
+npm install @xmtp/xmtp-js
 ```
 
 </TabItem>
