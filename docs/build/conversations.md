@@ -11,41 +11,9 @@ import TabItem from "@theme/TabItem";
 
 Most of the time, when interacting with the network, you'll want to do it through conversations. Conversations are between two wallets addresses.
 
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
-
-```ts
-import { Client } from "@xmtp/xmtp-js";
-// Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet, { env: "dev" });
-const conversations = xmtp.conversations;
-```
-
-</TabItem>
-<TabItem value="swift" label="Swift" default>
-
-```swift
-import XMTP
-// Create the client with a wallet from your app
-let client = try await Client.create(account: account)
-let conversations = try await client.conversations.list()
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
-
-```kotlin
-// Create the client with a wallet from your app
-val client = Client().create(account = account)
-val conversations = client.conversations.list()
-```
-
-</TabItem>
-</Tabs>
-
 ## Check if an address is on the network
 
-You might want to check if a blockchain address is registered on the network before instantiating a client instance.
+First you need to check if the address you want to message is on the XMTP network. You can do this by calling `Client.canMessage` with the address you want to message.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
@@ -65,6 +33,35 @@ const { canMessage } = useCanMessage();
 if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
   //Create conversation
 }
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift" default>
+
+```swift
+let canAliceMessageBob = try await client.canMessage(bobClient.address)
+```
+
+</TabItem>
+
+<TabItem value="dart" label="Dart" default>
+
+```dart
+ val canMessage = client.canMessage(fixtures.bobClient.address)
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin - beta" default>
+
+```kotlin
+ val canMessage = client.canMessage(bobClient.address)
+```
+
+</TabItem>
+<TabItem value="reactnative" label="React Native - beta" default>
+
+```tsx
+const canMessage = await client.canMessage(address);
 ```
 
 </TabItem>
