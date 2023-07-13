@@ -5,7 +5,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl/";
 const BuiltWithXmtp = () => {
   return (
     <div>
-      <div className="relative isolate overflow-hidden px-6 py-16 sm:py-24 mb-8 bg-color  built">
+      <div className="relative s isolate overflow-hidden px-6 py-16 sm:py-24 mb-8 bg-color  built">
         <div className=" absolute inset-0 -z-10 h-full w-full builder-bg"></div>
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl lg:mx-0">
