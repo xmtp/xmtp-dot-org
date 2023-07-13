@@ -56,8 +56,12 @@ const newConversation = await xmtp.conversations.newConversation(
 );
 ```
 
-</TabItem>
-<TabItem value="swift" label="Swift" default>
+Message this XMTP message bot to get an immediate automated reply:
+
+- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
+
+  </TabItem>
+  <TabItem value="swift" label="Swift" default>
 
 ```swift
 let newConversation = try await client.conversations.newConversation(
@@ -97,7 +101,7 @@ const convv = await startConversation(
 
 You can get a list of all conversations that have one or more messages.
 
-These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP. 
+These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP.
 
 To provide a user-friendly cold start (first load), display a "Loading conversations" status message and a progress bar.
 
