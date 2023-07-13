@@ -175,37 +175,6 @@ await initialize({ keys, signer });
 </TabItem>
 </Tabs>
 
-## Check if an address is on the network
-
-You might want to check if a blockchain address is registered on the network before instantiating a client instance.
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
-
-```ts
-const isOnProdNetwork = await Client.canMessage(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897",
-  { env: "production" },
-);
-```
-
-</TabItem>
-<TabItem value="react" label="React - beta" default>
-
-```tsx
-const { canMessage } = useCanMessage();
-if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
-  //Create conversation
-}
-```
-
-</TabItem>
-</Tabs>
-
-Be sure to provide error messaging when a user enters an address in the **To** field and the address hasn't yet created an XMTP identity.
-
-<img src={noxmtpidentity} style={{width:"450px"}}/>
-
 ## Configure the client
 
 Configure a client's network connection and other options using these client creation parameters:
