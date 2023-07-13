@@ -49,27 +49,47 @@ npx create-next-app my-app
 ### Install dependencies
 
 ```bash
-npm install  @thirdweb-dev/react @xmtp/xmtp-js
+npm install @xmtp/xmtp-js ethers@5.7.0
 ```
 
-### Configuring the client
+### Connect wallet button
 
 First we need to initialize XMTP client using as signer our wallet connection of choice.
 
 ```tsx
 import Home from "@/components/Home";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
 
 export default function Index() {
-  return (
-    <ThirdwebProvider activeChain="goerli">
-      <Home />
-    </ThirdwebProvider>
-  );
+  return <Home />;
 }
 ```
 
-### Display connect with XMTP
+```jsx
+const connectWallet = async function () {
+  // Check if the ethereum object exists on the window object
+  if (typeof window.ethereum !== "undefined") {
+    try {
+      // Request access to the user's Ethereum accounts
+      await window.ethereum.enable();
+
+      // Instantiate a new ethers provider with Metamask
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+      // Get the signer from the ethers provider
+      setSigner(provider.getSigner());
+
+      // Update the isConnected data property based on whether we have a signer
+      setIsConnected(true);
+    } catch (error) {
+      console.error("User rejected request", error);
+    }
+  } else {
+    console.error("Metamask not found");
+  }
+};
+```
+
+### Authenticate with XMTP
 
 Now that we have the wrapper we can add a button that will sign our user in with XMTP.
 
@@ -77,7 +97,9 @@ Now that we have the wrapper we can add a button that will sign our user in with
 {
   isConnected && !isOnNetwork && (
     <div className={styles.xmtp}>
-      <ConnectWallet theme="light" />
+      <button onClick={connectWallet} className="btnXmtp">
+        Connect Wallet
+      </button>
       <button onClick={initXmtp} className={styles.btnXmtp}>
         Connect to XMTP
       </button>
@@ -100,6 +122,8 @@ const initXmtp = async function () {
 };
 ```
 
+### Create a conversation
+
 ```jsx
 // Function to load the existing messages in a conversation
 const newConversation = async function (xmtp_client, addressTo) {
@@ -120,7 +144,7 @@ const newConversation = async function (xmtp_client, addressTo) {
 };
 ```
 
-### Listen to messages
+### Listen for messages
 
 We are going to use the `useEffect` hook to listen to new messages.
 
