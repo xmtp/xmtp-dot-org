@@ -56,10 +56,6 @@ const newConversation = await xmtp.conversations.newConversation(
 );
 ```
 
-Message this XMTP message bot to get an immediate automated reply:
-
-- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
-
   </TabItem>
   <TabItem value="swift" label="Swift" default>
 
@@ -96,6 +92,10 @@ const convv = await startConversation(
 
 </TabItem>
 </Tabs>
+
+Message this XMTP message bot to get an immediate automated reply:
+
+- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
 
 ## List existing conversations
 
