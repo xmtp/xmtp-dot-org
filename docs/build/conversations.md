@@ -95,8 +95,8 @@ const convv = await startConversation(
 
 Message this XMTP message bot to get an immediate automated reply:
 
-- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`) `production` network only
-- `gm` (`0x20B572bE48527a770479744AeC6fE5644F97678B`) `dev` network only
+- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`) `production`
+- `gm` (`0x20B572bE48527a770479744AeC6fE5644F97678B`) `dev`
 
 ## List existing conversations
 
