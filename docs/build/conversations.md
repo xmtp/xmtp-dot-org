@@ -7,7 +7,7 @@ description: Learn how to start, list, and cache conversations with XMTP
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Create and list conversations with XMTP
+# Start, list, and cache conversations with XMTP
 
 Most of the time, when interacting with the network, you'll want to do it through conversations. Conversations are between two wallets addresses.
 
