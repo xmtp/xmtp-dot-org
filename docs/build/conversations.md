@@ -52,7 +52,7 @@ You can create a new conversation with any address activated on the XMTP network
 
 ```ts
 const newConversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897",
+  "0x937C0d4a6294cdfa575de17382c7076b579DC176",
 );
 ```
 
