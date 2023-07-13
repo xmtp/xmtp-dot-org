@@ -13,13 +13,13 @@ Most of the time, when interacting with the network, you'll want to do it throug
 
 ## Check if an address is on the network
 
-First you need to check if the address you want to message is on the XMTP network. You can do this by calling `Client.canMessage` with the address you want to message.
+First you need to check if the address you want to message is on the XMTP network. You can do this by calling `client.canMessage` with the address you want to message.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
 
 ```ts
-const isOnProdNetwork = await Client.canMessage(
+const isOnProdNetwork = await client.canMessage(
   "0x3F11b27F323b62B159D2642964fa27C46C841897",
   { env: "production" },
 );
