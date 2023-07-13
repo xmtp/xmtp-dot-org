@@ -54,16 +54,6 @@ npm install @xmtp/xmtp-js ethers@5.7.0
 
 ### Connect wallet button
 
-First we need to initialize XMTP client using as signer our wallet connection of choice.
-
-```tsx
-import Home from "@/components/Home";
-
-export default function Index() {
-  return <Home />;
-}
-```
-
 ```jsx
 const connectWallet = async function () {
   // Check if the ethereum object exists on the window object
