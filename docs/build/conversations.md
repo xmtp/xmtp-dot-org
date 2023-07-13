@@ -72,6 +72,8 @@ if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
 
 Be sure to provide error messaging when a user enters an address in the **To** field and the address hasn't yet created an XMTP identity.
 
+import noxmtpidentity from '/docs/concepts/img/no-xmtp-identity.png';
+
 <img src={noxmtpidentity} style={{width:"450px"}}/>
 
 ## Start a new conversation

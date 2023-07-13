@@ -6,7 +6,6 @@ description: Learn how to create and configure an XMTP client
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import noxmtpidentity from '/docs/concepts/img/no-xmtp-identity.png';
 
 # Build authentication with XMTP
 
