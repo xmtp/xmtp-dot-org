@@ -26,16 +26,6 @@ const isOnProdNetwork = await client.canMessage(
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta" default>
-
-```tsx
-const { canMessage } = useCanMessage();
-if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
-  //Create conversation
-}
-```
-
-</TabItem>
 <TabItem value="swift" label="Swift" default>
 
 ```swift
@@ -55,6 +45,16 @@ let canAliceMessageBob = try await client.canMessage(bobClient.address)
 
 ```kotlin
  val canMessage = client.canMessage(bobClient.address)
+```
+
+</TabItem>
+<TabItem value="react" label="React - beta" default>
+
+```tsx
+const { canMessage } = useCanMessage();
+if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
+  //Create conversation
+}
 ```
 
 </TabItem>
