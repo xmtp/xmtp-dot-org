@@ -1153,6 +1153,9 @@ table code {
   width: 100%;
   max-width: 1920px;
   height: 660px;
+  overflow: hidden;
+  position: relative;
+}
 }
 
 .carousel-cell {
