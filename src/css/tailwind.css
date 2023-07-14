@@ -1161,10 +1161,13 @@ table code {
   width: 100%;
   height: 41.25rem;
   text-align: center;
+}
+
+.carousel-cell img {
   visibility: hidden;
 }
 
-.carousel-cell.is-selected {
+.carousel-cell.is-selected img {
   visibility: visible;
 }
 
