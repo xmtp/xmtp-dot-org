@@ -16,7 +16,7 @@ XMTP supports real-time message delivery and retrieval. Once you initially retri
 You can listen for new conversations being started in real-time. This enables apps to display incoming messages from new contacts.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 ```ts
 const stream = await xmtp.conversations.stream();
@@ -32,7 +32,7 @@ for await (const conversation of stream) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift" default>
+<TabItem value="swift" label="Swift">
 
 ```swift
 for try await conversation in client.conversations.stream() {
@@ -48,7 +48,7 @@ for try await conversation in client.conversations.stream() {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart" default>
+<TabItem value="dart" label="Dart">
 
 ```dart
 var listening = client.streamConversations().listen((convo) {
@@ -59,7 +59,7 @@ await listening.cancel();
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
+<TabItem value="kotlin" label="Kotlin">
 
 ```kotlin
 client.conversations.stream().collect {
@@ -70,7 +70,7 @@ client.conversations.stream().collect {
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta" default>
+<TabItem value="react" label="React - beta">
 
 ```tsx
 //The `useStreamConversations` hook listens for new conversations in real-time and calls the passed callback when a new conversation is created. It also exposes an error state.
@@ -95,6 +95,20 @@ if (error) {
 ```
 
 </TabItem>
+<TabItem value="rn" label="React Native - beta">
+
+```tsx
+const stream = await xmtp.conversations.stream()
+for await (const conversation of stream) {
+  console.log(`New conversation started with ${conversation.peerAddress}`)
+  // Say hello to your new friend
+  await conversation.send('Hi there!')
+  // Break from the loop to stop listening
+  break
+}
+```
+
+</TabItem>
 </Tabs>
 
 ## Listen for new messages in a conversation
@@ -104,8 +118,9 @@ You can listen for any new messages (incoming or outgoing) in a conversation by 
 A successfully received message (that makes it through the decoding and decryption without throwing) can be trusted to be authentic, i.e. that it was sent by the owner of the `message.senderAddress` wallet and that it wasn't modified in transit. The `message.sent` timestamp can be trusted to have been set by the sender.
 
 The Stream returned by the `stream` methods is an asynchronous iterator and as such usable by a for-await-of loop. Note however that it is by its nature infinite, so any looping construct used with it will not terminate, unless the termination is explicitly initiated (by breaking the loop or by an external call to `return`).
+
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
@@ -121,7 +136,7 @@ for await (const message of await conversation.streamMessages()) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift" default>
+<TabItem value="swift" label="Swift">
 
 ```swift
 let conversation = try await client.conversations.newConversation(
@@ -138,7 +153,7 @@ for try await message in conversation.streamMessages() {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart" default>
+<TabItem value="dart" label="Dart">
 
 ```dart
 var listening = client.streamMessages(convo).listen((message) {
@@ -149,7 +164,7 @@ await listening.cancel();
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
+<TabItem value="kotlin" label="Kotlin">
 
 ```kotlin
 val conversation =
@@ -165,7 +180,7 @@ conversation.streamMessages().collect {
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta" default>
+<TabItem value="react" label="React - beta">
 
 ```tsx
 import { useStreamMessages } from "@xmtp/react-sdk";
@@ -180,6 +195,22 @@ useStreamMessages(conversation, onMessage);
 ```
 
 </TabItem>
+<TabItem value="rn" label="React Native - beta">
+
+```tsx
+const conversation = await xmtp.conversations.newConversation(
+  '0x3F11b27F323b62B159D2642964fa27C46C841897'
+)
+for await (const message of await conversation.streamMessages()) {
+  if (message.senderAddress === xmtp.address) {
+    // This message was sent from me
+    continue
+  }
+  console.log(`New message from ${message.senderAddress}: ${message.content}`)
+}
+```
+
+</TabItem>
 </Tabs>
 
 ## Listen for new messages in all conversations
@@ -190,8 +221,8 @@ There is a chance this stream can miss messages if multiple new conversations ar
 
 :::
 
-<Tabs>
-<TabItem value="js" label="JavaScript" default>
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript">
 
 ```jsx
 for await (const message of await xmtp.conversations.streamAllMessages()) {
@@ -204,7 +235,7 @@ for await (const message of await xmtp.conversations.streamAllMessages()) {
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta" default>
+<TabItem value="react" label="React - beta">
 
 ```tsx
 import { useStreamAllMessages } from "@xmtp/react-sdk";
@@ -228,6 +259,19 @@ import { useStreamAllMessages } from "@xmtp/react-sdk";
     ...
   );
 };
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native - beta">
+
+```tsx
+for await (const message of await xmtp.conversations.streamAllMessages()) {
+  if (message.senderAddress === xmtp.address) {
+    // This message was sent from me
+    continue
+  }
+  console.log(`New message from ${message.senderAddress}: ${message.content}`)
+}
 ```
 
 </TabItem>

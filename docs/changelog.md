@@ -10,6 +10,18 @@ This changelog provides information about release milestones for XMTP SDKs, deve
 
 ---
 
+#### July 2023
+
+## [React Native client SDK repo](https://github.com/xmtp/xmtp-react-native) is in Beta (xmtp-react-native)
+
+Provides a package you can use to build with XMTP in a React Native or Expo app. (Jul 14)
+
+## [Kotlin client SDK](https://github.com/xmtp/xmtp-android) is Production Ready (xmtp-android)
+
+Provides a Kotlin implementation of an XMTP message API client for use with Android apps. (Jul 13)
+
+---
+
 #### May 2023
 
 ## [JavaScript client SDK](https://github.com/xmtp/xmtp-js) v9.1.0 released (xmtp-js)

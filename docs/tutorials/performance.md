@@ -52,7 +52,7 @@ To learn more, see [List messages in a conversation with pagination](/docs/build
 Compress message content using a supported compression algorithm.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 Message content can be optionally compressed using the `compression` option. The value of the option is the name of the compression algorithm to use. Currently supported are `gzip` and `deflate`. Compression is applied to the bytes produced by the content codec.
 
@@ -67,7 +67,7 @@ conversation.send("#".repeat(1000), {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift" default>
+<TabItem value="swift" label="Swift">
 
 Message content can be optionally compressed using the compression option. The value of the option is the name of the compression algorithm to use. Currently supported are gzip and deflate. Compression is applied to the bytes produced by the content codec.
 
@@ -78,7 +78,7 @@ try await conversation.send(text: '#'.repeat(1000), options: .init(compression: 
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
+<TabItem value="kotlin" label="Kotlin">
 
 Message content can be optionally compressed using the compression option. The value of the option is the name of the compression algorithm to use. Currently supported are gzip and deflate. Compression is applied to the bytes produced by the content codec.
 

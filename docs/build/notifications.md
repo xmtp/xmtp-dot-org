@@ -76,7 +76,7 @@ For Android apps, see [Enable the `xmtp-android` example app to send push notif
 
 8. Replace `YOUR_FIREBASE_SENDER_ID` in the `PullController.ts` with your sender ID from Firebase.
 
-## IOS
+## iOS
 
 For iOS apps, see the `xmtp-ios` [example app and notification service](https://github.com/xmtp/xmtp-ios/tree/main/XMTPiOSExample) to explore how you might enable push notifications for your own app built with the [`xmtp-ios` SDK](https://github.com/xmtp/xmtp-ios).
 

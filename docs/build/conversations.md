@@ -16,7 +16,7 @@ Most of the time, when interacting with the network, you'll want to do it throug
 First you need to check if the address you want to message is on the XMTP network. You can do this by calling `client.canMessage` with the address you want to message.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 ```ts
 const isOnProdNetwork = await client.canMessage(
@@ -26,7 +26,7 @@ const isOnProdNetwork = await client.canMessage(
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift" default>
+<TabItem value="swift" label="Swift">
 
 ```swift
 let canAliceMessageBob = try await client.canMessage(bobClient.address)
@@ -34,21 +34,21 @@ let canAliceMessageBob = try await client.canMessage(bobClient.address)
 
 </TabItem>
 
-<TabItem value="dart" label="Dart" default>
+<TabItem value="dart" label="Dart">
 
 ```dart
  val canMessage = client.canMessage(fixtures.bobClient.address)
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
+<TabItem value="kotlin" label="Kotlin">
 
 ```kotlin
  val canMessage = client.canMessage(bobClient.address)
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta" default>
+<TabItem value="react" label="React - beta">
 
 ```tsx
 const { canMessage } = useCanMessage();
@@ -58,10 +58,14 @@ if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
 ```
 
 </TabItem>
-<TabItem value="reactnative" label="React Native - beta" default>
+<TabItem value="rn" label="React Native - beta">
 
 ```tsx
-const canMessage = await client.canMessage(address);
+import { Client } from '@xmtp/xmtp-react-native'
+
+const isOnDevNetwork = await Client.canMessage(
+  '0x3F11b27F323b62B159D2642964fa27C46C841897'
+)
 ```
 
 </TabItem>
@@ -78,7 +82,7 @@ import noxmtpidentity from '/docs/concepts/img/no-xmtp-identity.png';
 You can create a new conversation with any address activated on the XMTP network. To learn more about supported addresses, see [Chains](/docs/dev-faqs#chains).
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 ```ts
 const newConversation = await xmtp.conversations.newConversation(
@@ -87,7 +91,7 @@ const newConversation = await xmtp.conversations.newConversation(
 ```
 
   </TabItem>
-  <TabItem value="swift" label="Swift" default>
+  <TabItem value="swift" label="Swift">
 
 ```swift
 let newConversation = try await client.conversations.newConversation(
@@ -95,14 +99,14 @@ let newConversation = try await client.conversations.newConversation(
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart" default>
+<TabItem value="dart" label="Dart">
 
 ```dart
 var convo = await client.newConversation("0x...");
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
+<TabItem value="kotlin" label="Kotlin">
 
 ```kotlin
 val newConversation =
@@ -110,7 +114,7 @@ val newConversation =
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta" default>
+<TabItem value="react" label="React - beta">
 
 ```tsx
 const startConversation = useStartConversation();
@@ -118,6 +122,15 @@ const convv = await startConversation(
   "0x3F11b27F323b62B159D2642964fa27C46C841897",
   "hi",
 );
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native - beta">
+
+```tsx
+const newConversation = await xmtp.conversations.newConversation(
+  '0x3F11b27F323b62B159D2642964fa27C46C841897'
+)
 ```
 
 </TabItem>
@@ -137,7 +150,7 @@ These conversations include all conversations for a user **regardless of which a
 To provide a user-friendly cold start (first load), display a "Loading conversations" status message and a progress bar.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 ```ts
 const allConversations = await xmtp.conversations.list();
@@ -149,7 +162,7 @@ for (const conversation of allConversations) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift" default>
+<TabItem value="swift" label="Swift">
 
 ```swift
 let allConversations = try await client.conversations.list()
@@ -161,7 +174,7 @@ for conversation in allConversations {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart" default>
+<TabItem value="dart" label="Dart">
 
 ```dart
 var conversations = await client.listConversations();
@@ -172,7 +185,7 @@ for (var convo in conversations) {
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
+<TabItem value="kotlin" label="Kotlin">
 
 ```kotlin
 val allConversations = client.conversations.list()
@@ -184,7 +197,7 @@ for (conversation in allConversations) {
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta" default>
+<TabItem value="react" label="React - beta">
 
 ```tsx
 const { conversations, error, isLoading } = useConversations();
@@ -200,6 +213,18 @@ const { conversations, error, isLoading } = useConversations();
 ```
 
 </TabItem>
+<TabItem value="rn" label="React Native - beta">
+
+```tsx
+const allConversations = await xmtp.conversations.list()
+// Say gm to everyone you've been chatting with
+for (const conversation of allConversations) {
+  console.log(`Saying GM to ${conversation.peerAddress}`)
+  await conversation.send('gm')
+}
+```
+
+</TabItem>
 </Tabs>
 
 ## Cache the conversation list
@@ -209,7 +234,7 @@ When running in a browser, conversations are cached in `LocalStorage` by default
 To disable this behavior, set the `persistConversations` client option to `false`.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 ```ts
 const clientWithNoCache = await Client.create(wallet, {
@@ -218,7 +243,7 @@ const clientWithNoCache = await Client.create(wallet, {
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
+<TabItem value="kotlin" label="Kotlin">
 
 ```kotlin
 val client = Client().create(wallet, { env: "dev" })
@@ -232,7 +257,7 @@ val client.importConversation(conversations)
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta" default>
+<TabItem value="react" label="React - beta">
 
 ```jsx
 const options = {
@@ -249,7 +274,7 @@ await initialize({ signer, options });
 You can save a conversation object locally using its `encodedContainer` property. This returns a `ConversationContainer` object which conforms to `Codable`.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="swift" label="Swift" default>
+<TabItem value="swift" label="Swift">
 
 ```swift
 // Get a conversation
@@ -273,7 +298,7 @@ try await decodedConversation.send(text: "hi")
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
+<TabItem value="kotlin" label="Kotlin">
 
 ```kotlin
 // Get a conversation

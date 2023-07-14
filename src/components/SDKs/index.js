@@ -50,7 +50,7 @@ const SDKs = () => {
       </a>
       <a
         target="_blank"
-        href="https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk"
+        href="https://github.com/xmtp/xmtp-react-native"
         className="chain-item">
         <img src={"/img/react.svg"} />
         <span>
