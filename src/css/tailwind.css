@@ -1152,6 +1152,7 @@ table code {
 .main-carousel {
   width: 100%;
   max-width: 1920px;
+  height: 660px;
 }
 
 .carousel-cell {
