@@ -135,7 +135,6 @@ function HomepageLogos() {
 );
 }
 
-
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 

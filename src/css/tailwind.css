@@ -1145,6 +1145,10 @@ table code {
   height: 10px;
 }
 
+.flickity-viewport {
+  height: 660px;
+}
+
 .main-carousel {
   width: 100%;
   max-width: 1920px;
