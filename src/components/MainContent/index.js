@@ -333,7 +333,7 @@ export const MainContent = ({ styles }) => {
               Join a community of builders
             </h1>
             <p className="text-neutral-800 text-base leading-6 text-center lg:max-w-[70%] mb-8">
-              From startups to Fortune 500 brands, developers trust and build with XMTP to deliver innovative messaging experiences
+              From startups to Fortune 500 companies, developers trust and build with XMTP to deliver innovative messaging experiences
             </p>
             <button className="bg-black rounded-lg w-52 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
               <img src="/img/xmtp-sm-icon.png" className="w-5 h-5 mr-2.5" />
