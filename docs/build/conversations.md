@@ -11,37 +11,67 @@ import TabItem from "@theme/TabItem";
 
 Most of the time, when interacting with the network, you'll want to do it through conversations. Conversations are between two wallets addresses.
 
+## Check if an address is on the network
+
+First you need to check if the address you want to message is on the XMTP network. You can do this by calling `client.canMessage` with the address you want to message.
+
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>
 
 ```ts
-import { Client } from "@xmtp/xmtp-js";
-// Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet, { env: "dev" });
-const conversations = xmtp.conversations;
+const isOnProdNetwork = await client.canMessage(
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
+  { env: "production" },
+);
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift" default>
 
 ```swift
-import XMTP
-// Create the client with a wallet from your app
-let client = try await Client.create(account: account)
-let conversations = try await client.conversations.list()
+let canAliceMessageBob = try await client.canMessage(bobClient.address)
+```
+
+</TabItem>
+
+<TabItem value="dart" label="Dart" default>
+
+```dart
+ val canMessage = client.canMessage(fixtures.bobClient.address)
 ```
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin - beta" default>
 
 ```kotlin
-// Create the client with a wallet from your app
-val client = Client().create(account = account)
-val conversations = client.conversations.list()
+ val canMessage = client.canMessage(bobClient.address)
+```
+
+</TabItem>
+<TabItem value="react" label="React - beta" default>
+
+```tsx
+const { canMessage } = useCanMessage();
+if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
+  //Create conversation
+}
+```
+
+</TabItem>
+<TabItem value="reactnative" label="React Native - beta" default>
+
+```tsx
+const canMessage = await client.canMessage(address);
 ```
 
 </TabItem>
 </Tabs>
+
+import noxmtpidentity from '/docs/concepts/img/no-xmtp-identity.png';
+
+- Be sure to provide error messaging when a user enters an address in the **To** field and the address hasn't yet created an XMTP identity.
+
+  <img src={noxmtpidentity} style={{width:"450px"}}/>
 
 ## Start a new conversation
 
@@ -52,12 +82,12 @@ You can create a new conversation with any address activated on the XMTP network
 
 ```ts
 const newConversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897",
+  "0x937C0d4a6294cdfa575de17382c7076b579DC176",
 );
 ```
 
-</TabItem>
-<TabItem value="swift" label="Swift" default>
+  </TabItem>
+  <TabItem value="swift" label="Swift" default>
 
 ```swift
 let newConversation = try await client.conversations.newConversation(
@@ -93,11 +123,18 @@ const convv = await startConversation(
 </TabItem>
 </Tabs>
 
+Message this XMTP message bot to get an immediate automated reply:
+
+- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`) env:`production`
+- `gm dev bot` (`0x20B572bE48527a770479744AeC6fE5644F97678B`) env:`dev`
+
 ## List existing conversations
 
 You can get a list of all conversations that have one or more messages.
 
 These conversations include all conversations for a user **regardless of which app created the conversation.** This functionality provides the concept of an [interoperable inbox](/docs/concepts/interoperable-inbox), which enables a user to access all of their conversations in any app built with XMTP.
+
+To provide a user-friendly cold start (first load), display a "Loading conversations" status message and a progress bar.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" default>

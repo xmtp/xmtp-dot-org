@@ -30,6 +30,16 @@ const config = {
       defer: true,
       "data-domain": "xmtp.org",
     },
+    {
+      src: "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js",
+      defer: true,
+      "data-domain": "xmtp.org",
+    },
+    {
+      src: "https://unpkg.com/flickity-fade@1/flickity-fade.js",
+      defer: true,
+      "data-domain": "xmtp.org",
+    },
   ],
   clientModules: [require.resolve("./src/css/tailwind.css")],
 
@@ -137,9 +147,14 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
               },
               {
-                to: "/docs/use-cases/finance",
+                to: "/docs/use-cases/defi",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeFi</div></div>`,
+              },
+              {
+                to: "/docs/use-cases/gaming",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/smile.svg" alt="Smile icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Gaming</div></div>`,
               },
             ],
           },
@@ -197,12 +212,6 @@ const config = {
             position: "right",
             value:
               '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
-          },
-          {
-            href: "/built-with-xmtp",
-            title: "Built with XMTP",
-            position: "right",
-            className: "header-xmtp-link",
           },
           {
             href: "https://discord.com/invite/xmtp",
@@ -280,7 +289,11 @@ const config = {
               },
               {
                 label: "DeFi",
-                to: "/docs/use-cases/finance",
+                to: "/docs/use-cases/defi",
+              },
+              {
+                label: "Gaming",
+                to: "/docs/use-cases/gaming",
               },
             ],
           },

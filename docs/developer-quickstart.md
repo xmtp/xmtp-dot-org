@@ -42,33 +42,44 @@ npx create-next-app my-app
 
 - Connect wallet button
 - Authenticate with XMTP
-- Loading a conversation
+- Create a conversation
 - Sending a message
+- Listen for messages
 
 ### Install dependencies
 
 ```bash
-npm install @xmtp/xmtp-js @thirdweb-dev/react
+npm install @xmtp/xmtp-js ethers@5.7.0
 ```
 
-### Configuring the client
+### Connect wallet button
 
-First we need to initialize XMTP client using as signer our wallet connection of choice.
+```jsx
+const connectWallet = async function () {
+  // Check if the ethereum object exists on the window object
+  if (typeof window.ethereum !== "undefined") {
+    try {
+      // Request access to the user's Ethereum accounts
+      await window.ethereum.enable();
 
-```tsx
-import Home from "@/components/Home";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
+      // Instantiate a new ethers provider with Metamask
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
 
-export default function Index() {
-  return (
-    <ThirdwebProvider activeChain="goerli">
-      <Home />
-    </ThirdwebProvider>
-  );
-}
+      // Get the signer from the ethers provider
+      setSigner(provider.getSigner());
+
+      // Update the isConnected data property based on whether we have a signer
+      setIsConnected(true);
+    } catch (error) {
+      console.error("User rejected request", error);
+    }
+  } else {
+    console.error("Metamask not found");
+  }
+};
 ```
 
-### Display connect with XMTP
+### Authenticate with XMTP
 
 Now that we have the wrapper we can add a button that will sign our user in with XMTP.
 
@@ -76,7 +87,9 @@ Now that we have the wrapper we can add a button that will sign our user in with
 {
   isConnected && !isOnNetwork && (
     <div className={styles.xmtp}>
-      <ConnectWallet theme="light" />
+      <button onClick={connectWallet} className="btnXmtp">
+        Connect Wallet
+      </button>
       <button onClick={initXmtp} className={styles.btnXmtp}>
         Connect to XMTP
       </button>
@@ -86,10 +99,10 @@ Now that we have the wrapper we can add a button that will sign our user in with
 ```
 
 ```tsx
-// Function to initialize the XMTP client
+// Function to initialize the XMTP clients
 const initXmtp = async function () {
   // Create the XMTP client
-  const xmtp = await Client.create(signer, { env: "dev" });
+  const xmtp = await Client.create(signer, { env: "production" });
   //Create or load conversation with Gm bot
   newConversation(xmtp, PEER_ADDRESS);
   // Set the XMTP client in state for later use
@@ -99,11 +112,31 @@ const initXmtp = async function () {
 };
 ```
 
-### Load conversation and messages
+### Create a conversation
 
-Now using our hooks we are going to use the state to listen when XMTP is connected.
+```jsx
+// Function to load the existing messages in a conversation
+const newConversation = async function (xmtp_client, addressTo) {
+  //Creates a new conversation with the address
+  if (await xmtp_client?.canMessage(addressTo)) {
+    //if you try with a non-enabled wallet is going to fail 0x1234567890123456789012345678901234567890
+    const conversation = await xmtp_client.conversations.newConversation(
+      addressTo,
+    );
+    convRef.current = conversation;
+    //Loads the messages of the conversation
+    const messages = await conversation.messages();
+    setMessages(messages);
+  } else {
+    console.log("cant message because is not on the network.");
+    //cant message because is not on the network.
+  }
+};
+```
 
-Later we are going to load our conversations and we are going to simulate starting a conversation with one of our bots
+### Listen for messages
+
+We are going to use the `useEffect` hook to listen to new messages.
 
 ```tsx
 useEffect(() => {
@@ -126,31 +159,9 @@ useEffect(() => {
 }, [messages, isOnNetwork]);
 ```
 
-### Listen to conversations
-
-In your component initialize the hook to listen to conversations
-
-```tsx
-const [history, setHistory] = useState(null);
-const { messages } = useMessages(conversation);
-// Stream messages
-const onMessage = useCallback((message) => {
-  setHistory((prevMessages) => {
-    const msgsnew = [...prevMessages, message];
-    return msgsnew;
-  });
-}, []);
-useStreamMessages(conversation, onMessage);
-```
-
 import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
 <Quickstarts />
-
-### Example apps
-
-- [React web app](https://github.com/xmtp/xmtp-quickstart-react)
-- [React Native app](https://github.com/xmtp/example-chat-react-native)
 
 #### Need to send a test message?
 

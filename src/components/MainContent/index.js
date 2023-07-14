@@ -115,24 +115,6 @@ export const MainContent = ({ styles }) => {
     <>
       <main className={`max-w-screen-max mx-4 lg:mx-4 xl:mx-auto px-0 xl:px-4`}>
         <div>
-          <ul
-            role="list"
-            className="-mt-20 md:-mt-36 grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3 list-none m-0 p-0"
-          >
-            {HEADER_DATA.map(({ title, subtitle, url, icon }) => (
-              <HeaderBox
-                key={title}
-                title={title}
-                subtitle={subtitle}
-                url={url}
-                styles={styles}
-                icon={icon}
-              />
-            ))}
-          </ul>
-        </div>
-
-        <div>
           <div className="relative min-h-[630px]">
             <div className="mt-12 sm:mt-16">
               <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
@@ -148,8 +130,7 @@ export const MainContent = ({ styles }) => {
                   <span className="text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                     <ALink
                       to="https://github.com/orgs/xmtp/discussions"
-                      className="text-red-500 font-bold"
-                    >
+                      className="text-red-500 font-bold">
                       Join the discussion
                     </ALink>
                   </span>
@@ -219,13 +200,11 @@ export const MainContent = ({ styles }) => {
                   <link
                     rel="preload"
                     href="/img/build-xmtp-dark.png"
-                    as="image"
-                  ></link>
+                    as="image"></link>
                   <link
                     rel="preload"
                     href="/img/build-xmtp.png"
-                    as="image"
-                  ></link>
+                    as="image"></link>
                   <div className="build-xmtp-img"></div>
                 </div>
               </div>
@@ -244,12 +223,11 @@ export const MainContent = ({ styles }) => {
             <div
               className={`hidden -scale-x-100 lg:grid absolute -left-12 h-32 justify-center arrow-icon w-20 items-center ${
                 sliderItems && sliderItems?.length > 3 ? "" : "2xl:hidden"
-              }`}
-            >
+              }`}>
               <ThemedImage
                 onClick={() => {
                   document.getElementsByClassName(
-                    "inner-div"
+                    "inner-div",
                   )[0].scrollLeft -= 360;
                 }}
                 sources={{
@@ -270,12 +248,11 @@ export const MainContent = ({ styles }) => {
             <div
               className={`arrow-icon w-24 h-32 absolute right-0 items-center justify-center hidden lg:grid ${
                 sliderItems && sliderItems?.length > 3 ? "" : "2xl:hidden"
-              }`}
-            >
+              }`}>
               <ThemedImage
                 onClick={() => {
                   document.getElementsByClassName(
-                    "inner-div"
+                    "inner-div",
                   )[0].scrollLeft += 360;
                 }}
                 sources={{
@@ -305,8 +282,7 @@ export const MainContent = ({ styles }) => {
               ref={videoRef}
               autoPlay="autoplay"
               muted
-              playsInline
-            >
+              playsInline>
               <source src="/img/animation.mp4" type="video/mp4" />
               Your browser does not support HTML video.
             </video>
@@ -329,22 +305,19 @@ export const MainContent = ({ styles }) => {
             </p>
             <Link
               to="/docs/concepts/interoperable-inbox"
-              className="bg-white rounded-lg w-52 h-12 text-black font-bold text-base cursor-pointer border-0 flex justify-center items-center hover:no-underline hover:text-black"
-            >
+              className="bg-white rounded-lg w-52 h-12 text-black font-bold text-base cursor-pointer border-0 flex justify-center items-center hover:no-underline hover:text-black">
               Learn more
             </Link>
           </div>
         </div>
 
         <div>
-          <div className="relative mx-auto max-w-8xl divide-y divide-gray-200">
+          <div className="relative mx-auto max-w-8xl divide-y divide-gray-200 mt-8">
             <div>
               <h2 className="mb-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white color-white">
                 Latest from XMTP
               </h2>
             </div>
-
-            <hr className="my-4 bg-black dark:bg-neutral-500" />
 
             <div className="grid gap-16 mt-8 gap-y-8 md:grid-cols-3 md:gap-x-5 md:gap-y-12">
               {BLOG_DATA.map((items) => (
@@ -354,22 +327,20 @@ export const MainContent = ({ styles }) => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-16 mb-10  max-w-screen-max border border-solid border-black bg-white mx-0 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-4">
+        <div className="flex flex-col mt-16 mb-20  max-w-screen-max border border-solid border-black bg-white mx-0 mb-0 rounded-2xl bg-cover bg-no-repeat relative px-8 pb-12">
           <div className="flex justify-center flex-col items-center mt-12 text-center">
             <h1 className="text-black text-4xl sm:text-3xl font-bold mb-4">
               Join a community of builders
             </h1>
             <p className="text-neutral-800 text-base leading-6 text-center lg:max-w-[70%] mb-8">
-              From hackathons to startups, developers are building with XMTP to
-              address use cases for secure messaging for blockchain accounts.
+              From startups to Fortune 500 brands, developers trust and build with XMTP to deliver innovative messaging experiences
             </p>
             <button className="bg-black rounded-lg w-52 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
               <img src="/img/xmtp-sm-icon.png" className="w-5 h-5 mr-2.5" />
               <Link
                 className="hover:no-underline text-white hover:text-white"
-                to="built-with-xmtp"
-              >
-                View app showcase
+                to="built-with-xmtp">
+                Explore apps
               </Link>
             </button>
           </div>

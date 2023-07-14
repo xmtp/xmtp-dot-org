@@ -14,9 +14,8 @@ tags:
 
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
-:::caution Deprecated
-This tutorial may be outdated. Check out the latest [documentation on Attachments](/docs/build/attachments).
-
+:::warning Get the latest doc
+This post may be out of date. See the [Attachments tutorial](/docs/build/attachments) for the latest guidance on how to build attachments.
 :::
 
 Let's talk about some new content types for XMTP.

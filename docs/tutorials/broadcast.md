@@ -29,7 +29,7 @@ async function main() {
   const broadcasts_array = [GM_BOT, test.address];
 
   //Querying the activation status of the wallets
-  const broadcasts_canMessage = await Client.canMessage(broadcasts_array);
+  const broadcasts_canMessage = await xmtp.canMessage(broadcasts_array);
   for (let i = 0; i < broadcasts_array.length; i++) {
     //Checking the activation status of each wallet
     const wallet = broadcasts_array[i];

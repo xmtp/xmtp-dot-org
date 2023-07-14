@@ -49,21 +49,9 @@ All documentation in a single Left Nav. It's like the chapters of a book, ensuri
 
 On top of this all external sources where updated. Sources like Readme’s and independent pages that point only to the Docs, preventing outdated content from appearing again. This ensures everyone interacting with XMTP gets the latest and best experience, always.
 
-## **Developer Quickstarts 🚀**
+import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
-A set of Quickstarts is now at your fingertips to take you from 0 to 1 in no time. Whether you're an expert or a beginner, in just 5-10 minutes you can have a sample app up and running in your preferred language.
-
-https://xmtp.org/docs/developer-quickstart
-
-Here’s what we’ve got:
-
-- [ReactJS](https://github.com/fabriguespe/xmtp-quickstart-reactjs) / [NextJS](https://github.com/fabriguespe/xmtp-quickstart-nextjs) / [React Hooks](https://github.com/fabriguespe/xmtp-hooks-quickstart)
-- [VueJS](https://github.com/fabriguespe/xmtp-quickstart-vuejs) / [NuxtJS](https://github.com/fabriguespe/xmtp-quickstart-nuxtjs)
-- [Dart](https://github.com/xmtp/xmtp-android)
-- [Kotlin](https://github.com/xmtp/xmtp-flutter)
-- [Swift](https://github.com/xmtp/xmtp-ios)
-- [React Native](https://github.com/fabriguespe/xmtp-react-native-quickstart)
-- [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions) / [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
+<Quickstarts/>
 
 ## **Use Cases to Spark Your Imagination 💡**
 
@@ -74,8 +62,9 @@ We've organized XMTP around various use cases in Finance, Commerce, Marketing, A
 - **[Marketing](https://xmtp.org/docs/use-cases/marketing) 📣**: Send secure newsletters to wallet owners, reach NFT collectors & token holders. Engage and analyze with confidence.
 - **[Support](https://xmtp.org/docs/use-cases/support) ☎️**: Redefine customer support and engage in finance transactions on chat, automate with AI bots, and streamline DAO operations - all through secure channels.
 - **[Commerce](https://xmtp.org/docs/use-cases/commerce) 🛍️**: Enhance e-commerce with encrypted communication between buyers and sellers.
-- **[DeFi](https://xmtp.org/docs/use-cases/finance) 🏦**: Empower Decentralized Finance by sending secure transaction confirmations, notifications, token transfers, NFT minting, etc.
-- [**Automation**](https://xmtp.org/docs/use-cases/automation) 🤖: Employ secure messaging for web3 automation tools, including triggers, notifications, and customer service bots.
+- **[DeFi](https://xmtp.org/docs/use-cases/defi) 🏦**: Empower Decentralized Finance by sending secure transaction confirmations, notifications, token transfers, NFT minting, etc.
+- **[Automation](https://xmtp.org/docs/use-cases/automation) 🤖**: Employ secure messaging for web3 automation tools, including triggers, notifications, and customer service bots.
+- **[Gaming](https://xmtp.org/docs/use-cases/gaming) 🎮**: Create secure and immersive gaming experiences with real-time messaging, multiplayer group chats, in-game notifications, and more.
 
 ## **Tutorials: The Developer’s Arsenal 🛠**
 
