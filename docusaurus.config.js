@@ -329,6 +329,10 @@ const config = {
                 label: "Status page",
                 href: "https://status.xmtp.com/",
               },
+              {
+                label: "Partnerships at XMTP Labs",
+                href: "https://docs.google.com/forms/d/e/1FAIpQLSeQWPBt7cgngVJi2UQJIMNqXEPtP38ghjisuX4_yHWBmcr36A/viewform?usp=sf_link",
+              },
             ],
           },
           {
