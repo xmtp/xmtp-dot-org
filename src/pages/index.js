@@ -12,17 +12,17 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <header className="homepageHeader px-0 pt-40 md:pt-0 h-[600px] md:h-[770px] bg-[length:1000px_auto] md:bg-[length:1560px_auto] bg-bottom bg-no-repeat flex flex-col justify-center items-center">
+    <header className="homepageHeader px-0 pt-1 md:pt-0 h-[600px] md:h-[770px] bg-[length:1000px_auto] md:bg-[length:1560px_auto] bg-bottom bg-no-repeat flex flex-col justify-center items-center">
         
         <div className="main-carousel">
 
-          <div className="absolute bottom-28 md:bottom-0">
+          <div className="absolute bottom-0">
             <img src="/img/leftPhone.png" className="w-[522px] leftPhone block dark:hidden"></img>
             <img src="/img/leftPhone-dark.png" className="w-[522px] leftPhone hidden dark:block"></img>
           </div>
           
           <div className="carousel-cell">
-            <div className="absolute bottom-28 md:bottom-0 right-0">
+            <div className="absolute bottom-36 md:bottom-16 right-0">
               <img src="/img/rightPhone1.png" className="w-[510px] rightPhone block dark:hidden"></img>
               <img src="/img/rightPhone1-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
@@ -38,7 +38,7 @@ function HomepageHeader() {
           </div>
           
           <div className="carousel-cell">
-            <div className="absolute bottom-28 md:bottom-0 right-0">
+            <div className="absolute bottom-36 md:bottom-16 right-0">
               <img src="/img/rightPhone2.png" className="w-[510px] rightPhone block dark:hidden"></img>
               <img src="/img/rightPhone2-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
@@ -54,7 +54,7 @@ function HomepageHeader() {
           </div>
           
           <div className="carousel-cell">
-            <div className="absolute bottom-28 md:bottom-0 right-0">
+            <div className="absolute bottom-36 md:bottom-16 right-0">
               <img src="/img/rightPhone4.png" className="w-[510px] rightPhone block dark:hidden"></img>
               <img src="/img/rightPhone4-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
@@ -70,7 +70,7 @@ function HomepageHeader() {
           </div>
           
           <div className="carousel-cell">
-            <div className="absolute bottom-28 md:bottom-0 right-0">
+            <div className="absolute bottom-36 md:bottom-16 right-0">
               <img src="/img/rightPhone3.png" className="w-[510px] rightPhone block dark:hidden"></img>
               <img src="/img/rightPhone3-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
@@ -134,7 +134,6 @@ function HomepageLogos() {
   
 );
 }
-
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
