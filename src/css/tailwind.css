@@ -1145,9 +1145,16 @@ table code {
   height: 10px;
 }
 
+.flickity-viewport {
+  height: 660px;
+}
+
 .main-carousel {
   width: 100%;
   max-width: 1920px;
+  height: 660px;
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel-cell {
@@ -1156,9 +1163,21 @@ table code {
   text-align: center;
 }
 
+.carousel-cell img {
+  visibility: hidden;
+}
+
+.carousel-cell.is-selected img {
+  visibility: visible;
+}
+
 .carousel-cell h1 {
   font-size: 48px;
   line-height: 1.1;
+}
+
+.carousel-cell h1 span {
+  opacity: 0;
 }
 
 .carousel-cell h4 {
@@ -1189,6 +1208,7 @@ https://flickity.metafizzy.co
   -webkit-animation-duration: 2s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .is-selected .rightPhone {
