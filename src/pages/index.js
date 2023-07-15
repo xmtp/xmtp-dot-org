@@ -107,8 +107,8 @@ function HomepageLogos() {
         <a href="/docs/tutorials/identity-resolution"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="/img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" width="150" height="40"></img></a>
       </div>
       <div class="mt-8 flex justify-center">
-        <p class="relative rounded-full bg-indigo-50 dark:bg-indigo-800 hover:bg-indigo-100 hover:drop-shadow transition px-6 py-1.5 text-sm leading-6 text-gray-800 dark:text-white ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
-          <span class="leading-4 md:inline font-semibold mr-2">🎉 Coinbase Wallet is the first wallet to launch messaging with XMTP</span>
+        <p class="relative rounded-full bg-indigo-50 dark:bg-indigo-800 hover:bg-indigo-100 hover:drop-shadow transition px-6 py-2 text-sm leading-5 text-gray-800 dark:text-white ring-1 ring-inset ring-gray-900/5 text-center text-bold md:text-left">
+          <span class="md:inline font-semibold mr-2">🎉 Coinbase Wallet is the first wallet to launch messaging with XMTP</span>
           <a href="/blog/coinbasewallet" class="font-semibold text-red-500"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
         </p>
       </div>
