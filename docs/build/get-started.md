@@ -21,7 +21,7 @@ All this happens transparently, without requiring any additional code.
 
 This is an overview of the core concepts and lines of code needed to use XMTP successfully.
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 ```tsx
 import { Client } from "@xmtp/xmtp-js";
@@ -46,7 +46,7 @@ for await (const message of await conversation.streamMessages()) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift" default>
+<TabItem value="swift" label="Swift">
 
 ```swift
 import XMTP
@@ -73,7 +73,7 @@ for try await message in conversation.streamMessages() {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart" default>
+<TabItem value="dart" label="Dart">
 
 ```dart
 import 'package:xmtp/xmtp.dart' as xmtp;
@@ -111,7 +111,7 @@ await listening.cancel();
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
+<TabItem value="kotlin" label="Kotlin">
 
 ```kotlin
 // You'll want to replace this with a wallet from your application.
@@ -134,7 +134,7 @@ conversation.streamMessages().collect { print("${message.senderAddress}: ${messa
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta" default>
+<TabItem value="react" label="React - beta">
 
 ```tsx
 import {
@@ -181,7 +181,7 @@ useStreamMessages(conversation, onMessage);
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - alpha" default>
+<TabItem value="rn" label="React Native - beta">
 
 ```jsx
 import { Client, Conversation, DecodedMessage } from '@xmtp/react-native-sdk';
@@ -239,14 +239,14 @@ function sendMessage(message: string) {
 To start with XMTP, install the XMTP client SDK:
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 ```bash
 npm install @xmtp/xmtp-js
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift" default>
+<TabItem value="swift" label="Swift">
 
 Use Xcode to add to the project (**File** > **Add Packages…**) or add this to your `Package.swift file`:
 
@@ -255,14 +255,14 @@ Use Xcode to add to the project (**File** > **Add Packages…**) or add this to 
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart" default>
+<TabItem value="dart" label="Dart">
 
 ```bash
 flutter pub add xmtp
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin - beta" default>
+<TabItem value="kotlin" label="Kotlin">
 
 You can find the latest package version on [Maven Central](https://central.sonatype.com/artifact/org.xmtp/android/0.0.5/versions).
 
@@ -271,14 +271,14 @@ implementation 'org.xmtp:android:X.X.X'
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta" default>
+<TabItem value="react" label="React - beta">
 
 ```bash
 npm i @xmtp/react-sdk
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - alpha" default>
+<TabItem value="rn" label="React Native - beta">
 
 ```bash
 npm i @xmtp/react-native-sdk

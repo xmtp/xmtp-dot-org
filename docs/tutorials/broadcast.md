@@ -3,6 +3,9 @@ sidebar_label: Broadcast
 sidebar_position: 5
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Send a broadcast message
 
 You can send a broadcast message (1:many message or announcement) with XMTP. The recipient sees the message as a DM from the sending wallet address. Be sure to follow these [best practices for broadcast messages](#best-practices-for-broadcast-messages).
@@ -11,6 +14,9 @@ You can send a broadcast message (1:many message or announcement) with XMTP. The
 2. Send the message to all of the activated wallet addresses.
 
 For example:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript">
 
 ```js
 const ethers = require("ethers");
@@ -45,6 +51,43 @@ async function main() {
 }
 main();
 ```
+
+</TabItem>
+<TabItem value="rn" label="React Native - beta">
+
+```tsx
+const ethers = require('ethers')
+const { Client } = require('@xmtp/xmtp-react-native')
+
+async function main() {
+  //Create a random wallet for example purposes. On the frontend you should replace it with the user's wallet (metamask, rainbow, etc)
+  //Initialize the xmtp client
+  const xmtp = await XMTP.Client.createRandom("dev");
+
+  //In this example we are going to broadcast to the GM_BOT wallet (already activated) and a random wallet (not activated)
+  const GM_BOT = '0x937C0d4a6294cdfa575de17382c7076b579DC176'
+  const test = ethers.Wallet.createRandom()
+  const broadcasts_array = [GM_BOT, test.address]
+
+  //Querying the activation status of the wallets
+  const broadcasts_canMessage = await Client.canMessage(broadcasts_array)
+  for (let i = 0; i < broadcasts_array.length; i++) {
+    //Checking the activation status of each wallet
+    const wallet = broadcasts_array[i]
+    const canMessage = broadcasts_canMessage[i]
+    if (broadcasts_canMessage[i]) {
+      //If activated, start
+      const conversation = await xmtp.conversations.newConversation(wallet)
+      // Send a message
+      const sent = await conversation.send('gm')
+    }
+  }
+}
+main()
+```
+
+</TabItem>
+</Tabs>
 
 ## Best practices for broadcast messages
 

@@ -44,7 +44,7 @@ In the unexpected event that an optimistic message fails to send, present the us
 Use an XMTP SDK to prepare a message before sending it. This will encrypt and package up the message in the proper format for the XMTP network. After preparing the message, it’s ready to be sent optimistically.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 ```tsx
 // standard (string) message
@@ -68,7 +68,7 @@ const preparedCustomContentMessage = await conversation.prepareMessage(
 After preparing an optimistic message, use its `send` method to send it.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript" default>
+<TabItem value="js" label="JavaScript">
 
 ```tsx
 try {
