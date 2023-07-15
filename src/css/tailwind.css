@@ -1176,6 +1176,10 @@ table code {
   line-height: 1.1;
 }
 
+.carousel-cell h1 span {
+  opacity: 0;
+}
+
 .carousel-cell h4 {
   font-size: 20px;
   font-weight: normal;
@@ -1205,7 +1209,6 @@ https://flickity.metafizzy.co
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  opacity: 0;
 }
 
 .is-selected .rightPhone {
