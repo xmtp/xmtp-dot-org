@@ -1204,6 +1204,8 @@ https://flickity.metafizzy.co
   -webkit-animation-duration: 2s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .is-selected .rightPhone {
