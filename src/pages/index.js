@@ -22,7 +22,7 @@ function HomepageHeader() {
           </div>
           
           <div className="carousel-cell">
-            <div className="absolute bottom-36 md:bottom-16 right-0">
+            <div className="absolute bottom-36 md:bottom-0 right-0">
               <img src="/img/rightPhone1.png" className="w-[510px] rightPhone block dark:hidden"></img>
               <img src="/img/rightPhone1-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
@@ -38,7 +38,7 @@ function HomepageHeader() {
           </div>
           
           <div className="carousel-cell">
-            <div className="absolute bottom-36 md:bottom-16 right-0">
+            <div className="absolute bottom-36 md:bottom-0 right-0">
               <img src="/img/rightPhone2.png" className="w-[510px] rightPhone block dark:hidden"></img>
               <img src="/img/rightPhone2-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
@@ -54,7 +54,7 @@ function HomepageHeader() {
           </div>
           
           <div className="carousel-cell">
-            <div className="absolute bottom-36 md:bottom-16 right-0">
+            <div className="absolute bottom-36 md:bottom-0 right-0">
               <img src="/img/rightPhone4.png" className="w-[510px] rightPhone block dark:hidden"></img>
               <img src="/img/rightPhone4-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
@@ -70,7 +70,7 @@ function HomepageHeader() {
           </div>
           
           <div className="carousel-cell">
-            <div className="absolute bottom-36 md:bottom-16 right-0">
+            <div className="absolute bottom-36 md:bottom-0 right-0">
               <img src="/img/rightPhone3.png" className="w-[510px] rightPhone block dark:hidden"></img>
               <img src="/img/rightPhone3-dark.png" className="w-[510px] rightPhone hidden dark:block"></img>
             </div>
