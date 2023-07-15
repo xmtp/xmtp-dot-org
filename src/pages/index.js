@@ -135,22 +135,8 @@ function HomepageLogos() {
 );
 }
 
-
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-
-  useEffect(() => {
-    
-    document.onreadystatechange = function() {
-      if (document.readyState !== "complete") {
-          document.querySelector("header.homepageHeader").style.visibility = "hidden";
-      } else {
-          document.querySelector("header.homepageHeader").style.visibility = "visible";
-      }
-  };
-  },
-
-  []);
 
   useEffect(() => {
     
