@@ -141,19 +141,6 @@ export default function Home() {
 
   useEffect(() => {
     
-    document.onreadystatechange = function() {
-      if (document.readyState !== "complete") {
-          document.querySelector("header.homepageHeader").style.visibility = "hidden";
-      } else {
-          document.querySelector("header.homepageHeader").style.visibility = "visible";
-      }
-  };
-  },
-
-  []);
-
-  useEffect(() => {
-    
     var elem = document.querySelector('.main-carousel');
       var flkty = new Flickity( elem, {
         cellSelector: '.carousel-cell',
