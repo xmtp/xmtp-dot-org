@@ -12,7 +12,7 @@ This changelog provides information about release milestones for XMTP SDKs, deve
 
 #### July 2023
 
-## [React Native client SDK repo](https://github.com/xmtp/xmtp-react-native) is in Beta (xmtp-react-native)
+## [React Native client SDK](https://github.com/xmtp/xmtp-react-native) is in Beta (xmtp-react-native)
 
 Provides a package you can use to build with XMTP in a React Native or Expo app. (Jul 14)
 

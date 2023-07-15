@@ -30,25 +30,25 @@ For example, a user should be able to enter `prxshant.eth` in your To field and 
 
 And certainly, your app should also be able to accept a raw wallet address and reverse-resolve and display the associated domain name, if available.
 
-When displaying names, also look for and display its associated avator. For example, when displaying `.lens` names, look for and display a Lens profile photo. Display blockies as avatars for raw 0x addresses.
+When displaying a name, also look for and display its associated avatar. For example, when displaying a `.lens` name, look for and display a Lens profile photo. Display blockies as avatars for raw 0x addresses.
 
 ## Resolve identities
 
 <Tabs className="bigTab">
 <TabItem value="airstack" className="bigTab" label="Airstack" default>
 
-In this tutorial, you will learn how to use Airstack as a universal resolver to resolve various web3 identities (e.g. Farcaster, Lens, and ENS) and Ethereum addresses to other web3 identities. Airstack provides json APIs and SDKs for React and Python.
+In this tutorial, you will learn how to use Airstack as a universal resolver to resolve various web3 identities (e.g. Farcaster, Lens, and ENS) and Ethereum addresses to other web3 identities. Airstack provides JSON APIs and SDKs for React and Python.
 
-To access the Airstack APIs, use https://api.airstack.xyz/gql as your json endpoint.
+To access the Airstack APIs, use https://api.airstack.xyz/gql as your JSON endpoint.
 
 ### Prerequisites
 
 - [An Airstack account](https://app.airstack.xyz) (free)
-- Basic Knowledge of json
+- Basic Knowledge of JSON
 
 ### 🤖 AI Natural Language
 
-Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to build a json query to fulfill your use case easily.
+Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to build a JSON query to fulfill your use case easily.
 
 <div className="nopadding" style={{width:'90%'}}  >
 
@@ -64,12 +64,12 @@ For example, if you would like to get the web3 identity of a user, e.g. all the 
 For the 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 address, get all web3 socials and ENS
 ```
 
-After clicking enter, the Airstack AI will output a json query that will fetch the web3 identities of the given address that will look as follows:
+After clicking enter, the Airstack AI will output a JSON query that will fetch the web3 identities of the given address that will look as follows:
 
 <Tabs>
 <TabItem value="request" label="Query" >
 
-With this query, you can get all web3 identities of the given user wallet, which will include the wallet address, ENS names, , Farcaster username and Lens profile.
+With this query, you can get all web3 identities of the given user wallet, which will include the wallet address, ENS names, Farcaster username, and Lens profile.
 
 ```graphql
 query web3Data {
@@ -153,18 +153,18 @@ query web3Data {
 </TabItem>
 </Tabs>
 
-The same query can be done starting from an ENS, Lens or Farcaster to resolve the other identities at-once. Example:
+The same query can be done starting from an ENS name, Lens profile, or Farcaster username to resolve the other identities all at once. Example:
 
 ```bash
 For vitalik.eth, get all web3 socials and ENS
 ```
 
-After clicking enter, the Airstack AI will output a json query that will fetch the web3 identities of the given address that will look as follows:
+After clicking enter, the Airstack AI will output a JSON query that will fetch the web3 identities of the given address that will look as follows:
 
 <Tabs>
 <TabItem value="request" label="Query" >
 
-With this query, you can get all web3 identities of the given user wallet, which will include the wallet address, ENS names, , Farcaster username and Lens profile.
+With this query, you can get all web3 identities of the given user wallet, which will include the wallet address, ENS names, Farcaster username, and Lens profile.
 
 ```graphql
 query vitalikSocialsAndENS {
@@ -284,7 +284,7 @@ query vitalikSocialsAndENS {
 
 ### Identity resolution
 
-Get the address of a ENS domain, Lens handle or Farcaster user
+Get the address of an ENS domain, Lens handle, or Farcaster user.
 
 <Tabs className="lensicons">
 
@@ -450,7 +450,7 @@ query {
 
 ### Bulk resolution queries
 
-If you have multiple inputs to call the same query, you can use Airstack to make a **single bulk query call** to get all the response more efficiently instead of making multiple calls with each individual input.
+If you have multiple inputs to call the same query, you can use Airstack to make a **single bulk query call** to get all the responses more efficiently instead of making multiple calls with each individual input.
 
 To create a bulk query, your query will need to have a filter input with the comparison operations of `_in` or `_nin`. A quick look at how it looks in the [Airstack Explorer](https://app.airstack.xyz/explorer) is shown below with the `resolveAddress`.
 
@@ -663,7 +663,7 @@ Use this tutorial to learn how to add Unstoppable Domain support to your app bui
 
 This tutorial requires that you have the following prerequisites in place:
 
-- An XMTP empowered app built with the [XMTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js)
+- An app built with the [XMTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js)
 - Add the Unstoppable Domains SDK
 
 ```jsx
@@ -768,7 +768,7 @@ To complete the Unstoppable Domains integration, it’s important to convert the
 
 </div>
 
-To do this, implement a function similar to the one below which will attempt to resolve the wallet address to a domain. Display the wallet address if the function returns null, otherwise display the domain.
+To do this, implement a function similar to the one below, which will attempt to resolve the wallet address to a domain. Display the wallet address if the function returns null, otherwise display the domain.
 
 ```jsx
 const domain = await resolution.reverse(address);
@@ -778,7 +778,7 @@ To achieve this for the message previews, iterate through the existing list of c
 
 ### Learn more
 
-To learn more about building with Unstoppable Domains , see their [Developer Portal](https://docs.unstoppabledomains.com/).
+To learn more about building with Unstoppable Domains, see their [Developer Portal](https://docs.unstoppabledomains.com/).
 
 </TabItem>
 </Tabs>
