@@ -10,7 +10,7 @@ import TabItem from "@theme/TabItem";
 
 When building with XMTP, a conversation comprises a set of messages exchanged between two participants. These participants are identified solely through their wallet addresses.
 
-Web3 is founded on values such as decentralization, portability and ownership. These principles allow users to maintain multiple pseudonymous identities. The idea is that users should be able to possess multiple identities, switch between them as they please, display varying information, and interact with different individuals.
+Web3 is founded on values such as decentralization, portability, and ownership. These principles allow users to maintain multiple pseudonymous identities. The idea is that users should be able to possess multiple identities, switch between them as they please, display varying information, and interact with different individuals.
 
 ## Lens Profiles
 
@@ -52,7 +52,7 @@ const buildConversationId = (profileIdA: string, profileIdB: string) => {
 
 :::caution Important
 
-Building multi profile experiences is optional. Allowing users to have the different conversations with multiple profiles can make the experience inconsistent outside the Lens ecosystem.
+Building multi-profile experiences is optional. Allowing users to have different conversations with multiple profiles can make the experience inconsistent outside the Lens ecosystem.
 :::
 
 You can assign a conversation ID to conversations and then use the ID to filter and organize conversations as needed. You set the `conversationId` when your app creates a conversation.
