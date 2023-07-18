@@ -71,7 +71,7 @@ We've organized XMTP around various use cases in Finance, Commerce, Marketing, A
 Our tutorials are technical deep-dives that feature integration partners, highlight use cases, and educate on specific concepts. They are code-heavy, designed for rapid deployment, and perfect for developers looking to experiment and showcase possibilities.
 
 - [Chat bots 🤖](/docs/tutorials/identity-resolution)
-- [CLI ✍🏻](//docs/tutorials/cli)
+- [CLI ✍🏻](/docs/tutorials/cli)
 - [Identity resolution 🔑](/docs/tutorials/identity-resolution)
 - [Attachments 📸](/docs/build/attachments)
 - [Optimistic messages 💨](/docs/tutorials/optimistic-sending)
