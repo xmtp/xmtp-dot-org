@@ -15,55 +15,56 @@ Before launching, review your app against this quality checklist. Meet the crite
 
 Your app provides an [interoperable inbox](/docs/concepts/interoperable-inbox) with the following characteristics:
 
-- [ ]  New conversations created using your app should have `conversationId = "null"`
-- [ ]  Display all conversations with `conversationId = "null"`
-- [ ]  [Bonus] Display all conversations with non-null `conversationId`, such as `Lens.dev`, `GetConverse.app`, etc.
-- [ ]  [Bonus] UI is intuitive and enables the user to understand the `conversationID`, if necessary
-- [ ]  [Bonus] Provide inbox filters. Do not use tabs.
+- [ ] New conversations created using your app should NOT have `conversationId`
+- [ ] Display all conversations without `conversationId`
+- [ ] [Bonus] Display all conversations with non-null `conversationId`, such as `Lens.dev`, `GetConverse.app`, etc.
+- [ ] [Bonus] UI is intuitive and enables the user to understand the `conversationID`, if necessary
+- [ ] [Bonus] Provide inbox filters. Do not use tabs.
 
 ### Performance
 
-- [ ]  [Use a local cache](/docs/tutorials/performance)
+- [ ] [Use a local cache](/docs/tutorials/performance)
 
 ### Test your app
 
-- [ ]  Test your app [against these test cases](/docs/tutorials/test-your-app)
+- [ ] Test your app [against these test cases](/docs/tutorials/test-your-app)
 
 ### UX
 
-- [ ]  Navigating between conversations is smooth, fast, and intuitive
-- [ ]  Sending messages works as expected
-- [ ]  New conversations can be created
-- [ ]  Conversation list is displayed and easily navigable
-- [ ]  [Bonus] Provides [optimistic sending](/docs/tutorials/optimistic-sending)
+- [ ] Navigating between conversations is smooth, fast, and intuitive
+- [ ] Sending messages works as expected
+- [ ] New conversations can be created
+- [ ] Conversation list is displayed and easily navigable
+- [ ] [Bonus] Provides [optimistic sending](/docs/tutorials/optimistic-sending)
 
 ### Resolution
 
-- [ ]  Provides forward and reverse [identity resolution](/docs/tutorials/identity-resolution) support for ENS
-- [ ]  [Bonus] Provides forward and reverse identity resolution support for UNS, cb.id, .lens, Cyberconnect
+- [ ] Provides forward and reverse [identity resolution](/docs/tutorials/identity-resolution) support for ENS
+- [ ] [Bonus] Provides forward and reverse identity resolution support for UNS, cb.id, .lens, Cyberconnect
 
 ### Bugs and reliability
 
-- [ ]  Does not create duplicate conversations
-- [ ]  Does not show duplicate conversations. For duplicates, show the most recent conversation only.
-- [ ]  Does not crash frequently
-- [ ]  Does not have obvious or critical bugs
+- [ ] Does not create duplicate conversations
+- [ ] Does not show duplicate conversations. For duplicates, show the most recent conversation only.
+- [ ] Does not crash frequently
+- [ ] Does not have obvious or critical bugs
 
 ### SDK version
 
-- [ ]  Uses the latest [XMTP client SDK](/docs/introduction#sdks). If not, which features is the app missing?
+- [ ] Uses the latest [XMTP client SDK](/docs/introduction#sdks). If not, which features is the app missing?
 
 ### Attachments
 
-- [ ]  [Bonus] Provides [image attachments](/docs/build/attachments)
-- [ ]  [Bonus] Provides a GIF picker
+- [ ] [Bonus] Provides [image attachments](/docs/build/attachments)
+- [ ] [Bonus] Provides a GIF picker
 
 ### Metrics
 
 Enable your app to track privacy-preserving metrics to help you understand app usage. For example:
-- [ ]  \# of active wallets: Wallets sending at least one message
-- [ ]  \# of active conversations: Conversations with at least one message
-- [ ]  \# of returning conversations: Conversations with at least one message per participant
+
+- [ ] \# of active wallets: Wallets sending at least one message
+- [ ] \# of active conversations: Conversations with at least one message
+- [ ] \# of returning conversations: Conversations with at least one message per participant
 
 ## Want more feedback?
 

@@ -61,11 +61,11 @@ if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
 <TabItem value="rn" label="React Native - beta">
 
 ```tsx
-import { Client } from '@xmtp/xmtp-react-native'
+import { Client } from "@xmtp/xmtp-react-native";
 
 const isOnDevNetwork = await Client.canMessage(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
+);
 ```
 
 </TabItem>
@@ -129,8 +129,8 @@ const convv = await startConversation(
 
 ```tsx
 const newConversation = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
+);
 ```
 
 </TabItem>
@@ -205,7 +205,7 @@ const { conversations, error, isLoading } = useConversations();
 {
   conversations.map((conversation, index) => (
     <div key={index}>
-      {conversation?.peerAddress}-{conversation.context?.conversationId}-
+      {conversation?.peerAddress}-
       {JSON.stringify(conversation.context?.metadata)}
     </div>
   ));
@@ -216,11 +216,11 @@ const { conversations, error, isLoading } = useConversations();
 <TabItem value="rn" label="React Native - beta">
 
 ```tsx
-const allConversations = await xmtp.conversations.list()
+const allConversations = await xmtp.conversations.list();
 // Say gm to everyone you've been chatting with
 for (const conversation of allConversations) {
-  console.log(`Saying GM to ${conversation.peerAddress}`)
-  await conversation.send('gm')
+  console.log(`Saying GM to ${conversation.peerAddress}`);
+  await conversation.send("gm");
 }
 ```
 
