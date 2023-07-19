@@ -291,11 +291,6 @@ import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
 <Quickstarts />
 
-### Example apps
-
-- [React web app](https://github.com/xmtp/xmtp-quickstart-react)
-- [React Native app](https://github.com/xmtp/example-chat-react-native)
-
 ### Need to send a test message?
 
 Message this XMTP message bot to get an immediate automated reply:
