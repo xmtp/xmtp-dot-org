@@ -11,7 +11,7 @@ This feature is in **alpha** status and ready for you to start experimenting w
 :::
 
 ```bash
-git clone -b beta https://github.com/xmtp/xmtp-js.git
+npm i --save @xmtp/xmtp-js@9.4.0-beta.1
 ```
 
 - `GroupConversation` is similar to `ConversationV1` or `ConversationV2` provided by the SDK. These conversations are just a way to send and receive messages.
