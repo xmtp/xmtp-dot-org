@@ -74,9 +74,11 @@ Our tutorials are technical deep-dives that feature integration partners, highli
 - [CLI ✍🏻](/docs/tutorials/cli)
 - [Identity resolution 🔑](/docs/tutorials/identity-resolution)
 - [Attachments 📸](/docs/build/attachments)
-- [Optimistic messages 💨](/docs/tutorials/optimistic-sending)
-- [Group chats 👩‍👩‍👧‍👦 (alpha)](/docs/build/group-chats)
-- [Notifications 🔔](/docs/build/notifications)
+- [Experimental Playground](https://xmtp.github.io/xmtp-react-playground/)
+  - Group chats
+  - Read receipts
+  - Reply's
+  - Reactions
 
 ## **Language Simplification 🗣**
 
