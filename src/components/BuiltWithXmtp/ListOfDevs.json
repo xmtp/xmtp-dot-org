@@ -18,7 +18,7 @@
     "name": "Orb",
     "href": "https://orb.ac/",
     "image": "/img/builtWithXmtp/orb-logo.jpeg",
-    "description": "Experience ownership and control of your identity, content, and monetization on this decentralized social media platform.",
+    "description": "Own and control your identity, content, and monetization on this decentralized social media platform.",
     "github": "",
     "twitter": "https://twitter.com/orbapp_"
   },
@@ -37,6 +37,14 @@
     "description": "ChainJet empowers entrepreneurs and communities to build Web3 automations without coding.",
     "github": "https://github.com/chainjet/platform",
     "twitter": "https://twitter.com/chainjetio"
+  },
+  {
+    "name": "Paragraph",
+    "href": "https://paragraph.xyz/",
+    "image": "/img/logo-paragraph.png",
+    "description": "Building tools that enable publishers, DAOs, writers, and creators build communities and monetize their content.",
+    "github": "https://github.com/paragraph-xyz",
+    "twitter": "https://twitter.com/paragraph_xyz"
   },
   {
     "name": "Buttrfly",
@@ -69,13 +77,6 @@
     "twitter": "https://twitter.com/BosonProtocol"
   },
   {
-    "name": "Lensport",
-    "href": "https://lensport.io/",
-    "image": "/img/builtWithXmtp/lensport.png",
-    "description": "Discover, collect, and sell Lens Posts to invest in creators you support. Built on Lens Protocol.",
-    "twitter": "https://twitter.com/lensport_io"
-  },
-  {
     "name": "AbsoluteLabs",
     "href": "https://absolutelabs.io/",
     "image": "/img/builtWithXmtp/absolute-logo.jpg",
@@ -86,8 +87,15 @@
     "name": "Holder",
     "href": "https://holder.xyz/",
     "image": "/img/builtWithXmtp/holder-logo.jpg",
-    "description": "Holder is a web3 CRM and marketing automation platform that powers customer engagement for the tokenized world.",
+    "description": "A web3 CRM and marketing automation platform that powers customer engagement for the tokenized world.",
     "twitter": "https://twitter.com/holderxyz"
+  },
+  {
+    "name": "Lensport",
+    "href": "https://lensport.io/",
+    "image": "/img/builtWithXmtp/lensport.png",
+    "description": "Discover, collect, and sell Lens Posts to invest in creators you support. Built on Lens Protocol.",
+    "twitter": "https://twitter.com/lensport_io"
   },
   {
     "name": "Pinsta",
