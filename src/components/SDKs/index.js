@@ -3,7 +3,7 @@ import React from "react";
 const SDKs = () => {
   return (
     <div className="chain-list six ">
-      <a
+      <button
         href="https://github.com/xmtp/xmtp-js"
         target="_blank"
         className="chain-item plausible-event-name=SDK+JavaScript">
@@ -11,7 +11,7 @@ const SDKs = () => {
         <span>
           JavaScript <img src="/img/el.svg" className="svg" />
         </span>
-      </a>
+      </button>
       <a
         target="_blank"
         href="https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk"
