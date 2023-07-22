@@ -60,7 +60,6 @@ console.log(`File Type: ${extname}`);
 ```tsx
 // Create a new conversation
 const conversation = await xmtp.conversations.newConversation(WALLET_TO);
-console.log("Conversation created with topic: ", conversation.topic);
 
 // Convert the file to a Uint8Array
 const blob = new Blob([file], { type: extname });
