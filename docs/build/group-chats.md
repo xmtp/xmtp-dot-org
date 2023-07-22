@@ -111,7 +111,9 @@ This sends a message with the `GroupChatTitleChanged` content type to the grou
 
 To add a group chat member, call `addMember` on a `GroupChat` instance:
 
-`await groupChat.addMember('0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0')`
+```jsx
+await groupChat.addMember('0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0')`
+```
 
 This sends an invitation to the recipient address. It also sends a `GroupChatMemberAdded` message to the group chat that clients can display and use to update their group chat member lists.
 
