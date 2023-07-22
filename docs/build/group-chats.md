@@ -10,7 +10,7 @@ import Experimental from "@site/src/components/Experimental/index.md";
 
 :::caution Important
 This feature is in **alpha** status and ready for you to start experimenting with. However, we do **not** recommend using alpha software in production apps. The feature is available on the `beta` branch only, but we're excited to share it with you and get your feedback.
-<Experimental />
+
 :::
 
 ```bash
@@ -19,6 +19,8 @@ npm i --save @xmtp/xmtp-js@9.4.0-beta.1
 
 - `GroupConversation` is similar to `ConversationV1` or `ConversationV2` provided by the SDK. These conversations are just a way to send and receive messages.
 - `GroupChat` is a wrapper around `GroupConversation` that knows about things like group chat titles, keeping the group chat member list in sync, and basically handling any richer features beyond just sending and receiving messages.
+
+<Experimental />
 
 ### Enable group chat for your Client
 

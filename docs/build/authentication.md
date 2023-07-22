@@ -106,7 +106,7 @@ const xmtp = await Client.create(wallet);
 </TabItem>
 </Tabs>
 
-### Saving keys
+## Saving keys
 
 You can export the unencrypted key bundle using the static method `getKeys`, save it somewhere secure, and then provide those keys at a later time to initialize a new client using the exported XMTP identity.
 
@@ -127,10 +127,11 @@ if (!keys) {
     persistConversations: false,
   });
   storeKeys(address, keys);
+  const client = await Client.create(null, { privateKeyOverride: keys });
 }
 ```
 
-We are using the following helper funtion to store the keys
+We are using the following helper funtions to store and retrieve the keys
 
 ```ts
 // Create a client using keys returned from getKeys
