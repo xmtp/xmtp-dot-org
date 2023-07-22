@@ -1394,3 +1394,19 @@ https://flickity.metafizzy.co
     height: 25em;
   }
 }
+
+/*left nav contet  type*/
+.theme-doc-sidebar-item-category .theme-doc-sidebar-item-category {
+  margin-top: 0rem !important;
+  border-left: thin solid #d3d3d3;
+  border-radius: 0;
+}
+
+li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-item
+  a {
+  border-left: 0px !important;
+}
+.theme-doc-sidebar-item-category .theme-doc-sidebar-item-category a {
+  font-weight: 500;
+  color: var(--docs-sidebar-link-color);
+}
