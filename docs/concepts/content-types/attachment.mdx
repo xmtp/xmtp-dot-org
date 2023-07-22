@@ -1,33 +1,77 @@
 ---
 sidebar_label: Attachments
 title: Attachments
-sidebar_position: 5
+sidebar_position: 4
 ---
 
-### Send an attachment
+# Send an attachment
 
-Text messages require neither codec nor encryption. They can be sent as they are.
+Text messages require neither codec nor encryption. They can be sent as they are. Attachments smaller than 1MB can be sent using the `AttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the XMTP network.
 
-```tsx
-const onSendMessage = async (value) => {
-  return convRef.send(value);
-};
+### Get started
+
+```jsx
+npm install @xmtp/xmtp-js xmtp-content-type-remote-attachment
 ```
 
-Attachments smaller than 1MB can be sent using the `AttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the XMTP network.
+### Import libraries
 
 ```tsx
-// Function to handle sending a small file attachment
-const handleSmallFile = async (file) => {
-  // Convert the file to a Uint8Array
-  const blob = new Blob([file], { type: file.type });
-  let imgArray = new Uint8Array(await blob.arrayBuffer());
+// We first import all the required modules
+const { Wallet } = require("ethers");
+const { Client } = require("@xmtp/xmtp-js");
+const { Blob } = require("buffer");
+const {
+  ContentTypeAttachment,
+  AttachmentCodec,
+} = require("@xmtp/content-type-remote-attachment");
+const fs = require("fs");
+const path = require("path");
+const WALLET_TO = "0x7E0b0363404751346930AF92C80D1fef932Cc41a";
 
-  const attachment = {
-    filename: file.name,
-    mimeType: file.type,
-    data: imgArray,
-  };
-  await conversation.send(attachment, { contentType: ContentTypeAttachment });
+// Creating a random wallet for this example, but you'd replace this with your application's wallet in real use
+const wallet = Wallet.createRandom();
+console.log("Wallet address: " + wallet.address);
+
+// Instantiate the XMTP client
+const xmtp = await Client.create(wallet, { env: "dev" });
+```
+
+### Register codec
+
+```tsx
+// Register the codecs, AttachmentCodec is for handling local attachments under 1MB
+xmtp.registerCodec(new AttachmentCodec());
+```
+
+### Load local file
+
+```tsx
+// Read local file and extract its details
+const file = fs.readFileSync("xmtp.png");
+const filename = path.basename("xmtp.png");
+const extname = path.extname("xmtp.png");
+console.log(`Filename: ${filename}`);
+console.log(`File Type: ${extname}`);
+```
+
+### Send encrypted file
+
+```tsx
+// Create a new conversation
+const conversation = await xmtp.conversations.newConversation(WALLET_TO);
+console.log("Conversation created with topic: ", conversation.topic);
+
+// Convert the file to a Uint8Array
+const blob = new Blob([file], { type: extname });
+let imgArray = new Uint8Array(await blob.arrayBuffer());
+
+const attachment = {
+  filename: filename,
+  mimeType: extname,
+  data: imgArray,
 };
+
+console.log("Attachment created", attachment);
+await conversation.send(attachment, { contentType: ContentTypeAttachment });
 ```
