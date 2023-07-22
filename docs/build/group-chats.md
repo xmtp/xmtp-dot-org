@@ -25,8 +25,11 @@ npm i --save @xmtp/xmtp-js@9.4.0-beta.1
 The first step is to enable group chat for your Client:
 
 ```jsx
-const creatorClient = await Client.create(yourSigner);
-creatorClient.enableGroupChat();
+// You'll want to replace this with a wallet from your application
+const signer = Wallet.createRandom(); //wallet implements signer interface
+// Create the client with your wallet. This will connect to the XMTP development network by default
+const xmtp = await Client.create(signer, { env: "dev" });
+xmtp.enableGroupChat();
 ```
 
 This enables the following capabilities required for group chat:
@@ -45,7 +48,7 @@ const memberAddresses = [
   "0x937C0d4a6294cdfa575de17382c7076b579DC176",
 ];
 const groupConversation =
-  creatorClient.conversations.newGroupConversation(memberAddresses);
+  xmtp.conversations.newGroupConversation(memberAddresses);
 ```
 
 Assuming the other members of the group chat have clients with group chat enabled, they'll see the group chat in their conversation list.
@@ -63,7 +66,7 @@ await groupConversation.send("hello everyone");
 When you enabled group chat for your Client, you enabled group chats to be returned in `conversations.list()`:
 
 ```jsx
-const conversations = await creatorClient.conversations.list();
+const conversations = await xmtp.conversations.list();
 const conversation = conversations[0];
 
 console.log(conversation.isGroup); // => true when it's a group conversation
@@ -84,10 +87,10 @@ const
 Use the `GroupChat` class to keep track of group state, such as the group chat title and member list:
 
 ```jsx
-const conversations = await creatorClient.conversations.list();
+const conversations = await xmtp.conversations.list();
 const conversation = conversations[0]; // assume this conversation is a group conversation
 
-const groupChat = new GroupChat(creatorClient, conversation);
+const groupChat = new GroupChat(xmtp, conversation);
 ```
 
 You can also use the `GroupChat` class to change the group chat title and member list.
@@ -125,3 +128,12 @@ await groupChat.rebuild({ since: rebuiltAt });
 For example, you'd do this the first time you load the group chat to make sure everything is up to date.
 
 Group state update messages, like `GroupChatTitleChanged` and `GroupChatMemberAdded`, are sent alongside the actual messages sent by group members. This means that to load the current group state, you must traverse the entire group chat history at least once. This is one of the reasons why persisting messages locally is a performance best practice.
+
+FAQ
+
+- Max 32 members (soft constraint, could theoretically be unlimited)
+- Hidden members possible (i.e. members can be added without other existing members’ knowledge)
+- Members cannot be removed
+- No way to leave a group or ignore unwanted conversations
+- ContentTypes used to send ‘metamessages’ for setting group chat title (Group title set to ‘Best friends’) and showing changes in membership (e.g. Pol has joined the chat)
+- All members can act as admin
