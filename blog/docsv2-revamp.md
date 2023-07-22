@@ -74,20 +74,6 @@ Our tutorials are technical deep-dives that feature integration partners, highli
 - [CLI ✍🏻](/docs/tutorials/cli)
 - [Identity resolution 🔑](/docs/tutorials/identity-resolution)
 
-### [Experimental Playground](https://xmtp.github.io/xmtp-react-playground/)
-
-Built with React and the XMTP JavaScript SDK, the playground provides the following functionality that you can use as a foundation for your app:
-
-- Performant database architecture
-- Group chat
-- Message reactions
-- Message replies
-- Attachments
-- Images
-- More formats to come
-
-_The playground's visual design is intentionally limited to help make the code easier for your to use, customize, and deploy_
-
 ## **Language Simplification 🗣**
 
 We’ve streamlined the language to keep it simple and relatable. For instance, Preview, Dev Preview, and General Availability are now `Alpha`, `Beta` & `Production` ✅. Also, many independent docs have been merged into traditional Developer `FAQs`.
