@@ -79,9 +79,24 @@ console.log(conversation.isGroup); // => true when it's a group conversation
 Enable a member of a group chat to change the group chat title by sending a message with the `GroupChatTitleChanged` content type:
 
 ```jsx
-import { ContentTypeGroupChatTitleChanged } from '@xmtp/xmtp-js'
 
-const
+import { ContentTypeGroupChatTitleChanged } from '@xmtp/xmtp-js'
+if (XMTP.ContentTypeGroupChatTitleChanged.sameAs(contentType)) {
+    const titleChanged = content as XMTP.GroupChatTitleChanged;
+
+    await db.conversations.update(conversation, {
+      title: titleChanged.newTitle,
+    });
+  }
+
+```
+
+### Change a group chat title
+
+To change a group chat title, call `changeTitle` on a `GroupChat` instance:
+
+```jsx
+await groupChat.changeTitle("The fun group");
 ```
 
 ### Manage group state with the `GroupChat` class
@@ -96,14 +111,6 @@ const groupChat = new GroupChat(xmtp, conversation);
 ```
 
 You can also use the `GroupChat` class to change the group chat title and member list.
-
-### Change a group chat title
-
-To change a group chat title, call `changeTitle` on a `GroupChat` instance:
-
-```jsx
-await groupChat.changeTitle("The fun group");
-```
 
 This sends a message with the `GroupChatTitleChanged` content type to the group chat that clients can display. Clients can also use the message to update the group chat title on their end.
 
