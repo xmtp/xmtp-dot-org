@@ -1,0 +1,62 @@
+---
+sidebar_label: Remote Attachments
+title: Remote Attachments
+sidebar_position: 5
+---
+
+### Send a remote attachment
+
+Attachments larger than 1MB can be sent using the `RemoteAttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the Thirdweb network. For uploading bigger files, we are going to first encrypt them and then upload them to the IPFS network via the Thirdweb SDK.
+
+1. Encrypt the file
+
+```tsx
+//Loadfile is a helper function to convert the file to a Uint8Array
+const imgData = await loadFile(file);
+
+const attachment = {
+  filename: file.name,
+  mimeType: file.type,
+  data: imgData,
+};
+
+const attachmentCodec = new AttachmentCodec();
+const encryptedAttachment = await RemoteAttachmentCodec.encodeEncrypted(
+  attachment,
+  attachmentCodec,
+);
+```
+
+2. Next we are going to upload the file to the IPFS network via the Thirdweb SDK.
+
+```tsx
+const uploadUrl = await upload({
+  //encryptedAttachment.payload.buffer is a Uint8Array
+  //We need to convert it to a File to upload it to the IPFS network
+  data: [new File([encryptedAttachment.payload.buffer], file.name)],
+  options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
+});
+
+//uploadUrl[0] is the IPFS hash of the encrypted file
+uploadUrl[0];
+```
+
+3. Finally, we will use the encrypted file's URL to send it to the XMTP network using XMTP `ContentTypeRemoteAttachment`.
+
+```tsx
+const remoteAttachment = {
+  url: uploadUrl[0],
+  contentDigest: encryptedAttachment.digest,
+  salt: encryptedAttachment.salt,
+  nonce: encryptedAttachment.nonce,
+  secret: encryptedAttachment.secret,
+  scheme: "https://",
+  filename: attachment.filename,
+  contentLength: attachment.data.byteLength,
+};
+
+const message = await conversation.send(remoteAttachment, {
+  contentType: ContentTypeRemoteAttachment,
+  contentFallback: "a screenshot of over 1MB",
+});
+```

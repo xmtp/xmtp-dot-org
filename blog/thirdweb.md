@@ -163,7 +163,7 @@ const newConversation = async function (xmtp_client, addressTo) {
 };
 ```
 
-### Send a message
+### Send an attachment
 
 Text messages require neither codec nor encryption. They can be sent as they are.
 
@@ -297,6 +297,7 @@ Remote storage is a different story because uploading and decrypting files is re
 export const deloadFile = async (attachment, client, RemoteAttachmentCodec) => {
   return RemoteAttachmentCodec.load(attachment, client)
     .then((decryptedAttachment) => {
+      console.log("attachment", decryptedAttachment);
       // Create a blob URL from the decrypted attachment data
       const blob = new Blob([decryptedAttachment.data], {
         type: decryptedAttachment.mimeType,
@@ -306,6 +307,19 @@ export const deloadFile = async (attachment, client, RemoteAttachmentCodec) => {
     .catch((error) => {
       console.error("Failed to load and decrypt remote attachment:", error);
     });
+};
+export const loadFile = async (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (reader.result instanceof ArrayBuffer) {
+        resolve(new Uint8Array(reader.result));
+      } else {
+        reject(new Error("Not an ArrayBuffer"));
+      }
+    };
+    reader.readAsArrayBuffer(file);
+  });
 };
 ```
 

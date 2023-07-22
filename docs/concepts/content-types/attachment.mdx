@@ -1,0 +1,33 @@
+---
+sidebar_label: Attachments
+title: Attachments
+sidebar_position: 5
+---
+
+### Send an attachment
+
+Text messages require neither codec nor encryption. They can be sent as they are.
+
+```tsx
+const onSendMessage = async (value) => {
+  return convRef.send(value);
+};
+```
+
+Attachments smaller than 1MB can be sent using the `AttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the XMTP network.
+
+```tsx
+// Function to handle sending a small file attachment
+const handleSmallFile = async (file) => {
+  // Convert the file to a Uint8Array
+  const blob = new Blob([file], { type: file.type });
+  let imgArray = new Uint8Array(await blob.arrayBuffer());
+
+  const attachment = {
+    filename: file.name,
+    mimeType: file.type,
+    data: imgArray,
+  };
+  await conversation.send(attachment, { contentType: ContentTypeAttachment });
+};
+```
