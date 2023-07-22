@@ -6,8 +6,6 @@ description: Build this quickstart app to learn some of the fundamental concepts
 
 # Developer Quickstart
 
-### Live Code Example
-
 Check out the replit live code example:
 
 - [Replit Live Example](https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1)
