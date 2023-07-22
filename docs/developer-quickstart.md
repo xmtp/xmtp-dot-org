@@ -77,12 +77,12 @@ const message = await conversation.send("gm");
 console.log("Message sent", message);
 ```
 
-### Stream messages in a conversation
+### Stream messages
 
-You can receive the complete message history in a conversation.
+You can receive the complete message history in all conversations.
 
 ```jsx
-for await (const message of await conversation.streamMessages()) {
+for await (const message of await xmtp.conversations.streamAllMessages()) {
   console.log(`New message from ${message.senderAddress}: ${message.content}`);
 }
 ```
