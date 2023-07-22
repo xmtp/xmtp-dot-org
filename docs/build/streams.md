@@ -98,13 +98,13 @@ if (error) {
 <TabItem value="rn" label="React Native - beta">
 
 ```tsx
-const stream = await xmtp.conversations.stream()
+const stream = await xmtp.conversations.stream();
 for await (const conversation of stream) {
-  console.log(`New conversation started with ${conversation.peerAddress}`)
+  console.log(`New conversation started with ${conversation.peerAddress}`);
   // Say hello to your new friend
-  await conversation.send('Hi there!')
+  await conversation.send("Hi there!");
   // Break from the loop to stop listening
-  break
+  break;
 }
 ```
 
@@ -115,9 +115,7 @@ for await (const conversation of stream) {
 
 You can listen for any new messages (incoming or outgoing) in a conversation by calling `conversation.streamMessages()`.
 
-A successfully received message (that makes it through the decoding and decryption without throwing) can be trusted to be authentic, i.e. that it was sent by the owner of the `message.senderAddress` wallet and that it wasn't modified in transit. The `message.sent` timestamp can be trusted to have been set by the sender.
-
-The Stream returned by the `stream` methods is an asynchronous iterator and as such usable by a for-await-of loop. Note however that it is by its nature infinite, so any looping construct used with it will not terminate, unless the termination is explicitly initiated (by breaking the loop or by an external call to `return`).
+_The Stream returned by the `stream` methods is an asynchronous iterator and as such usable by a for-await-of loop. Note however that it is by its nature infinite, so any looping construct used with it will not terminate, unless the termination is explicitly initiated (by breaking the loop or by an external call to `return`)._
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript">
@@ -199,14 +197,14 @@ useStreamMessages(conversation, onMessage);
 
 ```tsx
 const conversation = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
+);
 for await (const message of await conversation.streamMessages()) {
   if (message.senderAddress === xmtp.address) {
     // This message was sent from me
-    continue
+    continue;
   }
-  console.log(`New message from ${message.senderAddress}: ${message.content}`)
+  console.log(`New message from ${message.senderAddress}: ${message.content}`);
 }
 ```
 
@@ -268,9 +266,9 @@ import { useStreamAllMessages } from "@xmtp/react-sdk";
 for await (const message of await xmtp.conversations.streamAllMessages()) {
   if (message.senderAddress === xmtp.address) {
     // This message was sent from me
-    continue
+    continue;
   }
-  console.log(`New message from ${message.senderAddress}: ${message.content}`)
+  console.log(`New message from ${message.senderAddress}: ${message.content}`);
 }
 ```
 
