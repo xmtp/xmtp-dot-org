@@ -11,7 +11,7 @@ import TabItem from "@theme/TabItem";
 
 Messages are addressed using wallet addresses.
 
-The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/concepts/content-types).
+The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/concepts/content-types/introduction).
 
 ## Send messages
 
@@ -24,7 +24,7 @@ You might want to consider [optimistically sending messages](/docs/tutorials/opt
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
 );
 await conversation.send("Hello world");
 ```
@@ -72,9 +72,9 @@ await sendMessage(message);
 
 ```tsx
 const conversation = await xmtp.conversations.newConversation(
-  '0x3F11b27F323b62B159D2642964fa27C46C841897'
-)
-await conversation.send('Hello world')
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
+);
+await conversation.send("Hello world");
 ```
 
 </TabItem>
@@ -166,7 +166,7 @@ Call `conversation.messagesPaginated()`, which will return an [AsyncGenerator](h
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897"
+  "0x3F11b27F323b62B159D2642964fa27C46C841897",
 );
 
 for await (const page of conversation.messagesPaginated({ pageSize: 25 })) {

@@ -1,0 +1,74 @@
+---
+sidebar_label: Introduction
+sidebar_position: 1
+---
+
+# Content types with XMTP
+
+When you build an app with XMTP, all messages are encoded with a content type to ensure that an XMTP message API client knows how to encode and decode messages, ensuring interoperability and consistent display of messages across apps.
+
+In addition, message payloads are transported as a set of bytes. This means that payloads can carry any content type that a client supports, such as plain text, JSON, or even non-text binary or media content.
+
+At a high level, there are two categories of content types with XMTP:
+
+- Standard
+- Custom
+
+## Standard content types
+
+A standard content type is one that has undergone the XMTP Request for Comment (XRC) process and has been adopted as an XMTP Improvement Proposal (XIP).
+
+To learn more about the XRC and XIP processes that enable a framework for community members to propose standards and achieve consensus about their adoption, see [XMTP Improvement Proposals (XIPs)](https://github.com/xmtp/XIPs#readme).
+
+Once adopted, a standard content type is bundled in XMTP client SDKs. A developer can then import the standard content type from an SDK for use in their app.
+
+Currently, two standard content types are bundled in XMTP client SDKs:
+
+- Text: Handles plain text
+- Composite: Handles multiple content types in a single message
+
+To learn how to use standard content types when developing a client app, see [Use content types](/docs/concepts/content-types/introduction).
+
+## Custom content types
+
+Any developer building with XMTP can create a custom content type and immediately start using it in their app. Unlike a standard content type, use of a custom content type doesn't require prerequisite formal adoption through the XRC and XIP processes.
+
+For example, if you need a content type that isn't covered by a standard content type, you can create a custom content type and begin using it immediately in your app.
+
+:::info
+
+Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
+
+:::
+
+If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
+
+Fallback plain text is "alt text"-like description text that you can associate with a custom content type if you are concerned that a receiving app might not be able to handle the content. If the receiving app is unable to handle the custom content, it displays the fallback plain text instead.
+
+To learn how to use custom content types when developing a client app, see [Use content types](/docs/concepts/content-types/introduction).
+
+# Use content types
+
+All messages in XMTP are encoded with a **content type** to ensure interoperability and consistency of experience across the XMTP network.
+
+Two standard content types come bundled with the XMTP client SDK:
+
+1. `xmtp.org/text:1.0`, which defines a **default** `TextCodec` for plain text content
+
+   To learn more about this text content type, see [XIP-5](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#xmtporgtext).
+
+2. `xmtp.org/composite:1.0`, which defines an **optional** `CompositeCodec` for multiple content types in a single message
+
+   To learn more about this composite content type, see [XIP-9](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-9-composite-content-type.md).
+
+For these standard content types, `xmtp.org` is the `authorityId` value. `xmtp.org` is reserved for use as the `authorityId` for standard content types. Standard content types are those that have been adopted through the [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) (XIP) process.
+
+:::caution
+
+Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. Instead, consider using a unique DNS domain or ENS name that can be widely recognized as belonging to your app. For example, `frenz.xyz`.
+
+:::
+
+To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
+
+To learn more about the difference between standard and custom content types, see [Content types with XMTP](/docs/concepts/content-types/introduction).
