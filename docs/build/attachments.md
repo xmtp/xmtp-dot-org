@@ -40,7 +40,7 @@ End-to-end encryption must apply not only to XMTP messages, but to message attac
 import {
   AttachmentCodec,
   RemoteAttachmentCodec,
-} from "xmtp-content-type-remote-attachment";
+} from "@xmtp/content-type-remote-attachment";
 ```
 
 ```tsx
