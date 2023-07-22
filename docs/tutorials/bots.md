@@ -9,12 +9,6 @@ import onboardingbot from '/docs/concepts/img/onboarding-bot.png';
 
 Use the [XMTP Bot Starter project](https://github.com/xmtp/xmtp-bot-starter) to create chat bot on the XMTP network.
 
-:::caution Important
-
-This project is **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha software in production apps. Software in this status will change as we add features and iterate based on feedback.
-
-:::
-
 ## Usage
 
 ```typescript
