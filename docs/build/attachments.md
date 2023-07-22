@@ -6,14 +6,14 @@ description: Support image, video, and document message attachments in your app
 
 # Build message attachments with XMTP
 
-Use the `RemoteAttachmentCodec` from the `xmtp-content-type-remote-attachment` package to support message attachments in your app—including images, videos, gifs, and documents.
+Use the `RemoteAttachmentCodec` from the `@xmtp/content-type-remote-attachment` package to support message attachments in your app—including images, videos, gifs, and documents.
 
 As you go through the steps and code samples in this section, consider viewing the [xmtp.chat](https://xmtp.chat) reference implementation in parallel to see the features in context.
 
 ## Install the package
 
 ```bash
-npm i @xmtp/xmtp-content-type-remote-attachment
+npm i --save @xmtp/content-type-remote-attachment
 ```
 
 ## Send a remote attachment
@@ -152,7 +152,7 @@ await sendMessageFromHook(remoteAttachment, {
 });
 ```
 
-As shown in the example above, you **must** provide a `contentFallback` value. Use it to provide an alt text-like description of the original content. Providing a `contentFallback` value enables clients that don't support the content type to still display something meaningful. 
+As shown in the example above, you **must** provide a `contentFallback` value. Use it to provide an alt text-like description of the original content. Providing a `contentFallback` value enables clients that don't support the content type to still display something meaningful.
 
 :::caution
 
