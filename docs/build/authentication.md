@@ -98,26 +98,63 @@ if (isLoading) {
 <TabItem value="rn" label="React Native - beta">
 
 ```tsx
-import { Client } from '@xmtp/xmtp-react-native'
+import { Client } from "@xmtp/xmtp-react-native";
 // Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet)
+const xmtp = await Client.create(wallet);
 ```
 
 </TabItem>
 </Tabs>
 
-#### Create a client from saved private keys
+### Saving keys
 
 You can export the unencrypted key bundle using the static method `getKeys`, save it somewhere secure, and then provide those keys at a later time to initialize a new client using the exported XMTP identity.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript">
 
-```ts
+```jsx
 // Get the keys using a valid Signer. Save them somewhere secure.
-const keys = await Client.getKeys(wallet);
+let keys = loadKeys(address);
+if (!keys) {
+  keys = await Client.getKeys(signer, {
+    ...clientOptions,
+    // we don't need to publish the contact here since it
+    // will happen when we create the client later
+    skipContactPublishing: true,
+    // we can skip persistence on the keystore for this short-lived
+    // instance
+    persistConversations: false,
+  });
+  storeKeys(address, keys);
+}
+```
+
+We are using the following helper funtion to store the keys
+
+```ts
 // Create a client using keys returned from getKeys
-const client = await Client.create(null, { privateKeyOverride: keys });
+const ENCODING = "binary";
+
+export const buildLocalStorageKey = (walletAddress: string) =>
+  walletAddress ? `xmtp:${"dev"}:keys:${walletAddress}` : "";
+
+export const loadKeys = (walletAddress: string): Uint8Array | null => {
+  const val = localStorage.getItem(buildLocalStorageKey(walletAddress));
+  return val ? Buffer.from(val, ENCODING) : null;
+};
+
+export const storeKeys = (walletAddress: string, keys: Uint8Array) => {
+  localStorage.setItem(
+    buildLocalStorageKey(walletAddress),
+    Buffer.from(keys).toString(ENCODING),
+  );
+};
+
+export const wipeKeys = (walletAddress: string) => {
+  // This will clear the conversation cache + the private keys
+  localStorage.removeItem(buildLocalStorageKey(walletAddress));
+};
 ```
 
 </TabItem>
@@ -184,11 +221,11 @@ await initialize({ keys, signer });
 <TabItem value="rn" label="React Native - beta">
 
 ```js
-import { Client } from '@xmtp/xmtp-react-native'
+import { Client } from "@xmtp/xmtp-react-native";
 // Get the keys using a valid Signer. Save them somewhere secure.
-const keys = await Client.exportKeyBundle()
+const keys = await Client.exportKeyBundle();
 // Create a client using keys returned from getKeys
-const client = await Client.createFromKeyBundle(keys, "dev")
+const client = await Client.createFromKeyBundle(keys, "dev");
 ```
 
 </TabItem>
@@ -284,10 +321,10 @@ The `apiUrl`, `keyStoreType`, `codecs`, and `maxContentSize` parameters from the
 </TabItem>
 <TabItem value="rn" label="React Native - beta">
 
-| Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| appVersion                | `undefined`                                                                       | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
-| env                       | `dev`                                                                             | Connect to the specified XMTP network environment. Valid values include `dev`, `production`, or `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments). |
+| Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appVersion | `undefined` | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
+| env        | `dev`       | Connect to the specified XMTP network environment. Valid values include `dev`, `production`, or `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                             |
 
 </TabItem>
 </Tabs>
