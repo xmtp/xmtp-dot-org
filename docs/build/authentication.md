@@ -115,6 +115,8 @@ You can export the unencrypted key bundle using the static method `getKeys`, sav
 
 ```jsx
 // Get the keys using a valid Signer. Save them somewhere secure.
+import { loadKeys, storeKeys } from "./helpers";
+
 let keys = loadKeys(address);
 if (!keys) {
   keys = await Client.getKeys(signer, {
@@ -127,8 +129,8 @@ if (!keys) {
     persistConversations: false,
   });
   storeKeys(address, keys);
-  const client = await Client.create(null, { privateKeyOverride: keys });
 }
+const client = await Client.create(null, { privateKeyOverride: keys });
 ```
 
 We are using the following helper funtions to store and retrieve the keys
