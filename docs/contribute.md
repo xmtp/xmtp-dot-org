@@ -9,7 +9,15 @@ There are many ways to participate in the XMTP community, whether you are buildi
 
 ## XMTP grants
 
-Have a public goods project you want to build that fosters XMTP ecosystem growth? Apply for an [XMTP grant](/grants).
+:::caution Info
+
+XMTP is not accepting applications for grants at this time. Make sure to [follow XMTP on Twitter](https://twitter.com/xmtp_) for updates on when grants will reopen.
+
+:::
+
+## Partnerships with XMTP Labs
+
+Maximize your app's reach with guidance and assistance from the Partnerships team at XMTP Labs. XMTP Labs’ mission is to promote and support the development and global adoption of XMTP. [Get in touch](https://forms.gle/UMCFjB8ukiMxBxnK6)
 
 ## GitHub Discussions
 
