@@ -8,7 +8,8 @@ hide_table_of_contents: true
 
 :::caution XMTP Grants
 
-We are no longer accepting applications for XMTP Grants. Make sure to follow us on [Twitter](https://twitter.com/xmtp_) for updates on when applications will be available again
+XMTP is not accepting applications for grants at this time. Make sure to [follow XMTP on Twitter](https://twitter.com/xmtp_) for updates on when grants will reopen.
+
 :::
 
 ## ✨ Mission

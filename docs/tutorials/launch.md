@@ -78,13 +78,14 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 
 - Register for the Polygon [dApp Store Kit](https://docs.dappstorekit.io/docs/how%20to%20use%20the%20dapp%20store%20kit/dapp-registry-management/), which enables developers to launch their own dApp stores and list any dApp, including their own. To learn more, see the [dApp Store Kit Wiki](https://polygontechnology.notion.site/dApp-Store-Kit-Wiki-a3a9e7518b80400589aee8164550838e).
 
-- Check out these launch posts for other apps built with XMTP:
+- Check out these launch posts for apps built with XMTP:
 
-  - [Orb](https://twitter.com/orbapp_/status/1618659601154715649?s=20)
-  - [meTokens](https://twitter.com/meTokens/status/1597983759462436870?s=20&t=wHy9mBrNR5ri146CbhCMUw)
   - [Buttrfly](https://twitter.com/0xMoe_/status/1603126849852563456?s=20&t=wHy9mBrNR5ri146CbhCMUw)
-  - [Lenster](https://twitter.com/lensterxyz/status/1588203593257009152?s=20&t=wHy9mBrNR5ri146CbhCMUw)
+  - [Coinbase Wallet](https://twitter.com/CoinbaseWallet/status/1679178581224873985?s=20)
   - [LensPort](https://twitter.com/lensport_io/status/1602370688139939841?s=20&t=wHy9mBrNR5ri146CbhCMUw)
+  - [Lenster](https://twitter.com/lensterxyz/status/1588203593257009152?s=20&t=wHy9mBrNR5ri146CbhCMUw)
+  - [meTokens](https://twitter.com/meTokens/status/1597983759462436870?s=20&t=wHy9mBrNR5ri146CbhCMUw)
+  - [Orb](https://twitter.com/orbapp_/status/1618659601154715649?s=20)
 
 - Need an XMTP logo for your announcement?
 
@@ -94,6 +95,8 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 
   - [@xmtplabs](https://lenster.xyz/u/xmtplabs) on Lens
   - [@xmtp\_](https://twitter.com/xmtp_) on Twitter
+  - [@xmtp](https://warpcast.com/xmtp) on Farcaster
+  - [@xmtp_network](https://www.threads.net/@xmtp_network) on Threads
 
 - Have your app added to [Built with XMTP](/built-with-xmtp)
 
@@ -103,7 +106,7 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 
   - [Create a PR](https://github.com/xmtp/awesome-xmtp)
 
-- Create a commemorative NFT for your launch to reward early users
+- Create a commemorative [POAP](https://app.poap.xyz/) for your launch to reward early users
 
 ## Keep in touch post-launch
 
