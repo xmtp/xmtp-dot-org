@@ -11,7 +11,7 @@ import TabItem from "@theme/TabItem";
 
 Messages are addressed using wallet addresses.
 
-The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/concepts/content-types/introduction).
+The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/content-types/introduction).
 
 ## Send messages
 

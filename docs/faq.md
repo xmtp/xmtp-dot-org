@@ -150,7 +150,7 @@ The XMTP community can propose and adopt standards for other content types, eith
 
 Message payloads also include references to timestamps. However, timestamps are not currently independently verified and can be set to any value by the sending app.
 
-To learn more about content types, see [Content types](/docs/concepts/content-types/introduction).
+To learn more about content types, see [Content types](/docs/content-types/introduction).
 
 To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md)
 
