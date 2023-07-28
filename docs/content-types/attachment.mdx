@@ -10,31 +10,17 @@ Text messages require neither codec nor encryption. They can be sent as they are
 
 ### Get started
 
-```jsx
+```bash
 npm install @xmtp/xmtp-js xmtp-content-type-remote-attachment
 ```
 
 ### Import libraries
 
 ```tsx
-// We first import all the required modules
-const { Wallet } = require("ethers");
-const { Client } = require("@xmtp/xmtp-js");
-const { Blob } = require("buffer");
-const {
+import {
   ContentTypeAttachment,
   AttachmentCodec,
-} = require("@xmtp/content-type-remote-attachment");
-const fs = require("fs");
-const path = require("path");
-const WALLET_TO = "0x7E0b0363404751346930AF92C80D1fef932Cc41a";
-
-// Creating a random wallet for this example, but you'd replace this with your application's wallet in real use
-const wallet = Wallet.createRandom();
-console.log("Wallet address: " + wallet.address);
-
-// Instantiate the XMTP client
-const xmtp = await Client.create(wallet, { env: "dev" });
+} from "@xmtp/content-type-remote-attachment";
 ```
 
 ### Register codec
@@ -58,9 +44,6 @@ console.log(`File Type: ${extname}`);
 ### Send encrypted file
 
 ```tsx
-// Create a new conversation
-const conversation = await xmtp.conversations.newConversation(WALLET_TO);
-
 // Convert the file to a Uint8Array
 const blob = new Blob([file], { type: extname });
 let imgArray = new Uint8Array(await blob.arrayBuffer());
@@ -80,5 +63,4 @@ await conversation.send(attachment, { contentType: ContentTypeAttachment });
 ```jsx
 const blobdecoded = new Blob([attachment.data], { type: attachment.mimeType });
 const url = URL.createObjectURL(blobdecoded);
-console.log("URL", url);
 ```

@@ -4,6 +4,9 @@ sidebar_position: 7
 description: Support image, video, and document message attachments in your app
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";''
+
 # Build message attachments with XMTP
 
 Use the `RemoteAttachmentCodec` from the `@xmtp/content-type-remote-attachment` package to support message attachments in your app—including images, videos, gifs, and documents.
@@ -54,24 +57,49 @@ xmtp.registerCodec(new RemoteAttachmentCodec());
 
 ## Create an attachment object
 
+<Tabs>
+<TabItem value="backend" label="Backend">
+
 ```tsx
-const attachment: Attachment = {
-  filename: file.name,
-  mimeType: file.type,
-  data: new Uint8Array(data),
-};
+// Local file details
+const fs = require("fs");
+const path = require("path");
+
+const filePath = "xmtp.png";
+const data = fs.readFileSync(filePath);
+const filename = path.basename(filePath);
+const extname = path.extname(filePath);
+console.log(`Filename: ${filename}`);
+console.log(`Type: ${extname}`);
 ```
 
-## Create a preview attachment object
-
-Once you have the attachment object created, you can also create a preview for what to show in a message input before sending:
+</TabItem>
+<TabItem value="frontend" label="Frontend">
 
 ```tsx
-URL.createObjectURL(
-    new Blob([Buffer.from(somePNGData)], {
-    type: attachment.mimeType,
-  }),
-),
+// Local file details
+const readAsArrayBuffer = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () =>
+      reader.result instanceof ArrayBuffer
+        ? resolve(reader.result)
+        : reject(new Error("Not an ArrayBuffer"));
+    reader.readAsArrayBuffer(file);
+  });
+const data = await readAsArrayBuffer(file);
+```
+
+</TabItem>
+</Tabs>
+
+```tsx
+// Local file details
+const attachment = {
+  filename: filename,
+  mimeType: extname,
+  data: new Uint8Array(data),
+};
 ```
 
 ## Encrypt the attachment
@@ -79,8 +107,6 @@ URL.createObjectURL(
 Use the `RemoteAttachmentCodec.encodeEncrypted` to encrypt the attachment:
 
 ```tsx
-// Encode the attachment and encrypt that encoded content
-
 const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
   attachment,
   new AttachmentCodec(),
@@ -91,19 +117,19 @@ const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
 
 Upload the encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage:
 
+<Tabs>
+<TabItem value="web3storage" label="web3storage">
+
 ```tsx
-import { Filelike } from "web3.storage";
+const { Web3Storage } = require("web3.storage");
 
-export default class Upload implements Filelike {
-  name: string;
-  data: Uint8Array;
-
-  constructor(name: string, data: Uint8Array) {
+class Upload {
+  constructor(name, data) {
     this.name = name;
     this.data = data;
   }
 
-  stream(): ReadableStream {
+  stream() {
     const self = this;
     return new ReadableStream({
       start(controller) {
@@ -117,19 +143,37 @@ export default class Upload implements Filelike {
 const upload = new Upload("uploadIdOfYourChoice", encryptedEncoded.payload);
 
 const web3Storage = new Web3Storage({
-  token: process.env.NEXT_PUBLIC_WEB3_STORAGE_TOKEN as string,
+  token: "YOURTOKENHERE",
 });
 
 const cid = await web3Storage.put([upload]);
 const url = `https://${cid}.ipfs.w3s.link/uploadIdOfYourChoice`;
 ```
 
+</TabItem>
+<TabItem value="thirdweb" label="Thridweb">
+
+```tsx
+import { useStorageUpload } from "@thirdweb-dev/react";
+const { mutateAsync: upload } = useStorageUpload();
+const uploadUrl = await upload({
+  //encryptedEncoded.payload.buffer is a Uint8Array
+  //We need to convert it to a File to upload it to the IPFS network
+  data: [new File([encryptedEncoded.payload.buffer], file.name)], // Convert Uint8Array back to File
+  options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
+});
+const url = uploadUrl[0];
+```
+
+</TabItem>
+</Tabs>
+
 ### Create a remote attachment
 
 Now that you have a `url`, you can create a `RemoteAttachment`.
 
 ```tsx
-const remoteAttachment: RemoteAttachment = {
+const remoteAttachment = {
   url: url,
   contentDigest: encryptedEncoded.digest,
   salt: encryptedEncoded.salt,
@@ -146,8 +190,9 @@ const remoteAttachment: RemoteAttachment = {
 Now that you have a remote attachment, you can send it:
 
 ```tsx
-await sendMessageFromHook(remoteAttachment, {
-  contentFallback: "[Attachment] Cannot display ${remoteAttachment.filename}. This app does not support attachments yet."
+await conversation.send(remoteAttachment, {
+  contentFallback:
+    "[Attachment] Cannot display ${remoteAttachment.filename}. This app does not support attachments yet.",
   contentType: ContentTypeRemoteAttachment,
 });
 ```
@@ -165,9 +210,9 @@ If you don't provide a `contentFallback` value, clients that don't support the 
 Now that you can receive a remote attachment, you need a way to receive a remote attachment. For example:
 
 ```tsx
-const attachment: Attachment = await RemoteAttachmentCodec.load(
-  content,
-  client,
+const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
+  attachment,
+  new AttachmentCodec(),
 );
 ```
 
@@ -177,6 +222,18 @@ You now have the original attachment:
 attachment.filename // => "screenshot.png"
 attachment.mimeType // => "image/png",
 attachment.data // => [the PNG data]
+```
+
+## Create a preview attachment object
+
+Once you have the attachment object created, you can also create a preview for what to show in a message input before sending:
+
+```tsx
+URL.createObjectURL(
+    new Blob([Buffer.from(somePNGData)], {
+    type: attachment.mimeType,
+  }),
+),
 ```
 
 ## Storage considerations
