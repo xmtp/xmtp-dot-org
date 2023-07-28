@@ -123,8 +123,20 @@ You can now send notifications to your device using an [XMTP push notification c
   git checkout main
   git reset --hard origin/main
   ```
+- Here is a piece of code that points to the ports and network. Be sure to use TLS like this `./dev/run --xmtp-listener-tls --api`
+
+  ```jsx
+  static func envToUrl(env: XMTPEnvironment) -> String {
+   switch env {
+      case XMTPEnvironment.local: return "http://localhost:5556/"
+      case XMTPEnvironment.dev: return "https://dev.xmtp.network:5556/"
+      case XMTPEnvironment.production: return "https://production.xmtp.network:5556/"
+   }
+  }
+  ```
 
 If you have further issues or questions, don't hesitate to ask for help in the [XMTP Discord](https://discord.gg/xmtp).
 
 <br/>
 <FeedbackWidget />
+```
