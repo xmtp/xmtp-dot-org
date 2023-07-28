@@ -1,6 +1,6 @@
 ---
 sidebar_label: Custom
-sidebar_position: 15
+sidebar_position: 30
 ---
 
 # Build a custom content type
@@ -9,7 +9,7 @@ If you want to send a content type other than those supported by standard conten
 
 :::caution
 
-Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. `xmtp.org` is reserved for use as the `authorityId` for standard content types only.
+Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. Instead, consider using a unique DNS domain or ENS name that can be widely recognized as belonging to your app. For example, `frenz.xyz`.
 
 :::
 
@@ -17,7 +17,7 @@ To learn more about `authorityId` and other parameters in a content type identif
 
 1. Create an `AudioCodec` class that encodes and decodes the content type. For example, you can put this in the file that creates an XMTP client.
 
-```javascript
+```jsx
 import { Client, ContentTypeId } from "@xmtp/xmtp-js";
 
 const ContentTypeAudioKey = new ContentTypeId({

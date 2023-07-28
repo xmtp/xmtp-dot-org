@@ -3,7 +3,7 @@ sidebar_label: Introduction
 sidebar_position: 1
 ---
 
-# Content types with XMTP
+# Content Types with XMTP
 
 When you build an app with XMTP, all messages are encoded with a content type to ensure that an XMTP message API client knows how to encode and decode messages, ensuring interoperability and consistent display of messages across apps.
 
@@ -22,56 +22,35 @@ To learn more about the XRC and XIP processes that enable a framework for commun
 
 Once adopted, a standard content type is bundled in XMTP client SDKs. A developer can then import the standard content type from an SDK for use in their app.
 
-Currently, two standard content types are bundled in XMTP client SDKs:
+### [Text Content Type](/docs/content-types/plain-text)
 
-- Text: Handles plain text
-- Composite: Handles multiple content types in a single message
+An app built with XMTP uses the `TextCodec` (plain text) standard content type by default. This means that if your app is sending plain text messages only, you don’t need to perform any additional steps related to content types.
 
-To learn how to use standard content types when developing a client app, see [Use content types](/docs/content-types/introduction).
+### [Composite Content Type](/docs/content-types/composite)
 
-Two standard content types come bundled with the XMTP client SDK:
+If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
 
-1. `xmtp.org/text:1.0`, which defines a **default** `TextCodec` for plain text content
-
-   To learn more about this text content type, see [XIP-5](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#xmtporgtext).
-
-2. `xmtp.org/composite:1.0`, which defines an **optional** `CompositeCodec` for multiple content types in a single message
-
-   To learn more about this composite content type, see [XIP-9](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-9-composite-content-type.md).
-
-For these standard content types, `xmtp.org` is the `authorityId` value. `xmtp.org` is reserved for use as the `authorityId` for standard content types. Standard content types are those that have been adopted through the [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) (XIP) process.
-
-# Attachment content type
+### [Attachment Content Type](/docs/content-types/attachment)
 
 Attachments smaller than 1MB can be sent using the `AttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the XMTP network.
 
-# Remote Attachment Content Type
+### [Remote Attachment Content Type](/docs/content-types/remote-attachment)
 
 Remote attachments of any size can be sent using the `RemoteAttachmentCodec` and a storage provider.
 
-# Read Receipt Content Type
+### [Read Receipt Content Type](/docs/content-types/read-receipt)
 
 A reply is a method to directly respond to a specific message in a conversation. Users can select and reply to a particular message instead of sending a new one.
 
-# Reaction Content Type
+### [Reaction Content Type](/docs/content-types/reaction)
 
 A reaction is a quick and often emoji-based way to respond to a message. Reactions are usually limited to a predefined set of emojis or symbols provided by the messaging app.
 
-# Reply Content Type
+### [Reply Content Type](/docs/content-types/reply)
 
 A reply is a method to directly respond to a specific message in a conversation. Users can select and reply to a particular message instead of sending a new one.
 
-:::caution
-
-Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. Instead, consider using a unique DNS domain or ENS name that can be widely recognized as belonging to your app. For example, `frenz.xyz`.
-
-:::
-
-To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
-
-To learn more about the difference between standard and custom content types, see [Content types with XMTP](/docs/content-types/introduction).
-
-## Custom content types
+### [Custom content types](/docs/content-types/custom)
 
 Any developer building with XMTP can create a custom content type and immediately start using it in their app. Unlike a standard content type, use of a custom content type doesn't require prerequisite formal adoption through the XRC and XIP processes.
 
