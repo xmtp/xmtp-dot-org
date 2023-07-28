@@ -1,0 +1,75 @@
+---
+sidebar_label: Reply
+title: Reply
+sidebar_position: 6
+---
+
+# Reply Content Type
+
+A reply is a method to directly respond to a specific message in a conversation. Users can select and reply to a particular message instead of sending a new one.
+
+### Install the package
+
+Use the following commands to install the package:
+
+```bash
+npm i @xmtp/content-type-reply
+```
+
+### Import libraries
+
+```tsx
+import { ContentTypeReply, ReplyCodec } from "@xmtp/content-type-reply";
+```
+
+### Register codec
+
+```tsx
+// Create the XMTP client
+const xmtp = await Client.create(signer, { env: "dev" });
+// Register the codecs, AttachmentCodec is for handling local attachments under 1MB
+xmtp.registerCodec(new ReplyCodec());
+```
+
+### Create a Reply
+
+In XMTP, replies are represented as objects with two keys:
+
+- `reference`: The message ID for the message that is being replied to
+
+- `content`: A string representation of the reply
+
+```tsx
+const reply: Reply = {
+  reference: someMessageID,
+  content: "I concur",
+};
+```
+
+### Sending a Reply
+
+Once you've created a reply, you can send it:
+
+```tsx
+await conversation.send(reply, {
+  contentType: ContentTypeReply,
+  contentFallback: `[Reply] ${client.address} replied to ${someMessage.content} with:\n\n${reply.content}`,
+});
+```
+
+Note: Use contentFallback to allow clients that don't support these content types to still display some useful context. For clients that do support these types, they can use the content fallback as alt text for accessibility purposes.
+
+### Receiving a Reply
+
+Here's how you can receive a reply:
+
+```tsx
+if (message.contentType.sameAs(ContentTypeReply)) {
+  // We've got a reply.
+  const reply: Reply = message.content;
+}
+```
+
+### Displaying the Reply
+
+Replies should generally be displayed alongside the original message to provide context. However, the way you choose to display replies is completely up to you.

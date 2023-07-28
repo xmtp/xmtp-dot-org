@@ -124,7 +124,7 @@ const remoteAttachment: RemoteAttachment = {
 Awesome. We have a `RemoteAttachment`! Let's send that to our best friend.
 
 ```tsx
-await conversation.messages.send(remoteAttachment, {
+await conversation.send(remoteAttachment, {
   contentType: ContentTypeRemoteAttachment,
   contentFallback: "a screenshot of 1MB of text",
 });

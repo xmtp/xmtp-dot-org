@@ -1,0 +1,79 @@
+---
+sidebar_label: Reaction
+title: Reaction
+sidebar_position: 7
+---
+
+# Reaction Content Type
+
+A reaction is a quick and often emoji-based way to respond to a message. Reactions are usually limited to a predefined set of emojis or symbols provided by the messaging app.
+
+### Install the package
+
+```bash
+npm i @xmtp/content-type-reaction
+```
+
+### Import libraries
+
+```tsx
+import {
+  ContentTypeReaction,
+  ReactionCodec,
+} from "@xmtp/content-type-reaction";
+```
+
+### Register codec
+
+```tsx
+// Create the XMTP client
+const xmtp = await Client.create(signer, { env: "dev" });
+// Register the codecs, AttachmentCodec is for handling local attachments under 1MB
+xmtp.registerCodec(new ReactionCodec());
+```
+
+### Create a reaction
+
+With XMTP, reactions are represented as objects with the following keys:
+
+- `reference`: The message ID for the message that is being reacted to
+
+- `action`: The action of the reaction (added or removed)
+
+- `content`: A string representation of a reaction (e.g. smile) to be interpreted by clients
+
+```tsx
+const reaction = {
+  reference: someMessageID,
+  action: "added",
+  content: "smile",
+};
+```
+
+### Send a reaction
+
+Now that you have a reaction, you can send it:
+
+```tsx
+await conversation.send(reaction, {
+  contentType: ContentTypeReaction,
+  contentFallback: `[Reaction] ${client.address} reacted to ${someMessage.content} with:\n\n${reaction.content}`,
+});
+```
+
+Note: Use contentFallback to enable clients that don't support these content types to still display some useful context. For cases where clients do support these types, they can use the content fallback as alt text for accessibility purposes.
+
+### Receive a reaction
+
+Now that you can send a reaction, you need a way to receive a reaction. For example:
+
+```tsx
+if (message.contentType.sameAs(ContentTypeReaction)) {
+  // We've got a reaction.
+  const reaction: Reaction = message.content;
+}
+```
+
+### Display the reaction
+
+Generally, reactions should be interpreted as emoji. So, "smile" would translate to 😄 in UI clients. That being said, how you ultimately choose to render a reaction in your app is up to you.
