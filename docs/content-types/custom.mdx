@@ -1,0 +1,133 @@
+---
+sidebar_label: Custom
+sidebar_position: 20
+---
+
+# Build a custom content type
+
+If you want to send a content type other than those supported by standard content types (plain text and composite messages), you must build a custom content type. This task uses a fictional `AudioCodec` custom content type to help illustrate the steps.
+
+:::caution
+
+Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. `xmtp.org` is reserved for use as the `authorityId` for standard content types only.
+
+:::
+
+To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
+
+1. Create an `AudioCodec` class that encodes and decodes the content type. For example, you can put this in the file that creates an XMTP client.
+
+```javascript
+import { Client, ContentTypeId } from "@xmtp/xmtp-js";
+
+const ContentTypeAudioKey = new ContentTypeId({
+  authorityId: "your.domain",
+  typeId: "audio-key",
+  versionMajor: 1,
+  versionMinor: 0,
+});
+
+class AudioCodec {
+  get contentType() {
+    return ContentTypeAudioKey;
+  }
+
+  encode(key: string | undefined) {
+    return {
+      type: ContentTypeAudioKey,
+      parameters: {},
+      content: new TextEncoder().encode(key),
+    };
+  }
+
+  decode(content: { content: any }) {
+    const uint8Array = content.content;
+    const key = new TextDecoder().decode(uint8Array);
+    return key;
+  }
+}
+```
+
+2. Pass the `AudioCodec` content type as an option to the `Client.create() method`.
+
+```javascript
+const xmtp = await Client.create(null, {
+  env: "dev",
+  codecs: [new AudioCodec()],
+});
+```
+
+:::note
+
+If you register a codec for a custom content type that is already in the default set, it will replace the original codec.
+
+:::
+
+## Send a custom content type
+
+Once you’ve built your custom content type, you can immediately start using it to tag and send messages. This task uses a fictional `AudioCodec` custom content type to help illustrate the steps.
+
+1. Register your AudioCodec custom content type with the message API client. For example:
+
+```javascript
+import { Conversation, ContentTypeId } from "@xmtp/xmtp-js";
+
+const ContentTypeVoiceKey = new ContentTypeId({
+  authorityId: "your.domain",
+  typeId: "audio-key",
+  versionMajor: 1,
+  versionMinor: 0,
+});
+```
+
+2. Send a message using the `send` method with `audioRecording` as the content (in byteArrays).
+
+For example, you can build the `AudioCodec` to encode `audioData` as a binary representation of the audio file.
+
+In this code sample, the message is tagged and sent with two options: `contentType` and `contentFallback`. The `contentType` option is set to `ContentTypeVoiceKey`, which enables the message API client to know to use the `AudioCodec` to encode and decode the content. The `contentFallback` option is set to 'This is an audio recording' to enable an app to display descriptive text if it is unable to handle the custom content type.
+
+```javascript
+const audioRecording = "xxxxxxx"; // audio recording in byteArrays
+conversation.send(audioRecording, {
+  contentType: ContentTypeVoiceKey,
+  contentFallback: "This is an audio recording",
+});
+```
+
+As shown in the example above, you **must** provide a `contentFallback` value. Use it to provide an alt text-like description of the original content. Providing a `contentFallback` value enables clients that don't support your custom (non-standard) content type to still display something meaningful. This is especially important because your custom content type **will not** automatically be supported by other apps.
+
+:::caution
+
+If you don't provide a `contentFallback` value, clients that don't support your custom content type will display an empty message. This results in a poor user experience and breaks interoperability.
+
+:::
+
+If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
+
+If developers take interest in your custom content type, consider proposing it as a standard through the [XIP process](https://github.com/xmtp/XIPs#readme).
+
+### Use content types
+
+All messages in XMTP are encoded with a **content type** to ensure interoperability and consistency of experience across the XMTP network.
+
+Two standard content types come bundled with the XMTP client SDK:
+
+1. `xmtp.org/text:1.0`, which defines a **default** `TextCodec` for plain text content
+
+   To learn more about this text content type, see [XIP-5](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#xmtporgtext).
+
+2. `xmtp.org/composite:1.0`, which defines an **optional** `CompositeCodec` for multiple content types in a single message
+
+   To learn more about this composite content type, see [XIP-9](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-9-composite-content-type.md).
+
+For these standard content types, `xmtp.org` is the `authorityId` value. `xmtp.org` is reserved for use as the `authorityId` for standard content types. Standard content types are those that have been adopted through the [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) (XIP) process.
+
+:::caution
+
+Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. Instead, consider using a unique DNS domain or ENS name that can be widely recognized as belonging to your app. For example, `frenz.xyz`.
+
+:::
+
+To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
+
+To learn more about the difference between standard and custom content types, see [Content types with XMTP](/docs/content-types/introduction).
