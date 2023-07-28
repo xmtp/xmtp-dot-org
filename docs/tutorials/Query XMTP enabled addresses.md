@@ -6,7 +6,7 @@ sidebar_position: 6
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Query XMTP enabled adddresses
+# Query XMTP enabled addresses
 
 XMTP users can only chat with other users who have XMTP-enabled addresses. Thus, it is essential that if you are building on top of XMTP to know if a user or group of users have XMTP enabled.
 
