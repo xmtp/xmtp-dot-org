@@ -412,11 +412,15 @@ query {
 
 #### Get the Lens name of a Farcaster user
 
-AI Prompt:
+<Tabs>
+<TabItem value="prompt" label="Prompt"  >
 
 ```bash
 For Farcaster user vbuterin, fetch their Lens name
 ```
+
+</TabItem>
+</Tabs>
 
 <Tabs>
 <TabItem value="request" label="Request" >
