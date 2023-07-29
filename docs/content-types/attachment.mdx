@@ -46,7 +46,7 @@ let imgArray = new Uint8Array(await blob.arrayBuffer());
 
 const attachment = {
   filename: filename,
-  mimeType: extname,
+  mimeType: extname, //image, video or audio
   data: imgArray,
 };
 
