@@ -6,6 +6,8 @@ description: Managing Local Data with Dexie in a React Application
 
 # Managing Local Data with Dexie in a React Application
 
+The performance of a web application can be significantly improved by leveraging local data storage. Particularly in the context of loading messages, using a local database can result in a 10x performance increase compared to solely relying on a network-based data source. This is because local storage allows for quicker data retrieval, reducing load times and improving the overall user experience.
+
 This guide provides a walkthrough on managing local data storage in a React application using the Dexie.js library. Dexie.js is a minimalistic wrapper for IndexedDB, which is a low-level API for client-side storage of significant amounts of structured data.
 
 import ReactPlayer from 'react-player'
