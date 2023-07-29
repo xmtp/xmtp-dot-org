@@ -16,7 +16,7 @@ As you go through the steps and code samples in this section, consider viewing t
 ## Install the package
 
 ```bash
-npm i --save @xmtp/content-type-remote-attachment
+npm i  @xmtp/content-type-remote-attachment
 ```
 
 ## Send a remote attachment
@@ -151,7 +151,7 @@ const url = `https://${cid}.ipfs.w3s.link/uploadIdOfYourChoice`;
 ```
 
 </TabItem>
-<TabItem value="thirdweb" label="Thridweb">
+<TabItem value="thirdweb" label="Thirdweb">
 
 ```tsx
 import { useStorageUpload } from "@thirdweb-dev/react";
@@ -172,7 +172,7 @@ const url = uploadUrl[0];
 
 Now that you have a `url`, you can create a `RemoteAttachment`.
 
-```tsx
+```jsx
 const remoteAttachment = {
   url: url,
   contentDigest: encryptedEncoded.digest,
@@ -191,34 +191,23 @@ Now that you have a remote attachment, you can send it:
 
 ```tsx
 await conversation.send(remoteAttachment, {
-  contentFallback:
-    "[Attachment] Cannot display ${remoteAttachment.filename}. This app does not support attachments yet.",
   contentType: ContentTypeRemoteAttachment,
 });
 ```
-
-As shown in the example above, you **must** provide a `contentFallback` value. Use it to provide an alt text-like description of the original content. Providing a `contentFallback` value enables clients that don't support the content type to still display something meaningful.
-
-:::caution
-
-If you don't provide a `contentFallback` value, clients that don't support the content type will display an empty message. This results in a poor user experience and breaks interoperability.
-
-:::
 
 ## Download, decrypt, and decode the attachment
 
 Now that you can receive a remote attachment, you need a way to receive a remote attachment. For example:
 
 ```tsx
-const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
-  attachment,
-  new AttachmentCodec(),
-);
+if (message.contentType.sameAs(RemoteAttachmentContentType)) {
+  const attachment = await RemoteAttachmentCodec.load(message.content, client);
+}
 ```
 
 You now have the original attachment:
 
-```
+```bash
 attachment.filename // => "screenshot.png"
 attachment.mimeType // => "image/png",
 attachment.data // => [the PNG data]
@@ -230,7 +219,7 @@ Once you have the attachment object created, you can also create a preview for w
 
 ```tsx
 URL.createObjectURL(
-    new Blob([Buffer.from(somePNGData)], {
+    new Blob([Buffer.from(attachment.data)], {
     type: attachment.mimeType,
   }),
 ),

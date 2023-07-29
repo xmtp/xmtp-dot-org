@@ -244,7 +244,6 @@ const remoteAttachment = {
 
 const message = await conversation.send(remoteAttachment, {
   contentType: ContentTypeRemoteAttachment,
-  contentFallback: "a screenshot of over 1MB",
 });
 ```
 

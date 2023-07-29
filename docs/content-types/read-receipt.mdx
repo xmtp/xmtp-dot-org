@@ -9,24 +9,17 @@ A reply is a method to directly respond to a specific message in a conversation.
 
 ### Install the package
 
-Use the following commands to install the package:
-
 ```bash
 npm i @xmtp/content-type-read-receipt
 ```
 
-### Import libraries
+### Import and register
 
 ```tsx
 import {
   ContentTypeReadReceipt,
   ReadReceiptCodec,
 } from "@xmtp/content-type-read-receipt";
-```
-
-### Register codec
-
-```tsx
 // Create the XMTP client
 const xmtp = await Client.create(signer, { env: "dev" });
 // Register the codecs, AttachmentCodec is for handling local attachments under 1MB
@@ -35,22 +28,20 @@ xmtp.registerCodec(new ReadReceiptCodec());
 
 ### Create a Read Receipt
 
-In XMTP, replies are represented as objects with two keys:
-
-- `reference`: The message ID for the message that is being replied to
-
-- `content`: A string representation of the reply
+- `timestamp`: The timestamp the read receipt was sent, in ISO 8601 format
 
 ```tsx
-const reply: Read Receipt = {
-  reference: someMessageID,
-  content: "I concur",
+const readReceipt: ReadReceipt = {
+  /**
+   * The timestamp the read receipt was sent, in ISO 8601 format
+   */
+  timestamp: dateString,
 };
 ```
 
 ### Sending a Read Receipt
 
-Once you've created a reply, you can send it:
+Once you've created a read receipt, you can send it:
 
 ```tsx
 await conversation.send(readReceipt, {
@@ -58,19 +49,28 @@ await conversation.send(readReceipt, {
 });
 ```
 
-Note: Use contentFallback to allow clients that don't support these content types to still display some useful context. For clients that do support these types, they can use the content fallback as alt text for accessibility purposes.
-
 ### Receiving a Read Receipt
 
 Here's how you can receive a reply:
 
 ```tsx
-if (message.contentType.sameAs(ContentTypeRead Receipt)) {
+if (message.contentType.sameAs(ContentTypeReadReceipt)) {
   // We've got a reply.
-  const reply: Read Receipt = message.content;
+  const timestamp = message.content.timestamp;
 }
 ```
 
 ### Displaying the Read Receipt
 
-Replies should generally be displayed alongside the original message to provide context. However, the way you choose to display replies is completely up to you.
+A read receipt timestamp should be not display but instead used to calculate the time since the last message was read. While iterating through messages you can be sure that the last message was read at the timestamp of the read receipt if the string if the date is lower.
+
+```jsx
+function checkReadMessages(messages, readReceipt) {
+  return messages.map((message) => {
+    return {
+      ...message,
+      isRead: message.timestamp <= readTimestamp,
+    };
+  });
+}
+```

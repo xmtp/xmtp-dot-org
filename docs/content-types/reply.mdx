@@ -15,15 +15,10 @@ Use the following commands to install the package:
 npm i @xmtp/content-type-reply
 ```
 
-### Import libraries
+### Import and register
 
 ```tsx
 import { ContentTypeReply, ReplyCodec } from "@xmtp/content-type-reply";
-```
-
-### Register codec
-
-```tsx
 // Create the XMTP client
 const xmtp = await Client.create(signer, { env: "dev" });
 // Register the codecs, AttachmentCodec is for handling local attachments under 1MB
@@ -52,11 +47,8 @@ Once you've created a reply, you can send it:
 ```tsx
 await conversation.send(reply, {
   contentType: ContentTypeReply,
-  contentFallback: `[Reply] ${client.address} replied to ${someMessage.content} with:\n\n${reply.content}`,
 });
 ```
-
-Note: Use contentFallback to allow clients that don't support these content types to still display some useful context. For clients that do support these types, they can use the content fallback as alt text for accessibility purposes.
 
 ### Receiving a Reply
 

@@ -55,8 +55,7 @@ const preparedCustomContentMessage = await conversation.prepareMessage(
   customContent,
   {
     contentType,
-    contentFallback: "This content can't be displayed on this client.",
-  }
+  },
 );
 ```
 

@@ -667,7 +667,7 @@ This tutorial requires that you have the following prerequisites in place:
 - Add the Unstoppable Domains SDK
 
 ```jsx
-npm i --save @unstoppabledomains/resolution
+npm i  @unstoppabledomains/resolution
 ```
 
 Instantiate the library using your own RPC, such as Infura. Create a `resolution` variable that you will use many times across the app.

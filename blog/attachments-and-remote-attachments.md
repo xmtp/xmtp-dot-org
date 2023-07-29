@@ -126,11 +126,8 @@ Awesome. We have a `RemoteAttachment`! Let's send that to our best friend.
 ```tsx
 await conversation.send(remoteAttachment, {
   contentType: ContentTypeRemoteAttachment,
-  contentFallback: "a screenshot of 1MB of text",
 });
 ```
-
-Note that we’re using `contentFallback` here to allow clients that do not support these content types to still show something. For cases where clients _do_ support these types, the content fallback can be used as alt text for accessibility purposes.
 
 ### Receiving Remote Attachments
 
