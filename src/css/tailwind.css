@@ -858,7 +858,7 @@ ul li a:before {
 .bigTab > .tabs-container > .tabs > .tabs__item {
   padding-top: 18px !important;
   padding-bottom: 18px !important;
-  font-size: 16px;
+  font-size: 16px !important;
   background: white !important;
 }
 .bigTab > .tabs-container > .tabs > .tabs__item--active {
@@ -1454,6 +1454,22 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   margin-left: 5px;
 }
 
+.thirdweb_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/thirdweb.ico") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.web3storage_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/web3storage.ico") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
 .lens_tab::after {
   content: "";
   display: inline-block;
