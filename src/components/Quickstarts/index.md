@@ -15,9 +15,9 @@
 - [React Native app](https://github.com/xmtp/example-chat-react-native)
 - [New React Playground 🔥](https://github.com/xmtp/xmtp-react-playground/)
 
-  - Performant database architecture
+  - Local DB
   - Group chat
   - Message reactions
   - Message replies
+  - Read receipts
   - Attachments
-  - Images
