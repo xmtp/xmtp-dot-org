@@ -16,7 +16,7 @@ XMTP supports real-time message delivery and retrieval. Once you initially retri
 You can listen for new conversations being started in real-time. This enables apps to display incoming messages from new contacts.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 const stream = await xmtp.conversations.stream();
@@ -32,7 +32,7 @@ for await (const conversation of stream) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 for try await conversation in client.conversations.stream() {
@@ -48,7 +48,7 @@ for try await conversation in client.conversations.stream() {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 var listening = client.streamConversations().listen((convo) {
@@ -59,7 +59,7 @@ await listening.cancel();
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 client.conversations.stream().collect {
@@ -70,7 +70,7 @@ client.conversations.stream().collect {
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
 //The `useStreamConversations` hook listens for new conversations in real-time and calls the passed callback when a new conversation is created. It also exposes an error state.
@@ -95,7 +95,7 @@ if (error) {
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 const stream = await xmtp.conversations.stream();
@@ -118,7 +118,7 @@ You can listen for any new messages (incoming or outgoing) in a conversation by 
 _The Stream returned by the `stream` methods is an asynchronous iterator and as such usable by a for-await-of loop. Note however that it is by its nature infinite, so any looping construct used with it will not terminate, unless the termination is explicitly initiated (by breaking the loop or by an external call to `return`)._
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
@@ -134,7 +134,7 @@ for await (const message of await conversation.streamMessages()) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 let conversation = try await client.conversations.newConversation(
@@ -151,7 +151,7 @@ for try await message in conversation.streamMessages() {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 var listening = client.streamMessages(convo).listen((message) {
@@ -162,7 +162,7 @@ await listening.cancel();
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 val conversation =
@@ -178,7 +178,7 @@ conversation.streamMessages().collect {
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
 import { useStreamMessages } from "@xmtp/react-sdk";
@@ -193,7 +193,7 @@ useStreamMessages(conversation, onMessage);
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 const conversation = await xmtp.conversations.newConversation(
@@ -220,7 +220,7 @@ There is a chance this stream can miss messages if multiple new conversations ar
 :::
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```jsx
 for await (const message of await xmtp.conversations.streamAllMessages()) {
@@ -233,7 +233,7 @@ for await (const message of await xmtp.conversations.streamAllMessages()) {
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
 import { useStreamAllMessages } from "@xmtp/react-sdk";
@@ -260,7 +260,7 @@ import { useStreamAllMessages } from "@xmtp/react-sdk";
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 for await (const message of await xmtp.conversations.streamAllMessages()) {

@@ -288,7 +288,7 @@ Get the address of an ENS domain, Lens handle, or Farcaster user.
 
 <Tabs className="lensicons">
 
-<TabItem value="ens" label="ENS" >
+<TabItem value="ens" label="ENS" attributes={{className: "ens_tab"}}>
 
 AI Prompt:
 
@@ -308,7 +308,7 @@ query {
 ```
 
 </TabItem>
-<TabItem value="response" label="Json Output" >
+<TabItem value="response" label="Output" >
 
 ```graphql
 {
@@ -344,7 +344,7 @@ query {
 ```
 
 </TabItem>
-<TabItem value="response" label="Json Output" >
+<TabItem value="response" label="Output" >
 
 ```graphql
 {
@@ -360,7 +360,7 @@ query {
 </Tabs>
 
 </TabItem>
-<TabItem value="farcaster" label="Farcaster" >
+<TabItem value="farcaster" label="Farcaster" attributes={{className: "farcaster_tab"}}>
 
 AI Prompt:
 
@@ -380,7 +380,7 @@ query {
 ```
 
 </TabItem>
-<TabItem value="response" label="Json Output" >
+<TabItem value="response" label="Output" >
 
 ```graphql
 {
@@ -503,7 +503,7 @@ query FetchBulkENS($resolvedAddresses: [Address!]) {
 ```
 
 </TabItem>
-<TabItem value="response" label="Json Output" >
+<TabItem value="response" label="Output" >
 
 ```graphql
 {
