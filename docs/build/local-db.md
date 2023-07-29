@@ -8,13 +8,15 @@ description: Managing Local Data with Dexie in a React Application
 
 This guide provides a walkthrough on managing local data storage in a React application using the Dexie.js library. Dexie.js is a minimalistic wrapper for IndexedDB, which is a low-level API for client-side storage of significant amounts of structured data.
 
-### Managing Local Data with Dexie in a React Application
-
-This guide provides a walkthrough on managing local data storage in a React application using the Dexie.js library. Dexie.js is a minimalistic wrapper for IndexedDB, which is a low-level API for client-side storage of significant amounts of structured data.
+import ReactPlayer from 'react-player'
 
 #### Experimental Playground 🎲
 
-For hands-on experience, check out the React Playground. You can access the Playground via its [GitHub](https://github.com/xmtp/xmtp-react-playground) repo or [live version](https://xmtp.github.io/xmtp-react-playground/#/new).
+For hands-on experience, check out the React Playground.
+
+[GitHub repo](https://github.com/xmtp/xmtp-react-playground) | [Live Version](https://xmtp.github.io/xmtp-react-playground/#/new).
+
+<ReactPlayer width="auto" controls url='/img/localdb.mp4' muted playing="true" />
 
 ## Step 1: Installing Libraries
 
