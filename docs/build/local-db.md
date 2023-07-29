@@ -16,7 +16,7 @@ For hands-on experience, check out the React Playground.
 
 [GitHub repo](https://github.com/xmtp/xmtp-react-playground) | [Live Version](https://xmtp.github.io/xmtp-react-playground/#/new).
 
-<ReactPlayer width="auto" controls url='/img/localdb.mp4' muted playing="true" />
+<ReactPlayer width="auto"  url='/img/localdb.mp4' muted playing="true" />
 
 ## Step 1: Installing Libraries
 
