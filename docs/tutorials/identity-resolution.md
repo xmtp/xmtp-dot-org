@@ -60,7 +60,7 @@ Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to
 
 ### Reverse resolution
 
-For example, if you would like to get the web3 identity of a user, e.g. all the web3 socials and ENS of the `0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045` address, then you can simply type into the
+For example, if you would like to get the web3 identity of a user, e.g. all the web3 socials and ENS of the `0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045` address, then you can simply type into the prompt:
 
 <Tabs>
 <TabItem value="prompt" label="Prompt"  >
