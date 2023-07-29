@@ -85,7 +85,7 @@ const BuiltWithXmtp = () => {
                     className="  flex align-center"
                     href={developer.twitter}
                     style={{
-                      fontSize: "22px",
+                      fontSize: "20px",
                       fontWeight: "bold",
                       color: "black",
                     }}
