@@ -1,6 +1,6 @@
 ---
 sidebar_label: Notifications
-sidebar_position: 8
+sidebar_position: 20
 ---
 
 # Build push notifications with XMTP
