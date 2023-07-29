@@ -14,16 +14,7 @@ This guide provides a walkthrough on managing local data storage in a React appl
 
 #### Experimental Playground 🎲
 
-For hands-on experience, check out the React Playground. The playground, built with React and the XMTP JavaScript SDK, provides a solid foundation for your app, featuring:
-
-- Performant database architecture
-- Group chat
-- Message reactions
-- Message replies
-- Attachments
-- Images
-
-You can access the Playground via its [GitHub](https://github.com/xmtp/xmtp-react-playground) repo or [live version](https://xmtp.github.io/xmtp-react-playground/#/new).
+For hands-on experience, check out the React Playground. You can access the Playground via its [GitHub](https://github.com/xmtp/xmtp-react-playground) repo or [live version](https://xmtp.github.io/xmtp-react-playground/#/new).
 
 ## Step 1: Installing Libraries
 
