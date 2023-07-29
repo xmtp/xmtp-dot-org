@@ -1410,3 +1410,81 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   font-weight: 500;
   color: var(--docs-sidebar-link-color);
 }
+/*ICONS*/
+.farcaster_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/farcaster.png") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.ens_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/ens.ico") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.js_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/js.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.swift_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/swift.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.dart_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/dart.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.kotlin_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/kotlin.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.react_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/react.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.rn_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/react.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.typescript_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/js.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}

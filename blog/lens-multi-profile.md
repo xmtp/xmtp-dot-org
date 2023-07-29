@@ -81,7 +81,7 @@ await conversation.send("gm");
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 let conversation2 = try await client.conversations.newConversation(
@@ -94,7 +94,7 @@ with: "0x3F11b27F323b62B159D2642964fa27C46C841897",
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 let conversation1 = try await client.conversations.newConversation(
@@ -104,7 +104,7 @@ context: .init(conversationID: buildConversationId(myProfile.id, otherProfile.id
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 val conversation2 = client.conversations.newConversation(
@@ -140,7 +140,7 @@ const myProfileConversations = lensConversations.filter((conversation) =>
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 // Get all the conversations
@@ -158,7 +158,7 @@ let myAppConversations = conversations.filter {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 // Get all the conversations
@@ -168,7 +168,7 @@ var myConversations = conversations.where((c) =>
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 // Get all the conversations
