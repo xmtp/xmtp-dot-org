@@ -12,7 +12,8 @@ This guide provides a walkthrough on managing local data storage in a React appl
 
 This guide provides a walkthrough on managing local data storage in a React application using the Dexie.js library. Dexie.js is a minimalistic wrapper for IndexedDB, which is a low-level API for client-side storage of significant amounts of structured data.
 
-Experimental Playground 🎲
+#### Experimental Playground 🎲
+
 For hands-on experience, check out the React Playground. The playground, built with React and the XMTP JavaScript SDK, provides a solid foundation for your app, featuring:
 
 - Performant database architecture
