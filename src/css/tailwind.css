@@ -845,8 +845,6 @@ ul li a:before {
 
 .tabs-container ul {
   background: var(--ifm-pre-background);
-  font-size: 14px;
-  line-height: 20px;
 }
 .tabs {
   background: var(--ifm-pre-background);
