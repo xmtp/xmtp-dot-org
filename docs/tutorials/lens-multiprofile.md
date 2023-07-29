@@ -58,7 +58,7 @@ Building multi-profile experiences is optional. Allowing users to have different
 You can assign a conversation ID to conversations and then use the ID to filter and organize conversations as needed. You set the `conversationId` when your app creates a conversation.
 
 <Tabs>
-<TabItem value="js" label="JS" default>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}} default>
 
 ```tsx
 const conversation = await client.conversations.newConversation(
@@ -121,7 +121,7 @@ Here is the **Messages** panel in Lenster using the Lens DM `conversationId` to 
 1. Filter for Lens conversations only
 
 <Tabs>
-<TabItem value="js" label="JS" default>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}} default>
 
 ```tsx
 // Filter for Lens conversations with your profile
