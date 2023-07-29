@@ -9,7 +9,7 @@
 - [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions) / [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
 - [Nodebook](https://github.com/fabriguespe/xmtp-nodebook) / [Replit](https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1)
 
-### Example apps
+### Example apps 📲
 
 - [React web app](https://github.com/xmtp/xmtp-quickstart-react)
 - [React Native app](https://github.com/xmtp/example-chat-react-native)
