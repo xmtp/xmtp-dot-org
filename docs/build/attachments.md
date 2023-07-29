@@ -36,7 +36,7 @@ Because XMTP messages can only be up to 1MB in size, we need to store the attach
 
 End-to-end encryption must apply not only to XMTP messages, but to message attachments as well. For this reason, we need to encrypt the attachment before we store it.
 
-## Import and register codecs
+## Import and register
 
 ```tsx
 // Import the codecs we're going to use
@@ -44,9 +44,6 @@ import {
   AttachmentCodec,
   RemoteAttachmentCodec,
 } from "@xmtp/content-type-remote-attachment";
-```
-
-```tsx
 // Create the XMTP client
 const xmtp = await Client.create(signer, { env: "dev" });
 // Register the codecs. AttachmentCodec is for local attachments (<1MB)
@@ -58,7 +55,7 @@ xmtp.registerCodec(new RemoteAttachmentCodec());
 ## Create an attachment object
 
 <Tabs>
-<TabItem value="backend" label="Backend">
+<TabItem value="backend" label="Backend"  attributes={{className: "js_tab"}}>
 
 ```tsx
 // Local file details
@@ -74,7 +71,7 @@ console.log(`Type: ${extname}`);
 ```
 
 </TabItem>
-<TabItem value="frontend" label="Frontend">
+<TabItem value="frontend" label="Frontend" attributes={{className: "react_tab"}}>
 
 ```tsx
 // Local file details

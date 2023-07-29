@@ -9,8 +9,6 @@ import TabItem from "@theme/TabItem";
 
 # Send and list messages with XMTP
 
-Messages are addressed using wallet addresses.
-
 The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/content-types/introduction).
 
 ## Send messages
@@ -285,7 +283,7 @@ let decodedMessage = try conversation.decode(envelope)
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin -beta" default>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 val conversation =
