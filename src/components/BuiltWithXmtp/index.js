@@ -74,7 +74,7 @@ const BuiltWithXmtp = () => {
                 )}
                 {developer.github && (
                   <a
-                    className="text-base font-semibold text-red-500 flex align-center"
+                    className="text-base font-semibold  flex align-center"
                     href={developer.github}
                     target="_blank">
                     <div className="github-icon h-5 w-5"></div>
@@ -82,10 +82,15 @@ const BuiltWithXmtp = () => {
                 )}
                 {developer.twitter && (
                   <a
-                    className="text-base font-semibold text-red-500 flex align-center"
+                    className="  flex align-center"
                     href={developer.twitter}
+                    style={{
+                      fontSize: "22px",
+                      fontWeight: "bold",
+                      color: "black",
+                    }}
                     target="_blank">
-                    <div className="twitter-icon h-5 w-5"></div>
+                    𝕏
                   </a>
                 )}
               </div>

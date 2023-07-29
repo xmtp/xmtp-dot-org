@@ -1,59 +1,59 @@
 eng:
   name: Engineering
   title: XMTP Labs
-  url: https://twitter.com/xmtp_
+  url: https://x.com/xmtp_
   image_url: ./media/xmtp-icon.jpeg
 
 jha:
   name: J-Ha
   title: Documentation at XMTP Labs
-  url: https://twitter.com/j_ha
+  url: https://x.com/j_ha
   image_url: ./media/jhaaaa.jpeg
 
 mg:
   name: Matt Galligan
   title: Co-founder of XMTP Labs
-  url: https://twitter.com/mg
+  url: https://x.com/mg
   image_url: http://github.com/galligan.png
 
 montez:
   name: Montez
   title: Product Manager at XMTP Labs
-  url: https://twitter.com/xmtp_
+  url: https://x.com/xmtp_
   image_url: ./media/montez.png
 
 fabri:
   name: Fabri
   title: Developer Relations at XMTP Labs
-  url: https://twitter.com/fabriguespe
+  url: https://x.com/fabriguespe
   image_url: ./media/fabri.jpeg
 
 peter:
   name: Peter Denton
   title: Head of Growth at XMTP Labs
-  url: https://twitter.com/petermdenton
+  url: https://x.com/petermdenton
   image_url: ./media/peter-headshot.jpeg
 
 rich:
   name: Rich Bustos
   title: Developer Relations at XMTP Labs
-  url: https://twitter.com/richrdbustos
+  url: https://x.com/richrdbustos
   image_url: ./media/rich-headshot.jpeg
 
 rochelle:
   name: Rochelle Guillou
   title: Content Strategy at XMTP Labs
-  url: https://twitter.com/RochelleSophie_
+  url: https://x.com/RochelleSophie_
   image_url: ./media/rochelle-headshot.jpeg
 
 shane:
   name: Shane Mac
   title: Co-founder of XMTP Labs
-  url: https://twitter.com/shanemac
+  url: https://x.com/shanemac
   image_url: ./media/shane-headshot.jpeg
 
 yash:
   name: Yash Lunagaria
   title: Product Manager at XMTP Labs
-  url: https://twitter.com/yash_luna
+  url: https://x.com/yash_luna
   image_url: ./media/yash-headshot.jpeg

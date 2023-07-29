@@ -355,8 +355,8 @@ const config = {
                 href: "https://discord.gg/xmtp",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/xmtp_",
+                label: "𝕏",
+                href: "https://x.com/xmtp_",
               },
               {
                 label: "GitHub Discussions",

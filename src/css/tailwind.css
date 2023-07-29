@@ -286,7 +286,11 @@ body {
 .navbar__item .dropdown__menu {
   width: 448px;
 }
-
+.𝕏 {
+  color: white;
+  font-size: 30px;
+  padding: 0px !important;
+}
 .navbar-sidebar__backdrop {
   background-color: var(--backdrop-mobile-menu);
   height: 100vh;
