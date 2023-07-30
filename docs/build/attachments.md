@@ -25,12 +25,9 @@ Use the `RemoteAttachmentCodec` package to enable your app to send and receive
 
 Message attachments are files. More specifically, attachments are objects that have:
 
-- `filename`  
-   Most files have names, at least the most common file types.
-- `mimeType`  
-   What kind of file is it? You can often assume this from the file extension, but it's nice to have a specific field for it. [Here's a list of common mime types.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
-- `data`  
-   What is this file's data? Most files have data. If the file doesn't have data then it's probably not the most interesting thing to send.
+- `filename` Most files have names, at least the most common file types.
+- `mimeType` What kind of file is it? You can often assume this from the file extension, but it's nice to have a specific field for it. [Here's a list of common mime types.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+- `data` What is this file's data? Most files have data. If the file doesn't have data then it's probably not the most interesting thing to send.
 
 Because XMTP messages can only be up to 1MB in size, we need to store the attachment somewhere other than the XMTP network. In other words, we need to store it in a remote location.
 
