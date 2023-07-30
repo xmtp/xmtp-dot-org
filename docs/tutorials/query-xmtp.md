@@ -10,6 +10,10 @@ import TabItem from "@theme/TabItem";
 
 XMTP users can only chat with other users who have XMTP-enabled addresses. Thus, it is essential that if you are building on top of XMTP to know if a user or group of users have XMTP enabled.
 
+import ReactPlayer from 'react-player'
+
+<ReactPlayer w  url='/img/query-xmtp.mp4' muted playing="true" />
+
 In this guide, you’ll learn how to use Airstack to:
 
 - Check if ENS addresses have XMTP
