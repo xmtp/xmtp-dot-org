@@ -3,17 +3,28 @@ sidebar_label: Reaction
 sidebar_position: 7
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Reaction Content Type
 
 A reaction is a quick and often emoji-based way to respond to a message. Reactions are usually limited to a predefined set of emojis or symbols provided by the messaging app.
 
 ### Install the package
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
 ```bash
 npm i @xmtp/content-type-reaction
 ```
 
+</TabItem></Tabs>
+
 ### Import and register
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 import {
@@ -26,6 +37,8 @@ const xmtp = await Client.create(signer, { env: "dev" });
 xmtp.registerCodec(new ReactionCodec());
 ```
 
+</TabItem></Tabs>
+
 ### Create a reaction
 
 With XMTP, reactions are represented as objects with the following keys:
@@ -36,6 +49,9 @@ With XMTP, reactions are represented as objects with the following keys:
 
 - `content`: A string representation of a reaction (e.g. smile) to be interpreted by clients
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
 ```tsx
 const reaction = {
   reference: someMessageID,
@@ -44,9 +60,14 @@ const reaction = {
 };
 ```
 
+</TabItem></Tabs>
+
 ### Send a reaction
 
 Now that you have a reaction, you can send it:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 await conversation.send(reaction, {
@@ -54,9 +75,14 @@ await conversation.send(reaction, {
 });
 ```
 
+</TabItem></Tabs>
+
 ### Receive a reaction
 
 Now that you can send a reaction, you need a way to receive a reaction. For example:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 if (message.contentType.sameAs(ContentTypeReaction)) {
@@ -64,6 +90,8 @@ if (message.contentType.sameAs(ContentTypeReaction)) {
   const reaction: Reaction = message.content;
 }
 ```
+
+</TabItem></Tabs>
 
 ### Display the reaction
 

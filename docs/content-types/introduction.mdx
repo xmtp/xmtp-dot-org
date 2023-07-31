@@ -4,6 +4,9 @@ sidebar_position: 1
 className: new
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Content Types with XMTP
 
 When you build an app with XMTP, all messages are encoded with a content type to ensure that an XMTP message API client knows how to encode and decode messages, ensuring interoperability and consistent display of messages across apps.
@@ -30,10 +33,6 @@ An app built with XMTP uses the `TextCodec` (plain text) standard content type b
 - ### [Composite Content Type](/docs/content-types/composite)
 
 If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
-
-## Custom Content Types
-
-Any developer building with XMTP can create a custom content type and immediately start using it in their app. Unlike a standard content type, use of a custom content type doesn't require prerequisite formal adoption through the XRC and XIP processes.
 
 - ### [Attachment Content Type](/docs/content-types/attachment)
 
@@ -70,3 +69,50 @@ This tutorial will walk you through the process of building a custom content typ
 - ### [Advanced: Sending a polygon transaction](/docs/content-types/custom)
 
 This tutorial will walk you through the process of building a custom content type dedicated to multiplying numbers. For demonstration purposes, we'll create a MultiplyCodec custom content type. By the end of this tutorial, you will have a robust and reusable piece of code ready to be incorporated into your XMTP project.
+
+## Not supported content types
+
+While showing messages in your app you should be aware that some content types are not supported by all XMTP clients. If you want to display a message with a content type that is not supported by your app, you can use a set of if statements to be sure you are supporting your desire conrtent types but also rendering with a fallback the ones not supported.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+/*
+ ** For loop iterating through messages
+ */
+
+// Checking the type of the content in the message
+if (message.contentType.sameAs(ContentTypeRemoteAttachment)) {
+  // If the content is a remote attachment, return a RemoteURL component
+  // Add a key prop to force a re-render when a new message is sent
+  return <RemoteURL key={message.id} attachment={message.content} />;
+} else if (message.contentType.sameAs(ContentTypeAttachment)) {
+  // If the content is an attachment, get its URL
+  // It handles local attachments stored within the application server
+  return objectURL(message.content);
+} else if (message.contentType.sameAs(ContentTypeReadReceipt)) {
+  // If the content is a read receipt, update the read receipts for this message
+  updateReadReceipts(message, messages);
+} else if (message.contentType.sameAs(ContentTypeReply)) {
+  // If the content is a reply, render the reply
+  // This handles how reply messages are displayed
+  return renderReply(message.content);
+} else if (message.contentType.sameAs(ContentTypeReaction)) {
+  // If the content is a reaction (like a like, love, etc.), return the reaction
+  // This handles how reactions are displayed
+  return reaction(message.content);
+} else {
+  // If the content is a simple text message, display it in a span element
+  return <span>{message.content}</span>;
+}else {
+  // If the content is a simple text message or an unhandled type, display it in a span element
+  return <span>{"Fallback message"}</span>;
+}
+
+/*
+ ** End of loop
+ */
+```
+
+</TabItem></Tabs>

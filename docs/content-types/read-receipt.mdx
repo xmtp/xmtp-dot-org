@@ -3,17 +3,28 @@ sidebar_label: Read Receipt
 sidebar_position: 7
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Read Receipt Content Type
 
 A read receipt is a `timestamp` that indicates when a message was read. It is sent as a message and can be used to calculate the time since the last message was read.
 
 ### Install the package
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
 ```bash
 npm i @xmtp/content-type-read-receipt
 ```
 
+</TabItem></Tabs>
+
 ### Import and register
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 import {
@@ -26,9 +37,14 @@ const xmtp = await Client.create(signer, { env: "dev" });
 xmtp.registerCodec(new ReadReceiptCodec());
 ```
 
+</TabItem></Tabs>
+
 ### Create a Read Receipt
 
 - `timestamp`: The timestamp the read receipt was sent, in ISO 8601 format
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 const readReceipt: ReadReceipt = {
@@ -39,9 +55,14 @@ const readReceipt: ReadReceipt = {
 };
 ```
 
+</TabItem></Tabs>
+
 ### Sending a Read Receipt
 
 Once you've created a read receipt, you can send it:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 await conversation.send(readReceipt, {
@@ -49,9 +70,14 @@ await conversation.send(readReceipt, {
 });
 ```
 
+</TabItem></Tabs>
+
 ### Receiving a Read Receipt
 
 Here's how you can receive a reply:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 if (message.contentType.sameAs(ContentTypeReadReceipt)) {
@@ -60,9 +86,14 @@ if (message.contentType.sameAs(ContentTypeReadReceipt)) {
 }
 ```
 
+</TabItem></Tabs>
+
 ### Displaying the Read Receipt
 
 A read receipt timestamp should be not display but instead used to calculate the time since the last message was read. While iterating through messages you can be sure that the last message was read at the timestamp of the read receipt if the string if the date is lower.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```jsx
 function checkReadMessages(messages, readReceipt) {
@@ -74,3 +105,5 @@ function checkReadMessages(messages, readReceipt) {
   });
 }
 ```
+
+</TabItem></Tabs>

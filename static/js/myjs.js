@@ -2,7 +2,6 @@ window.onload = function () {
   const navItems = document.querySelectorAll(".menu__link");
 
   navItems.forEach((item) => {
-    console.log(item.innerText);
     if (
       item.innerText === "Local DB" ||
       item.innerText === "Quickstart" ||
@@ -12,12 +11,12 @@ window.onload = function () {
       item.innerText === "Query addresses" ||
       item.innerText === "Reply" ||
       item.innerText === "Reaction" ||
-      item.innerText === "Read Receipts" ||
+      item.innerText === "Read Receipt" ||
       item.innerText === "Custom (Basic)" ||
       item.innerText === "Custom (Advanced)"
     ) {
-      console.log(item.innerText);
       item.classList.add("new");
+      console.log(item.classList);
     }
   });
 };

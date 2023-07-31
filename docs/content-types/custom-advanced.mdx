@@ -1,0 +1,181 @@
+---
+sidebar_label: Custom (Advanced)
+sidebar_position: 35
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Building a Custom Content Type for sending transaction hashes
+
+This tutorial will walk you through the process of building a custom content type dedicated to send transaction hashes on the polygon blockchain.
+
+## Step 1: Creating the TransactionHash Content Type
+
+Let's start by creating a new file xmtp-content-type-transaction-hash.tsx. This file will host the TransactionHash class which is responsible for encoding and decoding our custom content type.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+import { ContentTypeId } from "@xmtp/xmtp-js";
+
+export const ContentTypeTransactionHash = new ContentTypeId({
+  authorityId: "your.domain",
+  typeId: "transaction-hash",
+  versionMajor: 1,
+  versionMinor: 0,
+});
+
+export class ContentTypeTransactionHashCodec {
+  get contentType() {
+    return ContentTypeTransactionHash;
+  }
+
+  encode(hash) {
+    return {
+      type: ContentTypeTransactionHash,
+      parameters: {},
+      content: new TextEncoder().encode(hash),
+    };
+  }
+
+  decode(content: { content: any }) {
+    const uint8Array = content.content;
+    const hash = new TextDecoder().decode(uint8Array);
+    return hash;
+  }
+}
+```
+
+</TabItem></Tabs>
+
+## Step 2: Using the Custom Content Type
+
+Once the TransactionHash content type is defined, it's time to put it to use.
+
+### Import and Register Custom Content Type
+
+Begin by importing and registering the TransactionHash content type.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+import {
+  ContentTypeTransactionHash,
+  ContentTypeTransactionHashCodec,
+} from "./xmtp-content-type-transaction-hash";
+
+const xmtp = await Client.create(wallet, {
+  env: "dev",
+});
+xmtp.registerCodec(new ContentTypeTransactionHashCodec());
+```
+
+</TabItem></Tabs>
+
+### Sending a Transaction Hash
+
+With your custom content type registered, you can now utilize it to send hashes. This code snippet shows how to use the TransactionHash content type to send a transaction.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+// Create a wallet from a known private key
+const wallet = new ethers.Wallet(privateKey);
+console.log(`Wallet address: ${wallet.address}`);
+
+//im using a burner wallet with MATIC from a faucet
+//https://faucet.polygon.technology/
+
+// Set up provider for Polygon Testnet (Mumbai)
+const provider = new ethers.providers.JsonRpcProvider(
+  "https://rpc-mumbai.maticvigil.com",
+);
+
+// Connect the wallet to the provider
+const signer = wallet.connect(provider);
+
+// Define the recipient address and amount
+const amount = ethers.utils.parseEther("0.01"); // Amount in ETH (0.01 in this case)
+
+// Create a transaction
+const transaction = {
+  to: recipientAddress,
+  value: amount,
+};
+
+// Sign and send the transaction
+const tx = await signer.sendTransaction(transaction);
+console.log(`Transaction hash: ${tx.hash}`);
+
+const conversation = await xmtp.conversations.newConversation(WALLET_TO);
+await conversation
+  .send(tx.hash, {
+    contentType: ContentTypeTransactionHash,
+  })
+  .then(() => {
+    console.log("Transaction data sent", tx.hash);
+  })
+  .catch((error) => {
+    console.log("Error sending transaction data: ", error);
+  });
+```
+
+</TabItem></Tabs>
+
+### Rendering the Custom Content Type
+
+To make use of the result of the hash, you need to add an async renderer for your custom content type.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+if (message.contentType.sameAs(ContentTypeTransactionHash)) {
+  // Handle ContentTypeAttachment
+  return (
+    <TransactionMonitor key={message.id} encodedContent={message.content} />
+  );
+}
+
+const TransactionMonitor = ({ encodedContent }) => {
+  const [transactionReceipt, setTransactionReceipt] = useState(null);
+  const [retryCount, setRetryCount] = useState(0);
+
+  useEffect(() => {
+    const fetchTransactionReceipt = async () => {
+      console.log(encodedContent);
+      const provider = new ethers.providers.JsonRpcProvider(
+        "https://rpc-mumbai.maticvigil.com",
+      );
+      const receipt = await provider.getTransactionReceipt(encodedContent);
+      if (receipt !== null) {
+        setTransactionReceipt(receipt);
+      }
+    };
+    fetchTransactionReceipt();
+  }, [encodedContent, retryCount]);
+
+  return transactionReceipt ? (
+    <div>Transaction was mined in block {transactionReceipt.blockNumber}</div>
+  ) : (
+    <div>
+      Waiting for transaction to be mined...
+      <button onClick={() => setRetryCount(retryCount + 1)}>
+        Refresh Status 🔄
+      </button>
+    </div>
+  );
+};
+```
+
+</TabItem></Tabs>
+
+Keep in mind that any other application that intends to use your custom content type must implement it as per your definition.
+
+If your TransactionHash content type generates interest within the developer community, consider proposing it as a standard through the [XIP process](http://localhost:3000/docs/concepts/xips).
+
+To sum up, creating a custom content type opens up new avenues for handling data within the XMTP framework, giving you the power to manage data in a more personalized or specialized way.

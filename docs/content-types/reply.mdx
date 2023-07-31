@@ -3,6 +3,9 @@ sidebar_label: Reply
 sidebar_position: 6
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Reply Content Type
 
 A reply is a method to directly respond to a specific message in a conversation. Users can select and reply to a particular message instead of sending a new one.
@@ -11,11 +14,19 @@ A reply is a method to directly respond to a specific message in a conversation.
 
 Use the following commands to install the package:
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
 ```bash
 npm i @xmtp/content-type-reply
 ```
 
+</TabItem></Tabs>
+
 ### Import and register
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 import { ContentTypeReply, ReplyCodec } from "@xmtp/content-type-reply";
@@ -25,6 +36,8 @@ const xmtp = await Client.create(signer, { env: "dev" });
 xmtp.registerCodec(new ReplyCodec());
 ```
 
+</TabItem></Tabs>
+
 ### Create a Reply
 
 In XMTP, replies are represented as objects with two keys:
@@ -33,6 +46,9 @@ In XMTP, replies are represented as objects with two keys:
 
 - `content`: A string representation of the reply
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
 ```tsx
 const reply: Reply = {
   reference: someMessageID,
@@ -40,9 +56,14 @@ const reply: Reply = {
 };
 ```
 
+</TabItem></Tabs>
+
 ### Sending a Reply
 
 Once you've created a reply, you can send it:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 await conversation.send(reply, {
@@ -50,9 +71,14 @@ await conversation.send(reply, {
 });
 ```
 
+</TabItem></Tabs>
+
 ### Receiving a Reply
 
 Here's how you can receive a reply:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 if (message.contentType.sameAs(ContentTypeReply)) {
@@ -60,6 +86,8 @@ if (message.contentType.sameAs(ContentTypeReply)) {
   const reply: Reply = message.content;
 }
 ```
+
+</TabItem></Tabs>
 
 ### Displaying the Reply
 

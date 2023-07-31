@@ -66,7 +66,9 @@ The first thing we need to do is encrypt it. The new [xmtp-content-type-remote-a
 // Import the codecs we're going to use
 import {
   AttachmentCodec,
+  ContentTypeAttachment,
   RemoteAttachmentCodec,
+  ContentTypeRemoteAttachment,
 } from "xmtp-content-type-remote-attachment";
 
 // Encode the attachment and encrypt that encoded content

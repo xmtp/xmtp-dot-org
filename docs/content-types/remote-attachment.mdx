@@ -12,11 +12,19 @@ Remote attachments of any size can be sent using the `RemoteAttachmentCodec` and
 
 ### Install the package
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
 ```bash
 npm i @xmtp/content-type-remote-attachment
 ```
 
+</TabItem></Tabs>
+
 ### Import and register
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 // Import the codecs we're going to use
@@ -31,6 +39,8 @@ xmtp.registerCodec(new AttachmentCodec());
 //RemoteAttachmentCodec is for remote attachments (>1MB) using thirdweb storage
 xmtp.registerCodec(new RemoteAttachmentCodec());
 ```
+
+</TabItem></Tabs>
 
 ### Create an attachment object
 
@@ -83,12 +93,17 @@ const attachment = {
 
 Use the `RemoteAttachmentCodec.encodeEncrypted` to encrypt the attachment:
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
 ```tsx
 const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
   attachment,
   new AttachmentCodec(),
 );
 ```
+
+</TabItem></Tabs>
 
 ### Upload the encrypted attachment
 
@@ -149,6 +164,9 @@ const url = uploadUrl[0];
 
 Now that you have a `url`, you can create a `RemoteAttachment`.
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
 ```jsx
 const remoteAttachment = {
   url: url,
@@ -162,9 +180,14 @@ const remoteAttachment = {
 };
 ```
 
+</TabItem></Tabs>
+
 ### Send a remote attachment
 
 Now that you have a remote attachment, you can send it:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 await conversation.send(remoteAttachment, {
@@ -172,9 +195,14 @@ await conversation.send(remoteAttachment, {
 });
 ```
 
+</TabItem></Tabs>
+
 ## Download, decrypt, and decode the attachment
 
 Now that you can receive a remote attachment, you need a way to receive a remote attachment. For example:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 if (message.contentType.sameAs(RemoteAttachmentContentType)) {
@@ -182,17 +210,22 @@ if (message.contentType.sameAs(RemoteAttachmentContentType)) {
 }
 ```
 
-You now have the original attachment:
+</TabItem></Tabs>
 
-```bash
-attachment.filename // => "screenshot.png"
-attachment.mimeType // => "image/png",
-attachment.data // => [the PNG data]
-```
+- You now have the original attachment:
+
+  ```bash
+  attachment.filename // => "screenshot.png"
+  attachment.mimeType // => "image/png",
+  attachment.data // => [the PNG data]
+  ```
 
 ## Create a preview attachment object
 
 Once you have the attachment object created, you can also create a preview for what to show in a message input before sending:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 URL.createObjectURL(
@@ -201,3 +234,5 @@ URL.createObjectURL(
   }),
 ),
 ```
+
+</TabItem></Tabs>

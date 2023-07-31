@@ -3,17 +3,28 @@ sidebar_label: Attachment
 sidebar_position: 5
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Attachment Content Type
 
 Attachments smaller than 1MB can be sent using the `AttachmentCodec`. The codec will automatically encrypt the attachment and upload it to the XMTP network.
 
 ### Install the package
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
 ```bash
 npm i @xmtp/content-type-remote-attachment
 ```
 
+</TabItem></Tabs>
+
 ### Import and register
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 import {
@@ -26,7 +37,12 @@ const xmtp = await Client.create(signer, { env: "dev" });
 xmtp.registerCodec(new AttachmentCodec());
 ```
 
+</TabItem></Tabs>
+
 ### Load local file
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 // Read local file and extract its details
@@ -37,7 +53,12 @@ console.log(`Filename: ${filename}`);
 console.log(`File Type: ${extname}`);
 ```
 
+</TabItem></Tabs>
+
 ### Send encrypted file
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
 // Convert the file to a Uint8Array
@@ -54,7 +75,12 @@ console.log("Attachment created", attachment);
 await conversation.send(attachment, { contentType: ContentTypeAttachment });
 ```
 
+</TabItem></Tabs>
+
 ### Receive encrypted file
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```jsx
 if (message.contentType.sameAs(ContentTypeAttachment)) {
@@ -64,3 +90,5 @@ if (message.contentType.sameAs(ContentTypeAttachment)) {
   const url = URL.createObjectURL(blobdecoded);
 }
 ```
+
+</TabItem></Tabs>
