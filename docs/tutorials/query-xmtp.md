@@ -12,26 +12,26 @@ XMTP users can only chat with other users who have XMTP-enabled addresses. Thus,
 
 import ReactPlayer from 'react-player'
 
-<ReactPlayer w  url='/img/query-xmtp.mp4' muted playing="true" />
+In this guide, you’ll learn how to use [Airstack](https://airstack.xyz) to:
 
-In this guide, you’ll learn how to use Airstack to:
+- [Check if ENS addresses have XMTP](#query-0x-address-or-ens-if-xmtp-is-enabled)
+- [Check if Lens addresses have XMTP](##bulk-query-lens-profiles-if-xmtp-is-enabled)
+- [Check if Farcaster addresses have XMTP](#bulk-query-farcaster-name-or-id-if-xmtp-is-enabled)
+- [Check if NFT or Token holders have XMTP](#check-if-nft-or-token-holders-have-xmtp)
+- [Check if POAP attendees have XMTP](#check-if-poap-attendees-have-xmtp)
 
-- Check if ENS addresses have XMTP
-- Check if Lens addresses have XMTP
-- Check if Farcaster addresses have XMTP
-- Check if NFT or Token holders have XMTP
-- Check if POAP attendees have XMTP
-
-With Airstack `XMTPs` API, it will return the `isXMTPEnabled` field that you can use to check if XMTP has been enabled.
+With [Airstack](https://airstack.xyz) `XMTPs` API, it will return the `isXMTPEnabled` field that you can use to check if XMTP has been enabled.
 
 ### Prerequisites
 
-- An Airstack account (free)
+- An [Airstack](https://airstack.xyz) account (free)
 - Basic knowledge of GraphQL
 
 #### 🤖 AI Natural Language
 
-Airstack provides an AI solution for you to build GraphQL queries to fulfill your use case easily.
+[Airstack](https://airstack.xyz) provides an AI solution for you to build GraphQL queries to fulfill your use case easily.
+
+<ReactPlayer w  url='/img/query-xmtp.mp4' muted playing="true" />
 
 ### Query 0x Address or ENS If XMTP Is Enabled
 
