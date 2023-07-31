@@ -1556,7 +1556,7 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
 }
 
 li > a.new::after {
-  content: "New";
+  content: "new";
   display: inline-block;
   margin-left: 5px;
   font-size: 0.6em;
