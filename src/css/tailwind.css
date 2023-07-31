@@ -1410,7 +1410,7 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   content: "";
   display: inline-block;
   width: 20px;
-  background: url("/img/js.svg") no-repeat;
+  background: url("/img/icons-docs/js.svg") no-repeat;
   background-size: contain;
   margin-left: 5px;
 }
@@ -1418,7 +1418,7 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   content: "";
   display: inline-block;
   width: 20px;
-  background: url("/img/swift.svg") no-repeat;
+  background: url("/img/icons-docs/swift.svg") no-repeat;
   background-size: contain;
   margin-left: 5px;
 }
@@ -1427,7 +1427,7 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   content: "";
   display: inline-block;
   width: 20px;
-  background: url("/img/dart.svg") no-repeat;
+  background: url("/img/icons-docs/dart.svg") no-repeat;
   background-size: contain;
   margin-left: 5px;
 }
@@ -1436,7 +1436,7 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   content: "";
   display: inline-block;
   width: 20px;
-  background: url("/img/kotlin.svg") no-repeat;
+  background: url("/img/icons-docs/kotlin.svg") no-repeat;
   background-size: contain;
   margin-left: 5px;
 }
@@ -1445,7 +1445,7 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   content: "";
   display: inline-block;
   width: 20px;
-  background: url("/img/react.svg") no-repeat;
+  background: url("/img/icons-docs/react.svg") no-repeat;
   background-size: contain;
   margin-left: 5px;
 }
@@ -1454,7 +1454,7 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   content: "";
   display: inline-block;
   width: 20px;
-  background: url("/img/react.svg") no-repeat;
+  background: url("/img/icons-docs/react.svg") no-repeat;
   background-size: contain;
   margin-left: 5px;
 }
