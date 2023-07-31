@@ -440,7 +440,7 @@ query POAPEventHoldersWithXMTP($eventId: String!) {
 
 ### Learn More about Airstack
 
-- [API References](https://docs.airstack.xyz/)
+- [API References](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference)
 - [SDKs](https://app.airstack.xyz/sdks)
 
 #### Check XMTP For Single User
