@@ -28,7 +28,11 @@ Features typically follow this release cycle:
 
 ### Q4
 
-- Read receipts (alpha)
+- Read receipts
+- Reactions
+- Group chats
+- Replies
+- Transaction receipt
 - Portable preferences, such as blocklists, allowlists, etc. (alpha)
 
 ## Decentralization roadmap
