@@ -1,5 +1,5 @@
 ---
-sidebar_label: Remote Attachments
+sidebar_label: Remote Attachment
 sidebar_position: 6
 ---
 
@@ -95,7 +95,7 @@ const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
 Upload the encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage:
 
 <Tabs>
-<TabItem value="web3storage" label="web3storage">
+<TabItem value="web3storage" label="Web3 Storage" attributes={{className: "web3storage_tab"}} >
 
 ```tsx
 const { Web3Storage } = require("web3.storage");
@@ -128,7 +128,7 @@ const url = `https://${cid}.ipfs.w3s.link/uploadIdOfYourChoice`;
 ```
 
 </TabItem>
-<TabItem value="thirdweb" label="Thirdweb">
+<TabItem value="thirdweb" label="Thirdweb" attributes={{className: "thirdweb_tab"}}>
 
 ```tsx
 import { useStorageUpload } from "@thirdweb-dev/react";

@@ -38,7 +38,7 @@ Provides `xmtpd` (XMTP daemon), an **experimental** version of XMTP node softwar
 
 ## [React client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) is in Beta
 
-Provides the XMTP client SDK for React apps written in TypeScript, making it easier and faster for web apps to integrate messaging via hooks and plug-n-play components. **[Read the announcement](https://twitter.com/xmtp_/status/1654176551565692928)** (May 4)
+Provides the XMTP client SDK for React apps written in TypeScript, making it easier and faster for web apps to integrate messaging via hooks and plug-n-play components. **[Read the announcement](https://x.com/xmtp_/status/1654176551565692928)** (May 4)
 
 ## [Web SDKs and examples repo](https://github.com/xmtp/xmtp-web) is public (xmtp-web)
 

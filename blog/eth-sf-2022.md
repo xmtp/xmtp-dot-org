@@ -14,7 +14,7 @@ tags:
 
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
-"Wow" is just about the best way we could sum up [@ETHGlobal](https://twitter.com/ETHGlobal)'s [#ETHSanFrancisco](https://twitter.com/hashtag/ETHSanFrancisco?src=hashtag_click).
+"Wow" is just about the best way we could sum up [@ETHGlobal](https://x.com/ETHGlobal)'s [#ETHSanFrancisco](https://x.com/hashtag/ETHSanFrancisco?src=hashtag_click).
 
 ![ETHSF-Wrapup card](./media/ETHSF-Wrapup---Alt.png)
 
@@ -30,7 +30,7 @@ Also an event finalist! NFT beeper with XMTP as the message relay to broadcast m
 
 ### Meet the team:
 
-[@bennygiang](https://twitter.com/BennyGiang) [@DruzyDowns](https://twitter.com/DruzyDowns) [@jayden_windle](https://twitter.com/jayden_windle) [@rayzhuynh](https://twitter.com/RayzHuynh) [@Alanahlam](https://twitter.com/alanahlam)
+[@bennygiang](https://x.com/BennyGiang) [@DruzyDowns](https://x.com/DruzyDowns) [@jayden_windle](https://x.com/jayden_windle) [@rayzhuynh](https://x.com/RayzHuynh) [@Alanahlam](https://x.com/alanahlam)
 
 ### Check out the repo:
 
@@ -40,11 +40,11 @@ Also an event finalist! NFT beeper with XMTP as the message relay to broadcast m
 
 ## Torpedo for Best Use 🥇
 
-A crypto marketplace for trading cloud compute. The team used XMTP as an E2EE transport layer to securely transfer session keys peer-to-peer between a provider and buyer. Also won a [@MidpointLabs](https://twitter.com/MidpointLabs) prize!
+A crypto marketplace for trading cloud compute. The team used XMTP as an E2EE transport layer to securely transfer session keys peer-to-peer between a provider and buyer. Also won a [@MidpointLabs](https://x.com/MidpointLabs) prize!
 
 ### Meet the team:
 
-[@ketan_jog](https://twitter.com/ketan_jog) [@jayendra_ram](https://twitter.com/jayendra_ram) [@AnthonyZhou101](https://twitter.com/AnthonyZhou101)
+[@ketan_jog](https://x.com/ketan_jog) [@jayendra_ram](https://x.com/jayendra_ram) [@AnthonyZhou101](https://x.com/AnthonyZhou101)
 
 ![Torpedo team](media/FhS69z4VIAAkdbK.jpeg)
 
@@ -54,7 +54,7 @@ A web3 Zapier which can automate notifications on EVM chains. With Relay, users 
 
 ### Meet the team:
 
-[@zeebradoom](https://twitter.com/zeebradoom) @lakejava1022 [@grindsets](https://twitter.com/grindsets) [@NotXenodrome](https://twitter.com/NotXenodrome)
+[@zeebradoom](https://x.com/zeebradoom) @lakejava1022 [@grindsets](https://x.com/grindsets) [@NotXenodrome](https://x.com/NotXenodrome)
 
 ### Check out the repo:
 
@@ -66,7 +66,7 @@ PreshMail allows users to be paid to receive messages through XMTP. It has a dyn
 
 ### Meet the team:
 
-[@zK_enk](https://twitter.com/zK_enk) [@chadxeth](https://twitter.com/chadxeth) [@lowenhere](https://twitter.com/lowenhere)
+[@zK_enk](https://x.com/zK_enk) [@chadxeth](https://x.com/chadxeth) [@lowenhere](https://x.com/lowenhere)
 
 ### Check out the repo:
 
@@ -74,11 +74,11 @@ PreshMail allows users to be paid to receive messages through XMTP. It has a dyn
 
 ## Decentral Couch with an Honorable Mention 🥉
 
-Also an event finalist and [@0xPolygon](https://twitter.com/0xPolygon) winner. A decentralized [@airbnb](https://twitter.com/Airbnb) that used XMTP to secure comms between hosts & guests. Built actions into message payloads w/ a custom ContentType.
+Also an event finalist and [@0xPolygon](https://x.com/0xPolygon) winner. A decentralized [@airbnb](https://x.com/Airbnb) that used XMTP to secure comms between hosts & guests. Built actions into message payloads w/ a custom ContentType.
 
 ### Meet the team:
 
-[@Alexishaebinkim](https://twitter.com/Alexishaebinkim) [@Big_BernZ](https://twitter.com/Big_BernZ)
+[@Alexishaebinkim](https://x.com/Alexishaebinkim) [@Big_BernZ](https://x.com/Big_BernZ)
 
 ### Check out the repo:
 
@@ -92,7 +92,7 @@ A web3-native gaming chat client which used zero-knowledge proofs to allow playe
 
 ### Meet the team:
 
-[@saharsh_wal](https://twitter.com/saharsh_wal) [@muchsahil](https://twitter.com/muchsahil)
+[@saharsh_wal](https://x.com/saharsh_wal) [@muchsahil](https://x.com/muchsahil)
 
 ### Check out the repo:
 
@@ -104,13 +104,13 @@ A platform that helps sexual assault victims remain anonymous, aided by end-to-e
 
 ### Meet the team:
 
-[@theemadmagz](https://twitter.com/theemadmagz) [@mirnaampuero\_\_](https://twitter.com/mirnaampuero__) [@steflikecurry](https://twitter.com/StefLikeCurry) [@whatwedocolin](https://twitter.com/whatwedocolin) [@sara_diazoporto](https://twitter.com/sara_diazoporto)
+[@theemadmagz](https://x.com/theemadmagz) [@mirnaampuero\_\_](https://x.com/mirnaampuero__) [@steflikecurry](https://x.com/StefLikeCurry) [@whatwedocolin](https://x.com/whatwedocolin) [@sara_diazoporto](https://x.com/sara_diazoporto)
 
 ### Check out the repo:
 
 [![confi-repo-card.png](media/confi-repo-card.png)](https://github.com/SaraGabriela/Confi)
 
-Altogether it was an incredible event. With 1,700 devs across 34 countries, [#ETHSanFrancisco](https://twitter.com/hashtag/ETHSanFrancisco?src=hashtag_click) was the largest IRL [@ETHGlobal](https://twitter.com/ETHGlobal) event yet!
+Altogether it was an incredible event. With 1,700 devs across 34 countries, [#ETHSanFrancisco](https://x.com/hashtag/ETHSanFrancisco?src=hashtag_click) was the largest IRL [@ETHGlobal](https://x.com/ETHGlobal) event yet!
 
 Developers continued to amaze us, building apps on XMTP that went far beyond DMs, chat, and obvious messaging use cases.
 

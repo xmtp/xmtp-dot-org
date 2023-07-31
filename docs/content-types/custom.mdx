@@ -1,98 +1,118 @@
 ---
-sidebar_label: Custom
+sidebar_label: Custom (Basic)
 sidebar_position: 30
 ---
 
-# Build a custom content type
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-If you want to send a content type other than those supported by standard content types (plain text and composite messages), you must build a custom content type. This task uses a fictional `AudioCodec` custom content type to help illustrate the steps.
+# Building a Custom Content Type for Multiplication Operations
 
-:::caution
+This tutorial will walk you through the process of building a custom content type dedicated to multiplying numbers. For demonstration purposes, we'll create a MultiplyCodec custom content type. By the end of this tutorial, you will have a robust and reusable piece of code ready to be incorporated into your XMTP project.
 
-Do not use `xmtp.org` as the `authorityId` for a custom content type that you create for your app. Instead, consider using a unique DNS domain or ENS name that can be widely recognized as belonging to your app. For example, `frenz.xyz`.
+## Step 1: Creating the MultiplyCodec Content Type
 
-:::
+Let's start by creating a new file xmtp-content-type-multiply-number.tsx. This file will host the MultiplyCodec class which is responsible for encoding and decoding our custom content type.
 
-To learn more about `authorityId` and other parameters in a content type identifier, see [Content Type Identifier and Parameters](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-5-message-content-types.md#content-type-identifier-and-parameters).
-
-1. Create an `AudioCodec` class that encodes and decodes the content type. For example, you can put this in the file that creates an XMTP client.
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```jsx
-import { Client, ContentTypeId } from "@xmtp/xmtp-js";
+import { ContentTypeId } from "@xmtp/xmtp-js";
 
-const ContentTypeAudioKey = new ContentTypeId({
+// Create a unique identifier for your content type
+const ContentTypeMultiplyNumbers = new ContentTypeId({
   authorityId: "your.domain",
-  typeId: "audio-key",
+  typeId: "multiply-number",
   versionMajor: 1,
   versionMinor: 0,
 });
 
-class AudioCodec {
+// Define the MultiplyCodec class
+class ContentTypeMultiplyNumberCodec {
   get contentType() {
-    return ContentTypeAudioKey;
+    return ContentTypeMultiplyNumbers;
   }
 
-  encode(key: string | undefined) {
+  // The encode method accepts an object with two numbers (a, b) and encodes it as a byte array
+  encode({ a, b }) {
     return {
-      type: ContentTypeAudioKey,
+      type: ContentTypeMultiplyNumbers,
       parameters: {},
-      content: new TextEncoder().encode(key),
+      content: new TextEncoder().encode(JSON.stringify({ a, b })),
     };
   }
 
+  // The decode method decodes the byte array, parses the string into numbers (a, b), and returns their product
   decode(content: { content: any }) {
     const uint8Array = content.content;
-    const key = new TextDecoder().decode(uint8Array);
-    return key;
+    const { a, b } = JSON.parse(new TextDecoder().decode(uint8Array));
+    return a * b;
   }
 }
 ```
 
-2. Pass the `AudioCodec` content type as an option to the `Client.create() method`.
+</TabItem></Tabs>
 
-```javascript
-const xmtp = await Client.create(null, {
+## Step 2: Using the Custom Content Type
+
+Once the MultiplyCodec content type is defined, it's time to put it to use.
+
+### Import and Register Custom Content Type
+
+Begin by importing and registering the MultiplyCodec content type.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+import {
+  ContentTypeMultiplyNumber,
+  ContentTypeMultiplyNumberCodec,
+} from "./xmtp-content-type-multiply-number";
+
+const xmtp = await Client.create(wallet, {
   env: "dev",
-  codecs: [new AudioCodec()],
+});
+xmtp.registerCodec(new ContentTypeMultiplyNumberCodec());
+```
+
+</TabItem></Tabs>
+
+### Sending a Message Using Custom Content Type
+
+With your custom content type registered, you can now utilize it to send messages. This code snippet shows how to use the MultiplyCodec content type to perform multiplication operations.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+const numbersToMultiply = { a: 3, b: 7 };
+
+conversation.send(numbersToMultiply, {
+  contentType: ContentTypeMultiplyNumbers,
 });
 ```
 
-:::note
+</TabItem></Tabs>
 
-If you register a codec for a custom content type that is already in the default set, it will replace the original codec.
+### Rendering the Custom Content Type
 
-:::
+To make use of the result of the multiplication operation, you need to add a renderer for your custom content type.
 
-## Send a custom content type
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-Once you’ve built your custom content type, you can immediately start using it to tag and send messages. This task uses a fictional `AudioCodec` custom content type to help illustrate the steps.
-
-1. Register your AudioCodec custom content type with the message API client. For example:
-
-```javascript
-import { Conversation, ContentTypeId } from "@xmtp/xmtp-js";
-
-const ContentTypeVoiceKey = new ContentTypeId({
-  authorityId: "your.domain",
-  typeId: "audio-key",
-  versionMajor: 1,
-  versionMinor: 0,
-});
+```jsx
+if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
+  return message.content;
+}
 ```
 
-2. Send a message using the `send` method with `audioRecording` as the content (in byteArrays).
+</TabItem></Tabs>
 
-For example, you can build the `AudioCodec` to encode `audioData` as a binary representation of the audio file.
+Keep in mind that any other application that intends to use your custom content type must implement it as per your definition.
 
-The `contentType` option is set to `ContentTypeVoiceKey`, which enables the message API client to know to use the `AudioCodec` to encode and decode the content.
+If your MultiplyCodec content type generates interest within the developer community, consider proposing it as a standard through the [XIP process](http://localhost:3000/docs/concepts/xips).
 
-```javascript
-const audioRecording = "xxxxxxx"; // audio recording in byteArrays
-conversation.send(audioRecording, {
-  contentType: ContentTypeVoiceKey,
-});
-```
-
-If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
-
-If developers take interest in your custom content type, consider proposing it as a standard through the [XIP process](https://github.com/xmtp/XIPs#readme).
+To sum up, creating a custom content type opens up new avenues for handling data within the XMTP framework, giving you the power to manage data in a more personalized or specialized way.

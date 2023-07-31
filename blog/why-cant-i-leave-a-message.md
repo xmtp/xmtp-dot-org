@@ -17,7 +17,7 @@ An idea we want to build with the XMTP community.
 
 <!--truncate-->
 
-Every day on Twitter & Discord people are trying to figure out how to reach a wallet address that they can't otherwise reach. The problem today is that there isn’t an established wallet-based inbox that everyone checks.
+Every day on 𝕏 & Discord people are trying to figure out how to reach a wallet address that they can't otherwise reach. The problem today is that there isn’t an established wallet-based inbox that everyone checks.
 
 We need a fun and lightweight way to leave messages for people and have simple ways to let them know there's a message waiting for them.
 
@@ -33,7 +33,7 @@ We believe that a simple idea could help solve this problem using XMTP. Introduc
 
 The XMTP Labs team discussing this idea
 
-We want to start sharing more raw ideas that we discuss internally with our community. If you'd like to build this and take this idea and run with it or have more ideas for this, say hello! Join our Discord or send us a note on Twitter or email us here!
+We want to start sharing more raw ideas that we discuss internally with our community. If you'd like to build this and take this idea and run with it or have more ideas for this, say hello! Join our Discord or send us a note on 𝕏 or email us here!
 
 Here are the bullet points of how we'd think about the problem and v1 for this simple idea:
 
