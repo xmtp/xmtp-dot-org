@@ -25,6 +25,9 @@ const config = {
   projectName: "xmtp-dot-org",
   scripts: [
     {
+      src: "/myjs.js",
+    },
+    {
       src: "https://plausible.io/js/script.tagged-events.outbound-links.js",
       async: true,
       defer: true,

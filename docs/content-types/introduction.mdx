@@ -1,6 +1,7 @@
 ---
 sidebar_label: Introduction
 sidebar_position: 1
+className: new
 ---
 
 # Content Types with XMTP
@@ -54,14 +55,18 @@ A reaction is a quick and often emoji-based way to respond to a message. Reactio
 
 A reply is a method to directly respond to a specific message in a conversation. Users can select and reply to a particular message instead of sending a new one.
 
-#### [Create Custom Content Type](/docs/content-types/custom)
+## Create Custom Content Types
 
-For example, if you need a content type that isn't covered, you can create a custom content type and begin using it immediately in your app.
-
-:::info
+:::caution
 Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
 :::
 
-If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.
+Keep in mind that any other application that intends to use your custom content type must implement it as per your definition.
 
-Fallback plain text is "alt text"-like description text that you can associate with a custom content type if you are concerned that a receiving app might not be able to handle the content. If the receiving app is unable to handle the custom content, it displays the fallback plain text instead.
+- ### [Basic: Number multiplier Content Type](/docs/content-types/custom)
+
+This tutorial will walk you through the process of building a custom content type dedicated to multiplying numbers. For demonstration purposes, we'll create a MultiplyCodec custom content type. By the end of this tutorial, you will have a robust and reusable piece of code ready to be incorporated into your XMTP project.
+
+- ### [Advanced: Sending a polygon transaction](/docs/content-types/custom-advanced)
+
+This tutorial will walk you through the process of building a custom content type dedicated to multiplying numbers. For demonstration purposes, we'll create a MultiplyCodec custom content type. By the end of this tutorial, you will have a robust and reusable piece of code ready to be incorporated into your XMTP project.

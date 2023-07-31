@@ -1415,12 +1415,8 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   margin-left: 5px;
 }
 .js_tab:hover::after {
-  content: "";
-  display: inline-block;
-  width: 20px;
   background: url("/img/icons-docs/hover/js.svg") no-repeat;
   background-size: contain;
-  margin-left: 5px;
 }
 .swift_tab::after {
   content: "";
@@ -1432,12 +1428,8 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
 }
 
 .swift_tab:hover::after {
-  content: "";
-  display: inline-block;
-  width: 20px;
   background: url("/img/icons-docs/hover/swift.svg") no-repeat;
   background-size: contain;
-  margin-left: 5px;
 }
 .dart_tab::after {
   content: "";
@@ -1449,12 +1441,8 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
 }
 
 .dart_tab:hover::after {
-  content: "";
-  display: inline-block;
-  width: 20px;
   background: url("/img/icons-docs/hover/dart.svg") no-repeat;
   background-size: contain;
-  margin-left: 5px;
 }
 
 .kotlin_tab::after {
@@ -1467,12 +1455,8 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
 }
 
 .kotlin_tab:hover::after {
-  content: "";
-  display: inline-block;
-  width: 20px;
   background: url("/img/icons-docs/hover/kotlin.svg") no-repeat;
   background-size: contain;
-  margin-left: 5px;
 }
 
 .react_tab::after {
@@ -1485,12 +1469,8 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
 }
 
 .react_tab:hover::after {
-  content: "";
-  display: inline-block;
-  width: 20px;
   background: url("/img/icons-docs/hover/react.svg") no-repeat;
   background-size: contain;
-  margin-left: 5px;
 }
 .rn_tab::after {
   content: "";
@@ -1501,12 +1481,8 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   margin-left: 5px;
 }
 .rn_tab:hover::after {
-  content: "";
-  display: inline-block;
-  width: 20px;
   background: url("/img/icons-docs/hover/react.svg") no-repeat;
   background-size: contain;
-  margin-left: 5px;
 }
 
 .thirdweb_tab::after {
@@ -1565,4 +1541,27 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   background: url("/img/js.svg") no-repeat;
   background-size: contain;
   margin-left: 5px;
+}
+
+@media (max-width: 799px) {
+  .react_tab::after,
+  .js_tab::after,
+  .swift_tab::after,
+  .dart_tab::after,
+  .kotlin_tab::after,
+  .rn_tab::after,
+  .typescript_tab::after {
+    width: 10px;
+  }
+}
+
+li > a.new::after {
+  content: "New";
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 0.6em;
+  color: #fff;
+  background-color: #4145da;
+  padding: 2px 5px;
+  border-radius: 5px;
 }

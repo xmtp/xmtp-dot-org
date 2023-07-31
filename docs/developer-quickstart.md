@@ -1,10 +1,10 @@
 ---
-sidebar_label: Developer Quickstart
+sidebar_label: Quickstart
 sidebar_position: 2
 description: Build this quickstart app to learn some of the fundamental concepts involved in building with XMTP.
 ---
 
-# Developer Quickstart
+# Quickstart
 
 Check out the replit live code example:
 
