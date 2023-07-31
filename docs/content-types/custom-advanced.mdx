@@ -142,8 +142,9 @@ if (message.contentType.sameAs(ContentTypeTransactionHash)) {
 }
 
 const TransactionMonitor = ({ encodedContent }) => {
-  const [transactionReceipt, setTransactionReceipt] = useState(null);
   const [retryCount, setRetryCount] = useState(0);
+
+  const [transactionValue, setTransactionValue] = useState(null);
 
   useEffect(() => {
     const fetchTransactionReceipt = async () => {
@@ -152,15 +153,16 @@ const TransactionMonitor = ({ encodedContent }) => {
         "https://rpc-mumbai.maticvigil.com",
       );
       const receipt = await provider.getTransactionReceipt(encodedContent);
-      if (receipt !== null) {
-        setTransactionReceipt(receipt);
+      const tx = await provider.getTransaction(encodedContent);
+      if (tx && tx.value) {
+        setTransactionValue(ethers.utils.formatEther(tx.value));
       }
     };
     fetchTransactionReceipt();
   }, [encodedContent, retryCount]);
 
-  return transactionReceipt ? (
-    <div>Transaction was mined in block {transactionReceipt.blockNumber}</div>
+  return transactionValue ? (
+    <div>Transaction value: {transactionValue} ETH</div>
   ) : (
     <div>
       Waiting for transaction to be mined...
