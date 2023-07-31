@@ -1414,6 +1414,14 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   background-size: contain;
   margin-left: 5px;
 }
+.js_tab:hover::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/icons-docs/hover/js.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
 .swift_tab::after {
   content: "";
   display: inline-block;
@@ -1423,11 +1431,28 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   margin-left: 5px;
 }
 
+.swift_tab:hover::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/icons-docs/hover/swift.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
 .dart_tab::after {
   content: "";
   display: inline-block;
   width: 20px;
   background: url("/img/icons-docs/dart.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.dart_tab:hover::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/icons-docs/hover/dart.svg") no-repeat;
   background-size: contain;
   margin-left: 5px;
 }
@@ -1441,6 +1466,15 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   margin-left: 5px;
 }
 
+.kotlin_tab:hover::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/icons-docs/hover/kotlin.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
 .react_tab::after {
   content: "";
   display: inline-block;
@@ -1450,11 +1484,27 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   margin-left: 5px;
 }
 
+.react_tab:hover::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/icons-docs/hover/react.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
 .rn_tab::after {
   content: "";
   display: inline-block;
   width: 20px;
   background: url("/img/icons-docs/react.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.rn_tab:hover::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/icons-docs/hover/react.svg") no-repeat;
   background-size: contain;
   margin-left: 5px;
 }
