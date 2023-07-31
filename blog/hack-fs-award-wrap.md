@@ -1,7 +1,7 @@
 ---
 slug: hack-fs-award-wrap
 hide_table_of_contents: true
-title: 'HackFS x XMTP awards wrap-up: Decentralized Ticketing Platform, Optik for video conferencing, and GhostShare for file sharing'
+title: "HackFS x XMTP awards wrap-up: Decentralized Ticketing Platform, Optik for video conferencing, and GhostShare for file sharing"
 date: 2022-08-01
 authors: peter
 description: HackFS by @ETHGlobal and @ProtocolLabs wrapped and, once again, the creativity and quality of the projects was outstanding.
@@ -14,7 +14,7 @@ tags:
 import ReactPlayer from 'react-player'
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
-[HackFS](https://fs.ethglobal.com/) by [@ETHGlobal](https://twitter.com/ETHGlobal) and [@ProtocolLabs](https://twitter.com/protocollabs) wrapped and, once again, the creativity and quality of the projects was outstanding.
+[HackFS](https://fs.ethglobal.com/) by [@ETHGlobal](https://x.com/ETHGlobal) and [@ProtocolLabs](https://x.com/protocollabs) wrapped and, once again, the creativity and quality of the projects was outstanding.
 
 ![HackFS awards wrap card](./media/blogPost.png)
 
@@ -32,7 +32,7 @@ After hearing countless stories about scams in the online ticketing process, thi
 
 <br/>
 
-- Development team: @[arthurka_eth](https://twitter.com/arthurka_eth), @[tenzin_rose](https://twitter.com/tenzin_rose)
+- Development team: @[arthurka_eth](https://x.com/arthurka_eth), @[tenzin_rose](https://x.com/tenzin_rose)
 - Github repo:
 
 [![arthurka-repo-card.png](media/arthurka-repo-card.png)](https://github.com/arthurka-o/decentralized-ticket-platform)
@@ -45,7 +45,7 @@ Optik is a web3-enabled video conferencing application. The platform provides a 
 
 <br/>
 
-- Development team: @[felixfpx](https://twitter.com/felixfpx), @[Dominichackett](https://twitter.com/Dominichackett), @[east9th](https://twitter.com/east9th)
+- Development team: @[felixfpx](https://x.com/felixfpx), @[Dominichackett](https://x.com/Dominichackett), @[east9th](https://x.com/east9th)
 - Github repo:
 
 [![optik-repo-card.png](media/optik-repo-card.png)](https://github.com/felixpx/hackfs)
@@ -58,7 +58,7 @@ GhostShare is a service for sharing files in a private and decentralized way. Th
 
 <br/>
 
-- Development team: @[JorisZierold](https://twitter.com/JorisZierold), @[jorgeolmos86](https://twitter.com/jorgeolmos86)
+- Development team: @[JorisZierold](https://x.com/JorisZierold), @[jorgeolmos86](https://x.com/jorgeolmos86)
 - Github repo:
 
 [![ghostshare-repo-card.png](media/ghostshare-repo-card.png)](https://github.com/Ghostshare)
@@ -71,7 +71,7 @@ SSHR is a dapp that enables users to privately store and share their own electro
 
 <br/>
 
-- Development team: @[0xblitzordd](https://twitter.com/0xblitzordd), @[thinkbynumbers](https://twitter.com/thinkbynumbers), @[BrahmaSen](https://twitter.com/BrahmaSen)
+- Development team: @[0xblitzordd](https://x.com/0xblitzordd), @[thinkbynumbers](https://x.com/thinkbynumbers), @[BrahmaSen](https://x.com/BrahmaSen)
 - Github repo:
 
 [![sshr-repo-card.png](media/sshr-repo-card.png)](https://github.com/yash-deore/sshr-hackfs)
@@ -84,19 +84,19 @@ Supercluster is a Dapp that allows content creators to create private IPFS netwo
 
 <br/>
 
-- Development team: @[dysntr](https://twitter.com/dysntr), @[KaiHuang](https://twitter.com/KaiHuang), @[\_gov218](https://twitter.com/_gov218), & CompositeFellow
+- Development team: @[dysntr](https://x.com/dysntr), @[KaiHuang](https://x.com/KaiHuang), @[\_gov218](https://x.com/_gov218), & CompositeFellow
 - Github repo:
 
 [![supercluster-repo-card.png](media/supercluster-repo-card.png)](https://github.com/dysntr/supercluster)
 
-We were so impressed by the above projects, and as we [shared on Twitter](https://twitter.com/xmtp_/status/1552304059289182209?s=20&t=noc0FU0wpTrl2ClkFn0_pA) this week, there were so many other creative ideas. [Take a look](https://twitter.com/xmtp_/status/1552304059289182209?s=20&t=noc0FU0wpTrl2ClkFn0_pA) for yourself and let us know how you are thinking about web3 messaging.
+We were so impressed by the above projects, and as we [shared on 𝕏](https://x.com/xmtp_/status/1552304059289182209?s=20&t=noc0FU0wpTrl2ClkFn0_pA) this week, there were so many other creative ideas. [Take a look](https://x.com/xmtp_/status/1552304059289182209?s=20&t=noc0FU0wpTrl2ClkFn0_pA) for yourself and let us know how you are thinking about web3 messaging.
 
 ---
 
 ## Have an idea you’re working on? Connect with us.
 
 - 👾 Official Discord Access -[ https://xmtp.typeform.com/early-access](https://xmtp.typeform.com/early-access)
-- 🐦 XMTP Official Twitter -[ https://twitter.com/xmtp\_](https://twitter.com/xmtp_)
+- 🐦 XMTP Official 𝕏 -[ https://x.com/xmtp\_](https://x.com/xmtp_)
 - 🌐 XMTP Website -[ https://xmtp.com/](https://xmtp.com/)
 - 📖 Careers at XMTP Labs -[ https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
 

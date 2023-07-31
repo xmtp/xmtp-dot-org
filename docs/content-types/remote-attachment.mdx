@@ -1,6 +1,6 @@
 ---
-sidebar_label: Remote Attachments
-sidebar_position: 20
+sidebar_label: Remote Attachment
+sidebar_position: 6
 ---
 
 import Tabs from "@theme/Tabs";
@@ -13,10 +13,10 @@ Remote attachments of any size can be sent using the `RemoteAttachmentCodec` and
 ### Install the package
 
 ```bash
-npm i --save @xmtp/content-type-remote-attachment
+npm i @xmtp/content-type-remote-attachment
 ```
 
-### Import and register codecs
+### Import and register
 
 ```tsx
 // Import the codecs we're going to use
@@ -24,9 +24,6 @@ import {
   AttachmentCodec,
   RemoteAttachmentCodec,
 } from "@xmtp/content-type-remote-attachment";
-```
-
-```tsx
 // Create the XMTP client
 const xmtp = await Client.create(signer, { env: "dev" });
 // Register the codecs. AttachmentCodec is for local attachments (<1MB)
@@ -98,7 +95,7 @@ const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
 Upload the encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage:
 
 <Tabs>
-<TabItem value="web3storage" label="web3storage">
+<TabItem value="web3storage" label="Web3 Storage" attributes={{className: "web3storage_tab"}} >
 
 ```tsx
 const { Web3Storage } = require("web3.storage");
@@ -131,7 +128,7 @@ const url = `https://${cid}.ipfs.w3s.link/uploadIdOfYourChoice`;
 ```
 
 </TabItem>
-<TabItem value="thirdweb" label="Thridweb">
+<TabItem value="thirdweb" label="Thirdweb" attributes={{className: "thirdweb_tab"}}>
 
 ```tsx
 import { useStorageUpload } from "@thirdweb-dev/react";
@@ -152,7 +149,7 @@ const url = uploadUrl[0];
 
 Now that you have a `url`, you can create a `RemoteAttachment`.
 
-```tsx
+```jsx
 const remoteAttachment = {
   url: url,
   contentDigest: encryptedEncoded.digest,
@@ -171,34 +168,23 @@ Now that you have a remote attachment, you can send it:
 
 ```tsx
 await conversation.send(remoteAttachment, {
-  contentFallback:
-    "[Attachment] Cannot display ${remoteAttachment.filename}. This app does not support attachments yet.",
   contentType: ContentTypeRemoteAttachment,
 });
 ```
-
-As shown in the example above, you **must** provide a `contentFallback` value. Use it to provide an alt text-like description of the original content. Providing a `contentFallback` value enables clients that don't support the content type to still display something meaningful.
-
-:::caution
-
-If you don't provide a `contentFallback` value, clients that don't support the content type will display an empty message. This results in a poor user experience and breaks interoperability.
-
-:::
 
 ## Download, decrypt, and decode the attachment
 
 Now that you can receive a remote attachment, you need a way to receive a remote attachment. For example:
 
 ```tsx
-const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
-  attachment,
-  new AttachmentCodec(),
-);
+if (message.contentType.sameAs(RemoteAttachmentContentType)) {
+  const attachment = await RemoteAttachmentCodec.load(message.content, client);
+}
 ```
 
 You now have the original attachment:
 
-```
+```bash
 attachment.filename // => "screenshot.png"
 attachment.mimeType // => "image/png",
 attachment.data // => [the PNG data]
@@ -210,7 +196,7 @@ Once you have the attachment object created, you can also create a preview for w
 
 ```tsx
 URL.createObjectURL(
-    new Blob([Buffer.from(somePNGData)], {
+    new Blob([Buffer.from(attachment.data)], {
     type: attachment.mimeType,
   }),
 ),

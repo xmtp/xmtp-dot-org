@@ -20,7 +20,7 @@ A client is created that requires passing in a connected wallet that implements 
 [Use client configuration options](#configure-the-client) to change parameters of a client's network connection.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 import { Client } from "@xmtp/xmtp-js";
@@ -29,7 +29,7 @@ const xmtp = await Client.create(wallet, { env: "dev" });
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 import XMTP
@@ -40,7 +40,7 @@ let client = try await Client.create(
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 /*The client has two constructors: `createFromWallet` and `createFromKeys`.
@@ -64,7 +64,7 @@ var client = await Client.createFromKeys(api, keys);
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 // Create the client with a `SigningKey` from your app
@@ -76,7 +76,7 @@ val client = Client().create(account = account, options = options)
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
 const { client, error, isLoading, initialize } = useClient();
@@ -95,7 +95,7 @@ if (isLoading) {
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 import { Client } from "@xmtp/xmtp-react-native";
@@ -111,7 +111,7 @@ const xmtp = await Client.create(wallet);
 You can export the unencrypted key bundle using the static method `getKeys`, save it somewhere secure, and then provide those keys at a later time to initialize a new client using the exported XMTP identity.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```jsx
 // Get the keys using a valid Signer. Save them somewhere secure.
@@ -161,7 +161,7 @@ export const wipeKeys = (walletAddress: string) => {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 // Create the client with a `SigningKey` from your app
@@ -183,7 +183,7 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 // Create the client with a `SigningKey` from your app
@@ -208,7 +208,7 @@ val client = Client().buildFrom(bundle = keys, options = options)
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
 import { Client, useClient } from "@xmtp/react-sdk";
@@ -221,7 +221,7 @@ await initialize({ keys, signer });
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```js
 import { Client } from "@xmtp/xmtp-react-native";
@@ -241,7 +241,7 @@ Configure a client's network connection and other options using these client cre
 Set the `env` client option to `dev` while developing. Set it to `production` before you launch.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 | Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -257,7 +257,7 @@ Set the `env` client option to `dev` while developing. Set it to `production` be
 | preEnableIdentityCallback | `undefined`                                                                       | `preEnableIdentityCallback` is a function that will be called immediately before an [Enable Identity](/docs/concepts/account-signatures#sign-to-enable-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                    |
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 | Parameter | Default | Description                                                                                                                                                                                                                                                                     |
 | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -272,7 +272,7 @@ let client = try await Client.create(account: account, options: clientOptions)
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 You can configure the client environment when you call `Api.create()`.
 
@@ -281,7 +281,7 @@ By default, it will connect to a `local` XMTP network.
 For important details about connecting to environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 | Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -306,7 +306,7 @@ The `apiUrl`, `keyStoreType`, `codecs`, and `maxContentSize` parameters from the
 :::
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 | Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -322,7 +322,7 @@ The `apiUrl`, `keyStoreType`, `codecs`, and `maxContentSize` parameters from the
 | preEnableIdentityCallback | `undefined`                                                                       | `preEnableIdentityCallback` is a function that will be called immediately before an [Enable Identity](/docs/concepts/account-signatures#sign-to-enable-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                    |
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 | Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -1,5 +1,5 @@
 ---
-sidebar_label: Attachments
+sidebar_label: Attachment
 sidebar_position: 5
 ---
 
@@ -10,21 +10,18 @@ Attachments smaller than 1MB can be sent using the `AttachmentCodec`. The codec 
 ### Install the package
 
 ```bash
-npm install @xmtp/xmtp-js xmtp-content-type-remote-attachment
+npm i @xmtp/content-type-remote-attachment
 ```
 
-### Import libraries
+### Import and register
 
 ```tsx
 import {
   ContentTypeAttachment,
   AttachmentCodec,
 } from "@xmtp/content-type-remote-attachment";
-```
-
-### Register codec
-
-```tsx
+// Create the XMTP client
+const xmtp = await Client.create(signer, { env: "dev" });
 // Register the codecs, AttachmentCodec is for handling local attachments under 1MB
 xmtp.registerCodec(new AttachmentCodec());
 ```
@@ -49,7 +46,7 @@ let imgArray = new Uint8Array(await blob.arrayBuffer());
 
 const attachment = {
   filename: filename,
-  mimeType: extname,
+  mimeType: extname, //image, video or audio
   data: imgArray,
 };
 
@@ -60,6 +57,10 @@ await conversation.send(attachment, { contentType: ContentTypeAttachment });
 ### Receive encrypted file
 
 ```jsx
-const blobdecoded = new Blob([attachment.data], { type: attachment.mimeType });
-const url = URL.createObjectURL(blobdecoded);
+if (message.contentType.sameAs(ContentTypeAttachment)) {
+  const blobdecoded = new Blob([message.content.data], {
+    type: message.content.mimeType,
+  });
+  const url = URL.createObjectURL(blobdecoded);
+}
 ```

@@ -286,7 +286,11 @@ body {
 .navbar__item .dropdown__menu {
   width: 448px;
 }
-
+.𝕏 {
+  color: white;
+  font-size: 30px;
+  padding: 0px !important;
+}
 .navbar-sidebar__backdrop {
   background-color: var(--backdrop-mobile-menu);
   height: 100vh;
@@ -838,8 +842,6 @@ ul li a:before {
 
 .tabs-container p {
   padding: 15px;
-  /*margin: 0px !important;*/
-  font-size: 14px;
   line-height: 20px;
   background: var(--ifm-pre-background);
   border-left: 2px solid var(--ifm-pre-background);
@@ -847,8 +849,6 @@ ul li a:before {
 
 .tabs-container ul {
   background: var(--ifm-pre-background);
-  font-size: 14px;
-  line-height: 20px;
 }
 .tabs {
   background: var(--ifm-pre-background);
@@ -856,53 +856,32 @@ ul li a:before {
 }
 
 /* big tabs*/
-
-.tabs-container .bigTab > ul {
+.bigTab > .tabs-container > .tabs {
   background: white !important;
-  font-size: inherit !important;
-  line-height: inherit !important;
 }
-.tabs.bigTab {
-  background: inherit;
-  border: 1px solid red !important;
-}
-.tabs:not(.bigTab) > .tabs__item:hover {
-  border-radius: 0px;
-}
-.tabs.bigTab > .tabs__item {
+.bigTab > .tabs-container > .tabs > .tabs__item {
   padding-top: 18px !important;
-  padding-bottom: 18px !important;
-  font-size: 14px !important;
-  line-height: 12px !important;
+  padding-bottom: 16px !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+  background: white !important;
 }
-.tabs.bigTab {
-  background: inherit;
-  padding: 0px !important;
-  margin: 0px !important;
-  border: 0px !important;
-  border-top-right-radius: var(--ifm-code-border-radius);
-  border-top-left-radius: var(--ifm-code-border-radius);
-}
-.tabs-container .bigTab > p {
-  padding: inherit;
-  margin: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  background: inherit;
-  border-left: inherit;
-}
-.bigTab > .tabs__item--active {
+.bigTab > .tabs-container > .tabs > .tabs__item--active {
   border: 1px solid #4d45db;
   border-radius: 10px;
+}
+.bigTab > .tabs-container > div > div > p,
+.bigTab > .tabs-container > div > div > ul {
+  background: white;
+  border: 0px;
+}
+.bigTab > .tabs-container > div > div > p {
+  padding-left: 0px;
 }
 /*margin fix*/
 
 .tabs-container p {
   margin-bottom: 0px !important;
-}
-
-.bigTab > p {
-  margin-bottom: 15px !important;
 }
 
 /*image turtorials*/
@@ -1409,4 +1388,131 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
 .theme-doc-sidebar-item-category .theme-doc-sidebar-item-category a {
   font-weight: 500;
   color: var(--docs-sidebar-link-color);
+}
+/*ICONS*/
+.farcaster_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/farcaster.png") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.ens_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/ens.ico") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.js_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/js.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.swift_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/swift.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.dart_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/dart.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.kotlin_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/kotlin.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.react_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/react.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.rn_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/react.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.thirdweb_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/thirdweb.ico") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.web3storage_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/web3storage.ico") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.lens_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/lens.ico") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.airstack_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/airstack.ico") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.uns_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/uns.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.everyname_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/everyname.png") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+}
+.typescript_tab::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  background: url("/img/js.svg") no-repeat;
+  background-size: contain;
+  margin-left: 5px;
 }

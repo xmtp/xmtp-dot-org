@@ -110,8 +110,8 @@ Here's a handful of helpful links to check out if you're keen to explore adding 
 - Check out the [XMTP documentation](/docs/introduction) for everything you need to get started
 - The [project's GitHub](https://github.com/xmtp) is home to the XMTP SDK, example chat app, and more…
 - Read the [XMTP Litepaper](https://github.com/xmtp/litepaper) to understand the motivation behind the project more deeply, as well as future plans
-- Follow [@xmtp\_ on Twitter](https://twitter.com/xmtp_)
-- Feel free to send me a message personally, [@mg on Twitter](https://twitter.com/mg)
+- Follow [@xmtp\_ on 𝕏](https://x.com/xmtp_)
+- Feel free to send me a message personally, [@mg on 𝕏](https://x.com/mg)
 - Come join the XMTP Labs team and mission, [check out our jobs page](https://blog.xmtp.com/careers/)
 
 <br/>

@@ -16,7 +16,7 @@ You can send a broadcast message (1:many message or announcement) with XMTP. The
 For example:
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```js
 const ethers = require("ethers");
@@ -53,11 +53,11 @@ main();
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-const ethers = require('ethers')
-const { Client } = require('@xmtp/xmtp-react-native')
+const ethers = require("ethers");
+const { Client } = require("@xmtp/xmtp-react-native");
 
 async function main() {
   //Create a random wallet for example purposes. On the frontend you should replace it with the user's wallet (metamask, rainbow, etc)
@@ -65,25 +65,25 @@ async function main() {
   const xmtp = await XMTP.Client.createRandom("dev");
 
   //In this example we are going to broadcast to the GM_BOT wallet (already activated) and a random wallet (not activated)
-  const GM_BOT = '0x937C0d4a6294cdfa575de17382c7076b579DC176'
-  const test = ethers.Wallet.createRandom()
-  const broadcasts_array = [GM_BOT, test.address]
+  const GM_BOT = "0x937C0d4a6294cdfa575de17382c7076b579DC176";
+  const test = ethers.Wallet.createRandom();
+  const broadcasts_array = [GM_BOT, test.address];
 
   //Querying the activation status of the wallets
-  const broadcasts_canMessage = await Client.canMessage(broadcasts_array)
+  const broadcasts_canMessage = await Client.canMessage(broadcasts_array);
   for (let i = 0; i < broadcasts_array.length; i++) {
     //Checking the activation status of each wallet
-    const wallet = broadcasts_array[i]
-    const canMessage = broadcasts_canMessage[i]
+    const wallet = broadcasts_array[i];
+    const canMessage = broadcasts_canMessage[i];
     if (broadcasts_canMessage[i]) {
       //If activated, start
-      const conversation = await xmtp.conversations.newConversation(wallet)
+      const conversation = await xmtp.conversations.newConversation(wallet);
       // Send a message
-      const sent = await conversation.send('gm')
+      const sent = await conversation.send("gm");
     }
   }
 }
-main()
+main();
 ```
 
 </TabItem>
@@ -95,13 +95,13 @@ main()
 
 - **If your app sends broadcast messages to your users**, be sure to get user consent before sending them broadcast messages. For example, you can request this consent during onboarding. Here's some example text you can build upon:
 
-  > (&nbsp;&nbsp;) **Yes**, I want to receive broadcast messages from &lt;app name&gt;. 
+  > (&nbsp;&nbsp;) **Yes**, I want to receive broadcast messages from &lt;app name&gt;.
   >
-  > These messages may include updates, promotions, and other relevant information. 
+  > These messages may include updates, promotions, and other relevant information.
   >
-  > You can unsubscribe at any time by adjusting your notification settings within the app or by replying “STOP” to a broadcast message. 
+  > You can unsubscribe at any time by adjusting your notification settings within the app or by replying “STOP” to a broadcast message.
   >
-  > We value your privacy and will use your contact information only to send these broadcast messages. 
+  > We value your privacy and will use your contact information only to send these broadcast messages.
   >
   > By clicking **Continue**, you confirm that you agree to receive broadcast messages from &lt;app name&gt;.
   >
@@ -129,4 +129,4 @@ main()
 
     > The signature you provided gives this app permission to read and send XMTP messages on your behalf. The signature is securely stored and accessed only to execute your workflows. Click **Delete signature** to revoke this permission and delete the signature from storage.
 
-    ![Signature storage disclosure and delete after connection](/img/sig-store-disclosure-delete.png) 
+    ![Signature storage disclosure and delete after connection](/img/sig-store-disclosure-delete.png)

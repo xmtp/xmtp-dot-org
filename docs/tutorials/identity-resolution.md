@@ -4,10 +4,12 @@ sidebar_position: 3
 hide_table_of_contents: true
 ---
 
+# Resolve identities in your app
+
+<div className="bigTab">
+
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-
-# Resolve identities in your app
 
 When you build with XMTP, there’s no cold start for your app and your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
 
@@ -34,8 +36,8 @@ When displaying a name, also look for and display its associated avatar. For exa
 
 ## Resolve identities
 
-<Tabs className="bigTab">
-<TabItem value="airstack" className="bigTab" label="Airstack" default>
+<Tabs >
+<TabItem value="airstack"  attributes={{className: "bigTab_tab airstack_tab"}} label="Airstack" default>
 
 In this tutorial, you will learn how to use Airstack as a universal resolver to resolve various web3 identities (e.g. Farcaster, Lens, and ENS) and Ethereum addresses to other web3 identities. Airstack provides JSON APIs and SDKs for React and Python.
 
@@ -58,11 +60,17 @@ Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to
 
 ### Reverse resolution
 
-For example, if you would like to get the web3 identity of a user, e.g. all the web3 socials and ENS of the `0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045` address, then you can simply type into the AI prompt:
+For example, if you would like to get the web3 identity of a user, e.g. all the web3 socials and ENS of the `0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045` address, then you can simply type into the prompt:
+
+<Tabs>
+<TabItem value="prompt" label="Prompt"  >
 
 ```bash
 For the 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 address, get all web3 socials and ENS
 ```
+
+</TabItem>
+</Tabs>
 
 After clicking enter, the Airstack AI will output a JSON query that will fetch the web3 identities of the given address that will look as follows:
 
@@ -151,6 +159,7 @@ query web3Data {
 ```
 
 </TabItem>
+
 </Tabs>
 
 The same query can be done starting from an ENS name, Lens profile, or Farcaster username to resolve the other identities all at once. Example:
@@ -288,7 +297,7 @@ Get the address of an ENS domain, Lens handle, or Farcaster user.
 
 <Tabs className="lensicons">
 
-<TabItem value="ens" label="ENS" >
+<TabItem value="ens" label="ENS" attributes={{className: "ens_tab"}}>
 
 AI Prompt:
 
@@ -308,7 +317,7 @@ query {
 ```
 
 </TabItem>
-<TabItem value="response" label="Json Output" >
+<TabItem value="response" label="Output" >
 
 ```graphql
 {
@@ -324,7 +333,7 @@ query {
 </Tabs>
 
 </TabItem>
-<TabItem value="lens" label="Lens 🌿" >
+<TabItem value="lens" label="Lens"  attributes={{className: "lens_tab"}}>
 
 AI Prompt:
 
@@ -344,7 +353,7 @@ query {
 ```
 
 </TabItem>
-<TabItem value="response" label="Json Output" >
+<TabItem value="response" label="Output" >
 
 ```graphql
 {
@@ -360,7 +369,7 @@ query {
 </Tabs>
 
 </TabItem>
-<TabItem value="farcaster" label="Farcaster" >
+<TabItem value="farcaster" label="Farcaster" attributes={{className: "farcaster_tab"}}>
 
 AI Prompt:
 
@@ -380,7 +389,7 @@ query {
 ```
 
 </TabItem>
-<TabItem value="response" label="Json Output" >
+<TabItem value="response" label="Output" >
 
 ```graphql
 {
@@ -403,11 +412,15 @@ query {
 
 #### Get the Lens name of a Farcaster user
 
-AI Prompt:
+<Tabs>
+<TabItem value="prompt" label="Prompt"  >
 
 ```bash
 For Farcaster user vbuterin, fetch their Lens name
 ```
+
+</TabItem>
+</Tabs>
 
 <Tabs>
 <TabItem value="request" label="Request" >
@@ -503,7 +516,7 @@ query FetchBulkENS($resolvedAddresses: [Address!]) {
 ```
 
 </TabItem>
-<TabItem value="response" label="Json Output" >
+<TabItem value="response" label="Output" >
 
 ```graphql
 {
@@ -550,7 +563,7 @@ query FetchBulkENS($resolvedAddresses: [Address!]) {
 - [NFTs](https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-nfts)
 
 </TabItem>
-<TabItem value="everyname" className="bigTab" label="Everyname" >
+<TabItem value="everyname" attributes={{className: "bigTab_tab everyname_tab"}}  label="Everyname" >
 
 To resolve identities in your app, consider using [Everyname](https://www.everyname.xyz/), which provides forward and reverse identity resolution for many name services.
 
@@ -651,7 +664,7 @@ axios
 To learn more about building with Everyname, see their [Developer Portal](https://docs.everyname.xyz/api/introduction).
 
 </TabItem>
-<TabItem value="uns" className="bigTab" label="Unstoppable Domains" >
+<TabItem value="uns" attributes={{className: "bigTab_tab uns_tab"}} label="Unstoppable Domains" >
 
 [Unstoppable Domains](https://unstoppabledomains.com/) offer blockchain-based domains. These domains simplify cryptocurrency transactions, enable easier user logins for dApps, games, and metaverses. They also provide a way to create and host censorship-resistant websites.
 
@@ -667,7 +680,7 @@ This tutorial requires that you have the following prerequisites in place:
 - Add the Unstoppable Domains SDK
 
 ```jsx
-npm i --save @unstoppabledomains/resolution
+npm i  @unstoppabledomains/resolution
 ```
 
 Instantiate the library using your own RPC, such as Infura. Create a `resolution` variable that you will use many times across the app.
@@ -786,3 +799,5 @@ To learn more about building with Unstoppable Domains, see their [Developer Port
 To learn about wallet addresses and chains that are compatible with XMTP, see [Chains](/docs/dev-faqs#chains).
 
 To learn about name services, or decentralized IDs, that work with XMTP, see [Decentralized identifiers](/docs/dev-faqs#decentralized-identifiers).
+
+</div>

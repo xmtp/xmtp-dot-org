@@ -39,7 +39,7 @@ You probably have some great questions by now! Check out these resources:
 Ask questions and learn with others building with XMTP. Join the community on the platform that works best for you:
 
 - Discord: [Chat with other builders](https://discord.gg/xmtp)
-- Twitter: [Follow @XMTP\_](https://twitter.com/xmtp_)
+- 𝕏: [Follow @XMTP\_](https://x.com/xmtp_)
 - GitHub Discussions: [Join the discussion](https://github.com/orgs/xmtp/discussions)
 
 ## Launch your app

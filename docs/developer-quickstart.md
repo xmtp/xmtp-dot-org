@@ -13,7 +13,7 @@ Check out the replit live code example:
 ### Get started
 
 ```jsx
-npm install @xmtp/xmtp-js ethers@5.7.0 qrcode-terminal
+npm install @xmtp/xmtp-js ethers@5.7.0
 ```
 
 ### Import libraries
@@ -33,6 +33,7 @@ You'll want to replace this with a wallet from your application
 // You'll want to replace this with a wallet from your application
 const wallet = Wallet.createRandom();
 console.log("Wallet address: " + wallet.address);
+//eg. Wallet address 0xd8dA6BF26964aF9D7eEd9e03E53415D37
 ```
 
 ### Create a client
@@ -41,8 +42,8 @@ A client is created that requires passing in a connected wallet that implements 
 
 ```jsx
 const xmtp = await Client.create(wallet, { env: "dev" });
-console.log(xmtp);
 console.log("Client created", xmtp.address);
+//eg. Client created 0xd8dA6BF26964aF9D7eEd9e03E53415D37
 ```
 
 ### Check if an address is on the network
@@ -55,6 +56,7 @@ First you need to check if the address you want to message is on the XMTP networ
 const WALLET_TO = "0x20B572bE48527a770479744AeC6fE5644F97678B";
 const isOnProdNetwork = await xmtp.canMessage(WALLET_TO);
 console.log("Can message: " + isOnProdNetwork);
+//eg. Can message: true
 ```
 
 ### Start a new conversation
@@ -64,6 +66,7 @@ You can create a new conversation with any EVM address activated on the XMTP net
 ```jsx
 const conversation = await xmtp.conversations.newConversation(WALLET_TO);
 console.log("Conversation created", conversation);
+//eg. Conversation created: {Object}
 ```
 
 ### Send a message
@@ -73,6 +76,7 @@ To send a message, the recipient must have already started their client at least
 ```jsx
 const message = await conversation.send("gm");
 console.log("Message sent", message);
+//eg. Message sent: {Object}
 ```
 
 ### Stream messages
@@ -83,6 +87,7 @@ You can receive the complete message history in all conversations.
 for await (const message of await xmtp.conversations.streamAllMessages()) {
   console.log(`New message from ${message.senderAddress}: ${message.content}`);
 }
+//eg. New message from 0xd8dA6BF26964aF9D7eEd9e03E53415D37: gm
 ```
 
 import Quickstarts from "@site/src/components/Quickstarts/index.md";

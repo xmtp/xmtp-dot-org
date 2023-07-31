@@ -9,20 +9,15 @@
 - [Firebase Functions](https://github.com/fabriguespe/xmtp-firebase-functions) / [NodeJS](https://github.com/fabriguespe/xmtp-quickstart-node)
 - [Nodebook](https://github.com/fabriguespe/xmtp-nodebook) / [Replit](https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1)
 
-### Example apps
+### Example apps 📲
 
 - [React web app](https://github.com/xmtp/xmtp-quickstart-react)
 - [React Native app](https://github.com/xmtp/example-chat-react-native)
+- [New React Playground 🔥](https://github.com/xmtp/xmtp-react-playground/)
 
-### Experimental Playground 🎲
-
-[React Playground](https://github.com/xmtp/xmtp-react-playground/)
-
-Built with React and the XMTP JavaScript SDK, the playground provides the following functionality that you can use as a foundation for your app:
-
-- Performant database architecture
-- Group chat
-- Message reactions
-- Message replies
-- Attachments
-- Images
+  - Local DB
+  - Group chat
+  - Message reactions
+  - Message replies
+  - Read receipts
+  - Attachments

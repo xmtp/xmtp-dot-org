@@ -58,7 +58,7 @@ Building multi-profile experiences is optional. Allowing users to have different
 You can assign a conversation ID to conversations and then use the ID to filter and organize conversations as needed. You set the `conversationId` when your app creates a conversation.
 
 <Tabs>
-<TabItem value="js" label="JS" default>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}} default>
 
 ```tsx
 const conversation = await client.conversations.newConversation(
@@ -66,13 +66,13 @@ const conversation = await client.conversations.newConversation(
   {
     conversationId: buildConversationId(myProfile.id, otherProfile.id),
     metadata: {},
-  }
+  },
 );
 await conversation.send("gm");
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 let conversation2 = try await client.conversations.newConversation(
@@ -85,7 +85,7 @@ with: "0x3F11b27F323b62B159D2642964fa27C46C841897",
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 let conversation1 = try await client.conversations.newConversation(
@@ -95,7 +95,7 @@ context: .init(conversationID: buildConversationId(myProfile.id, otherProfile.id
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 val conversation2 = client.conversations.newConversation(
@@ -121,17 +121,17 @@ Here is the **Messages** panel in Lenster using the Lens DM `conversationId` to 
 1. Filter for Lens conversations only
 
 <Tabs>
-<TabItem value="js" label="JS" default>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}} default>
 
 ```tsx
 // Filter for Lens conversations with your profile
 const myProfileConversations = lensConversations.filter((conversation) =>
-  conversation.context?.conversationId.includes(myProfile.id)
+  conversation.context?.conversationId.includes(myProfile.id),
 );
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 // Get all the conversations
@@ -149,7 +149,7 @@ let myAppConversations = conversations.filter {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 // Get all the conversations
@@ -159,7 +159,7 @@ var myConversations = conversations.where((c) =>
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 // Get all the conversations
@@ -182,8 +182,8 @@ val myAppConversations = conversations.filter {
 const conversationKeys = myProfileConversations.map((convo) =>
   buildConversationKey(
     convo.peerAddress,
-    convo.context?.conversationId as string
-  )
+    convo.context?.conversationId as string,
+  ),
 );
 const profileIds = conversationKeys.map((key) => getProfileFromKey(key));
 ```
@@ -197,8 +197,8 @@ to the person in the conversation since profiles can be transferred. */
 const conversationKeys = myProfileConversations.map((convo) =>
   buildConversationKey(
     convo.peerAddress,
-    convo.context?.conversationId as string
-  )
+    convo.context?.conversationId as string,
+  ),
 );
 const profileIds = conversationKeys.map((key) => getProfileFromKey(key));
 ```
@@ -234,7 +234,7 @@ const fetchProfiles = async () => {
     const peerAddress = profile.ownedBy as string;
     const key = buildConversationKey(
       peerAddress,
-      buildConversationId(myProfile.id, profile.id)
+      buildConversationId(myProfile.id, profile.id),
     );
     newMessageProfiles.set(key, profile);
   }

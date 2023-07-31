@@ -80,12 +80,12 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 
 - Check out these launch posts for apps built with XMTP:
 
-  - [Buttrfly](https://twitter.com/0xMoe_/status/1603126849852563456?s=20&t=wHy9mBrNR5ri146CbhCMUw)
-  - [Coinbase Wallet](https://twitter.com/CoinbaseWallet/status/1679178581224873985?s=20)
-  - [LensPort](https://twitter.com/lensport_io/status/1602370688139939841?s=20&t=wHy9mBrNR5ri146CbhCMUw)
-  - [Lenster](https://twitter.com/lensterxyz/status/1588203593257009152?s=20&t=wHy9mBrNR5ri146CbhCMUw)
-  - [meTokens](https://twitter.com/meTokens/status/1597983759462436870?s=20&t=wHy9mBrNR5ri146CbhCMUw)
-  - [Orb](https://twitter.com/orbapp_/status/1618659601154715649?s=20)
+  - [Buttrfly](https://x.com/0xMoe_/status/1603126849852563456?s=20&t=wHy9mBrNR5ri146CbhCMUw)
+  - [Coinbase Wallet](https://x.com/CoinbaseWallet/status/1679178581224873985?s=20)
+  - [LensPort](https://x.com/lensport_io/status/1602370688139939841?s=20&t=wHy9mBrNR5ri146CbhCMUw)
+  - [Lenster](https://x.com/lensterxyz/status/1588203593257009152?s=20&t=wHy9mBrNR5ri146CbhCMUw)
+  - [meTokens](https://x.com/meTokens/status/1597983759462436870?s=20&t=wHy9mBrNR5ri146CbhCMUw)
+  - [Orb](https://x.com/orbapp_/status/1618659601154715649?s=20)
 
 - Need an XMTP logo for your announcement?
 
@@ -94,7 +94,7 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 - Tag the XMTP Labs team to help amplify your launch
 
   - [@xmtplabs](https://lenster.xyz/u/xmtplabs) on Lens
-  - [@xmtp\_](https://twitter.com/xmtp_) on Twitter
+  - [@xmtp\_](https://x.com/xmtp_) on Twitter
   - [@xmtp](https://warpcast.com/xmtp) on Farcaster
   - [@xmtp_network](https://www.threads.net/@xmtp_network) on Threads
 

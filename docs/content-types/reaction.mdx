@@ -13,18 +13,13 @@ A reaction is a quick and often emoji-based way to respond to a message. Reactio
 npm i @xmtp/content-type-reaction
 ```
 
-### Import libraries
+### Import and register
 
 ```tsx
 import {
   ContentTypeReaction,
   ReactionCodec,
 } from "@xmtp/content-type-reaction";
-```
-
-### Register codec
-
-```tsx
 // Create the XMTP client
 const xmtp = await Client.create(signer, { env: "dev" });
 // Register the codecs, AttachmentCodec is for handling local attachments under 1MB
@@ -56,11 +51,8 @@ Now that you have a reaction, you can send it:
 ```tsx
 await conversation.send(reaction, {
   contentType: ContentTypeReaction,
-  contentFallback: `[Reaction] ${client.address} reacted to ${someMessage.content} with:\n\n${reaction.content}`,
 });
 ```
-
-Note: Use contentFallback to enable clients that don't support these content types to still display some useful context. For cases where clients do support these types, they can use the content fallback as alt text for accessibility purposes.
 
 ### Receive a reaction
 

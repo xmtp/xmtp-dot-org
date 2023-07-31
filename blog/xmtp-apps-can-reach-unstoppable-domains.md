@@ -36,7 +36,7 @@ This tutorial requires that you have the following prerequisites in place:
 - Add the Unstoppable Domains SDK
 
 ```bash
-npm i --save @unstoppabledomains/resolution
+npm i  @unstoppabledomains/resolution
 ```
 
 Instantiate the library using your own RPC, such as Infura. Create a `resolution` variable that we are going to use many times across the app.
@@ -152,7 +152,7 @@ import { useEffect, useState } from "react";
 // in a react way (i.e., using state and effects)
 export const useLocalStorage = (
   key: string | undefined, // The key of the item to be saved in the LocalStorage
-  defaultValue: string | null // The default value to be used when the value of the given key is not found
+  defaultValue: string | null, // The default value to be used when the value of the given key is not found
 ) => {
   // Initializing the state with the value from LocalStorage or the default value
   const [value, setValue] = useState(() => {
@@ -161,7 +161,7 @@ export const useLocalStorage = (
     try {
       // Trying to parse the JSON value of the item in the LocalStorage
       currentValue = JSON.parse(
-        localStorage.getItem(key || "") || String(defaultValue)
+        localStorage.getItem(key || "") || String(defaultValue),
       );
     } catch (error) {
       // If an error occurred (probably due to invalid JSON), the default value is used
@@ -184,7 +184,7 @@ export const useLocalStorage = (
 // The key is the peer address and the default value is an empty string
 const [previewUnsName, setPreviewUnsName] = useLocalStorage(
   convo?.peerAddress,
-  ""
+  "",
 );
 
 // This effect hook checks whether the peer address is valid and the username preview is empty

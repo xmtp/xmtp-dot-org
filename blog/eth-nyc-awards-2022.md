@@ -1,7 +1,7 @@
 ---
 slug: eth-nyc-awards-2022
 hide_table_of_contents: true
-title: 'ETH NYC awards wrap: OTC Swap for OpenSea, E2EE Chat via Intercom widget, and a kill switch “Burn My Wallet” for hacked wallets'
+title: "ETH NYC awards wrap: OTC Swap for OpenSea, E2EE Chat via Intercom widget, and a kill switch “Burn My Wallet” for hacked wallets"
 date: 2022-07-08
 authors: peter
 description: We just got back from ETH NYC and what a great event. 1,300 builders, 50 sponsors, so much energy…
@@ -34,7 +34,7 @@ Merchants and customers need systems that eliminate fraud in a verified/ trusted
 
 ![market3 screen](media/market3-2.png)
 
-- Development team: [@RealKevinYang ](https://twitter.com/RealKevinYang), [@zihuajliu](https://twitter.com/zihuajliu)
+- Development team: [@RealKevinYang ](https://x.com/RealKevinYang), [@zihuajliu](https://x.com/zihuajliu)
 - Live demo: [https://www.loom.com/share/21c1bf50846b4d25a2e0886a59057386](https://www.loom.com/share/21c1bf50846b4d25a2e0886a59057386)
 - Github repo:
 
@@ -52,7 +52,7 @@ OTC Swap was able to accomplish this in eight hours by combining XMTP, [OpenSea 
 
 ![OTC Swap screen](media/image--1--1-2.png)
 
-- Development team: [@0x_Yuzu](https://twitter.com/0x_Yuzu)
+- Development team: [@0x_Yuzu](https://x.com/0x_Yuzu)
 - Live demo:[ https://otc-swap.vercel.app/](https://otc-swap.vercel.app/)
 - Github repo:
 
@@ -66,7 +66,7 @@ Burn My Wallet created a "kill switch" for a stolen wallet. When a user reports 
 
 ![burn my wallet screen](media/burnmywallet-3.png)
 
-- Development team: [@NikitaVarabei](https://twitter.com/NikitaVarabei), [@erinleelikes](https://twitter.com/erinleelikes)
+- Development team: [@NikitaVarabei](https://x.com/NikitaVarabei), [@erinleelikes](https://x.com/erinleelikes)
 - Live demo:[ https://burnmywallet.com/](https://burnmywallet.com/)
 - Docs [https://docs.burnmywallet.com/](https://docs.burnmywallet.com/)
 - Github repo:
@@ -78,7 +78,7 @@ Burn My Wallet created a "kill switch" for a stolen wallet. When a user reports 
 ## Got an idea you’re working on? Connect with us.
 
 - 👾 Official Discord Access - [https://xmtp.typeform.com/early-access](https://xmtp.typeform.com/early-access)
-- 🐦 XMTP Official Twitter - [https://twitter.com/xmtp\_](https://twitter.com/xmtp_)
+- 🐦 XMTP Official 𝕏 - [https://x.com/xmtp\_](https://x.com/xmtp_)
 - 🌐 XMTP Website - [https://xmtp.com/](https://xmtp.com/)
 - 📖 Careers at XMTP Labs - [https://blog.xmtp.com/careers/](https://blog.xmtp.com/careers/)
 

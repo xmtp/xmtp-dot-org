@@ -8,7 +8,7 @@ hide_table_of_contents: true
 
 :::caution XMTP Grants
 
-XMTP is not accepting applications for grants at this time. Make sure to [follow XMTP on Twitter](https://twitter.com/xmtp_) for updates on when grants will reopen.
+XMTP is not accepting applications for grants at this time. Make sure to [follow XMTP on 𝕏](https://x.com/xmtp_) for updates on when grants will reopen.
 
 :::
 
@@ -170,7 +170,7 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 🧑‍💻 Ask questions and file bugs on [GitHub](https://github.com/xmtp)
 
-🕊️ Holler at us on [Twitter](https://twitter.com/xmtp_)
+🕊️ Holler at us on [𝕏](https://x.com/xmtp_)
 
 👾 Join the community at [Discord](https://discord.gg/xmtp)
 

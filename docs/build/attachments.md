@@ -16,7 +16,7 @@ As you go through the steps and code samples in this section, consider viewing t
 ## Install the package
 
 ```bash
-npm i --save @xmtp/content-type-remote-attachment
+npm i  @xmtp/content-type-remote-attachment
 ```
 
 ## Send a remote attachment
@@ -25,18 +25,15 @@ Use the `RemoteAttachmentCodec` package to enable your app to send and receive
 
 Message attachments are files. More specifically, attachments are objects that have:
 
-- `filename`  
-   Most files have names, at least the most common file types.
-- `mimeType`  
-   What kind of file is it? You can often assume this from the file extension, but it's nice to have a specific field for it. [Here's a list of common mime types.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
-- `data`  
-   What is this file's data? Most files have data. If the file doesn't have data then it's probably not the most interesting thing to send.
+- `filename` Most files have names, at least the most common file types.
+- `mimeType` What kind of file is it? You can often assume this from the file extension, but it's nice to have a specific field for it. [Here's a list of common mime types.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+- `data` What is this file's data? Most files have data. If the file doesn't have data then it's probably not the most interesting thing to send.
 
 Because XMTP messages can only be up to 1MB in size, we need to store the attachment somewhere other than the XMTP network. In other words, we need to store it in a remote location.
 
 End-to-end encryption must apply not only to XMTP messages, but to message attachments as well. For this reason, we need to encrypt the attachment before we store it.
 
-## Import and register codecs
+## Import and register
 
 ```tsx
 // Import the codecs we're going to use
@@ -44,9 +41,6 @@ import {
   AttachmentCodec,
   RemoteAttachmentCodec,
 } from "@xmtp/content-type-remote-attachment";
-```
-
-```tsx
 // Create the XMTP client
 const xmtp = await Client.create(signer, { env: "dev" });
 // Register the codecs. AttachmentCodec is for local attachments (<1MB)
@@ -58,7 +52,7 @@ xmtp.registerCodec(new RemoteAttachmentCodec());
 ## Create an attachment object
 
 <Tabs>
-<TabItem value="backend" label="Backend">
+<TabItem value="backend" label="Backend"  attributes={{className: "js_tab"}}>
 
 ```tsx
 // Local file details
@@ -74,7 +68,7 @@ console.log(`Type: ${extname}`);
 ```
 
 </TabItem>
-<TabItem value="frontend" label="Frontend">
+<TabItem value="frontend" label="Frontend" attributes={{className: "react_tab"}}>
 
 ```tsx
 // Local file details
@@ -118,7 +112,7 @@ const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
 Upload the encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage:
 
 <Tabs>
-<TabItem value="web3storage" label="web3storage">
+<TabItem value="web3storage" label="Web3 Storage" attributes={{className: "web3storage_tab"}} >
 
 ```tsx
 const { Web3Storage } = require("web3.storage");
@@ -151,7 +145,7 @@ const url = `https://${cid}.ipfs.w3s.link/uploadIdOfYourChoice`;
 ```
 
 </TabItem>
-<TabItem value="thirdweb" label="Thridweb">
+<TabItem value="thirdweb" label="Thirdweb" attributes={{className: "thirdweb_tab"}}>
 
 ```tsx
 import { useStorageUpload } from "@thirdweb-dev/react";
@@ -172,7 +166,7 @@ const url = uploadUrl[0];
 
 Now that you have a `url`, you can create a `RemoteAttachment`.
 
-```tsx
+```jsx
 const remoteAttachment = {
   url: url,
   contentDigest: encryptedEncoded.digest,
@@ -191,34 +185,23 @@ Now that you have a remote attachment, you can send it:
 
 ```tsx
 await conversation.send(remoteAttachment, {
-  contentFallback:
-    "[Attachment] Cannot display ${remoteAttachment.filename}. This app does not support attachments yet.",
   contentType: ContentTypeRemoteAttachment,
 });
 ```
-
-As shown in the example above, you **must** provide a `contentFallback` value. Use it to provide an alt text-like description of the original content. Providing a `contentFallback` value enables clients that don't support the content type to still display something meaningful.
-
-:::caution
-
-If you don't provide a `contentFallback` value, clients that don't support the content type will display an empty message. This results in a poor user experience and breaks interoperability.
-
-:::
 
 ## Download, decrypt, and decode the attachment
 
 Now that you can receive a remote attachment, you need a way to receive a remote attachment. For example:
 
 ```tsx
-const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
-  attachment,
-  new AttachmentCodec(),
-);
+if (message.contentType.sameAs(RemoteAttachmentContentType)) {
+  const attachment = await RemoteAttachmentCodec.load(message.content, client);
+}
 ```
 
 You now have the original attachment:
 
-```
+```bash
 attachment.filename // => "screenshot.png"
 attachment.mimeType // => "image/png",
 attachment.data // => [the PNG data]
@@ -230,7 +213,7 @@ Once you have the attachment object created, you can also create a preview for w
 
 ```tsx
 URL.createObjectURL(
-    new Blob([Buffer.from(somePNGData)], {
+    new Blob([Buffer.from(attachment.data)], {
     type: attachment.mimeType,
   }),
 ),

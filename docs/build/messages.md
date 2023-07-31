@@ -9,8 +9,6 @@ import TabItem from "@theme/TabItem";
 
 # Send and list messages with XMTP
 
-Messages are addressed using wallet addresses.
-
 The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/content-types/introduction).
 
 ## Send messages
@@ -20,7 +18,7 @@ To send a message, the recipient must have already started their client at least
 You might want to consider [optimistically sending messages](/docs/tutorials/optimistic-sending).
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 const conversation = await xmtp.conversations.newConversation(
@@ -30,7 +28,7 @@ await conversation.send("Hello world");
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 let conversation = try await client.conversations.newConversation(
@@ -39,7 +37,7 @@ try await conversation.send(content: "Hello world")
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 var convo = await client.newConversation("0x...");
@@ -47,7 +45,7 @@ await client.sendMessage(convo, 'gm');
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 val conversation =
@@ -57,7 +55,7 @@ conversation.send(text = "Hello world")
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
 import { useSendMessage } from "@xmtp/react-sdk";
@@ -68,7 +66,7 @@ await sendMessage(message);
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 const conversation = await xmtp.conversations.newConversation(
@@ -85,7 +83,7 @@ await conversation.send("Hello world");
 You can receive the complete message history in a conversation.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 for (const conversation of await xmtp.conversations.list()) {
@@ -100,7 +98,7 @@ for (const conversation of await xmtp.conversations.list()) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 for conversation in client.conversations.list() {
@@ -109,7 +107,7 @@ for conversation in client.conversations.list() {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 // Only show messages from the last 24 hours.
@@ -118,7 +116,7 @@ var messages = await alice.listMessages(convo,
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 for (conversation in client.conversations.list()) {
@@ -127,7 +125,7 @@ for (conversation in client.conversations.list()) {
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
 import { useMessages } from "@xmtp/react-sdk";
@@ -143,7 +141,7 @@ useEffect(() => {
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 for (const conversation of await xmtp.conversations.list()) {
@@ -160,7 +158,7 @@ for (const conversation of await xmtp.conversations.list()) {
 If a conversation has a lot of messages, it's more performant to retrieve and process the messages page by page instead of handling all of the messages at once.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 Call `conversation.messagesPaginated()`, which will return an [AsyncGenerator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) yielding one page of results at a time. `conversation.messages()` uses this under the hood internally to gather all messages.
 
@@ -181,7 +179,7 @@ for await (const page of conversation.messagesPaginated({ pageSize: 25 })) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 Call `conversation.messages(limit: Int, before: Date)`, which will return the specified number of messages sent before that time.
 
@@ -194,7 +192,7 @@ let nextPage = try await conversation.messages(limit: 25, before: messages[0].se
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 Specify `limit` and `end`, which will return the specified number
 of messages sent before that time.
@@ -206,7 +204,7 @@ var nextPage = await alice.listMessages(
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 Call `conversation.messages(limit: Int, before: Date)`, which will return the specified number of messages sent before that time.
 
@@ -219,7 +217,7 @@ val nextPage = conversation.messages(limit = 25, before = messages[0].sent)
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
 import { useMessages } from "@xmtp/react-sdk";
@@ -246,7 +244,7 @@ return (
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 const conversation = await xmtp.conversations.newConversation(
@@ -272,7 +270,7 @@ for await (const page of conversation.messages(limit: 25)) {
 You can decode a single `Envelope` from XMTP using the `decode` method:
 
 <Tabs groupId="sdk-langs">
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 let conversation = try await client.conversations.newConversation(
@@ -285,7 +283,7 @@ let decodedMessage = try conversation.decode(envelope)
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin -beta" default>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 val conversation =
