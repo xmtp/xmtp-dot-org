@@ -32,34 +32,6 @@ console.log("Wallet address: " + wallet.address);
 const xmtp = await Client.create(wallet, { env: "dev" });
 ```
 
-### Dynamic
-
-Begin by wrapping the app with `ThirdwebProvider`, then use the `ConnectWallet` component to establish wallet connectivity.
-
-```tsx
-<ThirdwebProvider activeChain="goerli">
-  <Home />
-</ThirdwebProvider>
-```
-
-```tsx
-//Just one line of code to connect to wallet
-<ConnectWallet theme="light" />
-```
-
-```tsx
-//After logging in, we can use thirweb hooks to see the wallet
-const address = useAddress();
-const signer = useSigner();
-```
-
-That’s it! Next, proceed with signing in to XMTP. Create a new XMTP instance and register the content types your chat app will utilize.
-
-```tsx
-// Create the XMTP client
-const xmtp = await Client.create(signer, { env: "dev" });
-```
-
 ### Thirdweb
 
 Install the necessary dependencies for using XMTP and Thirdweb:
