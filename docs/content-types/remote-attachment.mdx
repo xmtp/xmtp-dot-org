@@ -45,7 +45,7 @@ xmtp.registerCodec(new RemoteAttachmentCodec());
 ### Create an attachment object
 
 <Tabs>
-<TabItem value="backend" label="Backend">
+<TabItem value="backend" label="Backend"  attributes={{className: "js_tab"}}>
 
 ```tsx
 // Local file details
@@ -61,7 +61,7 @@ console.log(`Type: ${extname}`);
 ```
 
 </TabItem>
-<TabItem value="frontend" label="Frontend">
+<TabItem value="frontend" label="Frontend" attributes={{className: "react_tab"}}>
 
 ```tsx
 // Local file details
@@ -214,11 +214,11 @@ if (message.contentType.sameAs(RemoteAttachmentContentType)) {
 
 - You now have the original attachment:
 
-  ```bash
-  attachment.filename // => "screenshot.png"
-  attachment.mimeType // => "image/png",
-  attachment.data // => [the PNG data]
-  ```
+```bash
+attachment.filename // => "screenshot.png"
+attachment.mimeType // => "image/png",
+attachment.data // => [the PNG data]
+```
 
 ## Create a preview attachment object
 
