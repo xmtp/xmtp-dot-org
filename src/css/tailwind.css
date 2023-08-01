@@ -1565,3 +1565,6 @@ li > a.new::after {
   padding: 2px 5px;
   border-radius: 5px;
 }
+.ct img {
+  width: 50%;
+}
