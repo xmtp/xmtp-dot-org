@@ -9,6 +9,7 @@ window.onload = function () {
       item.innerText === "Developer Quickstart" ||
       item.innerText === "Content Types" ||
       item.innerText === "Query addresses" ||
+      item.innerText === "Wallet connectors" ||
       item.innerText === "Reply" ||
       item.innerText === "Reaction" ||
       item.innerText === "Read Receipt" ||

@@ -4,7 +4,9 @@ sidebar_position: 3
 hide_table_of_contents: true
 ---
 
-# Resolve identities in your app
+# Wallet connectors with XMTP
+
+In this tutorial, we will explore how to integrate different wallets into XMTP, allowing users to securely interact with the XMTP ecosystem. We will cover the integration process using various wallet connectors, including Dynamic, ThirdWeb, and Rainbow. By following this tutorial, you will be able to offer a seamless and user-friendly wallet integration experience within your XMTP applications.
 
 <div className="bigTab">
 
