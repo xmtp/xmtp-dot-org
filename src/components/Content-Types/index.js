@@ -2,7 +2,7 @@ import React from "react";
 
 const Usecases = () => {
   return (
-    <div className="chain-list  ct">
+    <div className="chain-list eight ct">
       <a href="/docs/content-types/plain-text" className="chain-item">
         <img src={"/img/ct/plain-text.svg"} />
         <span>Text</span>
