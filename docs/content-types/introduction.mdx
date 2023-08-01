@@ -75,3 +75,13 @@ This tutorial will walk you through the process of building a custom content typ
 - ### [Advanced: Sending a polygon transaction](/docs/content-types/custom-advanced)
 
 This tutorial will walk you through the process of building a custom content type dedicated to send transaction hashes on the polygon blockchain.
+
+## Handle unsupported Content Types
+
+```jsx
+const codec = codecs.codecFor(content.contentType);
+if (!codec) {
+  const fallback = `missing codec for content type "${content.contentType.toString()}"`;
+  throw new Error(fallback);
+}
+```
