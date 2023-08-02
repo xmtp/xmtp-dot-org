@@ -79,7 +79,7 @@ This tutorial will walk you through the process of building a custom content typ
 ## Handle unsupported Content Types
 
 ```jsx
-const codec = codecs.codecFor(content.contentType);
+const codec = xmtp.codecFor(content.contentType);
 if (!codec) {
   const fallback = `missing codec for content type "${content.contentType.toString()}"`;
   throw new Error(fallback);
