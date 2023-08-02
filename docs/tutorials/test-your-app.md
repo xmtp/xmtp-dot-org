@@ -45,14 +45,14 @@ Need an address to message? See [Use test message bots and addresses](#use-test-
 
 ### Performance
 
-Test your app's performance against these performance benchmarks. 
+Test your app's performance against these performance benchmarks.
 
 Start by [creating a test wallet](https://xmtp.org/docs/tutorials/test-your-app#create-a-test-wallet) with ~2,000 conversations and 1,000 messages per conversation. Run the following performance tests:
 
 - For a cold start (first load):
-    - Test that the app is interactive in <15 sec
+  - Test that the app is interactive in <15 sec
 - For a warm cache (subsequent loads and refreshes):
-    - Test that the app is interactive in <1 sec
+  - Test that the app is interactive in <1 sec
 - Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
 - Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
 

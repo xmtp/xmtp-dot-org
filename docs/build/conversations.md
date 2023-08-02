@@ -136,10 +136,9 @@ const newConversation = await xmtp.conversations.newConversation(
 </TabItem>
 </Tabs>
 
-Message this XMTP message bot to get an immediate automated reply:
+import Bots from "@site/src/components/Bots/index.md";
 
-- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`) env:`production`
-- `gm dev bot` (`0x20B572bE48527a770479744AeC6fE5644F97678B`) env:`dev`
+<Bots />
 
 ## List existing conversations
 

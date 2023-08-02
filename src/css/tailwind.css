@@ -1568,3 +1568,11 @@ li > a.new::after {
 .ct img {
   width: 50%;
 }
+.botchainet {
+  display: block;
+  margin-bottom: 15px;
+}
+.botchainet img {
+  width: 10px;
+  display: none;
+}

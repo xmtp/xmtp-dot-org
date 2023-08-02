@@ -94,11 +94,9 @@ import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
 <Quickstarts />
 
-#### Need to send a test message?
+import Bots from "@site/src/components/Bots/index.md";
 
-Message this XMTP message bot to get an immediate automated reply:
-
-- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
+<Bots />
 
 #### Troubleshooting
 
