@@ -4,6 +4,7 @@ window.onload = function () {
   navItems.forEach((item) => {
     if (
       item.innerText === "Local DB" ||
+      item.innerText === "Groups" ||
       item.innerText === "Quickstart" ||
       item.innerText === "Attachments" ||
       item.innerText === "Developer Quickstart" ||
