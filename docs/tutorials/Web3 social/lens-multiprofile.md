@@ -25,7 +25,7 @@ Need a Lens handle? Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/)
 
 ## Start a conversation with a Lens profile
 
-![Screenshot showing a search for a Lens profile in the New message panel in Lenster](img/search-for-lens-profile.png)
+![Screenshot showing a search for a Lens profile in the New message panel in Lenster](../img/search-for-lens-profile.png)
 
 When building with XMTP, you must provide a way to start a conversation between the user and the wallet address they want to message.
 
@@ -114,7 +114,7 @@ Now that you've built the Lens DM `conversationId` for your Lens app, your app c
 
 Here is the **Messages** panel in Lenster using the Lens DM `conversationId` to filter and display a user's Lens conversations only, along with message previews:
 
-![Screenshot showing the Messages panel in Lenster with a set of three conversations with preview messages highlighted](img/filter-for-lens-convos.png)
+![Screenshot showing the Messages panel in Lenster with a set of three conversations with preview messages highlighted](../img/filter-for-lens-convos.png)
 
 **To filter for Lens conversations and then display messages in a conversation:**
 
