@@ -962,7 +962,9 @@ ul li a:before {
   margin-bottom: 10px;
   object-fit: contain;
 }
-
+.partners .chain-item img {
+  margin-bottom: 0px !important;
+}
 .chain-item .svg {
   max-width: 10px; /* 20% smaller than before */
   margin-bottom: 0px;
