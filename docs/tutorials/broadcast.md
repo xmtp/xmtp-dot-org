@@ -8,7 +8,7 @@ import TabItem from "@theme/TabItem";
 
 # Send a broadcast message
 
-You can send a broadcast message (1:many message or announcement) with XMTP. The recipient sees the message as a DM from the sending wallet address. Be sure to follow these [best practices for broadcast messages](#best-practices-for-broadcast-messages).
+You can send a broadcast message (1:many message or announcement) with XMTP. The recipient sees the message as a DM from the sending wallet address. Be sure to follow these [Scale for broadcast messages](#best-practices-for-broadcast-messages).
 
 1. Use the bulk query `canMessage` method to identify the wallet addresses that are activated on the XMTP network.
 2. Send the message to all of the activated wallet addresses.
@@ -89,7 +89,7 @@ main();
 </TabItem>
 </Tabs>
 
-## Best practices for broadcast messages
+## Scale for broadcast messages
 
 - **Depending on where you’re based**, you could be subject to data privacy laws, including but not limited to GDPR and CCPA.
 
