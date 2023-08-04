@@ -22,7 +22,7 @@
   {
     "name": "Optimize performance of your app",
     "image": "img/perf-arch-cover.png",
-    "href": "/docs/tutorials/performance"
+    "href": "/docs/tutorials/scale/performance"
   },
   {
     "name": "Optimistically send messages",
@@ -62,11 +62,11 @@
   {
     "name": "Test your app",
     "image": "img/test-cover.png",
-    "href": "/docs/tutorials/test-your-app"
+    "href": "/docs/tutorials/scale/test-your-app"
   },
   {
     "name": "Prepare to launch your app",
     "image": "img/launch-cover.jpg",
-    "href": "/docs/tutorials/launch"
+    "href": "/docs/tutorials/scale/launch"
   }
 ]

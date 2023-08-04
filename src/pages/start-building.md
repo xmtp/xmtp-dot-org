@@ -22,7 +22,7 @@ Use this document as a map to build, launch, and maintain a best-in-class app wi
 
 ## Polish your app
 
-- [Explore these tutorials](/docs/tutorials/performance) to learn how to build beyond the basics and polish your app by following UX, performance, and testing Scale
+- [Explore these tutorials](/docs/tutorials/scale/performance) to learn how to build beyond the basics and polish your app by following UX, performance, and testing Scale
 
 - [Explore quickstart and example apps](/docs/build/get-started#quickstarts-) for implementation guidance and inspiration
 
@@ -44,7 +44,7 @@ Ask questions and learn with others building with XMTP. Join the community on th
 
 ## Launch your app
 
-Preparing to launch? See these Scale for [launching your app](/docs/tutorials/launch)
+Preparing to launch? See these Scale for [launching your app](/docs/tutorials/scale/launch)
 
 ## Contribute to XMTP
 
