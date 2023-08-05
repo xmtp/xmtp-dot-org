@@ -47,7 +47,7 @@ Need an address to message? See [Use test message bots and addresses](#use-test-
 
 Test your app's performance against these performance benchmarks.
 
-Start by [creating a test wallet](https://xmtp.org/docs/tutorials/scale/test-your-app#create-a-test-wallet) with ~2,000 conversations and 1,000 messages per conversation. Run the following performance tests:
+Start by [creating a test wallet](https://xmtp.org/docs//scale/test-your-app#create-a-test-wallet) with ~2,000 conversations and 1,000 messages per conversation. Run the following performance tests:
 
 - For a cold start (first load):
   - Test that the app is interactive in <15 sec

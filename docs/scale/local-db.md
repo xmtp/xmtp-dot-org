@@ -1,6 +1,6 @@
 ---
 sidebar_label: Local DB
-sidebar_position: 15
+sidebar_position: 1
 description: Managing Local Data with Dexie in a React Application
 ---
 

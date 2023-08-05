@@ -1,6 +1,6 @@
 ---
 sidebar_label: Performance
-sidebar_position: 1
+sidebar_position: 3
 description: Follow these guidelines to optimize your app’s performance.
 ---
 
