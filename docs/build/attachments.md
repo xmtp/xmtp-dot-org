@@ -46,42 +46,11 @@ xmtp.registerCodec(new RemoteAttachmentCodec());
 ### Create an attachment object
 
 <Tabs>
-<TabItem value="backend" label="Backend"  attributes={{className: "js_tab"}}>
-
-```tsx
-// Local file details
-const fs = require("fs");
-const path = require("path");
-
-const filePath = "xmtp.png";
-const data = fs.readFileSync(filePath);
-const filename = path.basename(filePath);
-const extname = path.extname(filePath);
-console.log(`Filename: ${filename}`);
-console.log(`Type: ${extname}`);
-```
-
-</TabItem>
 <TabItem value="frontend" label="Frontend" attributes={{className: "react_tab"}}>
 
 ```tsx
-// Local file details
-const readAsArrayBuffer = (file) =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () =>
-      reader.result instanceof ArrayBuffer
-        ? resolve(reader.result)
-        : reject(new Error("Not an ArrayBuffer"));
-    reader.readAsArrayBuffer(file);
-  });
-const data = await readAsArrayBuffer(file);
-```
+const arrayBuffer = await file.arrayBuffer();
 
-</TabItem>
-</Tabs>
-
-```tsx
 // Local file details
 const attachment = {
   filename: filename,
@@ -89,6 +58,9 @@ const attachment = {
   data: new Uint8Array(data),
 };
 ```
+
+</TabItem>
+</Tabs>
 
 ### Encrypt the attachment
 
@@ -237,66 +209,3 @@ URL.createObjectURL(
 ```
 
 </TabItem></Tabs>
-
-## Storage considerations
-
-XMTP messages have a size limit of 1 MB and most attachment types will exceed this size. As a result, you must store attachments in a remote location outside of the XMTP network.
-
-You can use storage options such as Web3 Storage, ThirdWeb Storage, S3 buckets, and others. Another option is to allow your users to provide their own storage credentials for one of these services.
-
-The [xmtp.chat](https://xmtp.chat) reference implementation uses Web3 Storage, with XMTP Labs hosting with our own token. We wanted to use a decentralized solution, which made Web3 Storage a good choice. Hosting with our own token reduces user friction, but we cap uploads at 5 MB. In the future, [xmtp.chat](https://xmtp.chat) might give users the option to provide their own token if they want to upload larger file sizes or keep their images beyond a certain timeframe.
-
-## Security considerations
-
-:::caution
-
-Automatically loading attachments from untrusted users can have negative security implications. Be sure to consider this before enabling attachments to autoload in your app.
-
-:::
-
-A more secure pattern you might want to use is to require the user to click a “Click to load” CTA before loading an attachment. After the attachment has been loaded, it can be pulled from a cache. This pattern requires one more click for the user, but provides greater security.
-
-The [xmtp.chat](https://xmtp.chat) reference implementation intentionally demonstrates both patterns for your reference:
-
-- Less secure: Attachments under 5 MB autoload
-- More secure: Attachments over 5 MB require a "Click to load" on first load
-
-## Privacy considerations
-
-:::caution
-
-Automatically loading attachments from untrusted users can have negative privacy implications. Be sure to consider this before enabling attachments to autoload in your app.
-
-:::
-
-Specifically, autoloading attachments enables the owner of the server where the attachment is stored to see user information such as IP address, user agent, and so forth.
-
-When you require a user to click a CTA to load the attachment, the server doesn't need to know any user-related information. Instead, the user is in control of the process and can retrieve the attachment without revealing any personal information.
-
-## UI considerations
-
-There are a few considerations worth mentioning on the UI side:
-
-- Provide drag-and-drop functionality for users if you’re building a web app.
-- Provide zoom capability for images.
-- Provide a loading state, as attachments can be slower to send than a message with just text. You might choose to optimistically send attachments or display a loading state.
-- Provide fallback text that displays for the recipient if they are using an app that doesn't yet support attachments.
-
-The [xmtp.chat](https://xmtp.chat) reference implementation includes the following error handling states, which you might want to consider for your app as well:
-
-- File size limit exceeded  
-   If your app enforces a file size limit, provide error handling when the size limit is exceeded.
-- Unsupported file type  
-   Provide error handling when a user attempts to attach an unsupported file type.
-- Error sending an attachment  
-   Provide this general error handling to cover other errors when sending an attachment.
-
-To help users avoid these error states in the first place, consider providing UI text that proactively lets users know about file size limits and supported file types.
-
-## Performance considerations
-
-To make your app more performant when loading attachments, consider caching these image URLs after the first load.
-
-The [xmtp.chat](https://xmtp.chat) reference implementation does this using Dexie, but there are other options as well.
-
-Note that when caching attachments, you must reset the cache after the client changes.

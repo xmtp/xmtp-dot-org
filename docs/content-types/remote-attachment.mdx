@@ -45,42 +45,11 @@ xmtp.registerCodec(new RemoteAttachmentCodec());
 ### Create an attachment object
 
 <Tabs>
-<TabItem value="backend" label="Backend"  attributes={{className: "js_tab"}}>
-
-```tsx
-// Local file details
-const fs = require("fs");
-const path = require("path");
-
-const filePath = "xmtp.png";
-const data = fs.readFileSync(filePath);
-const filename = path.basename(filePath);
-const extname = path.extname(filePath);
-console.log(`Filename: ${filename}`);
-console.log(`Type: ${extname}`);
-```
-
-</TabItem>
 <TabItem value="frontend" label="Frontend" attributes={{className: "react_tab"}}>
 
 ```tsx
-// Local file details
-const readAsArrayBuffer = (file) =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () =>
-      reader.result instanceof ArrayBuffer
-        ? resolve(reader.result)
-        : reject(new Error("Not an ArrayBuffer"));
-    reader.readAsArrayBuffer(file);
-  });
-const data = await readAsArrayBuffer(file);
-```
+const arrayBuffer = await file.arrayBuffer();
 
-</TabItem>
-</Tabs>
-
-```tsx
 // Local file details
 const attachment = {
   filename: filename,
@@ -88,6 +57,9 @@ const attachment = {
   data: new Uint8Array(data),
 };
 ```
+
+</TabItem>
+</Tabs>
 
 ### Encrypt the attachment
 
