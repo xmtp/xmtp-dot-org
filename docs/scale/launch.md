@@ -49,9 +49,10 @@ Your app provides an [interoperable inbox](/docs/concepts/interoperable-inbox) w
 - [ ] Does not crash frequently
 - [ ] Does not have obvious or critical bugs
 
-### SDK version
+### SDK and app versions
 
 - [ ] Uses the latest [XMTP client SDK](/docs/introduction#sdks). If not, which features is the app missing?
+- [ ] Sets an [`appVersion` value](/docs/build/authentication#configure-the-client).
 
 ### Attachments
 
