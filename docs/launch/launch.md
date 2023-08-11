@@ -23,11 +23,11 @@ Your app provides an [interoperable inbox](/docs/concepts/interoperable-inbox) w
 
 ### Performance
 
-- [ ] [Use a local cache](/docs//scale/performance)
+- [ ] [Use a local cache](/docs/launch/performance)
 
 ### Test your app
 
-- [ ] Test your app [against these test cases](/docs//scale/test-your-app)
+- [ ] Test your app [against these test cases](/docs/launch/test-your-app)
 
 ### UX
 
