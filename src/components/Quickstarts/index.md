@@ -16,7 +16,6 @@
 - [New React Playground 🔥](https://github.com/xmtp/xmtp-react-playground/)
 
   - Local DB
-  - Group chat
   - Message reactions
   - Message replies
   - Read receipts
