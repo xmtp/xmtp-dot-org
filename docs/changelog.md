@@ -138,8 +138,6 @@ Provides an example push notification server, written in Golang. (Nov 16)
 
 Provides a TypeScript implementation of an XMTP client for use with JavaScript and React apps. **[Read the release notes](https://github.com/xmtp/xmtp-js/releases/tag/v7.0.0)** (Nov 7)
 
-## [XMTP Quickstart chat app repo](https://github.com/xmtp/xmtp-quickstart-react) is public (xmtp-quickstart-react)
-
 Provides a 1:1 chat app built with the [JavaScript client SDK](https://github.com/xmtp/xmtp-js) (`xmtp-js`). The app is intentionally built with lightweight code to help make it easier to parse and start learning to build with XMTP. (Nov 4)
 
 ---

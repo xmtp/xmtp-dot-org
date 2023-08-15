@@ -11,7 +11,6 @@
 
 ### Example apps 📲
 
-- [React web app](https://github.com/xmtp/xmtp-quickstart-react)
 - [React Native app](https://github.com/xmtp/example-chat-react-native)
 - [New React Playground 🔥](https://github.com/xmtp/xmtp-react-playground/)
 
