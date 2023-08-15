@@ -30,6 +30,8 @@ To learn more, see [Wallet apps](/docs/dev-faqs#wallet-apps).
 
 Currently, XMTP Labs (the company) operates all of the network nodes in the two available XMTP network environments: `dev` and `production`.
 
+To explore the software for the nodes that currently form the XMTP network, see the [xmtp-node-go repo](https://github.com/xmtp/xmtp-node-go).
+
 Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes.
 
 XMTP Labs is working toward a phased decentralization of the network. To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
