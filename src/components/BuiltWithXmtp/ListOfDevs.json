@@ -78,14 +78,6 @@
     "twitter": "https://x.com/bellosights"
   },
   {
-    "name": "Boson App",
-    "href": "https://bosonapp.io/",
-    "image": "/img/builtWithXmtp/boson-logo.jpg",
-    "description": "Tokenize, transfer, and trade any physical asset as an NFT.",
-    "github": "https://github.com/bosonprotocol",
-    "twitter": "https://x.com/BosonProtocol"
-  },
-  {
     "name": "AbsoluteLabs",
     "href": "https://absolutelabs.io/",
     "image": "/img/builtWithXmtp/absolute-logo.jpg",
@@ -98,13 +90,6 @@
     "image": "/img/builtWithXmtp/holder-logo.jpg",
     "description": "A web3 CRM and marketing automation platform that powers customer engagement for the tokenized world.",
     "twitter": "https://x.com/holderxyz"
-  },
-  {
-    "name": "Lensport",
-    "href": "https://lensport.io/",
-    "image": "/img/builtWithXmtp/lensport.png",
-    "description": "Discover, collect, and sell Lens Posts to invest in creators you support. Built on Lens Protocol.",
-    "twitter": "https://x.com/lensport_io"
   },
   {
     "name": "Pinsta",
