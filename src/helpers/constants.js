@@ -103,8 +103,6 @@ export const XMTP_FLUTTER_URL =
 export const XMTP_WEB_URL = "https://api.github.com/repos/xmtp/xmtp-web";
 export const XMTP_NOTIF_SERVER_URL =
   "https://api.github.com/repos/xmtp/example-notification-server-go";
-export const QUICKSTART_CHAT_URL =
-  "https://api.github.com/repos/xmtp/xmtp-quickstart-react";
 
 export const CHAT_ITEM = {
   id: "2534740",

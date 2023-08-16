@@ -99,53 +99,6 @@ const SDKCardList = () => {
   );
 };
 
-// this provides the content in the cards in the Example Apps section on the SDKs and tools page
-const exampleappcards = [
-  {
-    title: "Quickstart React web app",
-    description:
-      "An example React chat app you can use to learn to build a basic messaging app using the XMTP client SDK",
-    firstLink: {
-      name: "GitHub repo",
-      link: "https://github.com/xmtp/xmtp-quickstart-react",
-    },
-    logo: "img/x-mark.svg",
-    theme: "sunrise",
-  },
-  {
-    title: "React Native example app",
-    description:
-      "🧑‍💻 Dev preview: An example chat app that demos how to integrate the XMTP client SDK for JavaScript into a React Native app",
-    firstLink: {
-      name: "GitHub repo",
-      link: "https://github.com/xmtp/example-chat-react-native",
-    },
-    logo: "img/x-mark.svg",
-    theme: "midnight",
-  },
-];
-
-// this provides the list of cards  in the Example Apps section on the SDKs and tools page
-const ExampleAppCardList = () => {
-  return (
-    <div className="list-none grid grid-cols-1 md:grid-cols-2 px-0 gap-8 mb-8">
-      {exampleappcards.map((card) => (
-        <div className="relative group">
-          <Card
-            key={card.title}
-            title={card.title}
-            description={card.description}
-            firstLink={card.firstLink}
-            secondLink={card.secondLink}
-            logo={card.logo}
-            theme={card.theme}
-          />
-        </div>
-      ))}
-    </div>
-  );
-};
-
 // this provides the content in the cards in the Developer tools section on the SDKs and tools page
 const devtoolcards = [
   {
@@ -272,8 +225,7 @@ const Card = ({
     <div>
       <ALink to={firstLink.link}>
         <article
-          className={`${theme}-theme grid grid-flow-col items-end h-36 rounded-lg relative hover:shadow-lg`}
-        >
+          className={`${theme}-theme grid grid-flow-col items-end h-36 rounded-lg relative hover:shadow-lg`}>
           <h3 className="text-white text-xl bold ml-6 mb-6 w-9/12"> {title}</h3>
           <section className="absolute right-4 bottom-4">
             <img src={logo} alt="card-logo" className="opacity-25" />
@@ -283,8 +235,7 @@ const Card = ({
       <p className="mb-2 mt-4">{description}</p>
       <ALink
         className="text-red-500 text-base font-semibold"
-        to={firstLink.link}
-      >
+        to={firstLink.link}>
         {firstLink.name}
       </ALink>
       {secondLink ? (
@@ -292,8 +243,7 @@ const Card = ({
           <span className="mx-4">|</span>
           <ALink
             className="text-red-500 text-base font-semibold"
-            to={secondLink.link}
-          >
+            to={secondLink.link}>
             {secondLink.name}
           </ALink>
         </>
@@ -303,8 +253,6 @@ const Card = ({
 };
 
 export { SDKCardList };
-
-export { ExampleAppCardList };
 
 export { DevToolsCardList };
 
