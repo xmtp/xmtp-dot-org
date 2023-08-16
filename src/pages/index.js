@@ -169,7 +169,7 @@ function HomepageLogos() {
               width="206"
               height="32"></img>
           </a>
-          <a href="/docs/tutorials/web3 social/lens-multiprofile">
+          <a href="/docs/tutorials/web3-social/lens-multiprofile">
             <img
               class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               src="/img/logo-lens.svg"
@@ -234,7 +234,7 @@ function HomepageLogos() {
               width="206"
               height="32"></img>
           </a>
-          <a href="/docs/tutorials/web3 social/lens-multiprofile">
+          <a href="/docs/tutorials/web3-social/lens-multiprofile">
             <img
               class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               src="/img/logo-lens-dark.svg"
