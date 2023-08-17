@@ -71,6 +71,14 @@
     "twitter": "https://x.com/EthereumPhone"
   },
   {
+    "name": "Boson App",
+    "href": "https://bosonapp.io/",
+    "image": "/img/builtWithXmtp/boson-logo.jpg",
+    "description": "Tokenize, transfer, and trade any physical asset as an NFT.",
+    "github": "https://github.com/bosonprotocol",
+    "twitter": "https://x.com/BosonProtocol"
+  },
+  {
     "name": "Bello",
     "href": "https://bello.lol/",
     "image": "/img/builtWithXmtp/bello.png",
