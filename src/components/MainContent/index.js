@@ -15,7 +15,6 @@ import {
   XMTP_IOS_URL,
   XMTP_FLUTTER_URL,
   XMTP_WEB_URL,
-  QUICKSTART_CHAT_URL,
   CHAT_ITEM,
 } from "../../helpers/constants";
 import { BlogItem } from "../BlogItem";
@@ -61,11 +60,6 @@ export const MainContent = ({ styles }) => {
         Authorization: customFields.personalToken,
       },
     });
-    const responseQuickChat = await fetch(QUICKSTART_CHAT_URL, {
-      headers: {
-        Authorization: customFields.personalToken,
-      },
-    });
 
     const dataXmtp = await responseXmtp.json();
     if (dataXmtp && !dataXmtp.message) items = [...items, dataXmtp];
@@ -79,9 +73,6 @@ export const MainContent = ({ styles }) => {
     if (dataWeb && !dataWeb.message) items = [...items, dataWeb];
     const dataNotif = await responseNotif.json();
     if (dataNotif && !dataNotif.message) items = [...items, dataNotif];
-    const dataQuickChat = await responseQuickChat.json();
-    if (dataQuickChat && !dataQuickChat.message)
-      items = [...items, dataQuickChat];
 
     items = [...items, CHAT_ITEM];
     setSliderItems(items);
