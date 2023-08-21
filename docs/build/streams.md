@@ -73,25 +73,33 @@ client.conversations.stream().collect {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-//The `useStreamConversations` hook listens for new conversations in real-time and calls the passed callback when a new conversation is created. It also exposes an error state.
-
 import { useCallback, useState } from "react";
 import { useStreamConversations } from "@xmtp/react-sdk";
+import type { Conversation } from "@xmtp/react-sdk";
 
-// track streamed conversations
-const [streamedConversations, setStreamedConversations] = useState<
-  Conversation[]
->([]);
+export const NewConversations: React.FC = () => {
+  // track streamed conversations
+  const [streamedConversations, setStreamedConversations] = useState<
+    Conversation[]
+  >([]);
 
-// callback to handle incoming conversations
-const onConversation = useCallback((conversation: Conversation) => {
-  setStreamedConversations((prev) => [...prev, conversation]);
-}, []);
-const { error } = useStreamConversations(onConversation);
+  // callback to handle incoming conversations
+  const onConversation = useCallback(
+    (conversation: Conversation) => {
+      setStreamedConversations((prev) => [...prev, conversation]);
+    },
+    [],
+  );
+  const { error } = useStreamConversations(onConversation);
 
-if (error) {
-  return "An error occurred while streaming conversations";
-}
+  if (error) {
+    return "An error occurred while streaming conversations";
+  }
+
+  return (
+    ...
+  );
+};
 ```
 
 </TabItem>
@@ -181,15 +189,40 @@ conversation.streamMessages().collect {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
+// The useStreamMessages hook streams new conversation messages on mount
+// and exposes an error state.
 import { useStreamMessages } from "@xmtp/react-sdk";
+import type { CachedConversation, DecodedMessage } from "@xmtp/react-sdk";
+import { useCallback, useEffect, useState } from "react";
 
-const onMessage = useCallback((message) => {
-  setHistory((prevMessages) => {
-    const msgsnew = [...prevMessages, message];
-    return msgsnew;
-  });
-}, []);
-useStreamMessages(conversation, onMessage);
+export const StreamMessages: React.FC<{
+  conversation: CachedConversation;
+}> = ({
+  conversation,
+}) => {
+  // track streamed messages
+  const [streamedMessages, setStreamedMessages] = useState<DecodedMessage[]>(
+    [],
+  );
+
+  // callback to handle incoming messages
+  const onMessage = useCallback(
+    (message: DecodedMessage) => {
+      setStreamedMessages((prev) => [...prev, message]);
+    },
+    [streamedMessages],
+  );
+
+  useStreamMessages(conversation, onMessage);
+
+  useEffect(() => {
+    setStreamedMessages([]);
+  }, [conversation]);
+
+  return (
+    ...
+  );
+};
 ```
 
 </TabItem>
@@ -236,8 +269,13 @@ for await (const message of await xmtp.conversations.streamAllMessages()) {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
+// The useStreamAllMessages hook streams new messages from all conversations 
+// on mount and exposes an error state.
 import { useStreamAllMessages } from "@xmtp/react-sdk";
+import type { DecodedMessage } from "@xmtp/react-sdk";
+import { useCallback, useState } from "react";
 
+export const StreamAllMessages: React.FC = () => {
   // track streamed messages
   const [streamedMessages, setStreamedMessages] = useState<DecodedMessage[]>(
     [],
