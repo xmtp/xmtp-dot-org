@@ -1,36 +1,48 @@
 ---
 sidebar_label: Local DB
 sidebar_position: 1
-description: Managing Local Data with Dexie in a React Application
+description: Manage local data with Dexie in a web app built with the xmtp-js SDK
 ---
 
-# Managing Local Data with Dexie in a React Application
+# Manage local data with Dexie in a web app built with xmtp-js
 
-The performance of a web application can be significantly improved by leveraging local data storage. Particularly in the context of loading messages, using a local database can result in a 10x performance increase compared to solely relying on a network-based data source.
+<!--Ry - I believe we said that we'd make this tutorial about xmtp-js and the code is not about React.-->
 
-This guide provides a walkthrough on managing local data storage in a React application using the Dexie.js library. Dexie.js is a minimalistic wrapper for IndexedDB, which is a low-level API for client-side storage of significant amounts of structured data.
+<!--I'd also like to see if we can add this entire doc to the end of https://junk-range-possible-git-react-prod-rel-xmtp-labs.vercel.app/docs/build/local-first. WDYT?-->
+
+<!--Ry - In the title above, should we change "local data" to "local cache"? And change "local database" below to "local cache"? there are so many references to "database" and "database schema" in this doc - I don't know if they can all be changed to "cache" instead without changing the meaning. Perhaps this doc is really about database vs cache?-->
+
+The performance of a web app can be significantly improved by leveraging local data storage. Particularly in the context of loading messages, using a local database can result in a 10x performance increase compared to solely relying on a network-based data source.
+
+This guide provides a walkthrough on managing local data storage in a web application built with the [xmtp-js SDK](https://github.com/xmtp/xmtp-js) and using the Dexie.js library. Dexie.js is a minimalistic wrapper for IndexedDB, which is a low-level API for client-side storage of significant amounts of structured data.
 
 import ReactPlayer from 'react-player'
 
-#### Experimental Playground 🎲
+#### Experimental playground 🎲
+
+<!--Ry - I believe we said that we'd make this tutorial about xmtp-js and the code is not about React. Is this demo from the React Playground being provided by xmtp-js?-->
 
 For hands-on experience, check out the React Playground.
 
-[GitHub repo](https://github.com/xmtp/xmtp-react-playground) | [Live Version](https://xmtp.github.io/xmtp-react-playground/#/new).
+[GitHub repo](https://github.com/xmtp/xmtp-react-playground) | [Live version](https://xmtp.github.io/xmtp-react-playground/#/new)
 
 <ReactPlayer width="auto"  url='/img/localdb.mp4' muted playing="true" />
 
-## Step 1: Installing Libraries
+## Step 1: Install libraries
 
 To start, install the necessary libraries:
+
+<!--Ry - I believe we said that we'd make this tutorial about xmtp-js and the code is not about React. This code below refers to a react hook - but it is a Dexie react hook that you can use with xmtp-js - and not an XMTP React SDK hook?-->
 
 ```bash
 npm install dexie dexie-react-hooks
 ```
 
-## Step 2: Defining the Database Schema
+## Step 2: Define the database schema
 
 Create a **`DB.ts`** file and define your database schema. Here's an example of a potential database schema:
+
+<!--Ry - I know we are calling this "local cache" in the React context. Here, this doc is talking about defining a database schema. Is this talking about something different from local-first architecture using a local cache?-->
 
 :::success
 
@@ -150,11 +162,11 @@ export default db;
 
 In this schema, we define interfaces for different types of data we want to store: conversations, messages, message attachments, and message reactions. We then create a class for the database that extends Dexie, and within that class, we define the tables and their structure.
 
-## Step 3: Database Operations
+## Step 3: Perform database operations
 
 After defining the schema, you can perform various database operations such as adding, updating, and retrieving data.
 
-### Adding Messages
+### Add messages
 
 When a new message is sent, it's first saved to the local database before being sent to the network.
 
@@ -177,7 +189,7 @@ const message: Message = {
 message.id = await db.messages.add(message);
 ```
 
-### Updating Messages
+### Update messages
 
 After a message is sent to the network and you receive the decoded message back, update the original message in the database with the ID of the message on the network and set **`isSending`** to false.
 
@@ -190,7 +202,7 @@ await db.messages.update(message.id!, {
 });
 ```
 
-### Checking for Existing Messages
+### Check for existing messages
 
 Before saving a received message, check if it already exists in the database. If the message doesn't exist, save it; otherwise, skip the saving process.
 
@@ -202,7 +214,7 @@ const existing = await db.messages
   .first();
 ```
 
-### Finding a Conversation
+### Find a conversation
 
 When you need to find a specific conversation in the **`conversations`** table, search by the `topic` field.
 
@@ -214,7 +226,7 @@ return await db.conversations
   .first();
 ```
 
-### Updating a Conversation
+### Update a conversation
 
 When a new message is received, update the `updatedAt` timestamp of the related conversation.
 
@@ -228,7 +240,7 @@ if (conversation && conversation.updatedAt < updatedAt) {
 }
 ```
 
-### Adding Conversations
+### Add conversations
 
 When a new conversation is started, it's first saved to the local database.
 
@@ -248,7 +260,7 @@ const conversation: Conversation = {
 conversation.id = await db.conversations.add(conversation);
 ```
 
-### Checking for Existing Conversations
+### Check for existing conversations
 
 Before saving a new conversation, check if it already exists in the database. If the conversation doesn't exist, save it; otherwise, return the existing one.
 
@@ -260,11 +272,13 @@ const existing = await db.conversations
   .first();
 ```
 
-## Step 4: Load Initial Data
+## Step 4: Load initial data
 
 To load initial data when the application starts, use the **`useConversations`** function. This function fetches conversations from an XMTP client, saves these conversations to the local database (if they're not already stored), and returns an array of all conversations.
 
-### Use Effect Hook to Fetch and Save Conversations
+### Use useEffect hook to fetch and save conversations
+
+<!--Ry - I believe we said that we'd make this tutorial about xmtp-js and the code is not about React. This code below refers to a react hook - but it is a Dexie react hook that you can use with xmtp-js - and not an XMTP React SDK hook?-->
 
 Start by using React's **`useEffect`** hook to run an asynchronous operation when the component mounts. This operation should fetch the list of conversations from the client, and for each conversation, save it to the local database and fetch and save the latest message for the conversation:
 
@@ -288,7 +302,7 @@ useEffect(() => {
 }, []);
 ```
 
-### Define Functions to Save Conversations and Messages
+### Define functions to save conversations and messages
 
 Next, define two functions: **`saveConversation`** and **`saveMessage`**. These functions should take an XMTP conversation or message as an argument, check if it already exists in the local database, and if it doesn't, save it to the database:
 
@@ -329,7 +343,9 @@ async function saveMessage(
 }
 ```
 
-### Use Effect Hook to Stream Conversations
+### Use useEffect hook to stream conversations
+
+<!--Ry - I believe we said that we'd make this tutorial about xmtp-js and the code is not about React. This code below refers to a react hook - but it is a Dexie react hook that you can use with xmtp-js - and not an XMTP React SDK hook?-->
 
 Use another **`useEffect`** hook to listen for new conversations in real-time. As new conversations come in, save them to the local database:
 
@@ -344,7 +360,7 @@ useEffect(() => {
 }, []);
 ```
 
-### Fetch Conversations from Local DB
+### Fetch conversations from local DB
 
 Finally, return the conversations from the local database:
 
@@ -356,11 +372,13 @@ return (
 );
 ```
 
+<!--Ry - I believe we said that we'd make this tutorial about xmtp-js and the code is not about React. This code below refers to a react hook - but it is a Dexie react hook that you can use with xmtp-js - and not an XMTP React SDK hook?-->
+
 This hook, **`useLiveQuery`**, automatically re-renders the component whenever the data in the local database changes. It is used to fetch all conversations from the database, sort them in reverse order by their updated time, and return the result. If the query returns nothing, an empty array is returned by default.
 
 By loading initial data, you ensure that your application loads instantly on each refresh without crashes and slow loading spinners.
 
-## Step 5: Preventing Race Conditions
+## Step 5: Prevent race conditions
 
 Race conditions can occur when multiple operations that read from and write to the same database area are executed in close sequence, leading to inconsistent data. To prevent race conditions, use a mutex (short for "mutual exclusion object"), which ensures that only one operation can happen at a time.
 
@@ -383,7 +401,7 @@ const conversationMutex = new Mutex();
 
 Now, we can use these mutexes to ensure that only one operation happens at a time. Here are some examples of how to use a mutex:
 
-### When Updating a Conversation
+### When updating a conversation
 
 Wrap the database operation within the **`runExclusive`** method of the mutex instance. This guarantees that no other operation can happen until the current operation is finished:
 
@@ -397,7 +415,7 @@ if (conversation && conversation.updatedAt < updatedAt) {
 }
 ```
 
-### When Saving a Conversation
+### When saving a conversation
 
 The same applies when saving a new conversation. The operation is wrapped in the **`runExclusive`** method:
 
@@ -428,4 +446,4 @@ Using a mutex in this way helps prevent race conditions and maintain the integri
 
 Managing local data storage in a React application can be complex. However, with Dexie.js and the right strategies for handling database operations, it can be much more manageable. Always remember to handle potential errors and race conditions to ensure the integrity of your data. Now that you've learned these steps, consider trying them out in your own projects. Happy coding!
 
-- For more information on using Dexie.js, check out the **[official documentation](https://dexie.org/docs/Tutorial/Getting-started)**.
+For more information on using Dexie.js, check out the **[official documentation](https://dexie.org/docs/Tutorial/Getting-started)**.
