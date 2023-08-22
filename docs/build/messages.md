@@ -251,27 +251,6 @@ for (const conversation of await xmtp.conversations.list()) {
 If a conversation has a lot of messages, it's more performant to retrieve and process the messages page by page instead of handling all of the messages at once.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-Call `conversation.messagesPaginated()`, which will return an [AsyncGenerator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) yielding one page of results at a time. `conversation.messages()` uses this under the hood internally to gather all messages.
-
-```ts
-const conversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897",
-);
-
-for await (const page of conversation.messagesPaginated({ pageSize: 25 })) {
-  for (const msg of page) {
-    // Breaking from the outer loop will stop the client from requesting any further pages
-    if (msg.content === "gm") {
-      return;
-    }
-    console.log(msg.content);
-  }
-}
-```
-
-</TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 Call `conversation.messages(limit: Int, before: Date)`, which will return the specified number of messages sent before that time.
