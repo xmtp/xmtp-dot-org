@@ -10,6 +10,15 @@ This changelog provides information about release milestones for XMTP SDKs, deve
 
 ---
 
+#### Aug 2023
+
+## [React client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) v1.0.0 is Production Ready
+
+This release delivers local-first architecture, optimistic sending, and support for standards-track content types via configuration. **[Read the release notes](https://github.com/xmtp/xmtp-web/releases/tag/%40xmtp%2Freact-sdk%401.0.0
+)** (Aug 22)
+
+---
+
 #### July 2023
 
 ## [React Native client SDK](https://github.com/xmtp/xmtp-react-native) is in Beta (xmtp-react-native)

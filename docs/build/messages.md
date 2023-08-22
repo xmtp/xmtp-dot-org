@@ -59,10 +59,93 @@ conversation.send(text = "Hello world")
 
 ```tsx
 import { useSendMessage } from "@xmtp/react-sdk";
+import type { Conversation } from "@xmtp/react-sdk";
+import { useCallback, useState } from "react";
 
-const sendMessage = useSendMessage(conversation);
+export const SendMessage: React.FC<{ conversation: CachedConversation }> = ({
+  conversation,
+}) => {
+  const [peerAddress, setPeerAddress] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const sendMessage = useSendMessage();
 
-await sendMessage(message);
+  const handleAddressChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setPeerAddress(e.target.value);
+    },
+    [],
+  );
+
+  const handleMessageChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setMessage(e.target.value);
+    },
+    [],
+  );
+
+  const handleSendMessage = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      if (peerAddress && isValidAddress(peerAddress) && message) {
+        setIsLoading(true);
+        await sendMessage(conversation, message);
+        setIsLoading(false);
+      }
+    },
+    [message, peerAddress, sendMessage],
+  );
+
+  return (
+    <form onSubmit={handleSendMessage}>
+      <input
+        name="addressInput"
+        type="text"
+        onChange={handleAddressChange}
+        disabled={isSending}
+      />
+      <input
+        name="messageInput"
+        type="text"
+        onChange={handleMessageChange}
+        disabled={isSending}
+      />
+    </form>
+  );
+};
+```
+
+### Optimistic sending with React
+
+When a user sends a message with XMTP, they might experience a slight delay between sending the message and seeing their sent message display in their app UI.
+
+This is because when a user sends a message, they typically have to wait for the XMTP network to finish processing the message before the app can display it in the UI.
+
+The local-first architecture of the React SDK automatically includes optimistic sending to immediately display the sent message in the sender’s UI while processing the message in the background. This provides the user with immediate feedback and enables them to continue messaging without having to wait for their previous message to finish processing.
+
+Messages that are in the sending state will have a `true` value for their `isSending` property.
+
+### Handle messages that fail to send with React
+
+If a message fails to complete the sending process, you must provide an error state that alerts the user and enables them to either resend the message or cancel sending the message.
+
+While in this unsent state, the message remains in its original location in the user’s conversation flow, with any newer sent and received messages displaying after it.
+
+If the user chooses to resend the message, the message moves into the most recently sent message position in the conversation. Once it successfully sends, it remains in that position.
+
+If the user chooses to cancel sending the message, the message is removed from the conversation flow.
+
+Messages that fail to send will have the `hasSendError` property set to `true`.
+
+#### Resend a failed message
+
+Use the `resendMessage` function from the `useResendMessage` hook to resend a failed message.
+
+```tsx
+const { resendMessage } = useResendMessage();
+
+// resend the message
+resendMessage(failedMessage);
 ```
 
 </TabItem>
@@ -129,15 +212,25 @@ for (conversation in client.conversations.list()) {
 
 ```tsx
 import { useMessages } from "@xmtp/react-sdk";
+import type { CachedConversation } from "@xmtp/react-sdk";
 
-const [conversation, setConversation] = useState(null);
-const { messages } = useMessages(conversation);
+export const Messages: React.FC<{
+  conversation: CachedConversation;
+}> = ({ conversation }) => {
+  const { error, messages, isLoading } = useMessages(conversation);
 
-useEffect(() => {
-  if (messages) {
-    console.log("Loaded message history:", messages.length);
+  if (error) {
+    return "An error occurred while loading messages";
   }
-}, [messages]);
+
+  if (isLoading) {
+    return "Loading messages...";
+  }
+
+  return (
+    ...
+  );
+};
 ```
 
 </TabItem>
@@ -214,33 +307,6 @@ val conversation =
 
 val messages = conversation.messages(limit = 25)
 val nextPage = conversation.messages(limit = 25, before = messages[0].sent)
-```
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-```tsx
-import { useMessages } from "@xmtp/react-sdk";
-
-const { error, isLoading, messages, next } = useMessages(
-  conversation,
-  options: {
-    limit: 20,
-  },
-);
-const handleClick = useCallback(() => {
-  // fetch next page of messages
-  next();
-}, [next]);
-
-
-return (
-
-    <button type="button" onClick={handleClick}>
-      Load more messages
-    </button>
-
-);
 ```
 
 </TabItem>

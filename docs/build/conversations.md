@@ -51,10 +51,43 @@ let canAliceMessageBob = try await client.canMessage(bobClient.address)
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-const { canMessage } = useCanMessage();
-if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
-  //Create conversation
-}
+import { useCanMessage } from "@xmtp/react-sdk";
+
+export const CanMessage: React.FC = () => {
+  const [peerAddress, setPeerAddress] = useState("");
+  const [isOnNetwork, setIsOnNetwork] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const { canMessage } = useCanMessage();
+
+  const handleAddressChange = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+    setPeerAddress(e.target.value);
+  }, []);
+
+  const handleCheckAddress = useCallback(async (e: FormEvent) => {
+      e.preventDefault();
+      if (isValidAddress(peerAddress)) {
+        setIsLoading(true);
+        setIsOnNetwork(await canMessage(peerAddress));
+        setIsLoading(false);
+      } else {
+        setIsOnNetwork(false);
+      }
+    };
+    void checkAddress();
+  }, [peerAddress]);
+
+  return (
+    <form onSubmit={handleCheckAddress}>
+      <input
+        name="addressInput"
+        type="text"
+        onChange={handleAddressChange}
+        disabled={isLoading}
+      />
+    </form>
+  );
+};
 ```
 
 </TabItem>
@@ -117,11 +150,59 @@ val newConversation =
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-const startConversation = useStartConversation();
-const convv = await startConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897",
-  "hi",
-);
+import { isValidAddress, useStartConversation } from "@xmtp/react-sdk";
+import { useCallback, useState } from "react";
+
+export const StartConversation: React.FC = () => {
+  const [peerAddress, setPeerAddress] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const startConversation = useStartConversation();
+
+  const handleAddressChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setPeerAddress(e.target.value);
+    },
+    [],
+  );
+
+  const handleMessageChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setMessage(e.target.value);
+    },
+    [],
+  );
+
+  const handleStartConversation = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      if (peerAddress && message) {
+        setIsLoading(true);
+        const conversation = await startConversation(peerAddress, message);
+        setIsLoading(false);
+      }
+    },
+    [message, peerAddress, startConversation],
+  );
+
+  return (
+    <form onSubmit={handleStartConversation}>
+      <input
+        name="addressInput"
+        type="text"
+        onChange={handleAddressChange}
+        disabled={isLoading}
+      />
+      <input
+        name="messageInput"
+        type="text"
+        onChange={handleMessageChange}
+        disabled={isLoading || !isValidAddress(peerAddress)}
+      />
+    </form>
+  );
+};
 ```
 
 </TabItem>
@@ -199,16 +280,21 @@ for (conversation in allConversations) {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-const { conversations, error, isLoading } = useConversations();
+export const ListConversations: React.FC = () => {
+  const { conversations, error, isLoading } = useConversations();
 
-{
-  conversations.map((conversation, index) => (
-    <div key={index}>
-      {conversation?.peerAddress}-
-      {JSON.stringify(conversation.context?.metadata)}
-    </div>
-  ));
-}
+  if (error) {
+    return "An error occurred while loading conversations";
+  }
+
+  if (isLoading) {
+    return "Loading conversations...";
+  }
+
+  return (
+    ...
+  );
+};
 ```
 
 </TabItem>
@@ -258,7 +344,8 @@ val client.importConversation(conversations)
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-```jsx
+```tsx
+const { initialize } = useClient();
 const options = {
   persistConversations: false,
 };

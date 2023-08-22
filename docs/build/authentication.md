@@ -14,6 +14,34 @@ The XMTP message API revolves around a network client that allows retrieving a
 1. To sign the newly generated key bundle. This happens only the very first time when key bundle is not found in storage.
 2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started (including the very first time).
 
+## Add the provider (React SDK only)
+
+To use the hooks provided by the React SDK, you must wrap your app with an `XMTPProvider`. This gives the hooks access to the XMTP client instance.
+
+:::info
+
+There’s only one client instance per provider.
+
+:::
+
+<Tabs groupId="sdk-langs">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```ts
+import { XMTPProvider } from "@xmtp/react-sdk";
+
+createRoot(document.getElementById("root") as HTMLElement).render(
+  <StrictMode>
+    <XMTPProvider>
+      <App />
+    </XMTPProvider>
+  </StrictMode>,
+);
+```
+
+</TabItem>
+</Tabs>
+
 ## Create a client
 
 A client is created that requires passing in a connected wallet that implements the [Signer](https://github.com/xmtp/xmtp-js/blob/main/src/types/Signer.ts) interface.
@@ -79,19 +107,31 @@ val client = Client().create(account = account, options = options)
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-const { client, error, isLoading, initialize } = useClient();
+export const CreateClient: React.FC<{ signer: Signer }> = ({ signer }) => {
+  const { client, error, isLoading, initialize } = useClient();
 
-const handleConnect = useCallback(async () => {
-  await initialize({ signer });
-}, [initialize]);
+  const handleConnect = useCallback(async () => {
+    await initialize({ signer });
+  }, [initialize]);
 
-if (error) {
-  return "An error occurred while initializing the client";
-}
+  if (error) {
+    return "An error occurred while initializing the client";
+  }
 
-if (isLoading) {
-  return "Awaiting signatures...";
-}
+  if (isLoading) {
+    return "Awaiting signatures...";
+  }
+
+  if (!client) {
+    return (
+      <button type="button" onClick={handleConnect}>
+        Connect to XMTP
+      </button>
+    );
+  }
+
+  return "Connected to XMTP";
+};
 ```
 
 </TabItem>
@@ -212,12 +252,26 @@ val client = Client().buildFrom(bundle = keys, options = options)
 
 ```tsx
 import { Client, useClient } from "@xmtp/react-sdk";
+import type { Signer } from "@xmtp/react-sdk";
 
-const { initialize } = useClient();
-// get the keys using a valid Signer
-const keys = await Client.getKeys(signer);
-// create a client using keys returned from getKeys
-await initialize({ keys, signer });
+export const CreateClientWithKeys: React.FC<{ signer: Signer }> = ({ signer }) => {
+  const { initialize } = useClient();
+
+  // initialize client on mount
+  useEffect(() => {
+    const init = async () => {
+      // get the keys using a valid Signer
+      const keys = await Client.getKeys(signer);
+      // create a client using keys returned from getKeys
+      await initialize({ keys, signer });
+    };
+    void init();
+  }, []);
+
+  return (
+    ...
+  );
+};
 ```
 
 </TabItem>
@@ -309,18 +363,18 @@ The `apiUrl`, `keyStoreType`, `codecs`, and `maxContentSize` parameters from the
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-| Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| appVersion                | `undefined`                                                                       | Add a client app version identifier that's included with API requests. **Production apps are strongly encouraged to set this value.**<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
-| env                       | `dev`                                                                             | Connect to the specified XMTP network environment. Valid values include `dev`, `production`, or `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                                                                                            |
-| apiUrl                    | `undefined`                                                                       | Manually specify an API URL to use. If specified, value of `env` will be ignored.                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| keystoreProviders         | `[StaticKeystoreProvider, NetworkKeystoreProvider, KeyGeneratorKeystoreProvider]` | Override the default behavior of how the Client creates a Keystore with a custom provider. This can be used to get the user's private keys from a different storage mechanism.                                                                                                                                                                                                                                                                                                                          |
-| persistConversations      | `true`                                                                            | Maintain a cache of previously seen V2 conversations in the storage provider (defaults to `LocalStorage`).                                                                                                                                                                                                                                                                                                                                                                                              |
-| skipContactPublishing     | `false`                                                                           | Do not publish the user's contact bundle to the network on Client creation. Designed to be used in cases where the Client session is short-lived (for example, decrypting a push notification), and where it is known that a Client instance has been instantiated with this flag set to false at some point in the past.                                                                                                                                                                               |
-| codecs                    | `[TextCodec]`                                                                     | Add codecs to support additional content types.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| maxContentSize            | `100M`                                                                            | Maximum message content size in bytes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| preCreateIdentityCallback | `undefined`                                                                       | `preCreateIdentityCallback` is a function that will be called immediately before a [Create Identity](/docs/concepts/account-signatures#sign-to-create-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                                                                                    |
-| preEnableIdentityCallback | `undefined`                                                                       | `preEnableIdentityCallback` is a function that will be called immediately before an [Enable Identity](/docs/concepts/account-signatures#sign-to-enable-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                                                                                   |
+| Parameter                 | Default                                                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appVersion                | undefined                                                                       | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: appVersion: APP_NAME + '/' + APP_VERSION.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
+| env                       | dev                                                                             | Connect to the specified XMTP network environment. Valid values include dev, production, or local. For important details about working with these environments, see [XMTP production and dev network environments](https://github.com/xmtp/xmtp-web/blob/main/packages/react-sdk/README.md#xmtp-production-and-dev-network-environments).                                                                                              |
+| apiUrl                    | undefined                                                                       | Manually specify an API URL to use. If specified, value of env will be ignored.                                                                                                                                                                                                                                                                                                                                                        |
+| keystoreProviders         | [StaticKeystoreProvider, NetworkKeystoreProvider, KeyGeneratorKeystoreProvider] | Override the default behavior of how the client creates a Keystore with a custom provider. This can be used to get the user's private keys from a different storage mechanism.                                                                                                                                                                                                                                                         |
+| persistConversations      | true                                                                            | Maintain a cache of previously seen V2 conversations in the storage provider (defaults to LocalStorage).                                                                                                                                                                                                                                                                                                                               |
+| skipContactPublishing     | false                                                                           | Do not publish the user's contact bundle to the network on client creation. Designed to be used in cases where the client session is short-lived (for example, decrypting a push notification), and where it is known that a client instance has been instantiated with this flag set to false at some point in the past.                                                                                                              |
+| codecs                    | [TextCodec]                                                                     | Add codecs to support additional content types.                                                                                                                                                                                                                                                                                                                                                                                        |
+| maxContentSize            | 100M                                                                            | Maximum message content size in bytes.                                                                                                                                                                                                                                                                                                                                                                                                 |
+| preCreateIdentityCallback | undefined                                                                       | preCreateIdentityCallback is a function that will be called immediately before a [Create Identity wallet signature](https://xmtp.org/docs/concepts/account-signatures#sign-to-create-an-xmtp-identity) is requested from the user.                                                                                                                                                                                                     |
+| preEnableIdentityCallback | undefined                                                                       | preEnableIdentityCallback is a function that will be called immediately before an [Enable Identity wallet signature](https://xmtp.org/docs/concepts/account-signatures#sign-to-enable-an-xmtp-identity) is requested from the user.                                                                                                                                                                                                    |
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
