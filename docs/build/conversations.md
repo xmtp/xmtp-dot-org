@@ -281,6 +281,7 @@ for (conversation in allConversations) {
 
 ```tsx
 export const ListConversations: React.FC = () => {
+  const { initialize } = useClient();
   const { conversations, error, isLoading } = useConversations();
 
   if (error) {
