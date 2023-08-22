@@ -70,9 +70,6 @@ export interface Conversation {
   title: string | undefined;
   createdAt: Date;
   updatedAt: Date;
-  isGroup: boolean;
-  peerAddress: string;
-  groupMembers?: string[] | undefined;
 }
 
 // Define a message interface
@@ -130,9 +127,6 @@ class DB extends Dexie {
       title,
       createdAt,
       updatedAt,
-      isGroup,
-      groupMembers,
-      peerAddress
       `,
       messages: `
       ++id,
@@ -243,9 +237,7 @@ When a new message is received, update the `updatedAt` timestamp of the related 
 // Check if the conversation needs to be updated
 if (conversation && conversation.updatedAt < updatedAt) {
   // If it does, update the updatedAt timestamp
-  await conversationMutex.runExclusive(async () => {
-    await db.conversations.update(conversation, { updatedAt });
-  });
+  await db.conversations.update(conversation, { updatedAt });
 }
 ```
 
@@ -261,8 +253,6 @@ const conversation: Conversation = {
   title: undefined,
   createdAt: xmtpConversation.createdAt,
   updatedAt: xmtpConversation.createdAt,
-  isGroup: xmtpConversation.isGroup,
-  peerAddress: xmtpConversation.peerAddress,
 };
 
 // Save the conversation to the database and get its ID

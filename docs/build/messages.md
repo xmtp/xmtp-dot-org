@@ -310,33 +310,6 @@ val nextPage = conversation.messages(limit = 25, before = messages[0].sent)
 ```
 
 </TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-```tsx
-import { useMessages } from "@xmtp/react-sdk";
-
-const { error, isLoading, messages, next } = useMessages(
-  conversation,
-  options: {
-    limit: 20,
-  },
-);
-const handleClick = useCallback(() => {
-  // fetch next page of messages
-  next();
-}, [next]);
-
-
-return (
-
-    <button type="button" onClick={handleClick}>
-      Load more messages
-    </button>
-
-);
-```
-
-</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx

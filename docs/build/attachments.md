@@ -46,11 +46,9 @@ xmtp.registerCodec(new RemoteAttachmentCodec());
 ### Create an attachment object
 
 <Tabs>
-<TabItem value="frontend" label="Frontend" attributes={{className: "react_tab"}}>
+<TabItem value="javascript" label="JavaScript" attributes={{className: "js_tab"}}>
 
 ```tsx
-const arrayBuffer = await file.arrayBuffer();
-
 // Local file details
 const attachment = {
   filename: filename,

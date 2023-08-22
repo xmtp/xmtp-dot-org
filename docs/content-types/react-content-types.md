@@ -1,5 +1,5 @@
 ---
-sidebar_label: For React
+sidebar_label: React SDK
 sidebar_position: 1.5
 ---
 
