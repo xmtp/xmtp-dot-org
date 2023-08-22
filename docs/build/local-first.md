@@ -18,17 +18,17 @@ import localfirst from '/docs/build/img/local-first-arch.jpeg';
 
 - When building a web app with the [React SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk), the local-first architecture is automatically provided by the SDK.
 
-- When building a web app with the [xmtp-js SDK](https://github.com/xmtp/xmtp-js), you can use the browser `localStorage` as the local cache to store encrypted data, decrypting data each time before display.
+- When building a web app with the [xmtp-js SDK](https://github.com/xmtp/xmtp-js), you can use the browser `localStorage` as the local cache to store encrypted data, decrypting data each time before display. You might also consider [using Dexie to manage your web app's local data](#manage-local-data-with-dexie-in-a-web-app-built-with-xmtp-js).
 
 - When building native iOS and Android mobile apps, you can use the device's encrypted container as the local cache to store decrypted data.
 
 For more performance best practices, see [Optimize performance of your app](/docs/launch/performance)
 
-## Manage local data with Dexie in a web app built with `xmtp-js`
+## Manage local data with Dexie in a web app built with xmtp-js
 
 The performance of a web app can be significantly improved by leveraging local data storage. Particularly in the context of loading messages, using a local cache can result in a 10x performance increase compared to solely relying on a network-based data source.
 
-This guide provides a walkthrough on managing local data storage in a web app built with the [xmtp-js SDK](https://github.com/xmtp/xmtp-js) and using the Dexie.js library. Dexie.js is a minimalistic wrapper for IndexedDB, which is a low-level API for client-side storage of significant amounts of structured data.
+This guide provides a walkthrough on managing local data storage using the Dexie.js library in a web app built with the [xmtp-js SDK](https://github.com/xmtp/xmtp-js). Dexie.js is a minimalistic wrapper for IndexedDB, which is a low-level API for client-side storage of significant amounts of structured data.
 
 import ReactPlayer from 'react-player'
 
@@ -39,6 +39,7 @@ For a hands-on experience, check out the React Playground, built with the xmtp-j
 [GitHub repo](https://github.com/xmtp/xmtp-react-playground) | [Live version](https://xmtp.github.io/xmtp-react-playground/#/new)
 
 <ReactPlayer width="auto"  url='/img/localdb.mp4' muted playing="true" />
+<br/>
 
 ### Step 1: Install libraries
 
@@ -331,4 +332,4 @@ async function saveMessage(
 
 Managing local data storage in a web app can be complex. However, with Dexie.js and the right strategies for handling database operations, it can be much more manageable. Always remember to handle potential errors and race conditions to ensure the integrity of your data. Now that you've learned these steps, consider trying them out in your own projects. Happy coding!
 
-For more information about using Dexie.js, check out the **[official documentation](https://dexie.org/docs/Tutorial/Getting-started)**.
+To learn more aboutDexie.js, see [Getting Started with Dexie.js](https://dexie.org/docs/Tutorial/Getting-started).
