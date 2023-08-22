@@ -281,7 +281,6 @@ for (conversation in allConversations) {
 
 ```tsx
 export const ListConversations: React.FC = () => {
-  const { initialize } = useClient();
   const { conversations, error, isLoading } = useConversations();
 
   if (error) {
@@ -345,7 +344,8 @@ val client.importConversation(conversations)
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-```jsx
+```tsx
+const { initialize } = useClient();
 const options = {
   persistConversations: false,
 };
