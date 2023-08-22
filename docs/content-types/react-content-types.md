@@ -92,8 +92,11 @@ When your app encounters a custom content type, you can:
 
 ### Integrate custom content types with the React SDK
 
-> **Note**  
-> This part of the React SDK is still under active development and may change in the future.
+:::caution
+
+This part of the React SDK is still under active development and may change in the future.
+
+:::
 
 To support a custom content type, you must create a content type configuration to integrate with the [local-first architecture](https://github.com/xmtp/xmtp-web/blob/main/packages/react-sdk/README.md#local-first-architecture). There are five possible options in a content type configuration, and two are required. They are outlined below.
 
