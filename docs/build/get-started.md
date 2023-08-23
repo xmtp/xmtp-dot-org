@@ -149,7 +149,7 @@ import {
 
 const { client, initialize } = useClient();
 const { conversations } = useConversations();
-const startConversation = useStartConversation();
+const { startConversation } = useStartConversation();
 const { canMessage } = useCanMessage();
 
 //Initialize
