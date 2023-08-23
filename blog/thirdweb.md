@@ -20,7 +20,7 @@ tags:
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 :::warning Get the latest doc
-This post may be out of date. See the [Attachments tutorial](/docs/build/attachments) for the latest guidance on how to build attachments.
+This post may be out of date. See the [Attachments tutorial](/docs/content-types/remote-attachment) for the latest guidance on how to build attachments.
 :::
 
 Follow these steps to start sending image attachments to wallets within your chat app. Our sample app includes everything you need to connect to wallets with Thirdweb's WalletSDK, use XMTP's remote attachments, and upload larger files to Thirdweb's storage.

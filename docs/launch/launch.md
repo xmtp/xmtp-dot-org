@@ -56,7 +56,7 @@ Your app provides an [interoperable inbox](/docs/concepts/interoperable-inbox) w
 
 ### Attachments
 
-- [ ] [Bonus] Provides [image attachments](/docs/build/attachments)
+- [ ] [Bonus] Provides [image attachments](/docs/content-types/remote-attachment)
 - [ ] [Bonus] Provides a GIF picker
 
 ### Metrics

@@ -39,7 +39,7 @@ We’ve abstracted the core concepts to help you build with XMTP more swiftly. T
 3. [Conversations](https://xmtp.org/docs/build/conversations)
 4. [Messages](https://xmtp.org/docs/build/messages)
 5. [Streams](https://xmtp.org/docs/build/streams)
-6. [Attachments](https://xmtp.org/docs/build/attachments)
+6. [Attachments](https://xmtp.org/docs/content-types/remote-attachment)
 7. [Groups](https://xmtp.org/docs/build/group-chats)
 8. [Notifications](https://xmtp.org/docs/build/notifications)
 

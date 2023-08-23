@@ -15,7 +15,7 @@ tags:
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 :::warning Get the latest doc
-This post may be out of date. See the [Attachments tutorial](/docs/build/attachments) for the latest guidance on how to build attachments.
+This post may be out of date. See the [Attachments tutorial](/docs/content-types/remote-attachment) for the latest guidance on how to build attachments.
 :::
 
 Let's talk about some new content types for XMTP.
