@@ -14,34 +14,6 @@ The XMTP message API revolves around a network client that allows retrieving a
 1. To sign the newly generated key bundle. This happens only the very first time when key bundle is not found in storage.
 2. To sign a random salt used to encrypt the key bundle in storage. This happens every time the client is started (including the very first time).
 
-## Add the provider (React SDK only)
-
-To use the hooks provided by the React SDK, you must wrap your app with an `XMTPProvider`. This gives the hooks access to the XMTP client instance.
-
-:::info
-
-There’s only one client instance per provider.
-
-:::
-
-<Tabs groupId="sdk-langs">
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-```ts
-import { XMTPProvider } from "@xmtp/react-sdk";
-
-createRoot(document.getElementById("root") as HTMLElement).render(
-  <StrictMode>
-    <XMTPProvider>
-      <App />
-    </XMTPProvider>
-  </StrictMode>,
-);
-```
-
-</TabItem>
-</Tabs>
-
 ## Create a client
 
 A client is created that requires passing in a connected wallet that implements the [Signer](https://github.com/xmtp/xmtp-js/blob/main/src/types/Signer.ts) interface.
@@ -106,6 +78,20 @@ val client = Client().create(account = account, options = options)
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
+To use the hooks provided by the React SDK, you must wrap your app with an `XMTPProvider`. This gives the hooks access to the XMTP client instance.
+
+```ts
+import { XMTPProvider } from "@xmtp/react-sdk";
+
+createRoot(document.getElementById("root") as HTMLElement).render(
+  <StrictMode>
+    <XMTPProvider>
+      <App />
+    </XMTPProvider>
+  </StrictMode>,
+);
+```
+
 ```tsx
 export const CreateClient: React.FC<{ signer: Signer }> = ({ signer }) => {
   const { client, error, isLoading, initialize } = useClient();
@@ -156,6 +142,9 @@ You can export the unencrypted key bundle using the static method `getKeys`, sav
 ```jsx
 // Get the keys using a valid Signer. Save them somewhere secure.
 import { loadKeys, storeKeys } from "./helpers";
+const clientOptions = {
+  env: "production",
+};
 
 let keys = loadKeys(address);
 if (!keys) {
