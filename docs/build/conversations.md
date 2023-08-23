@@ -158,7 +158,7 @@ export const StartConversation: React.FC = () => {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const startConversation = useStartConversation();
+  const { startConversation } = useStartConversation();
 
   const handleAddressChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
