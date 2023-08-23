@@ -6,7 +6,7 @@ window.onload = function () {
       item.innerText === "Local DB" ||
       item.innerText === "Groups" ||
       item.innerText === "Quickstart" ||
-      item.innerText === "Attachments" ||
+      item.innerText === "Local-first cache" ||
       item.innerText === "Developer Quickstart" ||
       item.innerText === "Content Types" ||
       item.innerText === "Query addresses" ||
