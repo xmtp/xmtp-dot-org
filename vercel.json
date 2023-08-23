@@ -9,7 +9,7 @@
         },
         {
           "key": "Cross-Origin-Opener-Policy",
-          "value": "https://xmtp-alpha-interactive-tutorial.vercel.app"
+          "value": "same-origin"
         }
       ]
     }
