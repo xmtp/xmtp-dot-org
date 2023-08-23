@@ -36,12 +36,12 @@ const config = {
     {
       src: "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js",
       defer: true,
-      "data-domain": "xmtp.org",
+      crossorigin: true,
     },
     {
       src: "https://unpkg.com/flickity-fade@1/flickity-fade.js",
       defer: true,
-      "data-domain": "xmtp.org",
+      crossorigin: true,
     },
   ],
   clientModules: [require.resolve("./src/css/tailwind.css")],
