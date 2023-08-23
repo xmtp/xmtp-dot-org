@@ -39,7 +39,7 @@ We’ve abstracted the core concepts to help you build with XMTP more swiftly. T
 3. [Conversations](https://xmtp.org/docs/build/conversations)
 4. [Messages](https://xmtp.org/docs/build/messages)
 5. [Streams](https://xmtp.org/docs/build/streams)
-6. [Attachments](https://xmtp.org/docs/build/attachments)
+6. [Attachments](https://xmtp.org/docs/content-types/remote-attachment)
 7. [Groups](https://xmtp.org/docs/build/group-chats)
 8. [Notifications](https://xmtp.org/docs/build/notifications)
 
@@ -57,14 +57,14 @@ import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
 We've organized XMTP around various use cases in Finance, Commerce, Marketing, Automation, Support, and more. Draw inspiration and see how XMTP can be the backbone of your creative solutions.
 
-- **[Messaging](https://xmtp.org/docs/use-cases/messaging) 💬**: Unlock the future of Messaging and build secure peer-to-peer apps or team platforms with end-to-end encryption, media attachments, group chats, and more. Communication reimagined!
+- **[Messaging](https://xmtp.org/docs/use-cases/messaging) 💬**: Unlock the future of Messaging and build secure peer-to-peer apps or team platforms with end-to-end encryption, media attachments, and more. Communication reimagined!
 - **[DeSo](https://xmtp.org/docs/use-cases/deso) 🌿**: Step into the world of Decentralized Social, like Lens Protocol apps did using XMTP. Discover new friends, create groups, share memes, and enjoy a world of possibilities.
 - **[Marketing](https://xmtp.org/docs/use-cases/marketing) 📣**: Send secure newsletters to wallet owners, reach NFT collectors & token holders. Engage and analyze with confidence.
 - **[Support](https://xmtp.org/docs/use-cases/support) ☎️**: Redefine customer support and engage in finance transactions on chat, automate with AI bots, and streamline DAO operations - all through secure channels.
 - **[Commerce](https://xmtp.org/docs/use-cases/commerce) 🛍️**: Enhance e-commerce with encrypted communication between buyers and sellers.
 - **[DeFi](https://xmtp.org/docs/use-cases/defi) 🏦**: Empower Decentralized Finance by sending secure transaction confirmations, notifications, token transfers, NFT minting, etc.
 - **[Automation](https://xmtp.org/docs/use-cases/automation) 🤖**: Employ secure messaging for web3 automation tools, including triggers, notifications, and customer service bots.
-- **[Gaming](https://xmtp.org/docs/use-cases/gaming) 🎮**: Create secure and immersive gaming experiences with real-time messaging, multiplayer group chats, in-game notifications, and more.
+- **[Gaming](https://xmtp.org/docs/use-cases/gaming) 🎮**: Create secure and immersive gaming experiences with real-time messaging, in-game notifications, and more.
 
 ## **Tutorials: The Developer’s Arsenal 🛠**
 

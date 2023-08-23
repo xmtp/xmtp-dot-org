@@ -20,7 +20,7 @@ A client is created that requires passing in a connected wallet that implements 
 [Use client configuration options](#configure-the-client) to change parameters of a client's network connection.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 import { Client } from "@xmtp/xmtp-js";
@@ -29,7 +29,7 @@ const xmtp = await Client.create(wallet, { env: "dev" });
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 import XMTP
@@ -40,7 +40,7 @@ let client = try await Client.create(
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 /*The client has two constructors: `createFromWallet` and `createFromKeys`.
@@ -64,7 +64,7 @@ var client = await Client.createFromKeys(api, keys);
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 // Create the client with a `SigningKey` from your app
@@ -76,26 +76,52 @@ val client = Client().create(account = account, options = options)
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+To use the hooks provided by the React SDK, you must wrap your app with an `XMTPProvider`. This gives the hooks access to the XMTP client instance.
+
+```ts
+import { XMTPProvider } from "@xmtp/react-sdk";
+
+createRoot(document.getElementById("root") as HTMLElement).render(
+  <StrictMode>
+    <XMTPProvider>
+      <App />
+    </XMTPProvider>
+  </StrictMode>,
+);
+```
 
 ```tsx
-const { client, error, isLoading, initialize } = useClient();
+export const CreateClient: React.FC<{ signer: Signer }> = ({ signer }) => {
+  const { client, error, isLoading, initialize } = useClient();
 
-const handleConnect = useCallback(async () => {
-  await initialize({ signer });
-}, [initialize]);
+  const handleConnect = useCallback(async () => {
+    await initialize({ signer });
+  }, [initialize]);
 
-if (error) {
-  return "An error occurred while initializing the client";
-}
+  if (error) {
+    return "An error occurred while initializing the client";
+  }
 
-if (isLoading) {
-  return "Awaiting signatures...";
-}
+  if (isLoading) {
+    return "Awaiting signatures...";
+  }
+
+  if (!client) {
+    return (
+      <button type="button" onClick={handleConnect}>
+        Connect to XMTP
+      </button>
+    );
+  }
+
+  return "Connected to XMTP";
+};
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 import { Client } from "@xmtp/xmtp-react-native";
@@ -111,11 +137,14 @@ const xmtp = await Client.create(wallet);
 You can export the unencrypted key bundle using the static method `getKeys`, save it somewhere secure, and then provide those keys at a later time to initialize a new client using the exported XMTP identity.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```jsx
 // Get the keys using a valid Signer. Save them somewhere secure.
 import { loadKeys, storeKeys } from "./helpers";
+const clientOptions = {
+  env: "production",
+};
 
 let keys = loadKeys(address);
 if (!keys) {
@@ -161,7 +190,7 @@ export const wipeKeys = (walletAddress: string) => {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 // Create the client with a `SigningKey` from your app
@@ -183,7 +212,7 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 // Create the client with a `SigningKey` from your app
@@ -208,20 +237,34 @@ val client = Client().buildFrom(bundle = keys, options = options)
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
 import { Client, useClient } from "@xmtp/react-sdk";
+import type { Signer } from "@xmtp/react-sdk";
 
-const { initialize } = useClient();
-// get the keys using a valid Signer
-const keys = await Client.getKeys(signer);
-// create a client using keys returned from getKeys
-await initialize({ keys, signer });
+export const CreateClientWithKeys: React.FC<{ signer: Signer }> = ({ signer }) => {
+  const { initialize } = useClient();
+
+  // initialize client on mount
+  useEffect(() => {
+    const init = async () => {
+      // get the keys using a valid Signer
+      const keys = await Client.getKeys(signer);
+      // create a client using keys returned from getKeys
+      await initialize({ keys, signer });
+    };
+    void init();
+  }, []);
+
+  return (
+    ...
+  );
+};
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```js
 import { Client } from "@xmtp/xmtp-react-native";
@@ -241,27 +284,28 @@ Configure a client's network connection and other options using these client cre
 Set the `env` client option to `dev` while developing. Set it to `production` before you launch.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-| Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| appVersion                | `undefined`                                                                       | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
-| env                       | `dev`                                                                             | Connect to the specified XMTP network environment. Valid values include `dev`, `production`, or `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                             |
-| apiUrl                    | `undefined`                                                                       | Manually specify an API URL to use. If specified, value of `env` will be ignored.                                                                                                                                                                                                                                                                                                                                                        |
-| keystoreProviders         | `[StaticKeystoreProvider, NetworkKeystoreProvider, KeyGeneratorKeystoreProvider]` | Override the default behavior of how the Client creates a Keystore with a custom provider. This can be used to get the user's private keys from a different storage mechanism.                                                                                                                                                                                                                                                           |
-| persistConversations      | `true`                                                                            | Maintain a cache of previously seen V2 conversations in the storage provider (defaults to `LocalStorage`).                                                                                                                                                                                                                                                                                                                               |
-| skipContactPublishing     | `false`                                                                           | Do not publish the user's contact bundle to the network on Client creation. Designed to be used in cases where the Client session is short-lived (for example, decrypting a push notification), and where it is known that a Client instance has been instantiated with this flag set to false at some point in the past.                                                                                                                |
-| codecs                    | `[TextCodec]`                                                                     | Add codecs to support additional content types.                                                                                                                                                                                                                                                                                                                                                                                          |
-| maxContentSize            | `100M`                                                                            | Maximum message content size in bytes.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| preCreateIdentityCallback | `undefined`                                                                       | `preCreateIdentityCallback` is a function that will be called immediately before a [Create Identity](/docs/concepts/account-signatures#sign-to-create-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                     |
-| preEnableIdentityCallback | `undefined`                                                                       | `preEnableIdentityCallback` is a function that will be called immediately before an [Enable Identity](/docs/concepts/account-signatures#sign-to-enable-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                    |
+| Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appVersion                | `undefined`                                                                       | Add a client app version identifier that's included with API requests. **Production apps are strongly encouraged to set this value.**<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
+| env                       | `dev`                                                                             | Connect to the specified XMTP network environment. Valid values include `dev`, `production`, or `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                                                                                            |
+| apiUrl                    | `undefined`                                                                       | Manually specify an API URL to use. If specified, value of `env` will be ignored.                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| keystoreProviders         | `[StaticKeystoreProvider, NetworkKeystoreProvider, KeyGeneratorKeystoreProvider]` | Override the default behavior of how the Client creates a Keystore with a custom provider. This can be used to get the user's private keys from a different storage mechanism.                                                                                                                                                                                                                                                                                                                          |
+| persistConversations      | `true`                                                                            | Maintain a cache of previously seen V2 conversations in the storage provider (defaults to `LocalStorage`).                                                                                                                                                                                                                                                                                                                                                                                              |
+| skipContactPublishing     | `false`                                                                           | Do not publish the user's contact bundle to the network on Client creation. Designed to be used in cases where the Client session is short-lived (for example, decrypting a push notification), and where it is known that a Client instance has been instantiated with this flag set to false at some point in the past.                                                                                                                                                                               |
+| codecs                    | `[TextCodec]`                                                                     | Add codecs to support additional content types.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| maxContentSize            | `100M`                                                                            | Maximum message content size in bytes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| preCreateIdentityCallback | `undefined`                                                                       | `preCreateIdentityCallback` is a function that will be called immediately before a [Create Identity](/docs/concepts/account-signatures#sign-to-create-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                                                                                    |
+| preEnableIdentityCallback | `undefined`                                                                       | `preEnableIdentityCallback` is a function that will be called immediately before an [Enable Identity](/docs/concepts/account-signatures#sign-to-enable-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                                                                                   |
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-| Parameter | Default | Description                                                                                                                                                                                                                                                                     |
-| --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| env       | `dev`   | Connect to the specified XMTP network environment. Valid values include `.dev`, `.production`, or `.local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments). |
+| Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appVersion | `undefined` | Add a client app version identifier that's included with API requests. **Production apps are strongly encouraged to set this value.**<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
+| env        | `dev`       | Connect to the specified XMTP network environment. Valid values include `.dev`, `.production`, or `.local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                                                                                         |
 
 **Configure `env`**
 
@@ -272,7 +316,7 @@ let client = try await Client.create(account: account, options: clientOptions)
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 You can configure the client environment when you call `Api.create()`.
 
@@ -281,12 +325,12 @@ By default, it will connect to a `local` XMTP network.
 For important details about connecting to environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
-| Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| env        | `DEV`       | Connect to the specified XMTP network environment. Valid values include `DEV`, `.PRODUCTION`, or `LOCAL`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                            |
-| appVersion | `undefined` | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
+| Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appVersion | `undefined` | Add a client app version identifier that's included with API requests. **Production apps are strongly encouraged to set this value.**<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
+| env        | `DEV`       | Connect to the specified XMTP network environment. Valid values include `DEV`, `.PRODUCTION`, or `LOCAL`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                                                                                           |
 
 **Configure `env`**
 
@@ -306,28 +350,28 @@ The `apiUrl`, `keyStoreType`, `codecs`, and `maxContentSize` parameters from the
 :::
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-| Parameter                 | Default                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| appVersion                | `undefined`                                                                       | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
-| env                       | `dev`                                                                             | Connect to the specified XMTP network environment. Valid values include `dev`, `production`, or `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                             |
-| apiUrl                    | `undefined`                                                                       | Manually specify an API URL to use. If specified, value of `env` will be ignored.                                                                                                                                                                                                                                                                                                                                                        |
-| keystoreProviders         | `[StaticKeystoreProvider, NetworkKeystoreProvider, KeyGeneratorKeystoreProvider]` | Override the default behavior of how the Client creates a Keystore with a custom provider. This can be used to get the user's private keys from a different storage mechanism.                                                                                                                                                                                                                                                           |
-| persistConversations      | `true`                                                                            | Maintain a cache of previously seen V2 conversations in the storage provider (defaults to `LocalStorage`).                                                                                                                                                                                                                                                                                                                               |
-| skipContactPublishing     | `false`                                                                           | Do not publish the user's contact bundle to the network on Client creation. Designed to be used in cases where the Client session is short-lived (for example, decrypting a push notification), and where it is known that a Client instance has been instantiated with this flag set to false at some point in the past.                                                                                                                |
-| codecs                    | `[TextCodec]`                                                                     | Add codecs to support additional content types.                                                                                                                                                                                                                                                                                                                                                                                          |
-| maxContentSize            | `100M`                                                                            | Maximum message content size in bytes.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| preCreateIdentityCallback | `undefined`                                                                       | `preCreateIdentityCallback` is a function that will be called immediately before a [Create Identity](/docs/concepts/account-signatures#sign-to-create-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                     |
-| preEnableIdentityCallback | `undefined`                                                                       | `preEnableIdentityCallback` is a function that will be called immediately before an [Enable Identity](/docs/concepts/account-signatures#sign-to-enable-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                    |
+| Parameter                 | Default                                                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appVersion                | undefined                                                                       | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: appVersion: APP_NAME + '/' + APP_VERSION.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
+| env                       | dev                                                                             | Connect to the specified XMTP network environment. Valid values include dev, production, or local. For important details about working with these environments, see [XMTP production and dev network environments](https://github.com/xmtp/xmtp-web/blob/main/packages/react-sdk/README.md#xmtp-production-and-dev-network-environments).                                                                                              |
+| apiUrl                    | undefined                                                                       | Manually specify an API URL to use. If specified, value of env will be ignored.                                                                                                                                                                                                                                                                                                                                                        |
+| keystoreProviders         | [StaticKeystoreProvider, NetworkKeystoreProvider, KeyGeneratorKeystoreProvider] | Override the default behavior of how the client creates a Keystore with a custom provider. This can be used to get the user's private keys from a different storage mechanism.                                                                                                                                                                                                                                                         |
+| persistConversations      | true                                                                            | Maintain a cache of previously seen V2 conversations in the storage provider (defaults to LocalStorage).                                                                                                                                                                                                                                                                                                                               |
+| skipContactPublishing     | false                                                                           | Do not publish the user's contact bundle to the network on client creation. Designed to be used in cases where the client session is short-lived (for example, decrypting a push notification), and where it is known that a client instance has been instantiated with this flag set to false at some point in the past.                                                                                                              |
+| codecs                    | [TextCodec]                                                                     | Add codecs to support additional content types.                                                                                                                                                                                                                                                                                                                                                                                        |
+| maxContentSize            | 100M                                                                            | Maximum message content size in bytes.                                                                                                                                                                                                                                                                                                                                                                                                 |
+| preCreateIdentityCallback | undefined                                                                       | preCreateIdentityCallback is a function that will be called immediately before a [Create Identity wallet signature](https://xmtp.org/docs/concepts/account-signatures#sign-to-create-an-xmtp-identity) is requested from the user.                                                                                                                                                                                                     |
+| preEnableIdentityCallback | undefined                                                                       | preEnableIdentityCallback is a function that will be called immediately before an [Enable Identity wallet signature](https://xmtp.org/docs/concepts/account-signatures#sign-to-enable-an-xmtp-identity) is requested from the user.                                                                                                                                                                                                    |
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-| Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| appVersion | `undefined` | Add a client app version identifier that's included with API requests.<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
-| env        | `dev`       | Connect to the specified XMTP network environment. Valid values include `dev`, `production`, or `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                             |
+| Parameter  | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appVersion | `undefined` | Add a client app version identifier that's included with API requests. **Production apps are strongly encouraged to set this value.**<br/>For example, you can use the following format: `appVersion: APP_NAME + '/' + APP_VERSION`.<br/>Setting this value provides telemetry that shows which apps are using the XMTP client SDK. This information can help XMTP developers provide app support, especially around communicating important SDK updates, including deprecations and required upgrades. |
+| env        | `dev`       | Connect to the specified XMTP network environment. Valid values include `dev`, `production`, or `local`. For important details about working with these environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).                                                                                                                                                                                                                            |
 
 </TabItem>
 </Tabs>
@@ -338,6 +382,14 @@ XMTP identity on `dev` network is completely distinct from its XMTP identity on 
 
 - `production`: This network is used in production and is configured to store messages indefinitely.
 
+  - Try the web inbox at [https://xmtp.chat/](https://xmtp.chat/).
+
+  - Send a message to our `gm` bot to get started. `gm.xmtp.eth`
+
 - `dev`: XMTP may occasionally delete messages and keys from this network
+
+  - Try the web dev inbox at [https://dev.xmtp.chat/](https://xmtp.chat/).
+
+  - Send a message to our `gm` bot to get started. `0x8DC925338C1eE1fE62c0C43404371deb701BfB55`
 
 - `local`: Use to have a client communicate with an XMTP node you are running locally. For example, an XMTP node developer can set `env` to `local` to generate client traffic to test a node running locally.

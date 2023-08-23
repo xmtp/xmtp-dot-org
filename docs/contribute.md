@@ -9,7 +9,15 @@ There are many ways to participate in the XMTP community, whether you are buildi
 
 ## XMTP grants
 
-Have a public goods project you want to build that fosters XMTP ecosystem growth? Apply for an [XMTP grant](/grants).
+:::caution Info
+
+XMTP is not accepting applications for grants at this time. Make sure to [follow XMTP on Twitter](https://x.com/xmtp_) for updates on when grants will reopen.
+
+:::
+
+## Partnerships with XMTP Labs
+
+Maximize your app's reach with guidance and assistance from the Partnerships team at XMTP Labs. XMTP Labs’ mission is to promote and support the development and global adoption of XMTP. [Get in touch](https://forms.gle/UMCFjB8ukiMxBxnK6)
 
 ## GitHub Discussions
 
@@ -23,11 +31,11 @@ Chat with the XMTP community. Say 👋, join a dev hangout, or get support.
 
 [Chat with other builders](https://discord.gg/xmtp)
 
-## Twitter
+## 𝕏
 
 Keep up with the latest news and insights from XMTP.
 
-[Follow @XMTP\_](https://twitter.com/xmtp_)
+[Follow @XMTP\_](https://x.com/xmtp_)
 
 ## Open source projects
 
@@ -51,7 +59,7 @@ If your PR to a repo in the [XMTP](https://github.com/xmtp) or [XMTP Labs](https
 
 XMTP Improvement Proposals (XIPs) propose and document updates to XMTP, which may become standards for XMTP clients and applications to adopt.
 
-Is there something your app needs that the protocol doesn’t currently support? Consider creating an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-0-purpose-process.md) (XIP). 
+Is there something your app needs that the protocol doesn’t currently support? Consider creating an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-0-purpose-process.md) (XIP).
 
 Here’s a [template](https://github.com/xmtp/XIPs/blob/main/xip-template.md) you can use to create one.
 

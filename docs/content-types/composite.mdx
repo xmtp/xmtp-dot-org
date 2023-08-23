@@ -1,0 +1,30 @@
+---
+sidebar_label: Composite
+sidebar_position: 10
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Composite Content Type
+
+![Status](https://img.shields.io/badge/Content_type_status-Standard-31CA54)
+
+If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
+
+### Import and register
+
+Import the `CompositeCodec` content type from the `xmtp-js` client SDK to make it available in your app. For example:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+import { CompositeCodec } from "@xmtp/xmtp-js";
+// Create the XMTP client
+const xmtp = await Client.create(signer, { env: "dev" });
+// Register the codecs, AttachmentCodec is for handling local attachments under 1MB
+xmtp.registerCodec(new CompositeCodec());
+```
+
+</TabItem></Tabs>

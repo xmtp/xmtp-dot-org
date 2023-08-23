@@ -15,7 +15,7 @@ tags:
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 :::warning Get the latest doc
-This post may be out of date. See the [Attachments tutorial](/docs/build/attachments) for the latest guidance on how to build attachments.
+This post may be out of date. See the [Attachments tutorial](/docs/content-types/remote-attachment) for the latest guidance on how to build attachments.
 :::
 
 Let's talk about some new content types for XMTP.
@@ -66,7 +66,9 @@ The first thing we need to do is encrypt it. The new [xmtp-content-type-remote-a
 // Import the codecs we're going to use
 import {
   AttachmentCodec,
+  ContentTypeAttachment,
   RemoteAttachmentCodec,
+  ContentTypeRemoteAttachment,
 } from "xmtp-content-type-remote-attachment";
 
 // Encode the attachment and encrypt that encoded content
@@ -124,13 +126,10 @@ const remoteAttachment: RemoteAttachment = {
 Awesome. We have a `RemoteAttachment`! Let's send that to our best friend.
 
 ```tsx
-await conversation.messages.send(remoteAttachment, {
+await conversation.send(remoteAttachment, {
   contentType: ContentTypeRemoteAttachment,
-  contentFallback: "a screenshot of 1MB of text",
 });
 ```
-
-Note that we’re using `contentFallback` here to allow clients that do not support these content types to still show something. For cases where clients _do_ support these types, the content fallback can be used as alt text for accessibility purposes.
 
 ### Receiving Remote Attachments
 

@@ -1,7 +1,7 @@
 ---
 slug: project-spotlight-relay-receiver
 hide_table_of_contents: true
-title: 'Project Spotlight: Relay Receiver, a no-code wallet chat for websites'
+title: "Project Spotlight: Relay Receiver, a no-code wallet chat for websites"
 date: 2022-08-16
 authors: peter
 description: Facilitating user communication and overcoming one of web3’s biggest challenges. NFT sales, POAP events, DAO activities, etc all have very meaningful reasons why users would want to message each other, but sometimes the website has no chat function and there’s no way to find the user elsewhere.
@@ -67,7 +67,7 @@ Given the interoperability of messages on the XMTP network, users can then acces
 
 - Relay Website: [https://try.relay.cc/](https://try.relay.cc/)
 
-- Twitter: [https://twitter.com/relay_eth](https://twitter.com/relay_eth)
+- 𝕏: [https://x.com/relay_eth](https://x.com/relay_eth)
 
 - Discord: [https://discord.gg/pyg6ATzB](https://discord.gg/pyg6ATzB)
 

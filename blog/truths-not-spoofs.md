@@ -36,7 +36,7 @@ Walled-garden messaging apps are no better. Users can create fake identities, po
 
 ### Token-gated chat in web3 tackles these problems head-on
 
-In web3, token-gated messaging opens up a world where you can see verifiable transactions and facts about the sender that help you vet who you want to interact with. Web3-native messaging platforms are introducing new forms of spam and phishing, though. Spammers are becoming more sophisticated about using blockchain data to socially engineer scams targeting wallet owners. Check out [@cifelse](https://twitter.com/cifelse)’s [thread](https://twitter.com/cifelse/status/1531587121752195072?s=20&t=BFN75Rmgb5ebiJ8O7PCJIQ) (“...file under phishing sites, terrible, and pathetic.”)
+In web3, token-gated messaging opens up a world where you can see verifiable transactions and facts about the sender that help you vet who you want to interact with. Web3-native messaging platforms are introducing new forms of spam and phishing, though. Spammers are becoming more sophisticated about using blockchain data to socially engineer scams targeting wallet owners. Check out [@cifelse](https://x.com/cifelse)’s [thread](https://x.com/cifelse/status/1531587121752195072?s=20&t=BFN75Rmgb5ebiJ8O7PCJIQ) (“...file under phishing sites, terrible, and pathetic.”)
 
 Applications can protect users with rules-based message acceptance and train consumers on truths not spoofs. In the end, this is better for consumers and, fortunately, there are ways developers can address this problem directly in their apps.
 

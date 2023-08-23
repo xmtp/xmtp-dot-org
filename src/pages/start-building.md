@@ -22,7 +22,7 @@ Use this document as a map to build, launch, and maintain a best-in-class app wi
 
 ## Polish your app
 
-- [Explore these tutorials](/docs/tutorials/performance) to learn how to build beyond the basics and polish your app by following UX, performance, and testing best practices
+- [Explore these tutorials](/docs/launch/performance) to learn how to build beyond the basics and polish your app by following UX, performance, and testing Scale
 
 - [Explore quickstart and example apps](/docs/build/get-started#quickstarts-) for implementation guidance and inspiration
 
@@ -39,12 +39,8 @@ You probably have some great questions by now! Check out these resources:
 Ask questions and learn with others building with XMTP. Join the community on the platform that works best for you:
 
 - Discord: [Chat with other builders](https://discord.gg/xmtp)
-- Twitter: [Follow @XMTP\_](https://twitter.com/xmtp_)
+- 𝕏: [Follow @XMTP\_](https://x.com/xmtp_)
 - GitHub Discussions: [Join the discussion](https://github.com/orgs/xmtp/discussions)
-
-## Launch your app
-
-Preparing to launch? See these best practices for [launching your app](/docs/tutorials/launch)
 
 ## Contribute to XMTP
 

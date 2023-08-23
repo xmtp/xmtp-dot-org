@@ -39,7 +39,7 @@ It's hard to imagine an Internet before email, online communities before chat, o
 
 Wallets do make life super easy when it comes to signing into services by providing a "portable" identity, and not requiring a username and password. But what happens when that service or dapp wants to get back in touch with you? Maybe for something critically important. Well…you're probably out of luck.
 
-That's where XMTP comes in: the same wallets we use to transact and sign in can be used to send and receive messages. Messages in XMTP are encoded with an [open content format](/docs/concepts/content-types/introduction), which opens the doors to many different presentation styles and use cases.
+That's where XMTP comes in: the same wallets we use to transact and sign in can be used to send and receive messages. Messages in XMTP are encoded with an [open content format](/docs/content-types/introduction), which opens the doors to many different presentation styles and use cases.
 
 All XMTP messages are end-to-end encrypted and are stored and delivered off-chain for scalability and to preserve privacy. They can be:
 
@@ -110,8 +110,8 @@ Here's a handful of helpful links to check out if you're keen to explore adding 
 - Check out the [XMTP documentation](/docs/introduction) for everything you need to get started
 - The [project's GitHub](https://github.com/xmtp) is home to the XMTP SDK, example chat app, and more…
 - Read the [XMTP Litepaper](https://github.com/xmtp/litepaper) to understand the motivation behind the project more deeply, as well as future plans
-- Follow [@xmtp\_ on Twitter](https://twitter.com/xmtp_)
-- Feel free to send me a message personally, [@mg on Twitter](https://twitter.com/mg)
+- Follow [@xmtp\_ on 𝕏](https://x.com/xmtp_)
+- Feel free to send me a message personally, [@mg on 𝕏](https://x.com/mg)
 - Come join the XMTP Labs team and mission, [check out our jobs page](https://blog.xmtp.com/careers/)
 
 <br/>

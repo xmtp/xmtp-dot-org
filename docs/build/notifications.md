@@ -1,6 +1,6 @@
 ---
 sidebar_label: Notifications
-sidebar_position: 8
+sidebar_position: 20
 ---
 
 # Build push notifications with XMTP
@@ -104,7 +104,7 @@ Here are some sample answers to help you complete the application:
 - **When your extension runs, what system and network resources does it need?** We might need to make a GRPC request in order to load additional information about a conversation. This is only necessary when we haven't stored the conversation details locally, which is expected to be less common than being able to just decode the conversation locally.
 - **How often does your extension run? What can trigger it to run?** The extension will run whenever a message is sent or received in a conversation. The frequency will depend on how active a user is.
 
-## Best practices
+## Scale
 
 - Display push notifications only for messages sent **to** a user. In other words, do not send a push notification to a user about a message they sent. To do this, filter out messages sent by the user and don't send push notifications for them.
 

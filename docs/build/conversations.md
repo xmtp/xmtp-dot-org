@@ -16,7 +16,7 @@ Most of the time, when interacting with the network, you'll want to do it throug
 First you need to check if the address you want to message is on the XMTP network. You can do this by calling `client.canMessage` with the address you want to message.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 const isOnProdNetwork = await client.canMessage(
@@ -26,7 +26,7 @@ const isOnProdNetwork = await client.canMessage(
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 let canAliceMessageBob = try await client.canMessage(bobClient.address)
@@ -34,31 +34,64 @@ let canAliceMessageBob = try await client.canMessage(bobClient.address)
 
 </TabItem>
 
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart" attributes={{className: "dart_tab"}}>
 
 ```dart
  val canMessage = client.canMessage(fixtures.bobClient.address)
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
  val canMessage = client.canMessage(bobClient.address)
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-const { canMessage } = useCanMessage();
-if (await canMessage("0x3F11b27F323b62B159D2642964fa27C46C841897")) {
-  //Create conversation
-}
+import { useCanMessage } from "@xmtp/react-sdk";
+
+export const CanMessage: React.FC = () => {
+  const [peerAddress, setPeerAddress] = useState("");
+  const [isOnNetwork, setIsOnNetwork] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const { canMessage } = useCanMessage();
+
+  const handleAddressChange = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+    setPeerAddress(e.target.value);
+  }, []);
+
+  const handleCheckAddress = useCallback(async (e: FormEvent) => {
+      e.preventDefault();
+      if (isValidAddress(peerAddress)) {
+        setIsLoading(true);
+        setIsOnNetwork(await canMessage(peerAddress));
+        setIsLoading(false);
+      } else {
+        setIsOnNetwork(false);
+      }
+    };
+    void checkAddress();
+  }, [peerAddress]);
+
+  return (
+    <form onSubmit={handleCheckAddress}>
+      <input
+        name="addressInput"
+        type="text"
+        onChange={handleAddressChange}
+        disabled={isLoading}
+      />
+    </form>
+  );
+};
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 import { Client } from "@xmtp/xmtp-react-native";
@@ -82,7 +115,7 @@ import noxmtpidentity from '/docs/concepts/img/no-xmtp-identity.png';
 You can create a new conversation with any address activated on the XMTP network. To learn more about supported addresses, see [Chains](/docs/dev-faqs#chains).
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 const newConversation = await xmtp.conversations.newConversation(
@@ -91,7 +124,7 @@ const newConversation = await xmtp.conversations.newConversation(
 ```
 
   </TabItem>
-  <TabItem value="swift" label="Swift">
+  <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 let newConversation = try await client.conversations.newConversation(
@@ -99,14 +132,14 @@ let newConversation = try await client.conversations.newConversation(
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 var convo = await client.newConversation("0x...");
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 val newConversation =
@@ -114,18 +147,66 @@ val newConversation =
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-const startConversation = useStartConversation();
-const convv = await startConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897",
-  "hi",
-);
+import { isValidAddress, useStartConversation } from "@xmtp/react-sdk";
+import { useCallback, useState } from "react";
+
+export const StartConversation: React.FC = () => {
+  const [peerAddress, setPeerAddress] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const startConversation = useStartConversation();
+
+  const handleAddressChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setPeerAddress(e.target.value);
+    },
+    [],
+  );
+
+  const handleMessageChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setMessage(e.target.value);
+    },
+    [],
+  );
+
+  const handleStartConversation = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      if (peerAddress && message) {
+        setIsLoading(true);
+        const conversation = await startConversation(peerAddress, message);
+        setIsLoading(false);
+      }
+    },
+    [message, peerAddress, startConversation],
+  );
+
+  return (
+    <form onSubmit={handleStartConversation}>
+      <input
+        name="addressInput"
+        type="text"
+        onChange={handleAddressChange}
+        disabled={isLoading}
+      />
+      <input
+        name="messageInput"
+        type="text"
+        onChange={handleMessageChange}
+        disabled={isLoading || !isValidAddress(peerAddress)}
+      />
+    </form>
+  );
+};
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 const newConversation = await xmtp.conversations.newConversation(
@@ -136,10 +217,9 @@ const newConversation = await xmtp.conversations.newConversation(
 </TabItem>
 </Tabs>
 
-Message this XMTP message bot to get an immediate automated reply:
+import Bots from "@site/src/components/Bots/index.md";
 
-- `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`) env:`production`
-- `gm dev bot` (`0x20B572bE48527a770479744AeC6fE5644F97678B`) env:`dev`
+<Bots />
 
 ## List existing conversations
 
@@ -150,7 +230,7 @@ These conversations include all conversations for a user **regardless of which a
 To provide a user-friendly cold start (first load), display a "Loading conversations" status message and a progress bar.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 const allConversations = await xmtp.conversations.list();
@@ -162,7 +242,7 @@ for (const conversation of allConversations) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 let allConversations = try await client.conversations.list()
@@ -174,7 +254,7 @@ for conversation in allConversations {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart">
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
 var conversations = await client.listConversations();
@@ -185,7 +265,7 @@ for (var convo in conversations) {
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 val allConversations = client.conversations.list()
@@ -197,23 +277,28 @@ for (conversation in allConversations) {
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-const { conversations, error, isLoading } = useConversations();
+export const ListConversations: React.FC = () => {
+  const { conversations, error, isLoading } = useConversations();
 
-{
-  conversations.map((conversation, index) => (
-    <div key={index}>
-      {conversation?.peerAddress}-
-      {JSON.stringify(conversation.context?.metadata)}
-    </div>
-  ));
-}
+  if (error) {
+    return "An error occurred while loading conversations";
+  }
+
+  if (isLoading) {
+    return "Loading conversations...";
+  }
+
+  return (
+    ...
+  );
+};
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native - beta">
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 const allConversations = await xmtp.conversations.list();
@@ -234,7 +319,7 @@ When running in a browser, conversations are cached in `LocalStorage` by default
 To disable this behavior, set the `persistConversations` client option to `false`.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 const clientWithNoCache = await Client.create(wallet, {
@@ -243,7 +328,7 @@ const clientWithNoCache = await Client.create(wallet, {
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 val client = Client().create(wallet, { env: "dev" })
@@ -257,9 +342,10 @@ val client.importConversation(conversations)
 ```
 
 </TabItem>
-<TabItem value="react" label="React - beta">
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-```jsx
+```tsx
+const { initialize } = useClient();
 const options = {
   persistConversations: false,
 };
@@ -274,7 +360,7 @@ await initialize({ signer, options });
 You can save a conversation object locally using its `encodedContainer` property. This returns a `ConversationContainer` object which conforms to `Codable`.
 
 <Tabs groupId="sdk-langs">
-<TabItem value="swift" label="Swift">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 // Get a conversation
@@ -298,7 +384,7 @@ try await decodedConversation.send(text: "hi")
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin">
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 // Get a conversation

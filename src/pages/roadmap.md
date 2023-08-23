@@ -28,12 +28,18 @@ Features typically follow this release cycle:
 
 ### Q4
 
-- Read receipts (alpha)
+- Read receipts
+- Reactions
+- Group chats
+- Replies
+- Transaction receipt
 - Portable preferences, such as blocklists, allowlists, etc. (alpha)
 
 ## Decentralization roadmap
 
-🎉 Anyone can now try running the [experimental `xmtpd` node software](https://github.com/xmtp/xmtpd) and be a part of the journey to decentralizing XMTP! In the future, `xmtpd` might replace the node software currently running the XMTP network.
+🎉 Anyone can now try running the [experimental `xmtpd` node software](https://github.com/xmtp/xmtpd) and be a part of the journey to decentralizing XMTP! 
+
+In the future, `xmtpd` might replace the node software currently running the XMTP network. To explore the node software currently running the XMTP network, see the [xmtp-node-go repo](https://github.com/xmtp/xmtp-node-go).
 
 ### Near term (~3 months)
 

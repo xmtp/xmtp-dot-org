@@ -5,14 +5,14 @@
     "image": "/img/builtWithXmtp/cbw.png",
     "description": "Your key to the world of crypto. Manage all of your crypto, NFTs, multiple wallets, and messages in one place.",
     "github": "",
-    "twitter": "https://twitter.com/CoinbaseWallet"
+    "twitter": "https://x.com/CoinbaseWallet"
   },
   {
     "name": "Converse",
     "href": "https://getconverse.app",
     "image": "/img/builtWithXmtp/converse.png",
     "description": "We're reinventing messaging, starting with web3.",
-    "twitter": "https://twitter.com/converseapp_"
+    "twitter": "https://x.com/converseapp_"
   },
   {
     "name": "Orb",
@@ -20,7 +20,7 @@
     "image": "/img/builtWithXmtp/orb-logo.jpeg",
     "description": "Own and control your identity, content, and monetization on this decentralized social media platform.",
     "github": "",
-    "twitter": "https://twitter.com/orbapp_"
+    "twitter": "https://x.com/orbapp_"
   },
   {
     "name": "Lenster",
@@ -28,82 +28,7 @@
     "image": "/img/builtWithXmtp/lenster.svg",
     "description": "Lenster is a composable, decentralized, and permissionless social media webapp built with Lens Protocol.",
     "github": "https://github.com/lensterxyz/lenster",
-    "twitter": "https://twitter.com/lensterxyz"
-  },
-  {
-    "name": "Chainjet",
-    "href": "https://chainjet.io/",
-    "image": "/img/builtWithXmtp/cj.jpg",
-    "description": "ChainJet empowers entrepreneurs and communities to build Web3 automations without coding.",
-    "github": "https://github.com/chainjet/platform",
-    "twitter": "https://twitter.com/chainjetio"
-  },
-  {
-    "name": "Paragraph",
-    "href": "https://paragraph.xyz/",
-    "image": "/img/logo-paragraph.png",
-    "description": "Building tools that enable publishers, DAOs, writers, and creators build communities and monetize their content.",
-    "github": "https://github.com/paragraph-xyz",
-    "twitter": "https://twitter.com/paragraph_xyz"
-  },
-  {
-    "name": "Buttrfly",
-    "href": "https://www.buttrfly.app/",
-    "image": "/img/builtWithXmtp/buttrfly-icon-rounded.png",
-    "description": "Decentralized social media app built for a mobile first experience on iOS. Built on Lens Protocol."
-  },
-  {
-    "name": "Relay",
-    "href": "https://relay.cc/",
-    "image": "/img/builtWithXmtp/relay.png",
-    "description": "Relay is the intersection of Ethereum-enabled OpenAI agents and wallet messaging.",
-    "github": "https://github.com/relaycc",
-    "twitter": "https://twitter.com/relay_eth"
-  },
-  {
-    "name": "ethOS",
-    "href": "https://www.ethosmobile.org/",
-    "image": "/img/builtWithXmtp/ethos-logo.png",
-    "description": "The world's first Ethereum mobile operating system. A mobile OS built to be crypto native.",
-    "github": "https://github.com/EthereumPhone",
-    "twitter": "https://twitter.com/EthereumPhone"
-  },
-  {
-    "name": "Boson App",
-    "href": "https://bosonapp.io/",
-    "image": "/img/builtWithXmtp/boson-logo.jpg",
-    "description": "Tokenize, transfer, and trade any physical asset as an NFT.",
-    "github": "https://github.com/bosonprotocol",
-    "twitter": "https://twitter.com/BosonProtocol"
-  },
-  {
-    "name": "AbsoluteLabs",
-    "href": "https://absolutelabs.io/",
-    "image": "/img/builtWithXmtp/absolute-logo.jpg",
-    "description": "Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
-    "twitter": "https://twitter.com/absolute_labs"
-  },
-  {
-    "name": "Holder",
-    "href": "https://holder.xyz/",
-    "image": "/img/builtWithXmtp/holder-logo.jpg",
-    "description": "A web3 CRM and marketing automation platform that powers customer engagement for the tokenized world.",
-    "twitter": "https://twitter.com/holderxyz"
-  },
-  {
-    "name": "Lensport",
-    "href": "https://lensport.io/",
-    "image": "/img/builtWithXmtp/lensport.png",
-    "description": "Discover, collect, and sell Lens Posts to invest in creators you support. Built on Lens Protocol.",
-    "twitter": "https://twitter.com/lensport_io"
-  },
-  {
-    "name": "Pinsta",
-    "href": "https://pinsta.xyz/",
-    "image": "/img/builtWithXmtp/pinsta-logo.jpg",
-    "description": "Decentralized image and video sharing service. Create Pin Boards to collect and discover rich media.",
-    "github": "https://github.com/PinstaApp/Pinsta",
-    "twitter": "https://twitter.com/PinstaApp"
+    "twitter": "https://x.com/lensterxyz"
   },
   {
     "name": "XMTP Inbox",
@@ -112,5 +37,80 @@
     "bgColor": "",
     "description": "XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
     "github": "https://github.com/xmtp-labs/xmtp-inbox-web"
+  },
+  {
+    "name": "Chainjet",
+    "href": "https://chainjet.io/",
+    "image": "/img/builtWithXmtp/cj.jpg",
+    "description": "ChainJet empowers entrepreneurs and communities to build Web3 automations without coding.",
+    "github": "https://github.com/chainjet/platform",
+    "twitter": "https://x.com/chainjetio"
+  },
+  {
+    "name": "Paragraph",
+    "href": "https://paragraph.xyz/",
+    "image": "/img/logo-paragraph.png",
+    "description": "Building tools that enable publishers, DAOs, writers, and creators build communities and monetize their content.",
+    "github": "https://github.com/paragraph-xyz",
+    "twitter": "https://x.com/paragraph_xyz"
+  },
+  {
+    "name": "Relay",
+    "href": "https://relay.cc/",
+    "image": "/img/builtWithXmtp/relay.png",
+    "description": "Relay is the intersection of Ethereum-enabled OpenAI agents and wallet messaging.",
+    "github": "https://github.com/relaycc",
+    "twitter": "https://x.com/relay_eth"
+  },
+  {
+    "name": "ethOS",
+    "href": "https://www.ethosmobile.org/",
+    "image": "/img/builtWithXmtp/ethos-logo.png",
+    "description": "The world's first Ethereum mobile operating system. A mobile OS built to be crypto native.",
+    "github": "https://github.com/EthereumPhone",
+    "twitter": "https://x.com/EthereumPhone"
+  },
+  {
+    "name": "Boson App",
+    "href": "https://bosonapp.io/",
+    "image": "/img/builtWithXmtp/boson-logo.jpg",
+    "description": "Tokenize, transfer, and trade any physical asset as an NFT.",
+    "github": "https://github.com/bosonprotocol",
+    "twitter": "https://x.com/BosonProtocol"
+  },
+  {
+    "name": "Bello",
+    "href": "https://bello.lol/",
+    "image": "/img/builtWithXmtp/bello.png",
+    "description": "Instantly analyze your Web3 community and its competitors without writing a single line of code.",
+    "twitter": "https://x.com/bellosights"
+  },
+  {
+    "name": "AbsoluteLabs",
+    "href": "https://absolutelabs.io/",
+    "image": "/img/builtWithXmtp/absolute-logo.jpg",
+    "description": "Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
+    "twitter": "https://x.com/absolute_labs"
+  },
+  {
+    "name": "Holder",
+    "href": "https://holder.xyz/",
+    "image": "/img/builtWithXmtp/holder-logo.jpg",
+    "description": "A web3 CRM and marketing automation platform that powers customer engagement for the tokenized world.",
+    "twitter": "https://x.com/holderxyz"
+  },
+  {
+    "name": "Pinsta",
+    "href": "https://pinsta.xyz/",
+    "image": "/img/builtWithXmtp/pinsta-logo.jpg",
+    "description": "Decentralized image and video sharing service. Create Pin Boards to collect and discover rich media.",
+    "github": "https://github.com/PinstaApp/Pinsta",
+    "twitter": "https://x.com/PinstaApp"
+  },
+  {
+    "name": "Buttrfly",
+    "href": "https://www.buttrfly.app/",
+    "image": "/img/builtWithXmtp/buttrfly-icon-rounded.png",
+    "description": "Decentralized social media app built for a mobile first experience on iOS. Built on Lens Protocol."
   }
 ]

@@ -15,11 +15,11 @@ tags:
 import ReactPlayer from 'react-player'
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
-*No more cold starts: plug into the XMTP network to reach users where they are.*
+_No more cold starts: plug into the XMTP network to reach users where they are._
 
 Coinbase Wallet has officially joined the XMTP network! Now every app built with XMTP can use their in-app messaging to reach users on Coinbase Wallet.
 
-Finally, *we can reach the wallet*.
+Finally, _we can reach the wallet_.
 
 <ReactPlayer width="100%" controls url='/img/cbw-messaging-final.mp4' muted playing="true" />
 
@@ -45,7 +45,7 @@ Coinbase Wallet built its inbox using XMTP to ensure that:
 
 Scan the QR code below to unlock messaging in your Coinbase Wallet app. Make sure your Coinbase Wallet app is updated to the latest version!
 
-If you don't have the Coinbase Wallet app yet, the QR code will redirect you to download it. 
+If you don't have the Coinbase Wallet app yet, the QR code will redirect you to download it.
 
 ![Reach users through Coinbase Wallet and XMTP](./media/XMTP_CBW-Pilot-Blog_QR.jpeg)
 

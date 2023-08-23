@@ -62,7 +62,7 @@ export const BLOG_DATA = [
       name: "Fabri",
       date: "1 Jul 2023 · 4 min read",
       img: "fabri.jpeg",
-      url: "https://twitter.com/fabriguespe",
+      url: "https://x.com/fabriguespe",
     },
     url: "/blog/docsv2",
   },
@@ -75,7 +75,7 @@ export const BLOG_DATA = [
       name: "Fabri",
       date: "30 Jun 2023 · 3 min read",
       img: "fabri.jpeg",
-      url: "https://twitter.com/fabriguespe",
+      url: "https://x.com/fabriguespe",
     },
     url: "/blog/eth-waterloo-2023",
   },
@@ -88,7 +88,7 @@ export const BLOG_DATA = [
       name: "J-Ha",
       date: "22 Jun 2023 · 4 min read",
       img: "jhaaaa.jpeg",
-      url: "https://twitter.com/j_ha",
+      url: "https://x.com/j_ha",
     },
     url: "/blog/feedback-widget",
   },
@@ -103,8 +103,6 @@ export const XMTP_FLUTTER_URL =
 export const XMTP_WEB_URL = "https://api.github.com/repos/xmtp/xmtp-web";
 export const XMTP_NOTIF_SERVER_URL =
   "https://api.github.com/repos/xmtp/example-notification-server-go";
-export const QUICKSTART_CHAT_URL =
-  "https://api.github.com/repos/xmtp/xmtp-quickstart-react";
 
 export const CHAT_ITEM = {
   id: "2534740",

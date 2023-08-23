@@ -72,7 +72,7 @@ A huge thank you to everyone who participated and made ETH Waterloo 2023 such a 
 
 **Bonus**:
 
-The last day we decided to catch a local showing of the BlackBerry movie. For those of you who may not know, BlackBerry has deep roots in Waterloo and, incidentally, is where our CEO’s [@shanemac](https://twitter.com/ShaneMac)'s first startup had its journey culminate in a buyout.
+The last day we decided to catch a local showing of the BlackBerry movie. For those of you who may not know, BlackBerry has deep roots in Waterloo and, incidentally, is where our CEO’s [@shanemac](https://x.com/ShaneMac)'s first startup had its journey culminate in a buyout.
 
 ![2020-03-26.jpg](./media/waterloo/2020-03-26.jpg)
 

@@ -10,6 +10,15 @@ This changelog provides information about release milestones for XMTP SDKs, deve
 
 ---
 
+#### Aug 2023
+
+## [React client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) v1.0.0 is Production Ready
+
+This release delivers local-first architecture, optimistic sending, and support for standards-track content types via configuration. **[Read the release notes](https://github.com/xmtp/xmtp-web/releases/tag/%40xmtp%2Freact-sdk%401.0.0
+)** (Aug 22)
+
+---
+
 #### July 2023
 
 ## [React Native client SDK](https://github.com/xmtp/xmtp-react-native) is in Beta (xmtp-react-native)
@@ -38,7 +47,7 @@ Provides `xmtpd` (XMTP daemon), an **experimental** version of XMTP node softwar
 
 ## [React client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) is in Beta
 
-Provides the XMTP client SDK for React apps written in TypeScript, making it easier and faster for web apps to integrate messaging via hooks and plug-n-play components. **[Read the announcement](https://twitter.com/xmtp_/status/1654176551565692928)** (May 4)
+Provides the XMTP client SDK for React apps written in TypeScript, making it easier and faster for web apps to integrate messaging via hooks and plug-n-play components. **[Read the announcement](https://x.com/xmtp_/status/1654176551565692928)** (May 4)
 
 ## [Web SDKs and examples repo](https://github.com/xmtp/xmtp-web) is public (xmtp-web)
 
@@ -137,8 +146,6 @@ Provides an example push notification server, written in Golang. (Nov 16)
 ## JavaScript client SDK v7.0.0 released (xmtp-js)
 
 Provides a TypeScript implementation of an XMTP client for use with JavaScript and React apps. **[Read the release notes](https://github.com/xmtp/xmtp-js/releases/tag/v7.0.0)** (Nov 7)
-
-## [XMTP Quickstart chat app repo](https://github.com/xmtp/xmtp-quickstart-react) is public (xmtp-quickstart-react)
 
 Provides a 1:1 chat app built with the [JavaScript client SDK](https://github.com/xmtp/xmtp-js) (`xmtp-js`). The app is intentionally built with lightweight code to help make it easier to parse and start learning to build with XMTP. (Nov 4)
 

@@ -20,7 +20,7 @@ tags:
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 :::warning Get the latest doc
-This post may be out of date. See the [Attachments tutorial](/docs/build/attachments) for the latest guidance on how to build attachments.
+This post may be out of date. See the [Attachments tutorial](/docs/content-types/remote-attachment) for the latest guidance on how to build attachments.
 :::
 
 Follow these steps to start sending image attachments to wallets within your chat app. Our sample app includes everything you need to connect to wallets with Thirdweb's WalletSDK, use XMTP's remote attachments, and upload larger files to Thirdweb's storage.
@@ -39,7 +39,7 @@ The WalletSDK is a development kit that grants developers access to a comprehens
 ### XMTP content types
 
 Content types are a way to describe the _type_ of _content_ a message contains on XMTP. Out of the box, XMTP's SDKs support one content type: `text`.
-[Read more](https://xmtp.org/docs/concepts/content-types/introduction)
+[Read more](https://xmtp.org/docs/content-types/introduction)
 
 ### Thirdweb storage
 
@@ -244,7 +244,6 @@ const remoteAttachment = {
 
 const message = await conversation.send(remoteAttachment, {
   contentType: ContentTypeRemoteAttachment,
-  contentFallback: "a screenshot of over 1MB",
 });
 ```
 
