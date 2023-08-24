@@ -213,7 +213,7 @@ export const StreamMessages: React.FC<{
     [streamedMessages],
   );
 
-  useStreamMessages(conversation, onMessage);
+  useStreamMessages(conversation, {onMessage});
 
   useEffect(() => {
     setStreamedMessages([]);
@@ -269,7 +269,7 @@ for await (const message of await xmtp.conversations.streamAllMessages()) {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-// The useStreamAllMessages hook streams new messages from all conversations 
+// The useStreamAllMessages hook streams new messages from all conversations
 // on mount and exposes an error state.
 import { useStreamAllMessages } from "@xmtp/react-sdk";
 import type { DecodedMessage } from "@xmtp/react-sdk";
