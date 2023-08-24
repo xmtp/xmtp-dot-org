@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/docs/developer-quickstart",
       "headers": [
         {
           "key": "Cross-Origin-Embedder-Policy",
