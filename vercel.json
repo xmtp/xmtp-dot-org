@@ -9,7 +9,7 @@
         },
         {
           "key": "Cross-Origin-Opener-Policy",
-          "value": "cross-origin"
+          "value": "same-origin"
         }
       ]
     }
