@@ -6,7 +6,7 @@ description: Build this quickstart app to learn some of the fundamental concepts
 
 # Quickstart
 
-<iframe src="https://xmtp-alpha-interactive-tutorial.vercel.app/" width="100%" style={{height: '100vh'}}></iframe>
+<iframe allow="cross-origin-isolated" src="https://xmtp-alpha-interactive-tutorial.vercel.app/" width="100%" style={{height: '100vh'}}></iframe>
 
 import Quickstarts from "@site/src/components/Quickstarts/index.md";
 
