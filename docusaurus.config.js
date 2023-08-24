@@ -54,8 +54,6 @@ const config = {
           path: "docs",
           id: "default",
           routeBasePath: "docs",
-          crossOriginIsolated: false,
-
           sidebarPath: require.resolve("./sidebars/sidebars.js"),
           showLastUpdateAuthor: false,
           showLastUpdateTime: true,
