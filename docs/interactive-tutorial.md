@@ -6,4 +6,4 @@ description: Use this interactive tutorial to learn some of the fundamental conc
 
 # Interactive Tutorial
 
-<iframe allow="cross-origin-isolated" src={`https://xmtp-alpha-interactive-tutorial.vercel.app?theme=${window.localStorage.getItem('theme')}`} width="100%" style={{height: '100vh'}}></iframe>
+<iframe allow="cross-origin-isolated" src="https://xmtp-alpha-interactive-tutorial.vercel.app" width="100%" style={{height: '100vh'}}></iframe>
