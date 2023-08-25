@@ -4,7 +4,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import { MainContent } from "../components/MainContent";
 import "./custom.css";
-import Flickity from "flickity";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
