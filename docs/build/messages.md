@@ -9,7 +9,7 @@ import TabItem from "@theme/TabItem";
 
 # Send and list messages with XMTP
 
-The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/content-types/introduction).
+The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/build/content-types).
 
 ## Send messages
 

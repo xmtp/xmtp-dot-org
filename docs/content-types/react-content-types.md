@@ -23,33 +23,33 @@ Here are some examples of standards-track content types that you can review, tes
 
 This content type supports sending file attachments that are stored off-network. Use it to enable your app to send and receive message attachments.
 
-- [XIP proposal discussion](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md)
+- [Comment on the XIP](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md)
 
-- [Source code](https://github.com/xmtp/xmtp-js-content-types/tree/main/packages/content-type-remote-attachment)
+- [Get the code](https://github.com/xmtp/xmtp-js-content-types/tree/main/packages/content-type-remote-attachment)
 
 ### Replies
 
 This content type supports direct replies to messages.
 
-- [XIP idea discussion](https://github.com/orgs/xmtp/discussions/35)
+- [Comment on the XIP idea](https://github.com/orgs/xmtp/discussions/35)
 
-- [Source code](https://github.com/xmtp/xmtp-js-content-types/tree/main/packages/content-type-reply)
+- [Ge the code](https://github.com/xmtp/xmtp-js-content-types/tree/main/packages/content-type-reply)
 
 ### Reactions
 
 This content type supports reactions to messages.
 
-- [XIP idea discussion](https://github.com/orgs/xmtp/discussions/36)
+- [Comment on the XIP idea](https://github.com/orgs/xmtp/discussions/36)
 
-- [Source code](https://github.com/xmtp/xmtp-js-content-types/tree/main/packages/content-type-reaction)
+- [Get the code](https://github.com/xmtp/xmtp-js-content-types/tree/main/packages/content-type-reaction)
 
 ### Read receipts
 
 This content type supports read receipts to messages
 
-- [XIP idea discussion](https://github.com/orgs/xmtp/discussions/43)
+- [Comment on the XIP idea](https://github.com/orgs/xmtp/discussions/43)
 
-- [Source code](https://github.com/xmtp/xmtp-js-content-types/tree/main/packages/content-type-read-receipt)
+- [Get the code](https://github.com/xmtp/xmtp-js-content-types/tree/main/packages/content-type-read-receipt)
 
 ## Integrate standards-track content types with the React SDK
 
