@@ -177,7 +177,7 @@ const onMessage = useCallback((message) => {
     return msgsnew;
   });
 }, []);
-useStreamMessages(conversation, onMessage);
+useStreamMessages(conversation, { onMessage });
 ```
 
 </TabItem>

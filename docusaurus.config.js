@@ -159,6 +159,11 @@ const config = {
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/smile.svg" alt="Smile icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Gaming</div></div>`,
               },
+              {
+                to: "/docs/use-cases/dao",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DAOs</div></div>`,
+              },
             ],
           },
           {
@@ -297,6 +302,10 @@ const config = {
               {
                 label: "Gaming",
                 to: "/docs/use-cases/gaming",
+              },
+              {
+                label: "DAOs",
+                to: "/docs/use-cases/dao",
               },
             ],
           },
