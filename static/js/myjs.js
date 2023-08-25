@@ -7,6 +7,9 @@ window.onload = function () {
       item.innerText === "Groups" ||
       item.innerText === "Quickstart" ||
       item.innerText === "Local-first cache" ||
+      item.innerText === "DAOs" ||
+      item.innerText === "DeFi" ||
+      item.innerText === "Marketing" ||
       item.innerText === "Developer Quickstart" ||
       item.innerText === "Content Types" ||
       item.innerText === "Query addresses" ||
