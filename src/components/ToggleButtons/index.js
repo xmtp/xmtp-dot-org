@@ -25,13 +25,6 @@ export default function ToggleButtons() {
     };
   }, []);
 
-  useEffect(() => {
-    // Update theme in query param on color mode state change, so it can be accessed in iframe
-    if (!window.location.href.includes(`theme=${colorMode}`)) {
-      window.location.href = `${window.location.pathname}?theme=${colorMode}`;
-    }
-  }, [colorMode]);
-
   const scrollFunction = () => {
     if (scrollToTopBtnRef.current && darkModeBtnRef.current) {
       if (
