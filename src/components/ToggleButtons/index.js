@@ -9,6 +9,11 @@ export default function ToggleButtons() {
   const handleDarkMode = () => {
     if (colorMode === "dark") setColorMode("light");
     if (colorMode === "light") setColorMode("dark");
+
+    // Add cookie to persist theme for iframe
+    const date = new Date();
+    date.setTime(date.getTime() + 24 * 60 * 60 * 1000); // expires after 1 day
+    document.cookie = `theme=${colorMode}; expires=${date.toUTCString()}`;
   };
 
   const handleScrollToTop = () => {
