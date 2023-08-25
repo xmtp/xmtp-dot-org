@@ -30,7 +30,6 @@
     "clsx": "^1.1.1",
     "docusaurus-plugin-plausible": "^0.0.5",
     "ethers": "^5.7.2",
-    "jquery": "^3.7.0",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.1",
