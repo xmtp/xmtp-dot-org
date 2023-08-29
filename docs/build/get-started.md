@@ -149,7 +149,7 @@ import {
 
 const { client, initialize } = useClient();
 const { conversations } = useConversations();
-const startConversation = useStartConversation();
+const { startConversation } = useStartConversation();
 const { canMessage } = useCanMessage();
 
 //Initialize
@@ -177,7 +177,7 @@ const onMessage = useCallback((message) => {
     return msgsnew;
   });
 }, []);
-useStreamMessages(conversation, onMessage);
+useStreamMessages(conversation, { onMessage });
 ```
 
 </TabItem>
