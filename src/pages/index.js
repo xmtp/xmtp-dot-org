@@ -4,8 +4,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import { MainContent } from "../components/MainContent";
 import "./custom.css";
-import { Link } from "react-router-dom";
-import FeedbackWidget from "../components/FeedbackWidget";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
