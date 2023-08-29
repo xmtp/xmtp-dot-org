@@ -159,7 +159,10 @@ if (!keys) {
   });
   storeKeys(address, keys);
 }
-const client = await Client.create(null, { privateKeyOverride: keys });
+const client = await Client.create(null, {
+  ...clientOptions,
+  privateKeyOverride: keys,
+});
 ```
 
 We are using the following helper funtions to store and retrieve the keys
@@ -168,8 +171,12 @@ We are using the following helper funtions to store and retrieve the keys
 // Create a client using keys returned from getKeys
 const ENCODING = "binary";
 
+export const getEnv = (): "dev" | "production" | "local" => {
+  return "production";
+};
+
 export const buildLocalStorageKey = (walletAddress: string) =>
-  walletAddress ? `xmtp:${"dev"}:keys:${walletAddress}` : "";
+  walletAddress ? `xmtp:${getEnv()}:keys:${walletAddress}` : "";
 
 export const loadKeys = (walletAddress: string): Uint8Array | null => {
   const val = localStorage.getItem(buildLocalStorageKey(walletAddress));
