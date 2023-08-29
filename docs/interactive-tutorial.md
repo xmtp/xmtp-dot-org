@@ -1,11 +1,11 @@
 ---
-sidebar_label: Interactive Tutorial
-sidebar_position: 5
-description: Use this interactive tutorial to learn some of the fundamental concepts involved in building with XMTP.
+sidebar_label: Interactive tutorial
+sidebar_position: 2.5
+description: Learn about the core code you need to build basic messaging with XMTP. This interactive tutorial makes real-time calls to the XMTP dev network.
 ---
 
 import Tutorial from '/src/components/Tutorial'
 
-# Interactive Tutorial
+# Interactive tutorial
 
 <Tutorial />
