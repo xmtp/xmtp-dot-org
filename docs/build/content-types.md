@@ -118,7 +118,11 @@ Here are tutorials you can use to learn how to create custom content types:
 
   Create a custom content type used to send transaction hashes on the Polygon blockchain.
 
-## Handle unsupported content types
+## Handle an unsupported content type error
+
+As more [custom](#create-a-custom-content-type) and [standards-track](#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This error could crash your app.
+
+To avoid this, code your app to detect, log, and handle the error. For example:
 
 ```jsx
 const codec = xmtp.codecFor(content.contentType);
