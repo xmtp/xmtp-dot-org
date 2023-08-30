@@ -4,52 +4,44 @@ hide_table_of_contents: true
 
 # Roadmap for XMTP
 
-Timelines are estimates and subject to change. For information about delivered features and fixes, see the [Changelog](/docs/changelog).
+Timelines are estimates and subject to change. For information about delivered features and fixes, see the [Changelog](/docs/changelog).
 
-## Features roadmap
+## Release cycle
 
-Features typically follow this release cycle:
+We typically follow this release cycle:
 
 - Alpha: Super early peek into the feature being built. Not ready for use in production apps.
 - Beta: Opportunity to test, validate, and provide feedback. Not ready for use in production apps.
 - Production: Ready for use in production apps.
 
-### Q2
+## Features roadmap
 
-- Group chat (alpha)
-- Media attachments, reactions, and replies (production)
-- React Native SDK (beta)
+### 2023 Q3
 
-### Q3
+- Onchain transaction reference content type
+- React SDK in Production
+- React Native SDK in Production (currently in Beta)
+- Android SDK in Production (currently in Beta)
+- XMTP v3 in Alpha
 
-- Android SDK (production)
-- React SDK (production)
-- Secret conversations: A new conversation type with additional Signal-level security properties such as forward secrecy and expiring message history (alpha)
+### 2023 Q4
 
-### Q4
+- XMTP v3 in Beta
 
-- Read receipts
-- Reactions
-- Group chats
-- Replies
-- Transaction receipt
-- Portable preferences, such as blocklists, allowlists, etc. (alpha)
+### 2024 Q1
+
+- XMTP v3 in Production
+- Support for smart contract wallets
+- Portable preferences in Alpha - blocklists, allowlists, etc.
 
 ## Decentralization roadmap
 
-🎉 Anyone can now try running the [experimental `xmtpd` node software](https://github.com/xmtp/xmtpd) and be a part of the journey to decentralizing XMTP! 
+### Near term (~6 months)
 
-In the future, `xmtpd` might replace the node software currently running the XMTP network. To explore the node software currently running the XMTP network, see the [xmtp-node-go repo](https://github.com/xmtp/xmtp-node-go).
-
-### Near term (~3 months)
-
-- Open source nodes
-- Third-party nodes in testnet
 - Smart contract inbox
+- Consent protocol RFC
 
-### Long term (~6 months)
+### Long term (~1+ year)
 
-- Limited public testnet: Third-party operators can run `xmtpd` nodes that participate in the XMTP network
-- v1 economic model, including universal consent
-
-To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
+- Third-party nodes in testnet
+- Incentivization in limited testnet: node rewards and economic spam control
