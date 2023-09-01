@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Installation
 
-To understand what you are inspecting please refer to our [architecture](/docs/dev-concepts/architectural-overview)
+To understand what you are inspecting please refer to our [architecture](/docs/concepts/architectural-overview)
 
 1. clone this repository [xmtp-debug](https://github.com/xmtp/xmtp-debug)
 2. run `npm install`

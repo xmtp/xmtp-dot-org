@@ -22,7 +22,7 @@ Use this document as a map to build, launch, and maintain a best-in-class app wi
 
 ## Polish your app
 
-- [Explore these tutorials](/docs/launch/performance) to learn how to build beyond the basics and polish your app by following UX, performance, and testing Scale
+- [Explore these tutorials](/docs/tutorials/launch) to learn how to build beyond the basics and polish your app by following UX, performance, and testing Scale
 
 - [Explore quickstart and example apps](/docs/build/get-started#quickstarts-) for implementation guidance and inspiration
 
