@@ -53,7 +53,7 @@ Enable your app to keep track of:
 - [ ] Number of active conversations: At least one message.
 - [ ] Number of returning conversations: A minimum of one message from each participant.
 
-## B. **Launch your app[](/docs/launch/#launch-your-app)**
+## B. Launch your app
 
 Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 
