@@ -25,7 +25,7 @@ Inside the same inbox is also the option to chat with customer support — which
 
 With blockchain technology however, there is full transparency as to what a wallet address has done in the past, and the assets they now own which proves identity. Connect these wallet addresses with secure end-to-end encrypted messaging and you get the confidence you need to trust that you are reaching the right person, and that your information and conversation are safe and private.
 
-By integrating XMTP, Unstoppable Domains is connecting web3 identities with messaging, and enabling brands and businesses to connect with their communities more directly. With web3 domain messaging, customer service can easily verify who a person says they are by seeing which NFTs they own and activities on-chain, and without having to collect personal information.
+**By integrating XMTP, Unstoppable Domains is connecting web3 identities with messaging, and enabling brands and businesses to connect with their communities more directly.** With web3 domain messaging, customer service can easily verify who a person says they are by seeing which NFTs they own and activities on-chain, and without having to collect personal information.
 
 What’s more, the connection between brands and users isn’t lost the second the chatbot is closed. The fact that Unstoppable Domains’ customer support chatbot is powered by XMTP means that the conversation can be continued on any other app within the XMTP network, such as Coinbase Wallet or Lens.
 
