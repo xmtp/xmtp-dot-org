@@ -328,12 +328,8 @@ const config = {
                 to: "/docs/faq#security",
               },
               {
-                label: "Protocol FAQ",
+                label: "FAQ",
                 to: "/docs/faq",
-              },
-              {
-                label: "Dev FAQ",
-                to: "/docs/dev-faqs",
               },
               {
                 label: "Brand assets",

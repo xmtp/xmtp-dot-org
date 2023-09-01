@@ -112,7 +112,7 @@ import noxmtpidentity from '/docs/concepts/img/no-xmtp-identity.png';
 
 ## Start a new conversation
 
-You can create a new conversation with any address activated on the XMTP network. To learn more about supported addresses, see [Chains](/docs/dev-faqs#chains).
+You can create a new conversation with any address activated on the XMTP network. To learn more about supported addresses, see [Chains](/docs/faq#chains).
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>

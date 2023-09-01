@@ -798,8 +798,6 @@ To learn more about building with Unstoppable Domains, see their [Developer Port
 </TabItem>
 </Tabs>
 
-To learn about wallet addresses and chains that are compatible with XMTP, see [Chains](/docs/dev-faqs#chains).
-
-To learn about name services, or decentralized IDs, that work with XMTP, see [Decentralized identifiers](/docs/dev-faqs#decentralized-identifiers).
+To learn about wallet addresses and chains that are compatible with XMTP, see [Chains](/docs/faq#chains).
 
 </div>
