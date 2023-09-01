@@ -22,7 +22,7 @@
   {
     "name": "Optimize performance of your app",
     "image": "img/perf-arch-cover.png",
-    "href": "/docs/launch/performance"
+    "href": "/docs/tutorials/launch"
   },
   {
     "name": "Optimistically send messages",
