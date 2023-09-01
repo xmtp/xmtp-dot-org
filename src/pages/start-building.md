@@ -30,7 +30,7 @@ Use this document as a map to build, launch, and maintain a best-in-class app wi
 
 You probably have some great questions by now! Check out these resources:
 
-- [Dev FAQ](/docs/dev-faqs) and [protocol FAQ](/docs/faq)
+- [FAQ](/docs/faq)
 - [Roadmap](/roadmap)
 - [Blog](/blog)
 
