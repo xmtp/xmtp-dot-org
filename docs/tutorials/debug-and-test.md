@@ -3,9 +3,11 @@ sidebar_label: Debug & Test
 sidebar_position: 6
 ---
 
-# Installation
+# Debug & Test
 
-To understand what you are inspecting please refer to our [architecture](/docs/concepts/architectural-overview)
+It's important to test your app's performance when handling a wallet address with more than just a few conversations and messages. To do this, you can use the xmtp-debug repo to easily populate a test wallet with X number of conversations, each with Y number of messages, on the XMTP network of your choice.
+
+Test your app's performance against these performance benchmarks. To understand what you are inspecting please refer to our [architecture](/docs/concepts/architectural-overview)
 
 1. clone this repository [xmtp-debug](https://github.com/xmtp/xmtp-debug)
 2. run `npm install`
@@ -77,3 +79,27 @@ $ npm start contacts list
 $ npm start intros list
 $ ...
 ```
+
+Populating test wallets might cause you to hit the XMTP network rate limit. If this happens, wait 5 minutes and try again.
+
+## Testing
+
+Start by [creating a test wallet](https://xmtp.org/docs/launch/test-your-app#create-a-test-wallet) with ~2,000 conversations and 1,000 messages per conversation. Run the following performance tests:
+
+- For a cold start (first load):
+  - Test that the app is interactive in <15 sec
+- For a warm cache (subsequent loads and refreshes):
+  - Test that the app is interactive in <1 sec
+- Sender UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
+- Recipient UX: Time between sending a message and displaying the message in the conversation thread: ≤1 second
+
+## **Use test message bots and addresses[](https://xmtp.org/docs/launch/test-your-app#use-test-message-bots-and-addresses)**
+
+If helpful for testing, you can create your own message bot, such as `gm.yourappname.eth`, using [ChainJet](https://chainjet.io/) or the [XMTP Bot Starter](https://github.com/xmtp/xmtp-bot-starter). You can use the message bot to receive and send test messages.
+
+If needed, you can also use these addresses for testing:
+
+- gm.xmtp.eth (0x937C0d4a6294cdfa575de17382c7076b579DC176)
+  Message this XMTP message bot to get an immediate automated reply.
+- hi.xmtp.eth (0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0)
+  Message the XMTP Labs team and a human will reply, though not as quickly as gm.xmtp.eth! 🤖
