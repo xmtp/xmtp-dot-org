@@ -32,7 +32,7 @@ Once adopted, a standard content type is bundled in XMTP client SDKs. A develope
 
 Here are the current standard content types:
 
-### [Text content type](/docs/content-types/plain-text)
+### Text content type
 
 An app built with XMTP uses the `TextCodec` (plain text) standard content type by default. This means that if your app is sending plain text messages only, you don’t need to perform any additional steps related to content types.
 
