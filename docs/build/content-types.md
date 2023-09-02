@@ -3,6 +3,9 @@ sidebar_label: Content types
 sidebar_position: 7
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Content types with XMTP
 
 When you build an app with XMTP, all messages are encoded with a content type to ensure that an XMTP client knows how to encode and decode messages, ensuring interoperability and consistent display of messages across apps.
@@ -31,11 +34,69 @@ Here are the current standard content types:
 
 ### [Text content type](/docs/content-types/plain-text)
 
-  An app built with XMTP uses the `TextCodec` (plain text) standard content type by default. This means that if your app is sending plain text messages only, you don’t need to perform any additional steps related to content types.
+An app built with XMTP uses the `TextCodec` (plain text) standard content type by default. This means that if your app is sending plain text messages only, you don’t need to perform any additional steps related to content types.
 
+<!--
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+await conversation.send("gm");
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+await sendMessage(conversation, "gm");
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await conversation.send(content: "gm")
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+var convo = await client.newConversation("0x...");
+await client.sendMessage(convo, 'gm');
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+conversation.send(text = "gm")
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+await conversation.send("gm");
+```
+
+</TabItem>
+</Tabs>
 ### [Composite content type](/docs/content-types/composite)
 
-  If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
+If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
+
+<!--
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+import { CompositeCodec } from "@xmtp/xmtp-js";
+//xmtp = await Client.create(signer, { env: "dev" });
+xmtp.registerCodec(new CompositeCodec());
+```
+
+</TabItem></Tabs>-->
 
 ## Standards-track content types
 
@@ -43,6 +104,7 @@ A standards-track content type is one that is being actively reviewed for adopti
 
 Here are standards-track content types that you can review, test, and adopt in your app today:
 
+<!--
 ### Attachment content type
 
 Use to send an attachment smaller than 1MB using the `AttachmentCodec`. The codec automatically encrypts the attachment and uploads it to the XMTP network.
@@ -50,7 +112,7 @@ Use to send an attachment smaller than 1MB using the `AttachmentCodec`. The code
 - [Read the doc](/docs/content-types/attachment)
 - [Comment on the XIP](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-15-attachment-content-type.md)
 - SDK support: [React](https://github.com/xmtp/xmtp-web/tree/8a248eab168eba494909d7215cffba9d50c1f87c/packages/react-sdk/src/helpers/caching/contentTypes), [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/library/src/main/java/org/xmtp/android/library/codecs), [Swift](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs)
-- Implemented in: Converse, Lenster
+-->
 
 ### Remote attachment content type
 
@@ -58,7 +120,8 @@ Use to send a remote attachment of any size using the `RemoteAttachmentCodec` an
 
 - [Read the doc](/docs/content-types/remote-attachment)
 - [Comment on the XIP](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md)
-- SDK support: [JavaScript](https://github.com/xmtp/xmtp-js-content-types/tree/363e82c894f5a4436c5617b1c0424bab574b27c0/packages), [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/library/src/main/java/org/xmtp/android/library/codecs), [Swift](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs)
+- SDK support: [React](https://github.com/xmtp/xmtp-web/tree/8a248eab168eba494909d7215cffba9d50c1f87c/packages/react-sdk/src/helpers/caching/contentTypes), [JavaScript](https://github.com/xmtp/xmtp-js-content-types/tree/363e82c894f5a4436c5617b1c0424bab574b27c0/packages), [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/library/src/main/java/org/xmtp/android/library/codecs), [Swift](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs)
+- Implemented in: Converse, Lenster
 
 ### Read receipt content type
 
@@ -112,17 +175,20 @@ Here are tutorials you can use to learn how to create custom content types:
 
 ### [Basic: Multiply a number](/docs/content-types/custom)
 
-  Create a custom content type used to multiply numbers.
+Create a custom content type used to multiply numbers.
 
 ### [Advanced: Send a Polygon transaction](/docs/content-types/custom-advanced)
 
-  Create a custom content type used to send transaction hashes on the Polygon blockchain.
+Create a custom content type used to send transaction hashes on the Polygon blockchain.
 
 ## Handle an unsupported content type error
 
 As more [custom](#create-a-custom-content-type) and [standards-track](#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This error could crash your app.
 
 To avoid this, code your app to detect, log, and handle the error. For example:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```jsx
 const codec = xmtp.codecFor(content.contentType);
@@ -131,3 +197,6 @@ if (!codec) {
   throw new Error(fallback);
 }
 ```
+
+</TabItem>
+</Tabs >
