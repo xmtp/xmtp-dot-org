@@ -99,4 +99,10 @@ if (message.contentType.sameAs(ContentTypeReply)) {
 
 ### Displaying the Reply
 
-Replies should generally be displayed alongside the original message to provide context. However, the way you choose to display replies is completely up to you.
+The presentation of replies are decisions to be made by client applications. It does seem worth it to call out some reply experiences that we use today that might map well to the above proposal. They are:
+
+- Discord
+  Individual messages can get replied to, where the replies retain a link back to the originally referenced message
+- Telegram
+
+_Note that iMessage and Slack are omitted, as they follow more of a “threaded” pattern, where messages are collected into a logical grouping. There may be a separate content type proposal to explore this as a pattern, so for now, we’ll hold off._
