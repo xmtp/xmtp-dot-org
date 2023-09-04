@@ -98,6 +98,23 @@ Client.register(codec = RemoteAttachmentCodec())
 <Tabs>
 <TabItem value="javascript" label="JavaScript" attributes={{className: "js_tab"}}>
 
+Load the file, in this example im using a web browser to load the file.
+
+```jsx
+//image is the uploaded event.target.files[0];
+const data = await new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => {
+    if (reader.result instanceof ArrayBuffer) {
+      resolve(reader.result);
+    } else {
+      reject(new Error("Not an ArrayBuffer"));
+    }
+  };
+  reader.readAsArrayBuffer(image);
+});
+```
+
 Create the attachment object
 
 ```tsx
@@ -381,3 +398,4 @@ runBlocking {
 
 </TabItem>
 </Tabs>
+````
