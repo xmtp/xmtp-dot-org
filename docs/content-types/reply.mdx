@@ -18,35 +18,74 @@ You are welcome to provide feedback by commenting on the [Reply Content Type XIP
 
 :::
 
-### Install the package
+### Configure content type
 
-Use the following commands to install the package:
+In some SDK's the `ReplyCodec` is already included in the SDK. If not, you can install the package using the following command:
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+In the javascript SDK you need to import this package first.
 
 ```bash
 npm i @xmtp/content-type-reply
 ```
 
-</TabItem></Tabs>
+After importing the package you can register the codec.
 
-### Import and register
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```tsx
+```jsx
 import { ContentTypeReply, ReplyCodec } from "@xmtp/content-type-reply";
 // Create the XMTP client
 const xmtp = await Client.create(signer, { env: "dev" });
-// Register the codecs, AttachmentCodec is for handling local attachments under 1MB
 xmtp.registerCodec(new ReplyCodec());
 ```
 
-</TabItem></Tabs>
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-### Create a Reply
+The React SDK supports all current standards-track content types, but only text messages are enabled out of the box. Adding support for other standards-track content types requires a bit of configuration.
+
+```jsx
+import {
+  XMTPProvider,
+  replyContentTypeConfig,
+} from "@xmtp/react-sdk";
+
+const contentTypeConfigs = [
+  replyContentTypeConfig,
+];
+
+createRoot(document.getElementById("root") as HTMLElement).render(
+  <StrictMode>
+    <XMTPProvider contentTypeConfigs={contentTypeConfigs}>
+      <App />
+    </XMTPProvider>
+  </StrictMode>,
+);
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+Client.register(ReplyCodec());
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+import org.xmtp.android.library.codecs.ReplyCodec
+
+Client.register(codec = ReplyCodec())
+```
+
+</TabItem>
+</Tabs>
+
+### Sending a Reply
+
+Once you've created a reply, you can send it:
 
 In XMTP, replies are represented as objects with two keys:
 
@@ -62,18 +101,7 @@ const reply: Reply = {
   reference: someMessageID,
   content: "I concur",
 };
-```
 
-</TabItem></Tabs>
-
-### Sending a Reply
-
-Once you've created a reply, you can send it:
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```tsx
 await conversation.send(reply, {
   contentType: ContentTypeReply,
 });
