@@ -120,8 +120,8 @@ Create the attachment object
 ```tsx
 // Local file details
 const attachment = {
-  filename: filename,
-  mimeType: extname,
+  filename: image?.name,
+  mimeType: image?.type,
   data: new Uint8Array(data),
 };
 ```
