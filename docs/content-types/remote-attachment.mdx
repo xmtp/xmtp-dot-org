@@ -43,7 +43,7 @@ import {
 // Create the XMTP client
 const xmtp = await Client.create(signer, { env: "dev" });
 xmtp.registerCodec(new AttachmentCodec());
-xmtp.registerCodec(new ContentTypeRemoteAttachment());
+xmtp.registerCodec(new RemoteAttachmentCodec());
 ```
 
 </TabItem>
