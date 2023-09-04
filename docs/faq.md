@@ -64,7 +64,6 @@ To store encrypted and encoded message payload content:
 
 - [Lens](https://www.lens.xyz/)
   - Example implementation in [Lenster](https://github.com/lensterxyz/lenster)
-  - Tutorial: [Integrating Multiple Profiles with Lens](/blog/Integrating-Multiple-Profiles-with-Lens)
 - [CyberConnect](https://link3.to/cyberconnect)
   - Example implementation in the [CyberConnect & XMTP Integration Demo App](https://github.com/cyberconnecthq/cc-xmtp-chatapp)
   - Tutorial: [Build messaging for CyberConnect profiles](https://cyberconnect.hashnode.dev/integrating-xmtp-into-cyberconnect-a-guide)
