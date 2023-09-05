@@ -1,9 +1,9 @@
 ---
-sidebar_label: Launch your app
-sidebar_position: 10
+sidebar_label: Get featured
+sidebar_position: 14
 ---
 
-# Launch your app
+# Get featured
 
 This guide will provide essential steps and recommendations to ensure that your XMTP-based app is launched successfully, optimizes performance, and is thoroughly tested.
 
