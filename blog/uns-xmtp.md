@@ -11,13 +11,16 @@ tags:
   - Messaging
 ---
 
+import ReactPlayer from 'react-player'
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Dapps and creators can now reach their audience inside of the Unstoppable Domains apps.
 
-![Demonstrating XMTP messaging on unstoppabledomains.com](./media/XMTP_Support_Messaging.gif)
+<ReactPlayer width="100%" controls url='/img/Unstoppable-Domains.mp4' muted playing="true" alt="Demonstrating XMTP messaging in Unstoppable Domains apps" />
 
 <!--truncate-->
+
+<br/>
 
 Unstoppable Domains integrated XMTP to enable domains to message each other, right from Unstoppable’s web platform or mobile app. The new inbox allows users to connect easily and securely via end-to-end encrypted wallet messaging. Conversations are also not confined to one website — the inbox is interoperable across [all apps built with XMTP](/built-with-xmtp), which means you can stay in touch on other apps like Lenster, Coinbase Wallet, or Converse Messenger.
 
