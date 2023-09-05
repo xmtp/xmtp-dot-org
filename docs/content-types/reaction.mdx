@@ -37,7 +37,7 @@ After importing the package you can register the codec.
 import {
   ContentTypeReaction,
   ReactionCodec,
-} from "@xmtp/content-type-remote-reaction";
+} from "@xmtp/content-type-reaction";
 // Create the XMTP client
 const xmtp = await Client.create(signer, { env: "dev" });
 xmtp.registerCodec(new ReactionCodec());
