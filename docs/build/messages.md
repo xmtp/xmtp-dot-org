@@ -25,8 +25,6 @@ const conversation = await xmtp.conversations.newConversation(
 await conversation.send("Hello world");
 ```
 
-**Optimistic sending**
-
 You might want to consider [optimistically sending messages](/docs/tutorials/other/optimistic-sending). This way the app will not have to wait for the message to be processed by the network. This is especially useful for mobile apps where the user might have a spotty connection and the application continues to run with multiple threads.
 
 <Tabs groupId="sdk-langs">
@@ -35,19 +33,7 @@ You might want to consider [optimistically sending messages](/docs/tutorials/oth
 ```tsx
 // standard (string) message
 const preparedTextMessage = await conversation.prepareMessage(messageText);
-
-// custom content type
-const preparedCustomContentMessage = await conversation.prepareMessage(
-  customContent,
-  {
-    contentType,
-  },
-);
-```
-
-After preparing an optimistic message, use its `send` method to send it.
-
-```tsx
+//After preparing an optimistic message, use its `send` method to send it.
 try {
   preparedMessage.send();
 } catch (e) {

@@ -7,7 +7,8 @@ window.onload = function () {
       item.innerText === "Groups" ||
       item.innerText === "Quickstart" ||
       item.innerText === "Local-first cache" ||
-      item.innerText === "Content types" ||
+      item.innerText === "Content Types" ||
+      item.innerText === "Get featured" ||
       item.innerText === "Launch your app" ||
       item.innerText === "Debug & Test" ||
       item.innerText === "DAOs" ||
@@ -15,7 +16,6 @@ window.onload = function () {
       item.innerText === "Marketing" ||
       item.innerText === "Interactive Tutorial" ||
       item.innerText === "Developer Quickstart" ||
-      item.innerText === "Content Types" ||
       item.innerText === "Query addresses" ||
       item.innerText === "Scale" ||
       item.innerText === "Reply" ||
