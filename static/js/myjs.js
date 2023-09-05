@@ -7,6 +7,7 @@ window.onload = function () {
       item.innerText === "Groups" ||
       item.innerText === "Quickstart" ||
       item.innerText === "Local-first cache" ||
+      item.innerText === "Content types" ||
       item.innerText === "Launch your app" ||
       item.innerText === "Debug & Test" ||
       item.innerText === "DAOs" ||
@@ -18,6 +19,7 @@ window.onload = function () {
       item.innerText === "Query addresses" ||
       item.innerText === "Scale" ||
       item.innerText === "Reply" ||
+      item.innerText === "Remote Attachment" ||
       item.innerText === "Reaction" ||
       item.innerText === "Read Receipt" ||
       item.innerText === "Custom (Basic)" ||

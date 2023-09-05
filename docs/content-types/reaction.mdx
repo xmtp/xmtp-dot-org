@@ -14,44 +14,77 @@ A reaction is a quick and often emoji-based way to respond to a message. Reactio
 
 :::tip Open for feedback
 
-You are welcome to provide feedback on this implementation by commenting on the [Proposal for emoji reactions content type](https://github.com/orgs/xmtp/discussions/36).
+You are welcome to provide feedback by commenting on the [Reaction Content Type XIP](https://github.com/orgs/xmtp/discussions/36) Proposal
 
 :::
 
-:::info Reactions with React
+### Configure content type
 
-To learn how to use the reaction content type with the React SDK, see [Handle content types with the React SDK](/docs/content-types/react-content-types).
-
-:::
-
-### Install the package
+In some SDK's the `ReactionCodec` is already included in the SDK. If not, you can install the package using the following command:
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+In the javascript SDK you need to import this package first.
 
 ```bash
 npm i @xmtp/content-type-reaction
 ```
 
-</TabItem></Tabs>
+After importing the package you can register the codec.
 
-### Import and register
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```tsx
+```jsx
 import {
   ContentTypeReaction,
   ReactionCodec,
 } from "@xmtp/content-type-reaction";
 // Create the XMTP client
 const xmtp = await Client.create(signer, { env: "dev" });
-// Register the codecs, AttachmentCodec is for handling local attachments under 1MB
 xmtp.registerCodec(new ReactionCodec());
 ```
 
-</TabItem></Tabs>
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+The React SDK supports all current standards-track content types, but only text messages are enabled out of the box. Adding support for other standards-track content types requires a bit of configuration.
+
+```jsx
+import {
+  XMTPProvider,
+  reactionContentTypeConfig,
+} from "@xmtp/react-sdk";
+
+const contentTypeConfigs = [
+  reactionContentTypeConfig,
+];
+
+createRoot(document.getElementById("root") as HTMLElement).render(
+  <StrictMode>
+    <XMTPProvider contentTypeConfigs={contentTypeConfigs}>
+      <App />
+    </XMTPProvider>
+  </StrictMode>,
+);
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+Client.register(ReactionCodec());
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+import org.xmtp.android.library.codecs.ReactionCodec
+
+Client.register(codec = ReactionCodec())
+```
+
+</TabItem>
+</Tabs>
 
 ### Create a reaction
 
@@ -72,18 +105,7 @@ const reaction = {
   action: "added",
   content: "smile",
 };
-```
 
-</TabItem></Tabs>
-
-### Send a reaction
-
-Now that you have a reaction, you can send it:
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```tsx
 await conversation.send(reaction, {
   contentType: ContentTypeReaction,
 });
