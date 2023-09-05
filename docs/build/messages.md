@@ -27,7 +27,7 @@ await conversation.send("Hello world");
 
 **Optimistic sending**
 
-You might want to consider [optimistically sending messages](/docs/tutorials/optimistic-sending). This way the app will not have to wait for the message to be processed by the network. This is especially useful for mobile apps where the user might have a spotty connection and the application continues to run with multiple threads.
+You might want to consider [optimistically sending messages](/docs/tutorials/other/optimistic-sending). This way the app will not have to wait for the message to be processed by the network. This is especially useful for mobile apps where the user might have a spotty connection and the application continues to run with multiple threads.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>

@@ -22,7 +22,7 @@ import localfirst from '/docs/build/img/local-first-arch.jpeg';
 
 - When building native iOS and Android mobile apps, you can use the device's encrypted container as the local cache to store decrypted data.
 
-For more performance best practices, see [Optimize performance of your app](/docs/tutorials/launch)
+For more performance best practices, see [Optimize performance of your app](/docs/get-featured)
 
 ## Manage local data with Dexie in a web app built with xmtp-js
 

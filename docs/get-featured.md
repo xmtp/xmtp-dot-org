@@ -18,7 +18,7 @@ Before launching, ensure your app meets the following criteria:
 - [ ] Serialize securely stored **`DecodedMessage`** histories to reduce redundant downloads and decryptions.
 - [ ] Implement message [pagination](/docs/build/messages#list-messages-in-a-conversation-with-pagination).
 - [ ] [Compress message content](/docs/build/messages#compress-message-content) with a suitable compression algorithm.
-- [ ] (Bonus) Implement [optimistic sending](/docs/tutorials/optimistic-sending).
+- [ ] (Bonus) Implement [optimistic sending](/docs/tutorials/other/optimistic-sending).
 
 ### **Bugs and Reliability**
 
