@@ -9,7 +9,7 @@ import TabItem from "@theme/TabItem";
 
 # Send and list messages with XMTP
 
-The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/build/content-types).
+The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/concepts/content-types).
 
 ## Send messages
 
@@ -325,3 +325,23 @@ for await (const page of conversation.messages(limit: 25)) {
 
 </TabItem>
 </Tabs>
+
+## Handle an unsupported content type error
+
+As more [custom]/docs/concepts/content-types(#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This error could crash your app.
+
+To avoid this, code your app to detect, log, and handle the error. For example:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+const codec = xmtp.codecFor(content.contentType);
+if (!codec) {
+  const fallback = `missing codec for content type "${content.contentType.toString()}"`;
+  throw new Error(fallback);
+}
+```
+
+</TabItem>
+</Tabs >

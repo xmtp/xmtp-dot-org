@@ -34,11 +34,11 @@ Before launching, ensure your app meets the following criteria:
 
 ### Content Types
 
-- [ ] Include image [remote attachments](/docs/content-types/remote-attachment).
-- [ ] Include [message replies](/docs/content-types/reply)
-- [ ] Include [message reactions](/docs/content-types/reaction)
-- [ ] Include [read receipts](/docs/content-types/read-receipt)
-- [ ] (Bonus) Implement a [custom content type](/docs/content-types/custom-advanced)
+- [ ] Include image [remote attachments](/docs/build/messages/remote-attachment).
+- [ ] Include [message replies](/docs/build/messages/reply)
+- [ ] Include [message reactions](/docs/build/messages/reaction)
+- [ ] Include [read receipts](docs/build/messages/read-receipt)
+- [ ] (Bonus) Implement a [custom content type](/docs/tutorials/custom-ct)
 
 ### **Resolution**
 
