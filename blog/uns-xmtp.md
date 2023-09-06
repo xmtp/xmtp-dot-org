@@ -3,7 +3,7 @@ hide_table_of_contents: true
 title: "Unstoppable Domains unlocks secure customer support with new XMTP powered messaging"
 date: 2023-09-1
 authors: rochelle
-image: ./media/XMTP_Support_Messaging.gif
+image: ./media/uns-xmtp.png
 description: "Dapps and creators can now reach their audience inside of the Unstoppable Domains apps."
 tags:
   - Announcements
@@ -13,9 +13,9 @@ tags:
 
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
-Dapps and creators can now reach their audience inside of the Unstoppable Domains apps.
+### Dapps and creators can now reach their audience inside of the Unstoppable Domains apps.
 
-![Demonstrating XMTP messaging on unstoppabledomains.com](./media/XMTP_Support_Messaging.gif)
+![UNS and XMTP](./media/uns-xmtp.png)
 
 <!--truncate-->
 
