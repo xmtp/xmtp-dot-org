@@ -22,12 +22,12 @@
   {
     "name": "Optimize performance of your app",
     "image": "img/perf-arch-cover.png",
-    "href": "/docs/tutorials/launch"
+    "href": "/docs/get-featured"
   },
   {
     "name": "Optimistically send messages",
     "image": "img/with-opt-sending-cover.jpg",
-    "href": "/docs/tutorials/optimistic-sending"
+    "href": "/docs/tutorials/other/optimistic-sending"
   },
   {
     "name": "Resolve identities in your app",

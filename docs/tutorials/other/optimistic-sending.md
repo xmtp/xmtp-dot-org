@@ -14,7 +14,7 @@ This is because when a user sends a message, they typically have to wait for the
 
 Messaging without optimistic sending:
 
-![Messaging without optimistic sending. Note the slight delay after clicking Send.](img/without-opt-sending.gif)
+![Messaging without optimistic sending. Note the slight delay after clicking Send.](../img/without-opt-sending.gif)
 
 Note the slight delay after clicking **Send**.
 
@@ -22,7 +22,7 @@ Implement optimistic sending to immediately display the sent message in the send
 
 Messaging with optimistic sending:
 
-![Messaging with optimistic sending. The message displays immediately for the sender, with a checkmark indicator displaying once the message has been successfully sent.](img/with-opt-sending.gif)
+![Messaging with optimistic sending. The message displays immediately for the sender, with a checkmark indicator displaying once the message has been successfully sent.](../img/with-opt-sending.gif)
 
 The message displays immediately for the sender, with a checkmark indicator displaying once the message has been successfully sent.
 

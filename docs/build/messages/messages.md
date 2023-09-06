@@ -9,13 +9,11 @@ import TabItem from "@theme/TabItem";
 
 # Send and list messages with XMTP
 
-The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/build/content-types).
+The message payload can be a plain string, but you can configure custom content types. To learn more, see [Content types](/docs/concepts/content-types).
 
 ## Send messages
 
 To send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network.
-
-You might want to consider [optimistically sending messages](/docs/tutorials/optimistic-sending).
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -27,6 +25,24 @@ const conversation = await xmtp.conversations.newConversation(
 await conversation.send("Hello world");
 ```
 
+You might want to consider [optimistically sending messages](/docs/tutorials/other/optimistic-sending). This way the app will not have to wait for the message to be processed by the network. This is especially useful for mobile apps where the user might have a spotty connection and the application continues to run with multiple threads.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```tsx
+// standard (string) message
+const preparedTextMessage = await conversation.prepareMessage(messageText);
+//After preparing an optimistic message, use its `send` method to send it.
+try {
+  preparedMessage.send();
+} catch (e) {
+  // handle error, enable canceling and retries (see below)
+}
+```
+
+</TabItem>
+</Tabs>
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
@@ -310,99 +326,22 @@ for await (const page of conversation.messages(limit: 25)) {
 </TabItem>
 </Tabs>
 
-## Decode a single message
+## Handle an unsupported content type error
 
-You can decode a single `Envelope` from XMTP using the `decode` method:
+As more [custom]/docs/concepts/content-types(#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This error could crash your app.
 
-<Tabs groupId="sdk-langs">
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-let conversation = try await client.conversations.newConversation(
-  with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
-
-// Assume this function returns an Envelope that contains a message for the above conversation
-let envelope = getEnvelopeFromXMTP()
-
-let decodedMessage = try conversation.decode(envelope)
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-val conversation =
-    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
-
-// Assume this function returns an Envelope that contains a message for the above conversation
-val envelope = getEnvelopeFromXMTP()
-
-val decodedMessage = conversation.decode(envelope)
-```
-
-</TabItem>
-</Tabs>
-
-## Compress message content
-
-Compress message content using a supported compression algorithm.
+To avoid this, code your app to detect, log, and handle the error. For example:
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-Message content can be optionally compressed using the `compression` option. The value of the option is the name of the compression algorithm to use. Currently supported are `gzip` and `deflate`. Compression is applied to the bytes produced by the content codec.
-
-Content will be decompressed transparently on the receiving end. Note that `Client` enforces maximum content size. The default limit can be overridden through the `ClientOptions`. Consequently, a message that would expand beyond that limit on the receiving end will fail to decode.
-
-```ts
-import { Compression } from "@xmtp/xmtp-js";
-
-conversation.send("#".repeat(1000), {
-  compression: Compression.COMPRESSION_DEFLATE,
-});
+```jsx
+const codec = xmtp.codecFor(content.contentType);
+if (!codec) {
+  const fallback = `missing codec for content type "${content.contentType.toString()}"`;
+  throw new Error(fallback);
+}
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-Message content can be optionally compressed using the compression option. The value of the option is the name of the compression algorithm to use. Currently supported are gzip and deflate. Compression is applied to the bytes produced by the content codec.
-
-Content will be decompressed transparently on the receiving end. Note that `Client` enforces maximum content size. The default limit can be overridden through the `ClientOptions`. Consequently, a message that would expand beyond that limit on the receiving end will fail to decode.
-
-```swift
-try await conversation.send(text: '#'.repeat(1000), options: .init(compression: .gzip))
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-Message content can be optionally compressed using the compression option. The value of the option is the name of the compression algorithm to use. Currently supported are gzip and deflate. Compression is applied to the bytes produced by the content codec.
-
-Content will be decompressed transparently on the receiving end. Note that `Client` enforces maximum content size. The default limit can be overridden through the `ClientOptions`. Consequently, a message that would expand beyond that limit on the receiving end will fail to decode.
-
-```kotlin
-conversation.send(
-    text = '#'.repeat(1000),
-    options = ClientOptions.Api(compression = EncodedContentCompression.GZIP)
-)
-```
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-Message content can be optionally compressed using the `compression` option. The value of the option is the name of the compression algorithm to use. Currently supported are `gzip` and `deflate`. Compression is applied to the bytes produced by the content codec.
-
-Content will be decompressed transparently on the receiving end. Note that `Client` enforces maximum content size. The default limit can be overridden through the `ClientOptions`. Consequently, a message that would expand beyond that limit on the receiving end will fail to decode.
-
-```tsx
-import { Compression, ContentTypeText } from "@xmtp/react-sdk";
-
-const sendMessage = useSendMessage();
-
-await sendMessage(conversation, "#".repeat(1000), ContentTypeText, {
-  compression: Compression.COMPRESSION_DEFLATE,
-});
-```
-
-</TabItem>
-</Tabs>
+</Tabs >

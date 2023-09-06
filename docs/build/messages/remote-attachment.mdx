@@ -1,0 +1,401 @@
+---
+sidebar_label: Attachment
+sidebar_position: 6
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Remote Attachment Content Type
+
+![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Stable-31CA54)
+
+Remote attachments of any size can be sent using the `RemoteAttachmentCodec` and a storage provider.
+
+:::tip Open for feedback
+
+You are welcome to provide feedback on by commenting on the [Remote Attachment Content Type XIP](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md) Proposal.
+
+:::
+
+### Configure content type
+
+In some SDK's the `AttachmentCodec` is already included in the SDK. If not, you can install the package using the following command:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+In the javascript SDK you need to import this package first.
+
+```bash
+npm i @xmtp/content-type-remote-attachment
+```
+
+After importing the package you can register the codec.
+
+```jsx
+import {
+  ContentTypeAttachment,
+  AttachmentCodec,
+  RemoteAttachmentCodec,
+  ContentTypeRemoteAttachment,
+} from "@xmtp/content-type-remote-attachment";
+// Create the XMTP client
+const xmtp = await Client.create(signer, { env: "dev" });
+xmtp.registerCodec(new AttachmentCodec());
+xmtp.registerCodec(new RemoteAttachmentCodec());
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+The React SDK supports all current standards-track content types, but only text messages are enabled out of the box. Adding support for other standards-track content types requires a bit of configuration.
+
+```jsx
+import {
+  XMTPProvider,
+  attachmentContentTypeConfig,
+} from "@xmtp/react-sdk";
+
+const contentTypeConfigs = [
+  attachmentContentTypeConfig,
+];
+
+createRoot(document.getElementById("root") as HTMLElement).render(
+  <StrictMode>
+    <XMTPProvider contentTypeConfigs={contentTypeConfigs}>
+      <App />
+    </XMTPProvider>
+  </StrictMode>,
+);
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+Client.register(AttachmentCodec());
+Client.register(RemoteAttachmentCodec());
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+import org.xmtp.android.library.codecs.Attachment
+import org.xmtp.android.library.codecs.AttachmentCodec
+import org.xmtp.android.library.codecs.ContentTypeAttachment
+
+Client.register(codec = AttachmentCodec())
+Client.register(codec = RemoteAttachmentCodec())
+```
+
+</TabItem>
+</Tabs>
+
+### Send a remote attachment
+
+<Tabs>
+<TabItem value="javascript" label="JavaScript" attributes={{className: "js_tab"}}>
+
+Load the file, in this example im using a web browser to load the file.
+
+```jsx
+//image is the uploaded event.target.files[0];
+const data = await new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => {
+    if (reader.result instanceof ArrayBuffer) {
+      resolve(reader.result);
+    } else {
+      reject(new Error("Not an ArrayBuffer"));
+    }
+  };
+  reader.readAsArrayBuffer(image);
+});
+```
+
+Create the attachment object
+
+```tsx
+// Local file details
+const attachment = {
+  filename: image?.name,
+  mimeType: image?.type,
+  data: new Uint8Array(data),
+};
+```
+
+Use the `RemoteAttachmentCodec.encodeEncrypted` to encrypt the attachment:
+
+```tsx
+const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
+  attachment,
+  new AttachmentCodec(),
+);
+```
+
+Upload the encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage:
+
+<Tabs>
+<TabItem value="web3storage" label="Web3 Storage" attributes={{className: "web3storage_tab"}} >
+
+```tsx
+const { Web3Storage } = require("web3.storage");
+
+class Upload {
+  constructor(name, data) {
+    this.name = name;
+    this.data = data;
+  }
+
+  stream() {
+    const self = this;
+    return new ReadableStream({
+      start(controller) {
+        controller.enqueue(Buffer.from(self.data));
+        controller.close();
+      },
+    });
+  }
+}
+
+const upload = new Upload("uploadIdOfYourChoice", encryptedEncoded.payload);
+
+const web3Storage = new Web3Storage({
+  token: "YOURTOKENHERE",
+});
+
+const cid = await web3Storage.put([upload]);
+const url = `https://${cid}.ipfs.w3s.link/uploadIdOfYourChoice`;
+```
+
+</TabItem>
+<TabItem value="thirdweb" label="Thirdweb" attributes={{className: "thirdweb_tab"}}>
+
+```tsx
+import { useStorageUpload } from "@thirdweb-dev/react";
+const { mutateAsync: upload } = useStorageUpload();
+const uploadUrl = await upload({
+  //encryptedEncoded.payload.buffer is a Uint8Array
+  //We need to convert it to a File to upload it to the IPFS network
+  data: [new File([encryptedEncoded.payload.buffer], file.name)], // Convert Uint8Array back to File
+  options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
+});
+const url = uploadUrl[0];
+```
+
+</TabItem>
+</Tabs>
+
+Create a remote attachment. Now that you have a `url`, you can create a `RemoteAttachment`.
+
+```jsx
+const remoteAttachment = {
+  url: url,
+  contentDigest: encryptedEncoded.digest,
+  salt: encryptedEncoded.salt,
+  nonce: encryptedEncoded.nonce,
+  secret: encryptedEncoded.secret,
+  scheme: "https://",
+  filename: attachment.filename,
+  contentLength: attachment.data.byteLength,
+};
+```
+
+Send a remote attachment. Now that you have a remote attachment, you can send it:
+
+```tsx
+await conversation.send(remoteAttachment, {
+  contentType: ContentTypeRemoteAttachment,
+});
+```
+
+</TabItem>
+
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Create the attachment object
+
+```swift
+let attachment = Attachment(
+  filename: "screenshot.png",
+  mimeType: "image/png",
+  data: Data(somePNGData)
+)
+```
+
+Encode and encrypt an attachment for transport
+
+```swift
+// Encode the attachment and encrypt that encoded content
+const encryptedAttachment = try RemoteAttachment.encodeEncrypted(
+	content: attachment,
+	codec: AttachmentCodec()
+)
+```
+
+Upload the encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage:
+
+```swift
+func upload(data: Data, token: String): String {
+  let url = URL(string: "https://api.web3.storage/upload")!
+  var request = URLRequest(url: url)
+  request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+  request.addValue("XMTP", forHTTPHeaderField: "X-NAME")
+  request.httpMethod = "POST"
+
+  let responseData = try await URLSession.shared.upload(for: request, from: data).0
+  let response = try JSONDecoder().decode(Web3Storage.Response.self, from: responseData)
+
+  return "https://\(response.cid).ipfs.w3s.link"
+}
+
+let url = upload(data: encryptedAttachment.payload, token: YOUR_WEB3_STORAGE_TOKEN)
+```
+
+Create a remote attachment from an attachment
+
+```swift
+let remoteAttachment = try RemoteAttachment(
+  url: url,
+  encryptedEncodedContent: encryptedEncodedContent
+)
+```
+
+Send a remote attachment and set the contentType
+
+```swift
+try await conversation.send(
+	content: remoteAttachment,
+	options: .init(
+		contentType: ContentTypeRemoteAttachment,
+		contentFallback: "a description of the image"
+	)
+)
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+Create the attachment object
+
+```kotlin
+val attachment = Attachment(
+filename = "test.txt",
+mimeType = "text/plain",
+data = "hello world".toByteStringUtf8(),
+)
+```
+
+Encode and encrypt an attachment for transport
+
+```kotlin
+val encodedEncryptedContent = RemoteAttachment.encodeEncrypted(
+content = attachment,
+codec = AttachmentCodec(),
+)
+```
+
+Create a remote attachment from an attachment
+
+```kotlin
+val remoteAttachment = RemoteAttachment.from(
+    encryptedEncodedContent = encodedEncryptedContent
+)
+remoteAttachment.contentLength = attachment.data.size()
+remoteAttachment.filename = attachment.filename
+```
+
+Send a remote attachment and set the contentType
+
+```kotlin
+val newConversation = client.conversations.newConversation(walletAddress)
+
+newConversation.send(
+content = remoteAttachment,
+options = SendOptions(contentType = ContentTypeRemoteAttachment),
+)
+```
+
+</TabItem>
+</Tabs>
+
+## Receive, decode, and decrypt a remote attachment
+
+Now that you can receive a remote attachment, you need a way to receive a remote attachment. For example:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```tsx
+if (message.contentType.sameAs(RemoteAttachmentContentType)) {
+  const attachment = await RemoteAttachmentCodec.load(message.content, client);
+}
+```
+
+You now have the original attachment:
+
+```bash
+attachment.filename // => "screenshot.png"
+attachment.mimeType // => "image/png",
+attachment.data // => [the PNG data]
+```
+
+Once you have the attachment object created, you can also create a preview for what to show in a message input before sending:
+
+```tsx
+const objectURL = URL.createObjectURL(
+  new Blob([Buffer.from(attachment.data)], {
+    type: attachment.mimeType,
+  }),
+);
+
+const img = document.createElement("img");
+img.src = objectURL;
+img.title = attachment.filename;
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let attachment: Attachment = try await remoteAttachment.content()
+```
+
+You now have the original attachment:
+
+```swift
+attachment.filename // => "screenshot.png"
+attachment.mimeType // => "image/png",
+attachment.data // => [the PNG data]
+```
+
+Once you have the attachment object created, you can also create a preview for what to show in a message input before sending:
+
+```swift
+import UIKIt
+import SwiftUI
+
+struct ContentView: View {
+	var body: some View {
+		Image(uiImage: UIImage(data: attachment.data))
+	}
+}
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val message = newConversation.messages().first()
+val loadedRemoteAttachment: RemoteAttachment = messages.content()
+loadedRemoteAttachment.fetcher = Fetcher()
+runBlocking {
+  val attachment: Attachment = loadedRemoteAttachment.load()
+}
+```
+
+</TabItem>
+</Tabs>
+````

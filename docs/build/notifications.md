@@ -52,6 +52,39 @@ Perform this setup to understand how you might want to enable push notifications
 
 5. You should now be able to see push notifications coming across the local network.
 
+## Decode a notification envelope
+
+You can decode a single `Envelope` from XMTP using the `decode` method:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let conversation = try await client.conversations.newConversation(
+  with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
+
+// Assume this function returns an Envelope that contains a message for the above conversation
+let envelope = getEnvelopeFromXMTP()
+
+let decodedMessage = try conversation.decode(envelope)
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val conversation =
+    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
+
+// Assume this function returns an Envelope that contains a message for the above conversation
+val envelope = getEnvelopeFromXMTP()
+
+val decodedMessage = conversation.decode(envelope)
+```
+
+</TabItem>
+</Tabs>
+
 ## React Native
 
 In addition to providing push notifications for new messages, provide them for new conversations. To learn more, see [A practical guide to building a push notification client](https://github.com/xmtp/example-notification-server-go/blob/main/docs/notifications-client-guide.md). This guide is based on a React Native example, but can serve as a reference for how you might provide a notification client in your language of choice.
