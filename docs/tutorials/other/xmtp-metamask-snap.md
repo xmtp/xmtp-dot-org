@@ -15,7 +15,7 @@ When you install the Snap, you give it permission to store your XMTP user keys i
 
 Use [MetaMask](https://metamask.io/) to sign in to any web app built with XMTP that supports MetaMask Snaps. [View supported apps](https://github.com/xmtp/snap)
 
-- If this is your first time using an app built with XMTP, you’ll be prompted to sign with your wallet account to create and enable an XMTP identity and generate your user keys. You’ll then be given the option to install Sign in with XMTP and store your user keys in MetaMask secure storage.
+- If this is your first time using an app built with XMTP, you’ll be given the option to install Sign in with XMTP to securely store your user keys. You’ll then be prompted to sign with your wallet account to create and enable an XMTP identity and generate your user keys. Your user keys will then be stored in MetaMask secure storage.
 
 - If this isn’t your first time using an app built with XMTP, you’ll be given the option to install Sign in with XMTP to securely store your user keys. You’ll then be prompted to sign with your wallet account to enable your XMTP identity and provide your user keys for secure storage.
 
