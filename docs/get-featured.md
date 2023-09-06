@@ -5,7 +5,7 @@ sidebar_position: 14
 
 # Get featured
 
-To be featured on the Built with XMTP page and receive amplification from XMTP's social channels, follow the checklist to provide a best-in-class messaging experience with your clients.
+To be featured on the Built with XMTP page and receive amplification from XMTP's social channels, follow the checklist to provide a best-in-class messaging experience with your client.
 
 ## **A. Quality Checklist**
 
