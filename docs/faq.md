@@ -302,7 +302,7 @@ The XMTP community can propose and adopt standards for other content types, eith
 
 Message payloads also include references to timestamps. However, timestamps are not currently independently verified and can be set to any value by the sending app.
 
-To learn more about content types, see [Content types](/docs/build/content-types).
+To learn more about content types, see [Content types](/docs/concepts/content-types).
 
 To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md)
 
@@ -317,7 +317,7 @@ Yes, via two XMTP improvement proposals that are currently in review status:
 
 To learn more about how to implement message attachments in your app, see:
 
-- For apps using the JavaScript client SDK (`xmtp-js`), see [Remote attachment content type](/docs/content-types/remote-attachment).
+- For apps using the JavaScript client SDK (`xmtp-js`), see [Remote attachment content type](/docs/build/messages/remote-attachment).
 
 - For apps using the Swift client SDK (`xmtp-ios`), see [Send a remote attachment](https://github.com/xmtp/xmtp-ios#send-a-remote-attachment).
 

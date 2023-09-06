@@ -81,7 +81,8 @@ await conversation.send("gm");
 
 </TabItem>
 </Tabs>
-### [Composite content type](/docs/content-types/composite)
+
+### Composite content type
 
 If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
 
@@ -106,7 +107,8 @@ Here are standards-track content types that you can review, test, and adopt in y
 
 Use to send an attachment smaller than 1MB using the `AttachmentCodec`. The codec automatically encrypts the attachment and uploads it to the XMTP network.
 
-- [Read the doc](/docs/content-types/attachment)
+<!-- - [Read the doc](/docs/content-types/attachment)-->
+
 - [Comment on the XIP](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-15-attachment-content-type.md)
 - SDK support: [React](https://github.com/xmtp/xmtp-web/tree/8a248eab168eba494909d7215cffba9d50c1f87c/packages/react-sdk/src/helpers/caching/contentTypes), [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/library/src/main/java/org/xmtp/android/library/codecs), [Swift](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs)
 
@@ -114,7 +116,7 @@ Use to send an attachment smaller than 1MB using the `AttachmentCodec`. The code
 
 Use to send a remote attachment of any size using the `RemoteAttachmentCodec` and a storage provider.
 
-- [Read the doc](/docs/content-types/remote-attachment)
+- [Read the doc](/docs/build/messages/remote-attachment)
 - [Comment on the XIP](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md)
 - SDK support: [React](https://github.com/xmtp/xmtp-web/tree/8a248eab168eba494909d7215cffba9d50c1f87c/packages/react-sdk/src/helpers/caching/contentTypes), [JavaScript](https://github.com/xmtp/xmtp-js-content-types/tree/363e82c894f5a4436c5617b1c0424bab574b27c0/packages), [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/library/src/main/java/org/xmtp/android/library/codecs), [Swift](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs)
 - Implemented in: Converse, Lenster
@@ -123,7 +125,7 @@ Use to send a remote attachment of any size using the `RemoteAttachmentCodec` an
 
 Use to send a read receipt, which is a `timestamp` that indicates when a message was read. The read receipt is sent as a message and you can use it to calculate the time since the last message was read.
 
-- [Read the doc](/docs/content-types/read-receipt)
+- [Read the doc](/docs/build/messages/read-receipt)
 - [Comment on the XIP idea](https://github.com/orgs/xmtp/discussions/43)
 - SDK support: [React](https://github.com/xmtp/xmtp-web/tree/8a248eab168eba494909d7215cffba9d50c1f87c/packages/react-sdk/src/helpers/caching/contentTypes), [JavaScript](https://github.com/xmtp/xmtp-js-content-types/tree/363e82c894f5a4436c5617b1c0424bab574b27c0/packages), [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/library/src/main/java/org/xmtp/android/library/codecs), [Swift](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs)
 
@@ -131,7 +133,7 @@ Use to send a read receipt, which is a `timestamp` that indicates when a message
 
 Use a reaction to send a quick and often emoji-based way to respond to a message. Reactions are usually limited to a predefined set of emojis or symbols provided by the messaging app.
 
-- [Read the doc](/docs/content-types/reaction)
+- [Read the doc](/docs/build/messages/reaction)
 - [Comment on the XIP idea](https://github.com/orgs/xmtp/discussions/36)
 - SDK support: [React](https://github.com/xmtp/xmtp-web/tree/8a248eab168eba494909d7215cffba9d50c1f87c/packages/react-sdk/src/helpers/caching/contentTypes), [JavaScript](https://github.com/xmtp/xmtp-js-content-types/tree/363e82c894f5a4436c5617b1c0424bab574b27c0/packages), [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/library/src/main/java/org/xmtp/android/library/codecs), [Swift](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs)
 - Implemented in: Converse
@@ -140,7 +142,7 @@ Use a reaction to send a quick and often emoji-based way to respond to a message
 
 Use a reply to send a direct response to a specific message in a conversation. Users can select and reply to a particular message instead of sending a new one.
 
-- [Read the doc](/docs/content-types/reply)
+- [Read the doc](/docs/build/messages/reply)
 - [Comment on the XIP idea](https://github.com/orgs/xmtp/discussions/35)
 - SDK support: [React](https://github.com/xmtp/xmtp-web/tree/8a248eab168eba494909d7215cffba9d50c1f87c/packages/react-sdk/src/helpers/caching/contentTypes), [JavaScript](https://github.com/xmtp/xmtp-js-content-types/tree/363e82c894f5a4436c5617b1c0424bab574b27c0/packages), [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/library/src/main/java/org/xmtp/android/library/codecs), [Swift](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs)
 
@@ -169,30 +171,10 @@ Fallback plain text is "alt text"-like description text that you can associate w
 
 Here are tutorials you can use to learn how to create custom content types:
 
-### [Basic: Multiply a number](/docs/content-types/custom)
+### [Basic: Multiply a number](/docs/tutorials/custom-ct)
 
 Create a custom content type used to multiply numbers.
 
-### [Advanced: Send a Polygon transaction](/docs/content-types/custom-advanced)
+### [Advanced: Send a Polygon transaction](/docs/tutorials/custom-ct)
 
 Create a custom content type used to send transaction hashes on the Polygon blockchain.
-
-## Handle an unsupported content type error
-
-As more [custom](#create-a-custom-content-type) and [standards-track](#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This error could crash your app.
-
-To avoid this, code your app to detect, log, and handle the error. For example:
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```jsx
-const codec = xmtp.codecFor(content.contentType);
-if (!codec) {
-  const fallback = `missing codec for content type "${content.contentType.toString()}"`;
-  throw new Error(fallback);
-}
-```
-
-</TabItem>
-</Tabs >
