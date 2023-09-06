@@ -8,6 +8,7 @@ window.onload = function () {
       item.innerText === "Quickstart" ||
       item.innerText === "Local-first cache" ||
       item.innerText === "Content Types" ||
+      item.innerText === "Custom Content Types" ||
       item.innerText === "Get featured" ||
       item.innerText === "Launch your app" ||
       item.innerText === "Debug & Test" ||

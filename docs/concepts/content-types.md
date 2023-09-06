@@ -36,7 +36,6 @@ Here are the current standard content types:
 
 An app built with XMTP uses the `TextCodec` (plain text) standard content type by default. This means that if your app is sending plain text messages only, you don’t need to perform any additional steps related to content types.
 
-<!--
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
@@ -86,7 +85,6 @@ await conversation.send("gm");
 
 If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
 
-<!--
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
@@ -96,7 +94,7 @@ import { CompositeCodec } from "@xmtp/xmtp-js";
 xmtp.registerCodec(new CompositeCodec());
 ```
 
-</TabItem></Tabs>-->
+</TabItem></Tabs>
 
 ## Standards-track content types
 
@@ -104,7 +102,6 @@ A standards-track content type is one that is being actively reviewed for adopti
 
 Here are standards-track content types that you can review, test, and adopt in your app today:
 
-<!--
 ### Attachment content type
 
 Use to send an attachment smaller than 1MB using the `AttachmentCodec`. The codec automatically encrypts the attachment and uploads it to the XMTP network.
@@ -112,7 +109,6 @@ Use to send an attachment smaller than 1MB using the `AttachmentCodec`. The code
 - [Read the doc](/docs/content-types/attachment)
 - [Comment on the XIP](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-15-attachment-content-type.md)
 - SDK support: [React](https://github.com/xmtp/xmtp-web/tree/8a248eab168eba494909d7215cffba9d50c1f87c/packages/react-sdk/src/helpers/caching/contentTypes), [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/library/src/main/java/org/xmtp/android/library/codecs), [Swift](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs)
--->
 
 ### Remote attachment content type
 
