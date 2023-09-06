@@ -84,6 +84,11 @@ Client.register(codec = ReactionCodec())
 ```
 
 </TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+React Native SDK already has the codecs registered.
+
+</TabItem>
 </Tabs>
 
 ### Create a reaction
@@ -95,6 +100,8 @@ With XMTP, reactions are represented as objects with the following keys:
 - `action`: The action of the reaction (added or removed)
 
 - `content`: A string representation of a reaction (e.g. smile) to be interpreted by clients
+
+- `schema`: The schema of the reaction (unicode, shortcode, or custom)
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -111,6 +118,23 @@ await conversation.send(reaction, {
 });
 ```
 
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+// Assuming you have a conversation object and the ID of the message you're reacting to
+const reactionContent = {
+  reaction: {
+    reference: messageId, // ID of the message you're reacting to
+    action: "added", // Action can be 'added' or 'removed'
+    schema: "unicode", // Schema can be 'unicode', 'shortcode', or 'custom'
+    content: "👍", // Content of the reaction
+  },
+};
+
+await conversation.send(reactionContent);
+```
+
 </TabItem></Tabs>
 
 ### Receive a reaction
@@ -124,6 +148,25 @@ Now that you can send a reaction, you need a way to receive a reaction. For exam
 if (message.contentType.sameAs(ContentTypeReaction)) {
   // We've got a reaction.
   const reaction: Reaction = message.content;
+}
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+function MessageContents({ content }: { content: MessageContent }) {
+  if (content.reaction) {
+    // This is a reaction
+    const reactionContent = content.reaction.content;
+    const messageId = content.reaction.reference;
+    const action = content.reaction.action;
+    const schema = content.reaction.schema;
+
+    // Handle the reaction content, the referenced message ID, the action, and the schema
+    // ...
+  }
+  // ...
 }
 ```
 

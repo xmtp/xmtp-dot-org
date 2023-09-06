@@ -91,6 +91,11 @@ Client.register(codec = RemoteAttachmentCodec())
 ```
 
 </TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+React Native SDK already has the codecs registered.
+
+</TabItem>
 </Tabs>
 
 ### Send a remote attachment
@@ -319,6 +324,36 @@ options = SendOptions(contentType = ContentTypeRemoteAttachment),
 ```
 
 </TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Encrypting the Attachment
+
+```jsx
+const encryptedAttachment = await client.encryptAttachment({
+  fileUri: "file://path/to/file",
+  mimeType: "image/jpeg",
+});
+```
+
+The upload process is not covered in the provided code, but you would typically use a library or SDK provided by your cloud storage provider. The URL of the uploaded file is then used to create a RemoteAttachmentContent object.
+
+```jsx
+const remoteAttachment: RemoteAttachmentContent = {
+  ...encryptedAttachment.metadata,
+  scheme: "https://",
+  url: "https://ipfs/path/to/file",
+};
+```
+
+Sending the Message: The RemoteAttachmentContent object is then included in the message content when sending the message.
+
+```jsx
+await convo.send({
+  remoteAttachment,
+});
+```
+
+</TabItem>
 </Tabs>
 
 ## Receive, decode, and decrypt a remote attachment
@@ -397,5 +432,21 @@ runBlocking {
 ```
 
 </TabItem>
+
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+On the receiving end, the remoteAttachment field of the message content is checked. If it exists, the encrypted file is downloaded and decrypted using the decryptAttachment method of the Client class.
+
+```jsx
+if (message.content.remoteAttachment) {
+  const decryptedAttachment = await client.decryptAttachment({
+    encryptedLocalFileUri: `file://${downloadedFilePath}`,
+    metadata: message.content.remoteAttachment,
+  });
+}
+```
+
+Displaying the Attachment: After decryption, the file can be displayed to the user. The provided code includes a React component RemoteAttachmentMessageContents that displays an image if the decrypted file is available, and a download button otherwise.
+
+</TabItem>
 </Tabs>
-````

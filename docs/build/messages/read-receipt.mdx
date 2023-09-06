@@ -18,7 +18,7 @@ You are welcome to provide feedback by commenting on the [Read Receipts Content 
 
 :::
 
-### Install the package
+### Configure content type
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -27,12 +27,7 @@ You are welcome to provide feedback by commenting on the [Read Receipts Content 
 npm i @xmtp/content-type-read-receipt
 ```
 
-</TabItem></Tabs>
-
-### Import and register
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+Import and register
 
 ```tsx
 import {
@@ -44,10 +39,16 @@ const xmtp = await Client.create(signer, { env: "dev" });
 xmtp.registerCodec(new ReadReceiptCodec());
 ```
 
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+React Native SDK already has the codecs registered.
+
 </TabItem></Tabs>
 
-### Create a Read Receipt
+### Sending a Read Receipt
 
+- `messageId`: The message id of the message that was read
 - `timestamp`: The timestamp the read receipt was sent, in ISO 8601 format
 
 <Tabs groupId="sdk-langs">
@@ -55,26 +56,19 @@ xmtp.registerCodec(new ReadReceiptCodec());
 
 ```tsx
 const readReceipt: ReadReceipt = {
-  /**
-   * The timestamp the read receipt was sent, in ISO 8601 format
-   */
-  timestamp: dateString,
+  timestamp: new Date().toISOString();
 };
 ```
 
-</TabItem></Tabs>
-
-### Sending a Read Receipt
-
 Once you've created a read receipt, you can send it:
 
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
 ```tsx
-await conversation.send(readReceipt, {
-  contentType: ContentTypeReadReceipt,
-});
+await conversation.messages.send(
+  {
+    timestamp: new Date().toISOString(),
+  },
+  ContentTypeReadReceipt,
+);
 ```
 
 </TabItem></Tabs>

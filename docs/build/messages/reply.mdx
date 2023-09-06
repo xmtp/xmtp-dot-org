@@ -81,6 +81,12 @@ Client.register(codec = ReplyCodec())
 ```
 
 </TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+React Native SDK already has the codecs registered.
+
+</TabItem>
+
 </Tabs>
 
 ### Sending a Reply
@@ -107,6 +113,37 @@ await conversation.send(reply, {
 });
 ```
 
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+// Assuming you have a conversation object and the ID of the message you're replying to
+const replyContent = {
+  reply: {
+    reference: messageId, // ID of the message you're replying to
+    content: {
+      text: "This is a reply", // Content of the reply
+    },
+  },
+};
+
+await conversation.send(replyContent);
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+var parentMessageId = "abc123"; // The ID of the message you're replying to
+var replyContent = DecodedContent(contentTypeText, "This is my reply"); // The content of your reply
+
+// Create a Reply instance
+var reply = Reply(parentMessageId, replyContent);
+
+// Send the reply
+await client.sendMessage(conversation, reply, contentType: contentTypeReply);
+```
+
 </TabItem></Tabs>
 
 ### Receiving a Reply
@@ -123,7 +160,36 @@ if (message.contentType.sameAs(ContentTypeReply)) {
 }
 ```
 
-</TabItem></Tabs>
+</TabItem>
+
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+function MessageContents({ content }: { content: MessageContent }) {
+  if (content.reply) {
+    // This is a reply
+    const replyContent = content.reply.content;
+    const messageId = content.reply.reference;
+
+    // Handle the reply content and the referenced message ID
+    // ...
+  }
+  // ...
+}
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+if (message.content is Reply) {
+    var reply = message.content as Reply;
+    print('Received a reply to message ${reply.reference}: ${reply.content.content}');
+}
+```
+
+</TabItem>
+</Tabs>
 
 ### Displaying the Reply
 
