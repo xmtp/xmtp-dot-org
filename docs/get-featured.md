@@ -5,7 +5,7 @@ sidebar_position: 14
 
 # Get featured
 
-This guide will provide essential steps and recommendations to ensure that your XMTP-based app is launched successfully, optimizes performance, and is thoroughly tested.
+To be featured on the Built with XMTP page and receive amplification from XMTP's social channels, follow the checklist to provide a best-in-class messaging experience with your clients.
 
 ## **A. Quality Checklist**
 
@@ -81,4 +81,4 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 ## C. **Post-Launch Engagement**
 
 - [ ] Keep in touch using the [XMTP community platform](/docs/contribute) that works best for you. This helps ensure that you hear about the latest SDK and content type releases, as well as upgrade and deprecation notices.
-- [ ] Message `prxshant.eth` using [xmtp.chat](https://xmtp.chat/) to share your app metrics. Let’s test hypotheses and learn together to help ensure interaction success and improve XMTP for all.
+- [ ] Message `prxshant.eth` using ([xmtp.chat](https://xmtp.chat/), [Converse](https://converse.xyz/), [Coinbase Wallet](https://www.coinbase.com/wallet), etc.) to share your app metrics. Let’s test hypotheses and learn together to help ensure interaction success and improve XMTP for all.
