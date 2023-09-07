@@ -6,7 +6,7 @@ sidebar_position: 6
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Reply content type
+# Reply Content Type
 
 ![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Beta-yellow)
 
@@ -14,7 +14,7 @@ A reply is a method to directly respond to a specific message in a conversation.
 
 :::tip Open for feedback
 
-You are welcome to provide feedback by commenting on the XIP idea: [Proposal for Reply content type](https://github.com/orgs/xmtp/discussions/35).
+You are welcome to provide feedback by commenting on the [Reply Content Type XIP](https://github.com/orgs/xmtp/discussions/35) Proposal.
 
 :::
 
@@ -83,7 +83,7 @@ Client.register(codec = ReplyCodec())
 </TabItem>
 </Tabs>
 
-### Send a reply
+### Sending a Reply
 
 Once you've created a reply, you can send it:
 
@@ -109,7 +109,7 @@ await conversation.send(reply, {
 
 </TabItem></Tabs>
 
-### Receive a reply
+### Receiving a Reply
 
 Here's how you can receive a reply:
 
@@ -125,12 +125,12 @@ if (message.contentType.sameAs(ContentTypeReply)) {
 
 </TabItem></Tabs>
 
-### Display a reply
+### Displaying the Reply
 
-The presentation of replies is a decision to be made by client apps. It does seem worth it to call out some reply experiences that we use today that might map well to the above proposal. They are:
+The presentation of replies are decisions to be made by client applications. It does seem worth it to call out some reply experiences that we use today that might map well to the above proposal. They are:
 
-- Discord  
+- Discord
   Individual messages can get replied to, where the replies retain a link back to the originally referenced message
 - Telegram
 
-_Note that iMessage and Slack are omitted, as they follow more of a “threaded” pattern, where messages are collected into logical groupings. A separate content type proposal may be introduced to explore this pattern._
+_Note that iMessage and Slack are omitted, as they follow more of a “threaded” pattern, where messages are collected into a logical grouping. There may be a separate content type proposal to explore this as a pattern, so for now, we’ll hold off._

@@ -1,12 +1,12 @@
 ---
-sidebar_label: Read receipt
+sidebar_label: Read Receipt
 sidebar_position: 7
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Read receipt content type
+# Read Receipt Content Type
 
 ![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Beta-yellow)
 
@@ -14,7 +14,7 @@ A read receipt is a `timestamp` that indicates when a message was read. It is se
 
 :::tip Open for feedback
 
-You are welcome to provide feedback by commenting on the XIP idea: [Proposal for read receipts content type](https://github.com/orgs/xmtp/discussions/43).
+You are welcome to provide feedback by commenting on the [Read Receipts Content Type XIP](https://github.com/orgs/xmtp/discussions/43) Proposal.
 
 :::
 
@@ -46,7 +46,7 @@ xmtp.registerCodec(new ReadReceiptCodec());
 
 </TabItem></Tabs>
 
-### Create a read receipt
+### Create a Read Receipt
 
 - `timestamp`: The timestamp the read receipt was sent, in ISO 8601 format
 
@@ -64,7 +64,7 @@ const readReceipt: ReadReceipt = {
 
 </TabItem></Tabs>
 
-### Send a read receipt
+### Sending a Read Receipt
 
 Once you've created a read receipt, you can send it:
 
@@ -79,7 +79,7 @@ await conversation.send(readReceipt, {
 
 </TabItem></Tabs>
 
-### Receive a read receipt
+### Receiving a Read Receipt
 
 Here's how you can receive a reply:
 
@@ -95,9 +95,9 @@ if (message.contentType.sameAs(ContentTypeReadReceipt)) {
 
 </TabItem></Tabs>
 
-### Use a read receipt timestamp
+### Displaying the Read Receipt
 
-A read receipt timestamp should not be displayed but instead used to calculate the time since the last message was read. While iterating through messages you can be sure that the last message was read at the timestamp of the read receipt if the string of the date is lower.
+A read receipt timestamp should be not display but instead used to calculate the time since the last message was read. While iterating through messages you can be sure that the last message was read at the timestamp of the read receipt if the string if the date is lower.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
