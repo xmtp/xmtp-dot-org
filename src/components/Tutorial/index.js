@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import App from "../../../tutorial/App";
+import "../../../tutorial/index.css";
 
 const Tutorial = () => {
   const [url, setUrl] = useState(
@@ -33,13 +35,7 @@ const Tutorial = () => {
     observer.observe(document.querySelector("html"), config);
   }, []);
 
-  return (
-    <iframe
-      allow="cross-origin-isolated"
-      src={url}
-      width="100%"
-      style={{ height: "100vh" }}></iframe>
-  );
+  return <App />;
 };
 
 export default Tutorial;

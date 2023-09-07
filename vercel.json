@@ -4,14 +4,6 @@
       "source": "/docs/interactive-tutorial",
       "headers": [
         {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        },
-        {
-          "key": "Expires",
-          "value": "0"
-        },
-        {
           "key": "Cross-Origin-Embedder-Policy",
           "value": "require-corp"
         },

@@ -1,0 +1,30 @@
+{
+  "header": "Get started building with XMTP",
+  "subheader": "Learn about the core code you need to build basic messaging. This tutorial makes real-time calls to the XMTP dev network. Use a desktop browser for the best experience.",
+  "steps": {
+    "2": {
+      "header": "Initialize the sender wallet",
+      "subheader": "Create a sender demo wallet using ethers and activate it on the XMTP network. A wallet address must be activated to exchange messages."
+    },
+    "3": {
+      "header": "Create a sender client",
+      "subheader": "To create a client, pass in an activated address that implements the Signer interface. In this case, we pass in the sender address we just activated."
+    },
+    "4": {
+      "header": "Check if an address is activated",
+      "subheader": "Here, we’ve created a recipient demo wallet and activated it on the network. Run this code to verify that the wallet address is activated. You can swap out the demo address with your own activated address. You’ll send a message to yourself in a later step."
+    },
+    "5": {
+      "header": "Create a conversation",
+      "subheader": "Create a conversation between the two addresses. The topic value in the response is the name of the conversation topic that stores the messages exchanged between the addresses."
+    },
+    "6": {
+      "header": "Send a message",
+      "subheader": "Send a message from the sender address to the recipient address, or your own address if you swapped it out earlier. You can modify the `hellooooo` message text."
+    },
+    "7": {
+      "header": "View messages in a conversation",
+      "subheader": "Run this code to list the conversation’s message history. If you sent a message to your own address, sign in to https://dev.xmtp.chat to see the message."
+    }
+  }
+}
