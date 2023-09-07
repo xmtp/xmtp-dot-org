@@ -54,43 +54,43 @@ const tags = {
 
 export const BLOG_DATA = [
   {
-    tag: [tags.decentralization, tags.docs],
-    title: "Say hello to a seamless journey for building chat apps",
+    tag: [tags.announcements, tags.developers, tags.hackathon, tags.messaging],
+    title: "The Crypto Cornerstore at ETH NYC",
     content:
-      "We are incredibly excited to announce the launch of the completely revamped XMTP developer documentation!",
+      "This September we're teaming up with ENS to run a crypto corner store at ETH Global NYC, powered by XMTP.",
+    user: {
+      name: "Rochelle",
+      date: "7 Sep 2023 · 3 min read",
+      img: "rochelle-headshot.jpeg",
+      url: "https://x.com/RochelleSophie_",
+    },
+    url: "/blog/cornerstore",
+  },
+  {
+    tag: [tags.announcements, tags.builtwithxmtp, tags.messaging],
+    title: "Unstoppable Domains unlocks secure customer support with new XMTP powered messaging",
+    content:
+      "Dapps and creators can now reach their audience inside of the Unstoppable Domains apps.",
+    user: {
+      name: "Rochelle",
+      date: "1 Sep 2023 · 3 min read",
+      img: "rochelle-headshot.jpeg",
+      url: "https://x.com/RochelleSophie_",
+    },
+    url: "/blog/uns-xmtp",
+  },
+  {
+    tag: [tags.announcements, tags.developers, tags.hackathon],
+    title: "Before and after ETH Paris: the future of web3 and secure, private messaging",
+    content:
+      "A huge thank you to everyone who participated and made ETH Paris such an exciting event!",
     user: {
       name: "Fabri",
-      date: "1 Jul 2023 · 4 min read",
+      date: "26 Jul 2023 · 4 min read",
       img: "fabri.jpeg",
       url: "https://x.com/fabriguespe",
     },
-    url: "/blog/docsv2",
-  },
-  {
-    tag: [tags.developers, tags.hackathon, tags.canada],
-    title: "ETH Waterloo Winning Apps",
-    content:
-      "Last Saturday, we had the incredible opportunity to attend ETH Waterloo. For those who may not know, Vitalik went to college in Waterloo, and the first ETH Global event was also held there.",
-    user: {
-      name: "Fabri",
-      date: "30 Jun 2023 · 3 min read",
-      img: "fabri.jpeg",
-      url: "https://x.com/fabriguespe",
-    },
-    url: "/blog/eth-waterloo-2023",
-  },
-  {
-    tag: [tags.developers, tags.messaging],
-    title: "Build a feedback widget for your website",
-    content:
-      "I have a feeling that most of you reading this have experienced that magic when collaboration, innovation, and plain ol' FUN converge in a project you're working on.",
-    user: {
-      name: "J-Ha",
-      date: "22 Jun 2023 · 4 min read",
-      img: "jhaaaa.jpeg",
-      url: "https://x.com/j_ha",
-    },
-    url: "/blog/feedback-widget",
+    url: "/blog/eth-paris",
   },
 ];
 
