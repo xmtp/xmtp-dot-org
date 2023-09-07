@@ -22,7 +22,7 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 <!--truncate-->
 
-Some of you might remember the Base cafe we hosted with Coinbase Wallet in July at ETH Paris. Anyone could place their order by texting an ENS we had set up, and pay for it in-chat using USDC. All gas-free on BASE. 
+Some of you might remember the [Base cafe](https://twitter.com/CoinbaseWallet/status/1683940629104001025) we hosted with Coinbase Wallet in July at ETH Paris. Anyone could place their order by texting an ENS we had set up, and pay for it in-chat using USDC. All gas-free on BASE. 
 
 Secure wallet messaging unlocks real utility, that can sometimes feel like magic because of the current systems we’re used to. For example: 
 
