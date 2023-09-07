@@ -1,9 +1,9 @@
 ---
-sidebar_label: GO Notifications Server
+sidebar_label: Go notifications server
 sidebar_position: 2
 ---
 
-# Setup Guide for XMTP Notification Server
+# Setup guide for XMTP notifications server
 
 This guide is a supplement to [core instructions](https://github.com/xmtp/example-notification-server-go/blob/np/export-kotlin-proto-code/README.md#local-setup) provided in the `example-notification-server-go` repository and aims to address some common misconceptions and issues encountered during the setup. This guide is written for macOS users, but the steps should be similar for Linux users.
 
@@ -19,9 +19,11 @@ This guide is a supplement to [core instructions](https://github.com/xmtp/exampl
    - [Windows](https://docs.docker.com/docker-for-windows/install/)
    - [Linux](https://docs.docker.com/engine/install/)
 
-:::tip
-After installation, make sure Docker is running by searching for Docker in Spotlight and opening the application. You don't need to do anything with the UI from Docker. We are going to use only terminal commands.
-:::
+   <br/>
+   
+   :::tip
+   After installation, make sure Docker is running by searching for Docker in Spotlight and opening the application. You don't need to do anything with the UI from Docker. We are going to use only terminal commands.
+   :::
 
 2. You need to have Docker and Docker Compose installed on your system. If you don't have Docker and Docker Compose installed, you can install them using Homebrew:
 
