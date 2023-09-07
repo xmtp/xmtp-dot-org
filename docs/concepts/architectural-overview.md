@@ -66,7 +66,7 @@ The primary responsibilities of a client are to:
 - Submit and retrieve public key bundles, encrypted private key bundles, encrypted invitations, and encrypted messages to and from the XMTP network.
 
 - Encode and decode message content types.  
-  To learn more, see [Content types](/docs/build/content-types).
+  To learn more, see [Content types](/docs/concepts/content-types).
 
 ### XMTP V2 topics and message presentation flow
 
@@ -221,6 +221,6 @@ With XMTP network interactions handled by the message API client, developers can
 - Inbox filtering
 
 - Custom content types  
-  To learn more, see [Content types](/docs/build/content-types).
+  To learn more, see [Content types](/docs/concepts/content-types).
 
 Developers can also help shape XMTP by participating in [XMTP Improvement Proposals (XIPs)](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) and [contributing](/docs/contribute) to XMTP SDKs and tools.
