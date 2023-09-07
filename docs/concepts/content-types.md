@@ -1,12 +1,12 @@
 ---
-sidebar_label: Content Types
+sidebar_label: Content types
 sidebar_position: 7
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Content Types with XMTP
+# Content types with XMTP
 
 When you build an app with XMTP, all messages are encoded with a content type to ensure that an XMTP client knows how to encode and decode messages, ensuring interoperability and consistent display of messages across apps.
 

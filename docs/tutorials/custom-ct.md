@@ -1,22 +1,25 @@
 ---
-sidebar_label: Custom Content-Type
+sidebar_label: Custom content type
 sidebar_position: 10
+toc_max_heading_level: 4
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Basic: Building a Custom Content Types
+# Build custom content types
 
-In this tutorials we are going to learn how to build a custom content type for the XMTP framework. We will start with a basic example of a custom content type that multiplies two numbers and then we will move on to a more advanced example of a custom content type that sends transaction hashes on the polygon blockchain. The advanced example will also show how to use the custom content type to render the transaction hash.
+In these tutorials, we are going to learn how to build custom content types for the XMTP framework. 
 
-# Basic: Multiplying Numbers
+We will start with a basic example of a custom content type that multiplies two numbers and then we will move on to a more advanced example of a custom content type that sends transaction hashes on the polygon blockchain. The advanced example will also show how to use the custom content type to render the transaction hash.
 
-This tutorial will walk you through the process of building a custom content type dedicated to multiplying numbers. For demonstration purposes, we'll create a MultiplyCodec custom content type.
+## Basic: Multiply numbers
 
-## Step 1: Creating the MultiplyCodec Content Type
+This tutorial will walk you through the process of building a custom content type dedicated to multiplying numbers. For demonstration purposes, we'll create a `MultiplyCodec` custom content type.
 
-Let's start by creating a new file xmtp-content-type-multiply-number.tsx. This file will host the MultiplyCodec class which is responsible for encoding and decoding our custom content type.
+### Step 1: Create the MultiplyCodec content type
+
+Let's start by creating a new file `xmtp-content-type-multiply-number.tsx`. This file will host the `MultiplyCodec` class which is responsible for encoding and decoding our custom content type.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -58,13 +61,13 @@ class ContentTypeMultiplyNumberCodec {
 
 </TabItem></Tabs>
 
-## Step 2: Using the Custom Content Type
+### Step 2: Use the custom content type
 
-Once the MultiplyCodec content type is defined, it's time to put it to use.
+Once the `MultiplyCodec` content type is defined, it's time to put it to use.
 
-### Import and Register Custom Content Type
+#### Import and register the custom content type
 
-Begin by importing and registering the MultiplyCodec content type.
+Begin by importing and registering the `MultiplyCodec` content type.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -83,9 +86,9 @@ xmtp.registerCodec(new ContentTypeMultiplyNumberCodec());
 
 </TabItem></Tabs>
 
-### Sending a Message Using Custom Content Type
+#### Send a message using the custom content type
 
-With your custom content type registered, you can now utilize it to send messages. This code snippet shows how to use the MultiplyCodec content type to perform multiplication operations.
+With your custom content type registered, you can now use it to send messages. This code snippet shows how to use the `MultiplyCodec` content type to perform multiplication operations.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -100,7 +103,7 @@ conversation.send(numbersToMultiply, {
 
 </TabItem></Tabs>
 
-### Rendering the Custom Content Type
+#### Render the custom content type
 
 To make use of the result of the multiplication operation, you need to add a renderer for your custom content type.
 
@@ -117,17 +120,17 @@ if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
 
 Keep in mind that any other application that intends to use your custom content type must implement it as per your definition.
 
-If your MultiplyCodec content type generates interest within the developer community, consider proposing it as a standard through the [XIP process](http://localhost:3000/docs/concepts/xips).
+If your `MultiplyCodec` content type generates interest within the developer community, consider proposing it as a standard through the [XIP process](/docs/concepts/xips).
 
 To sum up, creating a custom content type opens up new avenues for handling data within the XMTP framework, giving you the power to manage data in a more personalized or specialized way.
 
-# Advanced: Sending token transaction hashes
+## Advanced: Send token transaction hashes
 
-This tutorial will walk you through the process of building a custom content type dedicated to send transaction hashes on the polygon blockchain.
+This tutorial will walk you through the process of building a custom content type dedicated to send transaction hashes on the Polygon blockchain.
 
-## Step 1: Creating the TransactionHash Content Type
+### Step 1: Create the TransactionHash content type
 
-Let's start by creating a new file xmtp-content-type-transaction-hash.tsx. This file will host the TransactionHash class which is responsible for encoding and decoding our custom content type.
+Let's start by creating a new file `xmtp-content-type-transaction-hash.tsx`. This file will host the `TransactionHash` class which is responsible for encoding and decoding our custom content type.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -165,13 +168,13 @@ export class ContentTypeTransactionHashCodec {
 
 </TabItem></Tabs>
 
-## Step 2: Using the Custom Content Type
+### Step 2: Use the custom content type
 
-Once the TransactionHash content type is defined, it's time to put it to use.
+Once the `TransactionHash` content type is defined, it's time to put it to use.
 
-### Import and Register Custom Content Type
+#### Import and register the custom content type
 
-Begin by importing and registering the TransactionHash content type.
+Begin by importing and registering the `TransactionHash` content type.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -190,9 +193,9 @@ xmtp.registerCodec(new ContentTypeTransactionHashCodec());
 
 </TabItem></Tabs>
 
-### Sending a Transaction Hash
+#### Send a transaction hash
 
-With your custom content type registered, you can now utilize it to send hashes. This code snippet shows how to use the TransactionHash content type to send a transaction.
+With your custom content type registered, you can now utilize it to send hashes. This code snippet shows how to use the `TransactionHash` content type to send a transaction.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -241,7 +244,7 @@ await conversation
 
 </TabItem></Tabs>
 
-### Rendering the Custom Content Type
+#### Render the custom content type
 
 To make use of the result of the hash, you need to add an async renderer for your custom content type.
 
@@ -293,6 +296,6 @@ const TransactionMonitor = ({ encodedContent }) => {
 
 Keep in mind that any other application that intends to use your custom content type must implement it as per your definition.
 
-If your TransactionHash content type generates interest within the developer community, consider proposing it as a standard through the [XIP process](http://localhost:3000/docs/concepts/xips).
+If your `TransactionHash` content type generates interest within the developer community, consider proposing it as a standard through the [XIP process](/docs/concepts/xips).
 
 To sum up, creating a custom content type opens up new avenues for handling data within the XMTP framework, giving you the power to manage data in a more personalized or specialized way.

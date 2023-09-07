@@ -5,19 +5,18 @@ sidebar_position: 6
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import ReactPlayer from 'react-player'
 
-# Query XMTP enabled addresses
+# Query XMTP-enabled addresses
 
 XMTP users can only chat with other users who have XMTP-enabled addresses. Thus, it is essential that if you are building on top of XMTP to know if a user or group of users have XMTP enabled.
-
-import ReactPlayer from 'react-player'
 
 In this guide, you’ll learn how to use [Airstack](https://airstack.xyz) to:
 
 - [Check if ENS addresses have XMTP](#query-0x-address-or-ens-if-xmtp-is-enabled)
-- [Check if Lens addresses have XMTP](##bulk-query-lens-profiles-if-xmtp-is-enabled)
+- [Check if Lens addresses have XMTP](#bulk-query-lens-profiles-if-xmtp-is-enabled)
 - [Check if Farcaster addresses have XMTP](#bulk-query-farcaster-name-or-id-if-xmtp-is-enabled)
-- [Check if NFT or Token holders have XMTP](#check-if-nft-or-token-holders-have-xmtp)
+- [Check if NFT or token holders have XMTP](#check-if-nft-or-token-holders-have-xmtp)
 - [Check if POAP attendees have XMTP](#check-if-poap-attendees-have-xmtp)
 
 With [Airstack](https://airstack.xyz) `XMTPs` API, it will return the `isXMTPEnabled` field that you can use to check if XMTP has been enabled.
@@ -27,18 +26,19 @@ With [Airstack](https://airstack.xyz) `XMTPs` API, it will return the `isXMTPEna
 - An [Airstack](https://airstack.xyz) account (free)
 - Basic knowledge of GraphQL
 
-#### 🤖 AI Natural Language
+#### 🤖 AI natural language
 
 [Airstack](https://airstack.xyz) provides an AI solution for you to build GraphQL queries to fulfill your use case easily.
 
 <ReactPlayer w  url='/img/query-xmtp.mp4' muted playing="true" />
 
-### Query 0x Address or ENS If XMTP Is Enabled
+### Query a 0x address or ENS name to check if XMTP is enabled
 
-You can resolve either a 0x address of ENS to check if the user has XMTP enabled:
-AI Prompt
+You can query a 0x address or ENS name to check if the user has XMTP enabled:
 
-- [Live Demo](https://app.airstack.xyz/DTyOZg/Y52qApOo8j)
+AI prompt
+
+- [Live demo](https://app.airstack.xyz/DTyOZg/Y52qApOo8j)
 
 ```bash
 For vitalik.eth, show if XMTP is enabled
@@ -67,9 +67,10 @@ query MyQuery($address: Identity!) {
 ```
 
 </TabItem>
+
 <TabItem value="response" label="Response"  >
 
-```graphql
+```json
 {
   "data": {
     "XMTPs": {
@@ -86,11 +87,11 @@ query MyQuery($address: Identity!) {
 </TabItem>
 </Tabs>
 
-### Bulk Query Lens Profiles If XMTP Is Enabled
+### Bulk query Lens profiles to check if XMTP is enabled
 
 You can check if an array of Lens profiles have XMTP enabled:
 
-- [Live Demo](https://app.airstack.xyz/DTyOZg/SPXFLOFhtx)
+- [Live demo](https://app.airstack.xyz/DTyOZg/SPXFLOFhtx)
 
 ```bash
 For vitalik.lens and shanemac.lens, show if XMTP is enabled
@@ -133,7 +134,7 @@ query BulkFetchPrimaryENSandXMTP($lens: [Identity!]) {
 </TabItem>
 <TabItem value="response" label="Response"  >
 
-```graphql
+```json
 {
   "data": {
     "XMTPs": {
@@ -189,9 +190,9 @@ query BulkFetchPrimaryENSandXMTP($lens: [Identity!]) {
 </TabItem>
 </Tabs>
 
-### Bulk Query Farcaster Name or ID If XMTP Is Enabled
+### Bulk query Farcaster name or ID to check if XMTP is enabled
 
-- [Live Demo](https://app.airstack.xyz/DTyOZg/v4nVRtJsw5)
+- [Live demo](https://app.airstack.xyz/DTyOZg/v4nVRtJsw5)
 
 ```bash
 For farcaster user name vbuterin, name v, and id 602, show if XMTP are enabled
@@ -238,7 +239,7 @@ query BulkFetchFarcasterHaveXMTP($farcaster: [Identity!]) {
 </TabItem>
 <TabItem value="response" label="Response"  >
 
-```graphql
+```json
 {
   "data": {
     "XMTPs": {
@@ -300,11 +301,11 @@ query BulkFetchFarcasterHaveXMTP($farcaster: [Identity!]) {
 </TabItem>
 </Tabs>
 
-### Check if NFT or Token holders have XMTP
+### Check if NFT or token holders have XMTP enabled
 
-Get the NFT holders that have XMTP using the [TokenBalances](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference/tokenbalances-api) API and provide an NFT contract address for the `$tokenAddress` input.
+Get the NFT holders that have XMTP enabled using the [TokenBalances](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference/tokenbalances-api) API and provide an NFT contract address for the `$tokenAddress` input.
 
-- [Live Demo](https://app.airstack.xyz/DTyOZg/v4nVRtJsw5)
+- [Live demo](https://app.airstack.xyz/DTyOZg/v4nVRtJsw5)
 
 <Tabs >
 <TabItem value="request" label="Query"  >
@@ -340,7 +341,7 @@ query MyQuery($tokenAddress: Address!) {
 </TabItem>
 <TabItem value="response" label="Response"  >
 
-```graphql
+```json
 {
   "data": {
     "TokenBalances": {
@@ -368,11 +369,11 @@ query MyQuery($tokenAddress: Address!) {
 </TabItem>
 </Tabs>
 
-### Check if POAP attendees have XMTP
+### Check if POAP attendees have XMTP enabled
 
-Get the POAP holders that have XMTP using the [Poaps](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference/poaps-api) API and provide an POAP event ID for the $eventId input.
+Get the POAP holders that have XMTP enabled using the [Poaps](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference/poaps-api) API and provide a POAP event ID for the `$eventId` input.
 
-- [Live Demo](https://app.airstack.xyz/DTyOZg/v4nVRtJsw5)
+- [Live demo](https://app.airstack.xyz/DTyOZg/v4nVRtJsw5)
 
 <Tabs >
 <TabItem value="request" label="Query"  >
@@ -404,7 +405,7 @@ query POAPEventHoldersWithXMTP($eventId: String!) {
 </TabItem>
 <TabItem value="response" label="Response"  >
 
-```graphql
+```json
 {
   "data": {
     "Poaps": {
@@ -438,24 +439,24 @@ query POAPEventHoldersWithXMTP($eventId: String!) {
 </TabItem>
 </Tabs>
 
-### Learn More about Airstack
+### Learn more about Airstack
 
-- [API References](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference)
+- [API references](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference)
 - [SDKs](https://app.airstack.xyz/sdks)
 
-#### Check XMTP For Single User
+#### Check if a single user has XMTP enabled
 
-- [By 0x address](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-single-user#by-0x-address)
-- [By ENS](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-single-user#by-ens)
-- [By Lens Profile](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-single-user#by-lens-profile)
-- [By Farcaster Name or ID](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-single-user#by-farcaster-name-or-id)
+- [Check by 0x address](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-single-user#by-0x-address)
+- [Check by ENS](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-single-user#by-ens)
+- [Check by Lens profile](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-single-user#by-lens-profile)
+- [Check by Farcaster name or ID](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-single-user#by-farcaster-name-or-id)
 
-#### Check XMTP For Multiple User
+#### Check if multiple users have XMTP enabled
 
-- [Bulk Check Lens Profiles Have XMTP](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-multiple-users#bulk-check-lens-profiles-have-xmtp)
-- [Bulk Check Farcasters Have XMTP](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-multiple-users#bulk-check-farcasters-have-xmtp)
+- [Bulk check by Lens profiles](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-multiple-users#bulk-check-lens-profiles-have-xmtp)
+- [Bulk check by Farcaster names](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/check-multiple-users#bulk-check-farcasters-have-xmtp)
 
-#### NFT & POAP Holders
+#### Check if NFT and POAP holders have XMTP enabled
 
-- [NFT Holders](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/nft-and-poap-holders#nft-holders)
-- [POAP Holders](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/nft-and-poap-holders#poap-holders)
+- [Check by NFT holders](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/nft-and-poap-holders#nft-holders)
+- [Check by POAP Holders](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/has-xmtp/nft-and-poap-holders#poap-holders)

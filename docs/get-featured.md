@@ -7,32 +7,32 @@ sidebar_position: 14
 
 To be featured on the Built with XMTP page and receive amplification from XMTP's social channels, follow the checklist to provide a best-in-class messaging experience with your client.
 
-## **A. Quality Checklist**
+## A. Quality checklist
 
 Before launching, ensure your app meets the following criteria:
 
-### **Performance**
+### Performance
 
 - [ ] Implement a [Local-first cache](/docs/build/local-first).
-- [ ] Cache conversation list **`conversations.list()`** to boost performance by 90%.
-- [ ] Serialize securely stored **`DecodedMessage`** histories to reduce redundant downloads and decryptions.
+- [ ] Cache conversation list `conversations.list()` to boost performance by 90%.
+- [ ] Serialize securely stored `DecodedMessage` histories to reduce redundant downloads and decryptions.
 - [ ] Implement message [pagination](/docs/build/messages#list-messages-in-a-conversation-with-pagination).
 - [ ] [Compress message content](/docs/build/messages#compress-message-content) with a suitable compression algorithm.
 - [ ] (Bonus) Implement [optimistic sending](/docs/tutorials/other/optimistic-sending).
 
-### **Bugs and Reliability**
+### Bugs and reliability
 
 - [ ] No duplicate conversations should be created or displayed. If duplicates exist, only the latest conversation should be visible.
 - [ ] The app should be stable and not crash frequently.
 - [ ] No visible critical bugs.
 
-### **SDK and App Versions**
+### SDK and app versions
 
 - [ ] Make sure to use the [latest](/docs/changelog) XMTP client SDK.
-- [ ] Always set an **`appVersion`** [value](/docs/build/authentication#configure-the-client).
+- [ ] Always set an `appVersion` [value](/docs/build/authentication#configure-the-client).
 - [ ] Follow our [testing tutorial](/docs/tutorials/debug-and-test)
 
-### Content Types
+### Content types
 
 - [ ] Include image [remote attachments](/docs/build/messages/remote-attachment).
 - [ ] Include [message replies](/docs/build/messages/reply)
@@ -40,12 +40,12 @@ Before launching, ensure your app meets the following criteria:
 - [ ] Include [read receipts](docs/build/messages/read-receipt)
 - [ ] (Bonus) Implement a [custom content type](/docs/tutorials/custom-ct)
 
-### **Resolution**
+### Resolution
 
 - [ ] Offer forward and reverse [identity resolution](/docs/tutorials/identity-resolution) support for ENS.
 - [ ] (Bonus) Support for UNS, cb.id, .lens, Cyberconnect.
 
-### **Metrics**
+### Metrics
 
 Enable your app to keep track of:
 
@@ -78,7 +78,7 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
   - [Create a PR](https://github.com/xmtp/awesome-xmtp)
 - [ ] Create a commemorative [POAP](https://app.poap.xyz/) for your launch to reward early users
 
-## C. **Post-Launch Engagement**
+## C. Post-launch engagement
 
 - [ ] Keep in touch using the [XMTP community platform](/docs/contribute) that works best for you. This helps ensure that you hear about the latest SDK and content type releases, as well as upgrade and deprecation notices.
 - [ ] Message `prxshant.eth` using ([xmtp.chat](https://xmtp.chat/), [Converse](https://converse.xyz/), [Coinbase Wallet](https://www.coinbase.com/wallet), etc.) to share your app metrics. Let’s test hypotheses and learn together to help ensure interaction success and improve XMTP for all.
