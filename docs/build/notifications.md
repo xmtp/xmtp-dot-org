@@ -18,7 +18,7 @@ See the [example-notification-server-go](https://github.com/xmtp/example-notifi
 
 This example branch can serve as the basis for what you might want to provide for your own notification server. The branch also demonstrates how to generate the proto code if you decide to perform these tasks for your own app. This proto code from the example notification server has already been generated in the `xmtp-android` example app.
 
-Check out the [Setup Guide for XMTP Notification Server](/blog/setting-up-push-notification-server).
+Check out the [Setup Guide for XMTP Notification Server](/docs/tutorials/other/notifications-server).
 
 ## Firebase Cloud Messaging
 
