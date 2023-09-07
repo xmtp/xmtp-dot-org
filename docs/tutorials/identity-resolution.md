@@ -50,11 +50,11 @@ To access the Airstack APIs, use https://api.airstack.xyz/gql as your JSON endpo
 - [An Airstack account](https://app.airstack.xyz) (free)
 - Basic Knowledge of JSON
 
-### 🤖 AI Natural Language
+### 🤖 AI natural language
 
 Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to build a JSON query to fulfill your use case easily.
 
-<div className="nopadding" style={{width:'90%'}}  >
+<div className="nopadding" style={{width:'90%'}}>
 
 ![](./img/airstack-ai.png)
 
@@ -106,7 +106,7 @@ query web3Data {
 </TabItem>
 <TabItem value="response" label="Response" >
 
-```graphql
+```json
 {
   "data": {
     "Wallet": {
@@ -204,7 +204,7 @@ query vitalikSocialsAndENS {
 </TabItem>
 <TabItem value="response" label="Response" >
 
-```graphql
+```json
 {
   "data": {
     "Wallet": {
@@ -298,10 +298,9 @@ query vitalikSocialsAndENS {
 Get the address of an ENS domain, Lens handle, or Farcaster user.
 
 <Tabs className="lensicons">
-
 <TabItem value="ens" label="ENS" attributes={{className: "ens_tab"}}>
 
-AI Prompt:
+AI prompt:
 
 ```bash
 get the wallet address of vitalik.eth
@@ -321,7 +320,7 @@ query {
 </TabItem>
 <TabItem value="response" label="Output" >
 
-```graphql
+```json
 {
   "data": {
     "Wallet": {
@@ -337,7 +336,7 @@ query {
 </TabItem>
 <TabItem value="lens" label="Lens"  attributes={{className: "lens_tab"}}>
 
-AI Prompt:
+AI prompt:
 
 ```bash
 get the wallet address of fabri.lens
@@ -357,7 +356,7 @@ query {
 </TabItem>
 <TabItem value="response" label="Output" >
 
-```graphql
+```json
 {
   "data": {
     "Wallet": {
@@ -373,7 +372,7 @@ query {
 </TabItem>
 <TabItem value="farcaster" label="Farcaster" attributes={{className: "farcaster_tab"}}>
 
-AI Prompt:
+AI prompt:
 
 ```bash
 get the wallet address of Farcaster user vbuterin
@@ -393,7 +392,7 @@ query {
 </TabItem>
 <TabItem value="response" label="Output" >
 
-```graphql
+```json
 {
   "data": {
     "Wallet": {
@@ -441,7 +440,7 @@ query {
 </TabItem>
 <TabItem value="response" label="Response" >
 
-```graphql
+```json
 {
   "data": {
     "Wallet": {
@@ -505,7 +504,7 @@ query FetchBulkENS($resolvedAddresses: [Address!]) {
 </TabItem>
 <TabItem value="variables" label="Variables" >
 
-```graphql
+```json
 {
   "resolvedAddresses": [
     "0xD9C4475E2dd89a9a0aD0C1E9a1e1bb28Df7BA298",
@@ -520,7 +519,7 @@ query FetchBulkENS($resolvedAddresses: [Address!]) {
 </TabItem>
 <TabItem value="response" label="Output" >
 
-```graphql
+```json
 {
   "data": {
     "Domains": {
@@ -556,10 +555,10 @@ query FetchBulkENS($resolvedAddresses: [Address!]) {
 
 ### Learn more
 
-- [API References](https://docs.airstack.xyz/)
+- [API references](https://docs.airstack.xyz/)
 - [SDKs](https://app.airstack.xyz/sdks)
 
-#### Resolving POAPs, NFTs
+#### Resolve POAPs and NFTs
 
 - [POAPs](https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-poaps)
 - [NFTs](https://docs.airstack.xyz/airstack-docs-and-faqs/use-cases/recommendation-engine/recommendations-by-nfts)
