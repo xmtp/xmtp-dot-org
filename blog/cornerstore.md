@@ -43,7 +43,7 @@ Because this is built with XMTP, the sender & receiver of the chat are unfalsifi
 
 At the same time, projects can verify if a sender is who they say they are by looking at their on-chain history and seeing if they hold the right NFTs, or have received the funds already, etc. 
 
-Having this level of security in messaging means we’re also able to fully automate and customize the chat experience — with bots! More to come on this...
+Having this level of security in messaging means we’re also able to fully automate and customize the chat experience — with bots! Configured by our friends at [Chainjet](https://chainjet.io/). More to come on this…
 
 ## Private
 
