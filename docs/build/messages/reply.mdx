@@ -81,6 +81,17 @@ Client.register(codec = ReplyCodec())
 ```
 
 </TabItem>
+
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+import 'package:xmtp/src/content/reply_codec.dart';
+import 'package:xmtp/src/content/codec_registry.dart';
+
+var registry = CodecRegistry()..registerCodec(ReplyCodec());
+```
+
+</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 React Native SDK already has the codecs registered.
@@ -111,6 +122,40 @@ const reply: Reply = {
 await conversation.send(reply, {
   contentType: ContentTypeReply,
 });
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+import { useSendMessage } from "@xmtp/react-sdk";
+import { ContentTypeReply } from "@xmtp/content-type-reply";
+
+const sendMessage = useSendMessage();
+
+const replyContent = {
+  content: "Your reply content here",
+  contentType: ContentTypeText,
+  reference: "originalMessageXmtpId",
+};
+
+sendMessage(conversation, replyContent, ContentTypeReply);
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val reply = Reply(
+    reference = messageToReply.id,
+    content = "Hello",
+    contentType = ContentTypeText
+)
+
+aliceConversation.send(
+    content = reply,
+    options = SendOptions(contentType = ContentTypeReply),
+)
 ```
 
 </TabItem>
@@ -162,6 +207,55 @@ if (message.contentType.sameAs(ContentTypeReply)) {
 
 </TabItem>
 
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+if (message.contentType === ContentTypeReply.toString()) {
+  const replyContent = message.content as Reply;
+  // Use reply...
+}
+```
+
+**getReplies**
+
+This function retrieves all replies for a given message. It takes a message object and returns an array of reply IDs.
+
+```jsx
+import { getReplies } from "@xmtp/react-sdk";
+const replies = getReplies(message);
+```
+
+**hasReply**
+
+This function checks if a given message has any replies. It takes a message object and returns a boolean indicating whether the message has replies or not.
+
+```jsx
+import { hasReply } from "@xmtp/react-sdk";
+const messageHasReply = hasReply(message);
+```
+
+**getOriginalMessageFromReply**
+
+This function retrieves the original message that a given reply is in response to. It takes a reply message object and returns the original message object.
+
+```jsx
+import { getOriginalMessageFromReply } from "@xmtp/react-sdk";
+const originalMessage = await getOriginalMessageFromReply(replyMessage, db);
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+if (encodedContent.type == ContentTypeReply) {
+    // The message is a reply
+    val reply: Reply? = message.content()
+    println("Reply to: ${reply?.reference}")
+    println("Content: ${reply?.content}")
+}
+```
+
+</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -182,9 +276,9 @@ function MessageContents({ content }: { content: MessageContent }) {
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-if (message.content is Reply) {
-    var reply = message.content as Reply;
-    print('Received a reply to message ${reply.reference}: ${reply.content.content}');
+var decodedContent = await registry.decode(encoded);
+if (decodedContent.contentType == contentTypeReply) {
+  // The message is a reply.
 }
 ```
 

@@ -91,9 +91,17 @@ Client.register(codec = RemoteAttachmentCodec())
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-React Native SDK already has the codecs registered.
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Remote Attachments haven't been implemented yet.
+
+</TabItem>
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
+
+The XMTP SDK handles the registration of codecs for you. When you use the SDK's functions like encryptAttachment and decryptAttachment, the SDK internally uses the appropriate codecs to perform the encryption and decryption operations.
+
+You don't need to manually register or use the codecs in your application code. You just need to work with the high-level objects and methods provided by the SDK.
 
 </TabItem>
 </Tabs>
@@ -218,6 +226,31 @@ await conversation.send(remoteAttachment, {
 
 </TabItem>
 
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+import { useSendMessage } from "@xmtp/react-sdk";
+import { ContentTypeRemoteAttachment } from "@xmtp/content-type-remote-attachment";
+
+// Inside your component...
+const sendMessage = useSendMessage();
+
+import { RemoteAttachmentCodec } from "@xmtp/content-type-remote-attachment";
+
+const attachment = {
+  filename: "screenshot.png",
+  mimeType: "image/png",
+  data: [
+    /* the PNG data */
+  ],
+};
+
+const remoteAttachment = RemoteAttachmentCodec.encode(attachment);
+
+sendMessage(remoteAttachment);
+```
+
+</TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 Create the attachment object
@@ -324,32 +357,37 @@ options = SendOptions(contentType = ContentTypeRemoteAttachment),
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Encrypting the Attachment
+Remote Attachments haven't been implemented yet.
+
+</TabItem>
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
+
+This method takes a DecryptedLocalAttachment object as an argument
 
 ```jsx
-const encryptedAttachment = await client.encryptAttachment({
-  fileUri: "file://path/to/file",
-  mimeType: "image/jpeg",
+const { encryptedLocalFileUri, metadata } = await alice.encryptAttachment({
+  fileUri: `file://${file}`,
+  mimeType: "text/plain",
 });
 ```
 
-The upload process is not covered in the provided code, but you would typically use a library or SDK provided by your cloud storage provider. The URL of the uploaded file is then used to create a RemoteAttachmentContent object.
+Upload the encrypted file to a remote server
 
 ```jsx
-const remoteAttachment: RemoteAttachmentContent = {
-  ...encryptedAttachment.metadata,
-  scheme: "https://",
-  url: "https://ipfs/path/to/file",
-};
+let url = await uploadFile(encryptedLocalFileUri);
 ```
 
-Sending the Message: The RemoteAttachmentContent object is then included in the message content when sending the message.
+Send the remote attachment message
 
 ```jsx
 await convo.send({
-  remoteAttachment,
+  remoteAttachment: {
+    ...metadata,
+    scheme: "https://",
+    url,
+  },
 });
 ```
 
@@ -389,6 +427,15 @@ const objectURL = URL.createObjectURL(
 const img = document.createElement("img");
 img.src = objectURL;
 img.title = attachment.filename;
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+if (message.contentType === ContentTypeRemoteAttachment.toString()) {
+  // The message is a RemoteAttachment
+}
 ```
 
 </TabItem>
@@ -432,21 +479,29 @@ runBlocking {
 ```
 
 </TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+Remote Attachments haven't been implemented yet.
 
-On the receiving end, the remoteAttachment field of the message content is checked. If it exists, the encrypted file is downloaded and decrypted using the decryptAttachment method of the Client class.
+</TabItem>
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
+
+On the receiving end, you can use the decryptAttachment method to decrypt the downloaded file. This method takes an EncryptedLocalAttachment object as an argument and returns a DecryptedLocalAttachment object.
 
 ```jsx
-if (message.content.remoteAttachment) {
-  const decryptedAttachment = await client.decryptAttachment({
-    encryptedLocalFileUri: `file://${downloadedFilePath}`,
+if (message.contentTypeId === "xmtp.org/remoteStaticAttachment:1.0") {
+  const attached = await alice.decryptAttachment({
+    encryptedLocalFileUri: downloadedFileUri,
     metadata: message.content.remoteAttachment,
   });
 }
 ```
 
-Displaying the Attachment: After decryption, the file can be displayed to the user. The provided code includes a React component RemoteAttachmentMessageContents that displays an image if the decrypted file is available, and a download button otherwise.
+Display image
+
+```jsx
+<Image source={{ uri: attached.fileUri }} />
+```
 
 </TabItem>
 </Tabs>

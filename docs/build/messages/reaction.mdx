@@ -84,6 +84,17 @@ Client.register(codec = ReactionCodec())
 ```
 
 </TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+import 'package:xmtp/src/content/reaction_codec.dart';
+import 'package:xmtp/src/content/codec_registry.dart';
+
+var registry = CodecRegistry()..registerCodec(ReactionCodec());
+```
+
+</TabItem>
+
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 React Native SDK already has the codecs registered.
@@ -119,6 +130,54 @@ await conversation.send(reaction, {
 ```
 
 </TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+  const { sendMessage } = useSendMessage();
+  const handleClick = useCallback(
+    (emoji: string) => {
+      void sendMessage<Reaction>(
+        conversation,
+        {
+          content: emoji,
+          schema: "unicode",
+          reference: message.xmtpID,
+          action: "added",
+        },
+        ContentTypeReaction,
+      );
+    },
+    [conversation, message.xmtpID, sendMessage],
+  );
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+import org.xmtp.android.library.codecs.ReactionCodec
+
+Client.register(codec = ReactionCodec())
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+val reaction = Reaction(
+    reference = messageToReact.id,
+    action = ReactionAction.added,
+    content = "U+1F603",
+    schema = ReactionSchema.unicode
+)
+
+conversation.send(
+    content = reaction,
+    options = SendOptions(contentType = ContentTypeReaction),
+)
+```
+
+</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -149,6 +208,62 @@ if (message.contentType.sameAs(ContentTypeReaction)) {
   // We've got a reaction.
   const reaction: Reaction = message.content;
 }
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+
+if (message.contentType === ContentTypeReaction.toString()) {
+  const reactionContent = message.content as Reaction;
+  // Use reactionContent...
+}
+```
+
+**useReactions**
+
+The useReactions hook is used to fetch all reactions for a specific message. It takes a CachedMessage as a parameter and returns an array of CachedReaction objects.
+
+```jsx
+import { useReactions } from "@xmtp/react-sdk";
+const reactions = useReactions(message);
+```
+
+**getReactionsByXmtpID**
+
+This function retrieves all reactions associated with a specific XMTP ID from the database.
+
+```jsx
+import { getReactionsByXmtpID } from "@xmtp/react-sdk";
+const reactions = await getReactionsByXmtpID("testXmtpId1", db);
+```
+
+**hasReaction**
+
+This function checks if a message has any reactions. It takes a CachedMessage as a parameter and returns a boolean indicating whether the message has reactions or not.
+
+```jsx
+import { hasReaction } from "@xmtp/react-sdk";
+const messageHasReaction = hasReaction(originalMessage!);
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+if (message.contentType == ContentTypeReaction) {
+    // The message is a reaction
+    val reactionCodec = ReactionCodec()
+    val reaction: Reaction = reactionCodec.decode(message.content)
+}
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+var decoded = await codec.decode(encoded);
 ```
 
 </TabItem>
