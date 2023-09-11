@@ -7,6 +7,18 @@ const Tutorial = () => {
   );
 
   useEffect(() => {
+    // This is a temporary fix required for loading the tutorial in iframe
+    if (localStorage.getItem("loaded_tutorial") !== "true") {
+      localStorage.setItem("loaded_tutorial", "true");
+      window.location.reload();
+    }
+    return () => {
+      localStorage.removeItem("loaded_tutorial");
+      window.location.reload();
+    };
+  }, []);
+
+  useEffect(() => {
     // Add mutation handling for the data-theme in the html. Needed so we can pass appropriate dark/light mode to iframe.
     const handleMutations = (mutationsList, observer) => {
       for (let mutation of mutationsList) {

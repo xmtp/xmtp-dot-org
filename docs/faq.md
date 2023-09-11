@@ -8,7 +8,9 @@ description: "Get answers to the most frequently asked questions about XMTP."
 
 Get answers to the most frequently asked questions about XMTP.
 
-## Build
+## **Build**
+
+---
 
 ### What works with XMTP?
 
@@ -176,6 +178,8 @@ In your app onboarding flow, request user permission to display app-specific pus
 
 ## Network
 
+---
+
 ### Is the XMTP network decentralized?
 
 Currently, XMTP Labs (the company) operates all of the network nodes in the two available XMTP network environments: `dev` and `production`.
@@ -220,11 +224,15 @@ Currently, XMTP network nodes are configured to rate limit high-volume publishin
 
 XMTP Labs is capable of rate limiting the network while we are the only node operators. Rate limiting is a consideration in our research into economic spam controls. Ultimately, rate limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
 
+Limit: 1k publish request/5 minutes or 10k of any request type per 5 mins
+
 ### Who pays to keep the network running?
 
 XMTP Labs is committed to keeping the network running. Future incentive mechanisms will enable the network to run autonomously of XMTP Labs.
 
 ## Fees
+
+---
 
 ### Will XMTP charge messaging fees?
 
@@ -241,6 +249,8 @@ Messages are stored off-chain on the XMTP network, with all nodes currently host
 There are no message storage and retrieval-related fees incurred by developers for building with the XMTP SDK.
 
 ## Security
+
+---
 
 ### Has XMTP undergone a security audit?
 
@@ -274,6 +284,8 @@ To learn more about these keys, see [Key generation and usage in XMTP](/docs/con
 
 ## Storage
 
+---
+
 ### Where are XMTP messages stored?
 
 XMTP stores messages in the XMTP network before and after retrieval. Application-specific message storage policies may vary.
@@ -291,6 +303,8 @@ Different approaches to long-term message storage are currently being researched
 Have other questions or ideas about message storage? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
 
 ## Messages
+
+---
 
 ### Which message formats and metadata does XMTP support?
 
@@ -329,6 +343,8 @@ Have other questions or ideas about support for message deletion and editing? Po
 
 ## Message patterns
 
+---
+
 ### Is XMTP more like email or chat?
 
 XMTP enables developers to implement messaging features and UX paradigms that best fit their needs. As a result, messages sent using apps built with XMTP might resemble many typical forms of communication, such as email, chat, text messaging, push notifications, and more.
@@ -349,6 +365,8 @@ XMTP natively supports one-to-one messaging. One-to-many broadcast messages, or 
 To learn more, see [Send a broadcast message](/docs/tutorials/broadcast).
 
 ## XMTP Labs
+
+---
 
 ### What is XMTP Labs?
 

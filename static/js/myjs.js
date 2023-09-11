@@ -26,7 +26,6 @@ window.onload = function () {
       item.innerText === "Custom Content-Type"
     ) {
       item.classList.add("new");
-      console.log(item.classList);
     }
   });
 };
