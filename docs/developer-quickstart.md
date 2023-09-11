@@ -14,7 +14,7 @@ Check out the replit live code example:
 
 -->
 
-- [Replit Live Example](https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1#index.ts)
+- <a href="https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1#index.ts" class="plausible-event-name=Replit">Replit Live Example</a>
 
 ### Get started
 

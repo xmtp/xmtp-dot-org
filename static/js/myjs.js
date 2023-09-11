@@ -27,7 +27,6 @@ window.onload = function () {
       item.innerText === "Custom (Advanced)"
     ) {
       item.classList.add("new");
-      console.log(item.classList);
     }
   });
 };

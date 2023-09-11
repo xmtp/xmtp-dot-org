@@ -203,6 +203,12 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>
                 <div class="subtext text-sm text-normal whitespace-pre-line">Contribute to the XMTP community</div></div></div>`,
               },
+              {
+                to: "/docs/get-featured",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Get featured</div>
+                <div class="subtext text-sm text-normal whitespace-pre-line">Contribute to the XMTP community</div></div></div>`,
+              },
             ],
           },
           {
@@ -342,6 +348,10 @@ const config = {
               {
                 label: "Partnerships with XMTP Labs",
                 href: "https://forms.gle/UMCFjB8ukiMxBxnK6",
+              },
+              {
+                label: "Get featured",
+                href: "/docs/get-featured",
               },
             ],
           },

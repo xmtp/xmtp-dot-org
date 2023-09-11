@@ -132,6 +132,26 @@ const xmtp = await Client.create(wallet);
 </TabItem>
 </Tabs>
 
+import USubscribe from '/src/components/USubscribe/index'
+
+Example:
+
+<div className="centered">
+<USubscribe
+theme="default"
+size="medium"
+onSubscribe={(address) => console.log("New subscriber: " + address)}
+onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
+onError={(address) => console.log("Error subscribing: " + address)}
+env={"production"}
+labels={{
+          loading: "Loading...",
+          subscribed: "Identity enabled. You can now message other XMTP users.",
+          default: "Enable your XMTP identity",
+        }}
+/>
+</div>
+
 ## Saving keys
 
 You can export the unencrypted key bundle using the static method `getKeys`, save it somewhere secure, and then provide those keys at a later time to initialize a new client using the exported XMTP identity.
