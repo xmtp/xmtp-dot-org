@@ -842,7 +842,7 @@ ul li a:before {
 
 .tabs-container p {
   padding: 15px;
-  line-height: 20px;
+  line-height: 24px;
   background: var(--ifm-pre-background);
   border-left: 2px solid var(--ifm-pre-background);
 }

@@ -23,8 +23,7 @@ window.onload = function () {
       item.innerText === "Remote Attachment" ||
       item.innerText === "Reaction" ||
       item.innerText === "Read Receipt" ||
-      item.innerText === "Custom (Basic)" ||
-      item.innerText === "Custom (Advanced)"
+      item.innerText === "Custom Content-Type"
     ) {
       item.classList.add("new");
     }

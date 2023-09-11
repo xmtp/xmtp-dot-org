@@ -18,7 +18,7 @@ You are welcome to provide feedback by commenting on the [Read Receipts Content 
 
 :::
 
-### Install the package
+### Configure content type
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -27,12 +27,7 @@ You are welcome to provide feedback by commenting on the [Read Receipts Content 
 npm i @xmtp/content-type-read-receipt
 ```
 
-</TabItem></Tabs>
-
-### Import and register
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+Import and register
 
 ```tsx
 import {
@@ -44,10 +39,53 @@ const xmtp = await Client.create(signer, { env: "dev" });
 xmtp.registerCodec(new ReadReceiptCodec());
 ```
 
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+The React SDK supports all current standards-track content types, but only text messages are enabled out of the box. Adding support for other standards-track content types requires a bit of configuration.
+
+```jsx
+import {
+  XMTPProvider,
+  readReceiptContentTypeConfig,
+} from "@xmtp/react-sdk";
+
+const contentTypeConfigs = [
+  readReceiptContentTypeConfig,
+  // other content type configs...
+];
+
+createRoot(document.getElementById("root") as HTMLElement).render(
+  <StrictMode>
+    <XMTPProvider contentTypeConfigs={contentTypeConfigs}>
+      <App />
+    </XMTPProvider>
+  </StrictMode>,
+);
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+Client.register(codec = ReadReceiptCodec())
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Remote Attachments haven't been implemented yet.
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Read Receipts haven't been implemented yet.
+
 </TabItem></Tabs>
 
-### Create a Read Receipt
+### Sending a Read Receipt
 
+- `messageId`: The message id of the message that was read
 - `timestamp`: The timestamp the read receipt was sent, in ISO 8601 format
 
 <Tabs groupId="sdk-langs">
@@ -55,26 +93,43 @@ xmtp.registerCodec(new ReadReceiptCodec());
 
 ```tsx
 const readReceipt: ReadReceipt = {
-  /**
-   * The timestamp the read receipt was sent, in ISO 8601 format
-   */
-  timestamp: dateString,
+  timestamp: new Date().toISOString();
 };
 ```
 
-</TabItem></Tabs>
-
-### Sending a Read Receipt
-
 Once you've created a read receipt, you can send it:
 
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
 ```tsx
-await conversation.send(readReceipt, {
-  contentType: ContentTypeReadReceipt,
-});
+await conversation.messages.send(
+  {
+    timestamp: new Date().toISOString(),
+  },
+  ContentTypeReadReceipt,
+);
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+import { useSendMessage } from "@xmtp/react-sdk";
+import { ContentTypeReadReceipt } from "@xmtp/content-type-read-receipt";
+
+const sendMessage = useSendMessage();
+const readReceiptContent = { timestamp: new Date().toISOString() };
+
+sendMessage(conversation, readReceiptContent, ContentTypeReadReceipt);
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val readReceipt = ReadReceipt(timestamp = "2019-09-26T07:58:30.996+0200")
+conversation.send(
+    content = readReceipt,
+    options = SendOptions(contentType = ContentTypeReadReceipt),
+)
 ```
 
 </TabItem></Tabs>
@@ -90,6 +145,53 @@ Here's how you can receive a reply:
 if (message.contentType.sameAs(ContentTypeReadReceipt)) {
   // We've got a reply.
   const timestamp = message.content.timestamp;
+}
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+import { ContentTypeReadReceipt } from "@xmtp/content-type-read-receipt";
+
+if (ContentTypeReadReceipt.sameAs(message.contentType)) {
+  // The message is a read receipt
+  const readReceiptContent = message.content;
+  const timestamp = readReceiptContent.timestamp;
+}
+```
+
+**getReadReceipt**
+
+The getReadReceipt function retrieves the read receipt from a cached conversation. It takes a CachedConversation object as a parameter and returns the read receipt date, or undefined if the conversation has no read receipt.
+
+```jsx
+import { getReadReceipt } from "@xmtp/react-sdk";
+
+const readReceiptDate = getReadReceipt(conversation);
+```
+
+**hasReadReceipt**
+
+The hasReadReceipt function checks if a cached conversation has a read receipt. It takes a CachedConversation object as a parameter and returns true if the conversation has a read receipt, false otherwise.
+
+```jsx
+import { hasReadReceipt } from "@xmtp/react-sdk";
+
+const hasReceipt = hasReadReceipt(conversation);
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val message: DecodedMessage = conversation.messages().first()
+if (message.encodedContent.type == ContentTypeReadReceipt) {
+    // The message is a ReadReceipt
+    val readReceipt: ReadReceipt? = message.content()
+    if (readReceipt != null) {
+      println("Message read at: ${readReceipt.timestamp}")
+    }
 }
 ```
 
