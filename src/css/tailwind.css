@@ -1578,3 +1578,8 @@ li > a.new::after {
   width: 10px;
   display: none;
 }
+
+/*page title*/
+.special-page.interactive-tutorial h1 {
+  display: none;
+}
