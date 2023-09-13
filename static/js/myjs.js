@@ -3,9 +3,24 @@ window.onload = function () {
 
   // Get the title of the current page
   const pageTitle = document.title;
-  // Add a class to the body if the title is one of the specified ones
-  console.log(pageTitle);
 
+  if (
+    pageTitle === "Quickstart" ||
+    pageTitle === "Local-first cache" ||
+    pageTitle === "Content Types" ||
+    pageTitle === "Marketing" ||
+    pageTitle === "Interactive tutorial"
+  ) {
+    // Add a class to the body if the title is one of the specified ones
+    console.log(pageTitle);
+    // Convert the page title to a suitable CSS class name
+    const pageTitleClass = pageTitle.toLowerCase().replace(/ /g, "-");
+
+    // Add the class to the body
+    console.log("special-page", pageTitleClass);
+    document.body.classList.add("special-page");
+    document.body.classList.add(pageTitleClass);
+  }
   // Add class to nav items based on their text
   navItems.forEach((item) => {
     if (
@@ -34,22 +49,4 @@ window.onload = function () {
       item.classList.add("new");
     }
   });
-
-  // Add a class to the body if the title is one of the specified ones
-  console.log(pageTitle);
-  if (
-    pageTitle === "Quickstart" ||
-    pageTitle === "Local-first cache" ||
-    pageTitle === "Content Types" ||
-    pageTitle === "Marketing" ||
-    pageTitle === "Interactive Tutorial"
-  ) {
-    // Convert the page title to a suitable CSS class name
-    const pageTitleClass = pageTitle.toLowerCase().replace(/ /g, "-");
-
-    // Add the class to the body
-
-    document.body.classList.add("special-page");
-    document.body.classList.add(pageTitleClass);
-  }
 };
