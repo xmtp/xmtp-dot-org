@@ -1,37 +1,38 @@
 ---
 sidebar_label: Reaction
 sidebar_position: 7
+description: Learn how to use the reaction content type to support reactions in your app built with XMTP
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Reaction Content Type
+# Support reactions in your app built with XMTP
 
 ![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Beta-yellow)
 
-A reaction is a quick and often emoji-based way to respond to a message. Reactions are usually limited to a predefined set of emojis or symbols provided by the messaging app.
+Use the reaction content type to support reactions in your app. A reaction is a quick and often emoji-based way to respond to a message. Reactions are usually limited to a predefined set of emojis or symbols provided by the messaging app.
 
 :::tip Open for feedback
 
-You are welcome to provide feedback by commenting on the [Reaction Content Type XIP](https://github.com/orgs/xmtp/discussions/36) Proposal
+You're welcome to provide feedback by commenting on the [Proposal for emoji reactions content type](https://github.com/orgs/xmtp/discussions/36) XIP idea.
 
 :::
 
-### Configure content type
+## Configure the reaction content type
 
-In some SDK's the `ReactionCodec` is already included in the SDK. If not, you can install the package using the following command:
+In some SDKs, the `ReactionCodec` is already included in the SDK. If not, you can install the package using the following command:
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-In the javascript SDK you need to import this package first.
+In the JavaScript SDK, you need to import this package first.
 
 ```bash
 npm i @xmtp/content-type-reaction
 ```
 
-After importing the package you can register the codec.
+After importing the package, you can register the codec.
 
 ```jsx
 import {
@@ -102,17 +103,17 @@ React Native SDK already has the codecs registered.
 </TabItem>
 </Tabs>
 
-### Create a reaction
+## Create a reaction
 
 With XMTP, reactions are represented as objects with the following keys:
 
-- `reference`: The message ID for the message that is being reacted to
+- `reference`: ID of the message being reacted to
 
-- `action`: The action of the reaction (added or removed)
+- `action`: Action of the reaction (added or removed)
 
-- `content`: A string representation of a reaction (e.g. smile) to be interpreted by clients
+- `content`: String representation of the reaction (smile, for example) to be interpreted by clients
 
-- `schema`: The schema of the reaction (unicode, shortcode, or custom)
+- `schema`: Schema of the reaction (Unicode, shortcode, or custom)
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -196,7 +197,7 @@ await conversation.send(reactionContent);
 
 </TabItem></Tabs>
 
-### Receive a reaction
+## Receive a reaction
 
 Now that you can send a reaction, you need a way to receive a reaction. For example:
 
@@ -223,7 +224,7 @@ if (message.contentType === ContentTypeReaction.toString()) {
 
 **useReactions**
 
-The useReactions hook is used to fetch all reactions for a specific message. It takes a CachedMessage as a parameter and returns an array of CachedReaction objects.
+Use to fetch all reactions for a specific message. It takes a `CachedMessage` as a parameter and returns an array of `CachedReaction` objects.
 
 ```jsx
 import { useReactions } from "@xmtp/react-sdk";
@@ -232,7 +233,7 @@ const reactions = useReactions(message);
 
 **getReactionsByXmtpID**
 
-This function retrieves all reactions associated with a specific XMTP ID from the database.
+Use to retrieve all reactions associated with a specific XMTP ID from the database.
 
 ```jsx
 import { getReactionsByXmtpID } from "@xmtp/react-sdk";
@@ -241,7 +242,7 @@ const reactions = await getReactionsByXmtpID("testXmtpId1", db);
 
 **hasReaction**
 
-This function checks if a message has any reactions. It takes a CachedMessage as a parameter and returns a boolean indicating whether the message has reactions or not.
+Use to check if a message has any reactions. It takes a `CachedMessage` as a parameter and returns a boolean indicating whether the message has reactions.
 
 ```jsx
 import { hasReaction } from "@xmtp/react-sdk";
@@ -285,8 +286,9 @@ function MessageContents({ content }: { content: MessageContent }) {
 }
 ```
 
-</TabItem></Tabs>
+</TabItem>
+</Tabs>
 
-### Display the reaction
+## Display the reaction
 
 Generally, reactions should be interpreted as emoji. So, "smile" would translate to 😄 in UI clients. That being said, how you ultimately choose to render a reaction in your app is up to you.
