@@ -52,6 +52,26 @@ console.log("Client created", xmtp.address);
 //eg. Client created 0xd8dA6BF26964aF9D7eEd9e03E53415D37
 ```
 
+import USubscribe from '/src/components/USubscribe/index'
+
+Example:
+
+<div className="centered">
+<USubscribe
+theme="default"
+size="medium"
+onSubscribe={(address) => console.log("New subscriber: " + address)}
+onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
+onError={(address) => console.log("Error subscribing: " + address)}
+env={"production"}
+labels={{
+          loading: "Loading...",
+          subscribed: "Identity enabled. You can now message other XMTP users.",
+          default: "Enable your XMTP identity",
+        }}
+/>
+</div>
+
 ### Check if an address is on the network
 
 First you need to check if the address you want to message is on the XMTP network. You can do this by calling client.canMessage with the address you want to message.
