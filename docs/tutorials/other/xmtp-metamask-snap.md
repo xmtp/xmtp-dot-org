@@ -7,7 +7,7 @@ sidebar_position: 3
 
 Use the “Sign in with XMTP” MetaMask Snap to securely and conveniently sign in to any web app built with XMTP.
 
-When you install the Snap, you give it permission to store your XMTP user keys in MetaMask secure storage. From then on, when you use an app you’ve authorized to work with Sign in with XMTP, the Snap seamlessly and securely allows the app to use those keys without accessing the key material directly, enabling you to start messaging without needing to provide a signature.
+When you install the Snap, you permit it to store your XMTP user keys in MetaMask secure storage. From then on, when you use an app you’ve authorized to work with Sign in with XMTP, the Snap seamlessly and securely allows the app to use those keys without accessing the key material directly, enabling you to start messaging without needing to provide a signature.
 
 ## FAQ about Sign in with XMTP
 
@@ -37,7 +37,7 @@ With your permission, Sign in with XMTP stores your XMTP user keys in MetaMask s
 
 When you authorize Sign in with XMTP permission to work with an app, the Snap seamlessly and securely allows the app to use those keys without accessing the key material directly, enabling you to start messaging without needing to provide a signature.
 
-The Snap is used only when you visit a Snap-enabled app that you have already authorized to work with Sign in with XMTP.
+The Snap is used only when you visit a Snap-enabled app you've already authorized to work with Sign in with XMTP.
 
 ### What does Sign in with XMTP NOT do?
 
@@ -47,7 +47,7 @@ Sign in with XMTP doesn’t:
 - Show notifications for new messages
 - Allow you to send messages
 
-All of that is handled by apps that use the Snap.
+Apps that use the Snap provide these capabilities.
 
 ### Do my Sign in with XMTP app authorizations expire?
 

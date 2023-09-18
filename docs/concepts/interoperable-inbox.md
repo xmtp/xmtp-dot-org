@@ -22,9 +22,9 @@ If the app you use today no longer meets your needs, the interoperable inbox ena
 
 You might wonder: I have a hard enough time keeping track of conversations over Messenger, WhatsApp, and Telegram. Aren’t there already too many platforms for keeping in touch with people?
 
-For example, you might prefer using Messenger, but need to use WhatsApp to message your dad and Telegram to message your best friend because they don’t use Messenger. On top of this, even if you all agreed to align on using the same app, the two people who agreed to change apps would lose access to all of their existing messages and contacts.
+For example, you might prefer using Messenger but need to use WhatsApp to message your dad and Telegram to message your best friend because they don’t use Messenger. On top of this, even if you all agreed to align on using the same app, the two people who agreed to change apps would lose access to their existing messages and contacts.
 
-If Messenger, Telegram, and WhatsApp were built with XMTP, everyone could use their preferred app. You could use Messenger to message your dad on WhatsApp and to message your friend on Telegram. And one day, if you all decide to use the same app, you could do so seamlessly with all your messages and contacts available in your interoperable inboxes.
+If Messenger, Telegram, and WhatsApp were built with XMTP, everyone could use their preferred app. You could use Messenger to message your dad on WhatsApp and your friend on Telegram. And one day, if you all decide to use the same app, you could do so seamlessly with all your messages and contacts available in your interoperable inboxes.
 
 With XMTP, you own and control your messages and are always free to use the app that best suits your needs.
 

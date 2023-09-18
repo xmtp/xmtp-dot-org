@@ -13,7 +13,7 @@ XMTP supports real-time message delivery and retrieval. Once you initially retri
 
 ## Listen for new conversations
 
-You can listen for new conversations being started in real-time. This enables apps to display incoming messages from new contacts.
+You can code your app to listen for new conversations in real time. Listening for new conversations lets your app display incoming messages from new contacts.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -121,9 +121,9 @@ for await (const conversation of stream) {
 
 ## Listen for new messages in a conversation
 
-You can listen for any new messages (incoming or outgoing) in a conversation by calling `conversation.streamMessages()`.
+You can code your app to listen for new incoming and outgoing messages in a conversation by calling `conversation.streamMessages()`.
 
-_The Stream returned by the `stream` methods is an asynchronous iterator and as such usable by a for-await-of loop. Note however that it is by its nature infinite, so any looping construct used with it will not terminate, unless the termination is explicitly initiated (by breaking the loop or by an external call to `return`)._
+_The stream returned by the `stream` methods is an asynchronous iterator. This means that the stream can be used by a for-await-of loop. However, note that by its nature, the stream is infinite. Therefore, any looping construct used with the stream won't terminate unless you explicitly initiate the termination. You can initiate the termination by breaking the loop or by making an external call to `return`._
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -248,7 +248,7 @@ for await (const message of await conversation.streamMessages()) {
 
 :::info
 
-There is a chance this stream can miss messages if multiple new conversations are received in the time it takes to update the stream to include a new conversation.
+There is a chance that the stream can miss messages if multiple new conversations are received while the stream is being updated to include a new conversation.
 
 :::
 

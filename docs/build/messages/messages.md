@@ -135,11 +135,11 @@ export const SendMessage: React.FC<{ conversation: CachedConversation }> = ({
 
 When a user sends a message with XMTP, they might experience a slight delay between sending the message and seeing their sent message display in their app UI.
 
-This is because when a user sends a message, they typically have to wait for the XMTP network to finish processing the message before the app can display it in the UI.
+Typically, the slight delay is caused by the app needing to wait for the XMTP network to finish processing the message before the app can display the message in its UI.
 
-The local-first architecture of the React SDK automatically includes optimistic sending to immediately display the sent message in the sender’s UI while processing the message in the background. This provides the user with immediate feedback and enables them to continue messaging without having to wait for their previous message to finish processing.
+The local-first architecture of the React SDK automatically includes optimistic sending, which immediately displays the sent message in the sender’s UI while processing the message in the background. Optimistic sending provides the sender with immediate feedback and enables them to continue messaging without waiting for their previous message to finish processing.
 
-Messages that are in the sending state will have a `true` value for their `isSending` property.
+Messages in the sending state have their `isSending` property set to `true`.
 
 ### Handle messages that fail to send with React
 
@@ -147,11 +147,11 @@ If a message fails to complete the sending process, you must provide an error st
 
 While in this unsent state, the message remains in its original location in the user’s conversation flow, with any newer sent and received messages displaying after it.
 
-If the user chooses to resend the message, the message moves into the most recently sent message position in the conversation. Once it successfully sends, it remains in that position.
+If the user resends the message, the message moves into the most recently sent message position in the conversation. Once it successfully sends, it remains in that position.
 
-If the user chooses to cancel sending the message, the message is removed from the conversation flow.
+If the user cancels sending the message, the message is removed from the conversation flow.
 
-Messages that fail to send will have the `hasSendError` property set to `true`.
+Messages that fail to send have their `hasSendError` property set to `true`.
 
 #### Resend a failed message
 
@@ -294,7 +294,7 @@ var nextPage = await alice.listMessages(
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
-Call `conversation.messages(limit: Int, before: Date)`, which will return the specified number of messages sent before that time.
+Call `conversation.messages(limit: Int, before: Date)` to return the specified number of messages sent before that time.
 
 ```kotlin
 val conversation =
@@ -330,7 +330,7 @@ for await (const page of conversation.messages(limit: 25)) {
 
 As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This error could crash your app.
 
-To avoid this, code your app to detect, log, and handle the error. For example:
+To avoid crashing your app, code your app to detect, log, and handle the error. For example:
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>

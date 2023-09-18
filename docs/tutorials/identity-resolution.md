@@ -6,14 +6,14 @@ hide_table_of_contents: true
 
 # Wallet connectors with XMTP
 
-In this tutorial, we will explore how to integrate different wallets into XMTP, allowing users to securely interact with the XMTP ecosystem. We will cover the integration process using various wallet connectors, including Dynamic, ThirdWeb, and Rainbow. By following this tutorial, you will be able to offer a seamless and user-friendly wallet integration experience within your XMTP applications.
+In this tutorial, we'll explore how to integrate different wallets with XMTP, allowing users to securely interact with the XMTP ecosystem. We'll cover the integration process using various wallet connectors, including Dynamic, ThirdWeb, and Rainbow. Use this tutorial to learn how to offer a seamless and user-friendly wallet integration experience in your XMTP app.
 
 <div className="bigTab">
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-When you build with XMTP, there’s no cold start for your app and your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
+When you build with XMTP, there’s no cold start for your app and your users. As soon as your app plugs into the XMTP network, it can reach today’s most popular and meaningful identities.
 
 XMTP’s interoperability and composability help ensure that the network can continue to grow and bring messaging to every identity—via your app.
 
@@ -34,7 +34,7 @@ For example, a user should be able to enter `prxshant.eth` in your To field and 
 
 And certainly, your app should also be able to accept a raw wallet address and reverse-resolve and display the associated domain name, if available.
 
-When displaying a name, also look for and display its associated avatar. For example, when displaying a `.lens` name, look for and display a Lens profile photo. Display blockies as avatars for raw 0x addresses.
+When displaying a name, also look for and display its associated avatar. For example, when displaying a `.lens` name, look for and display a Lens profile photo. For raw 0x addresses, display blockies as avatars.
 
 ## Resolve identities
 

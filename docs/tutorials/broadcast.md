@@ -10,7 +10,7 @@ import TabItem from "@theme/TabItem";
 
 You can send a broadcast message (1:many message or announcement) with XMTP. The recipient sees the message as a DM from the sending wallet address.
 
-1. Use the bulk query `canMessage` method to identify the wallet addresses that are activated on the XMTP network. Up to 1k per batch.
+1. Use the bulk query `canMessage` method to identify the wallet addresses that are activated on the XMTP network, up to 1k per batch.
 2. Send the message to all of the activated wallet addresses.
 
 For example:
@@ -89,11 +89,11 @@ main();
 </TabItem>
 </Tabs>
 
-## Scale for broadcast messages
+## Best practices for broadcast messages
 
 - **Depending on where you’re based**, you could be subject to data privacy laws, including but not limited to GDPR and CCPA.
 
-- **If your app sends broadcast messages to your users**, be sure to get user consent before sending them broadcast messages. For example, you can request this consent during onboarding. Here's some example text you can build upon:
+- **If your app sends broadcast messages to your users**, get user consent before sending them broadcast messages. For example, you can request this consent during onboarding. Here's some example text you can build upon:
 
   > (&nbsp;&nbsp;) **Yes**, I want to receive broadcast messages from &lt;app name&gt;.
   >

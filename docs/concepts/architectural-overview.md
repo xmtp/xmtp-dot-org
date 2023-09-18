@@ -7,7 +7,7 @@ description: "Learn about the architecture of XMTP and how it supports messaging
 
 # Architectural overview of XMTP
 
-This topic provides an introduction to the architecture of XMTP (Extensible Message Transport Protocol) and how it supports messaging between blockchain accounts.
+This topic introduces the architecture of XMTP (Extensible Message Transport Protocol) and how it supports messaging between blockchain accounts.
 
 You can use this information to get an overview of how XMTP works and how building with XMTP can fit into your architecture and environment.
 
@@ -35,7 +35,7 @@ Currently, nodes are configured to rate limit high-volume publishing from messag
 
 Every **envelope** contains a payload, often encrypted, that is not observable by nodes. The payload could be a public key bundle, private key bundle, or a message created by a client app, but this information is opaque to nodes. Meaning is assigned to these envelopes in the [Client layer](#client-layer).
 
-Nodes can see envelope properties which help the nodes understand how to handle envelopes, but the properties reveal nothing about message content. An example of an important envelope property is a **topic** name. A topic name is a required envelope property. A topic name helps a node understand where to relay and store the envelope. Each envelope belongs to exactly one topic.
+Nodes can see envelope properties, which help the nodes understand how to handle envelopes, but the properties reveal nothing about message content. An example of an important envelope property is a **topic** name. A topic name is a required envelope property. A topic name helps a node understand where to relay and store the envelope. Each envelope belongs to exactly one topic.
 
 The primary responsibilities of an XMTP node are to:
 
@@ -96,7 +96,7 @@ The client sends an invitation to both the sender and recipient’s invite topic
 
 - A randomly generated conversation topic name, which tells clients which conversation topic to use to send and retrieve messages
 
-- Encrypted key material, which includes a shared secret for message encryption.
+- Encrypted key material, which includes a shared secret for message encryption
 
 To learn more, see [Invitations](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#invitations) in the `xmtp/proto` repo.
 
@@ -223,4 +223,4 @@ With XMTP network interactions handled by the message API client, developers can
 - Custom content types  
   To learn more, see [Content types](/docs/concepts/content-types).
 
-Developers can also help shape XMTP by participating in [XMTP Improvement Proposals (XIPs)](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) and [contributing](/docs/contribute) to XMTP SDKs and tools.
+Developers can also help shape XMTP by participating in [XMTP Improvement Proposals](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) (XIPs) and [contributing](/docs/contribute) to XMTP SDKs and tools.

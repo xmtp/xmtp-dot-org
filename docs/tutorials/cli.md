@@ -5,20 +5,20 @@ sidebar_position: 6
 
 # Build an XMTP CLI tool
 
-Use this starter project to build an XMTP CLI tool. You can also check out the [GitHub repo](https://github.com/xmtp/cli-starter)
+Use this starter project to build an XMTP CLI tool. You can also check out the [GitHub repo](https://github.com/xmtp/cli-starter).
 
-### Prerequisites
+## Prerequisites
 
 - Node.js version >16.7
 
-### Installation
+## Installation
 
 1. Run `npm i` in this folder
 2. Run `npm run watch` in your terminal, and leave it running as you complete this exercise
 3. Ensure that installation succeeded by running `./xmtp --help` in another terminal window
 4. Initialize with a random wallet by running `./xmtp init`
 
-### Tools we will be using
+## Tools
 
 - [xmtp-js](https://github.com/xmtp/xmtp-js) for interacting with the XMTP network
 - [yargs](https://www.npmjs.com/package/yargs) for command line parsing
@@ -153,7 +153,7 @@ The completed command will look like this:
 
 ### Stream all messages
 
-To stream messages from an address, we'll want to use a stateful React component. This will require doing some work in the command, as well as the Ink component
+To stream messages from an address, we'll want to use a stateful React component. This will require doing some work in the command, as well as the Ink component.
 
 The starter command in `index.tsx` should look like this:
 
@@ -186,7 +186,7 @@ const client = await Client.create(loadWallet(), { env });
 const stream = await client.conversations.streamAllMessages();
 ```
 
-Then we will pass that stream to the component with something like this:
+Then, we will pass that stream to the component with something like this:
 
 ```ts
 render(<MessageStream stream={stream} title={`Streaming all messages`} />);
@@ -237,7 +237,7 @@ useEffect(() => {
 
 ### Listen for messages from a single address
 
-The starter for this command should look like:
+The starter for this command should look like this:
 
 ```ts
   .command(
@@ -266,8 +266,8 @@ You can get a message stream from a `Conversation` by using the method `conversa
 
 ### Proper key management
 
-All the examples thus far have been using a randomly generated wallet and a private key stored in a file on disk. It would be better if we could use this with any existing wallet, and if we weren't touching private keys at all.
+All the examples thus far have been using a randomly generated wallet and a private key stored in a file on disk. It would be better if we could use this with any existing wallet and if we weren't touching private keys at all.
 
-With a simple webpage that uses Wagmi, Web3Modal, or any other library that returns an `ethers.Signer` you can export XMTP-specific keys and store those on the user's machine.
+With a simple web page that uses Wagmi, Web3Modal, or any other library that returns an `ethers.Signer`, you can export XMTP-specific keys and store those on the user's machine.
 
 The command to export keys is `Client.getKeys(wallet, { env })`.
