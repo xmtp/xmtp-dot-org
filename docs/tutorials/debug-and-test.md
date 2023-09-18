@@ -74,7 +74,7 @@ Limited to 3
 └─────────┴──────────────────────────┴──────┴─────────────┴─────────────┘
 ```
 
-Note that the options can also be set from environment variables prefixed with `XMTP_`, e.g.
+You can also set the options using environment variables prefixed with `XMTP_`. For example:
 
 ```sh
 $ export XMTP_ADDRESS=xmtp.eth
@@ -84,7 +84,7 @@ $ npm start intros list
 $ ...
 ```
 
-Populating test wallets might cause you to hit the XMTP network rate limit. If this happens, wait 5 minutes and try again.
+Populating test wallets might cause you to exceed the XMTP network rate limit. If this happens, wait 5 minutes and try again.
 
 ## Test your app
 
