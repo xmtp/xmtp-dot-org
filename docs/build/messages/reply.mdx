@@ -1,37 +1,38 @@
 ---
 sidebar_label: Reply
 sidebar_position: 6
+description: Learn how to use the reply content type to support quote replies in your app built with XMTP
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Reply Content Type
+# Support replies in your app built with XMTP
 
 ![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Beta-yellow)
 
-A reply is a method to directly respond to a specific message in a conversation. Users can select and reply to a particular message instead of sending a new one.
+Use the reply content type to support quote replies in your app. A reply is a method to directly respond to a specific message in a conversation. Users can select and reply to a particular message instead of sending a new one.
 
 :::tip Open for feedback
 
-You are welcome to provide feedback by commenting on the [Reply Content Type XIP](https://github.com/orgs/xmtp/discussions/35) Proposal.
+You're welcome to provide feedback by commenting on the [Proposal for Reply content type](https://github.com/orgs/xmtp/discussions/35) XIP idea.
 
 :::
 
-### Configure content type
+## Configure the reply content type
 
-In some SDK's the `ReplyCodec` is already included in the SDK. If not, you can install the package using the following command:
+In some SDKs, the `ReplyCodec` is already included in the SDK. If not, you can install the package using the following command:
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-In the javascript SDK you need to import this package first.
+In the JavaScript SDK, you need to import this package first.
 
 ```bash
 npm i @xmtp/content-type-reply
 ```
 
-After importing the package you can register the codec.
+After importing the package, you can register the codec.
 
 ```jsx
 import { ContentTypeReply, ReplyCodec } from "@xmtp/content-type-reply";
@@ -94,21 +95,19 @@ var registry = CodecRegistry()..registerCodec(ReplyCodec());
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-React Native SDK already has the codecs registered.
+The React Native SDK already has the codecs registered.
 
 </TabItem>
 
 </Tabs>
 
-### Sending a Reply
+## Send a reply
 
-Once you've created a reply, you can send it:
+Once you've created a reply, you can send it. Replies are represented as objects with two keys:
 
-In XMTP, replies are represented as objects with two keys:
+- `reference`: ID of the message being replied to
 
-- `reference`: The message ID for the message that is being replied to
-
-- `content`: A string representation of the reply
+- `content`: String representation of the reply
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -194,9 +193,7 @@ await client.sendMessage(conversation, reply, contentType: contentTypeReply);
 
 </TabItem></Tabs>
 
-### Receiving a Reply
-
-Here's how you can receive a reply:
+## Receive a reply
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -221,7 +218,7 @@ if (message.contentType === ContentTypeReply.toString()) {
 
 **getReplies**
 
-This function retrieves all replies for a given message. It takes a message object and returns an array of reply IDs.
+Use to retrieve all replies for a given message. It takes a message object and returns an array of reply IDs.
 
 ```jsx
 import { getReplies } from "@xmtp/react-sdk";
@@ -230,7 +227,7 @@ const replies = getReplies(message);
 
 **hasReply**
 
-This function checks if a given message has any replies. It takes a message object and returns a boolean indicating whether the message has replies or not.
+Use to check if a given message has any replies. It takes a message object and returns a boolean indicating whether the message has replies.
 
 ```jsx
 import { hasReply } from "@xmtp/react-sdk";
@@ -239,7 +236,7 @@ const messageHasReply = hasReply(message);
 
 **getOriginalMessageFromReply**
 
-This function retrieves the original message that a given reply is in response to. It takes a reply message object and returns the original message object.
+Use to retrieve the original message the reply is responding to. It takes a reply message object and returns the original message object.
 
 ```jsx
 import { getOriginalMessageFromReply } from "@xmtp/react-sdk";
@@ -288,12 +285,9 @@ if (decodedContent.contentType == contentTypeReply) {
 </TabItem>
 </Tabs>
 
-### Displaying the Reply
+### Display the reply
 
-The presentation of replies are decisions to be made by client applications. It does seem worth it to call out some reply experiences that we use today that might map well to the above proposal. They are:
+How you choose to display replies in your app is up to you. It might be useful to look at the user experience for replies in popular apps such as Telegram and Discord.
+For example, in Discord, users can reply to individual messages, and the reply provides a link to the original message.
 
-- Discord
-  Individual messages can get replied to, where the replies retain a link back to the originally referenced message
-- Telegram
-
-_Note that iMessage and Slack are omitted, as they follow more of a “threaded” pattern, where messages are collected into a logical grouping. There may be a separate content type proposal to explore this as a pattern, so for now, we’ll hold off._
+Note that the user experience of replies in iMessage and Slack follows more of a threaded pattern, where messages are collected into logical groupings. This pattern isn't supported by this reply content type. If you'd like to request support for a threaded reply pattern, [post an XIP idea](https://github.com/orgs/xmtp/discussions/categories/xip-ideas).

@@ -1,37 +1,38 @@
 ---
 sidebar_label: Attachment
 sidebar_position: 6
+description: Learn how to use the attachment and remote attachment content types to support attachments in your app built with XMTP
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Remote Attachment Content Type
+# Support attachments in your app built with XMTP
 
 ![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Stable-31CA54)
 
-Remote attachments of any size can be sent using the `RemoteAttachmentCodec` and a storage provider.
+Use the attachment and remote attachment content types to support attachments in your app. Remote attachments of any size can be sent using the `RemoteAttachmentCodec` and a storage provider.
 
 :::tip Open for feedback
 
-You are welcome to provide feedback on by commenting on the [Remote Attachment Content Type XIP](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md) Proposal.
+You're welcome to provide feedback by commenting on the [Remote Attachment Content Type Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md) XIP.
 
 :::
 
-### Configure content type
+## Configure the content types
 
-In some SDK's the `AttachmentCodec` is already included in the SDK. If not, you can install the package using the following command:
+In some SDKs, the `AttachmentCodec` is already included in the SDK. If not, you can install the package using the following command:
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-In the javascript SDK you need to import this package first.
+In the JavaScript SDK, you need to import this package first.
 
 ```bash
 npm i @xmtp/content-type-remote-attachment
 ```
 
-After importing the package you can register the codec.
+After importing the package, you can register the codec.
 
 ```jsx
 import {
@@ -94,24 +95,24 @@ Client.register(codec = RemoteAttachmentCodec())
 
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Remote Attachments haven't been implemented yet.
+Remote attachments for Dart haven't been implemented yet.
 
 </TabItem>
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
-The XMTP SDK handles the registration of codecs for you. When you use the SDK's functions like encryptAttachment and decryptAttachment, the SDK internally uses the appropriate codecs to perform the encryption and decryption operations.
+The XMTP SDK handles the registration of codecs for you. When you use the SDK's functions like `encryptAttachment` and `decryptAttachment`, the SDK internally uses the appropriate codecs to perform the encryption and decryption operations.
 
-You don't need to manually register or use the codecs in your application code. You just need to work with the high-level objects and methods provided by the SDK.
+You don't need to manually register or use the codecs in your app code. You just need to work with the high-level objects and methods provided by the SDK.
 
 </TabItem>
 </Tabs>
 
-### Send a remote attachment
+## Send a remote attachment
 
 <Tabs>
 <TabItem value="javascript" label="JavaScript" attributes={{className: "js_tab"}}>
 
-Load the file, in this example im using a web browser to load the file.
+Load the file. This example uses a web browser to load the file:
 
 ```jsx
 //image is the uploaded event.target.files[0];
@@ -128,7 +129,7 @@ const data = await new Promise((resolve, reject) => {
 });
 ```
 
-Create the attachment object
+Create an attachment object:
 
 ```tsx
 // Local file details
@@ -139,7 +140,7 @@ const attachment = {
 };
 ```
 
-Use the `RemoteAttachmentCodec.encodeEncrypted` to encrypt the attachment:
+Use `RemoteAttachmentCodec.encodeEncrypted` to encrypt an attachment:
 
 ```tsx
 const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
@@ -148,7 +149,7 @@ const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
 );
 ```
 
-Upload the encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage:
+Upload an encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage or Thirdweb:
 
 <Tabs>
 <TabItem value="web3storage" label="Web3 Storage" attributes={{className: "web3storage_tab"}} >
@@ -201,7 +202,7 @@ const url = uploadUrl[0];
 </TabItem>
 </Tabs>
 
-Create a remote attachment. Now that you have a `url`, you can create a `RemoteAttachment`.
+Now that you have a `url`, you can create a `RemoteAttachment`:
 
 ```jsx
 const remoteAttachment = {
@@ -216,7 +217,7 @@ const remoteAttachment = {
 };
 ```
 
-Send a remote attachment. Now that you have a remote attachment, you can send it:
+Now that you have a remote attachment, you can send it:
 
 ```tsx
 await conversation.send(remoteAttachment, {
@@ -253,7 +254,7 @@ sendMessage(remoteAttachment);
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Create the attachment object
+Create an attachment object:
 
 ```swift
 let attachment = Attachment(
@@ -263,17 +264,17 @@ let attachment = Attachment(
 )
 ```
 
-Encode and encrypt an attachment for transport
+Encode and encrypt an attachment for transport:
 
 ```swift
-// Encode the attachment and encrypt that encoded content
+// Encode an attachment and encrypt the encoded content
 const encryptedAttachment = try RemoteAttachment.encodeEncrypted(
 	content: attachment,
 	codec: AttachmentCodec()
 )
 ```
 
-Upload the encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage:
+Upload an encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage:
 
 ```swift
 func upload(data: Data, token: String): String {
@@ -292,7 +293,7 @@ func upload(data: Data, token: String): String {
 let url = upload(data: encryptedAttachment.payload, token: YOUR_WEB3_STORAGE_TOKEN)
 ```
 
-Create a remote attachment from an attachment
+Create a remote attachment from an attachment:
 
 ```swift
 let remoteAttachment = try RemoteAttachment(
@@ -301,7 +302,7 @@ let remoteAttachment = try RemoteAttachment(
 )
 ```
 
-Send a remote attachment and set the contentType
+Send a remote attachment and set the `contentType`:
 
 ```swift
 try await conversation.send(
@@ -316,7 +317,7 @@ try await conversation.send(
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
-Create the attachment object
+Create an attachment object:
 
 ```kotlin
 val attachment = Attachment(
@@ -326,7 +327,7 @@ data = "hello world".toByteStringUtf8(),
 )
 ```
 
-Encode and encrypt an attachment for transport
+Encode and encrypt an attachment for transport:
 
 ```kotlin
 val encodedEncryptedContent = RemoteAttachment.encodeEncrypted(
@@ -335,7 +336,7 @@ codec = AttachmentCodec(),
 )
 ```
 
-Create a remote attachment from an attachment
+Create a remote attachment from an attachment:
 
 ```kotlin
 val remoteAttachment = RemoteAttachment.from(
@@ -345,7 +346,7 @@ remoteAttachment.contentLength = attachment.data.size()
 remoteAttachment.filename = attachment.filename
 ```
 
-Send a remote attachment and set the contentType
+Send a remote attachment and set the `contentType`:
 
 ```kotlin
 val newConversation = client.conversations.newConversation(walletAddress)
@@ -359,12 +360,12 @@ options = SendOptions(contentType = ContentTypeRemoteAttachment),
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Remote Attachments haven't been implemented yet.
+Remote attachments for Dart haven't been implemented yet.
 
 </TabItem>
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
-This method takes a DecryptedLocalAttachment object as an argument
+This method takes a `DecryptedLocalAttachment` object as an argument:
 
 ```jsx
 const { encryptedLocalFileUri, metadata } = await alice.encryptAttachment({
@@ -373,13 +374,13 @@ const { encryptedLocalFileUri, metadata } = await alice.encryptAttachment({
 });
 ```
 
-Upload the encrypted file to a remote server
+Upload an encrypted file to a remote server:
 
 ```jsx
 let url = await uploadFile(encryptedLocalFileUri);
 ```
 
-Send the remote attachment message
+Send a remote attachment message:
 
 ```jsx
 await convo.send({
@@ -415,7 +416,7 @@ attachment.mimeType // => "image/png",
 attachment.data // => [the PNG data]
 ```
 
-Once you have the attachment object created, you can also create a preview for what to show in a message input before sending:
+Once you've created the attachment object, you can create a preview to show in the message input field before sending:
 
 ```tsx
 const objectURL = URL.createObjectURL(
@@ -453,7 +454,7 @@ attachment.mimeType // => "image/png",
 attachment.data // => [the PNG data]
 ```
 
-Once you have the attachment object created, you can also create a preview for what to show in a message input before sending:
+Once you've created the attachment object, you can create a preview to show in the message input field before sending:
 
 ```swift
 import UIKIt
@@ -481,12 +482,12 @@ runBlocking {
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Remote Attachments haven't been implemented yet.
+Remote attachments for Dart haven't been implemented yet.
 
 </TabItem>
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
-On the receiving end, you can use the decryptAttachment method to decrypt the downloaded file. This method takes an EncryptedLocalAttachment object as an argument and returns a DecryptedLocalAttachment object.
+On the receiving end, you can use the `decryptAttachment` method to decrypt the downloaded file. This method takes an `EncryptedLocalAttachment` object as an argument and returns a `DecryptedLocalAttachment` object.
 
 ```jsx
 if (message.contentTypeId === "xmtp.org/remoteStaticAttachment:1.0") {
@@ -497,7 +498,7 @@ if (message.contentTypeId === "xmtp.org/remoteStaticAttachment:1.0") {
 }
 ```
 
-Display image
+Display the attachment:
 
 ```jsx
 <Image source={{ uri: attached.fileUri }} />

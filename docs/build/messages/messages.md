@@ -25,7 +25,7 @@ const conversation = await xmtp.conversations.newConversation(
 await conversation.send("Hello world");
 ```
 
-You might want to consider [optimistically sending messages](/docs/tutorials/other/optimistic-sending). This way the app will not have to wait for the message to be processed by the network. This is especially useful for mobile apps where the user might have a spotty connection and the application continues to run with multiple threads.
+You might want to consider [optimistically sending messages](/docs/tutorials/other/optimistic-sending). This way, the app will not have to wait for the network to process the message first. Optimistic sending is especially useful for mobile apps where the user might have a spotty connection, making the app continue to run with multiple threads.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -328,7 +328,7 @@ for await (const page of conversation.messages(limit: 25)) {
 
 ## Handle an unsupported content type error
 
-As more [custom]/docs/concepts/content-types(#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This error could crash your app.
+As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This error could crash your app.
 
 To avoid this, code your app to detect, log, and handle the error. For example:
 

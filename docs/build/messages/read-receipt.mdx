@@ -1,24 +1,26 @@
 ---
-sidebar_label: Read Receipt
+sidebar_label: Read receipt
 sidebar_position: 7
+description: Learn how to use the read receipt content type to support read receipts in your app built with XMTP
+
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Read Receipt Content Type
+# Support read receipts in your app built with XMTP
 
 ![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Beta-yellow)
 
-A read receipt is a `timestamp` that indicates when a message was read. It is sent as a message and can be used to calculate the time since the last message was read.
+Use the read receipt content type to support read receipts in your app. A read receipt is a `timestamp` that indicates when a message was read. It is sent as a message and can be used to calculate the time since the last message was read.
 
 :::tip Open for feedback
 
-You are welcome to provide feedback by commenting on the [Read Receipts Content Type XIP](https://github.com/orgs/xmtp/discussions/43) Proposal.
+You're welcome to provide feedback by commenting on the [Proposal for read receipts content type](https://github.com/orgs/xmtp/discussions/43) XIP idea.
 
 :::
 
-### Configure content type
+## Configure the read receipt content type
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -27,7 +29,7 @@ You are welcome to provide feedback by commenting on the [Read Receipts Content 
 npm i @xmtp/content-type-read-receipt
 ```
 
-Import and register
+**Import and register**
 
 ```tsx
 import {
@@ -74,19 +76,19 @@ Client.register(codec = ReadReceiptCodec())
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Remote Attachments haven't been implemented yet.
+Read receipts for Dart haven't been implemented yet.
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-Read Receipts haven't been implemented yet.
+Read receipts for React Native haven't been implemented yet.
 
 </TabItem></Tabs>
 
-### Sending a Read Receipt
+## Send a read receipt
 
-- `messageId`: The message id of the message that was read
-- `timestamp`: The timestamp the read receipt was sent, in ISO 8601 format
+- `messageId`: ID of the message that was read
+- `timestamp`: Timestamp the read receipt sent, in ISO 8601 format
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -125,11 +127,22 @@ conversation.send(
 )
 ```
 
-</TabItem></Tabs>
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-### Receiving a Read Receipt
+Read receipts for Dart haven't been implemented yet.
 
-Here's how you can receive a reply:
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Read receipts for React Native haven't been implemented yet.
+
+</TabItem>
+</Tabs>
+
+## Receive a read receipt
+
+Here's how you can receive a read receipt:
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -156,7 +169,7 @@ if (ContentTypeReadReceipt.sameAs(message.contentType)) {
 
 **getReadReceipt**
 
-The getReadReceipt function retrieves the read receipt from a cached conversation. It takes a CachedConversation object as a parameter and returns the read receipt date, or undefined if the conversation has no read receipt.
+Use to retrieve the read receipt from a cached conversation. It takes a `CachedConversation` object as a parameter and returns the read receipt date, or `undefined`, if the conversation has no read receipt.
 
 ```jsx
 import { getReadReceipt } from "@xmtp/react-sdk";
@@ -166,7 +179,7 @@ const readReceiptDate = getReadReceipt(conversation);
 
 **hasReadReceipt**
 
-The hasReadReceipt function checks if a cached conversation has a read receipt. It takes a CachedConversation object as a parameter and returns true if the conversation has a read receipt, false otherwise.
+Use to check if a cached conversation has a read receipt. It takes a `CachedConversation` object as a parameter and returns `true` if the conversation has a read receipt and `false` if otherwise.
 
 ```jsx
 import { hasReadReceipt } from "@xmtp/react-sdk";
@@ -188,11 +201,26 @@ if (message.encodedContent.type == ContentTypeReadReceipt) {
 }
 ```
 
-</TabItem></Tabs>
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-### Displaying the Read Receipt
+Read receipts for Dart haven't been implemented yet.
 
-A read receipt timestamp should be not display but instead used to calculate the time since the last message was read. While iterating through messages you can be sure that the last message was read at the timestamp of the read receipt if the string if the date is lower.
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Read receipts for React Native haven't been implemented yet.
+
+</TabItem>
+</Tabs>
+
+## Use a read receipt
+
+A read receipt timestamp shouldn't be displayed. Instead, use it to calculate the time since the last message was read. While iterating through messages, you can be sure that the last message was read at the timestamp of the read receipt if the string of the date is lower.
+
+<!--string of the date - should be timestamp? if the string of the date/timestamp is lower than what value?-->
+
+<!--get React and Kotlin code for below-->
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
