@@ -10,6 +10,14 @@ This changelog provides information about release milestones for XMTP SDKs, deve
 
 ---
 
+#### Sep 2023
+
+## [JavaScript client SDK](https://github.com/xmtp/xmtp-js) v11 released (xmtp-js)
+
+This release delivers improved server-side performance, more robust conversation caching, and MetaMask Snaps support. **[Read the release notes](https://github.com/xmtp/xmtp-js/releases/tag/v11.0.0)** (Sep 15)
+
+---
+
 #### Aug 2023
 
 ## [React client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) v1.0.0 is Production Ready
