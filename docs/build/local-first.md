@@ -283,8 +283,6 @@ const existing = await db.conversations
 
 ### Step 4: Load initial data
 
-<!-- ry - we've removed many of the sections in this section - Use useEffect hook to fetch and save conversations, Use useEffect hook to stream conversations, and Fetch conversations from local DB - does it still make sense as reads now? -->
-
 To load initial data when the application starts, use the `useConversations` function. This function fetches conversations from an XMTP client, saves these conversations to the local database (if they're not already stored), and returns an array of all conversations.
 
 #### Define functions to save conversations and messages
