@@ -3,7 +3,7 @@ sidebar_label: MetaMask Snap
 sidebar_position: 3
 ---
 
-# Use the "Sign in with XMTP" MetaMask Snap
+# Use and build with the "Sign in with XMTP" MetaMask Snap
 
 Use the “Sign in with XMTP” MetaMask Snap to securely and conveniently sign in to any web app built with XMTP.
 
@@ -55,9 +55,23 @@ Yes. All app authorizations expire automatically after 30 days.
 
 ### As a developer who wants my app to use Sign in with XMTP, how do I get started?
 
-Build your app with [XMTP JavaScript SDK](https://github.com/xmtp/xmtp-js) ≥v11.0.0, which supports Sign in with XMTP. Upon first use, your users will be prompted to choose to use Sign in with XMTP with your app.
+Build your browser-based app with [XMTP JavaScript SDK](https://github.com/xmtp/xmtp-js) ≥v11.0.0, which supports Sign in with XMTP. 
+
+To enable the Snap in your app, set the `useSnaps` flag to `true` as part of client creation. 
+
+To learn more, see [Configure the client](/docs/build/authentication#configure-the-client) and [SnapKeystore](https://github.com/xmtp/xmtp-js/blob/beta/src/keystore/README.md#snapkeystore).
+
+Upon first use, your users will be prompted to choose to use Sign in with XMTP with your app.
+
+To learn more, see [Installing and upgrading Snaps](https://github.com/xmtp/xmtp-js/blob/beta/src/keystore/README.md#installing-and-upgrading-snaps).
 
 ### How do I get support for Sign in with XMTP?
 
+Users of the Snap:
+
 - Email: [support@xmtp.com](mailto:support@xmtp.com)
 - Discord: [User support channel](https://discord.com/channels/831836269558235136/1149024081874784356)
+
+Developers building with the Snap:
+
+- Discord: [Developer support channel](https://discord.com/channels/831836269558235136/1080102336564826193)

@@ -38,7 +38,17 @@ For a hands-on experience, check out the React Playground, built with the xmtp-j
 
 [GitHub repo](https://github.com/xmtp/xmtp-react-playground) | [Live version](https://xmtp.github.io/xmtp-react-playground/#/new)
 
-<ReactPlayer width="auto"  url='/img/localdb.mp4' muted playing="true" />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" url='/img/localdb.mp4' 
+  />
+</div>
+
 <br/>
 
 ### Step 1: Install libraries

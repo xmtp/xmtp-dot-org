@@ -23,7 +23,16 @@ Inspiration comes from everywhere in web3. Check out XMTP co-founder Shane Mac a
 
 [In this clip from an XMTP Labs all-hands meeting](https://youtu.be/AboZKQE_jnc), Shane takes us back to mid-2020 when we were gathering on Clubhouse as you could have the WILDEST conversations. Shinoda joined a room and talked about Facebook cutting him off from his audience, and how web3 could solve this for all artists in the future.
 
-<ReactPlayer width="100%" controls url='https://youtu.be/AboZKQE_jnc' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true"  url='https://youtu.be/AboZKQE_jnc'
+  />
+</div>
 
 <br/>
 

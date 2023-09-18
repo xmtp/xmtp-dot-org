@@ -113,8 +113,11 @@ Once you've created a reply, you can send it. Replies are represented as objects
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
+import { ContentTypeText } from "@xmtp/xmtp-js";
+import { ContentTypeReply } from "@xmtp/content-type-reply";
 const reply: Reply = {
   reference: someMessageID,
+  contentType:ContentTypeText
   content: "I concur",
 };
 

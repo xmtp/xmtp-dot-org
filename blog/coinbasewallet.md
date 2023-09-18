@@ -21,7 +21,17 @@ Coinbase Wallet has officially joined the XMTP network! Now every app built with
 
 Finally, _we can reach the wallet_.
 
-<ReactPlayer width="100%" controls url='/img/cbw-messaging-final.mp4' muted playing="true" />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" 
+    url='/img/cbw-messaging-final.mp4' 
+  />
+</div>
 
 <br/>
 

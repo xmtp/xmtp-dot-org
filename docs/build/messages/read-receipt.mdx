@@ -94,20 +94,13 @@ Read receipts for React Native haven't been implemented yet.
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
-const readReceipt: ReadReceipt = {
-  timestamp: new Date().toISOString();
-};
+const readReceipt: ReadReceipt = {};
 ```
 
 Once you've created a read receipt, you can send it:
 
 ```tsx
-await conversation.messages.send(
-  {
-    timestamp: new Date().toISOString(),
-  },
-  ContentTypeReadReceipt,
-);
+await conversation.messages.send({}, ContentTypeReadReceipt);
 ```
 
 </TabItem>
@@ -118,7 +111,7 @@ import { useSendMessage } from "@xmtp/react-sdk";
 import { ContentTypeReadReceipt } from "@xmtp/content-type-read-receipt";
 
 const sendMessage = useSendMessage();
-const readReceiptContent = { timestamp: new Date().toISOString() };
+const readReceiptContent = {};
 
 sendMessage(conversation, readReceiptContent, ContentTypeReadReceipt);
 ```

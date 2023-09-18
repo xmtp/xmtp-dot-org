@@ -38,7 +38,16 @@ Developer [@0x_Yuzu](https://x.com/0x_Yuzu) built a proof-of-concept application
 
 As illustrated in the examples below, the bartering experience takes place in a secure, friendly chat interface in a web app. This makes the back-and-forth experience of negotiation more natural and familiar for the buyer and seller.
 
-<ReactPlayer width="100%" controls url='https://vimeo.com/729445381?embedded=true&source=vimeo_logo&owner=180343266' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" url='https://vimeo.com/729445381?embedded=true&source=vimeo_logo&owner=180343266'
+  />
+</div>
 
 Here is the demo video from ETH NYC
 

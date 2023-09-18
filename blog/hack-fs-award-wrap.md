@@ -28,7 +28,16 @@ Here are the XMTP Labs award winners.
 
 After hearing countless stories about scams in the online ticketing process, this team set out to build a solution. While there are many centralized solutions to this problem, they often charge high fees to both buyers and sellers. The team came up with a decentralized ticketing solution that enables any user to create an event for which the participants can buy tickets in the form of NFTs. Event organizers can broadcast messages to the ticketholders using the XMTP protocol.
 
-<ReactPlayer width="100%" controls url='https://blog.xmtp.com/content/media/2022/08/dtp.mp4.mp4' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true"  url='https://blog.xmtp.com/content/media/2022/08/dtp.mp4.mp4'
+  />
+</div>
 
 <br/>
 
@@ -41,7 +50,16 @@ After hearing countless stories about scams in the online ticketing process, thi
 
 Optik is a web3-enabled video conferencing application. The platform provides a place for DAO contributors, teams, and groups to host meetings, online events, and more. Optik allows teams to set up public or allow list-only video conference calls, store recordings of these videos on IPFS, mint POAPs directly within the video conference, and more. XMTP is used to share invitations among meeting participants.
 
-<ReactPlayer width="100%" controls url='https://blog.xmtp.com/content/media/2022/08/optik.mp4.mp4' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" url='https://blog.xmtp.com/content/media/2022/08/optik.mp4.mp4'
+  />
+</div>
 
 <br/>
 
@@ -54,7 +72,16 @@ Optik is a web3-enabled video conferencing application. The platform provides a 
 
 GhostShare is a service for sharing files in a private and decentralized way. The project combines Lit Protocol, Web3.Storage, XMTP, Covalent, and Polygon to allow a user to securely share encrypted files via decentralized storage, and privately communicate about them.
 
-<ReactPlayer width="100%" controls url='https://blog.xmtp.com/content/media/2022/08/ghost.mp4.mp4' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" url='https://blog.xmtp.com/content/media/2022/08/ghost.mp4.mp4'
+  />
+</div>
 
 <br/>
 
@@ -67,7 +94,17 @@ GhostShare is a service for sharing files in a private and decentralized way. Th
 
 SSHR is a dapp that enables users to privately store and share their own electronic health records. The records are stored on a decentralized data network where only the patients can access their information after signing a transaction with their wallets. Patients may share their records with medical professionals, with decryption only possible through valid wallet signatures. Patients can communicate with their providers by using the XMTP-powered chat app, which facilitates secure communication.
 
-<ReactPlayer width="100%" controls url='https://blog.xmtp.com/content/media/2022/08/health.mp4.mp4' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" 
+     url='https://blog.xmtp.com/content/media/2022/08/health.mp4.mp4'
+  />
+</div>
 
 <br/>
 
@@ -80,7 +117,16 @@ SSHR is a dapp that enables users to privately store and share their own electro
 
 Supercluster is a Dapp that allows content creators to create private IPFS networks, and enables non-technical users to participate in them. A creator establishes their network by minting an NFT collection on the Polygon network. Once the collection has been minted, NFTs may be purchased or airdropped to interested participants. XMTP enabled the team to create a secure communication channel between each participant and creator.
 
-<ReactPlayer width="100%" controls url='https://blog.xmtp.com/content/media/2022/08/supercluster.mp4.mp4' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" url='https://blog.xmtp.com/content/media/2022/08/supercluster.mp4.mp4'
+  />
+</div>
 
 <br/>
 

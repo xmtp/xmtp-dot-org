@@ -17,7 +17,16 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 With Notifi, XMTP in-app messages can now trigger notifications to any web2 app, so devs can reliably reach their end-users without compromising on security.
 
-<ReactPlayer width="100%" controls url='/img/XMTP-NOTIFI-DEMO.mp4' playing="true" loop="true" />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true"  url='/img/XMTP-NOTIFI-DEMO.mp4' 
+  />
+</div>
 
 <br/>
 
@@ -39,7 +48,16 @@ It means web3 apps can tap the ubiquitous network email enabled, without comprom
 
 Watch the demo:
 
-<ReactPlayer width="100%" controls url='https://youtu.be/z7qGT5kXbdc' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" url='https://youtu.be/z7qGT5kXbdc'
+  />
+</div>
 
 <br/>
 
