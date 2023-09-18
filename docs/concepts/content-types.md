@@ -1,5 +1,5 @@
 ---
-sidebar_label: Content Types
+sidebar_label: Content types
 sidebar_position: 7
 ---
 
