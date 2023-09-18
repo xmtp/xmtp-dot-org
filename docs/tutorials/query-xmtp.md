@@ -32,7 +32,16 @@ With [Airstack](https://airstack.xyz) `XMTPs` API, it will return the `isXMTPEna
 
 [Airstack](https://airstack.xyz) provides an AI solution for you to build GraphQL queries to fulfill your use case easily.
 
-<ReactPlayer w  url='/img/query-xmtp.mp4' muted playing="true" />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true"  url='/img/query-xmtp.mp4'
+  />
+</div>
 
 ### Query a 0x address or ENS name to check if XMTP is enabled
 

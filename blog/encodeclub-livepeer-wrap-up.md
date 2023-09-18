@@ -33,7 +33,17 @@ The results were awesome. Nearly 30% of the 88 teams competing built application
 
 DeUniversity is a completely decentralized university platform that allows users to create and enroll in courses, conduct live classes, interact with students, and solve problems using Livepeer and XMTP. Using XMTP, DeUniversity built messaging experiences allowing students to chat during live streams, DM professors with questions, as well as with other students over end-to-end encrypted chats that preserve privacy.
 
-<ReactPlayer width="100%" controls url='https://vimeo.com/787437507' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" 
+    url='https://vimeo.com/787437507'
+  />
+</div>
 
 <br/>
 
@@ -45,7 +55,16 @@ DeUniversity is a completely decentralized university platform that allows users
 
 Enabling new and unique business models for content creators is core to the mission of web3. Polyfans built a messenger on top of XMTP, Lens protocol, Livepeer, and IPFS, which allows fans to chat with creators using both text and video. Creators can then token-gate livestreams and receive payments in chat from fans, allowing streamers to start generating revenue from day 1, all through a completely decentralized service infrastructure.
 
-<ReactPlayer width="100%" controls url='/img/polyfans-messenger-demo.mp4' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" url='/img/polyfans-messenger-demo.mp4'
+  />
+</div>
 
 <br/>
 
@@ -57,7 +76,16 @@ Enabling new and unique business models for content creators is core to the miss
 
 Livopedia built a creator studio for content creators to make building and deploying revenue-generating video messaging applications easy. With Livopedia, content creators can both gate uploaded and hosted videos, as well as token-gate livestreams for their fans. Using XMTP, content creators can then broadcast messages when livestreams start, as well as chat with fans across the XMTP network, and even send video messages to specific users, embedded right in the chat experience.
 
-<ReactPlayer width="100%" controls url='https://youtu.be/00Jl-_G5MqQ' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true"  url='https://youtu.be/00Jl-_G5MqQ'
+  />
+</div>
 
 <br/>
 

@@ -29,7 +29,17 @@ Here's what happens:
 
 We believe that a simple idea could help solve this problem using XMTP. Introducing: "You've Got Mail." It’s a simple app using XMTP that is both an inbox and a way to tell people to check it. Here's a video of me sharing this concept with our team at XMTP Labs:
 
-<ReactPlayer width="100%" controls url='https://youtu.be/cmE0xNrls_E' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true"
+     url='https://youtu.be/cmE0xNrls_E'
+  />
+</div>
 
 The XMTP Labs team discussing this idea
 

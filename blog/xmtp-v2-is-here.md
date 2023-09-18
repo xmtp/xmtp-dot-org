@@ -16,7 +16,16 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 The latest version brings conversation filtering and improvements to privacy.
 
-<ReactPlayer width="100%" controls url='https://www.youtube.com/watch?v=8_ufTvYBdLo' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" url='https://www.youtube.com/watch?v=8_ufTvYBdLo'
+  />
+</div>
 
 <!--truncate-->
 

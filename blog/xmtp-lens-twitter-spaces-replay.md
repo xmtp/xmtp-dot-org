@@ -17,7 +17,17 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 XMTP and Lens hosted a 𝕏 Spaces event on November 10 to dig into how developers can now use XMTP to add E2EE DMs into their Lens apps.
 
-<ReactPlayer width="100%" controls config = {{file: { attributes: { poster: 'https://blog.xmtp.com/content/images/size/w1460/2022/11/SpacesRecap.png' }}}} url='https://blog.xmtp.com/content/media/2022/11/XMTP_Twitter-Spaces-Event_FCv1-1.mp3' />
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" 
+    url='https://blog.xmtp.com/content/media/2022/11/XMTP_Twitter-Spaces-Event_FCv1-1.mp3'
+  />
+</div>
 
 <!--truncate-->
 
