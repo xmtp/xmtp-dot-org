@@ -70,7 +70,11 @@ const { canMessage } = useCanMessage();
 }
 
 const initXmtp = async () => {
-  await initialize({ signer });
+  const options = {
+    persistConversations: false,
+    env: "dev",
+  };
+  await initialize({ keys, options, signer });
 };
 
 // Start a conversation with XMTP
