@@ -1583,3 +1583,10 @@ li > a.new::after {
 .special-page.interactive-tutorial h1 {
   display: none;
 }
+
+/*ubutton*/
+.ubutton-widget .margin-top--md {
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+  max-height: 800px;
+}

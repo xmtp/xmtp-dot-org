@@ -3,25 +3,13 @@ sidebar_label: Introduction
 sidebar_position: 1
 ---
 
-# XMTP React Widgets
-
-A collection of React widgets for various purposes. These widgets can be used individually or combined to create powerful and interactive user interfaces.
-
-## Installation
-
-You can install the entire package or individual widgets using npm:
-
-```jsx
-npm install xmtp-react-widgets
-```
-
-## UWidgets
+# XMTP Integrations
 
 UWidgets are a collection of React components that can be used to create interactive user interfaces. `U` stands for `Universal`. The following widgets are available:
 
 ### **UConnect**
 
-<img src="/src/UWidgets/UConnect/UConnect.png"/>
+![](./img/UConnect.png)
 
 The **`UConnect`** widget serves as a contact button, typically positioned in the header or footer of business websites for optimal visibility and accessibility.
 
@@ -48,7 +36,7 @@ The **`UConnect`** widget serves as a contact button, typically positioned in th
 
 ## **UButton**
 
-<img src="/src/UWidgets/UButton/UButton.png"/>
+![](./img/UButton.png)
 
 The **`UButton`** widget allows users to display buttons with different themes and sizes. You can use it as follows:
 
@@ -74,7 +62,7 @@ The **`UButton`** widget allows users to display buttons with different themes a
 
 ## **UProfileCard**
 
-<img src="/src/UWidgets/UProfileCard/UProfileCard.png"/>
+![](./img/UProfileCard.png)
 
 Here's a simple example of how to use the UProfileCard component:
 
@@ -100,7 +88,7 @@ Here's a simple example of how to use the UProfileCard component:
 
 ## **USubscribe**
 
-<img src="/src/UWidgets/USubscribe/USubscribe.png"/>
+![](./img/USubscribe.png)
 
 Here's a simple example of how to use the USubscribe component:
 
@@ -132,7 +120,7 @@ Here's a simple example of how to use the USubscribe component:
 
 ## **UBroadcast**
 
-<img src="/src/UWidgets/UBroadcast/UBroadcast.png"/>
+![](./img/UBroadcast.png)
 
 The **`UBroadcast`** widget enables the user to broadcast messages to specified Ethereum addresses.
 
@@ -164,7 +152,7 @@ You can also control UBroadcast programmatically:
 
 ## **UInbox**
 
-<img src="/src/UWidgets/UInbox/UInbox.png"/>
+![](./img/UInbox.png)
 
 The **`UInbox`** widget is a specific control element. While the usage within the code is minimal, you can include the UInbox in your component tree simply by:
 
@@ -191,29 +179,17 @@ In the `src/deepLinkApps.js` file, we have a `deepLinkApps` object that contains
 ```jsx
 //Alphabetical order
 export const deepLinkApps = {
-  Coinbase: {
-    url: `https://go.cb-w.com/messaging?address=/{walletAddress}`,
-    icon: "https://assets.coinbase.com/assets/cf313fe804162f10.png",
-    device: ["Android", "iOS"],
-    name: "Coinbase Wallet",
-  },
-  Converse: {
-    url: `https://converse.xyz/dm/{walletAddress}`,
-    icon: "https://getconverse.app/favicon.ico",
-    device: ["Android", "iOS"],
-    name: "Converse",
+  xmtp: {
+    url: `https://xmtp.chat/dm/{walletAddress}`,
+    icon: "https://xmtp.chat/favicon.ico",
+    device: ["Desktop"],
+    name: "xmtp",
   },
   CustomApp: {
     url: `https://xmtp.chat/dm/{walletAddress}`,
     icon: "https://xmtp.chat/favicon.ico",
     device: ["All"],
     name: "Custom App",
-  },
-  xmtp: {
-    url: `https://xmtp.chat/dm/{walletAddress}`,
-    icon: "https://xmtp.chat/favicon.ico",
-    device: ["Desktop"],
-    name: "xmtp",
   },
 };
 ```

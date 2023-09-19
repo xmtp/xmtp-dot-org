@@ -9,6 +9,7 @@ window.onload = function () {
     pageTitle === "Local-first cache" ||
     pageTitle === "Content Types" ||
     pageTitle === "Marketing" ||
+    pageTitle === "UButton Widget" ||
     pageTitle === "Interactive tutorial"
   ) {
     // Add a class to the body if the title is one of the specified ones
