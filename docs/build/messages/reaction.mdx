@@ -69,19 +69,19 @@ createRoot(document.getElementById("root") as HTMLElement).render(
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-Client.register(ReactionCodec());
-```
-
-</TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
 import org.xmtp.android.library.codecs.ReactionCodec
 
 Client.register(codec = ReactionCodec())
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+Client.register(ReactionCodec());
 ```
 
 </TabItem>
@@ -160,6 +160,11 @@ import org.xmtp.android.library.codecs.ReactionCodec
 
 Client.register(codec = ReactionCodec())
 ```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Code sample coming soon
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
@@ -259,6 +264,11 @@ if (message.contentType == ContentTypeReaction) {
     val reaction: Reaction = reactionCodec.decode(message.content)
 }
 ```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Code sample coming soon
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>

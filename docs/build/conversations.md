@@ -26,28 +26,6 @@ const isOnProdNetwork = await client.canMessage(
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-let canAliceMessageBob = try await client.canMessage(bobClient.address)
-```
-
-</TabItem>
-
-<TabItem value="dart" label="Dart" attributes={{className: "dart_tab"}}>
-
-```dart
- val canMessage = client.canMessage(fixtures.bobClient.address)
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-```kotlin
- val canMessage = client.canMessage(bobClient.address)
-```
-
-</TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
@@ -91,6 +69,27 @@ export const CanMessage: React.FC = () => {
 ```
 
 </TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+ val canMessage = client.canMessage(bobClient.address)
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let canAliceMessageBob = try await client.canMessage(bobClient.address)
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart" attributes={{className: "dart_tab"}}>
+
+```dart
+ val canMessage = client.canMessage(fixtures.bobClient.address)
+```
+
+</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
@@ -121,29 +120,6 @@ You can create a new conversation with any address activated on the XMTP network
 const newConversation = await xmtp.conversations.newConversation(
   "0x937C0d4a6294cdfa575de17382c7076b579DC176",
 );
-```
-
-  </TabItem>
-  <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-let newConversation = try await client.conversations.newConversation(
-  with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-```dart
-var convo = await client.newConversation("0x...");
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-val newConversation =
-    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
 ```
 
 </TabItem>
@@ -205,6 +181,29 @@ export const StartConversation: React.FC = () => {
 };
 ```
 
+</TabItem>  
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val newConversation =
+    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
+```
+
+</TabItem>
+  <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let newConversation = try await client.conversations.newConversation(
+  with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+var convo = await client.newConversation("0x...");
+```
+
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
@@ -242,6 +241,39 @@ for (const conversation of allConversations) {
 ```
 
 </TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```tsx
+export const ListConversations: React.FC = () => {
+  const { conversations, error, isLoading } = useConversations();
+
+  if (error) {
+    return "An error occurred while loading conversations";
+  }
+
+  if (isLoading) {
+    return "Loading conversations...";
+  }
+
+  return (
+    ...
+  );
+};
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val allConversations = client.conversations.list()
+
+for (conversation in allConversations) {
+    print("Saying GM to ${conversation.peerAddress}")
+    conversation.send(text = "gm")
+}
+```
+
+</TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
@@ -262,39 +294,6 @@ for (var convo in conversations) {
   debugPrint('Saying GM to ${convo.peer}');
   await client.sendMessage(convo, 'gm');
 }
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-val allConversations = client.conversations.list()
-
-for (conversation in allConversations) {
-    print("Saying GM to ${conversation.peerAddress}")
-    conversation.send(text = "gm")
-}
-```
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-```tsx
-export const ListConversations: React.FC = () => {
-  const { conversations, error, isLoading } = useConversations();
-
-  if (error) {
-    return "An error occurred while loading conversations";
-  }
-
-  if (isLoading) {
-    return "Loading conversations...";
-  }
-
-  return (
-    ...
-  );
-};
 ```
 
 </TabItem>
@@ -328,6 +327,17 @@ const clientWithNoCache = await Client.create(wallet, {
 ```
 
 </TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```tsx
+const { initialize } = useClient();
+const options = {
+  persistConversations: false,
+};
+await initialize({ signer, options });
+```
+
+</TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
@@ -342,15 +352,19 @@ val client.importConversation(conversations)
 ```
 
 </TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-```tsx
-const { initialize } = useClient();
-const options = {
-  persistConversations: false,
-};
-await initialize({ signer, options });
-```
+Code sample coming soon
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -360,6 +374,38 @@ await initialize({ signer, options });
 You can save a conversation object locally using its `encodedContainer` property. This returns a `ConversationContainer` object which conforms to `Codable`.
 
 <Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+Not applicable
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+Not applicable
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+// Get a conversation
+val conversation =
+    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
+
+// Dump it to JSON
+val gson = GsonBuilder().create()
+val data = gson.toJson(conversation)
+
+// Get it back from JSON
+val containerAgain =
+    gson.fromJson(data.toString(StandardCharsets.UTF_8), ConversationV2Export::class.java)
+
+// Get an actual Conversation object like we had above
+val decodedConversation = containerAgain.decode(client)
+
+decodedConversation.send(text = "hi")
+```
+
+</TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
@@ -384,26 +430,14 @@ try await decodedConversation.send(text: "hi")
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-```kotlin
-// Get a conversation
-val conversation =
-    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
+Code sample coming soon
 
-// Dump it to JSON
-val gson = GsonBuilder().create()
-val data = gson.toJson(conversation)
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-// Get it back from JSON
-val containerAgain =
-    gson.fromJson(data.toString(StandardCharsets.UTF_8), ConversationV2Export::class.java)
-
-// Get an actual Conversation object like we had above
-val decodedConversation = containerAgain.decode(client)
-
-decodedConversation.send(text = "hi")
-```
+Code sample coming soon
 
 </TabItem>
 </Tabs>

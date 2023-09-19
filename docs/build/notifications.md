@@ -3,14 +3,16 @@ sidebar_label: Notifications
 sidebar_position: 20
 ---
 
-# Build push notifications with XMTP
-
-Push notifications can be a highly effective way to engage your users and increase app retention.
-
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 import pushnotifsettings from '/docs/concepts/img/push-notif-settings.png';
 import pushnotifsdecrypted from '/docs/concepts/img/push-notifs-decrypted.jpg';
 import badgingorb from '/docs/concepts/img/badging-orb.jpg';
 import unreadbadge from '/docs/concepts/img/unread-badge.png';
+
+# Build push notifications with XMTP
+
+Push notifications can be a highly effective way to engage your users and increase app retention. In addition to providing push notifications for new messages, provide them for new conversations. 
 
 ## Run your own notification server
 
@@ -57,17 +59,14 @@ Perform this setup to understand how you might want to enable push notifications
 You can decode a single `Envelope` from XMTP using the `decode` method:
 
 <Tabs groupId="sdk-langs">
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-```swift
-let conversation = try await client.conversations.newConversation(
-  with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
+Not applicable
 
-// Assume this function returns an Envelope that contains a message for the above conversation
-let envelope = getEnvelopeFromXMTP()
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-let decodedMessage = try conversation.decode(envelope)
-```
+Not applicable
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
@@ -83,11 +82,30 @@ val decodedMessage = conversation.decode(envelope)
 ```
 
 </TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let conversation = try await client.conversations.newConversation(
+  with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
+
+// Assume this function returns an Envelope that contains a message for the above conversation
+let envelope = getEnvelopeFromXMTP()
+
+let decodedMessage = try conversation.decode(envelope)
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
 </Tabs>
-
-## React Native
-
-In addition to providing push notifications for new messages, provide them for new conversations. To learn more, see [A practical guide to building a push notification client](https://github.com/xmtp/example-notification-server-go/blob/main/docs/notifications-client-guide.md). This guide is based on a React Native example, but can serve as a reference for how you might provide a notification client in your language of choice.
 
 ## Android
 
@@ -137,17 +155,21 @@ Here are some sample answers to help you complete the application:
 - **When your extension runs, what system and network resources does it need?** We might need to make a GRPC request in order to load additional information about a conversation. This is only necessary when we haven't stored the conversation details locally, which is expected to be less common than being able to just decode the conversation locally.
 - **How often does your extension run? What can trigger it to run?** The extension will run whenever a message is sent or received in a conversation. The frequency will depend on how active a user is.
 
-## Scale
+## React Native
+
+See [A practical guide to building a push notification client](https://github.com/xmtp/example-notification-server-go/blob/main/docs/notifications-client-guide.md). This guide is based on a React Native example, but can serve as a reference for how you might provide a notification client in your language of choice.
+
+## Best practices for notifications
 
 - Display push notifications only for messages sent **to** a user. In other words, do not send a push notification to a user about a message they sent. To do this, filter out messages sent by the user and don't send push notifications for them.
 
 - Provide a separate setting for enabling and disabling direct message push notifications. For example, if you’re building a Lens app, provide a setting for XMTP push notifications that’s separate from Lens push notifications for posts, comments, likes, and so forth. For example, here are push notification settings in the Orb app:
 
-<img src={pushnotifsettings} style={{width:"300px"}}/>
+  <img src={pushnotifsettings} style={{width:"300px"}}/>
 
 - Decrypt messages for push notifications so you can display the contents within the notification. For example, here is a decrypted push notification provided by the [Converse app](https://getconverse.app/).
 
-<img src={pushnotifsdecrypted} style={{width:"300px"}}/>
+  <img src={pushnotifsdecrypted} style={{width:"300px"}}/>
 
 - Display badges that indicate the presence of new notifications, messages, or conversations to help with engagement and interaction success.
 

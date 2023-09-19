@@ -46,6 +46,76 @@ for await (const message of await conversation.streamMessages()) {
 ```
 
 </TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```tsx
+import {
+  Client,
+  useStreamMessages,
+  useClient,
+  useMessages,
+  useConversations,
+  useCanMessage,
+  useStartConversation,
+} from "@xmtp/react-sdk";
+
+const { client, initialize } = useClient();
+const { conversations } = useConversations();
+const { startConversation } = useStartConversation();
+const { canMessage } = useCanMessage();
+
+//Initialize
+{
+  !isConnected && <button onClick={initXmtp}>Connect to XMTP</button>;
+}
+
+const initXmtp = async () => {
+  await initialize({ signer });
+};
+
+// Start a conversation with XMTP
+const add = "0x3F11b27F323b62B159D2642964fa27C46C841897";
+if (await canMessage(add)) {
+  const conversation = await startConversation(add, "hi");
+}
+
+//Stream messages
+const [history, setHistory] = useState(null);
+const { messages } = useMessages(conversation);
+// Stream messages
+const onMessage = useCallback((message) => {
+  setHistory((prevMessages) => {
+    const msgsnew = [...prevMessages, message];
+    return msgsnew;
+  });
+}, []);
+useStreamMessages(conversation, { onMessage });
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+// You'll want to replace this with a wallet from your application.
+val account = PrivateKeyBuilder()
+
+// Create the client with your wallet. This will connect to the XMTP `dev` network by default.
+// The account is anything that conforms to the `XMTP.SigningKey` protocol.
+val client = Client().create(account = account)
+
+// Start a conversation with XMTP
+val conversation =
+    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
+
+// Load all messages in the conversation
+val messages = conversation.messages()
+// Send a message
+conversation.send(text = "gm")
+// Listen for new messages in the conversation
+conversation.streamMessages().collect { print("${message.senderAddress}: ${message.body}") }
+```
+
+</TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
@@ -111,76 +181,6 @@ await listening.cancel();
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-// You'll want to replace this with a wallet from your application.
-val account = PrivateKeyBuilder()
-
-// Create the client with your wallet. This will connect to the XMTP `dev` network by default.
-// The account is anything that conforms to the `XMTP.SigningKey` protocol.
-val client = Client().create(account = account)
-
-// Start a conversation with XMTP
-val conversation =
-    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
-
-// Load all messages in the conversation
-val messages = conversation.messages()
-// Send a message
-conversation.send(text = "gm")
-// Listen for new messages in the conversation
-conversation.streamMessages().collect { print("${message.senderAddress}: ${message.body}") }
-```
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-```tsx
-import {
-  Client,
-  useStreamMessages,
-  useClient,
-  useMessages,
-  useConversations,
-  useCanMessage,
-  useStartConversation,
-} from "@xmtp/react-sdk";
-
-const { client, initialize } = useClient();
-const { conversations } = useConversations();
-const { startConversation } = useStartConversation();
-const { canMessage } = useCanMessage();
-
-//Initialize
-{
-  !isConnected && <button onClick={initXmtp}>Connect to XMTP</button>;
-}
-
-const initXmtp = async () => {
-  await initialize({ signer });
-};
-
-// Start a conversation with XMTP
-const add = "0x3F11b27F323b62B159D2642964fa27C46C841897";
-if (await canMessage(add)) {
-  const conversation = await startConversation(add, "hi");
-}
-
-//Stream messages
-const [history, setHistory] = useState(null);
-const { messages } = useMessages(conversation);
-// Stream messages
-const onMessage = useCallback((message) => {
-  setHistory((prevMessages) => {
-    const msgsnew = [...prevMessages, message];
-    return msgsnew;
-  });
-}, []);
-useStreamMessages(conversation, { onMessage });
-```
-
-</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -227,8 +227,6 @@ function sendMessage(message: string) {
     getMessages(conversation!!);
   };
 }
-
-
 ```
 
 </TabItem>
@@ -246,6 +244,22 @@ npm install @xmtp/xmtp-js
 ```
 
 </TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```bash
+npm i @xmtp/react-sdk
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+You can find the latest package version on [Maven Central](https://central.sonatype.com/artifact/org.xmtp/android/0.0.5/versions).
+
+```bash
+implementation 'org.xmtp:android:X.X.X'
+```
+
+</TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 Use Xcode to add to the project (**File** > **Add Packages…**) or add this to your `Package.swift file`:
@@ -259,22 +273,6 @@ Use Xcode to add to the project (**File** > **Add Packages…**) or add this to 
 
 ```bash
 flutter pub add xmtp
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-You can find the latest package version on [Maven Central](https://central.sonatype.com/artifact/org.xmtp/android/0.0.5/versions).
-
-```bash
-implementation 'org.xmtp:android:X.X.X'
-```
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-```bash
-npm i @xmtp/react-sdk
 ```
 
 </TabItem>
