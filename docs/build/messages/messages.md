@@ -27,9 +27,6 @@ await conversation.send("Hello world");
 
 You might want to consider [optimistically sending messages](/docs/tutorials/other/optimistic-sending). This way, the app will not have to wait for the network to process the message first. Optimistic sending is especially useful for mobile apps where the user might have a spotty connection, making the app continue to run with multiple threads.
 
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
 ```tsx
 // standard (string) message
 const preparedTextMessage = await conversation.prepareMessage(messageText);
@@ -39,35 +36,6 @@ try {
 } catch (e) {
   // handle error, enable canceling and retries (see below)
 }
-```
-
-</TabItem>
-</Tabs>
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-let conversation = try await client.conversations.newConversation(
-  with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
-try await conversation.send(content: "Hello world")
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-```dart
-var convo = await client.newConversation("0x...");
-await client.sendMessage(convo, 'gm');
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-val conversation =
-    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
-
-conversation.send(text = "Hello world")
 ```
 
 </TabItem>
@@ -131,7 +99,7 @@ export const SendMessage: React.FC<{ conversation: CachedConversation }> = ({
 };
 ```
 
-### Optimistic sending with React
+**Optimistic sending with React**
 
 When a user sends a message with XMTP, they might experience a slight delay between sending the message and seeing their sent message display in their app UI.
 
@@ -141,7 +109,7 @@ The local-first architecture of the React SDK automatically includes optimistic 
 
 Messages in the sending state have their `isSending` property set to `true`.
 
-### Handle messages that fail to send with React
+**Handle messages that fail to send with React**
 
 If a message fails to complete the sending process, you must provide an error state that alerts the user and enables them to either resend the message or cancel sending the message.
 
@@ -153,7 +121,7 @@ If the user cancels sending the message, the message is removed from the convers
 
 Messages that fail to send have their `hasSendError` property set to `true`.
 
-#### Resend a failed message
+**Resend a failed message**
 
 Use the `resendMessage` function from the `useResendMessage` hook to resend a failed message.
 
@@ -162,6 +130,33 @@ const { resendMessage } = useResendMessage();
 
 // resend the message
 resendMessage(failedMessage);
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val conversation =
+    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
+
+conversation.send(text = "Hello world")
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let conversation = try await client.conversations.newConversation(
+  with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
+try await conversation.send(content: "Hello world")
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+var convo = await client.newConversation("0x...");
+await client.sendMessage(convo, 'gm');
 ```
 
 </TabItem>
@@ -197,33 +192,6 @@ for (const conversation of await xmtp.conversations.list()) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-for conversation in client.conversations.list() {
-  let messagesInConversation = try await conversation.messages()
-}
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-```dart
-// Only show messages from the last 24 hours.
-var messages = await alice.listMessages(convo,
-    start: DateTime.now().subtract(const Duration(hours: 24)));
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-for (conversation in client.conversations.list()) {
-    val messagesInConversation = conversation.messages()
-}
-```
-
-</TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
@@ -250,6 +218,33 @@ export const Messages: React.FC<{
 ```
 
 </TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+for (conversation in client.conversations.list()) {
+    val messagesInConversation = conversation.messages()
+}
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+for conversation in client.conversations.list() {
+  let messagesInConversation = try await conversation.messages()
+}
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+// Only show messages from the last 24 hours.
+var messages = await alice.listMessages(convo,
+    start: DateTime.now().subtract(const Duration(hours: 24)));
+```
+
+</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
@@ -267,6 +262,29 @@ for (const conversation of await xmtp.conversations.list()) {
 If a conversation has a lot of messages, it's more performant to retrieve and process the messages page by page instead of handling all of the messages at once.
 
 <Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+Automatically handled by the SDK
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+Automatically handled by the SDK
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+Call `conversation.messages(limit: Int, before: Date)` to return the specified number of messages sent before that time.
+
+```kotlin
+val conversation =
+    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
+
+val messages = conversation.messages(limit = 25)
+val nextPage = conversation.messages(limit = 25, before = messages[0].sent)
+```
+
+</TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 Call `conversation.messages(limit: Int, before: Date)`, which will return the specified number of messages sent before that time.
@@ -289,19 +307,6 @@ of messages sent before that time.
 var messages = await alice.listMessages(convo, limit: 10);
 var nextPage = await alice.listMessages(
     convo, limit: 10, end: messages.last.sentAt);
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-Call `conversation.messages(limit: Int, before: Date)` to return the specified number of messages sent before that time.
-
-```kotlin
-val conversation =
-    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
-
-val messages = conversation.messages(limit = 25)
-val nextPage = conversation.messages(limit = 25, before = messages[0].sent)
 ```
 
 </TabItem>
@@ -328,12 +333,12 @@ for await (const page of conversation.messages(limit: 25)) {
 
 ## Handle an unsupported content type error
 
-As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This error could crash your app.
-
-To avoid crashing your app, code your app to detect, log, and handle the error. For example:
+As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This could crash your app.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+To avoid crashing your app, code your app to detect, log, and handle the error. For example:
 
 ```jsx
 const codec = xmtp.codecFor(content.contentType);
@@ -342,6 +347,46 @@ if (!codec) {
   throw new Error(fallback);
 }
 ```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```tsx
+// If you wish to display an unsupported content type, there’s a contentFallback
+// property that may include a useful string. However, it is recommended that 
+// you manually process unsupported content types.
+import { ContentTypeId } from "@xmtp/xmtp-js";
+import { ContentTypeAttachment } from "@xmtp/content-type-remote-attachment";
+
+const MessageContent = ({ message }) => {
+  if (
+    message.content === undefined &&
+    ContentTypeId.fromString(message.contentType).sameAs(ContentTypeAttachment)
+  ) {
+    return "This message contains an attachment, which is not supported by this client.";
+  }
+};
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+Code sample not available
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Code sample not available
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample not available
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Code sample not available
 
 </TabItem>
 </Tabs >

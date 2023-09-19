@@ -32,44 +32,6 @@ for await (const conversation of stream) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-for try await conversation in client.conversations.stream() {
-  print("New conversation started with \(conversation.peerAddress)")
-
-  // Say hello to your new friend
-  try await conversation.send(content: "Hi there!")
-
-  // Break from the loop to stop listening
-  //This stream will continue infinitely
-  break
-}
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-```dart
-var listening = client.streamConversations().listen((convo) {
-  debugPrint('Got a new conversation with ${convo.peer}');
-});
-// When you want to stop listening:
-await listening.cancel();
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-client.conversations.stream().collect {
-    print("New conversation started with ${it.peerAddress}")
-    // Say hello to your new friend
-    it.send(text = "Hi there!")
-}
-```
-
-</TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
@@ -100,6 +62,44 @@ export const NewConversations: React.FC = () => {
     ...
   );
 };
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+client.conversations.stream().collect {
+    print("New conversation started with ${it.peerAddress}")
+    // Say hello to your new friend
+    it.send(text = "Hi there!")
+}
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+for try await conversation in client.conversations.stream() {
+  print("New conversation started with \(conversation.peerAddress)")
+
+  // Say hello to your new friend
+  try await conversation.send(content: "Hi there!")
+
+  // Break from the loop to stop listening
+  //This stream will continue infinitely
+  break
+}
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+var listening = client.streamConversations().listen((convo) {
+  debugPrint('Got a new conversation with ${convo.peer}');
+});
+// When you want to stop listening:
+await listening.cancel();
 ```
 
 </TabItem>
@@ -142,50 +142,6 @@ for await (const message of await conversation.streamMessages()) {
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-let conversation = try await client.conversations.newConversation(
-  with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
-
-for try await message in conversation.streamMessages() {
-  if message.senderAddress == client.address {
-    // This message was sent from me
-    continue
-  }
-
-  print("New message from \(message.senderAddress): \(message.body)")
-}
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-```dart
-var listening = client.streamMessages(convo).listen((message) {
-  debugPrint('${message.sender}> ${message.content}');
-});
-// When you want to stop listening:
-await listening.cancel();
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-val conversation =
-    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
-
-conversation.streamMessages().collect {
-    if (it.senderAddress == client.address) {
-        // This message was sent from me
-    }
-
-    print("New message from ${it.senderAddress}: ${it.body}")
-}
-```
-
-</TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
@@ -223,6 +179,50 @@ export const StreamMessages: React.FC<{
     ...
   );
 };
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val conversation =
+    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
+
+conversation.streamMessages().collect {
+    if (it.senderAddress == client.address) {
+        // This message was sent from me
+    }
+
+    print("New message from ${it.senderAddress}: ${it.body}")
+}
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let conversation = try await client.conversations.newConversation(
+  with: "0x3F11b27F323b62B159D2642964fa27C46C841897")
+
+for try await message in conversation.streamMessages() {
+  if message.senderAddress == client.address {
+    // This message was sent from me
+    continue
+  }
+
+  print("New message from \(message.senderAddress): \(message.body)")
+}
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+var listening = client.streamMessages(convo).listen((message) {
+  debugPrint('${message.sender}> ${message.content}');
+});
+// When you want to stop listening:
+await listening.cancel();
 ```
 
 </TabItem>
@@ -296,6 +296,21 @@ export const StreamAllMessages: React.FC = () => {
   );
 };
 ```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+Code sample not available
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Code sample not available
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample not available
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>

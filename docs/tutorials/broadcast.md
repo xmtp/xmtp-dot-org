@@ -53,6 +53,26 @@ main();
 ```
 
 </TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+Code sample not available
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+Code sample not available
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Code sample not available
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample not available
+
+</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx

@@ -26,9 +26,9 @@ For more performance best practices, see [Optimize performance of your app](/doc
 
 ## Manage local data with Dexie in a web app built with xmtp-js
 
-The performance of a web app can be significantly improved by leveraging local data storage. Particularly in the context of loading messages, using a local cache can result in a 10x performance increase compared to solely relying on a network-based data source.
+You can significantly improve your web app's performance by leveraging local data storage. Particularly in the context of loading messages, using a local cache can result in a 10x performance increase compared to solely relying on a network-based data source.
 
-This guide provides a walkthrough on managing local data storage using the Dexie.js library in a web app built with the [xmtp-js SDK](https://github.com/xmtp/xmtp-js). Dexie.js is a minimalistic wrapper for IndexedDB, which is a low-level API for client-side storage of significant amounts of structured data.
+This guide provides a walkthrough on managing local data storage using the Dexie.js library in a web app built with the [xmtp-js SDK](https://github.com/xmtp/xmtp-js). Dexie.js is a minimalistic wrapper for IndexedDB, a low-level API for client-side storage of significant amounts of structured data.
 
 import ReactPlayer from 'react-player'
 
@@ -328,6 +328,6 @@ async function saveMessage(
 
 ### Conclusion
 
-Managing local data storage in a web app can be complex. However, with Dexie.js and the right strategies for handling database operations, it can be much more manageable. Always remember to handle potential errors and race conditions to ensure the integrity of your data. Now that you've learned these steps, consider trying them out in your own projects. Happy coding!
+Managing local data storage in a web app can be complex. However, it can be much more manageable with Dexie.js and the right strategies for handling database operations. Always remember to handle potential errors and race conditions to ensure the integrity of your data. Now that you've learned these steps, consider trying them out in your own projects. Happy coding!
 
-To learn more aboutDexie.js, see [Getting Started with Dexie.js](https://dexie.org/docs/Tutorial/Getting-started).
+To learn more about Dexie.js, see [Getting Started with Dexie.js](https://dexie.org/docs/Tutorial/Getting-started).

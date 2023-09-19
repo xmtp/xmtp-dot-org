@@ -66,13 +66,6 @@ createRoot(document.getElementById("root") as HTMLElement).render(
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-Client.register(ReplyCodec());
-```
-
-</TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
@@ -82,7 +75,13 @@ Client.register(codec = ReplyCodec())
 ```
 
 </TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
+```swift
+Client.register(ReplyCodec());
+```
+
+</TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
@@ -98,7 +97,6 @@ var registry = CodecRegistry()..registerCodec(ReplyCodec());
 The React Native SDK already has the codecs registered.
 
 </TabItem>
-
 </Tabs>
 
 ## Send a reply
@@ -129,7 +127,7 @@ await conversation.send(reply, {
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-```jsx
+```tsx
 import { useSendMessage } from "@xmtp/react-sdk";
 import { ContentTypeReply } from "@xmtp/content-type-reply";
 
@@ -161,6 +159,25 @@ aliceConversation.send(
 ```
 
 </TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Code sample not available
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+var parentMessageId = "abc123"; // The ID of the message you're replying to
+var replyContent = DecodedContent(contentTypeText, "This is my reply"); // The content of your reply
+
+// Create a Reply instance
+var reply = Reply(parentMessageId, replyContent);
+
+// Send the reply
+await client.sendMessage(conversation, reply, contentType: contentTypeReply);
+```
+
+</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -178,20 +195,7 @@ await conversation.send(replyContent);
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-```dart
-var parentMessageId = "abc123"; // The ID of the message you're replying to
-var replyContent = DecodedContent(contentTypeText, "This is my reply"); // The content of your reply
-
-// Create a Reply instance
-var reply = Reply(parentMessageId, replyContent);
-
-// Send the reply
-await client.sendMessage(conversation, reply, contentType: contentTypeReply);
-```
-
-</TabItem></Tabs>
+</Tabs>
 
 ## Receive a reply
 
@@ -206,7 +210,6 @@ if (message.contentType.sameAs(ContentTypeReply)) {
 ```
 
 </TabItem>
-
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```jsx
@@ -256,6 +259,21 @@ if (encodedContent.type == ContentTypeReply) {
 ```
 
 </TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Code sample not available
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+var decodedContent = await registry.decode(encoded);
+if (decodedContent.contentType == contentTypeReply) {
+  // The message is a reply.
+}
+```
+
+</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -273,19 +291,9 @@ function MessageContents({ content }: { content: MessageContent }) {
 ```
 
 </TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-```dart
-var decodedContent = await registry.decode(encoded);
-if (decodedContent.contentType == contentTypeReply) {
-  // The message is a reply.
-}
-```
-
-</TabItem>
 </Tabs>
 
-### Display the reply
+## Display the reply
 
 How you choose to display replies in your app is up to you. It might be useful to look at the user experience for replies in popular apps such as Telegram and Discord.
 For example, in Discord, users can reply to individual messages, and the reply provides a link to the original message.
