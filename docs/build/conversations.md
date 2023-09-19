@@ -354,17 +354,17 @@ val client.importConversation(conversations)
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -382,6 +382,28 @@ Not applicable
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 Not applicable
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+// Get a conversation
+val conversation =
+    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
+
+// Dump it to JSON
+val gson = GsonBuilder().create()
+val data = gson.toJson(conversation)
+
+// Get it back from JSON
+val containerAgain =
+    gson.fromJson(data.toString(StandardCharsets.UTF_8), ConversationV2Export::class.java)
+
+// Get an actual Conversation object like we had above
+val decodedConversation = containerAgain.decode(client)
+
+decodedConversation.send(text = "hi")
+```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
@@ -408,36 +430,14 @@ try await decodedConversation.send(text: "hi")
 ```
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-// Get a conversation
-val conversation =
-    client.conversations.newConversation("0x3F11b27F323b62B159D2642964fa27C46C841897")
-
-// Dump it to JSON
-val gson = GsonBuilder().create()
-val data = gson.toJson(conversation)
-
-// Get it back from JSON
-val containerAgain =
-    gson.fromJson(data.toString(StandardCharsets.UTF_8), ConversationV2Export::class.java)
-
-// Get an actual Conversation object like we had above
-val decodedConversation = containerAgain.decode(client)
-
-decodedConversation.send(text = "hi")
-```
-
-</TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 </Tabs>

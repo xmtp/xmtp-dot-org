@@ -293,7 +293,7 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>

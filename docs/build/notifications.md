@@ -97,12 +97,12 @@ let decodedMessage = try conversation.decode(envelope)
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 </Tabs>

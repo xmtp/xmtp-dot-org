@@ -371,22 +371,22 @@ const MessageContent = ({ message }) => {
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-Code sample not available
+Code sample coming soon
 
 </TabItem>
 </Tabs >
