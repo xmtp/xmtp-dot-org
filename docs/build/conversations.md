@@ -18,7 +18,7 @@ First you need to check if the address you want to message is on the XMTP networ
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-```ts
+```jsx
 const isOnNetwork = await client.canMessage(
   "0x3F11b27F323b62B159D2642964fa27C46C841897",
   { env: "production" },
