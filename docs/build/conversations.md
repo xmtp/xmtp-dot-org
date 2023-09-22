@@ -23,10 +23,17 @@ const isOnNetwork = await client.canMessage(
   "0x3F11b27F323b62B159D2642964fa27C46C841897",
   { env: "production" },
 );
-const areOnNetwork = await client.canMessage(
-  ["address1", "address2", "...", "adress1000"],
-  { env: "production" },
-);
+```
+
+You can bulk check addresses up to 1k at the same time.
+
+```jsx
+const areOnNetwork = await client.canMessage([
+  "address1",
+  "address2",
+  "...",
+  "adress1000",
+]);
 ```
 
 </TabItem>
