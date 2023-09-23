@@ -384,7 +384,7 @@ XMTP Labs is focused on serving developers. We build [SDKs, UI components, and e
 
 ### Does xmtp is compatible with `viem`
 
-Yes, not by default but you can create a wrapper around it. Like [lenster did](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useEthersWalletClient.tsx#L6)
+Yes, not by default but you can create a wrapper around it. Like [Lenster](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useEthersWalletClient.tsx#L6)
 
 ```js
 import { ZERO_ADDRESS } from "@lenster/data/constants";
@@ -427,7 +427,7 @@ const useEthersWalletClient = (): ({
 export default useEthersWalletClient;
 ```
 
-Then you can call it like this, like [lenster did](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useXmtpClient.tsx#L12)
+Then you can call it like this, like [Lenster](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useXmtpClient.tsx#L12)
 
 ```
 const { data: walletClient, isLoading } = useEthersWalletClient();
