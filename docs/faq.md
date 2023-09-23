@@ -407,7 +407,7 @@ const useEthersWalletClient = (): ({
     },
     signMessage: async (message: string): Promise<string> => {
       const signature = await data?.signMessage({ message });
-      return signature ?? "";
+      return signature ?? null; //lenster uses empty string which could be risky
     },
   };
 
@@ -425,4 +425,10 @@ const useEthersWalletClient = (): ({
 };
 
 export default useEthersWalletClient;
+```
+
+Then you can call it like this, like [lenster did](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useXmtpClient.tsx#L12)
+
+```
+const { data: walletClient, isLoading } = useEthersWalletClient();
 ```
