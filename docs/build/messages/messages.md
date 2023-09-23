@@ -52,7 +52,7 @@ export const SendMessage: React.FC<{ conversation: CachedConversation }> = ({
   const [peerAddress, setPeerAddress] = useState("");
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
-  const sendMessage = useSendMessage();
+  const { sendMessage } = useSendMessage();
 
   const handleAddressChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
@@ -353,7 +353,7 @@ if (!codec) {
 
 ```tsx
 // If you wish to display an unsupported content type, there’s a contentFallback
-// property that may include a useful string. However, it is recommended that 
+// property that may include a useful string. However, it is recommended that
 // you manually process unsupported content types.
 import { ContentTypeId } from "@xmtp/xmtp-js";
 import { ContentTypeAttachment } from "@xmtp/content-type-remote-attachment";

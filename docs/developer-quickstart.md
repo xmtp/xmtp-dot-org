@@ -80,8 +80,8 @@ First, you need to check if the address you want to message is on the XMTP netwo
 //Message this XMTP message bot to get an immediate automated reply:
 //gm.xmtp.eth (0x937C0d4a6294cdfa575de17382c7076b579DC176) env:production
 const WALLET_TO = "0x20B572bE48527a770479744AeC6fE5644F97678B";
-const isOnNetwork = await xmtp.canMessage(WALLET_TO);
-console.log("Can message: " + isOnNetwork);
+const isOnProdNetwork = await xmtp.canMessage(WALLET_TO);
+console.log("Can message: " + isOnProdNetwork);
 //eg. Can message: true
 ```
 
