@@ -14,7 +14,7 @@ Check out the replit live code example:
 
 -->
 
-- <a href="https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1#index.ts" class="plausible-event-name=Replit">Replit Live Example</a>
+- <a href="https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1#index.ts" class="plausible-event-name=Replit">Javascript Live Example</a>
 
 ### Get started
 
@@ -130,79 +130,77 @@ If you get into issues with `Buffer` and `polyfills` check out the fix below:
 
 1. Install the buffer dependency.
 
-   ```bash
-   npm i buffer
-   ```
+```bash
+npm i buffer
+```
 
 2. Create a new file, `polyfills.js`, in the root of your project.
 
-   ```tsx
-   import { Buffer } from "buffer";
+```tsx
+import { Buffer } from "buffer";
 
-   window.Buffer = window.Buffer ?? Buffer;
-   ```
+window.Buffer = window.Buffer ?? Buffer;
+```
 
 3. Import it into your main file on the first line.
 
-   - ReacJS: `index.js` or `index.tsx`
-   - VueJS: `main.js`
-   - NuxtJS: `app.vue`
+- ReacJS: `index.js` or `index.tsx`
+- VueJS: `main.js`
+- NuxtJS: `app.vue`
 
-   <br/>
-
-   ```tsx
-   //has to be on the first line of the file for it to work
-   import "./polyfills";
-   ```
+```tsx
+//has to be on the first line of the file for it to work
+import "./polyfills";
+```
 
 4. Update config files.
 
-   - Webpack: `vue.config.js` or `webpack.config.js`:
+- Webpack: `vue.config.js` or `webpack.config.js`:
 
-     ```jsx
-     const webpack = require("webpack");
+```jsx
+const webpack = require("webpack");
 
-     module.exports = {
-       configureWebpack: {
-         plugins: [
-           new webpack.ProvidePlugin({
-             Buffer: ["buffer", "Buffer"],
-           }),
-         ],
-       },
-       transpileDependencies: true,
-     };
-     ```
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        Buffer: ["buffer", "Buffer"],
+      }),
+    ],
+  },
+  transpileDependencies: true,
+};
+```
 
-   - Vite: `vite.config.js`:
+- Vite: `vite.config.js`:
 
-     ```jsx
-     import { defineConfig } from "vite";
-     import { Buffer } from "buffer";
+```jsx
+import { defineConfig } from "vite";
+import { Buffer } from "buffer";
 
-     export default defineConfig({
-       /**/
-       define: {
-         global: {
-           Buffer: Buffer,
-         },
-       },
-       /**/
-     });
-     ```
+export default defineConfig({
+  /**/
+  define: {
+    global: {
+      Buffer: Buffer,
+    },
+  },
+  /**/
+});
+```
 
-   - NuxtJS: `nuxt.config.js`:
+- NuxtJS: `nuxt.config.js`:
 
-     ```tsx
-     export default {
-       build: {
-         extend(config, { isClient }) {
-           if (isClient) {
-             config.node = {
-               Buffer: true,
-             };
-           }
-         },
-       },
-     };
-     ```
+```tsx
+export default {
+  build: {
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.node = {
+          Buffer: true,
+        };
+      }
+    },
+  },
+};
+```
