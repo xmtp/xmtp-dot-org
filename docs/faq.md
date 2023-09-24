@@ -457,8 +457,6 @@ window.Buffer = window.Buffer ?? Buffer;
 - VueJS: `main.js`
 - NuxtJS: `app.vue`
 
-  <br/>
-
 ```tsx
 //has to be on the first line of the file for it to work
 import "./polyfills";
