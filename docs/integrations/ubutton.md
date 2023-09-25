@@ -1,6 +1,6 @@
 ---
 sidebar_label: UButton
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 import Tabs from "@theme/Tabs";
@@ -20,7 +20,7 @@ size={"medium"}
 
 The UButton widget is a React component that allows users to message you through various messaging apps. It's customizable, supporting different themes, sizes, and even custom messaging apps.
 
-## **Usage**
+### Usage
 
 Here's a simple example of how to use the UButton component:
 
@@ -34,14 +34,14 @@ Here's a simple example of how to use the UButton component:
 />
 ```
 
-### **Props**
+### Props
 
-- **`domain`**: (Required) Your ENS name.
-- **`walletAddress`**: (Required) Your wallet address.
-- **`theme`**: (Optional) Set the theme. Available options: 'default', 'dark', 'light'. Default is 'default'.
-- **`size`**: (Optional) Set the button size. Available options: 'small', 'medium', 'large'. Default is 'medium'.
-- **`defaultApp`**: (Optional) Name of the messaging app for contact.
-- **`deepLinkApps`**: (Optional) An object containing information about different messaging apps.
+- `domain`: (Required) Your ENS name.
+- `walletAddress`: (Required) Your wallet address.
+- `theme`: (Optional) Set the theme. Available options: 'default', 'dark', 'light'. Default is 'default'.
+- `size`: (Optional) Set the button size. Available options: 'small', 'medium', 'large'. Default is 'medium'.
+- `defaultApp`: (Optional) Name of the messaging app for contact.
+- `deepLinkApps`: (Optional) An object containing information about different messaging apps.
 
 ### Installation
 

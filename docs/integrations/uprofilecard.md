@@ -1,6 +1,6 @@
 ---
 sidebar_label: UProfileCard
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 import Tabs from "@theme/Tabs";
@@ -8,6 +8,8 @@ import TabItem from "@theme/TabItem";
 import {UProfileCard} from "@site/src/components/UWidgets/UProfileCard";
 
 # Profile Card Button
+
+The UProfileCard widget is a React component that showcases a profile with an image, name, description, and a call-to-action button to contact the person or company through various messaging apps.
 
 <div className="widget-container">
 <UProfileCard
@@ -19,9 +21,7 @@ import {UProfileCard} from "@site/src/components/UWidgets/UProfileCard";
 />
 </div>
 
-The UProfileCard widget is a React component that showcases a profile with an image, name, description, and a call-to-action button to contact the person or company through various messaging apps.
-
-## **Usage**
+### Usage
 
 Here's a simple example of how to use the UProfileCard component:
 
@@ -35,15 +35,15 @@ Here's a simple example of how to use the UProfileCard component:
 />
 ```
 
-### **Props**
+### Props
 
-- **`domain`**: (Required) Your ENS name.
-- **`walletAddress`**: (Required) Your wallet address.
-- **`image`**: (Required) URL or path to the image of the person or company.
-- **`name`**: (Required) Name of the person or company.
-- **`description`**: (Required) A short description.
-- **`defaultApp`**: (Optional) Name of the messaging app for contact.
-- **`deepLinkApps`**: (Optional) An object containing information about different messaging apps.
+- `domain`: (Required) Your ENS name.
+- `walletAddress`: (Required) Your wallet address.
+- `image`: (Required) URL or path to the image of the person or company.
+- `name`: (Required) Name of the person or company.
+- `description`: (Required) A short description.
+- `defaultApp`: (Optional) Name of the messaging app for contact.
+- `deepLinkApps`: (Optional) An object containing information about different messaging apps.
 
 ### Installation
 

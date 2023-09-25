@@ -1,6 +1,6 @@
 ---
 sidebar_label: UConnect
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 import Tabs from "@theme/Tabs";
@@ -8,6 +8,8 @@ import TabItem from "@theme/TabItem";
 import {UConnect} from "@site/src/components/UWidgets/UConnect";
 
 # Contact Button
+
+The `UConnect` widget serves as a contact button, typically positioned in the header or footer of business websites for optimal visibility and accessibility.
 
 <div className="widget-container">
  <UConnect
@@ -20,37 +22,27 @@ import {UConnect} from "@site/src/components/UWidgets/UConnect";
         />
 </div>
 
-The **`UConnect`** widget serves as a contact button, typically positioned in the header or footer of business websites for optimal visibility and accessibility.
-
-## **Usage**
+### Usage
 
 Here's a simple example of how to use the UConnect component:
-
-```jsx
-<UConnect domain="shanemac.eth" walletAddress="0xUserWalletAddress" />
-```
-
-### **Props**
-
-- **`domain`**: (Required) Your ENS name.
-- **`walletAddress`**: (Required) Your wallet address.
-- **`theme`**: (Optional) Set the theme. Available options: 'dark', 'light'. Default is 'light'.
-- **`defaultApp`**: (Optional) Name of the messaging app for contact.
-- **`deepLinkApps`**: (Optional) An object containing information about different messaging apps.
-
-## **Themes**
-
-You can customize the appearance of the UConnect by setting the **`theme`** prop:
 
 ```jsx
 <UConnect
   domain="shanemac.eth"
   walletAddress="0xUserWalletAddress"
-  theme="dark"
   defaultApp="xmtp"
-  deepLinkApps="deepLinkApps"
+  theme={"light"}
+  size={"default"}
+  showText={true}
 />
 ```
+
+### Props
+
+- `domain`: (Required) Your ENS name.
+- `walletAddress`: (Required) Your wallet address.
+- `theme`: (Optional) Set the theme. Available options: 'dark', 'light', 'default'.
+- `deepLinkApps`: (Optional) An object containing information about different messaging apps.
 
 ### Installation
 

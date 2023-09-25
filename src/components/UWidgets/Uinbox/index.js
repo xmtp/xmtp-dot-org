@@ -1,23 +1,29 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Client } from "@xmtp/react-sdk";
+import { Client } from "@xmtp/xmtp-js";
 import { ethers } from "ethers";
 import styled, { keyframes } from "styled-components";
 import axios from "axios";
 
 export function UInbox({ wallet, env, relative = false }) {
-  const initialIsOpen =
-    localStorage.getItem("isWidgetOpen") === "true" || false;
-  const initialIsOnNetwork =
-    localStorage.getItem("isOnNetwork") === "true" || false;
-  const initialIsConnected =
-    (localStorage.getItem("isConnected") && wallet === "true") || false;
-
-  const [isOpen, setIsOpen] = useState(initialIsOpen);
-  const [isOnNetwork, setIsOnNetwork] = useState(initialIsOnNetwork);
-  const [isConnected, setIsConnected] = useState(initialIsConnected);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOnNetwork, setIsOnNetwork] = useState(false);
+  const [isConnected, setIsConnected] = useState(false);
   const [xmtpClient, setXmtpClient] = useState();
   const [selectedConversation, setSelectedConversation] = useState(null);
   const [signer, setSigner] = useState();
+
+  useEffect(() => {
+    const initialIsOpen =
+      localStorage.getItem("isWidgetOpen") === "true" || false;
+    const initialIsOnNetwork =
+      localStorage.getItem("isOnNetwork") === "true" || false;
+    const initialIsConnected =
+      (localStorage.getItem("isConnected") && wallet === "true") || false;
+
+    setIsOpen(initialIsOpen);
+    setIsOnNetwork(initialIsOnNetwork);
+    setIsConnected(initialIsConnected);
+  }, []);
 
   useEffect(() => {
     if (wallet) {
@@ -94,7 +100,6 @@ export function UInbox({ wallet, env, relative = false }) {
     setIsOnNetwork(!!xmtp.address);
     setXmtpClient(xmtp);
   };
-
   const openWidget = () => {
     setIsOpen(true);
   };
@@ -102,11 +107,13 @@ export function UInbox({ wallet, env, relative = false }) {
   const closeWidget = () => {
     setIsOpen(false);
   };
-  // Define uinbox object for global access
-  window.uinbox = {
-    open: openWidget,
-    close: closeWidget,
-  };
+
+  if (typeof window !== "undefined") {
+    window.uinbox = {
+      open: openWidget,
+      close: closeWidget,
+    };
+  }
   // Logout function to reset all states and clear local storage
   const handleLogout = async () => {
     setIsConnected(false);
@@ -197,9 +204,9 @@ const FloatingLogo = styled.div`
   bottom: ${(props) => (props.relative ? "0px" : "20px")};
   right: ${(props) => (props.relative ? "0px" : "20px")};
 
-  width: 30px;
-  height: 30px;
-  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  z-index: 1000 !important;
   border-radius: 50%;
   background-color: white;
   display: flex;
@@ -240,7 +247,8 @@ const FloatingLogo = styled.div`
 `;
 
 const UInboxContainer = styled.div`
-  position: fixed;
+  position: fixed; /* or absolute, fixed, sticky */
+  z-index: 999; /* adjust as needed */
   bottom: 70px;
   right: 20px;
   width: 300px;
@@ -249,10 +257,9 @@ const UInboxContainer = styled.div`
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000 !important;
   display: flex;
   flex-direction: column;
-
+  opacity: 1;
   &.expanded {
     height: 400px;
   }
@@ -589,6 +596,7 @@ const ConversationListItem = styled.li`
   align-items: center;
   border-bottom: 1px solid #e0e0e0;
   cursor: pointer;
+  margin-top: 0px !important;
   background-color: #f0f0f0;
   padding: 10px;
   transition: background-color 0.3s ease;
@@ -651,7 +659,6 @@ export const MessageContainer = ({
   searchTerm,
   selectConversation,
 }) => {
-  const messagesEndRef = useRef(null);
   const isFirstLoad = useRef(true);
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -723,33 +730,31 @@ export const MessageContainer = ({
     }
   };
 
-  const scrollToLatestMessage = () => {
-    const element = messagesEndRef.current;
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  useEffect(scrollToLatestMessage, [messages]);
-
+  }, [messages]);
   return (
     <MessagesContainer>
       {isLoading ? (
-        <small className="loading">Loading messages...</small>
+        <LoadingText>Loading messages...</LoadingText>
       ) : (
         <>
           <MessagesList>
-            {messages.map((message) => {
-              return (
-                <MessageItem
-                  key={message.id}
-                  message={message}
-                  senderAddress={message.senderAddress}
-                  client={client}
-                />
-              );
-            })}
-            <div ref={messagesEndRef} />
+            {messages
+              .slice()
+              .reverse()
+              .map((message) => {
+                return (
+                  <MessageItem
+                    key={message.id}
+                    message={message}
+                    senderAddress={message.senderAddress}
+                    client={client}
+                  />
+                );
+              })}
           </MessagesList>
           <MessageInput
             onSendMessage={(msg) => {
@@ -776,7 +781,7 @@ const MessagesList = styled.ul`
   align-items: flex-start;
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse; // Add this line
   overflow-y: auto;
 `;
 
@@ -788,6 +793,9 @@ const NewMessageContainer = styled.div`
   padding-left: 10px;
   padding-right: 10px;
   flex-wrap: wrap; // Add this line
+`;
+const LoadingText = styled.div`
+  text-align: center;
 `;
 
 const MessageInputField = styled.input`
@@ -856,11 +864,13 @@ const MessageItem = ({ message, senderAddress, client }) => {
         return <RenderedMessage>{message?.content}</RenderedMessage>;
       }
     } catch {
-      return message?.fallbackContent
-        ? message?.fallbackContent
-        : message?.contentFallback
-        ? message?.contentFallback
-        : "No fallback";
+      return message?.fallbackContent ? (
+        message?.fallbackContent
+      ) : message?.contentFallback ? (
+        message?.contentFallback
+      ) : (
+        <RenderedMessage>{message?.content}</RenderedMessage>
+      );
     }
   };
 
@@ -908,14 +918,16 @@ const MessageContent = styled.div`
 
 const SenderMessage = styled.li`
   align-self: flex-start;
-  text-align: right;
+  text-align: left;
   list-style: none;
+  width: 100%;
 `;
 
 const ReceiverMessage = styled.li`
   align-self: flex-end;
   list-style: none;
   text-align: right;
+  width: 100%;
 `;
 
 // Styled-components
@@ -935,9 +947,10 @@ const ENCODING = "binary";
 
 export const getEnv = () => {
   // "dev" | "production" | "local"
-  return process.env.REACT_APP_XMTP_ENV;
+  return typeof process !== "undefined" && process.env.REACT_APP_XMTP_ENV
+    ? process.env.REACT_APP_XMTP_ENV
+    : "production";
 };
-
 export const buildLocalStorageKey = (walletAddress) => {
   return walletAddress ? `xmtp:${getEnv()}:keys:${walletAddress}` : "";
 };
@@ -956,31 +969,4 @@ export const storeKeys = (walletAddress, keys) => {
 
 export const wipeKeys = (walletAddress) => {
   localStorage.removeItem(buildLocalStorageKey(walletAddress));
-};
-
-export const deloadFile = async (attachment, client, RemoteAttachmentCodec) => {
-  return RemoteAttachmentCodec.load(attachment, client)
-    .then((decryptedAttachment) => {
-      const blob = new Blob([decryptedAttachment.data], {
-        type: decryptedAttachment.mimeType,
-      });
-      return URL.createObjectURL(blob);
-    })
-    .catch((error) => {
-      console.error("Failed to load and decrypt remote attachment:", error);
-    });
-};
-
-export const loadFile = async (file) => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      if (reader.result instanceof ArrayBuffer) {
-        resolve(new Uint8Array(reader.result));
-      } else {
-        reject(new Error("Not an ArrayBuffer"));
-      }
-    };
-    reader.readAsArrayBuffer(file);
-  });
 };

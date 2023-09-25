@@ -36,7 +36,8 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-player": "^2.11.0",
-    "react-twitter-embed": "^4.0.4"
+    "react-twitter-embed": "^4.0.4",
+    "styled-components": "^6.0.8"
   },
   "browserslist": {
     "production": [
@@ -51,7 +52,7 @@
     ]
   },
   "devDependencies": {
-    "dotenv": "^16.0.1",
+    "dotenv": "^16.3.1",
     "postcss-import": "^14.0.2",
     "tailwindcss": "^3.0.23"
   }

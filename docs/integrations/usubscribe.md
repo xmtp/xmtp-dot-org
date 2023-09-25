@@ -1,6 +1,6 @@
 ---
 sidebar_label: USubscribe
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 import Tabs from "@theme/Tabs";
@@ -8,6 +8,8 @@ import TabItem from "@theme/TabItem";
 import {USubscribe} from "@site/src/components/UWidgets/USubscribe";
 
 # Subscribe Button
+
+The `USubscribe` widget is allows users to subscribe to the Dapp through xmtp. Has callbacks for managing subscrier lists.
 
 <div className="widget-container">
 <USubscribe
@@ -20,9 +22,7 @@ env={"production"}
 />
 </div>
 
-The USubscribe widget is a React component that allows users to subscribe using various XMTP options. It's customizable, supporting different themes and sizes, and returns the wallet address upon successful subscription.
-
-## **Usage**
+### Usage
 
 Here's a simple example of how to use the USubscribe component:
 
@@ -38,7 +38,7 @@ Here's a simple example of how to use the USubscribe component:
 />
 ```
 
-## **Props**
+### Props
 
 - `theme`: (Optional) Set the theme. Available options: 'default', 'dark', 'light'. Default is 'default'.
 - `size`: (Optional) Set the button size. Available options: 'small', 'medium', 'large'. Default is 'medium'.
@@ -47,24 +47,24 @@ Here's a simple example of how to use the USubscribe component:
 - `onSubscribe`: (Required) A callback function that is called when a new subscription is made.
 - `onUnsubscribe`: (Required) A callback function that is called when a subscription is cancelled.
 - `onError`: (Required) A callback function that is called when an error occurs during subscription or unsubscription.
-- **`env`**: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
+- `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
 - `labels`: (Optional) An object that contains the labels for different states of the component. The object should have the following structure:
 
-  ```jsx
-  labels = {
-    loading: "Loading...",
-    subscribed: "Subscribed",
-    unsubscribed: "Unsubscribed",
-    default: "Subscribe with your wallet",
-  };
-  ```
+```jsx
+labels = {
+  loading: "Loading...",
+  subscribed: "Subscribed",
+  unsubscribed: "Unsubscribed",
+  default: "Subscribe with your wallet",
+};
+```
 
 ### Installation
 
 Install required dependencies
 
 ```bash
-npm install @xmtp/xmtp-js styled-components
+npm install @xmtp/xmtp-js styled-components ethers@5.7.0
 ```
 
 Copy paste the component into your project
@@ -74,7 +74,7 @@ Copy paste the component into your project
 
 ```jsx
 import React, { useEffect, useState } from "react";
-import { Client } from "@xmtp/react-sdk";
+import { Client } from "@xmtp/xmtp-js";
 import styled, { keyframes } from "styled-components";
 import { ethers } from "ethers";
 

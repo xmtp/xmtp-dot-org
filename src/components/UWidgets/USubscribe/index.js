@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Client } from "@xmtp/react-sdk";
+import { Client } from "@xmtp/xmtp-js";
 import styled, { keyframes } from "styled-components";
 import { ethers } from "ethers";
 

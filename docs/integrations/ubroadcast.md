@@ -1,3 +1,59 @@
+---
+sidebar_label: UBroadcast
+sidebar_position: 5
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {UBroadcast} from "@site/src/components/UWidgets/UBroadcast";
+
+# Broadcast Widget
+
+<div className="widget-container">
+ <UBroadcast
+  env={"production"}
+  placeholderMessage="Enter a broadcast message here"
+/>
+</div>
+
+The `UBroadcast` widget enables the user to broadcast messages to 1 or many specified Ethereum addresses.
+
+### Props
+
+- `theme`: Accepts values "default", "dark", or "light".
+- `size`: Accepts values "small", "medium", or "large".
+- `placeholderMessage`: (Optional)A string for placeholder text in the message input (e.g., "Enter your marketing message here").
+- `walletAddresses`: (Optional)Wallet addresses that you want to send a broascast message.
+- `wallet`: (Optional) Sends the current signer of the wallet.
+- `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
+
+## Usage
+
+```jsx
+<UBroadcast
+  theme="dark"
+  size="medium"
+  wallet={signer}
+  walletAddresses={array}
+  placeholderMessage="Enter a broadcast message here"
+  env={"production"}
+/>
+```
+
+### Installation
+
+Install required dependencies
+
+```bash
+npm install @xmtp/xmtp-js styled-components ethers
+```
+
+Copy paste the component into your project
+
+<Tabs >
+<TabItem value="index" label="UBroadcast.js">
+
+```jsx
 import React, { useState } from "react";
 import { Client } from "@xmtp/xmtp-js";
 import styled from "styled-components";
@@ -272,3 +328,13 @@ function SVGLogo({ theme, size }) {
     </LogoIcon>
   );
 }
+```
+
+</TabItem>
+</Tabs>
+
+Import the component into your project
+
+```jsx
+import { UBroadcast } from "./UBroadcast";
+```

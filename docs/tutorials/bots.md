@@ -9,7 +9,7 @@ import onboardingbot from '/docs/concepts/img/onboarding-bot.png';
 
 Use the [XMTP Bot Starter project](https://github.com/xmtp/xmtp-bot-starter) to create chatbot on the XMTP network.
 
-## Usage
+### Usage
 
 ```typescript
 // TODO: this isn't actually published yet.
@@ -61,4 +61,3 @@ By default, the bot connects to the `dev` network. If you want to connect to pro
   - `hi.xmtp.eth` (`0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0`)
 
     Message the XMTP Labs team and a human will reply, though not as quickly as `gm.xmtp.eth`! 🤖
-    
