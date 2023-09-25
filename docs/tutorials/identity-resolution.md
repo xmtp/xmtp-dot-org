@@ -768,7 +768,7 @@ const domain = await resolution.addr(name, "ETH");
 
 <div className="nopadding" style={{width:'50%'}}  >
 
-![CleanShot 2023-06-04 at 19.29.24@2x.png](img/uns-img1.png)
+![Resolve the UNS name for the associated ETH address](img/uns-img1.png)
 
 </div>
 
@@ -778,7 +778,7 @@ To complete the Unstoppable Domains integration, it’s important to convert the
 
 <div className="nopadding" style={{width:'80%'}}  >
 
-![CleanShot 2023-06-04 at 19.30.56@2x.png](img/uns-img2.png)
+![Reverse resolve the connected wallet address from a UNS name](img/uns-img2.png)
 
 </div>
 

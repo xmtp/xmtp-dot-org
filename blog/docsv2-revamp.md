@@ -22,13 +22,13 @@ Let’s take a closer look at what’s new on this update of the documentation o
 
 <!--truncate-->
 
-![screenshot of revamped documentation](./media/docsv2/CleanShot_2023-06-15_at_20.52.172x.png)
+![revamped documentation](./media/docsv2/CleanShot_2023-06-15_at_20.52.172x.png)
 
 ## Tabs for Multi-SDK Consistent Storytelling **🧩**
 
 XMTP's commitment to interoperability and accessibility is reflected in their multi-SDK approach. Now the documentation simplified, making it language agnostic, while highlighting consistency in the SDKs through tabbed code sections.
 
-![screenshot of tabbed code samples](./media/docsv2/code.jpeg)
+![tabbed code samples](./media/docsv2/code.jpeg)
 
 ## **Core Concepts for Building with XMTP 🏗**
 
