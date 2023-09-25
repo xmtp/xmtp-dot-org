@@ -16,7 +16,7 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Announcing XMTP Grants! A program to nurture web3 messaging projects, support public good creation, and foster ecosystem growth.
 
-![XMTP-Grants-Cover.png](./media/XMTP-Grants-Cover.png)
+![XMTP Grants post card](./media/XMTP-Grants-Cover.png)
 
 <!--truncate-->
 

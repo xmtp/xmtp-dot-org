@@ -39,7 +39,7 @@ De-chat showcases not only how messaging experiences will extend well beyond tex
 - Live demo: [https://de-chat.vercel.app/](https://de-chat.vercel.app/)
 - Github repo:
 
-[![dechat-repo-card.png](media/dechat-repo-card.png)](https://github.com/De-Chat)
+[![dechat repo card](media/dechat-repo-card.png)](https://github.com/De-Chat)
 
 ---
 
@@ -60,7 +60,7 @@ GameJustu shows how developers can use encrypted messages to solve peer-to-peer 
 - Live demo: [https://gamejutsu.app/](https://gamejutsu.app/)
 - Github repo:
 
-[![chainhackers-repo-card.png](media/chainhackers-repo-card.png)](https://github.com/ChainHackers)
+[![chainhackers repo card](media/chainhackers-repo-card.png)](https://github.com/ChainHackers)
 
 ## Best Use - Dehitas 🥉
 
@@ -79,7 +79,7 @@ Furthermore, as Dehitas is leveraging decentralized solutions, it greatly reduce
 - Live Demo: [https://demo.dehitas.xyz/](https://demo.dehitas.xyz/)
 - Github repo:
 
-[![dehitas-repo-card.png](media/dehitas-repo-card.png)](https://github.com/Lampros-Tech/hireverse/tree/development)
+[![dehitas repo card](media/dehitas-repo-card.png)](https://github.com/Lampros-Tech/hireverse/tree/development)
 
 These are just a few of the submissions that utilized XMTP in their ETHOnline showcase. Each is a great example of all the ways web3 messaging can provide user value across many different types of use cases and we hope you’re just as inspired as we are.
 

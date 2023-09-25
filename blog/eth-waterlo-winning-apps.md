@@ -16,7 +16,7 @@ tags:
 
 Last Saturday, we had the incredible opportunity to attend ETH Waterloo. For those who may not know, Vitalik went to college in Waterloo, and the first ETH Global event was also held there. We couldn't help but feel the infectious energy and excitement for the future of blockchain technology.
 
-![FzfX28GXgAALIbX.jpeg](./media/waterloo/FzfX28GXgAALIbX.jpeg)
+![XMTP Labs team at ETH Waterloo](./media/waterloo/FzfX28GXgAALIbX.jpeg)
 
 <!--truncate-->
 
@@ -32,19 +32,19 @@ And now, the moment you've all been waiting for: the winners of ETH Waterloo 202
 
 🥇 **zBay**: zBay revolutionizes online marketplaces by decentralizing eBay, empowering merchants and buyers. It enables seamless communications between buyers and sellers through XMTP.
 
-![projects_r0724_images_Screenshot 2023-06-25 at 1.07.00 am.png](./media/waterloo/projects_r0724_images_Screenshot_2023-06-25_at_1.07.00_am.png)
+![zBay project UI](./media/waterloo/projects_r0724_images_Screenshot_2023-06-25_at_1.07.00_am.png)
 
 Read more: [https://ethglobal.com/showcase/zbay-r0724](https://ethglobal.com/showcase/zbay-r0724)
 
 🥈 **CryptoCupid**: A decentralized anonymous human to human dating platform powered by Worldcoin and XMTP. Read more
 
-![projects_cegju_images_MacBook Pro 16_ - 9.png](./media/waterloo/projects_cegju_images_MacBook_Pro_16__-_9.png)
+![CryptoCupid project UI](./media/waterloo/projects_cegju_images_MacBook_Pro_16__-_9.png)
 
 Read more: [https://ethglobal.com/showcase/cryptocupid-cegju](https://ethglobal.com/showcase/cryptocupid-cegju)
 
 🥉 **The Noun Knockout Card Game**: A fully decentralized deck builder featuring Nouns using XMTP, Airstack, and Near BOS.
 
-![projects_42sxm_images_Screen Shot 2023-06-25 at 5.31.06 AM.png](./media/waterloo/projects_42sxm_images_Screen_Shot_2023-06-25_at_5.31.06_AM.png)
+![Noun Knockout Card Game project UI](./media/waterloo/projects_42sxm_images_Screen_Shot_2023-06-25_at_5.31.06_AM.png)
 
 Read more: [https://ethglobal.com/showcase/the-noun-knockout-card-game-42sxm](https://ethglobal.com/showcase/the-noun-knockout-card-game-42sxm)
 
@@ -66,7 +66,7 @@ Read more: [https://github.com/TukanFrozen/nounify-my-face](https://github.com/T
 
 Guess who?
 
-![fabri.png](./media/waterloo/fabri.png)
+![Nounify My Face Fabri](./media/waterloo/fabri.png)
 
 A huge thank you to everyone who participated and made ETH Waterloo 2023 such a success. The future of web3 messaging looks bright, and we're excited to continue building it with all of you. See you at the next hackathon! 🚀
 
@@ -74,6 +74,6 @@ A huge thank you to everyone who participated and made ETH Waterloo 2023 such a 
 
 The last day we decided to catch a local showing of the BlackBerry movie. For those of you who may not know, BlackBerry has deep roots in Waterloo and, incidentally, is where our CEO’s [@shanemac](https://x.com/ShaneMac)'s first startup had its journey culminate in a buyout.
 
-![2020-03-26.jpg](./media/waterloo/2020-03-26.jpg)
+![Entry to Princess Twin Cinemas](./media/waterloo/2020-03-26.jpg)
 
 The movie was nothing short of incredible and we recommend you all to give it a watch when you get a chance. It truly was an intriguing glimpse into a piece of tech history and the entrepreneurial spirit that drives the ecosystem.

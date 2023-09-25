@@ -56,7 +56,7 @@ Airstack provides an [AI solution](https://app.airstack.xyz/explorer) for you to
 
 <div className="nopadding" style={{width:'90%'}}>
 
-![](./img/airstack-ai.png)
+![Airstack AI Assistant UI](./img/airstack-ai.png)
 
 </div>
 
@@ -470,7 +470,7 @@ To create a bulk query, your query will need to have a filter input with the com
 
 <div className="nopadding" style={{width:'30%'}}  >
 
-![](./img/airstack-bulk.png)
+![Airstack bulk query call UI](./img/airstack-bulk.png)
 
 </div>
 

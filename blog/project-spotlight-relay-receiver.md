@@ -37,7 +37,7 @@ Relay Receiver allows any web2 and web3 project to enable web3-native, secure, a
 
 You can see a screenshot of the Relay Receiver widget in action below.
 
-![alt_text](media/relay-receiver.png)
+![Relay Receiver widget](media/relay-receiver.png)
 
 It’s still early days, and already you can see three common use-cases for Receiver:
 
@@ -59,7 +59,7 @@ Given the interoperability of messages on the XMTP network, users can then acces
 
 ### Check out the Relay and XMTP SDKs
 
-[![sybil-interface-receiver repo card](media/relaycc-repo-card.png)](https://github.com/relaycc/sybil-interface-receiver)
+[![sybil interface receiver repo card](media/relaycc-repo-card.png)](https://github.com/relaycc/sybil-interface-receiver)
 
 [![xmtp-js repo card](media/xmtp-js-repo-card.png)](https://github.com/xmtp/xmtp-js)
 

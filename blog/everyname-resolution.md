@@ -12,7 +12,7 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 When you build with XMTP, there’s no cold start for your app or your users. As soon as your app plugs into the XMTP network, it's able to reach today’s most popular and meaningful identities.
 
-![](./media/everyname.jpg)
+![XMTP x Everyname post card](./media/everyname.jpg)
 
 <!--truncate-->
 

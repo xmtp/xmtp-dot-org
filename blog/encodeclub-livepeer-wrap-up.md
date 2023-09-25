@@ -17,7 +17,7 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Next Video Build: Livepeer x XMTP awards wrap-up: DeUniversity’s education platform, Polyfans Messenger token-gated livestream, and Livopedia’s creator tools take top honors.
 
-![Encode-Livepeer-Wrapup-cover.png](./media/Encode-Livepeer-Wrapup-cover.png)
+![Encode Livepeer Wrapup cover](./media/Encode-Livepeer-Wrapup-cover.png)
 
 <!--truncate-->
 
