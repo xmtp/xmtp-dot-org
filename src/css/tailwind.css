@@ -1583,3 +1583,17 @@ li > a.new::after {
 .special-page.interactive-tutorial h1 {
   display: none;
 }
+
+.centered,
+.widget-container {
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  box-shadow: inset 0 0 0 1px #ededed;
+  display: flex;
+  padding: 48px;
+  position: relative;
+  transition: background 0.18s;
+  z-index: 0;
+  align-items: center;
+  justify-content: center;
+}

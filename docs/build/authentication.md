@@ -136,7 +136,7 @@ const xmtp = await Client.create(wallet);
 </TabItem>
 </Tabs>
 
-import USubscribe from '/src/components/USubscribe/index'
+import {USubscribe} from '/src/components/UWidgets/USubscribe'
 
 Example:
 
