@@ -19,7 +19,7 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 Discover the WhatsApp for web3: end-to-end encrypted messages between wallets, that only you own and can take with you anywhere.
 
-![CONVERSE-BLOG.jpg](./media/CONVERSE-BLOG.jpg)
+![CONVERSE post card](./media/CONVERSE-BLOG.jpg)
 
 <!--truncate-->
 

@@ -76,7 +76,7 @@ Pat mused, “Hey, what if we use XMTP messages to capture and store the feedbac
 
 And the XMTP feedback widget was born:
 
-![feedback-widget.gif](./media/feedback-widget/feedback-widget.gif)
+![feedback widget](./media/feedback-widget/feedback-widget.gif)
 
 ## How it works
 

@@ -25,7 +25,7 @@ This post may be out of date. See the [Attachments tutorial](/docs/build/message
 
 Follow these steps to start sending image attachments to wallets within your chat app. Our sample app includes everything you need to connect to wallets with Thirdweb's WalletSDK, use XMTP's remote attachments, and upload larger files to Thirdweb's storage.
 
-![thirdweb.jpg](./media/xmtp-thirdweb/hero.png)
+![thirdweb post card](./media/xmtp-thirdweb/hero.png)
 
 <!--truncate-->
 

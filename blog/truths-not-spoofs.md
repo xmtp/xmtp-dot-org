@@ -46,7 +46,7 @@ As part of the ETH Shanghai hackathon, XMTP Labs [sponsored a bounty](https://gi
 
 Developer [@NftTopBest](https://github.com/NftTopBest)’s [proof-of-concept application](https://chat.web3nft.social/) ([repo](https://github.com/NftTopBest/example-chat-react-gitcoin-hackathon/pull/1)) allows users to create custom rulesets that determine which messages display in their inbox based on blockchain data, including what tokens are owned by the sender. For instance, a user could specify only wanting their inbox to display messages from a wallet that “owns a Moonbird”, or “has at least 1 ETH”, or even combine these to curate which cohorts can reach them. _(You can see an example in the following screenshot.)_
 
-![alt_text](media/xmtp-lit-condition-generator.png)
+![XMTP LIT condition generator UI](media/xmtp-lit-condition-generator.png)
 
 @NftTopBest showed how these rules could be exposed to let users precisely control how they receive web3 messages.
 

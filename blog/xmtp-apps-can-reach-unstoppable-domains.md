@@ -8,7 +8,7 @@ image: "/img/uc-uns.png"
 description: "XMTP Apps Can Reach Unstoppable Domains"
 ---
 
-![thirdweb.jpg](/img/uc-uns.png)
+![XMTP x Unstoppable Domains post card](/img/uc-uns.png)
 
 :::danger GIVEAWAY ALERT
 The first 100 people who message 'xmtp-discount.x' on @converseapp will get 20% off their Unstoppable Domain 😎 We'll also give one lucky winner a $500 USDC prize on Friday! Stay tuned on Converse for updates.
@@ -121,13 +121,13 @@ const domain = await resolution.addr(name, "ETH");
 //If there is no address associated with the domain or the domain is not valid, the above functions will return null or false respectively.
 ```
 
-![CleanShot 2023-06-04 at 19.29.24@2x.png](./media/uns-img1.png)
+![Resolving the ETH address for the UNS address](./media/uns-img1.png)
 
 ### Reverse resolve wallet addresses
 
 To complete the Unstoppable Domains integration, it’s important to convert the wallet addresses on the page into their respective domains. Using the [XMTP.chat](https://xmtp.chat/inbox) inbox as an example, we’ll want to reverse resolve the connected wallet address as well as the message previews.
 
-![CleanShot 2023-06-04 at 19.30.56@2x.png](./media/uns-img2.png)
+![Reverse resolve wallet addresses](./media/uns-img2.png)
 
 To do this, we’ll want to implement a function similar to the one below which will attempt to resolve the wallet address to a domain. Display the wallet address if the function returns null, otherwise display the domain.
 
