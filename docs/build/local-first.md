@@ -16,7 +16,7 @@ import localfirst from '/docs/build/img/local-first-arch.jpeg';
 
 <img src={localfirst} style={{width:"450px"}}/>
 
-- When building a web app with the [React SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk), the local-first architecture is automatically provided by the SDK.
+**When building a web app with the [React SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk), the local-first architecture is automatically provided by the SDK.**
 
 - When building a web app with the [xmtp-js SDK](https://github.com/xmtp/xmtp-js), you can use the browser `localStorage` as the local cache to store encrypted data, decrypting data each time before display. You might also consider [using Dexie to manage your web app's local data](#manage-local-data-with-dexie-in-a-web-app-built-with-xmtp-js).
 
