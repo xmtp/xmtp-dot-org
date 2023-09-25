@@ -131,7 +131,7 @@ await conversation.send(reply, {
 import { useSendMessage } from "@xmtp/react-sdk";
 import { ContentTypeReply } from "@xmtp/content-type-reply";
 
-const sendMessage = useSendMessage();
+const { sendMessage } = useSendMessage();
 
 const replyContent = {
   content: "Your reply content here",

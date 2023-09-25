@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: false
 sidebar_label: Changelog
-sidebar_position: 24
+sidebar_position: 80
 ---
 
 # Changelog for XMTP
@@ -22,8 +22,7 @@ This release delivers improved server-side performance, more robust conversation
 
 ## [React client SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) v1.0.0 is Production Ready
 
-This release delivers local-first architecture, optimistic sending, and support for standards-track content types via configuration. **[Read the release notes](https://github.com/xmtp/xmtp-web/releases/tag/%40xmtp%2Freact-sdk%401.0.0
-)** (Aug 22)
+This release delivers local-first architecture, optimistic sending, and support for standards-track content types via configuration. **[Read the release notes](https://github.com/xmtp/xmtp-web/releases/tag/%40xmtp%2Freact-sdk%401.0.0)** (Aug 22)
 
 ---
 

@@ -2,7 +2,6 @@
 sidebar_label: Read receipt
 sidebar_position: 7
 description: Learn how to use the read receipt content type to support read receipts in your app built with XMTP
-
 ---
 
 import Tabs from "@theme/Tabs";
@@ -115,7 +114,7 @@ await conversation.messages.send({}, ContentTypeReadReceipt);
 import { useSendMessage } from "@xmtp/react-sdk";
 import { ContentTypeReadReceipt } from "@xmtp/content-type-read-receipt";
 
-const sendMessage = useSendMessage();
+const { sendMessage } = useSendMessage();
 const readReceiptContent = {};
 
 sendMessage(conversation, readReceiptContent, ContentTypeReadReceipt);

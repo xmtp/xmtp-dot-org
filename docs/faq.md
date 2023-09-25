@@ -377,3 +377,139 @@ XMTP Labs employees work alongside other XMTP community members to build with an
 ### Does XMTP Labs plan to build apps or are you focused 100% on the protocol?
 
 XMTP Labs is focused on serving developers. We build [SDKs, UI components, and example apps](/docs/introduction#xmtp-sdks-and-example-apps) that help developers build great experiences with XMTP.
+
+## Developers
+
+---
+
+### Does xmtp is compatible with `viem`
+
+Yes, not by default but you can create a wrapper around it. Like [Lenster](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useEthersWalletClient.tsx#L6)
+
+```js
+import { ZERO_ADDRESS } from "@lenster/data/constants";
+import { CHAIN_ID } from "src/constants";
+import type { Address } from "viem";
+import { useWalletClient } from "wagmi";
+
+const useEthersWalletClient = (): ({
+  data: {
+    getAddress: () => Promise<Address>,
+    signMessage: (message: string) => Promise<string>,
+  },
+  isLoading: boolean,
+}) => {
+  const { data, isLoading } = useWalletClient({ chainId: CHAIN_ID });
+
+  const ethersWalletClient = {
+    getAddress: async (): Promise<Address> => {
+      return (await data?.account.address) ?? ZERO_ADDRESS;
+    },
+    signMessage: async (message: string): Promise<string> => {
+      const signature = await data?.signMessage({ message });
+      return signature ?? null; //lenster uses empty string which could be risky
+    },
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { signMessage, ...rest } = data ?? {};
+
+  const mergedWalletClient = {
+    data: {
+      ...ethersWalletClient,
+      ...{ ...rest },
+    },
+  };
+
+  return { data: mergedWalletClient.data, isLoading };
+};
+
+export default useEthersWalletClient;
+```
+
+Then you can call it like this, like [Lenster](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useXmtpClient.tsx#L12)
+
+```
+const { data: walletClient, isLoading } = useEthersWalletClient();
+```
+
+### Why my app is failing saying Buffer is not found
+
+If you get into issues with `Buffer` and `polyfills` check out the fix below:
+
+1. Install the buffer dependency.
+
+```bash
+npm i buffer
+```
+
+2. Create a new file, `polyfills.js`, in the root of your project.
+
+```tsx
+import { Buffer } from "buffer";
+
+window.Buffer = window.Buffer ?? Buffer;
+```
+
+3. Import it into your main file on the first line.
+
+- ReacJS: `index.js` or `index.tsx`
+- VueJS: `main.js`
+- NuxtJS: `app.vue`
+
+```tsx
+//has to be on the first line of the file for it to work
+import "./polyfills";
+```
+
+4. Update config files.
+
+- Webpack: `vue.config.js` or `webpack.config.js`:
+
+```jsx
+const webpack = require("webpack");
+
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        Buffer: ["buffer", "Buffer"],
+      }),
+    ],
+  },
+  transpileDependencies: true,
+};
+```
+
+- Vite: `vite.config.js`:
+
+```jsx
+import { defineConfig } from "vite";
+import { Buffer } from "buffer";
+
+export default defineConfig({
+  /**/
+  define: {
+    global: {
+      Buffer: Buffer,
+    },
+  },
+  /**/
+});
+```
+
+- NuxtJS: `nuxt.config.js`:
+
+```tsx
+export default {
+  build: {
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.node = {
+          Buffer: true,
+        };
+      }
+    },
+  },
+};
+```

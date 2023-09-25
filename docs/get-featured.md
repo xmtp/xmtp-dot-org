@@ -1,6 +1,6 @@
 ---
 sidebar_label: Get featured
-sidebar_position: 14
+sidebar_position: 50
 ---
 
 # Get featured

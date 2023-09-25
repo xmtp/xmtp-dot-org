@@ -11,8 +11,6 @@ window.onload = function () {
     pageTitle === "Marketing" ||
     pageTitle === "Interactive tutorial"
   ) {
-    // Add a class to the body if the title is one of the specified ones
-    console.log(pageTitle);
     // Convert the page title to a suitable CSS class name
     const pageTitleClass = pageTitle.toLowerCase().replace(/ /g, "-");
 
@@ -37,6 +35,7 @@ window.onload = function () {
       item.innerText === "DeFi" ||
       item.innerText === "Marketing" ||
       item.innerText === "Interactive Tutorial" ||
+      item.innerText === "Custom content type" ||
       item.innerText === "Developer Quickstart" ||
       item.innerText === "Query addresses" ||
       item.innerText === "Scale" ||
