@@ -18,7 +18,7 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 We just got back from [ETH NYC](https://ethglobal.com/) and what a great event. 1,300 builders, 50 sponsors, so much energy…
 
-![eth-nyc-awards-graphic.png](./media/eth-nyc-awards-graphic.png)
+![eth nyc awards graphic](./media/eth-nyc-awards-graphic.png)
 
 <!--truncate-->
 
@@ -38,7 +38,7 @@ Merchants and customers need systems that eliminate fraud in a verified/ trusted
 - Live demo: [https://www.loom.com/share/21c1bf50846b4d25a2e0886a59057386](https://www.loom.com/share/21c1bf50846b4d25a2e0886a59057386)
 - Github repo:
 
-[![openmagic-repo-card.png](media/openmagic-repo-card.png)](https://github.com/openmagic-io/openmagic-community-marketplace-demo)
+[![openmagic repo card](media/openmagic-repo-card.png)](https://github.com/openmagic-io/openmagic-community-marketplace-demo)
 
 ---
 
@@ -56,7 +56,7 @@ OTC Swap was able to accomplish this in eight hours by combining XMTP, [OpenSea 
 - Live demo:[ https://otc-swap.vercel.app/](https://otc-swap.vercel.app/)
 - Github repo:
 
-[![otcswap-repo-card.png](media/otcswap-repo-card.png)](https://github.com/Aqrare/eth-nyc)
+[![otc swap repo card](media/otcswap-repo-card.png)](https://github.com/Aqrare/eth-nyc)
 
 ---
 
@@ -71,7 +71,7 @@ Burn My Wallet created a "kill switch" for a stolen wallet. When a user reports 
 - Docs [https://docs.burnmywallet.com/](https://docs.burnmywallet.com/)
 - Github repo:
 
-[![burnmywallet-repo-card.png](media/burnmywallet-repo-card.png)](https://github.com/NikitaVr/burnmywallet)
+[![burn my wallet repo card](media/burnmywallet-repo-card.png)](https://github.com/NikitaVr/burnmywallet)
 
 ---
 

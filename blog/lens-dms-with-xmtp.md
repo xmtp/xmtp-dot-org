@@ -47,7 +47,7 @@ For those just now discovering XMTP (Extensible Message Transport Protocol), itâ
 
 Learn more about the Lens DMs with XMTP [in our Discord](https://discord.gg/xmtp). If youâ€™re a developer, you can [get started implementing DMs into your Lens app here](https://xmtp.org/lens-quickstart).
 
-[![build-key-xmtp-features-doc-card.png](media/build-key-xmtp-features-doc-card.png)](https://xmtp.org/lens-quickstart)
+[![build key xmtp features doc card](media/build-key-xmtp-features-doc-card.png)](https://xmtp.org/lens-quickstart)
 
 <br/>
 <FeedbackWidget />

@@ -7,7 +7,7 @@ sidebar_position: 2
 
 This guide is a supplement to [core instructions](https://github.com/xmtp/example-notification-server-go/blob/np/export-kotlin-proto-code/README.md#local-setup) provided in the `example-notification-server-go` repository and aims to address some common misconceptions and issues encountered during the setup. This guide is written for macOS users, but the steps should be similar for Linux users.
 
-![](../img/notifications/bells.png)
+![XMTP notification server post card](../img/notifications/bells.png)
 
 <!--truncate-->
 
@@ -58,7 +58,7 @@ This guide is a supplement to [core instructions](https://github.com/xmtp/exampl
    ./dev/up
    ```
 
-   ![](../img/notifications/cmd1.png)
+   ![./dev/up in CLI](../img/notifications/cmd1.png)
 
    If you encounter an error like `error getting credentials - err: docker-credential-desktop resolves to executable in current directory (./docker-credential-desktop), out:`, it's likely because Docker is not running. Make sure Docker Desktop is running and try the command again.
 
@@ -84,7 +84,7 @@ This guide is a supplement to [core instructions](https://github.com/xmtp/exampl
    ./dev/up
    ```
 
-   ![](../img/notifications/cmd2.png)
+   ![./dev/up in CLI](../img/notifications/cmd2.png)
 
    ```bash
    source .env
@@ -93,11 +93,11 @@ This guide is a supplement to [core instructions](https://github.com/xmtp/exampl
 
    This will start both the `worker` and the `api` service. The `worker` listens for new messages on the XMTP network and sends push notifications, and the `api` service handles HTTP/GRPC requests.
 
-   ![](../img/notifications/cmd3.png)
+   ![./dev/run --xmtp-listener --api in CLI](../img/notifications/cmd3.png)
 
 You can now send notifications to your device using an [XMTP push notification client](https://github.com/xmtp/example-notification-server-go/blob/main/docs/notifications-client-guide.md).
 
-![](../img/notifications/cmd4.png)
+![Server and API server started in CLI](../img/notifications/cmd4.png)
 
 ## Troubleshooting
 

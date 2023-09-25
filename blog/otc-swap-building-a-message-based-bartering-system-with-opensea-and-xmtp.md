@@ -32,7 +32,7 @@ Today, we’re focusing on how one developer built an application that enables p
 
 Developer [@0x_Yuzu](https://x.com/0x_Yuzu) built a proof-of-concept application called [OTC Swap](https://vimeo.com/729445381) that enables buyers and sellers to barter on the price of an NFT using a chat interface. During the negotiation the seller can use UI controls to accept, reject, or counter offers. Because bartering happens in a chat interface, the buyer and seller can have a conversation about the transaction and negotiate directly. **This improves upon today’s NFT marketplaces, where communication must happen externally.**
 
-![alt_text](media/Slide-16_9---1-3.png)
+![Create Order UI in OTC Swap](media/Slide-16_9---1-3.png)
 
 ### Messaging experience
 
@@ -65,7 +65,7 @@ Here is the OTC Swap bartering workflow and buyer and seller experience:
 
 Here is a visualization of the OTC Swap user flow:
 
-![alt_text](media/image-14-2.jpeg)
+![OTC Swap user flow](media/image-14-2.jpeg)
 
 ### E2EE and privacy
 

@@ -15,7 +15,7 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 This guide is a supplement to [core instructions](https://github.com/xmtp/example-notification-server-go/blob/np/export-kotlin-proto-code/README.md#local-setup) provided in the `example-notification-server-go` repository and aims to address some common misconceptions and issues encountered during the setup. This guide is written for macOS users, but the steps should be similar for Linux users.
 
-![](./media/notifications/bells.png)
+![notification server post card](./media/notifications/bells.png)
 
 <!--truncate-->
 
@@ -64,7 +64,7 @@ After installation, make sure Docker is running by searching for Docker in Spotl
    ./dev/up
    ```
 
-   ![](./media/notifications/cmd1.png)
+   ![set up the server](./media/notifications/cmd1.png)
 
    If you encounter an error like `error getting credentials - err: docker-credential-desktop resolves to executable in current directory (./docker-credential-desktop), out:`, it's likely because Docker is not running. Make sure Docker Desktop is running and try the command again.
 
@@ -90,7 +90,7 @@ After installation, make sure Docker is running by searching for Docker in Spotl
    ./dev/up
    ```
 
-   ![](./media/notifications/cmd2.png)
+   ![./dev/up in CLI](./media/notifications/cmd2.png)
 
    ```bash
    source .env
@@ -99,11 +99,11 @@ After installation, make sure Docker is running by searching for Docker in Spotl
 
    This will start both the `worker` and the `api` service. The `worker` listens for new messages on the XMTP network and sends push notifications, and the `api` service handles HTTP/GRPC requests.
 
-   ![](./media/notifications/cmd3.png)
+   ![./dev/run --xmtp-listener --api in CLI](./media/notifications/cmd3.png)
 
 You can now send notifications to your device using an [XMTP push notification client](https://github.com/xmtp/example-notification-server-go/blob/main/docs/notifications-client-guide.md).
 
-![](./media/notifications/cmd4.png)
+![dev/run in CLI](./media/notifications/cmd4.png)
 
 ## Troubleshooting
 

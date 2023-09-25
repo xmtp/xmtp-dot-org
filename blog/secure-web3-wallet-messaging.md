@@ -17,7 +17,7 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 How XMTP enables wallets to secure conversations, not just transactions and assets.
 
-![secure-web3-messaging-post.png](./media/secure-web3-messaging-post.png)
+![secure web3 messaging post card](./media/secure-web3-messaging-post.png)
 
 <!--truncate-->
 
@@ -85,7 +85,7 @@ One area where XMTP makes things ridiculously simple for wallet app and dapp dev
 
 The XMTP SDK handles all of the complex bits of establishing a secure connection between senders and recipients—built with [components of Signal's X3DH key agreement protocol](https://github.com/xmtp/litepaper/blob/main/README.md#421-securing-messages-between-participants). Wallet apps just need to use `conversation.send` and here's the rest of what gets taken care of by the SDK:
 
-![alt_text](media/encryption-made-easy.png)
+![Encryption made easy](media/encryption-made-easy.png)
 Encryption made easy
 
 The best part of this is that for wallets looking to add web3 messaging to their set of features, securing messages with XMTP means they can offer best-in-class encryption.
