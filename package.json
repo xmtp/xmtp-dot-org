@@ -19,7 +19,7 @@
     "@docusaurus/preset-classic": "2.0.0-rc.1",
     "@docusaurus/theme-search-algolia": "^2.0.0-rc.1",
     "@glidejs/glide": "^3.6.0",
-    "@ensdomains/ens-avatar": "^0.3.3",
+    "@ensdomains/ens-avatar": "^0.2.5",
     "@heroicons/react": "^2.0.17",
     "@markprompt/css": "^0.5.1",
     "@markprompt/react": "^0.11.4",
@@ -39,7 +39,6 @@
     "react-loadable": "^5.5.0",
     "react-player": "^2.11.0",
     "react-twitter-embed": "^4.0.4",
-    "regenerator-runtime": "^0.14.0",
     "styled-components": "^6.0.8"
   },
   "browserslist": {
