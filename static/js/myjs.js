@@ -9,6 +9,7 @@ window.onload = function () {
     pageTitle === "Local-first cache" ||
     pageTitle === "Content Types" ||
     pageTitle === "Marketing" ||
+    pageTitle === "XMTP Integrations" ||
     pageTitle === "Interactive tutorial"
   ) {
     // Convert the page title to a suitable CSS class name

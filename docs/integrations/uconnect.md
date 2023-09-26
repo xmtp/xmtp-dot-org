@@ -12,14 +12,14 @@ import {UConnect} from "@site/src/components/UWidgets/UConnect";
 The `UConnect` widget serves as a contact button, typically positioned in the header or footer of business websites for optimal visibility and accessibility.
 
 <div className="widget-container">
- <UConnect
-          domain="shanemac.eth"
-          walletAddress="0xUserWalletAddress"
-          defaultApp="xmtp"
-          theme={"light"}
-          size={"default"}
-          showText={true}
-        />
+<UConnect
+domain="shanemac.eth"
+walletAddress="0xUserWalletAddress"
+defaultApp="xmtp"
+theme={"light"}
+size={"default"}
+showText={true}
+/>
 </div>
 
 ### Props
