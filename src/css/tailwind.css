@@ -1583,3 +1583,28 @@ li > a.new::after {
 .special-page.interactive-tutorial h1 {
   display: none;
 }
+
+/*WIDGETS*/
+.centered,
+.widget-container {
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  box-shadow: inset 0 0 0 1px #ededed;
+  display: flex;
+  padding: 48px;
+  position: relative;
+  transition: background 0.18s;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.widget-container.ulink {
+  padding: 0px !important;
+  height: 500px;
+}
+
+.tabs-container pre {
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+  max-height: 500px;
+}
