@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import { ethers } from "ethers";
 import { Client } from "@xmtp/xmtp-js";
+import { AvatarResolver, utils as avtUtils } from "@ensdomains/ens-avatar";
 
 const Avatar = styled.img`
   border-radius: 50%;
@@ -26,7 +27,6 @@ const ULinkContainer = styled.div`
   width: 100%;
   pointer-events: auto;
   margin: 0 auto;
-  z-index: 10;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -120,13 +120,13 @@ export function ULink({
   size = "medium",
   device = "All",
 }) {
-  const [walletAddress, setWalletAddress] = useState(initialWalletAddress); // Add this state
-  const [message, setMessage] = useState(""); // Add this state to display messages
-  const [loadingResolve, setLoadingResolve] = useState(false); // Add this state to track loading status
+  const [walletAddress, setWalletAddress] = useState(initialWalletAddress);
+  const [message, setMessage] = useState("");
+  const [loadingResolve, setLoadingResolve] = useState(false);
   const [deviceSpecificApps, setDeviceSpecificApps] = useState([]);
 
   let { domain } = useParams();
-  domain = domain || "shanemac.eth"; // Set a default value
+  domain = domain || "shanemac.eth";
 
   useEffect(() => {
     const devicep = detectDevice(device);
@@ -135,27 +135,23 @@ export function ULink({
     setDeviceSpecificApps(filteredApps);
   }, []);
 
-  const isValidEthereumAddress = (address) => {
-    return /^0x[a-fA-F0-9]{40}$/.test(address);
-  };
+  const [avatar, setAvatar] = useState(null);
 
   const resolveDomainToAddress = async () => {
     setLoadingResolve(true); // Set loading to true here
     try {
-      let config = {
-        method: "get",
-        maxBodyLength: Infinity,
-        url: `https://api.everyname.xyz/forward?domain=${domain}`,
-        headers: {
-          Accept: "application/json",
-          "api-key": process ? process.env.REACT_APP_EVERYNAME_KEY : null,
-        },
-      };
+      const provider = new ethers.providers.CloudflareProvider();
+      const resolvedAddress = await provider.resolveName(domain);
+      const isEthDomain = /\.eth$/.test(domain);
+      const isValidEthereumAddress = /^0x[a-fA-F0-9]{40}$/.test(
+        resolvedAddress,
+      );
 
-      const response = await axios.request(config);
-      const resolvedAddress = response.data.address;
-      if (resolvedAddress && isValidEthereumAddress(resolvedAddress)) {
+      if (resolvedAddress && isEthDomain && isValidEthereumAddress) {
         setWalletAddress(resolvedAddress);
+        const avt = new AvatarResolver(provider);
+        const avatarURI = await avt.getAvatar(domain);
+        setAvatar(avatarURI);
       } else {
         setMessage("Invalid Ethereum address");
         setWalletAddress(null);
@@ -167,41 +163,10 @@ export function ULink({
       setLoadingResolve(false);
     }
   };
-  const [loadingMetadata, setLoadingMetadata] = useState(false);
-  const [avatar, setAvatar] = useState(null);
-  const fetchMetadata = async () => {
-    setLoadingMetadata(true);
-    try {
-      let config = {
-        method: "get",
-        maxBodyLength: Infinity,
-        url: `https://api.everyname.xyz/forward/social-profile?domain=${domain}`,
-        headers: {
-          Accept: "application/json",
-          "api-key": process.env.REACT_APP_EVERYNAME_KEY,
-        },
-      };
-
-      const response = await axios.request(config);
-      const avatarUrl = response.data.avatar;
-      if (avatarUrl && avatarUrl.length > 10) {
-        setAvatar(avatarUrl);
-      } else {
-        setMessage("Avatar not found");
-        setAvatar(null);
-      }
-    } catch (error) {
-      console.log(error);
-      setMessage("Error fetching metadata");
-    } finally {
-      setLoadingMetadata(false);
-    }
-  };
 
   useEffect(() => {
     if (domain) {
       resolveDomainToAddress();
-      fetchMetadata();
     }
   }, [domain]);
 

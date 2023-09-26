@@ -372,16 +372,11 @@ export const ConversationContainer = ({
 
   const [canMessage, setCanMessage] = useState(false);
   const [conversations, setConversations] = useState([]);
-  const isValidEthereumAddress = (address) => {
-    return /^0x[a-fA-F0-9]{40}$/.test(address);
-  };
 
   useEffect(() => {
-    let isMounted = true; // This flag is used to prevent state updates on an unmounted component
-    let stream; // Define stream here
-
+    let isMounted = true;
+    let stream;
     const fetchAndStreamConversations = async () => {
-      // Fetch the conversations
       setLoading(true);
       const allConversations = await client.conversations.list();
 
@@ -392,8 +387,6 @@ export const ConversationContainer = ({
         setConversations(sortedConversations);
       }
       setLoading(false);
-
-      // Start the stream
       stream = await client.conversations.stream();
       for await (const conversation of stream) {
         console.log(
@@ -414,13 +407,12 @@ export const ConversationContainer = ({
     fetchAndStreamConversations();
 
     return () => {
-      isMounted = false; // Prevent state updates after the component has unmounted
+      isMounted = false;
       if (stream) {
-        stream.return(); // End the stream when the component unmounts
+        stream.return();
       }
     };
-  }, []); // Empty dependency array means this effect runs once on mount and cleanup runs on unmount
-
+  }, []);
   const filteredConversations = conversations.filter(
     (conversation) =>
       conversation?.peerAddress
@@ -429,7 +421,6 @@ export const ConversationContainer = ({
       conversation?.peerAddress !== client.address,
   );
   const selectConversation = async (conversation) => {
-    console.log(conversation);
     setSelectedConversation(conversation);
   };
 
@@ -456,30 +447,23 @@ export const ConversationContainer = ({
       return `${diffWeeks} week${diffWeeks > 1 ? "s" : ""} ago`;
     }
   };
+  const isValidEthereumAddress = (address) => {
+    return /^0x[a-fA-F0-9]{40}$/.test(address);
+  };
+
   const handleSearchChange = async (e) => {
     setSearchTerm(e.target.value);
+    setMessage("Searching...");
     const addressInput = e.target.value;
-
-    // Check if it's already a valid Ethereum address first
-    if (isValidEthereumAddress(addressInput)) {
-      processEthereumAddress(addressInput);
+    const isEthDomain = /\.eth$/.test(addressInput);
+    console.log(isEthDomain, addressInput);
+    if (!isEthDomain) {
       return;
     }
-    setLoadingResolve(true); // Set loading to true here
-
+    setLoadingResolve(true);
     try {
-      let config = {
-        method: "get",
-        maxBodyLength: Infinity,
-        url: `https://api.everyname.xyz/forward?domain=${addressInput}`,
-        headers: {
-          Accept: "application/json",
-          "api-key": process.env.REACT_APP_EVERYNAME_KEY,
-        },
-      };
-
-      const response = await axios.request(config);
-      const resolvedAddress = response.data.address; // Assuming the API returns the address with key "address"
+      const provider = new ethers.providers.CloudflareProvider();
+      const resolvedAddress = await provider.resolveName(addressInput);
 
       if (resolvedAddress && isValidEthereumAddress(resolvedAddress)) {
         processEthereumAddress(resolvedAddress);
@@ -493,7 +477,7 @@ export const ConversationContainer = ({
       console.log(error);
       setMessage("Error resolving address");
     } finally {
-      setLoadingResolve(false); // Set loading to false whether it's successful or there's an error
+      setLoadingResolve(false);
     }
   };
 
@@ -528,7 +512,7 @@ export const ConversationContainer = ({
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          {loadingResolve && searchTerm && <small>Resolving address...</small>}{" "}
+          {loadingResolve && searchTerm && <small>Resolving address...</small>}
           {filteredConversations.length > 0 ? (
             filteredConversations.map((conversation, index) => (
               <ConversationListItem
@@ -596,9 +580,9 @@ const ConversationListItem = styled.li`
   align-items: center;
   border-bottom: 1px solid #e0e0e0;
   cursor: pointer;
-  margin-top: 0px !important;
   background-color: #f0f0f0;
   padding: 10px;
+  margin-top: 0px !important;
   transition: background-color 0.3s ease;
 
   &:hover {
@@ -652,6 +636,7 @@ const PeerAddressInput = styled.input`
   box-sizing: border-box;
   border: 0px solid #ccc;
 `;
+
 /*MessageContainer*/
 export const MessageContainer = ({
   conversation,

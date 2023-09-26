@@ -43,7 +43,7 @@ The `Ulink` widget is a React component that displays a page based on its ENS or
 Install required dependencies
 
 ```bash
-npm install @xmtp/xmtp-js styled-components react-router-dom axios
+npm install @xmtp/xmtp-js styled-components react-router-dom @ensdomains/ens-avatar
 ```
 
 Copy paste the component into your project
@@ -55,8 +55,9 @@ Copy paste the component into your project
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import { ethers } from "ethers";
 import { Client } from "@xmtp/xmtp-js";
+import { AvatarResolver, utils as avtUtils } from "@ensdomains/ens-avatar";
 
 const Avatar = styled.img`
   border-radius: 50%;
@@ -65,13 +66,15 @@ const Avatar = styled.img`
 `;
 const ULinkWrapper = styled.div`
   max-width: 800px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
 const ULinkContainer = styled.div`
-  position: relative; // Add relative positioning
+  position: relative;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,12 +87,12 @@ const ULinkContainer = styled.div`
   &::before {
     content: "";
     position: absolute;
-    top: 0px; // This is the pixel height from the top where the background starts
+    top: 0px;
     left: 0;
     right: 0;
-    height: 80px; // Set a fixed height for the colored background
-    background-color: rgb(56, 136, 255); // Replace with the color you want
-    z-index: -1; // To put it below the actual content
+    height: 80px;
+    background-color: rgb(56, 136, 255);
+    z-index: -1;
     @media (max-width: 799px) {
       height: 80px;
     }
@@ -186,27 +189,23 @@ export function ULink({
     setDeviceSpecificApps(filteredApps);
   }, []);
 
-  const isValidEthereumAddress = (address) => {
-    return true;
-  };
+  const [avatar, setAvatar] = useState(null);
 
   const resolveDomainToAddress = async () => {
-    setLoadingResolve(true);
+    setLoadingResolve(true); // Set loading to true here
     try {
-      let config = {
-        method: "get",
-        maxBodyLength: Infinity,
-        url: `https://api.everyname.xyz/forward?domain=${domain}`,
-        headers: {
-          Accept: "application/json",
-          "api-key": process.env.REACT_APP_EVERYNAME_KEY,
-        },
-      };
+      const provider = new ethers.providers.CloudflareProvider();
+      const resolvedAddress = await provider.resolveName(domain);
+      const isEthDomain = /\.eth$/.test(domain);
+      const isValidEthereumAddress = /^0x[a-fA-F0-9]{40}$/.test(
+        resolvedAddress,
+      );
 
-      const response = await axios.request(config);
-      const resolvedAddress = response.data.address;
-      if (resolvedAddress && isValidEthereumAddress(resolvedAddress)) {
+      if (resolvedAddress && isEthDomain && isValidEthereumAddress) {
         setWalletAddress(resolvedAddress);
+        const avt = new AvatarResolver(provider);
+        const avatarURI = await avt.getAvatar(domain);
+        setAvatar(avatarURI);
       } else {
         setMessage("Invalid Ethereum address");
         setWalletAddress(null);
@@ -218,41 +217,10 @@ export function ULink({
       setLoadingResolve(false);
     }
   };
-  const [loadingMetadata, setLoadingMetadata] = useState(false);
-  const [avatar, setAvatar] = useState(null);
-  const fetchMetadata = async () => {
-    setLoadingMetadata(true);
-    try {
-      let config = {
-        method: "get",
-        maxBodyLength: Infinity,
-        url: `https://api.everyname.xyz/forward/social-profile?domain=${domain}`,
-        headers: {
-          Accept: "application/json",
-          "api-key": process.env.REACT_APP_EVERYNAME_KEY,
-        },
-      };
-
-      const response = await axios.request(config);
-      const avatarUrl = response.data.avatar;
-      if (avatarUrl && avatarUrl.length > 10) {
-        setAvatar(avatarUrl);
-      } else {
-        setMessage("Avatar not found");
-        setAvatar(null);
-      }
-    } catch (error) {
-      console.log(error);
-      setMessage("Error fetching metadata");
-    } finally {
-      setLoadingMetadata(false);
-    }
-  };
 
   useEffect(() => {
     if (domain) {
       resolveDomainToAddress();
-      fetchMetadata();
     }
   }, [domain]);
 
@@ -278,6 +246,7 @@ export function ULink({
 
     checkCanMessage();
   }, [walletAddress]);
+
   return (
     <ULinkContainer>
       {avatar ? (

@@ -18,6 +18,7 @@
     "@docusaurus/plugin-google-gtag": "^2.0.0-rc.1",
     "@docusaurus/preset-classic": "2.0.0-rc.1",
     "@docusaurus/theme-search-algolia": "^2.0.0-rc.1",
+    "@ensdomains/ens-avatar": "^0.3.3",
     "@glidejs/glide": "^3.6.0",
     "@heroicons/react": "^2.0.17",
     "@markprompt/css": "^0.5.1",
