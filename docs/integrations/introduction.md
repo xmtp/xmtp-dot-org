@@ -165,7 +165,7 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 <UBroadcast
   theme="dark"
   size="medium"
-  walletAddresses={["0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204","0x2c8f98078253Aa7FE0097DF64867A1EacDd6b26B"]}
+  walletAddresses={["0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204"]}
   placeholderMessage="Enter a broadcast message here"
   env={"production"}
 />
