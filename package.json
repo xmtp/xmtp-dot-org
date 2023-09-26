@@ -2,6 +2,9 @@
   "name": "website",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -36,7 +39,8 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-player": "^2.11.0",
-    "react-twitter-embed": "^4.0.4"
+    "react-twitter-embed": "^4.0.4",
+    "styled-components": "^6.0.8"
   },
   "browserslist": {
     "production": [
