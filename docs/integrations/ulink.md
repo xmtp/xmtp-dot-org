@@ -18,6 +18,14 @@ The `Ulink` widget is a React component that displays a page based on its ENS or
     />
 </div>
 
+### Props
+
+- `domain`: (Required) The ENS domain name of the person or company.
+- `walletAddress`: (Required) The wallet address associated with the domain.
+- `deepLinkApps`: (Optional) An object specifying the messaging apps supported. Default values are provided.
+- `theme`: (Optional) The appearance theme ("light" or "dark"). Defaults to "default".
+- `size`: (Optional) Size of the component ("small", "medium", "large"). Defaults to "medium".
+
 ### Usage
 
 ```jsx
@@ -29,14 +37,6 @@ The `Ulink` widget is a React component that displays a page based on its ENS or
   size={"medium"}
 />
 ```
-
-### Props
-
-- `domain`: (Required) The ENS domain name of the person or company.
-- `walletAddress`: (Required) The wallet address associated with the domain.
-- `deepLinkApps`: (Optional) An object specifying the messaging apps supported. Default values are provided.
-- `theme`: (Optional) The appearance theme ("light" or "dark"). Defaults to "default".
-- `size`: (Optional) Size of the component ("small", "medium", "large"). Defaults to "medium".
 
 ### Installation
 

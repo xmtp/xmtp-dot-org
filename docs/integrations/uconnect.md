@@ -22,6 +22,13 @@ The `UConnect` widget serves as a contact button, typically positioned in the he
         />
 </div>
 
+### Props
+
+- `domain`: (Required) Your ENS name.
+- `walletAddress`: (Required) Your wallet address.
+- `theme`: (Optional) Set the theme. Available options: 'dark', 'light', 'default'.
+- `deepLinkApps`: (Optional) An object containing information about different messaging apps.
+
 ### Usage
 
 Here's a simple example of how to use the UConnect component:
@@ -36,13 +43,6 @@ Here's a simple example of how to use the UConnect component:
   showText={true}
 />
 ```
-
-### Props
-
-- `domain`: (Required) Your ENS name.
-- `walletAddress`: (Required) Your wallet address.
-- `theme`: (Optional) Set the theme. Available options: 'dark', 'light', 'default'.
-- `deepLinkApps`: (Optional) An object containing information about different messaging apps.
 
 ### Installation
 

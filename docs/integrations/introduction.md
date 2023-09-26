@@ -52,7 +52,7 @@ The `UConnect` widget serves as a contact button, typically positioned in the he
 
 ## UButton
 
-The `UButton` widget allows users to display buttons with different themes and sizes. You can use it as follows:
+The `UButton` widget allows users to display buttons with different themes and sizes with links to apps of the ecosystem. You can use it as follows:
 
 <div className="widget-container">
 <UButton
@@ -120,7 +120,7 @@ The `UProfileCard` widget showcases a profile with an image, name, description, 
 
 ## USubscribe
 
-The `USubscribe` widget is allows users to subscribe to the Dapp through xmtp. Has callbacks for managing subscrier lists.
+The `USubscribe` widget is allows users to subscribe to the Dapp through XMTP. Has callbacks for managing subscriers lists.
 
 <div className="widget-container">
 <USubscribe
@@ -130,30 +130,6 @@ The `USubscribe` widget is allows users to subscribe to the Dapp through xmtp. H
   onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
   onError={(address) => console.log("Error subscribing: " + address)}
   env={"production"}
-/>
-</div>
-
-### Props
-
-- `theme`: (Optional) Set the theme. Available options: 'default', 'dark', 'light'. Default is 'default'.
-- `size`: (Optional) Set the button size. Available options: 'small', 'medium', 'large'. Default is 'medium'.
-- `wallet`: (Required) An instance of ethers.js signer.
-- `checkSubscriptionStatus`: (Required) A function that checks the subscription status of a given address.
-- `onSubscribe`: (Required) A callback function that is called when a new subscription is made.
-- `onUnsubscribe`: (Required) A callback function that is called when a subscription is cancelled.
-- `onError`: (Required) A callback function that is called when an error occurs during subscription or unsubscription.
-- `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
-
-### Usage
-
-<div className="widget-container">
-<USubscribe
-theme="default"
-size="medium"
-onSubscribe={(address) => console.log("New subscriber: " + address)}
-onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
-onError={(address) => console.log("Error subscribing: " + address)}
-env={"production"}
 />
 </div>
 
@@ -189,7 +165,7 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 <UBroadcast
   theme="dark"
   size="medium"
-  walletAddresses={["0x2c8f98078253Aa7FE0097DF64867A1EacDd6b26B","0x2c8f98078253Aa7FE0097DF64867A1EacDd6b26B"]}
+  walletAddresses={["0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204","0x2c8f98078253Aa7FE0097DF64867A1EacDd6b26B"]}
   placeholderMessage="Enter a broadcast message here"
   env={"production"}
 />
@@ -217,7 +193,7 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 
 ## UInbox
 
-The `UInbox` widget is a specific control element. While the usage within the code is minimal, you can include the UInbox in your component tree simply by:
+The `UInbox` widget is a floating messaging component designed to allow for integrating web3 messaging in any website.
 
 <div className="widget-container">
 <UInbox env={"production"} relative="true" />
@@ -245,6 +221,14 @@ The `Ulink` widget is a React component that displays a page based on its ENS or
     />
 </div>
 
+### Props
+
+- `domain`: (Required) The ENS domain name of the person or company.
+- `walletAddress`: (Required) The wallet address associated with the domain.
+- `deepLinkApps`: (Optional) An object specifying the messaging apps supported. Default values are provided.
+- `theme`: (Optional) The appearance theme ("light" or "dark"). Defaults to "default".
+- `size`: (Optional) Size of the component ("small", "medium", "large"). Defaults to "medium".
+
 ### Usage
 
 ```jsx
@@ -256,14 +240,6 @@ The `Ulink` widget is a React component that displays a page based on its ENS or
   size={"medium"}
 />
 ```
-
-### Props
-
-- `domain`: (Required) The ENS domain name of the person or company.
-- `walletAddress`: (Required) The wallet address associated with the domain.
-- `deepLinkApps`: (Optional) An object specifying the messaging apps supported. Default values are provided.
-- `theme`: (Optional) The appearance theme ("light" or "dark"). Defaults to "default".
-- `size`: (Optional) Size of the component ("small", "medium", "large"). Defaults to "medium".
 
 ---
 

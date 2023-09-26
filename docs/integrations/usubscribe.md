@@ -9,7 +9,7 @@ import {USubscribe} from "@site/src/components/UWidgets/USubscribe";
 
 # Subscribe Button
 
-The `USubscribe` widget is allows users to subscribe to the Dapp through xmtp. Has callbacks for managing subscrier lists.
+The `USubscribe` widget is allows users to subscribe to the Dapp through XMTP. Has callbacks for managing subscriers lists.
 
 <div className="widget-container">
 <USubscribe
@@ -21,22 +21,6 @@ onError={(address) => console.log("Error subscribing: " + address)}
 env={"production"}
 />
 </div>
-
-### Usage
-
-Here's a simple example of how to use the USubscribe component:
-
-```jsx
-<USubscribe
-  theme="default"
-  size="medium"
-  wallet={signer}
-  checkSubscriptionStatus={(address) => checkSubscriptionStatus(address)}
-  onSubscribe={(address) => console.log("New subscriber: " + address)}
-  onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
-  onError={(address) => console.log("Error subscribing: " + address)}
-/>
-```
 
 ### Props
 
@@ -59,12 +43,26 @@ labels = {
 };
 ```
 
+### Usage
+
+```jsx
+<USubscribe
+  theme="default"
+  size="medium"
+  wallet={signer}
+  checkSubscriptionStatus={(address) => checkSubscriptionStatus(address)}
+  onSubscribe={(address) => console.log("New subscriber: " + address)}
+  onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
+  onError={(address) => console.log("Error subscribing: " + address)}
+/>
+```
+
 ### Installation
 
 Install required dependencies
 
 ```bash
-npm install @xmtp/xmtp-js styled-components ethers@5.7.0
+npm install @xmtp/xmtp-js styled-components ethers
 ```
 
 Copy paste the component into your project

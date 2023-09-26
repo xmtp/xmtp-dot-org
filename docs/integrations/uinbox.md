@@ -9,11 +9,11 @@ import {UInbox} from "@site/src/components/UWidgets/UInbox";
 
 # Inbox Widget
 
+The `UInbox` widget is a floating messaging component designed to allow for integrating web3 messaging in any website.
+
 <div className="widget-container">
 <UInbox env={"production"} relative="false" />
 </div>
-
-The UInbox widget is a React component designed to provide a user interface for interacting with an inbox-like structure. It offers programmatic control to open and close the inbox and can be integrated into various parts of an application.
 
 ### Props
 

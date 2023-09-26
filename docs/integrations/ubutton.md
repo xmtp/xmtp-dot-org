@@ -9,6 +9,8 @@ import {UButton} from "@site/src/components/UWidgets/UButton";
 
 # Contact Button
 
+The `UButton` widget allows users to display buttons with different themes and sizes with links to apps of the ecosystem. You can use it as follows:
+
 <div className="widget-container">
 <UButton
 domain="shanemac.eth"
@@ -18,11 +20,16 @@ size={"medium"}
 />
 </div>
 
-The UButton widget is a React component that allows users to message you through various messaging apps. It's customizable, supporting different themes, sizes, and even custom messaging apps.
+### Props
+
+- `domain`: (Required) Your ENS name.
+- `walletAddress`: (Required) Your wallet address.
+- `theme`: (Optional) Set the theme. Available options: 'default', 'dark', 'light'. Default is 'default'.
+- `size`: (Optional) Set the button size. Available options: 'small', 'medium', 'large'. Default is 'medium'.
+- `defaultApp`: (Optional) Name of the messaging app for contact.
+- `deepLinkApps`: (Optional) An object containing information about different messaging apps.
 
 ### Usage
-
-Here's a simple example of how to use the UButton component:
 
 ```jsx
 <UButton
@@ -33,15 +40,6 @@ Here's a simple example of how to use the UButton component:
   size={"medium"}
 />
 ```
-
-### Props
-
-- `domain`: (Required) Your ENS name.
-- `walletAddress`: (Required) Your wallet address.
-- `theme`: (Optional) Set the theme. Available options: 'default', 'dark', 'light'. Default is 'default'.
-- `size`: (Optional) Set the button size. Available options: 'small', 'medium', 'large'. Default is 'medium'.
-- `defaultApp`: (Optional) Name of the messaging app for contact.
-- `deepLinkApps`: (Optional) An object containing information about different messaging apps.
 
 ### Installation
 

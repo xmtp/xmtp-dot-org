@@ -9,14 +9,14 @@ import {UBroadcast} from "@site/src/components/UWidgets/UBroadcast";
 
 # Broadcast Widget
 
+The `UBroadcast` widget enables the user to broadcast messages to 1 or many specified Ethereum addresses.
+
 <div className="widget-container">
  <UBroadcast
   env={"production"}
   placeholderMessage="Enter a broadcast message here"
 />
 </div>
-
-The `UBroadcast` widget enables the user to broadcast messages to 1 or many specified Ethereum addresses.
 
 ### Props
 
