@@ -52,7 +52,7 @@ console.log("Client created", xmtp.address);
 //eg. Client created 0xd8dA6BF26964aF9D7eEd9e03E53415D37
 ```
 
-import USubscribe from '/src/components/USubscribe/index'
+import {USubscribe} from '/src/components/UWidgets/USubscribe'
 
 Example:
 
