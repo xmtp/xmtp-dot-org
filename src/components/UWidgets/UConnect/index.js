@@ -1,7 +1,6 @@
 import React from "react";
-
 import styled from "styled-components";
-
+console.log(styled, "styled");
 export function UConnect({
   domain,
   walletAddress,
