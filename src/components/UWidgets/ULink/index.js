@@ -26,6 +26,7 @@ const ULinkContainer = styled.div`
   width: 100%;
   pointer-events: auto;
   margin: 0 auto;
+  z-index: 10;
   padding-top: 30px;
   padding-bottom: 30px;
 
