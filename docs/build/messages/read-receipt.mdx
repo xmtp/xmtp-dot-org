@@ -91,17 +91,10 @@ Read receipts for React Native haven't been implemented yet.
 
 ## Send a read receipt
 
-- `messageId`: ID of the message that was read
-- `timestamp`: Timestamp the read receipt sent, in ISO 8601 format
-
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-```tsx
-const readReceipt: ReadReceipt = {};
-```
-
-Once you've created a read receipt, you can send it:
+The content of a read receipt message must be an empty object.
 
 ```tsx
 await conversation.messages.send({}, ContentTypeReadReceipt);
@@ -110,14 +103,15 @@ await conversation.messages.send({}, ContentTypeReadReceipt);
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
+The content of a read receipt message must be an empty object.
+
 ```jsx
 import { useSendMessage } from "@xmtp/react-sdk";
 import { ContentTypeReadReceipt } from "@xmtp/content-type-read-receipt";
 
 const { sendMessage } = useSendMessage();
-const readReceiptContent = {};
 
-sendMessage(conversation, readReceiptContent, ContentTypeReadReceipt);
+sendMessage(conversation, {}, ContentTypeReadReceipt);
 ```
 
 </TabItem>
@@ -158,8 +152,8 @@ Here's how you can receive a read receipt:
 
 ```tsx
 if (message.contentType.sameAs(ContentTypeReadReceipt)) {
-  // We've got a reply.
-  const timestamp = message.content.timestamp;
+  // The message is a read receipt
+  const timestamp = message.sent;
 }
 ```
 
@@ -167,12 +161,14 @@ if (message.contentType.sameAs(ContentTypeReadReceipt)) {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```jsx
+import { ContentTypeId } from "@xmtp/react-sdk";
 import { ContentTypeReadReceipt } from "@xmtp/content-type-read-receipt";
 
-if (ContentTypeReadReceipt.sameAs(message.contentType)) {
+const contentType = ContentTypeId.fromString(message.contentType);
+
+if (ContentTypeReadReceipt.sameAs(contentType)) {
   // The message is a read receipt
-  const readReceiptContent = message.content;
-  const timestamp = readReceiptContent.timestamp;
+  const timestamp = message.sentAt;
 }
 ```
 
@@ -230,9 +226,7 @@ Read receipts for React Native haven't been implemented yet
 
 ## Use a read receipt
 
-A read receipt timestamp shouldn't be displayed. Instead, use it to calculate the time since the last message was read. While iterating through messages, you can be sure that the last message was read at the timestamp of the read receipt if the string of the date is lower.
-
-<!--string of the date - should be timestamp? if the string of the date/timestamp is lower than what value?-->
+A read receipt timestamp shouldn't be displayed. Instead, use it to calculate the time since the last message was read. While iterating through messages, you can be sure that the last message was read at the timestamp of the read receipt if the string of the timestamp is lower.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>

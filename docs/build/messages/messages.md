@@ -195,13 +195,27 @@ for (const conversation of await xmtp.conversations.list()) {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
+import { useCallback } from "react";
 import { useMessages } from "@xmtp/react-sdk";
 import type { CachedConversation } from "@xmtp/react-sdk";
 
 export const Messages: React.FC<{
   conversation: CachedConversation;
 }> = ({ conversation }) => {
-  const { error, messages, isLoading } = useMessages(conversation);
+  // error callback
+  const onError = useCallback((err: Error) => {
+    // handle error
+  }, []);
+
+  // messages callback
+  const onMessages = useCallback((msgs: DecodedMessage[]) => {
+    // do something with messages
+  }, []);
+
+  const { error, messages, isLoading } = useMessages(conversation, {
+    onError,
+    onMessages,
+  });
 
   if (error) {
     return "An error occurred while loading messages";
