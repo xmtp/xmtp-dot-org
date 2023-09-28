@@ -229,12 +229,13 @@ await conversation.send(remoteAttachment, {
 
 ```jsx
 import { useSendMessage } from "@xmtp/react-sdk";
-import { ContentTypeRemoteAttachment } from "@xmtp/content-type-remote-attachment";
+import {
+  RemoteAttachmentCodec,
+  ContentTypeRemoteAttachment,
+} from "@xmtp/content-type-remote-attachment";
 
 // Inside your component...
 const { sendMessage } = useSendMessage();
-
-import { RemoteAttachmentCodec } from "@xmtp/content-type-remote-attachment";
 
 const attachment = {
   filename: "screenshot.png",
@@ -246,7 +247,7 @@ const attachment = {
 
 const remoteAttachment = RemoteAttachmentCodec.encode(attachment);
 
-sendMessage(remoteAttachment);
+sendMessage(conversation, remoteAttachment, ContentTypeRemoteAttachment);
 ```
 
 </TabItem>
