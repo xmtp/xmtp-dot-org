@@ -103,6 +103,8 @@ await conversation.messages.send({}, ContentTypeReadReceipt);
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
+The content of a read receipt message must be an empty object.
+
 ```jsx
 import { useSendMessage } from "@xmtp/react-sdk";
 import { ContentTypeReadReceipt } from "@xmtp/content-type-read-receipt";
@@ -224,9 +226,7 @@ Read receipts for React Native haven't been implemented yet
 
 ## Use a read receipt
 
-A read receipt timestamp shouldn't be displayed. Instead, use it to calculate the time since the last message was read. While iterating through messages, you can be sure that the last message was read at the timestamp of the read receipt if the string of the date is lower.
-
-<!--string of the date - should be timestamp? if the string of the date/timestamp is lower than what value?-->
+A read receipt timestamp shouldn't be displayed. Instead, use it to calculate the time since the last message was read. While iterating through messages, you can be sure that the last message was read at the timestamp of the read receipt if the string of the timestamp is lower.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
