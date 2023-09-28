@@ -33,9 +33,9 @@ If you are using JavaScript/TypeScript or Python, Install the Airstack SDK:
 <TabItem value="npm" label="npm"  >
 
 ```bash
-# npm
+# React
 npm install @airstack/airstack-react
-# npm
+# Node
 npm install @airstack/node
 ```
 
@@ -43,9 +43,9 @@ npm install @airstack/node
 <TabItem value="yarn" label="yarn"  >
 
 ```bash
-# yarn
+# React
 yarn add @airstack/airstack-react
-# yarn
+# Node
 yarn add @airstack/node
 ```
 
@@ -53,9 +53,9 @@ yarn add @airstack/node
 <TabItem value="pnpm" label="pnpm"  >
 
 ```bash
-# pnpm
+# React
 pnpm install @airstack/airstack-react
-# pnpm
+# Node
 pnpm install @airstack/node
 ```
 
@@ -63,6 +63,7 @@ pnpm install @airstack/node
 <TabItem value="pip" label="pip"  >
 
 ```bash
+# Python
 pip install airstack
 ```
 
