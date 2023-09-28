@@ -5,6 +5,7 @@ sidebar_position: 6
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import ReactPlayer from 'react-player'
 
 # Spam Filters
 
@@ -26,25 +27,47 @@ In this tutorial, you will learn how to use on-chain and off-chain data provided
 
 ### Get Started
 
-JavaScript/TypeScript/Python
 If you are using JavaScript/TypeScript or Python, Install the Airstack SDK:
 
+<Tabs>
+<TabItem value="npm" label="npm"  >
+
 ```bash
-# React
+# npm
 npm install @airstack/airstack-react
-# Node
+# npm
 npm install @airstack/node
-# React
+```
+
+</TabItem>
+<TabItem value="yarn" label="yarn"  >
+
+```bash
+# yarn
 yarn add @airstack/airstack-react
-# Node
+# yarn
 yarn add @airstack/node
-# React
+```
+
+</TabItem>
+<TabItem value="pnpm" label="pnpm"  >
+
+```bash
+# pnpm
 pnpm install @airstack/airstack-react
-# Node
+# pnpm
 pnpm install @airstack/node
-# Python
+```
+
+</TabItem>
+<TabItem value="pip" label="pip"  >
+
+```bash
 pip install airstack
 ```
+
+</TabItem>
+</Tabs>
 
 Then, add the following snippets to your code:
 
@@ -119,11 +142,20 @@ asyncio.run(main())
 
 To access the Airstack APIs in other languages, you can use https://api.airstack.xyz/gql as your GraphQL endpoint.
 
-#### Airstack AI
+#### 🤖 AI natural language
 
-Airstack provides an AI solution for you to build GraphQL queries to fulfill your use case easily. You can find the AI prompt of each query in each of the tutorial sections.
+[Airstack](https://airstack.xyz) provides an AI solution for you to build GraphQL queries to fulfill your use case easily.
 
-[Replace image w/ GIF later]
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true"  url='/img/query-xmtp.mp4'
+  />
+</div>
 
 ## Known Senders
 
@@ -1353,7 +1385,7 @@ Otherwise, you may take into consideration that the user B is a potential spamme
 
 #### Developer Support
 
-If you have any questions or need help regarding building a known inbox and spam filter for your XMTP messaging app, please join our Airstack's Telegram group.
+If you have any questions or need help regarding building a known inbox and spam filter for your XMTP messaging app, please join our Airstack's [Telegram group](https://t.me/+1k3c2FR7z51mNDRh).
 
 #### More Resources
 
