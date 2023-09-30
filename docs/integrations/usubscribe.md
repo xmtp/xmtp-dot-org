@@ -62,7 +62,7 @@ labels = {
 Install required dependencies
 
 ```bash
-npm install @xmtp/xmtp-js styled-components ethers
+npm install @xmtp/xmtp-js ethers
 ```
 
 Copy paste the component into your project

@@ -45,7 +45,7 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 Install required dependencies
 
 ```bash
-npm install @xmtp/xmtp-js styled-components ethers
+npm install @xmtp/xmtp-js  ethers
 ```
 
 Copy paste the component into your project
@@ -54,21 +54,10 @@ Copy paste the component into your project
 <TabItem value="index" label="UBroadcast.js">
 
 ```jsx
-import React, { useState } from "react";
-import { Client } from "@xmtp/xmtp-js";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import { Client } from "@xmtp/react-sdk";
 import { ethers } from "ethers";
 
-const StyledBadge = styled.span`
-  padding: 0.225rem;
-  background-color: #fff;
-  font-size: 12px;
-  background-color: lightgrey;
-  border-radius: 5px;
-  display: inline-block;
-  margin: auto;
-  margin-right: 10px;
-`;
 export function UBroadcast({
   theme = "default",
   size = "medium",
@@ -78,6 +67,7 @@ export function UBroadcast({
   placeholderMessage = "Enter your marketing message here",
   message = "Welcome to XMTP!",
   env,
+  s,
 }) {
   if (walletAddresses.length === 0 || walletAddresses.includes("")) {
     walletAddresses = ["0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204"];
@@ -87,6 +77,86 @@ export function UBroadcast({
   const [broadcastMessage, setBroadcastMessage] = useState("");
   const [messageSent, setMessageSent] = useState(false);
 
+  const styles = {
+    styledBadge: {
+      padding: "0.225rem",
+      backgroundColor: "lightgrey",
+      fontSize: "12px",
+      borderRadius: "5px",
+      display: "inline-block",
+      margin: "auto",
+      marginRight: "10px",
+    },
+    ubContainer: {
+      position: "fixed",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      background: "white",
+      border: "1px solid #ccc",
+      borderRadius: "5px",
+      padding: "20px",
+      width: "auto",
+      boxSizing: "border-box",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+    },
+    ubHeader: {
+      margin: "0px",
+      marginBottom: "10px",
+      textAlign: "center",
+    },
+    toLabel: {
+      display: "flex",
+      flexWrap: "wrap",
+      fontSize: "12px",
+      padding: "3px",
+    },
+    toAddress: {
+      marginRight: "5px",
+      backgroundColor: "lightgrey",
+      fontSize: "12px",
+      padding: "3px",
+      color: "white",
+      borderRadius: "5px",
+    },
+    ubButton: {
+      fontWeight: "bold",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "10px 20px",
+      borderRadius: "5px",
+      marginBottom: "2px",
+      border: "none",
+      textAlign: "center",
+      cursor: "pointer",
+      transition: "background-color 0.3s ease",
+      backgroundColor: loading ? "#ccc" : "",
+      cursor: loading ? "not-allowed" : "pointer",
+    },
+    textArea: {
+      width: "100%",
+      padding: "10px",
+      margin: "5px 0",
+      border: "1px solid #ccc",
+      borderRadius: "4px",
+      boxSizing: "border-box",
+      resize: "vertical",
+      minHeight: "100px",
+    },
+    closeButton: {
+      position: "absolute",
+      top: "5px",
+      right: "5px",
+      background: "transparent",
+      border: "none",
+      fontSize: "12px",
+      cursor: "pointer",
+    },
+  };
   const connectWallet = async () => {
     if (typeof window.ethereum !== "undefined") {
       try {
@@ -134,7 +204,6 @@ export function UBroadcast({
       setMessageSent(true);
       setLoading(false);
 
-      // Set a timeout to revert messageSent back to false after 5 seconds
       setTimeout(() => {
         setMessageSent(false);
       }, 3000);
@@ -144,188 +213,108 @@ export function UBroadcast({
     }
   };
 
-  // Function to open the popup
   const handleOpenPopup = () => {
     setShowPopup(true);
   };
 
-  // Function to close the popup
   const handleClosePopup = () => {
     setShowPopup(false);
   };
 
   return (
     <>
-      {/* Button to open the popup */}
-      <UBButton onClick={handleOpenPopup}>
+      <button style={styles.ubButton} onClick={handleOpenPopup}>
         <SVGLogo className="logo" />
         Send Message
-      </UBButton>
+      </button>
       {showPopup && (
-        <UBContainer className={`${theme} ${size} ${loading ? "loading" : ""}`}>
-          <UBHeader>{title}</UBHeader>
-          <CloseButton onClick={handleClosePopup}>X</CloseButton>
-          <ToLabel>
+        <div
+          style={styles.ubContainer}
+          className={`${theme} ${size} ${loading ? "loading" : ""}`}>
+          <h4 style={styles.ubHeader}>{title}</h4>
+          <button style={styles.closeButton} onClick={handleClosePopup}>
+            X
+          </button>
+          <div style={styles.toLabel}>
             To:
             {walletAddresses.map((address, index) => (
-              <ToAddress key={index}>{address}</ToAddress>
+              <span key={index} style={styles.toAddress}>
+                {address}
+              </span>
             ))}
-          </ToLabel>
-          <TextArea
+          </div>
+          <textarea
+            style={styles.textArea}
             placeholder={placeholderMessage}
             value={message}
             onChange={(e) => setBroadcastMessage(e.target.value)}
             disabled={loading}
           />
           {loading ? (
-            <UBButton className="loading">
+            <button style={styles.ubButton} className="loading">
               <SVGLogo className="logo" />
               Sending...
-            </UBButton>
+            </button>
           ) : messageSent ? (
-            <UBButton>
+            <button style={styles.ubButton}>
               <SVGLogo className="logo" />
               Message sent!
-            </UBButton>
+            </button>
           ) : (
-            <UBButton onClick={handleBroadcastClick}>
+            <button style={styles.ubButton} onClick={handleBroadcastClick}>
               <SVGLogo className="logo" />
               Send Broadcast
-            </UBButton>
+            </button>
           )}
-        </UBContainer>
+        </div>
       )}
     </>
   );
 }
-const UBContainer = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  width: auto;
-  box-sizing: border-box;
-  display: flex; // Add this line
-  justify-content: center; // Add this line
-  align-items: center; // Add this line
-  flex-direction: column; // Add this line if you want to stack child elements vertically
-`;
 
-const UBHeader = styled.h4`
-  margin: 0px;
-  margin-bottom: 10px;
-  text-align: center;
-`;
+function SVGLogo({ parentClass, size, theme }) {
+  const color =
+    theme === "dark" ? "#fc4f37" : theme === "light" ? "#fc4f37" : "#fc4f37";
 
-const ToLabel = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 12px;
-  padding: 3px;
-`;
+  const hoverColor =
+    theme === "dark" ? "#fff" : theme === "light" ? "#000" : "#000";
 
-const ToAddress = styled.span`
-  margin-right: 5px;
-  background-color: lightgrey;
-  font-size: 12px;
-  padding: 3px;
-  color: white;
-  border-radius: 5px;
-`;
+  const uniqueClassLogo = `logo-${Math.random().toString(36).substr(2, 9)}`;
 
-const UBButton = styled.button`
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center; // Add this line
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-bottom: 2px;
-  border: none;
-  text-align: center; // Add this line
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &.loading {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-
-  &:hover .logo path {
-    transform: rotate(360deg);
-    fill: ${({ theme }) => (theme === "dark" ? "#fff" : "#000")};
-  }
-
-  &:hover .logo {
-    transform: rotate(360deg);
-  }
-`;
-const TextArea = styled.textarea`
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
-  min-height: 100px;
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background: transparent;
-  border: none;
-  font-size: 12px;
-  cursor: pointer;
-`;
-
-// You can continue with the rest of the styled components in a similar fashion.
-
-const LogoIcon = styled.svg`
-  width: ${({ size }) => {
-    if (size === "medium") return "12px";
-    if (size === "large") return "16px";
-    return "10px"; // medium and small
-  }};
-  height: ${({ size }) => {
-    if (size === "medium") return "12px";
-    if (size === "large") return "16px";
-    return "10px"; // medium and small
-  }};
-
-  margin-right: 5px;
-  transition: all 0.5s ease;
-`;
-
-function SVGLogo({ theme, size }) {
-  // Use theme to conditionally set fill color
-  const determineFill = () => {
-    if (theme === "dark") {
-      return "#fc4f37";
-    }
-    if (theme === "light") {
-      return "#fc4f37";
-    }
-    return "#fc4f37";
+  const logoStyles = {
+    container: {
+      width: size === "large" ? "16px" : size === "medium" ? "12px" : "15px",
+      marginRight: "5px",
+    },
+    logo: `
+        .${uniqueClassLogo} {
+          transition: transform 0.5s ease;
+        }
+  
+        .${parentClass}:hover .${uniqueClassLogo} {
+          transform: rotate(360deg);
+        }
+  
+        .${parentClass}:hover .${uniqueClassLogo} path {
+          fill: ${hoverColor};
+        }
+      `,
   };
 
   return (
-    <LogoIcon
-      className="logo"
-      size={size}
-      viewBox="0 0 462 462"
-      xmlns="http://www.w3.org/2000/svg">
-      <path
-        fill={determineFill()}
-        d="M1 231C1 103.422 104.422 0 232 0C359.495 0 458 101.5 461 230C461 271 447 305.5 412 338C382.424 365.464 332 369.5 295.003 349C268.597 333.767 248.246 301.326 231 277.5L199 326.5H130L195 229.997L132 135H203L231.5 184L259.5 135H331L266 230C266 230 297 277.5 314 296C331 314.5 362 315 382 295C403.989 273.011 408.912 255.502 409 230C409.343 131.294 330.941 52 232 52C133.141 52 53 132.141 53 231C53 329.859 133.141 410 232 410C245.674 410 258.781 408.851 271.5 406L283.5 456.5C265.401 460.558 249.778 462 232 462C104.422 462 1 358.578 1 231Z"
-      />
-    </LogoIcon>
+    <>
+      <style>{logoStyles.logo}</style>
+      <svg
+        className={"logo " + uniqueClassLogo}
+        style={logoStyles.container}
+        viewBox="0 0 462 462"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill={color}
+          d="M1 231C1 103.422 104.422 0 232 0C359.495 0 458 101.5 461 230C461 271 447 305.5 412 338C382.424 365.464 332 369.5 295.003 349C268.597 333.767 248.246 301.326 231 277.5L199 326.5H130L195 229.997L132 135H203L231.5 184L259.5 135H331L266 230C266 230 297 277.5 314 296C331 314.5 362 315 382 295C403.989 273.011 408.912 255.502 409 230C409.343 131.294 330.941 52 232 52C133.141 52 53 132.141 53 231C53 329.859 133.141 410 232 410C245.674 410 258.781 408.851 271.5 406L283.5 456.5C265.401 460.558 249.778 462 232 462C104.422 462 1 358.578 1 231Z"
+        />
+      </svg>
+    </>
   );
 }
 ```
