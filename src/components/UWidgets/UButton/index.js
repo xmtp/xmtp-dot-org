@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+
 import { Client } from "@xmtp/xmtp-js";
 
 export function UButton({
@@ -7,10 +7,10 @@ export function UButton({
   walletAddress,
   deepLinkApps = {
     xmtp: {
-      url: `https://xmtp.chat/dm/${walletAddress}`,
+      url: `https://xmtp-react-widgets.vercel.app/link/${domain}`,
       icon: "https://xmtp.chat/favicon.ico",
       device: ["All"],
-      name: "xmtp.chat",
+      name: "xmtp",
     },
   },
   theme = "default",
@@ -19,6 +19,91 @@ export function UButton({
 }) {
   const [deviceSpecificApps, setDeviceSpecificApps] = useState([]);
   const [showApps, setShowApps] = useState(false);
+
+  const getEstimatedWidth = () => {
+    let maxTextLength = 0;
+
+    deviceSpecificApps.forEach((app) => {
+      const len = app.name.length;
+      if (len > maxTextLength) {
+        maxTextLength = len;
+      }
+    });
+
+    const estimatedWidth = 200 + 7 * maxTextLength;
+    return estimatedWidth;
+  };
+  const styles = {
+    uButtonContainer: {
+      position: "relative",
+      display: "inline-block",
+      borderRadius: "5px",
+    },
+    uButtonElement: {
+      fontWeight: "bold",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "10px 20px",
+      borderRadius: "5px",
+      marginBottom: "2px",
+      border: "none",
+      textAlign: "left",
+      cursor: "pointer",
+      transition: "background-color 0.3s ease",
+      color: theme === "dark" ? "#ffffff" : "#333333",
+      backgroundColor:
+        theme === "dark" ? "#333333" : theme === "light" ? "#fff" : "#ededed",
+      border: theme === "light" ? "1px solid #333333" : "none",
+      fontSize: size === "large" ? "16px" : "12px",
+    },
+    uButtonList: {
+      display: "inline-flex",
+      flexDirection: "column",
+      borderRadius: "5px",
+      position: "absolute",
+      top: "100%",
+      left: "0",
+      textAlign: "left",
+      borderRadius: "5px",
+      boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+      listStyle: "none",
+      padding: "0",
+      margin: "0",
+      zIndex: "1",
+      color: theme === "dark" ? "#ffffff" : "#333333",
+      backgroundColor:
+        theme === "dark" ? "#333333" : theme === "light" ? "#fff" : "#ededed",
+      border: theme === "light" ? "1px solid #333333" : "none",
+      fontSize: size === "large" ? "16px" : "12px",
+      minWidth: `${getEstimatedWidth()}px`,
+    },
+    uButtonListLi: {
+      padding: "10px",
+      display: "flex",
+      alignItems: "center",
+    },
+    uButtonListA: {
+      textDecoration: "none",
+      fontSize: "1.2rem",
+      color: theme === "dark" ? "#ffffff" : "#333333",
+    },
+    uButtonListImg: {
+      width: "16px",
+      height: "16px",
+      marginRight: "8px",
+    },
+    uButtonIcon: {
+      width: "16px",
+      height: "16px",
+      marginRight: "8px",
+    },
+    logoIcon: {
+      width: size === "large" ? "16px" : size === "medium" ? "12px" : "10px",
+      marginRight: "5px",
+      transition: "all 0.5s ease",
+    },
+  };
 
   useEffect(() => {
     const devicep = detectDevice(device);
@@ -40,244 +125,112 @@ export function UButton({
     );
   };
 
-  const [canMessage, setCanMessage] = useState(null); // State to hold the result
+  const [canMessage, setCanMessage] = useState(null);
 
   useEffect(() => {
-    // Asynchronous function to call Client.canMessage
     const checkCanMessage = async () => {
       const result = await Client.canMessage(walletAddress);
       setCanMessage(result);
     };
 
-    // Execute the function
     checkCanMessage();
-  }, [walletAddress]); // Dependency array, will rerun if walletAddress changes
+  }, [walletAddress]);
 
-  const [maxWidth, setMaxWidth] = useState(0);
-
-  useEffect(() => {
-    let maxTextLength = 0;
-
-    // Find the longest app.name
-    deviceSpecificApps.forEach((app) => {
-      const len = app.name.length;
-      if (len > maxTextLength) {
-        maxTextLength = len;
-      }
-    });
-
-    // Base width (padding, margin, etc) + (8 pixels per character * maxTextLength)
-    const estimatedWidth = 100 + 18 * maxTextLength;
-    console.log(estimatedWidth);
-    setMaxWidth(estimatedWidth);
-  }, [deviceSpecificApps]);
   if (!canMessage) {
     return null;
   }
 
   return (
-    <UButtonContainer>
-      <UButtonElement
-        theme={theme}
-        size={size}
+    <div className="ubutton" style={styles.uButtonContainer}>
+      <button
+        style={styles.uButtonElement}
         onClick={() => setShowApps(!showApps)}>
-        <SVGLogo theme={theme} size={size} />
+        <SVGLogo parentClass="ubutton" theme={theme} size={size} />
         {`${domain}`}
         <CopyPasteIcon
           walletAddress={walletAddress}
           theme={theme}
           size={size}
         />
-      </UButtonElement>
+      </button>
       {showApps && (
-        <UButtonList
-          theme={theme}
-          size={size}
-          style={{ minWidth: `${maxWidth}px` }}>
+        <ul style={styles.uButtonList} theme={theme} size={size}>
           {deviceSpecificApps.map((app, index) => (
-            <li key={index}>
-              <UButtonIcon src={app.icon} alt={`${app.name} Icon`} />
+            <li key={index} style={styles.uButtonListLi}>
+              <img
+                style={styles.uButtonIcon}
+                src={app.icon}
+                alt={`${app.name} Icon`}
+              />
               <a
                 href={app.url
                   .replace("{walletAddress}", walletAddress)
                   .replace("{domain}", domain)}
                 target="_newtab"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                style={styles.uButtonListA}>
                 Message on {app.name}
               </a>
             </li>
           ))}
-        </UButtonList>
+        </ul>
       )}
-    </UButtonContainer>
+    </div>
   );
 }
 
-const UButtonContainer = styled.div`
-  position: relative;
-  display: inline-block;
-  border-radius: 5px;
-`;
+function SVGLogo({ parentClass, size, theme }) {
+  const color =
+    theme === "dark" ? "#fc4f37" : theme === "light" ? "#fc4f37" : "#fc4f37";
 
-const UButtonElement = styled.button`
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-bottom: 2px;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  const hoverColor =
+    theme === "dark" ? "#fff" : theme === "light" ? "#000" : "#000";
 
-  color: ${({ theme }) => {
-    if (theme === "dark") return "#ffffff";
-    return "#333333"; // default and light
-  }};
-  background-color: ${({ theme }) => {
-    if (theme === "dark") return "#333333";
-    if (theme === "light") return "#fff";
-    return "#ededed"; // default
-  }};
-  border: ${({ theme }) => (theme === "light" ? "1px solid #333333" : "none")};
+  const uniqueClassLogo = `logo-${Math.random().toString(36).substr(2, 9)}`;
 
-  font-size: ${({ size }) => {
-    if (size === "large") return "16px";
-    return "12px"; // medium and small
-  }};
-
-  &:hover .logo {
-    transform: rotate(360deg);
-    transition: transform 0.5s ease;
-  }
-
-  &:hover .logo path {
-    fill: ${({ theme }) => {
-      if (theme === "dark") return "#ededed";
-      if (theme === "light") return "#333333";
-      return "#333333"; // default
-    }};
-  }
-`;
-const UButtonList = styled.ul`
-  display: inline-flex;
-  flex-direction: column;
-  border-radius: 5px;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  text-align: left;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-  li {
-    padding: 10px;
-    display: flex;
-    background: transparent;
-    align-items: center;
-
-    &:last-child {
-      border-bottom: none;
-    }
-
-    a {
-      text-decoration: none;
-      font-size: 1.2rem !important;
-    }
-
-    img {
-      width: 16px;
-      height: 16px;
-      margin-right: 8px;
-    }
-  }
-  li a {
-    color: ${({ theme }) => {
-      if (theme === "dark") return "#ffffff";
-      return "#333333"; // default and light
-    }};
-  }
-
-  background-color: ${({ theme }) => {
-    if (theme === "dark") return "#333333";
-    if (theme === "light") return "#fff";
-    return "#ededed"; // default
-  }};
-
-  border: ${({ theme }) => (theme === "light" ? "1px solid #333333" : "none")};
-
-  li a {
-    font-size: ${({ size }) => {
-      if (size === "large") return "16px";
-      return "12px"; // medium and small
-    }};
-  }
-`;
-
-const UButtonIcon = styled.img`
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-`;
-
-const LogoIcon = styled.svg`
-  width: ${({ size }) => {
-    if (size === "large") return "16px";
-    if (size === "medium") return "12px";
-    return "10px"; // medium and small
-  }};
-
-  margin-right: 5px;
-  transition: all 0.5s ease;
-`;
-
-function SVGLogo({ theme, size }) {
-  // Use theme to conditionally set fill color
-  const determineFill = () => {
-    if (theme === "dark") {
-      return "#fc4f37";
-    }
-    if (theme === "light") {
-      return "#fc4f37";
-    }
-    return "#fc4f37";
+  const logoStyles = {
+    container: {
+      width: size === "large" ? "16px" : size === "medium" ? "12px" : "15px",
+      marginRight: "5px",
+      marginTop: "3px",
+    },
+    logo: `
+        .${uniqueClassLogo} {
+          transition: transform 0.5s ease;
+        }
+  
+        .${parentClass}:hover .${uniqueClassLogo} {
+          transform: rotate(360deg);
+        }
+  
+        .${parentClass}:hover .${uniqueClassLogo} path {
+          fill: ${hoverColor};
+        }
+      `,
   };
 
   return (
-    <LogoIcon
-      className="logo"
-      size={size}
-      viewBox="0 0 462 462"
-      xmlns="http://www.w3.org/2000/svg">
-      <path
-        fill={determineFill()}
-        d="M1 231C1 103.422 104.422 0 232 0C359.495 0 458 101.5 461 230C461 271 447 305.5 412 338C382.424 365.464 332 369.5 295.003 349C268.597 333.767 248.246 301.326 231 277.5L199 326.5H130L195 229.997L132 135H203L231.5 184L259.5 135H331L266 230C266 230 297 277.5 314 296C331 314.5 362 315 382 295C403.989 273.011 408.912 255.502 409 230C409.343 131.294 330.941 52 232 52C133.141 52 53 132.141 53 231C53 329.859 133.141 410 232 410C245.674 410 258.781 408.851 271.5 406L283.5 456.5C265.401 460.558 249.778 462 232 462C104.422 462 1 358.578 1 231Z"
-      />
-    </LogoIcon>
+    <>
+      <style>{logoStyles.logo}</style>
+      <svg
+        className={"logo " + uniqueClassLogo}
+        style={logoStyles.container}
+        viewBox="0 0 462 462"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill={color}
+          d="M1 231C1 103.422 104.422 0 232 0C359.495 0 458 101.5 461 230C461 271 447 305.5 412 338C382.424 365.464 332 369.5 295.003 349C268.597 333.767 248.246 301.326 231 277.5L199 326.5H130L195 229.997L132 135H203L231.5 184L259.5 135H331L266 230C266 230 297 277.5 314 296C331 314.5 362 315 382 295C403.989 273.011 408.912 255.502 409 230C409.343 131.294 330.941 52 232 52C133.141 52 53 132.141 53 231C53 329.859 133.141 410 232 410C245.674 410 258.781 408.851 271.5 406L283.5 456.5C265.401 460.558 249.778 462 232 462C104.422 462 1 358.578 1 231Z"
+        />
+      </svg>
+    </>
   );
 }
-
-const CopyPasteIconContainer = styled.div`
-  width: ${({ size }) => {
-    if (size === "large") return "16px";
-    if (size === "medium") return "12px";
-    return "10px"; // medium and small
-  }};
-  margin-left: 5px;
-`;
 
 function CopyPasteIcon({ walletAddress, size }) {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopyClick = (event) => {
     event.stopPropagation();
-    console.log(walletAddress);
     navigator.clipboard.writeText(walletAddress).then(
       () => {
         setIsCopied(true);
@@ -290,9 +243,15 @@ function CopyPasteIcon({ walletAddress, size }) {
       },
     );
   };
-
+  const styles = {
+    copyPasteIconContainer: {
+      width: size === "large" ? "16px" : size === "medium" ? "12px" : "10px",
+      marginLeft: "5px",
+    },
+  };
   return (
-    <CopyPasteIconContainer
+    <div
+      style={styles.copyPasteIconContainer}
       size={size}
       className={isCopied ? "copied" : ""}
       onClick={(event) => handleCopyClick(event)}>
@@ -316,6 +275,6 @@ function CopyPasteIcon({ walletAddress, size }) {
             d="M22 0C14.268 0 8 6.268 8 14v40c0 7.732 6.268 14 14 14a6 6 0 0 0 0-12 2 2 0 0 1-2-2V14a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2 6 6 0 0 0 12 0c0-7.732-6.268-14-14-14H22Z"></path>
         </svg>
       )}
-    </CopyPasteIconContainer>
+    </div>
   );
 }

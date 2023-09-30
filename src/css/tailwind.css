@@ -796,7 +796,7 @@ main[class*="docMainContainer"] tr {
 p,
 tr {
   line-height: 24px;
-  margin-bottom: 15px !important;
+  margin-bottom: 15px;
   font-size: 16px;
 }
 

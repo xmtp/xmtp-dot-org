@@ -46,12 +46,6 @@ Here's a simple example of how to use the UConnect component:
 
 ### Installation
 
-Install required dependencies
-
-```bash
-npm install @xmtp/xmtp-js
-```
-
 Copy paste the component into your project
 
 <Tabs >
@@ -101,19 +95,21 @@ export function UConnect({
         rel="noopener noreferrer"
         style={styles.uConnect}
         className={`uconnect ${theme}`}>
-        <SVGLogo className="logo" size={size} theme={theme} />
+        <SVGLogo parentClass="uconnect" size={size} theme={theme} />
         {showText && domain}
       </a>
     </>
   );
 }
 
-function SVGLogo({ size, theme }) {
+function SVGLogo({ parentClass, size, theme }) {
   const color =
     theme === "dark" ? "#fc4f37" : theme === "light" ? "#fc4f37" : "#fc4f37";
 
   const hoverColor =
-    theme === "dark" ? "#fc4f37" : theme === "light" ? "#000" : "#000";
+    theme === "dark" ? "#fff" : theme === "light" ? "#000" : "#000";
+
+  const uniqueClassLogo = `logo-${Math.random().toString(36).substr(2, 9)}`;
 
   const logoStyles = {
     container: {
@@ -122,25 +118,25 @@ function SVGLogo({ size, theme }) {
       marginTop: "3px",
     },
     logo: `
-      .logo {
-        transition: transform 0.5s ease;
-      }
-
-      .uconnect:hover .logo {
-        transform: rotate(360deg);
-      }
-
-      .uconnect:hover .logo path {
-        fill: ${hoverColor};  // Color change on hover
-      }
-    `,
+        .${uniqueClassLogo} {
+          transition: transform 0.5s ease;
+        }
+  
+        .${parentClass}:hover .${uniqueClassLogo} {
+          transform: rotate(360deg);
+        }
+  
+        .${parentClass}:hover .${uniqueClassLogo} path {
+          fill: ${hoverColor};
+        }
+      `,
   };
 
   return (
     <>
       <style>{logoStyles.logo}</style>
       <svg
-        className="logo"
+        className={"logo " + uniqueClassLogo}
         style={logoStyles.container}
         viewBox="0 0 462 462"
         xmlns="http://www.w3.org/2000/svg">
