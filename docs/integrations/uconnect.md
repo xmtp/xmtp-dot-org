@@ -115,7 +115,7 @@ function SVGLogo({ parentClass, size, theme }) {
     container: {
       width: size === "large" ? "16px" : size === "medium" ? "12px" : "15px",
       marginRight: "5px",
-      marginTop: "3px",
+      marginTop: "0px",
     },
     logo: `
         .${uniqueClassLogo} {

@@ -163,7 +163,7 @@ export function ULink({
           left: 0;
           right: 0;
           height: 80px;
-          background-color: rgb(56, 136, 255);
+          background-color:#4f45e4;
           z-index: -1;
           @media (max-width: 799px) {
             height: 80px;
@@ -172,7 +172,7 @@ export function ULink({
         
       `}
       </style>
-      <div className="uLinkContainer" style={styles.uLinkContainer}>
+      <div className="uLinkContainer ulink" style={styles.uLinkContainer}>
         <style>
           {`
         
@@ -248,7 +248,7 @@ function SVGLogo({ parentClass, size, theme }) {
     container: {
       width: size === "large" ? "160px" : size === "medium" ? "100px" : "70px",
       marginRight: "5px",
-      marginTop: "3px",
+      marginTop: "0px",
     },
     logo: `
         .${uniqueClassLogo} {
