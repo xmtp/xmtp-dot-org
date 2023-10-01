@@ -66,7 +66,7 @@ Copy paste the component into your project
 <TabItem value="index" label="UInbox.js">
 
 ```jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Client } from "@xmtp/react-sdk";
 import { ethers } from "ethers";
 
