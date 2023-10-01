@@ -616,7 +616,7 @@ axios
 
 ### Reverse resolution using Everyname
 
-For reverse resolution, send a GET request with a wallet address and network. For example:
+For reverse resolution, send a GET request with a wallet address and domain provider. You can find a list of all domain providers [here.](https://docs.everyname.xyz/api/get-supported-providers)  For example:
 
 <Tabs>
 <TabItem value="request" label="Request" >
@@ -629,7 +629,7 @@ const axios = require("axios");
 let config = {
   method: "get",
   maxBodyLength: Infinity,
-  url: "https://api.everyname.xyz/reverse?address=0x7E0b0363404751346930AF92C80D1fef932Cc48a&network=lens",
+  url: "https://api.everyname.xyz/reverse?address=0x7E0b0363404751346930AF92C80D1fef932Cc48a&provider=lens",
   headers: {
     Accept: "application/json",
     "api-key": "process.env.EVERYNAME_KEY",
