@@ -57,7 +57,7 @@ Here's an example of how you can create buttons to open and close the UInbox wit
 Install required dependencies
 
 ```bash
-npm install @xmtp/xmtp-js styled-components axios etheres@5.7.0
+npm install @xmtp/xmtp-js ethers
 ```
 
 Copy paste the component into your project
@@ -66,11 +66,9 @@ Copy paste the component into your project
 <TabItem value="index" label="UInbox.js">
 
 ```jsx
-import React, { useState, useRef, useEffect } from "react";
-import { Client } from "@xmtp/xmtp-js";
+import React, { useState, useEffect } from "react";
+import { Client } from "@xmtp/react-sdk";
 import { ethers } from "ethers";
-import styled, { keyframes } from "styled-components";
-import axios from "axios";
 
 export function UInbox({ wallet, env, relative = false }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,6 +77,103 @@ export function UInbox({ wallet, env, relative = false }) {
   const [xmtpClient, setXmtpClient] = useState();
   const [selectedConversation, setSelectedConversation] = useState(null);
   const [signer, setSigner] = useState();
+
+  const styles = {
+    floatingLogo: (relative, isOpen) => ({
+      position: relative ? "relative" : "fixed",
+      bottom: relative ? "auto" : "20px",
+      right: relative ? "auto" : "20px",
+      width: "30px",
+      height: "30px",
+      borderRadius: "50%",
+      backgroundColor: "white",
+      display: "flex",
+      alignItems: "center",
+      border: "1px solid #ccc",
+      justifyContent: "center",
+      boxShadow: "0 2px 10px #ccc",
+      cursor: "pointer",
+      transition: "transform 0.3s ease",
+      padding: "5px",
+    }),
+    uButton: (isOnNetwork) => ({
+      position: "fixed",
+      bottom: "70px",
+      right: "20px",
+      width: "300px",
+      height: "400px",
+      border: "1px solid #ccc",
+      backgroundColor: "#f9f9f9",
+      borderRadius: "10px",
+      boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+      zIndex: "1000",
+      overflow: "hidden",
+      display: "flex",
+      flexDirection: "column",
+    }),
+    logoutBtn: {
+      position: "absolute",
+      top: "10px",
+      left: "5px",
+      background: "transparent",
+      border: "none",
+      fontSize: "10px",
+      cursor: "pointer",
+    },
+    widgetHeader: {
+      padding: "5px",
+    },
+    conversationHeader: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      background: "none",
+      border: "none",
+      width: "auto",
+      margin: "0px",
+    },
+    conversationHeaderH4: {
+      margin: "0px",
+      padding: "4px",
+    },
+    backButton: {
+      border: "0px",
+      background: "transparent",
+      cursor: "pointer",
+    },
+    widgetContent: {
+      flexGrow: 1,
+      overflowY: "auto",
+    },
+    xmtpContainer: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100%",
+    },
+    btnXmtp: {
+      backgroundColor: "#f0f0f0",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      border: "1px solid grey",
+      padding: "10px",
+      borderRadius: "5px",
+    },
+    widgetFooter: {
+      padding: "5px",
+      fontSize: "12px",
+      textAlign: "center",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    powered: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+  };
 
   useEffect(() => {
     const initialIsOpen =
@@ -137,7 +232,6 @@ export function UInbox({ wallet, env, relative = false }) {
   };
 
   const initXmtpWithKeys = async function () {
-    // Get address from the signer
     if (!signer) {
       handleLogout();
       return;
@@ -151,11 +245,7 @@ export function UInbox({ wallet, env, relative = false }) {
     if (!keys) {
       keys = await Client.getKeys(signer, {
         ...clientOptions,
-        // we don't need to publish the contact here since it
-        // will happen when we create the client later
         skipContactPublishing: true,
-        // we can skip persistence on the keystore for this short-lived
-        // instance
         persistConversations: false,
       });
       storeKeys(address, keys);
@@ -168,6 +258,7 @@ export function UInbox({ wallet, env, relative = false }) {
     setIsOnNetwork(!!xmtp.address);
     setXmtpClient(xmtp);
   };
+
   const openWidget = () => {
     setIsOpen(true);
   };
@@ -182,7 +273,6 @@ export function UInbox({ wallet, env, relative = false }) {
       close: closeWidget,
     };
   }
-  // Logout function to reset all states and clear local storage
   const handleLogout = async () => {
     setIsConnected(false);
     setIsOnNetwork(false);
@@ -193,44 +283,56 @@ export function UInbox({ wallet, env, relative = false }) {
     setSelectedConversation(null);
     localStorage.removeItem("isOnNetwork");
     localStorage.removeItem("isConnected");
-    // Optionally, you can also reset other states and clear other local storage items
   };
   return (
     <>
-      <FloatingLogo
-        relative={relative}
+      <div
+        style={styles.floatingLogo(relative, isOpen)}
         onClick={isOpen ? closeWidget : openWidget}
-        className={isOpen ? "spin-clockwise" : "spin-counter-clockwise"}>
-        <SVGLogo />
-      </FloatingLogo>
+        className={
+          "uinbox " + (isOpen ? "spin-clockwise" : "spin-counter-clockwise")
+        }>
+        <SVGLogo parentClass={"uinbox"} />
+      </div>
       {isOpen && (
-        <UInboxContainer className={isOnNetwork ? "expanded" : ""}>
-          {isConnected && <LogoutBtn onClick={handleLogout}>Logout</LogoutBtn>}
+        <div
+          style={styles.uButton(isOnNetwork)}
+          className={"uinbox" + (isOnNetwork ? "expanded" : "")}>
+          {isConnected && (
+            <button style={styles.logoutBtn} onClick={handleLogout}>
+              Logout
+            </button>
+          )}
           {isConnected && isOnNetwork && (
-            <WidgetHeader>
-              <ConversationHeader>
+            <div style={styles.widgetHeader}>
+              <div style={styles.conversationHeader}>
                 {isOnNetwork && selectedConversation && (
-                  <BackButton
+                  <button
+                    style={styles.backButton}
                     onClick={() => {
                       setSelectedConversation(null);
                     }}>
                     ←
-                  </BackButton>
+                  </button>
                 )}
-                <h4>Conversations</h4>
-              </ConversationHeader>
-            </WidgetHeader>
+                <h4 style={styles.conversationHeaderH4}>Conversations</h4>
+              </div>
+            </div>
           )}
-          <WidgetContent>
+          <div style={styles.widgetContent}>
             {!isConnected && (
-              <XmtpContainer>
-                <BtnXmtp onClick={connectWallet}>Connect Wallet</BtnXmtp>
-              </XmtpContainer>
+              <div style={styles.xmtpContainer}>
+                <button style={styles.btnXmtp} onClick={connectWallet}>
+                  Connect Wallet
+                </button>
+              </div>
             )}
             {isConnected && !isOnNetwork && (
-              <XmtpContainer>
-                <BtnXmtp onClick={initXmtpWithKeys}>Connect to XMTP</BtnXmtp>
-              </XmtpContainer>
+              <div style={styles.xmtpContainer}>
+                <button style={styles.btnXmtp} onClick={initXmtpWithKeys}>
+                  Connect to XMTP
+                </button>
+              </div>
             )}
             {isConnected && isOnNetwork && xmtpClient && (
               <ConversationContainer
@@ -239,193 +341,107 @@ export function UInbox({ wallet, env, relative = false }) {
                 setSelectedConversation={setSelectedConversation}
               />
             )}
-          </WidgetContent>
-          <WidgetFooter>
-            <Powered>
-              Powered by <PoweredLogo fill="#fc4f37" width="12px" /> XMTP{" "}
-            </Powered>
-          </WidgetFooter>
-        </UInboxContainer>
+          </div>
+          <div style={styles.widgetFooter}>
+            <span className="powered" style={styles.powered}>
+              Powered by <SVGLogo width="12px" parentClass={"powered"} /> XMTP
+            </span>
+          </div>
+        </div>
       )}
     </>
   );
 }
 
-const spinCounterClockwise = keyframes`
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-}`;
+function SVGLogo({ parentClass, size, theme }) {
+  const color =
+    theme === "dark" ? "#fc4f37" : theme === "light" ? "#fc4f37" : "#fc4f37";
 
-const spinClockwise = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-}`;
+  const hoverColor =
+    theme === "dark" ? "#fff" : theme === "light" ? "#000" : "#000";
 
-const FloatingLogo = styled.div`
-  position: ${(props) => (props.relative ? "relative" : "fixed")};
-  bottom: ${(props) => (props.relative ? "0px" : "20px")};
-  right: ${(props) => (props.relative ? "0px" : "20px")};
+  const uniqueClassLogo = `logo-${Math.random().toString(36).substr(2, 9)}`;
 
-  width: 30px;
-  height: 30px;
-  z-index: 1000 !important;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  justify-content: center;
-  box-shadow: 0 2px 10px #ccc;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  padding: 5px;
+  const logoStyles = {
+    logo: `
+    .${uniqueClassLogo} {
+      transition: transform 0.5s ease, fill 0.5s ease;
+    }
 
-  :active {
-    transform: scale(0.9);
-  }
+    .spin-clockwise .${uniqueClassLogo} {
+      animation: spinClockwise 0.5s linear;
+    }
 
-  :active {
-    transform: scale(0.95);
-  }
+    .spin-counter-clockwise .${uniqueClassLogo} {
+      animation: spinCounterClockwise 0.5s linear;
+    }
+    .spin-clockwise .${uniqueClassLogo} path{
+      fill: ${hoverColor};  // Add this line to change color while spinning
+    }
 
-  :hover {
-    transform: scale(1.05); /* This makes it grow a little (5%) when hovered */
-  }
+    @keyframes spinClockwise {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
-  :hover path {
-    transform: rotate(360deg); /* 360-degree spin */
-    fill: #ef4444; /* new color (red in this example) */
-  }
+    @keyframes spinCounterClockwise {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
 
-  &.spin-clockwise path {
-    animation: ${spinClockwise} 0.5s linear;
-    transform-origin: center;
-  }
+    .powered .${uniqueClassLogo} {
+      width: 12px !important;
+      margin-left:2px;
+      margin-right:2px;
+      margin-top:1px;
+    }
+  `,
+  };
 
-  &.spin-counter-clockwise path {
-    animation: ${spinCounterClockwise} 0.5s linear;
-    transform-origin: center;
-  }
-`;
-
-const UInboxContainer = styled.div`
-  position: fixed; /* or absolute, fixed, sticky */
-  z-index: 999; /* adjust as needed */
-  bottom: 70px;
-  right: 20px;
-  width: 300px;
-  height: 400px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  opacity: 1;
-  &.expanded {
-    height: 400px;
-  }
-`;
-const WidgetHeader = styled.div`
-  padding: 5px;
-  h4 {
-    margin: 5px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-`;
-
-const WidgetContent = styled.div`
-  flex-grow: 1;
-  z-index: 1000;
-  overflow-y: auto;
-`;
-
-const BtnXmtp = styled.button`
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid grey;
-  padding: 10px;
-  border-radius: 5px;
-`;
-
-const WidgetFooter = styled.div`
-  padding: 5px;
-  font-size: 12px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-const XmtpContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  z-index: 1000;
-`;
-
-const LogoutBtn = styled.button`
-  position: absolute;
-  top: 10px;
-  left: 5px;
-  background: transparent;
-  border: none;
-  font-size: 10px;
-  cursor: pointer;
-`;
-
-const ConversationHeader = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: none;
-  border: none;
-  width: auto;
-  margin: 0 auto;
-`;
-
-const BackButton = styled.button`
-  border: 0px;
-  background: transparent;
-  cursor: pointer;
-`;
-function SVGLogo({ width, fill }) {
   return (
-    <svg
-      viewBox="0 0 462 462"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ width }}>
-      <path
-        fill={fill}
-        d="M1 231C1 103.422 104.422 0 232 0C359.495 0 458 101.5 461 230C461 271 447 305.5 412 338C382.424 365.464 332 369.5 295.003 349C268.597 333.767 248.246 301.326 231 277.5L199 326.5H130L195 229.997L132 135H203L231.5 184L259.5 135H331L266 230C266 230 297 277.5 314 296C331 314.5 362 315 382 295C403.989 273.011 408.912 255.502 409 230C409.343 131.294 330.941 52 232 52C133.141 52 53 132.141 53 231C53 329.859 133.141 410 232 410C245.674 410 258.781 408.851 271.5 406L283.5 456.5C265.401 460.558 249.778 462 232 462C104.422 462 1 358.578 1 231Z"
-      />
-    </svg>
+    <>
+      <style>{logoStyles.logo}</style>
+      <svg
+        className={"logo " + uniqueClassLogo}
+        style={logoStyles.container}
+        viewBox="0 0 462 462"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill={color}
+          d="M1 231C1 103.422 104.422 0 232 0C359.495 0 458 101.5 461 230C461 271 447 305.5 412 338C382.424 365.464 332 369.5 295.003 349C268.597 333.767 248.246 301.326 231 277.5L199 326.5H130L195 229.997L132 135H203L231.5 184L259.5 135H331L266 230C266 230 297 277.5 314 296C331 314.5 362 315 382 295C403.989 273.011 408.912 255.502 409 230C409.343 131.294 330.941 52 232 52C133.141 52 53 132.141 53 231C53 329.859 133.141 410 232 410C245.674 410 258.781 408.851 271.5 406L283.5 456.5C265.401 460.558 249.778 462 232 462C104.422 462 1 358.578 1 231Z"
+        />
+      </svg>
+    </>
   );
 }
-const Powered = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: space-between; // Add this line
-  width: 40%;
-`;
 
-const PoweredLogo = styled(SVGLogo)`
-  width: ${(props) => props.width || "50px"};
-  fill: ${(props) => props.fillColor || "#000"};
-`;
+const ENCODING = "binary";
 
-/* Conversation Container*/
+export const getEnv = () => {
+  // "dev" | "production" | "local"
+  return typeof process !== "undefined" && process.env.REACT_APP_XMTP_ENV
+    ? process.env.REACT_APP_XMTP_ENV
+    : "production";
+};
+export const buildLocalStorageKey = (walletAddress) => {
+  return walletAddress ? `xmtp:${getEnv()}:keys:${walletAddress}` : "";
+};
+
+export const loadKeys = (walletAddress) => {
+  const val = localStorage.getItem(buildLocalStorageKey(walletAddress));
+  return val ? Buffer.from(val, ENCODING) : null;
+};
+
+export const storeKeys = (walletAddress, keys) => {
+  localStorage.setItem(
+    buildLocalStorageKey(walletAddress),
+    Buffer.from(keys).toString(ENCODING),
+  );
+};
+
+export const wipeKeys = (walletAddress) => {
+  localStorage.removeItem(buildLocalStorageKey(walletAddress));
+};
 
 export const ConversationContainer = ({
   client,
@@ -440,6 +456,70 @@ export const ConversationContainer = ({
 
   const [canMessage, setCanMessage] = useState(false);
   const [conversations, setConversations] = useState([]);
+  const styles = {
+    conversations: {
+      height: "100%",
+    },
+    conversationList: {
+      overflowY: "auto",
+      padding: "0px",
+      margin: "0",
+      listStyle: "none",
+      overflowY: "scroll",
+    },
+    conversationListItem: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      borderBottom: "1px solid #e0e0e0",
+      cursor: "pointer",
+      backgroundColor: "#f0f0f0",
+      padding: "10px",
+      marginTop: "0px",
+      transition: "background-color 0.3s ease",
+    },
+    conversationDetails: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      width: "75%",
+      marginLeft: "10px",
+      overflow: "hidden",
+    },
+    conversationName: {
+      fontSize: "16px",
+      fontWeight: "bold",
+    },
+    messagePreview: {
+      fontSize: "14px",
+      color: "#666",
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+    },
+    conversationTimestamp: {
+      fontSize: "12px",
+      color: "#999",
+      width: "25%",
+      textAlign: "right",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-end",
+      justifyContent: "space-between",
+    },
+    createNewButton: {
+      border: "1px",
+      padding: "5px",
+      borderRadius: "5px",
+      marginTop: "10px",
+    },
+    peerAddressInput: {
+      width: "100%",
+      padding: "10px",
+      boxSizing: "border-box",
+      border: "0px solid #ccc",
+    },
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -455,6 +535,12 @@ export const ConversationContainer = ({
         setConversations(sortedConversations);
       }
       setLoading(false);
+
+      const conv2 = await client.conversations.newConversation(
+        "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
+      );
+      console.log("conv2 messages", await conv2.messages());
+
       stream = await client.conversations.stream();
       for await (const conversation of stream) {
         console.log(
@@ -571,52 +657,55 @@ export const ConversationContainer = ({
     return <div>Loading...</div>;
   }
   return (
-    <Conversations>
+    <div style={styles.conversations}>
       {!selectedConversation && (
-        <ConversationList>
-          <PeerAddressInput
+        <ul style={styles.conversationList}>
+          <input
             type="text"
             placeholder="Enter a 0x wallet, ENS, or UNS address"
             value={searchTerm}
             onChange={handleSearchChange}
+            style={styles.peerAddressInput}
           />
           {loadingResolve && searchTerm && <small>Resolving address...</small>}
           {filteredConversations.length > 0 ? (
             filteredConversations.map((conversation, index) => (
-              <ConversationListItem
+              <li
                 key={index}
+                style={styles.conversationListItem}
                 onClick={() => {
                   selectConversation(conversation);
                 }}>
-                <ConversationDetails>
-                  <ConversationName>
+                <div style={styles.conversationDetails}>
+                  <span style={styles.conversationName}>
                     {conversation.peerAddress.substring(0, 6) +
                       "..." +
                       conversation.peerAddress.substring(
                         conversation.peerAddress.length - 4,
                       )}
-                  </ConversationName>
-                  <MessagePreview>...</MessagePreview>
-                </ConversationDetails>
-                <ConversationTimestamp>
+                  </span>
+                  <span style={styles.messagePreview}>...</span>
+                </div>
+                <div style={styles.conversationTimestamp}>
                   {getRelativeTimeLabel(conversation.createdAt)}
-                </ConversationTimestamp>
-              </ConversationListItem>
+                </div>
+              </li>
             ))
           ) : (
             <>
               {message && <small>{message}</small>}
               {peerAddress && canMessage && (
-                <CreateNewButton
+                <button
+                  style={styles.createNewButton}
                   onClick={() => {
                     setSelectedConversation({ messages: [] });
                   }}>
                   Create new conversation
-                </CreateNewButton>
+                </button>
               )}
             </>
           )}
-        </ConversationList>
+        </ul>
       )}
       {selectedConversation && (
         <MessageContainer
@@ -626,85 +715,10 @@ export const ConversationContainer = ({
           selectConversation={selectConversation}
         />
       )}
-    </Conversations>
+    </div>
   );
 };
 
-const Conversations = styled.div`
-  height: 100% !important;
-`;
-
-const ConversationList = styled.ul`
-  overflow-y: auto;
-  padding: 0px;
-  margin: 0;
-  list-style: none;
-  overflow-y: scroll;
-`;
-
-const ConversationListItem = styled.li`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #e0e0e0;
-  cursor: pointer;
-  background-color: #f0f0f0;
-  padding: 10px;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: lightblue;
-  }
-`;
-
-const ConversationDetails = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 75%;
-  margin-left: 10px;
-  overflow: hidden;
-`;
-
-const ConversationName = styled.span`
-  font-size: 16px;
-  font-weight: bold;
-`;
-
-const MessagePreview = styled.span`
-  font-size: 14px;
-  color: #666;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`;
-
-const ConversationTimestamp = styled.div`
-  font-size: 12px;
-  color: #999;
-  width: 25%;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-`;
-
-const CreateNewButton = styled.button`
-  border: 1px;
-  padding: 5px;
-  border-radius: 5px;
-  margin-top: 10px;
-`;
-
-const PeerAddressInput = styled.input`
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 0px solid #ccc;
-`;
-
-/*MessageContainer*/
 export const MessageContainer = ({
   conversation,
   client,
@@ -714,9 +728,29 @@ export const MessageContainer = ({
   const isFirstLoad = useRef(true);
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const styles = {
+    loadingText: {
+      textAlign: "center",
+    },
+    messagesContainer: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      height: "100%",
+    },
+    messagesList: {
+      paddingLeft: "10px",
+      paddingRight: "10px",
+      margin: "0px",
+      alignItems: "flex-start",
+      flexGrow: 1,
+      display: "flex",
+      flexDirection: "column-reverse",
+      overflowY: "auto",
+    },
+  };
 
   const updateMessages = (prevMessages, newMessage) => {
-    // Check if the new message already exists
     const doesMessageExist = prevMessages.some(
       (existingMessage) => existingMessage.id === newMessage.id,
     );
@@ -762,9 +796,7 @@ export const MessageContainer = ({
     if (conversation && conversation.peerAddress) {
       startMessageStream();
     }
-    return () => {
-      // Cleanup code if needed
-    };
+    return () => {};
   }, [conversation]);
 
   const handleSendMessage = async (newMessage) => {
@@ -775,7 +807,6 @@ export const MessageContainer = ({
     if (conversation && conversation.peerAddress) {
       await conversation.send(newMessage);
     } else if (conversation) {
-      console.log(searchTerm);
       const conv = await client.conversations.newConversation(searchTerm);
       selectConversation(conv);
       await conv.send(newMessage);
@@ -783,12 +814,12 @@ export const MessageContainer = ({
   };
 
   return (
-    <MessagesContainer>
+    <div style={styles.messagesContainer}>
       {isLoading ? (
-        <LoadingText>Loading messages...</LoadingText>
+        <div style={styles.loadingText}>Loading messages...</div>
       ) : (
         <>
-          <MessagesList>
+          <ul style={styles.messagesList}>
             {messages
               .slice()
               .reverse()
@@ -802,7 +833,7 @@ export const MessageContainer = ({
                   />
                 );
               })}
-          </MessagesList>
+          </ul>
           <MessageInput
             onSendMessage={(msg) => {
               handleSendMessage(msg);
@@ -810,70 +841,41 @@ export const MessageContainer = ({
           />
         </>
       )}
-    </MessagesContainer>
+    </div>
   );
 };
 
-const MessagesContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-`;
-
-const MessagesList = styled.ul`
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 0px;
-  align-items: flex-start;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column-reverse; // Add this line
-  overflow-y: auto;
-`;
-
-/*MessageInput*/
-
-const NewMessageContainer = styled.div`
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  flex-wrap: wrap; // Add this line
-`;
-const LoadingText = styled.div`
-  text-align: center;
-`;
-
-const MessageInputField = styled.input`
-  flex-grow: 1;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-`;
-
-const SendButton = styled.button`
-  padding: 5px 10px;
-  margin-left: 5px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
 export const MessageInput = ({ onSendMessage, replyingToMessage }) => {
   const [newMessage, setNewMessage] = useState("");
-
-  const handleDragOver = (event) => {
-    event.preventDefault();
+  const styles = {
+    newMessageContainer: {
+      display: "flex",
+      alignItems: "center",
+      paddingLeft: "10px",
+      paddingRight: "10px",
+      flexWrap: "wrap",
+    },
+    messageInputField: {
+      flexGrow: 1,
+      padding: "5px",
+      border: "1px solid #ccc",
+      borderRadius: "5px",
+    },
+    sendButton: {
+      padding: "5px 10px",
+      marginLeft: "5px",
+      border: "1px solid #ccc",
+      cursor: "pointer",
+      borderRadius: "5px",
+      display: "flex",
+      alignItems: "center",
+      textAlign: "center",
+      textDecoration: "none",
+      ":hover": {
+        textDecoration: "underline",
+      },
+    },
   };
-
   const handleInputChange = (event) => {
     if (event.key === "Enter") {
       onSendMessage(newMessage);
@@ -884,31 +886,32 @@ export const MessageInput = ({ onSendMessage, replyingToMessage }) => {
   };
 
   return (
-    <NewMessageContainer>
-      <MessageInputField
+    <div style={styles.newMessageContainer}>
+      <input
         type="text"
         value={newMessage}
         onKeyPress={handleInputChange}
         onChange={handleInputChange}
         placeholder="Type your message..."
+        style={styles.messageInputField}
       />
-      <SendButton
+      <button
         onClick={() => {
           onSendMessage(newMessage);
           setNewMessage("");
-        }}>
+        }}
+        style={styles.sendButton}>
         Send
-      </SendButton>
-    </NewMessageContainer>
+      </button>
+    </div>
   );
 };
 
-/*MessageItem*/
-const MessageItem = ({ message, senderAddress, client }) => {
+export const MessageItem = ({ message, senderAddress, client }) => {
   const renderMessage = (message) => {
     try {
       if (message?.content.length > 0) {
-        return <RenderedMessage>{message?.content}</RenderedMessage>;
+        return <div style={styles.renderedMessage}>{message?.content}</div>;
       }
     } catch {
       return message?.fallbackContent ? (
@@ -916,106 +919,73 @@ const MessageItem = ({ message, senderAddress, client }) => {
       ) : message?.contentFallback ? (
         message?.contentFallback
       ) : (
-        <RenderedMessage>{message?.content}</RenderedMessage>
+        <div style={styles.renderedMessage}>{message?.content}</div>
       );
     }
   };
 
   const isSender = senderAddress === client?.address;
 
-  const MessageComponent = isSender ? SenderMessage : ReceiverMessage;
+  const MessageComponent = isSender ? "li" : "li";
 
   return (
-    <MessageComponent key={message.id}>
-      <MessageContent>
+    <MessageComponent
+      style={isSender ? styles.senderMessage : styles.receiverMessage}
+      key={message.id}>
+      <div style={styles.messageContent}>
         {renderMessage(message)}
-        <Footer>
-          <TimeStamp>
+        <div style={styles.footer}>
+          <span style={styles.timeStamp}>
             {`${new Date(message.sent).getHours()}:${String(
               new Date(message.sent).getMinutes(),
             ).padStart(2, "0")}`}
-          </TimeStamp>
-        </Footer>
-      </MessageContent>
+          </span>
+        </div>
+      </div>
     </MessageComponent>
   );
 };
-export default MessageItem;
 
-const RenderedMessage = styled.div`
-  font-size: 12px;
-  word-break: break-word;
-  padding: 0px;
-`;
-const MessageContent = styled.div`
-  background-color: lightblue;
-  padding: 5px 10px;
-
-  align-self: flex-start;
-  text-align: left;
-  display: inline-block;
-  margin: 5px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  max-width: 80%;
-  word-break: break-word;
-  cursor: pointer;
-  list-style: none;
-`;
-
-const SenderMessage = styled.li`
-  align-self: flex-start;
-  text-align: left;
-  list-style: none;
-  width: 100%;
-`;
-
-const ReceiverMessage = styled.li`
-  align-self: flex-end;
-  list-style: none;
-  text-align: right;
-  width: 100%;
-`;
-
-// Styled-components
-const Footer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`;
-
-const TimeStamp = styled.span`
-  font-size: 8px;
-  color: grey;
-`;
-
-/* Helpers*/
-const ENCODING = "binary";
-
-export const getEnv = () => {
-  // "dev" | "production" | "local"
-  return typeof process !== "undefined" && process.env.REACT_APP_XMTP_ENV
-    ? process.env.REACT_APP_XMTP_ENV
-    : "production";
-};
-export const buildLocalStorageKey = (walletAddress) => {
-  return walletAddress ? `xmtp:${getEnv()}:keys:${walletAddress}` : "";
-};
-
-export const loadKeys = (walletAddress) => {
-  const val = localStorage.getItem(buildLocalStorageKey(walletAddress));
-  return val ? Buffer.from(val, ENCODING) : null;
-};
-
-export const storeKeys = (walletAddress, keys) => {
-  localStorage.setItem(
-    buildLocalStorageKey(walletAddress),
-    Buffer.from(keys).toString(ENCODING),
-  );
-};
-
-export const wipeKeys = (walletAddress) => {
-  localStorage.removeItem(buildLocalStorageKey(walletAddress));
+const styles = {
+  messageContent: {
+    backgroundColor: "lightblue",
+    padding: "5px 10px",
+    alignSelf: "flex-start",
+    textAlign: "left",
+    display: "inline-block",
+    margin: "5px",
+    borderRadius: "5px",
+    maxWidth: "80%",
+    wordBreak: "break-word",
+    cursor: "pointer",
+    listStyle: "none",
+  },
+  renderedMessage: {
+    fontSize: "12px",
+    wordBreak: "break-word",
+    padding: "0px",
+  },
+  senderMessage: {
+    alignSelf: "flex-start",
+    textAlign: "left",
+    listStyle: "none",
+    width: "100%",
+  },
+  receiverMessage: {
+    alignSelf: "flex-end",
+    listStyle: "none",
+    textAlign: "right",
+    width: "100%",
+  },
+  footer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
+  timeStamp: {
+    fontSize: "8px",
+    color: "grey",
+  },
 };
 ```
 

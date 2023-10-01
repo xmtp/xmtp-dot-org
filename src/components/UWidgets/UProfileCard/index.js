@@ -18,7 +18,7 @@ export function UProfileCard({
   theme = "default",
   size = "medium",
 }) {
-  const [showCard, setShowCard] = useState(true);
+  const [showCard, setShowCard] = useState(false);
 
   const styles = {
     uProfileCardContainer: {
@@ -110,7 +110,7 @@ export function UProfileCard({
       style={styles.uProfileCardContainer}
       className={`uprofilecard`}
       onMouseEnter={() => setShowCard(true)}
-      onMouseLeave={() => setShowCard(true)}>
+      onMouseLeave={() => setShowCard(false)}>
       <button style={styles.uButtonElement}>
         <SVGLogo parentClass={"uprofilecard"} theme={theme} size={size} />
         {domain}
