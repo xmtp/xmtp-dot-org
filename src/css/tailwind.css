@@ -1609,3 +1609,11 @@ li > a.new::after {
   overflow-x: auto !important;
   max-height: 500px;
 }
+
+.widget-container .uinbox {
+  position: relative !important;
+  bottom: auto !important;
+  right: auto !important;
+  width: 40px !important;
+  height: 40px !important;
+}

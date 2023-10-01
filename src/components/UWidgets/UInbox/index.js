@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Client } from "@xmtp/react-sdk";
+import { Client } from "@xmtp/xmtp-js";
 import { ethers } from "ethers";
 
-export function UInbox({ wallet, env, relative = false }) {
+export function UInbox({ wallet, env }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isOnNetwork, setIsOnNetwork] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
@@ -11,10 +11,10 @@ export function UInbox({ wallet, env, relative = false }) {
   const [signer, setSigner] = useState();
 
   const styles = {
-    floatingLogo: (relative, isOpen) => ({
-      position: relative ? "relative" : "fixed",
-      bottom: relative ? "auto" : "20px",
-      right: relative ? "auto" : "20px",
+    floatingLogo: {
+      position: "fixed",
+      bottom: "20px",
+      right: "20px",
       width: "30px",
       height: "30px",
       borderRadius: "50%",
@@ -27,8 +27,8 @@ export function UInbox({ wallet, env, relative = false }) {
       cursor: "pointer",
       transition: "transform 0.3s ease",
       padding: "5px",
-    }),
-    uButton: (isOnNetwork) => ({
+    },
+    uButton: {
       position: "fixed",
       bottom: "70px",
       right: "20px",
@@ -42,7 +42,7 @@ export function UInbox({ wallet, env, relative = false }) {
       overflow: "hidden",
       display: "flex",
       flexDirection: "column",
-    }),
+    },
     logoutBtn: {
       position: "absolute",
       top: "10px",
@@ -219,7 +219,7 @@ export function UInbox({ wallet, env, relative = false }) {
   return (
     <>
       <div
-        style={styles.floatingLogo(relative, isOpen)}
+        style={styles.floatingLogo}
         onClick={isOpen ? closeWidget : openWidget}
         className={
           "uinbox " + (isOpen ? "spin-clockwise" : "spin-counter-clockwise")
@@ -228,7 +228,7 @@ export function UInbox({ wallet, env, relative = false }) {
       </div>
       {isOpen && (
         <div
-          style={styles.uButton(isOnNetwork)}
+          style={styles.uButton}
           className={"uinbox" + (isOnNetwork ? "expanded" : "")}>
           {isConnected && (
             <button style={styles.logoutBtn} onClick={handleLogout}>

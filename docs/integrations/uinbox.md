@@ -12,7 +12,7 @@ import {UInbox} from "@site/src/components/UWidgets/UInbox";
 The `UInbox` widget is a floating messaging component designed to allow for integrating web3 messaging in any website.
 
 <div className="widget-container">
-<UInbox env={"production"} relative="false" />
+<UInbox env={"production"} />
 </div>
 
 ### Props
@@ -67,7 +67,7 @@ Copy paste the component into your project
 
 ```jsx
 import React, { useState, useRef, useEffect } from "react";
-import { Client } from "@xmtp/react-sdk";
+import { Client } from "@xmtp/xmtp-js";
 import { ethers } from "ethers";
 
 export function UInbox({ wallet, env, relative = false }) {

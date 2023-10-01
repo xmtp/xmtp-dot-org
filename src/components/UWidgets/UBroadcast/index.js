@@ -7,14 +7,20 @@ export function UBroadcast({
   size = "medium",
   title = "Broadcast Message",
   wallet,
-  walletAddresses = ["0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204"],
+  walletAddresses = [
+    "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
+    "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
+  ],
   placeholderMessage = "Enter your marketing message here",
   message = "Welcome to XMTP!",
   env,
   s,
 }) {
   if (walletAddresses.length === 0 || walletAddresses.includes("")) {
-    walletAddresses = ["0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204"];
+    walletAddresses = [
+      "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
+      "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
+    ];
   }
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -167,14 +173,17 @@ export function UBroadcast({
 
   return (
     <>
-      <button style={styles.ubButton} onClick={handleOpenPopup}>
-        <SVGLogo className="logo" />
+      <button
+        className="ubroadcast"
+        style={styles.ubButton}
+        onClick={handleOpenPopup}>
+        <SVGLogo parentClass="ubroadcast" />
         Send Message
       </button>
       {showPopup && (
         <div
           style={styles.ubContainer}
-          className={`${theme} ${size} ${loading ? "loading" : ""}`}>
+          className={`ubroadcast ${loading ? "loading" : ""}`}>
           <h4 style={styles.ubHeader}>{title}</h4>
           <button style={styles.closeButton} onClick={handleClosePopup}>
             X
@@ -196,17 +205,17 @@ export function UBroadcast({
           />
           {loading ? (
             <button style={styles.ubButton} className="loading">
-              <SVGLogo className="logo" />
+              <SVGLogo parentClass={"ubroadcast"} />
               Sending...
             </button>
           ) : messageSent ? (
             <button style={styles.ubButton}>
-              <SVGLogo className="logo" />
+              <SVGLogo parentClass={"ubroadcast"} />
               Message sent!
             </button>
           ) : (
             <button style={styles.ubButton} onClick={handleBroadcastClick}>
-              <SVGLogo className="logo" />
+              <SVGLogo parentClass={"ubroadcast"} />
               Send Broadcast
             </button>
           )}
