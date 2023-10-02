@@ -43,7 +43,7 @@ The `Ulink` widget is a React component that displays a page based on its ENS or
 Install required dependencies
 
 ```bash
-npm install @xmtp/xmtp-js styled-components react-router-dom @ensdomains/ens-avatar@0.2.5
+npm install @xmtp/xmtp-js react-router-dom @ensdomains/ens-avatar@0.2.5
 ```
 
 Copy paste the component into your project

@@ -46,7 +46,7 @@ size={"medium"}
 Install required dependencies
 
 ```bash
-npm install @xmtp/xmtp-js styled-components
+npm install @xmtp/xmtp-js
 ```
 
 Copy paste the component into your project
