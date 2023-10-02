@@ -194,16 +194,14 @@ The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has ca
 The `UBroadcast` widget enables the user to broadcast messages to 1 or many specified Ethereum addresses.
 
 <div className="widget-container">
-<UBroadcast
-  theme="default"
-  size="medium"
+ <UBroadcast
+  env="production"
   walletAddresses={[
       "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
       "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
   ]}
   placeholderMessage="Enter a broadcast message here"
-  env="production"
-  
+  onMessageSuccess={(message) => console.log("Message sent"+message.content)}
 />
 </div>
 
@@ -211,19 +209,26 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 
 - `theme`: Accepts values "default", "dark", or "light".
 - `size`: Accepts values "small", "medium", or "large".
-- `placeholderMessage`: A string for placeholder text in the message input (e.g., "Enter your marketing message here").
-- `walletAddresses`: Wallet addresses to which you want to send a broascast message.
+- `placeholderMessage`: (Optional)A string for placeholder text in the message input (e.g., "Enter your marketing message here").
+- `walletAddresses`: (Optional)Wallet addresses to which you want to send a broascast message.
+- `wallet`: (Optional) Sends the current signer of the wallet.
 - `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
+- `onMessageSuccess`: (Optional) Callback to run after sending a succesfull message.
 
-### Usage
+## Usage
 
 ```jsx
 <UBroadcast
   theme="dark"
   size="medium"
-  walletAddresses={array}
+  wallet={signer}
+  walletAddresses={[
+    "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
+    "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
+  ]}
   placeholderMessage="Enter a broadcast message here"
   env="production"
+  onMessageSuccess={(message) => console.log("Message sent" + message.content)}
 />
 ```
 

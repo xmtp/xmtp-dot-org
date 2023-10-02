@@ -1610,10 +1610,12 @@ li > a.new::after {
   max-height: 500px;
 }
 
-.widget-container > .floating-logo {
-  position: relative !important;
-  bottom: auto !important;
-  right: auto !important;
-  width: 40px !important;
-  height: 40px !important;
+@media (min-width: 799px) {
+  .widget-container > .floating-logo {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
 }

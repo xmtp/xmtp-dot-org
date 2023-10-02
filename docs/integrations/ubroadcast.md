@@ -31,6 +31,7 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 - `walletAddresses`: (Optional)Wallet addresses to which you want to send a broascast message.
 - `wallet`: (Optional) Sends the current signer of the wallet.
 - `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
+- `onMessageSuccess`: (Optional) Callback to run after sending a succesfull message.
 
 ## Usage
 
