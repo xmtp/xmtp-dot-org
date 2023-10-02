@@ -40,8 +40,8 @@ The `UConnect` widget serves as a contact button, typically positioned in the he
   domain="shanemac.eth"
   walletAddress="0x2c8f98078253Aa7FE0097DF64867A1EacDd6b26B"
   defaultApp="xmtp"
-  theme={"light"}
-  size={"default"}
+  theme="light"
+  size="medium"
 />
 </div>
 
@@ -51,19 +51,13 @@ The `UConnect` widget serves as a contact button, typically positioned in the he
 - `walletAddress`: Wallet address of the user.
 - `defaultApp`: Messaging application name
 - `theme`: Accepts values "default", "dark", or "light".
-- `showText`: A boolean value determining whether to display the text.
-- `defaultApp`: (Optional) Name of the messaging app for contact.
+- `showText`: (Optional) A boolean value determining whether to display the text. Default true.
 - `deepLinkApps`: (Optional) An object containing information about different messaging apps.
 
 ### Usage
 
 ```jsx
-<UConnect
-  domain="xmtp.eth"
-  walletAddress="0xUserWalletAddress"
-  theme="light"
-  showText={true}
-/>
+<UConnect domain="xmtp.eth" walletAddress="0xUserWalletAddress" theme="light" />
 ```
 
 ### Installation
@@ -78,8 +72,8 @@ The `UButton` widget allows users to display XMTP's ecosystem apps deeplink butt
 <UButton
 domain="shanemac.eth"
 walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
-theme={"light"}
-size={"medium"}
+theme="light"
+size="medium"
 /></div>
 
 ### Props
@@ -126,8 +120,9 @@ The `UProfileCard` widget showcases a profile with an image, name, description, 
 - `domain`: (Required) Your Domain name.
 - `walletAddress`: (Required) Your wallet address.
 - `image`: (Required) URL or path to the image of the person or company.
-- `name`: (Required) Name of the person or company.
 - `description`: (Required) A short description.
+- `theme`: Accepts values "default", "dark", or "light".
+- `size`: Accepts values "small", "medium", or "large".
 - `defaultApp`: (Optional) Name of the messaging app for contact.
 - `deepLinkApps`: (Optional) An object containing information about different messaging apps.
 
@@ -159,7 +154,7 @@ The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has ca
   onSubscribe={(address) => console.log("New subscriber: " + address)}
   onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
   onError={(address) => console.log("Error subscribing: " + address)}
-  env={"production"}
+  env="production"
 />
 </div>
 
@@ -167,7 +162,7 @@ The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has ca
 
 - `theme`: (Optional) Set the theme. Available options: 'default', 'dark', 'light'. Default is 'default'.
 - `size`: (Optional) Set the button size. Available options: 'small', 'medium', 'large'. Default is 'medium'.
-- `wallet`: (Required) An instance of ethers.js signer.
+- `wallet`: (Optional) An instance of ethers.js signer.
 - `checkSubscriptionStatus`: (Required) A function that checks the subscription status of a given address.
 - `onSubscribe`: (Required) A callback function that is called when a new subscription is made.
 - `onUnsubscribe`: (Required) A callback function that is called when a subscription is cancelled.
@@ -182,8 +177,11 @@ The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has ca
   size="medium"
   onSubscribe={(address) => console.log("New subscriber: " + address)}
   onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
+  checkSubscriptionStatus={(address) => {
+    return checkSubscriptionStatus(address);
+  }}
   onError={(address) => console.log("Error subscribing: " + address)}
-  env={"production"}
+  env="production"
 />
 ```
 
@@ -197,11 +195,15 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 
 <div className="widget-container">
 <UBroadcast
-  theme="dark"
+  theme="default"
   size="medium"
-  walletAddresses={["0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204"]}
+  walletAddresses={[
+      "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
+      "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
+  ]}
   placeholderMessage="Enter a broadcast message here"
-  env={"production"}
+  env="production"
+  
 />
 </div>
 
@@ -221,7 +223,7 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
   size="medium"
   walletAddresses={array}
   placeholderMessage="Enter a broadcast message here"
-  env={"production"}
+  env="production"
 />
 ```
 
@@ -234,18 +236,18 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 The `UInbox` widget is a floating messaging component designed to allow for integrating web3 messaging in any website.
 
 <div className="widget-container">
-<UInbox env={"production"} relative="true" />
+<UInbox env="production"  />
 </div>
 
 ### Props
 
-- `wallet`: (Required) An instance of ethers.js signer.
+- `wallet`: (Optional) An instance of ethers.js signer.
 - `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
 
 ### Usage
 
 ```jsx
-<UInbox wallet={signer} env={"production"} />
+<UInbox env="production" />
 ```
 
 ### Installation
@@ -277,15 +279,15 @@ The `ULink` widget is a React component that displays a page based on its ENS or
 <ULink
   domain="shanemac.eth"
   walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
-  theme={"light"}
+  theme="light"
   deepLinkApps={deepLinkApps}
-  size={"medium"}
+  size="medium"
 />
 ```
 
 ### Installation
 
-- [Go to installation](#docs/)
+- [Go to installation](/docs/integrations/ulink)
 
 ---
 
@@ -303,8 +305,8 @@ export const deepLinkApps = {
     name: "xmtp",
   },
   CustomApp: {
-    url: `https://xmtp.chat/dm/{walletAddress}`,
-    icon: "https://xmtp.chat/favicon.ico",
+    url: `https://xmtp-react-widgets.vercel.app/link/{walletAddress}`,
+    icon: "https://xmtp-react-widgets.vercel.app/link/favicon.ico",
     device: ["All"],
     name: "Custom App",
   },

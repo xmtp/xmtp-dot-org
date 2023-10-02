@@ -27,7 +27,6 @@ The `UProfileCard` widget showcases a profile with an image, name, description, 
 - `domain`: (Required) Your ENS name.
 - `walletAddress`: (Required) Your wallet address.
 - `image`: (Required) URL or path to the image of the person or company.
-- `name`: (Required) Name of the person or company.
 - `description`: (Required) A short description.
 - `defaultApp`: (Optional) Name of the messaging app for contact.
 - `deepLinkApps`: (Optional) An object containing information about different messaging apps.
@@ -63,7 +62,6 @@ import React, { useState } from "react";
 
 export function UProfileCard({
   image,
-  name,
   description,
   domain,
   walletAddress,
@@ -95,7 +93,6 @@ export function UProfileCard({
       padding: "10px 20px",
       borderRadius: "5px",
       marginBottom: "2px",
-      border: "none",
       textAlign: "left",
       cursor: "pointer",
       transition: "background-color 0.3s ease",
@@ -148,7 +145,6 @@ export function UProfileCard({
     },
     contact: {
       textAlign: "left",
-      fontSize: "14px",
       margin: "0px 0px 0px 0px !important;",
       lineHeight: "20px",
       fontSize: "14px !important",
@@ -178,11 +174,7 @@ export function UProfileCard({
       </button>
       {showCard && (
         <div style={styles.uProfileCardContent}>
-          <img
-            style={styles.uProfileCardImage}
-            src={image}
-            alt={`${name} Icon`}
-          />
+          <img style={styles.uProfileCardImage} src={image} />
           <div style={styles.uProfileCardText}>
             <div style={styles.title}>{domain}</div>
             <div style={styles.desc}>{description}</div>

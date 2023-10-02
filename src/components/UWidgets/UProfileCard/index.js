@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 export function UProfileCard({
   image,
-  name,
   description,
   domain,
   walletAddress,
@@ -34,7 +33,6 @@ export function UProfileCard({
       padding: "10px 20px",
       borderRadius: "5px",
       marginBottom: "2px",
-      border: "none",
       textAlign: "left",
       cursor: "pointer",
       transition: "background-color 0.3s ease",
@@ -87,7 +85,6 @@ export function UProfileCard({
     },
     contact: {
       textAlign: "left",
-      fontSize: "14px",
       margin: "0px 0px 0px 0px !important;",
       lineHeight: "20px",
       fontSize: "14px !important",
@@ -117,11 +114,7 @@ export function UProfileCard({
       </button>
       {showCard && (
         <div style={styles.uProfileCardContent}>
-          <img
-            style={styles.uProfileCardImage}
-            src={image}
-            alt={`${name} Icon`}
-          />
+          <img style={styles.uProfileCardImage} src={image} />
           <div style={styles.uProfileCardText}>
             <div style={styles.title}>{domain}</div>
             <div style={styles.desc}>{description}</div>

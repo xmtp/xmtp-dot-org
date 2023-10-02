@@ -15,8 +15,8 @@ The `UButton` widget display XMTP's ecosystem apps deeplink buttons in a dropdow
 <UButton
 domain="shanemac.eth"
 walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
-theme={"light"}
-size={"medium"}
+theme="light"
+size="medium"
 />
 </div>
 

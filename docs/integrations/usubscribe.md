@@ -18,7 +18,7 @@ size="medium"
 onSubscribe={(address) => console.log("New subscriber: " + address)}
 onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
 onError={(address) => console.log("Error subscribing: " + address)}
-env={"production"}
+env="production"
 />
 </div>
 
@@ -26,13 +26,13 @@ env={"production"}
 
 - `theme`: (Optional) Set the theme. Available options: 'default', 'dark', 'light'. Default is 'default'.
 - `size`: (Optional) Set the button size. Available options: 'small', 'medium', 'large'. Default is 'medium'.
-- `wallet`: (Required) An instance of ethers.js signer.
+- `wallet`: (Optional) An instance of ethers.js signer.
 - `checkSubscriptionStatus`: (Required) A function that checks the subscription status of a given address.
 - `onSubscribe`: (Required) A callback function that is called when a new subscription is made.
 - `onUnsubscribe`: (Required) A callback function that is called when a subscription is cancelled.
 - `onError`: (Required) A callback function that is called when an error occurs during subscription or unsubscription.
 - `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
-- `labels`: (Optional) An object that contains the labels for different states of the component. The object should have the following structure:
+- `labels`: (Optional) An object that contains the labels for different states of the component.
 
 ### Usage
 
@@ -115,7 +115,6 @@ export function USubscribe({
       padding: "10px 20px",
       borderRadius: "5px",
       marginBottom: "2px",
-      border: "none",
       textAlign: "left",
       cursor: "pointer",
       transition: "background-color 0.3s ease",

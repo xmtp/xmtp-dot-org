@@ -87,6 +87,8 @@ export function UInbox({ wallet, env }) {
       backgroundColor: "#f0f0f0",
       display: "flex",
       alignItems: "center",
+      textDecoration: "none",
+      color: "#000",
       justifyContent: "center",
       border: "1px solid grey",
       padding: "10px",

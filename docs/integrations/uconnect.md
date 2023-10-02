@@ -16,8 +16,8 @@ The `UConnect` widget serves as a contact button, typically positioned in the he
 domain="shanemac.eth"
 walletAddress="0xUserWalletAddress"
 defaultApp="xmtp"
-theme={"light"}
-size={"default"}
+theme="light"
+size="medium"
 showText={true}
 />
 </div>
@@ -38,9 +38,8 @@ Here's a simple example of how to use the UConnect component:
   domain="shanemac.eth"
   walletAddress="0xUserWalletAddress"
   defaultApp="xmtp"
-  theme={"light"}
-  size={"default"}
-  showText={true}
+  theme="light"
+  size="medium"
 />
 ```
 

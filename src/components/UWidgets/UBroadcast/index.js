@@ -7,24 +7,15 @@ export function UBroadcast({
   size = "medium",
   title = "Broadcast Message",
   wallet,
-  walletAddresses = [
-    "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
-    "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
-  ],
+  walletAddresses = [],
   placeholderMessage = "Enter your marketing message here",
   message = "Welcome to XMTP!",
   env,
   onMessageSuccess,
 }) {
-  if (walletAddresses.length === 0 || walletAddresses.includes("")) {
-    walletAddresses = [
-      "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
-      "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
-    ];
-  }
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [broadcastMessage, setBroadcastMessage] = useState("");
+  const [broadcastMessage, setBroadcastMessage] = useState(message);
   const [messageSent, setMessageSent] = useState(false);
 
   const styles = {
@@ -63,6 +54,7 @@ export function UBroadcast({
       flexWrap: "wrap",
       fontSize: "12px",
       padding: "3px",
+      maxWidth: "400px",
     },
     toAddress: {
       marginRight: "5px",
@@ -88,6 +80,11 @@ export function UBroadcast({
       transition: "background-color 0.3s ease",
       backgroundColor: loading ? "#ccc" : "",
       cursor: loading ? "not-allowed" : "pointer",
+      color: theme === "dark" ? "#ffffff" : "#333333",
+      backgroundColor:
+        theme === "dark" ? "#333333" : theme === "light" ? "#fff" : "#ededed",
+      border: theme === "light" ? "1px solid #333333" : "none",
+      fontSize: size === "large" ? "16px" : "12px",
     },
     textArea: {
       width: "100%",
@@ -134,7 +131,7 @@ export function UBroadcast({
       alert("Please provide wallet addresses as parameters");
       return;
     }
-    if (!message) {
+    if (!broadcastMessage) {
       alert("Please enter a message");
       return;
     }
@@ -200,7 +197,7 @@ export function UBroadcast({
           <textarea
             style={styles.textArea}
             placeholder={placeholderMessage}
-            value={message}
+            value={broadcastMessage}
             onChange={(e) => setBroadcastMessage(e.target.value)}
             disabled={loading}
           />

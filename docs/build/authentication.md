@@ -147,7 +147,7 @@ size="medium"
 onSubscribe={(address) => console.log("New subscriber: " + address)}
 onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
 onError={(address) => console.log("Error subscribing: " + address)}
-env={"production"}
+env="production"
 labels={{
           loading: "Loading...",
           subscribed: "Identity enabled. You can now message other XMTP users.",

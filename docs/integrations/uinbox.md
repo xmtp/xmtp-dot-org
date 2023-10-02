@@ -12,7 +12,7 @@ import {UInbox} from "@site/src/components/UWidgets/UInbox";
 The `UInbox` widget is a floating messaging component designed to allow for integrating web3 messaging in any website.
 
 <div className="widget-container">
-<UInbox env={"production"} />
+<UInbox env="production" />
 </div>
 
 ### Props
@@ -25,7 +25,7 @@ Integrating the UInbox component into your application is simple. Here's an exam
 ### Usage
 
 ```jsx
-<UInbox wallet={signer} env={"production"} />
+<UInbox wallet={signer} env="production" />
 ```
 
 #### Programmatic Control
@@ -155,6 +155,8 @@ export function UInbox({ wallet, env, relative = false }) {
       backgroundColor: "#f0f0f0",
       display: "flex",
       alignItems: "center",
+      textDecoration: "none",
+      color: "#000",
       justifyContent: "center",
       border: "1px solid grey",
       padding: "10px",

@@ -13,9 +13,9 @@ The `ULink` widget is a React component that displays a page based on its ENS or
 
 <div className="widget-container ulink">
 <ULink
-      domain="shanemac.eth"
-      walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
-    />
+  domain="shanemac.eth"
+  walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
+/>
 </div>
 
 ### Props
@@ -32,9 +32,9 @@ The `ULink` widget is a React component that displays a page based on its ENS or
 <ULink
   domain="shanemac.eth"
   walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
-  theme={"light"}
+  theme="light"
   deepLinkApps={deepLinkApps}
-  size={"medium"}
+  size="medium"
 />
 ```
 
@@ -249,7 +249,7 @@ export function ULink({
             width={100}
           />
         ) : (
-          <SVGLogo parentClass={"ulink"} theme={"default"} size={"medium"} />
+          <SVGLogo parentClass="ulink" theme="default" size="medium" />
         )}
         <div style={styles.uLinkWrapper}>
           <div style={styles.linkDomain}>{domain}</div>
@@ -283,7 +283,7 @@ export function ULink({
                 ))
               ) : (
                 <p>
-                  You cannot send a message bacause this walet is not on the
+                  You cannot send a message because this wallet is not on the
                   xmtp network.
                 </p>
               )}
