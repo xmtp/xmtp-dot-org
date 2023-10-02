@@ -14,7 +14,7 @@ export function UBroadcast({
   placeholderMessage = "Enter your marketing message here",
   message = "Welcome to XMTP!",
   env,
-  s,
+  onMessageSuccess,
 }) {
   if (walletAddresses.length === 0 || walletAddresses.includes("")) {
     walletAddresses = [
@@ -81,6 +81,8 @@ export function UBroadcast({
       borderRadius: "5px",
       marginBottom: "2px",
       border: "none",
+      textDecoration: "none",
+      color: "black",
       textAlign: "center",
       cursor: "pointer",
       transition: "background-color 0.3s ease",
@@ -149,6 +151,9 @@ export function UBroadcast({
           const conversation = await xmtp.conversations.newConversation(wallet);
           const sent = await conversation.send(broadcastMessage);
           console.log("Sent", sent);
+          if (onMessageSuccess) {
+            onMessageSuccess(sent); // Call the callback function here
+          }
         }
       }
       setMessageSent(true);
@@ -164,11 +169,7 @@ export function UBroadcast({
   };
 
   const handleOpenPopup = () => {
-    setShowPopup(true);
-  };
-
-  const handleClosePopup = () => {
-    setShowPopup(false);
+    setShowPopup(!showPopup);
   };
 
   return (
@@ -177,7 +178,7 @@ export function UBroadcast({
         className="ubroadcast"
         style={styles.ubButton}
         onClick={handleOpenPopup}>
-        <SVGLogo parentClass="ubroadcast" />
+        <SVGLogo parentClass="ubroadcast" size={size} theme={theme} />
         Send Message
       </button>
       {showPopup && (
@@ -185,7 +186,7 @@ export function UBroadcast({
           style={styles.ubContainer}
           className={`ubroadcast ${loading ? "loading" : ""}`}>
           <h4 style={styles.ubHeader}>{title}</h4>
-          <button style={styles.closeButton} onClick={handleClosePopup}>
+          <button style={styles.closeButton} onClick={handleOpenPopup}>
             X
           </button>
           <div style={styles.toLabel}>
@@ -205,17 +206,17 @@ export function UBroadcast({
           />
           {loading ? (
             <button style={styles.ubButton} className="loading">
-              <SVGLogo parentClass={"ubroadcast"} />
+              <SVGLogo />
               Sending...
             </button>
           ) : messageSent ? (
             <button style={styles.ubButton}>
-              <SVGLogo parentClass={"ubroadcast"} />
+              <SVGLogo />
               Message sent!
             </button>
           ) : (
             <button style={styles.ubButton} onClick={handleBroadcastClick}>
-              <SVGLogo parentClass={"ubroadcast"} />
+              <SVGLogo />
               Send Broadcast
             </button>
           )}

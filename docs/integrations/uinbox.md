@@ -1,5 +1,5 @@
 ---
-sidebar_label: UInbox
+sidebar_label: Inbox
 sidebar_position: 6
 ---
 

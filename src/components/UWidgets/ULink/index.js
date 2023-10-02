@@ -163,13 +163,19 @@ export function ULink({
           left: 0;
           right: 0;
           height: 80px;
-          background-color:#4f45e4;
+          background-color:#5284ff;
           z-index: -1;
           @media (max-width: 799px) {
             height: 80px;
           }
         }
-        
+
+       .instructions {
+          @media (max-width: 800px) {
+            font-size: 1rem !important;
+            line-height: 1.5rem !important;
+          }
+        }
       `}
       </style>
       <div className="uLinkContainer ulink" style={styles.uLinkContainer}>
@@ -189,11 +195,11 @@ export function ULink({
             width={100}
           />
         ) : (
-          <SVGLogo parentClass={"ulink"} theme={"default"} size={"default"} />
+          <SVGLogo parentClass={"ulink"} theme={"default"} size={"medium"} />
         )}
         <div style={styles.uLinkWrapper}>
           <div style={styles.linkDomain}>{domain}</div>
-          <div style={styles.instructions}>
+          <div className="instructions" style={styles.instructions}>
             Just send a message to <b>{domain} </b>
             using your preferred XMTP inbox, and hit send!
           </div>
@@ -248,7 +254,6 @@ function SVGLogo({ parentClass, size, theme }) {
     container: {
       width: size === "large" ? "160px" : size === "medium" ? "100px" : "70px",
       marginRight: "5px",
-      marginTop: "0px",
     },
     logo: `
         .${uniqueClassLogo} {

@@ -1,5 +1,5 @@
 ---
-sidebar_label: USubscribe
+sidebar_label: Subscribe Button
 sidebar_position: 4
 ---
 
@@ -34,15 +34,6 @@ env={"production"}
 - `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
 - `labels`: (Optional) An object that contains the labels for different states of the component. The object should have the following structure:
 
-```jsx
-labels = {
-  loading: "Loading...",
-  subscribed: "Subscribed",
-  unsubscribed: "Unsubscribed",
-  default: "Subscribe with your wallet",
-};
-```
-
 ### Usage
 
 ```jsx
@@ -54,6 +45,12 @@ labels = {
   onSubscribe={(address) => console.log("New subscriber: " + address)}
   onUnsubscribe={(address) => console.log("Unsubscribed: " + address)}
   onError={(address) => console.log("Error subscribing: " + address)}
+  labels = {
+    loading: "Loading...",
+    subscribed: "Subscribed",
+    unsubscribed: "Unsubscribed",
+    default: "Subscribe with your wallet",
+  };
 />
 ```
 

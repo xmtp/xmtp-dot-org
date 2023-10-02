@@ -1,5 +1,5 @@
 ---
-sidebar_label: UProfileCard
+sidebar_label: Profile Card
 sidebar_position: 3
 ---
 

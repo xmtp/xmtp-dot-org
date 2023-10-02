@@ -1,5 +1,5 @@
 ---
-sidebar_label: UConnect
+sidebar_label: Contact Link
 sidebar_position: 2
 ---
 

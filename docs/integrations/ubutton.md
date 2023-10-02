@@ -1,5 +1,5 @@
 ---
-sidebar_label: UButton
+sidebar_label: Buttons
 sidebar_position: 3
 ---
 
