@@ -222,7 +222,8 @@ export function UInbox({ wallet, env }) {
         style={styles.floatingLogo}
         onClick={isOpen ? closeWidget : openWidget}
         className={
-          "uinbox " + (isOpen ? "spin-clockwise" : "spin-counter-clockwise")
+          "uinbox floating-logo " +
+          (isOpen ? "spin-clockwise" : "spin-counter-clockwise")
         }>
         <SVGLogo parentClass={"uinbox"} />
       </div>

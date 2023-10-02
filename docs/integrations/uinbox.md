@@ -1,5 +1,5 @@
 ---
-sidebar_label: Inbox
+sidebar_label: Floating Inbox
 sidebar_position: 6
 ---
 
@@ -7,7 +7,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {UInbox} from "@site/src/components/UWidgets/UInbox";
 
-# Inbox Widget
+# Floating Inbox
 
 The `UInbox` widget is a floating messaging component designed to allow for integrating web3 messaging in any website.
 

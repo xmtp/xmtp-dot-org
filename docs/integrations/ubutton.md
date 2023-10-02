@@ -7,9 +7,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {UButton} from "@site/src/components/UWidgets/UButton";
 
-# Contact Button
+# Buttons
 
-The `UButton` widget allows users to display buttons with different themes and sizes with links to apps of the ecosystem. You can use it as follows:
+The `UButton` widget display XMTP's ecosystem apps deeplink buttons in a dropdown with different themes and sizes.
 
 <div className="widget-container">
 <UButton

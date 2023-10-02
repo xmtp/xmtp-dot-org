@@ -1610,7 +1610,7 @@ li > a.new::after {
   max-height: 500px;
 }
 
-.widget-container .uinbox {
+.widget-container > .floating-logo {
   position: relative !important;
   bottom: auto !important;
   right: auto !important;

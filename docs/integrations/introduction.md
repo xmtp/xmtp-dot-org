@@ -11,11 +11,27 @@ import {ULink} from "@site/src/components/UWidgets/ULink";
 import {UInbox} from "@site/src/components/UWidgets/UInbox";
 import {USubscribe} from "@site/src/components/UWidgets/USubscribe";
 
-# XMTP Integrations
+# Integration Widgets
 
-UWidgets are a collection of React components that can be used to create interactive user interfaces. `U` stands for `Universal`. The following widgets are available:
+Here is a collection of React components that can be used to create interactive user interfaces. `U` stands for `Universal`. The following widgets are available:
 
-## UConnect
+- [**Contact Link**](#contact-link): The `UConnect` widget serves as a contact button, typically positioned in the header or footer of business websites for optimal visibility and accessibility.
+
+- [**Buttons**](#buttons): The `UButton` widget display XMTP's ecosystem apps deeplink buttons in a dropdown with different themes and sizes. Fully customizable.
+
+- [**Profile Card**](#profile-card): The `UProfileCard` widget showcases a profile card with an image, name, description, and a call-to-action button to contact the person or company through xmtp.
+
+- [**Subscribe Button**](#subscribe-button): The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has callbacks for managing subscribers lists.
+
+- [**Broadcast**](#broadcast): The `UBroadcast` widget enables the user to broadcast messages to 1 or many specified Ethereum addresses.
+
+- [**Floating Inbox**](#floating-inbox): The `UInbox` widget is a floating messaging component designed to allow for integrating web3 messaging in any website.
+
+- [**Contact Page**](#contact-page): The `ULink` widget is a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP.
+
+---
+
+## Contact Link
 
 The `UConnect` widget serves as a contact button, typically positioned in the header or footer of business websites for optimal visibility and accessibility.
 
@@ -50,9 +66,13 @@ The `UConnect` widget serves as a contact button, typically positioned in the he
 />
 ```
 
-## UButton
+### Installation
 
-The `UButton` widget allows users to display buttons with different themes and sizes with links to apps of the ecosystem. You can use it as follows:
+- [Go to installation](/docs/integrations/uconnect)
+
+## Buttons
+
+The `UButton` widget allows users to display XMTP's ecosystem apps deeplink buttons with different themes and sizes.
 
 <div className="widget-container">
 <UButton
@@ -82,15 +102,20 @@ size={"medium"}
 />
 ```
 
-## UProfileCard
+### Installation
+
+- [Go to installation](/docs/integrations/ubutton)
+
+## Profile Card
 
 The `UProfileCard` widget showcases a profile with an image, name, description, and a call-to-action button to contact the person or company through xmtp.
 
 <div className="widget-container">
 <UProfileCard
-  image="https://pbs.twimg.com/profile_images/1561559544148500480/lBJtF9DK_400x400.jpg"
-  description="Hi, I'm Shane, Co-Founder of XMTP."
   domain="shanemac.eth"
+  walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
+  description="Hi, I'm Shane, Co-Founder of XMTP."
+  image="https://pbs.twimg.com/profile_images/1561559544148500480/lBJtF9DK_400x400.jpg"
   theme="default"
   size="medium"
 />
@@ -110,17 +135,22 @@ The `UProfileCard` widget showcases a profile with an image, name, description, 
 
 ```jsx
 <UProfileCard
-  image="https://pbs.twimg.com/profile_images/1561559544148500480/lBJtF9DK_400x400.jpg"
-  description="Hi, I'm Shane, Co-Founder of XMTP."
   domain="shanemac.eth"
+  walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
+  description="Hi, I'm Shane, Co-Founder of XMTP."
+  image="https://pbs.twimg.com/profile_images/1561559544148500480/lBJtF9DK_400x400.jpg"
   theme="default"
   size="medium"
 />
 ```
 
-## USubscribe
+### Installation
 
-The `USubscribe` widget is allows users to subscribe to the Dapp through XMTP. Has callbacks for managing subscriers lists.
+- [Go to installation](/docs/integrations/uprofilecard)
+
+## Subscribe Button
+
+The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has callbacks for managing subscribers lists.
 
 <div className="widget-container">
 <USubscribe
@@ -157,7 +187,11 @@ The `USubscribe` widget is allows users to subscribe to the Dapp through XMTP. H
 />
 ```
 
-## UBroadcast
+### Installation
+
+- [Go to installation](/docs/integrations/usubscribe)
+
+## Broadcast
 
 The `UBroadcast` widget enables the user to broadcast messages to 1 or many specified Ethereum addresses.
 
@@ -176,7 +210,7 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 - `theme`: Accepts values "default", "dark", or "light".
 - `size`: Accepts values "small", "medium", or "large".
 - `placeholderMessage`: A string for placeholder text in the message input (e.g., "Enter your marketing message here").
-- `walletAddresses`: Wallet addresses that you want to send a broascast message.
+- `walletAddresses`: Wallet addresses to which you want to send a broascast message.
 - `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
 
 ### Usage
@@ -191,7 +225,11 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 />
 ```
 
-## UInbox
+### Installation
+
+- [Go to installation](/docs/integrations/ubroadcast)
+
+## Floating Inbox
 
 The `UInbox` widget is a floating messaging component designed to allow for integrating web3 messaging in any website.
 
@@ -210,9 +248,13 @@ The `UInbox` widget is a floating messaging component designed to allow for inte
 <UInbox wallet={signer} env={"production"} />
 ```
 
-# Link Landing
+### Installation
 
-The `Ulink` widget is a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP.
+- [Go to installation](/docs/integrations/uinbox)
+
+# Contact Page
+
+The `ULink` widget is a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP.
 
 <div className="widget-container ulink">
 <ULink
@@ -241,11 +283,15 @@ The `Ulink` widget is a React component that displays a page based on its ENS or
 />
 ```
 
+### Installation
+
+- [Go to installation](#docs/)
+
 ---
 
 #### Deep Link Apps
 
-In the `src/deepLinkApps.js` file, we have a `deepLinkApps` object that contains information about different messaging apps. This object is structured as follows:
+In the `src/deepLinkApps.js` file, we have a `deepLinkApps` object that contains information about different messaging apps.
 
 ```jsx
 //Alphabetical order

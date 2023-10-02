@@ -7,7 +7,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {UConnect} from "@site/src/components/UWidgets/UConnect";
 
-# Contact Button
+# Contact Link
 
 The `UConnect` widget serves as a contact button, typically positioned in the header or footer of business websites for optimal visibility and accessibility.
 

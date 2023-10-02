@@ -7,9 +7,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {ULink} from "@site/src/components/UWidgets/ULink";
 
-# Link Landing
+# Contact Page
 
-The `Ulink` widget is a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP.
+The `ULink` widget is a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP.
 
 <div className="widget-container ulink">
 <ULink

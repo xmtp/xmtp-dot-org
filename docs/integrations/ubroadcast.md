@@ -24,7 +24,7 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 - `theme`: Accepts values "default", "dark", or "light".
 - `size`: Accepts values "small", "medium", or "large".
 - `placeholderMessage`: (Optional)A string for placeholder text in the message input (e.g., "Enter your marketing message here").
-- `walletAddresses`: (Optional)Wallet addresses that you want to send a broascast message.
+- `walletAddresses`: (Optional)Wallet addresses to which you want to send a broascast message.
 - `wallet`: (Optional) Sends the current signer of the wallet.
 - `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
 

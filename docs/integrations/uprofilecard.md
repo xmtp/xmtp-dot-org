@@ -7,15 +7,16 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import {UProfileCard} from "@site/src/components/UWidgets/UProfileCard";
 
-# Profile Card Button
+# Profile Card
 
 The `UProfileCard` widget showcases a profile with an image, name, description, and a call-to-action button to contact the person or company through xmtp.
 
 <div className="widget-container">
 <UProfileCard
-  image="https://pbs.twimg.com/profile_images/1561559544148500480/lBJtF9DK_400x400.jpg"
-  description="Hi, I'm Shane, Co-Founder of XMTP."
   domain="shanemac.eth"
+  walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
+  description="Hi, I'm Shane, Co-Founder of XMTP."
+  image="https://pbs.twimg.com/profile_images/1561559544148500480/lBJtF9DK_400x400.jpg"
   theme="default"
   size="medium"
 />
@@ -35,9 +36,10 @@ The `UProfileCard` widget showcases a profile with an image, name, description, 
 
 ```jsx
 <UProfileCard
-  image="https://pbs.twimg.com/profile_images/1561559544148500480/lBJtF9DK_400x400.jpg"
-  description="Hi, I'm Shane, Co-Founder of XMTP."
   domain="shanemac.eth"
+  walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
+  description="Hi, I'm Shane, Co-Founder of XMTP."
+  image="https://pbs.twimg.com/profile_images/1561559544148500480/lBJtF9DK_400x400.jpg"
   theme="default"
   size="medium"
 />

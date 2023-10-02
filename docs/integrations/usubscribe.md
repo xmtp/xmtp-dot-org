@@ -9,7 +9,7 @@ import {USubscribe} from "@site/src/components/UWidgets/USubscribe";
 
 # Subscribe Button
 
-The `USubscribe` widget is allows users to subscribe to the Dapp through XMTP. Has callbacks for managing subscriers lists.
+The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has callbacks for managing subscribers lists.
 
 <div className="widget-container">
 <USubscribe
