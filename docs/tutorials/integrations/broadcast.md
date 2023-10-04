@@ -323,3 +323,27 @@ After copying the `Broadcast` component, you can import it into your project lik
 ```jsx
 import { Broadcast } from "./Broadcast";
 ```
+
+#### Wallet Signer
+
+Please note that all widgets in this library that require a wallet signer only accept an instance of the `ethers.js` signer. Other types of signers are not supported at this time.
+
+The signer is optional. If the signer is not detected, the widgets have a built-in mechanism to establish a connection.
+
+For example, when using the `Subscribe` or `Inbox` widgets, you should provide an `ethers.js` signer instance like so:
+
+```jsx
+<Subscribe
+  // Other props
+  wallet={signer}
+/>
+```
+
+```jsx
+<Inbox
+  // Other props
+  wallet={signer}
+/>
+```
+
+Ensure that you have properly initialized the `ethers.js` signer instance before passing it to the widget.

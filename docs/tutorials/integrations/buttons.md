@@ -328,3 +328,46 @@ After copying the `Button` component into your project, you can import it and us
 ```jsx
 import { Button } from "./Button";
 ```
+
+#### Deep Link Apps
+
+In the `src/deepLinkApps.js` file, we have a `deepLinkApps` object that contains information about different messaging apps.
+
+```jsx
+//Alphabetical order
+export const deepLinkApps = {
+  xmtp: {
+    url: `https://xmtp.chat/dm/{walletAddress}`,
+    icon: "https://xmtp.chat/favicon.ico",
+    device: ["Desktop"],
+    name: "xmtp",
+  },
+  CustomApp: {
+    url: `https://xmtp-react-widgets.vercel.app/link/{walletAddress}`,
+    icon: "https://xmtp-react-widgets.vercel.app/link/favicon.ico",
+    device: ["All"],
+    name: "Custom App",
+  },
+};
+```
+
+**Props**
+
+- `url`: The URL for direct messaging in the app. The `{walletAddress}` placeholder will be replaced with the actual wallet address.
+- `name`: The descriptive name of the app.
+- `icon`: The URL of the app's favicon.
+- `device`: An array of operating systems where the app is available. "All" means the app is available on all operating systems.
+
+**Usage**
+
+This custom configuration works with `Button`, `Connect` and `ProfileCard`. All widgets that have deeplinking use case.
+
+```jsx
+<Button
+ /*Other props*/
+defaultApp = "CustomApp";
+deepLinkApps = { deepLinkApps };
+/>
+```
+
+This way, contributors can easily add new apps by modifying the `deepLinkApps.js` file through PR's.
