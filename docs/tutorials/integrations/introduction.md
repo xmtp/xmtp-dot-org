@@ -63,7 +63,7 @@ size="medium"
 
 ### Tutorial
 
-- [Go to Tutorial](/docs/tutorials/integrations/button)
+- [Go to Tutorial](/docs/tutorials/integrations/buttons)
 
 ## Profile Card
 
