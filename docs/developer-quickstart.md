@@ -52,12 +52,12 @@ console.log("Client created", xmtp.address);
 //eg. Client created 0xd8dA6BF26964aF9D7eEd9e03E53415D37
 ```
 
-import {USubscribe} from '/src/components/UWidgets/USubscribe'
+import {Subscribe} from '/src/components/Widgets/Subscribe'
 
 Example:
 
 <div className="centered">
-<USubscribe
+<Subscribe
 theme="default"
 size="medium"
 onSubscribe={(address) => console.log("New subscriber: " + address)}

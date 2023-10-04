@@ -1,74 +1,10 @@
----
-sidebar_label: Broadcast
-sidebar_position: 5
----
-
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-import {UBroadcast} from "@site/src/components/UWidgets/UBroadcast";
-
-# Broadcast Widget
-
-The `UBroadcast` widget enables the user to broadcast messages to 1 or many specified Ethereum addresses.
-
-<div className="widget-container">
- <UBroadcast
-  env="production"
-  walletAddresses={[
-      "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
-      "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
-  ]}
-  placeholderMessage="Enter a broadcast message here"
-  onMessageSuccess={(message) => console.log("Message sent"+message.content)}
-/>
-</div>
-
-### Props
-
-- `theme`: Accepts values "default", "dark", or "light".
-- `size`: Accepts values "small", "medium", or "large".
-- `placeholderMessage`: (Optional)A string for placeholder text in the message input (e.g., "Enter your marketing message here").
-- `walletAddresses`: (Optional)Wallet addresses to which you want to send a broascast message.
-- `wallet`: (Optional) Sends the current signer of the wallet.
-- `env`: XMTP developer environment. Read more [here](https://xmtp.org/docs/build/authentication#environments)
-- `onMessageSuccess`: (Optional) Callback to run after sending a succesfull message.
-
-## Usage
-
-```jsx
-<UBroadcast
-  theme="dark"
-  size="medium"
-  wallet={signer}
-  walletAddresses={[
-    "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
-    "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
-  ]}
-  placeholderMessage="Enter a broadcast message here"
-  env="production"
-  onMessageSuccess={(message) => console.log("Message sent" + message.content)}
-/>
-```
-
-### Installation
-
-Install required dependencies
-
-```bash
-npm install @xmtp/xmtp-js ethers
-```
-
-Copy paste the component into your project
-
-<Tabs >
-<TabItem value="index" label="UBroadcast.js">
-
-```jsx
+// Import necessary libraries
 import React, { useState, useEffect } from "react";
-import { Client } from "@xmtp/react-sdk";
-import { ethers } from "ethers";
+import { Client } from "@xmtp/react-sdk"; // XMTP SDK
+import { ethers } from "ethers"; // Ethereum library
 
-export function UBroadcast({
+// Define the Broadcast component
+export function Broadcast({
   theme = "default",
   size = "medium",
   title = "Broadcast Message",
@@ -79,11 +15,13 @@ export function UBroadcast({
   env,
   onMessageSuccess,
 }) {
+  // Define state variables
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
   const [broadcastMessage, setBroadcastMessage] = useState(message);
   const [messageSent, setMessageSent] = useState(false);
 
+  // Define styles for the component
   const styles = {
     styledBadge: {
       padding: "0.225rem",
@@ -172,11 +110,17 @@ export function UBroadcast({
       cursor: "pointer",
     },
   };
+
+  // Function to connect to the user's wallet
   const connectWallet = async () => {
+    // Check if the user has a web3 provider installed
     if (typeof window.ethereum !== "undefined") {
       try {
+        // Request access to the user's accounts
         await window.ethereum.request({ method: "eth_requestAccounts" });
+        // Create a new ethers provider using the user's web3 provider
         const provider = new ethers.providers.Web3Provider(window.ethereum);
+        // Return the signer from the provider
         return provider.getSigner();
       } catch (error) {
         console.error("User rejected request", error);
@@ -186,42 +130,57 @@ export function UBroadcast({
     }
   };
 
+  // Function to handle the broadcast click
   const handleBroadcastClick = async () => {
+    // Get the signer from the wallet prop or connect to the user's wallet
     let signer = wallet || (await connectWallet());
 
+    // Check if a signer was obtained
     if (!signer) {
       alert("Please connect to XMTP network first.");
       return;
     }
+    // Check if wallet addresses were provided
     if (walletAddresses.length === 0) {
       alert("Please provide wallet addresses as parameters");
       return;
     }
+    // Check if a message was entered
     if (!broadcastMessage) {
       alert("Please enter a message");
       return;
     }
 
+    // Set loading to true
     setLoading(true);
 
     try {
+      // Create a new XMTP client with the signer and environment
       const xmtp = await Client.create(signer, { env: env });
+      // Check if the client can message the provided wallet addresses
       const broadcasts_canMessage = await xmtp.canMessage(walletAddresses);
+      // Loop through the wallet addresses
       for (let i = 0; i < walletAddresses.length; i++) {
         const wallet = walletAddresses[i];
         const canMessage = broadcasts_canMessage[i];
+        // If the client can message the wallet address
         if (canMessage) {
+          // Create a new conversation with the wallet address
           const conversation = await xmtp.conversations.newConversation(wallet);
+          // Send the broadcast message
           const sent = await conversation.send(broadcastMessage);
           console.log("Sent", sent);
+          // If a success callback was provided, call it with the sent message
           if (onMessageSuccess) {
-            onMessageSuccess(sent); // Call the callback function here
+            onMessageSuccess(sent);
           }
         }
       }
+      // Set message sent to true and loading to false
       setMessageSent(true);
       setLoading(false);
 
+      // Reset message sent to false after 3 seconds
       setTimeout(() => {
         setMessageSent(false);
       }, 3000);
@@ -231,23 +190,24 @@ export function UBroadcast({
     }
   };
 
+  // Function to handle opening and closing the popup
   const handleOpenPopup = () => {
     setShowPopup(!showPopup);
   };
 
+  // Render the Broadcast component
   return (
     <>
       <button
-        className="ubroadcast"
+        className="Broadcast"
         style={styles.ubButton}
         onClick={handleOpenPopup}>
-        <SVGLogo parentClass="ubroadcast" size={size} theme={theme} />
         Send Message
       </button>
       {showPopup && (
         <div
           style={styles.ubContainer}
-          className={`ubroadcast ${loading ? "loading" : ""}`}>
+          className={`Broadcast ${loading ? "loading" : ""}`}>
           <h4 style={styles.ubHeader}>{title}</h4>
           <button style={styles.closeButton} onClick={handleOpenPopup}>
             X
@@ -269,17 +229,12 @@ export function UBroadcast({
           />
           {loading ? (
             <button style={styles.ubButton} className="loading">
-              <SVGLogo />
               Sending...
             </button>
           ) : messageSent ? (
-            <button style={styles.ubButton}>
-              <SVGLogo />
-              Message sent!
-            </button>
+            <button style={styles.ubButton}>Message sent!</button>
           ) : (
             <button style={styles.ubButton} onClick={handleBroadcastClick}>
-              <SVGLogo />
               Send Broadcast
             </button>
           )}
@@ -288,59 +243,3 @@ export function UBroadcast({
     </>
   );
 }
-
-function SVGLogo({ parentClass, size, theme }) {
-  const color =
-    theme === "dark" ? "#fc4f37" : theme === "light" ? "#fc4f37" : "#fc4f37";
-
-  const hoverColor =
-    theme === "dark" ? "#fff" : theme === "light" ? "#000" : "#000";
-
-  const uniqueClassLogo = `logo-${Math.random().toString(36).substr(2, 9)}`;
-
-  const logoStyles = {
-    container: {
-      width: size === "large" ? "16px" : size === "medium" ? "12px" : "15px",
-      marginRight: "5px",
-    },
-    logo: `
-        .${uniqueClassLogo} {
-          transition: transform 0.5s ease;
-        }
-  
-        .${parentClass}:hover .${uniqueClassLogo} {
-          transform: rotate(360deg);
-        }
-  
-        .${parentClass}:hover .${uniqueClassLogo} path {
-          fill: ${hoverColor};
-        }
-      `,
-  };
-
-  return (
-    <>
-      <style>{logoStyles.logo}</style>
-      <svg
-        className={"logo " + uniqueClassLogo}
-        style={logoStyles.container}
-        viewBox="0 0 462 462"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill={color}
-          d="M1 231C1 103.422 104.422 0 232 0C359.495 0 458 101.5 461 230C461 271 447 305.5 412 338C382.424 365.464 332 369.5 295.003 349C268.597 333.767 248.246 301.326 231 277.5L199 326.5H130L195 229.997L132 135H203L231.5 184L259.5 135H331L266 230C266 230 297 277.5 314 296C331 314.5 362 315 382 295C403.989 273.011 408.912 255.502 409 230C409.343 131.294 330.941 52 232 52C133.141 52 53 132.141 53 231C53 329.859 133.141 410 232 410C245.674 410 258.781 408.851 271.5 406L283.5 456.5C265.401 460.558 249.778 462 232 462C104.422 462 1 358.578 1 231Z"
-        />
-      </svg>
-    </>
-  );
-}
-```
-
-</TabItem>
-</Tabs>
-
-Import the component into your project
-
-```jsx
-import { UBroadcast } from "./UBroadcast";
-```

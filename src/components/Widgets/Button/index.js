@@ -1,82 +1,28 @@
----
-sidebar_label: Buttons
-sidebar_position: 3
----
-
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-import {UButton} from "@site/src/components/UWidgets/UButton";
-
-# Buttons
-
-The `UButton` widget display XMTP's ecosystem apps deeplink buttons in a dropdown with different themes and sizes.
-
-<div className="widget-container">
-<UButton
-domain="shanemac.eth"
-walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
-theme="light"
-size="medium"
-/>
-</div>
-
-### Props
-
-- `domain`: (Required) Your ENS name.
-- `walletAddress`: (Required) Your wallet address.
-- `theme`: (Optional) Set the theme. Available options: 'default', 'dark', 'light'. Default is 'default'.
-- `size`: (Optional) Set the button size. Available options: 'small', 'medium', 'large'. Default is 'medium'.
-- `defaultApp`: (Optional) Name of the messaging app for contact.
-- `deepLinkApps`: (Optional) An object containing information about different messaging apps.
-
-### Usage
-
-```jsx
-<UButton
-  domain="shanemac.eth"
-  walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
-  theme={"light"}
-  deepLinkApps={deepLinkApps}
-  size={"medium"}
-/>
-```
-
-### Installation
-
-Install required dependencies
-
-```bash
-npm install @xmtp/xmtp-js
-```
-
-Copy paste the component into your project
-
-<Tabs >
-<TabItem value="index" label="UButton.js">
-
-```jsx
 import React, { useState, useEffect } from "react";
 
 import { Client } from "@xmtp/xmtp-js";
 
-export function UButton({
-  domain,
-  walletAddress,
+// This is the Button component. It displays a button that allows users to send messages to a specified ENS domain and wallet address.
+export function Button({
+  domain, // The ENS domain associated with the wallet address.
+  walletAddress, // The wallet address associated with the ENS domain.
   deepLinkApps = {
+    // The messaging apps supported by the button.
     xmtp: {
-      url: `https://xmtp-react-widgets.vercel.app/link/${domain}`,
-      icon: "https://xmtp.chat/favicon.ico",
-      device: ["All"],
-      name: "xmtp",
+      url: `https://xmtp-react-widgets.vercel.app/link/${domain}`, // The URL for sending messages in the XMTP app.
+      icon: "https://xmtp.chat/favicon.ico", // The favicon of the XMTP app.
+      device: ["All"], // The operating systems where the XMTP app is available.
+      name: "xmtp", // The name of the XMTP app.
     },
   },
-  theme = "default",
-  size = "medium",
-  device = "All",
+  theme = "default", // The appearance theme of the button.
+  size = "medium", // The size of the button.
+  device = "All", // The operating system of the device where the button is displayed.
 }) {
   const [deviceSpecificApps, setDeviceSpecificApps] = useState([]);
   const [showApps, setShowApps] = useState(false);
 
+  // This function estimates the width of the button based on the length of the names of the supported apps.
   const getEstimatedWidth = () => {
     let maxTextLength = 0;
 
@@ -91,12 +37,12 @@ export function UButton({
     return estimatedWidth;
   };
   const styles = {
-    uButtonContainer: {
+    ButtonContainer: {
       position: "relative",
       display: "inline-block",
       borderRadius: "5px",
     },
-    uButtonElement: {
+    ButtonElement: {
       fontWeight: "bold",
       display: "inline-flex",
       alignItems: "center",
@@ -114,7 +60,7 @@ export function UButton({
       border: theme === "light" ? "1px solid #333333" : "none",
       fontSize: size === "large" ? "16px" : "12px",
     },
-    uButtonList: {
+    ButtonList: {
       display: "inline-flex",
       flexDirection: "column",
       borderRadius: "5px",
@@ -135,22 +81,22 @@ export function UButton({
       fontSize: size === "large" ? "16px" : "12px",
       minWidth: `${getEstimatedWidth()}px`,
     },
-    uButtonListLi: {
+    ButtonListLi: {
       padding: "10px",
       display: "flex",
       alignItems: "center",
     },
-    uButtonListA: {
+    ButtonListA: {
       textDecoration: "none",
       fontSize: "1.2rem",
       color: theme === "dark" ? "#ffffff" : "#333333",
     },
-    uButtonListImg: {
+    ButtonListImg: {
       width: "16px",
       height: "16px",
       marginRight: "8px",
     },
-    uButtonIcon: {
+    ButtonIcon: {
       width: "16px",
       height: "16px",
       marginRight: "8px",
@@ -162,6 +108,7 @@ export function UButton({
     },
   };
 
+  // This effect runs when the component mounts. It detects the device where the button is displayed and filters the supported apps based on the device.
   useEffect(() => {
     const devicep = detectDevice(device);
     const deepLinkAppsArray = Object.values(deepLinkApps);
@@ -169,6 +116,7 @@ export function UButton({
     setDeviceSpecificApps(filteredApps);
   }, []);
 
+  // This function detects the device where the button is displayed.
   const detectDevice = (device) => {
     const userAgent = window.navigator.userAgent;
     if (/Mobi|Android/i.test(userAgent)) return "Android";
@@ -176,6 +124,7 @@ export function UButton({
     return device ? device : "Desktop";
   };
 
+  // This function filters the supported apps based on the device where the button is displayed.
   const filterAppsByDevice = (apps, device) => {
     return apps.filter(
       (app) => app.device.includes(device) || app.device.includes("All"),
@@ -184,6 +133,7 @@ export function UButton({
 
   const [canMessage, setCanMessage] = useState(null);
 
+  // This effect runs when the wallet address changes. It checks if the wallet address can receive messages.
   useEffect(() => {
     const checkCanMessage = async () => {
       const result = await Client.canMessage(walletAddress);
@@ -193,16 +143,17 @@ export function UButton({
     checkCanMessage();
   }, [walletAddress]);
 
+  // If the wallet address cannot receive messages, the button is not displayed.
   if (!canMessage) {
     return null;
   }
 
+  // This is the render method of the Button component. It returns the button and the list of supported apps.
   return (
-    <div className="ubutton" style={styles.uButtonContainer}>
+    <div className="Button" style={styles.ButtonContainer}>
       <button
-        style={styles.uButtonElement}
+        style={styles.ButtonElement}
         onClick={() => setShowApps(!showApps)}>
-        <SVGLogo parentClass="ubutton" theme={theme} size={size} />
         {`${domain}`}
         <CopyPasteIcon
           walletAddress={walletAddress}
@@ -211,11 +162,11 @@ export function UButton({
         />
       </button>
       {showApps && (
-        <ul style={styles.uButtonList} theme={theme} size={size}>
+        <ul style={styles.ButtonList} theme={theme} size={size}>
           {deviceSpecificApps.map((app, index) => (
-            <li key={index} style={styles.uButtonListLi}>
+            <li key={index} style={styles.ButtonListLi}>
               <img
-                style={styles.uButtonIcon}
+                style={styles.ButtonIcon}
                 src={app.icon}
                 alt={`${app.name} Icon`}
               />
@@ -225,7 +176,7 @@ export function UButton({
                   .replace("{domain}", domain)}
                 target="_newtab"
                 rel="noopener noreferrer"
-                style={styles.uButtonListA}>
+                style={styles.ButtonListA}>
                 Message on {app.name}
               </a>
             </li>
@@ -236,56 +187,11 @@ export function UButton({
   );
 }
 
-function SVGLogo({ parentClass, size, theme }) {
-  const color =
-    theme === "dark" ? "#fc4f37" : theme === "light" ? "#fc4f37" : "#fc4f37";
-
-  const hoverColor =
-    theme === "dark" ? "#fff" : theme === "light" ? "#000" : "#000";
-
-  const uniqueClassLogo = `logo-${Math.random().toString(36).substr(2, 9)}`;
-
-  const logoStyles = {
-    container: {
-      width: size === "large" ? "16px" : size === "medium" ? "12px" : "15px",
-      marginRight: "5px",
-      marginTop: "0px",
-    },
-    logo: `
-        .${uniqueClassLogo} {
-          transition: transform 0.5s ease;
-        }
-  
-        .${parentClass}:hover .${uniqueClassLogo} {
-          transform: rotate(360deg);
-        }
-  
-        .${parentClass}:hover .${uniqueClassLogo} path {
-          fill: ${hoverColor};
-        }
-      `,
-  };
-
-  return (
-    <>
-      <style>{logoStyles.logo}</style>
-      <svg
-        className={"logo " + uniqueClassLogo}
-        style={logoStyles.container}
-        viewBox="0 0 462 462"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill={color}
-          d="M1 231C1 103.422 104.422 0 232 0C359.495 0 458 101.5 461 230C461 271 447 305.5 412 338C382.424 365.464 332 369.5 295.003 349C268.597 333.767 248.246 301.326 231 277.5L199 326.5H130L195 229.997L132 135H203L231.5 184L259.5 135H331L266 230C266 230 297 277.5 314 296C331 314.5 362 315 382 295C403.989 273.011 408.912 255.502 409 230C409.343 131.294 330.941 52 232 52C133.141 52 53 132.141 53 231C53 329.859 133.141 410 232 410C245.674 410 258.781 408.851 271.5 406L283.5 456.5C265.401 460.558 249.778 462 232 462C104.422 462 1 358.578 1 231Z"
-        />
-      </svg>
-    </>
-  );
-}
-
+// This is a helper component that displays a copy icon. When the icon is clicked, the wallet address is copied to the clipboard.
 function CopyPasteIcon({ walletAddress, size }) {
   const [isCopied, setIsCopied] = useState(false);
 
+  // This function handles the click event of the copy icon. It copies the wallet address to the clipboard.
   const handleCopyClick = (event) => {
     event.stopPropagation();
     navigator.clipboard.writeText(walletAddress).then(
@@ -335,13 +241,3 @@ function CopyPasteIcon({ walletAddress, size }) {
     </div>
   );
 }
-```
-
-</TabItem>
-</Tabs>
-
-Import the component into your project
-
-```jsx
-import { UButton } from "./UButton";
-```

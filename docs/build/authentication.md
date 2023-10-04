@@ -136,12 +136,12 @@ const xmtp = await Client.create(wallet);
 </TabItem>
 </Tabs>
 
-import {USubscribe} from '/src/components/UWidgets/USubscribe'
+import {Subscribe} from '/src/components/Widgets/Subscribe'
 
 Example:
 
 <div className="centered">
-<USubscribe
+<Subscribe
 theme="default"
 size="medium"
 onSubscribe={(address) => console.log("New subscriber: " + address)}

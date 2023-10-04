@@ -20,7 +20,7 @@ This guide is a supplement to [core instructions](https://github.com/xmtp/exampl
    - [Linux](https://docs.docker.com/engine/install/)
 
    <br/>
-   
+
    :::tip
    After installation, make sure Docker is running by searching for Docker in Spotlight and opening the application. You don't need to do anything with the UI from Docker. We are going to use only terminal commands.
    :::

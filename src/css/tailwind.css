@@ -1594,11 +1594,11 @@ li > a.new::after {
   padding: 48px;
   position: relative;
   transition: background 0.18s;
-  z-index: 1000;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
-.widget-container.ulink {
+.widget-container.Link {
   padding: 0px !important;
   height: 500px;
   z-index: 0;

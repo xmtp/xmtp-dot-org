@@ -1,18 +1,18 @@
 ---
-sidebar_label: Contact Page
+sidebar_label: Contact Page Tutorial
 sidebar_position: 7
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {ULink} from "@site/src/components/UWidgets/ULink";
+import {ContactPage} from "@site/src/components/Widgets/ContactPage";
 
-# Contact Page
+# Contact Page Tutorial
 
-The `ULink` widget is a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP.
+The `Link` widget is a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP. This tutorial will guide you through the process of creating such a widget.
 
-<div className="widget-container ulink">
-<ULink
+<div className="widget-container Link">
+<ContactPage
   domain="shanemac.eth"
   walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
 />
@@ -29,7 +29,7 @@ The `ULink` widget is a React component that displays a page based on its ENS or
 ### Usage
 
 ```jsx
-<ULink
+<ContactPage
   domain="shanemac.eth"
   walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
   theme="light"
@@ -49,47 +49,51 @@ npm install @xmtp/xmtp-js react-router-dom @ensdomains/ens-avatar@0.2.5
 Copy paste the component into your project
 
 <Tabs >
-<TabItem value="index" label="ULink.js">
+<TabItem value="index" label="Link.js">
 
 ```jsx
+// Import necessary libraries
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ethers } from "ethers";
-import { Client } from "@xmtp/xmtp-js";
+import { Client } from "@xmtp/xmtp-js"; // XMTP library
 import { AvatarResolver } from "@ensdomains/ens-avatar";
 
-export function ULink({
+// Define the Link component
+export function Link({
   walletAddress: initialWalletAddress,
   deepLinkApps = {
     xmtp: {
-      url: `https://xmtp.chat/dm/${initialWalletAddress}`,
-      icon: "https://xmtp.chat/favicon.ico",
-      device: ["All"],
-      name: "xmtp.chat",
+      // XMTP app configuration
+      url: `https://xmtp.chat/dm/${initialWalletAddress}`, // XMTP chat URL
+      icon: "https://xmtp.chat/favicon.ico", // XMTP icon
+      device: ["All"], // Supported devices
+      name: "xmtp.chat", // App name
     },
   },
   theme = "default",
   size = "medium",
   device = "All",
 }) {
+  // State variables
   const [walletAddress, setWalletAddress] = useState(initialWalletAddress);
-
   const [deviceSpecificApps, setDeviceSpecificApps] = useState([]);
 
+  // Styles for the component
   const styles = {
     avatar: {
       borderRadius: "50%",
       width: "100px",
       cursor: "pointer",
     },
-    uLinkWrapper: {
+    LinkWrapper: {
       maxWidth: "800px",
       height: "100%",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
     },
-    uLinkContainer: {
+    LinkContainer: {
       height: "100%",
       display: "flex",
       flexDirection: "column",
@@ -133,7 +137,7 @@ export function ULink({
       marginBottom: "30px",
       cursor: "pointer",
     },
-    uLinkIcon: {
+    LinkIcon: {
       width: "28px",
       height: "28px",
       marginRight: "8px",
@@ -143,9 +147,11 @@ export function ULink({
     },
   };
 
+  // Get the domain from the URL parameters
   let { domain } = useParams();
   domain = domain || "shanemac.eth";
 
+  // On component mount, detect the device and filter the apps
   useEffect(() => {
     const devicep = detectDevice(device);
     const deepLinkAppsArray = Object.values(deepLinkApps);
@@ -153,8 +159,10 @@ export function ULink({
     setDeviceSpecificApps(filteredApps);
   }, []);
 
+  // State variable for the avatar
   const [avatar, setAvatar] = useState(null);
 
+  // Function to resolve the domain to an address
   const resolveDomainToAddress = async () => {
     try {
       const provider = new ethers.providers.CloudflareProvider();
@@ -164,6 +172,7 @@ export function ULink({
         resolvedAddress,
       );
 
+      // If the resolved address is valid, set the wallet address and avatar
       if (resolvedAddress && isEthDomain && isValidEthereumAddress) {
         setWalletAddress(resolvedAddress);
         const avt = new AvatarResolver(provider);
@@ -177,12 +186,14 @@ export function ULink({
     }
   };
 
+  // On domain change, resolve the domain to an address
   useEffect(() => {
     if (domain) {
       resolveDomainToAddress();
     }
   }, [domain]);
 
+  // Function to detect the device
   const detectDevice = (device) => {
     const userAgent = window.navigator.userAgent;
     if (/Mobi|Android/i.test(userAgent)) return "Android";
@@ -190,27 +201,31 @@ export function ULink({
     return device ? device : "Desktop";
   };
 
+  // Function to filter apps by device
   const filterAppsByDevice = (apps, device) => {
     return apps.filter(
       (app) => app.device.includes(device) || app.device.includes("All"),
     );
   };
 
+  // State variable for checking if the user can message
   const [canMessage, setCanMessage] = useState(null);
+  // On wallet address change, check if the user can message
   useEffect(() => {
     const checkCanMessage = async () => {
-      const result = await Client.canMessage(walletAddress);
+      const result = await Client.canMessage(walletAddress); // XMTP function to check if the user can message
       setCanMessage(result);
     };
 
     checkCanMessage();
   }, [walletAddress]);
 
+  // Render the component
   return (
     <>
       <style>
         {`
-        .uLinkContainer::before {
+        .LinkContainer::before {
           content: "";
           position: absolute;
           top: 0px;
@@ -232,7 +247,7 @@ export function ULink({
         }
       `}
       </style>
-      <div className="uLinkContainer ulink" style={styles.uLinkContainer}>
+      <div className="LinkContainer Link" style={styles.LinkContainer}>
         <style>
           {`
         
@@ -249,9 +264,9 @@ export function ULink({
             width={100}
           />
         ) : (
-          <SVGLogo parentClass="ulink" theme="default" size="medium" />
+          <div> image here </div>
         )}
-        <div style={styles.uLinkWrapper}>
+        <div style={styles.LinkWrapper}>
           <div style={styles.linkDomain}>{domain}</div>
           <div className="instructions" style={styles.instructions}>
             Just send a message to <b>{domain} </b>
@@ -272,7 +287,7 @@ export function ULink({
                     theme={theme}
                     size={size}>
                     <img
-                      style={styles.uLinkIcon}
+                      style={styles.LinkIcon}
                       src={app.icon}
                       alt={`${app.name} Icon`}
                       width="50px"
@@ -294,52 +309,6 @@ export function ULink({
     </>
   );
 }
-
-function SVGLogo({ parentClass, size, theme }) {
-  const color =
-    theme === "dark" ? "#fc4f37" : theme === "light" ? "#fc4f37" : "#fc4f37";
-
-  const hoverColor =
-    theme === "dark" ? "#fff" : theme === "light" ? "#000" : "#000";
-
-  const uniqueClassLogo = `logo-${Math.random().toString(36).substr(2, 9)}`;
-
-  const logoStyles = {
-    container: {
-      width: size === "large" ? "160px" : size === "medium" ? "100px" : "70px",
-      marginRight: "5px",
-    },
-    logo: `
-        .${uniqueClassLogo} {
-          transition: transform 0.5s ease;
-        }
-  
-        .${parentClass}:hover .${uniqueClassLogo} {
-          transform: rotate(360deg);
-        }
-  
-        .${parentClass}:hover .${uniqueClassLogo} path {
-          fill: ${hoverColor};
-        }
-      `,
-  };
-
-  return (
-    <>
-      <style>{logoStyles.logo}</style>
-      <svg
-        className={"logo " + uniqueClassLogo}
-        style={logoStyles.container}
-        viewBox="0 0 462 462"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill={color}
-          d="M1 231C1 103.422 104.422 0 232 0C359.495 0 458 101.5 461 230C461 271 447 305.5 412 338C382.424 365.464 332 369.5 295.003 349C268.597 333.767 248.246 301.326 231 277.5L199 326.5H130L195 229.997L132 135H203L231.5 184L259.5 135H331L266 230C266 230 297 277.5 314 296C331 314.5 362 315 382 295C403.989 273.011 408.912 255.502 409 230C409.343 131.294 330.941 52 232 52C133.141 52 53 132.141 53 231C53 329.859 133.141 410 232 410C245.674 410 258.781 408.851 271.5 406L283.5 456.5C265.401 460.558 249.778 462 232 462C104.422 462 1 358.578 1 231Z"
-        />
-      </svg>
-    </>
-  );
-}
 ```
 
 </TabItem>
@@ -348,5 +317,5 @@ function SVGLogo({ parentClass, size, theme }) {
 Import the component into your project
 
 ```jsx
-import { ULink } from "./ULink";
+import { Link } from "./Link";
 ```

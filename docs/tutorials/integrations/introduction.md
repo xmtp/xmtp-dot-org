@@ -3,73 +3,38 @@ sidebar_label: Introduction
 sidebar_position: 1
 ---
 
-import {UButton} from "@site/src/components/UWidgets/UButton";
-import {UBroadcast} from "@site/src/components/UWidgets/UBroadcast";
-import {UConnect} from "@site/src/components/UWidgets/UConnect";
-import {UProfileCard} from "@site/src/components/UWidgets/UProfileCard";
-import {ULink} from "@site/src/components/UWidgets/ULink";
-import {UInbox} from "@site/src/components/UWidgets/UInbox";
-import {USubscribe} from "@site/src/components/UWidgets/USubscribe";
+import {Button} from "@site/src/components/Widgets/Button";
+import {Broadcast} from "@site/src/components/Widgets/Broadcast";
+import {Connect} from "@site/src/components/Widgets/Connect";
+import {ProfileCard} from "@site/src/components/Widgets/ProfileCard";
+import {ContactPage} from "@site/src/components/Widgets/ContactPage";
+import {Inbox} from "@site/src/components/Widgets/Inbox";
+import {Subscribe} from "@site/src/components/Widgets/Subscribe";
 
-# Integration Widgets
+# Integration Tutorials
 
-Here is a collection of React components that can be used to create interactive user interfaces. `U` stands for `Universal`. The following widgets are available:
+Here is a collection of React components that can be used to create interactive user interfaces. The following tutorials are available:
 
-- [**Contact Link**](#contact-link): The `UConnect` widget serves as a contact button, typically positioned in the header or footer of business websites for optimal visibility and accessibility.
+- [**Buttons**](#buttons): This tutorial shows how to display XMTP's ecosystem apps deeplink buttons in a dropdown with different themes and sizes. Fully customizable.
 
-- [**Buttons**](#buttons): The `UButton` widget display XMTP's ecosystem apps deeplink buttons in a dropdown with different themes and sizes. Fully customizable.
+- [**Profile Card**](#profile-card): This tutorial showcases how to create a profile card with an image, name, description, and a call-to-action button to contact the person or company through xmtp.
 
-- [**Profile Card**](#profile-card): The `UProfileCard` widget showcases a profile card with an image, name, description, and a call-to-action button to contact the person or company through xmtp.
+- [**Subscribe Button**](#subscribe-button): This tutorial allows users to learn how to create a subscription button for a Dapp through XMTP. Has callbacks for managing subscribers lists.
 
-- [**Subscribe Button**](#subscribe-button): The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has callbacks for managing subscribers lists.
+- [**Broadcast**](#broadcast): This tutorial enables the user to learn how to broadcast messages to 1 or many specified Ethereum addresses.
 
-- [**Broadcast**](#broadcast): The `UBroadcast` widget enables the user to broadcast messages to 1 or many specified Ethereum addresses.
+- [**Floating Inbox**](#floating-inbox): This tutorial is a guide to create a floating messaging component designed to allow for integrating web3 messaging in any website.
 
-- [**Floating Inbox**](#floating-inbox): The `UInbox` widget is a floating messaging component designed to allow for integrating web3 messaging in any website.
-
-- [**Contact Page**](#contact-page): The `ULink` widget is a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP.
+- [**Contact Page**](#contact-page): This tutorial is a guide to create a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP.
 
 ---
 
-## Contact Link
-
-The `UConnect` widget serves as a contact button, typically positioned in the header or footer of business websites for optimal visibility and accessibility.
-
-<div className="widget-container">
- <UConnect
-  domain="shanemac.eth"
-  walletAddress="0x2c8f98078253Aa7FE0097DF64867A1EacDd6b26B"
-  defaultApp="xmtp"
-  theme="light"
-  size="medium"
-/>
-</div>
-
-### Props
-
-- `domain`: Domain name associated with the user (e.g., "xmtp.eth").
-- `walletAddress`: Wallet address of the user.
-- `defaultApp`: Messaging application name
-- `theme`: Accepts values "default", "dark", or "light".
-- `showText`: (Optional) A boolean value determining whether to display the text. Default true.
-- `deepLinkApps`: (Optional) An object containing information about different messaging apps.
-
-### Usage
-
-```jsx
-<UConnect domain="xmtp.eth" walletAddress="0xUserWalletAddress" theme="light" />
-```
-
-### Installation
-
-- [Go to installation](/docs/integrations/uconnect)
-
 ## Buttons
 
-The `UButton` widget allows users to display XMTP's ecosystem apps deeplink buttons with different themes and sizes.
+This tutorial allows users to learn how to display XMTP's ecosystem apps deeplink buttons with different themes and sizes.
 
 <div className="widget-container">
-<UButton
+<Button
 domain="shanemac.eth"
 walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
 theme="light"
@@ -88,7 +53,7 @@ size="medium"
 ### Usage
 
 ```jsx
-<UButton
+<Button
   domain="fabri.eth"
   walletAddress="0xUserWalletAddress"
   theme="dark"
@@ -96,16 +61,16 @@ size="medium"
 />
 ```
 
-### Installation
+### Tutorial
 
-- [Go to installation](/docs/integrations/ubutton)
+- [Go to Tutorial](/docs/tutorials/integrations/button)
 
 ## Profile Card
 
-The `UProfileCard` widget showcases a profile with an image, name, description, and a call-to-action button to contact the person or company through xmtp.
+This tutorial showcases how to create a profile with an image, name, description, and a call-to-action button to contact the person or company through xmtp.
 
 <div className="widget-container">
-<UProfileCard
+<ProfileCard
   domain="shanemac.eth"
   walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
   description="Hi, I'm Shane, Co-Founder of XMTP."
@@ -129,7 +94,7 @@ The `UProfileCard` widget showcases a profile with an image, name, description, 
 ### Usage
 
 ```jsx
-<UProfileCard
+<ProfileCard
   domain="shanemac.eth"
   walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
   description="Hi, I'm Shane, Co-Founder of XMTP."
@@ -139,16 +104,16 @@ The `UProfileCard` widget showcases a profile with an image, name, description, 
 />
 ```
 
-### Installation
+### Tutorial
 
-- [Go to installation](/docs/integrations/uprofilecard)
+- [Go to Tutorial](/docs/tutorials/integrations/profilecard)
 
 ## Subscribe Button
 
-The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has callbacks for managing subscribers lists.
+This tutorial allows users to learn how to create a subscription button for a Dapp through XMTP. Has callbacks for managing subscribers lists.
 
 <div className="widget-container">
-<USubscribe
+<Subscribe
   theme="default"
   size="medium"
   onSubscribe={(address) => console.log("New subscriber: " + address)}
@@ -172,7 +137,7 @@ The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has ca
 ### Usage
 
 ```jsx
-<USubscribe
+<Subscribe
   theme="default"
   size="medium"
   onSubscribe={(address) => console.log("New subscriber: " + address)}
@@ -185,16 +150,16 @@ The `USubscribe` widget allows users to subscribe to a Dapp through XMTP. Has ca
 />
 ```
 
-### Installation
+### Tutorial
 
-- [Go to installation](/docs/integrations/usubscribe)
+- [Go to Tutorial](/docs/tutorials/integrations/subscribe)
 
 ## Broadcast
 
-The `UBroadcast` widget enables the user to broadcast messages to 1 or many specified Ethereum addresses.
+This tutorial enables the user to learn how to broadcast messages to 1 or many specified Ethereum addresses.
 
 <div className="widget-container">
- <UBroadcast
+ <Broadcast
   env="production"
   walletAddresses={[
       "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
@@ -218,7 +183,7 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 ## Usage
 
 ```jsx
-<UBroadcast
+<Broadcast
   theme="dark"
   size="medium"
   wallet={signer}
@@ -232,16 +197,16 @@ The `UBroadcast` widget enables the user to broadcast messages to 1 or many spec
 />
 ```
 
-### Installation
+### Tutorial
 
-- [Go to installation](/docs/integrations/ubroadcast)
+- [Go to Tutorial](/docs/tutorials/integrations/broadcast)
 
 ## Floating Inbox
 
-The `UInbox` widget is a floating messaging component designed to allow for integrating web3 messaging in any website.
+This tutorial is a guide to create a floating messaging component designed to allow for integrating web3 messaging in any website.
 
 <div className="widget-container">
-<UInbox env="production"  />
+<Inbox env="production"  />
 </div>
 
 ### Props
@@ -252,19 +217,19 @@ The `UInbox` widget is a floating messaging component designed to allow for inte
 ### Usage
 
 ```jsx
-<UInbox env="production" />
+<Inbox env="production" />
 ```
 
-### Installation
+### Tutorial
 
-- [Go to installation](/docs/integrations/uinbox)
+- [Go to Tutorial](/docs/tutorials/integrations/inbox)
 
-# Contact Page
+## Contact Page
 
-The `ULink` widget is a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP.
+The tutorial is a guide to create a React component that displays a page based on its ENS or domain and shows different buttons for contacting through XMTP.
 
-<div className="widget-container ulink">
-<ULink
+<div className="widget-container link">
+<ContactPage
       domain="shanemac.eth"
       walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
     />
@@ -281,7 +246,7 @@ The `ULink` widget is a React component that displays a page based on its ENS or
 ### Usage
 
 ```jsx
-<ULink
+<ContactPage
   domain="shanemac.eth"
   walletAddress="0x7E0b0363404751346930AF92C80D1fef932Cc48a"
   theme="light"
@@ -290,54 +255,11 @@ The `ULink` widget is a React component that displays a page based on its ENS or
 />
 ```
 
-### Installation
+### Tutorial
 
-- [Go to installation](/docs/integrations/ulink)
+- [Go to Tutorial](/docs/tutorials/integrations/contactpage)
 
 ---
-
-#### Deep Link Apps
-
-In the `src/deepLinkApps.js` file, we have a `deepLinkApps` object that contains information about different messaging apps.
-
-```jsx
-//Alphabetical order
-export const deepLinkApps = {
-  xmtp: {
-    url: `https://xmtp.chat/dm/{walletAddress}`,
-    icon: "https://xmtp.chat/favicon.ico",
-    device: ["Desktop"],
-    name: "xmtp",
-  },
-  CustomApp: {
-    url: `https://xmtp-react-widgets.vercel.app/link/{walletAddress}`,
-    icon: "https://xmtp-react-widgets.vercel.app/link/favicon.ico",
-    device: ["All"],
-    name: "Custom App",
-  },
-};
-```
-
-**Props**
-
-- `url`: The URL for direct messaging in the app. The `{walletAddress}` placeholder will be replaced with the actual wallet address.
-- `name`: The descriptive name of the app.
-- `icon`: The URL of the app's favicon.
-- `device`: An array of operating systems where the app is available. "All" means the app is available on all operating systems.
-
-**Usage**
-
-This custom configuration works with `UButton`, `UConnect` and `UProfileCard`. All widgets that have deeplinking use case.
-
-```jsx
-<UButton
- /*Other props*/
-defaultApp = "CustomApp";
-deepLinkApps = { deepLinkApps };
-/>
-```
-
-This way, contributors can easily add new apps by modifying the `deepLinkApps.js` file through PR's.
 
 #### Wallet Signer
 
@@ -345,17 +267,17 @@ Please note that all widgets in this library that require a wallet signer only a
 
 The signer is optional. If the signer is not detected, the widgets have a built-in mechanism to establish a connection.
 
-For example, when using the `USubscribe` or `UInbox` widgets, you should provide an `ethers.js` signer instance like so:
+For example, when using the `Subscribe` or `Inbox` widgets, you should provide an `ethers.js` signer instance like so:
 
 ```jsx
-<USubscribe
+<Subscribe
   // Other props
   wallet={signer}
 />
 ```
 
 ```jsx
-<UInbox
+<Inbox
   // Other props
   wallet={signer}
 />
