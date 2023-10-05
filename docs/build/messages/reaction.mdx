@@ -164,7 +164,19 @@ Client.register(codec = ReactionCodec())
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```swift
+let reaction = Reaction(
+    reference: messageToReact.id,
+    action: .added,
+    content: "U+1F603",
+    schema: .unicode
+)
+
+try await conversation.send(
+    content: reaction,
+    options: .init(contentType: ContentTypeReaction)
+)
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
@@ -268,7 +280,9 @@ if (message.contentType == ContentTypeReaction) {
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```swift
+let content: Reaction = try message.content()
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
