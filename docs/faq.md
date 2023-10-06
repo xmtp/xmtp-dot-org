@@ -239,6 +239,8 @@ Tips for Staying Within Limits
 - Spread out your requests over 5 minutes.
 - Use smaller batches for large queries.
 - Introduce a brief delay between calls.
+- Use multiple IPs to make requests.
+- Bulk canMessage makes api calls in 50 address batches
 
 By being aware of these limits and planning accordingly, you can avoid rate-limiting issues.
 
