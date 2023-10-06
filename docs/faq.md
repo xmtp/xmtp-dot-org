@@ -224,7 +224,23 @@ Currently, XMTP network nodes are configured to rate limit high-volume publishin
 
 XMTP Labs is capable of rate limiting the network while we are the only node operators. Rate limiting is a consideration in our research into economic spam controls. Ultimately, rate limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
 
-Limit: 1k publish request/5 minutes or 10k of any request type per 5 mins
+### What are the API rate limits?
+
+- 1,000 publish requests per 5 minutes.
+- 10,000 general requests per 5 minutes.
+- Nodes allow 40,000 reads per 5 minutes.
+
+### What happens if I exceed the limits?
+
+You'll get an HTTP 429 error and must wait for the next 5-minute window.
+
+Tips for Staying Within Limits
+
+- Spread out your requests over 5 minutes.
+- Use smaller batches for large queries.
+- Introduce a brief delay between calls.
+
+By being aware of these limits and planning accordingly, you can avoid rate-limiting issues.
 
 ### Who pays to keep the network running?
 
