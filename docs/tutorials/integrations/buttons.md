@@ -369,5 +369,3 @@ defaultApp = "CustomApp";
 deepLinkApps = { deepLinkApps };
 />
 ```
-
-This way, contributors can easily add new apps by modifying the `deepLinkApps.js` file through PR's.
