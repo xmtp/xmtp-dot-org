@@ -51,7 +51,6 @@ Copy paste the component into your project
 
 ```jsx
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { ethers } from "ethers";
 import { Client } from "@xmtp/xmtp-js";
 import { AvatarResolver } from "@ensdomains/ens-avatar";
@@ -66,10 +65,12 @@ export function ContactPage({
       name: "xmtp.chat",
     },
   },
-  theme = "default",
-  size = "medium",
+  domain = "cryptocornerstore.eth",
   device = "All",
 }) {
+  const [isLoadingResolveDomain, setIsLoadingResolveDomain] = useState(true);
+  const [isLoadingCanMessage, setIsLoadingCanMessage] = useState(true);
+
   const [walletAddress, setWalletAddress] = useState(initialWalletAddress);
 
   const [deviceSpecificApps, setDeviceSpecificApps] = useState([]);
@@ -127,9 +128,10 @@ export function ContactPage({
       fontWeight: "500",
       transition: "color 0.6s cubic-bezier(0.22, 1, 0.36, 1)",
       textDecoration: "none",
-      backgroundColor: "white",
       marginBottom: "30px",
-      cursor: "pointer",
+      // existing styles...
+      backgroundColor: isLoadingResolveDomain ? "lightgrey" : "white",
+      cursor: isLoadingResolveDomain ? "not-allowed" : "pointer",
     },
     ContactPageIcon: {
       width: "28px",
@@ -141,9 +143,6 @@ export function ContactPage({
     },
   };
 
-  let { domain } = useParams();
-  domain = domain || "cryptocornerstore.eth";
-
   useEffect(() => {
     const devicep = detectDevice(device);
     const deepLinkAppsArray = Object.values(deepLinkApps);
@@ -154,6 +153,7 @@ export function ContactPage({
   const [avatar, setAvatar] = useState(null);
 
   const resolveDomainToAddress = async () => {
+    setIsLoadingResolveDomain(true);
     try {
       const provider = new ethers.providers.CloudflareProvider();
       const resolvedAddress = await provider.resolveName(domain);
@@ -172,6 +172,8 @@ export function ContactPage({
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoadingResolveDomain(false);
     }
   };
 
@@ -195,10 +197,19 @@ export function ContactPage({
   };
 
   const [canMessage, setCanMessage] = useState(null);
+
   useEffect(() => {
     const checkCanMessage = async () => {
-      const result = await Client.canMessage(walletAddress);
-      setCanMessage(result);
+      setIsLoadingCanMessage(true);
+      try {
+        const result = await Client.canMessage(walletAddress);
+        setCanMessage(result);
+      } catch (error) {
+        console.log("Error checking canMessage:", error);
+        setCanMessage(false);
+      } finally {
+        setIsLoadingCanMessage(false);
+      }
     };
 
     checkCanMessage();
@@ -249,50 +260,48 @@ export function ContactPage({
             width={100}
           />
         ) : (
-          <SVGLogo
-            width={100}
-            parentClass={"ContactPage"}
-            theme={"default"}
-            size={"medium"}
-          />
+          <SVGLogo width={100} parentClass={"ContactPage"} />
         )}
         <div style={styles.ContactPageWrapper}>
           <div style={styles.linkDomain}>{domain}</div>
-          <div className="instructions" style={styles.instructions}>
-            Just send a message to <b>{domain} </b>
-            using your preferred XMTP inbox, and hit send!
-          </div>
-          {canMessage !== null && (
-            <>
-              {canMessage ? (
-                deviceSpecificApps.map((app, index) => (
-                  <a
-                    style={styles.listItemButton}
-                    key={index}
-                    className="listItemButton"
-                    target="_newtab"
-                    href={app.url
-                      .replace("{walletAddress}", walletAddress)
-                      .replace("{domain}", domain)}
-                    theme={theme}
-                    size={size}>
-                    <img
-                      style={styles.ContactPageIcon}
-                      src={app.icon}
-                      alt={`${app.name} Icon`}
-                      width="50px"
-                      className="logo"
-                    />
-                    Message on {app.name}
-                  </a>
-                ))
-              ) : (
-                <p>
-                  You cannot send a message bacause this walet is not on the
-                  xmtp network.
-                </p>
-              )}
-            </>
+          {!isLoadingResolveDomain && canMessage && (
+            <div className="instructions" style={styles.instructions}>
+              Just send a message to <b>{domain}</b>
+              using your preferred XMTP inbox, and hit send!
+            </div>
+          )}
+
+          {isLoadingResolveDomain ? (
+            <p>Loading ...</p>
+          ) : isLoadingCanMessage ? (
+            <p>Loading canMessage...</p>
+          ) : canMessage === null ? (
+            <p>Error or not initialized.</p>
+          ) : canMessage ? (
+            deviceSpecificApps.map((app, index) => (
+              <a
+                style={styles.listItemButton}
+                key={index}
+                className="listItemButton"
+                target="_newtab"
+                href={app.url
+                  .replace("{walletAddress}", walletAddress)
+                  .replace("{domain}", domain)}>
+                <img
+                  style={styles.ContactPageIcon}
+                  src={app.icon}
+                  alt={`${app.name} Icon`}
+                  width="50px"
+                  className="logo"
+                />
+                Message on {app.name}
+              </a>
+            ))
+          ) : (
+            <p>
+              You cannot send a message because this wallet is not on the xmtp
+              network.
+            </p>
           )}
         </div>
       </div>
