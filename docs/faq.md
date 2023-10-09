@@ -224,6 +224,10 @@ Currently, XMTP network nodes are configured to rate limit high-volume publishin
 
 XMTP Labs is capable of rate limiting the network while we are the only node operators. Rate limiting is a consideration in our research into economic spam controls. Ultimately, rate limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
 
+### Is there a way to get a list of all current XMTP-enabled wallets to avoid hitting rate limits?
+
+We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
+
 ### What are the API rate limits?
 
 - 1,000 publish requests per 5 minutes.
