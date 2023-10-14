@@ -1,33 +1,40 @@
 ---
-sidebar_label: Spam Filters
-sidebar_position: 6
+sidebar_label: Filter spam
+sidebar_position: 2
+description: "Learn how to use spam filters for your messaging app built with XMTP."
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import ReactPlayer from 'react-player'
 
-# Spam Filters
+# Filter spam in apps built with XMTP
 
-Learn how to use Airstack to build a known sender inbox and spam filters for your XMTP-powered messaging application.
+:::info
 
-## Overview
+Products listed on this page are not official endorsements and are provided for informational purposes only. 
 
-In this tutorial, you will learn how to use on-chain and off-chain data provided by Airstack to create various kinds of spam filtering systems for your application:
+Is your app using a great spam filter? Tell the community about it by opening a [pull request](https://github.com/xmtp/xmtp-dot-org/pulls) or [issue](https://github.com/xmtp/xmtp-dot-org/issues). 
 
-- [**Known Senders**](#known-senders): Separate the user inbox into known and unknown senders
-- [**Proof of Personhood**](#proof-of-personhood): Establish a scoring or evaluation system to prove an identity’s personhood
-- [**High Probability of Connection**](#high-probability-of-connection): Evaluating the likelihood of real-life connections using social graphs and POAPs
+:::
 
-### Pre-requisites
+In this tutorial, you will learn how to use on-chain and off-chain data provided by [Airstack](https://airstack.xyz) to create various kinds of spam filtering systems for your application:
 
-- [Get Airstack API key](https://docs.airstack.xyz/airstack-docs-and-faqs/get-started/get-api-key)
+- [**Known senders**](#known-senders): Separate the user inbox into known and unknown senders
+- [**Proof of personhood**](#proof-of-personhood): Establish a scoring or evaluation system to prove an identity’s personhood
+- [**High probability of connection**](#high-probability-of-connection): Evaluating the likelihood of real-life connections using social graphs and POAPs
+
+## Prerequisites
+
+- [Get an Airstack API key](https://docs.airstack.xyz/airstack-docs-and-faqs/get-started/get-api-key)
 - Basic knowledge of GraphQL
-- Basic knowledge of [XMTP](https://xmtp.org/)
+- Basic knowledge of XMTP
 
-### Get Started
+## Get started
 
-If you are using JavaScript/TypeScript or Python, Install the Airstack SDK:
+If you're using JavaScript/TypeScript or Python, install the Airstack SDK using the information below.
+
+If you're using another language, use https://api.airstack.xyz/gql as your GraphQL endpoint to access the Airstack APIs. 
 
 <Tabs>
 <TabItem value="npm" label="npm"  >
@@ -139,13 +146,9 @@ asyncio.run(main())
 </TabItem>
 </Tabs>
 
-### Other Programming Languages
+## AI natural language queries
 
-To access the Airstack APIs in other languages, you can use https://api.airstack.xyz/gql as your GraphQL endpoint.
-
-#### 🤖 AI natural language
-
-[Airstack](https://airstack.xyz) provides an AI solution for you to build GraphQL queries to fulfill your use case easily.
+Airstack provides an AI solution for building GraphQL queries.
 
 <div className='wrapper'>
   <ReactPlayer
@@ -158,17 +161,15 @@ To access the Airstack APIs in other languages, you can use https://api.airstack
   />
 </div>
 
-## Known Senders
+<br/>
 
----
+## Filter for known senders
 
-### Check If User A Is Following User B
+### Check if user A is following user B
 
-You can use Airstack to check and verify if user A is following user B on either Lens or Farcaster:
+You can use Airstack to check if user A is following user B on Lens or Farcaster.
 
-**Try Demo**
-
-- https://app.airstack.xyz/query/gxn0jQ0ADA
+**Try demo**: https://app.airstack.xyz/query/gxn0jQ0ADA
 
 <Tabs>
 <TabItem value="prompt" label="Prompt"  >
@@ -265,13 +266,11 @@ If the `Following` field returns an array with non-zero length, then user A is v
 
 Otherwise, user A does not follow user B in Lens and Farcaster.
 
-### Check If User A Has Any Token Transfers History With User B
+### Check if user A has a token transfer history with user B
 
-You can use Airstack to check and verify if user A has transferred any ERC20/721/1155 tokens to user B on either Ethereum or Polygon:
+You can use Airstack to check if user A has transferred any ERC20/721/1155 tokens to user B on Ethereum or Polygon.
 
-**Try Demo**
-
-- https://app.airstack.xyz/query/fBJOJH9bZA
+**Try demo:** https://app.airstack.xyz/query/fBJOJH9bZA
 
 <Tabs>
 <TabItem value="prompt" label="Prompt"  >
@@ -483,17 +482,15 @@ query GetTokenTransfers {
 </TabItem>
 </Tabs>
 
-## Proof of Personhood
+<br/>
 
----
+## Examine proof of personhood
 
-### Token Transfers
+### Token transfers
 
-You can examine a user’s token transfer history across Ethereum and Polygon to determine their likelihood of being a legitimate vs. bad actor:
+You can examine a user’s token transfer history across Ethereum and Polygon to determine their likelihood of being a legitimate vs. bad actor.
 
-**Try Demo**
-
-- https://app.airstack.xyz/query/dvRSbWiNKG
+**Try demo:** https://app.airstack.xyz/query/dvRSbWiNKG
 
 <Tabs>
 <TabItem value="prompt" label="Prompt"  >
@@ -684,17 +681,13 @@ query GetTokenTransfers {
 </TabItem>
 </Tabs>
 
-If either `ethereum.TokenTransfer` or `polygon.TokenTransfer` array has non-zero length, then the user has a history of transferring token and thus can be considered unlikely as a spammer.
+If the `ethereum.TokenTransfer` or `polygon.TokenTransfer` array has a non-zero length the user has a history of transferring tokens. This means that the user is unlikely to be a spammer.
 
-Otherwise, they may be considered as one.
+### Token balances
 
-### Token Balances
+You can examine a user’s ERC20/721/1155 token balances to determine their likelihood of being a legitimate vs. bad actor. Users with high-value token balances are more likely to be good actors than users with 0 balances.
 
-You can examine a user’s ERC20/721/1155 token balances to determine their likelihood of being a legitimate vs. bad actor. Users with high-value tokens are more likely to be good actors than users with 0 balances:
-
-**Try Demo**
-
-- https://app.airstack.xyz/query/5teoS4ZS1X
+**Try demo:** https://app.airstack.xyz/query/5teoS4ZS1X
 
 <Tabs>
 <TabItem value="prompt" label="Prompt"  >
@@ -807,13 +800,11 @@ query MyQuery {
 </TabItem>
 </Tabs>
 
-### Has Primary ENS
+### Has primary ENS
 
-You can use Airstack to check if a user has any primary ENS domain registered. This is a strong signal as it costs $ to purchase ENS and takes additional effort to register a primary ENS.:
+You can use Airstack to check if a user has a primary ENS domain registered. This is a strong signal of a good actor as it requires additional effort to purchase and register a primary ENS.
 
-**Try Demo**
-
-- https://app.airstack.xyz/query/6re2GWPzw5
+**Try demo:** https://app.airstack.xyz/query/6re2GWPzw5
 
 <Tabs>
 <TabItem value="prompt" label="Prompt"  >
@@ -870,15 +861,15 @@ query MyQuery {
 </TabItem>
 </Tabs>
 
-If the user has a primary ENS, then the `Domain` field will have non-zero length, and thus can be considered as a non-spammer.
+If the user has a primary ENS, then the `Domain` field will have a non-zero length, and thus can be considered as a non-spammer.
 
 Otherwise, you may consider the user as one.
 
-### Has Lens Profile & Followers
+### Has Lens profile and followers
 
-You can use Airstack to check if a given user has any Lens profile or not, and get the number of followers and people they are following. Users with low followers are more suspicious:
+You can use Airstack to check if a given user has any Lens profile or not, and get the number of followers and people they are following. Users with low followers are more suspicious.
 
-**Try Demo**
+**Try demo**
 
 - https://app.airstack.xyz/query/aoZPofhxXD
 
@@ -949,11 +940,11 @@ Additionally, you can also consider using comparing the number of followers and 
 
 Otherwise, you may take into consideration that the user is a potential spammer.
 
-### Has Farcaster Account & Followers
+### Has Farcaster account and followers
 
-You can use Airstack to check if a given user has any Farcaster account or not and get the number of followers and people they are followings.
+You can use Airstack to check if a given user has any Farcaster account or not and get the number of followers and people they are following.
 
-**Try Demo**
+**Try demo**
 
 - https://app.airstack.xyz/query/4GPOVP5rUE
 
@@ -1027,11 +1018,11 @@ Additionally, you can also consider using comparing the number of followers and 
 
 Otherwise, you may take into consideration that the user is a potential spammer.
 
-### Has Non-Virtual POAPs
+### Has non-virtual POAPs
 
-You can use Airstack to check if a user has any non-virutal POAPs, meaning that the user have attended a real-life event and collected the POAP in person:
+You can use Airstack to check if a user has any non-virtual POAPs, meaning that the user has attended a real-life event and collected the POAP in person.
 
-**Try Demo**
+**Try demo**
 
 - https://app.airstack.xyz/query/EjEAFk2Xv7
 
@@ -1108,15 +1099,15 @@ If the user has attended real-life event and collected the POAP, it will be show
 
 Otherwise, you may take into consideration that the user is a potential spammer.
 
-## High Probability of Connection
+<br/>
 
----
+## Examine high probability of connection
 
-### Common POAP Events Attended
+### Common POAP events attended
 
-You can use Airstack to check if user B has any POAPs in common with user A, which could provide a strong indication that user B has attended the same POAP events previously and thus close connection to one another:
+You can use Airstack to check if User B has any POAPs in common with User A, which could provide a strong indication that User B has attended the same POAP events previously and thus close connection to one another.
 
-**Try Demo**
+**Try demo**
 
 - https://app.airstack.xyz/query/GiJgN06hW9
 
@@ -1224,11 +1215,11 @@ By checking the innermost `Poaps` fields, you can see the events that are attend
 
 Otherwise, you may take into consideration that the user B is a potential spammer.
 
-### Common Followers on Lens or Farcaster
+### Common followers on Lens or Farcaster
 
-You can use Airstack to check if user B has any followers in common with user A on either Lens or Farcaster, which could provide a strong indication that user A and B have a close connection to one another on either of the social graph:
+You can use Airstack to check if user B has any followers in common with user A on either Lens or Farcaster, which could provide a strong indication that user A and B have a close connection to one another on either of the social graph.
 
-**Try Demo**
+**Try demo**
 
 - https://app.airstack.xyz/query/Ngh4xIAcYL
 
@@ -1383,20 +1374,3 @@ query CommonFollowers {
 You can see the followers that are following both user A and B, which will be returned in the innermost `Follower` fields with a non-zero length array. If so, user B can be considered unlikely a spammer.
 
 Otherwise, you may take into consideration that the user B is a potential spammer.
-
-#### Developer Support
-
-If you have any questions or need help regarding building a known inbox and spam filter for your XMTP messaging app, please join our Airstack's [Telegram group](https://t.me/+1k3c2FR7z51mNDRh).
-
-#### More Resources
-
-- [TokenTransfers API Reference](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference/tokentransfers-api)
-- [TokenBalances API Reference](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference/tokenbalances-api)
-- [Domains API Reference](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference/domains-api)
-- [Socials API Reference](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference/socials-api)
-- [POAPs API Reference](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference/poaps-api)
-- [Wallet API Reference](https://docs.airstack.xyz/airstack-docs-and-faqs/api-references/api-reference/wallet-api)
-- [Spam Filters](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters)
-  - [Known Senders](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/known-senders)
-  - [Proof of Personhood](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/proof-of-personhood)
-  - [High Probability of Connection](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/high-probability-of-connection)
