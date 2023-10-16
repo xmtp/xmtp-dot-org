@@ -218,15 +218,15 @@ Clients communicate with XMTP nodes through a gRPC (or JSON/HTTP) [message API](
 
 XMTP provides perceptibly real-time message delivery and retrieval. The network does not provide service level guarantees.
 
+### Is there a way to get a list of all current XMTP-enabled wallets ?
+
+We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
+
 ### How does network rate limiting work?
 
 Currently, XMTP network nodes are configured to rate limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node.
 
 XMTP Labs is capable of rate limiting the network while we are the only node operators. Rate limiting is a consideration in our research into economic spam controls. Ultimately, rate limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
-
-### Is there a way to get a list of all current XMTP-enabled wallets ?
-
-We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
 
 ### What are the API rate limits?
 
@@ -234,7 +234,7 @@ We don't provide a direct method to fetch all XMTP-enabled wallet addresses in b
 - 10,000 general requests per 5 minutes.
 - Nodes allow 40,000 reads per 5 minutes.
 
-### What happens if I exceed the limits?
+#### What happens if I exceed the limits?
 
 You'll get an HTTP 429 error and must wait for the next 5-minute window.
 
