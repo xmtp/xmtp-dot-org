@@ -25,8 +25,6 @@ Use these tools with your app built with XMTP to help keep your users safe from 
 
 Is your app using a great spam-busting tool provided as a public good? Tell the community about it by opening a [pull request](https://github.com/xmtp/xmtp-dot-org/pulls) or [issue](https://github.com/xmtp/xmtp-dot-org/issues).
 
-<br/>
-
 ## Third-party spam filtering tools
 
 :::info
@@ -37,4 +35,9 @@ Is your app using a great tool to filter spam and keep inboxes safe? Open an [is
 
 :::
 
-- Airstack: [Spam filters](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters)
+- [**Airstack**](https://www.airstack.xyz/) spam filters  
+  Use on-chain and off-chain data provided by Airstack to create spam filtering systems for your app, including:
+  - [Known senders](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/known-senders): Separate the user inbox into known and unknown senders
+  - [Proof of personhood](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/proof-of-personhood): Establish a scoring or evaluation system to prove an identity’s personhood
+  - [High probability of connection](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/high-probability-of-connection): Evaluate the likelihood of real-life connections using social graphs and POAPs
+  
