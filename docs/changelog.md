@@ -10,6 +10,14 @@ This changelog provides information about release milestones for XMTP SDKs, deve
 
 ---
 
+#### XXXXXX 2023
+
+## [React Native client SDK](https://github.com/xmtp/xmtp-react-native) vXXXX is Production Ready (xmtp-react-native)
+
+This release delivers improved performance and preregistered codec support for all standard and standards-track content types. **[Read the release notes](https://github.com/xmtp/xmtp-react-native/releases)** (Oct XXXXX)
+
+---
+
 #### Sep 2023
 
 ## [JavaScript client SDK](https://github.com/xmtp/xmtp-js) v11 released (xmtp-js)
