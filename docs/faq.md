@@ -228,7 +228,7 @@ Currently, XMTP network nodes are configured to rate limit high-volume publishin
 
 XMTP Labs is capable of rate limiting the network while we are the only node operators. Rate limiting is a consideration in our research into economic spam controls. Ultimately, rate limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
 
-### What are the API rate limits?
+#### What are the API rate limits?
 
 - 1,000 publish requests per 5 minutes.
 - 10,000 general requests per 5 minutes.
