@@ -230,24 +230,62 @@ import type { Signer } from "@xmtp/react-sdk";
 export const CreateClientWithKeys: React.FC<{ signer: Signer }> = ({ signer }) => {
   const { initialize } = useClient();
 
+  const initXmtpWithKeys = async () => {
+    const options = {
+      env: "dev"
+    };
+    const address = await getAddress(signer);
+    let keys = loadKeys(address);
+    if (!keys) {
+      keys = await Client.getKeys(signer, {
+        ...options,
+        skipContactPublishing: true,
+        persistConversations: false,
+      });
+      storeKeys(address, keys);
+    }
+    await initialize({ keys, options, signer });
+  };
+
   // initialize client on mount
   useEffect(() => {
-    const init = async () => {
-      // get the keys using a valid Signer
-      const keys = await Client.getKeys(signer);
-      // create a client using keys returned from WgetKeys
-      const options = {
-        persistConversations: false,
-        env: "dev",
-      };
-      await initialize({ keys, options, signer });
-    };
-    void init();
+    void initXmtpWithKeys();
   }, []);
 
   return (
     ...
   );
+};
+```
+
+We are using the following helper funtions to store and retrieve the keys
+
+```ts
+// Create a client using keys returned from getKeys
+const ENCODING = "binary";
+
+export const getEnv = (): "dev" | "production" | "local" => {
+  return "production";
+};
+
+export const buildLocalStorageKey = (walletAddress: string) =>
+  walletAddress ? `xmtp:${getEnv()}:keys:${walletAddress}` : "";
+
+export const loadKeys = (walletAddress: string): Uint8Array | null => {
+  const val = localStorage.getItem(buildLocalStorageKey(walletAddress));
+  return val ? Buffer.from(val, ENCODING) : null;
+};
+
+export const storeKeys = (walletAddress: string, keys: Uint8Array) => {
+  localStorage.setItem(
+    buildLocalStorageKey(walletAddress),
+    Buffer.from(keys).toString(ENCODING),
+  );
+};
+
+export const wipeKeys = (walletAddress: string) => {
+  // This will clear the conversation cache + the private keys
+  localStorage.removeItem(buildLocalStorageKey(walletAddress));
 };
 ```
 

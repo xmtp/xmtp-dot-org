@@ -12,7 +12,9 @@ import unreadbadge from '/docs/concepts/img/unread-badge.png';
 
 # Build push notifications with XMTP
 
-Push notifications can be a highly effective way to engage your users and increase app retention. In addition to providing push notifications for new messages, provide them for new conversations. 
+Push notifications can be a highly effective way to engage your users and increase app retention. In addition to providing push notifications for new messages, provide them for new conversations.
+
+![](./img/notif-diagram.png)
 
 ## Run your own notification server
 

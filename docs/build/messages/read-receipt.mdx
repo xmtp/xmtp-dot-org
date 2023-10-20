@@ -75,7 +75,9 @@ Client.register(codec = ReadReceiptCodec())
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```jsx
+ Client.register(codec: ReadReceiptCodec())
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
@@ -85,7 +87,7 @@ Read receipts for Dart haven't been implemented yet.
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-Read receipts for React Native haven't been implemented yet.
+React Native SDK already has the codecs registered.
 
 </TabItem></Tabs>
 
@@ -128,7 +130,14 @@ conversation.send(
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```swift
+let read = ReadReceipt(timestamp: "2019-09-26T07:58:30.996+0200")
+
+try await conversation.send(
+    content: read,
+    options: .init(contentType: ContentTypeReadReceipt)
+)
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
@@ -138,7 +147,9 @@ Read receipts for Dart haven't been implemented yet
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-Read receipts for React Native haven't been implemented yet
+```jsx
+await bobConversation.send({ readReceipt: {} });
+```
 
 </TabItem>
 </Tabs>
@@ -209,7 +220,10 @@ if (message.encodedContent.type == ContentTypeReadReceipt) {
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```swift
+let content: ReadReceipt = try message.content()
+content.timestamp // "2019-09-26T07:58:30.996+0200"
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
@@ -219,7 +233,11 @@ Read receipts for Dart haven't been implemented yet
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-Read receipts for React Native haven't been implemented yet
+```jsx
+if (message.contentTypeId !== "xmtp.org/readReceipt:1.0") {
+  throw Error("Unexpected message content " + bobMessages[0].content);
+}
+```
 
 </TabItem>
 </Tabs>

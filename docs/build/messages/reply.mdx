@@ -162,7 +162,19 @@ aliceConversation.send(
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```swift
+let reply = Reply(
+  reference: messageToReply.id,
+  content: "Hello",
+  contentType: ContentTypeText
+)
+
+try await conversation.send(
+  content: reply,
+  options: .init(contentType: ContentTypeReply)
+)
+		let content: Reply = try message.content()
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
@@ -268,7 +280,9 @@ if (encodedContent.type == ContentTypeReply) {
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```swift
+let content: Reply = try message.content()
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>

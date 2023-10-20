@@ -23,12 +23,20 @@
     "twitter": "https://x.com/orbapp_"
   },
   {
-    "name": "Lenster",
-    "href": "https://lenster.xyz",
-    "image": "/img/builtWithXmtp/lenster.svg",
-    "description": "Lenster is a composable, decentralized, and permissionless social media webapp built with Lens Protocol.",
-    "github": "https://github.com/lensterxyz/lenster",
-    "twitter": "https://x.com/lensterxyz"
+    "name": "Hey",
+    "href": "https://hey.xyz",
+    "image": "/img/builtWithXmtp/hey.png",
+    "description": "Hey is a decentralized and permissionless social media app built with Lens Protocol.",
+    "github": "https://github.com/heyxyz/hey",
+    "twitter": "https://x.com/heydotxyz"
+  },
+  {
+    "name": "Snapshot",
+    "href": "https://snapshot.org/#/",
+    "image": "/img/builtWithXmtp/snapshot.jpg",
+    "description": "Snapshot is voting platform that allows DAOs, protocols, or NFT communities to participate in the decentralized governance.",
+    "github": "https://github.com/snapshot-labs",
+    "twitter": "https://x.com/SnapshotLabs"
   },
   {
     "name": "XMTP Inbox",
