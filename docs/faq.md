@@ -222,6 +222,10 @@ XMTP provides perceptibly real-time message delivery and retrieval. The network 
 
 We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
 
+## Rate Limiting
+
+---
+
 ### How does network rate limiting work?
 
 Currently, XMTP network nodes are configured to rate limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node.
@@ -234,7 +238,7 @@ XMTP Labs is capable of rate limiting the network while we are the only node ope
 - 10,000 general requests per 5 minutes.
 - Nodes allow 40,000 reads per 5 minutes.
 
-#### What happens if I exceed the limits?
+### What happens if I exceed the limits?
 
 You'll get an HTTP 429 error and must wait for the next 5-minute window.
 
@@ -248,13 +252,13 @@ Tips for Staying Within Limits
 
 By being aware of these limits and planning accordingly, you can avoid rate-limiting issues.
 
-### Who pays to keep the network running?
-
-XMTP Labs is committed to keeping the network running. Future incentive mechanisms will enable the network to run autonomously of XMTP Labs.
-
 ## Fees
 
 ---
+
+### Who pays to keep the network running?
+
+XMTP Labs is committed to keeping the network running. Future incentive mechanisms will enable the network to run autonomously of XMTP Labs.
 
 ### Will XMTP charge messaging fees?
 

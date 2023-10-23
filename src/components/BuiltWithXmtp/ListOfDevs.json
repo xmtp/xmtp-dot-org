@@ -115,14 +115,6 @@
     "twitter": "https://x.com/holderxyz"
   },
   {
-    "name": "Pinsta",
-    "href": "https://pinsta.xyz/",
-    "image": "/img/builtWithXmtp/pinsta-logo.jpg",
-    "description": "Decentralized image and video sharing service. Create Pin Boards to collect and discover rich media.",
-    "github": "https://github.com/PinstaApp/Pinsta",
-    "twitter": "https://x.com/PinstaApp"
-  },
-  {
     "name": "Buttrfly",
     "href": "https://www.buttrfly.app/",
     "image": "/img/builtWithXmtp/buttrfly-icon-rounded.png",
