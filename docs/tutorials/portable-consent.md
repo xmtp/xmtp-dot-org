@@ -1,9 +1,11 @@
 ---
 sidebar_label: Portable consent
-sidebar_position: 4
+sidebar_position: 5.5
 hide_table_of_contents: false
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 import requeststab from '/docs/tutorials/img/requests-tab.png';
 import messagestab from '/docs/tutorials/img/messages-tab.png';
 import allowblock from '/docs/tutorials/img/allow-block.png';
@@ -89,27 +91,66 @@ Use the following methods to build portable consent in your app.
 
 To enable your user to block or allow a contact, call the following methods. Note that these functions accept lists, so you can do batch requests.
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```js
+<Placeholder for JS from Fabri>
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
 ```tsx
 client.contacts.allow([wantedConvo.peerAddress, wantedConvo.peerAddress]);
 client.contacts.block([spamConvo.peerAddress, unwantedConvo.peerAddress]);
 ```
 
+</TabItem>
+</Tabs>
+
 ### Refresh the contact consent list
 
 To ensure that you’re using the latest contact consent state, make sure to refresh the consent list from the network. Perform the refresh just in case the consent state has changed on a different device, for example.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```js
+<Placeholder for JS from Fabri>
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 client.contacts.refreshConsentList();
 ```
 
+</TabItem>
+</Tabs>
+
 ### Check if a contact is blocked or allowed
 
 Call the following methods to check if a contact is blocked or allowed.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```js
+<Placeholder for JS from Fabri>
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
 client.contacts.isAllowed(wantedConvo.peerAddress);
 client.contacts.isBlocked(spamConvo.peerAddress);
 ```
+
+</TabItem>
+</Tabs>
 
 ### Get a conversation’s consent state
 
@@ -117,12 +158,25 @@ When loading a list of conversations, take into account its current consent stat
 
 For example, you might want to display only allowed conversations (conversations with allowed contacts) on a **Messages** tab and “unknown” conversations (conversations with unknown contacts) on a **Requests** tab. For blocked conversations (conversations with blocked contacts), you might want to not display them at all.
 
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```js
+<Placeholder for JS from Fabri>
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
 ```tsx
 const state = await conversation.consentState();
 if (state === "blocked) {
 	// hide the conversation
 }
 ```
+
+</TabItem>
+</Tabs>
 
 ## Synchronize portable consent
 
