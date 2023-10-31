@@ -1,6 +1,6 @@
 ---
 sidebar_label: Conversations
-sidebar_position: 3
+sidebar_position: 4
 description: Learn how to start, list, and cache conversations with XMTP
 ---
 

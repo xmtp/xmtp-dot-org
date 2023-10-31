@@ -1,6 +1,6 @@
 ---
 sidebar_label: Reference docs
-sidebar_position: 1.25
+sidebar_position: 4
 description: "Access reference documentation for each XMTP client SDK"
 ---
 
@@ -19,3 +19,9 @@ Use these reference docs as comprehensive guides to integrating the capabilities
 - [Dart SDK reference docs](https://pub.dev/documentation/xmtp/latest/xmtp/Client-class.html) - `xmtp-flutter`
 
 - [React Native SDK reference docs](https://xmtp.github.io/xmtp-react-native/modules.html) - `xmtp-react-native`
+
+### SDKs
+
+import SDKs from "@site/src/components/SDKs";
+
+<SDKs />
