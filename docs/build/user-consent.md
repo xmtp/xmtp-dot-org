@@ -16,7 +16,7 @@ import consentlogic from '/docs/build/img/consent-state-logic.png';
 
 :::caution This feature is in **alpha** status
 
-This feature is in **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha features in production apps. Expect frequent changes as we iterate based on feedback.
+This feature is in **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha features in production apps. Expect frequent changes as we iterate based on feedback. Want to provide feedback? Comment on [Proposal: Portable consent state for v2 SDKs](https://github.com/orgs/xmtp/discussions/49). 
 
 :::
 
@@ -50,7 +50,7 @@ Conversation created using an app **with** user consent implemented:
 
   The user’s creation of the conversation with the contact is considered consent.
 
-- For an existing conversation created by a peer contact that hasn’t had its consent preference updated on the network (`unknown`) and that the user has responded to, the app must update the consent preference to `allowed`.  
+- For an existing conversation created by a peer contact that hasn’t had its consent preference updated on the network (`unknown`) and that the user responds to, the network will update the consent preference to `allowed`.  
 
   The user's response to the conversation is considered consent.
 
@@ -289,7 +289,7 @@ The user consent feature for Dart hasn't been implemented yet
 
 ```tsx
 const state = await conversation.consentState();
-if (state === "denied) {
+if (state === "denied") {
 	// hide the conversation
 }
 ```
