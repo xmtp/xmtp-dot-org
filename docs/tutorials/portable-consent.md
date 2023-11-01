@@ -8,7 +8,6 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import requeststab from '/docs/tutorials/img/requests-tab.png';
 import messagestab from '/docs/tutorials/img/messages-tab.png';
-import allowblock from '/docs/tutorials/img/allow-block.png';
 import consentlogic from '/docs/tutorials/img/consent-state-logic.png';
 
 # Use portable consent for XMTP
@@ -21,75 +20,95 @@ This feature is in **alpha** status and ready for you to start experimenting w
 
 :::
 
-As an inbox safety best practice, enable your users to accept or block a contact in an app built with XMTP.
+When you build an app with XMTP, you can choose to implement portable consent. 
 
-For example, when your user receives a message from a new contact, you can display the conversation on a **Requests** tab.
-
-<img src={requeststab} style={{width:"375px"}}/>
-
-You can then give your user the option to block or allow the contact.
-
-<img src={allowblock} style={{width:"375px"}}/>
-
-If your user selects **Allow**, display the conversation with the contact in your user’s main inbox view, such as on a **Messages** tab.
-
-<img src={messagestab} style={{width:"375px"}}/>
-
-If your user selects **Block**, remove the conversation with the contact from all views in your user’s inbox. This ensures that your user’s main inbox view is populated with only conversations with contacts they want to message with. Meanwhile, conversations with potential new contacts are accessible in a secondary view, and conversations with contacts they’ve blocked stay out of view completely.
-
-You can also enable your users to block a contact in a previously accepted conversation. Likewise, you can enable your users to allow (unblock) a previously blocked contact.
-
-To ensure that your users’ consent settings are consistently applied in any app built with XMTP, contact consent states are stored and accessible to apps in a consent list on the XMTP network.
-
-For example, if your user blocked a contact on a different device or in another app and then uses your app, you can load the latest consent list to be sure to not mistakenly display conversations with the blocked contact.
-
-## Understand contact consent states
-
-A contact can have one of three consent states:
+With portable consent, a blockchain account address registered on the XMTP network can have one of three contact consent states:
 
 - Unknown
 - Allowed
-- Blocked
+- Denied
+
+Contact consent states are stored in a consent list on the XMTP network. The consent list is accessible by all apps.
+
+## Understand contact consent states
 
 Here are some of the ways contact consent states are set:
 
+### Unknown
+
+Conversation created using an app **with** portable consent implemented:
+
+- For a new conversation that a peer contact wants to start with a user, the contact consent state is set to `unknown`.
+
+Conversation created using an app **without** portable consent implemented:
+
+- For an existing conversation created by a peer contact and that a user hasn't responded to, the contact consent state is set to `unknown`.
+
+### Allowed
+
+Conversation created using an app **with** portable consent implemented:
+
+- For a new conversation that a user created with a peer contact, the SDK sets the contact consent state to `allowed`.  
+
+  The user’s creation of the conversation with the contact is considered consent.
+
+- For an existing conversation created by a peer contact that hasn’t had its consent state updated on the network (`unknown`) and that the user has responded to, the app must update the contact consent state to `allowed`.  
+
+  The user's response to the conversation is considered consent.
+
+- For a peer contact that a user has taken the action to allow, subscribe to, or enable notifications from, for example, the app must update the contact consent state to `allowed`.
+
+Conversation created using an app **without** portable consent implemented:
+
+- For a new conversation that a user created with a peer contact, the SDK sets the contact consent state to `allowed`.  
+
+  The user’s creation of the conversation with the contact is considered consent.
+
+- For an existing conversation created by a peer contact that the user has responded to, the SDK sets the contact consent state is set to `allowed`.  
+
+  The user's response to the conversation is considered consent.
+
+### Denied
+
+Conversation created using an app **with** portable consent implemented:
+
+- For a peer contact that a user has taken the action to block, unsubscribe from, or disable notifications from, for example, the app must update the contact consent state to `denied`.
+
+## Handle consent states to respect user intent
+
+Your app should aim to handle contact consent states appropriately because they are an expression of user intent.
+
+For example, if a user blocked a contact, your app should respect the user's intent to not see messages from the blocked contact. Handling the contact consent state incorrectly and showing the user messages from the blocked contact may cause the user to lose trust in your app.
+
+Be sure to load the latest consent list from the network at appropriate steps in your app flow to ensure that your app can operate using the latest data.
+
+Here are some suggestions for how your app might provide user experiences that respect user intent based on contact consent states:
+
 **Unknown**
 
-- For a new conversation that a new contact wants to start with your user, the contact consent state is set to `unknown`.
-    
-    For example, you can consider displaying a conversation with an `unknown` contact on a **Requests** tab and give your user the option to block or allow the contact.
-    
-- For a preexisting conversation with only messages from a contact that hasn’t had its consent state updated on the network, the contact consent state is set to `unknown` by default.
-    
-    For example, you can consider displaying a conversation with an `unknown` contact on a **Requests** tab and give your user the option to block or allow the contact.
-    
+Consider displaying a conversation with an `unknown` contact on a **Requests** tab and give the user the option to block or allow the contact.  
+
+<img src={requeststab} style={{width:"375px"}}/>
+<p/>
+
 **Allowed**
 
-- For a new conversation that your user requests with a contact, the contact consent state is set to `allowed`. Your user’s creation of the conversation with the contact is considered as consenting to the conversation with the contact.
-    
-    For example, you can consider displaying the conversation with the `allowed` contact on the **Messages** tab.
-    
-- For a preexisting conversation with one or more messages from a contact that hasn’t had its consent state updated on the network (`unknown`) and your user has taken the action to send a message in response, update the contact consent state to `allowed`. You can consider the response from your user as consenting to the conversation with the contact.
-    
-    For example, you can consider moving the conversation with the contact from the **Requests** tab to the **Messages** tab.
-    
-- For a contact that your user has taken the action to allow, update the contact consent state to `allowed`.
+Consider displaying a conversation with an `allowed` contact on a **Messages** tab and give the user the option to block the contact.  
 
-    For example, you can consider displaying the conversation with the allowed contact on the **Messages** tab in your user’s inbox.
+<img src={messagestab} style={{width:"375px"}}/>
+<p/>
 
-**Blocked**
+**Denied**
 
-- For a contact that your user has taken the action to block, update the contact consent state to `blocked`.
-    
-    For example, you can consider removing a conversation with the blocked contact from your user’s inbox completely.
-    
+Consider removing a conversation with a `denied` contact from the user’s inbox completely. In an appropriate location in your app, give the user the option to unblock the contact.
+
 ## Build portable consent
 
 Use the following methods to build portable consent in your app.
 
-### Block or allow contacts
+### Deny or allow a contact
 
-To enable your user to block or allow a contact, call the following methods. Note that these functions accept lists, so you can do batch requests.
+To enable your user to deny or allow a contact, call the following methods. Note that these functions accept lists, so you can do batch requests.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -103,7 +122,7 @@ To enable your user to block or allow a contact, call the following methods. Not
 
 ```tsx
 client.contacts.allow([wantedConvo.peerAddress, wantedConvo.peerAddress]);
-client.contacts.block([spamConvo.peerAddress, unwantedConvo.peerAddress]);
+client.contacts.deny([spamConvo.peerAddress, unwantedConvo.peerAddress]);
 ```
 
 </TabItem>
@@ -130,9 +149,9 @@ client.contacts.refreshConsentList();
 </TabItem>
 </Tabs>
 
-### Check if a contact is blocked or allowed
+### Check if a contact is denied or allowed
 
-Call the following methods to check if a contact is blocked or allowed.
+Call the following methods to check if a contact is denied or allowed.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -146,7 +165,7 @@ Call the following methods to check if a contact is blocked or allowed.
 
 ```tsx
 client.contacts.isAllowed(wantedConvo.peerAddress);
-client.contacts.isBlocked(spamConvo.peerAddress);
+client.contacts.isDenied(spamConvo.peerAddress);
 ```
 
 </TabItem>
@@ -155,8 +174,6 @@ client.contacts.isBlocked(spamConvo.peerAddress);
 ### Get a conversation’s consent state
 
 When loading a list of conversations, take into account its current consent state. You can get the `consentState` directly from the conversation.
-
-For example, you might want to display only allowed conversations (conversations with allowed contacts) on a **Messages** tab and “unknown” conversations (conversations with unknown contacts) on a **Requests** tab. For blocked conversations (conversations with blocked contacts), you might want to not display them at all.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -170,7 +187,7 @@ For example, you might want to display only allowed conversations (conversations
 
 ```tsx
 const state = await conversation.consentState();
-if (state === "blocked) {
+if (state === "denied) {
 	// hide the conversation
 }
 ```
@@ -180,12 +197,24 @@ if (state === "blocked) {
 
 ## Synchronize portable consent
 
-This diagram illustrates the logic for how contact consent states are set in an app and the consent list on the XMTP network. 
+All apps that implement portable consent must adhere to the logic described in this section to keep the consent list on the network synchronized with local app contact content states, and vice versa.
 
-Your app must not overwrite a contact consent state in the consent list on the network except if your user performs one of the following explicit actions:
+:::caution
 
-- Blocks a contact. Update the contact consent state to `blocked`.
-- Allows a contact. Update the contact consent state to `allowed`.
-- Sends their first response message to a preexisting conversation requested by an unknown contact. Update the contact consent state from `unknown` to `allowed`.
+Do not update the consent list on the network except in the scenarios described below.
+
+:::
+
+Update a contact consent state in the consent list on the network in the following scenarios only:
+
+- A user explicitly denies the contact. For example, the user blocks, unsubscribes from, or disables notifications for the contact. The app should update the consent state in the consent list to `denied`.
+
+- A user explicitly allows a contact. For example, the user allows, subscribes to, or enables notifications for the contact. The app should update the consent state in the consent list to `allowed`.
+
+- An existing conversation has an `unknown` contact consent state, but a legacy consent state in the local database exists. The app should update the consent state in the consent list to match the legacy local state.
+
+- An existing conversation has an `unknown` contact consent state, but has an existing response from the user. The app should update the consent state in the consent list to `allowed`.
+
+The following diagram illustrates the detailed logic for how contact consent states are set in an app and in the consent list on the XMTP network. 
 
 <img src={consentlogic} style={{width:"90%"}}/>
