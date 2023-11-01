@@ -6,10 +6,6 @@ window.onload = function () {
 
   if (
     pageTitle === "Quickstart" ||
-    pageTitle === "Quickstarts" ||
-    pageTitle === "Reference docs" ||
-    pageTitle === "Example apps" ||
-    pageTitle === "Overview" ||
     pageTitle === "Local-first cache" ||
     pageTitle === "Content Types" ||
     pageTitle === "Marketing" ||
@@ -27,6 +23,10 @@ window.onload = function () {
   navItems.forEach((item) => {
     if (
       item.innerText === "Quickstart" ||
+      item.innerText === "Quickstarts" ||
+      item.innerText === "Reference docs" ||
+      item.innerText === "Example apps" ||
+      item.innerText === "Overview" ||
       item.innerText === "Content Types" ||
       item.innerText === "Custom Content Types" ||
       item.innerText === "Get featured" ||
