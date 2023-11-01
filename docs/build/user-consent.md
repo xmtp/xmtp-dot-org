@@ -50,7 +50,7 @@ Conversation created in an app on an SDK version **with** user consent support:
 
   The user’s creation of the conversation with the contact is considered consent.
 
-- For an existing conversation created by a peer contact that hasn’t had its consent preference updated on the network (`unknown`) and that the user responds to, the network will update the consent preference to `allowed`.  
+- For an existing conversation created by a peer contact that hasn’t had its consent preference updated on the network (`unknown`) and that the user responds to, the SDK will update the consent preference to `allowed`.  
 
   The user's response to the conversation is considered consent.
 
