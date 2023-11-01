@@ -113,9 +113,35 @@ To enable your user to deny or allow a contact, call the following methods. Note
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-```js
+```jsx
 <Placeholder for JS from Fabri>
 ```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```tsx
+<Placeholder for React>
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+<Placeholder for Kotlin>
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+<Placeholder for swift>
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Portable consent for Dart hasn't been implemented yet
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -140,6 +166,32 @@ To ensure that you’re using the latest contact consent state, make sure to ref
 ```
 
 </TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```tsx
+<Placeholder for React>
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+<Placeholder for Kotlin>
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+<Placeholder for swift>
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Portable consent for Dart hasn't been implemented yet
+
+</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
@@ -159,6 +211,32 @@ Call the following methods to check if a contact is denied or allowed.
 ```js
 <Placeholder for JS from Fabri>
 ```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```tsx
+<Placeholder for React>
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+<Placeholder for Kotlin>
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+<Placeholder for swift>
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Portable consent for Dart hasn't been implemented yet
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -181,6 +259,32 @@ When loading a list of conversations, take into account its current consent stat
 ```js
 <Placeholder for JS from Fabri>
 ```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```tsx
+<Placeholder for React>
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+<Placeholder for Kotlin>
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+<Placeholder for swift>
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Portable consent for Dart hasn't been implemented yet
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
