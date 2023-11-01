@@ -126,14 +126,16 @@ To enable your user to deny or allow a contact, call the following methods. Note
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-<Placeholder for Kotlin>
+client.contacts.isAllowed(wantedConvo.peerAddress)
+client.contacts.isDenied(spamConvo.peerAddress)
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-<Placeholder for swift>
+await client.contacts.isAllowed(wantedConvo.peerAddress)
+await client.contacts.isDenied(spamConvo.peerAddress)
 ```
 
 </TabItem>
@@ -174,14 +176,16 @@ To ensure that you’re using the latest consent preferences, make sure to refre
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-<Placeholder for Kotlin>
+client.contacts.allow([wantedConvo.peerAddress, wantedConvo.peerAddress])
+client.contacts.deny([spamConvo.peerAddress, unwantedConvo.peerAddress])
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-<Placeholder for swift>
+try await client.contacts.allow(addresses: [wantedConvo.peerAddress, wantedConvo.peerAddress])
+try await client.contacts.deny(addresses: [spamConvo.peerAddress, unwantedConvo.peerAddress])
 ```
 
 </TabItem>
@@ -221,14 +225,14 @@ Call the following methods to check if a contact is denied or allowed.
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-<Placeholder for Kotlin>
+client.contacts.refreshConsentList()
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-<Placeholder for swift>
+try await client.contacts.refreshConsentList()
 ```
 
 </TabItem>
@@ -269,14 +273,20 @@ When loading a list of conversations, take into account its consent preference. 
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-<Placeholder for Kotlin>
+val state = conversation.consentState()
+if (state == ConsentState.DENIED) {
+    // hide the conversation
+}
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-<Placeholder for swift>
+let state = await conversation.consentState()
+if (state == .denied) {
+    // hide the conversation
+}
 ```
 
 </TabItem>
