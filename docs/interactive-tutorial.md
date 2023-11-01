@@ -6,6 +6,8 @@ description: Learn about the core code you need to build basic messaging with XM
 
 import Tutorial from '/src/components/Tutorial'
 
+<Tutorial />
+
 # Interactive tutorial
 
 <Tutorial />

@@ -6,6 +6,10 @@ window.onload = function () {
 
   if (
     pageTitle === "Quickstart" ||
+    pageTitle === "Quickstarts" ||
+    pageTitle === "Reference docs" ||
+    pageTitle === "Example apps" ||
+    pageTitle === "Overview" ||
     pageTitle === "Local-first cache" ||
     pageTitle === "Content Types" ||
     pageTitle === "Marketing" ||

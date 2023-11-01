@@ -1,5 +1,5 @@
 ---
-sidebar_label: Example Apps
+sidebar_label: Example apps
 sidebar_position: 3
 description: "Get started building apps with XMTP."
 ---
