@@ -113,13 +113,13 @@ export const MessageContainer = ({
   // Function to handle the blocking of a contact
   const handleBlock = async () => {
     // Block the contact
-    await client.contacts.block([conversation.peerAddress]);
+    await client.contacts.deny([conversation.peerAddress]);
     // Hide the popup
     setShowPopup(false);
     // Refresh the consent list
     await client.contacts.refreshConsentList();
     // Log the blocking
-    console.log("blocked", conversation.peerAddress);
+    console.log("denied", conversation.peerAddress);
   };
   const startMessageStream = async () => {
     let stream = await conversation.streamMessages();

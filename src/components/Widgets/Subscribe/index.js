@@ -3,8 +3,9 @@ import { Client } from "@xmtp/xmtp-js";
 import { ethers } from "ethers";
 
 export function Subscribe({
-  wallet,
-  onConsentChange,
+  senderAddress,
+  onSubscribe,
+  onUnsubscribe,
   onError,
   env,
   label = "Subscribe with your wallet",
@@ -13,17 +14,15 @@ export function Subscribe({
   const [loading, setLoading] = useState(false);
   // State for subscription status
   const [subscriptionStatus, setSubscriptionStatus] = useState(label);
-  // State for random wallet address
-  const [randomWalletAddress, setRandomWalletAddress] = useState(null);
-  // State for signer
-  const [signer, setSigner] = useState(null);
   // State for consent log
   const [consentLog, setConsentLog] = useState("");
+  // State for sender address
 
   const styles = {
     SubscribeButtonContainer: {
       position: "relative",
-      display: "inline-block",
+      display: "flex",
+      flexDirection: "column",
       borderRadius: "5px",
       textAlign: "center",
       alignItems: "center",
@@ -46,22 +45,6 @@ export function Subscribe({
     },
   };
 
-  const getAddress = async (signer) => {
-    try {
-      if (signer && typeof signer.getAddress === "function") {
-        return await signer.getAddress();
-      }
-      if (signer && typeof signer.getAddresses === "function") {
-        //viem
-        const [address] = await signer.getAddresses();
-        return address;
-      }
-      return null;
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
   const connectWallet = async () => {
     if (typeof window.ethereum !== "undefined") {
       try {
@@ -81,55 +64,28 @@ export function Subscribe({
     try {
       // Set loading to true
       setLoading(true);
-      // Check if signer exists, if not create a new one
-      let signerTemp = signer ? signer : null;
-      if (!signerTemp) {
-        // Create a random wallet if wallet does not exist
-        let randomWallet = wallet || ethers.Wallet.createRandom();
-        // Create a new client with the random wallet
-        signerTemp = await Client.create(randomWallet, { env: env });
-        // Set the signer
-        setSigner(signerTemp);
-      }
-      // Set the random wallet address
-      setRandomWalletAddress(signerTemp.address);
-
-      // Get the subscriber address
-      const subscriberAddress = await getAddress(await connectWallet());
-      // Refresh the consent list
-      signerTemp.contacts.refreshConsentList();
+      // Get the subscriber
+      let wallet = await connectWallet();
+      let client = await Client.create(wallet, { env: env });
+      // Refresh content list
+      await client.contacts.refreshConsentList();
       // Get the consent state of the subscriber
-      let state = signerTemp.contacts.consentState(subscriberAddress);
+      let state = client.contacts.consentState(client.address);
       // If the state is unknown or blocked, allow the subscriber
-      if (state == "unknown" || state == "blocked") {
-        await signerTemp.contacts.allow([subscriberAddress]);
+      if (state == "unknown" || state == "denied") {
+        await client.contacts.allow([client.address]);
+        if (typeof onSubscribe === "function") onSubscribe(client.address);
       } else if (state == "allowed") {
         // If the state is allowed, block the subscriber
-        await signerTemp.contacts.block([subscriberAddress]);
+        if (typeof onUnsubscribe === "function") onUnsubscribe(client.address);
       }
-      // Refresh the consent list again
-      await signerTemp.contacts.refreshConsentList();
-      // Get the new consent state
-      state = signerTemp.contacts.consentState(subscriberAddress);
-
       // Create a log message
-      let log =
-        "Address " +
-        subscriberAddress +
-        " subscribed to random wallet: " +
-        signerTemp.address;
+      let log = "Address " + client.address + " subscribed to " + senderAddress;
       setConsentLog(log);
       console.log(log);
 
       // Set the subscription label
       setSubscriptionStatus("Consent State: " + state);
-
-      // If onConsentChange function exists, call it with the subscriber address and consent state
-      if (onConsentChange)
-        onConsentChange(
-          subscriberAddress,
-          signerTemp.contacts.consentState(subscriberAddress)
-        );
 
       // Set loading to false
       setLoading(false);
@@ -144,8 +100,8 @@ export function Subscribe({
   return (
     <div
       style={styles.SubscribeButtonContainer}
-      className={`Subscribe ${loading ? "loading" : ""}`}
-    >
+      className={`Subscribe ${loading ? "loading" : ""}`}>
+      <small>Sender address: {senderAddress}</small>
       <button style={styles.SubscribeButton} onClick={handleClick}>
         {loading ? "Loading... " : subscriptionStatus}
       </button>

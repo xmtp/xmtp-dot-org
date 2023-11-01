@@ -3,11 +3,9 @@ sidebar_label: Request Inbox
 sidebar_position: 6
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
 import {FloatingInbox} from "@site/src/components/Widgets/FloatingInbox-text";
 
-# How to Add Consent to an Existing XMTP App
+# How to Add Consent to an Existing XMTP Inbox
 
 Managing user consent is essential for enhancing privacy and user experience. If you already have an XMTP application, integrating portable consent features becomes crucial. This guide walks you through adding the consent logic to your existing XMTP app.
 
@@ -19,8 +17,8 @@ Managing user consent is essential for enhancing privacy and user experience. If
     marginTop: "20px",
   }}
 >
-  <h3 style={{ width: "50%" }}>Without Consent</h3>
-  <h3 style={{ width: "50%" }}>With Consent</h3>
+  <h3 style={{ width: "50%" }}>**Without Consent**</h3>
+  <h3 style={{ width: "50%" }}>**With Consent**</h3>
 </div>
 
 <div className="widget-container" style={{ padding: "0px", height: "400px" }}>
@@ -36,49 +34,28 @@ Here's your existing `initXmtp` function, updated to include the consent refresh
 const initXmtpWithKeys = async function () {
   // ... previous code
   const xmtp = await Client.create(wallet);
-
   // Add these lines to refresh the consent list
-  if (isConsent) {
-    await xmtp.contacts.refreshConsentList();
-  }
+  await xmtp.contacts.refreshConsentList();
 };
 ```
 
-#### Add Consent Logic to the Conversations List
+#### Filtering conversations based on consent
 
-Modify your existing `ListConversations` component to incorporate the consent logic. This involves some additional state variables, filtering mechanisms, and UI elements.
+Using the `consentState` property of the conversation object, you can filter the conversations based on consent.
 
 ```jsx
-// Initialize state variables for consent
-const [allowedConversations, setAllowedConversations] = useState([]);
-const [requestConversations, setRequestConversations] = useState([]);
-
-// ...existing code
-
-useEffect(() => {
-  // ...existing code
-
-  // Filtering based on consent state
-  const allowed = filteredConversations.filter(
-    (conversation) => conversation.consentState === "allowed",
-  );
-  const requests = filteredConversations.filter(
-    (conversation) => conversation.consentState === "unknown",
-  );
-
-  setAllowedConversations(allowed);
-  setRequestConversations(requests);
-
-  // ...existing code
-}, [conversations]);
-
-// Toggle tabs for allowed and requests
-const [activeTab, setActiveTab] = useState("allowed");
+// Filtering based on consent state
+const allowed = conversations.filter(
+  (conversation) => conversation.consentState === "allowed",
+);
+const requests = conversations.filter(
+  (conversation) => conversation.consentState === "unknown",
+);
 ```
 
-#### Rendering Conversations Based on Consent
+#### Request inbox
 
-To render the conversations according to the active tab (allowed or request), include the following code block within your existing component.
+You can now create a separate inbox for requests. This inbox will only show the conversations that have not been allowed yet.
 
 ```jsx
 {
@@ -98,9 +75,9 @@ To render the conversations according to the active tab (allowed or request), in
 }
 ```
 
-#### Integrate Popup, Allow and Block Actions
+#### Allow and denied actions
 
-Implement the popup actions like allow and block.
+Every time you open a conversation on the request tab you can show a popup with the allow and deny actions. You can use the `consentState` property of the conversation object to show the popup only when the consent state is `unknown`.
 
 ```jsx
 // Inside your MessageContainer component
@@ -123,39 +100,14 @@ const handleAccept = async () => {
 // Function to handle the blocking of a contact
 const handleBlock = async () => {
   // Block the contact
-  await client.contacts.block([conversation.peerAddress]);
+  await client.contacts.deny([conversation.peerAddress]);
   // Hide the popup
   setShowPopup(false);
   // Refresh the consent list
   await client.contacts.refreshConsentList();
   // Log the blocking
-  console.log("blocked", conversation.peerAddress);
+  console.log("denied", conversation.peerAddress);
 };
-```
-
-Render the popup
-
-```jsx
-// Add the following inside your component's return statement
-{
-  isConsent && showPopup ? (
-    <div style={styles.popup}>
-      <h4 style={styles.popupTitle}>Do you trust this contact?</h4>
-      <div style={styles.popupInner}>
-        <button
-          style={{ ...styles.popupButton, ...styles.acceptButton }}
-          onClick={handleAccept}>
-          Accept
-        </button>
-        <button
-          style={{ ...styles.popupButton, ...styles.blockButton }}
-          onClick={handleBlock}>
-          Block
-        </button>
-      </div>
-    </div>
-  ) : null;
-}
 ```
 
 #### Conclusion

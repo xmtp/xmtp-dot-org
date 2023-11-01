@@ -149,6 +149,8 @@ export function Broadcast({
     try {
       // Create a new XMTP client with the signer and environment
       const xmtp = await Client.create(signer, { env: env });
+      await xmtp.contacts.refreshConsentList();
+
       // Check if the client can message the provided wallet addresses
       const broadcasts_canMessage = await xmtp.canMessage(walletAddresses);
       // Loop through the wallet addresses
@@ -188,10 +190,10 @@ export function Broadcast({
   };
 
   const [walletAddressesInput, setWalletAddressesInput] = useState(
-    walletAddresses.join("\n ")
+    walletAddresses.join("\n "),
   );
   const [walletAddressesState, setWalletAddressesState] = useState(
-    walletAddressesInput.split(", ")
+    walletAddressesInput.split(", "),
   );
   const handleOpenPopup = () => {
     setWalletAddressesState(walletAddressesInput.split(", "));
@@ -217,16 +219,14 @@ export function Broadcast({
         <button
           className="Broadcast"
           style={styles.ubButton}
-          onClick={handleOpenPopup}
-        >
+          onClick={handleOpenPopup}>
           Send Message
         </button>
       </div>
       {showPopup && (
         <div
           style={styles.ubContainer}
-          className={`Broadcast ${loading ? "loading" : ""}`}
-        >
+          className={`Broadcast ${loading ? "loading" : ""}`}>
           <h4 style={styles.ubHeader}>{title}</h4>
           <button style={styles.closeButton} onClick={handleOpenPopup}>
             X

@@ -27,13 +27,12 @@ export const ConversationContainer = ({
     },
     conversationList: {
       padding: "0px",
-      marginTop: "0 !important",
+      margin: "0",
       listStyle: "none",
       overflowY: "scroll",
     },
     conversationListItem: {
       display: "flex",
-      marginTop: "0 !important",
       justifyContent: "space-between",
       alignItems: "center",
       margin: "0px",
@@ -194,7 +193,8 @@ export const ConversationContainer = ({
               style={styles.createNewButton}
               onClick={() => {
                 setSelectedConversation({ messages: [] });
-              }}>
+              }}
+            >
               Create new conversation
             </button>
           )}

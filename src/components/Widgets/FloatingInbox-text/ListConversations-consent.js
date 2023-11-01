@@ -16,9 +16,9 @@ export const ListConversations = ({
     conversationListItem: {
       display: "flex",
       width: "100%",
-      margin: "0px",
       justifyContent: "space-between",
       alignItems: "center",
+      margin: "0px",
       border: "0px",
       borderBottom: "1px solid #e0e0e0",
       cursor: "pointer",
@@ -67,7 +67,7 @@ export const ListConversations = ({
       const allConversations = await client.conversations.list();
 
       const sortedConversations = allConversations.sort(
-        (a, b) => new Date(b.createdAt) - new Date(a.createdAt),
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
       );
       if (isMounted) {
         setConversations(sortedConversations);
@@ -76,13 +76,13 @@ export const ListConversations = ({
       stream = await client.conversations.stream();
       for await (const conversation of stream) {
         console.log(
-          `New conversation started with ${conversation.peerAddress}`,
+          `New conversation started with ${conversation.peerAddress}`
         );
         if (isMounted) {
           setConversations((prevConversations) => {
             const newConversations = [...prevConversations, conversation];
             return newConversations.sort(
-              (a, b) => new Date(b.createdAt) - new Date(a.createdAt),
+              (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
             );
           });
         }
@@ -99,14 +99,16 @@ export const ListConversations = ({
         conversation?.peerAddress
           .toLowerCase()
           .includes(searchTerm.toLowerCase()) &&
-        conversation?.peerAddress !== client.address,
+        conversation?.peerAddress !== client.address
     );
 
     const allowed = filteredConversations.filter(
-      (conversation) => conversation.consentState === "allowed",
+      (conversation) => conversation.consentState === "allowed"
     );
     const requests = filteredConversations.filter(
-      (conversation) => conversation.consentState === "unknown",
+      (conversation) =>
+        conversation.consentState === "unknown" ||
+        conversation.consentState === "denied"
     );
 
     setAllowedConversations(allowed);
@@ -132,7 +134,8 @@ export const ListConversations = ({
             fontSize: "12px",
             padding: "5px",
           }}
-          onClick={() => setActiveTab("allowed")}>
+          onClick={() => setActiveTab("allowed")}
+        >
           ← Allowed
         </button>
       ) : (
@@ -143,7 +146,8 @@ export const ListConversations = ({
             fontSize: "12px",
             padding: "5px",
           }}
-          onClick={() => setActiveTab("requests")}>
+          onClick={() => setActiveTab("requests")}
+        >
           Requests →
         </button>
       )}
@@ -154,13 +158,14 @@ export const ListConversations = ({
             style={styles.conversationListItem}
             onClick={() => {
               selectConversation(conversation);
-            }}>
+            }}
+          >
             <div style={styles.conversationDetails}>
               <span style={styles.conversationName}>
                 {conversation.peerAddress.substring(0, 6) +
                   "..." +
                   conversation.peerAddress.substring(
-                    conversation.peerAddress.length - 4,
+                    conversation.peerAddress.length - 4
                   )}
               </span>
               <span style={styles.messagePreview}>...</span>
@@ -177,13 +182,14 @@ export const ListConversations = ({
             style={styles.conversationListItem}
             onClick={() => {
               selectConversation(conversation);
-            }}>
+            }}
+          >
             <div style={styles.conversationDetails}>
               <span style={styles.conversationName}>
                 {conversation.peerAddress.substring(0, 6) +
                   "..." +
                   conversation.peerAddress.substring(
-                    conversation.peerAddress.length - 4,
+                    conversation.peerAddress.length - 4
                   )}
               </span>
               <span style={styles.messagePreview}>...</span>
