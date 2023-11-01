@@ -110,15 +110,19 @@ To enable your user to deny or allow a contact, call the following methods. Note
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```jsx
-<Placeholder for JS from Fabri>
+// from the client
+await client.contacts.allow([address1, address2]);
+await client.contacts.deny([address1, address2]);
+
+// from a conversation
+await conversation.allow();
+await conversation.deny();
 ```
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-```tsx
-<Placeholder for React>
-```
+The user consent feature for React hasn't been implemented yet
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
@@ -160,15 +164,17 @@ To ensure that you’re using the latest consent preferences, make sure to refre
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```js
-<Placeholder for JS from Fabri>
+// load the entire consent list
+await client.contacts.refreshConsentList();
+
+// load the consent list from a specific time
+await client.contacts.loadConsentList(lastSyncedDate);
 ```
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-```tsx
-<Placeholder for React>
-```
+The user consent feature for React hasn't been implemented yet
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
@@ -209,15 +215,19 @@ Call the following methods to check if a contact is denied or allowed.
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```js
-<Placeholder for JS from Fabri>
+// from the client
+const isAllowed = client.contacts.isAllowed(address);
+const isDenied = client.contacts.isDenied(address);
+
+// from a conversation
+const isAllowed = conversation.isAllowed;
+const isDenied = conversation.isDenied;
 ```
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-```tsx
-<Placeholder for React>
-```
+The user consent feature for React hasn't been implemented yet
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
@@ -257,15 +267,17 @@ When loading a list of conversations, take into account its consent preference. 
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```js
-<Placeholder for JS from Fabri>
+// from the client
+const consentState = client.contacts.consentState(peerAddress);
+
+// from a conversation
+const consentState = conversation.consentState;
 ```
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-```tsx
-<Placeholder for React>
-```
+The user consent feature for React hasn't been implemented yet
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
