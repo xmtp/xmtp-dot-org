@@ -20,13 +20,13 @@ This feature is in **alpha** status and ready for you to start experimenting w
 
 :::
 
-The user consent feature enables your app to request and respect user consent preferences. With this feature, a blockchain account address registered on the XMTP network can have one of three consent preference values:
+The user consent feature enables your app to request and respect user consent preferences. With this feature, another blockchain account address registered on the XMTP network can have one of three consent preference values:
 
 - Unknown
 - Allowed
 - Denied
 
-These values express a user's consent preferences for a contact. These consent preferences are stored in a consent list on the XMTP network. The consent list is accessible by all apps.
+These values express a user's consent preferences for a contact. These consent preferences are stored privately in an encrypted consent list on the XMTP network. The consent list is accessible by all apps that a user has authorized.
 
 ## Understand user consent preferences
 
