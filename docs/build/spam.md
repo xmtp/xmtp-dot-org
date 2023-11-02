@@ -8,11 +8,15 @@ description: "Learn about spam filters for apps built with XMTP."
 
 :::tip FYI
 
-Tools listed on this page are not official endorsements and are provided for informational purposes only. 
+Third-party and public good tools listed on this page are not official endorsements and are provided for informational purposes only. 
 
 Is your app using a great tool to filter spam and keep inboxes safe? Open an [issue](https://github.com/xmtp/xmtp-dot-org/issues) to share information about it.
 
 :::
+
+## Enable users to manage spam
+
+[Implement user consent preferences](/docs/build/user-consent) in your app to enable your users to manage spammy contacts and conversations.
 
 ## Third-party tools
 
