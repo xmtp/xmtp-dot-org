@@ -34,7 +34,7 @@ XMTP's commitment to interoperability and accessibility is reflected in their mu
 
 We’ve abstracted the core concepts to help you build with XMTP more swiftly. Think of it as a TV show guiding you on how to integrate secure and private chat into your application. These are the chapters you wouldn’t want to miss:
 
-1. [Get started](https://xmtp.org/docs/build/get-started)
+1. [Get started](https://xmtp.org/docs/build/get-started/overview)
 2. [Authenticate](https://xmtp.org/docs/build/authentication)
 3. [Conversations](https://xmtp.org/docs/build/conversations)
 4. [Messages](https://xmtp.org/docs/build/messages)
