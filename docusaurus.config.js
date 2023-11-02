@@ -225,7 +225,7 @@ const config = {
             type: "html",
             position: "right",
             value:
-              '<button type="button" onClick="window.open(`/docs/build/get-started/overview`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
+              '<button type="button" onClick="window.open(`/docs/build/get-started`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
           },
           {
             type: "html",

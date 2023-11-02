@@ -65,7 +65,7 @@ Watch the demo:
 
 You can fork the XMTP example app and Notifi experience repo shown in the example above. Both are available as open-source examples on [GitHub here.](https://github.com/nimesh-notifi/xmtp-inbox-web/commit/a08e906f13bda56461a78aba5818a6687dbfcfc6)
 
-**Get started building with XMTP!**
+**Get Started Building with XMTP!**
 
 [Start building with XMTP](/start-building)
 

@@ -1,6 +1,6 @@
 ---
 sidebar_label: Local-first cache
-sidebar_position: 3
+sidebar_position: 1.5
 description: "If you're building a production-grade app, be sure to use a local-first architecture to help you build a performant app."
 ---
 

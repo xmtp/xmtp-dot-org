@@ -23,10 +23,6 @@ window.onload = function () {
   navItems.forEach((item) => {
     if (
       item.innerText === "Quickstart" ||
-      item.innerText === "Quickstarts" ||
-      item.innerText === "Reference docs" ||
-      item.innerText === "Example apps" ||
-      item.innerText === "Overview" ||
       item.innerText === "Content Types" ||
       item.innerText === "Custom Content Types" ||
       item.innerText === "Get featured" ||

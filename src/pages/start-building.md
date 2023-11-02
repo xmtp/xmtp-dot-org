@@ -14,9 +14,9 @@ Use this document as a map to build, launch, and maintain a best-in-class app wi
 
 ## Start building your app
 
-- Start with an [XMTP client SDK](/docs/build/get-started/overview)
+- Start with an [XMTP client SDK](/docs/build/get-started)
 
-- Learn to [build basic messaging](/docs/build/get-started/overview) features
+- Learn to [build basic messaging](/docs/build/get-started) features
 
 - Need some ideas? [Check out these XMTP use cases](/docs/use-cases/messaging) and best-in-class apps [built with XMTP](/built-with-xmtp)
 
@@ -24,7 +24,7 @@ Use this document as a map to build, launch, and maintain a best-in-class app wi
 
 - [Explore these tutorials](/docs/get-featured) to learn how to build beyond the basics and polish your app by following UX, performance, and testing Scale
 
-- [Explore quickstart and example apps](/docs/build/get-started/overview#quickstarts-) for implementation guidance and inspiration
+- [Explore quickstart and example apps](/docs/build/get-started#quickstarts-) for implementation guidance and inspiration
 
 ## Have questions?
 

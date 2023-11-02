@@ -1,5 +1,5 @@
 ---
-sidebar_label: Overview
+sidebar_label: Get started
 sidebar_position: 1
 description: "Get started building apps with XMTP."
 ---
@@ -15,10 +15,11 @@ A client must be connected to a wallet on startup. If this is the very first tim
 
 The key bundle persists encrypted in the network using a [wallet signature](/docs/concepts/account-signatures). The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys.
 
+All this happens transparently, without requiring any additional code.
+
 ### Overview
 
 This is an overview of the core concepts and lines of code needed to use XMTP successfully.
-
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" attributes={{className: "js_tab"}}>
 
@@ -287,6 +288,10 @@ npm i @xmtp/react-native-sdk
 
 </TabItem>
 </Tabs>
+
+import Quickstarts from "@site/src/components/Quickstarts/index.md";
+
+<Quickstarts />
 
 ### Need to send a test message?
 
