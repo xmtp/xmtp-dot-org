@@ -24,7 +24,7 @@ const BuiltWithXmtp = () => {
                 <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img>
                 <a
                   className="hover:no-underline text-white hover:text-white"
-                  href="/docs/build/get-started">
+                  href="/docs/build/get-started/overview">
                   Start building
                 </a>
               </button>

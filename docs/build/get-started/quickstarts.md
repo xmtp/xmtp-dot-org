@@ -1,4 +1,10 @@
-### Quickstarts 🏁
+---
+sidebar_label: Quickstarts
+sidebar_position: 2
+description: "Get started building apps with XMTP."
+---
+
+# Quickstarts
 
 - <a href="https://github.com/fabriguespe/xmtp-quickstart-hooks" class="plausible-event-name=Quickstart">React Hooks</a>
 - <a href="https://github.com/fabriguespe/xmtp-quickstart-reactjs" class="plausible-event-name=Quickstart">ReactJS</a>
