@@ -105,7 +105,7 @@ You can check if an array of Lens profiles have XMTP enabled:
 - [Live demo](https://app.airstack.xyz/DTyOZg/SPXFLOFhtx)
 
 ```bash
-For vitalik.lens and shanemac.lens, show if XMTP is enabled
+For lens/@vitalik and lens/@shanemac, show if XMTP is enabled
 ```
 
 <Tabs >
@@ -138,7 +138,7 @@ query BulkFetchPrimaryENSandXMTP($lens: [Identity!]) {
 
 ```json
 {
-  "lens": ["shanemac.lens", "vitalik.lens"]
+  "lens": ["lens/@shanemac", "lens/@vitalik"]
 }
 ```
 
