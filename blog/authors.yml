@@ -46,6 +46,12 @@ rochelle:
   url: https://x.com/RochelleSophie_
   image_url: ./media/rochelle-headshot.jpeg
 
+prashant:
+  name: Prashant
+  title: Business Development at XMTP Labs
+  url: https://twitter.com/prashantpbagga
+  image_url: ./media/prashant-headshot.jpg
+
 shane:
   name: Shane Mac
   title: Co-founder of XMTP Labs
