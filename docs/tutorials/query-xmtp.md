@@ -166,7 +166,7 @@ query BulkFetchPrimaryENSandXMTP($lens: [Identity!]) {
               },
               {
                 "dappName": "lens",
-                "profileName": "shanemac.lens"
+                "profileName": "lens/@shanemac"
               }
             ]
           }
@@ -187,7 +187,7 @@ query BulkFetchPrimaryENSandXMTP($lens: [Identity!]) {
               },
               {
                 "dappName": "lens",
-                "profileName": "vitalik.lens"
+                "profileName": "lens/@vitalik"
               }
             ]
           }
