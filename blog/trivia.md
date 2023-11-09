@@ -12,6 +12,8 @@ description: "How I got over 100 crypto wallets to play Trivia."
 
 ![Crypto Corner Store post card](./media/trivia/header.png)
 
+<!--truncate-->
+
 ### TL;DR: I made onboarding and participating dead simple: just DM triviatown.eth.
 
 At ETH NYC, we hosted a happy hour for the XMTP ecosystem using only XMTP.
