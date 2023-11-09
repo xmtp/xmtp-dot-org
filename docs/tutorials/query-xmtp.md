@@ -105,7 +105,7 @@ You can check if an array of Lens profiles have XMTP enabled:
 - [Live demo](https://app.airstack.xyz/DTyOZg/SPXFLOFhtx)
 
 ```bash
-For vitalik.lens and shanemac.lens, show if XMTP is enabled
+For lens/@vitalik and lens/@shanemac, show if XMTP is enabled
 ```
 
 <Tabs >
@@ -138,7 +138,7 @@ query BulkFetchPrimaryENSandXMTP($lens: [Identity!]) {
 
 ```json
 {
-  "lens": ["shanemac.lens", "vitalik.lens"]
+  "lens": ["lens/@shanemac", "lens/@vitalik"]
 }
 ```
 
@@ -166,7 +166,7 @@ query BulkFetchPrimaryENSandXMTP($lens: [Identity!]) {
               },
               {
                 "dappName": "lens",
-                "profileName": "shanemac.lens"
+                "profileName": "lens/@shanemac"
               }
             ]
           }
@@ -187,7 +187,7 @@ query BulkFetchPrimaryENSandXMTP($lens: [Identity!]) {
               },
               {
                 "dappName": "lens",
-                "profileName": "vitalik.lens"
+                "profileName": "lens/@vitalik"
               }
             ]
           }
@@ -265,7 +265,7 @@ query BulkFetchFarcasterHaveXMTP($farcaster: [Identity!]) {
               },
               {
                 "dappName": "lens",
-                "profileName": "vitalik.lens"
+                "profileName": "lens/@vitalik"
               }
             ],
             "addresses": ["0xd8da6bf26964af9d7eed9e03e53415d37aa96045"]
@@ -293,7 +293,7 @@ query BulkFetchFarcasterHaveXMTP($farcaster: [Identity!]) {
               },
               {
                 "dappName": "lens",
-                "profileName": "betashop9.lens"
+                "profileName": "lens/@betashop9"
               }
             ],
             "addresses": ["0xeaf55242a90bb3289db8184772b0b98562053559"]

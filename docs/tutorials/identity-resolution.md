@@ -42,6 +42,10 @@ Is your app using a great tool to resolve identities? Open an [issue](https://gi
 
 Airstack provides tools to resolve [ENS](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/resolve-identities/ens), [Farcaster](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/farcaster/resolve-farcaster-users), and [Lens](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/lens/resolve-lens-profiles) identities.
 
+:::note Lens v1 and v2 support
+_Airstack currently supports identity resolution with both the new Lens V2 handle `namespace/@handlename` format and the legacy V1 `.lens` profile name_
+:::
+
 ### Everyname
 
 Everyname provides tools to resolve [ENS, Farcaster, Lens, Unstoppable Domains, and other](https://docs.everyname.xyz/api/forward-social-profile) identities.
