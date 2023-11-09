@@ -3,14 +3,14 @@ slug: trivia
 hide_table_of_contents: true
 title: "How I got over 100 crypto wallets to play Trivia"
 date: 2023-11-8
-authors: eng
-image: "-"
+authors: prashant
+image: "./media/trivia/header.png"
 description: "How I got over 100 crypto wallets to play Trivia."
 ---
 
 # How I got over 100 crypto wallets to play Trivia
 
-by _Prashant Bagga_
+![Crypto Corner Store post card](./media/trivia/header.png)
 
 **TL;DR: I made onboarding and participating dead simple: just DM triviatown.eth.**
 
@@ -21,8 +21,6 @@ No email. No text. No phone number. No Luma. No Eventbrite. No Partiful.
 Everything from RSVP to check in and POAP distribution took place on XMTP.
 
 import { TwitterTweetEmbed } from "react-twitter-embed";
-
-[GIF]
 
 ### **Steps to run an event using XMTP:**
 
