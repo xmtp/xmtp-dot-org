@@ -265,7 +265,7 @@ query BulkFetchFarcasterHaveXMTP($farcaster: [Identity!]) {
               },
               {
                 "dappName": "lens",
-                "profileName": "vitalik.lens"
+                "profileName": "lens/@vitalik"
               }
             ],
             "addresses": ["0xd8da6bf26964af9d7eed9e03e53415d37aa96045"]
@@ -293,7 +293,7 @@ query BulkFetchFarcasterHaveXMTP($farcaster: [Identity!]) {
               },
               {
                 "dappName": "lens",
-                "profileName": "betashop9.lens"
+                "profileName": "lens/@betashop9"
               }
             ],
             "addresses": ["0xeaf55242a90bb3289db8184772b0b98562053559"]
