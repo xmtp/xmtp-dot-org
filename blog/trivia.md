@@ -74,7 +74,7 @@ Trivia Town was a way of showcasing how you can take this a step further, to cre
 
 :::info Looking to launch a similar experience?
 
-💡 Want to launch a similar game or experience? DM me at prxshant.eth, and let’s make it happen!
+💡 DM me at prxshant.eth, and let’s make it happen!
 
 :::
 
