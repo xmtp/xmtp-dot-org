@@ -112,3 +112,7 @@ const handleBlock = async () => {
 #### Conclusion
 
 By following these steps, you'll successfully integrate portable consent into your existing XMTP application. This enables users to have better control over who can send them messages, enhancing user privacy and experience.
+
+#### Example repo
+
+- _You can find a complete example of this tutorial in our [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)_
