@@ -294,30 +294,28 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
   useEffect(() => {
-    var elem = document.querySelector(".main-carousel");
-    var flkty = new Flickity(elem, {
-      cellSelector: ".carousel-cell",
-      cellAlign: "center",
-      autoPlay: 5000,
-      draggable: false,
-      prevNextButtons: false,
-      pageDots: false,
-      wrapAround: true,
-      fade: true,
-      accessibility: false,
-      pauseAutoPlayOnHover: false,
-      imagesLoaded: true,
-      on: {
-        ready: function () {
-          this.off("uiChange", this.stopPlayer);
-          this.off("pointerDown", this.stopPlayer);
+    if (Flickity) {
+      var elem = document.querySelector(".main-carousel");
+      new Flickity(elem, {
+        cellSelector: ".carousel-cell",
+        cellAlign: "center",
+        autoPlay: 5000,
+        draggable: false,
+        prevNextButtons: false,
+        pageDots: false,
+        wrapAround: true,
+        fade: true,
+        accessibility: false,
+        pauseAutoPlayOnHover: false,
+        imagesLoaded: true,
+        on: {
+          ready: function () {
+            this.off("uiChange", this.stopPlayer);
+            this.off("pointerDown", this.stopPlayer);
+          },
         },
-      },
-    });
-
-    var flkty = new Flickity(".main-carousel", {});
-
-    flkty.on("select", function (index) {});
+      });
+    }
   }, []);
 
   useEffect(() => {
