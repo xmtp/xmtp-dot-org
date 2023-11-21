@@ -15,6 +15,8 @@ tags:
 
 **_Explore how the winning projects at ETHOnline 2023 leveraged XMTP in unique ways, from engaging AI-powered NPCs to connecting with pro traders and receiving lessons from tutors who tokenize their time._**
 
+<!--truncate-->
+
 ETHOnline 2023, the flagship online event from ETHGlobal recently came to an end! It’s an async hackathon that took place across three weeks, from October 6th through the 27th, with over $200,000 in prizes. XMTP participated as a prize contributor, and we have three outstanding winners recognized for their implementations of our web3 messaging protocol.
 
 The categories we chose to honor for our participants were:
