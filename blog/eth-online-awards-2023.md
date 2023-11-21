@@ -13,6 +13,8 @@ tags:
   - Privacy & Security
 ---
 
+![](./media/eth-online/banner.png)
+
 **_Explore how the winning projects at ETHOnline 2023 leveraged XMTP in unique ways, from engaging AI-powered NPCs to connecting with pro traders and receiving lessons from tutors who tokenize their time._**
 
 <!--truncate-->
