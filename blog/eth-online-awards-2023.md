@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 title: "From Gaming to Education: How ETHOnline Winners used XMTP"
-date: 2023-21-11
+date: 2023-11-21
 authors: rochelle
 description: How ETHOnline Winners used XMTP
 image: ./media/eth-online/banner.png
