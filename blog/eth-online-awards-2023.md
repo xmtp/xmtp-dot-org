@@ -4,17 +4,13 @@ title: "From Gaming to Education: How ETHOnline Winners used XMTP"
 date: 2023-21-11
 authors: rochelle
 description: How ETHOnline Winners used XMTP
-image: ./media/eth-nyc-awards-graphic.png
+image: ./media/eth-online/banner.png
 tags:
   - Awards
   - Developers
   - Hackathon
   - Messaging
   - Privacy & Security
----
-
-[XMTP: ETHOnline 2023 Thread](https://www.notion.so/XMTP-ETHOnline-2023-Thread-78757557bbc34d72a9981a872355c5b9?pvs=21)
-
 ---
 
 **_Explore how the winning projects at ETHOnline 2023 leveraged XMTP in unique ways, from engaging AI-powered NPCs to connecting with pro traders and receiving lessons from tutors who tokenize their time._**
