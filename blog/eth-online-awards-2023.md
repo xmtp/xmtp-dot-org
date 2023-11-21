@@ -47,7 +47,7 @@ You can [view the Cosmic Cowboys’ ETHGlobal entry here.](https://ethglobal.com
 
 ![](./media/eth-online/image3.png)
 
-Dex Tech, which claims to be the "first gamified social DEX," is a decentralized exchange designed for traders to communicate confidently. Professional traders are often hard to reach, and verifying their reputations can be challenging. Dex Tech addresses this by blending a social touch into a unified DEX experience.
+Dex Tech, the "first gamified social DEX," is a decentralized exchange designed for traders to communicate confidently. Professional traders are often hard to reach, and verifying their reputations can be challenging. Dex Tech addresses this by blending a social touch into a unified DEX experience.
 
 Using Social Finance (SoFi or SocialFi), Dex Tech taps into the decentralized social realm and integrates with DeFi principles. In SocialFi, users can create their tokens, representing their value on the platform (called Keys for Dex Tech's traders). Pro traders, with a record of on-chain activity, build trust through their provenance.
 
