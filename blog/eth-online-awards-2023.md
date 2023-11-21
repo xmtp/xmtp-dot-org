@@ -35,9 +35,11 @@ From chats with AI powered game characters using token bound accounts, to reputa
 
 ![](./media/eth-online/image1.png)
 
-Team Piñata impressed with "Cosmic Cowboys," a web3 game highlighting tokenized game mechanics and interactive NPCs. The NPCs, established as ERC-721 tokens with unique metadata on-chain, each had their own wallets thanks to the ERC-6551 standard for Token Bound Accounts. The project won Best Onboarding by creatively enabling on-chain engagement with NPCs and dynamic AI-driven conversations through OpenAI's chat API.
+Team Piñata's "Cosmic Cowboys" is a web3 game that uses tokenized game mechanics and interactive NPCs. The NPCs, established as ERC-721 tokens with unique metadata on-chain, each have their own wallets thanks to the ERC-6551 standard for Token Bound Accounts. 
 
-The project demonstrated XMTP's capabilities by showcasing messaging between wallets, including those owned by NFTs created with the ERC-6551 standard. They utilized XMTP's on-chain messaging for in-game system notifications, extending the possibilities outlined in the ERC-6551 proposal.
+The project won Best Onboarding by creatively enabling on-chain engagement with NPCs and dynamic AI-driven conversations through OpenAI's chat API.
+
+The project uses XMTP to power messaging between wallets, including those owned by NFTs, as well as in-game system notifications. 
 
 You can [view the Cosmic Cowboys’ ETHGlobal entry here.](https://ethglobal.com/showcase/cosmic-cowboys-3q0co)
 
@@ -47,11 +49,13 @@ You can [view the Cosmic Cowboys’ ETHGlobal entry here.](https://ethglobal.com
 
 ![](./media/eth-online/image3.png)
 
-Dex Tech, the "first gamified social DEX," is a decentralized exchange designed for traders to communicate confidently. Professional traders are often hard to reach, and verifying their reputations can be challenging. Dex Tech addresses this by blending a social touch into a unified DEX experience.
+Dex Tech, the "first gamified social DEX," is a decentralized exchange designed for traders to communicate with, and learn from, pros. 
 
-Using Social Finance (SoFi or SocialFi), Dex Tech taps into the decentralized social realm and integrates with DeFi principles. In SocialFi, users can create their tokens, representing their value on the platform (called Keys for Dex Tech's traders). Pro traders, with a record of on-chain activity, build trust through their provenance.
+Professional traders are often hard to reach, and verifying their reputations can be challenging. Dex Tech addresses this by blending the social with the DEX experience.
 
-Dex Tech's use of XMTP highlights the protocol's flexibility. It token-gates conversations based on the number of Keys in a user's wallet. Holding Keys unlocks a valuable communication line, allowing users to gain insights from respected traders, creating an engaging environment for blockchain-based trading.
+Users can create their own tokens, representing their value on the platform. Pro traders can point to their on-chain activity to build trust.
+
+Dex Tech then token-gates conversations, allowing users to discover and reach respected traders, thereby creating an engaging environment for blockchain-based trading.
 
 Check out [Dex Tech’s entry to ETHGlobal here](https://ethglobal.com/showcase/dextech-x13s5).
 
@@ -63,14 +67,14 @@ Check out [Dex Tech’s entry to ETHGlobal here](https://ethglobal.com/showcase/
 
 Token Tutor is a web3 mentoring platform with the motto "Tokenize Time, Maximize Learning, Build the Future." Recognizing challenges in the current tokenization landscape for community leaders, Token Tutor aims to bring real value by tokenizing time for mentors, educators, and leaders.
 
-Mentors can distribute NFTs representing their time, allowing learners to mint these tokens for the chance to interact with thought leaders. This innovative system, powered by XMTP, provides a cost-effective, flexible, decentralized, and trust-less way for learners to connect with experts.
+Mentors can distribute NFTs representing their time, allowing learners to mint these tokens to connect. This provides a cost-effective and trust-less way for learners to connect with experts.
 
-Token Tutor incorporates a Public Good system, enriching both tutors and learners while strengthening the web3 community. The platform empowers educators by offering a direct, censorship-resistant method to monetize their time. XMTP integration facilitates encrypted messaging between learners and tutors, even enabling the transfer of USDC within the chat. The simplicity of sending crypto through XMTP, via Coinbase Wallet, mirrors the ease of sending funds through Apple Pay in iMessage.
+The XMTP integration powers encrypted messaging between learners and tutors, as well as the transfer of USDC to pay for the time within the chat, using . 
 
-As more individuals engage with on-chain activities, tokenizing real-world assets and unique assets like time, there's an increased opportunity for discovery. XMTP plays a crucial role in ensuring secure communication lines among web3 explorers, bridging experiences across various dApps within the network.
+As more people engage with on-chain activities, tokenizing real-world assets and unique assets like time, there's an increased opportunity for discovery and engagement. 
 
 [See Token Tutor’s showcase entry for ETHGlobal](https://ethglobal.com/showcase/token-tutor-bfyx4).
 
-## Congratulations!
+## Thank you!
 
-We want to express our gratitude for these participants showcasing different methods of integrating XMTP for their hackathon submissions at ETHOnline 2023! Congratulations, once again. We hope to continue seeing how far you take the future of messaging, across web3 and beyond. Great use cases like these leave us feeling inspired.
+Thank you for creating these awesome use cases and for showcasing new ways in which XMTP can be integrated... we hope these inspire others to continue to innovate! 
