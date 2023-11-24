@@ -16,7 +16,7 @@ import consentlogic from '/docs/build/img/consent-state-logic.png';
 
 :::caution This feature is in **alpha** status
 
-This feature is in **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha features in production apps. Expect frequent changes as we iterate based on feedback. Want to provide feedback? Comment on [Proposal: Portable consent state for v2 SDKs](https://github.com/orgs/xmtp/discussions/49). 
+This feature is in **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha features in production apps. Expect frequent changes as we iterate based on feedback. Want to provide feedback? Comment on [Proposal: Portable consent state for v2 SDKs](https://github.com/orgs/xmtp/discussions/49).
 
 :::
 
@@ -46,11 +46,11 @@ Conversation created in an app on an SDK version **without** user consent suppor
 
 Conversation created in an app on an SDK version **with** user consent support:
 
-- For a new conversation that a user created with a peer contact, the SDK sets the consent preference to `allowed`.  
+- For a new conversation that a user created with a peer contact, the SDK sets the consent preference to `allowed`.
 
   The user’s creation of the conversation with the contact is considered consent.
 
-- For an existing conversation created by a peer contact that hasn’t had its consent preference updated on the network (`unknown`) and that the user responds to, the SDK will update the consent preference to `allowed`.  
+- For an existing conversation created by a peer contact that hasn’t had its consent preference updated on the network (`unknown`) and that the user responds to, the SDK will update the consent preference to `allowed`.
 
   The user's response to the conversation is considered consent.
 
@@ -82,16 +82,18 @@ Here are some suggestions for how your app might provide user experiences that r
 
 **Unknown**
 
-Consider displaying a conversation with an `unknown` contact on a **Requests** tab and give the user the option to block or allow the contact.  
+Consider displaying a conversation with an `unknown` contact on a **Requests** tab and give the user the option to block or allow the contact.
 
 <img src={requeststab} style={{width:"375px"}}/>
+
 <p/>
 
 **Allowed**
 
-Consider displaying a conversation with an `allowed` contact on a **Messages** tab and give the user the option to block the contact.  
+Consider displaying a conversation with an `allowed` contact on a **Messages** tab and give the user the option to block the contact.
 
 <img src={messagestab} style={{width:"375px"}}/>
+
 <p/>
 
 **Denied**
@@ -310,9 +312,56 @@ The user consent feature for Dart hasn't been implemented yet
 ```tsx
 const state = await conversation.consentState();
 if (state === "denied") {
-	// hide the conversation
+  // hide the conversation
 }
 ```
+
+</TabItem>
+</Tabs>
+
+### Stream users consent actions
+
+The stream users consent actions feature allows you to monitor real-time changes in user consent preferences. By using this feature, you can keep track of whether a user has allowed or blocked certain contacts. This is particularly useful in scenarios where you need to update the user interface or trigger certain actions based on these changes.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```js
+const stream = await aliceClient.contacts.streamConsentList();
+for await (const action of stream) {
+  if (action.block)
+    console.log("Alice blocked:", action.block?.walletAddresses);
+  if (action.allow)
+    console.log("Alice allowed:", action.allow?.walletAddresses);
+  //You can either break from the loop, or call `await stream.return()`.
+  break;
+}
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+The user consent feature for React hasn't been implemented yet
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+The user consent feature for Kotlin hasn't been implemented yet
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+The user consent feature for Swift hasn't been implemented yet
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+The user consent feature for Dart hasn't been implemented yet
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+The user consent feature for RN hasn't been implemented yet
 
 </TabItem>
 </Tabs>
@@ -337,6 +386,14 @@ Update a consent preference in the consent list on the network in the following 
 
 - An existing conversation has an `unknown` consent preference, but has an existing response from the user. The app should update the consent preference in the consent list to `allowed`.
 
-The following diagram illustrates the detailed logic for how user consent preferences are set in an app and in the consent list on the XMTP network. 
+The following diagram illustrates the detailed logic for how user consent preferences are set in an app and in the consent list on the XMTP network.
 
 <img src={consentlogic} style={{width:"90%"}}/>
+
+### Tutorials
+
+For more practical examples, please refer to our tutorials.
+
+- [Request Inbox](/docs/tutorials/portable-consent/subscribe)
+- [Subscribe Button](/docs/tutorials/portable-consent/broadcast)
+- [Broadcast](/docs/tutorials/portable-consent/request-inbox)

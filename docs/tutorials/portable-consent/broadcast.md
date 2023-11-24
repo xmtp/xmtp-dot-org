@@ -5,9 +5,15 @@ sidebar_position: 5
 
 # How to Broadcast with XMTP
 
-This tutorial will guide you on how to create a simple `Broadcast` that enables the user to broadcast messages to one or many specified Ethereum addresses.
+![Feature status](https://img.shields.io/badge/Feature_status-Alpha-orange)
 
-<iframe src='https://xmtp-prototypes.vercel.app/Frames/Broadcast' width='100%' height='274px' frameBorder='0' scrolling='no' allowFullScreen></iframe>
+:::caution This feature is in **alpha** status
+
+This feature is in **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha features in production apps. Expect frequent changes as we iterate based on feedback. Want to provide feedback? Comment on [Proposal: Portable consent state for v2 SDKs](https://github.com/orgs/xmtp/discussions/49).
+
+:::
+
+This tutorial will guide you on how to create a simple `Broadcast` that enables the user to broadcast messages to one or many specified Ethereum addresses.
 
 #### Import XMTP Client and Ethers Library
 

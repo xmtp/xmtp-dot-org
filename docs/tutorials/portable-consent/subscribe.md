@@ -5,9 +5,14 @@ sidebar_position: 4
 
 # Enabling Subscribers with XMTP
 
-This tutorial will guide you on how to create a simple `Subscribe` button with consent that enables the user to subscribe to your messages or notifications.
+![Feature status](https://img.shields.io/badge/Feature_status-Alpha-orange)
 
-<iframe src='https://xmtp-prototypes.vercel.app/Frames/Subscribe' width='100%' height='200px' frameBorder='0' scrolling='no' allowFullScreen></iframe>
+:::caution This feature is in **alpha** status
+
+This feature is in **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha features in production apps. Expect frequent changes as we iterate based on feedback. Want to provide feedback? Comment on [Proposal: Portable consent state for v2 SDKs](https://github.com/orgs/xmtp/discussions/49).
+
+:::
+This tutorial will guide you on how to create a simple `Subscribe` button with consent that enables the user to subscribe to your messages or notifications.
 
 #### Import libraries
 

@@ -5,25 +5,15 @@ sidebar_position: 6
 
 # How to Add Consent to an Existing XMTP Inbox
 
+![Feature status](https://img.shields.io/badge/Feature_status-Alpha-orange)
+
+:::caution This feature is in **alpha** status
+
+This feature is in **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha features in production apps. Expect frequent changes as we iterate based on feedback. Want to provide feedback? Comment on [Proposal: Portable consent state for v2 SDKs](https://github.com/orgs/xmtp/discussions/49).
+
+:::
+
 Managing user consent is essential for enhancing privacy and user experience. If you already have an XMTP application, integrating portable consent features becomes crucial. This guide walks you through adding the consent logic to your existing XMTP app.
-
-<div
-  style={{
-    display: "flex",
-    justifyContent: "space-evenly",
-    textAlign: "center",
-    marginTop: "20px",
-  }}
->
-  <b style={{ width: "50%" }}>Without Consent</b>
-  <b style={{ width: "50%" }}>With Consent</b>
-</div>
-
-<div className="widget-container" style={{ padding: "0px", height: "400px" }}>
-
-<iframe src='https://xmtp-prototypes.vercel.app/Frames/FloatingInbox' width='50%' height='400px' frameBorder='0' scrolling='no' allowFullScreen></iframe>
-<iframe src='https://xmtp-prototypes.vercel.app/Frames/RequestInbox' width='50%' height='400px' frameBorder='0' scrolling='no' allowFullScreen></iframe>
-</div>
 
 #### Initialize XMTP Client with Consent
 
