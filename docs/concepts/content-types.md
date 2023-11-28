@@ -134,7 +134,7 @@ Use to send a read receipt, which is a `timestamp` that indicates when a message
 Use a reaction to send a quick and often emoji-based way to respond to a message. Reactions are usually limited to a predefined set of emojis or symbols provided by the messaging app.
 
 - [Read the doc](/docs/build/messages/reaction)
-- [Comment on the XIP idea](https://community.xmtp.org/t/proposal-for-emoji-reactions-content-type/499?u=jha)
+- [Comment on the XIP idea](https://community.xmtp.org/t/proposal-for-emoji-reactions-content-type/499/1)
 - SDK support: [React](https://github.com/xmtp/xmtp-web/tree/8a248eab168eba494909d7215cffba9d50c1f87c/packages/react-sdk/src/helpers/caching/contentTypes), [JavaScript](https://github.com/xmtp/xmtp-js-content-types/tree/363e82c894f5a4436c5617b1c0424bab574b27c0/packages), [Kotlin](https://github.com/xmtp/xmtp-android/tree/main/library/src/main/java/org/xmtp/android/library/codecs), [Swift](https://github.com/xmtp/xmtp-ios/tree/main/Sources/XMTP/Codecs)
 - Implemented in: Converse
 
