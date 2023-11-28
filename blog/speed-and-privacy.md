@@ -1,9 +1,10 @@
 ---
 hide_table_of_contents: true
 title: "Navigating speed and privacy with XMTP"
-date: 2023-11-21
+date: 2023-11-28
 authors: eng
 description: "When building apps with XMTP, a common question is how to fetch conversations by the most recent message."
+image: "./media/speed-and-privacy.png"
 tags:
   - Built with XMTP
   - Developers
@@ -14,11 +15,9 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 ### When building apps using XMTP, a common question is how to fetch conversations by the most recent message. 
 
-<!--requesting from Nad: image: "./media/speed-privacy.png"-->
+![speed-privacy.png](./media/speed-and-privacy.png)
 
-<!--requesting from Nad: ![speed-privacy.png](./media/speed-privacy.png)-->
-
-People are often surprised to learn that this isn’t possible with XMTP! Instead, an app must fetch all conversations up front.
+**People are often surprised to learn that this isn’t possible with XMTP! Instead, an app must fetch all conversations up front.**
 
 <!--truncate-->
 
@@ -32,4 +31,4 @@ While the first load may take a bit longer, this tradeoff highlights XMTP’s co
 
 Looking ahead, the XMTP Labs engineering is actively exploring solutions to further optimize this process while ensuring that any future enhancements will continue to uphold these stringent privacy standards.
 
-Have any ideas or feedback? Post to the [XMTP Community Forum](https://community.xmtp.org/).
+Have any ideas or feedback? Post to the [XMTP Community Forums](https://community.xmtp.org/).
