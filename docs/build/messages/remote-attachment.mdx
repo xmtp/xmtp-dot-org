@@ -1,5 +1,5 @@
 ---
-sidebar_label: Attachment
+sidebar_label: Remote Attachment
 sidebar_position: 6
 description: Learn how to use the attachment and remote attachment content types to support attachments in your app built with XMTP
 ---
@@ -227,6 +227,8 @@ await conversation.send(remoteAttachment, {
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
+Load the hooks and components you need:
+
 ```jsx
 import { useSendMessage } from "@xmtp/react-sdk";
 import {
@@ -236,18 +238,117 @@ import {
 
 // Inside your component...
 const { sendMessage } = useSendMessage();
+```
 
+Load the file. This example uses a web browser to load the file:
+
+```jsx
+//image is the uploaded event.target.files[0];
+const data = await new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => {
+    if (reader.result instanceof ArrayBuffer) {
+      resolve(reader.result);
+    } else {
+      reject(new Error("Not an ArrayBuffer"));
+    }
+  };
+  reader.readAsArrayBuffer(image);
+});
+```
+
+Create an attachment object:
+
+```tsx
+// Local file details
 const attachment = {
-  filename: "screenshot.png",
-  mimeType: "image/png",
-  data: [
-    /* the PNG data */
-  ],
+  filename: image?.name,
+  mimeType: image?.type,
+  data: new Uint8Array(data),
 };
+```
 
-const remoteAttachment = RemoteAttachmentCodec.encode(attachment);
+Use `RemoteAttachmentCodec.encodeEncrypted` to encrypt an attachment:
 
-sendMessage(conversation, remoteAttachment, ContentTypeRemoteAttachment);
+```tsx
+const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
+  attachment,
+  new AttachmentCodec(),
+);
+```
+
+Upload an encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage or Thirdweb:
+
+<Tabs>
+<TabItem value="web3storage" label="Web3 Storage" attributes={{className: "web3storage_tab"}} >
+
+```tsx
+const { Web3Storage } = require("web3.storage");
+
+class Upload {
+  constructor(name, data) {
+    this.name = name;
+    this.data = data;
+  }
+
+  stream() {
+    const self = this;
+    return new ReadableStream({
+      start(controller) {
+        controller.enqueue(Buffer.from(self.data));
+        controller.close();
+      },
+    });
+  }
+}
+
+const upload = new Upload("uploadIdOfYourChoice", encryptedEncoded.payload);
+
+const web3Storage = new Web3Storage({
+  token: "YOURTOKENHERE",
+});
+
+const cid = await web3Storage.put([upload]);
+const url = `https://${cid}.ipfs.w3s.link/uploadIdOfYourChoice`;
+```
+
+</TabItem>
+<TabItem value="thirdweb" label="Thirdweb" attributes={{className: "thirdweb_tab"}}>
+
+```tsx
+import { useStorageUpload } from "@thirdweb-dev/react";
+const { mutateAsync: upload } = useStorageUpload();
+const uploadUrl = await upload({
+  //encryptedEncoded.payload.buffer is a Uint8Array
+  //We need to convert it to a File to upload it to the IPFS network
+  data: [new File([encryptedEncoded.payload.buffer], file.name)], // Convert Uint8Array back to File
+  options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
+});
+const url = uploadUrl[0];
+```
+
+</TabItem>
+</Tabs>
+
+Now that you have a `url`, you can create a `RemoteAttachment`:
+
+```jsx
+const remoteAttachment = {
+  url: url,
+  contentDigest: encryptedEncoded.digest,
+  salt: encryptedEncoded.salt,
+  nonce: encryptedEncoded.nonce,
+  secret: encryptedEncoded.secret,
+  scheme: "https://",
+  filename: attachment.filename,
+  contentLength: attachment.data.byteLength,
+};
+```
+
+Now that you have a remote attachment, you can send it:
+
+```tsx
+await sendMessage(conversation, remoteAttachment, ContentTypeRemoteAttachment);
 ```
 
 </TabItem>
@@ -402,6 +503,8 @@ Now that you can receive a remote attachment, you need a way to receive a remote
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```tsx
+import { ContentTypeRemoteAttachment } from "@xmtp/content-type-remote-attachment";
+
 if (message.contentType.sameAs(RemoteAttachmentContentType)) {
   const attachment = await RemoteAttachmentCodec.load(message.content, client);
 }
@@ -433,9 +536,35 @@ img.title = attachment.filename;
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```jsx
-if (message.contentType === ContentTypeRemoteAttachment.toString()) {
+import { ContentTypeRemoteAttachment } from "@xmtp/content-type-remote-attachment";
+
+const contentType = ContentTypeId.fromString(message.contentType);
+if (contentType.sameAs(ContentTypeRemoteAttachment)) {
   // The message is a RemoteAttachment
+  const attachment = await RemoteAttachmentCodec.load(message.content, client);
 }
+```
+
+You now have the original attachment:
+
+```bash
+attachment.filename // => "screenshot.png"
+attachment.mimeType // => "image/png",
+attachment.data // => [the PNG data]
+```
+
+Once you've created the attachment object, you can create a preview to show in the message input field before sending:
+
+```tsx
+const objectURL = URL.createObjectURL(
+  new Blob([Buffer.from(attachment.data)], {
+    type: attachment.mimeType,
+  }),
+);
+
+const img = document.createElement("img");
+img.src = objectURL;
+img.title = attachment.filename;
 ```
 
 </TabItem>

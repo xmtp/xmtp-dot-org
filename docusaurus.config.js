@@ -381,12 +381,12 @@ const config = {
                 href: "https://discord.gg/xmtp",
               },
               {
-                label: "𝕏",
-                href: "https://x.com/xmtp_",
+                label: "Community forums",
+                href: "https://community.xmtp.org/",
               },
               {
-                label: "GitHub Discussions",
-                href: "https://github.com/orgs/xmtp/discussions",
+                label: "𝕏",
+                href: "https://x.com/xmtp_",
               },
               {
                 label: "GitHub",

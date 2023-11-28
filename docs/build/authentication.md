@@ -104,24 +104,8 @@ let client = try await Client.create(
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-/*The client has two constructors: `createFromWallet` and `createFromKeys`.
-
-The first time a user uses a new device, they should call `createFromWallet`. This will prompt them
-to sign a message to do one of the following: Create a new identity (if they're new) or enable their existing identity (if they've used XMTP before)
-
-When this succeeds, it configures the client with a bundle of `keys` that can be stored securely on
-the device.*/
-
 var api = xmtp.Api.create();
 var client = await Client.createFromWallet(api, wallet);
-await mySecureStorage.save(client.keys.writeToBuffer());
-
-//The second time a user launches the app they should call `createFromKeys` using the stored `keys` from their previous session.
-
-var stored = await mySecureStorage.load();
-var keys = xmtp.PrivateKeyBundle.fromBuffer(stored);
-var api = xmtp.Api.create();
-var client = await Client.createFromKeys(api, keys);
 ```
 
 </TabItem>
@@ -339,7 +323,17 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample coming soon
+```dart
+var api = xmtp.Api.create(host: 'dev.xmtp.network', isSecure: true)
+var client = await Client.createFromWallet(api, wallet);
+await mySecureStorage.save(client.keys.writeToBuffer());
+//The second time a user launches the app they should call `createFromKeys` using the stored `keys` from their previous session.
+
+var stored = await mySecureStorage.load();
+var keys = xmtp.PrivateKeyBundle.fromBuffer(stored);
+var api = xmtp.Api.create();
+var client = await Client.createFromKeys(api, keys);
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -444,11 +438,13 @@ let client = try await Client.create(account: account, options: clientOptions)
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-You can configure the client environment when you call `Api.create()`.
+You can configure the client environment when you call `Api.create()`. By default, it will connect to a `local` XMTP network.
 
-By default, it will connect to a `local` XMTP network.
-
-For important details about connecting to environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).
+```dart
+xmtp.Api.create(host: '127.0.0.1', port: 5556, isSecure: false)
+xmtp.Api.create(host: 'dev.xmtp.network', isSecure: true)
+xmtp.Api.create(host: 'production.xmtp.network', isSecure: true)*/
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
