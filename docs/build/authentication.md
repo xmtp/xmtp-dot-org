@@ -324,7 +324,7 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-var api = xmtp.Api.create(host: 'production.xmtp.network', isSecure: true)
+var api = xmtp.Api.create(host: 'dev.xmtp.network', isSecure: true)
 var client = await Client.createFromWallet(api, wallet);
 await mySecureStorage.save(client.keys.writeToBuffer());
 //The second time a user launches the app they should call `createFromKeys` using the stored `keys` from their previous session.
