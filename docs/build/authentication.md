@@ -324,10 +324,9 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-var api = xmtp.Api.create();
+var api = xmtp.Api.create(host: 'production.xmtp.network', isSecure: true)
 var client = await Client.createFromWallet(api, wallet);
 await mySecureStorage.save(client.keys.writeToBuffer());
-
 //The second time a user launches the app they should call `createFromKeys` using the stored `keys` from their previous session.
 
 var stored = await mySecureStorage.load();
@@ -440,8 +439,13 @@ let client = try await Client.create(account: account, options: clientOptions)
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 You can configure the client environment when you call `Api.create()`.
-
 By default, it will connect to a `local` XMTP network.
+
+```dart
+xmtp.Api.create(host: '127.0.0.1', port: 5556, isSecure: false)
+xmtp.Api.create(host: 'dev.xmtp.network', isSecure: true)
+xmtp.Api.create(host: 'production.xmtp.network', isSecure: true)*/
+```
 
 For important details about connecting to environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).
 
