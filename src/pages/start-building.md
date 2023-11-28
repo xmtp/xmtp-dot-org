@@ -40,7 +40,7 @@ Ask questions and learn with others building with XMTP. Join the community on th
 
 - Discord: [Chat with other builders](https://discord.gg/xmtp)
 - 𝕏: [Follow @XMTP\_](https://x.com/xmtp_)
-- GitHub Discussions: [Join the discussion](https://github.com/orgs/xmtp/discussions)
+- Discourse: [Join the discussion](https://community.xmtp.org/)
 
 ## Contribute to XMTP
 

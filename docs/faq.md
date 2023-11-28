@@ -158,7 +158,7 @@ Have you built with a tool that works well with XMTP? Let's add it to this page.
 
 The XMTP SDK is [available for multiple languages](/docs/introduction#xmtp-sdks-and-example-apps#sdks), including JavaScript, Kotlin, Swift, and Dart.
 
-Have other questions or ideas for future language or environment support? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+Have other questions or ideas for future language or environment support? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ### Which web3 libraries does the XMTP SDK require?
 
@@ -266,7 +266,7 @@ Most messaging incurs no fee. As XMTP decentralizes, messaging between participa
 
 There are no messaging-related fees incurred by developers for building with the XMTP SDK.
 
-Have other questions or ideas about message-related fees? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+Have other questions or ideas about message-related fees? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ### What are the costs of XMTP message storage and retrieval?
 
@@ -322,11 +322,11 @@ XMTP provides both `production` and `dev` network environments to support the de
 
 The `production` network is configured to store messages indefinitely.
 
-XMTP may occasionally delete messages and keys from the `dev` network and will provide advance notice in the [XMTP Discord community](https://discord.gg/xmtp) and [XMTP Announcements discussion forum](https://github.com/orgs/xmtp/discussions/categories/announcements).
+XMTP may occasionally delete messages and keys from the `dev` network and will provide advance notice in the [XMTP Discord community](https://discord.gg/xmtp) and [XMTP Announcements forum](https://community.xmtp.org/c/start-here/announcements/7).
 
 Different approaches to long-term message storage are currently being researched.
 
-Have other questions or ideas about message storage? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+Have other questions or ideas about message storage? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ## Messages
 
@@ -346,7 +346,7 @@ To learn more about content types, see [Content types](/docs/concepts/content-ty
 
 To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md)
 
-Have other questions or ideas about message formats and metadata? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+Have other questions or ideas about message formats and metadata? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ### Does XMTP support message attachments?
 
@@ -365,7 +365,7 @@ To learn more about how to implement message attachments in your app, see:
 
 Not currently. However, XMTP Labs is exploring ways to support message deletion and editing.
 
-Have other questions or ideas about support for message deletion and editing? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+Have other questions or ideas about support for message deletion and editing? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ## Message patterns
 
