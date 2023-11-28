@@ -438,16 +438,13 @@ let client = try await Client.create(account: account, options: clientOptions)
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-You can configure the client environment when you call `Api.create()`.
-By default, it will connect to a `local` XMTP network.
+You can configure the client environment when you call `Api.create()`. By default, it will connect to a `local` XMTP network.
 
 ```dart
 xmtp.Api.create(host: '127.0.0.1', port: 5556, isSecure: false)
 xmtp.Api.create(host: 'dev.xmtp.network', isSecure: true)
 xmtp.Api.create(host: 'production.xmtp.network', isSecure: true)*/
 ```
-
-For important details about connecting to environments, see [XMTP `production` and `dev` network environments](#xmtp-production-and-dev-network-environments).
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
