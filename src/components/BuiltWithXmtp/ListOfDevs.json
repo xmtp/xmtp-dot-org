@@ -108,6 +108,20 @@
     "twitter": "https://x.com/absolute_labs"
   },
   {
+    "name": "Yup",
+    "href": "https://yup.io/",
+    "image": "/img/builtWithXmtp/yup-logo.jpg",
+    "description": "Decentralized Social All-In-One. Twitter, Farcaster, Threads, Lens, Bluesky & more in one app.",
+    "twitter": "https://twitter.com/yup_io"
+  },
+  {
+    "name": "PERCS",
+    "href": "https://getpercs.com/",
+    "image": "/img/builtWithXmtp/percs-logo.jpg",
+    "description": "Web3 marketing automation for serious brands.",
+    "twitter": "https://twitter.com/getpercss"
+  },
+  {
     "name": "Holder",
     "href": "https://holder.xyz/",
     "image": "/img/builtWithXmtp/holder-logo.jpg",
