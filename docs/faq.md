@@ -461,7 +461,7 @@ const { data: walletClient, isLoading } = useEthersWalletClient();
 
 ### Why my app is failing saying Buffer is not found
 
-If you get into issues with `Buffer` and `polyfills` check out the fix below:
+If you run into issues with `Buffer` and `polyfills`, see these solutions:
 
 1. Install the buffer dependency.
 
@@ -497,7 +497,7 @@ import "./polyfills";
   **Install react-app-rewired**:
 
   ```bash
-  npm install react-app-rewired
+  npm install craco
   ```
 
   Create the `craco.config.js` in your root directory:
