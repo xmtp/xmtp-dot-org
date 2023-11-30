@@ -296,4 +296,4 @@ Message this XMTP message bot to get an immediate automated reply:
 
 ### Troubleshooting
 
-- If you get into issues with `Buffer` and `polyfills` check out our [troubleshooting tips](/docs/developer-quickstart#troubleshooting)
+- If you get into issues with `Buffer` and `polyfills` check out our [troubleshooting tips](/docs/faq#why-my-app-is-failing-saying-buffer-is-not-found)
