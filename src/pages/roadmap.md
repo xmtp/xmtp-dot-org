@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # XMTP roadmap
 
-The features and timelines listed below are subject to change. For information about recently delivered features and fixes, see the [Changelog](https://xmtp.org/docs/changelog).
+The features and timelines listed below are subject to change. For information about recently delivered features and fixes, see the [Changelog](https://xmtp.org/docs/changelog).
 
 ## 2023
 
