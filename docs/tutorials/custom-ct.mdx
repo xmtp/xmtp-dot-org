@@ -2,7 +2,6 @@
 sidebar_label: Custom content type
 sidebar_position: 10
 description: Learn how to build custom content types for use with XMTP
-
 ---
 
 import Tabs from "@theme/Tabs";
@@ -10,7 +9,7 @@ import TabItem from "@theme/TabItem";
 
 # Build custom content types for use with XMTP
 
-Building a custom content type enables you to manage data in a way that is more personalized or specialized to the needs of your app. 
+Building a custom content type enables you to manage data in a way that is more personalized or specialized to the needs of your app.
 
 For more common content types, you can usually find a [standard](/docs/concepts/content-types#standard-content-types) or [standards-track](/docs/concepts/content-types#standards-track-content-types) content type to serve your needs.
 
@@ -28,94 +27,157 @@ This tutorial covers how to build two example custom content types:
 
 Build a custom content type to multiply numbers.
 
-1. Create the custom content type by creating a new file, `xmtp-content-type-multiply-number.tsx`. This file hosts the `MultiplyCodec` class for encoding and decoding the custom content type.
+1. Create the custom content type by creating a new file
 
-    <Tabs groupId="sdk-langs">
-    <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-    ```jsx
-    import { ContentTypeId } from "@xmtp/xmtp-js";
+```jsx
+import { ContentTypeId } from "@xmtp/xmtp-js";
 
-    // Create a unique identifier for your content type
-    const ContentTypeMultiplyNumbers = new ContentTypeId({
-      authorityId: "your.domain",
-      typeId: "multiply-number",
-      versionMajor: 1,
-      versionMinor: 0,
-    });
+// Create a unique identifier for your content type
+const ContentTypeMultiplyNumbers = new ContentTypeId({
+  authorityId: "your.domain",
+  typeId: "multiply-number",
+  versionMajor: 1,
+  versionMinor: 0,
+});
 
-    // Define the MultiplyCodec class
-    class ContentTypeMultiplyNumberCodec {
-      get contentType() {
-        return ContentTypeMultiplyNumbers;
-      }
+// Define the MultiplyCodec class
+class ContentTypeMultiplyNumberCodec {
+  get contentType() {
+    return ContentTypeMultiplyNumbers;
+  }
 
-      // The encode method accepts an object with two numbers (a, b) and encodes it as a byte array
-      encode({ a, b }) {
-        return {
-          type: ContentTypeMultiplyNumbers,
-          parameters: {},
-          content: new TextEncoder().encode(JSON.stringify({ a, b })),
-        };
-      }
+  // The encode method accepts an object with two numbers (a, b) and encodes it as a byte array
+  encode({ a, b }) {
+    return {
+      type: ContentTypeMultiplyNumbers,
+      parameters: {},
+      content: new TextEncoder().encode(JSON.stringify({ a, b })),
+    };
+  }
 
-      // The decode method decodes the byte array, parses the string into numbers (a, b), and returns their product
-      decode(content: { content: any }) {
-        const uint8Array = content.content;
-        const { a, b } = JSON.parse(new TextDecoder().decode(uint8Array));
-        return a * b;
-      }
+  // The decode method decodes the byte array, parses the string into numbers (a, b), and returns their product
+  decode(content: { content: any }) {
+    const uint8Array = content.content;
+    const { a, b } = JSON.parse(new TextDecoder().decode(uint8Array));
+    return a * b;
+  }
+}
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+const ContentTypeNumber: ContentTypeId = {
+  authorityId: 'yourdomain.org',
+  typeId: 'number',
+  versionMajor: 1,
+  versionMinor: 0,
+}
+
+class NumberCodec implements JSContentCodec<number> {
+  contentType = ContentTypeNumber
+
+  // a completely absurd way of encoding number values
+  encode(content: number): EncodedContent {
+    return {
+      type: ContentTypeNumber,
+      parameters: {
+        number: JSON.stringify(content),
+      },
+      content: new Uint8Array(),
     }
-    ```
+  }
+  decode(encodedContent: EncodedContent): number {
+    return JSON.parse(encodedContent.parameters.number) as number
+  }
 
-    </TabItem></Tabs>
+  fallback(content: number): string | undefined {
+    return 'A number was sent.'
+  }
+}
+```
+
+</TabItem>
+</Tabs>
 
 2. Import and register the custom content type.
 
-    <Tabs groupId="sdk-langs">
-    <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-    ```jsx
-    import {
-      ContentTypeMultiplyNumber,
-      ContentTypeMultiplyNumberCodec,
-    } from "./xmtp-content-type-multiply-number";
+```jsx
+import { ContentTypeMultiplyNumberCodec } from "./xmtp-content-type-multiply-number";
 
-    const xmtp = await Client.create(wallet, {
-      env: "dev",
-    });
-    xmtp.registerCodec(new ContentTypeMultiplyNumberCodec());
-    ```
+const xmtp = await Client.create(wallet, {
+  env: "dev",
+});
+xmtp.registerCodec(new ContentTypeMultiplyNumberCodec());
+```
 
-    </TabItem></Tabs>
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+import { NumberCodec } from "./xmtp-content-type-number";
+
+const client = await Client.create({
+  env: "production",
+  codecs: [new NumberCodec()],
+});
+```
+
+</TabItem>
+</Tabs>
 
 3. Send a message using the custom content type. This code sample demonstrates how to use the `MultiplyCodec` custom content type to perform multiplication operations.
 
-  <Tabs groupId="sdk-langs">
-  <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-  ```jsx
-  const numbersToMultiply = { a: 3, b: 7 };
+```jsx
+const numbersToMultiply = { a: 3, b: 7 };
 
-  conversation.send(numbersToMultiply, {
-    contentType: ContentTypeMultiplyNumbers,
-  });
-  ```
+conversation.send(numbersToMultiply, {
+  contentType: ContentTypeMultiplyNumbers,
+});
+```
 
-  </TabItem></Tabs>
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+await conversation.send(12, { contentType: ContentTypeNumber });
+```
+
+</TabItem>
+</Tabs>
 
 4. To use the result of the multiplication operation, add a renderer for the custom content type.
 
-    <Tabs groupId="sdk-langs">
-    <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-    ```jsx
-    if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
-      return message.content; // 21
-    }
-    ```
+```jsx
+if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
+  return message.content; // 21
+}
+```
 
-    </TabItem></Tabs>
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+if (message.contentTypeId === "yourdomain.org/number:1.0") {
+  return message.content; // 12
+}
+```
+
+</TabItem>
+</Tabs>
 
 ## Advanced: Send token transaction hashes
 
@@ -123,154 +185,154 @@ Build a custom content type to send transaction hashes on the Polygon blockchain
 
 1. Create the custom content type by creating a new file, `xmtp-content-type-transaction-hash.tsx`. This file hosts the `TransactionHash` class for encoding and decoding the custom content type.
 
-    <Tabs groupId="sdk-langs">
-    <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-    ```jsx
-    import { ContentTypeId } from "@xmtp/xmtp-js";
+```jsx
+import { ContentTypeId } from "@xmtp/xmtp-js";
 
-    export const ContentTypeTransactionHash = new ContentTypeId({
-      authorityId: "your.domain",
-      typeId: "transaction-hash",
-      versionMajor: 1,
-      versionMinor: 0,
-    });
+export const ContentTypeTransactionHash = new ContentTypeId({
+  authorityId: "your.domain",
+  typeId: "transaction-hash",
+  versionMajor: 1,
+  versionMinor: 0,
+});
 
-    export class ContentTypeTransactionHashCodec {
-      get contentType() {
-        return ContentTypeTransactionHash;
-      }
+export class ContentTypeTransactionHashCodec {
+  get contentType() {
+    return ContentTypeTransactionHash;
+  }
 
-      encode(hash) {
-        return {
-          type: ContentTypeTransactionHash,
-          parameters: {},
-          content: new TextEncoder().encode(hash),
-        };
-      }
+  encode(hash) {
+    return {
+      type: ContentTypeTransactionHash,
+      parameters: {},
+      content: new TextEncoder().encode(hash),
+    };
+  }
 
-      decode(content: { content: any }) {
-        const uint8Array = content.content;
-        const hash = new TextDecoder().decode(uint8Array);
-        return hash;
-      }
-    }
-    ```
+  decode(content: { content: any }) {
+    const uint8Array = content.content;
+    const hash = new TextDecoder().decode(uint8Array);
+    return hash;
+  }
+}
+```
 
-    </TabItem></Tabs>
+</TabItem></Tabs>
 
 2. Import and register the custom content type.
 
-    <Tabs groupId="sdk-langs">
-    <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-    ```jsx
-    import {
-      ContentTypeTransactionHash,
-      ContentTypeTransactionHashCodec,
-    } from "./xmtp-content-type-transaction-hash";
+```jsx
+import {
+  ContentTypeTransactionHash,
+  ContentTypeTransactionHashCodec,
+} from "./xmtp-content-type-transaction-hash";
 
-    const xmtp = await Client.create(wallet, {
-      env: "dev",
-    });
-    xmtp.registerCodec(new ContentTypeTransactionHashCodec());
-    ```
+const xmtp = await Client.create(wallet, {
+  env: "dev",
+});
+xmtp.registerCodec(new ContentTypeTransactionHashCodec());
+```
 
-    </TabItem></Tabs>
+</TabItem></Tabs>
 
 3. Send a message using the custom content type. This code sample demonstrates how to use the `TransactionHash` content type to send a transaction.
 
-    <Tabs groupId="sdk-langs">
-    <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-    ```jsx
-    // Create a wallet from a known private key
-    const wallet = new ethers.Wallet(privateKey);
-    console.log(`Wallet address: ${wallet.address}`);
+```jsx
+// Create a wallet from a known private key
+const wallet = new ethers.Wallet(privateKey);
+console.log(`Wallet address: ${wallet.address}`);
 
-    //im using a burner wallet with MATIC from a faucet
-    //https://faucet.polygon.technology/
+//im using a burner wallet with MATIC from a faucet
+//https://faucet.polygon.technology/
 
-    // Set up provider for Polygon Testnet (Mumbai)
-    const provider = new ethers.providers.JsonRpcProvider(
-      "https://rpc-mumbai.maticvigil.com",
-    );
+// Set up provider for Polygon Testnet (Mumbai)
+const provider = new ethers.providers.JsonRpcProvider(
+  "https://rpc-mumbai.maticvigil.com",
+);
 
-    // Connect the wallet to the provider
-    const signer = wallet.connect(provider);
+// Connect the wallet to the provider
+const signer = wallet.connect(provider);
 
-    // Define the recipient address and amount
-    const amount = ethers.utils.parseEther("0.01"); // Amount in ETH (0.01 in this case)
+// Define the recipient address and amount
+const amount = ethers.utils.parseEther("0.01"); // Amount in ETH (0.01 in this case)
 
-    // Create a transaction
-    const transaction = {
-      to: recipientAddress,
-      value: amount,
-    };
+// Create a transaction
+const transaction = {
+  to: recipientAddress,
+  value: amount,
+};
 
-    // Sign and send the transaction
-    const tx = await signer.sendTransaction(transaction);
-    console.log(`Transaction hash: ${tx.hash}`);
+// Sign and send the transaction
+const tx = await signer.sendTransaction(transaction);
+console.log(`Transaction hash: ${tx.hash}`);
 
-    const conversation = await xmtp.conversations.newConversation(WALLET_TO);
-    await conversation
-      .send(tx.hash, {
-        contentType: ContentTypeTransactionHash,
-      })
-      .then(() => {
-        console.log("Transaction data sent", tx.hash);
-      })
-      .catch((error) => {
-        console.log("Error sending transaction data: ", error);
-      });
-    ```
+const conversation = await xmtp.conversations.newConversation(WALLET_TO);
+await conversation
+  .send(tx.hash, {
+    contentType: ContentTypeTransactionHash,
+  })
+  .then(() => {
+    console.log("Transaction data sent", tx.hash);
+  })
+  .catch((error) => {
+    console.log("Error sending transaction data: ", error);
+  });
+```
 
-    </TabItem></Tabs>
+</TabItem></Tabs>
 
 4. To use the result of the hash, add an async renderer for the custom content type.
 
-    <Tabs groupId="sdk-langs">
-    <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-    ```jsx
-    if (message.contentType.sameAs(ContentTypeTransactionHash)) {
-      // Handle ContentTypeAttachment
-      return (
-        <TransactionMonitor key={message.id} encodedContent={message.content} />
+```jsx
+if (message.contentType.sameAs(ContentTypeTransactionHash)) {
+  // Handle ContentTypeAttachment
+  return (
+    <TransactionMonitor key={message.id} encodedContent={message.content} />
+  );
+}
+
+const TransactionMonitor = ({ encodedContent }) => {
+  const [retryCount, setRetryCount] = useState(0);
+
+  const [transactionValue, setTransactionValue] = useState(null);
+
+  useEffect(() => {
+    const fetchTransactionReceipt = async () => {
+      console.log(encodedContent);
+      const provider = new ethers.providers.JsonRpcProvider(
+        "https://rpc-mumbai.maticvigil.com",
       );
-    }
-
-    const TransactionMonitor = ({ encodedContent }) => {
-      const [retryCount, setRetryCount] = useState(0);
-
-      const [transactionValue, setTransactionValue] = useState(null);
-
-      useEffect(() => {
-        const fetchTransactionReceipt = async () => {
-          console.log(encodedContent);
-          const provider = new ethers.providers.JsonRpcProvider(
-            "https://rpc-mumbai.maticvigil.com",
-          );
-          const receipt = await provider.getTransactionReceipt(encodedContent);
-          const tx = await provider.getTransaction(encodedContent);
-          if (tx && tx.value) {
-            setTransactionValue(ethers.utils.formatEther(tx.value));
-          }
-        };
-        fetchTransactionReceipt();
-      }, [encodedContent, retryCount]);
-
-      return transactionValue ? (
-        <div>Transaction value: {transactionValue} ETH</div>
-      ) : (
-        <div>
-          Waiting for transaction to be mined...
-          <button onClick={() => setRetryCount(retryCount + 1)}>
-            Refresh Status 🔄
-          </button>
-        </div>
-      );
+      const receipt = await provider.getTransactionReceipt(encodedContent);
+      const tx = await provider.getTransaction(encodedContent);
+      if (tx && tx.value) {
+        setTransactionValue(ethers.utils.formatEther(tx.value));
+      }
     };
-    ```
+    fetchTransactionReceipt();
+  }, [encodedContent, retryCount]);
 
-    </TabItem></Tabs>
+  return transactionValue ? (
+    <div>Transaction value: {transactionValue} ETH</div>
+  ) : (
+    <div>
+      Waiting for transaction to be mined...
+      <button onClick={() => setRetryCount(retryCount + 1)}>
+        Refresh Status 🔄
+      </button>
+    </div>
+  );
+};
+```
+
+</TabItem></Tabs>

@@ -99,7 +99,12 @@ Read receipts for Dart haven't been implemented yet.
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-React Native SDK already has the codecs registered.
+```jsx
+const client = await Client.create(wallet, {
+  env: "production",
+  codecs: [new XMTP.ReadReceiptCodec()],
+});
+```
 
 </TabItem></Tabs>
 
@@ -246,8 +251,8 @@ Read receipts for Dart haven't been implemented yet
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-if (message.contentTypeId !== "xmtp.org/readReceipt:1.0") {
-  throw Error("Unexpected message content " + bobMessages[0].content);
+if (message.contentTypeId === "xmtp.org/readReceipt:1.0") {
+  return content.timestamp; //Date received
 }
 ```
 
