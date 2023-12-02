@@ -168,9 +168,11 @@ if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
+Because of this message content is now a function which returns the actual content. You can get that content by call `message.content()` now instead of message.content . This may involve more filtering on the message side to make sure you are handling different contentTypes appropriately.
+
 ```jsx
 if (message.contentTypeId === "yourdomain.org/number:1.0") {
-  return message.content; // 12
+  return message.content(); // 12
 }
 ```
 

@@ -622,10 +622,15 @@ On the receiving end, you can use the `decryptAttachment` method to decrypt the 
 
 ```jsx
 if (message.contentTypeId === "xmtp.org/remoteStaticAttachment:1.0") {
-  const attached = await alice.decryptAttachment({
+  // Now we can decrypt the downloaded file using the message metadata.
+  const attached = await xmtp_client.decryptAttachment({
     encryptedLocalFileUri: downloadedFileUri,
-    metadata: message.content.remoteAttachment,
-  });
+    metadata: message.content() as RemoteAttachmentContent,
+  })
+
+  //attached.filename
+  //attached.mimeType
+  //attached.fileUri
 }
 ```
 
