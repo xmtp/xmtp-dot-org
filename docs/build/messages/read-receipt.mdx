@@ -252,7 +252,7 @@ Read receipts for Dart haven't been implemented yet
 
 ```jsx
 if (message.contentTypeId === "xmtp.org/readReceipt:1.0") {
-  return content.timestamp; //Date received
+  return message.content().timestamp; //Date received
 }
 ```
 

@@ -304,15 +304,11 @@ if (decodedContent.contentType == contentTypeReply) {
 
 ```jsx
 if (message.contentTypeId === "xmtp.org/reaction:1.0") {
-  if (message.content.reply) {
-    // This is a reply
-    const replyContent = content.reply.content;
-    const messageId = content.reply.reference;
-
-    // Handle the reply content and the referenced message ID
-    // ...
+  const reply = message.content();
+  if (reply) {
+    const replyContent = reply.content;
+    const messageId = reply.reference;
   }
-  // ...
 }
 ```
 

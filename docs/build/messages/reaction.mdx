@@ -301,7 +301,12 @@ var decoded = await codec.decode(encoded);
 
 ```jsx
 if (message.contentTypeId === "xmtp.org/reaction:1.0") {
-  return message.content;
+  const reaction = await message.content();
+  return reaction;
+  //reaction.reference = id of the message being reacted to,
+  //reaction.action = 'added',
+  //reaction.schema =  'unicode',
+  //reaction.content = '💖',
 }
 ```
 
