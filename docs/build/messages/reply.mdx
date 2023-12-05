@@ -303,7 +303,7 @@ if (decodedContent.contentType == contentTypeReply) {
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-if (message.contentTypeId === "xmtp.org/reaction:1.0") {
+if (message.contentTypeId === "xmtp.org/reply:1.0") {
   const reply = message.content();
   if (reply) {
     const replyContent: ReplyContent = reply;
