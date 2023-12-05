@@ -154,6 +154,10 @@ Have you built with a tool that works well with XMTP? Let's add it to this page.
 
 :::
 
+### Does XMTP work with smart contract wallets?
+
+XMTP doesn't currently support smart contract wallets. XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets). It also works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s.
+
 ### Which languages and environments does the XMTP SDK support?
 
 The XMTP SDK is [available for multiple languages](/docs/introduction#xmtp-sdks-and-example-apps#sdks), including JavaScript, Kotlin, Swift, and Dart.
@@ -221,6 +225,12 @@ XMTP provides perceptibly real-time message delivery and retrieval. The network 
 ### Is there a way to get a list of all current XMTP-enabled wallets ?
 
 We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
+
+### Does XMTP support group chat?
+
+Not yet. Despite efforts to build group chat with XMTP v2 (the current protocol version), protocol limitations prevented group chat from meeting XMTP's robust security standards. Efforts have shifted to updating the protocol to support secure group chat. More details to come. 
+
+Have other questions or feedback about group chat? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ## Rate Limiting
 
