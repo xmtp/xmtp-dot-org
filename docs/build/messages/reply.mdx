@@ -97,7 +97,7 @@ var registry = CodecRegistry()..registerCodec(ReplyCodec());
 ```jsx
 const client = await Client.create(wallet, {
   env: "production",
-  codecs: [new XMTP.ReplyCodec()],
+  codecs: [new ReplyCodec()],
 });
 ```
 
@@ -306,8 +306,10 @@ if (decodedContent.contentType == contentTypeReply) {
 if (message.contentTypeId === "xmtp.org/reaction:1.0") {
   const reply = message.content();
   if (reply) {
-    const replyContent = reply.content;
-    const messageId = reply.reference;
+    const replyContent: ReplyContent = reply;
+    const replyContentType = replyContent.contentType;
+    const codec = client.codecRegistry[replyContentType];
+    const actualReplyContent = codec.decode(replyContent.content);
   }
 }
 ```
@@ -321,7 +323,3 @@ How you choose to display replies in your app is up to you. It might be useful t
 For example, in Discord, users can reply to individual messages, and the reply provides a link to the original message.
 
 Note that the user experience of replies in iMessage and Slack follows more of a threaded pattern, where messages display in logical groupings, or threads. This reply content type doesn't support the threaded pattern. If you'd like to request support for a threaded reply pattern, [post an XIP idea](https://community.xmtp.org/c/development/ideas/54).
-
-```
-
-```

@@ -100,9 +100,9 @@ Remote attachments for Dart haven't been implemented yet.
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-const client = await Client.create(wallet, {
+const client = await Client.create(signer, {
   env: "production",
-  codecs: [new XMTP.RemoteAttachmentCodec(), new XMTP.StaticAttachmentCodec()],
+  codecs: [new RemoteAttachmentCodec(), new StaticAttachmentCodec()],
 });
 ```
 

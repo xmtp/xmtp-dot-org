@@ -99,9 +99,9 @@ var registry = CodecRegistry()..registerCodec(ReactionCodec());
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-const client = await Client.create(wallet, {
+const client = await Client.create(signer, {
   env: "production",
-  codecs: [new XMTP.ReactionCodec()],
+  codecs: [new ReactionCodec()],
 });
 ```
 
