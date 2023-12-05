@@ -180,6 +180,37 @@ struct NumberCodec: ContentCodec {
 ```
 
 </TabItem>
+
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+````dart
+final contentTypeInteger = xmtp.ContentTypeId(
+  authorityId: "com.example",
+  typeId: "integer",
+  versionMajor: 0,
+  versionMinor: 1,
+);
+
+class IntegerCodec extends Codec<int> {
+  @override
+  xmtp.ContentTypeId get contentType => contentTypeInteger;
+
+  @override
+  Future<int> decode(xmtp.EncodedContent encoded) async =>
+      Uint8List.fromList(encoded.content).buffer.asByteData().getInt64(0);
+
+  @override
+  Future<xmtp.EncodedContent> encode(int decoded) async => xmtp.EncodedContent(
+        type: contentTypeInteger,
+        content: Uint8List(8)..buffer.asByteData().setInt64(0, decoded),
+      );
+  @override
+  String? fallback(String content) {
+    return "Can't display “${content}”. This app doesn’t support “${content}”";
+  }
+}
+
+</TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -211,7 +242,7 @@ class NumberCodec implements JSContentCodec<number> {
     return 'A number was sent.'
   }
 }
-```
+````
 
 </TabItem>
 </Tabs>
