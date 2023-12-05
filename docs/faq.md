@@ -228,7 +228,9 @@ We don't provide a direct method to fetch all XMTP-enabled wallet addresses in b
 
 ### Does XMTP support group chat?
 
-Despite XMTP efforts to build group chat on XMTP v2 (which all our SDKs currently support), the protocol limitations prevent us from achieving the required security level for group conversations. The good news is that we're shifting our focus to XMTP v3, with the Alpha launch coming in the next couple of weeks. This opens doors for a secure group chat beginning of next year, aligning with our commitment to maintaining robust security standards. More details to share soon, so stay tuned!
+Not yet. Despite efforts to build group chat with XMTP v2 (the current protocol version), protocol limitations prevented group chat from meeting XMTP's robust security standards. Efforts have shifted to updating the protocol to support secure group chat. More details to come. 
+
+Have other questions or feedback about group chat? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ## Rate Limiting
 
