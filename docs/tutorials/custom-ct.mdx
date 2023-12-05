@@ -71,7 +71,7 @@ class ContentTypeMultiplyNumberCodec {
 ```
 
 </TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```jsx
 import { ContentTypeId } from "@xmtp/xmtp-js";
@@ -183,7 +183,7 @@ struct NumberCodec: ContentCodec {
 
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-````dart
+```dart
 final contentTypeInteger = xmtp.ContentTypeId(
   authorityId: "com.example",
   typeId: "integer",
@@ -209,6 +209,7 @@ class IntegerCodec extends Codec<int> {
     return "Can't display “${content}”. This app doesn’t support “${content}”";
   }
 }
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -242,7 +243,7 @@ class NumberCodec implements JSContentCodec<number> {
     return 'A number was sent.'
   }
 }
-````
+```
 
 </TabItem>
 </Tabs>
