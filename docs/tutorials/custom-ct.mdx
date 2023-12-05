@@ -62,6 +62,120 @@ class ContentTypeMultiplyNumberCodec {
     const { a, b } = JSON.parse(new TextDecoder().decode(uint8Array));
     return a * b;
   }
+
+  fallback(content: string): string | undefined {
+    return `Can’t display "${content}". This app doesn’t support "${content}".`;
+    //return undefined; if you don't want the content type to be displayed.
+  }
+}
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+import { ContentTypeId } from "@xmtp/xmtp-js";
+
+// Create a unique identifier for your content type
+const ContentTypeMultiplyNumbers = new ContentTypeId({
+  authorityId: "your.domain",
+  typeId: "multiply-number",
+  versionMajor: 1,
+  versionMinor: 0,
+});
+
+// Define the MultiplyCodec class
+class ContentTypeMultiplyNumberCodec {
+  get contentType() {
+    return ContentTypeMultiplyNumbers;
+  }
+
+  // The encode method accepts an object with two numbers (a, b) and encodes it as a byte array
+  encode({ a, b }) {
+    return {
+      type: ContentTypeMultiplyNumbers,
+      parameters: {},
+      content: new TextEncoder().encode(JSON.stringify({ a, b })),
+    };
+  }
+
+  // The decode method decodes the byte array, parses the string into numbers (a, b), and returns their product
+  decode(content: { content: any }) {
+    const uint8Array = content.content;
+    const { a, b } = JSON.parse(new TextDecoder().decode(uint8Array));
+    return a * b;
+  }
+
+  fallback(content: string): string | undefined {
+    return `Can’t display "${content}". This app doesn’t support "${content}".`;
+    //return undefined; if you don't want the content type to be displayed.
+  }
+}
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+import org.xmtp.android.library.codecs.ContentTypeId
+import org.xmtp.android.library.codecs.ContentTypeIdBuilder
+import org.xmtp.android.library.codecs.ContentCodec
+import org.xmtp.android.library.codecs.EncodedContent
+
+data class NumberCodec(
+    override var contentType: ContentTypeId = ContentTypeIdBuilder.builderFromAuthorityId(
+        authorityId = "example.com",
+        typeId = "number",
+        versionMajor = 1,
+        versionMinor = 1
+    )
+) : ContentCodec<Double> {
+    override fun encode(content: Double): EncodedContent {
+        return EncodedContent.newBuilder().also {
+            it.type = ContentTypeIdBuilder.builderFromAuthorityId(
+                authorityId = "example.com",
+                typeId = "number",
+                versionMajor = 1,
+                versionMinor = 1
+            )
+            it.content = mapOf(Pair("number", content)).toString().toByteStringUtf8()
+        }.build()
+    }
+
+    override fun decode(content: EncodedContent): Double =
+        content.content.toStringUtf8().filter { it.isDigit() || it == '.' }.toDouble()
+
+    override fun fallback(content: Double): String? {
+        return "Error: This app does not support numbers."
+    }
+}
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+import XCTest
+import XMTP
+
+struct NumberCodec: ContentCodec {
+    typealias T = Double
+
+    var contentType: XMTP.ContentTypeID {
+    	ContentTypeID(authorityID: "example.com", typeID: "number", versionMajor: 1, versionMinor: 1)
+    }
+    func encode(content: Double, client _: Client) throws -> XMTP.EncodedContent {
+    	var encodedContent = EncodedContent()
+    	encodedContent.type = ContentTypeID(authorityID: "example.com", typeID: "number", versionMajor: 1, versionMinor: 1)
+    	encodedContent.content = try JSONEncoder().encode(content)
+    	return encodedContent
+    }
+    func decode(content: XMTP.EncodedContent, client _: Client) throws -> Double {
+    	return try JSONDecoder().decode(Double.self, from: content.content)
+    }
+    func fallback(content: Double) throws -> String? {
+      return "pi"
+    }
 }
 ```
 

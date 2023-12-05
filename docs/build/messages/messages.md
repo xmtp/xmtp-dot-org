@@ -345,20 +345,20 @@ for await (const page of conversation.messages(limit: 25)) {
 </TabItem>
 </Tabs>
 
-## Handle an unsupported content type error
+## Handle unsupported content types
 
-As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This could crash your app.
+As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types are introduced into the XMTP ecosystem, your app may encounter content types it does not support. This situation, if not handled properly, could lead to app crashes.
+
+Each content type includes a `contentFallback` property. This property provides a string that describes the expected value of the content type. Note that content fallbacks are immutable and are set by default in the protocol. If you are creating custom content types, you have the option to include a custom fallback. For more information on this, please visit the [Custom Content Type Tutorial](/docs/tutorials/custom-ct).
+
+_Note: `Composite` and `ReadReceipts` have an `undefined` `fallback`, indicating the message is not expected to be displayed._
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-To avoid crashing your app, code your app to detect, log, and handle the error. For example:
-
 ```jsx
-const codec = xmtp.codecFor(content.contentType);
-if (!codec) {
-  const fallback = `missing codec for content type "${content.contentType.toString()}"`;
-  throw new Error(fallback);
+if(/*Not supported content type*/){
+  return message?.contentFallback
 }
 ```
 
@@ -366,47 +366,46 @@ if (!codec) {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-// If you wish to display an unsupported content type, there’s a contentFallback
-// property that may include a useful string. However, it is recommended that
-// you manually process unsupported content types.
-import { ContentTypeId } from "@xmtp/xmtp-js";
-import { ContentTypeAttachment } from "@xmtp/content-type-remote-attachment";
-
-const MessageContent = ({ message }) => {
-  if (
-    message.content === undefined &&
-    ContentTypeId.fromString(message.contentType).sameAs(ContentTypeAttachment)
-  ) {
-    return "This message contains an attachment, which is not supported by this client.";
-  }
-};
+if(/*Not supported content type*/){
+  return message?.contentFallback
+}
 ```
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
-Code sample coming soon
+```kotlin
+if (/*Not supported content type*/) {
+  return message?.contentFallback
+}
+```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```jsx
+if(/*Not supported content type*/){
+  return message?.contentFallback
+}
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample coming soon
+```jsx
+if(/*Not supported content type*/){
+  return message?.contentFallback
+}
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
+React Native is the only one that uses the `fallback` property
+
 ```jsx
 if(/*Not supported content type*/){
-  return message?.fallback ? (
-    message?.fallback
-  ) : (
-    <div style={styles.RenderedMessage}>"Message not supported"</div>
-  );
+  return message?.fallback
 }
 ```
 
