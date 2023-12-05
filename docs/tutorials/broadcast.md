@@ -24,9 +24,9 @@ const { Client } = require("@xmtp/xmtp-js");
 
 async function main() {
   //Create a random wallet for example purposes. On the frontend you should replace it with the user's wallet (metamask, rainbow, etc)
-  const wallet = ethers.Wallet.createRandom();
+  const signer = ethers.Wallet.createRandom();
   //Initialize the xmtp client
-  const xmtp = await Client.create(wallet, { env: "dev" });
+  const xmtp = await Client.create(signer, { env: "dev" });
   console.log("Broadcasting from: ", xmtp.address);
 
   //In this example we are going to broadcast to the GM_BOT wallet (already activated) and a random wallet (not activated)
@@ -40,7 +40,6 @@ async function main() {
     //Checking the activation status of each wallet
     const wallet = broadcasts_array[i];
     const canMessage = broadcasts_canMessage[i];
-    console.log(wallet, canMessage);
     if (broadcasts_canMessage[i]) {
       //If activated, start
       const conversation = await xmtp.conversations.newConversation(wallet);

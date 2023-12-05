@@ -270,4 +270,4 @@ All the examples thus far have been using a randomly generated wallet and a priv
 
 With a simple web page that uses Wagmi, Web3Modal, or any other library that returns an `ethers.Signer`, you can export XMTP-specific keys and store those on the user's machine.
 
-The command to export keys is `Client.getKeys(wallet, { env })`.
+The command to export keys is `Client.getKeys(signer, { env })`.
