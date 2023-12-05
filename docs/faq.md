@@ -154,7 +154,7 @@ Have you built with a tool that works well with XMTP? Let's add it to this page.
 
 :::
 
-### Does XMTP works with smart contract wallets?
+### Does XMTP work with smart contract wallets?
 
 XMTP doesn't currently support smart contract wallets. XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets). It also works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s.
 
