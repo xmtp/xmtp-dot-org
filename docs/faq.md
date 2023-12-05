@@ -226,7 +226,7 @@ XMTP provides perceptibly real-time message delivery and retrieval. The network 
 
 We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
 
-## Group chats
+### Does XMTP support group chat?
 
 Despite XMTP efforts to build group chat on XMTP v2 (which all our SDKs currently support), the protocol limitations prevent us from achieving the required security level for group conversations. The good news is that we're shifting our focus to XMTP v3, with the Alpha launch coming in the next couple of weeks. This opens doors for a secure group chat beginning of next year, aligning with our commitment to maintaining robust security standards. More details to share soon, so stay tuned!
 
