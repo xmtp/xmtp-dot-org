@@ -99,9 +99,12 @@ Remote attachments for Dart haven't been implemented yet.
 </TabItem>
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
-The XMTP SDK handles the registration of codecs for you. When you use the SDK's functions like `encryptAttachment` and `decryptAttachment`, the SDK internally uses the appropriate codecs to perform the encryption and decryption operations.
-
-You don't need to manually register or use the codecs in your app code. You just need to work with the high-level objects and methods provided by the SDK.
+```jsx
+const client = await Client.create(signer, {
+  env: "production",
+  codecs: [new RemoteAttachmentCodec(), new StaticAttachmentCodec()],
+});
+```
 
 </TabItem>
 </Tabs>
@@ -619,10 +622,15 @@ On the receiving end, you can use the `decryptAttachment` method to decrypt the 
 
 ```jsx
 if (message.contentTypeId === "xmtp.org/remoteStaticAttachment:1.0") {
-  const attached = await alice.decryptAttachment({
+  // Now we can decrypt the downloaded file using the message metadata.
+  const attached = await xmtp_client.decryptAttachment({
     encryptedLocalFileUri: downloadedFileUri,
-    metadata: message.content.remoteAttachment,
-  });
+    metadata: message.content() as RemoteAttachmentContent,
+  })
+
+  //attached.filename
+  //attached.mimeType
+  //attached.fileUri
 }
 ```
 
