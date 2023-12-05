@@ -110,7 +110,7 @@ class NumberCodec implements JSContentCodec<number> {
 ```jsx
 import { ContentTypeMultiplyNumberCodec } from "./xmtp-content-type-multiply-number";
 
-const xmtp = await Client.create(wallet, {
+const xmtp = await Client.create(signer, {
   env: "dev",
 });
 xmtp.registerCodec(new ContentTypeMultiplyNumberCodec());
@@ -232,7 +232,7 @@ import {
   ContentTypeTransactionHashCodec,
 } from "./xmtp-content-type-transaction-hash";
 
-const xmtp = await Client.create(wallet, {
+const xmtp = await Client.create(signer, {
   env: "dev",
 });
 xmtp.registerCodec(new ContentTypeTransactionHashCodec());

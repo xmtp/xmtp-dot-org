@@ -47,7 +47,7 @@ console.log("Wallet address: " + wallet.address);
 A client is created that requires passing in a connected wallet that implements the Signer interface. Use client configuration options to change parameters of a client's network connection.
 
 ```jsx
-const xmtp = await Client.create(wallet, { env: "dev" });
+const xmtp = await Client.create(signer, { env: "dev" });
 console.log("Client created", xmtp.address);
 //eg. Client created 0xd8dA6BF26964aF9D7eEd9e03E53415D37
 ```

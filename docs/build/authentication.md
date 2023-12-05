@@ -25,7 +25,7 @@ A client is created that requires passing in a connected wallet that implements 
 ```ts
 import { Client } from "@xmtp/xmtp-js";
 // Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet, { env: "dev" });
+const xmtp = await Client.create(signer, { env: "dev" });
 ```
 
 </TabItem>
@@ -114,7 +114,7 @@ var client = await Client.createFromWallet(api, wallet);
 ```tsx
 import { Client } from "@xmtp/xmtp-react-native";
 // Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet);
+const xmtp = await Client.create(signer);
 ```
 
 </TabItem>
