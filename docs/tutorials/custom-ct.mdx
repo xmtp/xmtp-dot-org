@@ -74,7 +74,7 @@ class ContentTypeMultiplyNumberCodec {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```jsx
-import { ContentTypeId } from "@xmtp/xmtp-js";
+import { ContentTypeId } from "@xmtp/react-sdk";
 
 // Create a unique identifier for your content type
 const ContentTypeMultiplyNumbers = new ContentTypeId({
@@ -121,29 +121,33 @@ import org.xmtp.android.library.codecs.ContentTypeId
 import org.xmtp.android.library.codecs.ContentTypeIdBuilder
 import org.xmtp.android.library.codecs.ContentCodec
 import org.xmtp.android.library.codecs.EncodedContent
+import kotlinx.serialization.*
+import kotlinx.serialization.json.*
 
-data class NumberCodec(
+@Serializable
+data class NumberPair(val a: Double, val b: Double)
+
+data class MultiplyNumberCodec(
     override var contentType: ContentTypeId = ContentTypeIdBuilder.builderFromAuthorityId(
         authorityId = "example.com",
-        typeId = "number",
+        typeId = "multiply-number",
         versionMajor = 1,
-        versionMinor = 1
+        versionMinor = 0
     )
 ) : ContentCodec<Double> {
     override fun encode(content: Double): EncodedContent {
+        // Assuming content is the product of two numbers
+        val numberPair = NumberPair(content / 2, 2.0) // You need to decide how to represent your numbers
         return EncodedContent.newBuilder().also {
-            it.type = ContentTypeIdBuilder.builderFromAuthorityId(
-                authorityId = "example.com",
-                typeId = "number",
-                versionMajor = 1,
-                versionMinor = 1
-            )
-            it.content = mapOf(Pair("number", content)).toString().toByteStringUtf8()
+            it.type = contentType
+            it.content = Json.encodeToString(numberPair).toByteStringUtf8()
         }.build()
     }
 
-    override fun decode(content: EncodedContent): Double =
-        content.content.toStringUtf8().filter { it.isDigit() || it == '.' }.toDouble()
+    override fun decode(content: EncodedContent): Double {
+        val numberPair = Json.decodeFromString<NumberPair>(content.content.toStringUtf8())
+        return numberPair.a * numberPair.b
+    }
 
     override fun fallback(content: Double): String? {
         return "Error: This app does not support numbers."
@@ -154,93 +158,141 @@ data class NumberCodec(
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-```swift
-import XCTest
+```Swift
 import XMTP
 
-struct NumberCodec: ContentCodec {
+// Define a structure to represent a pair of numbers
+struct NumberPair: Codable {
+    let a: Double
+    let b: Double
+}
+
+struct MultiplyNumberCodec: ContentCodec {
     typealias T = Double
 
     var contentType: XMTP.ContentTypeID {
-    	ContentTypeID(authorityID: "example.com", typeID: "number", versionMajor: 1, versionMinor: 1)
+        ContentTypeID(authorityID: "example.com", typeID: "multiply-number", versionMajor: 1, versionMinor: 0)
     }
+
     func encode(content: Double, client _: Client) throws -> XMTP.EncodedContent {
-    	var encodedContent = EncodedContent()
-    	encodedContent.type = ContentTypeID(authorityID: "example.com", typeID: "number", versionMajor: 1, versionMinor: 1)
-    	encodedContent.content = try JSONEncoder().encode(content)
-    	return encodedContent
+        var encodedContent = EncodedContent()
+        encodedContent.type = ContentTypeID(authorityID: "example.com", typeID: "multiply-number", versionMajor: 1, versionMinor: 0)
+
+        // Assuming content is the product of two numbers, you need to adjust this as per your use case
+        let numberPair = NumberPair(a: content / 2, b: 2.0)
+        encodedContent.content = try JSONEncoder().encode(numberPair)
+        return encodedContent
     }
+
     func decode(content: XMTP.EncodedContent, client _: Client) throws -> Double {
-    	return try JSONDecoder().decode(Double.self, from: content.content)
+        let numberPair = try JSONDecoder().decode(NumberPair.self, from: content.content)
+        return numberPair.a * numberPair.b
     }
+
     func fallback(content: Double) throws -> String? {
-      return "pi"
+        return "Error: This app does not support numbers."
     }
 }
 ```
 
 </TabItem>
-
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-final contentTypeInteger = xmtp.ContentTypeId(
+import 'dart:convert';
+import 'dart:typed_data';
+import 'package:xmtp/xmtp.dart' as xmtp;
+
+final contentTypeMultiplyNumbers = xmtp.ContentTypeId(
   authorityId: "com.example",
-  typeId: "integer",
-  versionMajor: 0,
-  versionMinor: 1,
+  typeId: "multiply-number",
+  versionMajor: 1,
+  versionMinor: 0,
 );
 
-class IntegerCodec extends Codec<int> {
-  @override
-  xmtp.ContentTypeId get contentType => contentTypeInteger;
+class NumberPair {
+  final double a;
+  final double b;
 
-  @override
-  Future<int> decode(xmtp.EncodedContent encoded) async =>
-      Uint8List.fromList(encoded.content).buffer.asByteData().getInt64(0);
+  NumberPair(this.a, this.b);
 
-  @override
-  Future<xmtp.EncodedContent> encode(int decoded) async => xmtp.EncodedContent(
-        type: contentTypeInteger,
-        content: Uint8List(8)..buffer.asByteData().setInt64(0, decoded),
+  Map<String, dynamic> toJson() => {
+        'a': a,
+        'b': b,
+      };
+
+  factory NumberPair.fromJson(Map<String, dynamic> json) => NumberPair(
+        (json['a'] as num).toDouble(),
+        (json['b'] as num).toDouble(),
       );
+}
+
+class MultiplyNumberCodec extends xmtp.Codec<double> {
+  @override
+  xmtp.ContentTypeId get contentType => contentTypeMultiplyNumbers;
+
+  @override
+  Future<double> decode(xmtp.EncodedContent encoded) async {
+    String jsonString = utf8.decode(encoded.content);
+    NumberPair numberPair = NumberPair.fromJson(json.decode(jsonString));
+    return numberPair.a * numberPair.b;
+  }
+
+  @override
+  Future<xmtp.EncodedContent> encode(double product) async {
+    // Assuming product is the multiplication of two numbers, adjust as needed
+    NumberPair numberPair = NumberPair(product / 2, 2.0);
+    String jsonString = json.encode(numberPair);
+    return xmtp.EncodedContent(
+      type: contentTypeMultiplyNumbers,
+      content: Uint8List.fromList(utf8.encode(jsonString)),
+    );
+  }
+
   @override
   String? fallback(String content) {
     return "Can't display “${content}”. This app doesn’t support “${content}”";
   }
 }
+
 ```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-const ContentTypeNumber: ContentTypeId = {
-  authorityId: 'yourdomain.org',
-  typeId: 'number',
+import { content } from "@xmtp/proto";
+type EncodedContent = content.EncodedContent;
+type ContentTypeId = content.ContentTypeId;
+
+const ContentTypeMultiplyNumbers = {
+  authorityId: "yourdomain.org",
+  typeId: "multiply-numbers",
   versionMajor: 1,
   versionMinor: 0,
-}
+};
 
-class NumberCodec implements JSContentCodec<number> {
-  contentType = ContentTypeNumber
+class MultiplyNumbersCodec implements JSContentCodec<{ a: number, b: number }> {
+  contentType = ContentTypeMultiplyNumbers;
 
-  // a completely absurd way of encoding number values
-  encode(content: number): EncodedContent {
+  // Encode a pair of numbers
+  encode(content: { a: number, b: number }): EncodedContent {
     return {
-      type: ContentTypeNumber,
-      parameters: {
-        number: JSON.stringify(content),
-      },
-      content: new Uint8Array(),
-    }
-  }
-  decode(encodedContent: EncodedContent): number {
-    return JSON.parse(encodedContent.parameters.number) as number
+      type: ContentTypeMultiplyNumbers,
+      parameters: {},
+      content: new TextEncoder().encode(JSON.stringify(content)),
+    };
   }
 
-  fallback(content: number): string | undefined {
-    return 'A number was sent.'
+  // Decode the content and return the product of the two numbers
+  decode(encodedContent: EncodedContent): number {
+    const contentStr = new TextDecoder().decode(encodedContent.content);
+    const { a, b } = JSON.parse(contentStr);
+    return a * b;
+  }
+
+  fallback(content: { a: number, b: number }): string | undefined {
+    return "A pair of numbers was sent.";
   }
 }
 ```
