@@ -154,6 +154,10 @@ Have you built with a tool that works well with XMTP? Let's add it to this page.
 
 :::
 
+### Does XMTP work with smart contract wallets?
+
+XMTP doesn't currently support smart contract wallets. XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets). It also works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s.
+
 ### Which languages and environments does the XMTP SDK support?
 
 The XMTP SDK is [available for multiple languages](/docs/introduction#xmtp-sdks-and-example-apps#sdks), including JavaScript, Kotlin, Swift, and Dart.
@@ -221,6 +225,12 @@ XMTP provides perceptibly real-time message delivery and retrieval. The network 
 ### Is there a way to get a list of all current XMTP-enabled wallets ?
 
 We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
+
+### Does XMTP support group chat?
+
+Not yet. Despite efforts to build group chat with XMTP v2 (the current protocol version), protocol limitations prevented group chat from meeting XMTP's robust security standards. Efforts have shifted to updating the protocol to support secure group chat. More details to come. 
+
+Have other questions or feedback about group chat? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ## Rate Limiting
 
@@ -461,7 +471,7 @@ const { data: walletClient, isLoading } = useEthersWalletClient();
 
 ### Why my app is failing saying Buffer is not found
 
-If you get into issues with `Buffer` and `polyfills` check out the fix below:
+If you run into issues with `Buffer` and `polyfills`, see these solutions:
 
 1. Install the buffer dependency.
 
@@ -488,7 +498,115 @@ window.Buffer = window.Buffer ?? Buffer;
 import "./polyfills";
 ```
 
-4. Update config files.
+#### Using config files
+
+<details><summary>React Scripts 5</summary>
+
+- **CRACO**: (Create React App Configuration Override) is a community solution for adding custom configurations to Create React App. It allows you to customize your configuration without ejecting from the default setup provided by Create React App.
+
+  **Install react-app-rewired**:
+
+  ```bash
+  npm install craco
+  ```
+
+  Create the `craco.config.js` in your root directory:
+
+  ```jsx
+  const webpack = require("webpack");
+  module.exports = {
+    webpack: {
+      plugins: [
+        new webpack.ProvidePlugin({
+          Buffer: ["buffer", "Buffer"],
+        }),
+      ],
+      resolve: {
+        fallback: {
+          buffer: require.resolve("buffer/"),
+        },
+      },
+    },
+  };
+  ```
+
+- **React-App-Rewired**: `react-app-rewired` is a tool to tweak the Create React App (CRA) configuration without ejecting, similar to CRACO. Here's how you can use it:
+
+  **Install react-app-rewired**:
+
+  ```
+  npm install react-app-rewired
+  ```
+
+  **Modify the `scripts` in your `package.json`**:
+  Replace `react-scripts` with `react-app-rewired`. For example:
+
+  ```json
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  }
+  ```
+
+  **Create a `config-overrides.js` file**:
+  In the root of your project, create a `config-overrides.js` file. This file will be used to modify the webpack config.
+
+  ```javascript
+  const webpack = require("webpack");
+
+  module.exports = function override(config, env) {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      buffer: require.resolve("buffer/"),
+    };
+    config.plugins = (config.plugins || []).concat([
+      new webpack.ProvidePlugin({
+        Buffer: ["buffer", "Buffer"],
+      }),
+    ]);
+    return config;
+  };
+  ```
+
+- **Eject Method**: Ejecting from CRA gives you full control over the configuration, but it's a one-way operation. Once you eject, you can't go back to the abstracted CRA setup.
+
+  **Eject the application**:
+
+  ```
+  npm run eject
+  ```
+
+  **Modify the Webpack Configuration**:
+  After ejecting, you'll have access to the `config` folder. Modify the `webpack.config.js` file:
+
+  ```javascript
+  const webpack = require("webpack");
+
+  // Inside the module.exports object
+  module.exports = {
+    // ... other configurations
+
+    resolve: {
+      // ... other resolve options
+      fallback: {
+        // ... other fallback options
+        buffer: require.resolve("buffer/"),
+      },
+    },
+    plugins: [
+      // ... other plugins
+      new webpack.ProvidePlugin({
+        Buffer: ["buffer", "Buffer"],
+      }),
+    ],
+  };
+  ```
+
+</details>
+
+<details><summary>WEBPACK</summary>
 
 - Webpack: `vue.config.js` or `webpack.config.js`:
 
@@ -507,6 +625,10 @@ module.exports = {
 };
 ```
 
+</details>
+
+<details><summary>VITE</summary>
+
 - Vite: `vite.config.js`:
 
 ```jsx
@@ -524,6 +646,10 @@ export default defineConfig({
 });
 ```
 
+</details>
+
+<details><summary>WEBPACK</summary>
+
 - NuxtJS: `nuxt.config.js`:
 
 ```tsx
@@ -539,3 +665,5 @@ export default {
   },
 };
 ```
+
+</details>

@@ -94,7 +94,12 @@ var registry = CodecRegistry()..registerCodec(ReplyCodec());
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-The React Native SDK already has the codecs registered.
+```jsx
+const client = await Client.create(signer, {
+  env: "production",
+  codecs: [new ReplyCodec()],
+});
+```
 
 </TabItem>
 </Tabs>
@@ -298,16 +303,14 @@ if (decodedContent.contentType == contentTypeReply) {
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-function MessageContents({ content }: { content: MessageContent }) {
-  if (content.reply) {
-    // This is a reply
-    const replyContent = content.reply.content;
-    const messageId = content.reply.reference;
-
-    // Handle the reply content and the referenced message ID
-    // ...
+if (message.contentTypeId === "xmtp.org/reply:1.0") {
+  const reply = message.content();
+  if (reply) {
+    const replyContent: ReplyContent = reply;
+    const replyContentType = replyContent.contentType;
+    const codec = client.codecRegistry[replyContentType];
+    const actualReplyContent = codec.decode(replyContent.content);
   }
-  // ...
 }
 ```
 

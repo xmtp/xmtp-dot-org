@@ -1032,14 +1032,7 @@ ul li a:before {
   width: 24px;
   height: 24px;
 }
-/*TIPS*/
-.alert {
-  border-width: 1px;
-}
-.alert p {
-  font-size: 0.8rem;
-  margin-bottom: 0px !important;
-}
+
 /*code words*/
 code:not([class]) {
   color: #db524c !important;
