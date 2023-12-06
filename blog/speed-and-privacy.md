@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 title: "Navigating speed and privacy with XMTP"
-date: 2023-11-28
+date: 2023-12-06
 authors: eng
 description: "When building apps with XMTP, a common question is how to fetch conversations by the most recent message."
 image: "./media/speed-and-privacy.png"
@@ -13,15 +13,15 @@ tags:
 
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
-### When building apps using XMTP, a common question is how to fetch conversations by the most recent message. 
-
 ![speed-privacy.png](./media/speed-and-privacy.png)
 
-**People are often surprised to learn that this isn’t possible with XMTP! Instead, an app must fetch all conversations up front.**
+### When building apps using XMTP, a common question is how to fetch conversations by the most recent message.
 
 <!--truncate-->
 
-This might initially seem confusing and inefficient. The operation is costly and could potentially create performance bottlenecks for accounts with thousands of conversations. However, this is actually a design choice that stems from XMTP’s deep commitment to privacy. 
+**People are often surprised to learn that this isn’t possible with XMTP! Instead, an app must fetch all conversations up front.**
+
+This might initially seem confusing and inefficient. The operation is costly and could potentially create performance bottlenecks for accounts with thousands of conversations. However, this is actually a design choice that stems from XMTP’s deep commitment to privacy.
 
 XMTP utilizes what's known as an "invite topic" to initiate conversations between participants, and a "conversation topic" for storing the ongoing exchange of messages. Importantly, XMTP avoids any linkage between the messages in the invite topic and those in the conversation topic. Linking these topics would risk de-anonymizing the conversations, something the protocol avoids to protect user privacy. As a result, the sorting and organizing of conversations happens on the client side, after decrypting the conversation topic. This ensures no sensitive information is processed or stored on the backend.
 
@@ -29,6 +29,6 @@ To counter the initial performance impact, apps built with XMTP should **[adopt 
 
 While the first load may take a bit longer, this tradeoff highlights XMTP’s commitment to preserving privacy. The system is designed so that XMTP doesn't know who you're communicating with or when.
 
-Looking ahead, the XMTP Labs engineering is actively exploring solutions to further optimize this process while ensuring that any future enhancements will continue to uphold these stringent privacy standards.
+Looking ahead, the XMTP Labs engineering team is actively exploring solutions to further optimize this process while ensuring that any future enhancements will continue to uphold these stringent privacy standards.
 
 Have any ideas or feedback? Post to the [XMTP Community Forums](https://community.xmtp.org/).
