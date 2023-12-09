@@ -355,28 +355,43 @@ The keys returned by `exportKeyBundle` should be treated with the utmost care as
 
 ## Start from private key
 
-You can start an XMTP from specific wallet key's if you want to maintain the same address.
+You can create an XMTP client with a private key using a compatible client library.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
 import { Client } from "@xmtp/xmtp-js";
-import { Wallet } from "ethers";
 
-let wallet = new Wallet("your_private_key");
+//ethers
+import { Wallet } from "ethers";
+const privateKey = "your_private_key";
+const signer = new Wallet();
+
+//viem
+import { privateKeyToAccount } from "viem/accounts";
+const hexPrivateKey = `0x${privateKey}`;
+const signer = privateKeyToAccount(hexPrivateKey);
+
 // Create the client with a `Signer` from your application
-const xmtp = await Client.create(wallet, { env: "dev" });
+const xmtp = await Client.create(signer, { env: "dev" });
 ```
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-import { Wallet } from "ethers";
 import { useClient } from "@xmtp/react-sdk";
 
-let signer = new Wallet("your_private_key");
+//ethers
+import { Wallet } from "ethers";
+const privateKey = "your_private_key";
+const signer = new Wallet();
+
+//viem
+import { privateKeyToAccount } from "viem/accounts";
+const hexPrivateKey = `0x${privateKey}`;
+const signer = privateKeyToAccount(hexPrivateKey);
 
 //Using react hooks
 const { client, error, isLoading, initialize } = useClient();
@@ -444,8 +459,8 @@ var client =  await xmtp.Client.createFromWallet(api, wallet);
 ```tsx
 import { Client } from "@xmtp/xmtp-react-native";
 import { Wallet } from "ethers";
-let wallet = new Wallet("your_private_key");
-const xmtp = await Client.create(wallet);
+const signer = new Wallet("your_private_key");
+const xmtp = await Client.create(signer);
 ```
 
 </TabItem>
