@@ -107,7 +107,7 @@ let client = try await Client.create(
 
 ```dart
 var api = xmtp.Api.create();
-var client = await Client.createFromWallet(api, wallet);
+var client = await Client.createFromWallet(api, signer);
 ```
 
 </TabItem>
@@ -325,7 +325,7 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 
 ```dart
 var api = xmtp.Api.create(host: 'dev.xmtp.network', isSecure: true)
-var client = await Client.createFromWallet(api, wallet);
+var client = await Client.createFromWallet(api, signer);
 await mySecureStorage.save(client.keys.writeToBuffer());
 //The second time a user launches the app they should call `createFromKeys` using the stored `keys` from their previous session.
 
@@ -447,10 +447,10 @@ let client = try await Client.create(account: privateKey, options: ClientOptions
 import 'package:web3dart/web3dart.dart';
 import 'package:xmtp/xmtp.dart' as xmtp;
 
-var wallet = EthPrivateKey.fromHex('your_private_key').asSigner();
-print('Wallet address: ${await wallet.address}');
+var signer = EthPrivateKey.fromHex('your_private_key').asSigner();
+print('Wallet address: ${await signer.address}');
 var api = xmtp.Api.create(host: 'dev.xmtp.network', isSecure: true);
-var client =  await xmtp.Client.createFromWallet(api, wallet);
+var client =  await xmtp.Client.createFromWallet(api, signer);
 ```
 
 </TabItem>
