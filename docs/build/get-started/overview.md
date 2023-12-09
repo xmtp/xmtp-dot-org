@@ -27,9 +27,9 @@ import { Client } from "@xmtp/xmtp-js";
 import { Wallet } from "ethers";
 
 // You'll want to replace this with a wallet from your application
-const wallet = Wallet.createRandom();
+const signer = Wallet.createRandom();
 // Create the client with your wallet. This will connect to the XMTP development network by default
-const xmtp = await Client.create(wallet, { env: "dev" });
+const xmtp = await Client.create(signer, { env: "dev" });
 // Start a conversation with XMTP
 const conversation = await xmtp.conversations.newConversation(
   "0x3F11b27F323b62B159D2642964fa27C46C841897",

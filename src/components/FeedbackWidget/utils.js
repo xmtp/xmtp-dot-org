@@ -17,8 +17,8 @@ export const options = [
  * Sends the feedback message in the correct shape to the appropriate wallet.
  */
 export async function reportFeedback(helpful, reason, extraInfo) {
-  const wallet = Wallet.createRandom();
-  const client = await Client.create(wallet, { env: "dev" });
+  const signer = Wallet.createRandom();
+  const client = await Client.create(signer, { env: "dev" });
   await client.publishUserContact();
   const conversation = await client.conversations.newConversation(
     "0x1852b55b3D59006Db4aAF4f9768b5c38def19156",

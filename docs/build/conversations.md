@@ -332,7 +332,7 @@ To disable this behavior, set the `persistConversations` client option to `false
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```ts
-const clientWithNoCache = await Client.create(wallet, {
+const clientWithNoCache = await Client.create(signer, {
   persistConversations: false,
 });
 ```
@@ -352,12 +352,12 @@ await initialize({ signer, options });
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-val client = Client().create(wallet, { env: "dev" })
+val client = Client().create(signer, { env: "dev" })
 val conversations = client.conversations.export()
 saveConversationsSomewhere(JSON.stringify(conversations))
 // To load the conversations in a new SDK instance you can run:
 
-val client = Client.create(wallet, { env: "dev" })
+val client = Client.create(signer, { env: "dev" })
 val conversations = JSON.parse(loadConversationsFromSomewhere())
 val client.importConversation(conversations)
 ```

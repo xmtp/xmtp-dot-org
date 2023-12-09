@@ -100,9 +100,9 @@ Read receipts for Dart haven't been implemented yet.
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-const client = await Client.create(wallet, {
+const client = await Client.create(signer, {
   env: "production",
-  codecs: [new XMTP.ReadReceiptCodec()],
+  codecs: [new ReadReceiptCodec()],
 });
 ```
 
@@ -252,7 +252,7 @@ Read receipts for Dart haven't been implemented yet
 
 ```jsx
 if (message.contentTypeId === "xmtp.org/readReceipt:1.0") {
-  return content.timestamp; //Date received
+  return message.sent; //Date received
 }
 ```
 

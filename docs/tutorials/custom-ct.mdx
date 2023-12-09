@@ -13,8 +13,6 @@ Building a custom content type enables you to manage data in a way that is more 
 
 For more common content types, you can usually find a [standard](/docs/concepts/content-types#standard-content-types) or [standards-track](/docs/concepts/content-types#standards-track-content-types) content type to serve your needs.
 
-If another developer wants to display your custom content type in their app, they must implement it exactly as you've defined it in your code.
-
 If your custom content type generates interest within the developer community, consider proposing it as a standard content type through the [XIP process](/docs/concepts/xips).
 
 This tutorial covers how to build two example custom content types:
@@ -112,7 +110,7 @@ class NumberCodec implements JSContentCodec<number> {
 ```jsx
 import { ContentTypeMultiplyNumberCodec } from "./xmtp-content-type-multiply-number";
 
-const xmtp = await Client.create(wallet, {
+const xmtp = await Client.create(signer, {
   env: "dev",
 });
 xmtp.registerCodec(new ContentTypeMultiplyNumberCodec());
@@ -170,14 +168,14 @@ if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
+Because of this message content is now a function which returns the actual content. You can get that content by call `message.content()` now instead of message.content . This may involve more filtering on the message side to make sure you are handling different contentTypes appropriately.
+
 ```jsx
 if (message.contentTypeId === "yourdomain.org/number:1.0") {
-  return message.content; // 12
+  return message.content(); // 12
 }
 ```
 
-</TabItem>
-</Tabs>
 
 ## Advanced: Send token transaction hashes
 
@@ -232,7 +230,7 @@ import {
   ContentTypeTransactionHashCodec,
 } from "./xmtp-content-type-transaction-hash";
 
-const xmtp = await Client.create(wallet, {
+const xmtp = await Client.create(signer, {
   env: "dev",
 });
 xmtp.registerCodec(new ContentTypeTransactionHashCodec());

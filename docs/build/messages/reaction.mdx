@@ -99,9 +99,9 @@ var registry = CodecRegistry()..registerCodec(ReactionCodec());
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-const client = await Client.create(wallet, {
+const client = await Client.create(signer, {
   env: "production",
-  codecs: [new XMTP.ReactionCodec()],
+  codecs: [new ReactionCodec()],
 });
 ```
 
@@ -301,7 +301,12 @@ var decoded = await codec.decode(encoded);
 
 ```jsx
 if (message.contentTypeId === "xmtp.org/reaction:1.0") {
-  return message.content;
+  const reaction = await message.content();
+  return reaction;
+  //reaction.reference = id of the message being reacted to,
+  //reaction.action = 'added',
+  //reaction.schema =  'unicode',
+  //reaction.content = '💖',
 }
 ```
 
