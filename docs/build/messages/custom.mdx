@@ -1,0 +1,519 @@
+---
+sidebar_label: Custom
+sidebar_position: 10
+description: Learn how to build custom content types for use with XMTP
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Build custom content types for use with XMTP
+
+:::caution
+
+Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
+
+:::
+
+Building a custom content type enables you to manage data in a way that is more personalized or specialized to the needs of your app.
+
+For more common content types, you can usually find a [standard](/docs/concepts/content-types#standard-content-types) or [standards-track](/docs/concepts/content-types#standards-track-content-types) content type to serve your needs.
+
+If your custom content type generates interest within the developer community, consider proposing it as a standard content type through the [XIP process](/docs/concepts/xips).
+
+## Create the content type
+
+Create the custom content type by creating a new file
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+import { ContentTypeId } from "@xmtp/xmtp-js";
+
+// Create a unique identifier for your content type
+const ContentTypeMultiplyNumbers = new ContentTypeId({
+  authorityId: "your.domain",
+  typeId: "multiply-number",
+  versionMajor: 1,
+  versionMinor: 0,
+});
+
+// Define the MultiplyCodec class
+class ContentTypeMultiplyNumberCodec {
+  get contentType() {
+    return ContentTypeMultiplyNumbers;
+  }
+
+  // The encode method accepts an object with two numbers (a, b) and encodes it as a byte array
+  encode({ a, b }) {
+    return {
+      type: ContentTypeMultiplyNumbers,
+      parameters: {},
+      content: new TextEncoder().encode(JSON.stringify({ a, b })),
+    };
+  }
+
+  // The decode method decodes the byte array, parses the string into numbers (a, b), and returns their product
+  decode(content: { content: any }) {
+    const uint8Array = content.content;
+    const { a, b } = JSON.parse(new TextDecoder().decode(uint8Array));
+    return a * b;
+  }
+
+  fallback(content: string): string | undefined {
+    return `Can’t display "${content}". This app doesn’t support "${content}".`;
+    //return undefined; if you don't want the content type to be displayed.
+  }
+}
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+The React SDK supports all current standards-track content types, but only text messages are enabled out of the box. Adding support for other standards-track content types requires a bit of configuration.
+
+```jsx
+import { ContentTypeId } from "@xmtp/react-sdk";
+
+// Create a unique identifier for your content type
+const ContentTypeMultiplyNumbers = new ContentTypeId({
+  authorityId: "your.domain",
+  typeId: "multiply-number",
+  versionMajor: 1,
+  versionMinor: 0,
+});
+
+// Define the MultiplyCodec class
+class ContentTypeMultiplyNumberCodec {
+  get contentType() {
+    return ContentTypeMultiplyNumbers;
+  }
+
+  // The encode method accepts an object with two numbers (a, b) and encodes it as a byte array
+  encode({ a, b }) {
+    return {
+      type: ContentTypeMultiplyNumbers,
+      parameters: {},
+      content: new TextEncoder().encode(JSON.stringify({ a, b })),
+    };
+  }
+
+  // The decode method decodes the byte array, parses the string into numbers (a, b), and returns their product
+  decode(content: { content: any }) {
+    const uint8Array = content.content;
+    const { a, b } = JSON.parse(new TextDecoder().decode(uint8Array));
+    return a * b;
+  }
+
+  fallback(content: string): string | undefined {
+    return `Can’t display "${content}". This app doesn’t support "${content}".`;
+    //return undefined; if you don't want the content type to be displayed.
+  }
+}
+
+export const multiplyNumbersContentTypeConfig: ContentTypeConfiguration = {
+  codecs: [new ContentTypeMultiplyNumberCodec()],
+  contentTypes: [ContentTypeMultiplyNumbers.toString()],
+  namespace: NAMESPACE, // Replace with the actual namespace you are using
+  processors: {
+    [ContentTypeMultiplyNumbers.toString()]: [processMultiplyNumbers],
+  },
+  validators: {
+    [ContentTypeMultiplyNumbers.toString()]: isValidMultiplyNumbersContent,
+  },
+};
+
+// You'll need to define the processMultiplyNumbers and isValidMultiplyNumbersContent functions
+// These should be tailored to handle the specific logic of processing and validating
+// the content type for multiplying numbers.
+
+function processMultiplyNumbers(content) {
+  // Define how to process the multiply numbers content
+  // Example: logging, storing, or manipulating the data
+}
+
+function isValidMultiplyNumbersContent(content) {
+  // Define validation logic for multiply numbers content
+  // Example: checking if the numbers are valid, not null, etc.
+}
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+import org.xmtp.android.library.codecs.ContentTypeId
+import org.xmtp.android.library.codecs.ContentTypeIdBuilder
+import org.xmtp.android.library.codecs.ContentCodec
+import org.xmtp.android.library.codecs.EncodedContent
+import kotlinx.serialization.*
+import kotlinx.serialization.json.*
+
+@Serializable
+data class NumberPair(val a: Double, val b: Double)
+
+data class MultiplyNumberCodec(
+    override var contentType: ContentTypeId = ContentTypeIdBuilder.builderFromAuthorityId(
+        authorityId = "your.domain",
+        typeId = "multiply-number",
+        versionMajor = 1,
+        versionMinor = 0
+    )
+) : ContentCodec<Double> {
+    override fun encode(content: NumberPair): EncodedContent {
+        return EncodedContent.newBuilder().also {
+            it.type = contentType
+            it.content = Json.encodeToString(numberPair).toByteStringUtf8()
+        }.build()
+    }
+
+    override fun decode(content: EncodedContent): Double {
+        val numberPair = Json.decodeFromString<NumberPair>(content.content.toStringUtf8())
+        return numberPair.a * numberPair.b
+    }
+
+    override fun fallback(content: Double): String? {
+        return "Error: This app does not support numbers."
+    }
+}
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```Swift
+import XMTP
+
+// Define a structure to represent a pair of numbers
+struct NumberPair: Codable {
+    let a: Double
+    let b: Double
+}
+
+struct MultiplyNumberCodec: ContentCodec {
+    typealias T = Double
+
+    var contentType: XMTP.ContentTypeID {
+        ContentTypeID(authorityID: "your.domain", typeID: "multiply-number", versionMajor: 1, versionMinor: 0)
+    }
+
+    func encode(content: Codable, client _: Client) throws -> XMTP.EncodedContent {
+        var encodedContent = EncodedContent()
+        encodedContent.type = ContentTypeID(authorityID: "your.domain", typeID: "multiply-number", versionMajor: 1, versionMinor: 0)
+        encodedContent.content = try JSONEncoder().encode(content)
+        return encodedContent
+    }
+
+    func decode(content: XMTP.EncodedContent, client _: Client) throws -> Double {
+        let numberPair = try JSONDecoder().decode(NumberPair.self, from: content.content)
+        return numberPair.a * numberPair.b
+    }
+
+    func fallback(content: Double) throws -> String? {
+        return "Error: This app does not support numbers."
+    }
+}
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+import 'dart:convert';
+import 'dart:typed_data';
+import 'package:xmtp/xmtp.dart' as xmtp;
+
+final contentTypeMultiplyNumbers = xmtp.ContentTypeId(
+  authorityId: "com.example",
+  typeId: "multiply-number",
+  versionMajor: 1,
+  versionMinor: 0,
+);
+
+class NumberPair {
+  final double a;
+  final double b;
+
+  NumberPair(this.a, this.b);
+
+  Map<String, dynamic> toJson() => {
+        'a': a,
+        'b': b,
+      };
+
+  factory NumberPair.fromJson(Map<String, dynamic> json) => NumberPair(
+        (json['a'] as num).toDouble(),
+        (json['b'] as num).toDouble(),
+      );
+}
+
+class MultiplyNumberCodec extends xmtp.Codec<double> {
+  @override
+  xmtp.ContentTypeId get contentType => contentTypeMultiplyNumbers;
+
+  @override
+  Future<double> decode(xmtp.EncodedContent encoded) async {
+    String jsonString = utf8.decode(encoded.content);
+    NumberPair numberPair = NumberPair.fromJson(json.decode(jsonString));
+    return numberPair.a * numberPair.b;
+  }
+
+  @override
+  Future<xmtp.EncodedContent> encode(NumberPair content) async {
+    String jsonString = json.encode(content);
+    return xmtp.EncodedContent(
+      type: contentTypeMultiplyNumbers,
+      content: Uint8List.fromList(utf8.encode(jsonString)),
+    );
+  }
+
+  @override
+  String? fallback(String content) {
+    return "Can't display “${content}”. This app doesn’t support “${content}”";
+  }
+}
+
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+import { content } from "@xmtp/proto";
+type EncodedContent = content.EncodedContent;
+type ContentTypeId = content.ContentTypeId;
+
+const ContentTypeMultiplyNumbers = {
+  authorityId: "your.domain",
+  typeId: "multiply-numbers",
+  versionMajor: 1,
+  versionMinor: 0,
+};
+
+class MultiplyNumbersCodec implements JSContentCodec<{ a: number, b: number }> {
+  contentType = ContentTypeMultiplyNumbers;
+
+  // Encode a pair of numbers
+  encode(content: { a: number, b: number }): EncodedContent {
+    return {
+      type: ContentTypeMultiplyNumbers,
+      parameters: {},
+      content: new TextEncoder().encode(JSON.stringify(content)),
+    };
+  }
+
+  // Decode the content and return the product of the two numbers
+  decode(encodedContent: EncodedContent): number {
+    const contentStr = new TextDecoder().decode(encodedContent.content);
+    const { a, b } = JSON.parse(contentStr);
+    return a * b;
+  }
+
+  fallback(content: { a: number, b: number }): string | undefined {
+    return "A pair of numbers was sent.";
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Configure the content types
+
+Import and register the custom content type.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+import { ContentTypeMultiplyNumberCodec } from "./xmtp-content-type-multiply-number";
+
+const xmtp = await Client.create(signer, {
+  env: "dev",
+});
+xmtp.registerCodec(new ContentTypeMultiplyNumberCodec());
+```
+
+</TabItem>
+
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+The React SDK supports all current standards-track content types, but only text messages are enabled out of the box. Adding support for other standards-track content types requires a bit of configuration.
+
+```jsx
+import {
+  XMTPProvider,
+} from "@xmtp/react-sdk";
+
+import {multiplyNumbersContentTypeConfig} from "./xmtp-content-type-multiply-number";
+
+const contentTypeConfigs = [
+  multiplyNumbersContentTypeConfig,
+];
+
+createRoot(document.getElementById("root") as HTMLElement).render(
+  <StrictMode>
+    <XMTPProvider contentTypeConfigs={contentTypeConfigs}>
+      <App />
+    </XMTPProvider>
+  </StrictMode>,
+);
+```
+
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+import org.xmtp.android.library.codecs.ContentTypeMultiplyNumberCodec
+
+Client.register(codec = ContentTypeMultiplyNumberCodec())
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+Client.register(codec: ContentTypeMultiplyNumberCodec());
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+import 'package:xmtp/src/content/multiply_number_codec.dart';
+import 'package:xmtp/src/content/codec_registry.dart';
+
+var registry = CodecRegistry()..registerCodec(ContentTypeMultiplyNumberCodec());
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+import { NumberCodec } from "./xmtp-content-type-number";
+
+const client = await Client.create({
+  env: "production",
+  codecs: [new NumberCodec()],
+});
+```
+
+</TabItem>
+</Tabs>
+
+## Send the content
+
+Send a message using the custom content type. This code sample demonstrates how to use the `MultiplyCodec` custom content type to perform multiplication operations.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+const numbersToMultiply = { a: 3, b: 7 };
+
+conversation.send(numbersToMultiply, {
+  contentType: ContentTypeMultiplyNumbers,
+});
+```
+
+</TabItem>
+
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+const numbersToMultiply = { a: 3, b: 7 };
+
+conversation.send(numbersToMultiply, {
+  contentType: ContentTypeMultiplyNumbers,
+});
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+import org.xmtp.android.library.codecs.ContentTypeMultiplyNumberCodec
+
+val numbers = NumberPair(
+    a = 3,
+    b = 7,
+)
+
+conversation.send(
+    content = numbers,
+    options = SendOptions(contentType = ContentTypeMultiplyNumberCodec().contentType),
+)
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let reaction = Reaction(
+    reference: messageToReact.id,
+    action: .added,
+    content: "U+1F603",
+    schema: .unicode
+)
+
+try await aliceConversation.send(
+  content: 3.14,
+  options: .init(contentType: NumberCodec().contentType))
+
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+val reaction = Reaction(
+    reference = messageToReact.id,
+    action = ReactionAction.added,
+    content = "U+1F603",
+    schema = ReactionSchema.unicode
+)
+
+conversation.send(
+    content = reaction,
+    options = SendOptions(contentType = ContentTypeReaction),
+)
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+await conversation.send(12, { contentType: ContentTypeNumber });
+```
+
+</TabItem>
+</Tabs>
+
+## Receive the content
+
+To use the result of the multiplication operation, add a renderer for the custom content type.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
+  return message.content; // 21
+}
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Because of this message content is now a function which returns the actual content. You can get that content by call `message.content()` now instead of message.content . This may involve more filtering on the message side to make sure you are handling different contentTypes appropriately.
+
+```jsx
+if (message.contentTypeId === "your.domain/number:1.0") {
+  return message.content(); // 12
+}
+```
+
+</TabItem>
+</Tabs>
