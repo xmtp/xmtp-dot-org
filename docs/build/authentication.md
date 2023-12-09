@@ -363,9 +363,10 @@ You can create an XMTP client with a private key using a compatible client libra
 ```ts
 import { Client } from "@xmtp/xmtp-js";
 
+const privateKey = "your_private_key";
+
 //ethers
 import { Wallet } from "ethers";
-const privateKey = "your_private_key";
 const signer = new Wallet();
 
 //viem
@@ -383,9 +384,10 @@ const xmtp = await Client.create(signer, { env: "dev" });
 ```tsx
 import { useClient } from "@xmtp/react-sdk";
 
+const privateKey = "your_private_key";
+
 //ethers
 import { Wallet } from "ethers";
-const privateKey = "your_private_key";
 const signer = new Wallet();
 
 //viem
