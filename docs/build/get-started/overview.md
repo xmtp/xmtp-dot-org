@@ -153,9 +153,9 @@ import 'package:xmtp/xmtp.dart' as xmtp;
 import 'package:web3dart/credentials.dart';
 import 'dart:math';
 
-var wallet = EthPrivateKey.createRandom(Random.secure());
+var signer = EthPrivateKey.createRandom(Random.secure());
 var api = xmtp.Api.create();
-var client = await xmtp.Client.createFromWallet(api, wallet);
+var client = await xmtp.Client.createFromWallet(api, signer);
 
 //List conversations
 var conversations = await client.listConversations();

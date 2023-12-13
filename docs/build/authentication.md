@@ -4,6 +4,8 @@ sidebar_position: 2
 description: Learn how to create and configure an XMTP client
 ---
 
+import USubscribe from '/src/components/USubscribe/index'
+
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
@@ -105,7 +107,7 @@ let client = try await Client.create(
 
 ```dart
 var api = xmtp.Api.create();
-var client = await Client.createFromWallet(api, wallet);
+var client = await Client.createFromWallet(api, signer);
 ```
 
 </TabItem>
@@ -119,8 +121,6 @@ const xmtp = await Client.create(signer);
 
 </TabItem>
 </Tabs>
-
-import USubscribe from '/src/components/USubscribe/index'
 
 Example:
 
@@ -325,7 +325,7 @@ let client = try Client.from(bundle: keys, options: .init(api: .init(env: .produ
 
 ```dart
 var api = xmtp.Api.create(host: 'dev.xmtp.network', isSecure: true)
-var client = await Client.createFromWallet(api, wallet);
+var client = await Client.createFromWallet(api, signer);
 await mySecureStorage.save(client.keys.writeToBuffer());
 //The second time a user launches the app they should call `createFromKeys` using the stored `keys` from their previous session.
 
@@ -349,6 +349,121 @@ const client = await Client.createFromKeyBundle(keys, "dev");
 ```
 
 The keys returned by `exportKeyBundle` should be treated with the utmost care as compromise of these keys will allow an attacker to impersonate the user on the XMTP network. Ensure these keys are stored somewhere secure and encrypted.
+
+</TabItem>
+</Tabs>
+
+## Start from private key
+
+You can create an XMTP client with a private key using a compatible client library.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```ts
+import { Client } from "@xmtp/xmtp-js";
+
+const privateKey = "your_private_key";
+
+//ethers
+import { Wallet } from "ethers";
+const signer = new Wallet();
+
+//viem
+import { privateKeyToAccount } from "viem/accounts";
+const hexPrivateKey = `0x${privateKey}`;
+const signer = privateKeyToAccount(hexPrivateKey);
+
+// Create the client with a `Signer` from your application
+const xmtp = await Client.create(signer, { env: "dev" });
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```tsx
+import { useClient } from "@xmtp/react-sdk";
+
+const privateKey = "your_private_key";
+
+//ethers
+import { Wallet } from "ethers";
+const signer = new Wallet();
+
+//viem
+import { privateKeyToAccount } from "viem/accounts";
+const hexPrivateKey = `0x${privateKey}`;
+const signer = privateKeyToAccount(hexPrivateKey);
+
+//Using react hooks
+const { client, error, isLoading, initialize } = useClient();
+await initialize({ keys, options, signer });
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+// Create the client with a `SigningKey` from your app
+val options =
+    ClientOptions(
+        api = ClientOptions.Api(env = XMTPEnvironment.PRODUCTION, isSecure = true)
+    )
+val client = Client().create(account = account, options = options)
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+func dataFromHexString(_ hex: String) -> Data? {
+    var data = Data(capacity: hex.count / 2)
+    var buffer = 0
+    var index = 0
+    for char in hex {
+        if let value = char.hexDigitValue {
+            if index % 2 == 0 {
+                buffer = value << 4
+            } else {
+                buffer |= value
+                data.append(UInt8(buffer))
+            }
+            index += 1
+        } else {
+            return nil
+        }
+    }
+    return data
+}
+
+let privateKeyString = "your_private_key"
+if let privateKeyData = dataFromHexString(privateKeyString) {
+let privateKey = try PrivateKey(privateKeyData)
+let client = try await Client.create(account: privateKey, options: ClientOptions(api: .init(env: .production)))
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+import 'package:web3dart/web3dart.dart';
+import 'package:xmtp/xmtp.dart' as xmtp;
+
+var signer = EthPrivateKey.fromHex('your_private_key').asSigner();
+print('Wallet address: ${await signer.address}');
+var api = xmtp.Api.create(host: 'dev.xmtp.network', isSecure: true);
+var client =  await xmtp.Client.createFromWallet(api, signer);
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```tsx
+import { Client } from "@xmtp/xmtp-react-native";
+import { Wallet } from "ethers";
+const signer = new Wallet("your_private_key");
+const xmtp = await Client.create(signer);
+```
 
 </TabItem>
 </Tabs>
