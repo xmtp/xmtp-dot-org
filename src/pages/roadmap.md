@@ -24,11 +24,10 @@ Timelines are estimates and subject to change. For information about delivered f
 
 - [Group chat via MLS](https://github.com/xmtp/roadmap/milestone/2) in production
 - [XMTP testnet](https://github.com/xmtp/roadmap/milestone/7) in production
-- [1:1 chats via MLS](https://github.com/xmtp/roadmap/milestone/3) in production
 
 ### Q3
 
-- [XMTP fully using MLS](https://github.com/xmtp/roadmap/milestone/4) in production
+- [1:1 chats via MLS](https://github.com/xmtp/roadmap/milestone/3) in production
 - [XMTP mainnet](https://github.com/xmtp/roadmap/milestone/8) in alpha
 
 ### Q4
