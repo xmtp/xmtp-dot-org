@@ -10,6 +10,14 @@ This changelog provides information about release milestones for XMTP SDKs, deve
 
 ---
 
+#### Dec 2023
+
+## [React Native client SDK](https://github.com/xmtp/xmtp-react-native) v1.21.0 released (xmtp-react-native)
+
+This release introduces support for custom content types and a breaking change to message content. **[Read the release notes](https://github.com/xmtp/xmtp-react-native/releases/tag/v1.21.0)** (Dec 1)
+
+---
+
 #### Oct 2023
 
 ## [React Native client SDK](https://github.com/xmtp/xmtp-react-native) is Production Ready (xmtp-react-native)
