@@ -351,8 +351,6 @@ As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and 
 
 Each content type includes a `contentFallback` property. This property provides a string that describes the expected value of the content type. Note that content fallbacks are immutable and are set by default in the protocol. If you are creating custom content types, you have the option to include a custom fallback. For more information on this, please visit the [Custom Content Type Tutorial](/docs/tutorials/custom-ct).
 
-_Note: `Composite` and `ReadReceipts` have an `undefined` `fallback`, indicating the message is not expected to be displayed._
-
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
@@ -429,3 +427,5 @@ if (!isRegistered) {
 
 </TabItem>
 </Tabs >
+
+_Note: `Composite` and `ReadReceipts` have an `undefined` fallback, indicating the message is not expected to be displayed._
