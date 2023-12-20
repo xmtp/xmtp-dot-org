@@ -400,6 +400,8 @@ if(!codec){
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
+Dart doesnt have a public method for checking if the content type is registered. Instead the decode function uses this method internally and returns the `encoded.fallback` if exists.
+
 ```jsx
 import 'package:xmtp_proto/xmtp_proto.dart' as xmtp;
 import 'package:xmtp/src/content/codec_registry.dart';
