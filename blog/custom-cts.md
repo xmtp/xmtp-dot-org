@@ -17,7 +17,7 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 ![let it snow screen effect in xmtp.chat](./media/snow-cover.png)
 
-As we celebrate the holiday season, we’re excited to showcase the flexibility of XMTP with a whimsical winter-themed ScreenEffect in the [xmtp.chat](https://xmtp.chat/) example app. 
+As we celebrate the holiday season, we’re excited to showcase the flexibility of XMTP with a whimsical winter-themed ScreenEffect in the [xmtp.chat](https://xmtp.chat/) example app.
 
 <!--truncate-->
 
@@ -29,7 +29,7 @@ Interested in how it works? Simply long-press the send button in the app and cho
 
 Custom content types in XMTP empower developers to enrich their app's capabilities and can ultimately **elevate the entire XMTP ecosystem**.
 
-Differing from standard content types, custom content types like this one don't require formal adoption through the XIP process because they’re still considered “experimental.” 
+Differing from standard content types, custom content types like this one don't require formal adoption through the XIP process because they’re still considered “experimental.”
 
 This opens the door for immediate experimentation and use in your own projects. Creating a custom content type can be a helpful first step toward getting a new content type adopted as an XMTP standard through the [XIP process](https://github.com/xmtp/XIPs).
 
@@ -41,7 +41,7 @@ Curious about crafting your own custom content type to share with other XMTP app
 
 Here's a quick glossary of fields that are required for all content types:
 
-- `authorityId`: Identifies the entity that governs the content type, its definition, and implementation. Authority ID should be unique and widely recognized as belonging to the entity. DNS domains or ENS names can serve this purpose (e.g. `alix.eth`). The `xmtp.org` authority ID is reserved for standard content types, as well as this custom content type used for demonstration purposes.
+- `authorityId`: Identifies the entity that governs the content type, its definition, and implementation. Authority ID should be unique and widely recognized as belonging to the entity. DNS domains or ENS names can serve this purpose (e.g. `alix.eth`). The `xmtp.org` authority ID is reserved for standard content types.
 
 - `typeId`: Identifies the particular type of content that can be handled by a specific implementation of the content type’s encoding/decoding rules.
 
@@ -67,13 +67,13 @@ export const ContentTypeScreenEffect = new ContentTypeId({
 });
 
 export type ScreenEffect = {
-  messageId: string;
-  effectType: EffectType;
+  messageId: string,
+  effectType: EffectType,
 };
 
 export type ScreenEffectParameters = Pick<
   ScreenEffect,
-  "messageId" | "effectType"
+  "messageId" | "effectType",
 >;
 
 export class ScreenEffectCodec
@@ -119,7 +119,7 @@ export class ScreenEffectCodec
 
 ## 💡 Try it and give us feedback!
 
-Whether you want to give the ScreenEffect content type a spin in your own app, or if you want to try out your own, let us know what you learn! 
+Whether you want to give the ScreenEffect content type a spin in your own app, or if you want to try out your own, let us know what you learn!
 
 The XMTP core team has done some experimenting already and found it very illuminating, so we’d love to hear anything you run into as you try these out as well.
 
