@@ -1591,3 +1591,7 @@ li > a.new::after {
   overflow-x: auto !important;
   max-height: 500px;
 }
+/*ask ai*/
+.DocSearch {
+  display: none;
+}
