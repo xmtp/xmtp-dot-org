@@ -14,7 +14,7 @@ Use these reference docs as comprehensive guides to integrating the capabilities
 
 - [Kotlin SDK reference docs](https://xmtp.github.io/xmtp-android/) - `xmtp-android`
 
-- [Swift SDK reference docs](https://xmtp.github.io/xmtp-ios/documentation/xmtp) - `xmtp-ios`
+- [Swift SDK reference docs](https://xmtp.github.io/xmtp-ios/) - `xmtp-ios`
 
 - [Dart SDK reference docs](https://pub.dev/documentation/xmtp/latest/xmtp/Client-class.html) - `xmtp-flutter`
 
