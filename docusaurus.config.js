@@ -32,7 +32,7 @@ const config = {
       "data-project-logo":
         "https://avatars.githubusercontent.com/u/82580170?s=280&v=4",
       "data-modal-example-questions":
-        "How sdo sI send a remote attachment?,Is XMTP Decentralized?, Do you have group chats?",
+        "How do I send a remote attachment?,Is XMTP Decentralized?, Do you have group chats?",
       "data-button-position-bottom": "120px",
       "data-button-hide": "true",
       "data-modal-override-open-class": "DocSearch",
