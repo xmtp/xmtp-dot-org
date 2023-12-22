@@ -49,7 +49,7 @@ Here's a quick glossary of fields that are required for all content types:
 
 - `fallback`: Provides a way to display an alt-like text description in an app that doesn’t support a content type. However, in this case, we set `fallback` to `undefined` because displaying an alt-text description provides little value and may even be considered noise. Additionally, the `undefined` value enables apps to filter out your custom content type if they don’t support it.
 
-The `parameters.messageId` and `parameters.effectType` parameters are used specifically for this content type and identify which effect to run when a particular message is being rendered.
+The `parameters.messageId` and `parameters.effectType` parameters are used specifically for this content type and identify which message a particular message is attached to in case you need any information from it to run your effect.
 
 Here’s the full code block for the ScreenEffect content type:
 
