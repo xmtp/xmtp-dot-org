@@ -29,8 +29,6 @@ Create the custom content type by creating a new file
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```jsx
-import { ContentTypeId } from "@xmtp/xmtp-js";
-
 // Create a unique identifier for your content type
 const ContentTypeMultiplyNumbers = new ContentTypeId({
   authorityId: "your.domain",
@@ -46,7 +44,7 @@ class ContentTypeMultiplyNumberCodec {
   }
 
   // The encode method accepts an object with two numbers (a, b) and encodes it as a byte array
-  encode({ a, b }) {
+  encode({ a, b }: { a: number, b: number }) {
     return {
       type: ContentTypeMultiplyNumbers,
       parameters: {},
@@ -61,12 +59,16 @@ class ContentTypeMultiplyNumberCodec {
     return a * b;
   }
 
-  fallback(content: string): string | undefined {
-    return `Can’t display "${content}". This app doesn’t support "${content}".`;
+  fallback(content: number): string | undefined {
+    return `Can’t display number content types. Number was ${JSON.stringify(
+      content,
+    )}`;
     //return undefined; if you don't want the content type to be displayed.
   }
 }
 ```
+
+_Test: A test of this content type can be found in the following [PR](https://github.com/xmtp/xmtp-js/pull/509/files)_
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
