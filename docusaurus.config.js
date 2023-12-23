@@ -35,7 +35,7 @@ const config = {
         "How do I send a remote attachment?,Is XMTP Decentralized?, Do you have group chats?",
       "data-button-position-bottom": "120px",
       "data-button-hide": "true",
-      "data-modal-override-open-class": "DocSearch",
+      "data-modal-override-open-class": "ask_gpt",
       "data-search-mode-default": "false",
       "data-search-mode-enabled": "true",
       "data-search-include-source-names": "true",
@@ -258,6 +258,12 @@ const config = {
             title: "Go to the XMTP GitHub repo",
             position: "right",
             className: "header-github-link",
+          },
+          {
+            type: "html",
+            position: "right",
+            value:
+              '<button type="button" class="navbar__chatbutton ask_gpt"><strong>Ask AI</strong></button>',
           },
         ],
       },

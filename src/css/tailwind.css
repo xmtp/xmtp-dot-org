@@ -1593,5 +1593,15 @@ li > a.new::after {
 }
 /*ask ai*/
 .DocSearch {
-  display: none;
+  /*display: none;*/
+}
+
+.ask_gpt {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.ask_gpt:hover {
+  background-color: black;
+  color: white;
 }
