@@ -108,7 +108,7 @@ const client = await Client.create(signer, {
 </TabItem>
 </Tabs>
 
-## Send a reaction
+## Create a reaction
 
 With XMTP, reactions are represented as objects with the following keys:
 
@@ -161,25 +161,9 @@ await conversation.send(reaction, {
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-import org.xmtp.android.library.codecs.ContentTypeReaction
-import org.xmtp.android.library.codecs.EncodedContent
-import org.xmtp.android.library.codecs.Reaction
-import org.xmtp.android.library.codecs.ReactionAction
-import org.xmtp.android.library.codecs.ReactionCodec
-import org.xmtp.android.library.codecs.ReactionSchema
 import org.xmtp.android.library.codecs.ReactionCodec
 
-val reaction = Reaction(
-    reference = messageToReact.id,
-    action = ReactionAction.Added,
-    content = "U+1F603",
-    schema = ReactionSchema.Unicode
-)
-
-conversation.send(
-    content = reaction,
-    options = SendOptions(contentType = ContentTypeReaction),
-)
+Client.register(codec = ReactionCodec())
 ```
 
 </TabItem>

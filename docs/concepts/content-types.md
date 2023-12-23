@@ -171,7 +171,7 @@ Fallback plain text is "alt text"-like description text that you can associate w
 
 Here are tutorials you can use to learn how to create custom content types:
 
-### [Basic: Number](/docs/build/messages/custom)
+### [Basic: Multiply Number](/docs/build/messages/custom)
 
 Create a custom content type used to multiply numbers.
 
