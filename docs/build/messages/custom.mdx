@@ -73,7 +73,7 @@ class ContentTypeMultiplyNumberCodec {
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-The React SDK supports all current standards-track content types, but only text messages are enabled out of the box. Adding support for other standards-track content types requires a bit of configuration.
+_A test of this content type can be found in the following [PR](https://github.com/xmtp/xmtp-web/pull/141/files)_
 
 ```jsx
 import { ContentTypeId } from "@xmtp/react-sdk";
@@ -183,6 +183,8 @@ data class MultiplyNumberCodec(
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+_A test of this content type can be found in the following [PR](https://github.com/xmtp/xmtp-ios/pull/211)_
 
 ```swift
 import XMTP
@@ -341,17 +343,17 @@ Import and register the custom content type.
 ```jsx
 import { ContentTypeMultiplyNumberCodec } from "./xmtp-content-type-multiply-number";
 
-const xmtp = await Client.create(signer, {
-  env: "dev",
+const client = await Client.create({
+  env: "production",
+  codecs: [new ContentTypeMultiplyNumberCodec()],
 });
-xmtp.registerCodec(new ContentTypeMultiplyNumberCodec());
+//or
+client.registerCodec(new ContentTypeMultiplyNumberCodec());
 ```
 
 </TabItem>
 
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-The React SDK supports all current standards-track content types, but only text messages are enabled out of the box. Adding support for other standards-track content types requires a bit of configuration.
 
 ```jsx
 import {
@@ -387,7 +389,7 @@ Client.register(codec = ContentTypeMultiplyNumberCodec())
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-Client.register(codec: ContentTypeMultiplyNumberCodec());
+Client.register(codec: ContentTypeMultiplyNumberCodec())
 ```
 
 </TabItem>
@@ -404,11 +406,11 @@ var registry = CodecRegistry()..registerCodec(ContentTypeMultiplyNumberCodec());
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-import { NumberCodec } from "./xmtp-content-type-number";
+import { ContentTypeMultiplyNumberCodec } from "./xmtp-content-type-number";
 
 const client = await Client.create({
   env: "production",
-  codecs: [new NumberCodec()],
+  codecs: [new ContentTypeMultiplyNumberCodec()],
 });
 ```
 
@@ -463,17 +465,8 @@ conversation.send(
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-let reaction = Reaction(
-    reference: messageToReact.id,
-    action: .added,
-    content: "U+1F603",
-    schema: .unicode
-)
-
-try await aliceConversation.send(
-  content: 3.14,
-  options: .init(contentType: NumberCodec().contentType))
-
+let multiplyNumbers = MultiplyNumbers(num1: 3, num2: 2)
+try await aliceConversation.send(content: multiplyNumbers, options: .init(contentType: ContentTypeMultiplyNumberCodec().contentType))
 ```
 
 </TabItem>
@@ -528,4 +521,15 @@ if (message.contentTypeId === "your.domain/number:1.0") {
 ```
 
 </TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+if let content: MultiplyNumbers = try? messages[0].content() {
+    //content.result
+}
+```
+
+</TabItem>
 </Tabs>
+
+_To handle unsupported content types, refer to the [fallback](/docs/build/messages/#handle-an-unsupported-content-type-error) section._
