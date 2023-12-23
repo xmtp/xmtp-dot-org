@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Build an XMTP CLI tool
 
-Use this starter project to build an XMTP CLI tool. You can also check out the [GitHub repo](https://github.com/xmtp/cli-starter).
+Use this starter project to build an XMTP CLI tool. You can also check out the [cli-starter](https://github.com/xmtp/xmtp-node-js-tools/tree/main/packages/cli-starter) package in the [xmtp-node-js-tools](https://github.com/xmtp/xmtp-node-js-tools) repo.
 
 ## Prerequisites
 
