@@ -299,38 +299,54 @@ class MultiplyNumbersCodec extends Codec<MultiplyNumbers> {
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-import { content } from "@xmtp/proto";
-type EncodedContent = content.EncodedContent;
-type ContentTypeId = content.ContentTypeId;
+import { content } from '@xmtp/proto'
+type EncodedContent = content.EncodedContent
+type ContentTypeId = content.ContentTypeId
 
-const ContentTypeMultiplyNumbers = {
-  authorityId: "your.domain",
-  typeId: "multiply-numbers",
+const ContentTypeMultiplyNumbers: ContentTypeId = {
+  authorityId: 'com.example',
+  typeId: 'multiplyNumbers',
   versionMajor: 1,
-  versionMinor: 0,
-};
+  versionMinor: 1,
+}
+class MultiplyNumbers {
+  public readonly num1: number
+  public readonly num2: number
+  public readonly result: number
 
-class MultiplyNumbersCodec implements JSContentCodec<{ a: number, b: number }> {
-  contentType = ContentTypeMultiplyNumbers;
+  constructor(num1: number, num2: number, result: number) {
+    this.num1 = num1
+    this.num2 = num2
+    this.result = result
+  }
+}
 
-  // Encode a pair of numbers
-  encode(content: { a: number, b: number }): EncodedContent {
+class ContentTypeMultiplyNumberCodec
+  implements JSContentCodec<MultiplyNumbers>
+{
+  get contentType() {
+    return ContentTypeMultiplyNumbers
+  }
+
+  encode(decoded: MultiplyNumbers): EncodedContent {
     return {
       type: ContentTypeMultiplyNumbers,
-      parameters: {},
-      content: new TextEncoder().encode(JSON.stringify(content)),
-    };
+      parameters: {
+        num1: decoded.num1.toString(),
+        num2: decoded.num2.toString(),
+      },
+      content: new Uint8Array(),
+    }
   }
 
-  // Decode the content and return the product of the two numbers
-  decode(encodedContent: EncodedContent): number {
-    const contentStr = new TextDecoder().decode(encodedContent.content);
-    const { a, b } = JSON.parse(contentStr);
-    return a * b;
+  decode(encoded: EncodedContent): MultiplyNumbers {
+    const num1 = parseFloat(encoded.parameters['num1'] ?? '0')
+    const num2 = parseFloat(encoded.parameters['num2'] ?? '0')
+    return new MultiplyNumbers(num1, num2, num1 * num2)
   }
 
-  fallback(content: { a: number, b: number }): string | undefined {
-    return "A pair of numbers was sent.";
+  fallback(content: MultiplyNumbers): string {
+    return `MultiplyNumbersCodec is not supported`
   }
 }
 ```
@@ -489,7 +505,10 @@ await alice.sendMessageEncoded(aliceConvo, encodedMultiplyNumbers);
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-await conversation.send(12, { contentType: ContentTypeNumber });
+const multiplyNumbers = new MultiplyNumbers(3, 7);
+await bobConvo.send(multiplyNumbers, {
+  contentType: ContentTypeMultiplyNumbers,
+});
 ```
 
 </TabItem>
@@ -509,17 +528,6 @@ if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
 ```
 
 </TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
-
-Because of this message content is now a function which returns the actual content. You can get that content by call `message.content()` now instead of message.content . This may involve more filtering on the message side to make sure you are handling different contentTypes appropriately.
-
-```jsx
-if (message.contentTypeId === "your.domain/number:1.0") {
-  return message.content(); // 12
-}
-```
-
-</TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
@@ -534,6 +542,17 @@ if let content: MultiplyNumbers = try? messages[0].content() {
 ```dart
 if (bobMessages[0].contentType == contentTypeMultiplyNumbers) {
   (bobMessages[0].content as MultiplyNumbers).result// 408.0
+}
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Because of this message content is now a function which returns the actual content. You can get that content by call `message.content()` now instead of message.content . This may involve more filtering on the message side to make sure you are handling different contentTypes appropriately.
+
+```jsx
+if (message.contentTypeId === "com.example/multiplyNumbers:1.1") {
+  return message.content(); // 21
 }
 ```
 
