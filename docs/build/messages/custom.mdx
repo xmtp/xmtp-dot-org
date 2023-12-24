@@ -233,61 +233,66 @@ public struct MultiplyNumbersCodec: ContentCodec {
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
+_A test of this content type can be found in the following [PR](https://github.com/xmtp/xmtp-flutter/pull/106/files)_
+
 ```dart
 import 'dart:convert';
-import 'dart:typed_data';
+import 'dart:math';
+
+import 'package:flutter/foundation.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:web3dart/crypto.dart';
+import 'package:web3dart/web3dart.dart';
 import 'package:xmtp/xmtp.dart' as xmtp;
+import 'package:xmtp/src/content/codec.dart';
+import 'package:xmtp/src/client.dart';
 
-final contentTypeMultiplyNumbers = xmtp.ContentTypeId(
-  authorityId: "com.example",
-  typeId: "multiply-number",
-  versionMajor: 1,
-  versionMinor: 0,
-);
+// Class to store two numbers and their multiplication result
+class MultiplyNumbers {
+  final double num1;
+  final double num2;
+  final double result;
 
-class NumberPair {
-  final double a;
-  final double b;
-
-  NumberPair(this.a, this.b);
-
-  Map<String, dynamic> toJson() => {
-        'a': a,
-        'b': b,
-      };
-
-  factory NumberPair.fromJson(Map<String, dynamic> json) => NumberPair(
-        (json['a'] as num).toDouble(),
-        (json['b'] as num).toDouble(),
-      );
+  MultiplyNumbers({required this.num1, required this.num2, required this.result});
 }
 
-class MultiplyNumberCodec extends xmtp.Codec<double> {
+
+/// This encodes two numbers and their multiplication result.
+final contentTypeMultiplyNumbers = xmtp.ContentTypeId(
+  authorityId: "com.example",
+  typeId: "multiplyNumbers",
+  versionMajor: 1,
+  versionMinor: 1,
+);
+
+// Codec class to encode and decode the multiplication result
+class MultiplyNumbersCodec extends Codec<MultiplyNumbers> {
   @override
+  // Content type for the codec
   xmtp.ContentTypeId get contentType => contentTypeMultiplyNumbers;
 
   @override
-  Future<double> decode(xmtp.EncodedContent encoded) async {
-    String jsonString = utf8.decode(encoded.content);
-    NumberPair numberPair = NumberPair.fromJson(json.decode(jsonString));
-    return numberPair.a * numberPair.b;
+  // Function to encode the multiplication result
+  Future<xmtp.EncodedContent> encode(MultiplyNumbers decoded) async => xmtp.EncodedContent(
+    type: contentTypeMultiplyNumbers,
+    parameters: {
+      'num1': decoded.num1.toString(),
+      'num2': decoded.num2.toString(),
+    },
+  );
+
+  @override
+  // Function to decode the encoded content
+  Future<MultiplyNumbers> decode(xmtp.EncodedContent encoded) async {
+    var num1 = double.parse(encoded.parameters['num1'] ?? '0');
+    var num2 = double.parse(encoded.parameters['num2'] ?? '0');
+    return MultiplyNumbers(num1: num1, num2: num2, result: num1 * num2);
   }
 
   @override
-  Future<xmtp.EncodedContent> encode(NumberPair content) async {
-    String jsonString = json.encode(content);
-    return xmtp.EncodedContent(
-      type: contentTypeMultiplyNumbers,
-      content: Uint8List.fromList(utf8.encode(jsonString)),
-    );
-  }
-
-  @override
-  String? fallback(String content) {
-    return "Can't display “${content}”. This app doesn’t support “${content}”";
-  }
+  // Fallback function in case the codec is not supported
+  String fallback(MultiplyNumbers content) => "MultiplyNumbersCodec is not supported";
 }
-
 ```
 
 </TabItem>
@@ -396,10 +401,7 @@ Client.register(codec: ContentTypeMultiplyNumberCodec())
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-import 'package:xmtp/src/content/multiply_number_codec.dart';
-import 'package:xmtp/src/content/codec_registry.dart';
-
-var registry = CodecRegistry()..registerCodec(ContentTypeMultiplyNumberCodec());
+var client = await Client.createFromWallet(api, wallet,customCodecs: [MultiplyNumbersCodec()]);
 ```
 
 </TabItem>
@@ -473,17 +475,14 @@ try await aliceConversation.send(content: multiplyNumbers, options: .init(conten
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-val reaction = Reaction(
-    reference = messageToReact.id,
-    action = ReactionAction.added,
-    content = "U+1F603",
-    schema = ReactionSchema.unicode
-)
-
-conversation.send(
-    content = reaction,
-    options = SendOptions(contentType = ContentTypeReaction),
-)
+// Creating a conversation between Alice and Bob
+var aliceConvo = await alice.newConversation(bob.address.toString());
+// Multiplying two numbers and storing the result
+var multiplyNumbers = MultiplyNumbers(num1: 12, num2: 34, result: 12*34);
+// Encoding the multiplication result
+var encodedMultiplyNumbers = await MultiplyNumbersCodec().encode(multiplyNumbers);
+// Alice sends the encoded message
+await alice.sendMessageEncoded(aliceConvo, encodedMultiplyNumbers);
 ```
 
 </TabItem>
@@ -526,6 +525,15 @@ if (message.contentTypeId === "your.domain/number:1.0") {
 ```swift
 if let content: MultiplyNumbers = try? messages[0].content() {
     //content.result
+}
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+if (bobMessages[0].contentType == contentTypeMultiplyNumbers) {
+  (bobMessages[0].content as MultiplyNumbers).result// 408.0
 }
 ```
 
