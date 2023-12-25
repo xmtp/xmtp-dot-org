@@ -10,7 +10,7 @@ Use these reference docs as comprehensive guides to integrating the capabilities
 
 - [JavaScript SDK reference docs](https://xmtp-js.pages.dev/modules) - `xmtp-js`
 
-- [React SDK reference docs](https://xmtp.github.io/xmtp-web/modules.html) - `xmtp-web` React
+- [React SDK reference docs](https://xmtp.github.io/xmtp-web/modules.html) - `xmtp-web`
 
 - [Kotlin SDK reference docs](https://xmtp.github.io/xmtp-android/) - `xmtp-android`
 
