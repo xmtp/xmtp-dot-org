@@ -31,40 +31,59 @@ Create the custom content type by creating a new file
 _A test of this content type can be found in the following [PR](https://github.com/xmtp/xmtp-js/pull/509/files)_
 
 ```jsx
+import { ContentTypeId } from "@xmtp/xmtp-js";
+import type { ContentCodec, EncodedContent } from "@xmtp/xmtp-js";
+
 // Create a unique identifier for your content type
-const ContentTypeMultiplyNumbers = new ContentTypeId({
-  authorityId: "your.domain",
-  typeId: "multiply-number",
+export const ContentTypeMultiplyNumbers = new ContentTypeId({
+  authorityId: 'your.domain',
+  typeId: 'multiply-number',
   versionMajor: 1,
   versionMinor: 0,
-});
+})
+
+// Define the MultiplyNumbers class
+export class MultiplyNumbers {
+  public num1: number
+  public num2: number
+  public result: number | undefined
+
+  constructor(num1: number, num2: number, result?: number) {
+    this.num1 = num1
+    this.num2 = num2
+    this.result = result
+  }
+}
 
 // Define the MultiplyCodec class
-class ContentTypeMultiplyNumberCodec {
-  get contentType() {
-    return ContentTypeMultiplyNumbers;
+export class ContentTypeMultiplyNumberCodec
+  implements ContentCodec<MultiplyNumbers>
+{
+  get contentType(): ContentTypeId {
+    return ContentTypeMultiplyNumbers
   }
 
-  // The encode method accepts an object with two numbers (a, b) and encodes it as a byte array
-  encode({ a, b }: { a: number, b: number }) {
+  // The encode method accepts an object of MultiplyNumbers and encodes it as a byte array
+  encode(numbers: MultiplyNumbers): EncodedContent {
+    const { num1, num2 } = numbers
     return {
       type: ContentTypeMultiplyNumbers,
       parameters: {},
-      content: new TextEncoder().encode(JSON.stringify({ a, b })),
-    };
+      content: new TextEncoder().encode(JSON.stringify({ num1, num2 })),
+    }
   }
 
-  // The decode method decodes the byte array, parses the string into numbers (a, b), and returns their product
-  decode(content: { content: any }) {
-    const uint8Array = content.content;
-    const { a, b } = JSON.parse(new TextDecoder().decode(uint8Array));
-    return a * b;
+  // The decode method decodes the byte array, parses the string into numbers (num1, num2), and returns their product
+  decode(encodedContent: EncodedContent): MultiplyNumbers {
+    const decodedContent = new TextDecoder().decode(encodedContent.content)
+    const { num1, num2 } = JSON.parse(decodedContent)
+    return new MultiplyNumbers(num1, num2, num1 * num2)
   }
 
-  fallback(content: number): string | undefined {
+  fallback(content: MultiplyNumbers): string | undefined {
     return `Can’t display number content types. Number was ${JSON.stringify(
-      content,
-    )}`;
+      content
+    )}`
     //return undefined; if you don't want the content type to be displayed.
   }
 }
@@ -76,40 +95,59 @@ class ContentTypeMultiplyNumberCodec {
 _A test of this content type can be found in the following [PR](https://github.com/xmtp/xmtp-web/pull/141/files)_
 
 ```jsx
-import { ContentTypeId } from "@xmtp/react-sdk";
+import { ContentTypeId } from "@xmtp/xmtp-js";
+import type { ContentCodec, EncodedContent } from "@xmtp/xmtp-js";
 
 // Create a unique identifier for your content type
-const ContentTypeMultiplyNumbers = new ContentTypeId({
-  authorityId: "your.domain",
-  typeId: "multiply-number",
+export const ContentTypeMultiplyNumbers = new ContentTypeId({
+  authorityId: 'your.domain',
+  typeId: 'multiply-number',
   versionMajor: 1,
   versionMinor: 0,
-});
+})
+
+// Define the MultiplyNumbers class
+export class MultiplyNumbers {
+  public num1: number
+  public num2: number
+  public result: number | undefined
+
+  constructor(num1: number, num2: number, result?: number) {
+    this.num1 = num1
+    this.num2 = num2
+    this.result = result
+  }
+}
 
 // Define the MultiplyCodec class
-class ContentTypeMultiplyNumberCodec {
-  get contentType() {
-    return ContentTypeMultiplyNumbers;
+export class ContentTypeMultiplyNumberCodec
+  implements ContentCodec<MultiplyNumbers>
+{
+  get contentType(): ContentTypeId {
+    return ContentTypeMultiplyNumbers
   }
 
-  // The encode method accepts an object with two numbers (a, b) and encodes it as a byte array
-  encode({ a, b }) {
+  // The encode method accepts an object of MultiplyNumbers and encodes it as a byte array
+  encode(numbers: MultiplyNumbers): EncodedContent {
+    const { num1, num2 } = numbers
     return {
       type: ContentTypeMultiplyNumbers,
       parameters: {},
-      content: new TextEncoder().encode(JSON.stringify({ a, b })),
-    };
+      content: new TextEncoder().encode(JSON.stringify({ num1, num2 })),
+    }
   }
 
-  // The decode method decodes the byte array, parses the string into numbers (a, b), and returns their product
-  decode(content: { content: any }) {
-    const uint8Array = content.content;
-    const { a, b } = JSON.parse(new TextDecoder().decode(uint8Array));
-    return a * b;
+  // The decode method decodes the byte array, parses the string into numbers (num1, num2), and returns their product
+  decode(encodedContent: EncodedContent): MultiplyNumbers {
+    const decodedContent = new TextDecoder().decode(encodedContent.content)
+    const { num1, num2 } = JSON.parse(decodedContent)
+    return new MultiplyNumbers(num1, num2, num1 * num2)
   }
 
-  fallback(content: string): string | undefined {
-    return `Can’t display "${content}". This app doesn’t support "${content}".`;
+  fallback(content: MultiplyNumbers): string | undefined {
+    return `Can’t display number content types. Number was ${JSON.stringify(
+      content
+    )}`
     //return undefined; if you don't want the content type to be displayed.
   }
 }
@@ -443,7 +481,7 @@ Send a message using the custom content type. This code sample demonstrates how 
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```jsx
-const numbersToMultiply = { a: 3, b: 7 };
+const numbersToMultiply = new MultiplyNumbers(2, 3);
 
 conversation.send(numbersToMultiply, {
   contentType: ContentTypeMultiplyNumbers,
@@ -528,12 +566,28 @@ if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
 ```
 
 </TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
+  return message.content; // 21
+}
+```
+
+</TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 if let content: MultiplyNumbers = try? messages[0].content() {
     //content.result
 }
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+
 ```
 
 </TabItem>
