@@ -38,7 +38,6 @@ const config = {
       "data-modal-override-open-class": "ask_gpt",
       "data-search-mode-default": "false",
       "data-search-mode-enabled": "true",
-      "data-search-include-source-names": "true",
       "data-modal-title": "XMTP Docs",
       async: true,
     },
