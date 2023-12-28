@@ -78,17 +78,22 @@ Client.register(codec = ReplyCodec())
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-Client.register(ReplyCodec());
+Client.register(codec: ReplyCodec())
 ```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-import 'package:xmtp/src/content/reply_codec.dart';
 import 'package:xmtp/src/content/codec_registry.dart';
+import 'package:xmtp/src/content/decoded.dart';
+import 'package:xmtp/src/content/text_codec.dart';
+import 'package:xmtp/src/content/reply_codec.dart';
 
-var registry = CodecRegistry()..registerCodec(ReplyCodec());
+// Registering
+var registry = CodecRegistry()..registerCodec(TextCodec());
+var codec = ReplyCodec();
+codec.setRegistry(registry);;
 ```
 
 </TabItem>
@@ -152,8 +157,13 @@ sendMessage(conversation, replyContent, ContentTypeReply);
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
+import org.xmtp.android.library.codecs.ContentTypeReply
+import org.xmtp.android.library.codecs.ContentTypeText
+import org.xmtp.android.library.codecs.Reply
+
+// Assuming aliceConversation and messageToReact are already defined
 val reply = Reply(
-    reference = messageToReply.id,
+    reference = messageToReact.id,
     content = "Hello",
     contentType = ContentTypeText
 )
@@ -178,13 +188,17 @@ try await conversation.send(
   content: reply,
   options: .init(contentType: ContentTypeReply)
 )
-		let content: Reply = try message.content()
 ```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
+import 'package:xmtp/src/content/codec_registry.dart';
+import 'package:xmtp/src/content/decoded.dart';
+import 'package:xmtp/src/content/text_codec.dart';
+import 'package:xmtp/src/content/reply_codec.dart';
+
 var parentMessageId = "abc123"; // The ID of the message you're replying to
 var replyContent = DecodedContent(contentTypeText, "This is my reply"); // The content of your reply
 
