@@ -183,15 +183,13 @@ function isValidMultiplyNumbersContent(content) {
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
+import org.json.JSONObject
 import org.xmtp.android.library.codecs.ContentTypeId
 import org.xmtp.android.library.codecs.ContentTypeIdBuilder
 import org.xmtp.android.library.codecs.ContentCodec
 import org.xmtp.android.library.codecs.EncodedContent
-import kotlinx.serialization.*
-import kotlinx.serialization.json.*
 
-@Serializable
-data class NumberPair(val a: Double, val b: Double)
+data class NumberPair(val a: Double, val b: Double, var result: Double = 0.0)
 
 data class MultiplyNumberCodec(
     override var contentType: ContentTypeId = ContentTypeIdBuilder.builderFromAuthorityId(
@@ -200,20 +198,26 @@ data class MultiplyNumberCodec(
         versionMajor = 1,
         versionMinor = 0
     )
-) : ContentCodec<Double> {
+) : ContentCodec<NumberPair> {
     override fun encode(content: NumberPair): EncodedContent {
+        val jsonObject = JSONObject()
+        jsonObject.put("a", content.a)
+        jsonObject.put("b", content.b)
         return EncodedContent.newBuilder().also {
             it.type = contentType
-            it.content = Json.encodeToString(numberPair).toByteStringUtf8()
+            it.content = jsonObject.toString().toByteStringUtf8()
         }.build()
     }
 
-    override fun decode(content: EncodedContent): Double {
-        val numberPair = Json.decodeFromString<NumberPair>(content.content.toStringUtf8())
-        return numberPair.a * numberPair.b
+    override fun decode(content: EncodedContent): NumberPair {
+        val jsonObject = JSONObject(content.content.toStringUtf8())
+        val a = jsonObject.getDouble("a")
+        val b = jsonObject.getDouble("b")
+        val numberPair = NumberPair(a, b, a * b)
+        return numberPair
     }
 
-    override fun fallback(content: Double): String? {
+    override fun fallback(content: NumberPair): String? {
         return "Error: This app does not support numbers."
     }
 }
@@ -338,6 +342,9 @@ class MultiplyNumbersCodec extends Codec<MultiplyNumbers> {
 
 ```jsx
 import { content } from '@xmtp/proto'
+
+import {JSContentCodec, Client, Conversation, DecodedMessage } from '@xmtp/react-native-sdk';
+
 type EncodedContent = content.EncodedContent
 type ContentTypeId = content.ContentTypeId
 
