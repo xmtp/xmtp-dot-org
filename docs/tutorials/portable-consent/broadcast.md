@@ -13,6 +13,12 @@ This feature is in **alpha** status and ready for you to start experimenting w
 
 :::
 
+<div class=" rabbit  p-5 ">
+
+📥 <b>Need a Quick Reference?</b> Check out the GitHub repo: <a href="https://github.com/fabriguespe/xmtp-broadcast">xmtp-broadcast</a>.
+
+</div>
+
 This tutorial will guide you on how to create a simple `Broadcast` that enables the user to broadcast messages to one or many specified Ethereum addresses.
 
 #### Import XMTP Client and Ethers Library

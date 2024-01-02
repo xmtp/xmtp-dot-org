@@ -13,6 +13,12 @@ This feature is in **alpha** status and ready for you to start experimenting w
 
 :::
 
+<div class=" rabbit  p-5 ">
+
+📥 <b>Need a Quick Reference?</b> Check out the GitHub repo: <a href="https://github.com/fabriguespe/xmtp-inbox-portable-consent">inbox-portable-consent</a>.
+
+</div>
+
 Managing user consent is essential for enhancing privacy and user experience. If you already have an XMTP application, integrating portable consent features becomes crucial. This guide walks you through adding the consent logic to your existing XMTP app.
 
 #### Initialize XMTP Client with Consent

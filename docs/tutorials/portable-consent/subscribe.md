@@ -12,6 +12,13 @@ sidebar_position: 4
 This feature is in **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha features in production apps. Expect frequent changes as we iterate based on feedback. Want to provide feedback? Comment on [Proposal: Portable consent state for v2 SDKs](https://github.com/orgs/xmtp/discussions/49).
 
 :::
+
+<div class=" rabbit  p-5 ">
+
+📥 <b>Need a Quick Reference?</b> Check out the GitHub repo: <a href="https://github.com/fabriguespe/xmtp-subscribe-portable-consent">xmtp-subscribe</a>.
+
+</div>
+
 This tutorial will guide you on how to create a simple `Subscribe` button with consent that enables the user to subscribe to your messages or notifications.
 
 #### Import libraries
