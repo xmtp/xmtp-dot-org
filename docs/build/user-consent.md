@@ -12,8 +12,6 @@ import consentlogic from '/docs/build/img/consent-state-logic.png';
 
 # Request and respect user consent
 
-![Feature status](https://img.shields.io/badge/Feature_status-Alpha-orange)
-
 The user consent feature enables your app to request and respect user consent preferences. With this feature, another blockchain account address registered on the XMTP network can have one of three consent preference values:
 
 - Unknown
@@ -124,16 +122,16 @@ The user consent feature for React hasn't been implemented yet
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-client.contacts.isAllowed(wantedConvo.peerAddress)
-client.contacts.isDenied(spamConvo.peerAddress)
+client.contacts.allow([wantedConvo.peerAddress, wantedConvo.peerAddress])
+client.contacts.deny([spamConvo.peerAddress, unwantedConvo.peerAddress])
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-await client.contacts.isAllowed(wantedConvo.peerAddress)
-await client.contacts.isDenied(spamConvo.peerAddress)
+try await client.contacts.allow(addresses: [wantedConvo.peerAddress, wantedConvo.peerAddress])
+try await client.contacts.deny(addresses: [spamConvo.peerAddress, unwantedConvo.peerAddress])
 ```
 
 </TabItem>
@@ -156,16 +154,13 @@ client.contacts.deny([spamConvo.peerAddress, unwantedConvo.peerAddress]);
 
 To ensure that you’re using the latest consent preferences, make sure to refresh the consent list from the network. Perform the refresh just in case the consent preference has changed on a different device, for example.
 
+- `refreshConsentList()` returns the history of all consent entries.
+
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
 ```js
-// load the entire consent list
 await client.contacts.refreshConsentList();
-
-// Load the consent list from a specific time. If no time is specified, it loads the consent list from the last time the refresh was made.
-// The 'lastSyncedDate' parameter is optional.
-await client.contacts.loadConsentList(lastSyncedDate);
 ```
 
 </TabItem>
@@ -177,16 +172,14 @@ The user consent feature for React hasn't been implemented yet
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-client.contacts.allow([wantedConvo.peerAddress, wantedConvo.peerAddress])
-client.contacts.deny([spamConvo.peerAddress, unwantedConvo.peerAddress])
+client.contacts.refreshConsentList()
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-try await client.contacts.allow(addresses: [wantedConvo.peerAddress, wantedConvo.peerAddress])
-try await client.contacts.deny(addresses: [spamConvo.peerAddress, unwantedConvo.peerAddress])
+try await client.contacts.refreshConsentList()
 ```
 
 </TabItem>
@@ -199,6 +192,53 @@ The user consent feature for Dart hasn't been implemented yet
 
 ```tsx
 client.contacts.refreshConsentList();
+```
+
+</TabItem>
+</Tabs>
+
+### Get the consent list
+
+Load the consent list from a specific time. If no time is specified, it loads the consent list from the last time the refresh was made.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript" attributes={{className: "js_tab"}}>
+
+The `lastSyncedDate` parameter is optional.
+
+```js
+await client.contacts.loadConsentList(lastSyncedDate);
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+The user consent feature for React hasn't been implemented yet
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+client.contacts.consentList
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await client.contacts.consentList
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+The user consent feature for Dart hasn't been implemented yet
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```tsx
+client.contacts.consentList();
 ```
 
 </TabItem>
@@ -230,14 +270,16 @@ The user consent feature for React hasn't been implemented yet
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-client.contacts.refreshConsentList()
+client.contacts.isAllowed(wantedConvo.peerAddress)
+client.contacts.isDenied(spamConvo.peerAddress)
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-try await client.contacts.refreshConsentList()
+await client.contacts.isAllowed(wantedConvo.peerAddress)
+await client.contacts.isDenied(spamConvo.peerAddress)
 ```
 
 </TabItem>
