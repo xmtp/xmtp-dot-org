@@ -14,12 +14,6 @@ import consentlogic from '/docs/build/img/consent-state-logic.png';
 
 ![Feature status](https://img.shields.io/badge/Feature_status-Alpha-orange)
 
-:::caution This feature is in **alpha** status
-
-This feature is in **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha features in production apps. Expect frequent changes as we iterate based on feedback. Want to provide feedback? Comment on [Proposal: Portable consent state for v2 SDKs](https://github.com/orgs/xmtp/discussions/49). 
-
-:::
-
 The user consent feature enables your app to request and respect user consent preferences. With this feature, another blockchain account address registered on the XMTP network can have one of three consent preference values:
 
 - Unknown
@@ -46,11 +40,11 @@ Conversation created in an app on an SDK version **without** user consent suppor
 
 Conversation created in an app on an SDK version **with** user consent support:
 
-- For a new conversation that a user created with a peer contact, the SDK sets the consent preference to `allowed`.  
+- For a new conversation that a user created with a peer contact, the SDK sets the consent preference to `allowed`.
 
   The user’s creation of the conversation with the contact is considered consent.
 
-- For an existing conversation created by a peer contact that hasn’t had its consent preference updated on the network (`unknown`) and that the user responds to, the SDK will update the consent preference to `allowed`.  
+- For an existing conversation created by a peer contact that hasn’t had its consent preference updated on the network (`unknown`) and that the user responds to, the SDK will update the consent preference to `allowed`.
 
   The user's response to the conversation is considered consent.
 
@@ -82,16 +76,18 @@ Here are some suggestions for how your app might provide user experiences that r
 
 **Unknown**
 
-Consider displaying a conversation with an `unknown` contact on a **Requests** tab and give the user the option to block or allow the contact.  
+Consider displaying a conversation with an `unknown` contact on a **Requests** tab and give the user the option to block or allow the contact.
 
 <img src={requeststab} style={{width:"375px"}}/>
+
 <p/>
 
 **Allowed**
 
-Consider displaying a conversation with an `allowed` contact on a **Messages** tab and give the user the option to block the contact.  
+Consider displaying a conversation with an `allowed` contact on a **Messages** tab and give the user the option to block the contact.
 
 <img src={messagestab} style={{width:"375px"}}/>
+
 <p/>
 
 **Denied**
@@ -167,7 +163,8 @@ To ensure that you’re using the latest consent preferences, make sure to refre
 // load the entire consent list
 await client.contacts.refreshConsentList();
 
-// load the consent list from a specific time
+// Load the consent list from a specific time. If no time is specified, it loads the consent list from the last time the refresh was made.
+// The 'lastSyncedDate' parameter is optional.
 await client.contacts.loadConsentList(lastSyncedDate);
 ```
 
@@ -310,7 +307,7 @@ The user consent feature for Dart hasn't been implemented yet
 ```tsx
 const state = await conversation.consentState();
 if (state === "denied") {
-	// hide the conversation
+  // hide the conversation
 }
 ```
 
@@ -337,6 +334,6 @@ Update a consent preference in the consent list on the network in the following 
 
 - An existing conversation has an `unknown` consent preference, but has an existing response from the user. The app should update the consent preference in the consent list to `allowed`.
 
-The following diagram illustrates the detailed logic for how user consent preferences are set in an app and in the consent list on the XMTP network. 
+The following diagram illustrates the detailed logic for how user consent preferences are set in an app and in the consent list on the XMTP network.
 
 <img src={consentlogic} style={{width:"90%"}}/>
