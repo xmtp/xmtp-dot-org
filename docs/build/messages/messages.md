@@ -387,7 +387,7 @@ if (!codec) {
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-```jsx
+```swift
 let codec = client.codecRegistry.find(for: contentType)
 if(!codec){
   /*Not supported content type*/
@@ -400,7 +400,7 @@ if(!codec){
 
 Dart doesnt have a public method for checking if the content type is registered. Instead the decode function uses this method internally and returns the `encoded.fallback` if exists.
 
-```jsx
+```dart
 import 'package:xmtp_proto/xmtp_proto.dart' as xmtp;
 import 'package:xmtp/src/content/codec_registry.dart';
 import 'package:xmtp/src/content/text_codec.dart';
@@ -428,4 +428,4 @@ if (!isRegistered) {
 </TabItem>
 </Tabs >
 
-_Note: `Composite` and `ReadReceipts` have an `undefined` fallback, indicating the message is not expected to be displayed._
+_Note: `ReadReceipts` have an `undefined` or `nil` fallback, indicating the message is not expected to be displayed._
