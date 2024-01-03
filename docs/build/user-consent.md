@@ -356,6 +356,24 @@ if (state === "denied") {
 </TabItem>
 </Tabs>
 
+## Streaming the Consent List
+
+This section provides an example of how to stream the consent list. The code snippet below demonstrates how to create a new conversation and then stream the consent list, logging each action to the console.
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript" attributes={{className: "js_tab"}}>
+
+```js
+const aliceStream = await aliceClient.contacts.streamConsentList();
+for await (const action of aliceStream) {
+  // Each action indicates the address and if it's allowed or denied
+}
+await aliceStream.return();
+```
+
+</TabItem>
+</Tabs>
+
 ## Synchronize user consent preferences
 
 All apps that use the user consent feature must adhere to the logic described in this section to keep the consent list on the network synchronized with local app user consent preferences, and vice versa.
