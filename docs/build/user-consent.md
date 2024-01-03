@@ -116,7 +116,30 @@ await conversation.deny();
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-The user consent feature for React hasn't been implemented yet
+In the React SDK, we provide a convenient hook `useConsent` for managing consent.
+
+```jsx
+import { useConsent } from "@xmtp/react-sdk";
+
+function ConsentControl({ conversation }) {
+  const { allow, deny } = useConsent();
+
+  const handleAllow = async () => {
+    await allow([conversation.peerAddress]);
+    // Additional UI logic or state updates after allowing
+  };
+
+  const handleDeny = async () => {
+    await deny([conversation.peerAddress]);
+    // Additional UI logic or state updates after denying
+  };
+
+  return (
+    // ... UI elements that call handleAllow and handleDeny
+  );
+}
+
+```
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
@@ -166,7 +189,20 @@ await client.contacts.refreshConsentList();
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-The user consent feature for React hasn't been implemented yet
+```jsx
+import { useEffect } from "react";
+import { useConsent } from "@xmtp/react-sdk";
+
+function ConsentList() {
+  const { refreshConsentList } = useConsent();
+
+  useEffect(() => {
+    void refreshConsentList();
+  }, []);
+
+  // ... UI rendering
+}
+```
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
@@ -213,7 +249,20 @@ await client.contacts.loadConsentList(lastSyncedDate);
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-The user consent feature for React hasn't been implemented yet
+```jsx
+import { useEffect } from "react";
+import { useConsent } from "@xmtp/react-sdk";
+
+function LoadConsentList() {
+  const { loadConsentList } = useConsent();
+
+  useEffect(() => {
+    void (loadConsentList(/* Optional: startTime */));
+  }, []);
+
+  // ... UI rendering
+}
+```
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
@@ -251,7 +300,7 @@ Call the following methods to check if a contact is denied or allowed.
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-```js
+```jsx
 // from the client
 const isAllowed = client.contacts.isAllowed(address);
 const isDenied = client.contacts.isDenied(address);
@@ -264,7 +313,25 @@ const isDenied = conversation.isDenied;
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-The user consent feature for React hasn't been implemented yet
+```jsx
+import { useConsent } from "@xmtp/react-sdk";
+
+function CheckConsent({ conversation }) {
+  const { isAllowed, isBlocked } = useConsent();
+
+  useEffect(() => {
+    const checkConsent = async () => {
+      const allowed = await isAllowed(conversation.peerAddress);
+      const blocked = await isBlocked(conversation.peerAddress);
+      // Use `allowed` and `blocked` for UI updates or logic
+    };
+
+    checkConsent();
+  }, [conversation.peerAddress]);
+
+  // ... UI rendering based on consent status
+}
+```
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
@@ -311,12 +378,25 @@ const consentState = client.contacts.consentState(peerAddress);
 
 // from a conversation
 const consentState = conversation.consentState;
+
+// consentState can be 'allowed', 'denied', or 'unknown'
 ```
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-The user consent feature for React hasn't been implemented yet
+```jsx
+import { useConsent } from "@xmtp/react-sdk";
+
+function ConversationConsent({ conversation }) {
+  const { consentState } = useConsent();
+
+  const state = consentState(conversation.peerAddress);
+  // state can be 'allowed', 'denied', or 'unknown'
+
+  // ... UI rendering based on the state
+}
+```
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
@@ -356,7 +436,7 @@ if (state === "denied") {
 </TabItem>
 </Tabs>
 
-## Streaming the Consent List
+## Streaming the consent list
 
 This section provides an example of how to stream the consent list. The code snippet below demonstrates how to create a new conversation and then stream the consent list, logging each action to the console.
 
@@ -372,6 +452,39 @@ await aliceStream.return();
 ```
 
 </TabItem>
+
+<TabItem value="react" label="React" attributes={{className: "react_tab"}}>
+
+```jsx
+import { useStreamConsentList } from "@xmtp/react-sdk";
+
+function ConsentListStreamer() {
+  const handleAction = (action) => {
+    console.log("New action received:", action);
+    // You can update your UI or state based on the action here
+  };
+
+  const handleError = (error) => {
+    console.error("Error in streaming consent list:", error);
+    // Handle error state in UI
+  };
+
+  const { error } = useStreamConsentList(handleAction, handleError);
+
+  return (
+    <div>
+      <h3>Consent List Stream</h3>
+      {error && <p>Error: {error.message}</p>}
+      {/* Additional UI for showing streaming status or actions */}
+    </div>
+  );
+}
+
+export default ConsentListStreamer;
+```
+
+</TabItem>
+
 </Tabs>
 
 ## Synchronize user consent preferences
