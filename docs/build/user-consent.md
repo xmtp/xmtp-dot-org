@@ -317,12 +317,12 @@ const isDenied = conversation.isDenied;
 import { useConsent } from "@xmtp/react-sdk";
 
 function CheckConsent({ conversation }) {
-  const { isAllowed, isBlocked } = useConsent();
+  const { isAllowed, isDenied } = useConsent();
 
   useEffect(() => {
     const checkConsent = async () => {
       const allowed = await isAllowed(conversation.peerAddress);
-      const blocked = await isBlocked(conversation.peerAddress);
+      const blocked = await isDenied(conversation.peerAddress);
       // Use `allowed` and `blocked` for UI updates or logic
     };
 
