@@ -116,8 +116,6 @@ await conversation.deny();
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-In the React SDK, we provide a convenient hook `useConsent` for managing consent.
-
 ```jsx
 import { useConsent } from "@xmtp/react-sdk";
 
