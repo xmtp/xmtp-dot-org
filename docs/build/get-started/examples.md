@@ -45,7 +45,24 @@ import TabItem from "@theme/TabItem";
 </div>
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab "}}>
+</Tabs>
+
+## Example apps
+
+<Tabs>
+<TabItem value="react" label="React" attributes={{className: "react_tab "}}>
+
+<div className="quickstarts-tabs">
+
+<ul>
+  <li><a href="https://github.com/xmtp/xmtp-react-playground/" class="plausible-event-name=Example">React Playground app</a><br/><small>A tool to help you build your own app with XMTP, including reactions, replies, read receipts, and attachments</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-react-playground/" class="plausible-event-name=Example">Inbox Web</a><br/><small>Core and advanced capabilities of the XMTP client SDK, aiming to showcase effective and innovative ways of building with XMTP.</small></li>
+</ul>
+</div>
+
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab "}}>
 
 <div className="quickstarts-tabs">
 
@@ -89,23 +106,6 @@ import TabItem from "@theme/TabItem";
 </div>
 
 </TabItem>
-</Tabs>
-
-## Example apps
-
-<Tabs>
-<TabItem value="react" label="React" attributes={{className: "react_tab "}}>
-
-<div className="quickstarts-tabs">
-
-<ul>
-  <li><a href="https://github.com/xmtp/xmtp-react-playground/" class="plausible-event-name=Example">React Playground app</a><br/><small>A tool to help you build your own app with XMTP, including reactions, replies, read receipts, and attachments</small></li>
-</ul>
-
-</div>
-
-</TabItem>
-
 </Tabs>
 
 ## Wallet connectors
