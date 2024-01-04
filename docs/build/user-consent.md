@@ -240,10 +240,8 @@ Load the consent list from a specific time. If no time is specified, it loads th
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript" attributes={{className: "js_tab"}}>
 
-The `lastSyncedDate` parameter is optional.
-
 ```js
-await client.contacts.loadConsentList(lastSyncedDate);
+await client.contacts.loadConsentList(/* Optional: lastSyncedDate */);
 ```
 
 </TabItem>
@@ -257,7 +255,7 @@ function LoadConsentList() {
   const { loadConsentList } = useConsent();
 
   useEffect(() => {
-    void (loadConsentList(/* Optional: startTime */));
+    void (loadConsentList(/* Optional: lastSyncedDate */));
   }, []);
 
   // ... UI rendering
