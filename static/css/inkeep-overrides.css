@@ -1,0 +1,14 @@
+.ikp-codeblock-highlighter {
+  background: #272A36 !important;
+}
+
+.ikp-floating-button {
+  background: #111827;
+  border: 2px solid #6b7280;
+}
+
+@media (min-width: 1193px) {
+  .ikp-floating-button {
+    right: 3rem !important;
+  }
+}

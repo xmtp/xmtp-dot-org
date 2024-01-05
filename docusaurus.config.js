@@ -89,6 +89,8 @@ const config = {
     ],
   ],
 
+  themes: ["@inkeep/docusaurus/chatButton", "@inkeep/docusaurus/searchBar"],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -421,6 +423,50 @@ const config = {
         searchPagePath: "search",
 
         //... other Algolia params
+      },
+      inkeepConfig: {
+        fixedPositionXOffset: '1rem',
+        stylesheetUrls: ['/css/inkeep-overrides.css'],
+        baseSettings: {
+          apiKey: "c4c64b49e9269a9e9eeb012ecec22bb5057efc5fac84310b",
+          integrationId: "clr0ydb5b0000m8xpwpem4ul7",
+          organizationId: "org_9LpqIO1SFohEzNcf",
+          primaryBrandColor: "#EF4444",
+          organizationDisplayName: "XMTP",
+          theme: {
+            primaryColors: {
+              textColorOnPrimary: 'white',
+            },
+            syntaxHighlighter: {
+              lightTheme: darkCodeTheme,
+              darkTheme: darkCodeTheme,
+            },
+          },
+        },
+        modalSettings: {
+        },
+        searchSettings: {
+        },
+        aiChatSettings: {
+          botAvatarSrcUrl: "/img/xmtp-icon.svg",
+          quickQuestions: [
+            "How do I send messages to many users at once?",
+            "Is there a way to encrypt messages at storage?",
+            "How do I send messasges to many users at once?",
+          ],
+          getHelpCallToActions: [
+            {
+              icon: { builtIn: 'FaGithub' },
+              name: 'GitHub Discussions',
+              url: 'https://github.com/orgs/xmtp/discussions',
+            },
+            {
+              icon: { builtIn: 'FaDiscord' },
+              name: 'Discord',
+              url: 'https://discord.com/invite/xmtp',
+            },
+          ],
+        },
       },
       prism: {
         additionalLanguages: ["dart", "swift", "kotlin", "graphql"],

@@ -23,6 +23,7 @@
     "@docusaurus/theme-search-algolia": "^2.0.0-rc.1",
     "@glidejs/glide": "^3.6.0",
     "@heroicons/react": "^2.0.17",
+    "@inkeep/docusaurus": "^1.0.3",
     "@markprompt/css": "^0.5.1",
     "@markprompt/react": "^0.11.4",
     "@mdx-js/react": "^1.6.22",
