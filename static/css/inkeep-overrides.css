@@ -2,6 +2,10 @@
   background: #272A36 !important;
 }
 
+[data-theme='light'] .ikp-search-bar-trigger__container {
+  background: #ffffff;
+}
+
 .ikp-floating-button {
   background: #111827;
   border: 2px solid #6b7280;
