@@ -343,9 +343,34 @@ You can export the unencrypted key bundle using the static method `Client.export
 ```js
 import { Client } from "@xmtp/xmtp-react-native";
 // Get the keys using a valid Signer. Save them somewhere secure.
-const keys = await Client.exportKeyBundle();
+const keys = await Client.exportKeyBundle(xmtp.address);
+//Save the keys
+storeKeyBundle(xmtp.address, keys);
+//Load the keys
+let keys = await loadKeyBundle(address);
 // Create a client using keys returned from getKeys
-const client = await Client.createFromKeyBundle(keys, "dev");
+const xmtp = await Client.createFromKeyBundle(keys, clientOptions);
+```
+
+In this example we are using `AsyncStorage` external library to save the key bundle
+
+```jsx
+export const buildLocalStorageKey = (walletAddress) => {
+  return walletAddress ? `xmtp:${getEnv()}:keys:${walletAddress}` : "";
+};
+
+export const loadKeyBundle = async (address) => {
+  const keyBundle = await AsyncStorage.getItem(buildLocalStorageKey(address));
+  //console.log(buildLocalStorageKey(address), keyBundle);
+  return keyBundle;
+};
+export const storeKeyBundle = async (address, keyBundle) => {
+  //console.log(buildLocalStorageKey(address), keyBundle);
+  await AsyncStorage.setItem(buildLocalStorageKey(address), keyBundle);
+};
+export const wipeKeyBundle = async (address) => {
+  await AsyncStorage.removeItem(buildLocalStorageKey(address));
+};
 ```
 
 The keys returned by `exportKeyBundle` should be treated with the utmost care as compromise of these keys will allow an attacker to impersonate the user on the XMTP network. Ensure these keys are stored somewhere secure and encrypted.
