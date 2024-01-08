@@ -361,11 +361,9 @@ export const buildLocalStorageKey = (walletAddress) => {
 
 export const loadKeyBundle = async (address) => {
   const keyBundle = await AsyncStorage.getItem(buildLocalStorageKey(address));
-  //console.log(buildLocalStorageKey(address), keyBundle);
   return keyBundle;
 };
 export const storeKeyBundle = async (address, keyBundle) => {
-  //console.log(buildLocalStorageKey(address), keyBundle);
   await AsyncStorage.setItem(buildLocalStorageKey(address), keyBundle);
 };
 export const wipeKeyBundle = async (address) => {
