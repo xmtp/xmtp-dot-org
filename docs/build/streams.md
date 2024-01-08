@@ -106,14 +106,31 @@ await listening.cancel();
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-const stream = await xmtp.conversations.stream();
-for await (const conversation of stream) {
-  console.log(`New conversation started with ${conversation.peerAddress}`);
-  // Say hello to your new friend
-  await conversation.send("Hi there!");
-  // Break from the loop to stop listening
-  break;
-}
+import { useXmtp } from "@xmtp/react-native-sdk";
+const { client } = useXmtp();
+
+useEffect(() => {
+  const streamConversations = async () => {
+    client.conversations.stream((conversation) => {
+      console.log("Streamed conversation:", conversation);
+
+      setConversations((prevConversations) => {
+        const newConversations = [...prevConversations, conversation];
+        return newConversations.sort(
+          (a, b) => new Date(b.createdAt) - new Date(a.createdAt),
+        );
+      });
+    });
+  };
+
+  streamConversations();
+
+  return () => {
+    if (stream) {
+      stream.return();
+    }
+  };
+}, []);
 ```
 
 </TabItem>
@@ -229,16 +246,14 @@ await listening.cancel();
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-const conversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897",
-);
-for await (const message of await conversation.streamMessages()) {
-  if (message.senderAddress === xmtp.address) {
-    // This message was sent from me
-    continue;
-  }
-  console.log(`New message from ${message.senderAddress}: ${message.content}`);
-}
+useEffect(() => {
+  const startMessageStream = async () => {
+    conversation.streamMessages((message) => {
+      console.log("Streamed message:", message);
+    });
+  };
+  startMessageStream();
+}, [conversation]);
 ```
 
 </TabItem>
@@ -300,12 +315,29 @@ export const StreamAllMessages: React.FC = () => {
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
-Code sample coming soon
+```kotlin
+client.conversations.streamAllMessages().collect {
+    if (it.senderAddress == client.address) {
+        // This message was sent from me
+    }
+
+    print("New message from ${it.senderAddress}: ${it.body}")
+}
+```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```swift
+for try await message in client.conversations.streamAllMessages() {
+  if message.senderAddress == client.address {
+    // This message was sent from me
+    continue
+  }
+
+  print("New message from \(message.senderAddress): \(message.body)")
+}
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
@@ -316,13 +348,19 @@ Code sample coming soon
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-for await (const message of await xmtp.conversations.streamAllMessages()) {
-  if (message.senderAddress === xmtp.address) {
-    // This message was sent from me
-    continue;
-  }
-  console.log(`New message from ${message.senderAddress}: ${message.content}`);
-}
+import { useXmtp } from "@xmtp/react-native-sdk";
+const { client } = useXmtp();
+
+useEffect(() => {
+  const startMessageStream = async () => {
+    client.conversations.streamAllMessages((message) => {
+      console.log(
+        `New message from ${message.senderAddress}: ${message.content}`,
+      );
+    });
+  };
+  startMessageStream();
+}, []);
 ```
 
 </TabItem>
