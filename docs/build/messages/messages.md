@@ -334,10 +334,9 @@ const conversation = await xmtp.conversations.newConversation(
 for await (const page of conversation.messages(limit: 25)) {
   for (const msg of page) {
     // Breaking from the outer loop will stop the client from requesting any further pages
-    if (msg.content === 'gm') {
+    if (msg?.content() === 'gm') {
       return
     }
-    console.log(msg.content)
   }
 }
 ```

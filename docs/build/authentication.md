@@ -388,7 +388,7 @@ const privateKey = "your_private_key";
 
 //ethers
 import { Wallet } from "ethers";
-const signer = new Wallet();
+const signer = new Wallet(privateKey);
 
 //viem
 import { privateKeyToAccount } from "viem/accounts";
@@ -461,7 +461,10 @@ var client =  await xmtp.Client.createFromWallet(api, signer);
 ```tsx
 import { Client } from "@xmtp/xmtp-react-native";
 import { Wallet } from "ethers";
-const signer = new Wallet("your_private_key");
+
+const privateKey = "your_key";
+const provider = new ethers.InfuraProvider("mainnet", "your_infura_token");
+const signer = new ethers.Wallet(privateKey, provider);
 const xmtp = await Client.create(signer);
 ```
 
@@ -491,7 +494,7 @@ Set the `env` client option to `dev` while developing. Set it to `production` be
 | preEnableIdentityCallback | `undefined`                                                                       | `preEnableIdentityCallback` is a function that will be called immediately before an [Enable Identity](/docs/concepts/account-signatures#sign-to-enable-an-xmtp-identity) wallet signature is requested from the user.                                                                                                                                                                                                                                                                                                                                   |
 | useSnaps                  | `false`                                                                           | Enabling the `useSnaps` flag will allow the client to attempt to connect to the "Sign in with XMTP" MetaMask Snap as part of client creation. It is safe to enable this flag even if you do not know whether the user has an appropriate MetaMask version enabled. If no compatible version of MetaMask is found, client creation will proceed as if this flag was set to `false`. To learn more, see [Build with the Snap](/docs/tutorials/other/xmtp-metamask-snap.md#as-a-developer-who-wants-my-app-to-use-sign-in-with-xmtp-how-do-i-get-started). |
 | basePersistence           | `InMemoryPersistence` (Node.js) or `LocalStoragePersistence` (browser)            | A persistence provider used by the Keystore to persist its cache of conversations and metadata. Ignored in cases where the `useSnaps` is enabled and the user has a Snaps-compatible browser. To learn more, see [Keystore](https://github.com/xmtp/xmtp-js/blob/beta/src/keystore/README.md#keystore) and [Pluggable persistence](https://github.com/xmtp/xmtp-js/releases/tag/v11.0.0).                                                                                                                                                               |
-| apiClientFactory          | `HttpApiClient`                                                                   | Override the function used to create an API client for the XMTP network. If you are running `xmtp-js` on a server, you will want to import [`@xmtp/grpc-api-client`](https://github.com/xmtp/xmtp-node-js-tools/tree/main/packages/grpc-api-client) and set this option to `GrpcApiClient.fromOptions` for better performance and reliability. To learn more, see [Pluggable gRPC API client](https://github.com/xmtp/xmtp-js/releases/tag/v11.0.0).                                                                                                                                              |
+| apiClientFactory          | `HttpApiClient`                                                                   | Override the function used to create an API client for the XMTP network. If you are running `xmtp-js` on a server, you will want to import [`@xmtp/grpc-api-client`](https://github.com/xmtp/xmtp-node-js-tools/tree/main/packages/grpc-api-client) and set this option to `GrpcApiClient.fromOptions` for better performance and reliability. To learn more, see [Pluggable gRPC API client](https://github.com/xmtp/xmtp-js/releases/tag/v11.0.0).                                                                                                    |
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
