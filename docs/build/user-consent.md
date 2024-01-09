@@ -164,8 +164,8 @@ The user consent feature for Dart hasn't been implemented yet
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-client.contacts.allow([wantedConvo.peerAddress, wantedConvo.peerAddress]);
-client.contacts.deny([spamConvo.peerAddress, unwantedConvo.peerAddress]);
+await client.contacts.allow([wantedConvo.peerAddress, wantedConvo.peerAddress]);
+await client.contacts.deny([spamConvo.peerAddress, unwantedConvo.peerAddress]);
 ```
 
 </TabItem>
@@ -225,7 +225,7 @@ The user consent feature for Dart hasn't been implemented yet
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-client.contacts.refreshConsentList();
+await client.contacts.refreshConsentList();
 ```
 
 </TabItem>
@@ -283,7 +283,7 @@ The user consent feature for Dart hasn't been implemented yet
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-client.contacts.consentList();
+await client.contacts.consentList();
 ```
 
 </TabItem>
@@ -354,8 +354,8 @@ The user consent feature for Dart hasn't been implemented yet
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-client.contacts.isAllowed(wantedConvo.peerAddress);
-client.contacts.isDenied(spamConvo.peerAddress);
+await client.contacts.isAllowed(wantedConvo.peerAddress);
+await client.contacts.isDenied(spamConvo.peerAddress);
 ```
 
 </TabItem>
@@ -480,7 +480,26 @@ export default ConsentListStreamer;
 ```
 
 </TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
+Code sample coming soon
+
+</TabItem>
+<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
 </Tabs>
 
 ## Synchronize user consent preferences
