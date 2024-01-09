@@ -158,7 +158,12 @@ try await client.contacts.deny(addresses: [spamConvo.peerAddress, unwantedConvo.
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-The user consent feature for Dart hasn't been implemented yet
+```dart
+var auth = AuthManager(client.address, api);
+
+await contacts.deny(auth.keys, wantedConvo.address);
+await contacts.allow(auth.keys, spamConvo.address);
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -219,7 +224,12 @@ try await client.contacts.refreshConsentList()
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-The user consent feature for Dart hasn't been implemented yet
+```dart
+var auth = AuthManager(client.address, api);
+var contacts = ContactManager(api, auth);
+
+await contacts.refreshConsents(auth.keys);
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -348,7 +358,13 @@ await client.contacts.isDenied(spamConvo.peerAddress)
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-The user consent feature for Dart hasn't been implemented yet
+```dart
+var auth = AuthManager(client.address, api);
+var contacts = ContactManager(api, auth);
+
+var state = contacts.checkConsent(wantedConvo.address)
+//state can be ContactConsent.deny, ContactConsent.unkown or ContactConsent.allow
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -525,3 +541,7 @@ Update a consent preference in the consent list on the network in the following 
 The following diagram illustrates the detailed logic for how user consent preferences are set in an app and in the consent list on the XMTP network.
 
 <img src={consentlogic} style={{width:"90%"}}/>
+
+```
+
+```
