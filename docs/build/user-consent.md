@@ -159,10 +159,8 @@ try await client.contacts.deny(addresses: [spamConvo.peerAddress, unwantedConvo.
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-var auth = AuthManager(client.address, api);
-
-await contacts.deny(auth.keys, wantedConvo.address);
-await contacts.allow(auth.keys, spamConvo.address);
+await client.allowContact(wantedConvo.address);
+await client.denyContact(spamConvo.address);
 ```
 
 </TabItem>
@@ -225,10 +223,7 @@ try await client.contacts.refreshConsentList()
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-var auth = AuthManager(client.address, api);
-var contacts = ContactManager(api, auth);
-
-await contacts.refreshConsents(auth.keys);
+await client.refreshContactConsentPreferences();
 ```
 
 </TabItem>
@@ -287,7 +282,9 @@ try await client.contacts.consentList
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-The user consent feature for Dart hasn't been implemented yet
+```dart
+var consents = client.exportContactConsents();
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -359,10 +356,7 @@ await client.contacts.isDenied(spamConvo.peerAddress)
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-var auth = AuthManager(client.address, api);
-var contacts = ContactManager(api, auth);
-
-var state = contacts.checkConsent(wantedConvo.address)
+var state = client.checkContactConsent(wantedConvo.address);
 //state can be ContactConsent.deny, ContactConsent.unkown or ContactConsent.allow
 ```
 
