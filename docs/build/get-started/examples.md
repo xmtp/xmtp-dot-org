@@ -46,7 +46,8 @@ import TabItem from "@theme/TabItem";
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/fabriguespe/xmtprn" class="plausible-event-name=Quickstart">React Native</a><br/><small>Quickstart React Native app</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-rn-quickstart" class="plausible-event-name=Quickstart">React Native</a><br/><small>Quickstart React Native app</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-rn-request-inbox" class="plausible-event-name=Quickstart">Portable consent request inbox</a><br/><small>Quickstart inbox app demoing how to build user consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
 </ul>
 
 </div>
@@ -107,7 +108,7 @@ import TabItem from "@theme/TabItem";
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/xmtp/xmtp-react-native" class="plausible-event-name=Quickstart">React Native</a><br/><small>Quickstart React Native app</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-react-native" class="plausible-event-name=Quickstart">React Native</a><br/><small>Quickstart Example SDK app</small></li>
 </ul>
 
 </div>
