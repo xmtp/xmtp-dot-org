@@ -154,11 +154,15 @@ Have you built with a tool that works well with XMTP? Let's add it to this page.
 
 :::
 
+### Does XMTP work with smart contract wallets?
+
+XMTP doesn't currently support smart contract wallets. XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets). It also works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s.
+
 ### Which languages and environments does the XMTP SDK support?
 
 The XMTP SDK is [available for multiple languages](/docs/introduction#xmtp-sdks-and-example-apps#sdks), including JavaScript, Kotlin, Swift, and Dart.
 
-Have other questions or ideas for future language or environment support? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+Have other questions or ideas for future language or environment support? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ### Which web3 libraries does the XMTP SDK require?
 
@@ -184,11 +188,19 @@ In your app onboarding flow, request user permission to display app-specific pus
 
 Currently, XMTP Labs (the company) operates all of the network nodes in the two available XMTP network environments: `dev` and `production`.
 
+These network nodes operate in US jurisdiction in compliance with Office of Foreign Assets Control (OFAC) sanctions and Committee on Foreign Investment in the United States (CFIUS) export compliance regulations. Accordingly, IP-based geoblocking is in place for the following countries/territories:
+
+- Cuba
+- Iran
+- North Korea
+- Syria
+- The Crimea, Donetsk People’s Republic, and Luhansk People’s Republic regions of Ukraine
+
 To explore the software for the nodes that currently form the XMTP network, see the [xmtp-node-go repo](https://github.com/xmtp/xmtp-node-go).
 
-Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes.
+XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal ](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
+Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes all over the world. Decentralization is a top priority and is required to ensure that XMTP is able to serve everyone on the planet.
 
 ### Is XMTP a blockchain?
 
@@ -200,7 +212,7 @@ XMTP Labs is researching various consensus protocols that would allow the networ
 
 Yes, you will be able to run a node.
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
+XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal ](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
 
 ### What is the relationship between Waku and XMTP?
 
@@ -221,6 +233,12 @@ XMTP provides perceptibly real-time message delivery and retrieval. The network 
 ### Is there a way to get a list of all current XMTP-enabled wallets ?
 
 We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
+
+### Does XMTP support group chat?
+
+Not yet. Despite efforts to build group chat with XMTP v2 (the current protocol version), protocol limitations prevented group chat from meeting XMTP's robust security standards. Efforts have shifted to updating the protocol to support secure group chat. More details to come.
+
+Have other questions or feedback about group chat? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ## Rate Limiting
 
@@ -266,7 +284,7 @@ Most messaging incurs no fee. As XMTP decentralizes, messaging between participa
 
 There are no messaging-related fees incurred by developers for building with the XMTP SDK.
 
-Have other questions or ideas about message-related fees? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+Have other questions or ideas about message-related fees? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ### What are the costs of XMTP message storage and retrieval?
 
@@ -322,11 +340,11 @@ XMTP provides both `production` and `dev` network environments to support the de
 
 The `production` network is configured to store messages indefinitely.
 
-XMTP may occasionally delete messages and keys from the `dev` network and will provide advance notice in the [XMTP Discord community](https://discord.gg/xmtp) and [XMTP Announcements discussion forum](https://github.com/orgs/xmtp/discussions/categories/announcements).
+XMTP may occasionally delete messages and keys from the `dev` network and will provide advance notice in the [XMTP Discord community](https://discord.gg/xmtp) and [XMTP Announcements forum](https://community.xmtp.org/c/start-here/announcements/7).
 
 Different approaches to long-term message storage are currently being researched.
 
-Have other questions or ideas about message storage? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+Have other questions or ideas about message storage? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ## Messages
 
@@ -346,7 +364,7 @@ To learn more about content types, see [Content types](/docs/concepts/content-ty
 
 To learn more about the XMTP improvement proposals governance process, see [What is an XIP?](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md)
 
-Have other questions or ideas about message formats and metadata? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+Have other questions or ideas about message formats and metadata? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ### Does XMTP support message attachments?
 
@@ -365,7 +383,7 @@ To learn more about how to implement message attachments in your app, see:
 
 Not currently. However, XMTP Labs is exploring ways to support message deletion and editing.
 
-Have other questions or ideas about support for message deletion and editing? Post to the [XMTP discussion forum](https://github.com/orgs/xmtp/discussions).
+Have other questions or ideas about support for message deletion and editing? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ## Message patterns
 
@@ -461,7 +479,7 @@ const { data: walletClient, isLoading } = useEthersWalletClient();
 
 ### Why my app is failing saying Buffer is not found
 
-If you get into issues with `Buffer` and `polyfills` check out the fix below:
+If you run into issues with `Buffer` and `polyfills`, see these solutions:
 
 1. Install the buffer dependency.
 
@@ -488,7 +506,115 @@ window.Buffer = window.Buffer ?? Buffer;
 import "./polyfills";
 ```
 
-4. Update config files.
+#### Using config files
+
+<details><summary>React Scripts 5</summary>
+
+- **CRACO**: (Create React App Configuration Override) is a community solution for adding custom configurations to Create React App. It allows you to customize your configuration without ejecting from the default setup provided by Create React App.
+
+  **Install react-app-rewired**:
+
+  ```bash
+  npm install craco
+  ```
+
+  Create the `craco.config.js` in your root directory:
+
+  ```jsx
+  const webpack = require("webpack");
+  module.exports = {
+    webpack: {
+      plugins: [
+        new webpack.ProvidePlugin({
+          Buffer: ["buffer", "Buffer"],
+        }),
+      ],
+      resolve: {
+        fallback: {
+          buffer: require.resolve("buffer/"),
+        },
+      },
+    },
+  };
+  ```
+
+- **React-App-Rewired**: `react-app-rewired` is a tool to tweak the Create React App (CRA) configuration without ejecting, similar to CRACO. Here's how you can use it:
+
+  **Install react-app-rewired**:
+
+  ```
+  npm install react-app-rewired
+  ```
+
+  **Modify the `scripts` in your `package.json`**:
+  Replace `react-scripts` with `react-app-rewired`. For example:
+
+  ```json
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  }
+  ```
+
+  **Create a `config-overrides.js` file**:
+  In the root of your project, create a `config-overrides.js` file. This file will be used to modify the webpack config.
+
+  ```javascript
+  const webpack = require("webpack");
+
+  module.exports = function override(config, env) {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      buffer: require.resolve("buffer/"),
+    };
+    config.plugins = (config.plugins || []).concat([
+      new webpack.ProvidePlugin({
+        Buffer: ["buffer", "Buffer"],
+      }),
+    ]);
+    return config;
+  };
+  ```
+
+- **Eject Method**: Ejecting from CRA gives you full control over the configuration, but it's a one-way operation. Once you eject, you can't go back to the abstracted CRA setup.
+
+  **Eject the application**:
+
+  ```
+  npm run eject
+  ```
+
+  **Modify the Webpack Configuration**:
+  After ejecting, you'll have access to the `config` folder. Modify the `webpack.config.js` file:
+
+  ```javascript
+  const webpack = require("webpack");
+
+  // Inside the module.exports object
+  module.exports = {
+    // ... other configurations
+
+    resolve: {
+      // ... other resolve options
+      fallback: {
+        // ... other fallback options
+        buffer: require.resolve("buffer/"),
+      },
+    },
+    plugins: [
+      // ... other plugins
+      new webpack.ProvidePlugin({
+        Buffer: ["buffer", "Buffer"],
+      }),
+    ],
+  };
+  ```
+
+</details>
+
+<details><summary>WEBPACK</summary>
 
 - Webpack: `vue.config.js` or `webpack.config.js`:
 
@@ -507,6 +633,10 @@ module.exports = {
 };
 ```
 
+</details>
+
+<details><summary>VITE</summary>
+
 - Vite: `vite.config.js`:
 
 ```jsx
@@ -524,6 +654,10 @@ export default defineConfig({
 });
 ```
 
+</details>
+
+<details><summary>WEBPACK</summary>
+
 - NuxtJS: `nuxt.config.js`:
 
 ```tsx
@@ -539,3 +673,5 @@ export default {
   },
 };
 ```
+
+</details>

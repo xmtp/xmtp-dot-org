@@ -35,15 +35,11 @@ const config = {
     },
     {
       src: "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js",
-      defer: true,
       "data-domain": "xmtp.org",
-      crossorigin: "anonymous",
     },
     {
       src: "https://unpkg.com/flickity-fade@1/flickity-fade.js",
-      defer: true,
       "data-domain": "xmtp.org",
-      crossorigin: "anonymous",
     },
   ],
   clientModules: [require.resolve("./src/css/tailwind.css")],
@@ -383,12 +379,12 @@ const config = {
                 href: "https://discord.gg/xmtp",
               },
               {
-                label: "𝕏",
-                href: "https://x.com/xmtp_",
+                label: "Community forums",
+                href: "https://community.xmtp.org/",
               },
               {
-                label: "GitHub Discussions",
-                href: "https://github.com/orgs/xmtp/discussions",
+                label: "𝕏",
+                href: "https://x.com/xmtp_",
               },
               {
                 label: "GitHub",

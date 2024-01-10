@@ -12,7 +12,7 @@ Thank you for your interest in contributing to `xmtp.org`! We're glad you're her
 
 To help ensure that your contribution experience goes as smoothly as possible, please follow the guidance provided in this document.
 
-Have a question about contributing to `xmtp.org`? Post to the [XMTP Q&A discussion forum](https://github.com/orgs/xmtp/discussions/categories/q-a).
+Have a question about contributing to `xmtp.org`? Post to the [XMTP Help & Resources forum](https://community.xmtp.org/c/help/9).
 
 ### Make a quick fix to documentation
 

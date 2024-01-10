@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Build an XMTP CLI tool
 
-Use this starter project to build an XMTP CLI tool. You can also check out the [GitHub repo](https://github.com/xmtp/cli-starter).
+Use this starter project to build an XMTP CLI tool. You can also check out the [cli-starter](https://github.com/xmtp/xmtp-node-js-tools/tree/main/packages/cli-starter) package in the [xmtp-node-js-tools](https://github.com/xmtp/xmtp-node-js-tools) repo.
 
 ## Prerequisites
 
@@ -270,4 +270,4 @@ All the examples thus far have been using a randomly generated wallet and a priv
 
 With a simple web page that uses Wagmi, Web3Modal, or any other library that returns an `ethers.Signer`, you can export XMTP-specific keys and store those on the user's machine.
 
-The command to export keys is `Client.getKeys(wallet, { env })`.
+The command to export keys is `Client.getKeys(signer, { env })`.

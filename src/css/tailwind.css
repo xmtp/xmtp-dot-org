@@ -1032,14 +1032,7 @@ ul li a:before {
   width: 24px;
   height: 24px;
 }
-/*TIPS*/
-.alert {
-  border-width: 1px;
-}
-.alert p {
-  font-size: 0.8rem;
-  margin-bottom: 0px !important;
-}
+
 /*code words*/
 code:not([class]) {
   color: #db524c !important;
@@ -1144,10 +1137,6 @@ table code {
   text-align: center;
 }
 
-.carousel-cell img {
-  visibility: hidden;
-}
-
 .carousel-cell.is-selected img {
   visibility: visible;
 }
@@ -1155,10 +1144,6 @@ table code {
 .carousel-cell h1 {
   font-size: 48px;
   line-height: 1.1;
-}
-
-.carousel-cell h1 span {
-  opacity: 0;
 }
 
 .carousel-cell h4 {

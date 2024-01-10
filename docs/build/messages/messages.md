@@ -400,7 +400,15 @@ Code sample coming soon
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-Code sample coming soon
+```jsx
+if(/*Not supported content type*/){
+  return message?.fallback ? (
+    message?.fallback
+  ) : (
+    <div style={styles.RenderedMessage}>"Message not supported"</div>
+  );
+}
+```
 
 </TabItem>
 </Tabs >

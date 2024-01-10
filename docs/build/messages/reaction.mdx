@@ -15,7 +15,7 @@ Use the reaction content type to support reactions in your app. A reaction is a 
 
 :::tip Open for feedback
 
-You're welcome to provide feedback by commenting on the [Proposal for emoji reactions content type](https://github.com/orgs/xmtp/discussions/36) XIP idea.
+You're welcome to provide feedback by commenting on the [Proposal for emoji reactions content type](https://community.xmtp.org/t/proposal-for-emoji-reactions-content-type/499/1) XIP idea.
 
 :::
 
@@ -98,7 +98,12 @@ var registry = CodecRegistry()..registerCodec(ReactionCodec());
 
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
-React Native SDK already has the codecs registered.
+```jsx
+const client = await Client.create(signer, {
+  env: "production",
+  codecs: [new ReactionCodec()],
+});
+```
 
 </TabItem>
 </Tabs>
@@ -295,18 +300,13 @@ var decoded = await codec.decode(encoded);
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-function MessageContents({ content }: { content: MessageContent }) {
-  if (content.reaction) {
-    // This is a reaction
-    const reactionContent = content.reaction.content;
-    const messageId = content.reaction.reference;
-    const action = content.reaction.action;
-    const schema = content.reaction.schema;
-
-    // Handle the reaction content, the referenced message ID, the action, and the schema
-    // ...
-  }
-  // ...
+if (message.contentTypeId === "xmtp.org/reaction:1.0") {
+  const reaction = await message.content();
+  return reaction;
+  //reaction.reference = id of the message being reacted to,
+  //reaction.action = 'added',
+  //reaction.schema =  'unicode',
+  //reaction.content = '💖',
 }
 ```
 

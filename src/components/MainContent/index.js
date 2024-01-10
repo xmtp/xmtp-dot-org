@@ -120,7 +120,7 @@ export const MainContent = ({ styles }) => {
 
                   <span className="text-base text-neutral-800 dark:text-neutral-300 color-neutral-300">
                     <ALink
-                      to="https://github.com/orgs/xmtp/discussions"
+                      to="https://community.xmtp.org/"
                       className="text-red-500 font-bold">
                       Join the discussion
                     </ALink>

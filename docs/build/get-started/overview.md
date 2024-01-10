@@ -27,9 +27,9 @@ import { Client } from "@xmtp/xmtp-js";
 import { Wallet } from "ethers";
 
 // You'll want to replace this with a wallet from your application
-const wallet = Wallet.createRandom();
+const signer = Wallet.createRandom();
 // Create the client with your wallet. This will connect to the XMTP development network by default
-const xmtp = await Client.create(wallet, { env: "dev" });
+const xmtp = await Client.create(signer, { env: "dev" });
 // Start a conversation with XMTP
 const conversation = await xmtp.conversations.newConversation(
   "0x3F11b27F323b62B159D2642964fa27C46C841897",
@@ -153,9 +153,9 @@ import 'package:xmtp/xmtp.dart' as xmtp;
 import 'package:web3dart/credentials.dart';
 import 'dart:math';
 
-var wallet = EthPrivateKey.createRandom(Random.secure());
+var signer = EthPrivateKey.createRandom(Random.secure());
 var api = xmtp.Api.create();
-var client = await xmtp.Client.createFromWallet(api, wallet);
+var client = await xmtp.Client.createFromWallet(api, signer);
 
 //List conversations
 var conversations = await client.listConversations();
@@ -296,4 +296,4 @@ Message this XMTP message bot to get an immediate automated reply:
 
 ### Troubleshooting
 
-- If you get into issues with `Buffer` and `polyfills` check out our [troubleshooting tips](/docs/developer-quickstart#troubleshooting)
+- If you run into issues with Buffer and polyfills, see these [solutions](/docs/faq#why-my-app-is-failing-saying-buffer-is-not-found)
