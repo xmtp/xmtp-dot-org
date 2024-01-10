@@ -151,7 +151,7 @@ const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
 );
 ```
 
-Upload an encrypted attachment anywhere where it will be accessible via an HTTPS GET request. This will depend on what storage provider you use which may vary based on your needs. On xmtp.chat, we use Web3 Storage, but don't formally endorse any particular tool.
+Upload an encrypted attachment to a location where it will be accessible via an HTTPS GET request. This location will depend on which storage provider you use based on your needs. For example, the [xmtp.chat](https://xmtp.chat/) example app uses web3.storage. (This information is shared for educational purposes only and is not an endorsement.)
 
 Now that you have a `url`, you can create a `RemoteAttachment`:
 
