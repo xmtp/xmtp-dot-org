@@ -535,7 +535,3 @@ Update a consent preference in the consent list on the network in the following 
 The following diagram illustrates the detailed logic for how user consent preferences are set in an app and in the consent list on the XMTP network.
 
 <img src={consentlogic} style={{width:"90%"}}/>
-
-```
-
-```
