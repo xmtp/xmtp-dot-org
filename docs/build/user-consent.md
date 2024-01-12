@@ -538,8 +538,8 @@ The following diagram illustrates the detailed logic for how user consent prefer
 
 ### Tutorials
 
-For more practical examples, please refer to our tutorials.
+For practical examples, see these tutorials:
 
-- [Request Inbox](/docs/tutorials/portable-consent/subscribe)
-- [Subscribe Button](/docs/tutorials/portable-consent/broadcast)
-- [Broadcast](/docs/tutorials/portable-consent/request-inbox)
+- [Enable subscribers with XMTP](/docs/tutorials/portable-consent/broadcast)
+- [Broadcast messages with XMTP](/docs/tutorials/portable-consent/request-inbox)
+- [Add consent to an existing XMTP inbox](/docs/tutorials/portable-consent/subscribe)

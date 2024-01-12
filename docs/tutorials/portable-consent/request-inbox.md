@@ -1,9 +1,9 @@
 ---
-sidebar_label: Request Inbox
+sidebar_label: Request inbox
 sidebar_position: 6
 ---
 
-# How to Add Consent to an Existing XMTP Inbox
+# Add consent to an existing XMTP inbox
 
 ![Feature status](https://img.shields.io/badge/Feature_status-Alpha-orange)
 
@@ -15,13 +15,15 @@ This feature is in **alpha** status and ready for you to start experimenting w
 
 <div class=" rabbit  p-5 ">
 
-📥 <b>Need a Quick Reference?</b> Check out the GitHub repo: <a href="https://github.com/fabriguespe/xmtp-inbox-portable-consent">inbox-portable-consent</a>.
+📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-inbox-portable-consent">inbox-portable-consent</a>
 
 </div>
 
-Managing user consent is essential for enhancing privacy and user experience. If you already have an XMTP application, integrating portable consent features becomes crucial. This guide walks you through adding the consent logic to your existing XMTP app.
+Managing user consent is essential for enhancing privacy and the user experience. Providing user consent features in your app gives your users better control over who can send them messages.
 
-#### Initialize XMTP Client with Consent
+If you already have an XMTP app, integrating portable consent features becomes crucial. This guide walks you through adding consent logic to your app.
+
+## Initialize XMTP client with consent
 
 Here's your existing `initXmtp` function, updated to include the consent refresh logic.
 
@@ -34,7 +36,7 @@ const initXmtpWithKeys = async function () {
 };
 ```
 
-#### Filtering conversations based on consent
+## Filtering conversations based on consent
 
 Using the `consentState` property of the conversation object, you can filter the conversations based on consent.
 
@@ -48,7 +50,7 @@ const requests = conversations.filter(
 );
 ```
 
-#### Request inbox
+## Request inbox
 
 You can now create a separate inbox for requests. This inbox will only show the conversations that have not been allowed yet.
 
@@ -70,9 +72,9 @@ You can now create a separate inbox for requests. This inbox will only show the 
 }
 ```
 
-#### Allow and denied actions
+## Allow and deny actions
 
-Every time you open a conversation on the request tab you can show a popup with the allow and deny actions. You can use the `consentState` property of the conversation object to show the popup only when the consent state is `unknown`.
+When you open a conversation on the request tab, you can show a popup with the allow and deny actions. You can use the `consentState` property of the conversation object to show the popup only when the consent state is `unknown`.
 
 ```jsx
 // Inside your MessageContainer component
@@ -105,11 +107,7 @@ const handleBlock = async () => {
 };
 ```
 
-#### Conclusion
+## Example repos
 
-By following these steps, you'll successfully integrate portable consent into your existing XMTP application. This enables users to have better control over who can send them messages, enhancing user privacy and experience.
-
-#### Example repo
-
-- JS example in the following repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
-- ReactNative example in the following repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-rn-request-inbox)
+- JS example repo: [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
+- React Native example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-rn-request-inbox)
