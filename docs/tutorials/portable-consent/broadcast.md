@@ -146,6 +146,6 @@ Neglecting these guidelines can result in consent state conflicts and compromise
 
 Consent has really evolved through the years. It started with email, then email marketing, and was the wild west until laws like GPDR stepped in. This is new chapter in the history of consent in a new era for privacy, portability, and ownership.
 
-## Example repo
+### Example repo
 
 _You can find a complete example of this tutorial in the [xmtp-broadcast](https://github.com/fabriguespe/xmtp-broadcast) repo._

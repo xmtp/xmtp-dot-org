@@ -146,7 +146,7 @@ Neglecting these guidelines can result in consent state conflicts and compromise
 
 Consent has really evolved through the years. It started with email, then email marketing, and was the wild west until laws like GPDR stepped in. This is new chapter in the history of consent in a new era for privacy, portability, and ownership.
 
-## Example repos
+### Example repos
 
 - JS example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
 - React Native example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-rn-request-inbox)
