@@ -5,13 +5,9 @@ sidebar_position: 6
 
 # Add consent to an existing XMTP inbox
 
-![Feature status](https://img.shields.io/badge/Feature_status-Alpha-orange)
+Managing user consent is essential for enhancing privacy and the user experience. Providing user consent features in your app gives your users better control over who can send them messages.
 
-:::caution This feature is in **alpha** status
-
-This feature is in **alpha** status and ready for you to start experimenting with. However, we do not recommend using alpha features in production apps. Expect frequent changes as we iterate based on feedback. Want to provide feedback? Comment on [Proposal: Portable consent state for v2 SDKs](https://github.com/orgs/xmtp/discussions/49).
-
-:::
+If you already have an XMTP app, integrating portable consent features becomes crucial. This guide walks you through adding consent logic to your app.
 
 <div class=" rabbit  p-5 ">
 
@@ -19,24 +15,30 @@ This feature is in **alpha** status and ready for you to start experimenting w
 
 </div>
 
-Managing user consent is essential for enhancing privacy and the user experience. Providing user consent features in your app gives your users better control over who can send them messages.
+## Considerations
 
-If you already have an XMTP app, integrating portable consent features becomes crucial. This guide walks you through adding consent logic to your app.
+Before diving into the code let's consider important aspects while integrating consent features. For example, before making an allow or block action you should synchronize the updated consent list in order to **prevent overwriting network** consent from another app. For more details head to these sections of our docs:
 
-## Initialize XMTP client with consent
+- [Understand user consent preferences](https://xmtp.org/docs/build/user-consent#understand-user-consent-preferences): Here are some of the ways user consent preferences are set
+- [Use consent preferences to respect user intent](https://xmtp.org/docs/build/user-consent#use-consent-preferences-to-respect-user-intent): Your app should aim to handle consent preferences appropriately because they are an expression of user intent.
+- [Synchronize user consent preferences](https://xmtp.org/docs/build/user-consent#synchronize-user-consent-preferences):All apps that use the user consent feature must adhere to the logic described in this section to keep the consent list on the network synchronized with local app user consent preferences, and vice versa.
 
-Here's your existing `initXmtp` function, updated to include the consent refresh logic.
+## Quickstart
+
+#### Initialize XMTP Client with Consent
+
+Here's your existing `initXmtpWithKeys` function, updated to include the consent refresh logic.
 
 ```jsx
 const initXmtpWithKeys = async function () {
   // ... previous code
   const xmtp = await Client.create(wallet);
-  // Add these lines to refresh the consent list
+  // Refresh the consent list to make sure your application is up-to-date with the network
   await xmtp.contacts.refreshConsentList();
 };
 ```
 
-## Filtering conversations based on consent
+#### Filtering conversations based on consent
 
 Using the `consentState` property of the conversation object, you can filter the conversations based on consent.
 
@@ -50,7 +52,7 @@ const requests = conversations.filter(
 );
 ```
 
-## Request inbox
+#### Request inbox
 
 You can now create a separate inbox for requests. This inbox will only show the conversations that have not been allowed yet.
 
@@ -72,9 +74,23 @@ You can now create a separate inbox for requests. This inbox will only show the 
 }
 ```
 
-## Allow and deny actions
+#### Refresh consent when opening a conversation
 
-When you open a conversation on the request tab, you can show a popup with the allow and deny actions. You can use the `consentState` property of the conversation object to show the popup only when the consent state is `unknown`.
+To ensure that your application respects the latest user consent preferences, it's important to refresh the consent state every time a conversation is opened. This can be done by calling the `refreshConsentList` method of the XMTP client before any interaction within a conversation occurs.
+
+```jsx
+// Function to select and open a conversation
+const openConversation = async (conversation) => {
+  // Refresh the consent list to make sure your application is up-to-date with the network
+  await client.contacts.refreshConsentList();
+  // Now it's safe to open the conversation
+  setSelectedConversation(conversation);
+};
+```
+
+#### Allow and denied actions
+
+Every time you open a conversation on the request tab you can show a popup with the allow and deny actions. You can use the `consentState` property of the conversation object to show the popup only when the consent state is `unknown`.
 
 ```jsx
 // Inside your MessageContainer component
@@ -84,11 +100,13 @@ const [showPopup, setShowPopup] = useState(
 
 // Function to handle the acceptance of a contact
 const handleAccept = async () => {
+  // Refresh the consent list first
+  await client.contacts.refreshConsentList();
   // Allow the contact
   await client.contacts.allow([conversation.peerAddress]);
   // Hide the popup
   setShowPopup(false);
-  // Refresh the consent list
+  // Refresh the consent list to make sure your application is up-to-date with the network
   await client.contacts.refreshConsentList();
   // Log the acceptance
   console.log("accepted", conversation.peerAddress);
@@ -96,6 +114,8 @@ const handleAccept = async () => {
 
 // Function to handle the blocking of a contact
 const handleBlock = async () => {
+  // Refresh the consent list first
+  await client.contacts.refreshConsentList();
   // Block the contact
   await client.contacts.deny([conversation.peerAddress]);
   // Hide the popup
@@ -106,6 +126,23 @@ const handleBlock = async () => {
   console.log("denied", conversation.peerAddress);
 };
 ```
+
+:::caution Caution
+
+**Always synchronize consent states:** Before updating consent preferences on the network, ensure you refresh the consent list with `refreshConsentList`. Update the network's consent list only in these scenarios:
+
+- **User Denies Contact:** Set to `denied` if a user blocks or unsubscribes.
+- **User Allows Contact:** Set to `allowed` if a user subscribes or enables notifications.
+- **Legacy Preferences:** Align the network with any existing local preferences.
+- **User Response:** Set to `allowed` if the user has engaged in conversation.
+
+Neglecting these guidelines can result in consent state conflicts and compromise user privacy.
+
+:::
+
+## Conclusion
+
+Consent has really evolved through the years. It started with email, then email marketing, and was the wild west until laws like GPDR stepped in. This is new chapter in the history of consent in a new era for privacy, portability, and ownership.
 
 ## Example repos
 
