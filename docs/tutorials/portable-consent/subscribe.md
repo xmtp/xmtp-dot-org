@@ -69,7 +69,7 @@ let state = client.contacts.consentState(client.address);
 Based on the current state, either allow or block the subscriber.
 
 ```jsx
-// If the state is unknown or blocked, allow the subscriber
+// If the state is unknown or denied, allow the subscriber
 if (state == "unknown" || state == "denied") {
   await client.contacts.allow([senderAddress]);
 }
@@ -80,19 +80,45 @@ if (state == "unknown" || state == "denied") {
 
 ### Callbacks
 
-The `onSubscribe` and `onUnsubscribe` functions are called when the consent state is updated. You can use these functions to update your local state or to send a message to your subscribers.
+The `onSubscribe` and `onUnsubscribe` functions are called when the consent state is updated. If you wrap your code around a component, you can use these functions to update your local state or to send a message to your subscribers.
 
 ```jsx
-<Subscribe
+// Define a SubscribeButton component that uses the onSubscribe and onUnsubscribe callbacks
+function SubscribeButton({ onSubscribe, onUnsubscribe }) {
+  // ... other component logic
+
+  // Example usage of onSubscribe and onUnsubscribe within the component
+  const handleSubscribe = (address) => {
+    // Perform subscription logic...
+    onSubscribe(address); // Call the onSubscribe callback
+  };
+
+  const handleUnsubscribe = (address) => {
+    // Perform unsubscription logic...
+    onUnsubscribe(address); // Call the onUnsubscribe callback
+  };
+
+  return (
+    <div>
+      <button onClick={() => handleSubscribe("subscriberAddress")}>
+        Subscribe
+      </button>
+      <button onClick={() => handleUnsubscribe("subscriberAddress")}>
+        Unsubscribe
+      </button>
+    </div>
+  );
+}
+
+// Usage of SubscribeButton component with onSubscribe and onUnsubscribe callbacks
+<SubscribeButton
   onSubscribe={(address) => {
-    //Update local db
-    //or send a message to the subscriber
+    // Update local db or send a message to the subscriber
   }}
   onUnsubscribe={(address) => {
-    //Update local db
-    //or send a message to the subscriber
+    // Update local db or send a message to the subscriber
   }}
-/>
+/>;
 ```
 
 :::caution Caution

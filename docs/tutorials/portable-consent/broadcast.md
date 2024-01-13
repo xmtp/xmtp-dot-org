@@ -39,7 +39,7 @@ import { ethers } from "ethers";
 The Broadcast function accepts a walletAddresses array. This array holds the Ethereum addresses that you intend to broadcast messages to.
 
 ```jsx
-walletAddresses = [
+const walletAddresses = [
   "0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204",
   "0xa64af7F78DE39A238Ecd4ffF7D6D410DBACe2dF0",
 ];
@@ -111,7 +111,7 @@ for (let i = 0; i < walletAddresses.length; i++) {
 
 ### Popup UI
 
-A modal pops up when the user opts to send a message. This modal contains a text area for the user to input their message. It also handles `isLoading` and `messageSent` states.
+A modal pops up when the user opts to send a message. This modal contains a text area for the user to input their message.
 
 ```jsx
 {
