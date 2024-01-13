@@ -62,7 +62,7 @@ _This will return an array of booleans that correspond to the wallet addresses. 
 
 ## Check if address has given consent to the sender
 
-The `isAllowed` method checks if the wallet address has given consent to the sender. If the address has not given consent, the sender cannot send messages to the address. To learn more about consent, check out the tutorial
+The `isAllowed` method checks if the wallet address has given consent to the sender. If the address has not given consent, the sender cannot send messages to the address.
 
 ```jsx
 xmtp.contacts.isAllowed(wallet);

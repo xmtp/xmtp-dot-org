@@ -543,3 +543,8 @@ For practical examples, see these tutorials:
 - [Enable subscribers with XMTP](/docs/tutorials/portable-consent/broadcast)
 - [Broadcast messages with XMTP](/docs/tutorials/portable-consent/request-inbox)
 - [Add consent to an existing XMTP inbox](/docs/tutorials/portable-consent/subscribe)
+
+### Example repos
+
+- JS example repo: [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
+- React Native example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-rn-request-inbox)
