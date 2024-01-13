@@ -23,9 +23,11 @@ Before diving into the code let's consider important aspects while integrating c
 - [Use consent preferences to respect user intent](https://xmtp.org/docs/build/user-consent#use-consent-preferences-to-respect-user-intent): Your app should aim to handle consent preferences appropriately because they are an expression of user intent.
 - [Synchronize user consent preferences](https://xmtp.org/docs/build/user-consent#synchronize-user-consent-preferences):All apps that use the user consent feature must adhere to the logic described in this section to keep the consent list on the network synchronized with local app user consent preferences, and vice versa.
 
-## Quickstart
+## Tutorial
 
-#### Initialize XMTP Client with Consent
+---
+
+### Initialize XMTP client with consent
 
 Here's your existing `initXmtpWithKeys` function, updated to include the consent refresh logic.
 
@@ -38,7 +40,7 @@ const initXmtpWithKeys = async function () {
 };
 ```
 
-#### Filtering conversations based on consent
+### Filtering conversations based on consent
 
 Using the `consentState` property of the conversation object, you can filter the conversations based on consent.
 
@@ -52,7 +54,7 @@ const requests = conversations.filter(
 );
 ```
 
-#### Request inbox
+### Request inbox
 
 You can now create a separate inbox for requests. This inbox will only show the conversations that have not been allowed yet.
 
@@ -74,7 +76,7 @@ You can now create a separate inbox for requests. This inbox will only show the 
 }
 ```
 
-#### Refresh consent when opening a conversation
+### Refresh consent when opening a conversation
 
 To ensure that your application respects the latest user consent preferences, it's important to refresh the consent state every time a conversation is opened. This can be done by calling the `refreshConsentList` method of the XMTP client before any interaction within a conversation occurs.
 
@@ -88,9 +90,9 @@ const openConversation = async (conversation) => {
 };
 ```
 
-#### Allow and denied actions
+### Allow and deny actions
 
-Every time you open a conversation on the request tab you can show a popup with the allow and deny actions. You can use the `consentState` property of the conversation object to show the popup only when the consent state is `unknown`.
+When you open a conversation on the request tab, you can show a popup with the allow and deny actions. You can use the `consentState` property of the conversation object to show the popup only when the consent state is `unknown`.
 
 ```jsx
 // Inside your MessageContainer component
@@ -146,5 +148,5 @@ Consent has really evolved through the years. It started with email, then email 
 
 ## Example repos
 
-- JS example repo: [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
+- JS example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
 - React Native example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-rn-request-inbox)

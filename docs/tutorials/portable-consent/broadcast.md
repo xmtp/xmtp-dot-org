@@ -5,7 +5,7 @@ sidebar_position: 5
 
 # Broadcast messages with XMTP
 
-This tutorial will guide you on creating a simple `Broadcast` that enables the user to broadcast messages to one or many specified Ethereum addresses.
+This tutorial will guide you on creating a simple **Broadcast** that enables the user to broadcast messages to one or many specified Ethereum addresses.
 
 <div class=" rabbit  p-5 ">
 
@@ -21,9 +21,11 @@ Before diving into the code let's consider important aspects while integrating c
 - [Use consent preferences to respect user intent](https://xmtp.org/docs/build/user-consent#use-consent-preferences-to-respect-user-intent): Your app should aim to handle consent preferences appropriately because they are an expression of user intent.
 - [Synchronize user consent preferences](https://xmtp.org/docs/build/user-consent#synchronize-user-consent-preferences):All apps that use the user consent feature must adhere to the logic described in this section to keep the consent list on the network synchronized with local app user consent preferences, and vice versa.
 
-## Quickstart
+## Tutorial
 
-#### Import XMTP Client and Ethers Library
+---
+
+### Import the XMTP client and ethers libraries
 
 The code starts by importing the required XMTP and Ethereum packages. This enables you to create an XMTP client and interact with the Ethereum blockchain.
 
@@ -32,7 +34,7 @@ import { Client } from "@xmtp/xmtp-js";
 import { ethers } from "ethers";
 ```
 
-#### Set up the `walletAddresses` Array
+### Set up the `walletAddresses` array
 
 The Broadcast function accepts a walletAddresses array. This array holds the Ethereum addresses that you intend to broadcast messages to.
 
@@ -43,15 +45,15 @@ walletAddresses = [
 ];
 ```
 
-#### Rate Limiting
+### Rate limiting
 
 Keep in mind that the XMTP client limits up to 1,000 publish requests per 5 minutes. It's important to be aware of this when broadcasting messages, especially when dealing with a large array of wallet addresses.
 
-_For more information check the [FAQs](https://xmtp.org/docs/faq#rate-limiting)_
+_For more information, see the [FAQs](https://xmtp.org/docs/faq#rate-limiting)_
 
-#### Check which addresses can receive messages
+### Check which addresses can receive messages
 
-In the `handleBroadcastClick` function, the `canMessage` method checks which of the wallet addresses from the array can receive messages.
+In the `handleBroadcastClick` function, the `canMessage` method checks which wallet addresses from the array can receive messages.
 
 ```jsx
 // Create a new XMTP client with the signer and environment
@@ -62,25 +64,25 @@ const broadcasts_canMessage = await xmtp.canMessage([walletAddresses]);
 
 _This will return an array of booleans that correspond to the wallet addresses. If the boolean is true, the address can receive messages. If the boolean is false, the address cannot receive messages._
 
-#### Check if has given consent to the sender
+## Check if address has given consent to the sender
 
-The `isAllowed` method checks if the wallet address has given consent to the sender. If the address has not given consent, the sender cannot send messages to the address. To learn more about consent check out the tutorial
+The `isAllowed` method checks if the wallet address has given consent to the sender. If the address has not given consent, the sender cannot send messages to the address.
 
 ```jsx
 xmtp.contacts.isAllowed(wallet);
 ```
 
-#### Refresh the Consent List
+### Refresh the consent list
 
-To ensure we're working with the most up-to-date information, refresh the consent list before doing the broadcast.
+To ensure you're working with the most up-to-date information, refresh the consent list before doing the broadcast.
 
 ```jsx
 await xmtp.contacts.refreshConsentList();
 ```
 
-#### Loop through wallet address array to broadcast
+### Loop through wallet address array to broadcast
 
-Here, you loop through the `walletAddresses` array. For each address that can receive messages, a new conversation is started and the message is sent.
+Loop through the `walletAddresses` array. For each address that can receive messages, a new conversation is started, and the message is sent.
 
 ```jsx
 // Create a new XMTP client with the signer and environment
@@ -107,9 +109,9 @@ for (let i = 0; i < walletAddresses.length; i++) {
 }
 ```
 
-#### Popup UI
+### Popup UI
 
-A modal pops up when the user opts to send a message. This modal contains a text area for the user to input their message. Also handles `isLoading` and `messageSent` states.
+A modal pops up when the user opts to send a message. This modal contains a text area for the user to input their message. It also handles `isLoading` and `messageSent` states.
 
 ```jsx
 {
