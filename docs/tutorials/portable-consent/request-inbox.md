@@ -154,6 +154,8 @@ const handleSendMessage = async (newMessage) => {
 };
 ```
 
+Include this step in your message sending workflow to maintain proper consent practices within your XMTP application.
+
 :::caution Caution
 
 **Always synchronize consent states:** Before updating consent preferences on the network, ensure you refresh the consent list with `refreshConsentList`. Update the network's consent list only in these scenarios:
