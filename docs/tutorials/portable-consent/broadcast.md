@@ -148,4 +148,4 @@ Consent has really evolved through the years. It started with email, then email 
 
 ### Example repo
 
-_You can find a complete example of this tutorial in the [xmtp-broadcast](https://github.com/fabriguespe/xmtp-broadcast) repo._
+You can find a complete example of this tutorial in the [xmtp-broadcast](https://github.com/fabriguespe/xmtp-broadcast) repo.

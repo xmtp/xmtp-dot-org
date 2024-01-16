@@ -46,7 +46,7 @@ let wallet = await connectWallet();
 let client = await Client.create(wallet, { env: env });
 ```
 
-### Refresh the Consent List
+### Refresh the consent list
 
 To ensure we're working with the most up-to-date information, refresh the consent list.
 
@@ -140,4 +140,4 @@ Consent has really evolved through the years. It started with email, then email 
 
 ### Example repo
 
-_You can find a complete example of this tutorial in the [xmtp-subscribe-portable-consent](https://github.com/fabriguespe/xmtp-subscribe-portable-consent) repo._
+You can find a complete example of this tutorial in the [xmtp-subscribe-portable-consent](https://github.com/fabriguespe/xmtp-subscribe-portable-consent) repo.

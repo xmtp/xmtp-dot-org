@@ -129,9 +129,9 @@ const handleBlock = async () => {
 };
 ```
 
-### Updating Consent on message send
+### Updating consent on message send
 
-When sending a message, it's crucial to ensure the consent state is correctly set to "allowed". To do this, refresh the consent list first to synchronize with the network's state. Here's the updated `handleSendMessage` function:
+A user's response to the conversation is considered consent. Previously to send a message we need to ensure the consent state is correctly set to "allowed".
 
 ```jsx
 const handleSendMessage = async (newMessage) => {
@@ -176,4 +176,4 @@ Consent has really evolved through the years. It started with email, then email 
 
 ### Example repos
 
-- JS example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
+JS example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
