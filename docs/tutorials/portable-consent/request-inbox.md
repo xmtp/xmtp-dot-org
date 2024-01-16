@@ -176,4 +176,3 @@ Consent has really evolved through the years. It started with email, then email 
 ### Example repos
 
 - JS example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
-- React Native example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-rn-request-inbox)

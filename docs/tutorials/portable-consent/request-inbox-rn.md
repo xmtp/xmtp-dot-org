@@ -23,15 +23,9 @@ Before diving into the code let's consider important aspects while integrating c
 - [Use consent preferences to respect user intent](https://xmtp.org/docs/build/user-consent#use-consent-preferences-to-respect-user-intent): Your app should aim to handle consent preferences appropriately because they are an expression of user intent.
 - [Synchronize user consent preferences](https://xmtp.org/docs/build/user-consent#synchronize-user-consent-preferences):All apps that use the user consent feature must adhere to the logic described in this section to keep the consent list on the network synchronized with local app user consent preferences, and vice versa.
 
-## Considerations
-
-Before diving into the code let's consider important aspects while integrating consent features. For example, before making an allow or block action you should synchronize the updated consent list in order to **prevent overwriting network** consent from another app. For more details head to these sections of our docs:
-
-- [Understand user consent preferences](https://xmtp.org/docs/build/user-consent#understand-user-consent-preferences): Here are some of the ways user consent preferences are set
-- [Use consent preferences to respect user intent](https://xmtp.org/docs/build/user-consent#use-consent-preferences-to-respect-user-intent): Your app should aim to handle consent preferences appropriately because they are an expression of user intent.
-- [Synchronize user consent preferences](https://xmtp.org/docs/build/user-consent#synchronize-user-consent-preferences):All apps that use the user consent feature must adhere to the logic described in this section to keep the consent list on the network synchronized with local app user consent preferences, and vice versa.
-
 ## Installation Steps
+
+---
 
 ### Prerequisites
 
@@ -111,7 +105,9 @@ Finally, start your React Native application:
 npm run ios
 ```
 
-## Quickstart
+## Tutorial
+
+---
 
 ### Initialize XMTP Client with Consent
 
@@ -223,7 +219,7 @@ const handleBlock = async () => {
 };
 ```
 
-### Updating Consent on message send
+### Updating consent on message send
 
 When sending a message, it's crucial to ensure the consent state is correctly set to "allowed". To do this, refresh the consent list first to synchronize with the network's state. Here's the updated `handleSendMessage` function:
 
@@ -289,5 +285,4 @@ Consent has really evolved through the years. It started with email, then email 
 
 ### Example repos
 
-- JS example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
 - React Native example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-rn-request-inbox)
