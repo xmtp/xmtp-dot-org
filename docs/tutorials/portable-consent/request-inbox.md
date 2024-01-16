@@ -140,6 +140,33 @@ const handleBlock = async () => {
 
 Neglecting these guidelines can result in consent state conflicts and compromise user privacy.
 
+### Updating Consent on message send
+
+When sending a message, it's crucial to ensure the consent state is correctly set to "allowed". To do this, refresh the consent list first to synchronize with the network's state. Here's the updated `handleSendMessage` function:
+
+```jsx
+const handleSendMessage = async (newMessage) => {
+  if (!newMessage.trim()) {
+    alert("Empty message");
+    return;
+  }
+  if (conversation && conversation.peerAddress) {
+    // Refresh the consent list to ensure it's up-to-date
+    await client.contacts.refreshConsentList();
+    // Update the consent state to "allowed"
+    await client.contacts.allow([conversation.peerAddress]);
+    // Send the message
+    await conversation.send(newMessage);
+  } else if (conversation) {
+    // Handle creating a new conversation and sending a message
+    // The SDK handles newConversation as Allowed
+    // ...
+  }
+};
+```
+
+Include this step in your message sending workflow to maintain proper consent practices within your XMTP application.
+
 :::
 
 ## Conclusion
