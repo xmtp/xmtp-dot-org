@@ -129,6 +129,31 @@ const handleBlock = async () => {
 };
 ```
 
+### Updating Consent on message send
+
+When sending a message, it's crucial to ensure the consent state is correctly set to "allowed". To do this, refresh the consent list first to synchronize with the network's state. Here's the updated `handleSendMessage` function:
+
+```jsx
+const handleSendMessage = async (newMessage) => {
+  if (!newMessage.trim()) {
+    alert("Empty message");
+    return;
+  }
+  if (conversation && conversation.peerAddress) {
+    // Refresh the consent list to ensure it's up-to-date
+    await client.contacts.refreshConsentList();
+    // Update the consent state to "allowed"
+    await client.contacts.allow([conversation.peerAddress]);
+    // Send the message
+    await conversation.send(newMessage);
+  } else if (conversation) {
+    // Handle creating a new conversation and sending a message
+    // The SDK handles newConversation as Allowed
+    // ...
+  }
+};
+```
+
 :::caution Caution
 
 **Always synchronize consent states:** Before updating consent preferences on the network, ensure you refresh the consent list with `refreshConsentList`. Update the network's consent list only in these scenarios:
