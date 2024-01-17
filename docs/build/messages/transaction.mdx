@@ -1,0 +1,199 @@
+---
+sidebar_label: Transaction Reference
+sidebar_position: 9
+description: Learn how to implement a transaction reference content type
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Transaction reference content type
+
+![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Beta-yellow)
+
+This package provides an XMTP content type to support on-chain transaction references. It is a reference to an on-chain transaction sent as a message. This content type facilitates sharing transaction hashes or IDs, thereby providing a direct link to on-chain activities. Transaction references serve to display transaction details, facilitating the sharing of on-chain activities, such as token transfers, between users.
+
+:::tip Open for feedback
+
+You're welcome to provide feedback by commenting on the [Proposal for transaction reference content type](https://github.com/orgs/xmtp/discussions/37) XIP idea.
+
+:::
+
+## Configure the content type
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+In the JavaScript SDK, you need to import this package first.
+
+```bash
+npm i @xmtp/content-type-transaction-reference
+```
+
+After importing the package, you can register the codec.
+
+```jsx
+import {
+  ContentTypeTransactionReference,
+  TransactionReferenceCodec,
+} from "@xmtp/content-type-transaction-reference";
+// Create the XMTP client
+const xmtp = await Client.create(signer, { env: "dev" });
+xmtp.registerCodec(new TransactionReferenceCodec());
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+</Tabs>
+
+## Send a transaction reference
+
+With XMTP, a transaction reference is represented as an object with the following keys:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+With XMTP, a transaction reference is represented as an object with the following keys:
+
+```tsx
+const transactionReference: TransactionReference = {
+  /**
+   * Optional namespace for the networkId
+   */
+  namespace: "eip155";
+  /**
+   * The networkId for the transaction, in decimal or hexidecimal format
+   */
+  networkId: 1;
+  /**
+   * The transaction hash
+   */
+  reference: "0x123...abc";
+  /**
+   * Optional metadata object
+   */
+  metadata: {
+    transactionType: "transfer",
+    currency: "USDC",
+    amount: 100000, // In integer format, this represents 1 USDC (100000/10^6)
+    decimals: 6, // Specifies that the currency uses 6 decimal places
+    fromAddress: "0x456...def",
+    toAddress: "0x789...ghi"
+  };
+};
+```
+
+Once you have a transaction reference, you can send it as part of your conversation:
+
+```jsx
+await conversation.messages.send(transactionReference, {
+  contentType: ContentTypeTransactionReference,
+});
+```
+
+</TabItem>
+
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+</Tabs>
+
+## Receive a transaction reference
+
+To receive and process a transaction reference:
+
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```tsx
+// Assume `loadLastMessage` is a thing you have
+const message: DecodedMessage = await loadLastMessage();
+
+if (!message.contentType.sameAs(ContentTypeTransactionReference)) {
+  // Handle non-transaction reference message
+  return;
+}
+
+const transactionRef: TransactionReference = message.content;
+// Process the transaction reference here
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+</Tabs>
+
+## Display the transaction reference
+
+Displaying a transaction reference typically involves rendering details such as the transaction hash, network ID, and any relevant metadata. The exact UI representation can vary based on your application's design, you might want to fetch on-chain data before showing them to the user.
+
+_To handle unsupported content types, refer to the [fallback](/docs/build/messages/#handle-an-unsupported-content-type-error) section._
