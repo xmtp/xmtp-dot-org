@@ -18,11 +18,55 @@ At a high level, there are three categories of content types with XMTP:
 - Standards-track
 - Custom
 
-#### Experimental playground 🎲
+## Text content type
 
-To explore implementations of standard and standards-track content types, see the XMTP React playground:
+An app built with XMTP uses the `TextCodec` (plain text) standard content type by default. This means that if your app is sending plain text messages only, you don’t need to perform any additional steps related to content types.
 
-[GitHub repo](https://github.com/xmtp/xmtp-react-playground) | [Web app](https://xmtp.github.io/xmtp-react-playground/#/new)
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+
+```jsx
+await conversation.send("gm");
+```
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+
+```jsx
+await sendMessage(conversation, "gm");
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await conversation.send(content: "gm")
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+```dart
+var convo = await client.newConversation("0x...");
+await client.sendMessage(convo, 'gm');
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+conversation.send(text = "gm")
+```
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```jsx
+await conversation.send("gm");
+```
+
+</TabItem>
+</Tabs>
 
 ## Standard content types
 
@@ -30,7 +74,7 @@ A standard content type is one that has undergone the XMTP Request for Comment (
 
 Once adopted, a standard content type is bundled in XMTP client SDKs. A developer can then import the standard content type from an SDK for use in their app.
 
-Here are the current standard content types:
+Here is the current standard content types:
 
 ## Standards-track content types
 
