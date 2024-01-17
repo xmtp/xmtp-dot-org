@@ -20,6 +20,12 @@ At a high level, there are three categories of content types with XMTP:
 
 ## Standard content types
 
+A standard content type is one that has undergone the XMTP Request for Comment (XRC) process and has been adopted as an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs#readme) (XIP).
+
+Once adopted, a standard content type is bundled in XMTP client SDKs. A developer can then import the standard content type from an SDK for use in their app.
+
+Here is the current standard content types:
+
 ### Text content type
 
 An app built with XMTP uses the `TextCodec` (plain text) standard content type by default. This means that if your app is sending plain text messages only, you don’t need to perform any additional steps related to content types.
@@ -69,12 +75,6 @@ await conversation.send("gm");
 
 </TabItem>
 </Tabs>
-
-A standard content type is one that has undergone the XMTP Request for Comment (XRC) process and has been adopted as an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs#readme) (XIP).
-
-Once adopted, a standard content type is bundled in XMTP client SDKs. A developer can then import the standard content type from an SDK for use in their app.
-
-Here is the current standard content types:
 
 ## Standards-track content types
 
