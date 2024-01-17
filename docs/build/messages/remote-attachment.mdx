@@ -151,58 +151,7 @@ const encryptedEncoded = await RemoteAttachmentCodec.encodeEncrypted(
 );
 ```
 
-Upload an encrypted attachment anywhere where it will be accessible via an HTTPS GET request. For example, you can use web3.storage or Thirdweb:
-
-<Tabs>
-<TabItem value="web3storage" label="Web3 Storage" attributes={{className: "web3storage_tab"}} >
-
-```tsx
-const { Web3Storage } = require("web3.storage");
-
-class Upload {
-  constructor(name, data) {
-    this.name = name;
-    this.data = data;
-  }
-
-  stream() {
-    const self = this;
-    return new ReadableStream({
-      start(controller) {
-        controller.enqueue(Buffer.from(self.data));
-        controller.close();
-      },
-    });
-  }
-}
-
-const upload = new Upload("uploadIdOfYourChoice", encryptedEncoded.payload);
-
-const web3Storage = new Web3Storage({
-  token: "YOURTOKENHERE",
-});
-
-const cid = await web3Storage.put([upload]);
-const url = `https://${cid}.ipfs.w3s.link/uploadIdOfYourChoice`;
-```
-
-</TabItem>
-<TabItem value="thirdweb" label="Thirdweb" attributes={{className: "thirdweb_tab"}}>
-
-```tsx
-import { useStorageUpload } from "@thirdweb-dev/react";
-const { mutateAsync: upload } = useStorageUpload();
-const uploadUrl = await upload({
-  //encryptedEncoded.payload.buffer is a Uint8Array
-  //We need to convert it to a File to upload it to the IPFS network
-  data: [new File([encryptedEncoded.payload.buffer], file.name)], // Convert Uint8Array back to File
-  options: { uploadWithGatewayUrl: true, uploadWithoutDirectory: true },
-});
-const url = uploadUrl[0];
-```
-
-</TabItem>
-</Tabs>
+Upload an encrypted attachment to a location where it will be accessible via an HTTPS GET request. This location will depend on which storage provider you use based on your needs. For example, the [xmtp.chat](https://xmtp.chat/) example app uses web3.storage. (This information is shared for educational purposes only and is not an endorsement.)
 
 Now that you have a `url`, you can create a `RemoteAttachment`:
 

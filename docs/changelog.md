@@ -10,6 +10,14 @@ This changelog provides information about release milestones for XMTP SDKs, deve
 
 ---
 
+#### Dec 2023
+
+## [React Native client SDK](https://github.com/xmtp/xmtp-react-native) v1.21.0 released (xmtp-react-native)
+
+This release introduces support for custom content types and a breaking change to message content. **[Read the release notes](https://github.com/xmtp/xmtp-react-native/releases/tag/v1.21.0)** (Dec 1)
+
+---
+
 #### Oct 2023
 
 ## [React Native client SDK](https://github.com/xmtp/xmtp-react-native) is Production Ready (xmtp-react-native)
@@ -86,7 +94,7 @@ This release provides:
 - A Keystore API
 - **[Read the release notes](https://github.com/xmtp/xmtp-js/releases/tag/v8.0.0)** (Apr 13)
 
-## [XMTP bot starter repo](https://github.com/xmtp/xmtp-bot-starter) is public (xmtp-bot-starter)
+## [XMTP bot starter package](https://github.com/xmtp/xmtp-node-js-tools/tree/main/packages/bot-starter) is public (bot-starter)
 
 Provides tools to help you build a bot on the XMTP network. (Apr 11)
 

@@ -6,42 +6,42 @@ hide_table_of_contents: true
 
 Timelines are estimates and subject to change. For information about delivered features and fixes, see the [Changelog](/docs/changelog).
 
-## Release cycle
+## 2023 milestones
 
-We typically follow this release cycle:
+### Q4
 
-- Alpha: Super early peek into the feature being built. Not ready for use in production apps.
-- Beta: Opportunity to test, validate, and provide feedback. Not ready for use in production apps.
-- Production: Ready for use in production apps.
+- Allow/denylist user preferences available in all SDKs
 
-## Features roadmap
+## 2024 milestones
 
-### 2023 Q3
+### Q1
 
-- Onchain transaction reference content type
-- React SDK in Production
-- React Native SDK in Production (currently in Beta)
-- Android SDK in Production (currently in Beta)
-- XMTP v3 in Alpha
+- [Group chat via Messaging Layer Security (MLS)](https://github.com/xmtp/roadmap/milestone/1) in alpha
+- [Contact directory via did:ethr](https://github.com/xmtp/roadmap/milestone/5) in alpha
+- [XMTP testnet](https://github.com/xmtp/roadmap/milestone/6) in alpha
 
-### 2023 Q4
+### Q2
 
-- XMTP v3 in Beta
+- [Group chat via MLS](https://github.com/xmtp/roadmap/milestone/2) in production
+- [XMTP testnet](https://github.com/xmtp/roadmap/milestone/7) in production
 
-### 2024 Q1
+### Q3
 
-- XMTP v3 in Production
-- Support for smart contract wallets
-- Portable preferences in Alpha - blocklists, allowlists, etc.
+- [1:1 chats via MLS](https://github.com/xmtp/roadmap/milestone/3) in production
+- [XMTP mainnet](https://github.com/xmtp/roadmap/milestone/8) in alpha
 
-## Decentralization roadmap
+### Q4
 
-### Near term (~6 months)
+TBD
 
-- Smart contract inbox
-- Consent protocol RFC
+## Release cycles
 
-### Long term (~1+ year)
+Prior roadmaps combined multiple features into a single versioned release, such as XMTP v1 and v2.
 
-- Third-party nodes in testnet
-- Incentivization in limited testnet: node rewards and economic spam control
+Going forward, individual features will be released as they become available. For example, group chat, contact directory, key revocation, etc.
+
+We typically follow this release cycle for new features:
+
+- **Alpha**: Super early peek into the feature being built. Not ready for use in production apps.
+- **Beta**: Opportunity to test, validate, and provide feedback. Not ready for use in production apps.
+- **Production**: Ready for use in production apps.

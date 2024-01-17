@@ -154,6 +154,10 @@ Have you built with a tool that works well with XMTP? Let's add it to this page.
 
 :::
 
+### Does XMTP work with smart contract wallets?
+
+XMTP doesn't currently support smart contract wallets. XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets). It also works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s.
+
 ### Which languages and environments does the XMTP SDK support?
 
 The XMTP SDK is [available for multiple languages](/docs/introduction#xmtp-sdks-and-example-apps#sdks), including JavaScript, Kotlin, Swift, and Dart.
@@ -184,11 +188,19 @@ In your app onboarding flow, request user permission to display app-specific pus
 
 Currently, XMTP Labs (the company) operates all of the network nodes in the two available XMTP network environments: `dev` and `production`.
 
+These network nodes operate in US jurisdiction in compliance with Office of Foreign Assets Control (OFAC) sanctions and Committee on Foreign Investment in the United States (CFIUS) export compliance regulations. Accordingly, IP-based geoblocking is in place for the following countries/territories:
+
+- Cuba
+- Iran
+- North Korea
+- Syria
+- The Crimea, Donetsk People’s Republic, and Luhansk People’s Republic regions of Ukraine
+
 To explore the software for the nodes that currently form the XMTP network, see the [xmtp-node-go repo](https://github.com/xmtp/xmtp-node-go).
 
-Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes.
+XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal ](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
+Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes all over the world. Decentralization is a top priority and is required to ensure that XMTP is able to serve everyone on the planet.
 
 ### Is XMTP a blockchain?
 
@@ -200,7 +212,7 @@ XMTP Labs is researching various consensus protocols that would allow the networ
 
 Yes, you will be able to run a node.
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
+XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal ](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
 
 ### What is the relationship between Waku and XMTP?
 
@@ -221,6 +233,12 @@ XMTP provides perceptibly real-time message delivery and retrieval. The network 
 ### Is there a way to get a list of all current XMTP-enabled wallets ?
 
 We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
+
+### Does XMTP support group chat?
+
+Not yet. Despite efforts to build group chat with XMTP v2 (the current protocol version), protocol limitations prevented group chat from meeting XMTP's robust security standards. Efforts have shifted to updating the protocol to support secure group chat. More details to come.
+
+Have other questions or feedback about group chat? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
 ## Rate Limiting
 

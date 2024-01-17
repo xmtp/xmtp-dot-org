@@ -2,10 +2,14 @@
 slug: trivia
 hide_table_of_contents: true
 title: "How I got over 100 crypto wallets to play Trivia"
-date: 2023-11-8
+date: 2023-11-08
 authors: prashant
 image: "./media/trivia/header.png"
 description: "How I got over 100 crypto wallets to play Trivia."
+tags:
+  - Built with XMTP
+  - Developers
+  - Messaging
 ---
 
 # How I got over 100 crypto wallets to play Trivia

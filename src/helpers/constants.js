@@ -54,43 +54,43 @@ const tags = {
 
 export const BLOG_DATA = [
   {
-    tag: [tags.announcements, tags.developers, tags.hackathon, tags.messaging],
-    title: "The Crypto Cornerstore at ETH NYC",
-    content:
-      "This September we're teaming up with ENS to run a crypto corner store at ETH Global NYC, powered by XMTP.",
+    tag: [tags.developers, tags.messaging, tags.privacySecurity],
+    title: "Navigating speed and privacy with XMTP",
+    content: 
+           "When building apps using XMTP, a common question is how to fetch conversations by the most recent message.",
     user: {
-      name: "Rochelle",
-      date: "7 Sep 2023 · 3 min read",
+      name: "Engineering",
+      date: "06 Dec 2023 · 2 min read",
+      img: "xmtp-icon.jpeg",
+      url: "https://twitter.com/xmtp_",
+    },
+    url: "/blog/speed-and-privacy",
+  },
+  {
+    tag: [tags.awards, tags.developers, tags.hackathon, tags.messaging],
+    title: "From Gaming to Education at ETHOnline 2023",
+    content: 
+           "Explore how the winning projects at ETHOnline 2023 leveraged XMTP in unique ways",
+    user: {
+      name: "Rochelle Guillou",
+      date: "21 Nov 2023 · 3 min read",
       img: "rochelle-headshot.jpeg",
       url: "https://x.com/RochelleSophie_",
     },
-    url: "/blog/cornerstore",
+    url: "/blog/eth-online-awards-2023",
   },
   {
     tag: [tags.announcements, tags.builtwithxmtp, tags.messaging],
-    title: "Unstoppable Domains unlocks secure customer support with new XMTP powered messaging",
-    content:
-      "Dapps and creators can now reach their audience inside of the Unstoppable Domains apps.",
+    title: "Building communities across apps",
+    content: 
+           "The web3 advantage of using Paragraph for content distribution",
     user: {
-      name: "Rochelle",
-      date: "1 Sep 2023 · 3 min read",
+      name: "Rochelle Guillou",
+      date: "20 Nov 2023 · 4 min read",
       img: "rochelle-headshot.jpeg",
       url: "https://x.com/RochelleSophie_",
     },
-    url: "/blog/uns-xmtp",
-  },
-  {
-    tag: [tags.announcements, tags.developers, tags.hackathon],
-    title: "Before and after ETH Paris: the future of web3 and secure, private messaging",
-    content:
-      "A huge thank you to everyone who participated and made ETH Paris such an exciting event!",
-    user: {
-      name: "Fabri",
-      date: "26 Jul 2023 · 4 min read",
-      img: "fabri.jpeg",
-      url: "https://x.com/fabriguespe",
-    },
-    url: "/blog/eth-paris",
+    url: "/blog/paragraph",
   },
 ];
 
