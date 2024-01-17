@@ -358,7 +358,10 @@ Each content type includes a `contentFallback` property. This property provides 
 const codec = client.codecFor(content.contentType);
 if (!codec) {
   /*Not supported content type*/
-  return message?.contentFallback;
+  if (message?.contentFallback !== undefined) {
+    return message?.contentFallback;
+  }
+  // Handle other types like ReadReceipts which are not mean to be displayed
 }
 ```
 
@@ -369,7 +372,10 @@ if (!codec) {
 const codec = client.codecFor(content.contentType);
 if (!codec) {
   /*Not supported content type*/
-  return message?.contentFallback;
+  if (message?.contentFallback !== undefined) {
+    return message?.contentFallback;
+  }
+  // Handle other types like ReadReceipts which are not mean to be displayed
 }
 ```
 
@@ -380,7 +386,10 @@ if (!codec) {
 val codec = client.codecRegistry.find(options?.contentType)
 if (!codec) {
   /*Not supported content type*/
-  return message?.contentFallback
+  if (message?.contentFallback != null) {
+    return message?.contentFallback
+  }
+  // Handle other types like ReadReceipts which are not meant to be displayed
 }
 ```
 
@@ -391,7 +400,10 @@ if (!codec) {
 let codec = client.codecRegistry.find(for: contentType)
 if(!codec){
   /*Not supported content type*/
-  return message?.contentFallback
+  if (message?.contentFallback != null) {
+    return message?.contentFallback
+  }
+  // Handle other types like ReadReceipts which are not meant to be displayed
 }
 ```
 
@@ -411,6 +423,9 @@ registry.registerCodec(TextCodec());
 // Use the registry to decode the content
 var decoded = await registry.decode(encoded);
 //if the content type doesn't exists. will return `encoded.fallback`
+if(decoded == null){
+  // Handle other types like ReadReceipts which are not meant to be displayed
+}
 ```
 
 </TabItem>
@@ -420,8 +435,11 @@ var decoded = await registry.decode(encoded);
 const contentTypeID = `${contentType.authorityId}/${contentType.typeId}:${contentType.versionMajor}.${contentType.versionMinor}`;
 const isRegistered = contentTypeID in client.codecRegistry;
 if (!isRegistered) {
-  /*Not supported content type*/
-  return message?.fallback;
+  // Not supported content type
+  if (message?.fallback != null) {
+    return message?.fallback;
+  }
+  // Handle other types like ReadReceipts which are not meant to be displayed
 }
 ```
 
