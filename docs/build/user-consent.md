@@ -535,3 +535,17 @@ Update a consent preference in the consent list on the network in the following 
 The following diagram illustrates the detailed logic for how user consent preferences are set in an app and in the consent list on the XMTP network.
 
 <img src={consentlogic} style={{width:"90%"}}/>
+
+### Tutorials
+
+For practical examples, see these tutorials:
+
+- [Enable subscribers with XMTP](/docs/tutorials/portable-consent/subscribe)
+- [Broadcast messages with XMTP](/docs/tutorials/portable-consent/broadcast)
+- [Add consent to an existing XMTP inbox JS](/docs/tutorials/portable-consent/request-inbox)
+- [Add consent to an existing XMTP inbox RN](/docs/tutorials/portable-consent/request-inbox-rn)
+
+### Example repos
+
+- JS example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
+- React Native example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-rn-request-inbox)
