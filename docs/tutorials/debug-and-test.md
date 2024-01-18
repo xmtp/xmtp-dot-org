@@ -84,7 +84,7 @@ $ npm start intros list
 $ ...
 ```
 
-Populating test wallets might cause you to exceed the XMTP network rate limit. If this happens, wait 5 minutes and try again.
+Populating test wallets might cause you to exceed the XMTP network rate limit. If this happens, wait 5 minutes and try again. To learn more, see [Rate limiting](/docs/faq#rate-limiting).
 
 ## Test your app
 
