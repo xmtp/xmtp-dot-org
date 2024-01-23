@@ -349,7 +349,7 @@ for await (const page of conversation.messages(limit: 25)) {
 
 As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types are introduced into the XMTP ecosystem, your app may encounter content types it does not support. This situation, if not handled properly, could lead to app crashes.
 
-Each content type includes a `contentFallback` property. This property provides a string that describes the expected value of the content type. Note that content fallbacks are immutable and are set by default in the protocol. If you are creating custom content types, you have the option to include a custom fallback. For more information on this, please visit the [Custom Content Type Tutorial](/docs/tutorials/custom-ct).
+Each content type includes a `contentFallback` property. This property provides a string that describes the expected value of the content type. Note that content fallbacks are immutable and are set by default in network messages. If you are creating custom content types, you have the option to include a custom fallback. For more information on this, please visit the [Custom Content Type Tutorial](/docs/tutorials/custom-ct).
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -358,8 +358,8 @@ Each content type includes a `contentFallback` property. This property provides 
 const codec = client.codecFor(content.contentType);
 if (!codec) {
   /*Not supported content type*/
-  if (message?.contentFallback !== undefined) {
-    return message?.contentFallback;
+  if (message.contentFallback !== undefined) {
+    return message.contentFallback;
   }
   // Handle other types like ReadReceipts which are not mean to be displayed
 }
@@ -372,8 +372,8 @@ if (!codec) {
 const codec = client.codecFor(content.contentType);
 if (!codec) {
   /*Not supported content type*/
-  if (message?.contentFallback !== undefined) {
-    return message?.contentFallback;
+  if (message.contentFallback !== undefined) {
+    return message.contentFallback;
   }
   // Handle other types like ReadReceipts which are not mean to be displayed
 }
@@ -386,8 +386,8 @@ if (!codec) {
 val codec = client.codecRegistry.find(options?.contentType)
 if (!codec) {
   /*Not supported content type*/
-  if (message?.contentFallback != null) {
-    return message?.contentFallback
+  if (message.contentFallback != null) {
+    return message.contentFallback
   }
   // Handle other types like ReadReceipts which are not meant to be displayed
 }
@@ -398,10 +398,10 @@ if (!codec) {
 
 ```swift
 let codec = client.codecRegistry.find(for: contentType)
-if(!codec){
+if (!codec) {
   /*Not supported content type*/
-  if (message?.contentFallback != null) {
-    return message?.contentFallback
+  if (message.contentFallback != null) {
+    return message.contentFallback
   }
   // Handle other types like ReadReceipts which are not meant to be displayed
 }
@@ -423,7 +423,7 @@ registry.registerCodec(TextCodec());
 // Use the registry to decode the content
 var decoded = await registry.decode(encoded);
 //if the content type doesn't exists. will return `encoded.fallback`
-if(decoded == null){
+if (decoded == null) {
   // Handle other types like ReadReceipts which are not meant to be displayed
 }
 ```
