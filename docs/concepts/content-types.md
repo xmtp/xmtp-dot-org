@@ -161,7 +161,7 @@ For example, if you need a content type that isn't covered by a standard or stan
 
 :::caution
 
-Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
+Be aware that your custom content type may not be automatically recognized or supported by other applications, which could result in it being overlooked or only its fallback text being displayed.
 
 :::
 
