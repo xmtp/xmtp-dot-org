@@ -103,16 +103,60 @@ const refreshConsentList = async (client) => {
 Render the consent list in a table format, allowing users to see their current consents.
 
 ```jsx
-// This would be part of the render function or a separate component
-{
-  consentList.map((consent, index) => (
-    <div key={index}>
-      <span>{consent.address}</span>
-      <span>{consent.state}</span>
-      // Add buttons or links for allow/deny actions
-    </div>
-  ));
-}
+// Container for displaying the consent list
+<div style={styles.ConsentContainer}>
+  // Table for displaying allowed consents
+  <div style={styles.ConsentTable}>
+    // Conditionally render the 'Allowed' header if there are any allowed
+    consents
+    {consentList.length > 0 && <h2>Allowed</h2>}
+    // Filter and map through the consentList to display allowed consents
+    {consentList
+      .filter((consent) => consent.permissionType === "allowed")
+      .map((consent, index) => (
+        // Display each allowed consent in a row with a deny option
+        <div
+          key={index}
+          style={{ display: "flex", justifyContent: "space-between" }}>
+          // Index of the consent in the list
+          <span style={{ textAlign: "left" }}>{index + 1}.</span>
+          // Value of the consent
+          <span style={{ textAlign: "left" }}>{consent.value}</span>
+          // Button to deny the consent
+          <span
+            style={{ color: "red", cursor: "pointer" }}
+            onClick={() => handleDeny(consent.value)}>
+            Deny
+          </span>
+        </div>
+      ))}
+  </div>
+  // Table for displaying denied consents
+  <div style={styles.ConsentTable}>
+    // Conditionally render the 'Denied' header if there are any denied consents
+    {consentList.length > 0 && <h2>Denied</h2>}
+    // Filter and map through the consentList to display denied consents
+    {consentList
+      .filter((consent) => consent.permissionType === "denied")
+      .map((consent, index) => (
+        // Display each denied consent in a row with an allow option
+        <div
+          key={index}
+          style={{ display: "flex", justifyContent: "space-between" }}>
+          // Index of the consent in the list
+          <span style={{ textAlign: "left" }}>{index + 1}.</span>
+          // Value of the consent
+          <span style={{ textAlign: "left" }}>{consent.value}</span>
+          // Button to allow the consent
+          <span
+            style={{ color: "green", cursor: "pointer" }}
+            onClick={() => handleAllow(consent.value)}>
+            Allow
+          </span>
+        </div>
+      ))}
+  </div>
+</div>
 ```
 
 ### Handle consent change
