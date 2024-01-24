@@ -25,12 +25,6 @@ Before diving into the code let's consider important aspects while integrating c
 
 ---
 
-Certainly! Below is a detailed tutorial with full code and comments for each section. This tutorial will guide you through creating a `ConsentManagement` component in React, which allows users to manage XMTP consent lists and download them as a CSV file.
-
-## Tutorial
-
----
-
 ### Import Libraries
 
 Start by importing the necessary libraries. This includes React for the UI, XMTP for messaging, and ethers for Ethereum blockchain interaction.
