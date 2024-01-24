@@ -34,7 +34,7 @@ import { Client } from "@xmtp/xmtp-js"; // XMTP client for messaging
 import { ethers } from "ethers"; // Ethers for Ethereum interaction
 ```
 
-### Connect to the Wallet
+### Connect the wallet
 
 This function handles the connection to the user's Ethereum wallet using MetaMask or a similar wallet provider.
 
@@ -54,7 +54,7 @@ const connectWallet = async () => {
 };
 ```
 
-### Show Subscriptions Button (Get Consent List)
+### Get consent List
 
 This function is triggered when the user wants to view their subscriptions. It connects to the wallet and fetches the consent list.
 
@@ -74,7 +74,7 @@ const handleClick = async () => {
 };
 ```
 
-### Table Rendering
+### Render consent table
 
 Render the consent list in a table format, allowing users to see their current consents.
 
@@ -91,7 +91,7 @@ Render the consent list in a table format, allowing users to see their current c
 }
 ```
 
-### Handle Allowing and Denying Addresses
+### Handle consent change
 
 These functions manage the consent states by allowing or denying addresses.
 
@@ -111,7 +111,7 @@ const handleDeny = async (address) => {
 };
 ```
 
-### Download the Consent List as a CSV File
+### Download the consent list as a CSV file
 
 This function generates and downloads the consent list as a CSV file.
 
