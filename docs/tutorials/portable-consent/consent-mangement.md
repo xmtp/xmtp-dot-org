@@ -41,7 +41,7 @@ import { Client } from "@xmtp/xmtp-js"; // XMTP client for messaging
 import { ethers } from "ethers"; // Ethers for Ethereum interaction
 ```
 
-#### 2. Connect to the Wallet
+### Connect to the Wallet
 
 This function handles the connection to the user's Ethereum wallet using MetaMask or a similar wallet provider.
 
