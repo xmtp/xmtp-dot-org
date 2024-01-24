@@ -90,7 +90,7 @@ const refreshConsentList = async (client) => {
     return 0;
   });
 
-  // Update the state with the unique and sorted consent list
+  // Update the state with the unique and sorted consent list.
   setConsentList(uniqueConsentList);
 
   // Return the unique and sorted consent list
