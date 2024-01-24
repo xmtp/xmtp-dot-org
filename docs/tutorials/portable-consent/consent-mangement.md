@@ -56,21 +56,45 @@ const connectWallet = async () => {
 
 ### Get consent List
 
-This function is triggered when the user wants to view their subscriptions. It connects to the wallet and fetches the consent list.
+This function is triggered when the user wants to view their subscriptions. It connects to the wallet and fetches the consent list. The consent list is a log with all consent actions, ordered by date. To get the list we need to filter unique actions by address.
 
 ```jsx
-const handleClick = async () => {
-  try {
-    setLoading(true);
-    const wallet = await connectWallet();
-    const client = await Client.create(wallet, { env: env });
-    setClient(client);
-    await refreshConsentList(client);
-    setLoading(false);
-  } catch (error) {
-    if (typeof onError === "function") onError(error);
-    console.error(error);
-  }
+// Function to refresh the consent list
+const refreshConsentList = async (client) => {
+  // Fetch the consent list from the client
+  let consentList = await client.contacts.refreshConsentList();
+
+  // Create a unique consent list by removing duplicates
+  let uniqueConsentList = consentList
+    .slice() // Create a copy of the consent list
+    .reverse() // Reverse the list to keep the latest consent
+    .filter(
+      // Filter out duplicates by checking if the current index is the first occurrence of the consent value
+      (consent, index, self) =>
+        index === self.findIndex((t) => t.value === consent.value),
+    )
+    .reverse(); // Reverse the list back to the original order
+
+  // Sort the unique consent list based on the permission type
+  uniqueConsentList = uniqueConsentList.sort((a, b) => {
+    // If 'a' is allowed and 'b' is not, 'a' should come first
+    if (a.permissionType === "allowed" && b.permissionType !== "allowed")
+      return -1;
+    // If 'a' is unknown and 'b' is not, 'b' should come first
+    if (a.permissionType === "unknown" && b.permissionType !== "unknown")
+      return 1;
+    // If 'a' is denied and 'b' is not, 'b' should come first
+    if (a.permissionType === "denied" && b.permissionType !== "denied")
+      return 1;
+    // If none of the above conditions are met, keep the original order
+    return 0;
+  });
+
+  // Update the state with the unique and sorted consent list
+  setConsentList(uniqueConsentList);
+
+  // Return the unique and sorted consent list
+  return uniqueConsentList;
 };
 ```
 
