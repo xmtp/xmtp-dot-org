@@ -164,17 +164,44 @@ Render the consent list in a table format, allowing users to see their current c
 These functions manage the consent states by allowing or denying addresses.
 
 ```jsx
+// Function to handle allowing an address
 const handleAllow = async (address) => {
+  // Check if the client object is available
   if (client) {
-    await client.contacts.allow([address]);
-    await refreshConsentList(client);
+    // Confirm with the user if they want to allow the address
+    if (window.confirm("Are you sure you want to allow this address?")) {
+      // Refresh the consent list before performing the allow action
+      await refreshConsentList(client);
+      // Perform the allow action on the address
+      await client.contacts.allow([address]);
+      // Refresh the consent list after performing the allow action
+      await refreshConsentList(client);
+      // Trigger the onSubscribe callback with the address and state
+      onSubscribe(client.address, "allowed");
+    }
+  } else {
+    // Log an error if the client object is not available
+    console.error("Client is not set");
   }
 };
-
+// Function to handle denying an address
 const handleDeny = async (address) => {
+  // Check if the client object is available
   if (client) {
-    await client.contacts.deny([address]);
-    await refreshConsentList(client);
+    // Confirm with the user if they want to deny the address
+    if (window.confirm("Are you sure you want to deny this address?")) {
+      // Refresh the consent list before performing the deny action
+      await refreshConsentList(client);
+      // Perform the deny action on the address
+      await client.contacts.deny([address]);
+      // Refresh the consent list after performing the deny action
+      await refreshConsentList(client);
+      // Trigger the onUnsubscribe callback with the address and state
+      onUnsubscribe(client.address, "denied");
+    }
+  } else {
+    // Log an error if the client object is not available
+    console.error("Client is not set");
   }
 };
 ```
