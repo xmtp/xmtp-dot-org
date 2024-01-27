@@ -13,7 +13,9 @@ The message payload can be a plain string, but you can configure custom content 
 
 ## Send messages
 
-To send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network.
+To send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network. 
+
+Messages can be up to 1MB only. Use [remote attachments](/docs/build/messages/remote-attachment) to support larger messages.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
