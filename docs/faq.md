@@ -368,6 +368,12 @@ To learn more about the XMTP improvement proposals governance process, see [What
 
 Have other questions or ideas about message formats and metadata? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
+### Does XMTP have a maximum message size?
+
+Yes. Messages sent on the XMTP network are limited to just short of 1MB (1048214 bytes).
+
+For this reason, XMTP supports [message attachments](#does-xmtp-support-message-attachments).
+
 ### Does XMTP support message attachments?
 
 Yes, via two XMTP improvement proposals that are currently in review status:
@@ -375,11 +381,7 @@ Yes, via two XMTP improvement proposals that are currently in review status:
 - [XIP-15](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-15-attachment-content-type.md): Attachment content type
 - [XIP-17](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md): Remote attachment content type
 
-To learn more about how to implement message attachments in your app, see:
-
-- For apps using the JavaScript client SDK (`xmtp-js`), see [Remote attachment content type](/docs/build/messages/remote-attachment).
-
-- For apps using the Swift client SDK (`xmtp-ios`), see [Send a remote attachment](https://github.com/xmtp/xmtp-ios#send-a-remote-attachment).
+To learn how to implement message attachments in your app, see [Remote attachment content type](/docs/build/messages/remote-attachment).
 
 ### Does XMTP support deleting and editing messages?
 
