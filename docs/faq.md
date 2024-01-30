@@ -370,7 +370,7 @@ Have other questions or ideas about message formats and metadata? Post to the [X
 
 ### Does XMTP have a maximum message size?
 
-Yes. Messages sent on the XMTP network can be up to 1MB only.
+Yes. Messages sent on the XMTP network are limited to just short of 1MB (1048214 bytes).
 
 For this reason, XMTP supports [message attachments](#does-xmtp-support-message-attachments).
 
