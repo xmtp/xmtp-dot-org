@@ -1,21 +1,21 @@
 ---
-sidebar_label: Transaction Reference
+sidebar_label: Transaction reference
 sidebar_position: 9
-description: Learn how to implement a transaction reference content type
+description: Learn how to implement an on-chain transaction reference content type
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Transaction reference content type
+# Support on-chain transaction references in your app built with XMTP
 
-![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Beta-yellow)
+![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Alpha-orange)
 
 This package provides an XMTP content type to support on-chain transaction references. It is a reference to an on-chain transaction sent as a message. This content type facilitates sharing transaction hashes or IDs, thereby providing a direct link to on-chain activities. Transaction references serve to display transaction details, facilitating the sharing of on-chain activities, such as token transfers, between users.
 
 :::tip Open for feedback
 
-You're welcome to provide feedback by commenting on the [Proposal for transaction reference content type](https://github.com/orgs/xmtp/discussions/37) XIP idea.
+You're welcome to provide feedback by commenting on [XIP-21: On-chain transaction reference content type](https://community.xmtp.org/t/xip-21-on-chain-transaction-reference-content-type/532).
 
 :::
 
@@ -196,4 +196,4 @@ _To handle unsupported content types, refer to the [fallback](/docs/build/messag
 
 ## Display the transaction reference
 
-Displaying a transaction reference typically involves rendering details such as the transaction hash, network ID, and any relevant metadata. The exact UI representation can vary based on your application's design, you might want to fetch on-chain data before showing them to the user.
+Displaying a transaction reference typically involves rendering details such as the transaction hash, network ID, and any relevant metadata. Because the exact UI representation can vary based on your app's design, you might want to fetch on-chain data before showing it to the user.
