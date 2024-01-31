@@ -23,6 +23,14 @@
     "twitter": "https://x.com/orbapp_"
   },
   {
+    "name": "Phaver",
+    "href": "https://phaver.com/",
+    "image": "/img/builtWithXmtp/phaver.jpeg",
+    "description": "The largest web3 social app powered by LensProtocol 🌿.",
+    "github": "",
+    "twitter": "https://twitter.com/phaverapp"
+  },
+  {
     "name": "Hey",
     "href": "https://hey.xyz",
     "image": "/img/builtWithXmtp/hey.png",
