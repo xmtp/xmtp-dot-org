@@ -1607,7 +1607,6 @@ li > a.new::after {
 }
 
 .quickstarts-tabs ul {
-  background-color: #fff !important;
 }
 
 @mobile {
