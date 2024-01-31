@@ -1613,3 +1613,7 @@ li > a.new::after {
     width: 100%;
   }
 }
+.quickstarts-tabs ul li {
+  vertical-align: top;
+  text-align: left;
+}
