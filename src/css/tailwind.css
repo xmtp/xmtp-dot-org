@@ -1606,9 +1606,6 @@ li > a.new::after {
   text-align: left;
 }
 
-.quickstarts-tabs ul {
-}
-
 @mobile {
   .quickstarts-tabs ul li {
     width: 100%;
