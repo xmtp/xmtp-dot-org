@@ -378,10 +378,12 @@ For this reason, XMTP supports [message attachments](#does-xmtp-support-message-
 
 Yes, via two XMTP improvement proposals that are currently in review status:
 
-- [XIP-15](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-15-attachment-content-type.md): Attachment content type
+- [XIP-15](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-15-attachment-content-type.md): Attachment content type  
+  Attachment size is limited to just short of 1MB (1048214 bytes). To support larger attachments, use the remote attachment content type.
+
 - [XIP-17](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md): Remote attachment content type
 
-To learn how to implement message attachments in your app, see [Remote attachment content type](/docs/build/messages/remote-attachment).
+To learn how to implement message attachments in your app, see [Support attachments in your app](/docs/build/messages/remote-attachment).
 
 ### Does XMTP support deleting and editing messages?
 
