@@ -1602,6 +1602,8 @@ li > a.new::after {
   display: inline-block;
   padding: 10px;
   margin: 10px;
+  vertical-align: top;
+  text-align: left;
 }
 
 .quickstarts-tabs ul {
@@ -1612,8 +1614,4 @@ li > a.new::after {
   .quickstarts-tabs ul li {
     width: 100%;
   }
-}
-.quickstarts-tabs ul li {
-  vertical-align: top;
-  text-align: left;
 }
