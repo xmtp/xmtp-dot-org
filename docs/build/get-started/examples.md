@@ -9,7 +9,11 @@ import TabItem from "@theme/TabItem";
 
 # Examples
 
+Welcome to the XMTP examples page. Here, you'll find a variety of code examples, projects, and apps to help you get started with building your own applications using XMTP.
+
 ## Quickstarts
+
+A quickstart is a brief guide or repo aimed at helping XMTP developers to understand core build primitives from the network.
 
 <Tabs groupId="quickstarts-tabs" >
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
@@ -21,9 +25,9 @@ import TabItem from "@theme/TabItem";
   <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa" class="plausible-event-name=Quickstart">Progressive web app</a><br/><small>Quickstart app for building a PWA, which is a way to provide an app without requiring separate bundling or distribution</small></li>
   <li><a href="https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1#index.ts" class="plausible-event-name=Replit">JavaScript live example</a><br/><small>A Repl of a full flow for sending and streaming messages in JavaScript</small></li>
   <li><a href="https://github.com/fabriguespe/xmtp-nodebookons" class="plausible-event-name=Quickstart">Node.js Notebooks</a><br/><small>Interactive Node.js notebooks (similar to Jupyter) for learning about and experimenting with XMTP</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-ppp-request-inbox" class="plausible-event-name=Quickstart">Portable consent request inbox</a><br/><small>Quickstart inbox app demoing how to build user consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-ppp-subscribe" class="plausible-event-name=Quickstart">Portable consent subscribe</a><br/><small>Quickstart app demoing how to build a Subscribe button to record broadcast message user consent</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-ppp-broadcast" class="plausible-event-name=Quickstart">Portable consent broadcast</a><br/><small>Quickstart app demoing how to build broadcast messaging that checks for user consent</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-ppp-request-inbox" class="plausible-event-name=Quickstart">Portable consent request inbox</a><br/><small>How to build consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-ppp-subscribe" class="plausible-event-name=Quickstart">Portable consent subscribe</a><br/><small>How to build a Subscribe button to record broadcast message user consent</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-ppp-broadcast" class="plausible-event-name=Quickstart">Portable consent broadcast</a><br/><small>How to build broadcast messaging that checks for user consent</small></li>
 </ul>
 
 </div>
@@ -34,7 +38,7 @@ import TabItem from "@theme/TabItem";
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-hooks" class="plausible-event-name=Quickstart">React hooks</a><br/><small>Floating inbox quickstart app built using React hooks</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-hooks" class="plausible-event-name=Quickstart">React hooks</a><br/><small>Floating inbox quickstart app built using React. Use it to help you build your own app with XMTP</small></li>
 </ul>
 
 </div>
@@ -46,8 +50,8 @@ import TabItem from "@theme/TabItem";
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/fabriguespe/xmtp-rn-quickstart" class="plausible-event-name=Quickstart">React Native</a><br/><small>Quickstart React Native app</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-rn-request-inbox" class="plausible-event-name=Quickstart">Portable consent request inbox</a><br/><small>Quickstart inbox app demoing how to build user consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-rn-quickstart" class="plausible-event-name=Quickstart">React Native</a><br/><small>Quickstart React Native app. Use it to help you build your own app with XMTP.</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-rn-request-inbox" class="plausible-event-name=Quickstart">Portable consent request inbox</a><br/><small>How to build consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
 </ul>
 
 </div>
@@ -57,6 +61,8 @@ import TabItem from "@theme/TabItem";
 
 ## Example apps
 
+Example apps are more comprehensive than quickstarts. They are fully functional applications built with XMTP that showcase a broader range of features and use-cases.
+
 <Tabs>
 <TabItem value="react" label="React" attributes={{className: "react_tab "}}>
 
@@ -64,7 +70,7 @@ import TabItem from "@theme/TabItem";
 
 <ul>
   <li><a href="https://github.com/xmtp/xmtp-react-playground/" class="plausible-event-name=Example">React Playground app</a><br/><small>A tool to help you build your own app with XMTP, including reactions, replies, read receipts, and attachments</small></li>
-  <li><a href="https://github.com/xmtp/xmtp-react-playground/" class="plausible-event-name=Example">Inbox Web</a><br/><small>Core and advanced capabilities of the XMTP client SDK, aiming to showcase effective and innovative ways of building with XMTP.</small></li>
+  <li><a href="https://github.com/xmtp-labs/xmtp-inbox-web/" class="plausible-event-name=Example">Inbox Web</a><br/><small>XMTP official client, aiming to showcase effective and innovative ways of building with XMTP.</small></li>
 </ul>
 </div>
 
@@ -118,6 +124,8 @@ import TabItem from "@theme/TabItem";
 
 ## Wallet connectors
 
+Wallet connectors are essential components in decentralized applications (dApps). They allow users to connect their cryptocurrency wallets to the dApp, enabling them to sign transactions and interact with the blockchain. Different wallet connectors support different wallets and XMTP works out of the box with most of them.
+
 <Tabs>
 <TabItem value="wallet" label="Wallet connectors" attributes={{className: "wallet_tab "}}>
 
@@ -138,6 +146,8 @@ import TabItem from "@theme/TabItem";
 </Tabs>
 
 ## Other integrations
+
+These projects provide a robust foundation for building your own applications using XMTP. They are designed to demonstrate XMTP compatibility and include pre-configured setups for ease of use.
 
 <Tabs groupId="quickstarts-tabs" >
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
@@ -160,7 +170,7 @@ import TabItem from "@theme/TabItem";
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-hooks-next" class="plausible-event-name=Quickstart">Next.js hooks</a><br/><small>Floating inbox quickstart app built using Next.js hooks</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-hooks-next" class="plausible-event-name=Quickstart">Next.js hooks</a><br/><small>Floating inbox quickstart app built using Next.js hooks. Use it to help you build your own app with XMTP.</small></li>
 </ul>
 
 </div>

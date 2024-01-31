@@ -1593,14 +1593,23 @@ li > a.new::after {
 }
 
 .quickstarts-tabs ul {
-  list-style-type: none !important;
   padding: 10px !important;
+  list-style-type: disc !important;
 }
 .quickstarts-tabs ul li {
+  list-style-type: disc !important;
   width: 47%;
   display: inline-block;
   padding: 10px;
-  border: 1px solid;
-  border-radius: 10px;
   margin: 10px;
+}
+
+.quickstarts-tabs ul {
+  background-color: #fff !important;
+}
+
+@mobile {
+  .quickstarts-tabs ul li {
+    width: 100%;
+  }
 }
