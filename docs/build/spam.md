@@ -28,7 +28,7 @@ Learn how to create a split inbox that filters senders into three buckets: Prima
 
 - [**Primary Inbox**](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/primary-inbox): The Primary Inbox should contain all the users that a given user certainly knows.
 - [**General Inbox**](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/general-inbox): The General inbox should contain all the users that a given user is likely to know or we have strong signals that they are a good actor.
-- [**Request Inbox**](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/request-inbox): The request inbox is for users unknown to the main user and without any connections. It typically holds spam, which users should avoid.
+- [**Request Inbox**](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/request-inbox): The Request Inbox is for users unknown to the main user and without any connections. It typically holds spam, which users should avoid.
 
 ## Public good tools
 
