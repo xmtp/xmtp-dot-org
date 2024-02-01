@@ -15,6 +15,14 @@
     "twitter": "https://x.com/converseapp_"
   },
   {
+    "name": "Hey",
+    "href": "https://hey.xyz",
+    "image": "/img/builtWithXmtp/hey.png",
+    "description": "Hey is a decentralized and permissionless social media app built with Lens Protocol.",
+    "github": "https://github.com/heyxyz/hey",
+    "twitter": "https://x.com/heydotxyz"
+  },
+  {
     "name": "Orb",
     "href": "https://orb.ac/",
     "image": "/img/builtWithXmtp/orb-logo.jpeg",
@@ -29,14 +37,6 @@
     "description": "Join phaver in building a future where your online social graph is owned and built by you, not companies.",
     "github": "",
     "twitter": "https://twitter.com/phaverapp"
-  },
-  {
-    "name": "Hey",
-    "href": "https://hey.xyz",
-    "image": "/img/builtWithXmtp/hey.png",
-    "description": "Hey is a decentralized and permissionless social media app built with Lens Protocol.",
-    "github": "https://github.com/heyxyz/hey",
-    "twitter": "https://x.com/heydotxyz"
   },
   {
     "name": "Snapshot",
