@@ -1,5 +1,5 @@
 ---
-sidebar_label: Groups
+sidebar_label: Group chats
 sidebar_position: 4
 description: Learn how to start, list, and cache conversations with XMTP
 ---
@@ -114,6 +114,8 @@ Send a message to an existing group chat. Refer to the [Messages](/docs/build/me
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
+val group = client.conversations.newGroup(listOf(walletAddress1,walletAddress2))
+//Send a message
 group.send("Hello, group!")
 ```
 
@@ -121,6 +123,8 @@ group.send("Hello, group!")
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
+let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2])
+//Send a message
 try await group.send(content: "Hello, group!")
 ```
 
@@ -322,7 +326,7 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-## Stream group updates
+## Listen for group chat updates
 
 Monitor updates in group chats, including member management activities like adding and removing members as well as the creation of new group chats.
 
