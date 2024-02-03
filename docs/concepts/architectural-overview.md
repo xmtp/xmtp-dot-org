@@ -23,7 +23,7 @@ At the most basic level, the architecture of XMTP includes three layers:
 
 The network layer provides the XMTP network, which is composed of **nodes** (computers) running XMTP node software.
 
-The XMTP network enables any computer running XMTP node software to participate in the network. Currently, the node software is closed source and all nodes in the XMTP network are operated by XMTP Labs. XMTP Labs is working toward a phased decentralization of the network. To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
+The XMTP network enables any computer running XMTP node software to participate in the network. Currently, the node software is closed source and all nodes in the XMTP network are operated by XMTP Labs. XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal ](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
 
 This diagram shows the key components of an XMTP node. The nodes provide a **message API** that enables client apps built with the XMTP client SDK to communicate with the nodes in the XMTP network. The nodes use Waku node software to connect to other nodes and form a peer-to-peer network to relay and store envelopes submitted and requested by client apps.
 
@@ -31,7 +31,7 @@ This diagram shows the key components of an XMTP node. The nodes provide a **mes
 
 ![Diagram showing three nodes connected in a peer-to-peer fashion to form the XMTP network. The diagram shows the key components of a node, including a message API and Waku node. The diagram also shows a client app connecting a message API client to the message API in a node.](img/xmtp-nodes.png)<!--Source file: [https://www.figma.com/file/77ToMB4T16NiLwJjIp7dU1/diagrams?type=design&node-id=16-502&mode=design)-->
 
-Currently, nodes are configured to rate limit high-volume publishing from message API clients. A rate-limited message API client can expect to receive a 429 status code response from a node. Rate limits can change at any time in the interest of maintaining network health.
+Currently, nodes are configured to rate limit high-volume publishing from message API clients. A rate-limited message API client can expect to receive a 429 status code response from a node. Rate limits can change at any time in the interest of maintaining network health. To learn more, see [Rate limiting](/docs/faq#rate-limiting).
 
 Every **envelope** contains a payload, often encrypted, that is not observable by nodes. The payload could be a public key bundle, private key bundle, or a message created by a client app, but this information is opaque to nodes. Meaning is assigned to these envelopes in the [Client layer](#client-layer).
 
