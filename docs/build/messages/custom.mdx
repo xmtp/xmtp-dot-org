@@ -84,7 +84,7 @@ export class ContentTypeMultiplyNumberCodec
     return `Can’t display number content types. Number was ${JSON.stringify(
       content
     )}`
-    //return undefined; if you don't want the content type to be displayed.
+    // return undefined to indicate that this content type should not be displayed if it's not supported by a client
   }
 }
 ```
@@ -148,7 +148,7 @@ export class ContentTypeMultiplyNumberCodec
     return `Can’t display number content types. Number was ${JSON.stringify(
       content
     )}`
-    //return undefined; if you don't want the content type to be displayed.
+    // return undefined to indicate that this content type should not be displayed if it's not supported by a client
   }
 }
 
