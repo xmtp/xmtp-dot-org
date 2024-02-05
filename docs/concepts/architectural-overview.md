@@ -104,7 +104,7 @@ To learn more, see [Invitations](https://github.com/xmtp/proto/blob/main/PROTOCO
 
 Clients use conversation topics to store messages exchanged between a pair of addresses.
 
-A conversation topic is created for a pair of addresses when the first message is sent between them. The conversation topic name uses this format provided by the invitation: `m-<random-32-byte-value-represented-as-a-64-character-hexadecimal-string>`
+A conversation topic is created for a pair of addresses when the first message is sent between them. The conversation topic name uses this format provided by the invitation: `m-<random-64-character-hexadecimal-string>`
 
 For example, `m-98ed4749a569d3bf302727102157361c0e513026840cbbc9be07705c5584da4d`
 
