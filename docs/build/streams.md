@@ -111,7 +111,7 @@ const { client } = useXmtp();
 
 useEffect(() => {
   const streamConversations = async () => {
-    client.conversations.stream((conversation) => {
+    const unsubscribe = client.conversations.stream((conversation) => {
       console.log("Streamed conversation:", conversation);
 
       setConversations((prevConversations) => {
@@ -121,15 +121,15 @@ useEffect(() => {
         );
       });
     });
+
+    // Optional: return a cleanup function to unsubscribe when the component unmounts
+    return () => {
+      console.log("Unsubscribing from conversation stream");
+      //unsubscribe();
+    };
   };
 
   streamConversations();
-
-  return () => {
-    if (stream) {
-      stream.return();
-    }
-  };
 }, []);
 ```
 
@@ -247,13 +247,20 @@ await listening.cancel();
 
 ```tsx
 useEffect(() => {
-  const startMessageStream = async () => {
-    conversation.streamMessages((message) => {
-      console.log("Streamed message:", message);
-    });
+  // Define the callback function to be called for each new message
+  const handleMessage = async (message) => {
+    console.log(
+      `New message from ${message.senderAddress}: ${message.content()}`,
+    );
+    setMessages((prevMessages) => updateMessages(prevMessages, message));
   };
-  startMessageStream();
-}, [conversation]);
+
+  // Optional: return a cleanup function to unsubscribe when the component unmounts
+  return () => {
+    console.log("Unsubscribing from message stream");
+    // unsubscribe();
+  };
+}, []);
 ```
 
 </TabItem>
@@ -349,16 +356,24 @@ Code sample coming soon
 
 ```tsx
 import { useXmtp } from "@xmtp/react-native-sdk";
+
 const { client } = useXmtp();
 
 useEffect(() => {
-  const startMessageStream = async () => {
-    client.conversations.streamAllMessages((message) => {
+  const startMessageStream = () => {
+    const unsubscribe = client.conversations.streamAllMessages((message) => {
       console.log(
         `New message from ${message.senderAddress}: ${message.content}`,
       );
     });
+
+    // Optional: return a cleanup function to unsubscribe when the component unmounts
+    return () => {
+      console.log("Unsubscribing from message stream");
+      // unsubscribe();
+    };
   };
+
   startMessageStream();
 }, []);
 ```
