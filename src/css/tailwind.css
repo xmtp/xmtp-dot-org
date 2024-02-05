@@ -1586,8 +1586,19 @@ li > a.new::after {
   height: 500px;
 }
 
-.tabs-container pre {
+/*.tabs-container pre,
+.codeBlockContent_biex pre {
   overflow-y: auto !important;
   overflow-x: auto !important;
   max-height: 500px;
+}*/
+pre code {
+  max-height: 500px;
+}
+.rabbit {
+  background-color: #0000000d;
+  margin-bottom: 5px;
+}
+.rabbit p {
+  margin: 0px !important;
 }

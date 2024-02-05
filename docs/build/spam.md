@@ -8,7 +8,7 @@ description: "Learn about spam filters for apps built with XMTP."
 
 :::tip FYI
 
-Third-party and public good tools listed on this page are not official endorsements and are provided for informational purposes only. 
+Third-party and public good tools listed on this page are not official endorsements and are provided for informational purposes only.
 
 Is your app using a great tool to filter spam and keep inboxes safe? Open an [issue](https://github.com/xmtp/xmtp-dot-org/issues) to share information about it.
 
@@ -24,12 +24,12 @@ Explore these third-party spam filtering tools.
 
 ### Airstack spam filters
 
-Use on-chain and off-chain data provided by [Airstack](https://www.airstack.xyz/) to create spam filtering systems for your app, including:
+Learn how to create a split inbox with [Airstack](https://www.airstack.xyz/) that filters senders into three buckets: Primary, General, & Requests. The goal is for the user to never see any spam messages.
 
-- [**Known senders**](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/known-senders): Separate the user inbox into known and unknown senders
-- [**Proof of personhood**](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/proof-of-personhood): Establish a scoring or evaluation system to prove an identity’s personhood
-- [**High probability of connection**](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/high-probability-of-connection): Evaluate the likelihood of real-life connections using social graphs and POAPs
-  
+- [**Primary Inbox**](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/primary-inbox): The Primary Inbox should contain all the users that a given user certainly knows.
+- [**General Inbox**](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/general-inbox): The General inbox should contain all the users that a given user is likely to know or we have strong signals that they are a good actor.
+- [**Request Inbox**](https://docs.airstack.xyz/airstack-docs-and-faqs/guides/xmtp/spam-filters/request-inbox): The Request Inbox is for users unknown to the main user and without any connections. It typically holds spam, which users should avoid.
+
 ## Public good tools
 
 Experiment with these spam filtering tools provided as public goods by members of the XMTP community.
