@@ -24,7 +24,7 @@ A standard content type is one that has undergone the XMTP Request for Comment (
 
 Once adopted, a standard content type is bundled in XMTP client SDKs. A developer can then import the standard content type from an SDK for use in their app.
 
-Here is the current standard content types:
+Here is the current standard content type:
 
 ### Text content type
 
