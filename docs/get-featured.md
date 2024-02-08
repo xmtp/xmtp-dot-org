@@ -80,5 +80,4 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
 ## C. Post-launch engagement
 
 - [ ] Keep in touch using the [XMTP community platform](/docs/contribute) that works best for you. This helps ensure that you hear about the latest SDK and content type releases, as well as upgrade and deprecation notices.
-- [ ] Message `prxshant.eth` using ([xmtp.chat](https://xmtp.chat/), [Converse](https://converse.xyz/), [Coinbase Wallet](https://www.coinbase.com/wallet), etc.) to share your app metrics. Let’s test hypotheses and learn together to help ensure interaction success and improve XMTP for all.
 - [ ] Contribute to XMTP's GitHub Repos: If you have code improvements, bug fixes, or features that could benefit the XMTP ecosystem, consider [contributing](/docs/contribute) to XMTP's GitHub repositories. By doing this, you not only improve the protocol but also gain valuable experience and recognition within the community. Make sure to follow the guidelines laid out for pull requests and XMTP Improvement Proposals.

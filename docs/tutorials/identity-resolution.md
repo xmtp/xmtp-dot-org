@@ -14,13 +14,7 @@ In this context, **identity** refers to:
 - Wallet addresses, such as raw 0x addresses like `0x4b70d04124c2996De29e0caa050A49822Faec6Cc`
 - Human-readable domain names associated with wallet addresses. These domain names are provided by name services, such as Ethereum Name Service (ENS) and Unstoppable Domains (UNS).
 
-As a UX best practice, build your app to enable a user to enter a domain name in the **To** field and have the identity resolve to its associated raw wallet address. For example, a user should be able to enter `prxshant.eth` in your **To** field and have your app forward-resolve and display the identity's associated wallet address `0x4b70d04124c2996De29e0caa050A49822Faec6Cc`.
-
-<div className="nopadding" style={{width:'90%'}}>
-
-![Entering prxshant.eth in a to field and having it resolve to 0x4b70d04124c2996De29e0caa050A49822Faec6Cc](img/id-resolution.gif)
-
-</div>
+As a UX best practice, build your app to enable a user to enter a domain name in the **To** field and have the identity resolve to its associated raw wallet address. For example, a user should be able to enter `gm.xmtp.eth` in your **To** field and have your app forward-resolve and display the identity's associated wallet address `0x937C0d4a6294cdfa575de17382c7076b579DC176`.
 
 Your app should also be able to accept a raw wallet address and reverse-resolve and display the identity's associated domain name, if available.
 

@@ -146,14 +146,6 @@ Here are **just a few** of the chains supported by XMTP:
   </a>
 </div>
 
-:::tip
-
-Want to propose a path to compatibility for other popular chains such as Aptos, Bitcoin, Cosmos, Flow, Hedera Hashgraph, Polkadot, Solana, Starkware, Stellar, Sui, and Tezos? Do it via an [XMTP grant](/grants)!
-
-Have you built with a tool that works well with XMTP? Let's add it to this page. Share your experience with `prxshant.eth` on [xmtp.chat](https://xmtp.chat/inbox) or using the feedback widget at the bottom of this page.
-
-:::
-
 ### Does XMTP work with smart contract wallets?
 
 XMTP doesn't currently support smart contract wallets. XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets). It also works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s.
