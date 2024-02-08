@@ -18,19 +18,13 @@ At a high level, there are three categories of content types with XMTP:
 - Standards-track
 - Custom
 
-#### Experimental playground 🎲
-
-To explore implementations of standard and standards-track content types, see the XMTP React playground:
-
-[GitHub repo](https://github.com/xmtp/xmtp-react-playground) | [Web app](https://xmtp.github.io/xmtp-react-playground/#/new)
-
 ## Standard content types
 
 A standard content type is one that has undergone the XMTP Request for Comment (XRC) process and has been adopted as an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs#readme) (XIP).
 
 Once adopted, a standard content type is bundled in XMTP client SDKs. A developer can then import the standard content type from an SDK for use in their app.
 
-Here are the current standard content types:
+Here is the current standard content type:
 
 ### Text content type
 
@@ -81,21 +75,6 @@ await conversation.send("gm");
 
 </TabItem>
 </Tabs>
-
-### Composite content type
-
-If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```jsx
-import { CompositeCodec } from "@xmtp/xmtp-js";
-//xmtp = await Client.create(signer, { env: "dev" });
-xmtp.registerCodec(new CompositeCodec());
-```
-
-</TabItem></Tabs>
 
 ## Standards-track content types
 
