@@ -25,9 +25,7 @@ In this context, **identity** refers to:
 
 As a UX best practice, build your app to enable a user to enter a domain name in the To field and have it resolve to its associated raw wallet address.
 
-For example, a user should be able to enter `prxshant.eth` in your To field and have your app forward-resolve and display its associated wallet address `0x4b70d04124c2996De29e0caa050A49822Faec6Cc`.
-
-![Entering prxshant.eth in a to field and having it resolve to 0x4b70d04124c2996De29e0caa050A49822Faec6Cc](./media/id-resolution.gif)
+For example, a user should be able to enter `gm.xmtp.eth` in your To field and have your app forward-resolve and display its associated wallet address `0x937C0d4a6294cdfa575de17382c7076b579DC176`.
 
 And certainly, your app should also be able to accept a raw wallet address and reverse-resolve and display the associated domain name, if available.
 
