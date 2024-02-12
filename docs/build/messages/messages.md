@@ -349,7 +349,7 @@ for await (const page of conversation.messages(limit: 25)) {
 
 As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types are introduced into the XMTP ecosystem, your app may encounter content types it does not support. This situation, if not handled properly, could lead to app crashes.
 
-Each content type is accompanied by a `contentFallback` property, which offers a descriptive string representing the content type's expected value. It's important to note that content fallbacks are immutable and are predefined in network messages. In instances where `contentFallback` is `undefined`, it indicates that the content, such as read receipts, is not intended to be rendered. If you're venturing into creating custom content types, you're provided with the flexibility to specify a custom fallback. For a deeper dive into this, consider exploring the [Custom Content Type Tutorial](/docs/tutorials/custom-ct).
+Each message is accompanied by a `contentFallback` property, which offers a descriptive string representing the content type's expected value. It's important to note that content fallbacks are immutable and are predefined in the content type specification. In instances where `contentFallback` is `undefined`, such as read receipts, it indicates that the content is not intended to be rendered. If you're venturing into creating custom content types, you're provided with the flexibility to specify a custom fallback string. For a deeper dive into this, consider exploring the [Custom Content Type Tutorial](/docs/tutorials/custom-ct).
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
