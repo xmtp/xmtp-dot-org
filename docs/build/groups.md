@@ -306,6 +306,11 @@ Code sample expected for Q2 2024
 Streams allow real-time monitoring of new messages in a group chat. Here's how you can set up a stream for message updates. Refer to the [Streams](/docs/build/streams.md) section for more details.
 
 <Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
@@ -321,11 +326,6 @@ messageStream.collect { message ->
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-Code sample expected for Q2 2024
-
-</TabItem>
-<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
 Code sample expected for Q2 2024
 
@@ -352,6 +352,16 @@ Code sample expected for Q2 2024
 Monitor updates in group chats, including member management activities like adding and removing members as well as the creation of new group chats.
 
 <Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+const group = await client.conversations.newGroup([
+  walletAddress1,
+  walletAddress2,
+]);
+```
+
+</TabItem>
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
@@ -376,11 +386,6 @@ conversationStream.collect { conversation ->
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-Code sample expected for Q2 2024
-
-</TabItem>
-<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
 Code sample expected for Q2 2024
 
