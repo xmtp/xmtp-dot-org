@@ -306,6 +306,11 @@ Code sample expected for Q2 2024
 Streams allow real-time monitoring of new messages in a group chat. Here's how you can set up a stream for message updates. Refer to the [Streams](/docs/build/streams.md) section for more details.
 
 <Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
