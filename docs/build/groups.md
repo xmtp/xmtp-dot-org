@@ -165,6 +165,49 @@ Code sample expected for Q2 2024
 </TabItem>
 </Tabs>
 
+## Check if a group chat is active
+
+Determine whether a group chat is currently active. This can be useful for updating the UI to reflect the current state of the group chat, especially after members have been added or removed.
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+const isActive = await group.isActive();
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val isActive = group.isActive()
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let isActive = group.isActive
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+</Tabs>
+
 ## Manage group chat members
 
 Here are the ways that you manage group chat members with XMTP.
