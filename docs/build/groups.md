@@ -210,7 +210,7 @@ Code sample expected for Q2 2024
 
 ## Manage group chat members
 
-Here are the ways that you manage group chat members with XMTP.
+You can list, add and remove members from a group chat. The current limit is 250. Only the creator of the group chat has the permissions to add or remove members. This restriction ensures that only authorized individuals can modify the participant list. Developers should design their application's user interface and functionality with this consideration in mind, ensuring that options to add or remove members are only available to the group's creator.
 
 ### List group members
 
