@@ -164,12 +164,12 @@ const config = {
               },
               {
                 to: "/docs/use-cases/groups",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/groups.svg" alt="Finance icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Groups</div></div>`,
               },
               {
                 to: "/docs/use-cases/frames",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/frames.svg" alt="Finance icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Frames</div></div>`,
               },
             ],
