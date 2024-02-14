@@ -167,7 +167,7 @@ Code sample expected for Q2 2024
 
 ## Check if a group chat is active
 
-Determine whether a group chat is currently active. This can be useful for updating the UI to reflect the current state of the group chat, especially after members have been added or removed.
+The `isActive` property indicates whether the current user is still a participant in the group chat. If the group chat is not active for the user, it typically means the user has been removed from the group. Developers should use this status to adjust the user interface accordingly. If a group chat is not active for a user, the application should hide or disable functionalities such as sending messages, adding, or removing members. This ensures a a good user experience and prevents actions that are not permissible due to the user's status in the group chat.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
