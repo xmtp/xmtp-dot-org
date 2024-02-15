@@ -7,7 +7,8 @@ description: "XMTP released a major protocol update that protects users’ allow
 image: "./media/InboxProtection_Blog-alt3.png"
 tags:
   - Announcements
-  - Built with XMTP
+  - Developers
+  - Privacy & Security
   - Messaging
 ---
 
