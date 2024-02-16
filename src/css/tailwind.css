@@ -1604,6 +1604,7 @@ li > a.new::after {
   margin: 10px;
   vertical-align: top;
   text-align: left;
+  line-height: 1.4
 }
 
 @mobile {
