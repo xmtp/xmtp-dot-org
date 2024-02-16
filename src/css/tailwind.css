@@ -1610,9 +1610,6 @@ li > a.new::after {
 .quickstarts-tabs a {
   font-weight: bold !important;
 }
-.bold {
-  font-weight: bold !important;
-}
 
 @media (max-width: 640px) {
   .quickstarts-tabs ul li {
