@@ -21,13 +21,13 @@ A quickstart is a brief guide or repo aimed at helping XMTP developers to unders
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-reactjs" class="plausible-event-name=Quickstart"><strong>Floating Inbox</strong></a><br/><small>Floating inbox quickstart app in JS. Use it to help you build your own app with XMTP.</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa" class="plausible-event-name=Quickstart"><strong>Progressive web app</strong></a><br/><small>Quickstart app for building a PWA, which is a way to provide an app without requiring separate bundling or distribution</small></li>
-  <li><a href="https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1#index.ts" class="plausible-event-name=Replit"><strong>JavaScript live example</strong></a><br/><small>A Repl of a full flow for sending and streaming messages in JavaScript</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-nodebooks" class="plausible-event-name=Quickstart"><strong>Node.js Notebooks</strong></a><br/><small>Interactive Node.js notebooks (similar to Jupyter) for learning about and experimenting with XMTP</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-ppp-request-inbox" class="plausible-event-name=Quickstart"><strong>Portable consent request inbox</strong></a><br/><small>How to build consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-ppp-subscribe" class="plausible-event-name=Quickstart"><strong>Portable consent subscribe</strong></a><br/><small>How to build a Subscribe button to record broadcast message user consent</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-ppp-broadcast" class="plausible-event-name=Quickstart"><strong>Portable consent broadcast</strong></a><br/><small>How to build broadcast messaging that checks for user consent</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-reactjs" class="plausible-event-name=Quickstart">Floating Inbox</a><br/><small>Floating inbox quickstart app in JS. Use it to help you build your own app with XMTP.</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa" class="plausible-event-name=Quickstart">Progressive web app</a><br/><small>Quickstart app for building a PWA, which is a way to provide an app without requiring separate bundling or distribution</small></li>
+  <li><a href="https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1#index.ts" class="plausible-event-name=Replit">JavaScript live example</a><br/><small>A Repl of a full flow for sending and streaming messages in JavaScript</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-nodebooks" class="plausible-event-name=Quickstart">Node.js Notebooks</a><br/><small>Interactive Node.js notebooks (similar to Jupyter) for learning about and experimenting with XMTP</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-ppp-request-inbox" class="plausible-event-name=Quickstart">Portable consent request inbox</a><br/><small>How to build consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-ppp-subscribe" class="plausible-event-name=Quickstart">Portable consent subscribe</a><br/><small>How to build a Subscribe button to record broadcast message user consent</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-ppp-broadcast" class="plausible-event-name=Quickstart">Portable consent broadcast</a><br/><small>How to build broadcast messaging that checks for user consent</small></li>
 </ul>
 
 </div>
@@ -69,8 +69,8 @@ Example apps are more comprehensive than quickstarts. They are fully functional 
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/xmtp/xmtp-react-playground/" class="plausible-event-name=Example"><strong>React Playground app</strong></a><br/><small>A tool to help you build your own app with XMTP, including reactions, replies, read receipts, and attachments</small></li>
-  <li><a href="https://github.com/xmtp-labs/xmtp-inbox-web/" class="plausible-event-name=Example"><strong>Inbox Web</strong></a><br/><small>XMTP official client, aiming to showcase effective and innovative ways of building with XMTP.</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-react-playground/" class="plausible-event-name=Example">React Playground app</a><br/><small>A tool to help you build your own app with XMTP, including reactions, replies, read receipts, and attachments</small></li>
+  <li><a href="https://github.com/xmtp-labs/xmtp-inbox-web/" class="plausible-event-name=Example">Inbox Web</a><br/><small>XMTP official client, aiming to showcase effective and innovative ways of building with XMTP.</small></li>
 </ul>
 </div>
 
@@ -132,12 +132,12 @@ Wallet connectors are essential components in decentralized applications (dApps)
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-0xpass" class="plausible-event-name=Quickstart"><strong>0xPass</strong></a><br/><small>Quickstart app for building a progressive web app (PWA) with a 0xPass wallet connector</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-dynamic" class="plausible-event-name=Quickstart"><strong>Dynamic</strong></a><br/><small>Quickstart app for building a PWA with a Dynamic wallet connector</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-metamask" class="plausible-event-name=Quickstart"><strong>MetaMask</strong></a><br/><small>Quickstart app for building a PWA with a MetaMask wallet connector</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-privy" class="plausible-event-name=Quickstart"><strong>Privy</strong></a><br/><small>Quickstart app for building a PWA with a Privy wallet connector</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-thirdweb" class="plausible-event-name=Quickstart"><strong>ThirdWeb</strong></a><br/><small>Quickstart app for building a PWA with a Thirdweb wallet connector</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-walletconnect" class="plausible-event-name=Quickstart"><strong>WalletConnect</strong></a><br/><small>Quickstart app for building a PWA with a WalletConnect wallet connector</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-0xpass" class="plausible-event-name=Quickstart">0xPass</a><br/><small>Quickstart app for building a progressive web app (PWA) with a 0xPass wallet connector</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-dynamic" class="plausible-event-name=Quickstart">Dynamic</a><br/><small>Quickstart app for building a PWA with a Dynamic wallet connector</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-metamask" class="plausible-event-name=Quickstart">MetaMask</a><br/><small>Quickstart app for building a PWA with a MetaMask wallet connector</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-privy" class="plausible-event-name=Quickstart">Privy</a><br/><small>Quickstart app for building a PWA with a Privy wallet connector</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-thirdweb" class="plausible-event-name=Quickstart">ThirdWeb</a><br/><small>Quickstart app for building a PWA with a Thirdweb wallet connector</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-walletconnect" class="plausible-event-name=Quickstart">WalletConnect</a><br/><small>Quickstart app for building a PWA with a WalletConnect wallet connector</small></li>
 </ul>
 
 </div>
@@ -155,10 +155,10 @@ These projects provide a robust foundation for building your own applications us
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-reactjs-next" class="plausible-event-name=Quickstart"><strong>Next.js</strong></a><br/><small>Floating inbox quickstart app in Next.js. Use it to help you build your own app with XMTP.</small></li>  
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-vuejs" class="plausible-event-name=Quickstart"><strong>Vue.js</strong></a><br/><small>A tutorial and quickstart app for building a chatbot in VueJS. Use them to help you build your own app with XMTP.</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-node" class="plausible-event-name=Quickstart"><strong>Node.js</strong></a><br/><small>Quickstart code for creating a new XMTP client, initiating a conversation, and sending a message in Node.js</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-firebase-functions" class="plausible-event-name=Quickstart"><strong>Firebase Functions</strong></a><br/><small>Quickstart code for integrating an XMTP app with Firebase functions</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-reactjs-next" class="plausible-event-name=Quickstart">Next.js</a><br/><small>Floating inbox quickstart app in Next.js. Use it to help you build your own app with XMTP.</small></li>  
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-vuejs" class="plausible-event-name=Quickstart">Vue.js</a><br/><small>A tutorial and quickstart app for building a chatbot in VueJS. Use them to help you build your own app with XMTP.</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-node" class="plausible-event-name=Quickstart">Node.js</a><br/><small>Quickstart code for creating a new XMTP client, initiating a conversation, and sending a message in Node.js</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-firebase-functions" class="plausible-event-name=Quickstart">Firebase Functions</a><br/><small>Quickstart code for integrating an XMTP app with Firebase functions</small></li>
 </ul>
 
 </div>
