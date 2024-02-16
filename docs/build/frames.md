@@ -152,7 +152,7 @@ const { redirectedTo } = await framesClient.proxy.postRedirect(
 
 This part of the guide focuses on how to render XMTP frames within your application, making the frames interactive and visually integrated. It includes:
 
-<video controls src="https://github.com/open-frames/open-frames-quickstart/assets/1447073/9e01e560-af69-4aec-bdbd-db486d7e432f" width="100%" type="video/mp4">
+<video controls src="https://github.com/fabriguespe/xmtp-quickstart-frames/assets/1447073/adf38f79-703c-4759-8523-4feb0ebb2d0e" width="100%" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
