@@ -25,10 +25,10 @@ The XMTP Frames guide you're looking at is designed to help developers integrate
 
 These are the foundational tools that allow developers to create, sign, and manage XMTP frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
 
-- [**Validating Frame URL**](#validating-frame-url): Checks if a URL in message content is suitable for frame processing.
-- [**Getting Frame Metadata**](#getting-frame-metadata): Retrieves metadata from frames like images, titles, buttons, and post URLs.
-- [**Sign XMTP Payload**](#sign-xmtp-payload): Signs the XMTP payload for frame actions, ensuring authenticity and integrity.
-- [**Handle Frame Actions**](#handle-frame-actions): Manages user interactions with a frame, including posting back to a frame's URL or handling redirects.
+- [**Install Required Packages**](#install-required-packages): To begin, add the necessary XMTP packages to your project.
+- [**Declare Protocol Compatibility**](#declare-protocol-compatibility): Ensure your application can interact with XMTP frames by declaring protocol compatibility.
+- [**Validate Incoming Messages**](#Validate-Incoming-Messages): Checks if a URL in message content is suitable for frame processing.
+- [**Enable Secure Communication**](#enable-secure-communication): Implements security measures to authenticate and secure frame actions, ensuring the integrity and origin of frame interactions.
 
 ### Rendering Frames in Your Application
 
