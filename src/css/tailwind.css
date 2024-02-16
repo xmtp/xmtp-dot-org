@@ -1614,5 +1614,5 @@ li > a.new::after {
 }
 
 .quickstarts-tabs a {
-  font-weight: bold;
+  font-weight: bold !important;
 }
