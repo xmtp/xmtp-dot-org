@@ -1586,8 +1586,44 @@ li > a.new::after {
   height: 500px;
 }
 
-.tabs-container pre {
+/*.tabs-container pre,
+.codeBlockContent_biex pre {
   overflow-y: auto !important;
   overflow-x: auto !important;
   max-height: 500px;
+}*/
+pre code {
+  max-height: 500px;
+}
+.rabbit {
+  background-color: #0000000d;
+  margin-bottom: 5px;
+}
+.rabbit p {
+  margin: 0px !important;
+}
+
+.quickstarts-tabs ul {
+  padding: 10px !important;
+  list-style-type: disc !important;
+}
+.quickstarts-tabs ul li {
+  list-style-type: disc !important;
+  width: 47%;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  vertical-align: top;
+  text-align: left;
+  line-height: 1.4;
+}
+
+@mobile {
+  .quickstarts-tabs ul li {
+    width: 100%;
+  }
+}
+
+.quickstarts-tabs a {
+  font-weight: bold;
 }
