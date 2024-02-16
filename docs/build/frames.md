@@ -34,7 +34,7 @@ These are the foundational tools that allow developers to create, sign, and mana
 
 <div class=" rabbit  p-5 ">
 
-📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-quickstart-frames">xmtp-broadcast</a>
+📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-quickstart-frames">xmtp-quickstart-frames</a>
 
 </div>
 
