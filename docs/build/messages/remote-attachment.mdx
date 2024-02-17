@@ -42,9 +42,10 @@ import {
   ContentTypeRemoteAttachment,
 } from "@xmtp/content-type-remote-attachment";
 // Create the XMTP client
-const xmtp = await Client.create(signer, { env: "dev" });
-xmtp.registerCodec(new AttachmentCodec());
-xmtp.registerCodec(new RemoteAttachmentCodec());
+const xmtp = await Client.create(signer, { 
+    env: "dev",
+    codecs: [new AttachmentCodec(), new RemoteAttachmentCodec()]
+});
 ```
 
 </TabItem>
