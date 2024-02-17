@@ -46,6 +46,10 @@ This part of the guide focuses on how to render XMTP frames within your applicat
 - [**Handling Clicks in the Frames**](#handling-clicks-in-the-frames): Interpreting user interactions within a frame to determine and execute the corresponding action, such as navigating to a link or updating frame content.
 - [**Sign XMTP Payload**](#sign-xmtp-payload): Authenticating and securing frame actions by signing XMTP payloads, ensuring the integrity and origin of frame interactions.
 
+### Use cases
+
+For inspiration and a deeper dive into how XMTP Frames can work across various domains, refer to the **[XMTP Frames Use Cases](/docs/use-cases/frames)** section below.
+
 ---
 
 ## Protocol Libraries
