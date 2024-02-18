@@ -11,7 +11,7 @@ import TabItem from "@theme/TabItem";
 
 ![Status](https://img.shields.io/badge/Reference_implementation_status-Alpha-orange)
 
-Secure group chats are an important part of every messaging app. Learn how to create and manage them with XMTP. Discover how XMTP can enhance your group communication experience.
+Secure group chats are an important part of every messaging app. In this comprehensive guide, we delve into the essentials of leveraging XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices, we cover it all. Whether you're a seasoned developer or new to XMTP, this documentation provides you with the knowledge to integrate group chat functionalities into your applications effectively.
 
 :::caution Group Chats are Per Installation
 Group chats in XMTP are specific to each installation. This means that while you will see your group chat conversations across different devices, you will not see the historical messages within those chats automatically. Each group chat's message history is tied to the device where it was started. Consequently, there is no message history synced across devices. When you sign in on a new device, you will be able to see existing group chat conversations but will only receive new messages going forward. This behavior is specific to group conversations.
@@ -177,7 +177,7 @@ Code sample expected for Q2 2024
 
 ## Check if a group chat is active
 
-The `isActive` property indicates whether the current user is still a participant in the group chat. If the group chat is not active for the user, it typically means the user has been removed from the group. Developers should use this status to adjust the user interface accordingly. If a group chat is not active for a user, the application should hide or disable functionalities such as sending messages, adding, or removing members. This ensures a a good user experience and prevents actions that are not permissible due to the user's status in the group chat.
+The `isActive` property indicates whether the current user is still a participant in the group chat. If the group chat is not active for the user, it typically means the user has been removed from the group. Developers should use this status to adjust the user interface accordingly. If a group chat is not active for a user, the application should hide or disable functionalities such as sending messages, adding, or removing members. This ensures a good user experience and prevents actions that are not permissible due to the user's status in the group chat.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
