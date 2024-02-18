@@ -11,7 +11,7 @@ import TabItem from "@theme/TabItem";
 
 ![Status](https://img.shields.io/badge/Reference_implementation_status-Alpha-orange)
 
-Secure group chats are an important part of every messaging app. In this comprehensive guide, we delve into the essentials of leveraging XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices, we cover it all. Whether you're a seasoned developer or new to XMTP, this documentation provides you with the knowledge to integrate group chat functionalities into your applications effectively.
+Secure group chats are an important part of every messaging app. In this guide, we delve into the essentials of using XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices.
 
 :::caution Group Chats are Per Installation
 Group chats in XMTP are specific to each installation. This means that while you will see your group chat conversations across different devices, you will not see the historical messages within those chats automatically. Each group chat's message history is tied to the device where it was started. Consequently, there is no message history synced across devices. When you sign in on a new device, you will be able to see existing group chat conversations but will only receive new messages going forward. This behavior is specific to group conversations.
@@ -84,7 +84,7 @@ const groups = await client.conversations.listGroups();
 val groups = client.conversations.listGroups()
 ```
 
-List all you conversation for both group and individual conversations using `includeGroups`
+List all you conversation for both group and individual conversations
 
 ```kotlin
 // List all conversations, including both group and individual
@@ -99,7 +99,7 @@ val conversations = client.conversations.list(includeGroups = true)
 let groups = try await client.conversations.groups()
 ```
 
-List all you conversation for both group and individual conversations using `includeGroups`
+List all you conversation for both group and individual conversations
 
 ```swift
 let groups = try await client.conversations.list(includeGroups: true)
@@ -419,8 +419,10 @@ Streams allow real-time monitoring of new messages in a group chat. Here's how y
 // Assuming `group` is an existing group chat object
 const streamGroupMessages = async (group) => {
   const cancelGroupMessageStream = await aliceGroup.streamGroupMessages(
-    console.log(`New message: ${message.content}`);
-  });
+    (message) => {
+      console.log(`New message: ${message.content}`);
+    },
+  );
 
   // Use cancelGroupMessageStream() to stop listening to group updates
 };
@@ -495,7 +497,7 @@ And for streaming all conversations, including individual and groups:
 const streamAllConversations = async (client) => {
   const allConvos = [];
   const cancelStreamAll = await client.conversations.streamAll(
-    (conversationContainer) => {
+    (conversation) => {
       allConvos.push(conversation);
     },
   );
@@ -523,7 +525,7 @@ Keep your conversation list current by streaming updates for both group and indi
 val conversationsAndGroupsStream = client.conversations.streamAll()
 
 allConversationsStream.collect { grouporconv ->
-    println("New or updated group of grouporconv: ${grouporconv.id}")
+    println("New or updated group or conversation: ${grouporconv.id}")
 }
 ```
 
