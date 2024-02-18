@@ -13,7 +13,7 @@ The message payload can be a plain string, but you can configure custom content 
 
 ## Send messages
 
-To send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network. 
+To send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network.
 
 Messages are limited to just short of 1MB (1048214 bytes) . Use [remote attachments](/docs/build/messages/remote-attachment) to support larger messages.
 
@@ -346,6 +346,12 @@ for await (const page of conversation.messages(limit: 25)) {
 
 </TabItem>
 </Tabs>
+
+## Note on Group Chats
+
+The methods for sending and listing messages, as well as handling unsupported content types, are applicable to both one-on-one and group conversations within XMTP. This means you can use the same approach to manage messages in group chats as you would in individual conversations.
+
+For additional information on group chat-specific features, such as managing group members or listening for new messages in a group chat, please see the [Group Chats](/docs/build/groups) documentation.
 
 ## Handle an unsupported content type error
 

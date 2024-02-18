@@ -13,6 +13,10 @@ import TabItem from "@theme/TabItem";
 
 Secure group chats are an important part of every messaging app. Learn how to create and manage them with XMTP. Discover how XMTP can enhance your group communication experience.
 
+:::caution Group Chats are Per Installation
+Group chats in XMTP are specific to each installation. This means that while you will see your group chat conversations across different devices, you will not see the historical messages within those chats automatically. Each group chat's message history is tied to the device where it was started. Consequently, there is no message history synced across devices. When you sign in on a new device, you will be able to see existing group chat conversations but will only receive new messages going forward. This behavior is specific to group conversations.
+:::
+
 ## Create a group chat
 
 Initiate a new group chat with a list of specified addresses. To create a group, the recipient must have already started their client at least once on the XMTP network.
@@ -83,7 +87,7 @@ val groups = client.conversations.listGroups()
 List all you conversation for both group and individual conversations using `includeGroups`
 
 ```kotlin
-// Use existing list() method
+// List all conversations, including both group and individual
 val conversations = client.conversations.list(includeGroups = true)
 ```
 
@@ -93,6 +97,12 @@ val conversations = client.conversations.list(includeGroups = true)
 ```swift
 // List all group chats for the current user
 let groups = try await client.conversations.groups()
+```
+
+List all you conversation for both group and individual conversations using `includeGroups`
+
+```swift
+let groups = try await client.conversations.list(includeGroups: true)
 ```
 
 </TabItem>
@@ -187,7 +197,61 @@ val isActive = group.isActive()
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-let isActive = group.isActive
+var isActive = try group.isActive()
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+</Tabs>
+
+## Synchronizing Group Conversations
+
+XMTP's `syncGroups` method ensures your application's group conversations are current, reflecting new groups or membership changes. Use `syncGroups` to:
+
+- **After Signing In:** Immediately update group conversation data.
+- **Periodically:** Keep data current based on your app's requirements.
+- **After Receiving a Notification:** Reflect changes in group membership prompted by notifications.
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+await client.conversations.syncGroups();
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+client.conversations.syncGroups()
+```
+
+List all you conversation for both group and individual conversations using `includeGroups`
+
+```kotlin
+// List all conversations, including both group and individual
+val conversations = client.conversations.list(includeGroups = true)
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await client.conversations.sync()
 ```
 
 </TabItem>
@@ -351,7 +415,16 @@ Streams allow real-time monitoring of new messages in a group chat. Here's how y
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
-Code sample expected for Q2 2024
+```jsx
+// Assuming `group` is an existing group chat object
+const streamGroupMessages = async (group) => {
+  const cancelGroupMessageStream = await aliceGroup.streamGroupMessages(
+    console.log(`New message: ${message.content}`);
+  });
+
+  // Use cancelGroupMessageStream() to stop listening to group updates
+};
+```
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
@@ -370,7 +443,12 @@ messageStream.collect { message ->
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample expected for Q2 2024
+```swift
+// Assuming `group` is an existing group chat object
+for try await message in group.streamMessages() {
+    print("New message: \(message.content)")
+}
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
@@ -398,10 +476,17 @@ Monitor updates in group chats, including member management activities like addi
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
 ```jsx
-const group = await client.conversations.newGroup([
-  walletAddress1,
-  walletAddress2,
-]);
+// Listen for group chat updates
+const streamGroups = async (client) => {
+  const groups = [];
+  const cancelStreamGroups = await client.conversations.streamGroups(
+    (group) => {
+      groups.push(group);
+    },
+  );
+
+  // Use cancelStreamGroups() to stop listening to group updates
+};
 ```
 
 </TabItem>
@@ -430,7 +515,21 @@ conversationStream.collect { conversation ->
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample expected for Q2 2024
+```swift
+// Stream updates for all group conversations
+for try await group in client.conversations.streamGroups() {
+    print("New or updated group: \(group.id)")
+}
+```
+
+And for streaming all conversations, including individual and groups:
+
+```swift
+// Stream updates for all conversations, including individual and groups
+for try await conversation in client.conversations.streamAll() {
+    print("New or updated conversation: \(conversation.id)")
+}
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
@@ -449,3 +548,9 @@ Code sample expected for Q2 2024
 
 </TabItem>
 </Tabs>
+
+## Note on Conversations and Messages in Group Chats
+
+It's important to note that all the features and methods described in the [Conversations](/docs/build/conversations) and [Messages](/docs/build/messages/messages) documentation are fully applicable to group chats as well. This includes starting new conversations, checking if an address is on the network, sending messages, and listing existing conversations. XMTP's API design ensures that you can manage group chats with the same ease and flexibility as one-on-one conversations.
+
+This means that whether you're working with individual conversations or group chats, the process for managing them remains consistent, allowing for a unified and streamlined development experience across different types of communication within XMTP.
