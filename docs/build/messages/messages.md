@@ -13,7 +13,7 @@ The message payload can be a plain string, but you can configure custom content 
 
 ## Send messages
 
-To send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network. 
+To send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network.
 
 Messages are limited to just short of 1MB (1048214 bytes) . Use [remote attachments](/docs/build/messages/remote-attachment) to support larger messages.
 
@@ -433,8 +433,8 @@ if (decoded == null) {
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-const contentTypeID = `${contentType.authorityId}/${contentType.typeId}:${contentType.versionMajor}.${contentType.versionMinor}`;
-const isRegistered = contentTypeID in client.codecRegistry;
+//contentTypeID has the following structure `${contentType.authorityId}/${contentType.typeId}:${contentType.versionMajor}.${contentType.versionMinor}`;
+const isRegistered = message.contentTypeID in client.codecRegistry;
 if (!isRegistered) {
   // Not supported content type
   if (message?.fallback != null) {
