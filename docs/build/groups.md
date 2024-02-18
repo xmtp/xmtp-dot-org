@@ -489,6 +489,21 @@ const streamGroups = async (client) => {
 };
 ```
 
+And for streaming all conversations, including individual and groups:
+
+```jsx
+const streamAllConversations = async (client) => {
+  const allConvos = [];
+  const cancelStreamAll = await client.conversations.streamAll(
+    (conversationContainer) => {
+      allConvos.push(conversation);
+    },
+  );
+
+  // Use cancelStreamAll() to stop listening to all conversation updates
+};
+```
+
 </TabItem>
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 

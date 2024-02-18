@@ -327,3 +327,99 @@ for await (const message of await xmtp.conversations.streamAllMessages()) {
 
 </TabItem>
 </Tabs>
+
+## Listen for group chat updates
+
+Monitor updates in group chats, including member management activities like adding and removing members as well as the creation of new group chats.
+
+<Tabs groupId="groupchats">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+// Stream updates for all group conversations
+val groupsStream = client.conversations.streamGroups()
+
+groupsStream.collect { group ->
+    println("New or updated group: ${group.id}")
+}
+```
+
+Keep your conversation list current by streaming updates for both group and individual conversations using `includeGroups`.
+
+```kotlin
+// Stream updates for all conversations, including individual and groups
+val conversationStream = client.conversations.stream(includeGroups = true)
+
+conversationStream.collect { conversation ->
+    println("New or updated conversation: ${conversation.id}")
+}
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+// Stream updates for all group conversations
+for try await group in client.conversations.streamGroups() {
+    print("New or updated group: \(group.id)")
+}
+```
+
+And for streaming all conversations, including individual and groups:
+
+```swift
+// Stream updates for all conversations, including individual and groups
+for try await conversation in client.conversations.streamAll() {
+    print("New or updated conversation: \(conversation.id)")
+}
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+// Listen for group chat updates
+const streamGroups = async (client) => {
+  const groups = [];
+  const cancelStreamGroups = await client.conversations.streamGroups(
+    (group) => {
+      groups.push(group);
+    },
+  );
+
+  // Use cancelStreamGroups() to stop listening to group updates
+};
+```
+
+And for streaming all conversations, including individual and groups:
+
+```jsx
+const streamAllConversations = async (client) => {
+  const allConvos = [];
+  const cancelStreamAll = await client.conversations.streamAll(
+    (conversationContainer) => {
+      allConvos.push(conversation);
+    },
+  );
+
+  // Use cancelStreamAll() to stop listening to all conversation updates
+};
+```
+
+</TabItem>
+</Tabs>
