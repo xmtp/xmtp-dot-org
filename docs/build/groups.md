@@ -520,10 +520,10 @@ Keep your conversation list current by streaming updates for both group and indi
 
 ```kotlin
 // Stream updates for all conversations, including individual and groups
-val conversationStream = client.conversations.stream(includeGroups = true)
+val conversationsAndGroupsStream = client.conversations.streamAll()
 
-conversationStream.collect { conversation ->
-    println("New or updated conversation: ${conversation.id}")
+allConversationsStream.collect { grouporconv ->
+    println("New or updated group of grouporconv: ${grouporconv.id}")
 }
 ```
 
