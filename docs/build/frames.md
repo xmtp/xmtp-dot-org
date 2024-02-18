@@ -91,9 +91,7 @@ These packages enable your frame to send, receive, and validate messages across 
 Use a meta tag in your frame's HTML to declare the client protocols your frame supports:
 
 ```html
-<meta
-  property="of:frame:minimum_client_protocol"
-  content="farcaster@VNext,xmtp@2024-02-01,lens@2024-02-02" />
+<meta property="of:accepts:xmtp" content="2024-02-01" />
 ```
 
 This informs client applications about the protocols your frame can interact with.
@@ -106,7 +104,7 @@ Implement message validation using `@xmtp/frames-validator` to ensure the authen
 import { validateFramesPost } from "@xmtp/frames-validator";
 
 export function handler(requestBody: any) {
-  if (requestBody.untrustedData?.clientType === "xmtp") {
+  if (requestBody.clientProtocol === "xmtp") {
     const { verifiedWalletAddress } = await validateFramesPost(requestBody);
     // Handle verified XMTP payload
   } else {
