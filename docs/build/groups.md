@@ -218,7 +218,7 @@ Code sample expected for Q2 2024
 </TabItem>
 </Tabs>
 
-## Synchronizing Group Conversations
+## Synchronizing group conversations
 
 XMTP's `syncGroups` method ensures your application's group conversations are current, reflecting new groups or membership changes. Use `syncGroups` to:
 
@@ -245,6 +245,51 @@ List all you conversation for both group and individual conversations using `inc
 ```kotlin
 // List all conversations, including both group and individual
 val conversations = client.conversations.list(includeGroups = true)
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await client.conversations.sync()
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+</Tabs>
+
+## Synchronizing group details and messages
+
+To ensure your application has the latest group chat details, including member list and the most recent messages, it's crucial to periodically synchronize each group chat. This can be particularly important after joining a group, adding new members, or sending messages. Use the `sync()` method on a group chat object to update its state with the latest information from the XMTP network.
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+// Assuming `group` is an existing group chat object
+await group.sync();
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+// Assuming `group` is an existing group chat object
+group.sync()
 ```
 
 </TabItem>
@@ -566,7 +611,7 @@ Code sample expected for Q2 2024
 </TabItem>
 </Tabs>
 
-## Note on Conversations and Messages in Group Chats
+## Note on conversations and messages in group chats
 
 It's important to note that all the features and methods described in the [Conversations](/docs/build/conversations) and [Messages](/docs/build/messages) documentation are fully applicable to group chats as well. This includes starting new conversations, checking if an address is on the network, sending messages, and listing existing conversations. XMTP's API design ensures that you can manage group chats with the same ease and flexibility as one-on-one conversations.
 
