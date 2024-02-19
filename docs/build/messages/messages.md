@@ -446,5 +446,3 @@ if (!isRegistered) {
 
 </TabItem>
 </Tabs >
-
-_Note: `ReadReceipts` have an `undefined` or `nil` fallback, indicating the message is not expected to be displayed._
