@@ -248,7 +248,7 @@ await client.conversations.syncGroups();
 client.conversations.syncGroups()
 ```
 
-List all you conversation for both group and individual conversations using `includeGroups`
+List all you conversation for both group and individual conversations.
 
 ```kotlin
 // List all conversations, including both group and individual
