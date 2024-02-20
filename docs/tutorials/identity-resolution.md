@@ -47,3 +47,7 @@ Everyname provides tools to resolve [ENS, Farcaster, Lens, Unstoppable Domains, 
 ### Unstoppable Domains
 
 Unstoppable Domains provides tools to resolve [Unstoppable Domains](https://docs.unstoppabledomains.com/resolution/overview/) identities.
+
+### SimpleHash
+
+[SimpleHash](https://docs.simplehash.com/reference/overview) provides tools to resolve ENS and Base Name Service identities.
