@@ -571,7 +571,7 @@ groupsStream.collect { group ->
 }
 ```
 
-Keep your conversation list current by streaming updates for both group and individual conversations using `includeGroups`.
+Keep your conversation list current by streaming updates for both group and individual conversations.
 
 ```kotlin
 // Stream updates for all conversations, including individual and groups
