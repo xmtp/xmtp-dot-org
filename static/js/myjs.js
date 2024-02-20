@@ -21,11 +21,7 @@ window.onload = function () {
   }
   // Add class to nav items based on their text
   navItems.forEach((item) => {
-    if (
-      item.innerText === "User consent" ||
-      item.innerText === "Groups" ||
-      item.innerText === "Spam"
-    ) {
+    if (item.innerText === "Group chats" || item.innerText === "Frames") {
       item.classList.add("new");
     }
   });

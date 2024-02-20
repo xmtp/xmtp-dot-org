@@ -13,8 +13,8 @@ import TabItem from "@theme/TabItem";
 
 Secure group chats are an important part of every messaging app. In this guide, we delve into the essentials of using XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices.
 
-:::caution Group Chats are Per Installation
-Group chats in XMTP are specific to each installation. This means that while you will see your group chat conversations across different devices, you will not see the historical messages within those chats automatically. Each group chat's message history is tied to the device where it was started. Consequently, there is no message history synced across devices. When you sign in on a new device, you will be able to see existing group chat conversations but will only receive new messages going forward. This behavior is specific to group conversations.
+:::caution Group chats are currently per installation
+As of now, group chats in XMTP are specific to each installation. This means that while you can access your group chat conversations across different devices, the historical messages within those chats might not automatically appear. Currently, each group chat's message history is tied to the device where it was initiated. As a result, there is no automatic syncing of message history across devices. When you sign in on a new device, you will see existing group chat conversations but will only receive new messages from that point forward. We are actively working on enhancing this feature to improve your experience with group conversations.
 :::
 
 ## Create a group chat
