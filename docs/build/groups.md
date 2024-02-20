@@ -25,10 +25,11 @@ Initiate a new group chat with a list of specified addresses. To create a group,
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
 ```jsx
-const group = await client.conversations.newGroup([
-  walletAddress1,
-  walletAddress2,
-]);
+const group = await client.conversations.newGroup(
+  [walletAddress1, walletAddress2],
+  // Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+  { permissions: "creator_is_admin" },
+);
 ```
 
 </TabItem>
@@ -73,6 +74,9 @@ Retrieve all existing group chat conversations associated with the current XMTP 
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
 ```jsx
+//First fetch new data from the network
+await client.conversations.syncGroups();
+//Get the updated group list
 const groups = await client.conversations.listGroups();
 ```
 
@@ -80,7 +84,9 @@ const groups = await client.conversations.listGroups();
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-// List all group chats for the current user
+//First fetch new data from the network
+client.conversations.syncGroups()
+//Get the updated group list
 val groups = client.conversations.listGroups()
 ```
 
@@ -95,7 +101,9 @@ val conversations = client.conversations.list(includeGroups = true)
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-// List all group chats for the current user
+//First fetch new data from the network
+try await client.conversations.sync()
+//Get the updated group list
 let groups = try await client.conversations.groups()
 ```
 
@@ -220,7 +228,7 @@ Code sample expected for Q2 2024
 
 ## Synchronizing group conversations
 
-XMTP's `syncGroups` method ensures your application's group conversations are current, reflecting new groups or membership changes. Use `syncGroups` to:
+XMTP's `syncGroups` brings the current data from the network and updates local DB, reflecting new groups or membership changes. Use `syncGroups` to:
 
 - **After Signing In:** Immediately update group conversation data.
 - **Periodically:** Keep data current based on your app's requirements.
@@ -346,7 +354,7 @@ val members = group.memberAddresses()
 
 ```swift
 try await group.sync()
-let members = group.members()
+let members = group.memberAddresses()
 ```
 
 </TabItem>
