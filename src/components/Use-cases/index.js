@@ -35,6 +35,14 @@ const Usecases = () => {
         <img src={"/img/smile.svg"} />
         <span>Gaming</span>
       </a>
+      <a href="/docs/use-cases/groups" className="chain-item">
+        <img src={"/img/groups.svg"} />
+        <span>Groups</span>
+      </a>
+      <a href="/docs/use-cases/frames" className="chain-item">
+        <img src={"/img/smile.svg"} />
+        <span>Frames</span>
+      </a>
     </div>
   );
 };

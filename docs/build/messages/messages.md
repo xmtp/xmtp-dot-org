@@ -346,7 +346,7 @@ for await (const page of conversation.messages(limit: 25)) {
 
 </TabItem>
 </Tabs>
-
+ 
 ## Note on Group Chats
 
 The methods for sending and listing messages, as well as handling unsupported content types, are applicable to both one-on-one and group conversations within XMTP. This means you can use the same approach to manage messages in group chats as you would in individual conversations.

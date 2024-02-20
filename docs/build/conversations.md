@@ -368,40 +368,7 @@ val conversations = JSON.parse(loadConversationsFromSomewhere())
 val client.importConversation(conversations)
 ```
 
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-</Tabs>
-
-## Serialize/Deserialize conversations
-
-You can save a conversation object locally using its `encodedContainer` property. This returns a `ConversationContainer` object which conforms to `Codable`.
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-Not applicable
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-Not applicable
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+**Serialize/Deserialize conversations**: You can save a conversation object locally using its `encodedContainer` property. This returns a `ConversationContainer` object which conforms to `Codable`.
 
 ```kotlin
 // Get a conversation
@@ -424,6 +391,8 @@ decodedConversation.send(text = "hi")
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+**Serialize/Deserialize conversations**: You can save a conversation object locally using its `encodedContainer` property. This returns a `ConversationContainer` object which conforms to `Codable`.
 
 ```swift
 // Get a conversation
