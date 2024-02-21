@@ -298,12 +298,12 @@ As of now, group chats in XMTP are specific to each installation. This means tha
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
-````jsx
+```jsx
 // Assuming `group` is an existing group chat object
 await group.sync();
 // Get group messages
 await group.messages();
-``
+```
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
@@ -313,7 +313,7 @@ await group.messages();
 group.sync()
 // Get group messages
 group.messages();
-````
+```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
@@ -480,7 +480,7 @@ Code sample coming soon
 
 ## Listen for new messages in a group chat
 
-Streams allow real-time monitoring of new messages in a group chat. Here's how you can set up a stream for message updates. Refer to the [Streams](/docs/build/streams.md) section for more details.
+Streams enable real-time monitoring of new messages in a group chat as well as member management activities like adding and removing members. Here's how you can set up a stream for message updates. Refer to this [section](/docs/build/streams.md) for more details on streams.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -540,9 +540,9 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-## Listen for group chat updates
+## Listen for new group chats
 
-Monitor updates in group chats, including member management activities like adding and removing members, as well as the creation of new group chats.
+Monitor the creation of new group chats.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
