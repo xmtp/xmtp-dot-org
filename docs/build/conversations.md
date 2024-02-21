@@ -326,7 +326,7 @@ for (const conversation of allConversations) {
 
 All the features and methods described in this document, including starting new conversations, checking if an address is on the network, and listing existing conversations, also apply to group chats. XMTP's approach to conversations is designed to be consistent across both one-on-one and group conversations, ensuring a seamless development experience.
 
-Refer to the [Group Chats](/docs/build/group-chat) section for more details on managing group chats specifically.
+For more details about building group chat specifically, refer to the [Group Chat](/docs/build/group-chat) documentation.
 
 ## Cache the conversation list
 
