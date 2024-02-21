@@ -104,7 +104,7 @@ Implement message validation using `@xmtp/frames-validator` to ensure the authen
 import { validateFramesPost } from "@xmtp/frames-validator";
 
 export function handler(requestBody: any) {
-  if (requestBody.clientProtocol === "xmtp") {
+  if (requestBody.clientProtocol.startsWith("xmtp")) {
     const { verifiedWalletAddress } = await validateFramesPost(requestBody);
     // Handle verified XMTP payload
   } else {
@@ -112,6 +112,8 @@ export function handler(requestBody: any) {
   }
 }
 ```
+
+XMTP Frames are also supported in [`onchainkit`](https://onchainkit.xyz/xmtpkit/introduction).
 
 ### Enable Secure Communication
 
