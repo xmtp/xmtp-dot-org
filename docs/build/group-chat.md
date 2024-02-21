@@ -40,14 +40,19 @@ const group = await client.conversations.newGroup(
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-val group = client.conversations.newGroup(listOf(walletAddress1,walletAddress2))
+val group = client.conversations.newGroup(listOf(walletAddress1, walletAddress2),
+  // Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+  permissions = "creator_is_admin"
+)
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2])
+let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2],
+// Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+permissions: "creator_is_admin")
 ```
 
 </TabItem>
