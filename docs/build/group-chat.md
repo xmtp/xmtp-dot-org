@@ -1,20 +1,24 @@
 ---
-sidebar_label: Group chats
+sidebar_label: Group chat
 sidebar_position: 4
-description: Learn how to start, list, and cache conversations with XMTP
+description: Learn how to create, list, and manage group chats with XMTP
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Manage group chats with XMTP
+# Build group chat with XMTP
 
-![Status](https://img.shields.io/badge/Reference_implementation_status-Alpha-orange)
+![Status](https://img.shields.io/badge/Project_status-Alpha-orange)
 
 Secure group chats are an important part of every messaging app. In this guide, we delve into the essentials of using XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices.
 
-:::caution Group Chats are Per Installation
-Group chats in XMTP are specific to each installation. This means that while you will see your group chat conversations across different devices, you will not see the historical messages within those chats automatically. Each group chat's message history is tied to the device where it was started. Consequently, there is no message history synced across devices. When you sign in on a new device, you will be able to see existing group chat conversations but will only receive new messages going forward. This behavior is specific to group conversations.
+:::caution
+
+This project is in **Alpha** status and ready for you to experiment with.
+
+However, we do not recommend using **Alpha** software in production apps. Software in this status is likely to change based on feedback.
+
 :::
 
 ## Create a group chat
@@ -36,97 +40,35 @@ const group = await client.conversations.newGroup(
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-val group = client.conversations.newGroup(listOf(walletAddress1,walletAddress2))
+val group = client.conversations.newGroup(listOf(walletAddress1, walletAddress2),
+  // Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+  permissions = "creator_is_admin"
+)
 ```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2])
+let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2],
+// Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+permissions: "creator_is_admin")
 ```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
-
-</TabItem>
-</Tabs>
-
-_The maximum amount of addresses allowed is 250._
-
-## List group chat conversations
-
-Retrieve all existing group chat conversations associated with the current XMTP client. Refer to the [Conversations](/docs/build/conversations.md) section for more details.
-
-<Tabs groupId="groupchats">
-<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
-
-```jsx
-//First fetch new data from the network
-await client.conversations.syncGroups();
-//Get the updated group list
-const groups = await client.conversations.listGroups();
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-//First fetch new data from the network
-client.conversations.syncGroups()
-//Get the updated group list
-val groups = client.conversations.listGroups()
-```
-
-List all you conversation for both group and individual conversations
-
-```kotlin
-// List all conversations, including both group and individual
-val conversations = client.conversations.list(includeGroups = true)
-```
-
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-//First fetch new data from the network
-try await client.conversations.sync()
-//Get the updated group list
-let groups = try await client.conversations.groups()
-```
-
-List all you conversation for both group and individual conversations
-
-```swift
-let groups = try await client.conversations.list(includeGroups: true)
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-Code sample expected for Q2 2024
-
-</TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
-
-Code sample expected for Q2 2024
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
-
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -168,17 +110,136 @@ try await group.send(content: "Hello, group!")
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
+
+</TabItem>
+</Tabs>
+
+## Synchronizing group conversations
+
+XMTP's `syncGroups` brings the current data from the network and updates local DB, reflecting new groups or membership changes. Use `syncGroups` to:
+
+- **After Signing In:** Immediately update group conversation data.
+- **Periodically:** Keep data current based on your app's requirements.
+- **After Receiving a Notification:** Reflect changes in group membership prompted by notifications.
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+await client.conversations.syncGroups();
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+client.conversations.syncGroups()
+```
+
+List all conversations for both group and individual conversations.
+
+```kotlin
+// List all conversations, including both group and individual
+val conversations = client.conversations.list(includeGroups = true)
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await client.conversations.sync()
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample coming soon
+
+</TabItem>
+</Tabs>
+
+## List group chat conversations
+
+Retrieve all existing group chat conversations associated with the current XMTP client. Refer to the [Conversations](/docs/build/conversations.md) section for more details.
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+//First fetch new data from the network
+await client.conversations.syncGroups();
+//Get the updated group list
+const groups = await client.conversations.listGroups();
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+//First fetch new data from the network
+client.conversations.syncGroups()
+//Get the updated group list
+val groups = client.conversations.listGroups()
+```
+
+List all conversations for both group and individual conversations.
+
+```kotlin
+// List all conversations, including both group and individual
+val conversations = client.conversations.list(includeGroups = true)
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+//First fetch new data from the network
+try await client.conversations.sync()
+//Get the updated group list
+let groups = try await client.conversations.groups()
+```
+
+List all conversations for both group and individual conversations
+
+```swift
+let groups = try await client.conversations.list(includeGroups: true)
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -211,71 +272,17 @@ var isActive = try group.isActive()
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
-
-</TabItem>
-</Tabs>
-
-## Synchronizing group conversations
-
-XMTP's `syncGroups` brings the current data from the network and updates local DB, reflecting new groups or membership changes. Use `syncGroups` to:
-
-- **After Signing In:** Immediately update group conversation data.
-- **Periodically:** Keep data current based on your app's requirements.
-- **After Receiving a Notification:** Reflect changes in group membership prompted by notifications.
-
-<Tabs groupId="groupchats">
-<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
-
-```jsx
-await client.conversations.syncGroups();
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-client.conversations.syncGroups()
-```
-
-List all you conversation for both group and individual conversations.
-
-```kotlin
-// List all conversations, including both group and individual
-val conversations = client.conversations.list(includeGroups = true)
-```
-
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-try await client.conversations.sync()
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-Code sample expected for Q2 2024
-
-</TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
-
-Code sample expected for Q2 2024
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
-
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -284,12 +291,18 @@ Code sample expected for Q2 2024
 
 To ensure your application has the latest group chat details, including member list and the most recent messages, it's crucial to periodically synchronize each group chat. This can be particularly important after joining a group, adding new members, or sending messages. Use the `sync()` method on a group chat object to update its state with the latest information from the XMTP network.
 
+:::caution Group chats are currently per installation
+As of now, group chats in XMTP are specific to each installation. This means that while you can access your group chat conversations across different devices, the historical messages within those chats might not automatically appear. Currently, each group chat's message history is tied to the device where it was initiated. As a result, there is no automatic syncing of message history across devices. When you sign in on a new device, you will see existing group chat conversations but will only receive new messages from that point forward. We are actively working on enhancing this feature to improve your experience with group conversations.
+:::
+
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
 ```jsx
 // Assuming `group` is an existing group chat object
 await group.sync();
+// Get group messages
+await group.messages();
 ```
 
 </TabItem>
@@ -298,6 +311,8 @@ await group.sync();
 ```kotlin
 // Assuming `group` is an existing group chat object
 group.sync()
+// Get group messages
+group.messages();
 ```
 
 </TabItem>
@@ -305,22 +320,24 @@ group.sync()
 
 ```swift
 try await client.conversations.sync()
+// Get group messages
+try await group.messages();
 ```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -360,24 +377,24 @@ let members = group.memberAddresses()
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
 
 ### Add group members
 
-Add new members to an existing group chat using its wallet address.
+Add new members to an existing group chat using their wallet addresses.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -403,24 +420,24 @@ try await group.addMembers(addresses: [walletAddress])
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
 
 ### Remove group members
 
-Remove a member from an existing group chat using its wallet address
+Remove members from an existing group chat using their wallet addresses.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -446,24 +463,24 @@ try await group.removeMembers(addresses: [walletAddress])
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
 
-## Listen for new messages in a group chat
+## Listen for new messages and updates in a group chat
 
-Streams allow real-time monitoring of new messages in a group chat. Here's how you can set up a stream for message updates. Refer to the [Streams](/docs/build/streams.md) section for more details.
+Streams enable real-time monitoring of new messages in a group chat as well as member management activities like adding and removing members. Here's how you can set up a stream for message updates. Refer to this [section](/docs/build/streams.md) for more details on streams.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -471,13 +488,21 @@ Streams allow real-time monitoring of new messages in a group chat. Here's how y
 ```jsx
 // Assuming `group` is an existing group chat object
 const streamGroupMessages = async (group) => {
-  const cancelGroupMessageStream = await aliceGroup.streamGroupMessages(
-    (message) => {
+  const cancelGroupMessageStream = await group.streamGroupMessages(
+    async (message) => {
       console.log(`New message: ${message.content}`);
+      // Membership updates
+      if (message.contentTypeId === ContentTypes.GroupMembershipChange) {
+        await group.sync();
+        const addresses = await group.memberAddresses();
+        // Get new members
+        console.log(addresses); // Example usage of addresses
+      }
     },
   );
 
   // Use cancelGroupMessageStream() to stop listening to group updates
+  return cancelGroupMessageStream;
 };
 ```
 
@@ -508,24 +533,24 @@ for try await message in group.streamMessages() {
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
 
-## Listen for group chat updates
+## Listen for new group chats
 
-Monitor updates in group chats, including member management activities like adding and removing members as well as the creation of new group chats.
+Monitor the creation of new group chats.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -604,17 +629,17 @@ for try await conversation in client.conversations.streamAll() {
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
