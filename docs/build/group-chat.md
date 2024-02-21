@@ -293,10 +293,12 @@ As of now, group chats in XMTP are specific to each installation. This means tha
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
-```jsx
+````jsx
 // Assuming `group` is an existing group chat object
 await group.sync();
-```
+// Get group messages
+await group.messages();
+``
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
@@ -304,13 +306,17 @@ await group.sync();
 ```kotlin
 // Assuming `group` is an existing group chat object
 group.sync()
-```
+// Get group messages
+group.messages();
+````
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
 try await client.conversations.sync()
+// Get group messages
+try await group.messages();
 ```
 
 </TabItem>
