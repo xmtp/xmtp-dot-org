@@ -488,13 +488,21 @@ Streams enable real-time monitoring of new messages in a group chat as well as m
 ```jsx
 // Assuming `group` is an existing group chat object
 const streamGroupMessages = async (group) => {
-  const cancelGroupMessageStream = await aliceGroup.streamGroupMessages(
-    (message) => {
+  const cancelGroupMessageStream = await group.streamGroupMessages(
+    async (message) => {
       console.log(`New message: ${message.content}`);
+      // Membership updates
+      if (message.contentTypeId === ContentTypes.GroupMembershipChange) {
+        await group.sync();
+        const addresses = await group.memberAddresses();
+        // Get new members
+        console.log(addresses); // Example usage of addresses
+      }
     },
   );
 
   // Use cancelGroupMessageStream() to stop listening to group updates
+  return cancelGroupMessageStream;
 };
 ```
 
