@@ -68,6 +68,58 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
+## Send a message in a group chat
+
+Send a message to an existing group chat. Refer to the [Messages](/docs/build/messages) section for more details.
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+const group = await client.conversations.newGroup([
+  walletAddress1,
+  walletAddress2,
+]);
+// Send a message
+await group.send("Hello, group!");
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val group = client.conversations.newGroup(listOf(walletAddress1,walletAddress2))
+//Send a message
+group.send("Hello, group!")
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2])
+//Send a message
+try await group.send(content: "Hello, group!")
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample coming soon
+
+</TabItem>
+</Tabs>
+
 ## Synchronizing group conversations
 
 XMTP's `syncGroups` brings the current data from the network and updates local DB, reflecting new groups or membership changes. Use `syncGroups` to:
@@ -75,10 +127,6 @@ XMTP's `syncGroups` brings the current data from the network and updates local D
 - **After Signing In:** Immediately update group conversation data.
 - **Periodically:** Keep data current based on your app's requirements.
 - **After Receiving a Notification:** Reflect changes in group membership prompted by notifications.
-
-:::caution Group chats are currently per installation
-As of now, group chats in XMTP are specific to each installation. This means that while you can access your group chat conversations across different devices, the historical messages within those chats might not automatically appear. Currently, each group chat's message history is tied to the device where it was initiated. As a result, there is no automatic syncing of message history across devices. When you sign in on a new device, you will see existing group chat conversations but will only receive new messages from that point forward. We are actively working on enhancing this feature to improve your experience with group conversations.
-:::
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -191,58 +239,6 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-## Send a message in a group chat
-
-Send a message to an existing group chat. Refer to the [Messages](/docs/build/messages) section for more details.
-
-<Tabs groupId="groupchats">
-<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
-
-```jsx
-const group = await client.conversations.newGroup([
-  walletAddress1,
-  walletAddress2,
-]);
-// Send a message
-await group.send("Hello, group!");
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-val group = client.conversations.newGroup(listOf(walletAddress1,walletAddress2))
-//Send a message
-group.send("Hello, group!")
-```
-
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2])
-//Send a message
-try await group.send(content: "Hello, group!")
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
-
-Code sample coming soon
-
-</TabItem>
-</Tabs>
-
 ## Check if a group chat is active
 
 The `isActive` property indicates whether the current user is still a participant in the group chat. If the group chat is not active for the user, it typically means the user has been removed from the group. Developers should use this status to adjust the user interface accordingly. If a group chat is not active for a user, the application should hide or disable functionalities such as sending messages, adding, or removing members. This ensures a good user experience and prevents actions that are not permissible due to the user's status in the group chat.
@@ -289,6 +285,10 @@ Code sample coming soon
 ## Synchronizing group details and messages
 
 To ensure your application has the latest group chat details, including member list and the most recent messages, it's crucial to periodically synchronize each group chat. This can be particularly important after joining a group, adding new members, or sending messages. Use the `sync()` method on a group chat object to update its state with the latest information from the XMTP network.
+
+:::caution Group chats are currently per installation
+As of now, group chats in XMTP are specific to each installation. This means that while you can access your group chat conversations across different devices, the historical messages within those chats might not automatically appear. Currently, each group chat's message history is tied to the device where it was initiated. As a result, there is no automatic syncing of message history across devices. When you sign in on a new device, you will see existing group chat conversations but will only receive new messages from that point forward. We are actively working on enhancing this feature to improve your experience with group conversations.
+:::
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
