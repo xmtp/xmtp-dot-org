@@ -1,7 +1,7 @@
 ---
 sidebar_label: Group chats
 sidebar_position: 4
-description: Learn how to start, list, and cache conversations with XMTP
+description: Learn how to create, list, and manage group chats with XMTP
 ---
 
 import Tabs from "@theme/Tabs";
@@ -9,9 +9,17 @@ import TabItem from "@theme/TabItem";
 
 # Manage group chats with XMTP
 
-![Status](https://img.shields.io/badge/Reference_implementation_status-Alpha-orange)
+![Status](https://img.shields.io/badge/Project_status-Alpha-orange)
 
 Secure group chats are an important part of every messaging app. In this guide, we delve into the essentials of using XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices.
+
+:::caution
+
+This project is in **Alpha** status and ready for you to experiment with.
+
+However, we do not recommend using **Alpha** software in production apps. Software in this status is likely to change based on feedback.
+
+:::
 
 :::caution Group Chats are Per Installation
 Group chats in XMTP are specific to each installation. This means that while you will see your group chat conversations across different devices, you will not see the historical messages within those chats automatically. Each group chat's message history is tied to the device where it was started. Consequently, there is no message history synced across devices. When you sign in on a new device, you will be able to see existing group chat conversations but will only receive new messages going forward. This behavior is specific to group conversations.
@@ -49,22 +57,20 @@ let group = try await client.conversations.newGroup(with: [walletAddress1, walle
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
-
-_The maximum amount of addresses allowed is 250._
 
 ## List group chat conversations
 
@@ -90,7 +96,7 @@ client.conversations.syncGroups()
 val groups = client.conversations.listGroups()
 ```
 
-List all you conversation for both group and individual conversations
+List all conversations for both group and individual conversations.
 
 ```kotlin
 // List all conversations, including both group and individual
@@ -107,7 +113,7 @@ try await client.conversations.sync()
 let groups = try await client.conversations.groups()
 ```
 
-List all you conversation for both group and individual conversations
+List all conversations for both group and individual conversations
 
 ```swift
 let groups = try await client.conversations.list(includeGroups: true)
@@ -116,17 +122,17 @@ let groups = try await client.conversations.list(includeGroups: true)
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -168,17 +174,17 @@ try await group.send(content: "Hello, group!")
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -211,17 +217,17 @@ var isActive = try group.isActive()
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -265,17 +271,17 @@ try await client.conversations.sync()
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -310,17 +316,17 @@ try await client.conversations.sync()
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -360,24 +366,24 @@ let members = group.memberAddresses()
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
 
 ### Add group members
 
-Add new members to an existing group chat using its wallet address.
+Add new members to an existing group chat using their wallet addresses.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -403,24 +409,24 @@ try await group.addMembers(addresses: [walletAddress])
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
 
 ### Remove group members
 
-Remove a member from an existing group chat using its wallet address
+Remove members from an existing group chat using their wallet addresses.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -446,17 +452,17 @@ try await group.removeMembers(addresses: [walletAddress])
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
@@ -508,24 +514,24 @@ for try await message in group.streamMessages() {
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
 
 ## Listen for group chat updates
 
-Monitor updates in group chats, including member management activities like adding and removing members as well as the creation of new group chats.
+Monitor updates in group chats, including member management activities like adding and removing members, as well as the creation of new group chats.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -604,17 +610,17 @@ for try await conversation in client.conversations.streamAll() {
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
 
-Code sample expected for Q2 2024
+Code sample coming soon
 
 </TabItem>
 </Tabs>
