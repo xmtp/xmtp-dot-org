@@ -21,10 +21,6 @@ However, we do not recommend using **Alpha** software in production apps. Softwa
 
 :::
 
-:::caution Group Chats are Per Installation
-Group chats in XMTP are specific to each installation. This means that while you will see your group chat conversations across different devices, you will not see the historical messages within those chats automatically. Each group chat's message history is tied to the device where it was started. Consequently, there is no message history synced across devices. When you sign in on a new device, you will be able to see existing group chat conversations but will only receive new messages going forward. This behavior is specific to group conversations.
-:::
-
 ## Create a group chat
 
 Initiate a new group chat with a list of specified addresses. To create a group, the recipient must have already started their client at least once on the XMTP network.
@@ -52,6 +48,64 @@ val group = client.conversations.newGroup(listOf(walletAddress1,walletAddress2))
 
 ```swift
 let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2])
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample coming soon
+
+</TabItem>
+</Tabs>
+
+## Synchronizing group conversations
+
+XMTP's `syncGroups` brings the current data from the network and updates local DB, reflecting new groups or membership changes. Use `syncGroups` to:
+
+- **After Signing In:** Immediately update group conversation data.
+- **Periodically:** Keep data current based on your app's requirements.
+- **After Receiving a Notification:** Reflect changes in group membership prompted by notifications.
+
+:::caution Group chats are currently per installation
+As of now, group chats in XMTP are specific to each installation. This means that while you can access your group chat conversations across different devices, the historical messages within those chats might not automatically appear. Currently, each group chat's message history is tied to the device where it was initiated. As a result, there is no automatic syncing of message history across devices. When you sign in on a new device, you will see existing group chat conversations but will only receive new messages from that point forward. We are actively working on enhancing this feature to improve your experience with group conversations.
+:::
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+await client.conversations.syncGroups();
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+client.conversations.syncGroups()
+```
+
+List all you conversation for both group and individual conversations.
+
+```kotlin
+// List all conversations, including both group and individual
+val conversations = client.conversations.list(includeGroups = true)
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await client.conversations.sync()
 ```
 
 </TabItem>
@@ -212,60 +266,6 @@ val isActive = group.isActive()
 
 ```swift
 var isActive = try group.isActive()
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
-
-Code sample coming soon
-
-</TabItem>
-</Tabs>
-
-## Synchronizing group conversations
-
-XMTP's `syncGroups` brings the current data from the network and updates local DB, reflecting new groups or membership changes. Use `syncGroups` to:
-
-- **After Signing In:** Immediately update group conversation data.
-- **Periodically:** Keep data current based on your app's requirements.
-- **After Receiving a Notification:** Reflect changes in group membership prompted by notifications.
-
-<Tabs groupId="groupchats">
-<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
-
-```jsx
-await client.conversations.syncGroups();
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-client.conversations.syncGroups()
-```
-
-List all you conversation for both group and individual conversations.
-
-```kotlin
-// List all conversations, including both group and individual
-val conversations = client.conversations.list(includeGroups = true)
-```
-
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-try await client.conversations.sync()
 ```
 
 </TabItem>
