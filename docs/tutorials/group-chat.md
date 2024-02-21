@@ -18,9 +18,14 @@ However, we do not recommend using **Alpha** software in production apps. Softwa
 
 <div class=" rabbit  p-5 ">
 
-📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-rn-group-chat">group-chat</a>
+📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-rn-groupchats">group-chat</a>
 
 </div>
+
+<details>
+<summary>
+
+<h3>Installation Steps</h3></summary>
 
 ### Prerequisites
 
@@ -28,10 +33,6 @@ However, we do not recommend using **Alpha** software in production apps. Softwa
 - npm or Yarn
 - React Native CLI
 - Xcode (for iOS)
-
-<details>
-<summary>
-<h3>Installation Steps</h3></summary>
 
 ### 1. Initialize react native project
 
