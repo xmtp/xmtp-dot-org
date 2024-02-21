@@ -7,7 +7,7 @@ description: Learn how to create, list, and manage group chats with XMTP
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Group chat with XMTP
+# Build group chat with XMTP
 
 ![Status](https://img.shields.io/badge/Project_status-Alpha-orange)
 
