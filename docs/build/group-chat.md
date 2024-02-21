@@ -1,5 +1,5 @@
 ---
-sidebar_label: Group chats
+sidebar_label: Group chat
 sidebar_position: 4
 description: Learn how to create, list, and manage group chats with XMTP
 ---
@@ -7,7 +7,7 @@ description: Learn how to create, list, and manage group chats with XMTP
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Manage group chats with XMTP
+# Group chat with XMTP
 
 ![Status](https://img.shields.io/badge/Project_status-Alpha-orange)
 

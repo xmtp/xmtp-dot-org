@@ -23,7 +23,7 @@ window.onload = function () {
   navItems.forEach((item) => {
     if (
       item.innerText === "User consent" ||
-      item.innerText === "Group chats" ||
+      item.innerText === "Group chat" ||
       item.innerText === "Spam"
     ) {
       item.classList.add("new");
