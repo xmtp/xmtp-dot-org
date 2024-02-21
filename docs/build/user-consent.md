@@ -1,5 +1,5 @@
 ---
-sidebar_label: User consent
+sidebar_label: Allow/Block
 sidebar_position: 5.5
 hide_table_of_contents: false
 ---
@@ -10,9 +10,9 @@ import requeststab from '/docs/build/img/requests-tab.png';
 import messagestab from '/docs/build/img/messages-tab.png';
 import consentlogic from '/docs/build/img/consent-state-logic.png';
 
-# Request and respect user consent
+# Universal Allow/Block Prefs
 
-The user consent feature enables your app to request and respect user consent preferences. With this feature, another blockchain account address registered on the XMTP network can have one of three consent preference values:
+The allow/block feature enables your app to request and respect user consent preferences. With this feature, another blockchain account address registered on the XMTP network can have one of three consent preference values:
 
 - Unknown
 - Allowed
