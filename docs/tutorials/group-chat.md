@@ -166,18 +166,17 @@ Here's a simplified example of how you might use `group.messages()` to load and 
 As of now, group chats in XMTP are specific to each installation. This means that while you can access your group chat conversations across different devices, the historical messages within those chats might not automatically appear. Currently, each group chat's message history is tied to the device where it was initiated. As a result, there is no automatic syncing of message history across devices. When you sign in on a new device, you will see existing group chat conversations but will only receive new messages from that point forward. We are actively working on enhancing this feature to improve your experience with group conversations.
 :::
 
-```
+```jsx
 useEffect(() => {
   const loadGroupMessages = async () => {
-    if (conversation && conversation.version === 'GROUP') {
+    if (conversation && conversation.version === "GROUP") {
       try {
         setIsLoading(true);
         // Assuming `conversation` is an instance of a GroupChat
         // Fetch the latest 20 messages from the group chat
         const messages = await conversation.messages({ limit: 20 });
-        setMessages(messages.reverse()); // Reverse the messages to display the latest at the bottom
       } catch (error) {
-        console.error('Failed to load group messages:', error);
+        console.error("Failed to load group messages:", error);
       } finally {
         setIsLoading(false);
       }
