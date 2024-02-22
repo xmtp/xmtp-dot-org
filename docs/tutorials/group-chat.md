@@ -174,7 +174,7 @@ useEffect(() => {
         setIsLoading(true);
         // Assuming `conversation` is an instance of a GroupChat
         // Fetch the latest 20 messages from the group chat
-        const messages = await conversation.messages({ limit: 20 });
+        const messages = await conversation.messages();
       } catch (error) {
         console.error("Failed to load group messages:", error);
       } finally {
