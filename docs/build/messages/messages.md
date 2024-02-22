@@ -336,10 +336,9 @@ const conversation = await xmtp.conversations.newConversation(
 for await (const page of conversation.messages(limit: 25)) {
   for (const msg of page) {
     // Breaking from the outer loop will stop the client from requesting any further pages
-    if (msg.content === 'gm') {
+    if (msg?.content() === 'gm') {
       return
     }
-    console.log(msg.content)
   }
 }
 ```
@@ -440,8 +439,8 @@ if (decoded == null) {
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-const contentTypeID = `${contentType.authorityId}/${contentType.typeId}:${contentType.versionMajor}.${contentType.versionMinor}`;
-const isRegistered = contentTypeID in client.codecRegistry;
+//contentTypeID has the following structure `${contentType.authorityId}/${contentType.typeId}:${contentType.versionMajor}.${contentType.versionMinor}`;
+const isRegistered = message.contentTypeID in client.codecRegistry;
 if (!isRegistered) {
   // Not supported content type
   if (message?.fallback != null) {
@@ -453,5 +452,3 @@ if (!isRegistered) {
 
 </TabItem>
 </Tabs >
-
-_Note: `ReadReceipts` have an `undefined` or `nil` fallback, indicating the message is not expected to be displayed._
