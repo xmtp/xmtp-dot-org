@@ -1,9 +1,3 @@
----
-sidebar_label: Group chat
-sidebar_position: 0
-description: Learn how to create, list, and manage group chats with XMTP
----
-
 # Group chat tutorial with React Native
 
 This tutorial will guide you through implementing group chat functionality in your XMTP inbox, covering creation, message sending, streaming, and member management.
@@ -109,6 +103,8 @@ npm run ios
 
 ## Tutorial
 
+---
+
 ### Creating a group chat
 
 To create a group chat, you can use the GroupChat class. When a user initiates a new group chat, you should collect the participants' addresses and create a new instance of GroupChat.
@@ -162,6 +158,36 @@ const handleSendMessage = async (newMessage) => {
 };
 ```
 
+### Loading group chat messages
+
+Here's a simplified example of how you might use `group.messages()` to load and display messages from a group chat:
+
+:::caution Group chats are currently per installation
+As of now, group chats in XMTP are specific to each installation. This means that while you can access your group chat conversations across different devices, the historical messages within those chats might not automatically appear. Currently, each group chat's message history is tied to the device where it was initiated. As a result, there is no automatic syncing of message history across devices. When you sign in on a new device, you will see existing group chat conversations but will only receive new messages from that point forward. We are actively working on enhancing this feature to improve your experience with group conversations.
+:::
+
+```
+useEffect(() => {
+  const loadGroupMessages = async () => {
+    if (conversation && conversation.version === 'GROUP') {
+      try {
+        setIsLoading(true);
+        // Assuming `conversation` is an instance of a GroupChat
+        // Fetch the latest 20 messages from the group chat
+        const messages = await conversation.messages({ limit: 20 });
+        setMessages(messages.reverse()); // Reverse the messages to display the latest at the bottom
+      } catch (error) {
+        console.error('Failed to load group messages:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+  };
+
+  loadGroupMessages();
+}, [conversation]);
+```
+
 ### Listening for new messages
 
 To stream messages from a group chat, you can use the streamMessages method. This method should be called when the group chat is selected to ensure real-time message updates.
@@ -180,6 +206,10 @@ useEffect(() => {
 ```
 
 ### Manage group chat members
+
+:::caution
+Remember to `sync()` chats to ensure you have the latest data.
+:::
 
 To add or remove members from a group chat, you can use the `addMembers` and `removeMember` methods provided by the GroupChat class.
 Adding a Member
@@ -230,6 +260,6 @@ const getGroupMemberAddresses = () => {
 };
 ```
 
-## Note on Conversations and Messages in Group Chats
+## Note on conversations and messages in group chats
 
 It's important to note that all the features and methods described in the [Conversations](/docs/build/conversations.md) and [Messages](/docs/build/messages/messages.md) documentation are fully applicable to group chats as well. This includes starting new conversations, checking if an address is on the network, sending messages, and listing existing conversations. XMTP design ensures that you can manage group chats with the same ease and flexibility as one-on-one conversations.
