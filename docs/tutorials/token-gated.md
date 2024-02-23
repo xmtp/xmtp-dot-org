@@ -3,7 +3,7 @@ sidebar_label: Token gated group chat
 sidebar_position: 6
 ---
 
-## Building Token-Gated Group Chats
+# Building Token-Gated Group Chats
 
 ### Context
 
