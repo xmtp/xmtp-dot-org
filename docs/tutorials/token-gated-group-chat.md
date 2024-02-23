@@ -45,7 +45,7 @@ Leveraging this interface, we are now equipped to provide group chat functionali
 
 ### Create a Converse group link
 
-The backend `/create` endpoint, hosted on Replit, is designed to accept parameters such as `name` and `description`. Upon receiving these, it initiates the creation of a group by invoking the `createGroup` method.
+The backend `/create` endpoint, hosted on [Replit](https://replit.com/@neekolas/Converse-Invite-Link), is designed to accept parameters such as `name` and `description`. Upon receiving these, it initiates the creation of a group by invoking the `createGroup` method.
 
 ```jsx
 const groupId = await client.createGroup("group-creator-is-admin");
@@ -64,12 +64,10 @@ with parameters:
 ```json
 {
   "webhook": "<https://my-domain.com/webhook>", // An URL that will be called with group
-  join requests
   "topic": "<groupId>",
   "name": "My Super Group",
   "description": "Something visible to the user, like eligibility criteria"
 }
-
 ```
 
 Lets take a look at the full code code
@@ -168,16 +166,16 @@ If the wallet is not allowed to join the group, your webhook needs to return
 
 And the reason will be displayed back to the user in Converse.
 
-## Launch Your Own in Just Three Simple Steps
+### Launch Your Own in Just Three Simple Steps
 
-### Step 1: Fork the Code on Replit
+#### Step 1: Fork the Code on Replit
 
-Navigate to this Replit link and fork the provided code to kickstart your own group chat creation. While we'll be utilizing Replit for this demonstration, feel free to opt for any backend platform of your preference that can generate a unique webhook URL for creation and validation processes.
+Navigate to this [Replit](https://replit.com/@neekolas/Converse-Invite-Link) link and fork the provided code to kickstart your own group chat creation. While we'll be utilizing Replit for this demonstration, feel free to opt for any backend platform of your preference that can generate a unique webhook URL for creation and validation processes.
 
-### Step 2: Customize Group Validation Logic
+#### Step 2: Customize Group Validation Logic
 
 Adjust the validation logic within your fork to ensure it meets the specific requirements of your group chat.
 
-### Step 3: Update Your Repository with Your Custom Replit URL
+#### Step 3: Update Your Repository with Your Custom Replit URL
 
 By updating your repository with your personalized Replit URL, you finalize the setup. Congratulations! You've now successfully established an API for effortlessly setting up group chats.
