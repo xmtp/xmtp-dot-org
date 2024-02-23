@@ -10,7 +10,17 @@ Programmatic groups empower developers to create a variety of token-gated commun
 - Accessing exclusive content
 - Networking with peers and forging new connections
 
-![](/img/converse-group.mp4)
+<div className='wrapper'>
+  <ReactPlayer
+    className='player'    
+     width='100%'
+    height='100%'  
+    controls 
+    muted  
+    playing="true" 
+    url='/img/converse-group.mp4' 
+  />
+</div>
 
 ### Problem
 
