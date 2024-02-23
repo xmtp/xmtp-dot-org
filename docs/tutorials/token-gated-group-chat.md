@@ -210,16 +210,10 @@ If the wallet is not allowed to join the group, your webhook needs to return
 
 And the reason will be displayed back to the user in Converse.
 
-### Launch Your Own in Just Three Simple Steps
+**Quick Setup in Three Steps**
 
-#### Step 1: Fork the Code on Replit
+1. **Fork on Replit:** Start by forking the project at [Replit](https://replit.com/@neekolas/Converse-Invite-Link). Any backend that allows webhook URL creation works.
 
-Navigate to this [Replit](https://replit.com/@neekolas/Converse-Invite-Link) link and fork the provided code to kickstart your own group chat creation. While we'll be utilizing Replit for this demonstration, feel free to opt for any backend platform of your preference that can generate a unique webhook URL for creation and validation processes.
+2. **Adjust Logic:** Tailor the validation logic to your group chat's requirements.
 
-#### Step 2: Customize Group Validation Logic
-
-Adjust the validation logic within your fork to ensure it meets the specific requirements of your group chat.
-
-#### Step 3: Update Your Repository with Your Custom Replit URL
-
-By updating your repository with your personalized Replit URL, you finalize the setup. Congratulations! You've now successfully established an API for effortlessly setting up group chats.
+3. **Update Repository:** Add your custom Replit URL to your repository to complete the setup, enabling your group chat API.
