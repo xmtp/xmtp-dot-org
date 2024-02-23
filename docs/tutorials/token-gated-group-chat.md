@@ -26,6 +26,14 @@ The solution lies in Converse group links. Developers can generate a unique link
 
 </div>
 
+#### CLI
+
+For ETH Denver, we've introduced a CLI tool, built using the [libxmtp GitHub repository](https://github.com/xmtp/libxmtp) repository, to enable the swift creation and management of token-gated group chats. This tool eliminates the need for full SDK changes. We don't have those changes yet since the Alpha was released this week.
+
+For details on starting with the CLI for token-gated group chats, visit the [Libxmtp CLI section](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For a hands-on example and to see the CLI tool in action, visit [Groups Node.js Client Replit](https://replit.com/@neekolas/Groups-Nodejs-Client%23src/index.ts).
+
+#### Getting started
+
 Our server is going to be using the CLI for managing group chats connected to libxmtp. `Client.ts` generates a `groupClient` with an interface for interacting with groups:
 
 ```jsx
@@ -54,7 +62,11 @@ await groupsClient.listMessages(groupId);
 
 Leveraging this interface, we are now equipped to provide group chat functionalities through webhooks. Our server will incorporate two primary webhook calls.
 
-### Create a Converse group link
+:::info
+While groups created with links are end-to-end encrypted they are not yet private. The bot that manages adding and removing members has access to all messages sent in the group. This limitation will be removed in future versions
+:::
+
+### 1: Create a Converse group link
 
 The backend `/create` endpoint, hosted on [Replit](https://replit.com/@neekolas/Converse-Invite-Link), is designed to accept parameters such as `name` and `description`. Upon receiving these, it initiates the creation of a group by invoking the `createGroup` method.
 
@@ -111,30 +123,45 @@ This will return a `groupLinkId` that will allow us to generate the converse URL
 You get back a link in the form `https://preview.converse.xyz/group/<groupLinkId>` that
 you can share with people.
 
-### Open the Converse Group Link on a mobile phone that has Converse PREVIEW
+### Open the Converse Group Link
+
+Open the Converse Group Link on a mobile phone that has Converse PREVIEW installed. Converse PREVIEW is under development. Here are the urls where you can download it:
+
+[iOS Testflight](https://testflight.apple.com/join/70v1Rvv5) | [Android IPA](https://drive.google.com/file/d/1rUtCmtIB6VzHNW8PDJ1TMBRuI2OEOdcg/view)
 
 Upon accessing the link, users will be greeted with the group's name and description, alongside a button to request joining the group. Clicking this button triggers a request to your specified webhook, carrying the `walletAddress` and the `groupId`. This enables your backend logic to determine whether the wallet should be granted access to the group.
 
-This process involves your backend webhook validating the wallet address. The request will include parameters such as `groupLinkId`, `topic: groupId`, and `walletAddress`.
+### Token gated verification
+
+This process involves your backend webhook validating the wallet address. The request will include parameters such as `groupLinkId`, `groupId`, and `walletAddress`.
 
 ```jsx
+// Define a POST route for the webhook
 app.post("/webhook", async (req: Request, res: Response) => {
+  // Destructure the necessary properties from the request body
   const { groupLinkId, topic: groupId, walletAddress } = req.body;
+  // Log the received join query with groupId and walletAddress for debugging
   console.log(
     `Received a join query for groupId ${groupId} - wallet ${walletAddress}`,
   );
 
+  // Check if the member should be added to the group
   if (await shouldAddMember(groupId, walletAddress)) {
     try {
+      // Attempt to add the member to the group
       await addMember(groupsClient, groupId, walletAddress);
+      // Respond with a success status if the member is successfully added
       res.json({
         status: "SUCCESS",
       });
     } catch (e) {
+      // Log any errors that occur during the addMember process
       console.error(e);
+      // Respond with a 500 status code and the error if an exception is caught
       return res.status(500).json({ error: e });
     }
   } else {
+    // Respond with a denied status and a reason if the member should not be added
     res.json({
       status: "DENIED",
       reason: "You are not allowed to join this group",
