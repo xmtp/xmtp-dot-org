@@ -12,7 +12,7 @@ import TabItem from "@theme/TabItem";
 ![Status](https://img.shields.io/badge/Project_status-Alpha-orange)
 
 :::info
-🚀 **Token-Gated Group Chats Launched!** 🚀
+🚀 **Token-Gated Group with XMTP + Converse + Airstack!** 🚀
 
 Exciting news! Token-gated group chats are now available on the Dev Network, ideal for NFT collections, ERC-20 token holders, and exclusive communities. These groups provide unique content and networking opportunities.
 
