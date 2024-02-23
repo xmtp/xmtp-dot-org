@@ -9,21 +9,21 @@ sidebar_position: 1
 
 XMTP v2 signatures use `secp256k1` keys signed by the user’s wallet. To use MLS for group chat, XMTP is migrating to `ed25519` keys signed by the `secp256k1` keys.
 
-XMTP is also requiring a signature for each app/device combination (“installation”).  Users will have to authorize XMTP for each app they install on each device (instead of once per app).
+XMTP is also requiring a signature for each app/device combination (“installation”).  This is a change from requiring a signature just for users.  Users will have to authorize XMTP for each app they install on each device (instead of once per app).
 
 ## How do XMTP Identities get the new key type?
 
-When an existing user opens a V3 app for the first time, XMTP will take their `secp256k1` Create Identity signature and sign it with an `ed25519` key.
+When an existing user opens a V3 app for the first time, XMTP will take their `ed25519` key  and sign it with an `secp256k1` key from their Create Identity signature.
 
-New users who go through the Create Identity signature process will also get an `secp256k1` Create Identity signature signed with an `ed25519` key.
+New users who go through the Create Identity signature process will also get an `ed25519` key signed with an `secp256k1` key from their Create Identity signature.
 
 There is no cryptographic difference between V2 users who migrated to V3, and new V3 users.
 
 ## How do app/device installations work?
 
-Every app/device combination has to have an Enable Identity signature.  When a previously enabled app on one device is installed on a new device, users will have to provide an Enable Identity signature.  This is a change from V2.
+Every app/device combination has to have an Enable Identity signature.  When a previously enabled app on one device is installed on a new device, users will have to provide an Enable Identity signature.
 
-New apps also have to get an Enable Identity signature, as they did before.
+New apps also have to get an Enable Identity signature.
 
 ## How do apps get permission to send group messages?
 
@@ -40,8 +40,8 @@ When a V3 user opens another app, either a new app or an existing app that doesn
 In sum:
 
 1. New users still have to Create Identity.
-1. New app/device combinations have to Enable Identity.
-1. Users have to Grant Messaging Access to previously enabled apps, or newly enabled apps.
+1. New app/device combinations still have to Enable Identity.
+1. Users additionally have to Grant Messaging Access to both existing and new app/device combinations.
      1. Except for V2 users the one time they are automatically migrated to V3.
      1. Or if the user provides a Create Identity signature to create a new V3 identity in an app.
 
