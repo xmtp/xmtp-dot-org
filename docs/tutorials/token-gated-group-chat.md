@@ -10,6 +10,8 @@ Programmatic groups empower developers to create a variety of token-gated commun
 - Accessing exclusive content
 - Networking with peers and forging new connections
 
+![](/img/converse-group.mp4)
+
 ### Problem
 
 The challenge for developers is determining the most effective way to direct users to join these groups. It's crucial to guide them to a platform where they can engage and interact with the community.
