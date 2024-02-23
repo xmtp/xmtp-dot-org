@@ -13,9 +13,9 @@ XMTP is also requiring a signature for each app/device combination (“installat
 
 ## How do XMTP Identities get the new key type?
 
-When an existing user opens a V3 app for the first time, XMTP will take their `ed25519` Create Identity signature and sign it with an `secp256k1` key.
+When an existing user opens a V3 app for the first time, XMTP will take their `ed25519` key  and sign it with an `secp256k1` key from their Create Identity signature.
 
-New users who go through the Create Identity signature process will also get an `ed25519` Create Identity signature signed with an `secp256k1` key.
+New users who go through the Create Identity signature process will also get an `ed25519` key signed with an `secp256k1` key from their Create Identity signature.
 
 There is no cryptographic difference between V2 users who migrated to V3, and new V3 users.
 
