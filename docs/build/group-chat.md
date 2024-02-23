@@ -12,17 +12,7 @@ import TabItem from "@theme/TabItem";
 ![Status](https://img.shields.io/badge/Project_status-Alpha-orange)
 
 :::info
-🚀 **Token-Gated Group with XMTP!** 🚀
-
-Exciting news! Token-gated group chats are now available on the Dev Network, ideal for NFT collections, ERC-20 token holders, and exclusive communities. These groups provide unique content and networking opportunities.
-
-**Getting Started:**
-
-1. **Set Up Your Group Chat**: Quickly deploy your group chat using our CLI.
-2. **Create a Converse Link**: Easily share access to your group.
-3. **Automate Membership with Airstack**: Use Airstack APIs for easy gatekeeping.
-
-**For Developers**: Explore our step-by-step guide visiting [Building Token-Gated Group Chats](/docs/tutorials/token-gated-group-chat).
+🚀 Explore our [ETH Denver tutorial](/docs/tutorials/token-gated-group-chat) on setting up token-gated group chats with XMTP. 🚀
 :::
 
 Secure group chats are an important part of every messaging app. In this guide, we delve into the essentials of using XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices.

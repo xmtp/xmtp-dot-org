@@ -22,7 +22,7 @@ The solution lies in Converse group links. Developers can generate a unique link
 
 <div class=" rabbit  p-5 ">
 
-📥 <b>Need a quick reference?</b> Go to the Replit repo: <a href="https://replit.com/@neekolas/Converse-Invite-Link">Converse-Invite-Link</a>
+📥 <b>Want to race ahead?</b> Jump to the quick setup [section](/#Quick-Setup).
 
 </div>
 
@@ -129,8 +129,6 @@ you can share with people.
 
 ### Open the Converse Group Link
 
-![](./img/converse-group.MP4)
-
 Open the Converse Group Link on a mobile phone that has Converse PREVIEW installed. Converse PREVIEW is under development. Here are the urls where you can download it:
 
 [iOS Testflight](https://testflight.apple.com/join/70v1Rvv5) | [Android IPA](https://drive.google.com/file/d/1rUtCmtIB6VzHNW8PDJ1TMBRuI2OEOdcg/view)
@@ -210,7 +208,7 @@ If the wallet is not allowed to join the group, your webhook needs to return
 
 And the reason will be displayed back to the user in Converse.
 
-**Quick Setup in Three Steps**
+### Quick Setup in Three Steps
 
 1. **Fork on Replit:** Start by forking the project at [Replit](https://replit.com/@neekolas/Converse-Invite-Link). Any backend that allows webhook URL creation works.
 
