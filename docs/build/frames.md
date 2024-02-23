@@ -113,7 +113,7 @@ export function handler(requestBody: any) {
 }
 ```
 
-XMTP Frames are also supported in [`onchainkit`](https://onchainkit.xyz/xmtpkit/introduction).
+XMTP Frames are also supported in [`onchainkit`](https://onchainkit.xyz/xmtp/introduction).
 
 ### Enable Secure Communication
 

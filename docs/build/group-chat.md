@@ -11,6 +11,10 @@ import TabItem from "@theme/TabItem";
 
 ![Status](https://img.shields.io/badge/Project_status-Alpha-orange)
 
+:::info
+🚀 Explore our [ETH Denver tutorial](/docs/tutorials/token-gated-group-chat) on setting up token-gated group chats with XMTP. 🚀
+:::
+
 Secure group chats are an important part of every messaging app. In this guide, we delve into the essentials of using XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices.
 
 :::caution
