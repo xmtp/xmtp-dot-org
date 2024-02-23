@@ -10,6 +10,8 @@ Programmatic groups empower developers to create a variety of token-gated commun
 - Accessing exclusive content
 - Networking with peers and forging new connections
 
+import ReactPlayer from 'react-player'
+
 <div className='wrapper'>
   <ReactPlayer
     className='player'    
