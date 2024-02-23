@@ -59,7 +59,6 @@
     --dropdown-subtext-color: #475569;
     --build-xmtp-img-url: url("/img/build-xmtp.png");
     --docusaurus-details-decoration-color: black;
-    --ifm-color-info-dark: black;
   }
   [data-theme="light"] {
     --ifm-footer-background-color: #171717;
