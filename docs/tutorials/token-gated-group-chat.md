@@ -20,20 +20,6 @@ The challenge for developers is determining the most effective way to direct use
 
 The solution lies in Converse group links. Developers can generate a unique link for each group, leading users directly to a Converse in-app page. Upon clicking the link, users arrive at a page where they can request to join the group. If they meet the eligibility criteria, they are added to the group and can begin participating in discussions.
 
-### Concepts
-
-- **Libxmtp**: The backbone of group chats is the latest version of the XMTP protocol, which incorporates the Messaging Layer Security (MLS) standard. This functionality is currently implemented in mobile SDKs. To facilitate the creation of group chats on the backend, we've devised a workaround using libxmtp alongside a Command Line Interface (CLI).
-
--- **CLI**: The Command Line Interface (CLI) is a powerful tool that ...
-
--- **Converse**: Converse is a mobile application designed to ...
-
--- **XMTP**: The XMTP protocol serves as the foundation for ...
-
--- **Group Chat**: Group chats represent the latest innovation in the XMTP protocol, enabling multi-wallet conversations. For more details, refer to the official documentation.
-
--- **Airstack**: Airstack is a ...
-
 ### How it Works
 
 :::
