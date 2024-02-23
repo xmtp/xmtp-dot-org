@@ -129,7 +129,7 @@ you can share with people.
 
 ### Open the Converse Group Link
 
-![](./img/converse-group.mp4)
+![](./img/converse-group.MP4)
 
 Open the Converse Group Link on a mobile phone that has Converse PREVIEW installed. Converse PREVIEW is under development. Here are the urls where you can download it:
 
