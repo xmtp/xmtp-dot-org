@@ -22,7 +22,7 @@ Exciting news! Token-gated group chats are now available on the Dev Network, ide
 2. **Create a Converse Link**: Easily share access to your group.
 3. **Automate Membership with Airstack**: Use Airstack APIs for easy gatekeeping.
 
-**For Developers**: Explore our step-by-step guide visiting [Building Token-Gated Group Chats](/tutorials/token-gated-group-chat).
+**For Developers**: Explore our step-by-step guide visiting [Building Token-Gated Group Chats](/docs/tutorials/token-gated-group-chat).
 :::
 
 Secure group chats are an important part of every messaging app. In this guide, we delve into the essentials of using XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices.
