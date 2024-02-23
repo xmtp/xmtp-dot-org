@@ -26,13 +26,13 @@ The solution lies in Converse group links. Developers can generate a unique link
 
 </div>
 
-#### CLI
+### CLI
 
 For ETH Denver, we've introduced a CLI tool, built using the [libxmtp GitHub repository](https://github.com/xmtp/libxmtp) repository, to enable the swift creation and management of token-gated group chats. This tool eliminates the need for full SDK changes. We don't have those changes yet since the Alpha was released this week.
 
 For details on starting with the CLI for token-gated group chats, visit the [Libxmtp CLI section](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For a hands-on example and to see the CLI tool in action, visit [Groups Node.js Client Replit](https://replit.com/@neekolas/Groups-Nodejs-Client%23src/index.ts).
 
-#### Getting started
+### Creating the client
 
 Our server is going to be using the CLI for managing group chats connected to libxmtp. `Client.ts` generates a `groupClient` with an interface for interacting with groups:
 
@@ -96,34 +96,40 @@ with parameters:
 Lets take a look at the full code code
 
 ```jsx
-const groupId = await client.createGroup("group-creator-is-admin");
-console.log("Creating group with id", groupId);
-const request = {
-  webhook: WEBHOOK_URL,
-  topic: groupId,
-  name,
-  description,
-};
-console.log(request);
-const data = await (
-  await fetch(CONVERSE_GROUP_LINK_ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(request),
-  })
-).json();
+async function createConverseGroup(name, description) {
+  const groupId = await client.createGroup("group-creator-is-admin");
+  console.log(`Group created with ID: ${groupId}`);
+
+  const requestBody = {
+    webhook: WEBHOOK_URL,
+    topic: groupId,
+    name,
+    description,
+  };
+  console.log("Request Body:", requestBody);
+
+  try {
+    const response = await fetch(CONVERSE_GROUP_LINK_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(requestBody),
+    });
+    const data = await response.json();
+    console.log("Group Link Created:", data);
+    return data;
+  } catch (error) {
+    console.error("Failed to create group link:", error);
+    throw error;
+  }
+}
 ```
 
-This will return a `groupLinkId` that will allow us to generate the converse URL
-
-### Share your converse link
-
-You get back a link in the form `https://preview.converse.xyz/group/<groupLinkId>` that
+This will return a `groupLinkId` that will allow us to generate the converse URL: `https://preview.converse.xyz/group/<groupLinkId>` that
 you can share with people.
 
 ### Open the Converse Group Link
+
+![](./img/converse-group.mp4)
 
 Open the Converse Group Link on a mobile phone that has Converse PREVIEW installed. Converse PREVIEW is under development. Here are the urls where you can download it:
 
@@ -172,7 +178,7 @@ app.post("/webhook", async (req: Request, res: Response) => {
 
 The `shouldAddMember` function executes various checks, such as verifying NFTs or tokens possessed by the wallet, including POAPs, among others.
 
-For incorporating different validation logics, please consult the [Airstack API Docs]. Specifically, in this scenario, we aim to authenticate whether the address attended ETH Paris by confirming the possession of a POAP.
+For incorporating different validation logics, please consult the [Airstack API Docs](https://docs.airstack.xyz/airstack-docs-and-faqs/) and [Figma](https://www.figma.com/community/file/1342873007403279194) inspiration.
 
 ```jsx
 async function shouldAddMember(
@@ -184,7 +190,7 @@ async function shouldAddMember(
 }
 ```
 
-if true, adds member with the methods previously described and return success
+If the condition is true, then add a member using the methods that were described earlier. After adding the member, return a success message.
 
 ```jsx
 await addMember(groupsClient, groupId, walletAddress);
