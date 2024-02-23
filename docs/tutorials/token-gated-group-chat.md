@@ -22,7 +22,7 @@ The solution lies in Converse group links. Developers can generate a unique link
 
 <div class=" rabbit  p-5 ">
 
-📥 <b>Want to race ahead?</b> Jump to the quick setup [section](/#Quick-Setup).
+📥 <b>Want to race ahead?</b> Jump to the quick setup [section](/docs/tutorials/token-gated-group-chat#quick-setup-in-three-steps).
 
 </div>
 
