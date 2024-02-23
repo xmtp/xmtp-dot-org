@@ -1,3 +1,8 @@
+---
+sidebar_label: Group chat
+sidebar_position: 6
+---
+
 # Group chat tutorial with React Native
 
 This tutorial will guide you through implementing group chat functionality in your XMTP inbox, covering creation, message sending, streaming, and member management.

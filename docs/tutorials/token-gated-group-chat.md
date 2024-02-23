@@ -5,8 +5,6 @@ sidebar_position: 6
 
 # Building Token-Gated Group Chats
 
-### Context
-
 Programmatic groups empower developers to create a variety of token-gated communities, including those based on NFT collections, ERC-20 tokens, and unique access keys similar to Friendtech. For users, these groups offer significant benefits, such as:
 
 - Accessing exclusive content
@@ -22,23 +20,36 @@ The solution lies in Converse group links. Developers can generate a unique link
 
 ### How it Works
 
-:::
-Eager to deploy your own group chat in just three steps? Jump to #deploy.
-:::
+<div class=" rabbit  p-5 ">
 
-Our server is going to be using the CLI for managing group chats connected to libxmtp. Client.ts generates a `groupClient` with an interface for interacting with groups:
+📥 <b>Need a quick reference?</b> Go to the Replit repo: <a href="https://replit.com/@neekolas/Converse-Invite-Link">Converse-Invite-Link</a>
+
+</div>
+
+Our server is going to be using the CLI for managing group chats connected to libxmtp. `Client.ts` generates a `groupClient` with an interface for interacting with groups:
 
 ```jsx
+// Initialize the groups client with the database "converse.db"
 const groupsClient = await createClient("converse.db");
 
-//that is used to create methods
-await client.createGroup(permissions); //an external wallet controlled by the backend
-generates the group and returns ID
-await addMembers(groupId, accountAddresses);
-await removeMembers(groupId, accountAddresses);
-await listGroups();
-await send(groupId, message);
-await listMessages(groupId);
+// Create a new group with specified permissions, controlled by an external wallet
+// This method returns the unique ID of the newly created group
+const groupId = await groupsClient.createGroup(permissions);
+
+// Add members to the group by specifying the group ID and an array of account addresses
+await groupsClient.addMembers(groupId, accountAddresses);
+
+// Remove members from the group by specifying the group ID and an array of account addresses
+await groupsClient.removeMembers(groupId, accountAddresses);
+
+// List all groups available in the database
+await groupsClient.listGroups();
+
+// Send a message to a specific group by specifying the group ID and the message content
+await groupsClient.send(groupId, message);
+
+// List all messages from a specific group by specifying the group ID
+await groupsClient.listMessages(groupId);
 ```
 
 Leveraging this interface, we are now equipped to provide group chat functionalities through webhooks. Our server will incorporate two primary webhook calls.
