@@ -7,7 +7,7 @@ description: Making Frames Interoperable
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# XMTP Chat Frames
+# Render Chat Frames with XMTP
 
 The XMTP community has been actively discussing and implementing ways to enhance user experience by supporting frames within XMTP applications. An effort in this direction is detailed in a community post [Supporting Frames in XMTP](https://community.xmtp.org/t/supporting-frames-in-xmtp/535).
 
@@ -19,14 +19,14 @@ _This video shows how its implemented in [xmtp.chat](https://xmtp.chat/inbox)_
 
 ## Introduction
 
-The XMTP Frames guide you're looking at is designed to help developers integrate XMTP frames into their applications. It covers both the use of protocol libraries, which enable the creation and handling of XMTP frames, and the practical aspects of rendering these frames within an application. Here's a breakdown to clarify the separation:
+The Chat Frames guide you're looking at is designed to help developers integrate Frames into their applications. It covers both the use of protocol libraries, which enable the creation and handling of Frames, and the practical aspects of rendering these frames within an application. Here's a breakdown to clarify the separation:
 
 ### Protocol libraries
 
-These are the foundational tools that allow developers to create, sign, and manage XMTP frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
+These are the foundational tools that allow developers to create, sign, and manage Frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
 
 - [**Install Required Packages**](#install-required-packages): To begin, add the necessary XMTP packages to your project.
-- [**Declare Protocol Compatibility**](#declare-protocol-compatibility): Ensure your application can interact with XMTP frames by declaring protocol compatibility.
+- [**Declare Protocol Compatibility**](#declare-protocol-compatibility): Ensure your application can interact with Frames by declaring protocol compatibility.
 - [**Validate Incoming Messages**](#Validate-Incoming-Messages): Checks if a URL in message content is suitable for frame processing.
 - [**Enable Secure Communication**](#enable-secure-communication): Implements security measures to authenticate and secure frame actions, ensuring the integrity and origin of frame interactions.
 
@@ -38,7 +38,7 @@ These are the foundational tools that allow developers to create, sign, and mana
 
 </div>
 
-This part of the guide focuses on how to render XMTP frames within your application, making the frames interactive and visually integrated. It includes:
+This part of the guide focuses on how to render Frames within your application, making the frames interactive and visually integrated. It includes:
 
 - [**Validating frame URL**](#validating-frame-url): Ensuring the URL embedded within the message content is appropriate for frame processing and meets XMTP standards.
 - [**Getting frame metadata**](#getting-frame-metadata): Extracting and processing metadata from frames, including images, titles, buttons, and URLs, to facilitate rendering and interaction.
@@ -48,13 +48,13 @@ This part of the guide focuses on how to render XMTP frames within your applicat
 
 ### Use cases
 
-For inspiration and a deeper dive into how XMTP Frames can work across various domains, refer to the **[XMTP Frames Use Cases](/docs/use-cases/frames)** section below.
+For inspiration and a deeper dive into how Frames can work across various domains, refer to the **[Chat Frames Use Cases](/docs/use-cases/frames)** section below.
 
 ---
 
 ## Protocol libraries
 
-These are the foundational tools that allow developers to create, sign, and manage XMTP frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
+These are the foundational tools that allow developers to create, sign, and manage Chat frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
 
 ### Install required packages
 
@@ -64,21 +64,21 @@ To start, add the necessary XMTP packages to your project:
 <TabItem value="npm" label="npm" >
 
 ```bash
-npm install @xmtp/frames-client @xmtp/frames-validator
+npm install @xmtp/frames-client
 ```
 
 </TabItem>
 <TabItem value="yarn" label="Yarn" >
 
 ```bash
-yarn add @xmtp/frames-client @xmtp/frames-validator
+yarn add @xmtp/frames-client
 ```
 
 </TabItem>
 <TabItem value="bun" label="bun" >
 
 ```bash
-bun install @xmtp/frames-client @xmtp/frames-validator
+bun install @xmtp/frames-client
 ```
 
 </TabItem>
@@ -113,11 +113,11 @@ export function handler(requestBody: any) {
 }
 ```
 
-XMTP Frames are also supported in [`onchainkit`](https://onchainkit.xyz/xmtp/introduction).
+Chat Frames are also supported in [`onchainkit`](https://onchainkit.xyz/xmtp/introduction).
 
 ## Rendering Frames in Your Application
 
-This part of the guide focuses on how to render XMTP frames within your application, making the frames interactive and visually integrated. It includes:
+This part of the guide focuses on how to render Frames within your application, making the frames interactive and visually integrated. It includes:
 
 <video controls src="https://github.com/fabriguespe/xmtp-quickstart-frames/assets/1447073/adf38f79-703c-4759-8523-4feb0ebb2d0e" width="100%" type="video/mp4">
 Your browser does not support the video tag.
@@ -285,4 +285,4 @@ if (action === "post") {
 }
 ```
 
-The guide combines these two aspects to provide a comprehensive overview of both the backend (protocol libraries) and frontend (rendering and interaction) components necessary for integrating XMTP frames into an application.
+The guide combines these two aspects to provide a comprehensive overview of both the backend (protocol libraries) and frontend (rendering and interaction) components necessary for integrating Frames into an application.
