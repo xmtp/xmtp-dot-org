@@ -218,8 +218,6 @@ val conversations = client.conversations.list(includeGroups = true)
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-//First fetch new data from the network
-try await client.conversations.sync()
 //Get the updated group list
 let groups = try await client.conversations.groups()
 ```
@@ -291,9 +289,9 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-## Synchronizing group details and messages
+## Get group chat messages
 
-To ensure your application has the latest group chat details, including member list and the most recent messages, it's crucial to periodically synchronize each group chat. This can be particularly important after joining a group, adding new members, or sending messages. Use the `sync()` method on a group chat object to update its state with the latest information from the XMTP network.
+To ensure your application has the latest group chat details, including member list and the most recent messages, it's crucial to periodically synchronize each group chat. This can be particularly important after joining a group, adding new members, or sending messages.
 
 :::caution Group chats are currently per installation
 As of now, group chats in XMTP are specific to each installation. This means that while you can access your group chat conversations across different devices, the historical messages within those chats might not automatically appear. Currently, each group chat's message history is tied to the device where it was initiated. As a result, there is no automatic syncing of message history across devices. When you sign in on a new device, you will see existing group chat conversations but will only receive new messages from that point forward. We are actively working on enhancing this feature to improve your experience with group conversations.
@@ -303,8 +301,6 @@ As of now, group chats in XMTP are specific to each installation. This means tha
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
 ```jsx
-// Assuming `group` is an existing group chat object
-await group.sync();
 // Get group messages
 await group.messages();
 ```
@@ -313,8 +309,6 @@ await group.messages();
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-// Assuming `group` is an existing group chat object
-group.sync()
 // Get group messages
 group.messages();
 ```
@@ -323,7 +317,6 @@ group.messages();
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-try await client.conversations.sync()
 // Get group messages
 try await group.messages();
 ```
@@ -346,9 +339,11 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
+_Use the `sync()` method on a group chat object to update its state with the latest information from the XMTP network._
+
 ## Manage group chat members
 
-You can list, add and remove members from a group chat. The current limit is 250. Only the creator of the group chat has the permissions to add or remove members. This restriction ensures that only authorized individuals can modify the participant list. Developers should design their application's user interface and functionality with this consideration in mind, ensuring that options to add or remove members are only available to the group's creator.
+You can list, add and remove members from a group chat. Only the creator of the group chat has the permissions to add or remove members. This restriction ensures that only authorized individuals can modify the participant list. Developers should design their application's user interface and functionality with this consideration in mind, ensuring that options to add or remove members are only available to the group's creator.
 
 ### List group members
 
@@ -358,7 +353,6 @@ Retrieve a list of wallet addresses for all members in the group chat
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
 
 ```jsx
-await group.sync();
 const members = await group.memberAddresses();
 ```
 
@@ -366,7 +360,6 @@ const members = await group.memberAddresses();
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-group.sync()
 val members = group.memberAddresses()
 ```
 
@@ -374,7 +367,6 @@ val members = group.memberAddresses()
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-try await group.sync()
 let members = group.memberAddresses()
 ```
 
@@ -482,12 +474,14 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-## Listen for new messages and updates in a group chat
+## Listen for new messages and updates
 
 Streams enable real-time monitoring of new messages in a group chat as well as member management activities like adding and removing members. Here's how you can set up a stream for message updates. Refer to this [section](/docs/build/streams.md) for more details on streams.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+List for messages specific to a group chat
 
 ```jsx
 // Assuming `group` is an existing group chat object
@@ -497,7 +491,6 @@ const streamGroupMessages = async (group) => {
       console.log(`New message: ${message.content}`);
       // Membership updates
       if (message.contentTypeId === ContentTypes.GroupMembershipChange) {
-        await group.sync();
         const addresses = await group.memberAddresses();
         // Get new members
         console.log(addresses); // Example usage of addresses
@@ -507,6 +500,19 @@ const streamGroupMessages = async (group) => {
 
   // Use cancelGroupMessageStream() to stop listening to group updates
   return cancelGroupMessageStream;
+};
+```
+
+And for streaming all conversations, including individual and groups:
+
+```jsx
+const streamAllGroupMessages = async (client) => {
+  const allConvos = [];
+  const cancelStreamAllGroupMessages =
+    await client.conversations.streamAllGroupMessages(async (message) => {
+      console.log(`New message: ${message.content}`);
+    });
+  // Use cancelStreamAllGroupMessages() to stop listening to all conversation updates
 };
 ```
 
