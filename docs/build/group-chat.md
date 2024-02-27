@@ -343,7 +343,7 @@ _Use the `sync()` method on a group chat object to update its state with the lat
 
 ## Manage group chat members
 
-You can list, add and remove members from a group chat. The current limit is 250. Only the creator of the group chat has the permissions to add or remove members. This restriction ensures that only authorized individuals can modify the participant list. Developers should design their application's user interface and functionality with this consideration in mind, ensuring that options to add or remove members are only available to the group's creator.
+You can list, add and remove members from a group chat. Only the creator of the group chat has the permissions to add or remove members. This restriction ensures that only authorized individuals can modify the participant list. Developers should design their application's user interface and functionality with this consideration in mind, ensuring that options to add or remove members are only available to the group's creator.
 
 ### List group members
 
