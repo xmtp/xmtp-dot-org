@@ -21,7 +21,7 @@ A quickstart is a brief guide or repo aimed at helping XMTP developers to unders
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="/docs/tutorials/token-gated-group-chat" class="plausible-event-name=Quickstart">Token Gates Group Chat</a><br/><small>How to buid a token gated group chat with Converse and XMTP</small></li>
+  <li><a href="/docs/tutorials/token-gated-group-chat" class="plausible-event-name=Quickstart">Token Gates Group Chat</a><br/><small>How to build a token-gated group chat with Converse and XMTP.</small></li>
   <li><a href="https://github.com/fabriguespe/xmtp-quickstart-frames" class="plausible-event-name=Quickstart">Frames Quickstart</a><br/><small>Learn how to render interoperable Frames in your messaging apps</small></li>
   <li><a href="/docs/tutorials/portable-consent/subscribe" class="plausible-event-name=Quickstart">Subscribe</a><br/><small>How to build a Subscribe button to record broadcast message user consent</small></li>
   <li><a href="/docs/tutorials/portable-consent/broadcast" class="plausible-event-name=Quickstart">Broadcast</a><br/><small>How to build broadcast messaging that checks for user consent</small></li>
@@ -40,7 +40,7 @@ A quickstart is a brief guide or repo aimed at helping XMTP developers to unders
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-hooks" class="plausible-event-name=Quickstart">React hooks</a><br/><small>Floating inbox quickstart app built using React. Use it to help you build your own app with XMTP</small></li>
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-hooks" class="plausible-event-name=Quickstart">React hooks</a><br/><small>Floating Inbox Quickstart app built using React. Use it to help you build your own app with XMTP</small></li>
 </ul>
 
 </div>
@@ -159,7 +159,7 @@ These projects provide a robust foundation for building your own applications us
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-reactjs-next" class="plausible-event-name=Quickstart">Next.js</a><br/><small>Floating inbox quickstart app in Next.js. Use it to help you build your own app with XMTP.</small></li>  
+  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-reactjs-next" class="plausible-event-name=Quickstart">Next.js</a><br/><small>Floating Inbox Quickstart app in Next.js. Use it to help you build your own app with XMTP.</small></li>  
   <li><a href="https://github.com/fabriguespe/xmtp-quickstart-vuejs" class="plausible-event-name=Quickstart">Vue.js</a><br/><small>A tutorial and quickstart app for building a chatbot in VueJS. Use them to help you build your own app with XMTP.</small></li>
   <li><a href="https://github.com/fabriguespe/xmtp-quickstart-node" class="plausible-event-name=Quickstart">Node.js</a><br/><small>Quickstart code for creating a new XMTP client, initiating a conversation, and sending a message in Node.js</small></li>
   <li><a href="https://github.com/fabriguespe/xmtp-firebase-functions" class="plausible-event-name=Quickstart">Firebase Functions</a><br/><small>Quickstart code for integrating an XMTP app with Firebase functions</small></li>
