@@ -474,7 +474,7 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-## Listen for new messages and updates in a group chat
+## Listen for new messages and updates
 
 Streams enable real-time monitoring of new messages in a group chat as well as member management activities like adding and removing members. Here's how you can set up a stream for message updates. Refer to this [section](/docs/build/streams.md) for more details on streams.
 
