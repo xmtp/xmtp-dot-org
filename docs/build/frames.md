@@ -17,7 +17,7 @@ Your browser does not support the video tag.
 
 _This video shows how its implemented in [xmtp.chat](https://xmtp.chat/inbox)_
 
-## Introduction
+## Overview
 
 These are the foundational tools that allow developers to create, sign, and manage Frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
 
@@ -32,7 +32,9 @@ These are the foundational tools that allow developers to create, sign, and mana
 - [**Experience XMTP on xmtp.chat**](https://xmtp.chat/): Engage with Frames firsthand by trying them on the official XMTP client platform.
 - [**Open Frames Initiative**](https://github.com/open-frames/standard/blob/v0.0.1/README.md): XMTP contributes to the Open Frames standard, fostering interoperability and open standards.
 
-These are the foundational tools that allow developers to create, sign, and manage Chat frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
+## Getting started
+
+Welcome to the XMTP Frames guide. Here, you'll learn to integrate Frames into your apps for a richer chat experience. Discover how to manage and render Frames, ensuring secure and interactive communication.
 
 ### Protocol compatibility
 
@@ -71,6 +73,37 @@ bun install @xmtp/frames-client
 
 </TabItem>
 </Tabs>
+
+```jsx
+const xmtpClient = await Client.create(wallet);
+const framesClient = new FramesClient(xmtpClient);
+
+const frameUrl = "https://www.myframe.xyz";
+
+// Read data from a frame
+const frameMetadata = await framesClient.proxy.readMetadata(frameUrl);
+
+// Get a proxied image URL, which you can use directly in an <image> tag
+const imageUrl = framesClient.proxy.mediaUrl(
+  frameMetadata.metaTags["fc:frame:image"],
+);
+
+// Handle a click to button 2 from a conversation with topic "/xmtp/0/123" and participant addresses "abc" and "xyz"
+const payload = await signFrameAction({
+  frameUrl,
+  buttonIndex: 2,
+  conversationTopic: "/xmtp/0/123",
+  participantAccountAddresses: ["abc", "xyz"],
+});
+
+// If the button action type was `post`
+const updatedFrameMetadata = await framesClient.proxy.post(frameUrl, payload);
+// If the button action type was `post_redirect`
+const { redirectedTo } = await framesClient.proxy.postRedirect(
+  frameUrl,
+  payload,
+);
+```
 
 ### Validate incoming messages
 
