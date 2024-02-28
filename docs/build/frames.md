@@ -147,5 +147,3 @@ export function handler(requestBody: any) {
   }
 }
 ```
-
-Chat Frames are also supported in [`onchainkit`](https://onchainkit.xyz/xmtp/introduction).
