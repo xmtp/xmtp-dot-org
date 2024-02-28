@@ -44,7 +44,7 @@ The solution lies in Converse group links. Developers can generate a unique link
 
 For ETH Denver, we've introduced a CLI tool, built using the [libxmtp GitHub repository](https://github.com/xmtp/libxmtp) repository, to enable the swift creation and management of token-gated group chats. This tool eliminates the need for full SDK changes. We don't have those changes yet since the Alpha was released this week.
 
-For details on starting with the CLI for token-gated group chats, visit the [Libxmtp CLI section](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For a hands-on example and to see the CLI tool in action, visit [Groups Node.js Client Replit](https://replit.com/@neekolas/Groups-Nodejs-Client%23src/index.ts).
+For details on starting with the CLI for token-gated group chats, visit the [Libxmtp CLI section](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For a hands-on example and to see the CLI tool in action, visit [Groups Node.js Client Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts).
 
 ### Creating the client
 

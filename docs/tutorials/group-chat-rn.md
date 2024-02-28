@@ -7,14 +7,6 @@ sidebar_position: 6
 
 This tutorial will guide you through implementing group chat functionality in your XMTP inbox, covering creation, message sending, streaming, and member management.
 
-:::caution
-
-This project is in **Alpha** status and ready for you to experiment with.
-
-However, we do not recommend using **Alpha** software in production apps. Software in this status is likely to change based on feedback.
-
-:::
-
 <div class=" rabbit  p-5 ">
 
 📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-rn-groupchats">group-chat</a>
