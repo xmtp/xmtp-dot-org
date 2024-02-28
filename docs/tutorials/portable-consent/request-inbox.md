@@ -7,7 +7,7 @@ sidebar_position: 6
 
 Managing user consent is essential for enhancing privacy and the user experience. Providing user consent features in your app gives your users better control over who can send them messages.
 
-If you already have an XMTP app, integrating portable consent features becomes crucial. This guide walks you through adding consent logic to your app.
+If you already have an XMTP app, integrating universal allow/block features becomes crucial. This guide walks you through adding consent logic to your app.
 
 <div class=" rabbit  p-5 ">
 
