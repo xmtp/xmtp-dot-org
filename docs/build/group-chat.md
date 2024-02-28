@@ -12,16 +12,14 @@ import TabItem from "@theme/TabItem";
 ![Status](https://img.shields.io/badge/Project_status-Alpha-orange)
 
 :::info
-🚀 Explore our [ETH Denver tutorial](/docs/tutorials/token-gated-group-chat) on setting up token-gated group chats with XMTP. 🚀
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 :::
 
 Secure group chats are an important part of every messaging app. In this guide, we delve into the essentials of using XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices.
 
 :::caution
 
-This project is in **Alpha** status and ready for you to experiment with.
-
-However, we do not recommend using **Alpha** software in production apps. Software in this status is likely to change based on feedback.
+This project is in **Alpha** status and ready for you to experiment with. However, we do not recommend using **Alpha** software in production apps. Software in this status is likely to change based on feedback.
 
 :::
 
@@ -67,7 +65,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
@@ -119,7 +117,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
@@ -173,7 +171,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
@@ -238,7 +236,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
@@ -281,7 +279,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
@@ -336,7 +334,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
@@ -386,7 +384,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
@@ -429,7 +427,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
@@ -472,7 +470,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
@@ -542,7 +540,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
@@ -638,7 +636,7 @@ Code sample coming soon
 </TabItem>
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-Code sample coming soon
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 </TabItem>
 <TabItem value="react" label="React"  attributes={{className: "react_tab "}}>

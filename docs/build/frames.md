@@ -98,6 +98,32 @@ This informs client applications about the protocols your frame can interact wit
 
 ### Validate incoming messages
 
+To start, add the necessary XMTP packages to your project:
+
+<Tabs >
+<TabItem value="npm" label="npm" >
+
+```bash
+npm install @xmtp/frames-validator
+```
+
+</TabItem>
+<TabItem value="yarn" label="Yarn" >
+
+```bash
+yarn add @xmtp/frames-validator
+```
+
+</TabItem>
+<TabItem value="bun" label="bun" >
+
+```bash
+bun install @xmtp/frames-validator
+```
+
+</TabItem>
+</Tabs>
+
 Implement message validation using `@xmtp/frames-validator` to ensure the authenticity of incoming POST requests. This step is crucial for security, especially when dealing with multiple protocols.
 
 ```tsx
