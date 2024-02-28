@@ -28,7 +28,7 @@ These are the foundational tools that allow developers to create, sign, and mana
 - [**Rendering Chat Frames in your application**](/docs/tutorials/frames): This tutorial covers the practical aspects of rendering these frames within an application.
 - [**Exploring Chat Frames Use Cases**](/docs/use-cases/frames): Dive into a comprehensive exploration of how Frames can be innovatively applied across different sectors for inspiration.
 - [**OnChainKit Documentation**](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
-- [**FrameJS Documentation**](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
+- [**Frames.js Documentation**](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
 - [**Experience XMTP on xmtp.chat**](https://xmtp.chat/): Engage with Frames firsthand by trying them on the official XMTP client platform.
 - [**Open Frames Initiative**](https://github.com/open-frames/standard/blob/v0.0.1/README.md): XMTP contributes to the Open Frames standard, fostering interoperability and open standards.
 
