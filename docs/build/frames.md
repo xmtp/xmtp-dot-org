@@ -25,7 +25,7 @@ These are the foundational tools that allow developers to create, sign, and mana
 - [**Declare Protocol Compatibility**](#declare-protocol-compatibility): Ensure your application can interact with Frames by declaring protocol compatibility.
 - [**Validate Incoming Messages**](#Validate-Incoming-Messages): Checks if a URL in message content is suitable for frame processing.
 - [**Enable Secure Communication**](#enable-secure-communication): Implements security measures to authenticate and secure frame actions, ensuring the integrity and origin of frame interactions.
-- [**Rendering Chat Frames in your application**](/docs/tutorials/frames): This tutorial covers the practical aspects of rendering these frames within an application.
+- [**Rendering Chat Frames in your application**](/docs/tutorials/render-frames): This tutorial covers the practical aspects of rendering these frames within an application.
 - [**Exploring Chat Frames Use Cases**](/docs/use-cases/frames): Dive into a comprehensive exploration of how Frames can be innovatively applied across different sectors for inspiration.
 - [**OnChainKit Documentation**](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
 - [**Frames.js Documentation**](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
