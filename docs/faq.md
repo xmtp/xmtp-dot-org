@@ -204,7 +204,7 @@ XMTP Labs is researching various consensus protocols that would allow the networ
 
 Yes, you will be able to run a node.
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal ](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
+XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
 
 ### What is the relationship between Waku and XMTP?
 
@@ -222,9 +222,11 @@ Clients communicate with XMTP nodes through a gRPC (or JSON/HTTP) [message API](
 
 XMTP provides perceptibly real-time message delivery and retrieval. The network does not provide service level guarantees.
 
-### Is there a way to get a list of all current XMTP-enabled wallets ?
+### Is there a way to get a list of all current XMTP-enabled wallets?
 
-We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
+XMTP doesn't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. You might consider using a third-party service to do so instead of building the functionality yourself.
+
+For example, services like [Airstack](https://www.airstack.xyz/) and [Blaze](https://www.withblaze.app/) have compiled extensive lists of XMTP addresses by querying the XMTP `canMessage` API over time at a rate that avoids hitting the limits.
 
 ### Does XMTP support group chat?
 
