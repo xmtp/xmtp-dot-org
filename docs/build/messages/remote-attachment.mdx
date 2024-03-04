@@ -94,7 +94,12 @@ Client.register(RemoteAttachmentCodec());
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Remote attachments for Dart haven't been implemented yet.
+```dart
+import 'package:xmtp/src/content/reply_codec.dart';
+import 'package:xmtp/src/content/remote_attachment_codec.dart';
+
+var registry = CodecRegistry()..registerCodec(RemoteAttachmentCodec());
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
@@ -412,7 +417,18 @@ try await conversation.send(
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Remote attachments for Dart haven't been implemented yet.
+```dart
+// Initiating a new conversation between Alice and Bob using Bob's hex address
+var convo = await alice.newConversation(bob.address.hex);
+// Sending an initial message in the conversation
+await alice.sendMessage(convo, "Here's an attachment for you:");
+// Creating an attachment with the filename, MIME type, and content
+var attachment = Attachment("foo.txt", "text/plain", utf8.encode("bar"));
+// Uploading the attachment and getting a remote reference
+var remote = await alice.upload(attachment, files.upload);
+// Sending the remote attachment in the conversation with the specified content type
+await alice.sendMessage(convo, remote, contentType: contentTypeRemoteAttachment);
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
@@ -562,7 +578,16 @@ struct ContentView: View {
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Remote attachments for Dart haven't been implemented yet.
+```dart
+// And he should be able to download the remote attachment.
+var downloaded = await bob.download(
+  messages[0].content as RemoteAttachment,
+  downloader: files.download,
+);
+// Filename: downloadedAttachment.filename
+// MIME Type: downloadedAttachment.mimeType
+// Data: utf8.decode(downloadedAttachment.data)
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
