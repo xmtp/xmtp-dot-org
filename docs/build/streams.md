@@ -41,9 +41,7 @@ import type { Conversation } from "@xmtp/react-sdk";
 
 export const NewConversations: React.FC = () => {
   // track streamed conversations
-  const [streamedConversations, setStreamedConversations] = useState<
-    Conversation[]
-  >([]);
+  const [streamedConversations, setStreamedConversations] = useState<Conversation[]>([]);
 
   // callback to handle incoming conversations
   const onConversation = useCallback(
@@ -59,7 +57,7 @@ export const NewConversations: React.FC = () => {
   }
 
   return (
-    ...
+    /* show conversation list*/
   );
 };
 ```
@@ -164,7 +162,7 @@ for await (const message of await conversation.streamMessages()) {
 ```tsx
 // The useStreamMessages hook streams new conversation messages on mount
 // and exposes an error state.
-import { useStreamMessages } from "@xmtp/react-sdk";
+import { useStreamMessages, toCachedMessage } from "@xmtp/react-sdk";
 import type { CachedConversation, DecodedMessage } from "@xmtp/react-sdk";
 import { useCallback, useEffect, useState } from "react";
 
@@ -174,14 +172,15 @@ export const StreamMessages: React.FC<{
   conversation,
 }) => {
   // track streamed messages
-  const [streamedMessages, setStreamedMessages] = useState<DecodedMessage[]>(
-    [],
-  );
+  const [streamedMessages, setStreamedMessages] = useState<DecodedMessage[]>([]);
 
   // callback to handle incoming messages
   const onMessage = useCallback(
     (message: DecodedMessage) => {
-      setStreamedMessages((prev) => [...prev, message]);
+      // Convert into cached message format
+      const cached = toCachedMessage(message);
+      //Add it to the array
+      setStreamedMessages((prev) => [...prev, cached]);
     },
     [streamedMessages],
   );
@@ -192,8 +191,19 @@ export const StreamMessages: React.FC<{
     setStreamedMessages([]);
   }, [conversation]);
 
+  const combinedMessages = useMemo(() => {
+    return [
+      ...new Map(
+        [...messages, ...streamedMessages].map((message) => [
+          message.id,
+          message,
+        ])
+      ).values(),
+    ];
+  }, [messages, streamedMessages]);
+
   return (
-    ...
+    /* show combinedMessages*/
   );
 };
 ```
@@ -299,22 +309,35 @@ import { useCallback, useState } from "react";
 
 export const StreamAllMessages: React.FC = () => {
   // track streamed messages
-  const [streamedMessages, setStreamedMessages] = useState<DecodedMessage[]>(
-    [],
-  );
+  const [streamedMessages, setStreamedMessages] = useState<DecodedMessage[]>([]);
 
   // callback to handle incoming messages
   const onMessage = useCallback(
     (message: DecodedMessage) => {
-      setStreamedMessages((prev) => [...prev, message]);
+      // Convert into cached message format
+      const cached = toCachedMessage(message);
+      //Add message to the stream
+      setStreamedMessages((prev) => [...prev, cached]);
     },
     [streamedMessages],
   );
 
   useStreamAllMessages(onMessage);
 
+
+  const combinedMessages = useMemo(() => {
+    return [
+      ...new Map(
+        [...messages, ...streamedMessages].map((message) => [
+          message.id,
+          message,
+        ])
+      ).values(),
+    ];
+  }, [messages, streamedMessages]);
+
   return (
-    ...
+    /* show combinedMessages*/
   );
 };
 ```
