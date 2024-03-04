@@ -1,7 +1,7 @@
 ### Quickstarts 🏁
 
-- <a href="https://github.com/fabriguespe/xmtp-quickstart-hooks" class="plausible-event-name=Quickstart">React Hooks</a>
-- <a href="https://github.com/fabriguespe/xmtp-quickstart-reactjs" class="plausible-event-name=Quickstart">ReactJS</a>
+- <a href="https://github.com/xmtp/xmtp-quickstart-hooks" class="plausible-event-name=Quickstart">React Hooks</a>
+- <a href="https://github.com/xmtp/xmtp-quickstart-reactjs" class="plausible-event-name=Quickstart">ReactJS</a>
 - <a href="https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1#index.ts" class="plausible-event-name=Replit">Javascript Live Example</a>
 - <a href="https://github.com/fabriguespe/xmtp-quickstart-vuejs" class="plausible-event-name=Quickstart">VueJS</a>
 - <a href="https://github.com/xmtp/xmtp-flutter" class="plausible-event-name=Quickstart">Flutter</a>
