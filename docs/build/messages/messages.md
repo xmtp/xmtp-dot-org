@@ -376,6 +376,11 @@ if (!codec) {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
+import { useClient, ContentTypeId } from "@xmtp/react-sdk";
+const { client } = useClient();
+
+const date = message.sentAt ? message.sentAt : message.sent;
+const contentType = ContentTypeId.fromString(message.contentType);
 const codec = client.codecFor(content.contentType);
 if (!codec) {
   /*Not supported content type*/
