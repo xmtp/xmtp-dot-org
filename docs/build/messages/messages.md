@@ -379,7 +379,6 @@ if (!codec) {
 import { useClient, ContentTypeId } from "@xmtp/react-sdk";
 const { client } = useClient();
 
-const date = message.sentAt ? message.sentAt : message.sent;
 const contentType = ContentTypeId.fromString(message.contentType);
 const codec = client.codecFor(content.contentType);
 if (!codec) {
