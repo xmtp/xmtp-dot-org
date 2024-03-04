@@ -380,7 +380,7 @@ import { useClient, ContentTypeId } from "@xmtp/react-sdk";
 const { client } = useClient();
 
 const contentType = ContentTypeId.fromString(message.contentType);
-const codec = client.codecFor(content.contentType);
+const codec = client.codecFor(contentType);
 if (!codec) {
   /*Not supported content type*/
   if (message.contentFallback !== undefined) {
