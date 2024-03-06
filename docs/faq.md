@@ -230,9 +230,7 @@ For example, services like [Airstack](https://www.airstack.xyz/) and [Blaze](htt
 
 ### Does XMTP support group chat?
 
-Not yet. Despite efforts to build group chat with XMTP v2 (the current protocol version), protocol limitations prevented group chat from meeting XMTP's robust security standards. Efforts have shifted to updating the protocol to support secure group chat. More details to come.
-
-Have other questions or feedback about group chat? Post to the [XMTP Community Forums](https://community.xmtp.org/).
+Yes. XMTP [support](/docs/build/group-chat) group chats currently in React Native, Android & IOS (Alpha). At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
 
 ## Rate-limiting
 
