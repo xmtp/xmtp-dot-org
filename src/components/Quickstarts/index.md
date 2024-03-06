@@ -8,5 +8,5 @@
 - <a href="https://github.com/xmtp/xmtp-android" class="plausible-event-name=Quickstart">Android</a>
 - <a href="https://github.com/xmtp/xmtp-ios" class="plausible-event-name=Quickstart">IOS</a>
 - <a href="https://github.com/xmtp/xmtp-react-native" class="plausible-event-name=Quickstart">React Native</a>
-- <a href="https://github.com/xmtp/xmtp-firebase-functions" class="plausible-event-name=Quickstart">Firebase Functions</a>
+- <a href="https://github.com/xmtp/xmtp-quickstart-firebase-functions" class="plausible-event-name=Quickstart">Firebase Functions</a>
 - <a href="https://github.com/xmtp/xmtp-quickstart-node" class="plausible-event-name=Quickstart">NodeJS</a>

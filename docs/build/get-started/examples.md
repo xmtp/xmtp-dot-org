@@ -162,7 +162,7 @@ These projects provide a robust foundation for building your own applications us
   <li><a href="https://github.com/xmtp/xmtp-quickstart-reactjs-next" class="plausible-event-name=Quickstart">Next.js</a><br/><small>Floating Inbox Quickstart app in Next.js. Use it to help you build your own app with XMTP.</small></li>  
   <li><a href="https://github.com/xmtp/xmtp-quickstart-vuejs" class="plausible-event-name=Quickstart">Vue.js</a><br/><small>A tutorial and quickstart app for building a chatbot in VueJS. Use them to help you build your own app with XMTP.</small></li>
   <li><a href="https://github.com/xmtp/xmtp-quickstart-node" class="plausible-event-name=Quickstart">Node.js</a><br/><small>Quickstart code for creating a new XMTP client, initiating a conversation, and sending a message in Node.js</small></li>
-  <li><a href="https://github.com/xmtp/xmtp-firebase-functions" class="plausible-event-name=Quickstart">Firebase Functions</a><br/><small>Quickstart code for integrating an XMTP app with Firebase functions</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-quickstart-firebase-functions" class="plausible-event-name=Quickstart">Firebase Functions</a><br/><small>Quickstart code for integrating an XMTP app with Firebase functions</small></li>
 </ul>
 
 </div>
