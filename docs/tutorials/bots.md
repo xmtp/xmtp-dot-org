@@ -7,7 +7,9 @@ import onboardingbot from '/docs/concepts/img/onboarding-bot.png';
 
 # Build a chatbot
 
-Use the [XMTP Bot Starter project](https://github.com/xmtp/xmtp-bot-starter) to create chatbot on the XMTP network.
+Use the [XMTP Bot Starter package](https://github.com/xmtp/xmtp-node-js-tools/tree/main/packages/bot-starter) to create chatbot on the XMTP network.
+
+You might also be interested in the other packages in the [xmtp-node-js-tool](https://github.com/xmtp/xmtp-node-js-tools) repo.
 
 ## Usage
 

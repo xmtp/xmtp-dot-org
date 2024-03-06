@@ -84,7 +84,7 @@ $ npm start intros list
 $ ...
 ```
 
-Populating test wallets might cause you to exceed the XMTP network rate limit. If this happens, wait 5 minutes and try again.
+Populating test wallets might cause you to exceed the XMTP network rate limit. If this happens, wait 5 minutes and try again. To learn more, see [Rate limiting](/docs/faq#rate-limiting).
 
 ## Test your app
 
@@ -101,7 +101,9 @@ Start by creating a test wallet with ~2,000 conversations and 1,000 messages per
 
 ## Use test message bots and addresses
 
-If helpful for testing, you can create your own message bot, such as `gm.yourappname.eth`, using [ChainJet](https://chainjet.io/) or the [XMTP Bot Starter](https://github.com/xmtp/xmtp-bot-starter). You can use the message bot to receive and send test messages.
+If helpful for testing, you can create your own message bot, such as `gm.yourappname.eth`, using [ChainJet](https://chainjet.io/) or the [XMTP Bot Starter](https://github.com/xmtp/xmtp-node-js-tools/tree/main/packages/bot-starter). You can use the message bot to receive and send test messages.
+
+You might also be interested in the bot-related packages in the [xmtp-node-js-tool](https://github.com/xmtp/xmtp-node-js-tools) repo.
 
 If needed, you can also use these addresses for testing:
 

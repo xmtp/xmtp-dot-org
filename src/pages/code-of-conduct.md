@@ -8,7 +8,26 @@ This code of conduct applies within all XMTP community spaces, virtual and physi
 
 ## Our pledge
 
-We as members pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
+We as members pledge to make participation in our community a harassment-free experience for everyone, regardless of:
+
+- Age
+- Body size
+- Caste
+- Color
+- Education
+- Family status
+- Gender identity and expression
+- Level of experience
+- Marital status
+- National origin
+- Personal appearance
+- Race and/or ethnicity
+- Religion
+- Sex characteristics
+- Sexual identity and orientation
+- Socioeconomic status
+- Visible or invisible disability
+- Any other dimension of diversity
 
 We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
 
@@ -38,10 +57,14 @@ Community moderators have the right and responsibility to remove, edit, or rejec
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior can be reported to the community moderators responsible for enforcement at [conduct@xmtp.org](mailto:conduct@xmtp.org). All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. All community moderators are obligated to respect the privacy and security of the reporter of any incident.
+Instances of unacceptable behavior can be reported to the community moderators responsible for enforcement at [conduct@xmtp.org](mailto:conduct@xmtp.org).
 
-Community moderators who do not follow or enforce the code of conduct in good faith may face temporary or permanent repercussions as determined by other community moderators.
+All reports will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. 
+
+Anyone asked to stop unacceptable behavior is expected to comply immediately. Violation of this code of conduct can result in anyone being asked to leave an event or online space, either temporarily or for the duration of the event, or being banned from participation in spaces, or future events and activities in perpetuity.
+
+All community moderators are obligated to respect the privacy and security of the reporter of any incident. Community moderators who do not follow or enforce the code of conduct in good faith may face temporary or permanent repercussions as determined by other community moderators.
 
 ## Attribution
 
-The XMTP code of conduct is adapted from the Contributor Covenant, [version 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html) and [version 1.4](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html).
+The XMTP code of conduct is adapted from the Contributor Covenant [version 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html) and [version 1.4](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html) as well as the Mozilla Community Participation Guidelines [version 3.1](https://www.mozilla.org/en-US/about/governance/policies/participation/).

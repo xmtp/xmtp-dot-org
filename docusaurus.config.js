@@ -137,7 +137,7 @@ const config = {
               {
                 to: "/docs/use-cases/messaging",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/messaging-icon.svg" alt="Messaging icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Chat apps</div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,
               },
               {
                 to: "/docs/use-cases/deso",
@@ -178,6 +178,16 @@ const config = {
                 to: "/docs/use-cases/dao",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DAOs</div></div>`,
+              },
+              {
+                to: "/docs/use-cases/groups",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/groups.svg" alt="Finance icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Groups</div></div>`,
+              },
+              {
+                to: "/docs/use-cases/frames",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/frames.svg" alt="Finance icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Frames</div></div>`,
               },
             ],
           },
@@ -222,7 +232,7 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
               },
               {
-                to: "https://paragraph.xyz/@xmtp",
+                to: "https://paragraph.xyz/@xmtp_community/",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Marketing icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Newsletter</div></div>`,
               },
@@ -338,6 +348,14 @@ const config = {
                 label: "DAOs",
                 to: "/docs/use-cases/dao",
               },
+              {
+                label: "Groups",
+                to: "/docs/use-cases/groups",
+              },
+              {
+                label: "Frames",
+                to: "/docs/use-cases/frames",
+              },
             ],
           },
 
@@ -378,7 +396,7 @@ const config = {
               },
               {
                 label: "Newsletter",
-                href: "https://paragraph.xyz/@xmtp",
+                href: "https://paragraph.xyz/@xmtp_community/",
               },
             ],
           },

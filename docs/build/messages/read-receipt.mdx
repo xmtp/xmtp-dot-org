@@ -31,7 +31,7 @@ You're welcome to provide feedback by commenting on the [Proposal for read recei
 
 While this is a per-app decision, the best practice is to provide users with the option to opt out of sending read receipts. If a user opts out, when they read a message, a read receipt will not be sent to the sender of the message.
 
-## Configure the read receipt content type
+## Configure the content type
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -258,6 +258,8 @@ if (message.contentTypeId === "xmtp.org/readReceipt:1.0") {
 
 </TabItem>
 </Tabs>
+
+_`ReadReceipts` have an `undefined` or `nil` fallback, indicating the message is not expected to be displayed. Refer to [how handle unsupported content types](/docs/build/messages/#handle-an-unsupported-content-type-error) section._
 
 ## Use a read receipt
 

@@ -94,7 +94,7 @@ This release provides:
 - A Keystore API
 - **[Read the release notes](https://github.com/xmtp/xmtp-js/releases/tag/v8.0.0)** (Apr 13)
 
-## [XMTP bot starter repo](https://github.com/xmtp/xmtp-bot-starter) is public (xmtp-bot-starter)
+## [XMTP bot starter package](https://github.com/xmtp/xmtp-node-js-tools/tree/main/packages/bot-starter) is public (bot-starter)
 
 Provides tools to help you build a bot on the XMTP network. (Apr 11)
 
