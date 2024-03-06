@@ -136,12 +136,12 @@ Wallet connectors are essential components in decentralized applications (dApps)
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-0xpass" class="plausible-event-name=Quickstart">0xPass</a><br/><small>Quickstart app for building a progressive web app (PWA) with a 0xPass wallet connector</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-dynamic" class="plausible-event-name=Quickstart">Dynamic</a><br/><small>Quickstart app for building a PWA with a Dynamic wallet connector</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-metamask" class="plausible-event-name=Quickstart">MetaMask</a><br/><small>Quickstart app for building a PWA with a MetaMask wallet connector</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-privy" class="plausible-event-name=Quickstart">Privy</a><br/><small>Quickstart app for building a PWA with a Privy wallet connector</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-thirdweb" class="plausible-event-name=Quickstart">ThirdWeb</a><br/><small>Quickstart app for building a PWA with a Thirdweb wallet connector</small></li>
-  <li><a href="https://github.com/fabriguespe/xmtp-quickstart-pwa-walletconnect" class="plausible-event-name=Quickstart">WalletConnect</a><br/><small>Quickstart app for building a PWA with a WalletConnect wallet connector</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-quickstart-0xpass" class="plausible-event-name=Quickstart">0xPass</a><br/><small>Quickstart app for building a progressive web app (PWA) with a 0xPass wallet connector</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-quickstart-dynamic" class="plausible-event-name=Quickstart">Dynamic</a><br/><small>Quickstart app for building a PWA with a Dynamic wallet connector</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-quickstart-metamask" class="plausible-event-name=Quickstart">MetaMask</a><br/><small>Quickstart app for building a PWA with a MetaMask wallet connector</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-quickstart-privy" class="plausible-event-name=Quickstart">Privy</a><br/><small>Quickstart app for building a PWA with a Privy wallet connector</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-quickstart-thirdweb" class="plausible-event-name=Quickstart">ThirdWeb</a><br/><small>Quickstart app for building a PWA with a Thirdweb wallet connector</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-quickstart-walletconnect" class="plausible-event-name=Quickstart">WalletConnect</a><br/><small>Quickstart app for building a PWA with a WalletConnect wallet connector</small></li>
 </ul>
 
 </div>
