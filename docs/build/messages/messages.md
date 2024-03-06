@@ -376,7 +376,11 @@ if (!codec) {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-const codec = client.codecFor(content.contentType);
+import { useClient, ContentTypeId } from "@xmtp/react-sdk";
+const { client } = useClient();
+
+const contentType = ContentTypeId.fromString(message.contentType);
+const codec = client.codecFor(contentType);
 if (!codec) {
   /*Not supported content type*/
   if (message.contentFallback !== undefined) {
