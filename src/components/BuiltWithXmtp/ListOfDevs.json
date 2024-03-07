@@ -39,7 +39,7 @@
     "github": "https://github.com/xmtp-labs/xmtp-inbox-web"
   },
   {
-    "name": "Basename",
+    "name": " Base Name Service",
     "href": "https://basename.app",
     "image": "/img/builtWithXmtp/md.png",
     "description": "Web3 naming (.base) for the next billion+ users on Base.",
