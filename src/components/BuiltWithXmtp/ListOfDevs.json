@@ -15,13 +15,6 @@
     "twitter": "https://x.com/converseapp_"
   },
   {
-    "name": "Basename",
-    "href": "https://basename.app",
-    "image": "/img/builtWithXmtp/md.png",
-    "description": "Web3 naming (.base) for the next billion+ users on Base.",
-    "twitter": "https://x.com/basenameapp"
-  },
-  {
     "name": "Phaver",
     "href": "https://phaver.com/",
     "image": "/img/builtWithXmtp/phaver.jpg",
@@ -44,6 +37,13 @@
     "bgColor": "",
     "description": "XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
     "github": "https://github.com/xmtp-labs/xmtp-inbox-web"
+  },
+  {
+    "name": "Basename",
+    "href": "https://basename.app",
+    "image": "/img/builtWithXmtp/md.png",
+    "description": "Web3 naming (.base) for the next billion+ users on Base.",
+    "twitter": "https://x.com/basenameapp"
   },
   {
     "name": "Yup",
