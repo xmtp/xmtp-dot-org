@@ -27,7 +27,7 @@ A quickstart is a brief guide or repo aimed at helping XMTP developers to unders
   <li><a href="/docs/tutorials/portable-consent/broadcast" class="plausible-event-name=Quickstart">Broadcast</a><br/><small>How to build broadcast messaging that checks for user consent</small></li>
   <li><a href="/docs/tutorials/portable-consent/request-inbox" class="plausible-event-name=Quickstart">Request inbox</a><br/><small>How to build consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
   <li><a href="https://github.com/xmtp/xmtp-quickstart-reactjs" class="plausible-event-name=Quickstart">Floating Inbox</a><br/><small>Floating inbox quickstart app in JS. Use it to help you build your own app with XMTP.</small></li>
-  <li><a href="https://github.com/xmtp/xmtp-quickstart-pwa" class="plausible-event-name=Quickstart">Progressive web app</a><br/><small>Quickstart app for building a PWA, which is a way to provide an app without requiring separate bundling or distribution</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-quickstart-pwa" class="plausible-event-name=Quickstart">Progressive web app</a><br/><small>Quickstart app for building an app, which is a way to provide an app without requiring separate bundling or distribution</small></li>
   <li><a href="https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1#index.ts" class="plausible-event-name=Replit">JavaScript live example</a><br/><small>A Repl of a full flow for sending and streaming messages in JavaScript</small></li>
   <li><a href="https://github.com/xmtp/xmtp-nodebooks" class="plausible-event-name=Quickstart">Node.js Notebooks</a><br/><small>Interactive Node.js notebooks (similar to Jupyter) for learning about and experimenting with XMTP</small></li>
 </ul>
@@ -136,11 +136,12 @@ Wallet connectors are essential components in decentralized applications (dApps)
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-dynamic" class="plausible-event-name=Quickstart">Dynamic</a><br/><small>Quickstart app for building a PWA with a Dynamic wallet connector</small></li>
-  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-metamask" class="plausible-event-name=Quickstart">MetaMask</a><br/><small>Quickstart app for building a PWA with a MetaMask wallet connector</small></li>
-  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-privy" class="plausible-event-name=Quickstart">Privy</a><br/><small>Quickstart app for building a PWA with a Privy wallet connector</small></li>
-  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-thirdweb" class="plausible-event-name=Quickstart">ThirdWeb</a><br/><small>Quickstart app for building a PWA with a Thirdweb wallet connector</small></li>
-  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-walletconnect" class="plausible-event-name=Quickstart">WalletConnect</a><br/><small>Quickstart app for building a PWA with a WalletConnect wallet connector</small></li>
+  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-dynamic" class="plausible-event-name=Quickstart">Dynamic</a><br/><small>Quickstart app for building an app with a Dynamic wallet connector</small></li>
+  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-metamask" class="plausible-event-name=Quickstart">MetaMask</a><br/><small>Quickstart app for building an app with a MetaMask wallet connector</small></li>
+  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-privy" class="plausible-event-name=Quickstart">Privy</a><br/><small>Quickstart app for building an app with a Privy wallet connector</small></li>
+  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-thirdweb" class="plausible-event-name=Quickstart">ThirdWeb</a><br/><small>Quickstart app for building an app with a Thirdweb wallet connector</small></li>
+  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-walletconnect" class="plausible-event-name=Quickstart">WalletConnect</a><br/><small>Quickstart app for building an app with a WalletConnect wallet connector</small></li>
+  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-walletconnect" class="plausible-event-name=Quickstart">RainbowKit</a><br/><small>Quickstart app for building with a RainbowKit and Viem wallet connector</small></li>
 </ul>
 
 </div>
