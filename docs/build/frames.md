@@ -21,10 +21,9 @@ _This video shows how its implemented in [xmtp.chat](https://xmtp.chat/inbox)_
 
 These are the foundational tools that allow developers to create, sign, and manage Frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
 
-- [**Install Required Packages**](#install-required-packages): To begin, add the necessary XMTP packages to your project.
-- [**Declare Protocol Compatibility**](#declare-protocol-compatibility): Ensure your application can interact with Frames by declaring protocol compatibility.
-- [**Validate Incoming Messages**](#Validate-Incoming-Messages): Checks if a URL in message content is suitable for frame processing.
-- [**Enable Secure Communication**](#enable-secure-communication): Implements security measures to authenticate and secure frame actions, ensuring the integrity and origin of frame interactions.
+- [**Declare Protocol Compatibility**](#protocol-compatibility): Ensure your application can interact with Frames by declaring protocol compatibility.
+- [**Manage requests**](#manage-requests): Checks if a URL in message content is suitable for frame processing.
+- [**Valida incoming messages**](#validate-incoming-messages): Implements security measures to authenticate and secure frame actions, ensuring the integrity and origin of frame interactions.
 - [**Rendering Chat Frames in your application**](/docs/tutorials/render-frames): This tutorial covers the practical aspects of rendering these frames within an application.
 - [**Exploring Chat Frames Use Cases**](/docs/use-cases/frames): Dive into a comprehensive exploration of how Frames can be innovatively applied across different sectors for inspiration.
 - [**OnChainKit Documentation**](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
