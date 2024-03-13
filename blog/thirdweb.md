@@ -50,10 +50,10 @@ StorageSDK handles the complexities of decentralized file management for you. No
 
 This repository demonstrates the implementation of these concepts within a simple chat app.
 
-[GitHub repo](https://github.com/fabriguespe/xmtp-thirdweb-js)
+[GitHub repo](https://github.com/xmtp/xmtp-quickstart-thirdweb)
 
 ```bash
-git clone git@github.com:fabriguespe/xmtp-thirdweb-js.git
+git clone git@github.com:xmtp/xmtp-quickstart-thirdweb.git
 cd xmtp-thirdweb-js
 npm install
 npm run dev

@@ -11,7 +11,7 @@ import TabItem from "@theme/TabItem";
 
 The XMTP community has been actively discussing and implementing ways to enhance user experience by supporting frames within XMTP applications. An effort in this direction is detailed in a community post [Supporting Frames in XMTP](https://community.xmtp.org/t/supporting-frames-in-xmtp/535).
 
-<video controls src="https://github.com/fabriguespe/xmtp-quickstart-frames/assets/1447073/48c305e8-0212-450b-9a00-b57acb8d14af" width="100%" type="video/mp4">
+<video controls src="https://github.com/xmtp/xmtp-quickstart-node/assets/1447073/7cc4fe16-3e2b-4d81-ade9-217095e52af2" width="100%" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
