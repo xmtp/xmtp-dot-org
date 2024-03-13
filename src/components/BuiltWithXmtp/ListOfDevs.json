@@ -46,6 +46,13 @@
     "twitter": "https://x.com/basenameapp"
   },
   {
+    "name": "Operator",
+    "href": "https://operator.io/",
+    "image": "/img/builtWithXmtp/operator.png",
+    "description": "Decentralized AI agent infrastructure.",
+    "twitter": "https://twitter.com/operator_io"
+  },
+  {
     "name": "Yup",
     "href": "https://yup.io/",
     "image": "/img/builtWithXmtp/yup-logo.jpg",
