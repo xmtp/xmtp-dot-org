@@ -52,7 +52,7 @@ A quickstart is a brief guide or repo aimed at helping XMTP developers to unders
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="https://github.com/xmtp/xmtp-quickstart-reactnative" class="plausible-event-name=Quickstart">React Native</a><br/><small>Quickstart React Native app. Use it to help you build your own app with XMTP.</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-react-native-quickstart" class="plausible-event-name=Quickstart">React Native</a><br/><small>Quickstart React Native app. Use it to help you build your own app with XMTP.</small></li>
   <li><a href="/docs/tutorials/portable-consent/request-inbox-rn" class="plausible-event-name=Quickstart">Request inbox</a><br/><small>How to build consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
   <li><a href="/docs/tutorials/group-chat-rn" class="plausible-event-name=Quickstart">Group Chat</a><br/><small>Quickstart React Native app. Use it to help you build your own group chat with XMTP.</small></li>
 </ul>

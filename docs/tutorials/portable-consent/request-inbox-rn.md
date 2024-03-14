@@ -285,4 +285,4 @@ Consent has really evolved through the years. It started with email, then email 
 
 ### Example repos
 
-React Native example repo [xmtp-rn-request-inbox](https://github.com/xmtp/xmtp-quickstart-react-native-request-inboxx)
+React Native example repo [xmtp-rn-request-inbox](https://github.com/xmtp/xmtp-react-native-quickstart-request-inbox)

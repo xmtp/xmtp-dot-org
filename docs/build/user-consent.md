@@ -548,4 +548,4 @@ For practical examples, see these tutorials:
 ### Example repos
 
 - JS example repo [xmtp-request-inbox](https://github.com/xmtp/xmtp-quickstart-request-inbox)
-- React Native example repo [xmtp-request-inbox](https://github.com/xmtp/xmtp-quickstart-react-native-request-inbox)
+- React Native example repo [xmtp-request-inbox](https://github.com/xmtp/xmtp-react-native-quickstart-request-inbox)

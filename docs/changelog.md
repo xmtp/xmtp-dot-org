@@ -80,7 +80,7 @@ Provides XMTP web SDKs and examples, including a [React SDK](https://github.com/
 
 #### Apr 2023
 
-## [React Native quickstart app repo](https://github.com/xmtp/xmtp-quickstart-react-native) is public (xmtp-quickstart-react-native)
+## [React Native quickstart app repo](https://github.com/xmtp/xmtp--react-native-quickstart) is public (xmtp-quickstart-react-native)
 
 Explore a basic XMTP React Native app that calls through to the [JavaScript client SDK](https://github.com/xmtp/xmtp-js) (`xmtp-js`) via a webview. (Apr 17)
 
