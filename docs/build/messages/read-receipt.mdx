@@ -81,6 +81,9 @@ createRoot(document.getElementById("root") as HTMLElement).render(
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
+import org.xmtp.android.library.Client
+import org.xmtp.android.library.codecs.ReadReceiptCodec
+
 Client.register(codec = ReadReceiptCodec())
 ```
 
@@ -94,7 +97,17 @@ Client.register(codec = ReadReceiptCodec())
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Read receipts for Dart haven't been implemented yet.
+```dart
+import 'package:xmtp/src/content/codec_registry.dart';
+import 'package:xmtp/src/content/decoded.dart';
+import 'package:xmtp/src/content/text_codec.dart';
+import 'package:xmtp/src/content/ReadReceiptCodec.dart';
+
+// Registering
+var registry = CodecRegistry()..registerCodec(TextCodec());
+var codec = ReadReceiptCodec();
+codec.setRegistry(registry);
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -137,8 +150,16 @@ sendMessage(conversation, {}, ContentTypeReadReceipt);
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-val readReceipt = ReadReceipt(timestamp = "2019-09-26T07:58:30.996+0200")
-conversation.send(
+import org.xmtp.android.library.Client
+import org.xmtp.android.library.codecs.ReadReceipt
+import org.xmtp.android.library.codecs.ContentTypeReadReceipt
+import org.xmtp.android.library.messages.SendOptions
+
+// Create a ReadReceipt instance
+val readReceipt = ReadReceipt
+
+// Send the read receipt
+aliceConversation.send(
     content = readReceipt,
     options = SendOptions(contentType = ContentTypeReadReceipt),
 )
@@ -159,7 +180,15 @@ try await conversation.send(
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Read receipts for Dart haven't been implemented yet
+```dart
+// Creating
+var receipt = ReadReceipt();
+
+conversation.send(
+    content = receipt,
+    options = SendOptions(contentType = ContentTypeReadReceipt),
+)
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -245,7 +274,12 @@ content.timestamp // "2019-09-26T07:58:30.996+0200"
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Read receipts for Dart haven't been implemented yet
+```dart
+var decodedContent = await registry.decode(encoded);
+if (decodedContent.contentType == ContentTypeReadReceipt) {
+  // The message is a readReceipt
+}
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
@@ -259,58 +293,14 @@ if (message.contentTypeId === "xmtp.org/readReceipt:1.0") {
 </TabItem>
 </Tabs>
 
+## Display a read receipt
+
 _`ReadReceipts` have an `undefined` or `nil` fallback, indicating the message is not expected to be displayed. Refer to [how handle unsupported content types](/docs/build/messages/#handle-an-unsupported-content-type-error) section._
 
 ## Use a read receipt
 
 Generally, a read receipt indicator should be displayed under the message it's associated with. The indicator can include a timestamp. Ultimately, how you choose to display a read receipt indicator is completely up to you.
 
-:::important
-
 The read receipt is provided as an **empty message** whose timestamp provides the data needed for the indicators. **Be sure to filter out read receipt empty messages and not display them to users.**
 
-:::
-
 You can use a read receipt timestamp to calculate the time since the last message was read. While iterating through messages, you can be sure that the last message was read at the timestamp of the read receipt if the string of the timestamp is lower.
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```jsx
-function checkReadMessages(messages, readReceipt) {
-  return messages.map((message) => {
-    return {
-      ...message,
-      isRead: message.timestamp <= readTimestamp,
-    };
-  });
-}
-```
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-Read receipts for Dart haven't been implemented yet
-
-</TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
-
-Read receipts for React Native haven't been implemented yet
-
-</TabItem>
-</Tabs>

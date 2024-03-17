@@ -88,10 +88,15 @@ Client.register(ReactionCodec());
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-import 'package:xmtp/src/content/reaction_codec.dart';
 import 'package:xmtp/src/content/codec_registry.dart';
+import 'package:xmtp/src/content/decoded.dart';
+import 'package:xmtp/src/content/text_codec.dart';
+import 'package:xmtp/src/content/reaction_codec.dart';
 
-var registry = CodecRegistry()..registerCodec(ReactionCodec());
+// Registering
+var registry = CodecRegistry()..registerCodec(TextCodec());
+var codec = ReactionCodec();
+codec.setRegistry(registry);
 ```
 
 </TabItem>
@@ -108,7 +113,7 @@ const client = await Client.create(signer, {
 </TabItem>
 </Tabs>
 
-## Create a reaction
+## Send a reaction
 
 With XMTP, reactions are represented as objects with the following keys:
 
@@ -161,9 +166,23 @@ await conversation.send(reaction, {
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-import org.xmtp.android.library.codecs.ReactionCodec
+import org.xmtp.android.library.codecs.Reaction
+import org.xmtp.android.library.codecs.ReactionAction
+import org.xmtp.android.library.codecs.ReactionSchema
+import org.xmtp.android.library.codecs.ContentTypeReaction
+import org.xmtp.android.library.SendOptions
 
-Client.register(codec = ReactionCodec())
+val reaction = Reaction(
+    reference = messageToReact.id, // the ID of the message you're reacting to
+    action = ReactionAction.Added, // the action of the reaction
+    content = "U+1F603", // the content of the reaction
+    schema = ReactionSchema.Unicode // the schema of the reaction
+)
+conversation.send(
+    content = reaction,
+    options = SendOptions(contentType = ContentTypeReaction)
+)
+
 ```
 
 </TabItem>
@@ -293,7 +312,11 @@ let content: Reaction = try message.content()
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
 ```dart
-var decoded = await codec.decode(encoded);
+var decodedContent = await registry.decode(encoded);
+if (decodedContent.contentType == ContentTypeReaction) {
+  // The message is a reaction.
+  Reaction receivedReaction = decodedContent.content;
+}
 ```
 
 </TabItem>
