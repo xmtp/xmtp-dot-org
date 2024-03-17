@@ -32,7 +32,7 @@ We are open to any and all ideas! Below are just a few categories of projects we
 - Gitcoin messaging
 - Pay to message
 
-### 🎒 Portable consent backpack
+### 🎒 Allow/block backpack
 
 - Follow
 - Block/spam
@@ -74,7 +74,7 @@ We offer two types of grants: Micro grants and Kickstarter grants.
 - Bigger project scope, fast review process
 - Examples:
   - Cross-chain support or account abstraction
-  - Portable and interoperable consent backpack
+  - Universal allow/block backpack
 
 📣 If you are unsure, message us via XMTP at `grants.xmtp.eth` and we'll be happy to help you figure out the grant type that's right for you.
 

@@ -76,12 +76,6 @@ Many projects like ENS, Polygon, BASE, Lens and Linea [have used this combinatio
 
 Trivia Town was a way of showcasing how you can take this a step further, to create a fun and engaging experience that users want to come back to.
 
-:::info Looking to launch a similar experience?
-
-💡 DM me at prxshant.eth, and let’s make it happen!
-
-:::
-
 <div className="imgs" style={{width: "70%"}}>
 
 ![](./media/trivia/1.png)

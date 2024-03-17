@@ -19,7 +19,7 @@ You're welcome to provide feedback by commenting on the [Proposal for Reply cont
 
 :::
 
-## Configure the reply content type
+## Configure the content type
 
 In some SDKs, the `ReplyCodec` is already included in the SDK. If not, you can install the package using the following command:
 
@@ -229,7 +229,7 @@ await conversation.send(replyContent);
 </TabItem>
 </Tabs>
 
-## Receive a reply
+## Receive the content type
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
@@ -330,6 +330,8 @@ if (message.contentTypeId === "xmtp.org/reply:1.0") {
 
 </TabItem>
 </Tabs>
+
+_To handle unsupported content types, refer to the [fallback](/docs/build/messages/#handle-an-unsupported-content-type-error) section._
 
 ## Display the reply
 

@@ -15,6 +15,8 @@ The message payload can be a plain string, but you can configure custom content 
 
 To send a message, the recipient must have already started their client at least once and consequently advertised their key bundle on the network.
 
+Messages are limited to just short of 1MB (1048214 bytes) . Use [remote attachments](/docs/build/messages/remote-attachment) to support larger messages.
+
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
@@ -334,31 +336,39 @@ const conversation = await xmtp.conversations.newConversation(
 for await (const page of conversation.messages(limit: 25)) {
   for (const msg of page) {
     // Breaking from the outer loop will stop the client from requesting any further pages
-    if (msg.content === 'gm') {
+    if (msg?.content() === 'gm') {
       return
     }
-    console.log(msg.content)
   }
 }
 ```
 
 </TabItem>
 </Tabs>
+ 
+## Note on Group Chats
 
-## Handle an unsupported content type error
+The methods for sending and listing messages, as well as handling unsupported content types, are applicable to both one-on-one and group conversations within XMTP. This means you can use the same approach to manage messages in group chats as you would in individual conversations.
 
-As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types enter the XMTP ecosystem, your app might receive a content type your app doesn't support. This could crash your app.
+For additional information on group chat-specific features, such as managing group members or listening for new messages in a group chat, please see the [Group Chat](/docs/build/group-chat) documentation.
+
+## Handle unsupported content types
+
+As more [custom](/docs/concepts/content-types#create-a-custom-content-type) and [standards-track](/docs/concepts/content-types#standards-track-content-types) content types are introduced into the XMTP ecosystem, your app may encounter content types it does not support. This situation, if not handled properly, could lead to app crashes.
+
+Each message is accompanied by a `contentFallback` property, which offers a descriptive string representing the content type's expected value. It's important to note that content fallbacks are immutable and are predefined in the content type specification. In instances where `contentFallback` is `undefined`, such as read receipts, it indicates that the content is not intended to be rendered. If you're venturing into creating custom content types, you're provided with the flexibility to specify a custom fallback string. For a deeper dive into this, consider exploring the [Custom Content Type Tutorial](/docs/tutorials/custom-ct).
 
 <Tabs groupId="sdk-langs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-To avoid crashing your app, code your app to detect, log, and handle the error. For example:
-
 ```jsx
-const codec = xmtp.codecFor(content.contentType);
+const codec = client.codecFor(content.contentType);
 if (!codec) {
-  const fallback = `missing codec for content type "${content.contentType.toString()}"`;
-  throw new Error(fallback);
+  /*Not supported content type*/
+  if (message.contentFallback !== undefined) {
+    return message.contentFallback;
+  }
+  // Handle other types like ReadReceipts which are not mean to be displayed
 }
 ```
 
@@ -366,47 +376,81 @@ if (!codec) {
 <TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
 ```tsx
-// If you wish to display an unsupported content type, there’s a contentFallback
-// property that may include a useful string. However, it is recommended that
-// you manually process unsupported content types.
-import { ContentTypeId } from "@xmtp/xmtp-js";
-import { ContentTypeAttachment } from "@xmtp/content-type-remote-attachment";
+import { useClient, ContentTypeId } from "@xmtp/react-sdk";
+const { client } = useClient();
 
-const MessageContent = ({ message }) => {
-  if (
-    message.content === undefined &&
-    ContentTypeId.fromString(message.contentType).sameAs(ContentTypeAttachment)
-  ) {
-    return "This message contains an attachment, which is not supported by this client.";
+const contentType = ContentTypeId.fromString(message.contentType);
+const codec = client.codecFor(contentType);
+if (!codec) {
+  /*Not supported content type*/
+  if (message.contentFallback !== undefined) {
+    return message.contentFallback;
   }
-};
+  // Handle other types like ReadReceipts which are not mean to be displayed
+}
 ```
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
-Code sample coming soon
+```kotlin
+val codec = client.codecRegistry.find(options?.contentType)
+if (!codec) {
+  /*Not supported content type*/
+  if (message.contentFallback != null) {
+    return message.contentFallback
+  }
+  // Handle other types like ReadReceipts which are not meant to be displayed
+}
+```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```swift
+let codec = client.codecRegistry.find(for: contentType)
+if (!codec) {
+  /*Not supported content type*/
+  if (message.contentFallback != null) {
+    return message.contentFallback
+  }
+  // Handle other types like ReadReceipts which are not meant to be displayed
+}
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-Code sample coming soon
+Dart doesnt have a public method for checking if the content type is registered. Instead the decode function uses this method internally and returns the `encoded.fallback` if exists.
+
+```dart
+import 'package:xmtp_proto/xmtp_proto.dart' as xmtp;
+import 'package:xmtp/src/content/codec_registry.dart';
+import 'package:xmtp/src/content/text_codec.dart';
+
+// Create a CodecRegistry and register a TextCodec
+var registry = CodecRegistry();
+registry.registerCodec(TextCodec());
+// Use the registry to decode the content
+var decoded = await registry.decode(encoded);
+//if the content type doesn't exists. will return `encoded.fallback`
+if (decoded == null) {
+  // Handle other types like ReadReceipts which are not meant to be displayed
+}
+```
 
 </TabItem>
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```jsx
-if(/*Not supported content type*/){
-  return message?.fallback ? (
-    message?.fallback
-  ) : (
-    <div style={styles.RenderedMessage}>"Message not supported"</div>
-  );
+//contentTypeID has the following structure `${contentType.authorityId}/${contentType.typeId}:${contentType.versionMajor}.${contentType.versionMinor}`;
+const isRegistered = message.contentTypeID in client.codecRegistry;
+if (!isRegistered) {
+  // Not supported content type
+  if (message?.fallback != null) {
+    return message?.fallback;
+  }
+  // Handle other types like ReadReceipts which are not meant to be displayed
 }
 ```
 

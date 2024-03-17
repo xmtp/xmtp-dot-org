@@ -19,7 +19,7 @@ You're welcome to provide feedback by commenting on the [Proposal for emoji reac
 
 :::
 
-## Configure the reaction content type
+## Configure the content type
 
 In some SDKs, the `ReactionCodec` is already included in the SDK. If not, you can install the package using the following command:
 
@@ -324,7 +324,7 @@ if (decodedContent.contentType == ContentTypeReaction) {
 
 ```jsx
 if (message.contentTypeId === "xmtp.org/reaction:1.0") {
-  const reaction = await message.content();
+  const reaction = message.content();
   return reaction;
   //reaction.reference = id of the message being reacted to,
   //reaction.action = 'added',
@@ -335,6 +335,8 @@ if (message.contentTypeId === "xmtp.org/reaction:1.0") {
 
 </TabItem>
 </Tabs>
+
+_To handle unsupported content types, refer to the [fallback](/docs/build/messages/#handle-an-unsupported-content-type-error) section._
 
 ## Display the reaction
 

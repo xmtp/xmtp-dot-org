@@ -146,14 +146,6 @@ Here are **just a few** of the chains supported by XMTP:
   </a>
 </div>
 
-:::tip
-
-Want to propose a path to compatibility for other popular chains such as Aptos, Bitcoin, Cosmos, Flow, Hedera Hashgraph, Polkadot, Solana, Starkware, Stellar, Sui, and Tezos? Do it via an [XMTP grant](/grants)!
-
-Have you built with a tool that works well with XMTP? Let's add it to this page. Share your experience with `prxshant.eth` on [xmtp.chat](https://xmtp.chat/inbox) or using the feedback widget at the bottom of this page.
-
-:::
-
 ### Does XMTP work with smart contract wallets?
 
 XMTP doesn't currently support smart contract wallets. XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets). It also works with externally owned accounts (EOAs) on Ethereum and Ethereum side-chains and L2s.
@@ -198,7 +190,7 @@ These network nodes operate in US jurisdiction in compliance with Office of Fore
 
 To explore the software for the nodes that currently form the XMTP network, see the [xmtp-node-go repo](https://github.com/xmtp/xmtp-node-go).
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
+XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal ](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
 
 Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes all over the world. Decentralization is a top priority and is required to ensure that XMTP is able to serve everyone on the planet.
 
@@ -212,7 +204,7 @@ XMTP Labs is researching various consensus protocols that would allow the networ
 
 Yes, you will be able to run a node.
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more, see [XMTP: The journey to decentralization](/blog/journey-to-decentralization).
+XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
 
 ### What is the relationship between Waku and XMTP?
 
@@ -230,43 +222,45 @@ Clients communicate with XMTP nodes through a gRPC (or JSON/HTTP) [message API](
 
 XMTP provides perceptibly real-time message delivery and retrieval. The network does not provide service level guarantees.
 
-### Is there a way to get a list of all current XMTP-enabled wallets ?
+### Is there a way to get a list of all current XMTP-enabled wallets?
 
-We don't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. However, you could consider utilizing a third-party service like Airstack. They have compiled an extensive list of XMTP addresses by querying our canMessage API over time at a rate that avoids hitting the limits. This approach could be a time-efficient alternative for you.
+XMTP doesn't provide a direct method to fetch all XMTP-enabled wallet addresses in bulk. You might consider using a third-party service to do so instead of building the functionality yourself.
+
+For example, services like [Airstack](https://www.airstack.xyz/) and [Blaze](https://www.withblaze.app/) have compiled extensive lists of XMTP addresses by querying the XMTP `canMessage` API over time at a rate that avoids hitting the limits.
 
 ### Does XMTP support group chat?
 
-Not yet. Despite efforts to build group chat with XMTP v2 (the current protocol version), protocol limitations prevented group chat from meeting XMTP's robust security standards. Efforts have shifted to updating the protocol to support secure group chat. More details to come. 
+Yes! XMTP v3 alpha supports group chats in React Native, Android, and IOS SDks. However, the JavaScript SDK currently lacks support for group chat functionalities. If you want to integrate backend features, you can use the CLI, which provides a viable solution as described in this [repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). You can also check out a practical implementation example available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts).
 
-Have other questions or feedback about group chat? Post to the [XMTP Community Forums](https://community.xmtp.org/).
-
-## Rate Limiting
+## Rate-limiting
 
 ---
 
-### How does network rate limiting work?
+### How does network rate-limiting work?
 
-Currently, XMTP network nodes are configured to rate limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node.
+Currently, XMTP network nodes are configured to rate-limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node.
 
-XMTP Labs is capable of rate limiting the network while we are the only node operators. Rate limiting is a consideration in our research into economic spam controls. Ultimately, rate limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
+XMTP Labs is capable of rate-limiting the network while we are the only node operators. Rate-limiting is a consideration in our research into economic spam controls. Ultimately, rate-limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
 
-### What are the API rate limits?
+### What are the API rate-limits?
 
 - 1,000 publish requests per 5 minutes.
 - 10,000 general requests per 5 minutes.
 - Nodes allow 40,000 reads per 5 minutes.
 
+If your requirements exceed these limits, [submit this form](https://docs.google.com/forms/d/e/1FAIpQLSftr558wsYD2X_0c1Jsz6rTxua1f1DDJidAn7iphJVc48l7Fw/viewform) to share more details with the XMTP Labs team.
+
 ### What happens if I exceed the limits?
 
 You'll get an HTTP 429 error and must wait for the next 5-minute window.
 
-Tips for Staying Within Limits
+Tips for staying within limits:
 
-- Spread out your requests over 5 minutes.
+- Spread your requests over 5 minutes.
 - Use smaller batches for large queries.
 - Introduce a brief delay between calls.
 - Use multiple IPs to make requests.
-- Bulk canMessage makes api calls in 50 address batches
+- Bulk `canMessage` makes API calls in 50-address batches.
 
 By being aware of these limits and planning accordingly, you can avoid rate-limiting issues.
 
@@ -366,18 +360,22 @@ To learn more about the XMTP improvement proposals governance process, see [What
 
 Have other questions or ideas about message formats and metadata? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
+### Does XMTP have a maximum message size?
+
+Yes. Messages sent on the XMTP network are limited to just short of 1MB (1048214 bytes).
+
+For this reason, XMTP supports [message attachments](#does-xmtp-support-message-attachments).
+
 ### Does XMTP support message attachments?
 
 Yes, via two XMTP improvement proposals that are currently in review status:
 
-- [XIP-15](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-15-attachment-content-type.md): Attachment content type
+- [XIP-15](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-15-attachment-content-type.md): Attachment content type  
+  Attachment size is limited to just short of 1MB (1048214 bytes). To support larger attachments, use the remote attachment content type.
+
 - [XIP-17](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-17-remote-attachment-content-type-proposal.md): Remote attachment content type
 
-To learn more about how to implement message attachments in your app, see:
-
-- For apps using the JavaScript client SDK (`xmtp-js`), see [Remote attachment content type](/docs/build/messages/remote-attachment).
-
-- For apps using the Swift client SDK (`xmtp-ios`), see [Send a remote attachment](https://github.com/xmtp/xmtp-ios#send-a-remote-attachment).
+To learn how to implement message attachments in your app, see [Support attachments in your app](/docs/build/messages/remote-attachment).
 
 ### Does XMTP support deleting and editing messages?
 

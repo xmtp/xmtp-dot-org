@@ -322,6 +322,12 @@ for (const conversation of allConversations) {
 </TabItem>
 </Tabs>
 
+## Note on Group Chats
+
+All the features and methods described in this document, including starting new conversations, checking if an address is on the network, and listing existing conversations, also apply to group chats. XMTP's approach to conversations is designed to be consistent across both one-on-one and group conversations, ensuring a seamless development experience.
+
+For more details about building group chat specifically, refer to the [Group Chat](/docs/build/group-chat) documentation.
+
 ## Cache the conversation list
 
 When running in a browser, conversations are cached in `LocalStorage` by default. Running `client.conversations.list()` will update that cache and persist the results to the browser's `LocalStorage`. The data stored in `LocalStorage` is encrypted and signed using the Keystore's identity key so that attackers cannot read the sensitive contents or tamper with them. Caching the conversation list can improve performance by up to 90%.
@@ -362,40 +368,7 @@ val conversations = JSON.parse(loadConversationsFromSomewhere())
 val client.importConversation(conversations)
 ```
 
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-</Tabs>
-
-## Serialize/Deserialize conversations
-
-You can save a conversation object locally using its `encodedContainer` property. This returns a `ConversationContainer` object which conforms to `Codable`.
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-Not applicable
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-Not applicable
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+**Serialize/Deserialize conversations**: You can save a conversation object locally using its `encodedContainer` property. This returns a `ConversationContainer` object which conforms to `Codable`.
 
 ```kotlin
 // Get a conversation
@@ -418,6 +391,8 @@ decodedConversation.send(text = "hi")
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+**Serialize/Deserialize conversations**: You can save a conversation object locally using its `encodedContainer` property. This returns a `ConversationContainer` object which conforms to `Codable`.
 
 ```swift
 // Get a conversation

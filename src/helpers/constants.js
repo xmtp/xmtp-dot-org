@@ -54,6 +54,19 @@ const tags = {
 
 export const BLOG_DATA = [
   {
+    tag: [tags.announcements, tags.developers, tags.privacySecurity],
+    title: "New Inbox Protection on XMTP",
+    content: 
+           "XMTP is getting an essential protocol update that brings users’ allow/block preferences to the network-level",
+    user: {
+      name: "Rochelle Guillou",
+      date: "15 Feb 2024 · 3 min read",
+      img: "rochelle-headshot.jpeg",
+      url: "https://x.com/RochelleSophie_",
+    },
+    url: "/blog/inbox",
+  },
+  {
     tag: [tags.developers, tags.messaging, tags.privacySecurity],
     title: "Navigating speed and privacy with XMTP",
     content: 
@@ -78,19 +91,6 @@ export const BLOG_DATA = [
       url: "https://x.com/RochelleSophie_",
     },
     url: "/blog/eth-online-awards-2023",
-  },
-  {
-    tag: [tags.announcements, tags.builtwithxmtp, tags.messaging],
-    title: "Building communities across apps",
-    content: 
-           "The web3 advantage of using Paragraph for content distribution",
-    user: {
-      name: "Rochelle Guillou",
-      date: "20 Nov 2023 · 4 min read",
-      img: "rochelle-headshot.jpeg",
-      url: "https://x.com/RochelleSophie_",
-    },
-    url: "/blog/paragraph",
   },
 ];
 

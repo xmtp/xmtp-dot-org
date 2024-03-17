@@ -10,24 +10,30 @@ Timelines are estimates and subject to change. For information about delivered f
 
 ### Q4
 
-- Allow/denylist user preferences available in all SDKs
+- ✅ Universal allow/block preferences available in all SDKs  
+  To learn more, see [Universal allow/block preferences](/docs/build/user-consent).
 
 ## 2024 milestones
 
 ### Q1
 
-- [Group chat via Messaging Layer Security (MLS)](https://github.com/xmtp/roadmap/milestone/1) in alpha
-- [Contact directory via did:ethr](https://github.com/xmtp/roadmap/milestone/5) in alpha
-- [XMTP testnet](https://github.com/xmtp/roadmap/milestone/6) in alpha
+- ✅ Group chat via Messaging Layer Security (MLS) in alpha  
+  To learn more, see [Build group chat with XMTP](/docs/build/group-chat).
+
+- Contact directory via did:ethr in alpha
+
+- XMTP testnet in alpha
 
 ### Q2
 
 - [Group chat via MLS](https://github.com/xmtp/roadmap/milestone/2) in production
+
 - [XMTP testnet](https://github.com/xmtp/roadmap/milestone/7) in production
 
 ### Q3
 
 - [1:1 chats via MLS](https://github.com/xmtp/roadmap/milestone/3) in production
+
 - [XMTP mainnet](https://github.com/xmtp/roadmap/milestone/8) in alpha
 
 ### Q4
@@ -36,12 +42,10 @@ TBD
 
 ## Release cycles
 
-Prior roadmaps combined multiple features into a single versioned release, such as XMTP v1 and v2.
-
-Going forward, individual features will be released as they become available. For example, group chat, contact directory, key revocation, etc.
-
 We typically follow this release cycle for new features:
 
 - **Alpha**: Super early peek into the feature being built. Not ready for use in production apps.
+
 - **Beta**: Opportunity to test, validate, and provide feedback. Not ready for use in production apps.
+
 - **Production**: Ready for use in production apps.
