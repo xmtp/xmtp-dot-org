@@ -1,13 +1,19 @@
 ---
-sidebar_label: Custom content type
+sidebar_label: Send a transaction
 sidebar_position: 10
-description: Learn how to build custom content types for use with XMTP
+description: Send token transaction hashes
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Build custom content types for use with XMTP
+# Send token transaction hashes
+
+:::caution
+
+Be aware that your custom content type may not be automatically recognized or supported by other applications, which could result in it being overlooked or only its fallback text being displayed.
+
+:::
 
 Building a custom content type enables you to manage data in a way that is more personalized or specialized to the needs of your app.
 
@@ -15,173 +21,7 @@ For more common content types, you can usually find a [standard](/docs/concepts/
 
 If your custom content type generates interest within the developer community, consider proposing it as a standard content type through the [XIP process](/docs/concepts/xips).
 
-This tutorial covers how to build two example custom content types:
-
-- A basic example of a custom content type that multiplies two numbers
-
-- An advanced example of a custom content type that sends transaction hashes on the Polygon blockchain. This example also describes how to use the custom content type to render the transaction hash.
-
-## Basic: Multiply numbers using a custom content type
-
-Build a custom content type to multiply numbers.
-
-1. Create the custom content type by creating a new file
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```jsx
-import { ContentTypeId } from "@xmtp/xmtp-js";
-
-// Create a unique identifier for your content type
-const ContentTypeMultiplyNumbers = new ContentTypeId({
-  authorityId: "your.domain",
-  typeId: "multiply-number",
-  versionMajor: 1,
-  versionMinor: 0,
-});
-
-// Define the MultiplyCodec class
-class ContentTypeMultiplyNumberCodec {
-  get contentType() {
-    return ContentTypeMultiplyNumbers;
-  }
-
-  // The encode method accepts an object with two numbers (a, b) and encodes it as a byte array
-  encode({ a, b }) {
-    return {
-      type: ContentTypeMultiplyNumbers,
-      parameters: {},
-      content: new TextEncoder().encode(JSON.stringify({ a, b })),
-    };
-  }
-
-  // The decode method decodes the byte array, parses the string into numbers (a, b), and returns their product
-  decode(content: { content: any }) {
-    const uint8Array = content.content;
-    const { a, b } = JSON.parse(new TextDecoder().decode(uint8Array));
-    return a * b;
-  }
-}
-```
-
-</TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
-
-```jsx
-const ContentTypeNumber: ContentTypeId = {
-  authorityId: 'yourdomain.org',
-  typeId: 'number',
-  versionMajor: 1,
-  versionMinor: 0,
-}
-
-class NumberCodec implements JSContentCodec<number> {
-  contentType = ContentTypeNumber
-
-  // a completely absurd way of encoding number values
-  encode(content: number): EncodedContent {
-    return {
-      type: ContentTypeNumber,
-      parameters: {
-        number: JSON.stringify(content),
-      },
-      content: new Uint8Array(),
-    }
-  }
-  decode(encodedContent: EncodedContent): number {
-    return JSON.parse(encodedContent.parameters.number) as number
-  }
-
-  fallback(content: number): string | undefined {
-    return 'A number was sent.'
-  }
-}
-```
-
-</TabItem>
-</Tabs>
-
-2. Import and register the custom content type.
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```jsx
-import { ContentTypeMultiplyNumberCodec } from "./xmtp-content-type-multiply-number";
-
-const xmtp = await Client.create(signer, {
-  env: "dev",
-});
-xmtp.registerCodec(new ContentTypeMultiplyNumberCodec());
-```
-
-</TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
-
-```jsx
-import { NumberCodec } from "./xmtp-content-type-number";
-
-const client = await Client.create({
-  env: "production",
-  codecs: [new NumberCodec()],
-});
-```
-
-</TabItem>
-</Tabs>
-
-3. Send a message using the custom content type. This code sample demonstrates how to use the `MultiplyCodec` custom content type to perform multiplication operations.
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```jsx
-const numbersToMultiply = { a: 3, b: 7 };
-
-conversation.send(numbersToMultiply, {
-  contentType: ContentTypeMultiplyNumbers,
-});
-```
-
-</TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
-
-```jsx
-await conversation.send(12, { contentType: ContentTypeNumber });
-```
-
-</TabItem>
-</Tabs>
-
-4. To use the result of the multiplication operation, add a renderer for the custom content type.
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```jsx
-if (message.contentType.sameAs(ContentTypeMultiplyNumber)) {
-  return message.content; // 21
-}
-```
-
-</TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
-
-Because of this message content is now a function which returns the actual content. You can get that content by call `message.content()` now instead of message.content . This may involve more filtering on the message side to make sure you are handling different contentTypes appropriately.
-
-```jsx
-if (message.contentTypeId === "yourdomain.org/number:1.0") {
-  return message.content(); // 12
-}
-```
-
-</TabItem>
-</Tabs>
-
-## Advanced: Send token transaction hashes
-
-Build a custom content type to send transaction hashes on the Polygon blockchain.
+This tutorial covers how to build a custom content type that sends transaction hashes on the Polygon blockchain. This example also describes how to use the custom content type to render the transaction hash.
 
 1. Create the custom content type by creating a new file, `xmtp-content-type-transaction-hash.tsx`. This file hosts the `TransactionHash` class for encoding and decoding the custom content type.
 

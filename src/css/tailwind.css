@@ -58,6 +58,7 @@
     --nav-searchbox-shadow: inset 0 0 0 1px rgb(220, 220, 220);
     --dropdown-subtext-color: #475569;
     --build-xmtp-img-url: url("/img/build-xmtp.png");
+    --docusaurus-details-decoration-color: black;
   }
   [data-theme="light"] {
     --ifm-footer-background-color: #171717;
@@ -1601,4 +1602,29 @@ pre code {
 }
 .rabbit p {
   margin: 0px !important;
+}
+
+.quickstarts-tabs ul {
+  padding: 10px !important;
+  list-style-type: disc !important;
+}
+.quickstarts-tabs ul li {
+  list-style-type: disc !important;
+  width: 47%;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  vertical-align: top;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.quickstarts-tabs a {
+  font-weight: bold !important;
+}
+
+@media (max-width: 640px) {
+  .quickstarts-tabs ul li {
+    width: 100%;
+  }
 }

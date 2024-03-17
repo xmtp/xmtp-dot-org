@@ -18,19 +18,13 @@ At a high level, there are three categories of content types with XMTP:
 - Standards-track
 - Custom
 
-#### Experimental playground 🎲
-
-To explore implementations of standard and standards-track content types, see the XMTP React playground:
-
-[GitHub repo](https://github.com/xmtp/xmtp-react-playground) | [Web app](https://xmtp.github.io/xmtp-react-playground/#/new)
-
 ## Standard content types
 
 A standard content type is one that has undergone the XMTP Request for Comment (XRC) process and has been adopted as an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs#readme) (XIP).
 
 Once adopted, a standard content type is bundled in XMTP client SDKs. A developer can then import the standard content type from an SDK for use in their app.
 
-Here are the current standard content types:
+Here is the current standard content type:
 
 ### Text content type
 
@@ -81,21 +75,6 @@ await conversation.send("gm");
 
 </TabItem>
 </Tabs>
-
-### Composite content type
-
-If you want your app to be able to send multiple content types; such as any combination of plain text, images, audio, and video; in a single message, you must set up your app to use the `CompositeCodec` standard content type.
-
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
-
-```jsx
-import { CompositeCodec } from "@xmtp/xmtp-js";
-//xmtp = await Client.create(signer, { env: "dev" });
-xmtp.registerCodec(new CompositeCodec());
-```
-
-</TabItem></Tabs>
 
 ## Standards-track content types
 
@@ -161,7 +140,7 @@ For example, if you need a content type that isn't covered by a standard or stan
 
 :::caution
 
-Your custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.
+Be aware that your custom content type may not be automatically recognized or supported by other applications, which could result in it being overlooked or only its fallback text being displayed.
 
 :::
 
@@ -171,7 +150,7 @@ Fallback plain text is "alt text"-like description text that you can associate w
 
 Here are tutorials you can use to learn how to create custom content types:
 
-### [Basic: Multiply a number](/docs/tutorials/custom-ct)
+### [Basic: Multiply Number](/docs/build/messages/custom)
 
 Create a custom content type used to multiply numbers.
 

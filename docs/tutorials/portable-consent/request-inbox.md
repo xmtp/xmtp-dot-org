@@ -7,11 +7,11 @@ sidebar_position: 6
 
 Managing user consent is essential for enhancing privacy and the user experience. Providing user consent features in your app gives your users better control over who can send them messages.
 
-If you already have an XMTP app, integrating portable consent features becomes crucial. This guide walks you through adding consent logic to your app.
+If you already have an XMTP app, integrating universal allow/block features becomes crucial. This guide walks you through adding consent logic to your app.
 
 <div class=" rabbit  p-5 ">
 
-📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-inbox-portable-consent">inbox-portable-consent</a>
+📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/xmtp/xmtp-quickstart-request-inbox">request-inbox</a>
 
 </div>
 
@@ -176,4 +176,4 @@ Consent has really evolved through the years. It started with email, then email 
 
 ### Example repos
 
-JS example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
+JS example repo [xmtp-request-inbox](https://github.com/xmtp/xmtp-quickstart-request-inbox)

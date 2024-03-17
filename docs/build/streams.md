@@ -106,14 +106,31 @@ await listening.cancel();
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-const stream = await xmtp.conversations.stream();
-for await (const conversation of stream) {
-  console.log(`New conversation started with ${conversation.peerAddress}`);
-  // Say hello to your new friend
-  await conversation.send("Hi there!");
-  // Break from the loop to stop listening
-  break;
-}
+import { useXmtp } from "@xmtp/react-native-sdk";
+const { client } = useXmtp();
+
+useEffect(() => {
+  const streamConversations = async () => {
+    const unsubscribe = client.conversations.stream((conversation) => {
+      console.log("Streamed conversation:", conversation);
+
+      setConversations((prevConversations) => {
+        const newConversations = [...prevConversations, conversation];
+        return newConversations.sort(
+          (a, b) => new Date(b.createdAt) - new Date(a.createdAt),
+        );
+      });
+    });
+
+    // Optional: return a cleanup function to unsubscribe when the component unmounts
+    return () => {
+      console.log("Unsubscribing from conversation stream");
+      //unsubscribe();
+    };
+  };
+
+  streamConversations();
+}, []);
 ```
 
 </TabItem>
@@ -229,16 +246,21 @@ await listening.cancel();
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-const conversation = await xmtp.conversations.newConversation(
-  "0x3F11b27F323b62B159D2642964fa27C46C841897",
-);
-for await (const message of await conversation.streamMessages()) {
-  if (message.senderAddress === xmtp.address) {
-    // This message was sent from me
-    continue;
-  }
-  console.log(`New message from ${message.senderAddress}: ${message.content}`);
-}
+useEffect(() => {
+  // Define the callback function to be called for each new message
+  const handleMessage = async (message) => {
+    console.log(
+      `New message from ${message.senderAddress}: ${message.content()}`,
+    );
+    setMessages((prevMessages) => updateMessages(prevMessages, message));
+  };
+
+  // Optional: return a cleanup function to unsubscribe when the component unmounts
+  return () => {
+    console.log("Unsubscribing from message stream");
+    // unsubscribe();
+  };
+}, []);
 ```
 
 </TabItem>
@@ -300,12 +322,29 @@ export const StreamAllMessages: React.FC = () => {
 </TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
-Code sample coming soon
+```kotlin
+client.conversations.streamAllMessages().collect {
+    if (it.senderAddress == client.address) {
+        // This message was sent from me
+    }
+
+    print("New message from ${it.senderAddress}: ${it.body}")
+}
+```
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-Code sample coming soon
+```swift
+for try await message in client.conversations.streamAllMessages() {
+  if message.senderAddress == client.address {
+    // This message was sent from me
+    continue
+  }
+
+  print("New message from \(message.senderAddress): \(message.body)")
+}
+```
 
 </TabItem>
 <TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
@@ -316,13 +355,123 @@ Code sample coming soon
 <TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
 
 ```tsx
-for await (const message of await xmtp.conversations.streamAllMessages()) {
-  if (message.senderAddress === xmtp.address) {
-    // This message was sent from me
-    continue;
-  }
-  console.log(`New message from ${message.senderAddress}: ${message.content}`);
+import { useXmtp } from "@xmtp/react-native-sdk";
+
+const { client } = useXmtp();
+
+useEffect(() => {
+  const startMessageStream = () => {
+    const unsubscribe = client.conversations.streamAllMessages((message) => {
+      console.log(
+        `New message from ${message.senderAddress}: ${message.content}`,
+      );
+    });
+
+    // Optional: return a cleanup function to unsubscribe when the component unmounts
+    return () => {
+      console.log("Unsubscribing from message stream");
+      // unsubscribe();
+    };
+  };
+
+  startMessageStream();
+}, []);
+```
+
+</TabItem>
+</Tabs>
+
+## Listen for group chat updates
+
+Monitor updates in group chats, including member management activities like adding and removing members as well as the creation of new group chats.
+
+<Tabs groupId="groupchats">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+// Stream updates for all group conversations
+val groupsStream = client.conversations.streamGroups()
+
+groupsStream.collect { group ->
+    println("New or updated group: ${group.id}")
 }
+```
+
+Keep your conversation list current by streaming updates for both group and individual conversations using `includeGroups`.
+
+```kotlin
+// Stream updates for all conversations, including individual and groups
+val conversationStream = client.conversations.stream(includeGroups = true)
+
+conversationStream.collect { conversation ->
+    println("New or updated conversation: ${conversation.id}")
+}
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+// Stream updates for all group conversations
+for try await group in client.conversations.streamGroups() {
+    print("New or updated group: \(group.id)")
+}
+```
+
+And for streaming all conversations, including individual and groups:
+
+```swift
+// Stream updates for all conversations, including individual and groups
+for try await conversation in client.conversations.streamAll() {
+    print("New or updated conversation: \(conversation.id)")
+}
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample expected for Q2 2024
+
+</TabItem>
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+// Listen for group chat updates
+const streamGroups = async (client) => {
+  const groups = [];
+  const cancelStreamGroups = await client.conversations.streamGroups(
+    (group) => {
+      groups.push(group);
+    },
+  );
+
+  // Use cancelStreamGroups() to stop listening to group updates
+};
+```
+
+And for streaming all conversations, including individual and groups:
+
+```jsx
+const streamAllConversations = async (client) => {
+  const allConvos = [];
+  const cancelStreamAll = await client.conversations.streamAll(
+    (conversationContainer) => {
+      allConvos.push(conversation);
+    },
+  );
+
+  // Use cancelStreamAll() to stop listening to all conversation updates
+};
 ```
 
 </TabItem>
