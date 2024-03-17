@@ -8,7 +8,7 @@ sidebar_position: 10
 This guide will walk you through the creation of a consent management system. This system will allow users to control their consent preferences for your messages or notifications. By leveraging XMTP, this tutorial offers tools to build a consent management system that respects user preferences and protects their privacy.
 
 <div class=" rabbit  p-5 ">
-📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-ppp-consent-management">xmtp-subscribe</a>
+📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/xmtp/allow-list-management">allow-list-management</a>
 
 </div>
 
@@ -263,4 +263,4 @@ Consent has really evolved through the years. It started with email, then email 
 
 ### Example repo
 
-You can find a complete example of this tutorial in the [xmtp-subscribe-consent-management](https://github.com/fabriguespe/xmtp-ppp-consent-management) repo.
+You can find a complete example of this tutorial in the [allow-list-management](https://github.com/xmtp/allow-list-management) repo.
