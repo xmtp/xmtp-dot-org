@@ -53,6 +53,8 @@ These are the foundational tools that allow developers to create, sign, and mana
 - [**Declare Protocol Compatibility**](#protocol-compatibility): Ensure your application can interact with Frames by declaring protocol compatibility.
 - [**Manage requests**](#manage-requests): Checks if a URL in message content is suitable for frame processing.
 - [**Validate incoming messages**](#validate-incoming-messages): Implements security measures to authenticate and secure frame actions, ensuring the integrity and origin of frame interactions.
+- [**Rendering Chat Frames in your application**]: This tutorial covers the practical aspects of rendering these frames within an application.
+- [**Exploring Chat Frames Use Cases**]: Dive into a comprehensive exploration of how Frames can be innovatively applied across different sectors for inspiration.
 
 ### Protocol compatibility
 
