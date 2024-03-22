@@ -11,7 +11,11 @@ import TabItem from "@theme/TabItem";
 You can send a broadcast message (1:many message or announcement) with XMTP. The recipient sees the message as a DM from the sending wallet address.
 
 1. Use the bulk query `canMessage` method to identify the wallet addresses that are activated on the XMTP network, up to 1k per batch.
-2. Send the message to all of the activated wallet addresses.
+2. Begin sending messages to the activated wallet addresses.
+3. Your sending logic should monitor responses from the XMTP network and respond as follows:
+    If you recieve a 200 response, send the next message.
+    If you recieve a 429 response, pause sending for one minute then resume sending starting with the message which triggered the 429.
+4. Repeat the loop described in step 3 until all activated wallet addresses have been messaged.
 
 For example:
 
