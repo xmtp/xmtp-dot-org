@@ -504,6 +504,10 @@ window.Buffer = window.Buffer ?? Buffer;
 import "./polyfills";
 ```
 
+### Does XMTP works with Bun?
+
+Currently, Bun does not offer full compatibility with XMTP. It is recommended to use Yarn as an alternative to prevent any unforeseen issues.
+
 #### Using config files
 
 <details><summary>React Scripts 5</summary>

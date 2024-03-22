@@ -66,9 +66,7 @@ yarn add @xmtp/frames-client
 </TabItem>
 <TabItem value="bun" label="bun" >
 
-```bash
-bun install @xmtp/frames-client
-```
+Currently, Bun does not offer full compatibility with XMTP. It is recommended to use Yarn as an alternative to prevent any unforeseen issues.
 
 </TabItem>
 </Tabs>
@@ -125,9 +123,7 @@ yarn add @xmtp/frames-validator
 </TabItem>
 <TabItem value="bun" label="bun" >
 
-```bash
-bun install @xmtp/frames-validator
-```
+Currently, Bun does not offer full compatibility with XMTP. It is recommended to use Yarn as an alternative to prevent any unforeseen issues.
 
 </TabItem>
 </Tabs>
