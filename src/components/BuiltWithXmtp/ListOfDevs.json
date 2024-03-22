@@ -15,6 +15,14 @@
     "twitter": "https://x.com/converseapp_"
   },
   {
+    "name": "Family",
+    "href": "https://family.co/",
+    "image": "/img/builtWithXmtp/family.png",
+    "description": "Explore Ethereum with the best wallet for iOS. Interacting with crypto has never been so simple.",
+    "github": "",
+    "twitter": "https://twitter.com/family"
+  },
+  {
     "name": "Phaver",
     "href": "https://phaver.com/",
     "image": "/img/builtWithXmtp/phaver.jpg",
@@ -31,26 +39,11 @@
     "twitter": "https://x.com/SnapshotLabs"
   },
   {
-    "name": "XMTP Inbox",
-    "href": "https://xmtp.chat",
-    "image": "/img/builtWithXmtp/xmtp.svg",
-    "bgColor": "",
-    "description": "XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
-    "github": "https://github.com/xmtp-labs/xmtp-inbox-web"
-  },
-  {
-    "name": " Base Name Service",
+    "name": "Base Name Service",
     "href": "https://basename.app",
     "image": "/img/builtWithXmtp/md.png",
     "description": "Web3 naming (.base) for the next billion+ users on Base.",
     "twitter": "https://x.com/basenameapp"
-  },
-  {
-    "name": "Operator",
-    "href": "https://operator.io/",
-    "image": "/img/builtWithXmtp/operator.png",
-    "description": "Decentralized AI agent infrastructure.",
-    "twitter": "https://twitter.com/operator_io"
   },
   {
     "name": "Yup",
@@ -98,6 +91,14 @@
     "twitter": "https://x.com/bellosights"
   },
   {
+    "name": "XMTP Inbox",
+    "href": "https://xmtp.chat",
+    "image": "/img/builtWithXmtp/xmtp.svg",
+    "bgColor": "",
+    "description": "XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
+    "github": "https://github.com/xmtp-labs/xmtp-inbox-web"
+  },
+  {
     "name": "AbsoluteLabs",
     "href": "https://absolutelabs.io/",
     "image": "/img/builtWithXmtp/absolute-logo.jpg",
@@ -133,6 +134,13 @@
     "description": "Tokenize, transfer, and trade any physical asset as an NFT.",
     "github": "https://github.com/bosonprotocol",
     "twitter": "https://x.com/BosonProtocol"
+  },
+  {
+    "name": "Operator",
+    "href": "https://operator.io/",
+    "image": "/img/builtWithXmtp/operator.png",
+    "description": "Decentralized AI agent infrastructure.",
+    "twitter": "https://twitter.com/operator_io"
   },
   {
     "name": "Buttrfly",
