@@ -1,6 +1,6 @@
 ---
-sidebar_label: Hackathons
-sidebar_position: 50
+sidebar_label: Frameworks 🖼️
+sidebar_position: 3
 ---
 
 # Hackathons
@@ -13,60 +13,44 @@ The best and fastest way to get support will be the [**XMTP Discord**](https://d
 
 </div>
 
-### Introducing Chat Frames
+:::info Open Frames
 
-Make Frames interoperable and embed interactive experiences within your messaging apps:
+XMTP contributes to the Open Frames standard, fostering interoperability and open standards.
 
-**Ideas**:
+- [**Open Frames Spec**](https://github.com/open-frames/standard/blob/v0.0.1/README.md): Make Farcaster Frames interoperable.
+- [**Awesome Open Frames**](https://github.com/open-frames/awesome-open-frames.git): Curated list of Open Frames compatible Frames.
 
-- dApp integrations 🔌
-- Fun and Games 🕹️
-- Educational Tools 🛠
-- Tipping & Commerce 💰
-- [Rock Paper Scissors](https://github.com/Unshut-Labs/xmtp-frame-rock-paper-scissors)
-- [XMTP Polls](https://github.com/xmtp-labs/fc-polls)
+:::
 
-**Resources**:
+---
 
-- [Documentation](/docs/build/frames)
-- [Use cases](/docs/use-cases/frames)
-- [OnChainKit Docs](https://onchainkit.xyz/xmtp/introduction)
-- [Frames.js Docs](https://framesjs.org/reference/js/xmtp)
-- [Try them on xmtp.chat](https://xmtp.chat/)
+## Third Party Tools
 
-### Build token gated group chat with XMTP
+These tools already provide integration support interoperable Frames.
 
-Exciting news! Token-gated group chats are now available on the Dev Network, ideal for NFT collections, ERC-20 token holders, and exclusive communities. These groups provide unique content and networking opportunities.
+### Tooling
 
-**Getting Started:**
+Third party frameworks and tooling who have already integrated XMTP signing into their offerings:
 
-1. **Set Up Your Group Chat**: Quickly deploy your group chat using our CLI.
-2. **Add your logic**: Define your group's access logic.
-3. **Create a Group Link**: Easily share access to your group.
+- [**OnChainKit**](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
+- [**Frames.js**](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
 
-**Resources**:
+### Clients
 
-- [Documentation](/docs/build/group-chat)
-- [Use cases](/docs/use-cases/groups)
-- [React Native Example App](https://github.com/xmtp-labs/xmtp-inbox-mobile)
-- [Tutorial: Building Token-Gated Group Chats](/docs/tutorials/token-gated-group-chat)
-- [React Native Quickstart](https://github.com/xmtp/xmtp-quickstart-reactnative)
+Some clients are fully XMTP compatible and can render Frames signing XMTP payloads.
 
-### Universal Allow/Block Prefs
+- [**Dev Inbox**](https://dev-inbox.chat/): Engage with Frames firsthand by trying them on web.
+- [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
 
-[XIP-42](https://community.xmtp.org/t/xip-42-universal-allow-and-block-preferences/544) establishes `allow` and `block` permission preferences, enabling users to explicitly specify which contacts should be able to reach them and which should be blocked across all inbox apps.
+## Getting started
 
-**Tutorials**:
+These are the foundational tools that allow developers to create, sign, and manage Frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
 
-- [Broadcast Tutorial](/docs/tutorials/portable-consent/broadcast)
-- [Subscribe Tutorial](/docs/tutorials/portable-consent/subscribe)
-- Building a request inbox in [JavaScript](/docs/tutorials/portable-consent/request-inbox) or [React Rative](/docs/tutorials/portable-consent/request-inbox-rn)
-
-**Resources**:
-
-- [Documentation](/docs/build/user-consent)
-- [Spam](/docs/build/spam)
-- [Warpcast Thread](https://warpcast.com/0xdesigner/0x52fa0e7d)
+- [**Declare Protocol Compatibility**](#protocol-compatibility): Ensure your application can interact with Frames by declaring protocol compatibility.
+- [**Manage requests**](#manage-requests): Checks if a URL in message content is suitable for frame processing.
+- [**Validate incoming messages**](#validate-incoming-messages): Implements security measures to authenticate and secure frame actions, ensuring the integrity and origin of frame interactions.
+- [**Rendering Chat Frames in your application**](/docs/tutorials/render-frames): This tutorial covers the practical aspects of rendering these frames within an application.
+- [**Exploring Chat Frames Use Cases**](/docs/use-cases/frames): Dive into a comprehensive exploration of how Frames can be innovatively applied across different sectors for inspiration.
 
 ### More Resources
 

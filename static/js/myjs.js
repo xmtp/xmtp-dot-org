@@ -22,9 +22,10 @@ window.onload = function () {
   // Add class to nav items based on their text
   navItems.forEach((item) => {
     if (
-      item.innerText === "User consent" ||
       item.innerText === "Group chat" ||
-      item.innerText === "Spam"
+      item.innerText === "Token gated group chat" ||
+      item.innerText === "Allow/block" ||
+      item.innerText === "Chat Frames"
     ) {
       item.classList.add("new");
     }

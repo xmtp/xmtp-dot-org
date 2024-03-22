@@ -7,7 +7,7 @@ description: Making Frames Interoperable
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Render Chat Frames with XMTP
+# Chat Frames with XMTP
 
 The XMTP community has been actively discussing and implementing ways to enhance user experience by supporting frames within XMTP applications. An effort in this direction is detailed in a community post [Supporting Frames in XMTP](https://community.xmtp.org/t/supporting-frames-in-xmtp/535).
 
@@ -17,7 +17,36 @@ Your browser does not support the video tag.
 
 _This video shows how its implemented in [xmtp.chat](https://xmtp.chat/inbox)_
 
-## Overview
+:::info Open Frames
+
+XMTP contributes to the Open Frames standard, fostering interoperability and open standards.
+
+- [**Open Frames Spec**](https://github.com/open-frames/standard/blob/v0.0.1/README.md): Make Farcaster Frames interoperable.
+- [**Awesome Open Frames**](https://github.com/open-frames/awesome-open-frames.git): Curated list of Open Frames compatible Frames.
+
+:::
+
+---
+
+## Third Party Tools
+
+These tools already provide integration support interoperable Frames.
+
+### Tooling
+
+Third party frameworks and tooling who have already integrated XMTP signing into their offerings:
+
+- [**OnChainKit**](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
+- [**Frames.js**](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
+
+### Clients
+
+Some clients are fully XMTP compatible and can render Frames signing XMTP payloads:
+
+- [**Dev Inbox**](https://dev-inbox.chat/): Engage with Frames firsthand by trying them on web.
+- [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
+
+## Getting started
 
 These are the foundational tools that allow developers to create, sign, and manage Frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
 
@@ -26,14 +55,6 @@ These are the foundational tools that allow developers to create, sign, and mana
 - [**Validate incoming messages**](#validate-incoming-messages): Implements security measures to authenticate and secure frame actions, ensuring the integrity and origin of frame interactions.
 - [**Rendering Chat Frames in your application**](/docs/tutorials/render-frames): This tutorial covers the practical aspects of rendering these frames within an application.
 - [**Exploring Chat Frames Use Cases**](/docs/use-cases/frames): Dive into a comprehensive exploration of how Frames can be innovatively applied across different sectors for inspiration.
-- [**OnChainKit Documentation**](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
-- [**Frames.js Documentation**](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
-- [**Experience XMTP on xmtp.chat**](https://xmtp.chat/): Engage with Frames firsthand by trying them on the official XMTP client platform.
-- [**Open Frames Initiative**](https://github.com/open-frames/standard/blob/v0.0.1/README.md): XMTP contributes to the Open Frames standard, fostering interoperability and open standards.
-
-## Getting started
-
-Welcome to the XMTP Frames guide. Here, you'll learn to integrate Frames into your apps for a richer chat experience. Discover how to manage and render Frames, ensuring secure and interactive communication.
 
 ### Protocol compatibility
 
