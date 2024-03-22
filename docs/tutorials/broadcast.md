@@ -15,7 +15,7 @@ You can send a broadcast message (1:many message or announcement) with XMTP. The
 3. Your sending logic should monitor responses from the XMTP network and respond as follows:
    - If you receive a 200 response, send the next message.
    - If you receive a 429 response, pause sending for one minute then resume sending starting with the message that triggered the 429.
-4. Repeat the loop described in step 3 until all activated wallet addresses have been messaged.
+4. Repeat the loop described in step 3 until all the activated wallet addresses have been messaged.
 
 For example:
 
