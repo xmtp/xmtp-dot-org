@@ -1628,3 +1628,17 @@ pre code {
     width: 100%;
   }
 }
+/*ask ai*/
+.DocSearch {
+  /*display: none;*/
+}
+
+.ask_gpt {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.ask_gpt:hover {
+  background-color: black;
+  color: white;
+}
