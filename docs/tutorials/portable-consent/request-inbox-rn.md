@@ -55,7 +55,7 @@ npx install-expo-modules@latest
 Install the XMTP React Native SDK using npm:
 
 ```bash
-npm install @xmtp/react-native-sdk
+yarn install @xmtp/react-native-sdk
 ```
 
 ### 4. Update Podfile for iOS

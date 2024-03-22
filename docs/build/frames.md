@@ -53,7 +53,7 @@ These packages enable your frame to send, receive requests across different prot
 <TabItem value="npm" label="npm" >
 
 ```bash
-npm install @xmtp/frames-client
+yarn install @xmtp/frames-client
 ```
 
 </TabItem>
@@ -110,7 +110,7 @@ To start, add the necessary XMTP packages to your project:
 <TabItem value="npm" label="npm" >
 
 ```bash
-npm install @xmtp/frames-validator
+yarn install @xmtp/frames-validator
 ```
 
 </TabItem>
