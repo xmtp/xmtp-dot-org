@@ -30,18 +30,18 @@ XMTP contributes to the Open Frames standard, fostering interoperability and ope
 
 ## Third Party Tools
 
-This tools already provide integration support interoperable Frames.
+These tools already provide integration support interoperable Frames.
 
 ### Tooling
 
-Third party frameworks and tooling already integrated XMTP signing into their offerings.
+Third party frameworks and tooling who have already integrated XMTP signing into their offerings:
 
 - [**OnChainKit**](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
 - [**Frames.js**](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
 
 ### Clients
 
-Currenty some clients are fully xmtp compatible and can render Frames signing XMTP payloads.
+Some clients are fully XMTP compatible and can render Frames signing XMTP payloads:
 
 - [**Dev Inbox**](https://dev-inbox.chat/): Engage with Frames firsthand by trying them on web.
 - [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
