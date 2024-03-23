@@ -74,7 +74,7 @@ These packages enable your frame to send, receive requests across different prot
 <TabItem value="npm" label="npm" >
 
 ```bash
-npm install @xmtp/frames-client
+yarn install @xmtp/frames-client
 ```
 
 </TabItem>
@@ -87,9 +87,7 @@ yarn add @xmtp/frames-client
 </TabItem>
 <TabItem value="bun" label="bun" >
 
-```bash
-bun install @xmtp/frames-client
-```
+Currently, Bun does not offer full compatibility with XMTP. It is recommended to use Yarn 4 as an alternative to prevent any unforeseen issues.
 
 </TabItem>
 </Tabs>
@@ -133,7 +131,7 @@ To start, add the necessary XMTP packages to your project:
 <TabItem value="npm" label="npm" >
 
 ```bash
-npm install @xmtp/frames-validator
+yarn install @xmtp/frames-validator
 ```
 
 </TabItem>
@@ -146,9 +144,7 @@ yarn add @xmtp/frames-validator
 </TabItem>
 <TabItem value="bun" label="bun" >
 
-```bash
-bun install @xmtp/frames-validator
-```
+Currently, Bun does not offer full compatibility with XMTP. It is recommended to use Yarn 4 as an alternative to prevent any unforeseen issues.
 
 </TabItem>
 </Tabs>

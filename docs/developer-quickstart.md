@@ -19,7 +19,7 @@ Check out the replit live code example:
 ### Get started
 
 ```jsx
-npm install @xmtp/xmtp-js ethers@5.7.0
+yarn install @xmtp/xmtp-js ethers@5.7.0
 ```
 
 ### Import libraries
