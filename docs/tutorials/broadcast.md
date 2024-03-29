@@ -58,8 +58,6 @@ When planning to send broadcast messages at a high volume, it's crucial to consi
 - **Adherence to Rate Limits**: Understand and respect XMTP's [rate limits](/docs/faq#rate-limiting) to prevent network overload and ensure your messages are delivered smoothly.
 - **Batch Processing**: Sending messages in batches can help manage rate limits effectively. Consider the timing and size of each batch to optimize delivery.
 - **Error Handling**: Implement robust error handling to manage rate limiting responses from the network. This may include adjusting send rates or retrying failed messages.
-- **User Consent**: Ensure compliance and deliverability with data privacy laws by obtaining explicit consent from users for broadcast messages, especially at high volumes. [Read more](/docs/build/user-consent).
-- **Deliverability**: Without explicit consent from the recipients, broadcast messages are more likely to be flagged as spam, significantly reducing their deliverability. [Read more](/docs/build/user-consent).
 
 :::info Handling rate-limiting
 Explore our [repository](https://github.com/alexrisch/broadcaster-app) for concise strategies and code samples on high volume broadcast management, including batch processing, error handling, and rate limit adherence.
