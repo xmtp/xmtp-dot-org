@@ -8,111 +8,64 @@ import TabItem from "@theme/TabItem";
 
 # Send a broadcast message
 
-You can send a broadcast message (1:many message or announcement) with XMTP. The recipient sees the message as a DM from the sending wallet address.
+Broadcasting with XMTP allows you to send a single message to multiple recipients, treating each message as a direct message (DM) from the sender's wallet address to each recipient's wallet address. This method is particularly useful for announcements or updates. However, it's important to note that each recipient wallet must be activated on the XMTP network to receive messages.
 
-1. Use the bulk query `canMessage` method to identify the wallet addresses that are activated on the XMTP network, up to 1k per batch.
-2. Begin sending messages to the activated wallet addresses.
-3. Your sending logic should monitor responses from the XMTP network and respond as follows:
-   - If you receive a 200 response, send the next message.
-   - If you receive a 429 response, pause sending for one minute then resume sending starting with the message that triggered the 429.
-4. Repeat the loop described in step 3 until all the activated wallet addresses have been messaged.
+- **Network Activation**: Before sending a broadcast message, verify that each recipient's wallet is activated on the XMTP network with `canMessage`. Only activated wallets can receive and view messages.
+- **Rate Limiting**: XMTP imposes rate limits to maintain network health and prevent spam. Familiarize yourself with these limits and design your message sending strategy to comply with them. [FAQ](/docs/faq#rate-limiting).
+- **User Consent**: In accordance with data privacy laws, obtain explicit consent from users before sending them broadcast messages. [Read more](/docs/build/user-consent).
 
-For example:
+:::caution
+Without explicit consent from the recipients, broadcast messages are more likely to be flagged as spam, significantly reducing their deliverability. [Read more](/docs/build/user-consent).
+:::
 
-<Tabs groupId="sdk-langs">
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
+Here's a simplified example for sending a broadcast message with XMTP:
 
-```js
-const ethers = require("ethers");
-const { Client } = require("@xmtp/xmtp-js");
+```jsx
+import { ethers } from "ethers";
+import { Client } from "@xmtp/xmtp-js";
 
-async function main() {
-  //Create a random wallet for example purposes. On the frontend you should replace it with the user's wallet (metamask, rainbow, etc)
+// Function to send a broadcast message to a list of recipients
+async function sendBroadcastMessage(recipients, message) {
+  // In a real application, use the user's wallet
   const signer = ethers.Wallet.createRandom();
-  //Initialize the xmtp client
-  const xmtp = await Client.create(signer, { env: "dev" });
-  console.log("Broadcasting from: ", xmtp.address);
+  const xmtp = await Client.create(signer);
 
-  //In this example we are going to broadcast to the GM_BOT wallet (already activated) and a random wallet (not activated)
-  const GM_BOT = "0x937C0d4a6294cdfa575de17382c7076b579DC176";
-  const test = ethers.Wallet.createRandom();
-  const broadcasts_array = [GM_BOT, test.address];
-
-  //Querying the activation status of the wallets
-  const broadcasts_canMessage = await xmtp.canMessage(broadcasts_array);
-  for (let i = 0; i < broadcasts_array.length; i++) {
-    //Checking the activation status of each wallet
-    const wallet = broadcasts_array[i];
-    const canMessage = broadcasts_canMessage[i];
-    if (broadcasts_canMessage[i]) {
-      //If activated, start
-      const conversation = await xmtp.conversations.newConversation(wallet);
-      // Send a message
-      const sent = await conversation.send("gm");
+  // Iterate over each recipient to send the message
+  for (const recipient of recipients) {
+    // Check if the recipient is activated on the XMTP network
+    if (await xmtp.canMessage(recipient)) {
+      const conversation = await xmtp.conversations.newConversation(recipient);
+      await conversation.send(message);
+      console.log(`Message successfully sent to ${recipient}`);
+    } else {
+      console.log(
+        `Recipient ${recipient} is not activated on the XMTP network.`,
+      );
     }
   }
 }
-main();
+
+// Example usage
+const recipients = ["0x123...", "0x456..."]; // Replace with actual recipient addresses
+const message = "Hello from XMTP!"; // Your broadcast message
+sendBroadcastMessage(recipients, message);
 ```
 
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
+### Managing high volume broadcasts
 
-Code sample coming soon
+When planning to send broadcast messages at a high volume, it's crucial to consider XMTP's rate limits to ensure efficient and responsible use of the network. High volume broadcasts require careful strategy to avoid rate limiting issues and to maintain network health.
 
-</TabItem>
-<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
+- **Adherence to Rate Limits**: Understand and respect XMTP's [rate limits](/docs/faq#rate-limiting) to prevent network overload and ensure your messages are delivered smoothly.
+- **Batch Processing**: Sending messages in batches can help manage rate limits effectively. Consider the timing and size of each batch to optimize delivery.
+- **Error Handling**: Implement robust error handling to manage rate limiting responses from the network. This may include adjusting send rates or retrying failed messages.
+- **User Consent**: Ensure compliance and deliverability with data privacy laws by obtaining explicit consent from users for broadcast messages, especially at high volumes. [Read more](/docs/build/user-consent).
+- **Deliverability**: Without explicit consent from the recipients, broadcast messages are more likely to be flagged as spam, significantly reducing their deliverability. [Read more](/docs/build/user-consent).
 
-Code sample coming soon
+:::info Handling rate-limiting
+Explore our [repository](https://github.com/alexrisch/broadcaster-app) for concise strategies and code samples on high volume broadcast management, including batch processing, error handling, and rate limit adherence.
+:::
 
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
-
-```tsx
-const ethers = require("ethers");
-const { Client } = require("@xmtp/xmtp-react-native");
-
-async function main() {
-  //Create a random wallet for example purposes. On the frontend you should replace it with the user's wallet (metamask, rainbow, etc)
-  //Initialize the xmtp client
-  const xmtp = await XMTP.Client.createRandom("dev");
-
-  //In this example we are going to broadcast to the GM_BOT wallet (already activated) and a random wallet (not activated)
-  const GM_BOT = "0x937C0d4a6294cdfa575de17382c7076b579DC176";
-  const test = ethers.Wallet.createRandom();
-  const broadcasts_array = [GM_BOT, test.address];
-
-  //Querying the activation status of the wallets
-  const broadcasts_canMessage = await Client.canMessage(broadcasts_array);
-  for (let i = 0; i < broadcasts_array.length; i++) {
-    //Checking the activation status of each wallet
-    const wallet = broadcasts_array[i];
-    const canMessage = broadcasts_canMessage[i];
-    if (broadcasts_canMessage[i]) {
-      //If activated, start
-      const conversation = await xmtp.conversations.newConversation(wallet);
-      // Send a message
-      const sent = await conversation.send("gm");
-    }
-  }
-}
-main();
-```
-
-</TabItem>
-</Tabs>
-
-## Best practices for broadcast messages
+### Best practices
 
 - **Depending on where you’re based**, you could be subject to data privacy laws, including but not limited to GDPR and CCPA.
 
