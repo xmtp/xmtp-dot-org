@@ -51,7 +51,7 @@ sendBroadcastMessage(recipients, message);
 
 When planning to send broadcast messages at a high volume, it's crucial to consider XMTP's rate limits to ensure efficient and responsible use of the network. High volume broadcasts require careful strategy to avoid rate limiting issues and to maintain network health.
 
-- **Adherence to Rate Limits**: Understand and respect XMTP's rate limits to prevent network overload and ensure your messages are delivered smoothly.
+- **Adherence to Rate Limits**: Understand and respect XMTP's [rate limits](/docs/faq#rate-limiting) to prevent network overload and ensure your messages are delivered smoothly.
 - **Batch Processing**: Sending messages in batches can help manage rate limits effectively. Consider the timing and size of each batch to optimize delivery.
 - **Error Handling**: Implement robust error handling to manage rate limiting responses from the network. This may include adjusting send rates or retrying failed messages.
 - **User Consent**: Ensure compliance with data privacy laws by obtaining explicit consent from users for broadcast messages, especially at high volumes.
