@@ -65,6 +65,8 @@ When planning to send broadcast messages at a high volume, it's crucial to consi
 Explore our [repository](https://github.com/alexrisch/broadcaster-app) for concise strategies and code samples on high volume broadcast management, including batch processing, error handling, and rate limit adherence.
 :::
 
+---
+
 ### Best practices
 
 - **Depending on where you’re based**, you could be subject to data privacy laws, including but not limited to GDPR and CCPA.
