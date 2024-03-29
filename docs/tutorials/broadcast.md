@@ -8,62 +8,148 @@ import TabItem from "@theme/TabItem";
 
 # Send a broadcast message
 
-Broadcasting with XMTP allows you to send a single message to multiple recipients, treating each message as a direct message (DM) from the sender's wallet address to each recipient's wallet address. This method is particularly useful for announcements or updates. However, it's important to note that each recipient wallet must be activated on the XMTP network to receive messages.
+You can send a broadcast message (1:many message or announcement) with XMTP. The recipient sees the message as a DM from the sending wallet address.
 
-- **Network Activation**: Before sending a broadcast message, verify that each recipient's wallet is activated on the XMTP network with `canMessage`. Only activated wallets can receive and view messages.
-- **Rate Limiting**: XMTP imposes rate limits to maintain network health and prevent spam. Familiarize yourself with these limits and design your message sending strategy to comply with them. [FAQ](/docs/faq#rate-limiting).
-- **User Consent**: In accordance with data privacy laws such as GDPR and CCPA, obtain explicit consent from users before sending them broadcast messages. [Read more](/docs/build/user-consent).
+1. Use the bulk query `canMessage` method to identify the wallet addresses that are activated on the XMTP network, up to 1k per batch.
+2. Begin sending messages to the activated wallet addresses.
+3. Your sending logic should monitor responses from the XMTP network and respond as follows:
+   - If you receive a 200 response, send the next message.
+   - If you receive a 429 response, pause sending for one minute then resume sending starting with the message that triggered the 429.
+4. Repeat the loop described in step 3 until all the activated wallet addresses have been messaged.
 
-Here's a simplified example for sending a broadcast message with XMTP:
+For example:
 
-```jsx
-import { ethers } from "ethers";
-import { Client } from "@xmtp/xmtp-js";
+<Tabs groupId="sdk-langs">
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab"}}>
 
-// Function to send a broadcast message to a list of recipients
-async function sendBroadcastMessage(recipients, message) {
-  // In a real application, use the user's wallet
+```js
+const ethers = require("ethers");
+const { Client } = require("@xmtp/xmtp-js");
+
+async function main() {
+  //Create a random wallet for example purposes. On the frontend you should replace it with the user's wallet (metamask, rainbow, etc)
   const signer = ethers.Wallet.createRandom();
-  const xmtp = await Client.create(signer);
+  //Initialize the xmtp client
+  const xmtp = await Client.create(signer, { env: "dev" });
+  console.log("Broadcasting from: ", xmtp.address);
 
-  // Iterate over each recipient to send the message
-  for (const recipient of recipients) {
-    // Check if the recipient is activated on the XMTP network
-    if (await xmtp.canMessage(recipient)) {
-      const conversation = await xmtp.conversations.newConversation(recipient);
-      await conversation.send(message);
-      console.log(`Message successfully sent to ${recipient}`);
-    } else {
-      console.log(
-        `Recipient ${recipient} is not activated on the XMTP network.`,
-      );
+  //In this example we are going to broadcast to the GM_BOT wallet (already activated) and a random wallet (not activated)
+  const GM_BOT = "0x937C0d4a6294cdfa575de17382c7076b579DC176";
+  const test = ethers.Wallet.createRandom();
+  const broadcasts_array = [GM_BOT, test.address];
+
+  //Querying the activation status of the wallets
+  const broadcasts_canMessage = await xmtp.canMessage(broadcasts_array);
+  for (let i = 0; i < broadcasts_array.length; i++) {
+    //Checking the activation status of each wallet
+    const wallet = broadcasts_array[i];
+    const canMessage = broadcasts_canMessage[i];
+    if (broadcasts_canMessage[i]) {
+      //If activated, start
+      const conversation = await xmtp.conversations.newConversation(wallet);
+      // Send a message
+      const sent = await conversation.send("gm");
     }
   }
 }
-
-// Example usage
-const recipients = ["0x123...", "0x456..."]; // Replace with actual recipient addresses
-const message = "Hello from XMTP!"; // Your broadcast message
-sendBroadcastMessage(recipients, message);
+main();
 ```
 
-### Managing high volume broadcasts
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
 
-When planning to send broadcast messages at a high volume, it's crucial to consider XMTP's rate limits to ensure efficient and responsible use of the network. High volume broadcasts require careful strategy to avoid rate limiting issues and to maintain network health.
+Code sample coming soon
 
-- **Adherence to Rate Limits**: Understand and respect XMTP's [rate limits](/docs/faq#rate-limiting) to prevent network overload and ensure your messages are delivered smoothly.
-- **Batch Processing**: Sending messages in batches can help manage rate limits effectively. Consider the timing and size of each batch to optimize delivery.
-- **Error Handling**: Implement robust error handling to manage rate limiting responses from the network. This may include adjusting send rates or retrying failed messages.
-- **User Consent**: Ensure compliance with data privacy laws by obtaining explicit consent from users for broadcast messages, especially at high volumes.
+</TabItem>
+<TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
-:::info Handling rate-limiting
-Explore our [repository](https://github.com/alexrisch/broadcaster-app) for concise strategies and code samples on high volume broadcast management, including batch processing, error handling, and rate limit adherence:
-:::
+Code sample coming soon
 
-### Best practices
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
-- When sending broadcast messages, it's crucial to adhere to data privacy laws such as GDPR and CCPA. Ensure you have user consent before sending broadcast messages. This can be requested during onboarding with clear options for the user to opt-in or opt-out.
+Code sample coming soon
 
-- For apps allowing customers to send broadcast messages, advise your customers to obtain consent from their users before sending messages. Provide clear guidelines on how to request this consent and how to unsubscribe from messages.
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
 
-- If your app uses signatures to send XMTP messages on behalf of a customer, inform your customer about this. The app should auto-delete signatures periodically and allow manual revocation. Provide clear instructions and UI for users to understand and manage their consent and signature.
+Code sample coming soon
+
+</TabItem>
+<TabItem value="rn" label="React Native"  attributes={{className: "rn_tab"}}>
+
+```tsx
+const ethers = require("ethers");
+const { Client } = require("@xmtp/xmtp-react-native");
+
+async function main() {
+  //Create a random wallet for example purposes. On the frontend you should replace it with the user's wallet (metamask, rainbow, etc)
+  //Initialize the xmtp client
+  const xmtp = await XMTP.Client.createRandom("dev");
+
+  //In this example we are going to broadcast to the GM_BOT wallet (already activated) and a random wallet (not activated)
+  const GM_BOT = "0x937C0d4a6294cdfa575de17382c7076b579DC176";
+  const test = ethers.Wallet.createRandom();
+  const broadcasts_array = [GM_BOT, test.address];
+
+  //Querying the activation status of the wallets
+  const broadcasts_canMessage = await Client.canMessage(broadcasts_array);
+  for (let i = 0; i < broadcasts_array.length; i++) {
+    //Checking the activation status of each wallet
+    const wallet = broadcasts_array[i];
+    const canMessage = broadcasts_canMessage[i];
+    if (broadcasts_canMessage[i]) {
+      //If activated, start
+      const conversation = await xmtp.conversations.newConversation(wallet);
+      // Send a message
+      const sent = await conversation.send("gm");
+    }
+  }
+}
+main();
+```
+
+</TabItem>
+</Tabs>
+
+## Best practices for broadcast messages
+
+- **Depending on where you’re based**, you could be subject to data privacy laws, including but not limited to GDPR and CCPA.
+
+- **If your app sends broadcast messages to your users**, get user consent before sending them broadcast messages. For example, you can request this consent during onboarding. Here's some example text you can build upon:
+
+  > (&nbsp;&nbsp;) **Yes**, I want to receive broadcast messages from &lt;app name&gt;.
+  >
+  > These messages may include updates, promotions, and other relevant information.
+  >
+  > You can unsubscribe at any time by adjusting your notification settings within the app or by replying “STOP” to a broadcast message.
+  >
+  > We value your privacy and will use your contact information only to send these broadcast messages.
+  >
+  > By clicking **Continue**, you confirm that you agree to receive broadcast messages from &lt;app name&gt;.
+  >
+  > (&nbsp;&nbsp;) **No**, I don’t want to receive broadcast messages from &lt;app name&gt;.
+  >
+  > [Cancel]&nbsp;&nbsp;&nbsp;[**Continue**]
+
+- **If your app allows your customers to send broadcast messages to their users**, be sure to advise your customers to get their users' consent before sending them broadcast messages. For example, you can provide this guidance during onboarding. Here's some example text you can build upon:
+
+  > By signing up to use this app, you agree to get consent from your users before sending them broadcast messages using this platform. When requesting user consent, let users know what kinds of message content they can expect to receive and how you'll use their contact information.
+  >
+  > Also be sure to provide users with a way to unsubscribe from your broadcast messages, such as via notification settings or by replying "STOP" to a broadcast message.
+
+- **If your app stores a signature on a server to read and send XMTP messages on behalf of your customer**, such as automated broadcast messages, be sure to let your customer know. Ideally, your app should also periodically auto-delete signatures and provide a way for a customer to manually revoke their signature. For example, you can provide this guidance as a part of the XMTP connection flow. Here's some example text and UX you can build upon:
+
+  For example:
+
+  - Before connection:
+
+    > You’ll be prompted to provide a signature that gives this app permission to read and send XMTP messages on your behalf. The signature will be securely stored and accessed only to execute your workflows. You’ll be able to revoke permission at any time using the Delete signature option that will appear here.
+
+    ![Signature storage disclosure before connection](/img/sig-store-disclosure-connect.png)
+
+  - After connection:
+
+    > The signature you provided gives this app permission to read and send XMTP messages on your behalf. The signature is securely stored and accessed only to execute your workflows. Click **Delete signature** to revoke this permission and delete the signature from storage.
+
+    ![Signature storage disclosure and delete after connection](/img/sig-store-disclosure-delete.png)
