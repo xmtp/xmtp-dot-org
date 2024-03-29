@@ -25,6 +25,7 @@ window.onload = function () {
       item.innerText === "Group chat" ||
       item.innerText === "Token gated group chat" ||
       item.innerText === "Allow/block" ||
+      item.innerText === "Broadcast" ||
       item.innerText === "Chat Frames"
     ) {
       item.classList.add("new");
