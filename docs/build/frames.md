@@ -43,7 +43,7 @@ Third party frameworks and tooling who have already integrated XMTP signing into
 
 Some clients are fully XMTP compatible and can render Frames signing XMTP payloads:
 
-- [**Dev Inbox**](https://dev-inbox.chat/): Engage with Frames firsthand by trying them on web.
+- [**Dev Inbox**](https://dev-inbox.vercel.app/): Engage with Frames firsthand by trying them on web.
 - [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
 
 ## Getting started
