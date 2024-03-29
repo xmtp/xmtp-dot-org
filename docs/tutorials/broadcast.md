@@ -11,8 +11,8 @@ import TabItem from "@theme/TabItem";
 Broadcasting with XMTP allows you to send a single message to multiple recipients, treating each message as a direct message (DM) from the sender's wallet address to each recipient's wallet address. This method is particularly useful for announcements or updates. However, it's important to note that each recipient wallet must be activated on the XMTP network to receive messages.
 
 - **Network Activation**: Before sending a broadcast message, verify that each recipient's wallet is activated on the XMTP network with `canMessage`. Only activated wallets can receive and view messages.
-- **Rate Limiting**: XMTP imposes rate limits to maintain network health and prevent spam. Familiarize yourself with these limits and design your message sending strategy to comply with them. [FAQ](/faq#rate-limiting).
-- **User Consent**: In accordance with data privacy laws such as GDPR and CCPA, obtain explicit consent from users before sending them broadcast messages. Read more [allow/block](/docs/build/user-consent).
+- **Rate Limiting**: XMTP imposes rate limits to maintain network health and prevent spam. Familiarize yourself with these limits and design your message sending strategy to comply with them. [FAQ](/docs/faq#rate-limiting).
+- **User Consent**: In accordance with data privacy laws such as GDPR and CCPA, obtain explicit consent from users before sending them broadcast messages. [Read more](/docs/build/user-consent).
 
 Here's a simplified example for sending a broadcast message with XMTP:
 
