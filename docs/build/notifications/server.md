@@ -1,5 +1,5 @@
 ---
-slug: notifications-server
+slug: server
 title: Notification Server
 ---
 

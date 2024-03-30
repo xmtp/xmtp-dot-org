@@ -82,6 +82,8 @@ await notificationClient.subscribeWithMetadata({
 });
 ```
 
+_Refer to [filtering](./filtering) for more details_
+
 ### 4. Listening for notifications
 
 Alice's Frontend is now listening for incoming notifications.

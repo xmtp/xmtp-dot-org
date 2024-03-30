@@ -1,6 +1,6 @@
 ---
-sidebar_label: Implementation
-sidebar_position: 21
+sidebar_label: Mobile
+sidebar_position: 22
 ---
 
 import Tabs from "@theme/Tabs";
@@ -10,19 +10,9 @@ import pushnotifsdecrypted from '/docs/concepts/img/push-notifs-decrypted.jpg';
 import badgingorb from '/docs/concepts/img/badging-orb.jpg';
 import unreadbadge from '/docs/concepts/img/unread-badge.png';
 
-# Build push notifications with XMTP
+# Build push notifications in Mobile
 
 Push notifications can be a highly effective way to engage your users and increase app retention. In addition to providing push notifications for new messages, provide them for new conversations.
-
-![](../img/notif-diagram.png)
-
-## Run your own notification server
-
-See the [example-notification-server-go](https://github.com/xmtp/example-notification-server-go) for an example push notification server written in Golang that you can use as a reference for how you might provide a server for your app.
-
-This example branch can serve as the basis for what you might want to provide for your own notification server. The branch also demonstrates how to generate the proto code if you decide to perform these tasks for your own app. This proto code from the example notification server has already been generated in the `xmtp-android` example app.
-
-Check out the [Setup Guide for XMTP Notification Server](/docs/tutorials/notifications-server).
 
 ## Firebase Cloud Messaging
 
