@@ -1,6 +1,6 @@
 ---
-sidebar_label: Notifications
-sidebar_position: 20
+sidebar_label: Implementation
+sidebar_position: 21
 ---
 
 import Tabs from "@theme/Tabs";
@@ -14,7 +14,7 @@ import unreadbadge from '/docs/concepts/img/unread-badge.png';
 
 Push notifications can be a highly effective way to engage your users and increase app retention. In addition to providing push notifications for new messages, provide them for new conversations.
 
-![](./img/notif-diagram.png)
+![](../img/notif-diagram.png)
 
 ## Run your own notification server
 
@@ -22,7 +22,7 @@ See the [example-notification-server-go](https://github.com/xmtp/example-notifi
 
 This example branch can serve as the basis for what you might want to provide for your own notification server. The branch also demonstrates how to generate the proto code if you decide to perform these tasks for your own app. This proto code from the example notification server has already been generated in the `xmtp-android` example app.
 
-Check out the [Setup Guide for XMTP Notification Server](/docs/tutorials/other/notifications-server).
+Check out the [Setup Guide for XMTP Notification Server](/docs/tutorials/notifications-server).
 
 ## Firebase Cloud Messaging
 
