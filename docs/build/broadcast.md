@@ -6,7 +6,7 @@ sidebar_position: 5
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Send a broadcast message
+# Broadcast messages with XMTP
 
 Broadcasting with XMTP allows you to send a single message to multiple recipients, treating each message as a direct message (DM) from the sender's wallet address to each recipient's wallet address. This method is particularly useful for announcements or updates. However, it's important to note that each recipient wallet must be activated on the XMTP network to receive messages.
 
