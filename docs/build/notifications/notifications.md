@@ -18,7 +18,7 @@ XMTP notifications are designed to seamlessly integrate into both mobile and web
 
 - [**Overview**](./overview): Understand the fundamentals of XMTP notifications, including their importance and how they enhance user experience in messaging applications.
 
-- Mobile Integration: Learn how XMTP notifications are tailored for mobile platforms, ensuring efficient delivery and user engagement through services like Firebase.
+- **Mobile Integration**: Learn how XMTP notifications are tailored for mobile platforms, ensuring efficient delivery and user engagement through services like Firebase.
 
   - [**Android**](./android): Set up your notification client in Android devices using the Kotlin SDK
   - [**iOS**](./ios): Learn howto navigate App store guidelines and integrate notifications with the IOS SDK
