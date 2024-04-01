@@ -51,7 +51,7 @@ const message = "Hello from XMTP!"; // Your broadcast message
 sendBroadcastMessage(recipients, message);
 ```
 
-### Managing high volume broadcasts
+## Managing high volume broadcasts
 
 When planning to send broadcast messages at a high volume, it's crucial to consider XMTP's rate limits to ensure efficient and responsible use of the network. High volume broadcasts require careful strategy to avoid rate limiting issues and to maintain network health.
 
@@ -102,7 +102,7 @@ By being aware of these limits and planning accordingly, you can avoid rate-limi
 
 ---
 
-### Best practices
+## Best practices
 
 - **Depending on where you’re based**, you could be subject to data privacy laws, including but not limited to GDPR and CCPA.
 
