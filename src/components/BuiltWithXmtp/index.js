@@ -10,12 +10,10 @@ const BuiltWithXmtp = () => {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
-              Built with XMTP
+            The open protocol for web3 messaging
             </h1>
             <p className="text-lg leading-7 text-gray-600">
-              Hundreds of awesome projects, people, and partners rely on XMTP.
-              <br />
-              <strong>Come build with us!</strong>
+            <strong><a href="https://www.dunemovie.com/home/" target="_blank">1,845,234</a></strong> web3 identities rely on apps built with XMTP for secure, private, and portable messaging
             </p>
           </div>
           <div className="mx-auto mt-4 max-w-2xl lg:mx-0 lg:max-w-none">
@@ -24,8 +22,8 @@ const BuiltWithXmtp = () => {
                 <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img>
                 <a
                   className="hover:no-underline text-white hover:text-white"
-                  href="/docs/build/get-started/overview">
-                  Start building
+                  href="/docs/introduction">
+                  Build with XMTP
                 </a>
               </button>
             </div>
@@ -113,15 +111,14 @@ const BuiltWithXmtp = () => {
               target="_blank"
               className="focus:outline-none">
               <h5 className="text-lg font-bold text-gray-900 mb-0">
-                Get Featured!
+                Project missing?
               </h5>
             </a>
             <p className="text-base text-gray-500">
-              Have a project building on XMTP? Want your profile updated?{" "}
+              Know of a project built with XMTP that should be here?{" "}
               <a href="https://forms.gle/p1VgVtkoGfHXANXt5" target="_blank">
-                Share your details
+                <strong>Submit it</strong>
               </a>{" "}
-              and we'll follow up.
             </p>
           </div>
         </div>
