@@ -258,56 +258,6 @@ const config = {
               },
             ],
           },
-
-          {
-            title: "Use cases",
-            items: [
-              {
-                label: "Chat",
-                to: "/docs/use-cases/messaging",
-              },
-              {
-                label: "Web3 social",
-                to: "/docs/use-cases/deso",
-              },
-              {
-                label: "Marketing",
-                to: "/docs/use-cases/marketing",
-              },
-              {
-                label: "Automation",
-                to: "/docs/use-cases/automation",
-              },
-              {
-                label: "Support",
-                to: "/docs/use-cases/support",
-              },
-              {
-                label: "Commerce",
-                to: "/docs/use-cases/commerce",
-              },
-              {
-                label: "DeFi",
-                to: "/docs/use-cases/defi",
-              },
-              {
-                label: "Gaming",
-                to: "/docs/use-cases/gaming",
-              },
-              {
-                label: "DAOs",
-                to: "/docs/use-cases/dao",
-              },
-              {
-                label: "Groups",
-                to: "/docs/use-cases/groups",
-              },
-              {
-                label: "Frames",
-                to: "/docs/use-cases/frames",
-              },
-            ],
-          },
           {
             title: "Community",
             items: [
