@@ -10,7 +10,7 @@ import TabItem from "@theme/TabItem";
 
 This part of the guide focuses on how to render Frames within your application, making the frames interactive and visually integrated. It includes:
 
-<div class=" rabbit  p-5 ">⌛️ <b>Want to race ahead?</b> Jump to the quick setup <a href="https://github.com/xmtp/xmtp-quickstart-chat-frames">xmtp-quickstart-chat-frames</div>
+<div class=" rabbit  p-5 ">⌛️ <b>Want to race ahead?</b> Jump to the quick setup <a href="https://github.com/xmtp/xmtp-quickstart-chat-frames">xmtp-quickstart-chat-frames</a></div>
 
 ### Validating frame URL
 
