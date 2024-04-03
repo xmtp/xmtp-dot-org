@@ -11,12 +11,6 @@ import TabItem from "@theme/TabItem";
 
 The XMTP community has been actively discussing and implementing ways to enhance user experience by supporting frames within XMTP applications. An effort in this direction is detailed in a community post [Supporting Frames in XMTP](https://community.xmtp.org/t/supporting-frames-in-xmtp/535).
 
-<video controls src="https://github.com/xmtp/xmtp-quickstart-node/assets/1447073/7cc4fe16-3e2b-4d81-ade9-217095e52af2" width="100%" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-_This video shows how its implemented in [xmtp.chat](https://xmtp.chat/inbox)_
-
 :::info Open Frames
 
 XMTP contributes to the Open Frames standard, fostering interoperability and open standards.
@@ -43,7 +37,7 @@ Third party frameworks and tooling who have already integrated XMTP signing into
 
 Some clients are fully XMTP compatible and can render Frames signing XMTP payloads:
 
-- [**Dev Inbox**](https://dev-inbox.vercel.app/): Engage with Frames firsthand by trying them on web.
+- [**XMTP.chat**](https://xmtp.chat/): Engage with Frames firsthand by trying them on web.
 - [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
 
 ## Getting started
@@ -53,8 +47,6 @@ These are the foundational tools that allow developers to create, sign, and mana
 - [**Declare Protocol Compatibility**](#protocol-compatibility): Ensure your application can interact with Frames by declaring protocol compatibility.
 - [**Manage requests**](#manage-requests): Checks if a URL in message content is suitable for frame processing.
 - [**Validate incoming messages**](#validate-incoming-messages): Implements security measures to authenticate and secure frame actions, ensuring the integrity and origin of frame interactions.
-- [**Rendering Chat Frames in your application**](/docs/tutorials/render-frames): This tutorial covers the practical aspects of rendering these frames within an application.
-- [**Exploring Chat Frames Use Cases**](/docs/use-cases/frames): Dive into a comprehensive exploration of how Frames can be innovatively applied across different sectors for inspiration.
 
 ### Protocol compatibility
 
