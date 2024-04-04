@@ -181,32 +181,37 @@ const config = {
             items: [
               {
                 href: "https://community.xmtp.org/",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discourse-icon.svg" alt="Sparkles icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discourse-icon.svg" alt="Discourse icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Community forum</div>`,
               },
               {
                 href: "https://discord.com/invite/xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discord-nav-icon.svg" alt="Sparkles icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discord-nav-icon.svg" alt="Discord icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support & chat</div>`,
               },
               {
+                href: "https://github.com/xmtp/awesome-xmtp/",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="XMTP icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Awesome XMTP</div>`,
+              },
+              {
                 href: "https://paragraph.xyz/@xmtp_community/",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Marketing icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Megaphone icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Newsletter</div></div>`,
               },
               {
                 href: "https://calendar.google.com/calendar/u/0?cid=aGlAeG10cC5vcmc",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/calendar-icon.svg" alt="Sparkles icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/calendar-icon.svg" alt="Calendar icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Calendar</div>`,
               },
               {
                 to: "/docs/contribute",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/heart-icon.svg" alt="Community icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/heart-icon.svg" alt="Heart icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>`,
               },
               {
                 to: "code-of-conduct",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Community icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>`,
               },
 
@@ -239,6 +244,10 @@ const config = {
               {
                 label: "Dev support & chat",
                 href: "https://discord.gg/xmtp",
+              },
+              {
+                label: "Awesome XMTP",
+                href: "https://github.com/xmtp/awesome-xmtp/",
               },
               {
                 label: "Newsletter",
