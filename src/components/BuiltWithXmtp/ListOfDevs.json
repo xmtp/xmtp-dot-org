@@ -4,37 +4,49 @@
     "href": "https://www.coinbase.com/wallet",
     "image": "/img/builtWithXmtp/cbw.png",
     "description": "Your key to the world of crypto. Manage all of your crypto, NFTs, multiple wallets, and messages in one place.",
-    "github": "",
     "twitter": "https://x.com/CoinbaseWallet"
   },
   {
     "name": "Converse",
     "href": "https://getconverse.app",
     "image": "/img/builtWithXmtp/converse.png",
-    "description": "We're reinventing messaging, starting with web3.",
+    "description": "We're reinventing messaging, starting with web3",
     "twitter": "https://x.com/converseapp_"
   },
   {
     "name": "Family",
     "href": "https://family.co/",
     "image": "/img/builtWithXmtp/family.png",
-    "description": "Interacting with crypto has never been so simple.",
-    "github": "",
+    "description": "Interacting with crypto has never been so simple",
     "twitter": "https://twitter.com/family"
   },
   {
-    "name": "Phaver",
-    "href": "https://phaver.com/",
-    "image": "/img/builtWithXmtp/phaver.jpg",
-    "description": "Join phaver in building a future where your online social graph is owned and built by you, not companies.",
-    "github": "",
-    "twitter": "https://twitter.com/phaverapp"
+    "name": "Hey",
+    "href": "https://hey.xyz",
+    "image": "/img/builtWithXmtp/hey.png",
+    "description": "Decentralized and permissionless social media app built with Lens Protocol",
+    "github": "https://github.com/heyxyz/hey",
+    "twitter": "https://x.com/heydotxyz"
+  },
+  {
+    "name": "Interface",
+    "href": "https://www.interface.social/",
+    "image": "/img/builtWithXmtp/interface-logo.png",
+    "description": "Mobile app that helps you explore everything that happens onchain on your Ethereum journey",
+    "twitter": "https://twitter.com/interfacedapp"
+  },
+  {
+    "name": "Yup",
+    "href": "https://yup.io/",
+    "image": "/img/builtWithXmtp/yup-logo.jpg",
+    "description": "Decentralized social all-in-one. Twitter, Farcaster, Threads, Lens, Bluesky, and more in one app.",
+    "twitter": "https://twitter.com/yup_io"
   },
   {
     "name": "Snapshot",
     "href": "https://snapshot.org/#/",
     "image": "/img/builtWithXmtp/snapshot.jpg",
-    "description": "Snapshot is voting platform that allows DAOs, protocols, or NFT communities to participate in the decentralized governance.",
+    "description": "Voting platform that allows DAOs, protocols, and NFT communities to participate in decentralized governance",
     "github": "https://github.com/snapshot-labs",
     "twitter": "https://x.com/SnapshotLabs"
   },
@@ -42,37 +54,37 @@
     "name": "Base Name Service",
     "href": "https://basename.app",
     "image": "/img/builtWithXmtp/md.png",
-    "description": "Web3 naming (.base) for the next billion+ users on Base.",
+    "description": "Web3 naming (.base) for the next billion+ users on Base",
     "twitter": "https://x.com/basenameapp"
-  },
-  {
-    "name": "Yup",
-    "href": "https://yup.io/",
-    "image": "/img/builtWithXmtp/yup-logo.jpg",
-    "description": "Decentralized Social All-In-One. Twitter, Farcaster, Threads, Lens, Bluesky & more in one app.",
-    "twitter": "https://twitter.com/yup_io"
-  },
-  {
-    "name": "Chainjet",
-    "href": "https://chainjet.io/",
-    "image": "/img/builtWithXmtp/cj.jpg",
-    "description": "ChainJet empowers entrepreneurs and communities to build Web3 automations without coding.",
-    "github": "https://github.com/chainjet/platform",
-    "twitter": "https://x.com/chainjetio"
   },
   {
     "name": "Paragraph",
     "href": "https://paragraph.xyz/",
     "image": "/img/logo-paragraph.png",
-    "description": "Building tools that enable publishers, DAOs, writers, and creators build communities and monetize their content.",
+    "description": "Building tools that enable publishers, DAOs, writers, and creators to build communities and monetize their content",
     "github": "https://github.com/paragraph-xyz",
     "twitter": "https://x.com/paragraph_xyz"
+  },
+  {
+    "name": "Phaver",
+    "href": "https://phaver.com/",
+    "image": "/img/builtWithXmtp/phaver.jpg",
+    "description": "Building a future where your online social graph is owned and built by you, not companies",
+    "twitter": "https://twitter.com/phaverapp"
+  },
+  {
+    "name": "Chainjet",
+    "href": "https://chainjet.io/",
+    "image": "/img/builtWithXmtp/cj.jpg",
+    "description": "Empowers entrepreneurs and communities to build web3 automation without coding",
+    "github": "https://github.com/chainjet/platform",
+    "twitter": "https://x.com/chainjetio"
   },
   {
     "name": "ethOS",
     "href": "https://www.ethosmobile.org/",
     "image": "/img/builtWithXmtp/ethos-logo.png",
-    "description": "The world's first Ethereum mobile operating system. A mobile OS built to be crypto native.",
+    "description": "World's first Ethereum mobile operating system. A mobile OS built to be crypto native.",
     "github": "https://github.com/EthereumPhone",
     "twitter": "https://x.com/EthereumPhone"
   },
@@ -87,43 +99,35 @@
     "name": "Bello",
     "href": "https://bello.lol/",
     "image": "/img/builtWithXmtp/bello.png",
-    "description": "Instantly analyze your Web3 community and its competitors without writing a single line of code.",
+    "description": "Instantly analyze your web3 community and its competitors without writing a single line of code",
     "twitter": "https://x.com/bellosights"
-  },
-  {
-    "name": "XMTP Inbox",
-    "href": "https://xmtp.chat",
-    "image": "/img/builtWithXmtp/xmtp.svg",
-    "bgColor": "",
-    "description": "XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
-    "github": "https://github.com/xmtp-labs/xmtp-inbox-web"
   },
   {
     "name": "AbsoluteLabs",
     "href": "https://absolutelabs.io/",
     "image": "/img/builtWithXmtp/absolute-logo.jpg",
-    "description": "Web3 social app helping communities to launch and grow by leveraging the power of NFTs.",
+    "description": "Web3 social app helping communities launch and grow by leveraging the power of NFTs",
     "twitter": "https://x.com/absolute_labs"
   },
   {
     "name": "PERCS",
     "href": "https://getpercs.com/",
     "image": "/img/builtWithXmtp/percs-logo.jpg",
-    "description": "Web3 marketing automation for serious brands.",
+    "description": "Web3 marketing automation for serious brands",
     "twitter": "https://twitter.com/getpercss"
   },
   {
     "name": "Holder",
     "href": "https://holder.xyz/",
     "image": "/img/builtWithXmtp/holder-logo.jpg",
-    "description": "A web3 CRM and marketing automation platform that powers customer engagement for the tokenized world.",
+    "description": "Web3 CRM and marketing automation platform that powers customer engagement for the tokenized world",
     "twitter": "https://x.com/holderxyz"
   },
   {
     "name": "Relay",
     "href": "https://relay.cc/",
     "image": "/img/builtWithXmtp/relay.png",
-    "description": "Relay is the intersection of Ethereum-enabled OpenAI agents and wallet messaging.",
+    "description": "At the intersection of Ethereum-enabled OpenAI agents and wallet messaging",
     "github": "https://github.com/relaycc",
     "twitter": "https://x.com/relay_eth"
   },
@@ -131,7 +135,7 @@
     "name": "Boson App",
     "href": "https://bosonapp.io/",
     "image": "/img/builtWithXmtp/boson-logo.jpg",
-    "description": "Tokenize, transfer, and trade any physical asset as an NFT.",
+    "description": "Tokenize, transfer, and trade any physical asset as an NFT",
     "github": "https://github.com/bosonprotocol",
     "twitter": "https://x.com/BosonProtocol"
   },
@@ -139,7 +143,7 @@
     "name": "Operator",
     "href": "https://operator.io/",
     "image": "/img/builtWithXmtp/operator.png",
-    "description": "Decentralized AI agent infrastructure.",
+    "description": "Decentralized AI agent infrastructure",
     "twitter": "https://twitter.com/operator_io"
   },
   {
@@ -147,5 +151,12 @@
     "href": "https://www.buttrfly.app/",
     "image": "/img/builtWithXmtp/buttrfly-icon-rounded.png",
     "description": "Decentralized social media app built for a mobile first experience on iOS. Built on Lens Protocol."
+  },
+  {
+    "name": "XMTP Inbox",
+    "href": "https://xmtp.chat",
+    "image": "/img/builtWithXmtp/xmtp.svg",
+    "description": "Web app that demonstrates core and advanced capabilities of the XMTP client SDK",
+    "github": "https://github.com/xmtp-labs/xmtp-inbox-web"
   }
 ]

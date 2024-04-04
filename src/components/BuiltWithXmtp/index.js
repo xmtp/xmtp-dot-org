@@ -111,7 +111,7 @@ const BuiltWithXmtp = () => {
               target="_blank"
               className="focus:outline-none">
               <h5 className="text-lg font-bold text-gray-900 mb-0">
-                Project missing?
+                Help build this list
               </h5>
             </a>
             <p className="text-base text-gray-500">

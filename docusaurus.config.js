@@ -230,35 +230,6 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "SDKs",
-            items: [
-              {
-                label: `JavaScript`,
-                href: "https://github.com/xmtp/xmtp-js",
-              },
-              {
-                label: `Swift`,
-                href: `https://github.com/xmtp/xmtp-ios`,
-              },
-              {
-                label: `Dart`,
-                href: `https://github.com/xmtp/xmtp-flutter`,
-              },
-              {
-                label: `Kotlin`,
-                href: `https://github.com/xmtp/xmtp-android`,
-              },
-              {
-                label: `React`,
-                href: `https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk`,
-              },
-              {
-                label: `React Native`,
-                href: `https://github.com/xmtp/xmtp-react-native`,
-              },
-            ],
-          },
-          {
             title: "Community",
             items: [
               {
