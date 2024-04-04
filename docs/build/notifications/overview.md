@@ -49,6 +49,12 @@ await client.registerInstallation({
 
 The notification server adds Alice's `installationId` to certain topics. The list of `subscriptionDetails` includes all information needed to join topics, such as user permission and HMAC keys for safely checking messages.
 
+- `consentState`: Notifications are only subscribed to if the `consentState` of a conversation is "allowed". This ensures that users receive notifications only for conversations they have consented to. [Learn more](./user-consent)
+
+- `Invite` topic V2: Clients use invite topics to initiate conversations between weallets. [Learn more](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#invitations)
+
+- `Intro` topic V1: Clients use intro topics to store the first message sent between two wallets
+
 ```javascript
 let subscriptionDetails = [];
 

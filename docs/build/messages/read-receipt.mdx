@@ -297,6 +297,10 @@ if (message.contentTypeId === "xmtp.org/readReceipt:1.0") {
 
 _`ReadReceipts` have an `undefined` or `nil` fallback, indicating the message is not expected to be displayed. Refer to [how handle unsupported content types](/docs/build/messages/#handle-an-unsupported-content-type-error) section._
 
+## Notifications and read receipts
+
+Read receipts do not trigger push notifications. They contain a function `shouldPush=false` that indicates the notification should not be sent.
+
 ## Use a read receipt
 
 Generally, a read receipt indicator should be displayed under the message it's associated with. The indicator can include a timestamp. Ultimately, how you choose to display a read receipt indicator is completely up to you.

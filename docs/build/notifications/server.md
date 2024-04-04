@@ -1,6 +1,6 @@
 ---
 slug: server
-title: Notification Server
+title: Notification server
 ---
 
 # Setup Guide for XMTP Notification Server

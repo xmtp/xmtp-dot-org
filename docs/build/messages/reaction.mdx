@@ -341,3 +341,7 @@ _To handle unsupported content types, refer to the [fallback](/docs/build/messag
 ## Display the reaction
 
 Generally, reactions should be interpreted as emoji. So, "smile" would translate to 😄 in UI clients. That being said, how you ultimately choose to render a reaction in your app is up to you.
+
+## Notifications and reactions
+
+Reaction removal does not trigger push notifications. They contain a function `shouldPush=false` that indicates the notification should not be sent.
