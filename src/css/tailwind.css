@@ -1628,3 +1628,8 @@ pre code {
     width: 100%;
   }
 }
+
+.btn-principal:hover {
+  text-decoration: none !important;
+  color: white;
+}
