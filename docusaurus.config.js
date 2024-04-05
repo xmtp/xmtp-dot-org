@@ -441,7 +441,7 @@ const config = {
         //... other Algolia params
       },
       prism: {
-        additionalLanguages: ["dart", "swift", "kotlin", "graphql"],
+        additionalLanguages: ["swift", "kotlin", "graphql"],
         theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
       },
