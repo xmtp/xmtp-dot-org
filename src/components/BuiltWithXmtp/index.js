@@ -13,11 +13,11 @@ const BuiltWithXmtp = () => {
               The open protocol for web3 messaging
             </h1>
             <p className="text-lg leading-7 text-gray-600">
-              <strong>
-                <a href="https://www.dunemovie.com/home/" target="_blank">
+              <strong className="pr-1">
+                <a href="https://www.dunemovie.com/home/" target="_blank" rel="noreferrer">
                   1,845,234
                 </a>
-              </strong>{" "}
+              </strong>
               web3 identities rely on apps built with XMTP for secure, private,
               and portable messaging
             </p>
@@ -26,10 +26,10 @@ const BuiltWithXmtp = () => {
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
               <a
                 href="/docs/introduction"
-                className="btn-principal bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0 no-underline">
+                className="btn-principal bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0 no-underline" rel="noreferrer">
                 <img
                   src="/img/xmtp-sm-icon.png"
-                  className="w-5 h-5 mr-2.5"></img>
+                  className="w-5 h-5 mr-2.5" alt="XMTP icon"></img>
                 Build with XMTP
               </a>
             </div>
@@ -121,10 +121,10 @@ const BuiltWithXmtp = () => {
               </h5>
             </a>
             <p className="text-base text-gray-500">
-              Know of a project built with XMTP that should be here?{" "}
-              <a href="https://forms.gle/p1VgVtkoGfHXANXt5" target="_blank">
+              Know of a project built with XMTP that should be here?
+              <a className="px-1" href="https://forms.gle/p1VgVtkoGfHXANXt5" target="_blank">
                 <strong>Submit it</strong>
-              </a>{" "}
+              </a>
             </p>
           </div>
         </div>
