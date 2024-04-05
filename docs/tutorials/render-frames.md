@@ -10,9 +10,7 @@ import TabItem from "@theme/TabItem";
 
 This part of the guide focuses on how to render Frames within your application, making the frames interactive and visually integrated. It includes:
 
-<video controls src="https://github.com/fabriguespe/xmtp-quickstart-frames/assets/1447073/adf38f79-703c-4759-8523-4feb0ebb2d0e" width="100%" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div class=" rabbit  p-5 ">⌛️ <b>Want to race ahead?</b> Jump to the quick setup <a href="https://github.com/xmtp/xmtp-quickstart-chat-frames">xmtp-quickstart-chat-frames</a></div>
 
 ### Validating frame URL
 

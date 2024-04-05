@@ -9,7 +9,7 @@ This tutorial will guide you through implementing group chat functionality in yo
 
 <div class=" rabbit  p-5 ">
 
-📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-rn-groupchats">group-chat</a>
+📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/xmtp/xmtp-react-native-quickstart-groupchat">group-chat</a>
 
 </div>
 
@@ -46,7 +46,7 @@ npx install-expo-modules@latest
 Install the XMTP React Native SDK using npm:
 
 ```bash
-npm install @xmtp/react-native-sdk
+yarn install @xmtp/react-native-sdk
 ```
 
 ### 4. Update podfile for ios

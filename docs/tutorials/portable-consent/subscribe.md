@@ -9,7 +9,7 @@ This tutorial will show you how to create a simple **Subscribe** button with con
 
 <div class=" rabbit  p-5 ">
 
-📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-subscribe-portable-consent">xmtp-subscribe</a>
+📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/xmtp/xmtp-quickstart-subscribe">xmtp-subscribe</a>
 
 </div>
 
@@ -140,4 +140,4 @@ Consent has really evolved through the years. It started with email, then email 
 
 ### Example repo
 
-You can find a complete example of this tutorial in the [xmtp-subscribe-portable-consent](https://github.com/fabriguespe/xmtp-subscribe-portable-consent) repo.
+You can find a complete example of this tutorial in the [xmtp-subscribe](https://github.com/xmtp/xmtp-quickstart-subscribe) repo.

@@ -1,5 +1,5 @@
 ---
-sidebar_label: Allow/Block
+sidebar_label: Allow/block
 sidebar_position: 5.5
 hide_table_of_contents: false
 ---
@@ -10,7 +10,7 @@ import requeststab from '/docs/build/img/requests-tab.png';
 import messagestab from '/docs/build/img/messages-tab.png';
 import consentlogic from '/docs/build/img/consent-state-logic.png';
 
-# Universal Allow/Block Prefs
+# Universal allow/block Prefs
 
 The allow/block feature enables your app to request and respect user consent preferences. With this feature, another blockchain account address registered on the XMTP network can have one of three consent preference values:
 
@@ -547,5 +547,5 @@ For practical examples, see these tutorials:
 
 ### Example repos
 
-- JS example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-inbox-portable-consent)
-- React Native example repo [xmtp-inbox-portable-consent](https://github.com/fabriguespe/xmtp-rn-request-inbox)
+- JS example repo [xmtp-request-inbox](https://github.com/xmtp/xmtp-quickstart-request-inbox)
+- React Native example repo [xmtp-request-inbox](https://github.com/xmtp/xmtp-quickstart-react-native-request-inbox)

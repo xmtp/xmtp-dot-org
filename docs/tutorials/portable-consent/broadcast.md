@@ -9,7 +9,7 @@ This tutorial will guide you on creating a simple **Broadcast** that enables the
 
 <div class=" rabbit  p-5 ">
 
-📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/fabriguespe/xmtp-broadcast">xmtp-broadcast</a>
+📥 <b>Need a quick reference?</b> Check out this GitHub repo: <a href="https://github.com/xmtp/xmtp-quickstart-broadcast">xmtp-broadcast</a>
 
 </div>
 
@@ -148,4 +148,4 @@ Consent has really evolved through the years. It started with email, then email 
 
 ### Example repo
 
-You can find a complete example of this tutorial in the [xmtp-broadcast](https://github.com/fabriguespe/xmtp-broadcast) repo.
+You can find a complete example of this tutorial in the [xmtp-broadcast](https://github.com/xmtp/xmtp-quickstart-broadcast) repo.

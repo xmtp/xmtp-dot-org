@@ -404,6 +404,10 @@ const config = {
             title: "Community",
             items: [
               {
+                label: "Calendar",
+                href: "https://calendar.google.com/calendar/u/0/r?cid=aGlAeG10cC5vcmc",
+              },
+              {
                 label: "Code of conduct",
                 to: "code-of-conduct",
               },
