@@ -1431,6 +1431,9 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-it
   background-size: contain;
 }
 
+.dart_tab {
+  display: none;
+}
 .kotlin_tab::after {
   content: "";
   display: inline-block;

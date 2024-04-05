@@ -268,10 +268,6 @@ const config = {
                 href: `https://github.com/xmtp/xmtp-ios`,
               },
               {
-                label: `Dart`,
-                href: `https://github.com/xmtp/xmtp-flutter`,
-              },
-              {
                 label: `Kotlin`,
                 href: `https://github.com/xmtp/xmtp-android`,
               },
