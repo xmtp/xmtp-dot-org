@@ -37,7 +37,7 @@
   {
     "name": "Send a broadcast message",
     "image": "img/broadcast-cover.png",
-    "href": "/docs/tutorials/broadcast"
+    "href": "/docs/build/broadcast"
   },
   {
     "name": "Build a chatbot",
