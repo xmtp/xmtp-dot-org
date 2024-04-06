@@ -232,38 +232,6 @@ For example, services like [Airstack](https://www.airstack.xyz/) and [Blaze](htt
 
 Yes! XMTP v3 alpha supports group chats in React Native, Android, and IOS SDks. However, the JavaScript SDK currently lacks support for group chat functionalities. If you want to integrate backend features, you can use the CLI, which provides a viable solution as described in this [repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). You can also check out a practical implementation example available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts).
 
-## Rate-limiting
-
----
-
-### How does network rate-limiting work?
-
-Currently, XMTP network nodes are configured to rate-limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node.
-
-XMTP Labs is capable of rate-limiting the network while we are the only node operators. Rate-limiting is a consideration in our research into economic spam controls. Ultimately, rate-limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
-
-### What are the API rate-limits?
-
-- 1,000 publish requests per 5 minutes.
-- 10,000 general requests per 5 minutes.
-- Nodes allow 40,000 reads per 5 minutes.
-
-If your requirements exceed these limits, [submit this form](https://docs.google.com/forms/d/e/1FAIpQLSftr558wsYD2X_0c1Jsz6rTxua1f1DDJidAn7iphJVc48l7Fw/viewform) to share more details with the XMTP Labs team.
-
-### What happens if I exceed the limits?
-
-You'll get an HTTP 429 error and must wait for the next 5-minute window.
-
-Tips for staying within limits:
-
-- Spread your requests over 5 minutes.
-- Use smaller batches for large queries.
-- Introduce a brief delay between calls.
-- Use multiple IPs to make requests.
-- Bulk `canMessage` makes API calls in 50-address batches.
-
-By being aware of these limits and planning accordingly, you can avoid rate-limiting issues.
-
 ## Fees
 
 ---
@@ -404,7 +372,7 @@ To learn more about how the XMTP Inbox chat app is built, see the [xmtp-inbox-we
 
 XMTP natively supports one-to-one messaging. One-to-many broadcast messages, or announcements, can be constructed using the XMTP SDK.
 
-To learn more, see [Send a broadcast message](/docs/tutorials/broadcast).
+To learn more, see [Send a broadcast message](/docs/build/broadcast).
 
 ## XMTP Labs
 
