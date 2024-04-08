@@ -375,11 +375,11 @@
 }
 
 .footer {
-  background-color: black;
+  background-color: #000000;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 5em;
-  padding-bottom: 3em;
+  padding-top: 3em;
+  padding-bottom: 2em;
 }
 
 .footer .container {
@@ -403,7 +403,7 @@
 }
 
 .footer__item .footer__link-item {
-  line-height: 0.5rem;
+  line-height: 1.2rem;
 }
 
 .multiline-text-2 {

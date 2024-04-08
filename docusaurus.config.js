@@ -254,6 +254,10 @@ const config = {
                 href: "https://paragraph.xyz/@xmtp_community/",
               },
               {
+                label: "XMTP on 𝕏",
+                href: "https://x.com/xmtp_",
+              },
+              {
                 label: "Calendar",
                 href: "https://calendar.google.com/calendar/u/0/r?cid=aGlAeG10cC5vcmc",
               },
@@ -292,8 +296,24 @@ const config = {
               },
             ],
           },
+          {
+            title: "Site",
+            items: [
+              {
+                label: "Privacy policy",
+                to: "privacy",
+              },
+              {
+                label: "Terms of service",
+                href: "terms",
+              },
+              {
+                label: "CC BY 4.0",
+                href: "https://creativecommons.org/licenses/by/4.0/",
+              },
+            ],
+          },
         ],
-        // copyright: `Website CC0 XMTP`,
       },
       algolia: {
         // The application ID provided by Algolia
