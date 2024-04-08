@@ -29,7 +29,7 @@ Facilitating user communication and overcoming one of web3’s biggest challenge
 
 ### **Meet Relay**
 
-[Relay](https://try.relay.cc/) is a 8-person company building communication tools that integrate web3 chat and messaging. Relay was founded with the purpose of solving problems in DAO membership and debate. They identified this problem from seeing first-hand the issues of coordinating web3 while relying on centralized web2 messengers and identity.
+[Relay](https://relay.cc/) is an 8-person company building communication tools that integrate web3 chat and messaging. Relay was founded with the purpose of solving problems in DAO membership and debate. They identified this problem from seeing first-hand the issues of coordinating web3 while relying on centralized web2 messengers and identity.
 
 Relay’s first product is called [Relay Receiver](https://mirror.xyz/relaycc.eth/3ciz14Fs5Tw61zbh5Lr-WCPvpuuOB5NRCdwq6wEM7bY): a no-code, drop-in chatbox to let any user connect their wallet and chat with other users. The app is built completely on top of web3, no database is required and no login code is needed, so users can connect using Ethereum wallets and start chatting.
 
@@ -65,7 +65,7 @@ Given the interoperability of messages on the XMTP network, users can then acces
 
 ### Learn more about Relay
 
-- Relay Website: [https://try.relay.cc/](https://try.relay.cc/)
+- Relay Website: [https://relay.cc/](https://relay.cc/)
 
 - 𝕏: [https://x.com/relay_eth](https://x.com/relay_eth)
 

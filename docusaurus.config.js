@@ -177,73 +177,51 @@ const config = {
           {
             type: "dropdown",
             position: "right",
-            label: "Resources",
+            label: "Community",
             items: [
               {
-                to: "built-with-xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="Sparkles icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Built with XMTP</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Explore a showcase of apps built with XMTP</div></div></div>`,
+                href: "https://community.xmtp.org/",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discourse-icon.svg" alt="Discourse icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Community forum</div>`,
               },
               {
-                to: "roadmap",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/map-icon.svg" alt="Map icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Roadmap</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Future features and decentralization milestones</div></div></div>`,
+                href: "https://discord.com/invite/xmtp",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discord-nav-icon.svg" alt="Discord icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support & chat</div>`,
               },
               {
-                to: "docs/concepts/architectural-overview",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/block-icon.svg" alt="Sparkle icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Architecture</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Architecture of the XTMP network and client layers</div></div></div>`,
+                href: "https://github.com/xmtp/awesome-xmtp/",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="XMTP icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Awesome XMTP</div>`,
               },
               {
-                to: "docs/faq#security",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/lock-closed-icon.svg" alt="Lock icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Security</div>
-                 <div class="subtext text-sm text-normal whitespace-pre-line">Overview of XMTP security</div></div></div>`,
+                href: "https://paragraph.xyz/@xmtp_community/",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Megaphone icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Newsletter</div></div>`,
+              },
+              {
+                href: "https://calendar.google.com/calendar/u/0?cid=aGlAeG10cC5vcmc",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/calendar-icon.svg" alt="Calendar icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Calendar</div>`,
               },
               {
                 to: "/docs/contribute",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/user-group.svg" alt="Community icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>
-                <div class="subtext text-sm text-normal whitespace-pre-line">Contribute to the XMTP community</div></div></div>`,
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/heart-icon.svg" alt="Heart icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>`,
               },
               {
-                to: "/docs/get-featured",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/support-icon.svg" alt="Automation icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
+                to: "code-of-conduct",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>`,
               },
-              {
-                to: "https://paragraph.xyz/@xmtp_community/",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Marketing icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Newsletter</div></div>`,
-              },
+
             ],
-          },
-          {
-            to: "blog",
-            position: "right",
-            label: "Blog",
-            activeBaseRegex: `/`,
-          },
-          {
-            type: "html",
-            position: "right",
-            value:
-              '<button type="button" onClick="window.open(`/docs/build/get-started/overview`, `_self`);" class="navbar__sbbutton"><strong>Start building</strong></button>',
           },
           {
             type: "html",
             position: "right",
             value:
               '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
-          },
-          {
-            href: "https://discord.com/invite/xmtp",
-            title: "Go to the Discord",
-            position: "right",
-            className: "header-discord-link",
           },
           {
             href: "https://github.com/xmtp",
@@ -257,100 +235,41 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "SDKs",
+            title: "Community",
             items: [
               {
-                label: `JavaScript`,
-                href: "https://github.com/xmtp/xmtp-js",
+                label: "Community forum",
+                href: "https://community.xmtp.org/",
               },
               {
-                label: `Swift`,
-                href: `https://github.com/xmtp/xmtp-ios`,
+                label: "Dev support & chat",
+                href: "https://discord.gg/xmtp",
               },
               {
-                label: `Dart`,
-                href: `https://github.com/xmtp/xmtp-flutter`,
+                label: "Awesome XMTP",
+                href: "https://github.com/xmtp/awesome-xmtp/",
               },
               {
-                label: `Kotlin`,
-                href: `https://github.com/xmtp/xmtp-android`,
+                label: "Newsletter",
+                href: "https://paragraph.xyz/@xmtp_community/",
               },
               {
-                label: `React`,
-                href: `https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk`,
+                label: "Calendar",
+                href: "https://calendar.google.com/calendar/u/0/r?cid=aGlAeG10cC5vcmc",
               },
               {
-                label: `React Native`,
-                href: `https://github.com/xmtp/xmtp-react-native`,
+                label: "Contribute",
+                to: "/docs/contribute",
+              },
+              {
+                label: "Code of conduct",
+                to: "code-of-conduct",
               },
             ],
           },
-
-          {
-            title: "Use cases",
-            items: [
-              {
-                label: "Chat",
-                to: "/docs/use-cases/messaging",
-              },
-              {
-                label: "Web3 social",
-                to: "/docs/use-cases/deso",
-              },
-              {
-                label: "Marketing",
-                to: "/docs/use-cases/marketing",
-              },
-              {
-                label: "Automation",
-                to: "/docs/use-cases/automation",
-              },
-              {
-                label: "Support",
-                to: "/docs/use-cases/support",
-              },
-              {
-                label: "Commerce",
-                to: "/docs/use-cases/commerce",
-              },
-              {
-                label: "DeFi",
-                to: "/docs/use-cases/defi",
-              },
-              {
-                label: "Gaming",
-                to: "/docs/use-cases/gaming",
-              },
-              {
-                label: "DAOs",
-                to: "/docs/use-cases/dao",
-              },
-              {
-                label: "Groups",
-                to: "/docs/use-cases/groups",
-              },
-              {
-                label: "Frames",
-                to: "/docs/use-cases/frames",
-              },
-            ],
-          },
-
           {
             title: "Resources",
             items: [
-              {
-                label: "Changelog",
-                to: "/docs/changelog",
-              },
-              {
-                label: "Roadmap",
-                to: "roadmap",
-              },
-              {
-                label: "Security",
-                to: "/docs/faq#security",
-              },
               {
                 label: "FAQ",
                 to: "/docs/faq",
@@ -366,51 +285,6 @@ const config = {
               {
                 label: "Partnerships with XMTP Labs",
                 href: "https://forms.gle/UMCFjB8ukiMxBxnK6",
-              },
-              {
-                label: "Get featured",
-                href: "/docs/get-featured",
-              },
-              {
-                label: "Newsletter",
-                href: "https://paragraph.xyz/@xmtp_community/",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Calendar",
-                href: "https://calendar.google.com/calendar/u/0/r?cid=aGlAeG10cC5vcmc",
-              },
-              {
-                label: "Code of conduct",
-                to: "code-of-conduct",
-              },
-              {
-                label: "Contribute",
-                to: "/docs/contribute",
-              },
-              {
-                label: "Built with XMTP",
-                to: "built-with-xmtp",
-              },
-              {
-                label: "Discord",
-                href: "https://discord.gg/xmtp",
-              },
-              {
-                label: "Community forums",
-                href: "https://community.xmtp.org/",
-              },
-              {
-                label: "𝕏",
-                href: "https://x.com/xmtp_",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/xmtp",
               },
               {
                 label: "Careers at XMTP Labs",
