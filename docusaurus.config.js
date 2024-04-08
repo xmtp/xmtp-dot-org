@@ -256,14 +256,6 @@ const config = {
                 label: "Calendar",
                 href: "https://calendar.google.com/calendar/u/0/r?cid=aGlAeG10cC5vcmc",
               },
-              {
-                label: "Contribute",
-                to: "/docs/contribute",
-              },
-              {
-                label: "Code of conduct",
-                to: "code-of-conduct",
-              },
             ],
           },
           {
@@ -295,24 +287,33 @@ const config = {
             title: "Company",
             items: [
               {
-                label: "🅧",
-                href: "https://x.com/xmtp_",
-              },
-              {
-                label: "Farcaster",
-                href: "https://warpcast.com/~/channel/xmtp",
-              },
-              {
-                label: "Terms of service",
-                href: "/terms",
-              },
-              {
                 label: "Terms of service",
                 href: "/terms",
               },
               {
                 label: "Privacy policy",
                 href: "/privacy",
+              },
+              {
+                label: "Contribute",
+                to: "/docs/contribute",
+              },
+              {
+                label: "Code of conduct",
+                to: "code-of-conduct",
+              },
+            ],
+          },
+          {
+            title: "Social",
+            items: [
+              {
+                label: "Twitter / 𝕏",
+                href: "https://x.com/xmtp_",
+              },
+              {
+                label: "Farcaster",
+                href: "https://warpcast.com/~/channel/xmtp",
               },
             ],
           },
