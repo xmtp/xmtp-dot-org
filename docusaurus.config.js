@@ -254,10 +254,6 @@ const config = {
                 href: "https://paragraph.xyz/@xmtp_community/",
               },
               {
-                label: "XMTP on 𝕏",
-                href: "https://x.com/xmtp_",
-              },
-              {
                 label: "Calendar",
                 href: "https://calendar.google.com/calendar/u/0/r?cid=aGlAeG10cC5vcmc",
               },
@@ -293,6 +289,19 @@ const config = {
               {
                 label: "Careers at XMTP Labs",
                 href: "https://blog.xmtp.com/careers/",
+              },
+            ],
+          },
+          {
+            title: "Socials",
+            items: [
+              {
+                label: "Twitter / 𝕏",
+                href: "https://x.com/xmtp_",
+              },
+              {
+                label: "Farcaster",
+                href: "https://warpcast.com/~/channel/xmtp",
               },
             ],
           },

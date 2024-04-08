@@ -378,8 +378,8 @@
   background-color: #000000;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 3em;
-  padding-bottom: 2em;
+  padding-top: 2.5em;
+  padding-bottom: 1.5em;
 }
 
 .footer .container {
@@ -400,6 +400,7 @@
 
 .footer__item {
   margin-bottom: 1rem;
+  line-height: 1.5rem;
 }
 
 .footer__item .footer__link-item {
