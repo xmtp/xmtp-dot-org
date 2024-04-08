@@ -14,8 +14,8 @@ const BuiltWithXmtp = () => {
             </h1>
             <p className="text-lg leading-7 text-gray-600">
               <strong className="pr-1">
-                <a href="https://www.dunemovie.com/home/" target="_blank" rel="noreferrer">
-                  1,845,234
+                <a href="https://dune.com/xmtp_team/dash" target="_blank" rel="noreferrer">
+                  1,869,155+
                 </a>
               </strong>
               web3 identities rely on apps built with XMTP for secure, private,
@@ -122,7 +122,7 @@ const BuiltWithXmtp = () => {
             </a>
             <p className="text-base text-gray-500">
               Know of a project built with XMTP that should be here?
-              <a className="px-1" href="https://forms.gle/p1VgVtkoGfHXANXt5" target="_blank">
+              <a className="px-1" href="https://forms.gle/p1VgVtkoGfHXANXt5" target="_blank" rel="noreferrer">
                 <strong>Submit it</strong>
               </a>
             </p>
