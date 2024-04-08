@@ -10,7 +10,7 @@ export default function FooterWrapper(props) {
   return (
     <>
       <Footer {...props} />
-      <div className={`bg-black px-4 ${colorMode}`}>
+      {/*<div className={`bg-black px-4 ${colorMode}`}>
         <div className="h-px bg-white max-w-screen-max mx-auto" />
         <div className="flex justify-center flex-wrap md:justify-between items-center h-auto footerfino max-w-screen-max mx-auto mt-9 md:mt-0 mb-20 md:mb-0 text-center md:text-inherit flex-col md:flex-row">
           <Link to="/">
@@ -44,9 +44,9 @@ export default function FooterWrapper(props) {
               𝕏
             </ALink>
           </div>
-        </div>
+        </div
       </div>
-      <ToggleButtons />
+      <ToggleButtons />*/}
     </>
   );
 }

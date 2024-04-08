@@ -214,7 +214,6 @@ const config = {
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>`,
               },
-
             ],
           },
           {
@@ -289,6 +288,31 @@ const config = {
               {
                 label: "Careers at XMTP Labs",
                 href: "https://blog.xmtp.com/careers/",
+              },
+            ],
+          },
+          {
+            title: "Company",
+            items: [
+              {
+                label: "🅧",
+                href: "https://x.com/xmtp_",
+              },
+              {
+                label: "Farcaster",
+                href: "https://warpcast.com/~/channel/xmtp",
+              },
+              {
+                label: "Terms of service",
+                href: "/terms",
+              },
+              {
+                label: "Terms of service",
+                href: "/terms",
+              },
+              {
+                label: "Privacy policy",
+                href: "/privacy",
               },
             ],
           },
