@@ -102,6 +102,10 @@ Provides tools to help you build a bot on the XMTP network. (Apr 11)
 
 Provides a Swift implementation of an XMTP message API client for use with iOS apps. (Apr 10)
 
+## [Dart client SDK](https://github.com/xmtp/xmtp-flutter) is Production Ready (xmtp-flutter)
+
+Provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps. (Apr 10)
+
 ---
 
 #### Mar 2023
@@ -141,6 +145,10 @@ Demonstrates core and advanced capabilities of the [JavaScript client SDK](https
 ## [Swift client SDK repo](https://github.com/xmtp/xmtp-ios) is public and in Beta (xmtp-ios)
 
 Provides a Swift implementation of an XMTP message API client for use with iOS apps. (Dec 20)
+
+## [Dart client SDK repo](https://github.com/xmtp/xmtp-flutter) is public and in Beta (xmtp-flutter)
+
+Provides a Dart implementation of an XMTP message API client for use with Flutter and mobile apps. (Dec 20)
 
 ## XMTP v2 is here
 
