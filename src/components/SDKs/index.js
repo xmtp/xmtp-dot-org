@@ -32,15 +32,6 @@ const SDKs = () => {
       </a>
       <a
         target="_blank"
-        href="https://github.com/xmtp/xmtp-flutter"
-        className="chain-item plausible-event-name=SDK+Dart">
-        <img src={"/img/dart.svg"} />
-        <span>
-          Dart <img src="/img/el.svg" className="svg" />
-        </span>
-      </a>
-      <a
-        target="_blank"
         href="https://github.com/xmtp/xmtp-android"
         className="chain-item plausible-event-name=SDK+Kotlin">
         <img src={"/img/kotlin.svg"} />
