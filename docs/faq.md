@@ -152,7 +152,7 @@ XMTP doesn't currently support smart contract wallets. XMTP has been implemented
 
 ### Which languages and environments does the XMTP SDK support?
 
-The XMTP SDK is [available for multiple languages](/docs/introduction#xmtp-sdks-and-example-apps#sdks), including JavaScript, Kotlin, Swift, and Dart.
+The XMTP SDK is [available for multiple languages](/docs/developer-quickstart#xmtp-sdks-and-example-apps#sdks), including JavaScript, Kotlin, Swift, and Dart.
 
 Have other questions or ideas for future language or environment support? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
@@ -386,7 +386,7 @@ XMTP Labs employees work alongside other XMTP community members to build with an
 
 ### Does XMTP Labs plan to build apps or are you focused 100% on the protocol?
 
-XMTP Labs is focused on serving developers. We build [SDKs, UI components, and example apps](/docs/introduction#xmtp-sdks-and-example-apps) that help developers build great experiences with XMTP.
+XMTP Labs is focused on serving developers. We build [SDKs, UI components, and example apps](/docs/developer-quickstart#xmtp-sdks-and-example-apps) that help developers build great experiences with XMTP.
 
 ## Developers
 

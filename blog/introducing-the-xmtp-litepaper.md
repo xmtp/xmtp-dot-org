@@ -34,7 +34,7 @@ So in the meantime, while we continue to build, we invite you to:
 
 - Read the [XMTP Litepaper](https://github.com/xmtp/litepaper)
 - Discuss it with us on [𝕏](https://x.com/xmtp_), [Discord](https://discord.gg/xmtp), and [Discourse](https://community.xmtp.org/)
-- Check out the [XMTP docs](/docs/introduction) to get started building
+- Check out the [XMTP docs](/docs/developer-quickstart) to get started building
 
 <br/>
 <FeedbackWidget />

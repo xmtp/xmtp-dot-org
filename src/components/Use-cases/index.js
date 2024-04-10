@@ -36,11 +36,11 @@ const Usecases = () => {
         <span>Gaming</span>
       </a>
       <a href="/docs/use-cases/groups" className="chain-item">
-        <img src={"/img/groups.svg"} />
+        <img src={"/img/group-chat-icon.svg"} />
         <span>Groups</span>
       </a>
       <a href="/docs/use-cases/frames" className="chain-item">
-        <img src={"/img/smile.svg"} />
+        <img src={"/img/frame-icon.svg"} />
         <span>Frames</span>
       </a>
     </div>

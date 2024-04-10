@@ -8,9 +8,9 @@ Use this document as a map to build, launch, and maintain a best-in-class app wi
 
 ## Intro to XMTP
 
-- [Why XMTP?](/docs/introduction)
+- [Why XMTP?](/docs/developer-quickstart)
 
-- [Try messaging with XMTP](/docs/introduction#try-messaging-with-xmtp)
+- [Try messaging with XMTP](/docs/developer-quickstart#try-messaging-with-xmtp)
 
 ## Start building your app
 

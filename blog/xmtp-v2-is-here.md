@@ -65,7 +65,7 @@ XMTP v2 came together after thousands of interactions with developers. It is inc
 
 Come build with XMTP at:
 
-- [XMTP documentation](/docs/introduction)
+- [XMTP documentation](/docs/developer-quickstart)
 
 - GitHub repo: https://github.com/xmtp
 
