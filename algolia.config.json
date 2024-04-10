@@ -18,11 +18,6 @@
       "selectors_key": "community"
     },
     {
-      "url": "https://xmtp.org/built-with-xmtp/*",
-      "tags": "community",
-      "selectors_key": "community"
-    },
-    {
       "url": "https://xmtp.org/grants/*",
       "tags": "community",
       "selectors_key": "community"

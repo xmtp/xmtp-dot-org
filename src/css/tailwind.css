@@ -375,11 +375,11 @@
 }
 
 .footer {
-  background-color: black;
+  background-color: #000000;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 5em;
-  padding-bottom: 3em;
+  padding-top: 2.5em;
+  padding-bottom: 1.5em;
 }
 
 .footer .container {
@@ -400,10 +400,11 @@
 
 .footer__item {
   margin-bottom: 1rem;
+  line-height: 1.5rem;
 }
 
 .footer__item .footer__link-item {
-  line-height: 0.5rem;
+  line-height: 1.2rem;
 }
 
 .multiline-text-2 {
@@ -1064,6 +1065,13 @@ code:not([class]) {
   }
 }
 /*footer cols*/
+
+@media (max-width: 996px) {
+  .header-github-link {
+    display: none;
+  }
+}
+
 @media (max-width: 799px) {
   .col {
     flex-basis: 50%;
@@ -1630,4 +1638,10 @@ pre code {
   .quickstarts-tabs ul li {
     width: 100%;
   }
+}
+
+.btn-principal:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #dc2626;
 }
