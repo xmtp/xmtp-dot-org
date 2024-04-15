@@ -127,60 +127,6 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-## Synchronizing group conversations
-
-XMTP's `syncGroups` brings the current data from the network and updates local DB, reflecting new groups or membership changes. Use `syncGroups` to:
-
-- **After Signing In:** Immediately update group conversation data.
-- **Periodically:** Keep data current based on your app's requirements.
-- **After Receiving a Notification:** Reflect changes in group membership prompted by notifications.
-
-<Tabs groupId="groupchats">
-<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
-
-```jsx
-await client.conversations.syncGroups();
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-client.conversations.syncGroups()
-```
-
-List all conversations for both group and individual conversations.
-
-```kotlin
-// List all conversations, including both group and individual
-val conversations = client.conversations.list(includeGroups = true)
-```
-
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-try await client.conversations.sync()
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
-
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
-
-Code sample coming soon
-
-</TabItem>
-</Tabs>
-
 ## List group chat conversations
 
 Retrieve all existing group chat conversations associated with the current XMTP client. Refer to the [Conversations](/docs/build/conversations.md) section for more details.
@@ -337,8 +283,6 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-_Use the `sync()` method on a group chat object to update its state with the latest information from the XMTP network._
-
 ## Manage group chat members
 
 You can list, add and remove members from a group chat. Only the creator of the group chat has the permissions to add or remove members. This restriction ensures that only authorized individuals can modify the participant list. Developers should design their application's user interface and functionality with this consideration in mind, ensuring that options to add or remove members are only available to the group's creator.
@@ -471,6 +415,32 @@ Code sample coming soon
 
 </TabItem>
 </Tabs>
+
+## Manage group chat names
+
+Group chats in XMTP can have names to help users identify them easily. Here's how to manage these names:
+
+### Retrieve group name
+
+To get the current name of a group chat:
+
+```jsx
+const groupName = await group.groupName();
+```
+
+### Update group name
+
+To update the name of a group chat:
+
+```jsx
+await group.updateGroupName("New Group Name");
+```
+
+_Remember to do `await group.sync()` syncronizing the group's data including the name_
+
+### Synchronization of group names
+
+Group names are updated across all clients after synchronization. If a group name is changed, other members will see the updated name only after they perform a sync operation on their group data.
 
 ## Listen for new messages and updates
 
@@ -651,6 +621,95 @@ Code sample coming soon
 
 </TabItem>
 </Tabs>
+
+## Synchronization of Group Chats
+
+XMTP's sync methods brings the current data from the network and updates local DB, reflecting new groups or membership changes.
+
+### `client.conversations.syncGroups()`
+
+- **After Signing In:** Immediately update group conversation data.
+- **Periodically:** Keep data current based on your app's requirements.
+- **After Receiving a Notification:** Reflect changes in group membership prompted by notifications.
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+// List groups without syncing with the network
+let groups = await client.conversations.listGroups(true);
+console.log(groups.length); // Might be 0 if not synced after group creation
+// Sync groups and list again
+await client.conversations.syncGroups();
+groups = await client.conversations.listGroups(true);
+console.log(groups.length); // Reflects the actual number of groups
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+client.conversations.syncGroups()
+```
+
+List all conversations for both group and individual conversations.
+
+```kotlin
+// List all conversations, including both group and individual
+val conversations = client.conversations.list(includeGroups = true)
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await client.conversations.sync()
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample coming soon
+
+</TabItem>
+</Tabs>
+
+### `group.sync()`
+
+This method is used to synchronize specific data for a single group, such as new messages and membership changes. It ensures that the group's data is up-to-date with the latest changes from the network.
+
+```jsx
+// Assume group is an existing group chat object
+await group.sync(); // Synchronizes the group's messages and members
+// Fetch messages without network sync
+const messages = await group.messages(true);
+console.log(messages.length); // Shows messages fetched from local data
+```
+
+#### Using the `skipSync` Parameter
+
+The `skipSync` parameter is available in methods like `conversations.listGroups()`, `group.messages()`, and `group.memberAddresses()`. It controls whether to synchronize with the network before fetching data:
+
+- **`true`**: Data is fetched directly from the local database without a network call. This can be faster but might not reflect the most recent changes.
+- **`false`** (default): Data is synchronized with the network before fetching, ensuring that the most up-to-date information is retrieved.
+
+#### Best Practices
+
+- Use `client.conversations.syncGroups()` to ensure your list of groups is up-to-date before displaying them in your application.
+- Use `group.sync()` to fetch the latest messages and member updates for a specific group, especially after known changes like adding new members.
+- Consider the application's need for data freshness versus response speed when deciding whether to use the `skipSync` parameter.
+
+This section aims to clarify the synchronization process, helping developers choose the appropriate methods and parameters based on their specific needs for data accuracy and performance.
 
 ## Note on conversations and messages in group chats
 
