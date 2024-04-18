@@ -624,7 +624,7 @@ Code sample coming soon
 
 ### Manage group member consent
 
-In XMTP, you can not only add or remove members from a group chat but also manage permissions regarding who is allowed or denied access to the group. This feature is crucial for maintaining control over group interactions and ensuring that only authorized members can participate.
+In XMTP, you can not only add or remove members from a group chat but also manage permissions regarding who is allowed or denied access to the group.Consent is crucial for maintaining control over group interactions and ensuring that only authorized members can participate. To learn more visit [Allow/Block](/docs/build/group-chat) section.
 
 #### Allow and deny group access
 
@@ -666,11 +666,11 @@ XMTP's sync methods brings the current data from the network and updates local D
 ```jsx
 // List groups without syncing with the network
 let groups = await client.conversations.listGroups(true);
-console.log(groups.length); // Might be 0 if not synced after group creation
+// groups length might be 0 if not synced after group creation
 // Sync groups and list again
 await client.conversations.syncGroups();
 groups = await client.conversations.listGroups(true);
-console.log(groups.length); // Reflects the actual number of groups
+console.log(groups.length); // groups length reflects the actual number of groups
 ```
 
 </TabItem>
@@ -724,23 +724,6 @@ const messages = await group.messages(true);
 console.log(messages.length); // Shows messages fetched from local data
 ```
 
-#### Using the `skipSync` Parameter
-
-The `skipSync` parameter is available in methods like `conversations.listGroups()`, `group.messages()`, and `group.memberAddresses()`. It controls whether to synchronize with the network before fetching data:
-
-- **`true`**: Data is fetched directly from the local database without a network call. This can be faster but might not reflect the most recent changes.
-- **`false`** (default): Data is synchronized with the network before fetching, ensuring that the most up-to-date information is retrieved.
-
-#### Best Practices
-
-- Use `client.conversations.syncGroups()` to ensure your list of groups is up-to-date before displaying them in your application.
-- Use `group.sync()` to fetch the latest messages and member updates for a specific group, especially after known changes like adding new members.
-- Consider the application's need for data freshness versus response speed when deciding whether to use the `skipSync` parameter.
-
-This section aims to clarify the synchronization process, helping developers choose the appropriate methods and parameters based on their specific needs for data accuracy and performance.
-
 ## Note on conversations and messages in group chats
 
 It's important to note that all the features and methods described in the [Conversations](/docs/build/conversations) and [Messages](/docs/build/messages) documentation are fully applicable to group chats as well. This includes starting new conversations, checking if an address is on the network, sending messages, and listing existing conversations. XMTP's API design ensures that you can manage group chats with the same ease and flexibility as one-on-one conversations.
-
-This means that whether you're working with individual conversations or group chats, the process for managing them remains consistent, allowing for a unified and streamlined development experience across different types of communication within XMTP.
