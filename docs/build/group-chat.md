@@ -33,8 +33,8 @@ Initiate a new group chat with a list of specified addresses. To create a group,
 ```jsx
 const group = await client.conversations.newGroup(
   [walletAddress1, walletAddress2],
-  // Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
-  { permissions: "creator_is_admin" },
+  // Set permissions for the group. Options include "creator_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+  { permissions: "creator_admin" },
 );
 ```
 
@@ -43,8 +43,8 @@ const group = await client.conversations.newGroup(
 
 ```kotlin
 val group = client.conversations.newGroup(listOf(walletAddress1, walletAddress2),
-  // Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
-  permissions = "creator_is_admin"
+  // Set permissions for the group. Options include "creator_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+  permissions = "creator_admin"
 )
 ```
 
@@ -53,8 +53,8 @@ val group = client.conversations.newGroup(listOf(walletAddress1, walletAddress2)
 
 ```swift
 let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2],
-// Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
-permissions: "creator_is_admin")
+// Set permissions for the group. Options include "creator_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+permissions: "creator_admin")
 ```
 
 </TabItem>
@@ -621,6 +621,36 @@ Code sample coming soon
 
 </TabItem>
 </Tabs>
+
+To enhance the documentation on group member management in XMTP, you can add details about the methods used to manage group permissions and member statuses, such as allowing or denying groups, and checking these permissions. Here's a proposed addition to the [docs/build/group-chat.md](file:///Users/fabrizioguespe/DevRel/xmtp-dot-org/docs/build/group-chat.md#1%2C1-1%2C1):
+
+### Manage group member consent
+
+In XMTP, you can not only add or remove members from a group chat but also manage permissions regarding who is allowed or denied access to the group. This feature is crucial for maintaining control over group interactions and ensuring that only authorized members can participate.
+
+#### Allow and deny group access
+
+You can explicitly allow or deny members' access to a group chat. This is particularly useful in scenarios where group membership needs to be tightly controlled.
+
+```jsx
+// Allow a member to access a group
+await group.allowMembers([walletAddress]);
+
+// Deny a member's access to a group
+await group.denyMembers([walletAddress]);
+```
+
+#### Check if a group is allowed or denied
+
+You can check if a group is allowed or denied for a member. This method helps in managing user experiences and accessibilities based on their group status.
+
+```jsx
+// Check if a group is allowed for a member
+const isAllowed = await group.isGroupAllowed(walletAddress);
+
+// Check if a group is denied for a member
+const isDenied = await group.isGroupDenied(walletAddress);
+```
 
 ## Synchronization of Group Chats
 
