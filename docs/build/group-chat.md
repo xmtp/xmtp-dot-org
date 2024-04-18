@@ -622,8 +622,6 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-To enhance the documentation on group member management in XMTP, you can add details about the methods used to manage group permissions and member statuses, such as allowing or denying groups, and checking these permissions. Here's a proposed addition to the [docs/build/group-chat.md](file:///Users/fabrizioguespe/DevRel/xmtp-dot-org/docs/build/group-chat.md#1%2C1-1%2C1):
-
 ### Manage group member consent
 
 In XMTP, you can not only add or remove members from a group chat but also manage permissions regarding who is allowed or denied access to the group. This feature is crucial for maintaining control over group interactions and ensuring that only authorized members can participate.
