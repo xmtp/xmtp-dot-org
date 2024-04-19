@@ -1632,7 +1632,12 @@ pre code {
 .DocSearch {
   /*display: none;*/
 }
-
+.ask_gpt {
+  display: none;
+}
+.docs-doc-page .ask_gpt {
+  display: block;
+}
 .ask_gpt {
   background-color: white;
   color: black;
