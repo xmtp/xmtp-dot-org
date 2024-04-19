@@ -10,24 +10,28 @@ const BuiltWithXmtp = () => {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
-              Built with XMTP
+              The open protocol for web3 messaging
             </h1>
             <p className="text-lg leading-7 text-gray-600">
-              Hundreds of awesome projects, people, and partners rely on XMTP.
-              <br />
-              <strong>Come build with us!</strong>
+              <strong className="pr-1">
+                <a href="https://dune.com/xmtp_team/dash" target="_blank" rel="noreferrer">
+                  1,878,204+
+                </a>
+              </strong>
+              web3 identities rely on apps built with XMTP for secure, private,
+              and portable messaging
             </p>
           </div>
           <div className="mx-auto mt-4 max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-              <button class="bg-red-500 hover:bg-red-600 hover:drop-shadow transition rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0">
-                <img src="/img/xmtp-sm-icon.png" class="w-5 h-5 mr-2.5"></img>
-                <a
-                  className="hover:no-underline text-white hover:text-white"
-                  href="/docs/build/get-started/overview">
-                  Start building
-                </a>
-              </button>
+              <a
+                href="/docs/introduction"
+                className="btn-principal bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0 no-underline" rel="noreferrer">
+                <img
+                  src="/img/xmtp-sm-icon.png"
+                  className="w-5 h-5 mr-2.5" alt="XMTP icon"></img>
+                Build with XMTP
+              </a>
             </div>
           </div>
         </div>
@@ -113,15 +117,14 @@ const BuiltWithXmtp = () => {
               target="_blank"
               className="focus:outline-none">
               <h5 className="text-lg font-bold text-gray-900 mb-0">
-                Get Featured!
+                Help build this list
               </h5>
             </a>
             <p className="text-base text-gray-500">
-              Have a project building on XMTP? Want your profile updated?{" "}
-              <a href="https://forms.gle/p1VgVtkoGfHXANXt5" target="_blank">
-                Share your details
-              </a>{" "}
-              and we'll follow up.
+              Know of a project built with XMTP that should be here?
+              <a className="px-1" href="https://forms.gle/p1VgVtkoGfHXANXt5" target="_blank" rel="noreferrer">
+                <strong>Submit it</strong>
+              </a>
             </p>
           </div>
         </div>

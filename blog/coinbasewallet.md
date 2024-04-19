@@ -49,7 +49,7 @@ Coinbase Wallet built its inbox using XMTP to ensure that:
 
 - **All messages are fully secure and private.** Messages are encrypted end-to-end between participants and stored in XMTP's progressively decentralized network. Coinbase does not have access to users’ messages, ensuring that their conversations remain private.
 - **Digital assets can be transacted using the same inbox.** The ability to send global payments for free in a way that feels like WhatsApp + Cash App is such a massive innovation for the entire web3 space.
-- **End-users own their communications.** The Coinbase Wallet inbox is tied to users’ web3 identity, which means they will find their messages and contacts in every other app within the XMTP network, including Lenster, ConverseApp, OrbApp, and others. ([Explore apps](/built-with-xmtp))
+- **End-users own their communications.** The Coinbase Wallet inbox is tied to users’ web3 identity, which means they will find their messages and contacts in every other app within the XMTP network, including Lenster, ConverseApp, OrbApp, and others. ([Explore apps](https://xmtp.org/))
 
 **Get access**
 

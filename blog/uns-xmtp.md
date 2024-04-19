@@ -19,7 +19,7 @@ import FeedbackWidget from '/src/components/FeedbackWidget'
 
 <!--truncate-->
 
-Unstoppable Domains integrated XMTP to enable domains to message each other, right from Unstoppable’s web platform or mobile app. The new inbox allows users to connect easily and securely via end-to-end encrypted wallet messaging. Conversations are also not confined to one website — the inbox is interoperable across [all apps built with XMTP](/built-with-xmtp), which means you can stay in touch on other apps like Lenster, Coinbase Wallet, or Converse Messenger.
+Unstoppable Domains integrated XMTP to enable domains to message each other, right from Unstoppable’s web platform or mobile app. The new inbox allows users to connect easily and securely via end-to-end encrypted wallet messaging. Conversations are also not confined to one website — the inbox is interoperable across [all apps built with XMTP](https://xmtp.org/), which means you can stay in touch on other apps like Lenster, Coinbase Wallet, or Converse Messenger.
 
 Inside the same inbox is also the option to chat with customer support — which unlocks an important use case for businesses and brands. Customer service scams are everywhere, because verifying a brand or an individual’s identity through messaging is especially hard, if not impossible, in web2.
 
@@ -33,7 +33,7 @@ If you are a partner, and interested in exploring the Unstoppable Customer Suppo
 
 For NFT marketplaces specifically, this also opens the door for a much more secure interaction between buyers and sellers. On [unstoppabledomains.com](https://unstoppabledomains.com/), if you see a domain you want to buy, you can now message the domain name directly on the platform, knowing that you are interacting with its real owner. Or if you head to [UD.me/Sandy.NFT](https://ud.me/Sandy.NFT), which is the Unstoppable Profile, messaging can be done while you are joining communities and subcommunities.
 
-On the receiving end, if you are open to selling your domain you will receive inbound offers on [any app that’s built with XMTP](/built-with-xmtp) — you won’t need to check the website or download a new app to stay notified.
+On the receiving end, if you are open to selling your domain you will receive inbound offers on [any app that’s built with XMTP](https://xmtp.org/) — you won’t need to check the website or download a new app to stay notified.
 
 <br/>
 <FeedbackWidget />

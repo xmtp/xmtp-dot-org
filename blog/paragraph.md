@@ -37,7 +37,7 @@ For example, someone could mint your content on Lens, and you could use Paragrap
     1. Paragraph makes it super easy for anyone to collect your posts in the form of NFTs, or to create NFT-backed subscriptions. This creates a new and easy way for publishers to [monetize their content](https://docs.paragraph.xyz/docs/advanced/referral-program#optimism-and-base). 
     2. The NFT is the immutable on-chain proof that someone collected your content or became a member of your community. Because it is tied to a wallet address, it can be taken across apps to securely prove membership. 
 2. **Use Paragraph to reach NFT holders on any app within the XMTP network, without collecting user data.** 
-    1. Paragraph uses XMTP to send newsletters to wallet addresses, which means that a message sent from Paragraph can reach audiences across any app within the XMTP network, including any Lens app, Coinbase Wallet, Converse, Unstoppable Domains, etc. [See app showcase](https://xmtp.org/built-with-xmtp). 
+    1. Paragraph uses XMTP to send newsletters to wallet addresses, which means that a message sent from Paragraph can reach audiences across any app within the XMTP network, including any Lens app, Coinbase Wallet, Converse, Unstoppable Domains, etc. [See app showcase](https://xmtp.org/). 
     2. This allows you to avoid email and become the only newsletter that people receive on web3 social apps like [Hey](https://hey.xyz/), for example. 
 3. **Offer integrated experiences that unlock rewards across apps.**
     1. Since NFTs are an open standard, creators can build a community by providing exclusive access, discounts, prizes, and more - across any app in the web3 ecosystem. Mrwildenfree for example is building his audience across Lens, Paragraph, and Sound.xyz.
