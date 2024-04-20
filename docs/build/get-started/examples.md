@@ -22,13 +22,13 @@ A quickstart is a brief guide or repo aimed at helping XMTP developers to unders
 
 <ul>
   <li><a href="/docs/tutorials/token-gated-group-chat" class="plausible-event-name=Quickstart">Token Gates Group Chat</a><br/><small>How to build a token-gated group chat with Converse and XMTP.</small></li>
-  <li><a href="https://github.com/xmtp/xmtp-quickstart-render-chat-frames" class="plausible-event-name=Quickstart">Frames Quickstart</a><br/><small>Learn how to render interoperable Frames in your messaging apps</small></li>
+  <li><a href="/docs/tutorials/render-frames" class="plausible-event-name=Quickstart">Render Frames</a><br/><small>Learn how to render interoperable Frames in your messaging apps</small></li>
   <li><a href="/docs/tutorials/portable-consent/subscribe" class="plausible-event-name=Quickstart">Subscribe</a><br/><small>How to build a Subscribe button to record broadcast message user consent</small></li>
   <li><a href="/docs/tutorials/portable-consent/request-inbox" class="plausible-event-name=Quickstart">Request inbox</a><br/><small>How to build consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
   <li><a href="https://github.com/xmtp/xmtp-quickstart-reactjs" class="plausible-event-name=Quickstart">Floating Inbox</a><br/><small>Floating inbox quickstart app in JS. Use it to help you build your own app with XMTP.</small></li>
   <li><a href="https://github.com/xmtp/xmtp-quickstart-pwa" class="plausible-event-name=Quickstart">Progressive web app</a><br/><small>Quickstart app for building an app, which is a way to provide an app without requiring separate bundling or distribution</small></li>
   <li><a href="https://replit.com/@FabrizioGuespe/XMTP-Developer-Quickstart?v=1#index.ts" class="plausible-event-name=Replit">JavaScript live example</a><br/><small>A Repl of a full flow for sending and streaming messages in JavaScript</small></li>
-  <li><a href="https://github.com/xmtp/xmtp-nodebooks" class="plausible-event-name=Quickstart">Node.js Notebooks</a><br/><small>Interactive Node.js notebooks (similar to Jupyter) for learning about and experimenting with XMTP</small></li>
+
 </ul>
 
 </div>
