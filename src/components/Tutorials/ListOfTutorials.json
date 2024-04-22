@@ -40,11 +40,6 @@
     "href": "/docs/build/broadcast"
   },
   {
-    "name": "Build a chatbot",
-    "image": "img/bot-cover.jpg",
-    "href": "/docs/tutorials/bots"
-  },
-  {
     "name": "Build an XMTP CLI tool",
     "image": "img/cli-cover.jpg",
     "href": "/docs/tutorials/cli"
