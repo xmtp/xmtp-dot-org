@@ -1640,6 +1640,26 @@ pre code {
   }
 }
 
+/*ask ai*/
+.DocSearch {
+  /*display: none;*/
+}
+.ask_gpt {
+  display: none;
+}
+.docs-doc-page .ask_gpt {
+  display: block;
+}
+.ask_gpt {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.ask_gpt:hover {
+  background-color: black;
+  color: white;
+}
+
 .btn-principal:hover {
   text-decoration: none;
   color: white;
