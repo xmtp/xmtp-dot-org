@@ -227,10 +227,6 @@ const newConversation = await xmtp.conversations.newConversation(
 </TabItem>
 </Tabs>
 
-import Bots from "@site/src/components/Bots/index.md";
-
-<Bots />
-
 ## List existing conversations
 
 You can get a list of all conversations that have one or more messages.

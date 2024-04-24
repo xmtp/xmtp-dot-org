@@ -52,4 +52,4 @@ To learn more about message encryption, see [Invitation and message encryption](
 
 To explore the ecosystem of apps built with XMTP, see:
 
-- [Built with XMTP](/built-with-xmtp): A curated showcase of apps built with XMTP‍
+- [Built with XMTP](https://xmtp.org/): A curated showcase of apps built with XMTP‍

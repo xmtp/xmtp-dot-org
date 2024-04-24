@@ -37,12 +37,7 @@
   {
     "name": "Send a broadcast message",
     "image": "img/broadcast-cover.png",
-    "href": "/docs/tutorials/broadcast"
-  },
-  {
-    "name": "Build a chatbot",
-    "image": "img/bot-cover.jpg",
-    "href": "/docs/tutorials/bots"
+    "href": "/docs/build/broadcast"
   },
   {
     "name": "Build an XMTP CLI tool",

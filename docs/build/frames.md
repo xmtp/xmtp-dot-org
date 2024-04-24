@@ -53,7 +53,7 @@ These are the foundational tools that allow developers to create, sign, and mana
 In compliance with [Open Frames](https://github.com/open-frames/standard/blob/v0.0.1/README.md), Use a meta tag in your frame's HTML to declare the client protocols your frame supports.
 
 ```html
-<meta property="of:accepts:xmtp" content="2024-02-01" />
+<meta property="of:accepts:xmtp" content="vNext" />
 ```
 
 This informs client applications about the protocols your frame can interact with.

@@ -22,7 +22,7 @@ How developer [@0x_Yuzu](https://x.com/0x_Yuzu) built an application that enable
 
 <!--truncate-->
 
-Developers are using web3’s composability to build a wider range of user-centric experiences. [OpenSea’s Seaport protocol](https://docs.opensea.io/v2.0/reference/seaport-overview) is a good example. Seaport is an open source, decentralized NFT marketplace protocol that enables developers to build apps and tools that reinvent how and where NFT buyers and sellers can interact.
+Developers are using web3’s composability to build a wider range of user-centric experiences. [OpenSea’s Seaport protocol](https://docs.opensea.io/docs/seaport) is a good example. Seaport is an open source, decentralized NFT marketplace protocol that enables developers to build apps and tools that reinvent how and where NFT buyers and sellers can interact.
 
 > "Current marketplaces don’t allow users to communicate back and forth in a conversational way,” said [@0x_Yuzu](https://x.com/0x_Yuzu). “OTC Swap allows users to fully communicate and come to a consensus, all without giving up their privacy or security."
 
