@@ -150,12 +150,5 @@
     "description": "World's first Ethereum mobile operating system. A mobile OS built to be crypto native.",
     "github": "https://github.com/EthereumPhone",
     "twitter": "https://x.com/EthereumPhone"
-  },
-  {
-    "name": "XMTP Inbox",
-    "href": "https://xmtp.chat",
-    "image": "/img/builtWithXmtp/xmtp.svg",
-    "description": "Web app that demonstrates core and advanced capabilities of the XMTP client SDK",
-    "github": "https://github.com/xmtp-labs/xmtp-inbox-web"
   }
 ]

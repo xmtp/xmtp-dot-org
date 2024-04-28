@@ -37,8 +37,8 @@ Third party frameworks and tooling who have already integrated XMTP signing into
 
 Some clients are fully XMTP compatible and can render Frames signing XMTP payloads:
 
-- [**XMTP.chat**](https://xmtp.chat/): Engage with Frames firsthand by trying them on web.
 - [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
+- [**DevInbox**](https://github.com/xmtp/dev-inbox): Open Source Chat Inbox for Developers to easily test xmtp features.
 
 ## Getting started
 

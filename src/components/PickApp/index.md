@@ -14,10 +14,6 @@ import cb from "/docs/use-cases/img/cbw.png";
     <img src={cb} />
     <span>Coinbase Wallet</span>
   </a>
-  <a href="https://xmtp.chat/" class="chain-item">
-    <img src={webinbox} />
-    <span>Web Inbox</span>
-  </a>
   <a href="https://lenster.xyz/" class="chain-item">
     <img src={lenster} />
     <span>Lenster</span>

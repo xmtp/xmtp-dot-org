@@ -72,7 +72,7 @@ Example apps are more comprehensive than quickstarts. They are fully functional 
 
 <ul>
   <li><a href="https://github.com/xmtp/xmtp-react-playground/" class="plausible-event-name=Example">React Playground app</a><br/><small>A tool to help you build your own app with XMTP, including reactions, replies, read receipts, and attachments</small></li>
-  <li><a href="https://github.com/xmtp-labs/xmtp-inbox-web/" class="plausible-event-name=Example">Inbox Web</a><br/><small>XMTP official client, aiming to showcase effective and innovative ways of building with XMTP.</small></li>
+  <li><a href="https://github.com/xmtp/dev-inbox/" class="plausible-event-name=Example">Dev Inbox</a><br/><small>XMTP official client, aiming to showcase effective and innovative ways of building with XMTP.</small></li>
 </ul>
 </div>
 

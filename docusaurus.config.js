@@ -214,14 +214,7 @@ const config = {
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>`,
               },
-
             ],
-          },
-          {
-            type: "html",
-            position: "right",
-            value:
-              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
           },
           {
             href: "https://github.com/xmtp",

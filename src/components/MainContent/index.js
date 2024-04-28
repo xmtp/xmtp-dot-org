@@ -15,7 +15,7 @@ import {
   XMTP_IOS_URL,
   XMTP_FLUTTER_URL,
   XMTP_WEB_URL,
-  CHAT_ITEM,
+  ,
 } from "../../helpers/constants";
 import { BlogItem } from "../BlogItem";
 import ALink from "../ALink";
@@ -74,7 +74,7 @@ export const MainContent = ({ styles }) => {
     const dataNotif = await responseNotif.json();
     if (dataNotif && !dataNotif.message) items = [...items, dataNotif];
 
-    items = [...items, CHAT_ITEM];
+    items = [...items];
     setSliderItems(items);
   };
 
