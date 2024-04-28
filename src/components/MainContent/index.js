@@ -15,7 +15,6 @@ import {
   XMTP_IOS_URL,
   XMTP_FLUTTER_URL,
   XMTP_WEB_URL,
-  ,
 } from "../../helpers/constants";
 import { BlogItem } from "../BlogItem";
 import ALink from "../ALink";
