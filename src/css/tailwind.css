@@ -1665,3 +1665,24 @@ pre code {
   color: white;
   background-color: #dc2626;
 }
+
+/*FARHACK*/
+
+details {
+  background: #8465cb !important;
+}
+summary {
+  color: white;
+}
+
+.details_node_modules-\@docusaurus-theme-classic-lib-theme-Details-styles-module {
+  border: 0px;
+  border-color: transparent !important;
+}
+.details_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module
+  > summary::before {
+  border-color: transparent transparent transparent white !important;
+}
+.collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
+  border-color: white !important;
+}
