@@ -25,6 +25,23 @@ const config = {
   projectName: "xmtp-dot-org",
   scripts: [
     {
+      src: "https://widget.kapa.ai/kapa-widget.bundle.js",
+      "data-website-id": "7039ef02-1fe3-4e7a-9dfa-5421408b7cea",
+      "data-project-name": "XMTP",
+      "data-project-color": "#5A2895",
+      "data-project-logo":
+        "https://avatars.githubusercontent.com/u/82580170?s=280&v=4",
+      "data-modal-example-questions":
+        "How do I send a remote attachment?,Is XMTP Decentralized?, Do you have group chats?",
+      "data-button-position-bottom": "120px",
+      "data-button-hide": "true",
+      "data-modal-override-open-class": "ask_gpt",
+      "data-search-mode-default": "false",
+      "data-search-mode-enabled": "true",
+      "data-modal-title": "XMTP Docs",
+      async: true,
+    },
+    {
       src: "/js/myjs.js",
     },
     {
@@ -221,6 +238,12 @@ const config = {
             title: "Go to the XMTP GitHub repo",
             position: "right",
             className: "header-github-link",
+          },
+          {
+            type: "html",
+            position: "right",
+            value:
+              '<button type="button" class="navbar__chatbutton ask_gpt"><strong>Ask AI</strong></button>',
           },
         ],
       },
