@@ -20,19 +20,35 @@ This guide will take you through the steps to create and deploy a simple bot usi
 First, install the necessary CLI tool globally using npm:
 
 ```bash
-npm install -g create-xmtp-bot
-```
-
-### Step 2: Create Your Bot
-
-Generate your new bot project and navigate into your project directory:
-
-```bash
-npx create-xmtp-bot my-bot-name
+npx create-xmtp-bot@latest <bot-name>
 cd my-bot-name
 ```
 
-### Step 3: Understanding the `index.ts` File
+### Configuration
+
+Set your private key and network environment in the `.env` file:
+
+```bash
+KEY= # your bot's private key
+XMTP_ENV= # production or dev network
+```
+
+### Building and Running Your Bot
+
+Install dependencies and run your bot:
+
+```bash
+# install dependencies
+yarn install
+# build and run your bot
+yarn build
+yarn start
+# For development with hot-reload
+yarn build:watch
+yarn start:watch
+```
+
+### Step 2: Understanding the `index.ts` File
 
 The `index.ts` file contains the main logic for your bot:
 
