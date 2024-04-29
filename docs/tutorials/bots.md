@@ -38,11 +38,6 @@ XMTP_ENV= # production or dev network
 Install dependencies and run your bot:
 
 ```bash
-# install dependencies
-yarn install
-# build and run your bot
-yarn build
-yarn start
 # For development with hot-reload
 yarn build:watch
 yarn start:watch
