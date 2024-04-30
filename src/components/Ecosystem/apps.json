@@ -139,23 +139,6 @@
     "category": "Messaging 💬"
   },
   {
-    "title": "Web Inbox",
-    "url": "https://xmtp.chat/",
-    "icon": {
-      "type": "file",
-      "file": {
-        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e08a9295-10bd-474e-930c-1ea0653d059f/favicon_%281%29.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230528%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230528T001925Z&X-Amz-Expires=3600&X-Amz-Signature=98950aefeaaec30b9cc38e74a0a2fc85e34f9d20d600be414873c7c8d7f446b9&X-Amz-SignedHeaders=host&x-id=GetObject",
-        "expiry_time": "2023-05-28T01:19:25.317Z"
-      }
-    },
-    "cover": null,
-    "description": "XMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.",
-    "partner": false,
-    "featured": true,
-    "curated": true,
-    "category": "Messaging 💬"
-  },
-  {
     "title": "AbsoluteLabs",
     "url": "https://absolutelabs.io/",
     "icon": {

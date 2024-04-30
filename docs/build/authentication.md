@@ -604,14 +604,12 @@ XMTP identity on `dev` network is completely distinct from its XMTP identity on 
 
 - `production`: This network is used in production and is configured to store messages indefinitely.
 
-  - Try the web inbox at [https://xmtp.chat/](https://xmtp.chat/).
-
-  - Send a message to our `gm` bot to get started. `gm.xmtp.eth`
+  - Try the web inbox at [Dev Inbox Prod](https://github.com/xmtp/dev-inbox).
 
 - `dev`: XMTP may occasionally delete messages and keys from this network
 
-  - Try the web dev inbox at [https://dev.xmtp.chat/](https://xmtp.chat/).
-
-  - Send a message to our `gm` bot to get started. `0x8DC925338C1eE1fE62c0C43404371deb701BfB55`
+  - Try the web dev inbox at [Dev Inbox Dev](https://github.com/xmtp/dev-inbox/).
 
 - `local`: Use to have a client communicate with an XMTP node you are running locally. For example, an XMTP node developer can set `env` to `local` to generate client traffic to test a node running locally.
+
+> Send a message to our `gm` bot to get started. `gm.xmtp.eth`

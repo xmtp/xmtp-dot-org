@@ -36,18 +36,7 @@ import polygon from '/docs/concepts/img/polygon-logo.png';
 import scroll from '/docs/concepts/img/scroll-logo.png';
 import activatedmsscreen from '/docs/concepts/img/activate-dms-screen.png';
 
-To connect web3 wallets to your app:
-
-- [Thirdweb](https://thirdweb.com/)
-  - Example implementation in the [XMTP React Native example app](https://github.com/xmtp/xmtp-react-native/blob/main/example/src/AuthView.tsx#L7)
-  - Example implementation in the [XMTP React JS example app](/blog/thirdbweb-wallet-remote-attachments)
-- [RainbowKit](https://www.rainbowkit.com/)
-  - Example implementation in the [XMTP Inbox Web app](https://github.com/xmtp-labs/xmtp-inbox-web)
-  - Support for WalletConnect v2 is now standard in RainbowKit. To learn how to upgrade, see [Migrating to WalletConnect v2](https://www.rainbowkit.com/guides/walletconnect-v2).
-- [WalletConnect](https://walletconnect.com/)
-- [wagmi](https://wagmi.sh/)
-
-XMTP client SDKs require you to use [ethers](https://ethers.org/) or another web3 library capable of supplying an [ethers Signer](https://docs.ethers.io/v5/api/signer/). These wallet connection tools, as well as others, provide this capability.
+To connect web3 wallets to your xmtp app head to [Examples](./build/get-started/examples.md)
 
 #### Storage
 
@@ -362,11 +351,6 @@ XMTP enables developers to implement messaging features and UX paradigms that be
 ### Does XMTP support real-time conversations?
 
 Real-time chat is a core use case for XMTP and is demonstrated by the XMTP Inbox chat app.
-
-- [Try the app](https://dev.xmtp.chat/) connected to the XMTP `dev` network
-- [Try the app](https://xmtp.chat/) connected to the XMTP `production` network
-
-To learn more about how the XMTP Inbox chat app is built, see the [xmtp-inbox-web repo](https://github.com/xmtp-labs/xmtp-inbox-web).
 
 ### Does XMTP support broadcast messaging?
 

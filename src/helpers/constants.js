@@ -103,13 +103,3 @@ export const XMTP_FLUTTER_URL =
 export const XMTP_WEB_URL = "https://api.github.com/repos/xmtp/xmtp-web";
 export const XMTP_NOTIF_SERVER_URL =
   "https://api.github.com/repos/xmtp/example-notification-server-go";
-
-export const CHAT_ITEM = {
-  id: "2534740",
-  full_name: "Hosted XMTP Inbox chat app",
-  description:
-    "Hosted xmtp-inbox-web app connected to the XMTP production network",
-  text: "Try it",
-  html_url: "https://xmtp.chat/",
-  icon: "chat-icon.svg",
-};
