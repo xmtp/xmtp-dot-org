@@ -25,6 +25,7 @@ XMTP contributes to the Open Frames standard, fostering interoperability and ope
 Popular frameworks have already integrated Open Frames into their stack:
 
 - [**OnChainKit**](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
+  - [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): Onchainkit quickstart that integrates XMTP.
 - [**Frames.js**](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
 - [**Frog**](https://frog.fm/getting-started): There is an active [**discussion**](https://github.com/wevm/frog/discussions/51) to integrate Open Frames.
 
@@ -39,5 +40,5 @@ Some clients are fully XMTP compatible and can render Frames signing XMTP payloa
 
 These are the foundational tools that allow developers to create, sign, and manage Frames created by Open Frames & XMTP
 
-- [**@xmtp/frames-client**](https://github.com/xmtp/xmtp-web/tree/main/packages/frames-client): Library that will help you render frames in your messaging app.
-- [**@xmtp/frames-validator**](https://github.com/xmtp/xmtp-web/tree/main/packages/frames-client): A set of tools for validating POST payloads from XMTP Frames
+- [**@xmtp/frames-validator**](https://github.com/xmtp/xmtp-node-js-tools/blob/main/packages/frames-validator/): A set of tools for validating POST payloads from XMTP Frames
+- [**@xmtp/frames-client**](https://github.com/xmtp/xmtp-web/tree/main/packages/frames-client): Library used by messaging apps to render xmtp frames..
