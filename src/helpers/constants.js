@@ -13,7 +13,7 @@ export const HEADER_DATA = [
   },
   {
     title: "Start building with XMTP client SDKs",
-    subtitle: "Build web3 messaging apps in React, JS, Kotlin, Swift, & Dart",
+    subtitle: "Build web3 messaging apps in React, JS, Kotlin, & Swift",
     url: "/docs/introduction#xmtp-sdks-and-example-apps",
     icon: "quickstart-icon.svg",
   },
@@ -56,8 +56,8 @@ export const BLOG_DATA = [
   {
     tag: [tags.announcements, tags.developers, tags.privacySecurity],
     title: "New Inbox Protection on XMTP",
-    content: 
-           "XMTP is getting an essential protocol update that brings users’ allow/block preferences to the network-level",
+    content:
+      "XMTP is getting an essential protocol update that brings users’ allow/block preferences to the network-level",
     user: {
       name: "Rochelle Guillou",
       date: "15 Feb 2024 · 3 min read",
@@ -69,8 +69,8 @@ export const BLOG_DATA = [
   {
     tag: [tags.developers, tags.messaging, tags.privacySecurity],
     title: "Navigating speed and privacy with XMTP",
-    content: 
-           "When building apps using XMTP, a common question is how to fetch conversations by the most recent message.",
+    content:
+      "When building apps using XMTP, a common question is how to fetch conversations by the most recent message.",
     user: {
       name: "Engineering",
       date: "06 Dec 2023 · 2 min read",
@@ -82,8 +82,8 @@ export const BLOG_DATA = [
   {
     tag: [tags.awards, tags.developers, tags.hackathon, tags.messaging],
     title: "From Gaming to Education at ETHOnline 2023",
-    content: 
-           "Explore how the winning projects at ETHOnline 2023 leveraged XMTP in unique ways",
+    content:
+      "Explore how the winning projects at ETHOnline 2023 leveraged XMTP in unique ways",
     user: {
       name: "Rochelle Guillou",
       date: "21 Nov 2023 · 3 min read",

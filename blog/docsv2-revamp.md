@@ -63,7 +63,6 @@ We've organized XMTP around various use cases in Finance, Commerce, Marketing, A
 - **[Support](https://xmtp.org/docs/use-cases/support) ☎️**: Redefine customer support and engage in finance transactions on chat, automate with AI bots, and streamline DAO operations - all through secure channels.
 - **[Commerce](https://xmtp.org/docs/use-cases/commerce) 🛍️**: Enhance e-commerce with encrypted communication between buyers and sellers.
 - **[DeFi](https://xmtp.org/docs/use-cases/defi) 🏦**: Empower Decentralized Finance by sending secure transaction confirmations, notifications, token transfers, NFT minting, etc.
-- **[Automation](https://xmtp.org/docs/use-cases/automation) 🤖**: Employ secure messaging for web3 automation tools, including triggers, notifications, and customer service bots.
 - **[Gaming](https://xmtp.org/docs/use-cases/gaming) 🎮**: Create secure and immersive gaming experiences with real-time messaging, in-game notifications, and more.
 
 ## **Tutorials: The Developer’s Arsenal 🛠**
@@ -77,12 +76,6 @@ Our tutorials are technical deep-dives that feature integration partners, highli
 ## **Language Simplification 🗣**
 
 We’ve streamlined the language to keep it simple and relatable. For instance, Preview, Dev Preview, and General Availability are now `Alpha`, `Beta` & `Production` ✅. Also, many independent docs have been merged into traditional Developer `FAQs`.
-
-## **Hackathons Hub 🏁**
-
-Discover a hub dedicated to hackathons that is updated ad-hoc, providing a centralized space for showcasing possibilities and aligning with XMTP priorities when building at hackathons.
-
-https://xmtp.org/docs/hackathons
 
 ### **Conclusion 🏁**
 

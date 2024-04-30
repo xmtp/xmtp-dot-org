@@ -70,7 +70,7 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
   - [@xmtp\_](https://x.com/xmtp_) on Twitter
   - [@xmtp](https://warpcast.com/xmtp) on Farcaster
   - [@xmtp_network](https://www.threads.net/@xmtp_network) on Threads
-- [ ] Have your app added to [Built with XMTP](/built-with-xmtp)
+- [ ] Have your app added to [Built with XMTP](https://xmtp.org/)
   - [Submit this form](https://forms.gle/p1VgVtkoGfHXANXt5)
 - [ ] Have your project repo added to [awesome-xmtp](https://github.com/xmtp/awesome-xmtp)
   - [Create a PR](https://github.com/xmtp/awesome-xmtp)

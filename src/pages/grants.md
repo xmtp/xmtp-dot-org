@@ -164,7 +164,7 @@ You can fill in the form available at [Claim Payments](https://forms.xmtp.org/gr
 
 ### Project showcase
 
-- [Built with XMTP](built-with-xmtp)
+- [Built with XMTP](https://xmtp.org/)
 
 ## 💬 Contact us
 
