@@ -41,4 +41,4 @@ Some clients are fully XMTP compatible and can render Frames signing XMTP payloa
 These are the foundational tools that allow developers to create, sign, and manage Frames created by Open Frames & XMTP
 
 - [**@xmtp/frames-validator**](https://github.com/xmtp/xmtp-node-js-tools/blob/main/packages/frames-validator/): A set of tools for validating POST payloads from XMTP Frames
-- [**@xmtp/frames-client**](https://github.com/xmtp/xmtp-web/tree/main/packages/frames-client): Library used by messaging apps to render xmtp frames..
+- [**@xmtp/frames-client**](https://github.com/xmtp/xmtp-web/tree/main/packages/frames-client): Library used by messaging apps to render xmtp frames.
