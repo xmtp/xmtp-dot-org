@@ -70,7 +70,7 @@ Popular frameworks have already integrated Open Frames into their stacks:
   - [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): Onchainkit quickstart that integrates XMTP.
 - [Frames.js](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
   - [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Onchainkit quickstart that integrates XMTP.
-- [Frog](https://frog.fm/getting-started): There is an active [**discussion**](https://github.com/wevm/frog/discussions/51) to integrate Open Frames.
+- [Frog](https://frog.fm/getting-started): There is an active [discussion](https://github.com/wevm/frog/discussions/51) to integrate Open Frames.
 
 </details>
 
@@ -121,6 +121,8 @@ sendNotification("Hello from Farcaster!", "0x123...");
 
 </details>
 
+---
+
 ## Messaging apps 💬
 
 Test the bots in messaging apps
@@ -129,12 +131,12 @@ Test the bots in messaging apps
 - [Coinbase Wallet](https://www.coinbase.com/wallet): Your key to the world of crypto. (Frame support TBA).
 - [dev-inbox](https://dev-dev-inbox.vercel.app/): Web messaging client (Frame Transactions TBA).
 
-### Identities 🥷🏻
+## Identities 🥷🏻
 
 ![](https://github.com/xmtp/awesome-xmtp/assets/1447073/9bb4f8c2-321e-4b6d-b52e-2105d69c4d47)
 
 Learn about the 2 million identities part of XMTP by visiting the [Dune dashboard](https://dune.com/xmtp_team/dash).
 
-### Examples 🔥
+## Examples 🔥
 
 See live examples in the [Awesome XMTP ⭐️](https://github.com/xmtp/awesome-xmtp) repo.

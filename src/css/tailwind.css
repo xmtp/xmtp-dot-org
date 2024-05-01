@@ -58,7 +58,6 @@
     --nav-searchbox-shadow: inset 0 0 0 1px rgb(220, 220, 220);
     --dropdown-subtext-color: #475569;
     --build-xmtp-img-url: url("/img/build-xmtp.png");
-    --docusaurus-details-decoration-color: black;
   }
   [data-theme="light"] {
     --ifm-footer-background-color: #171717;
@@ -1668,14 +1667,17 @@ pre code {
 
 /*FARHACK*/
 
-.details_node_modules-\@docusaurus-theme-classic-lib-theme-Details-styles-module {
+.details_node_modules-\@docusaurus-theme-classic-lib-theme-Details-styles-module,
+details {
   border: 1px solid #8465cb !important;
-  background-color: transparent;
+  background-color: transparent !important;
+}
+.collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module,
+details > div > div {
+  border-color: #8465cb !important;
 }
 .details_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module
-  > summary::before {
+  > summary::before,
+summary::before {
   border-color: transparent transparent transparent #8465cb !important;
-}
-.collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
-  border-color: #8465cb !important;
 }
