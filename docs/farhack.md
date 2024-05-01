@@ -60,7 +60,7 @@ This prize goes to the best Frame compatible with messaging apps.
 
 **Requirements:**
 
-<details><summary>Integrate with Open Frames</summary>
+<details><summary>Integrate your Frame with XMTP</summary>
 
 **Metadata**
 
@@ -93,7 +93,7 @@ Popular frameworks have already integrated Open Frames into their stacks:
 
 <details><summary><b>OnChainKit</b></summary>
 
-### Overview
+Discover how OnchainKit seamlessly incorporates XMTP payloads
 
 **Metadata:**
 
@@ -139,14 +139,14 @@ async function getResponse(req: any): Promise<NextResponse> {
 }
 ```
 
-- [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads
+- [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Official OnchainKit documentation.
 - [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): Onchainkit quickstart that integrates XMTP.
 
 </details>
 
 <details><summary><b>Frames.js</b></summary>
 
-#### Overview
+Learn more about the integration of XMTP payloads within FrameJS
 
 **Metadata**
 
@@ -187,7 +187,7 @@ async function getResponse(req: any): Promise<NextResponse> {
 }
 ```
 
-- [Frames.js](https://framesjs.org/reference/js/xmtp): Learn more about the integration of XMTP payloads within FrameJS.
+- [Frames.js](https://framesjs.org/reference/js/xmtp): Official Framesjs Documentation.
 - [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Onchainkit quickstart that integrates XMTP.
 
 </details>
