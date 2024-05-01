@@ -58,7 +58,7 @@ run(async (context: HandlerContext) => {
 
 Open Frames is an interoperable standard that expands on the Frames specification. This prize goes to the best Farcaster Frame compatible with the Open Frame [standard](https://github.com/open-frames/awesome-open-frames).
 
-**Qualification Requirements:**
+**Requirements:**
 
 <details><summary>Integrate with Open Frames</summary>
 
@@ -82,7 +82,7 @@ Popular frameworks have already integrated Open Frames into their stacks:
 
 Implement a Frame or Bot that sends notifications through XMTP.
 
-**Qualification Requirements:**
+**Requirements:**
 
 <details><summary>Send notifications using XMTP libraries</summary>
 
