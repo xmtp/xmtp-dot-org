@@ -54,9 +54,9 @@ run(async (context: HandlerContext) => {
 
 </details>
 
-<details><summary>🖼️ <b>Best Open Frame</b> - $500</summary>
+<details><summary>🖼️ <b>Best Chat Frame</b> - $500</summary>
 
-Open Frames is an interoperable standard that expands on the Frames specification. This prize goes to the best Farcaster Frame compatible with the Open Frame [standard](https://github.com/open-frames/awesome-open-frames).
+This prize goes to the best Frame compatible with messaging apps, utilizing the Open Frames [standard](https://github.com/open-frames/awesome-open-frames).
 
 **Requirements:**
 
