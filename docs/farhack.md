@@ -56,21 +56,147 @@ run(async (context: HandlerContext) => {
 
 <details><summary>🖼️ <b>Best Chat Frame</b> - $500</summary>
 
-This prize goes to the best Frame compatible with messaging apps, utilizing the Open Frames [standard](https://github.com/open-frames/awesome-open-frames).
+This prize goes to the best Frame compatible with messaging apps.
 
 **Requirements:**
 
 <details><summary>Integrate with Open Frames</summary>
 
+**Metadata**
+
+In compliance with [Open Frames](https://github.com/open-frames/standard/blob/v0.0.1/README.md), Use a meta tag in your frame's HTML to declare the client protocols your frame supports.
+
+```html
+<meta property="of:accepts:xmtp" content="vNext" />
+```
+
+**Validate incoming messages**
+
+Implement message validation using `@xmtp/frames-validator` to ensure the authenticity of incoming POST requests.
+
+```tsx
+import { validateFramesPost } from "@xmtp/frames-validator";
+
+export function handler(requestBody: any) {
+  if (requestBody.clientProtocol.startsWith("xmtp")) {
+    const { verifiedWalletAddress } = await validateFramesPost(requestBody);
+    // Handle verified XMTP payload
+  } else {
+    // Handle Farcaster or other protocol payloads
+  }
+}
+```
+
 **Frameworks**
 
 Popular frameworks have already integrated Open Frames into their stacks:
 
-- [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
-  - [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): Onchainkit quickstart that integrates XMTP.
-- [Frames.js](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
-  - [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Onchainkit quickstart that integrates XMTP.
+<details><summary><b>OnChainKit</b></summary>
+
+### Overview
+
+**Metadata:**
+
+```jsx
+const frameMetadata = getFrameMetadata({
+  /**
+   * Frame metadata like Image, Buttons, Input, etc.
+   */
+  isOpenFrame: true,
+  accepts: { xmtp: "vNext" },
+});
+
+export const metadata: Metadata = {
+  /**
+   * ...other metadata
+   */
+  other: {
+    ...frameMetadata,
+  },
+};
+```
+
+**Validate incoming messages**
+
+```jsx
+import {
+  isXmtpFrameRequest,
+  getXmtpFrameMessage,
+} from "@coinbase/onchainkit/xmtp";
+/* ... */
+async function getResponse(req: any): Promise<NextResponse> {
+  const body: FrameRequest = await req.json();
+  if (isXmtpFrameRequest(body)) {
+    const { isValid, message } = await getXmtpFrameMessage(body);
+    // ... do something with the message if isValid is true
+    if (isValid) {
+      const { verifiedWalletAddress } = message;
+      // ... do something with the verifiedWalletAddress
+    }
+  } else {
+    // ...
+  }
+}
+```
+
+- [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads
+- [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): Onchainkit quickstart that integrates XMTP.
+
+</details>
+
+<details><summary><b>Frames.js</b></summary>
+
+#### Overview
+
+**Metadata**
+
+```jsx
+const acceptedProtocols: ClientProtocolId[] = [
+  {
+    id: "xmtp",
+    version: "vNext",
+  },
+  {
+    id: "farcaster",
+    version: "vNext",
+  },
+];
+```
+
+**Validate incoming messages**:
+
+```jsx
+let fid: number | undefined;
+let walletAddress: string | undefined;
+
+import {
+  isXmtpFrameRequest,
+  getXmtpFrameMessage,
+} from "@coinbase/onchainkit/xmtp";
+import { NextResponse } from "next/server";
+import type { FrameRequest } from "@coinbase/onchainkit";
+
+async function getResponse(req: any): Promise<NextResponse> {
+  const body: FrameRequest = await req.json();
+  if (isXmtpFrameRequest(body)) {
+    const { isValid, message } = await getXmtpFrameMessage(body);
+    walletAddress = frameMessage?.verifiedWalletAddress;
+  } else {
+    // ...
+  }
+}
+```
+
+- [Frames.js](https://framesjs.org/reference/js/xmtp): Learn more about the integration of XMTP payloads within FrameJS.
+- [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Onchainkit quickstart that integrates XMTP.
+
+</details>
+
+<details><summary><b>Frog</b></summary>
+
 - [Frog](https://frog.fm/getting-started): There is an active [discussion](https://github.com/wevm/frog/discussions/51) to integrate Open Frames.
+
+</details>
 
 </details>
 
