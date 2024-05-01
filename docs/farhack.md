@@ -12,7 +12,7 @@ Welcome to the ultimate Farcaster hackathon to learn how to build innovative Fra
 
 ## Prizes 🏆
 
-<details><summary>🤖 <b>Best use of an XMTP Bot in Farcaster</b> - $500</summary>
+<details><summary>🤖 <b>Best use of an XMTP Bot with Farcaster</b> - $500</summary>
 
 This prize goes to the team that most effectively creates a Bot that uses Farcaster in a meaningful way.
 
