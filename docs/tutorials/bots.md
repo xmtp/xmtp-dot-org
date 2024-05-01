@@ -1,30 +1,22 @@
 ---
-sidebar_label: Chat bots
+sidebar_label: Build and deploy an XMTP Bot
 sidebar_position: 6
 ---
 
-# Building a Bot with @xmtp/botkit
+# Build and deploy an XMTP Bot
 
-This guide will take you through the steps to create and deploy a simple bot using the [BotKit](https://github.com/fabriguespe/botkit) package.
-
-## Prerequisites
-
-- Node.js installed on your machine
-- Basic understanding of TypeScript
-- An account on Railway for deployment
-
-## Setting Up Your Bot Environment
+This guide will take you through the steps to create and deploy a simple bot using the [BotKit](https://github.com/xmtp/botkit) package.
 
 ### Step 1: Installation
 
 First, install the necessary CLI tool globally using npm:
 
 ```bash
-npx create-xmtp-bot@latest <bot-name>
-cd my-bot-name
+npx create-xmtp-bot <bot-name>
+cd <bot-name>
 ```
 
-### Configuration
+#### Configuration
 
 Set your private key and network environment in the `.env` file:
 
@@ -33,7 +25,7 @@ KEY= # your bot's private key
 XMTP_ENV= # production or dev network
 ```
 
-### Building and Running Your Bot
+#### Building and Running Your Bot
 
 Install dependencies and run your bot:
 
@@ -99,7 +91,7 @@ run(async (context: HandlerContext) => {
 
 This script listens for messages and sends a options like showing info and subscribing logic.
 
-## Examples
+#### Examples
 
 Explore different types of bots:
 
@@ -109,9 +101,7 @@ Explore different types of bots:
 
 Find more examples in the [Awesome XMTP ⭐️](https://github.com/xmtp/awesome-xmtp) repository.
 
-## Deployment
-
-### Deploy with Railway
+### Step 3: Deploy with Railway
 
 1. **Sign Up and Setup**: Create an account at [Railway](https://railway.app/) and start a new empty project.
 
@@ -130,42 +120,6 @@ Find more examples in the [Awesome XMTP ⭐️](https://github.com/xmtp/awesome-
 4. **Environment Variables**: Set up environment variables in Railway.
    ![](./img/railway/5.gif)
 
-### Register an ENS Domain
+### Step 4: Register an ENS Domain
 
 Enhance your bot's identity by registering an [ENS domain](https://ens.domains/).
-
-## Development and Testing
-
-Clone the botkit repository and set up your development environment:
-
-```bash
-git clone https://github.com/xmtp/botkit
-cd botkit
-cp .env.example .env
-```
-
-### Configuration
-
-Set your private key and network environment in the `.env` file:
-
-```bash
-KEY= # your bot's private key
-XMTP_ENV= # production or dev network
-```
-
-### Building and Running Your Bot
-
-Install dependencies and run your bot:
-
-```bash
-# install dependencies
-yarn install
-# build and run your bot
-yarn build
-yarn start
-# For development with hot-reload
-yarn build:watch
-yarn start:watch
-```
-
-This tutorial provides you with all the essentials to start building and deploying your own bots using the XMTP framework.

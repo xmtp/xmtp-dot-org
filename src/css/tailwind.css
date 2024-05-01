@@ -1668,21 +1668,14 @@ pre code {
 
 /*FARHACK*/
 
-details {
-  background: #8465cb !important;
-}
-summary {
-  color: white;
-}
-
 .details_node_modules-\@docusaurus-theme-classic-lib-theme-Details-styles-module {
-  border: 0px;
-  border-color: transparent !important;
+  border: 1px solid #8465cb !important;
+  background-color: transparent;
 }
 .details_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module
   > summary::before {
-  border-color: transparent transparent transparent white !important;
+  border-color: transparent transparent transparent #8465cb !important;
 }
 .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
-  border-color: white !important;
+  border-color: #8465cb !important;
 }

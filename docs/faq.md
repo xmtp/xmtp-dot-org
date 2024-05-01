@@ -1,6 +1,6 @@
 ---
 sidebar_label: FAQ
-sidebar_position: 4
+sidebar_position: 5
 description: "Get answers to the most frequently asked questions about XMTP."
 ---
 

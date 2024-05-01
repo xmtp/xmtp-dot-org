@@ -27,6 +27,7 @@ Popular frameworks have already integrated Open Frames into their stack:
 - [**OnChainKit**](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
   - [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): Onchainkit quickstart that integrates XMTP.
 - [**Frames.js**](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
+  - [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Onchainkit quickstart that integrates XMTP.
 - [**Frog**](https://frog.fm/getting-started): There is an active [**discussion**](https://github.com/wevm/frog/discussions/51) to integrate Open Frames.
 
 ### Clients
