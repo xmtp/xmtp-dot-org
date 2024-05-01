@@ -5,15 +5,15 @@ sidebar_position: 20
 
 # Notification architecture overview
 
-The notification architecture may appear complex initially, but we've simplified it into manageable concepts and steps. This overview will walk you through the notification handling and delivery process in XMTP, using practical examples to illustrate each step.
+The notification architecture might appear complex initially, but we've simplified it into manageable concepts and steps. This overview walks you through the notification handling and delivery process in XMTP, using practical examples to illustrate each step.
 
-![](../img/notif-diagram.png)
+![Sequence diagram illustrating an overview of the notification handling and delivery process in XMTP](../img/notif-diagram.png)
 
 To describe the process with an example, consider a message being sent from Alice to Bob using a mobile messaging app. This app is built with React Native for iOS devices and uses Firebase for notifications. Here is a detailed explanation of each step, along with code examples.
 
-### 1. Initializing XMTP client
+## 1. Initialize the XMTP client
 
-Alice opens the Frontend on her iOS device and initializes her new wallet with XMTP.
+Alice opens the frontend on her iOS device and initializes her new wallet with XMTP.
 
 ```javascript
 import { Client } from "@XMTP"; // XMTP JavaScript client
@@ -22,9 +22,9 @@ import { Client } from "@XMTP"; // XMTP JavaScript client
 const XMTPClient = await Client.create(aliceSigner, { env: "dev" });
 ```
 
-### 2. Registering device with Firebase
+## 2. Register the device with Firebase
 
-When Alice launches the Frontend on her device for the first time, the app registers with Firebase to receive notifications.
+When Alice launches the frontend on her device for the first time, the app registers with Firebase to receive notifications.
 
 ```javascript
 // Get token from Firebase
@@ -45,13 +45,13 @@ await client.registerInstallation({
 });
 ```
 
-### 3. Subscribing to topics
+## 3. Subscribe to topics
 
 The notification server adds Alice's `installationId` to certain topics. The list of `subscriptionDetails` includes all information needed to join topics, such as user permission and HMAC keys for safely checking messages.
 
 - `consentState`: Notifications are only subscribed to if the `consentState` of a conversation is "allowed". This ensures that users receive notifications only for conversations they have consented to. [Learn more](../user-consent)
 
-- `Invite` topic V2: Clients use invite topics to initiate conversations between weallets. [Learn more](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#invitations)
+- `Invite` topic V2: Clients use invite topics to initiate conversations between wallets. [Learn more](https://github.com/xmtp/proto/blob/main/PROTOCOL.md#invitations)
 
 - `Intro` topic V1: Clients use intro topics to store the first message sent between two wallets
 
@@ -88,9 +88,9 @@ await notificationClient.subscribeWithMetadata({
 });
 ```
 
-### 4. Listening for notifications
+## 4. Listen for notifications
 
-Alice's Frontend is now listening for incoming notifications.
+Alice's frontend is now listening for incoming notifications.
 
 ```javascript
 // Listener for incoming Firebase notifications
@@ -99,9 +99,9 @@ messaging().onMessage(async (remoteMessage) => {
 });
 ```
 
-### 5. Sending a message
+## 5. Send a message
 
-Bob sends a message to Alice using his instance of the Frontend.
+Bob sends a message to Alice using his instance of the frontend.
 
 ```javascript
 const bobClient = await Client.create(bobSigner, { env: "dev" });
@@ -109,9 +109,9 @@ const conversation = await bobClient.conversations.newConversation(aliceWallet);
 await conversation.send("Hello Alice!");
 ```
 
-### 6. XMTP Network dispatch
+## 6. XMTP network dispatch
 
-The XMTP Network sends the encrypted message and topic to the notification server.
+The XMTP network sends the encrypted message and topic to the notification server.
 
 ```javascript
 // Pseudo-code for XMTP network sending encrypted message
@@ -119,9 +119,9 @@ const messageTopic = "XMTP/0/dm-alice-XMTP-topic-id";
 sendToNotificationServer(encryptedMessage, messageTopic);
 ```
 
-### 7. Triggering push notifications
+## 7. Trigger push notifications
 
-The Notification Server triggers a push notification to Firebase.
+The notification server triggers a push notification to Firebase.
 
 ```javascript
 const message = {
@@ -134,13 +134,13 @@ const message = {
 firebase_admin.messaging().send(message);
 ```
 
-### 8. Firebase notification forwarding
+## 8. Firebase notification forwarding
 
 Firebase forwards the notification to Alice's device.
 
-### 9. Decrypting the message
+## 9. Decrypt the message
 
-Alice's Frontend receives the notification and decrypts the message.
+Alice's frontend receives the notification and decrypts the message.
 
 ```javascript
 // Decrypting the message when a notification is received from Firebase
@@ -152,4 +152,4 @@ Firebase.messaging().onMessage((payload) => {
 
 The XMTP framework's notification architecture, in conjunction with Firebase Cloud Messaging, offers a secure and reliable approach to notification management and delivery. This comprehensive guide outlines the essential steps, from device registration to message decryption, to streamline the process and improve developers' notification implementation experience.
 
-- For specific details go to [setting up notification client](https://github.com/XMTP/example-notification-server-go/blob/main/docs/notifications-client-guide.md?plain=1)
+For more details, see [A Practical Guide To Building A Push Notification Client](https://github.com/XMTP/example-notification-server-go/blob/main/docs/notifications-client-guide.md?plain=1).
