@@ -1,6 +1,6 @@
 ---
 sidebar_label: FAQ
-sidebar_position: 4
+sidebar_position: 5
 description: "Get answers to the most frequently asked questions about XMTP."
 ---
 
@@ -474,7 +474,7 @@ import "./polyfills";
 
 ### Does XMTP works with Bun?
 
-Currently, Bun does not offer full compatibility with XMTP. It is recommended to use Yarn 4 as an alternative to prevent any unforeseen issues.
+Currently, Bun does not offer full compatibility with XMTP. It is recommended to use Yarn as an alternative to prevent any unforeseen issues.
 
 #### Using config files
 
