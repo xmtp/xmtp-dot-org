@@ -140,7 +140,7 @@ async function getResponse(req: any): Promise<NextResponse> {
 ```
 
 - [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Official OnchainKit documentation.
-- [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): Onchainkit quickstart that integrates XMTP.
+- [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): OnchainKit quickstart that integrates XMTP.
 
 </details>
 
