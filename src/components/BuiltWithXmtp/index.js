@@ -15,7 +15,7 @@ const BuiltWithXmtp = () => {
             <p className="text-lg leading-7 text-gray-600">
               <strong className="pr-1">
                 <a href="https://dune.com/xmtp_team/dash" target="_blank" rel="noreferrer">
-                  1,894,182+
+                  1,919,923+
                 </a>
               </strong>
               web3 identities rely on apps built with XMTP for secure, private,
