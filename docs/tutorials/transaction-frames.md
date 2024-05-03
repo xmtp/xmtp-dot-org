@@ -3,7 +3,7 @@ sidebar_label: Transactions in Open Frames
 sidebar_position: 6
 ---
 
-# Support a transactional Open Frame in an app built with XMTP
+# Transactions in Open Frames
 
 :::Prerequisite
 This guide assumes your app already supports non-transaction Open Frames. If necessary, see [Protocol compatibility](https://xmtp.org/docs/build/frames#protocol-compatibility) to set this up first.
