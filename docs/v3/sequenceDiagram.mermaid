@@ -1,0 +1,28 @@
+sequenceDiagram
+    participant Amal
+    participant Bola
+    participant Caro
+    participant XMTP
+
+    Amal->>+XMTP: create_client(encryption_key, account_address)
+    XMTP-->>-Amal: client
+    Amal->>+XMTP: client.text_to_sign()
+    XMTP-->>-Amal: text to be signed for register_identity
+    Amal->>XMTP: client.register_identity(recoverable_wallet_signature)
+    Bola->>+XMTP: create_client(encryption_key, account_address)
+    XMTP-->>-Bola: client
+    Bola->>+XMTP: client.text_to_sign()
+    XMTP-->>-Bola: text to be signed for register_identity
+    Bola->>XMTP: client.register_identity(recoverable_wallet_signature)
+    Caro->>+XMTP: create_client(encryption_key, account_address)
+    XMTP-->>-Caro: client
+    Caro->>+XMTP: client.text_to_sign()
+    XMTP-->>-Caro: text to be signed for register_identity
+    Caro->>XMTP: client.register_identity(recoverable_wallet_signature)
+    Amal->>XMTP: conversations.create_group(Bola, Caro)
+    Bola->>XMTP: conversations.sync()
+    Bola->>+XMTP: conversations.list()
+    XMTP-->>-Bola: List of groups including new group
+    Caro->>XMTP: conversations.sync()
+    Caro->>+XMTP: conversations.list()
+    XMTP-->>-Caro: List of groups including new group      
