@@ -9,6 +9,16 @@ sidebar_position: 6
 **Prerequisite**: This guide assumes your app already supports non-transaction Open Frames. If necessary, see [Protocol compatibility](https://xmtp.org/docs/build/frames#protocol-compatibility) to set this up first.
 :::
 
+In this guide, we will walk through the process of supporting transactional Open Frames in your application using XMTP. Each section provides step-by-step instructions to integrate these functionality.
+
+### Sections covered:
+
+1. **How to render a transactional Open Frame**: Learn the steps to display transactional frames within your application.
+2. **Security considerations for transactional frames**: Understand the security measures needed when dealing with transactional frames.
+3. **Building a transactional frame**: Implement the method to construct and manage transactional frames.
+
+---
+
 ## Determine if an Open Frame is transactional
 
 Frame transactions are triggered using button-click events.
@@ -119,6 +129,8 @@ Use the example [Open Frames Tx Frame](https://tx-boilerplate-frame.vercel.app/)
 
 This example Frame uses the Sepolia network to make a 0.0000032ETH (~1 cent) transaction to the address associated with hi.xmtp.eth.
 
+---
+
 ## Security considerations
 
 When rendering transaction Frames in your app, consider providing these security best practices to keep your users safe:
@@ -129,6 +141,8 @@ When rendering transaction Frames in your app, consider providing these security
 - Apps rendering transaction Frames should avoid the `mainnet` for now. The associated fees can be high for most of the current use cases for transaction Frames.
 
 For more transaction Frame security considerations as well as mitigation strategies, see the [Farcaster transaction Frame security documentation](https://www.notion.so/Frame-Transactions-Public-9d9f9f4f527249519a41bd8d16165f73?pvs=21).
+
+---
 
 # Build a transaction Open Frame
 
