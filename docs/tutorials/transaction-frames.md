@@ -277,10 +277,13 @@ export async function POST(req: NextRequest): Promise<Response> {
 
 8. Send your transaction Frame in an XMTP message and try interacting with it!
 
-<aside>
+:::info
+
 🧪 If you’re using this boilerplate Frame we just built, be sure you’re on the `Sepolia` network.
 
-</aside>
+:::
+
+### Resources
 
 If you need an XMTP messaging app to use, try one of these:
 
