@@ -131,7 +131,7 @@ async function getResponse(req: any): Promise<NextResponse> {
 
 ### Tutorials
 
-- [**Transaction Frames**]: Create transactional frames compatible with messaging apps
+- [**Transaction Frames**](/docs/tutorials/transaction-frames.md): Create transactional frames compatible with messaging apps
 
 ### Clients
 
