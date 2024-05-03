@@ -115,7 +115,7 @@ if (
 
 ## Try an example transaction Open Frame
 
-Use the example [Open Frames Tx Frame](https://tx-boilerplate-frame.vercel.app/) to try these steps out in your app.
+Use the example [Open Frames Tx Frame](https://tx-boilerplate-frame.vercel.app/) to try these steps out in your app. Or check the code of the [open source repo](https://github.com/xmtp-labs/tx-boilerplate-frame).
 
 This example Frame uses the Sepolia network to make a 0.0000032ETH (~1 cent) transaction to the address associated with hi.xmtp.eth.
 
