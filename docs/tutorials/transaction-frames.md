@@ -1,5 +1,5 @@
 ---
-sidebar_label: Frames Transactions in Open Frames
+sidebar_label: Transactions in Open Frames
 sidebar_position: 6
 ---
 
