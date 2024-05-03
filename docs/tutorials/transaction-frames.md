@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Transactions in Open Frames
 
-:::Prerequisite
+:::info Prerequisite
 This guide assumes your app already supports non-transaction Open Frames. If necessary, see [Protocol compatibility](https://xmtp.org/docs/build/frames#protocol-compatibility) to set this up first.
 :::
 
