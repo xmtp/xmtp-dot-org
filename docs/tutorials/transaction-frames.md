@@ -9,8 +9,6 @@ sidebar_position: 6
 This guide assumes your app already supports non-transaction Open Frames. If necessary, see [Protocol compatibility](https://xmtp.org/docs/build/frames#protocol-compatibility) to set this up first.
 :::
 
-In this guide, we will walk through the process of supporting transactional Open Frames in your application using XMTP. Each section provides step-by-step instructions to integrate these functionality.
-
 ### Sections:
 
 1. **How to render a transactional Open Frame**: Learn the steps to display transactional frames within your application.
@@ -20,6 +18,8 @@ In this guide, we will walk through the process of supporting transactional Open
 ---
 
 ## Support a transactional Open Frame in an app built with XMTP
+
+In this guide, we will walk through the process of supporting transactional Open Frames in your application using XMTP. Each section provides step-by-step instructions to integrate these functionality.
 
 ### Determine if an Open Frame is transactional
 
