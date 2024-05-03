@@ -3,7 +3,7 @@ sidebar_label: Transactions in Open Frames
 sidebar_position: 6
 ---
 
-# Support a transactional Open Frame in an app built with XMTP
+# Transactions in Open Frames
 
 :::info Prerequisite
 This guide assumes your app already supports non-transaction Open Frames. If necessary, see [Protocol compatibility](https://xmtp.org/docs/build/frames#protocol-compatibility) to set this up first.
@@ -19,7 +19,9 @@ In this guide, we will walk through the process of supporting transactional Open
 
 ---
 
-## Determine if an Open Frame is transactional
+## Support a transactional Open Frame in an app built with XMTP
+
+### Determine if an Open Frame is transactional
 
 Frame transactions are triggered using button-click events.
 
@@ -37,7 +39,7 @@ const button = frameMetadata.frameInfo.buttons[`${buttonIndex}`];
 const isTransactionFrame = button.action === "tx";
 ```
 
-## Determine the transaction target and post URL
+### Determine the transaction target and post URL
 
 If the button action indicates the Frame is transactional, get the `target` and `postUrl` from the button. To learn more, see Frame Metadata [Optional Properties](https://github.com/open-frames/standard?tab=readme-ov-file#optional-properties).
 
@@ -49,7 +51,7 @@ if (isTransactionFrame) {
 }
 ```
 
-## Post to the target URL to fetch transaction data
+### Post to the target URL to fetch transaction data
 
 Make a POST request to the `target` URL to fetch transaction data.
 
@@ -81,7 +83,7 @@ const transactionInfo: {
       );
 ```
 
-## Process transaction data and receive a hash
+### Process transaction data and receive a hash
 
 Pull the address and value from the returned transaction data and use them to process the transaction using your preferred tools, such as Infura. Documenting this step in detail is out of the scope of this tutorial.
 
@@ -96,7 +98,7 @@ const value = Number(transactionInfo.params.value);
 const transactionHash = <<returned_hash>>
 ```
 
-## Ensure the processed transaction matches the request
+### Ensure the processed transaction matches the request
 
 Use the hash to gather information about the processed transaction using your preferred tools. Ensure that the details match the requested transaction.
 
@@ -123,7 +125,7 @@ if (
 }
 ```
 
-## Try an example transaction Open Frame
+### Try an example transaction Open Frame
 
 Use the example [Open Frames Tx Frame](https://tx-boilerplate-frame.vercel.app/) to try these steps out in your app. Or check the code of the [open source repo](https://github.com/xmtp-labs/tx-boilerplate-frame).
 
@@ -144,7 +146,7 @@ For more transaction Frame security considerations as well as mitigation strateg
 
 ---
 
-# Build a transaction Open Frame
+## Build a transaction Open Frame
 
 Follow these steps to build a transaction Open Frame that can be displayed in an app built with XMTP.
 
