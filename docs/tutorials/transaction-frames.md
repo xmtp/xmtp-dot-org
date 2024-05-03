@@ -19,7 +19,7 @@ This guide assumes your app already supports non-transaction Open Frames. If nec
 
 ## Support a transactional Open Frame in an app built with XMTP
 
-In this guide, we will walk through the process of supporting transactional Open Frames in your application using XMTP. Each section provides step-by-step instructions to integrate these functionality.
+In this guide, we will walk through the process of supporting transactional Open Frames in your application using XMTP. Each section provides step-by-step instructions to integrate this functionality.
 
 ### Determine if an Open Frame is transactional
 
