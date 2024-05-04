@@ -41,7 +41,7 @@ const isTransactionFrame = button.action === "tx";
 
 ### Determine the transaction target and post URL
 
-If the button action indicates the Frame is transactional, get the `target` and `postUrl` from the button. To learn more, see Frame Metadata [Optional Properties](https://github.com/open-frames/standard?tab=readme-ov-file#optional-properties).
+If the button action indicates the Frame is transactional, get the `target` and `postUrl` from the button. To learn more, see Frame Metadata [Optional Properties](https://www.openframes.xyz/#optional-properties).
 
 ```jsx
 if (isTransactionFrame) {
@@ -149,8 +149,6 @@ For more transaction Frame security considerations as well as mitigation strateg
 ## Build a transaction Open Frame
 
 Follow these steps to build a transaction Open Frame that can be displayed in an app built with XMTP.
-
-Ensure the app meets the requirements covered in [Support a transactional Open Frame in an app built with XMTP](https://www.notion.so/Support-a-transactional-Open-Frame-in-an-app-built-with-XMTP-56abbbb7bc4e4a1188bd2801265d6b36?pvs=21).
 
 **To build a transaction Open Frame:**
 
