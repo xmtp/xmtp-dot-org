@@ -144,9 +144,6 @@ Some clients are fully XMTP compatible and can render Frames signing XMTP payloa
 
 ### Open Frames
 
-XMTP contributes to the Open Frames standard, fostering interoperability and open standards.
-
-- [**Open Frames Spec**](https://github.com/open-frames/standard/blob/v0.0.1/README.md): Make Farcaster Frames interoperable.
-- [**Awesome Open Frames**](https://github.com/open-frames/awesome-open-frames.git): Curated list of Open Frames compatible Frames.
+XMTP contributes to the Open Frames [standard](https://www.openframes.xyz/), fostering interoperability and open standards.
 
 :::

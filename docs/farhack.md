@@ -64,7 +64,7 @@ This prize goes to the best Frame compatible with messaging apps.
 
 **Metadata**
 
-In compliance with [Open Frames](https://github.com/open-frames/standard/blob/v0.0.1/README.md), Use a meta tag in your frame's HTML to declare the client protocols your frame supports.
+In compliance with [Open Frames](https://www.openframes.xyz/), Use a meta tag in your frame's HTML to declare the client protocols your frame supports.
 
 ```html
 <meta property="of:accepts:xmtp" content="vNext" />
