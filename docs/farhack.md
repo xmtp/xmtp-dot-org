@@ -216,17 +216,9 @@ export const app = new Frog(addMetaTags("xmtp"));
 
 Install the `@xmtp/frames-validator` package to validate incoming messages.
 
-:::code-group
-
-```bash [npm]
+```bash
 npm install @xmtp/frames-validator
 ```
-
-```bash [yarn]
-yarn add @xmtp/frames-validator
-```
-
-:::
 
 Add the middleware to validate incoming messages.
 
