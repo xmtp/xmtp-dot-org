@@ -194,6 +194,46 @@ async function getResponse(req: any): Promise<NextResponse> {
 
 <details><summary><b>Frog</b></summary>
 
+**Metadata**
+
+```jsx
+const openFrames = (client: string, version?: string) => {
+  return {
+    unstable_metaTags: [
+      { property: `of:accepts`, content: version || "vNext" },
+      { property: `of:accepts:${client}`, content: version || "vNext" },
+    ],
+  };
+};
+
+export const app = new Frog(openFrames("xmtp"));
+```
+
+**Validate incoming messages**:
+
+```jsx
+import { validateFramesPost } from "@xmtp/frames-validator";
+
+const xmtpSupport = async (c: Context, next: Next) => {
+  // Check if the request is a POST and relevant for XMTP processing
+  if (c.req.method === "POST") {
+    const requestBody = (await c.req.json().catch(() => {})) || {};
+    if (requestBody?.clientProtocol?.includes("xmtp")) {
+      c.set("client", "xmtp");
+      const { verifiedWalletAddress } = await validateFramesPost(requestBody);
+      c.set("verifiedWalletAddress", verifiedWalletAddress);
+      console.log("verifiedWalletAddress", verifiedWalletAddress);
+    } else {
+      // Add farcaster check
+      c.set("client", "farcaster");
+    }
+  }
+  await next();
+};
+
+app.use(xmtpSupport);
+```
+
 - [Frog](https://frog.fm/getting-started): There is an active [discussion](https://github.com/wevm/frog/discussions/51) to integrate Open Frames.
 
 </details>
