@@ -189,7 +189,7 @@ if (isXmtpFrameActionPayload(previousFrame.postBody)) {
 
 **Metadata**
 
-To build a Frame with XMTP, you must first add XMTP metadata. This is done following the specifications of [OpenFrames](https://www.openframes.xyz).
+To build a Frame with XMTP, you must first add XMTP metadata.
 
 ```jsx
 const addMetaTags = (client: string, version?: string) => {
