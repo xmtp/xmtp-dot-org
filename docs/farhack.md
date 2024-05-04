@@ -259,7 +259,7 @@ app.frame("/", (c) => {
 });
 ```
 
-- [Frog](https://frog.fm/concepts/middleware#xmtp-frames-middleware): Officia Frog XMTP documentation
+- [Frog](https://frog.fm/concepts/middleware#xmtp-frames-middleware): XMTP Frog official middleware
 - [Quickstart](https://github.com/fabriguespe/frog-starter): Frog open frame XMTP quickstart
 
 </details>

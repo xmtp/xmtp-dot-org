@@ -9,7 +9,7 @@ import TabItem from "@theme/TabItem";
 
 # Chat Frames with XMTP
 
-The XMTP community has implemeted ways to enhance user experience by supporting frames within XMTP applications. More details in this community post [Supporting Frames in XMTP](https://community.xmtp.org/t/supporting-frames-in-xmtp/535).
+The XMTP community has implemented ways to enhance user experience by supporting frames within XMTP applications. More details in this community post [Supporting Frames in XMTP](https://community.xmtp.org/t/supporting-frames-in-xmtp/535).
 
 ## Libraries
 
@@ -190,7 +190,7 @@ app.frame("/", (c) => {
 });
 ```
 
-- [Frog](https://frog.fm/concepts/middleware#xmtp-frames-middleware): Officia Frog XMTP documentation
+- [Frog](https://frog.fm/concepts/middleware#xmtp-frames-middleware): XMTP Frog official middleware
 - [Quickstart](https://github.com/fabriguespe/frog-starter): Frog open frame XMTP quickstart
 
 </details>
