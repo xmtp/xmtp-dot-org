@@ -111,7 +111,7 @@ async function getResponse(req: any): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
   if (isXmtpFrameRequest(body)) {
     const { isValid, message } = await getXmtpFrameMessage(body);
-    walletAddress = frameMessage?.verifiedWalletAddress;
+    walletAddress = message?.verifiedWalletAddress;
   } else {
     // ...
   }
@@ -119,7 +119,7 @@ async function getResponse(req: any): Promise<NextResponse> {
 ```
 
 - [Frames.js](https://framesjs.org/reference/js/xmtp): Official Framesjs Documentation.
-- [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Onchainkit quickstart that integrates XMTP.
+- [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Frames.js example that integrates XMTP.
 
 </details>
 
@@ -127,7 +127,7 @@ async function getResponse(req: any): Promise<NextResponse> {
 
 **Metadata**
 
-To build a Frame with XMTP, you must first add XMTP metadata. This is done following the specifications of [OpenFrames](https://www.openframes.xy).
+To build a Frame with XMTP, you must first add XMTP metadata. This is done following the specifications of [OpenFrames](https://www.openframes.xyz).
 
 ```jsx
 const addMetaTags = (client: string, version?: string) => {
@@ -164,7 +164,6 @@ const xmtpSupport = async (c: Context, next: Next) => {
       c.set("client", "xmtp");
       const { verifiedWalletAddress } = await validateFramesPost(requestBody);
       c.set("verifiedWalletAddress", verifiedWalletAddress);
-      console.log("verifiedWalletAddress", verifiedWalletAddress);
     } else {
       // Add farcaster check
       c.set("client", "farcaster");
