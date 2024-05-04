@@ -9,7 +9,7 @@ import TabItem from "@theme/TabItem";
 
 # Chat Frames with XMTP
 
-The XMTP community has implemented ways to enhance user experience by supporting frames within XMTP applications. More details in this community post [Supporting Frames in XMTP](https://community.xmtp.org/t/supporting-frames-in-xmtp/535).
+The XMTP community has implemented ways to enhance user experience by supporting frames within XMTP applications by supporting [Open Frames](https://www.openframes.xyz). More details in this community post [Supporting Frames in XMTP](https://community.xmtp.org/t/supporting-frames-in-xmtp/535).
 
 ## Libraries
 
@@ -97,24 +97,17 @@ const acceptedProtocols: ClientProtocolId[] = [
 **Validate incoming messages**:
 
 ```jsx
+import { getXmtpFrameMessage, isXmtpFrameActionPayload } from "frames.js/xmtp";
+
 let fid: number | undefined;
 let walletAddress: string | undefined;
 
-import {
-  isXmtpFrameRequest,
-  getXmtpFrameMessage,
-} from "@coinbase/onchainkit/xmtp";
-import { NextResponse } from "next/server";
-import type { FrameRequest } from "@coinbase/onchainkit";
-
-async function getResponse(req: any): Promise<NextResponse> {
-  const body: FrameRequest = await req.json();
-  if (isXmtpFrameRequest(body)) {
-    const { isValid, message } = await getXmtpFrameMessage(body);
-    walletAddress = message?.verifiedWalletAddress;
-  } else {
-    // ...
-  }
+if (isXmtpFrameActionPayload(previousFrame.postBody)) {
+  const frameMessage = await getXmtpFrameMessage(previousFrame.postBody);
+  const { verifiedWalletAddress } = frameMessage;
+  // Do something with xmtp wallet address
+} else {
+  // Do something else
 }
 ```
 
@@ -204,11 +197,3 @@ Some clients are fully XMTP compatible and can render Frames signing XMTP payloa
 
 - [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
 - [**Dev Inbox**](https://github.com/xmtp/dev-inbox/): Engage with Frames firsthand by trying them on web.
-
-:::info
-
-### Open Frames
-
-XMTP contributes to the Open Frames [standard](https://www.openframes.xyz/), fostering interoperability and open standards.
-
-:::

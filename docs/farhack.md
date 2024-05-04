@@ -89,7 +89,7 @@ export function handler(requestBody: any) {
 
 **Frameworks**
 
-Popular frameworks have already integrated Open Frames into their stacks:
+Popular frameworks have already integrated Open Frames into their stack:
 
 <details><summary><b>OnChainKit</b></summary>
 
@@ -139,8 +139,8 @@ async function getResponse(req: any): Promise<NextResponse> {
 }
 ```
 
-- [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Official XMTP OnchainKit documentation.
-- [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): OnchainKit quickstart that integrates XMTP.
+- [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Official OnchainKit documentation.
+- [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): Onchainkit quickstart that integrates XMTP.
 
 </details>
 
@@ -166,29 +166,22 @@ const acceptedProtocols: ClientProtocolId[] = [
 **Validate incoming messages**:
 
 ```jsx
+import { getXmtpFrameMessage, isXmtpFrameActionPayload } from "frames.js/xmtp";
+
 let fid: number | undefined;
 let walletAddress: string | undefined;
 
-import {
-  isXmtpFrameRequest,
-  getXmtpFrameMessage,
-} from "@coinbase/onchainkit/xmtp";
-import { NextResponse } from "next/server";
-import type { FrameRequest } from "@coinbase/onchainkit";
-
-async function getResponse(req: any): Promise<NextResponse> {
-  const body: FrameRequest = await req.json();
-  if (isXmtpFrameRequest(body)) {
-    const { isValid, message } = await getXmtpFrameMessage(body);
-    walletAddress = frameMessage?.verifiedWalletAddress;
-  } else {
-    // ...
-  }
+if (isXmtpFrameActionPayload(previousFrame.postBody)) {
+  const frameMessage = await getXmtpFrameMessage(previousFrame.postBody);
+  const { verifiedWalletAddress } = frameMessage;
+  // Do something with xmtp wallet address
+} else {
+  // Do something else
 }
 ```
 
-- [Frames.js](https://framesjs.org/reference/js/xmtp): Official Framesjs XMTP Documentation.
-- [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Onchainkit quickstart that integrates XMTP.
+- [Frames.js](https://framesjs.org/reference/js/xmtp): Official Framesjs Documentation.
+- [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Frames.js example that integrates XMTP.
 
 </details>
 
@@ -233,7 +226,6 @@ const xmtpSupport = async (c: Context, next: Next) => {
       c.set("client", "xmtp");
       const { verifiedWalletAddress } = await validateFramesPost(requestBody);
       c.set("verifiedWalletAddress", verifiedWalletAddress);
-      console.log("verifiedWalletAddress", verifiedWalletAddress);
     } else {
       // Add farcaster check
       c.set("client", "farcaster");
