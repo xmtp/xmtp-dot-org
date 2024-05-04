@@ -139,7 +139,7 @@ async function getResponse(req: any): Promise<NextResponse> {
 }
 ```
 
-- [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Official OnchainKit documentation.
+- [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Official XMTP OnchainKit documentation.
 - [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): OnchainKit quickstart that integrates XMTP.
 
 </details>
@@ -187,7 +187,7 @@ async function getResponse(req: any): Promise<NextResponse> {
 }
 ```
 
-- [Frames.js](https://framesjs.org/reference/js/xmtp): Official Framesjs Documentation.
+- [Frames.js](https://framesjs.org/reference/js/xmtp): Official Framesjs XMTP Documentation.
 - [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Onchainkit quickstart that integrates XMTP.
 
 </details>
@@ -232,9 +232,20 @@ const xmtpSupport = async (c: Context, next: Next) => {
 };
 
 app.use(xmtpSupport);
+
+app.frame("/", (c) => {
+  /* get variables */
+  const { buttonValue, inputText, status } = c;
+
+  // get XMTP verified address
+  const { verifiedWalletAddress } = c.var;
+
+  /* return */
+});
 ```
 
-- [Frog](https://frog.fm/getting-started): There is an active [discussion](https://github.com/wevm/frog/discussions/51) to integrate Open Frames.
+- [Frog](https://frog.fm/getting-started): Official XMTP Frog documentation
+- [Quickstart](https://github.com/fabriguespe/frog-starter): Frog open frame XMTP quickstart
 
 </details>
 

@@ -165,7 +165,8 @@ const xmtpSupport = async (c: Context, next: Next) => {
 app.use(xmtpSupport);
 ```
 
-- [Frog](https://frog.fm/getting-started): There is an active [discussion](https://github.com/wevm/frog/discussions/51) to integrate Open Frames.
+- [Frog](https://frog.fm/getting-started): Official XMTP Frog documentation
+- [Quickstart](https://github.com/fabriguespe/frog-starter): Frog open frame XMTP quickstart
 
 </details>
 
