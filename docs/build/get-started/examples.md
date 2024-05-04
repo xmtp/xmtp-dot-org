@@ -140,7 +140,7 @@ Wallet connectors are essential components in decentralized applications (dApps)
   <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-privy" class="plausible-event-name=Quickstart">Privy</a><br/><small>Quickstart app for building an app with a Privy wallet connector</small></li>
   <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-thirdweb" class="plausible-event-name=Quickstart">ThirdWeb</a><br/><small>Quickstart app for building an app with a Thirdweb wallet connector</small></li>
   <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-walletconnect" class="plausible-event-name=Quickstart">WalletConnect</a><br/><small>Quickstart app for building an app with a WalletConnect wallet connector</small></li>
-  <li><a href="https://github.com/xmtp-labs/xmtp-quickstart-walletconnect" class="plausible-event-name=Quickstart">RainbowKit</a><br/><small>Quickstart app for building with a RainbowKit and Viem wallet connector</small></li>
+  <li><a href="https://github.com/xmtp-labs/quickstart-rainbowkit" class="plausible-event-name=Quickstart">RainbowKit</a><br/><small>Quickstart app for building with a RainbowKit and Viem wallet connector</small></li>
 </ul>
 
 </div>
