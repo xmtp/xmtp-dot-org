@@ -196,8 +196,11 @@ async function getResponse(req: any): Promise<NextResponse> {
 
 **Metadata**
 
+To build a Frame with XMTP, you must first add XMTP metadata. This is done following the specifications of [OpenFrames](https://www.openframes.xy).
+
 ```jsx
-const openFrames = (client: string, version?: string) => {
+const addMetaTags = (client: string, version?: string) => {
+  // Follow the OpenFrames meta tags spec
   return {
     unstable_metaTags: [
       { property: `of:accepts`, content: version || "vNext" },
@@ -206,10 +209,26 @@ const openFrames = (client: string, version?: string) => {
   };
 };
 
-export const app = new Frog(openFrames("xmtp"));
+export const app = new Frog(addMetaTags("xmtp"));
 ```
 
 **Validate incoming messages**:
+
+Install the `@xmtp/frames-validator` package to validate incoming messages.
+
+:::code-group
+
+```bash [npm]
+npm install @xmtp/frames-validator
+```
+
+```bash [yarn]
+yarn add @xmtp/frames-validator
+```
+
+:::
+
+Add the middleware to validate incoming messages.
 
 ```jsx
 import { validateFramesPost } from "@xmtp/frames-validator";
@@ -232,13 +251,17 @@ const xmtpSupport = async (c: Context, next: Next) => {
 };
 
 app.use(xmtpSupport);
+```
 
+**Access verified wallet address**:
+
+```jsx
 app.frame("/", (c) => {
-  /* get variables */
+  /* Get Frame variables */
   const { buttonValue, inputText, status } = c;
 
-  // get XMTP verified address
-  const { verifiedWalletAddress } = c.var;
+  // XMTP verified address
+  const { verifiedWalletAddress } = c?.var || {};
 
   /* return */
 });
