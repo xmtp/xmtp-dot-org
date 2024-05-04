@@ -196,7 +196,7 @@ async function getResponse(req: any): Promise<NextResponse> {
 
 **Metadata**
 
-To build a Frame with XMTP, you must first add XMTP metadata. This is done following the specifications of [OpenFrames](https://www.openframes.xy).
+To build a Frame with XMTP, you must first add XMTP metadata. This is done following the specifications of [OpenFrames](https://www.openframes.xyz).
 
 ```jsx
 const addMetaTags = (client: string, version?: string) => {
@@ -267,7 +267,7 @@ app.frame("/", (c) => {
 });
 ```
 
-- [Frog](https://frog.fm/getting-started): Official XMTP Frog documentation
+- [Frog](https://frog.fm/concepts/middleware#xmtp-frames-middleware): Officia Frog XMTP documentation
 - [Quickstart](https://github.com/fabriguespe/frog-starter): Frog open frame XMTP quickstart
 
 </details>
