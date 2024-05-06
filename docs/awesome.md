@@ -1,24 +1,16 @@
 ---
-sidebar_label: FarHack
+sidebar_label: Awesome
 sidebar_position: 4
 description: Making Frames Interoperable
 ---
 
-# FarHack
+# Awesome ✨
 
-Welcome to the ultimate Farcaster hackathon to learn how to build innovative Frames and Bots with XMTP. Happy coding 🫡
+> 💬 **Try it:** Message `awesome.hi.xmtp.eth`
 
-![](./build/img/farhack/farhack.png)
+See live examples in the [Awesome XMTP ⭐️](https://github.com/xmtp/awesome-xmtp) repo.
 
-## Prizes 🏆
-
-<details><summary>🤖 <b>Best use of an XMTP Bot with Farcaster</b> - $500</summary>
-
-This prize goes to the team that most effectively creates a Bot that uses Farcaster in a meaningful way.
-
-**Requirements:**
-
-<details><summary>Develop a Farcaster Bot using XMTP libraries</summary>
+<details><summary>🤖 <b>Bots</b></summary>
 
 To create a new XMTP bot using [BotKit](https://github.com/xmtp/botkit) cli tool:
 
@@ -52,19 +44,11 @@ run(async (context: HandlerContext) => {
 
 </details>
 
-</details>
-
-<details><summary>🖼️ <b>Best Chat Frame</b> - $500</summary>
-
-This prize goes to the best Frame compatible with messaging apps.
-
-**Requirements:**
-
-<details><summary>Integrate your Frame with XMTP</summary>
+<details><summary>🖼️ <b>Frames</b></summary>
 
 **Metadata**
 
-In compliance with [Open Frames](https://www.openframes.xyz/), Use a meta tag in your frame's HTML to declare the client protocols your frame supports.
+In compliance with [Open Frames](https://github.com/open-frames/standard/blob/v0.0.1/README.md), use a meta tag in your frame's HTML to declare the client protocols your frame supports.
 
 ```html
 <meta property="of:accepts:xmtp" content="vNext" />
@@ -89,7 +73,7 @@ export function handler(requestBody: any) {
 
 **Frameworks**
 
-Popular frameworks have already integrated Open Frames into their stack:
+Popular frameworks have already integrated Open Frames into their stacks:
 
 <details><summary><b>OnChainKit</b></summary>
 
@@ -140,7 +124,7 @@ async function getResponse(req: any): Promise<NextResponse> {
 ```
 
 - [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Official OnchainKit documentation.
-- [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): Onchainkit quickstart that integrates XMTP.
+- [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): OnchainKit quickstart that integrates XMTP.
 
 </details>
 
@@ -166,22 +150,29 @@ const acceptedProtocols: ClientProtocolId[] = [
 **Validate incoming messages**:
 
 ```jsx
-import { getXmtpFrameMessage, isXmtpFrameActionPayload } from "frames.js/xmtp";
-
 let fid: number | undefined;
 let walletAddress: string | undefined;
 
-if (isXmtpFrameActionPayload(previousFrame.postBody)) {
-  const frameMessage = await getXmtpFrameMessage(previousFrame.postBody);
-  const { verifiedWalletAddress } = frameMessage;
-  // Do something with xmtp wallet address
-} else {
-  // Do something else
+import {
+  isXmtpFrameRequest,
+  getXmtpFrameMessage,
+} from "@coinbase/onchainkit/xmtp";
+import { NextResponse } from "next/server";
+import type { FrameRequest } from "@coinbase/onchainkit";
+
+async function getResponse(req: any): Promise<NextResponse> {
+  const body: FrameRequest = await req.json();
+  if (isXmtpFrameRequest(body)) {
+    const { isValid, message } = await getXmtpFrameMessage(body);
+    walletAddress = frameMessage?.verifiedWalletAddress;
+  } else {
+    // ...
+  }
 }
 ```
 
 - [Frames.js](https://framesjs.org/reference/js/xmtp): Official Framesjs Documentation.
-- [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Frames.js example that integrates XMTP.
+- [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): OnchainKit quickstart that integrates XMTP.
 
 </details>
 
@@ -258,17 +249,9 @@ app.frame("/", (c) => {
 
 </details>
 
-- Send your Frame through [Converse](https://converse.xyz/dm/hi.xmtp.eth) to `hi.xmtp.eth`.
-
-</details>
-
-<details><summary>🔔 <b>Best Use of XMTP to Send Notifications</b> - $500</summary>
+<details><summary>🔔 <b>Notifications</b></summary>
 
 Implement a Frame or Bot that sends notifications through XMTP.
-
-**Requirements:**
-
-<details><summary>Send notifications using XMTP libraries</summary>
 
 **Install the js sdk:**
 
@@ -303,8 +286,6 @@ sendNotification("Hello from Farcaster!", "0x123...");
 
 </details>
 
-</details>
-
 ---
 
 ## Messaging apps 💬
@@ -320,7 +301,3 @@ Test the bots in messaging apps
 ![](https://github.com/xmtp/awesome-xmtp/assets/1447073/9bb4f8c2-321e-4b6d-b52e-2105d69c4d47)
 
 Learn about the 2 million identities part of XMTP by visiting the [Dune dashboard](https://dune.com/xmtp_team/dash).
-
-## Examples 🔥
-
-See live examples in the [Awesome XMTP ⭐️](https://github.com/xmtp/awesome-xmtp) repo.
