@@ -48,7 +48,7 @@ run(async (context: HandlerContext) => {
 
 **Metadata**
 
-In compliance with [Open Frames](https://github.com/open-frames/standard/blob/v0.0.1/README.md), Use a meta tag in your frame's HTML to declare the client protocols your frame supports.
+In compliance with [Open Frames](https://github.com/open-frames/standard/blob/v0.0.1/README.md), use a meta tag in your frame's HTML to declare the client protocols your frame supports.
 
 ```html
 <meta property="of:accepts:xmtp" content="vNext" />
@@ -172,7 +172,7 @@ async function getResponse(req: any): Promise<NextResponse> {
 ```
 
 - [Frames.js](https://framesjs.org/reference/js/xmtp): Official Framesjs Documentation.
-- [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Onchainkit quickstart that integrates XMTP.
+- [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): OnchainKit quickstart that integrates XMTP.
 
 </details>
 
