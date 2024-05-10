@@ -2,7 +2,7 @@
 
 ## Summary
 
-* XMTP v3 now supports multiple wallets per user, including [smart wallets](./smart-wallet.md).
+* XMTP v3 now supports multiple wallets per user, including [smart wallets](https://community.xmtp.org/t/xip-44-smart-contract-wallet-support/627).
 * User wallets now belong to a shared Inbox with a single Inbox ID.
 * The first wallet used to create an Inbox is a *recovery wallet*.
   * A recovery wallet can remove other wallets.
@@ -21,27 +21,17 @@
   * The inbox log has a list of all identity actions affecting the inbox.
   * The inbox log can track 256 identity actions. Since identity actions can be combined, this can be more than 256 associations, removals, change of recovery wallets, etc.
 
+:::info More Information
+You can find more information on multi-wallet identity in [XIP-46](https:https://community.xmtp.org/t/xip-46-multi-wallet-identity/639).
+:::
+
 ## Multi-wallet Support
 
 Within the Ethereum ecosystem, many people use multiple wallets, even wallets embedded inside of apps.  Users are likely to have multiple wallets, even multiple identities, outside of an EVM chain.
 
 XMTP allows those users to be contacted through a single inbox for all of those identities through associating these multiple wallets with a single Inbox ID.
 
-```mermaid
-flowchart TD
-    A[Inbox ID] --> B[Embedded wallet - Converse]
-    A --> C[Embedded Wallet - Other Messaging App]
-    A --> D[Portable wallet - Hot wallet]
-    A --> E[Portable wallet - Cold wallet]
-    A --> F[Burner wallet]
-    B -->|ENS subdomain| G[vitalik.converse.xyz]
-    D -. ENS .-> H[vitalik.eth]
-    D -. Farcaster association .-> I[Embedded wallet - Farcaster]
-    D -. Lens assocation.-> J[lens/vitalik]
-    D -.Other protocol .-> K[Embedded wallet - other protocol]
-    E -. Owns .-> L[Valuable NFTs]
-    I -. ENS subdomain .-> M[vitalik.fcast.id]
-```
+![Inbox wallets](./img/inbox-wallets.png)
 
 XMTP creates a log of all the wallets associated with an Inbox ID and makes this log available through a public API.  In the diagram above, this log charts the relationship between the solid lines, whereas the dotted lines will be resolved by the apps that use XMTP (for example, through services such as Airstack).
 
@@ -59,7 +49,7 @@ When an XMTP V2 user upgrades to XMTP V3, their wallet becomes the recovery wall
 
 ### Associated Wallets
 
-![Inbox Diagram](./Inbox%20Diagram.png)
+![Inbox Diagram](./img/inbox-diagram.png)
 
 Associated wallets are additional addressible wallets in the Inbox.  An associated wallet can have multiple *installations*.  A user can use the wallet on multiple apps on multiple devices, and each one would have its own installation.  When someone sends a message to the name associated with the wallet, it goes to all the installations in the entire Inbox, not just the installations associated with one wallet.
 
@@ -147,7 +137,9 @@ When an identity action needs to be signed by an installation, the SDKs (via Lib
 
 ### Creating a new Inbox
 
-[Graphic TBD]
+<!--
+Coinbase or other user UX screenshot signing a new inbox action goes here
+-->
 
 For a new user, the first thing the app will need to do is create an Inbox. This will automatically register the user's wallet as the recovery address. The app will also need to add themselves as an installation ("Grant messaging access to app"), which they can do in the same combined action as creating the Inbox.
 
@@ -171,7 +163,9 @@ Create inbox, with or without the installation grant, will have to be signed by 
 
 ### Migrating a V2 Wallet
 
-[Graphic TBD]
+<!--
+If there's any visible effect of migrating a wallet, screenshot goes here
+-->
 
 For an existing user with an upgraded app, XMTP will automatically migrate the V2 wallet into a new Inbox and mark that wallet as the recovery wallet. The app will still need to add themselves as an installation ("Grant messaging access to app").
 

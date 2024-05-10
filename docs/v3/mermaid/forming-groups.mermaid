@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant Amal
+    participant Bola
+    participant Caro
+    participant XMTP
+
+    Amal->>XMTP: conversations.create_group(Bola, Caro)
+    Bola->>XMTP: conversations.sync()
+    Bola->>+XMTP: conversations.list()
+    XMTP-->>-Bola: List of groups including new group
+    Caro->>XMTP: conversations.sync()
+    Caro->>+XMTP: conversations.list()
+    XMTP-->>-Caro: List of groups including new group  

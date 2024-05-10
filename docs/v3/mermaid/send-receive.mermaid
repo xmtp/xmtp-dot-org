@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant Amal
+    participant Bola
+    participant Caro
+    participant XMTP
+
+    Note left of Amal: Send Message
+    Amal->>XMTP: group.send("Hello, group!")
+    Amal->>XMTP: group.sync()
+
+    Note left of Amal: Receive Message
+    Bola->>XMTP: group.sync()
+    Bola->>XMTP: group.find_messages()
+    XMTP-->>Bola: "Amal: Hello, group!"
+
+    Caro->>XMTP: group.sync()
+    Caro->>XMTP: group.find_messages()
+    XMTP-->>Caro: "Amal: Hello, group!"
