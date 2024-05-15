@@ -206,6 +206,10 @@ Yes, you will be able to run a node.
 
 XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
 
+### Does XMTP have a token?
+
+XMTP does not currently have a token. Disregard any information regarding airdrops or token sales. If and when an official token is introduced, announcements will be made exclusively through XMTP's official channels.
+
 ### What is the relationship between Waku and XMTP?
 
 XMTP currently uses the Waku protocol to relay messages between network nodes.
@@ -374,27 +378,13 @@ XMTP natively supports one-to-one messaging. One-to-many broadcast messages, or 
 
 To learn more, see [Send a broadcast message](/docs/build/broadcast).
 
-## XMTP Labs
-
----
-
-### What is XMTP Labs?
-
-XMTP Labs is a web3 software company that contributes to XMTP, an open network, protocol, and standards for secure messaging between blockchain accounts.
-
-XMTP Labs employees work alongside other XMTP community members to build with and extend XMTP. Community [contributions and participation](/docs/contribute) are critical to the development and adoption of XMTP.
-
-### Does XMTP Labs plan to build apps or are you focused 100% on the protocol?
-
-XMTP Labs is focused on serving developers. We build [SDKs, UI components, and example apps](/docs/introduction#xmtp-sdks-and-example-apps) that help developers build great experiences with XMTP.
-
 ## Developers
 
 ---
 
-### Does xmtp is compatible with `viem`
+### Is XMTP compatible with `viem`
 
-Yes, not by default but you can create a wrapper around it. Like [Lenster](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useEthersWalletClient.tsx#L6)
+Yes. Though not by default, you can create a wrapper around it. For example, see this [Lenster](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useEthersWalletClient.tsx#L6) implementation.
 
 ```js
 import { ZERO_ADDRESS } from "@lenster/data/constants";
@@ -437,15 +427,15 @@ const useEthersWalletClient = (): ({
 export default useEthersWalletClient;
 ```
 
-Then you can call it like this, like [Lenster](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useXmtpClient.tsx#L12)
+You can then call it as shown in this [Lenster](https://github.com/lensterxyz/lenster/blob/19e5911cd3b0d4f2c391d1a1180a7ea5d9335bf3/apps/web/src/hooks/useXmtpClient.tsx#L12) implementation.
 
 ```
 const { data: walletClient, isLoading } = useEthersWalletClient();
 ```
 
-### Why my app is failing saying Buffer is not found
+### Why is my app failing with a "Buffer is not found" error?
 
-If you run into issues with `Buffer` and `polyfills`, see these solutions:
+If you run into issues with `Buffer` and `polyfills`, try this solution:
 
 1. Install the buffer dependency.
 
@@ -453,7 +443,7 @@ If you run into issues with `Buffer` and `polyfills`, see these solutions:
 npm i buffer
 ```
 
-2. Create a new file, `polyfills.js`, in the root of your project.
+2. Create a new file `polyfills.js` in the root of your project.
 
 ```tsx
 import { Buffer } from "buffer";
@@ -461,7 +451,7 @@ import { Buffer } from "buffer";
 window.Buffer = window.Buffer ?? Buffer;
 ```
 
-3. Import it into your main file on the first line.
+3. On the first line of your main file, import `polyfills`.
 
 - ReacJS: `index.js` or `index.tsx`
 - VueJS: `main.js`
@@ -472,9 +462,9 @@ window.Buffer = window.Buffer ?? Buffer;
 import "./polyfills";
 ```
 
-### Does XMTP works with Bun?
+### Does XMTP work with Bun?
 
-Currently, Bun does not offer full compatibility with XMTP. It is recommended to use Yarn as an alternative to prevent any unforeseen issues.
+Currently, Bun does not offer full compatibility with XMTP. Use Yarn as an alternative to prevent any issues.
 
 #### Using config files
 
@@ -645,3 +635,17 @@ export default {
 ```
 
 </details>
+
+## XMTP Labs
+
+---
+
+### What is XMTP Labs?
+
+XMTP Labs is a web3 software company that contributes to XMTP, an open network, protocol, and standards for secure messaging between blockchain accounts.
+
+XMTP Labs employees work alongside other XMTP community members to build with and extend XMTP. Community [contributions and participation](/docs/contribute) are critical to the development and adoption of XMTP.
+
+### Does XMTP Labs plan to build apps or are you focused 100% on the protocol?
+
+XMTP Labs is focused on serving developers. We build [SDKs, UI components, and example apps](/docs/introduction#xmtp-sdks-and-example-apps) that help developers build great experiences with XMTP.
