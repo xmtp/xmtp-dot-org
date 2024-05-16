@@ -11,8 +11,8 @@ const HomepageHeader = () => {
     <>
         <div className="container text-left py-0 px-4 m-auto max-w-screen-max">
           <Link to="/docs/build/group-chat">
-            <div className="rounded-full border border-blue-300 bg-blue-50 text-xs font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-3 lg:mb-4 w-fit">
-            🚀 Build with Group Chat in production! »
+            <div className="rounded-full border border-blue-300 bg-blue-50 text-l font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-3 lg:mb-4 w-fit">
+            🚀 Build with Group Chat in prod! »
             </div>
           </Link>
         </div>
