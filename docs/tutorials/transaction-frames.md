@@ -75,6 +75,7 @@ const transactionInfo: {
 		abi: Abi | [];
 		to: `0x${string}`;
 		value?: string;
+    // Needed if you are interacting with a smart contract in this transaction, e.g. in a mint scenario
 		data?: `0x${string}`;
 	};
 } = await framesClient.proxy.postTransaction(
@@ -130,6 +131,12 @@ if (
 Use the example [Open Frames Tx Frame](https://tx-boilerplate-frame.vercel.app/) to try these steps out in your app. Or check the code of the [open source repo](https://github.com/xmtp-labs/tx-boilerplate-frame).
 
 This example Frame uses the Sepolia network to make a 0.0000032ETH (~1 cent) transaction to the address associated with hi.xmtp.eth.
+
+### Try an example mint Open Frame with a transaction
+
+Use the example [Open Frames Mint Tx Frame](https://mint-tx-boilerplate-frame.vercel.app/) to try these steps out in your app. Or check the code of the [open source repo](https://github.com/xmtp-labs/mint-tx-boilerplate-frame).
+
+This example Frame uses the Sepolia network to make a 0.0000032ETH (~1 cent) transaction and mint an NFT of an AI dog.
 
 ---
 
@@ -217,7 +224,7 @@ export default function Home() {
 
 ```jsx
 import { NextRequest, NextResponse } from "next/server";
-import { parseEther } from "viem";
+import { parseEther, encodeFunctionData } from "viem";
 import type { FrameTransactionResponse } from "@coinbase/onchainkit/frame";
 import { getXmtpFrameMessage } from "@coinbase/onchainkit/xmtp";
 
@@ -227,6 +234,14 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
   if (!isValid) {
     return new NextResponse("Message not valid", { status: 500 });
   }
+
+  // This optional param is needed in scenarios where you're interacting with a smart contract
+  // The values passed will depend on the implementation details of your contract; this is just an example
+  const data = encodeFunctionData({
+    abi: JSON.parse(contractAbi),
+    functionName: "publicMint",
+    args: [],
+  });
 
   const txData: FrameTransactionResponse = {
     // Sepolia or whichever chain id; we suggest avoiding mainnet for now
@@ -238,6 +253,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
       to: "0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0",
       // Transaction value in eth sent back as wei — in this case, ~1 cent.
       value: parseEther("0.0000032", "wei").toString(),
+      data, // If applicable
     },
   };
   return NextResponse.json(txData);
@@ -293,7 +309,7 @@ export async function POST(req: NextRequest): Promise<Response> {
 
 :::info
 
-🧪 If you’re using this boilerplate Frame we just built, be sure you’re on the `Sepolia` network.
+🧪 If you’re using a boilerplate Frame we just built, be sure you’re on the `Sepolia` network.
 
 :::
 
@@ -302,4 +318,4 @@ export async function POST(req: NextRequest): Promise<Response> {
 If you need an XMTP messaging app to use, try one of these:
 
 - https://app-preview.converse.xyz/
-- https://dev-dev-inbox.vercel.app/.
+- https://dev-dev-inbox.vercel.app/
