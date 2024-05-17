@@ -28,7 +28,7 @@ run(async (context: HandlerContext) => {
   // Get the message and the address from the sender
   const { content, senderAddress } = context.message;
 
-  // Read or write to Farcaster
+  // Show a frame or talk to the user
 
   // To reply, just call `reply` on the HandlerContext.
   await context.reply("gm");
@@ -281,7 +281,7 @@ async function sendNotification(recipient, message) {
   }
 }
 // Example usage
-sendNotification("Hello from Farcaster!", "0x123...");
+sendNotification("Hello from XMTP!", "0x123...");
 ```
 
 </details>
