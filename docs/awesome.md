@@ -294,7 +294,7 @@ Test the bots in messaging apps
 
 - [Converse](https://getconverse.app/): Own your conversations. Works with Frames (Frame Transactions TBA).
 - [Coinbase Wallet](https://www.coinbase.com/wallet): Your key to the world of crypto. (Frame support TBA).
-- [dev-inbox](https://dev-dev-inbox.vercel.app/): Web messaging client (Frame Transactions TBA).
+- [dev-inbox](https://dev-dev-inbox.vercel.app/): Web messaging client (Sepolia Transactions).
 
 ## Identities 🥷🏻
 
