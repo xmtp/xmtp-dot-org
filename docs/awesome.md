@@ -1,10 +1,70 @@
 ---
-sidebar_label: Awesome
+sidebar_label: Onchain Summer ☀️
 sidebar_position: 4
 description: Making Frames Interoperable
 ---
 
-# Awesome ✨
+# Onchain Summer ☀️
+
+🚀 XMTP is offering $4500 in bounties for the Onchain Summer buildathon!
+
+🏆 **Best XMTP Bot - $1500**
+
+🖼️ **Best Chat Frame - $1500**
+
+🔔 **Best Use of XMTP for Notifications - $1500**
+
+![](./img/onchaimsummer.jpeg)
+
+> Make messaging shine this summer combining frames and bots! 😎
+
+Here are some examples to get you inspired:
+
+<div className="apparelbot">
+
+- `apparelbot.eth`: Allows users to browse and purchase limited edition digital apparel as NFTs. Each item is a unique collectible with proof of ownership.
+
+```plaintext
+User: Show me the latest apparel.
+Bot: Here are the latest items: [Frame] NFT Jacket - 0.02 ETH
+User: Buy NFT Jacket.
+Bot: Transaction complete! Your NFT Jacket is now in your wallet.
+```
+
+- `fantasysports.eth`: Users can create fantasy sports teams, submit selections, and receive real-time onchain updates and scores.
+
+```plaintext
+User: Show my team.
+Bot: Your team: Player 1, Player 2, Player 3.
+User: Update Player 1 to Player 5.
+Bot: Your team is now updated: Player 5, Player 2, Player 3.
+User: Show latest scores [Frame]
+Bot: Latest scores: Team A - 3, Team B - 1.
+```
+
+- `retrogames.eth` Users can play classic retro games with blockchain-based scoring and achievements.
+
+```plaintext
+User: Start Pac-Man.
+Bot: [Frame] Use the controls to play Pac-Man.
+User: [Plays Game]
+Bot: Your score: 1500. New high score!
+```
+
+- `musicdrop.eth`: Artists can drop exclusive tracks onchain, ensuring unique access for fans.
+
+```plaintext
+User: Show latest drops.
+Bot: Latest drops: [Frame] New Song by Artist - 0.01 ETH.
+User: Buy New Song.
+Bot: Transaction complete! Your exclusive track is now in your wallet.
+```
+
+</div>
+
+---
+
+### Awesome ✨
 
 > 💬 **Try it:** Message `awesome.hi.xmtp.eth`
 
