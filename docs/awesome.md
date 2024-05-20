@@ -16,7 +16,7 @@ description: Making Frames Interoperable
 
 ![](./img/onchaimsummer.jpeg)
 
-> Make messaging shine this summer combining frames and bots! 😎
+> Enhance your messaging experience this summer by integrating bots with frames, and see them in action in the Coinbase Wallet! 😎
 
 Here are some examples to get you inspired:
 
