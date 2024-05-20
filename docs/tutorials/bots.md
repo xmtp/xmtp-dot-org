@@ -1,66 +1,125 @@
 ---
-sidebar_label: Chatbots
+sidebar_label: Build and deploy an XMTP Bot
 sidebar_position: 6
 ---
 
-import onboardingbot from '/docs/concepts/img/onboarding-bot.png';
+# Build and deploy an XMTP Bot
 
-# Build a chatbot
+This guide will take you through the steps to create and deploy a simple bot using the [BotKit](https://github.com/xmtp/botkit) package.
 
-Use the [XMTP Bot Starter package](https://github.com/xmtp/xmtp-node-js-tools/tree/main/packages/bot-starter) to create chatbot on the XMTP network.
+### Step 1: Installation
 
-You might also be interested in the other packages in the [xmtp-node-js-tool](https://github.com/xmtp/xmtp-node-js-tools) repo.
+First, install the necessary CLI tool globally using npm:
 
-## Usage
+```bash
+npx create-xmtp-bot <bot-name>
+cd <bot-name>
+```
 
-```typescript
-// TODO: this isn't actually published yet.
-import run from "@xmtp/bot-starter";
+#### Configuration
 
-// Call `run` with a handler function. The handler function is called
-// with a HandlerContext
-run(async (context) => {
-  // When someone sends your bot a message, you can get the DecodedMessage
-  // from the HandlerContext's `message` field
-  const messageBody = context.message.content;
+Set your private key and network environment in the `.env` file:
 
-  // To reply, just call `reply` on the HandlerContext.
-  await context.reply(`ECHO: ${messageBody}`);
+```bash
+KEY= # your bot's private key
+XMTP_ENV= # production or dev network
+```
+
+#### Building and Running Your Bot
+
+Install dependencies and run your bot:
+
+```bash
+# For development with hot-reload
+yarn build:watch
+yarn start:watch
+```
+
+### Step 2: Understanding the `index.ts` File
+
+The `index.ts` file contains the main logic for your bot:
+
+```tsx
+import "dotenv/config";
+import { run, HandlerContext } from "@xmtp/botkit";
+
+const inMemoryCacheStep = new Map<string, number>();
+
+run(async (context: HandlerContext) => {
+  const { content, senderAddress } = context.message;
+  const lowerContent = content.toLowerCase();
+
+  if (
+    ["stop", "unsubscribe", "cancel", "list"].some((word) =>
+      lowerContent.includes(word),
+    )
+  ) {
+    inMemoryCacheStep.set(senderAddress, 0);
+    await context.reply(
+      "You are now unsubscribed. You will no longer receive updates!",
+    );
+  }
+
+  const cacheStep = inMemoryCacheStep.get(senderAddress) || 0;
+  let message = "";
+
+  switch (cacheStep) {
+    case 0:
+      message = "Welcome! Choose an option:\n1. Info\n2. Subscribe";
+      inMemoryCacheStep.set(senderAddress, 1);
+      break;
+    case 1:
+      if (content === "1") {
+        message = "Here is the info.";
+      } else if (content === "2") {
+        message =
+          "You are now subscribed. You will receive updates. Type 'stop' to unsubscribe.";
+        inMemoryCacheStep.set(senderAddress, 0);
+      } else {
+        message = "Invalid option. Please choose 1 for Info or 2 to Subscribe.";
+      }
+      break;
+    default:
+      message = "Invalid option. Please start again.";
+      inMemoryCacheStep.set(senderAddress, 0);
+      break;
+  }
+
+  await context.reply(message);
 });
 ```
 
-## Keep the same address (the KEY environment variable)
+This script listens for messages and sends a options like showing info and subscribing logic.
 
-By default, your bot will have a new address every time you start it up. That's ideal. If you have a private key, you can encode it to a hex string and set the `KEY` environment variable. Your bot will then use this key to connect to the network.
+#### Examples
 
-Don't know how to create a private key? Here's how to do it with ethers.js:
+Explore different types of bots:
 
-```typescript
-import { Wallet } from "ethers";
+- [Gm](https://github.com/xmtp/botkit/tree/main/examples/gm): A basic greeting bot.
+- [Conversational](https://github.com/xmtp/botkit/tree/main/examples/conversational): Engage users with ongoing conversations and redis subscription
+- [GPT](https://github.com/xmtp/botkit/tree/main/examples/gpt): Utilize OpenAI APIs for dynamic responses.
 
-const key = Wallet.createRandom().privateKey;
-console.log("Set your environment variable: KEY=" + key);
-```
+Find more examples in the [Awesome XMTP ⭐️](https://github.com/xmtp/awesome-xmtp) repository.
 
-## XMTP environment (the XMTP_ENV environment variable)
+### Step 3: Deploy with Railway
 
-By default, the bot connects to the `dev` network. If you want to connect to production, specify `XMTP_ENV=production`.
+1. **Sign Up and Setup**: Create an account at [Railway](https://railway.app/) and start a new empty project.
 
-## More bot resources
+   ![](./img/railway/2.png)
 
-- Want to use a GUI to create a chatbot? Check out [chainjet.io](https://chainjet.io/).
+2. **Database (Optional)**: Optionally, Right click to add a Redis database to your project.
 
-  For example, when a user sends a message to `gm.xmtp.eth`, a message bot built with ChainJet sends an automatic reply. You can configure your bot to provide onboarding information or an easy way for a user to send and receive their first messages with your app.
+   ![](./img/railway/3.png)
 
-  <img src={onboardingbot} style={{width:"600px"}}/>
+   **Get the redis connection string**
 
-- Need someone to send a test message to? Try these addresses:
+   ![](./img/railway/6.gif)
 
-  - `gm.xmtp.eth` (`0x937C0d4a6294cdfa575de17382c7076b579DC176`)
+3. **Repository**: Connect your GitHub repository where your bot code resides and deploy the repo.
+   ![](./img/railway/4.png)
+4. **Environment Variables**: Set up environment variables in Railway.
+   ![](./img/railway/5.gif)
 
-    Message this XMTP chatbot to get an immediate automated reply.
+### Step 4: Register an ENS Domain
 
-  - `hi.xmtp.eth` (`0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0`)
-
-    Message the XMTP Labs team and a human will reply, though not as quickly as `gm.xmtp.eth`! 🤖
-    
+Enhance your bot's identity by registering an [ENS domain](https://ens.domains/).

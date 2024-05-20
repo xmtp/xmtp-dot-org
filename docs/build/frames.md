@@ -9,149 +9,191 @@ import TabItem from "@theme/TabItem";
 
 # Chat Frames with XMTP
 
-The XMTP community has been actively discussing and implementing ways to enhance user experience by supporting frames within XMTP applications. An effort in this direction is detailed in a community post [Supporting Frames in XMTP](https://community.xmtp.org/t/supporting-frames-in-xmtp/535).
+The XMTP community has implemented ways to enhance user experience by supporting frames within XMTP applications by supporting [Open Frames](https://www.openframes.xyz). More details in this community post [Supporting Frames in XMTP](https://community.xmtp.org/t/supporting-frames-in-xmtp/535).
 
-:::info Open Frames
+## Libraries
 
-XMTP contributes to the Open Frames standard, fostering interoperability and open standards.
+These are the foundational tools that allow developers to create, sign, and manage Frames created by Open Frames & XMTP
 
-- [**Open Frames Spec**](https://github.com/open-frames/standard/blob/v0.0.1/README.md): Make Farcaster Frames interoperable.
-- [**Awesome Open Frames**](https://github.com/open-frames/awesome-open-frames.git): Curated list of Open Frames compatible Frames.
+- [**@xmtp/frames-validator**](https://github.com/xmtp/xmtp-node-js-tools/blob/main/packages/frames-validator/): A set of tools for validating POST payloads from XMTP Frames
+- [**@xmtp/frames-client**](https://github.com/xmtp/xmtp-web/tree/main/packages/frames-client): Library used by messaging apps to render xmtp frames.
 
-:::
+### Frameworks
 
----
+Popular frameworks have already integrated Open Frames into their stack:
 
-## Third Party Tools
+<details><summary><b>OnChainKit</b></summary>
 
-These tools already provide integration support interoperable Frames.
+Discover how OnchainKit seamlessly incorporates XMTP payloads
 
-### Tooling
+**Metadata:**
 
-Third party frameworks and tooling who have already integrated XMTP signing into their offerings:
+```jsx
+const frameMetadata = getFrameMetadata({
+  /**
+   * Frame metadata like Image, Buttons, Input, etc.
+   */
+  isOpenFrame: true,
+  accepts: { xmtp: "vNext" },
+});
 
-- [**OnChainKit**](https://onchainkit.xyz/xmtp/introduction): Discover how OnchainKit seamlessly incorporates XMTP payloads.
-- [**Frames.js**](https://framesjs.org/reference/js/xmtp): Learn about the integration of XMTP payloads within FrameJS.
+export const metadata: Metadata = {
+  /**
+   * ...other metadata
+   */
+  other: {
+    ...frameMetadata,
+  },
+};
+```
+
+**Validate incoming messages**
+
+```jsx
+import {
+  isXmtpFrameRequest,
+  getXmtpFrameMessage,
+} from "@coinbase/onchainkit/xmtp";
+/* ... */
+async function getResponse(req: any): Promise<NextResponse> {
+  const body: FrameRequest = await req.json();
+  if (isXmtpFrameRequest(body)) {
+    const { isValid, message } = await getXmtpFrameMessage(body);
+    // ... do something with the message if isValid is true
+    if (isValid) {
+      const { verifiedWalletAddress } = message;
+      // ... do something with the verifiedWalletAddress
+    }
+  } else {
+    // ...
+  }
+}
+```
+
+- [OnChainKit](https://onchainkit.xyz/xmtp/introduction): Official OnchainKit documentation.
+- [Quickstart](https://github.com/daria-github/a-frame-in-100-lines/): Onchainkit quickstart that integrates XMTP.
+
+</details>
+
+<details><summary><b>Frames.js</b></summary>
+
+Learn more about the integration of XMTP payloads within FrameJS
+
+**Metadata**
+
+```jsx
+const acceptedProtocols: ClientProtocolId[] = [
+  {
+    id: "xmtp",
+    version: "vNext",
+  },
+  {
+    id: "farcaster",
+    version: "vNext",
+  },
+];
+```
+
+**Validate incoming messages**:
+
+```jsx
+import { getXmtpFrameMessage, isXmtpFrameActionPayload } from "frames.js/xmtp";
+
+let fid: number | undefined;
+let walletAddress: string | undefined;
+
+if (isXmtpFrameActionPayload(previousFrame.postBody)) {
+  const frameMessage = await getXmtpFrameMessage(previousFrame.postBody);
+  const { verifiedWalletAddress } = frameMessage;
+  // Do something with xmtp wallet address
+} else {
+  // Do something else
+}
+```
+
+- [Frames.js](https://framesjs.org/reference/js/xmtp): Official Framesjs Documentation.
+- [Quickstart](https://github.com/framesjs/frames.js/tree/main/templates/next-starter-with-examples/): Frames.js example that integrates XMTP.
+
+</details>
+
+<details><summary><b>Frog</b></summary>
+
+**Metadata**
+
+To build a Frame with XMTP, you must first add XMTP metadata.
+
+```jsx
+const addMetaTags = (client: string, version?: string) => {
+  // Follow the OpenFrames meta tags spec
+  return {
+    unstable_metaTags: [
+      { property: `of:accepts`, content: version || "vNext" },
+      { property: `of:accepts:${client}`, content: version || "vNext" },
+    ],
+  };
+};
+
+export const app = new Frog(addMetaTags("xmtp"));
+```
+
+**Validate incoming messages**:
+
+Install the `@xmtp/frames-validator` package to validate incoming messages.
+
+```bash
+npm install @xmtp/frames-validator
+```
+
+Add the middleware to validate incoming messages.
+
+```jsx
+import { validateFramesPost } from "@xmtp/frames-validator";
+
+const xmtpSupport = async (c: Context, next: Next) => {
+  // Check if the request is a POST and relevant for XMTP processing
+  if (c.req.method === "POST") {
+    const requestBody = (await c.req.json().catch(() => {})) || {};
+    if (requestBody?.clientProtocol?.includes("xmtp")) {
+      c.set("client", "xmtp");
+      const { verifiedWalletAddress } = await validateFramesPost(requestBody);
+      c.set("verifiedWalletAddress", verifiedWalletAddress);
+    } else {
+      // Add farcaster check
+      c.set("client", "farcaster");
+    }
+  }
+  await next();
+};
+
+app.use(xmtpSupport);
+```
+
+**Access verified wallet address**:
+
+```jsx
+app.frame("/", (c) => {
+  /* Get Frame variables */
+  const { buttonValue, inputText, status } = c;
+
+  // XMTP verified address
+  const { verifiedWalletAddress } = c?.var || {};
+
+  /* return */
+});
+```
+
+- [Frog](https://frog.fm/concepts/middleware#xmtp-frames-middleware): XMTP Frog official middleware
+- [Quickstart](https://github.com/fabriguespe/frog-starter): Frog open frame XMTP quickstart
+
+</details>
+
+### Tutorials
+
+- [**Transaction Frames**](/docs/tutorials/transaction-frames.md): Create transactional frames compatible with messaging apps
 
 ### Clients
 
 Some clients are fully XMTP compatible and can render Frames signing XMTP payloads:
 
-- [**XMTP.chat**](https://xmtp.chat/): Engage with Frames firsthand by trying them on web.
 - [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
-
-## Getting started
-
-These are the foundational tools that allow developers to create, sign, and manage Frames. The protocol libraries are essential for interacting with the XMTP network at a lower level, handling the creation of frames, signing payloads, and managing frame actions. Key aspects include:
-
-- [**Declare Protocol Compatibility**](#protocol-compatibility): Ensure your application can interact with Frames by declaring protocol compatibility.
-- [**Manage requests**](#manage-requests): Checks if a URL in message content is suitable for frame processing.
-- [**Validate incoming messages**](#validate-incoming-messages): Implements security measures to authenticate and secure frame actions, ensuring the integrity and origin of frame interactions.
-
-### Protocol compatibility
-
-In compliance with [Open Frames](https://github.com/open-frames/standard/blob/v0.0.1/README.md), Use a meta tag in your frame's HTML to declare the client protocols your frame supports.
-
-```html
-<meta property="of:accepts:xmtp" content="vNext" />
-```
-
-This informs client applications about the protocols your frame can interact with.
-
-### Manage requests
-
-These packages enable your frame to send, receive requests across different protocols.
-
-<Tabs >
-<TabItem value="npm" label="npm" >
-
-```bash
-yarn install @xmtp/frames-client
-```
-
-</TabItem>
-<TabItem value="yarn" label="Yarn" >
-
-```bash
-yarn add @xmtp/frames-client
-```
-
-</TabItem>
-<TabItem value="bun" label="bun" >
-
-Currently, Bun does not offer full compatibility with XMTP. It is recommended to use Yarn 4 as an alternative to prevent any unforeseen issues.
-
-</TabItem>
-</Tabs>
-
-```jsx
-const xmtpClient = await Client.create(wallet);
-const framesClient = new FramesClient(xmtpClient);
-
-const frameUrl = "https://www.myframe.xyz";
-
-// Read data from a frame
-const frameMetadata = await framesClient.proxy.readMetadata(frameUrl);
-
-// Get a proxied image URL, which you can use directly in an <image> tag
-const imageUrl = framesClient.proxy.mediaUrl(
-  frameMetadata.metaTags["fc:frame:image"],
-);
-
-// Handle a click to button 2 from a conversation with topic "/xmtp/0/123" and participant addresses "abc" and "xyz"
-const payload = await signFrameAction({
-  frameUrl,
-  buttonIndex: 2,
-  conversationTopic: "/xmtp/0/123",
-  participantAccountAddresses: ["abc", "xyz"],
-});
-
-// If the button action type was `post`
-const updatedFrameMetadata = await framesClient.proxy.post(frameUrl, payload);
-// If the button action type was `post_redirect`
-const { redirectedTo } = await framesClient.proxy.postRedirect(
-  frameUrl,
-  payload,
-);
-```
-
-### Validate incoming messages
-
-To start, add the necessary XMTP packages to your project:
-
-<Tabs >
-<TabItem value="npm" label="npm" >
-
-```bash
-yarn install @xmtp/frames-validator
-```
-
-</TabItem>
-<TabItem value="yarn" label="Yarn" >
-
-```bash
-yarn add @xmtp/frames-validator
-```
-
-</TabItem>
-<TabItem value="bun" label="bun" >
-
-Currently, Bun does not offer full compatibility with XMTP. It is recommended to use Yarn 4 as an alternative to prevent any unforeseen issues.
-
-</TabItem>
-</Tabs>
-
-Implement message validation using `@xmtp/frames-validator` to ensure the authenticity of incoming POST requests. This step is crucial for security, especially when dealing with multiple protocols.
-
-```tsx
-import { validateFramesPost } from "@xmtp/frames-validator";
-
-export function handler(requestBody: any) {
-  if (requestBody.clientProtocol.startsWith("xmtp")) {
-    const { verifiedWalletAddress } = await validateFramesPost(requestBody);
-    // Handle verified XMTP payload
-  } else {
-    // Handle Farcaster or other protocol payloads
-  }
-}
-```
+- [**Dev Inbox**](https://github.com/xmtp/dev-inbox/): Engage with Frames firsthand by trying them on web.
