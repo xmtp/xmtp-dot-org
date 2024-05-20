@@ -1681,3 +1681,7 @@ details > div > div {
 summary::before {
   border-color: transparent transparent transparent #4f45e4 !important;
 }
+
+.apparelbot .prism-code {
+  background-color: #0233d2;
+}
