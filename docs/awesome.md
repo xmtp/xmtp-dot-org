@@ -88,7 +88,7 @@ run(async (context: HandlerContext) => {
   // Get the message and the address from the sender
   const { content, senderAddress } = context.message;
 
-  // Read or write to Farcaster
+  // Show a frame or talk to the user
 
   // To reply, just call `reply` on the HandlerContext.
   await context.reply("gm");
@@ -341,7 +341,7 @@ async function sendNotification(recipient, message) {
   }
 }
 // Example usage
-sendNotification("Hello from Farcaster!", "0x123...");
+sendNotification("Hello from XMTP!", "0x123...");
 ```
 
 </details>
@@ -354,7 +354,7 @@ Test the bots in messaging apps
 
 - [Converse](https://getconverse.app/): Own your conversations. Works with Frames (Frame Transactions TBA).
 - [Coinbase Wallet](https://www.coinbase.com/wallet): Your key to the world of crypto. (Frame support TBA).
-- [dev-inbox](https://dev-dev-inbox.vercel.app/): Web messaging client (Frame Transactions TBA).
+- [dev-inbox](https://dev-dev-inbox.vercel.app/): Web messaging client (Sepolia Transactions).
 
 ## Identities 🥷🏻
 
