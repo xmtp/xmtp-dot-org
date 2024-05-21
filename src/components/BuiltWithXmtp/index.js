@@ -37,6 +37,12 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
+      <div className="relative s isolate overflow-hidden px-6 bg-color">
+        <div className=" absolute inset-0 -z-10 h-full w-full"></div>
+          <h2 className="">Pick any app. Message any identity.<br />Own your communications.</h2>
+          <hr />
+      </div>
+
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {ListOfDevelopers.map((developer) => (
           <div
