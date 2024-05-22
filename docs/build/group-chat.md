@@ -33,8 +33,8 @@ Initiate a new group chat with a list of specified addresses. To create a group,
 ```jsx
 const group = await client.conversations.newGroup(
   [walletAddress1, walletAddress2],
-  // Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
-  { permissions: "creator_is_admin" },
+  // Set permissions for the group. Options include "creator_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+  { permissions: "creator_admin" },
 );
 ```
 
@@ -43,8 +43,8 @@ const group = await client.conversations.newGroup(
 
 ```kotlin
 val group = client.conversations.newGroup(listOf(walletAddress1, walletAddress2),
-  // Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
-  permissions = "creator_is_admin"
+  // Set permissions for the group. Options include "creator_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+  permissions = "creator_admin"
 )
 ```
 
@@ -53,8 +53,8 @@ val group = client.conversations.newGroup(listOf(walletAddress1, walletAddress2)
 
 ```swift
 let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2],
-// Set permissions for the group. Options include "creator_is_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
-permissions: "creator_is_admin")
+// Set permissions for the group. Options include "creator_admin" where only the creator has admin rights, or "everyone_is_admin" where all members are admins.
+permissions: "creator_admin")
 ```
 
 </TabItem>
@@ -107,60 +107,6 @@ group.send("Hello, group!")
 let group = try await client.conversations.newGroup(with: [walletAddress1, walletAddress2])
 //Send a message
 try await group.send(content: "Hello, group!")
-```
-
-</TabItem>
-<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
-
-Code sample coming soon
-
-</TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
-
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
-
-Code sample coming soon
-
-</TabItem>
-</Tabs>
-
-## Synchronizing group conversations
-
-XMTP's `syncGroups` brings the current data from the network and updates local DB, reflecting new groups or membership changes. Use `syncGroups` to:
-
-- **After Signing In:** Immediately update group conversation data.
-- **Periodically:** Keep data current based on your app's requirements.
-- **After Receiving a Notification:** Reflect changes in group membership prompted by notifications.
-
-<Tabs groupId="groupchats">
-<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
-
-```jsx
-await client.conversations.syncGroups();
-```
-
-</TabItem>
-<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
-
-```kotlin
-client.conversations.syncGroups()
-```
-
-List all conversations for both group and individual conversations.
-
-```kotlin
-// List all conversations, including both group and individual
-val conversations = client.conversations.list(includeGroups = true)
-```
-
-</TabItem>
-<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
-```swift
-try await client.conversations.sync()
 ```
 
 </TabItem>
@@ -337,8 +283,6 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-_Use the `sync()` method on a group chat object to update its state with the latest information from the XMTP network._
-
 ## Manage group chat members
 
 You can list, add and remove members from a group chat. Only the creator of the group chat has the permissions to add or remove members. This restriction ensures that only authorized individuals can modify the participant list. Developers should design their application's user interface and functionality with this consideration in mind, ensuring that options to add or remove members are only available to the group's creator.
@@ -471,6 +415,32 @@ Code sample coming soon
 
 </TabItem>
 </Tabs>
+
+## Manage group chat names
+
+Group chats in XMTP can have names to help users identify them easily. Here's how to manage these names:
+
+### Retrieve group name
+
+To get the current name of a group chat:
+
+```jsx
+const groupName = await group.groupName();
+```
+
+### Update group name
+
+To update the name of a group chat:
+
+```jsx
+await group.updateGroupName("New Group Name");
+```
+
+_Remember to do `await group.sync()` synchronizing the group's data including the name_
+
+### Synchronization of group names
+
+Group names are updated across all clients after synchronization. If a group name is changed, other members will see the updated name only after they perform a sync operation on their group data.
 
 ## Listen for new messages and updates
 
@@ -652,8 +622,108 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
+## Manage group member consent
+
+With XMTP, in addition to adding and removing members from a group chat, you can also manage permissions that control who is allowed or denied access to the group. Consent is crucial for maintaining control over group interactions and ensuring that only authorized members can participate. To learn more, see [Allow/block](/docs/build/user-consent).
+
+### Allow and deny group access
+
+You can explicitly allow or deny members' access to a group chat. This is particularly useful in scenarios where group membership needs to be tightly controlled.
+
+```jsx
+// Allow a member to access a group
+await group.allowMembers([walletAddress]);
+
+// Deny a member's access to a group
+await group.denyMembers([walletAddress]);
+```
+
+### Check if a group is allowed or denied
+
+You can check if a group is allowed or denied for a member. This method helps manage user experiences and access based on their group status.
+
+```jsx
+// Check if a group is allowed for a member
+const isAllowed = await group.isGroupAllowed(walletAddress);
+
+// Check if a group is denied for a member
+const isDenied = await group.isGroupDenied(walletAddress);
+```
+
+## Synchronize group chats
+
+XMTP's sync methods bring current data from the network and update the local database.
+
+### client.conversations.syncGroups()
+
+- **After signing in**: Immediately update group conversation data.
+- **Periodically**: Keep data current based on your app's requirements.
+- **After receiving a notification**: Reflect changes in group membership prompted by notifications.
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
+```jsx
+// List groups without syncing with the network
+let groups = await client.conversations.listGroups(true);
+// groups length might be 0 if not synced after group creation
+// Sync groups and list again
+await client.conversations.syncGroups();
+groups = await client.conversations.listGroups(true);
+console.log(groups.length); // groups length reflects the actual number of groups
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+client.conversations.syncGroups()
+```
+
+List all conversations for both group and individual conversations.
+
+```kotlin
+// List all conversations, including both group and individual
+val conversations = client.conversations.list(includeGroups = true)
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await client.conversations.sync()
+```
+
+</TabItem>
+<TabItem value="dart" label="Dart"  attributes={{className: "dart_tab"}}>
+
+Code sample coming soon
+
+</TabItem>
+<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
+
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
+
+</TabItem>
+<TabItem value="react" label="React"  attributes={{className: "react_tab "}}>
+
+Code sample coming soon
+
+</TabItem>
+</Tabs>
+
+### group.sync()
+
+This method is used to synchronize specific data for a single group, such as new messages and membership changes. It ensures that the group's data is up to date with the latest changes from the network.
+
+```jsx
+// Assume group is an existing group chat object
+await group.sync(); // Synchronizes the group's messages and members
+// Fetch messages without network sync
+const messages = await group.messages(true);
+console.log(messages.length); // Shows messages fetched from local data
+```
+
 ## Note on conversations and messages in group chats
 
-It's important to note that all the features and methods described in the [Conversations](/docs/build/conversations) and [Messages](/docs/build/messages) documentation are fully applicable to group chats as well. This includes starting new conversations, checking if an address is on the network, sending messages, and listing existing conversations. XMTP's API design ensures that you can manage group chats with the same ease and flexibility as one-on-one conversations.
-
-This means that whether you're working with individual conversations or group chats, the process for managing them remains consistent, allowing for a unified and streamlined development experience across different types of communication within XMTP.
+It's important to note that all the features and methods described in [Conversations](/docs/build/conversations) and [Messages](/docs/build/messages) are fully applicable to group chats as well. This includes starting new conversations, checking if an address is on the network, sending messages, and listing existing conversations. XMTP's API design ensures that you can manage group chats with the same ease and flexibility as one-on-one conversations.
