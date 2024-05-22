@@ -436,7 +436,7 @@ To update the name of a group chat:
 await group.updateGroupName("New Group Name");
 ```
 
-_Remember to do `await group.sync()` syncronizing the group's data including the name_
+_Remember to do `await group.sync()` synchronizing the group's data including the name_
 
 ### Synchronization of group names
 
@@ -622,11 +622,11 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-### Manage group member consent
+## Manage group member consent
 
-In XMTP, you can not only add or remove members from a group chat but also manage permissions regarding who is allowed or denied access to the group.Consent is crucial for maintaining control over group interactions and ensuring that only authorized members can participate. To learn more visit [Allow/Block](/docs/build/group-chat) section.
+With XMTP, in addition to adding and removing members from a group chat, you can also manage permissions that control who is allowed or denied access to the group. Consent is crucial for maintaining control over group interactions and ensuring that only authorized members can participate. To learn more, see [Allow/block](/docs/build/user-consent).
 
-#### Allow and deny group access
+### Allow and deny group access
 
 You can explicitly allow or deny members' access to a group chat. This is particularly useful in scenarios where group membership needs to be tightly controlled.
 
@@ -638,9 +638,9 @@ await group.allowMembers([walletAddress]);
 await group.denyMembers([walletAddress]);
 ```
 
-#### Check if a group is allowed or denied
+### Check if a group is allowed or denied
 
-You can check if a group is allowed or denied for a member. This method helps in managing user experiences and accessibilities based on their group status.
+You can check if a group is allowed or denied for a member. This method helps manage user experiences and access based on their group status.
 
 ```jsx
 // Check if a group is allowed for a member
@@ -650,15 +650,15 @@ const isAllowed = await group.isGroupAllowed(walletAddress);
 const isDenied = await group.isGroupDenied(walletAddress);
 ```
 
-## Synchronization of Group Chats
+## Synchronize group chats
 
-XMTP's sync methods brings the current data from the network and updates local DB, reflecting new groups or membership changes.
+XMTP's sync methods bring current data from the network and update the local database.
 
-### `client.conversations.syncGroups()`
+### client.conversations.syncGroups()
 
-- **After Signing In:** Immediately update group conversation data.
-- **Periodically:** Keep data current based on your app's requirements.
-- **After Receiving a Notification:** Reflect changes in group membership prompted by notifications.
+- **After signing in**: Immediately update group conversation data.
+- **Periodically**: Keep data current based on your app's requirements.
+- **After receiving a notification**: Reflect changes in group membership prompted by notifications.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -712,9 +712,9 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-### `group.sync()`
+### group.sync()
 
-This method is used to synchronize specific data for a single group, such as new messages and membership changes. It ensures that the group's data is up-to-date with the latest changes from the network.
+This method is used to synchronize specific data for a single group, such as new messages and membership changes. It ensures that the group's data is up to date with the latest changes from the network.
 
 ```jsx
 // Assume group is an existing group chat object
@@ -726,4 +726,4 @@ console.log(messages.length); // Shows messages fetched from local data
 
 ## Note on conversations and messages in group chats
 
-It's important to note that all the features and methods described in the [Conversations](/docs/build/conversations) and [Messages](/docs/build/messages) documentation are fully applicable to group chats as well. This includes starting new conversations, checking if an address is on the network, sending messages, and listing existing conversations. XMTP's API design ensures that you can manage group chats with the same ease and flexibility as one-on-one conversations.
+It's important to note that all the features and methods described in [Conversations](/docs/build/conversations) and [Messages](/docs/build/messages) are fully applicable to group chats as well. This includes starting new conversations, checking if an address is on the network, sending messages, and listing existing conversations. XMTP's API design ensures that you can manage group chats with the same ease and flexibility as one-on-one conversations.
