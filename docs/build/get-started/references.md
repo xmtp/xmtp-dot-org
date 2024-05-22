@@ -16,8 +16,6 @@ Use these reference docs as comprehensive guides to integrating the capabilities
 
 - [Swift SDK reference docs](https://xmtp.github.io/xmtp-ios/) - `xmtp-ios`
 
-- [Dart SDK reference docs](https://pub.dev/documentation/xmtp/latest/xmtp/Client-class.html) - `xmtp-flutter`
-
 - [React Native SDK reference docs](https://xmtp.github.io/xmtp-react-native/modules.html) - `xmtp-react-native`
 
 ### SDKs

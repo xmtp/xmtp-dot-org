@@ -58,7 +58,7 @@ XMTP Labs is taking a phased approach toward architectural and logical decentral
      This phase introduces smart contracts to provide stronger consistency for managing controls such as postage fees, advertised identities, or staking in the network.
 
      - Implement and deploy Topics Contract for managing topic metadata.
-     - Implement [Dispatcher](https://docs.lens.xyz/docs/dispatcher) for clients interacting with the control plane.
+     - Implement [Dispatcher](https://docs.lens.xyz/docs/lens-profile-manager) for clients interacting with the control plane.
      - Implement initial full node registration and staking via Consensus Contract.
      - Implement and deploy Contacts Contract for managing advertised contacts.
 

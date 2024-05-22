@@ -16,22 +16,22 @@ XMTP notifications are designed to seamlessly integrate into both mobile and web
 
 ## Concepts
 
-- [**Overview**](./overview): Understand the fundamentals of XMTP notifications, including their importance and how they enhance user experience in messaging applications.
+- [**Overview**](./overview): Understand the fundamentals of XMTP notifications, including their importance and how they enhance the user experience in messaging applications.
 
 - **Mobile**: Learn how XMTP notifications are tailored for mobile platforms, ensuring efficient delivery and user engagement through services like Firebase.
 
-  - [**Android**](./android): Set up your notification client in Android devices using the Kotlin SDK
-  - [**iOS**](./ios): Learn howto navigate App store guidelines and integrate notifications with the IOS SDK
+  - [**Android**](./android): Set up your notifications client for Android devices using the Kotlin SDK
+  - [**iOS**](./ios): Learn how to navigate App Store guidelines and integrate notifications using the iOS SDK
 
 - [**Example Notification Server**](./server): Access a practical example of setting up a notification server with XMTP, providing a solid starting point for your own implementation.
 
 ## Resources
 
-- [**Example Notification Server Implementation**](https://github.com/xmtp/example-notification-server-go): Dive into an example notification server to understand the integration process and how to leverage XMTP for efficient notification handling.
+- [**Example Notification Server Implementation**](https://github.com/xmtp/example-notification-server-go): Dive into an example notification server to understand the integration process and how to leverage XMTP for efficient notification handling
 
-- [**Building A Push Notification Client**](https://github.com/xmtp/example-notification-server-go/blob/main/docs/notifications-client-guide.md):This document aims to be a guide to implementing a notifications client in your language and framework of choice.
+- [**Build a Push Notification Client**](https://github.com/xmtp/example-notification-server-go/blob/main/docs/notifications-client-guide.md): Learn how to implement a notifications client in your language and framework of choice
 
-- [**Integration Test Suite**](https://github.com/xmtp/example-notification-server-go/blob/main/integration/README.md): This package is designed to run as an integration test suite for the notification server
+- [**Integration Test Suite**](https://github.com/xmtp/example-notification-server-go/blob/main/integration/README.md): Run an integration test suite for the notification server
 
 ## Example apps
 

@@ -18,7 +18,7 @@ Use this document as a map to build, launch, and maintain a best-in-class app wi
 
 - Learn to [build basic messaging](/docs/build/get-started/overview) features
 
-- Need some ideas? [Check out these XMTP use cases](/docs/use-cases/messaging) and best-in-class apps [built with XMTP](/built-with-xmtp)
+- Need some ideas? [Check out these XMTP use cases](/docs/use-cases/messaging) and best-in-class apps [built with XMTP](https://xmtp.org/)
 
 ## Polish your app
 
