@@ -58,7 +58,6 @@
     --nav-searchbox-shadow: inset 0 0 0 1px rgb(220, 220, 220);
     --dropdown-subtext-color: #475569;
     --build-xmtp-img-url: url("/img/build-xmtp.png");
-    --docusaurus-details-decoration-color: black;
   }
   [data-theme="light"] {
     --ifm-footer-background-color: #171717;
@@ -1664,4 +1663,25 @@ pre code {
   text-decoration: none;
   color: white;
   background-color: #dc2626;
+}
+
+/*FARHACK*/
+
+.details_node_modules-\@docusaurus-theme-classic-lib-theme-Details-styles-module,
+details {
+  border: 1px solid #4f45e4 !important;
+  background-color: transparent !important;
+}
+.collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module,
+details > div > div {
+  border-color: #4f45e4 !important;
+}
+.details_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module
+  > summary::before,
+summary::before {
+  border-color: transparent transparent transparent #4f45e4 !important;
+}
+
+.apparelbot .prism-code {
+  background-color: #0233d2;
 }
