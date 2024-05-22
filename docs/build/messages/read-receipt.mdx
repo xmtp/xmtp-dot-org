@@ -299,7 +299,7 @@ _`ReadReceipts` have an `undefined` or `nil` fallback, indicating the message is
 
 ## Notifications and read receipts
 
-Read receipts do not trigger push notifications. They contain a function `shouldPush=false` that indicates the notification should not be sent.
+Read receipts have `shouldPush` set to `false` that indicates the notification should not be sent. This means that read receipts do not trigger push notifications as long as the notification server respects this flag.
 
 ## Use a read receipt
 

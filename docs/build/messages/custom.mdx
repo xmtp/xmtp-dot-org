@@ -87,9 +87,9 @@ export class ContentTypeMultiplyNumberCodec
     // return undefined to indicate that this content type should not be displayed if it's not supported by a client
   }
 
-
-  // This method is optional and can be used to determine if the content type should have a push notification
-  shouldPush() {
+  // Set to true to enable push notifications for interoperable content types.
+  // Receiving clients must handle this field appropriately.
+  shouldPush(): boolean {
     return true;
   }
 }

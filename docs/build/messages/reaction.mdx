@@ -344,4 +344,4 @@ Generally, reactions should be interpreted as emoji. So, "smile" would translate
 
 ## Notifications and reactions
 
-Reaction removal does not trigger push notifications. They contain a function `shouldPush=false` that indicates the notification should not be sent.
+Reactions have `shouldPush` set to `false` that indicates the notification should not be sent. This means that reactions do not trigger push notifications as long as the notification server respects this flag.
