@@ -189,7 +189,7 @@
 
 .builder-bg {
   background-image: urL("/img/bwx-bg-light.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -549,8 +549,8 @@ main[class*="docMainContainer"] tr {
 }
 
 [class*="mdxPageWrapper"] {
-  max-width: 65%;
-  margin-left: var(--doc-sidebar-width);
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 [class*="mdxPageWrapper"] .col {
