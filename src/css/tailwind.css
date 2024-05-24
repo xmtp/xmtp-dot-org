@@ -187,6 +187,10 @@
   color: white;
 }
 
+[data-theme="dark"] .x-logo {
+  color: white;
+}
+
 .builder-bg {
   background-image: urL("/img/bwx-bg-light.png");
   background-size: contain;

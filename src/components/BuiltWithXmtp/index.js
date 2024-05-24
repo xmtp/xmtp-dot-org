@@ -100,12 +100,11 @@ const BuiltWithXmtp = () => {
                 )}
                 {developer.twitter && (
                   <a
-                    className="  flex align-center"
+                    className="flex align-center text-black x-logo"
                     href={developer.twitter}
                     style={{
                       fontSize: "20px",
                       fontWeight: "bold",
-                      color: "black",
                     }}
                     target="_blank">
                     𝕏
