@@ -17,6 +17,12 @@ This project is in **Alpha** status and ready for you to experiment with. Howeve
 
 :::
 
+:::info JavaScript
+
+At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
+
+:::
+
 Secure group chats are an important part of every messaging app. In this guide, we delve into the essentials of using XMTP for creating secure group chats. From the initial steps of starting a new group chat, listing and caching conversations for quick access, to advanced topics like managing group members and synchronizing message history data across devices.
 
 ## Create a group chat
@@ -59,11 +65,7 @@ permissions: "creator_admin")
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
 </Tabs>
 
 ## List group chat conversations
@@ -117,11 +119,7 @@ let groups = try await client.conversations.list(includeGroups: true)
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
 </Tabs>
 
 ## Check if a group chat is active
@@ -155,11 +153,7 @@ var isActive = try group.isActive()
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
 </Tabs>
 
 ## Messages
@@ -170,6 +164,9 @@ To ensure your application has the latest group chat details, including member l
 
 Determine if a user has the permissions to message a specific group.
 
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
+
 ```jsx
 const canMessage = await group.canGroupMessage([
   caro.address,
@@ -177,6 +174,19 @@ const canMessage = await group.canGroupMessage([
   "0xNewAddress",
 ]);
 ```
+
+</TabItem>
+
+<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
+
+Snippet coming soon
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+Snippet coming soon
+</TabItem>
+</Tabs>
 
 ### Send a message in a group chat
 
@@ -218,11 +228,7 @@ try await group.send(content: "Hello, group!")
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
 </Tabs>
 
 ### Load messages
@@ -256,11 +262,7 @@ try await group.messages();
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
 </Tabs>
 
 :::caution Group chats are per installation
@@ -376,11 +378,7 @@ try await group.removeMembers(addresses: [walletAddress])
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
 </Tabs>
 
 ## Manage group chat names
@@ -402,6 +400,16 @@ To update the name of a group chat:
 await group.updateGroupName("New Group Name");
 ```
 
+</TabItem>
+
+<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
+
+Snippet coming soon
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+Snippet coming soon
 </TabItem>
 </Tabs>
 
@@ -479,11 +487,7 @@ for try await message in group.streamMessages() {
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
 </Tabs>
 
 ## Listen for new group chats
@@ -570,11 +574,7 @@ for try await conversation in client.conversations.streamAll() {
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
 </Tabs>
 
 ## Manage group member consent
@@ -597,6 +597,15 @@ await group.denyMembers([walletAddress]);
 ```
 
 </TabItem>
+<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
+
+Snippet coming soon
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+Snippet coming soon
+</TabItem>
 </Tabs>
 
 ### Check if a group is allowed or denied
@@ -615,6 +624,16 @@ const isDenied = await group.isGroupDenied(walletAddress);
 ```
 
 </TabItem>
+
+<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
+
+Snippet coming soon
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+Snippet coming soon
+</TabItem>
 </Tabs>
 
 ## Synchronize group chats
@@ -626,6 +645,8 @@ XMTP's sync methods bring current data from the network and update the local dat
 - **After receiving a notification**: Reflect changes in group membership prompted by notifications.
 
 ### `syncGroups()`
+
+This method is used to sync all groups in the conversations array.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -667,11 +688,7 @@ try await client.conversations.sync()
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-<TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
-At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
-
-</TabItem>
 </Tabs>
 
 ### `sync()`
