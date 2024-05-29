@@ -6,9 +6,7 @@
 * A group can be anywhere from 1 person to 20,000.
 * Groups can have administrators with special permissions. Those permissions include:
   * Add or remove group members.
-  * Mute group members.
   * Set a group title or other metadata.
-  * Delete messages.
   * Pin messages.
   * Promote members to admins or demote admins.
   * Update permissions policies.
@@ -135,13 +133,15 @@ The group protocol contains methods specific to individual groups, identified by
 | send | Send a message to this group. Requires sync. |
 | sync | Query for new messages, proposals, and commits, and send unpublished messages related to this group. |
 | find_messages | Query the database for stored messages, with filters for time frame and limit. Requires sync.|
-| list_members | A list including the account address and installation id of each member. Requires sync. |
+| list_members | A list including the inboxId of each member and their associated account addresses. Requires sync. |
 | add_members | Add multiple group members by account address. Syncs automatically.|
+| add_members_by_inbox_id | Add multiple group members by inboxId.  Syncs automatically.|
 | remove_members | Remove multiple group members by account address. Syncs automatically.|
+| remove_members_by_inbox_id | Remove multiple group members by inboxId.  Syncs automatically.|
 | stream | Stream messages to a callback function. Syncs automatically.|
 | created_at_ns | Group creation time. |
 | is_active | Whether the group is active. Requires sync. |
-| added_by_address | The address of the group member who added this user to the group. |
+| added_by_inbox_id | The inboxId of the group member who added this user to the group. |
 | group_metadata | Group metadata, such as group title and permissions. Requires sync.|
 
 ### Delivery Status
@@ -152,7 +152,7 @@ When the app calls `sync()`, LibXMTP will make three attempts to automatically s
 
 ## Spam Protection
 
-To prevent unwanted contacts, the app should apply the existing [Universal allow/block Preferences](../build/user-consent.md) to group chats. The Group protocol provides the `added_by_address` method to find out who has initiated the user into a group chat. Apps can compare this address using the standard `isAllowed()` or `isDenied()` functions on the contacts to determine how and whether the group should be listed, and how and whether messages are displayed, based on the design of the app and the user's settings.
+To prevent unwanted contacts, the app should apply the existing [Universal allow/block Preferences](../build/user-consent.md) to group chats. The Group protocol provides the `added_by_inbox_id` method to find out who has initiated the user into a group chat. Apps can compare this inboxId using the standard `isInboxIdAllowed()` or `isInboxIdDenied()` functions on the contacts to determine how and whether the group should be listed, and how and whether messages are displayed, based on the design of the app and the user's settings.
 
 :::note
 Even if an app is not displaying a group chat, LibXMTP will keep receiving group messages and store them in the local database as long as the user is a member of the group.
