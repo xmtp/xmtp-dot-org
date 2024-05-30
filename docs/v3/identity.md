@@ -9,11 +9,12 @@
   * A user can use the recovery wallet to set a different recovery wallet.
   * A user with an existing V2 wallet gets an Inbox with that wallet as the recovery wallet.
 * The Inbox can have multiple *associated wallets* (besides the recovery wallet).
-  * Users can send a message to any name belonging to an associated wallet in the Inbox.
+  * Users can send a message to any name(ENS, cb.id, farcaster id, etc.) belonging to an associated wallet in the Inbox.
   * Associated wallets can add one or more *installations* as children (one per app/device pairing).
   * Removing the wallet removes all installations that are the child of that wallet.
 * Adding/removing a wallet or installation is an *identity action*.
-  * Only recovery wallets can remove other wallets or installations.
+  * Associated wallets can add other associated wallets or installations.
+  * Only recovery wallets can remove other associated wallets or installations.
 * Identity actions for new associations are signed by the wallet or installation making the change.
   * In some cases, it may be signed by both.
   * Action removing associations and changing the recovery wallet must be signed by the recovery wallet.
@@ -69,7 +70,7 @@ When you register a new installation, XMTP creates a new Ed25519 key pair that i
 
 The public key of the pair is used as the XMTP *signature key*. This is the unique identifier for an XMTP installation.  Messages sent by that installation are encrypted with the private key. Recipient installations use the signature key to decrypt them.
 
-Messages sent to the installation are encrypted using the signature key so only the installation can decrypt them.
+Messages sent to the installation are encrypted using the encryption key so only the installation can decrypt them.
 
 ## Updating the Inbox
 
