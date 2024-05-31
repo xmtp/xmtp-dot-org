@@ -105,17 +105,12 @@ const payload = await framesClient.signFrameAction({
 
 Pass the postUrl from the button as well as the payload with the signature from the previous step to complete the subscription flow and return metadata of a new success frame.
 
-    const completeTransaction = await framesClient.proxy.post(
-      postUrl,
-      payload,
-    );
-    // Finally, set the current frame state to this new metadata/success screen
-
 ```jsx
 const completeTransaction = await framesClient.proxy.post(
   buttonPostUrl,
   payloadWithTxId,
 );
+// Finally, set the current frame state to this new metadata/success screen
 ```
 
 ### Try an example subscribe Open Frame
@@ -173,7 +168,7 @@ const frameMetadata = getFrameMetadata({
   // This is the image shown on the default screen
   // Add whatever path is needed for your starting image
   // In this case, using an Open Graph image
-  image: `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?transaction=null`,
+  image: `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?subscribed=false`,
 });
 
 export const metadata: Metadata = {
