@@ -277,18 +277,18 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body = await req.json();
   const { isValid } = await getXmtpFrameMessage(body);
 
-  if (!isValid) {
-    return new NextResponse("Message not valid", { status: 500 });
-  }
+if (!isValid) {
+  return new NextResponse("Message not valid", { status: 500 });
+}
 
-  const xmtpClient = // Your client
-  const signature = body.untrustedData.transactionId;
+const xmtpClient = // Your client
+const signature = body.untrustedData.transactionId;
 
-  // Create the consent proof payload
-  const payloadBytes = createConsentProofPayload(signature, Date.now());
-  const consentProof = invitation.ConsentProofPayload.decode(
-    consentProofUint8Array
-  );
+// Create the consent proof payload
+const payloadBytes = createConsentProofPayload(signature, Date.now());
+const consentProof = invitation.ConsentProofPayload.decode(
+  consentProofUint8Array
+);
 
   const payloadWithTimestamp = {
     ...consentProof,
@@ -323,7 +323,7 @@ export async function POST(req: NextRequest): Promise<Response> {
 
 ### Resources
 
-If you need an XMTP messaging app to use, try this one:
+If you need an XMTP messaging app to use, try one of these:
 
 - https://app-preview.converse.xyz/
 - https://dev-dev-inbox.vercel.app/
