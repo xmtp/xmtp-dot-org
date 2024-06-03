@@ -284,19 +284,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const xmtpClient = // Your client
   const signature = body.untrustedData.transactionId;
 
-  // Create the consent proof payload — this will be coming from the frames validator package shortly
+  // Create the consent proof payload
   const payloadBytes = createConsentProofPayload(signature, Date.now());
-  const consentProofBase64 = Buffer.from(payloadBytes).toString("base64");
-  const base64ToBytes = (base64: string) => {
-  const binary = atob(base64);
-  const bytes = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i++) {
-      bytes[i] = binary.charCodeAt(i);
-    }
-    return bytes;
-  };
-  const consentProofUint8Array = base64ToBytes(consentProofBase64);
-
   const consentProof = invitation.ConsentProofPayload.decode(
     consentProofUint8Array
   );
