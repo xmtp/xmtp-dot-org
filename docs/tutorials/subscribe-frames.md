@@ -326,4 +326,4 @@ export async function POST(req: NextRequest): Promise<Response> {
 If you need an XMTP messaging app to use, try one of these:
 
 - https://app-preview.converse.xyz/
-- https://dev-dev-inbox.vercel.app/
+- https://xmtp-frames-quickstart.vercel.app/
