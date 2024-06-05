@@ -61,9 +61,9 @@ const NotifiCaseStudy = () => {
                   <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z" />
                 </svg>
               </div>
-              <p class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Personalization with privacy</p>
-              <p class="mt-6 text-lg leading-7 text-gray-600">XMTP’s subscribe functionality makes it easy for dapps like GMX to build subscribers lists, while still maintaining end-user privacy.</p>
-              <p class="mt-6 text-lg leading-7 text-gray-600">Users can opt-in to consented messages from anywhere, including gmx.com, apps, or Frames, which XMTP encrypts and stores in an encrypted list on the network. Notifi can then broadcast real-time notifications following user preferences, without knowing any personal identifying information.</p>
+              <p class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Let users subscribe from anywhere</p>
+              <p class="mt-6 text-lg leading-7 text-gray-600">By building on top of XMTP’s consent standards, Notifi makes it possible for users to opt-in to messages from GMX via subscribe buttons across gmx.com, apps, or Frames on Farcaster.</p>
+              <p class="mt-6 text-lg leading-7 text-gray-600">When a user subscribes, they are adding GMX’s unique address to their allowed contacts list, which is controlled by the user and accessible by any XMTP client app once they log in. This gives Coinbase Wallet a reliable source of truth to respect users’ contact preferences and keep users’ main inbox free from spam.</p>
               <div class="mt-8">
                 <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Get started</a>
               </div>
@@ -84,8 +84,8 @@ const NotifiCaseStudy = () => {
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
                 </svg>
               </div>
-              <p class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Delivering real-time notifications </p>
-              <p class="mt-6 text-lg leading-7 text-gray-600">Via Notifi, GMX can segment and send broadcast messages to their list of opt-in users and know that their messages are reaching the user’s main inbox.</p>
+              <p class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Deliver real-time notifications </p>
+              <p class="mt-6 text-lg leading-7 text-gray-600">Via Notifi, publishers can segment and send broadcast messages to their list of subscribers. Since Coinbase Wallet respects users’ opt-in preferences stored on the XMTP network, publishers can feel confident that their messages will reach subscribers’ main inbox.</p>
               <p class="mt-6 text-lg leading-7 text-gray-600">Starting today, GMX users can receive key notifications, including:</p>
               <dl class="pl-4 my-8 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
                 <div class="relative pl-12">
@@ -113,7 +113,6 @@ const NotifiCaseStudy = () => {
                   </dt>
                 </div>
               </dl>
-              <p class="mt-6 text-lg leading-7 text-gray-600">Coinbase Wallet can trust that these users have given permission to be reached by GMX, and deliver the notifications in the user’s main inbox instead of hiding it in secondary tabs.</p>
             </div>
           </div>
           <div class="lg:order-first">
@@ -140,9 +139,8 @@ const NotifiCaseStudy = () => {
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
                 </svg>
               </div>
-              <p class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">User Protection, Built In.</p>
-              <p class="mt-6 text-lg leading-7 text-gray-600">On XMTP, users’ preferences to allow or block an address are stored in an encrypted list on the network. This list is controlled by the user and is respected by every app the user signs into.</p>
-              <p class="mt-6 text-lg leading-7 text-gray-600">After being granted access, inbox apps verify if a user has allowed or denied to receive messages from senders, and save these preferences in their app. Only if a user has allowed a specific address will that address be able to reach the main inbox.  All other messages end up in the inbox’s requests tab.</p>
+              <p class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Build subscriber lists without collecting personal data</p>
+              <p class="mt-6 text-lg leading-7 text-gray-600">By default, subscriptions on XMTP are encrypted and private. By integrating XMTP’s subscribe and broadcast functionality, Notifi can build distribution lists for clients like GMX, while keeping their end-users identities and subscription preferences private. This means that GMX can reach their users through more secure inboxes, like Coinbase Wallet, while users never have to worry about their subscription data being shared with third parties.</p>
               <div class="mt-8">
                 <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Get started</a>
               </div>
