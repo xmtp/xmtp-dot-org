@@ -119,7 +119,7 @@ const NotifiCaseStudy = () => {
           <div class="lg:order-first">
             <video class="h-full w-full rounded-lg" autoPlay muted loop>
               <source
-                src="img/PHONESCENE1.mp4"
+                src="img/PHONESCENE.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
