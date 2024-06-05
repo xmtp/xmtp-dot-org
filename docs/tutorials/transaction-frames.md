@@ -147,7 +147,6 @@ When rendering transaction Frames in your app, consider providing these security
 - Include allow lists that enable your app to interact with known “safe” transaction frames only
 - For unknown frames, inform the user that they are about to interact with an unknown Frame and to proceed at their own risk.
 - Use simulation services in cases where you want to allow access to unverified transaction Frames. These services enable you to submit transaction information to a simulator first, which enables you to test the process without financial risk and retrieve debit amount details.
-- Apps rendering transaction Frames should avoid the `mainnet` for now. The associated fees can be high for most of the current use cases for transaction Frames.
 
 For more transaction Frame security considerations as well as mitigation strategies, see the [Farcaster transaction Frame security documentation](https://www.notion.so/Frame-Transactions-Public-9d9f9f4f527249519a41bd8d16165f73?pvs=21).
 
