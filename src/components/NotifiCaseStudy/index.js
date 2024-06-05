@@ -30,7 +30,7 @@ const NotifiCaseStudy = () => {
           <h1 class="mt-6 text-4xl font-bold tracking-tight text-black sm:text-6xl">Notifi uses XMTP to deliver real-time alerts on Coinbase Wallet</h1>
           <p class="mt-6 text-lg leading-8 text-gray-500">Notifi’s integration with XMTP enables DeFi projects like GMX to deliver real-time notifications and critical alerts for traders directly in Coinbase Wallet.</p>
           <div class="mt-10 flex items-center gap-x-6">
-            <a href="/docs/tutorials/portable-consent/subscribe" class="rounded-md bg-red-500 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">Get started</a>
+            <a href="/docs/tutorials/portable-consent/subscribe" class="rounded-md bg-red-500 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">Get started</a>
           </div>
         </div>
         <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
@@ -65,7 +65,7 @@ const NotifiCaseStudy = () => {
               <p class="mt-6 text-lg leading-7 text-gray-600">XMTP’s subscribe functionality makes it easy for dapps like GMX to build subscribers lists, while still maintaining end-user privacy.</p>
               <p class="mt-6 text-lg leading-7 text-gray-600">Users can opt-in to consented messages from anywhere, including gmx.com, apps, or Frames, which XMTP encrypts and stores in an encrypted list on the network. Notifi can then broadcast real-time notifications following user preferences, without knowing any personal identifying information.</p>
               <div class="mt-8">
-                <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Get started</a>
+                <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Get started</a>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@ const NotifiCaseStudy = () => {
               <p class="mt-6 text-lg leading-7 text-gray-600">On XMTP, users’ preferences to allow or block an address are stored in an encrypted list on the network. This list is controlled by the user and is respected by every app the user signs into.</p>
               <p class="mt-6 text-lg leading-7 text-gray-600">After being granted access, inbox apps verify if a user has allowed or denied to receive messages from senders, and save these preferences in their app. Only if a user has allowed a specific address will that address be able to reach the main inbox.  All other messages end up in the inbox’s requests tab.</p>
               <div class="mt-8">
-                <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Get started</a>
+                <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Get started</a>
               </div>
             </div>
           </div>
