@@ -34,7 +34,7 @@ const NotifiCaseStudy = () => {
           </div>
         </div>
         <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-          <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+          <div class="flex-none lg:max-w-none">
             <img src="img/notifiGraphic.png" alt="App screenshot" width="1170" height="740" />
           </div>
         </div>
@@ -148,7 +148,11 @@ const NotifiCaseStudy = () => {
               </div>
             </div>
           </div>
-          <img src="img/notifiGraphic3.png" alt="Product screenshot" width="600" height="850" />
+          <div class="mx-auto flex max-w-full lg:flex-none">
+            <div class="flex-none lg:max-w-none">
+              <img src="img/notifiGraphic3.png" alt="Product screenshot" width="600" height="850" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
