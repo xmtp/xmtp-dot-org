@@ -21,8 +21,7 @@ A quickstart is a brief guide or repo aimed at helping XMTP developers to unders
 <div className="quickstarts-tabs">
 
 <ul>
-  <li><a href="/docs/tutorials/token-gated-group-chat" class="plausible-event-name=Quickstart">Token Gates Group Chat</a><br/><small>How to build a token-gated group chat with Converse and XMTP.</small></li>
-  <li><a href="https://github.com/xmtp/xmtp-quickstart-chat-frames" class="plausible-event-name=Quickstart">Render Frames</a><br/><small>Learn how to render interoperable Frames in your messaging apps</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-quickstart-frames" class="plausible-event-name=Quickstart">Render Frames</a><br/><small>Learn how to render interoperable Frames in your messaging apps</small></li>
   <li><a href="/docs/tutorials/portable-consent/subscribe" class="plausible-event-name=Quickstart">Subscribe</a><br/><small>How to build a Subscribe button to record broadcast message user consent</small></li>
   <li><a href="/docs/tutorials/portable-consent/request-inbox" class="plausible-event-name=Quickstart">Request inbox</a><br/><small>How to build consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
   <li><a href="https://github.com/xmtp/xmtp-quickstart-reactjs" class="plausible-event-name=Quickstart">Floating Inbox</a><br/><small>Floating inbox quickstart app in JS. Use it to help you build your own app with XMTP.</small></li>
