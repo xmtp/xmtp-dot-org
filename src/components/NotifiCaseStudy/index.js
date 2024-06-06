@@ -73,9 +73,6 @@ const NotifiCaseStudy = () => {
               <p class="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">Let users subscribe from anywhere</p>
               <p class="mt-6 text-lg leading-7">By building on top of XMTP’s consent standards, Notifi makes it possible for users to opt-in to messages from GMX via subscribe buttons across gmx.com, apps, or Frames on Farcaster.</p>
               <p class="mt-6 text-lg leading-7">When a user subscribes, they are adding GMX’s unique address to their allowed contacts list, which is controlled by the user and accessible by any XMTP client app once they log in. This gives Coinbase Wallet a reliable source of truth to respect users’ contact preferences and keep users’ main inbox free from spam.</p>
-              <div class="mt-8">
-                <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 pointer hover:no-underline">Get started</a>
-              </div>
             </div>
           </div>
           <img src="img/notifiGraphic1.png" alt="Product screenshot" class="max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:ml-0" width="640" height="570" />
@@ -151,7 +148,7 @@ const NotifiCaseStudy = () => {
               <p class="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">Build subscriber lists without collecting personal data</p>
               <p class="mt-6 text-lg leading-7">By default, subscriptions on XMTP are encrypted and private. By integrating XMTP’s subscribe and broadcast functionality, Notifi can build distribution lists for clients like GMX, while keeping their end-users identities and subscription preferences private. This means that GMX can reach their users through more secure inboxes, like Coinbase Wallet, while users never have to worry about their subscription data being shared with third parties.</p>
               <div class="mt-8">
-                <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 pointer hover:no-underline">Get started</a>
+                <a href="https://gmx.io" target="_blank" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 pointer hover:no-underline">Try it now on GMX</a>
               </div>
             </div>
           </div>
