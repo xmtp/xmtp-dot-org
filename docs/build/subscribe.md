@@ -22,6 +22,10 @@ Requires actions by the sender
 - Verify the consent payload to allow the sender  
 Requires actions by the client SDK
 
+This diagram provides an overview of how consent proofs work. Senders can provide a consent proof-enabled **Subscribe** button in Frames, apps, and websites. After the user clicks **Subscribe**, they're prompted to sign with their wallet to provide "proof of consent" that they've opted-in to receive messages from the sender. The sender can then include the consent proof when sending a broadcast message to the user to enable strong deliverability for their message and ensure that it displays in the user's main inbox.
+
+![Diagram illustrating how consent proofs can be surfaced in Frames, websites, and apps to enable a user to provide consent to receive messages from a sender. The sender can then use the consent proof to ensure that their message is displayed in the user's main inbox.](img/consent-proof-flow.png)
+
 ## Obtain a consent signature from the user
 
 A consent proof signature must be obtained from a user's wallet. The signature is then encoded into a payload that client SDKs can use to verify and validate consent before allowing the sender to message the user's wallet.
