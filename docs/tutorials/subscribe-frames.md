@@ -1,6 +1,6 @@
 ---
 sidebar_label: Subscribe in Open Frames
-sidebar_position: 6
+sidebar_position: 6.3
 ---
 
 # Subscribe in Open Frames
@@ -326,4 +326,4 @@ export async function POST(req: NextRequest): Promise<Response> {
 If you need an XMTP messaging app to use, try one of these:
 
 - https://app-preview.converse.xyz/
-- https://dev-dev-inbox.vercel.app/
+- https://xmtp-frames-quickstart.vercel.app/
