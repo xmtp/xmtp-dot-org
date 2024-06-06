@@ -22,15 +22,24 @@ const NotifiCaseStudy = () => {
       </div>
       <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-10">
         <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <div class="mt-24 sm:mt-32 lg:mt-16">
+          <div class="mt-4 sm:mt-4 lg:mt-0">
             <a class="inline-flex space-x-6">
               <span class="rounded-full bg-red-500/10 px-3 py-1 text-sm font-semibold leading-6 text-red-400 ring-1 ring-inset ring-red-500/20">Case Study</span>
             </a>
           </div>
           <h1 class="mt-6 text-4xl font-bold tracking-tight text-black sm:text-6xl">Notifi uses XMTP to deliver real-time alerts on Coinbase Wallet</h1>
           <p class="mt-6 text-lg leading-8 text-gray-500">Notifi’s integration with XMTP enables DeFi projects like GMX to deliver real-time notifications and critical alerts for traders directly in Coinbase Wallet.</p>
-          <div class="mt-10 flex items-center gap-x-6">
-            <a href="/docs/tutorials/portable-consent/subscribe" class="rounded-md bg-red-500 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">Get started</a>
+          <div class="mt-6 flex items-center gap-x-6">
+            <a href="/docs/tutorials/portable-consent/subscribe" class="rounded-md bg-red-500 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pointer hover:no-underline">Get started</a>
+          </div>
+          <div class="bg-white py-12">
+            <div class="mx-auto max-w-7xl">
+              <div class="mx-auto grid grid-cols-3 gap-x-4 gap-y-10">
+                <img class="col-span-1 max-h-12 w-full object-contain lg:col-span-1" src="img/cbwalletLogo.svg" alt="Coinbase Wallet" width="283" height="48" />
+                <img class="col-span-1 max-h-12 w-full object-contain lg:col-span-1 mt-3" src="img/gmxLogo.svg" alt="GMX" width="108" height="24" />
+                <img class="col-span-1 max-h-12 w-full object-contain lg:col-span-1 mt-3" src="img/notifiLogo.svg" alt="Notifi" width="95" height="22" />
+              </div>
+            </div>
           </div>
         </div>
         <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
@@ -65,7 +74,7 @@ const NotifiCaseStudy = () => {
               <p class="mt-6 text-lg leading-7 text-gray-600">By building on top of XMTP’s consent standards, Notifi makes it possible for users to opt-in to messages from GMX via subscribe buttons across gmx.com, apps, or Frames on Farcaster.</p>
               <p class="mt-6 text-lg leading-7 text-gray-600">When a user subscribes, they are adding GMX’s unique address to their allowed contacts list, which is controlled by the user and accessible by any XMTP client app once they log in. This gives Coinbase Wallet a reliable source of truth to respect users’ contact preferences and keep users’ main inbox free from spam.</p>
               <div class="mt-8">
-                <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Get started</a>
+                <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 pointer hover:no-underline">Get started</a>
               </div>
             </div>
           </div>
@@ -142,7 +151,7 @@ const NotifiCaseStudy = () => {
               <p class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Build subscriber lists without collecting personal data</p>
               <p class="mt-6 text-lg leading-7 text-gray-600">By default, subscriptions on XMTP are encrypted and private. By integrating XMTP’s subscribe and broadcast functionality, Notifi can build distribution lists for clients like GMX, while keeping their end-users identities and subscription preferences private. This means that GMX can reach their users through more secure inboxes, like Coinbase Wallet, while users never have to worry about their subscription data being shared with third parties.</p>
               <div class="mt-8">
-                <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Get started</a>
+                <a href="/docs/tutorials/portable-consent/subscribe" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 pointer hover:no-underline">Get started</a>
               </div>
             </div>
           </div>
