@@ -1,6 +1,6 @@
 ---
 sidebar_label: Subscribe in Open Frames
-sidebar_position: 6
+sidebar_position: 6.3
 ---
 
 # Subscribe in Open Frames

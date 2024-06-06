@@ -1,6 +1,6 @@
 ---
 sidebar_label: Transactions and Mints in Open Frames
-sidebar_position: 6
+sidebar_position: 6.3
 ---
 
 # Transactions and Mints in Open Frames

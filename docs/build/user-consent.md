@@ -1,6 +1,6 @@
 ---
 sidebar_label: Allow/block
-sidebar_position: 5.5
+sidebar_position: 5.1
 hide_table_of_contents: false
 ---
 
@@ -536,16 +536,19 @@ The following diagram illustrates the detailed logic for how user consent prefer
 
 <img src={consentlogic} style={{width:"90%"}}/>
 
-### Tutorials
+## Tutorials
 
 For practical examples, see these tutorials:
 
-- [Enable subscribers with XMTP](/docs/tutorials/portable-consent/subscribe)
+- [Enable subscribers with XMTP](/docs/tutorials/subscribe)
 - [Broadcast messages with XMTP](/docs/build/broadcast)
 - [Add consent to an existing XMTP inbox JS](/docs/tutorials/portable-consent/request-inbox)
 - [Add consent to an existing XMTP inbox RN](/docs/tutorials/portable-consent/request-inbox-rn)
 
-### Example repos
+## Example repos
 
 - JS example repo [xmtp-request-inbox](https://github.com/xmtp/xmtp-quickstart-request-inbox)
 - React Native example repo [xmtp-request-inbox](https://github.com/xmtp/xmtp-quickstart-react-native-request-inbox)
+- Subscribe-Broadcast demo button and backend
+  - [Button repo](https://github.com/alexrisch/subscribe-broadcast/blob/main/src/app/subscribe/button/page.tsx)
+  - [Backend repo](https://github.com/alexrisch/broadcast-api/blob/main/src/index.ts#L51)
