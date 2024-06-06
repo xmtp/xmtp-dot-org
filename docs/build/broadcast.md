@@ -1,6 +1,6 @@
 ---
 sidebar_label: Broadcast
-sidebar_position: 5
+sidebar_position: 5.2
 ---
 
 import Tabs from "@theme/Tabs";
@@ -10,9 +10,9 @@ import TabItem from "@theme/TabItem";
 
 Broadcasting with XMTP allows you to send a single message to multiple recipients, treating each message as a direct message (DM) from the sender's wallet address to each recipient's wallet address. This method is particularly useful for announcements or updates. However, it's important to note that each recipient wallet must be activated on the XMTP network to receive messages.
 
-- **Network Activation**: Before sending a broadcast message, verify that each recipient's wallet is activated on the XMTP network with `canMessage`. Only activated wallets can receive and view messages.
-- **Rate Limiting**: XMTP imposes rate limits to maintain network health and prevent spam. Familiarize yourself with these limits and design your message sending strategy to comply with them. [FAQ](/docs/faq#rate-limiting).
-- **User Consent**: In accordance with data privacy laws, obtain explicit consent from users before sending them broadcast messages. [Read more](/docs/build/user-consent).
+- **Network activation**: Before sending a broadcast message, verify that each recipient's wallet is activated on the XMTP network with `canMessage`. Only activated wallets can receive and view messages.
+- **Rate limiting**: XMTP imposes rate limits to maintain network health and prevent spam. Familiarize yourself with these limits and design your message sending strategy to comply with them. [FAQ](/docs/faq#rate-limiting).
+- **User consent**: In accordance with data privacy laws, obtain explicit consent from users before sending them broadcast messages. [Read more](/docs/build/user-consent).
 
 :::caution
 Without explicit consent from the recipients, broadcast messages are more likely to be flagged as spam, significantly reducing their deliverability. [Read more](/docs/build/user-consent).
@@ -51,16 +51,20 @@ const message = "Hello from XMTP!"; // Your broadcast message
 sendBroadcastMessage(recipients, message);
 ```
 
-## Managing high volume broadcasts
+## Managing high-volume broadcasts
 
-When planning to send broadcast messages at a high volume, it's crucial to consider XMTP's rate limits to ensure efficient and responsible use of the network. High volume broadcasts require careful strategy to avoid rate limiting issues and to maintain network health.
+When planning to send broadcast messages at a high volume, it's crucial to consider XMTP's rate limits to ensure efficient and responsible use of the network. High-volume broadcasts require careful strategy to avoid rate-limiting issues and to maintain network health.
 
-- **Adherence to Rate Limits**: Understand and respect XMTP's [rate limits](/docs/faq#rate-limiting) to prevent network overload and ensure your messages are delivered smoothly.
-- **Batch Processing**: Sending messages in batches can help manage rate limits effectively. Consider the timing and size of each batch to optimize delivery.
-- **Error Handling**: Implement robust error handling to manage rate limiting responses from the network. This may include adjusting send rates or retrying failed messages.
+- **Adherence to rate limits**: Understand and respect XMTP's [rate limits](/docs/faq#rate-limiting) to prevent network overload and ensure your messages are delivered smoothly.
+- **Batch processing**: Sending messages in batches can help manage rate limits effectively. Consider the timing and size of each batch to optimize delivery.
+- **Error handling**: Implement robust error handling to manage rate limiting responses from the network. This may include adjusting send rates or retrying failed messages.
 
 :::info Handling rate-limiting
-Explore our [repository](https://github.com/alexrisch/broadcaster-app) for concise strategies and code samples on high volume broadcast management, including batch processing, error handling, and rate limit adherence.
+Explore the [broadcaster-app](https://github.com/alexrisch/broadcaster-app) GitHub repo for concise strategies and code samples for high-volume broadcast management, including batch processing, error handling, and rate-limit adherence.
+:::
+
+:::info Easier broadcast setup
+Use the [Broadcast SDK](https://www.npmjs.com/package/@xmtp/broadcast-sdk) to send high-volume broadcasts. The SDK helps manage rate-limiting logic and enables easier broadcasting setup.
 :::
 
 ---
@@ -121,6 +125,8 @@ By being aware of these limits and planning accordingly, you can avoid rate-limi
   > (&nbsp;&nbsp;) **No**, I don’t want to receive broadcast messages from &lt;app name&gt;.
   >
   > [Cancel]&nbsp;&nbsp;&nbsp;[**Continue**]
+
+  If it suits your use case, consider handling consent using a [**Subscribe** button with consent proofs](subscribe) on a web page or in a dapp. 
 
 - **If your app allows your customers to send broadcast messages to their users**, be sure to advise your customers to get their users' consent before sending them broadcast messages. For example, you can provide this guidance during onboarding. Here's some example text you can build upon:
 
