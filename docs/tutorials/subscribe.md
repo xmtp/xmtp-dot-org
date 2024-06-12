@@ -1,9 +1,9 @@
 ---
-sidebar_label: Subscribe
-sidebar_position: 4
+sidebar_label: Subscribe button
+sidebar_position: 6.2
 ---
 
-# Enable subscribers with XMTP
+# Enable XMTP subscriptions using a wallet connection
 
 This tutorial will show you how to create a simple **Subscribe** button with consent that enables users to subscribe to your messages or notifications.
 
