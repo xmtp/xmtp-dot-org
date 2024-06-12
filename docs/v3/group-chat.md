@@ -30,7 +30,7 @@
 
 ## Group Sizes
 
-Group sizes can range from 1 to 20,000.  XMTP excepts most groups will fall into one of two profiles: The small group where everyone knows each other (e.g. texting), and large groups of relative strangers (e.g. Discord).  Small groups are your typical group chat - the group size is not large enough to require a lot of permissions, or moderation.  Large groups often start with restricted permission and more moderation to make sure the group is not too noisy for its intended purpose.
+Group sizes can range from 1 to 400.  XMTP excepts most groups will fall into one of two profiles: The small group where everyone knows each other (e.g. texting), and large groups of relative strangers (e.g. Discord).  Small groups are your typical group chat - the group size is not large enough to require a lot of permissions, or moderation.  Large groups often start with restricted permission and more moderation to make sure the group is not too noisy for its intended purpose.
 
 A 1-person group is allowed, and messages sent to the group will be broadcast to all the installations used by that person.
 
