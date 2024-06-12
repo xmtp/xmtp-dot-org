@@ -9,14 +9,6 @@ import TabItem from "@theme/TabItem";
 
 # Build group chat with XMTP
 
-![Status](https://img.shields.io/badge/Project_status-Alpha-orange)
-
-:::caution
-
-This project is in **Alpha** status and ready for you to experiment with. However, we do not recommend using **Alpha** software in production apps. Software in this status is likely to change based on feedback.
-
-:::
-
 :::info JavaScript
 
 At present, the JavaScript SDK lacks support for Group Chat functionalities. Nevertheless, for those looking to integrate backend features, the CLI provides a viable solution, as detailed in [this repository](https://github.com/xmtp/libxmtp/tree/main/examples/cli). For practical application, an example implementation is available on [Replit](https://replit.com/@neekolas/Groups-Nodejs-Client#src/index.ts). To explore group functionalities further, refer to the comprehensive [Token Gated Group Chat Tutorial](/docs/tutorials/token-gated-group-chat).
@@ -124,7 +116,7 @@ The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For
 
 ## Check if a group chat is active
 
-The `isActive` property indicates whether the current user is still a participant in the group chat. If the group chat is not active for the user, it typically means the user has been removed from the group. Developers should use this status to adjust the user interface accordingly. If a group chat is not active for a user, the application should hide or disable functionalities such as sending messages, adding, or removing members. This ensures a good user experience and prevents actions that are not permissible due to the user's status in the group chat.
+The `isActive` property indicates whether the current user is still a participant in the group chat. If the group chat is not active for the user, it typically means the user has been removed from the group. Developers should use this status to adjust the user interface accordingly. If a group chat is not active for a user, the application should hide or disable functionalities such as sending messages and adding or removing members. This ensures a good user experience and prevents actions that are not permissible due to the user's status in the group chat.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -158,11 +150,11 @@ The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For
 
 ## Messages
 
-To ensure your application has the latest group chat details, including member list and the most recent messages, it's crucial to periodically synchronize each group chat. This can be particularly important after joining a group, adding new members, or sending messages.
+To ensure your application has the latest group chat details, including the member list and most recent messages, it's crucial to periodically synchronize each group chat. This can be particularly important after joining a group, adding new members, or sending messages.
 
 ### Check if a user can message a group
 
-Determine if a user has the permissions to message a specific group.
+Determine if a user has permission to message a specific group.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -176,15 +168,15 @@ const canMessage = await group.canGroupMessage([
 ```
 
 </TabItem>
-
-<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 Snippet coming soon
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
 
 Snippet coming soon
+
 </TabItem>
 </Tabs>
 
@@ -228,7 +220,6 @@ try await group.send(content: "Hello, group!")
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-
 </Tabs>
 
 ### Load messages
@@ -262,7 +253,6 @@ try await group.messages();
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-
 </Tabs>
 
 :::caution Group chats are per installation
@@ -271,7 +261,7 @@ Group chats in XMTP are tied to each installation. This means that while you can
 
 ## Manage group chat members
 
-You can list, add and remove members from a group chat. Only the creator of the group chat has the permissions to add or remove members. This restriction ensures that only authorized individuals can modify the participant list.
+You can list, add, and remove members from a group chat. Only the group chat creator has permission to add or remove members. This restriction ensures that only authorized individuals can modify the participant list.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -294,7 +284,7 @@ Determine which wallet address added the current user to a group.
 const addedByAddress = await group.addedByAddress();
 ```
 
-Check if its admin
+Check if the address is an admin
 
 ```tsx
 const isAdmin = await group.isAdmin();
@@ -327,7 +317,7 @@ This section explains how to determine which wallet address added the current us
 val addedByAddress = group.addedByAddress();
 ```
 
-Check if its admin
+Check if the address is an admin
 
 ```kotlin
 val isAdmin = group.isAdmin();
@@ -360,7 +350,7 @@ This section explains how to determine which wallet address added the current us
 try await group.addedByAddress();
 ```
 
-Check if its admin
+Check if the address is an admin
 
 ```swift
 try await group.isAdmin();
@@ -401,23 +391,23 @@ await group.updateGroupName("New Group Name");
 ```
 
 </TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
+Snippet coming soon
+
+</TabItem>
 <TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
 
 Snippet coming soon
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
-
-Snippet coming soon
-</TabItem>
 </Tabs>
 
-_Remember to do `await group.sync()` synchronizing the group's data including the name_
+_Remember to do `await group.sync()` to synchronize the group's data, including the name_
 
 ## Listen for new messages and updates
 
-Streams enable real-time monitoring of new messages in a group chat as well as member management activities like adding and removing members. Here's how you can set up a stream for message updates. Refer to this [section](/docs/build/streams.md) for more details on streams.
+Streams enable real-time monitoring of new messages in a group chat and member management activities like adding and removing members. Here's how you can set up a stream for message updates. Refer to this [section](/docs/build/streams.md) for more details on streams.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -487,7 +477,6 @@ for try await message in group.streamMessages() {
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-
 </Tabs>
 
 ## Listen for new group chats
@@ -574,16 +563,15 @@ for try await conversation in client.conversations.streamAll() {
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-
 </Tabs>
 
 ## Manage group member consent
 
 With XMTP, in addition to adding and removing members from a group chat, you can also manage permissions that control who is allowed or denied access to the group. Consent is crucial for maintaining control over group interactions and ensuring that only authorized members can participate. To learn more, see [Allow/block](/docs/build/user-consent).
 
-### Allow and deny group access
+### Allow and deny access to a group
 
-You can explicitly allow or deny members' access to a group chat. This is particularly useful in scenarios where group membership needs to be tightly controlled.
+You can explicitly allow or deny access to a group chat. This is particularly useful in scenarios where group membership needs to be tightly controlled.
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab "}}>
@@ -597,14 +585,15 @@ await group.denyMembers([walletAddress]);
 ```
 
 </TabItem>
-<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 Snippet coming soon
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
 
 Snippet coming soon
+
 </TabItem>
 </Tabs>
 
@@ -624,15 +613,15 @@ const isDenied = await group.isGroupDenied(walletAddress);
 ```
 
 </TabItem>
-
-<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 Snippet coming soon
 
 </TabItem>
-<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+<TabItem value="swift" label="Swift" attributes={{className: "swift_tab"}}>
 
 Snippet coming soon
+
 </TabItem>
 </Tabs>
 
@@ -644,7 +633,7 @@ XMTP's sync methods bring current data from the network and update the local dat
 - **Periodically**: Keep data current based on your app's requirements.
 - **After receiving a notification**: Reflect changes in group membership prompted by notifications.
 
-### `syncGroups()`
+### syncGroups()
 
 This method is used to sync all groups in the conversations array.
 
@@ -688,10 +677,9 @@ try await client.conversations.sync()
 The [Flutter SDK](https://github.com/xmtp/xmtp-flutter) is being deprecated. For information about alternative solutions or how to contribute to maintaining this SDK, please join the XMTP Discord.
 
 </TabItem>
-
 </Tabs>
 
-### `sync()`
+### sync()
 
 This method is used to synchronize specific data for a single group, such as new messages and membership changes. It ensures that the group's data is up to date with the latest changes from the network.
 
