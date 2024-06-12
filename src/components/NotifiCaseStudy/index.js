@@ -1,9 +1,15 @@
 import React from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl/";
+import Head from "@docusaurus/Head";
 
 const NotifiCaseStudy = () => {
   return (
   <div>
+    <Head>
+      <title>Notifi uses XMTP to deliver real-time alerts on Coinbase Wallet</title>
+      <meta property="og:title" content="Notifi uses XMTP to deliver real-time alerts on Coinbase Wallet" />
+      <meta property="og:description" content="Notifi’s integration with XMTP enables DeFi projects like GMX to deliver real-time notifications and critical alerts for traders directly in Coinbase Wallet." />
+    </Head>
     <div class="relative isolate overflow-hidden">
       <div class="absolute inset-0 -z-10 overflow-hidden">
         <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 dark:stroke-gray-800 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
@@ -148,7 +154,7 @@ const NotifiCaseStudy = () => {
               <p class="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">Build subscriber lists without collecting personal data</p>
               <p class="mt-6 text-lg leading-7">By default, subscriptions on XMTP are encrypted and private. By integrating XMTP’s subscribe and broadcast functionality, Notifi can build distribution lists for clients like GMX, while keeping their end-users identities and subscription preferences private. This means that GMX can reach their users through more secure inboxes, like Coinbase Wallet, while users never have to worry about their subscription data being shared with third parties.</p>
               <div class="mt-8">
-                <a href="https://gmx.io" target="_blank" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 pointer hover:no-underline">Try it now on GMX</a>
+                <a href="https://gmx.notifi.network/" target="_blank" class="inline-flex rounded-md bg-red-600 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 pointer hover:no-underline">Try it now on GMX</a>
               </div>
             </div>
           </div>
