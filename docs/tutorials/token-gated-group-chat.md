@@ -1,6 +1,6 @@
 ---
 sidebar_label: Token gated group chat
-sidebar_position: 6
+sidebar_position: 6.1
 ---
 
 # Building Token-Gated Group Chats

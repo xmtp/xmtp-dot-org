@@ -16,35 +16,47 @@ const BuiltWithXmtp = () => {
       </div>
       <div className="relative s isolate overflow-hidden px-6 py-16 sm:py-24 mb-8 bg-color  built">
         <div className=" absolute inset-0 -z-10 h-full w-full builder-bg"></div>
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="max-w-7xl">
+          <div className="mx-auto md:mx-0">
             <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
               The open protocol for web3 messaging
             </h1>
             <p className="text-lg leading-7 text-gray-600">
               <strong className="pr-1">
                 <a href="https://dune.com/xmtp_team/dash" target="_blank" rel="noreferrer">
-                  1,919,923+
+                  1,953,353+
                 </a>
               </strong>
               web3 identities rely on apps built with XMTP for secure, private,
               and portable messaging
             </p>
           </div>
-          <div className="mx-auto mt-4 max-w-2xl lg:mx-0 lg:max-w-none">
+          <div className="mt-4 max-w-2xl md:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
               <a
                 href="/docs/introduction"
-                className="btn-principal bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0 no-underline" rel="noreferrer">
+                className="btn-principal bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0 no-underline"
+                rel="noreferrer">
                 <img
                   src="/img/xmtp-sm-icon.png"
-                  className="w-5 h-5 mr-2.5" alt="XMTP icon"></img>
+                  className="w-5 h-5 mr-2.5"
+                  alt="XMTP icon"></img>
                 Build with XMTP
               </a>
             </div>
           </div>
         </div>
       </div>
+
+      <div className="relative isolate overflow-hidden px-6 bg-color">
+        <div className=" absolute inset-0 -z-10 h-full w-full"></div>
+        <h2>
+          Pick any app. Message any identity.
+          <br />
+          Own your communications.
+        </h2>
+      </div>
+
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {ListOfDevelopers.map((developer) => (
           <div
@@ -94,12 +106,11 @@ const BuiltWithXmtp = () => {
                 )}
                 {developer.twitter && (
                   <a
-                    className="  flex align-center"
+                    className="flex align-center text-black x-logo"
                     href={developer.twitter}
                     style={{
                       fontSize: "20px",
                       fontWeight: "bold",
-                      color: "black",
                     }}
                     target="_blank">
                     𝕏
@@ -128,7 +139,11 @@ const BuiltWithXmtp = () => {
             </a>
             <p className="text-base text-gray-500">
               Know of a project built with XMTP that should be here?
-              <a className="px-1" href="https://forms.gle/p1VgVtkoGfHXANXt5" target="_blank" rel="noreferrer">
+              <a
+                className="px-1"
+                href="https://forms.gle/p1VgVtkoGfHXANXt5"
+                target="_blank"
+                rel="noreferrer">
                 <strong>Submit it</strong>
               </a>
             </p>

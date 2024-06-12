@@ -1,13 +1,15 @@
 ---
-sidebar_label: Transactions in Open Frames
-sidebar_position: 6
+sidebar_label: Transactions and Mints in Open Frames
+sidebar_position: 6.3
 ---
 
-# Transactions in Open Frames
+# Transactions and Mints in Open Frames
 
 :::info Prerequisite
 This guide assumes your app already supports non-transaction Open Frames. If necessary, see [Protocol compatibility](https://xmtp.org/docs/build/frames#protocol-compatibility) to set this up first.
 :::
+
+Note: A mint is a form of a transaction frame. Where applicable, steps for mint frames will be specified through this tutorial.
 
 ### Sections:
 
@@ -75,6 +77,7 @@ const transactionInfo: {
 		abi: Abi | [];
 		to: `0x${string}`;
 		value?: string;
+    // Needed if you are interacting with a smart contract in this transaction, e.g. in a mint scenario
 		data?: `0x${string}`;
 	};
 } = await framesClient.proxy.postTransaction(
@@ -112,9 +115,7 @@ if (
   ) {
     // Error handle, shouldn't show frame success screen
   } else {
-    // Pass the hash as a transactionId to the payload
-    payload.untrustedData.transactionId = hash;
-
+    // Pass the hash as an optional transactionId to the signFrameAction payload if you plan to use it
     // Complete the transaction, which returns metadata of a new success frame
     const completeTransaction = await framesClient.proxy.post(
       postUrl,
@@ -131,6 +132,12 @@ Use the example [Open Frames Tx Frame](https://tx-boilerplate-frame.vercel.app/)
 
 This example Frame uses the Sepolia network to make a 0.0000032ETH (~1 cent) transaction to the address associated with hi.xmtp.eth.
 
+### Try an example mint Open Frame with a transaction
+
+Use the example [Open Frames Mint Tx Frame](https://mint-tx-boilerplate-frame.vercel.app/) to try these steps out in your app. Or check the code of the [open source repo](https://github.com/xmtp-labs/mint-tx-boilerplate-frame).
+
+This example Frame uses the Sepolia network to make a 0.0000032ETH (~1 cent) transaction and mint an NFT of an AI dog.
+
 ---
 
 ## Security considerations
@@ -140,7 +147,6 @@ When rendering transaction Frames in your app, consider providing these security
 - Include allow lists that enable your app to interact with known “safe” transaction frames only
 - For unknown frames, inform the user that they are about to interact with an unknown Frame and to proceed at their own risk.
 - Use simulation services in cases where you want to allow access to unverified transaction Frames. These services enable you to submit transaction information to a simulator first, which enables you to test the process without financial risk and retrieve debit amount details.
-- Apps rendering transaction Frames should avoid the `mainnet` for now. The associated fees can be high for most of the current use cases for transaction Frames.
 
 For more transaction Frame security considerations as well as mitigation strategies, see the [Farcaster transaction Frame security documentation](https://www.notion.so/Frame-Transactions-Public-9d9f9f4f527249519a41bd8d16165f73?pvs=21).
 
@@ -217,7 +223,7 @@ export default function Home() {
 
 ```jsx
 import { NextRequest, NextResponse } from "next/server";
-import { parseEther } from "viem";
+import { parseEther, encodeFunctionData } from "viem";
 import type { FrameTransactionResponse } from "@coinbase/onchainkit/frame";
 import { getXmtpFrameMessage } from "@coinbase/onchainkit/xmtp";
 
@@ -227,6 +233,14 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
   if (!isValid) {
     return new NextResponse("Message not valid", { status: 500 });
   }
+
+  // This optional param is needed in scenarios where you're interacting with a smart contract
+  // The values passed will depend on the implementation details of your contract; this is just an example
+  const data = encodeFunctionData({
+    abi: JSON.parse(contractAbi),
+    functionName: "publicMint",
+    args: [],
+  });
 
   const txData: FrameTransactionResponse = {
     // Sepolia or whichever chain id; we suggest avoiding mainnet for now
@@ -238,6 +252,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
       to: "0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0",
       // Transaction value in eth sent back as wei — in this case, ~1 cent.
       value: parseEther("0.0000032", "wei").toString(),
+      data, // If applicable
     },
   };
   return NextResponse.json(txData);
@@ -293,7 +308,7 @@ export async function POST(req: NextRequest): Promise<Response> {
 
 :::info
 
-🧪 If you’re using this boilerplate Frame we just built, be sure you’re on the `Sepolia` network.
+🧪 If you’re using a boilerplate Frame we just built, be sure you’re on the `Sepolia` network.
 
 :::
 
@@ -302,4 +317,4 @@ export async function POST(req: NextRequest): Promise<Response> {
 If you need an XMTP messaging app to use, try one of these:
 
 - https://app-preview.converse.xyz/
-- https://dev-dev-inbox.vercel.app/.
+- https://xmtp-frames-quickstart.vercel.app/

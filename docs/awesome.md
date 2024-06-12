@@ -1,10 +1,70 @@
 ---
-sidebar_label: Awesome
+sidebar_label: Onchain Summer ☀️
 sidebar_position: 4
 description: Making Frames Interoperable
 ---
 
-# Awesome ✨
+# Onchain Summer ☀️
+
+🚀 XMTP is offering $4500 in bounties for the Onchain Summer buildathon!
+
+🏆 **Best XMTP Bot - $1500**
+
+🖼️ **Best Chat Frame - $1500**
+
+🔔 **Best Use of XMTP for Notifications - $1500**
+
+![](./img/onchaimsummer.jpeg)
+
+> Enhance your messaging experience this summer by integrating bots with frames, and see them in action in the Coinbase Wallet! 😎
+
+Here are some examples to get you inspired:
+
+<div className="apparelbot">
+
+- `apparelbot.eth`: Allows users to browse and purchase limited edition digital apparel as NFTs. Each item is a unique collectible with proof of ownership.
+
+```plaintext
+User: Show me the latest apparel.
+Bot: Here are the latest items: [Frame] NFT Jacket - 0.02 ETH
+User: Buy NFT Jacket.
+Bot: Transaction complete! Your NFT Jacket is now in your wallet.
+```
+
+- `fantasysports.eth`: Users can create fantasy sports teams, submit selections, and receive real-time onchain updates and scores.
+
+```plaintext
+User: Show my team.
+Bot: Your team: Player 1, Player 2, Player 3.
+User: Update Player 1 to Player 5.
+Bot: Your team is now updated: Player 5, Player 2, Player 3.
+User: Show latest scores [Frame]
+Bot: Latest scores: Team A - 3, Team B - 1.
+```
+
+- `retrogames.eth` Users can play classic retro games with blockchain-based scoring and achievements.
+
+```plaintext
+User: Start Pac-Man.
+Bot: [Frame] Use the controls to play Pac-Man.
+User: [Plays Game]
+Bot: Your score: 1500. New high score!
+```
+
+- `musicdrop.eth`: Artists can drop exclusive tracks onchain, ensuring unique access for fans.
+
+```plaintext
+User: Show latest drops.
+Bot: Latest drops: [Frame] New Song by Artist - 0.01 ETH.
+User: Buy New Song.
+Bot: Transaction complete! Your exclusive track is now in your wallet.
+```
+
+</div>
+
+---
+
+### Awesome ✨
 
 > 💬 **Try it:** Message `awesome.hi.xmtp.eth`
 
@@ -28,7 +88,7 @@ run(async (context: HandlerContext) => {
   // Get the message and the address from the sender
   const { content, senderAddress } = context.message;
 
-  // Read or write to Farcaster
+  // Show a frame or talk to the user
 
   // To reply, just call `reply` on the HandlerContext.
   await context.reply("gm");
@@ -281,20 +341,19 @@ async function sendNotification(recipient, message) {
   }
 }
 // Example usage
-sendNotification("Hello from Farcaster!", "0x123...");
+sendNotification("Hello from XMTP!", "0x123...");
 ```
 
 </details>
 
 ---
 
-## Messaging apps 💬
+### Clients
 
-Test the bots in messaging apps
+Some clients are fully XMTP compatible and can render Frames signing XMTP payloads:
 
-- [Converse](https://getconverse.app/): Own your conversations. Works with Frames (Frame Transactions TBA).
-- [Coinbase Wallet](https://www.coinbase.com/wallet): Your key to the world of crypto. (Frame support TBA).
-- [dev-inbox](https://dev-dev-inbox.vercel.app/): Web messaging client (Frame Transactions TBA).
+- [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
+- [**Frames Quickstart**](https://github.com/xmtp/xmtp-quickstart-frames/): Engage with Frames firsthand by trying them on web.
 
 ## Identities 🥷🏻
 

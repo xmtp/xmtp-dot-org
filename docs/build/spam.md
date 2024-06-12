@@ -1,6 +1,6 @@
 ---
 sidebar_label: Spam
-sidebar_position: 6
+sidebar_position: 5.1
 description: "Learn about spam filters for apps built with XMTP."
 ---
 

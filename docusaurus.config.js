@@ -145,9 +145,9 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Web3 social</div></div>`,
               },
               {
-                to: "/docs/use-cases/marketing",
+                to: "notifi-case-study",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Marketing icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Broadcast</div></div>`,
               },
               {
                 to: "/docs/use-cases/automation",
