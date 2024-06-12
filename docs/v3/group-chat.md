@@ -3,7 +3,7 @@
 ## Summary
 
 * XMTP V3 is introducing Group Chat based on the MLS [specification](https://www.rfc-editor.org/rfc/rfc9420.html).
-* A group can be anywhere from 1 person to 20,000.
+* A group can be anywhere from 1 person to 400.
 * Groups can have administrators with special permissions. Those permissions include:
   * Add or remove group members.
   * Set a group title or other metadata.
