@@ -1,13 +1,15 @@
 ---
-sidebar_label: Transactions in Open Frames
-sidebar_position: 6
+sidebar_label: Transactions and Mints in Open Frames
+sidebar_position: 6.3
 ---
 
-# Transactions in Open Frames
+# Transactions and Mints in Open Frames
 
 :::info Prerequisite
 This guide assumes your app already supports non-transaction Open Frames. If necessary, see [Protocol compatibility](https://xmtp.org/docs/build/frames#protocol-compatibility) to set this up first.
 :::
+
+Note: A mint is a form of a transaction frame. Where applicable, steps for mint frames will be specified through this tutorial.
 
 ### Sections:
 
@@ -113,9 +115,7 @@ if (
   ) {
     // Error handle, shouldn't show frame success screen
   } else {
-    // Pass the hash as a transactionId to the payload
-    payload.untrustedData.transactionId = hash;
-
+    // Pass the hash as an optional transactionId to the signFrameAction payload if you plan to use it
     // Complete the transaction, which returns metadata of a new success frame
     const completeTransaction = await framesClient.proxy.post(
       postUrl,
@@ -147,7 +147,6 @@ When rendering transaction Frames in your app, consider providing these security
 - Include allow lists that enable your app to interact with known “safe” transaction frames only
 - For unknown frames, inform the user that they are about to interact with an unknown Frame and to proceed at their own risk.
 - Use simulation services in cases where you want to allow access to unverified transaction Frames. These services enable you to submit transaction information to a simulator first, which enables you to test the process without financial risk and retrieve debit amount details.
-- Apps rendering transaction Frames should avoid the `mainnet` for now. The associated fees can be high for most of the current use cases for transaction Frames.
 
 For more transaction Frame security considerations as well as mitigation strategies, see the [Farcaster transaction Frame security documentation](https://www.notion.so/Frame-Transactions-Public-9d9f9f4f527249519a41bd8d16165f73?pvs=21).
 
@@ -318,4 +317,4 @@ export async function POST(req: NextRequest): Promise<Response> {
 If you need an XMTP messaging app to use, try one of these:
 
 - https://app-preview.converse.xyz/
-- https://dev-dev-inbox.vercel.app/
+- https://xmtp-frames-quickstart.vercel.app/

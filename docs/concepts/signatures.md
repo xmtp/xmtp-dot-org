@@ -2,10 +2,14 @@
 sidebar_label: Account signatures
 sidebar_position: 7
 slug: account-signatures
-description: "Learn about what it means to sign to create and enable your XMTP identity."
+description: "Learn about account signature types when using XMTP"
 ---
 
-# Sign to send and receive messages using apps built with XMTP
+# Account signatures with XMTP
+
+Learn about the types of account signatures you may be prompted to provide when using apps built with XMTP.
+
+## Sign to send and receive messages using apps built with XMTP
 
 The first time you use an app built with XMTP (Extensible Message Transport Protocol) to send and receive messages using a blockchain account (account), you’re prompted to provide two signatures using your account keys:
 
@@ -17,7 +21,7 @@ Providing these signatures with your account keys doesn’t cost you any Ether.
 
 Let’s dive deeper into the details of what happens behind the scenes when you provide these signatures.
 
-## Sign to create an XMTP identity
+### Sign to create an XMTP identity
 
 The first time you use an app built with XMTP to send or receive messages, you’re prompted to sign to create a public identity on the XMTP network.
 
@@ -45,7 +49,7 @@ More precisely, two things happen:
 
 Once you’ve successfully signed to create an XMTP identity, you’ll never be prompted to do it again for the same account.
 
-## Sign to enable an XMTP identity
+### Sign to enable an XMTP identity
 
 After you’ve signed to create an XMTP identity (first-time only) and anytime you start a new messaging session using an app built with XMTP, you’re prompted to sign with your account keys to enable your XMTP identity.
 
@@ -62,3 +66,17 @@ The first time you sign to enable an XMTP identity, XMTP uses this secret to enc
 Subsequently, when you sign to enable an XMTP identity, XMTP fetches your encrypted private keys from the XMTP network and uses this secret to decrypt the keys. These private keys are what enable you to access your messages on the XMTP network.
 
 You’re prompted to sign to enable your XMTP identity any time an app built with XMTP needs to fetch and decrypt your private keys to enable you to access your messages.
+
+## Sign to consent to receive broadcast messages
+
+When you click a **Subscribe** button built with XMTP’s consent standards, you're prompted to sign to grant your consent to receive broadcast messages from a publisher.
+
+For example, here’s the MetaMask **Signature request** window that displays when clicking the **Subscribe** button on this [example subscription page](https://subscribe-broadcast.vercel.app/subscribe/button). You will typically see **Subscribe** buttons like this on a web page or in a dapp.
+
+![MetaMask wallet browser extension Signature request window showing an "XMTP: Grant inbox consent to sender" message](img/consent-proof-sign.png)
+
+When you click **Sign**, you're consenting to receive broadcast messages from the publisher at your connected wallet address. You can see the publisher's sending address in the **Signature request** window.
+
+When you provide consent, you're adding the publisher's address to your personal XMTP allowed contacts list. This enables messages from the publisher to be displayed in your main inbox instead of being treated as a message from an unknown sender and placed in a secondary view.
+
+To learn about XMTP's consent standards, see [Universal allow/block preferences](../build/user-consent).

@@ -196,4 +196,4 @@ app.frame("/", (c) => {
 Some clients are fully XMTP compatible and can render Frames signing XMTP payloads:
 
 - [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
-- [**Dev Inbox**](https://github.com/xmtp/dev-inbox/): Engage with Frames firsthand by trying them on web.
+- [**Frames Quickstart**](https://github.com/xmtp/xmtp-quickstart-frames/): Engage with Frames firsthand by trying them on web.

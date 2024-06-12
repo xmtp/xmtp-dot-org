@@ -348,13 +348,12 @@ sendNotification("Hello from XMTP!", "0x123...");
 
 ---
 
-## Messaging apps 💬
+### Clients
 
-Test the bots in messaging apps
+Some clients are fully XMTP compatible and can render Frames signing XMTP payloads:
 
-- [Converse](https://getconverse.app/): Own your conversations. Works with Frames (Frame Transactions TBA).
-- [Coinbase Wallet](https://www.coinbase.com/wallet): Your key to the world of crypto. (Frame support TBA).
-- [dev-inbox](https://dev-dev-inbox.vercel.app/): Web messaging client (Sepolia Transactions).
+- [**Converse**](https://converse.xyz): Converse is Frame compatible. Send your Frames through Converse.
+- [**Frames Quickstart**](https://github.com/xmtp/xmtp-quickstart-frames/): Engage with Frames firsthand by trying them on web.
 
 ## Identities 🥷🏻
 
