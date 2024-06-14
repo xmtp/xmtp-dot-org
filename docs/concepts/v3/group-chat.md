@@ -70,17 +70,17 @@ Permission options are the settings for each permission.  They include:
 
 ## Form groups
 
-![Forming a group](./img/forming-groups.png)
+![Forming a group](./img/form-groups.png)
 
-Forming groups is fairly simple. Amal's app can use the conversation protocol to create a group with Bola and Caro. Behind the scenes, XMTP looks up every installation belonging to Bola and Caro and sends each installation a welcome message. Each installation has its own key pair, so each message is encrypted separately. 
+Forming groups is fairly simple. Alix's app can use the conversation protocol to create a group with Bo and Caro. Behind the scenes, XMTP looks up every installation belonging to Bo and Caro and sends each installation a welcome message. Each installation has its own key pair, so each message is encrypted separately. 
 
-Bola and Caro's apps then see the new conversation on the list when they use the conversation protocol to sync with XMTP. They then use the group protocol to engage with individual groups.
+Bo and Caro's apps then see the new conversation on the list when they use the conversation protocol to sync with XMTP. They then use the group protocol to engage with individual groups.
 
 ## Send and receive messages
 
 ![Sending and receiving](./img/send-receive.png)
 
-When Amal sends a message to the group, XMTP sends the message to every installation of every group member. Other group member's apps use the group protocol to receive the message.
+When Alix sends a message to the group, XMTP sends the message to every installation of every group member. Other group member's apps use the group protocol to receive the message.
 
 ## Add and remove members
 
