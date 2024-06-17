@@ -1,13 +1,13 @@
 ---
-sidebar_label: Group chat
-sidebar_position: 4
+sidebar_label: Group chat with MLS
+sidebar_position: 5.1
 description: Learn how to build group chat with XMTP
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Build group chat with XMTP
+# Build group chat with MLS and XMTP
 
 Secure group chat is an important part of every messaging app. In this guide, we cover the essentials of building group chat using XMTP, from the initial steps of ensuring that potential members have v3 identities and starting a new group chat to managing membership and synchronizing group chat details.
 
@@ -425,7 +425,7 @@ Updates are also retrieved and added to the local database when streaming and wh
 
 When your user sends a message, you don’t need to sync with the network for them to see their own message. The message gets written to their local database, and it shows up immediately for them. The same applies when your user creates a group. 
 
-See [⚠️ Important: Actions that make a local database inaccessible](#️important-actions-that-make-a-local-database-inaccessible).
+See [⚠️ Important: Manage actions that make a local database inaccessible](#️-important-manage-actions-that-make-a-local-database-inaccessible).
 
 This means that everything XMTP gets from the network for the user is stored in this local database and never needs to be fetched again. Extra syncing isn’t costly as the process won’t fetch data it already has, but this is just an explanation of why syncing isn’t necessary for data created by a user’s own actions.
 
