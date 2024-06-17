@@ -25,9 +25,9 @@ An app installation is registered to a user. Group chat messages a user sends us
 
 To learn more, see [Installations](/docs/concepts/v3/identity#installations).
 
-### ⚠️ Important: Actions that make a local database inaccessible
+### ⚠️ Important: Manage actions that make a local database inaccessible
 
-Because group chat keys work per app installation, there are user actions that can make an app installation’s local database inaccessible to other app installations.
+Because group chat keys work per app installation, there are user actions that make an app installation’s local database inaccessible to other app installations.
 
 Here are the actions:
 
@@ -36,9 +36,15 @@ Here are the actions:
 
 As a result of either of these actions, the user will lose access to the local database for the app installation, which includes all group chat messages they sent using the installation of your app on their device.
 
-As an app developer, this concept is important to understand and clearly communicate to your users. For example, you might consider using this language:
+As an app developer, this concept is important to understand and communicate to your users. For example, you might consider using this language:
 
 > If you log out of &lt;app name&gt; and log into a different app on this device, or delete &lt;app name&gt; from this device, you will lose access to all group chat messages you sent using this installation of &lt;app name&gt; on this device.
+
+To enable your users to avoid losing access to their local databases, allow them to store their local cache in iCloud or Google Cloud, for example. This option will enable message persistence within a single app ecosystem. 
+
+For example, let's say that App A enables users to store their local cache in iCloud. A user does this and then deletes App A from their device. The user can reinstall App A and restore their local cache from iCloud.
+
+However, this option does not allow users to restore a local cache across apps. For example, a local cache from App A can't be used to restore message history to App B. In this case, the best solution will be the forthcoming XMTP Message History server.
 
 ### Web support for group chat
 
