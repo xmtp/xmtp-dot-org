@@ -36,7 +36,7 @@ Here are the actions:
 
 As a result of either of these actions, the user will lose access to the local database for the app installation, which includes all group chat messages they sent using the installation of your app on their device.
 
-As an app developer, this concept to important to understand and clearly communicate to your users. For example, you might consider using this language:
+As an app developer, this concept is important to understand and clearly communicate to your users. For example, you might consider using this language:
 
 > If you log out of &lt;app name&gt; and log into a different app on this device, or delete &lt;app name&gt; from this device, you will lose access to all group chat messages you sent using this installation of &lt;app name&gt; on this device.
 
