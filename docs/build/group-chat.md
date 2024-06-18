@@ -122,7 +122,41 @@ let client = try await Client.create(
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+import { createWalletClient, http, toBytes } from 'viem'
+import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts'
+import { mainnet } from 'viem/chains'
+import { Client } from '@xmtp/mls-client'
+
+// create a wallet for signing
+const key = generatePrivateKey()
+const account = privateKeyToAccount(key)
+const wallet = createWalletClient({
+  account,
+  chain: mainnet,
+  transport: http(),
+})
+
+// create client
+const client = Client.create(account.address, {
+  env: 'dev', // or 'production'
+  // provide a path for the local SQLite DB
+  dbPath: 'path/to/local/db/file.db3',
+})
+
+// sign the provided message
+const signature = await user.wallet.signMessage({
+  // it's possible for `signatureText` to be `null` if the identity is already registered
+  message: client.signatureText!,
+})
+const signatureBytes = toBytes(signature)
+
+// add the signature to the client
+client.addEcdsaSignature(signatureBytes)
+
+// register client identity
+await client.registerIdentity()
 ```
 
 </TabItem>
@@ -162,6 +196,8 @@ let canMessageV3 = try await alixClient.canMessageV3(addresses: [alix.address, b
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 const canMessage = await client.canMessage([
   caro.address,
   alix.address,
@@ -216,6 +252,8 @@ permissions: .adminOnly, name: "Group Name", imageUrlSquare: "<URL>")
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 const group = await client.conversations.newConversation(
   [walletAddress1, walletAddress2],
   GroupPermissions.GroupCreatorIsAdmin
@@ -291,6 +329,8 @@ let groups = try await client.conversations.list(includeGroups: true)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 // sync groups first
 await client.conversations.sync();
 const groups = await client.conversations.list(options);
@@ -328,6 +368,8 @@ let isActive = try group.isActive()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 const isActive = group.isActive;
 ```
 
@@ -372,6 +414,8 @@ try await group.send(content: "Hello, group!")
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 const group = await client.conversations.newConversation(
   [walletAddress1, walletAddress2],
   GroupPermissions.GroupCreatorIsAdmin
@@ -409,6 +453,8 @@ try await group.messages();
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 // sync group first
 await group.sync();
 const messages = group.messages(options);
@@ -485,6 +531,8 @@ try await client.conversations.list(includeGroups: true)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 await client.conversations.sync();
 ```
 
@@ -534,6 +582,8 @@ print("Test message content: \(testMessage.content())"
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 await group.sync();
 ```
 
@@ -620,6 +670,8 @@ for try await conversation in client.conversations.streamAll() {
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 const stream = client.conversations.stream()
 
 for await (const group of stream) {
@@ -698,6 +750,8 @@ let groups = try await client.conversations.streamAllMessages(includeGroups: tru
 Stream messages in group chats, current and future:
 
 ```tsx
+// this API is experimental and may change in the future
+
 const stream = client.conversations.streamAllMessages();
 
 for await (const message of stream) {
@@ -711,6 +765,8 @@ stream.stop()
 Stream messages in a group chat:
 
 ```tsx
+// this API is experimental and may change in the future
+
 const stream = group.stream()
 
 for await (const message of stream) {
@@ -755,6 +811,8 @@ Code sample coming soon
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 const groupName = group.name;
 ```
 
@@ -788,6 +846,8 @@ Code sample coming soon
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 await group.updateName("New Group Name");
 ```
 
