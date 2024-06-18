@@ -318,12 +318,6 @@ for (const conversation of allConversations) {
 </TabItem>
 </Tabs>
 
-## Note on Group Chats
-
-All the features and methods described in this document, including starting new conversations, checking if an address is on the network, and listing existing conversations, also apply to group chats. XMTP's approach to conversations is designed to be consistent across both one-on-one and group conversations, ensuring a seamless development experience.
-
-For more details about building group chat specifically, refer to the [Group Chat](/docs/build/group-chat) documentation.
-
 ## Cache the conversation list
 
 When running in a browser, conversations are cached in `LocalStorage` by default. Running `client.conversations.list()` will update that cache and persist the results to the browser's `LocalStorage`. The data stored in `LocalStorage` is encrypted and signed using the Keystore's identity key so that attackers cannot read the sensitive contents or tamper with them. Caching the conversation list can improve performance by up to 90%.

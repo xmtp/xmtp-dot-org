@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant Alix
+    participant Bo
+    participant Caro
+    participant XMTP
+
+    Note left of Alix: Remove Caro
+
+    Alix->>XMTP: group.remove_members(Caro)
+    Alix->>+XMTP: group.list_members()
+    XMTP-->>-Alix: "Caro has been removed from the group"
+    Bo->>XMTP: group.sync()
+    Bo->>+XMTP: group.list_members()
+    XMTP-->>-Bo: "Caro has been removed from the group"
+
+    Note left of Alix: Add Caro
+    Alix->>XMTP: group.addMembers(Caro)
+    Alix->>+XMTP: group.list_members()
+    XMTP-->>-Alix: "Caro has been added to the group"
+    Bo->>XMTP: group.sync()
+    Bo->>+XMTP: group.list_members()
+    XMTP-->>-Bo: "Caro has been added to the group"    
+    Caro->>+XMTP: conversations.sync()
+    Caro->>+XMTP: conversations.list()
+    XMTP-->>Caro: List of groups including new group  
