@@ -1,10 +1,19 @@
 import React from "react";
 import ListOfDevelopers from "./ListOfDevs.json";
 import useBaseUrl from "@docusaurus/useBaseUrl/";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Link from '@docusaurus/Link';
 
 const BuiltWithXmtp = () => {
   return (
     <div>
+      <div className="container text-left py-0 px-4 m-auto max-w-screen-max">
+        <Link to="/docs/build/group-chat">
+          <div className="rounded-full border border-blue-300 bg-blue-50 text-l font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-3 lg:mb-4 w-fit">
+            Groups with MLS in production »
+          </div>
+        </Link>
+      </div>
       <div className="relative s isolate overflow-hidden px-6 py-16 sm:py-24 mb-8 bg-color  built">
         <div className=" absolute inset-0 -z-10 h-full w-full builder-bg"></div>
         <div className="max-w-7xl">
@@ -111,7 +120,6 @@ const BuiltWithXmtp = () => {
             </div>
           </div>
         ))}
-
         <div className="relative flex items-top space-x-4 rounded-lg border border-gray-400 px-6 py-4 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400">
           <div className="flex-shrink-0">
             <a className="rounded rounded-md flex justify-center py-0 mb-4">
@@ -120,7 +128,6 @@ const BuiltWithXmtp = () => {
                 src="/img/getFeatured.jpg"></img>
             </a>
           </div>
-
           <div className="min-w-0 flex-1">
             <a
               href="https://forms.gle/p1VgVtkoGfHXANXt5"
