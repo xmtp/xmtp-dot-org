@@ -152,7 +152,6 @@ Permission options are the settings for each permission.  They include:
 * Unspecified
 * Allow
 * Deny
-* Creator Only
 * Allow if Admin or Super Admin
 * Allow if Super Admin
 

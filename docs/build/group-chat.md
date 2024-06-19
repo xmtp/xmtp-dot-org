@@ -780,6 +780,154 @@ stream.stop()
 </TabItem>
 </Tabs>
 
+## Manage group chat membership
+
+### Add members by address
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
+
+```jsx
+await group.addMembers([walletAddress]);
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+group.addMembers(listOf(walletAddress))
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await group.addMembers(addresses: [walletAddress])
+```
+
+</TabItem>
+<TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
+
+```tsx
+// this API is experimental and may change in the future
+
+await group.addMembers([walletAddress]);
+```
+
+</TabItem>
+</Tabs>
+
+### Remove members by address
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
+
+```jsx
+await group.removeMembers([walletAddress]);
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+group.removeMembers(listOf(walletAddress))
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```kotlin
+*try* *await* group.removeMembers(addresses: [walletAddress])
+```
+
+</TabItem>
+<TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
+
+```tsx
+// this API is experimental and may change in the future
+
+await group.removeMembers([walletAddress]);
+```
+
+</TabItem>
+</Tabs>
+
+### Get addresses for members
+
+`members` returns a members Type, which has a list of addresses, an inboxId, and a permissionsType.
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
+
+```jsx
+const members =await group.members();
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val members = group.members()
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+let members = group.members()
+```
+
+</TabItem>
+<TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
+
+```tsx
+// this API is experimental and may change in the future
+
+// sync group first
+await group.sync();
+const members = group.members;
+```
+
+</TabItem>
+</Tabs>
+
+### Get the inbox ID that added the current member
+
+<Tabs groupId="groupchats">
+<TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
+
+```tsx
+// this API is experimental and may change in the future
+
+const addedByInboxId =await group.addedByInboxId();
+```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
+
+```kotlin
+val addedByAddress = group.addedByInboxId();
+```
+
+</TabItem>
+<TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
+
+```swift
+try await group.addedByInboxId();
+```
+
+</TabItem>
+<TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
+
+```tsx
+// this API is experimental and may change in the future
+
+const addedByInboxId = await group.addedByInboxId;
+```
+
+</TabItem>
+</Tabs>
+
 ## Manage group chat metadata
 
 Group chats can have metadata, like names and images. Metadata can help users more easily identify their group chats.
