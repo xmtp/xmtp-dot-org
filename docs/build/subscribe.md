@@ -11,6 +11,12 @@ Senders ask users to produce a signature attesting to the consent update. Inbox 
 
 You can use this functionality to provide a **Subscribe** button like the one you can try on this [example subscribe page](https://subscribe-broadcast.vercel.app/subscribe/button). To explore the code providing this page, see the [subscribe-broadcast button repo](https://github.com/alexrisch/subscribe-broadcast/blob/main/src/app/subscribe/button/page.tsx) and [broadcast-api backend repo](https://github.com/alexrisch/broadcast-api/blob/main/src/index.ts#L51).
 
+:::tipBest practice
+
+Enable users to subscribe to individual content sources, such as creators, brands, or information types, instead of offering just one subscription that broadcasts it all. To do this, use a different wallet for each content source, create an XMTP inbox for each wallet, and enable subscriptions as described here.
+
+:::
+
 ## How it works
 
 There are three components to the consent proof workflow:
