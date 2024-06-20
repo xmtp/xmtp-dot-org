@@ -264,7 +264,7 @@ There are no message storage and retrieval-related fees incurred by developers f
 
 ### Has XMTP undergone a security audit?
 
-Yes, read the comprehensive [XMTP security assessment](/img/REP-final-20230207T000355Z.pdf) prepared by [CertiK](https://www.certik.com/company/about).
+The [XMTP JavaScript SDK](https://github.com/xmtp/xmtp-js) (`xmtp-js`) was verified by [CertiK](https://www.certik.com/company/about) on Feb 6, 2023. Read their [XMTP security assessment](/img/REP-final-20230207T000355Z.pdf).
 
 ### How does XMTP establish a secure and fraud-proof relationship between two identities?
 
