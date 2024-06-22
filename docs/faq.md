@@ -270,15 +270,15 @@ The [XMTP JavaScript SDK](https://github.com/xmtp/xmtp-js) (`xmtp-js`) was verif
 
 Blockchain accounts sign and advertise a set of keys to start using XMTP. XMTP uses these keys to establish a shared secret between the blockchain accounts. It then uses the shared secret to generate a key used to encrypt an invitation that allows the blockchain accounts to start exchanging messages. No third-party apps or relayers are involved in this process.
 
-To learn more about these keys, see [Key generation and usage in XMTP](/docs/concepts/key-generation-and-usage).
+To learn more about these keys, see [Key generation and usage in XMTP](/docs/concepts/v2/key-generation-and-usage).
 
-To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](/docs/concepts/invitation-and-message-encryption).
+To learn more about invitation and message encryption, see [Invitation and message encryption with XMTP](/docs/concepts/v2/invitation-and-message-encryption).
 
 ### Does each blockchain account address have a corresponding XMTP identity?
 
 Yes. Each blockchain account address is represented by an XMTP identity key. This identity key is a part of a key bundle that only the address that generated it can use to authenticate messages.
 
-To learn more about XMTP identity keys, see [Key generation and usage in XMTP](/docs/concepts/key-generation-and-usage).
+To learn more about XMTP identity keys, see [Key generation and usage in XMTP](/docs/concepts/v2/key-generation-and-usage).
 
 ### Why do apps built with XMTP require a user to sign with their blockchain account private keys each time they start a new messaging session?
 
@@ -290,7 +290,7 @@ If you are using the JavaScript client SDK, you might consider [manually handlin
 
 Based on developer and community feedback, we are researching more robust approaches to secure key management.
 
-To learn more about these keys, see [Key generation and usage in XMTP](/docs/concepts/key-generation-and-usage).
+To learn more about these keys, see [Key generation and usage in XMTP](/docs/concepts/v2/key-generation-and-usage).
 
 ## Storage
 

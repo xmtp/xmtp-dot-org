@@ -9,9 +9,9 @@ import TabItem from "@theme/TabItem";
 
 # Get started with XMTP
 
-The [XMTP message API](/docs/concepts/architectural-overview#network-layer) revolves around a network client that allows retrieving and sending messages to other network participants.
+The [XMTP message API](/docs/concepts/v2/architectural-overview#network-layer) revolves around a network client that allows retrieving and sending messages to other network participants.
 
-A client must be connected to a wallet on startup. If this is the very first time the client is created, the client will generate a [key bundle](/docs/concepts/key-generation-and-usage) that is used to [encrypt and authenticate messages](/docs/concepts/invitation-and-message-encryption).
+A client must be connected to a wallet on startup. If this is the very first time the client is created, the client will generate a [key bundle](/docs/concepts/v2/key-generation-and-usage) that is used to [encrypt and authenticate messages](/docs/concepts/v2/invitation-and-message-encryption).
 
 The key bundle persists encrypted in the network using a [wallet signature](/docs/concepts/account-signatures). The public side of the key bundle is also regularly advertised on the network to allow parties to establish shared encryption keys.
 

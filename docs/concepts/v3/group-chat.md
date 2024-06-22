@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+description: "Learn about group chat concepts and protocols"
+---
+
 # Group chat
 
 ## Summary

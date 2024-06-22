@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+description: "Learn about smart wallet support concepts"
+---
+
 # Smart wallet support
 
 :::info More Information
