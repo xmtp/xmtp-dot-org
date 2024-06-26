@@ -40,7 +40,7 @@ A quickstart is a brief guide or repo aimed at helping XMTP developers to unders
 
 <ul>
   <li><a href="https://github.com/xmtp/xmtp-quickstart-hooks" class="plausible-event-name=Quickstart">React hooks</a><br/><small>Floating Inbox Quickstart app built using React. Use it to help you build your own app with XMTP</small></li>
-  <li><a href="https://github.com/xmtp/xmtp-quickstart-content-types" class="plausible-event-name=Quickstart">Content Types</a><br/><small>Learn how to send and render different content types.</small></li>
+  <li><a href="https://github.com/xmtp/xmtp-quickstart-hooks-content-types" class="plausible-event-name=Quickstart">Content Types</a><br/><small>Learn how to send and render different content types.</small></li>
 </ul>
 
 </div>
