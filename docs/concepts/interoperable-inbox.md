@@ -40,13 +40,13 @@ To learn more about building with XMTP, see [Quickstart for the XMTP client SDK 
 
 To use XMTP, you create an XMTP identity that you can use to send and receive messages with any app built with XMTP. Because you create the identity using an Ethereum account’s public and private keys that only you have access to, **you own and control your XMTP identity.**
 
-To learn more about keys and XMTP identities, see [Key generation and usage in XMTP](/docs/concepts/key-generation-and-usage).
+To learn more about keys and XMTP identities, see [Key generation and usage in XMTP](/docs/concepts/v2/key-generation-and-usage).
 
 ### You own and control your messages
 
 When you send messages with an app built with XMTP, the messages are **end-to-end encrypted** and stored on and retrieved from the **XMTP network**. Because the XMTP network is progressively decentralized and not controlled by any single entity, **you own and control your messages.**
 
-To learn more about message encryption, see [Invitation and message encryption](/docs/concepts/invitation-and-message-encryption).
+To learn more about message encryption, see [Invitation and message encryption](/docs/concepts/v2/invitation-and-message-encryption).
 
 ### A vibrant ecosystem of apps built with XMTP
 

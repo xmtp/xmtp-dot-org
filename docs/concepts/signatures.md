@@ -41,7 +41,7 @@ More precisely, two things happen:
 
    This XMTP public key is directly tied to your XMTP identity, is stored and advertised on the XMTP network, and provides the information others need to message you.
 
-   To learn more about these keys, see [Key generation and usage](/docs/concepts/key-generation-and-usage).
+   To learn more about these keys, see [Key generation and usage](/docs/concepts/v2/key-generation-and-usage).
 
 2. You sign a message containing your XMTP identity using your account keys.
 

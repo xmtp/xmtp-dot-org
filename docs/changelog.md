@@ -58,7 +58,7 @@ Provides a Kotlin implementation of an XMTP message API client for use with Andr
 
 ## [JavaScript client SDK](https://github.com/xmtp/xmtp-js) v9.1.0 released (xmtp-js)
 
-This release implemented deterministic [XMTP v2 conversation topics](/docs/concepts/architectural-overview#conversation-topic-v2). This feature addresses a possible, but improbable, scenario in which two conversation topics are unintentionally created between two wallet addresses, causing unexpected conversation fragmentation. Upgrade now to get this feature that provides a **forward-only fix**. **[Read the release notes](https://github.com/xmtp/xmtp-js/releases/tag/v9.1.0)** (May 24)
+This release implemented deterministic [XMTP v2 conversation topics](/docs/concepts/v2/architectural-overview#conversation-topic-v2). This feature addresses a possible, but improbable, scenario in which two conversation topics are unintentionally created between two wallet addresses, causing unexpected conversation fragmentation. Upgrade now to get this feature that provides a **forward-only fix**. **[Read the release notes](https://github.com/xmtp/xmtp-js/releases/tag/v9.1.0)** (May 24)
 
 ## [JavaScript client SDK](https://github.com/xmtp/xmtp-js) v9.0.0 released (xmtp-js)
 

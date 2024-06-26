@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+description: "Learn about multi-wallet identity and app installation concepts"
+---
+
 # Multi-wallet identity
 
 ## Summary

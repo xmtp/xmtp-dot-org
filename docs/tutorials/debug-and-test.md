@@ -11,7 +11,7 @@ To ensure your app provides a seamless and performant user experience, be sure t
 
 It's important to debug your app's performance when handling a wallet address with more than just a few conversations and messages. To do this, you can use the `xmtp-debug` repo to easily populate a test wallet with X number of conversations, each with Y number of messages, on the XMTP network of your choice.
 
-Test your app's performance against these performance benchmarks. To understand what you are inspecting, see [Architectural overview of XMTP](/docs/concepts/architectural-overview).
+Test your app's performance against these performance benchmarks. To understand what you are inspecting, see [Architectural overview of XMTP](/docs/concepts/v2/architectural-overview).
 
 1. Clone the [xmtp-debug](https://github.com/xmtp/xmtp-debug) repo
 2. Run `npm install`

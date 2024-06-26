@@ -58,7 +58,7 @@ The client layer consists of XMTP message API clients (clients) embedded in clie
 The primary responsibilities of a client are to:
 
 - Create blockchain account-based XMTP identities, including public and private key bundles.  
-  To learn more, see [Key generation and usage](/docs/concepts/key-generation-and-usage).
+  To learn more, see [Key generation and usage](/docs/concepts/v2/key-generation-and-usage).
 
 - Encrypt and decrypt private key bundles, invitations, and messages.  
   To learn more, see [Invitation and message encryption](invitation-and-message-encryption).
@@ -140,7 +140,7 @@ In this flow, the client app:
 
 5. Uses the shared secret from the invitation to create an encryption key to decrypt Amal’s message and present it to Bola.
 
-To learn more, see [Key generation and usage](/docs/concepts/key-generation-and-usage) and [Invitation and message encryption](/docs/concepts/invitation-and-message-encryption).
+To learn more, see [Key generation and usage](/docs/concepts/v2/key-generation-and-usage) and [Invitation and message encryption](/docs/concepts/v2/invitation-and-message-encryption).
 
 ### XMTP V1 topics and message presentation flow
 

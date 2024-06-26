@@ -55,7 +55,7 @@ We have published our [platform roadmap](/roadmap) to give developers more trans
 
 ### Deprecation date for pre-v7 versions of the SDK
 
-Update your app to use >=v7.0.0 of the X[MTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js) by Jan 8, 2023 to start exploring the new XMTP v2 use cases for your app. v7.0.0 clients are fully compatible with pre-v7.0.0 clients. Conversations established using XMTP v1 can continue as before. However, conversations using XMTP v2 will not be visible to pre-v7.0.0 clients. To learn more, see [Determining whether to use XMTP v2 or v1 topics](/docs/concepts/architectural-overview#determining-whether-to-use-xmtp-v2-or-v1-topics).
+Update your app to use >=v7.0.0 of the X[MTP client SDK for JavaScript](https://github.com/xmtp/xmtp-js) by Jan 8, 2023 to start exploring the new XMTP v2 use cases for your app. v7.0.0 clients are fully compatible with pre-v7.0.0 clients. Conversations established using XMTP v1 can continue as before. However, conversations using XMTP v2 will not be visible to pre-v7.0.0 clients. To learn more, see [Determining whether to use XMTP v2 or v1 topics](/docs/concepts/v2/architectural-overview#determining-whether-to-use-xmtp-v2-or-v1-topics).
 
 To learn more about and discuss important deprecation details, see this [GitHub discussion](https://github.com/orgs/xmtp/discussions/17).
 

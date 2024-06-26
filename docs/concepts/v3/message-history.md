@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+description: "Learn about message history concepts"
+---
+
 # Message history
 
 :::info More Information
