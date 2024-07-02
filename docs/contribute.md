@@ -15,9 +15,9 @@ XMTP is not accepting applications for grants at this time. Make sure to [follow
 
 :::
 
-## Partnerships with XMTP Labs
+## Partnerships with Ephemera
 
-Maximize your app's reach with guidance and assistance from the Partnerships team at XMTP Labs. XMTP Labs’ mission is to promote and support the development and global adoption of XMTP. [Get in touch](https://forms.gle/UMCFjB8ukiMxBxnK6)
+Maximize your app's reach with guidance and assistance from the Partnerships team at Ephemera. Ephemera’s mission is to promote and support the development and global adoption of XMTP. [Get in touch](https://forms.gle/UMCFjB8ukiMxBxnK6)
 
 ## Discourse
 
@@ -39,7 +39,7 @@ Keep up with the latest news and insights from XMTP.
 
 ## Open source projects
 
-XMTP welcomes contributions to any of the public repos in the [XMTP](https://github.com/xmtp) and [XMTP Labs](https://github.com/xmtp-labs) GitHub orgs.
+XMTP welcomes contributions to any of the public repos in the [XMTP](https://github.com/xmtp) and [Ephemera](https://github.com/xmtp-labs) GitHub orgs.
 
 ### 🐞 Bugs
 
@@ -53,7 +53,7 @@ Request features by creating an issue in the [related XMTP GitHub repo](https://
 
 We encourage pull requests (PRs) from the community, but we suggest that you start with a feature request or a post to the [XMTP Community Forums](https://community.xmtp.org/) just to do a temperature check. For example, if the PR involves a major change to the XMTP protocol, it must be fleshed out as an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) before work begins.
 
-If your PR to a repo in the [XMTP](https://github.com/xmtp) or [XMTP Labs](https://github.com/xmtp-labs) GitHub org is meerged you're eligible to claim this [XMTP contributor POAP](https://www.gitpoap.io/gp/1042).
+If your PR to a repo in the [XMTP](https://github.com/xmtp) or [Ephemera](https://github.com/xmtp-labs) GitHub org is meerged you're eligible to claim this [XMTP contributor POAP](https://www.gitpoap.io/gp/1042).
 
 ## XMTP Improvement Proposals
 

@@ -75,7 +75,7 @@ Use the [Broadcast SDK](https://www.npmjs.com/package/@xmtp/broadcast-sdk) to se
 
 Currently, XMTP network nodes are configured to rate-limit high-volume publishing from clients. A rate-limited client can expect to receive a 429 status code response from a node.
 
-XMTP Labs is capable of rate-limiting the network while we are the only node operators. Rate-limiting is a consideration in our research into economic spam controls. Ultimately, rate-limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
+Ephemera is capable of rate-limiting the network while we are the only node operators. Rate-limiting is a consideration in our research into economic spam controls. Ultimately, rate-limiting decisions will be made based on maintaining network quality and reducing the potential for malicious attacks by senders and nodes.
 
 ### What are the API rate-limits?
 
@@ -88,7 +88,7 @@ Sending one message involves one publish request (1 API call), but if it's a new
 
 - Nodes allow 40,000 reads per 5 minutes.
 
-If your requirements exceed these limits, [submit this form](https://docs.google.com/forms/d/e/1FAIpQLSftr558wsYD2X_0c1Jsz6rTxua1f1DDJidAn7iphJVc48l7Fw/viewform) to share more details with the XMTP Labs team.
+If your requirements exceed these limits, [submit this form](https://docs.google.com/forms/d/e/1FAIpQLSftr558wsYD2X_0c1Jsz6rTxua1f1DDJidAn7iphJVc48l7Fw/viewform) to share more details with the Ephemera team.
 
 ### What happens if I exceed the limits?
 
