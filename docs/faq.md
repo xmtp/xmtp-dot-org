@@ -178,7 +178,7 @@ In your app onboarding flow, request user permission to display app-specific pus
 
 ### Is the XMTP network decentralized?
 
-Currently, XMTP Labs (the company) operates all of the network nodes in the two available XMTP network environments: `dev` and `production`.
+Currently, Ephemera (the company) operates all of the network nodes in the two available XMTP network environments: `dev` and `production`.
 
 These network nodes operate in US jurisdiction in compliance with Office of Foreign Assets Control (OFAC) sanctions and Committee on Foreign Investment in the United States (CFIUS) export compliance regulations. Accordingly, IP-based geoblocking is in place for the following countries/territories:
 
@@ -190,21 +190,19 @@ These network nodes operate in US jurisdiction in compliance with Office of Fore
 
 To explore the software for the nodes that currently form the XMTP network, see the [xmtp-node-go repo](https://github.com/xmtp/xmtp-node-go).
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal ](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
-
-Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes all over the world. Decentralization is a top priority and is required to ensure that XMTP is able to serve everyone on the planet.
+Ephemera is working toward a phased decentralization of the network. Decentralization of the XMTP network will be achieved by a diverse set of independent third parties operating nodes all over the world. Decentralization is a top priority and is required to ensure that XMTP is able to serve everyone on the planet.
 
 ### Is XMTP a blockchain?
 
 XMTP is not a blockchain. Nodes on the XMTP network run software to store and transfer messages between blockchain accounts. For secure and reliable delivery of messages, the nodes participate in a consensus mechanism.
 
-XMTP Labs is researching various consensus protocols that would allow the network to operate in a decentralized fashion while maintaining its current emphasis on user privacy and low-latency message delivery.
+Ephemera is researching various consensus protocols that would allow the network to operate in a decentralized fashion while maintaining its current emphasis on user privacy and low-latency message delivery.
 
 ### Will I be able to run my own XMTP node?
 
 Yes, you will be able to run a node.
 
-XMTP Labs is working toward a phased decentralization of the network. To learn more, see [Decentralizing XMTP, a minimum viable proposal](https://community.xmtp.org/t/decentralizing-xmtp-a-minimum-viable-proposal/510).
+Ephemera is working toward a phased decentralization of the network.
 
 ### Does XMTP have a token?
 
@@ -242,7 +240,7 @@ Yes! XMTP v3 alpha supports group chats in React Native, Android, and IOS SDks. 
 
 ### Who pays to keep the network running?
 
-XMTP Labs is committed to keeping the network running. Future incentive mechanisms will enable the network to run autonomously of XMTP Labs.
+Ephemera is committed to keeping the network running. Future incentive mechanisms will enable the network to run autonomously of Ephemera.
 
 ### Will XMTP charge messaging fees?
 
@@ -254,7 +252,7 @@ Have other questions or ideas about message-related fees? Post to the [XMTP Comm
 
 ### What are the costs of XMTP message storage and retrieval?
 
-Messages are stored off-chain on the XMTP network, with all nodes currently hosted by XMTP Labs. XMTP Labs currently absorbs all message storage and retrieval costs.
+Messages are stored off-chain on the XMTP network, with all nodes currently hosted by Ephemera. Ephemera currently absorbs all message storage and retrieval costs.
 
 There are no message storage and retrieval-related fees incurred by developers for building with the XMTP SDK.
 
@@ -351,7 +349,7 @@ To learn how to implement message attachments in your app, see [Support attachme
 
 ### Does XMTP support deleting and editing messages?
 
-Not currently. However, XMTP Labs is exploring ways to support message deletion and editing.
+Not currently. However, Ephemera is exploring ways to support message deletion and editing.
 
 Have other questions or ideas about support for message deletion and editing? Post to the [XMTP Community Forums](https://community.xmtp.org/).
 
@@ -636,16 +634,16 @@ export default {
 
 </details>
 
-## XMTP Labs
+## Ephemera
 
 ---
 
-### What is XMTP Labs?
+### What is Ephemera?
 
-XMTP Labs is a web3 software company that contributes to XMTP, an open network, protocol, and standards for secure messaging between blockchain accounts.
+Ephemera is a web3 software company that contributes to XMTP, an open network, protocol, and standards for secure messaging between blockchain accounts.
 
-XMTP Labs employees work alongside other XMTP community members to build with and extend XMTP. Community [contributions and participation](/docs/contribute) are critical to the development and adoption of XMTP.
+Ephemera employees work alongside other XMTP community members to build with and extend XMTP. Community [contributions and participation](/docs/contribute) are critical to the development and adoption of XMTP.
 
-### Does XMTP Labs plan to build apps or are you focused 100% on the protocol?
+### Does Ephemera plan to build apps or are you focused 100% on the protocol?
 
-XMTP Labs is focused on serving developers. We build [SDKs, UI components, and example apps](/docs/introduction#xmtp-sdks-and-example-apps) that help developers build great experiences with XMTP.
+Ephemera is focused on serving developers. We build [SDKs, UI components, and example apps](/docs/introduction#xmtp-sdks-and-example-apps) that help developers build great experiences with XMTP.

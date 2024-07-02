@@ -65,7 +65,7 @@ Way to go! 🎉 Here are some resources and ideas for promoting your app launch:
   - [Bello](https://twitter.com/xmtp_/status/1693978790618095972)
 - [ ] Need an XMTP logo for your announcement?
   - See the [XMTP Brand Guidelines](https://github.com/xmtp/brand)
-- [ ] Tag the XMTP Labs team to help amplify your launch
+- [ ] Tag the XMTP team to help amplify your launch
   - [@xmtplabs](https://lenster.xyz/u/xmtplabs) on Lens
   - [@xmtp\_](https://x.com/xmtp_) on Twitter
   - [@xmtp](https://warpcast.com/xmtp) on Farcaster
