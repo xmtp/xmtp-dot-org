@@ -823,6 +823,14 @@ await group.sync();
 
 ## Manage group chat admins
 
+Here's an overview of how group chat admin statuses work:
+
+- Everyone in a group chat is a member.
+- A member can be granted admin or super admin status.  
+If the member's admin or super admin status is removed, they are still a member of the group chat. 
+- By default, only a member with super admin can add and remove admin and super admin statuses.  
+Also by default, the group creator is the only member with super admin status.
+
 :::info
 
 By design, checking admin permission status by wallet address is not supported. Instead, look up the `inboxID` for that wallet address, then use the calls below.
@@ -973,7 +981,7 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-### Grant admin permission
+### Add admin status to inbox ID
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
@@ -1006,7 +1014,7 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-### Grant super admin permission
+### Add super admin status to inbox ID
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
@@ -1039,7 +1047,7 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-### Revoke admin permission
+### Remove admin status from inbox ID
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
@@ -1072,7 +1080,7 @@ Code sample coming soon
 </TabItem>
 </Tabs>
 
-### Revoke super admin permission
+### Remove super admin status from inbox ID
 
 <Tabs groupId="groupchats">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
