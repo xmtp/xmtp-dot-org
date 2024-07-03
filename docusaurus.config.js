@@ -306,12 +306,12 @@ const config = {
                 href: "https://status.xmtp.com/",
               },
               {
-                label: "Partnerships with XMTP Labs",
+                label: "Partnerships with Ephemera",
                 href: "https://forms.gle/UMCFjB8ukiMxBxnK6",
               },
               {
-                label: "Careers at XMTP Labs",
-                href: "https://blog.xmtp.com/careers/",
+                label: "Careers at Ephemera",
+                href: "https://paragraph.xyz/@ephemera/careers",
               },
             ],
           },
