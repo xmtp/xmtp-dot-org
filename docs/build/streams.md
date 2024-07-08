@@ -385,7 +385,7 @@ useEffect(() => {
 
 Monitor updates in group chats, including member management activities like adding and removing members as well as the creation of new group chats.
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="js" label="JavaScript"  attributes={{className: "js_tab "}}>
 
 Code sample expected for Q2 2024

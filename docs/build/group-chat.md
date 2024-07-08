@@ -36,15 +36,19 @@ Here are the actions:
 
 As a result of either of these actions, the user will lose access to the local database for the app installation, which includes all group chat messages they sent using the installation of your app on their device.
 
-As an app developer, this concept is important to understand and communicate to your users. For example, you might consider using this language:
+:::tip
+To prevent your users from entering this undesirable state, [Enable message history for group chat](/docs/build/message-history).
+:::
 
-> If you log out of &lt;app name&gt; and log into a different app on this device, or delete &lt;app name&gt; from this device, you will lose access to all group chat messages you sent using this installation of &lt;app name&gt; on this device.
-
-To enable your users to avoid losing access to their local databases, allow them to store their local cache in iCloud or Google Cloud, for example. This option will enable message persistence within a single app ecosystem. 
+If you choose to not enable message history, you can help users avoid losing access to their local databases by allowing them to store their local cache in iCloud or Google Cloud, for example. This option will enable message persistence within a single app ecosystem.
 
 For example, let's say that App A enables users to store their local cache in iCloud. A user does this and then deletes App A from their device. The user can reinstall App A and restore their local cache from iCloud.
 
-However, this option does not allow users to restore a local cache across apps. For example, a local cache from App A can't be used to restore message history to App B. In this case, the best solution will be the forthcoming XMTP Message History server.
+However, this option does not allow users to restore a local cache across apps. For example, a local cache from App A can't be used to restore message history to App B. In this case, the best solution will be to [Enable message history for group chat](/docs/build/message-history).
+
+If you choose to provide neither message history nor local cache storage, be sure to clearly communicate the concept of losing access to group chat messages to your users. For example, you might consider using this language:
+
+> If you log out of &lt;app name&gt; and log into a different app on this device, or delete &lt;app name&gt; from this device, you will lose access to all group chat messages you sent using this installation of &lt;app name&gt; on this device.
 
 ### Web support for group chat
 
@@ -107,7 +111,7 @@ If you want your app to support group chat offered by V3, you must explicitly co
 
 `dbEncryptionKey` is optional. For Android, if not provided, a key is created and stored for you. For iOS, if not provided, the database remains unencrypted.
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -203,7 +207,7 @@ Only users with V3 identities can participate in a group chat. For this reason, 
 
 To learn more about V3 identities, see [Multi-wallet Identity in V3](/docs/concepts/v3/identity.md).
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -247,7 +251,7 @@ const canMessage = await client.canMessage([
 
 To create a group chat, each of the specified member addresses must have a V3 identity and have used the identity to start up an app installation that supports group chat.
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -314,7 +318,7 @@ Display group chats associated with the current client.
 In this documentation, “group chat” refers to "group chat conversations." As with XMTP direct message conversations, conversations do not include the messages in the conversation.
 :::
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -378,7 +382,7 @@ const groups = await client.conversations.list(options);
 
 ### Get group chat messages
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -419,7 +423,7 @@ Use the `isActive` property to check if the current user is still a participan
 
 Use this status to adjust the user’s interface accordingly, such as removing the user’s ability to send messages in the group chat.
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -456,7 +460,7 @@ const isActive = group.isActive;
 
 Group chat supports all message types you can send using direct message conversations, including [Subscription Frames](/docs/tutorials/subscribe-frames), [replies](/docs/build/messages/reply), [reactions](/docs/build/messages/reaction), [attachments](/docs/build/messages/remote-attachment), and [read receipts](/docs/build/messages/read-receipt).
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -506,7 +510,7 @@ await group.send("Hello, group!", ContentTypeText);
 
 ### Stream group chat updates
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -603,7 +607,7 @@ stream.stop();
 
 Stream messages and member management updates in group chats, such as adding and removing members:
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -712,7 +716,7 @@ However, you must sync (or use streaming) to enable **other** users to see the g
 
 ### Sync group chat updates
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -774,7 +778,7 @@ await client.conversations.sync();
 
 Use **`sync()`** to synchronize group chat data, such as new messages or membership changes.
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -839,7 +843,7 @@ By design, checking admin permission status by wallet address is not supported. 
 
 ### Check if inbox ID is an admin
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -877,7 +881,7 @@ const isAdmin = group.isAdmin(inboxId);
 
 ### Check if inbox ID is a super admin
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -915,7 +919,7 @@ const isSuperAdmin = group.isSuperAdmin(inboxId);
 
 ### List admins
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -949,7 +953,7 @@ Code sample coming soon
 
 ### List super admins
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -983,7 +987,7 @@ Code sample coming soon
 
 ### Add admin status to inbox ID
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1016,7 +1020,7 @@ Code sample coming soon
 
 ### Add super admin status to inbox ID
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1049,7 +1053,7 @@ Code sample coming soon
 
 ### Remove admin status from inbox ID
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1082,7 +1086,7 @@ Code sample coming soon
 
 ### Remove super admin status from inbox ID
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1117,7 +1121,7 @@ Code sample coming soon
 
 ### Add members by inbox ID
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1152,7 +1156,7 @@ await group.addMembers([inboxId]);
 
 ### Add members by address
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1188,7 +1192,7 @@ await group.addMembers([walletAddress]);
 
 ### Remove members by inbox ID
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1223,7 +1227,7 @@ await group.removeMembers([inboxId]);
 
 ### Remove members by address
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1258,7 +1262,7 @@ await group.removeMembers([walletAddress]);
 
 ### Get inbox IDs for members
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1300,7 +1304,7 @@ Code sample coming soon
 
 ### Get addresses for members
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1339,7 +1343,7 @@ const members = group.members;
 
 ### Get the inbox ID that added the current member
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1390,7 +1394,7 @@ To learn how to keep user consent preferences synchronized, see [Synchronize use
 
 ### Allow or deny contact by wallet in group chat
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1428,7 +1432,7 @@ Code sample coming soon
 
 ### Allow or deny contact by inbox ID in group chat
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1473,7 +1477,7 @@ Code sample coming soon
 
 ### Allow or deny contact by group chat ID
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1516,7 +1520,7 @@ Code sample coming soon
 
 Enable a user to explicitly allow or deny contact from an inbox ID.
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1564,7 +1568,7 @@ Code sample coming soon
 
 Check if contact from a group chat ID is allowed or denied for a user.
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1603,7 +1607,7 @@ Code sample coming soon
 
 Check if contact from an inbox ID is allowed or denied for a user.
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1640,7 +1644,7 @@ Group chats can have metadata, like names and images. Metadata can help users mo
 
 ### Get a group chat name
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1675,7 +1679,7 @@ const groupName = group.name;
 
 ### Update a group chat name
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1710,7 +1714,7 @@ await group.updateName("New Group Name");
 
 ### Get a group chat image URL
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
@@ -1743,7 +1747,7 @@ Code sample coming soon
 
 ### Update a group chat image URL
 
-<Tabs groupId="groupchats">
+<Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
