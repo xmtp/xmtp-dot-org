@@ -49,7 +49,14 @@ Client().create(
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-Code sample coming soon
+let options = ClientOptions(
+    api: ClientOptions.Api(
+        env: .production,
+        isSecure: true
+    ),
+    enableV3: true,
+    historySyncUrl: "SYNC_URL"
+)
 ```
 
 </TabItem>
@@ -102,7 +109,7 @@ client.requestMessageHistorySync()
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-Code sample coming soon
+try await client.requestMessageHistorySync()
 ```
 
 </TabItem>

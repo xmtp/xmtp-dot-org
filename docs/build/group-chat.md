@@ -1409,7 +1409,11 @@ await contact.deny([walletAddress]);
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-Code sample coming soon
+// Allow
+contacts.allow(listOf(walletAddress))
+
+// Deny
+contacts.deny(listOf(walletAddress))
 ```
 
 </TabItem>
@@ -1417,7 +1421,10 @@ Code sample coming soon
 
 ```swift
 // Allow
-try await contact.allowInboxes(inboxIDs: [inboxID])
+try await contacts.allow(addresses: [walletAddress])
+
+// Deny
+try await contacts.deny(addresses: [walletAddress])
 ```
 
 </TabItem>
@@ -1503,7 +1510,11 @@ contact.denyGroups(listOf(group.id))
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-Code sample coming soon
+// Allow
+try await contacts.allowGroups(groupIds: [groupId])
+
+// Deny
+try await contacts.denyGroups(groupIds: [groupId])
 ```
 
 </TabItem>
