@@ -70,6 +70,8 @@ let options = ClientOptions(
 
 ```tsx
 // Ry, this might be totallly off...
+
+// this API is experimental and may change in the future
 const client = await Client.create('0x1234...', {
   apiUrl: 'SYNC_URL'
 });
@@ -125,6 +127,8 @@ try await client.requestMessageHistorySync()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// this API is experimental and may change in the future
+
 await client.requestHistorySync();
 ```
 
