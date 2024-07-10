@@ -22,7 +22,7 @@ A quickstart is a brief guide or repo aimed at helping XMTP developers to unders
 
 <ul>
   <li><a href="https://github.com/xmtp/xmtp-quickstart-frames" class="plausible-event-name=Quickstart">Render Frames</a><br/><small>Learn how to render interoperable Frames in your messaging apps</small></li>
-  <li><a href="/docs/tutorials/subscribe" class="plausible-event-name=Quickstart">Subscribe</a><br/><small>How to build a Subscribe button to record broadcast message user consent</small></li>
+  <li><a href="/docs/build/subscribe">Subscribe</a><br/><small>Learn how to enable subscriptions using consent proofs</small></li>
   <li><a href="https://github.com/xmtp/xmtp-quickstart-content-types" class="plausible-event-name=Quickstart">Content Types</a><br/><small>Learn how to send and render different content types.</small></li>
   <li><a href="/docs/tutorials/portable-consent/request-inbox" class="plausible-event-name=Quickstart">Request inbox</a><br/><small>How to build consent, like Allowed/Requested tabs and Accept/Block buttons</small></li>
   <li><a href="https://github.com/xmtp/xmtp-quickstart-reactjs" class="plausible-event-name=Quickstart">Floating Inbox</a><br/><small>Floating inbox quickstart app in JS. Use it to help you build your own app with XMTP.</small></li>
