@@ -9,7 +9,7 @@ import TabItem from "@theme/TabItem";
 
 # Support reactions in your app built with XMTP
 
-![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Beta-yellow)
+![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Stable-31CA54)
 
 Use the reaction content type to support reactions in your app. A reaction is a quick and often emoji-based way to respond to a message. Reactions are usually limited to a predefined set of emojis or symbols provided by the messaging app.
 
@@ -18,6 +18,12 @@ Use the reaction content type to support reactions in your app. A reaction is a 
 You're welcome to provide feedback by commenting on the [Proposal for emoji reactions content type](https://community.xmtp.org/t/proposal-for-emoji-reactions-content-type/499/1) XIP idea.
 
 :::
+
+## Use a local database for performance
+
+Use a local database to store reactions. This will enable your app to performantly display a reaction with its [referenced message](#send-a-reaction) when rendering message lists.
+
+To learn more about using a local database, see [Use local-first architecture](/docs/build/local-first).
 
 ## Configure the content type
 
