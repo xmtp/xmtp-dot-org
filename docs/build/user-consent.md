@@ -540,7 +540,7 @@ The following diagram illustrates the detailed logic for how user consent prefer
 
 For practical examples, see these tutorials:
 
-- [Enable subscribers with XMTP](/docs/tutorials/subscribe)
+- [Enable subscribers with XMTP](/docs/build/subscribe)
 - [Broadcast messages with XMTP](/docs/build/broadcast)
 - [Add consent to an existing XMTP inbox JS](/docs/tutorials/portable-consent/request-inbox)
 - [Add consent to an existing XMTP inbox RN](/docs/tutorials/portable-consent/request-inbox-rn)
