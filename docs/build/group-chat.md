@@ -945,7 +945,9 @@ try group.listAdmins()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const admins = conversation.admins;
 ```
 
 </TabItem>
@@ -979,7 +981,9 @@ try group.listSuperAdmins()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const superAdmins = conversation.superAdmins;
 ```
 
 </TabItem>
@@ -1012,7 +1016,9 @@ try await group.addAdmin(inboxid: inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await conversation.addAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1045,7 +1051,9 @@ try await group.addSuperAdmin(inboxid: inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await conversation.addSuperAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1078,7 +1086,9 @@ try await group.removeAdmin(inboxid: inboxid)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await conversation.removeAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1111,7 +1121,9 @@ try await group.removeSuperAdmin(inboxid: inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await conversation.removeSuperAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1296,7 +1308,9 @@ try await client.inboxIdFromAddress(address: peerAddress)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const memberInboxIds = conversation.members.map(member => member.inboxId);
 ```
 
 </TabItem>
@@ -1431,7 +1445,13 @@ try await contacts.deny(addresses: [walletAddress])
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+// Allow contacts
+await client.contacts.allow(walletAddresses);
+
+// Deny contacts
+await client.contacts.deny(walletAddresses);
 ```
 
 </TabItem>
@@ -1444,10 +1464,10 @@ Code sample coming soon
 
 ```jsx
 // Allow
-await contact.allowGroup([groupId]);
+await contacts.allowInboxes([inboxId1, inboxId2, ...])
 
 // Deny
-await contact.denyGroup([groupId]);
+await contacts.denyInboxes([inboxId1, inboxId2, ...])
 ```
 
 </TabItem>
@@ -1476,6 +1496,15 @@ try await contact.denyInboxes(inboxIds: [inboxID])
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// Ry I can't seem to find a method for this by inbox Id, but it did offer me this by wallet address:
+
+// this API is experimental and may change in the future
+
+// Allow
+// await client.contacts.allow([walletAddress]);
+
+// Deny
+//await client.contacts.deny([walletAddress]);
 Code sample coming soon
 ```
 
@@ -1521,7 +1550,13 @@ try await contacts.denyGroups(groupIds: [groupId])
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+// Allow
+await client.contacts.allowGroup(groupId);
+
+// Deny
+await client.contacts.denyGroup(groupId);
 ```
 
 </TabItem>
@@ -1569,6 +1604,15 @@ try await client.contacts.denyInboxes(inboxIds: [client.inboxID])
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// Ry I can't seem to find a method for this by inbox ID, but it did offer me this by wallet address, which is the same as it gave me for Allow or deny contact by inbox ID in group chat
+
+// this API is experimental and may change in the future
+
+// Allow
+// await client.contacts.allow([walletAddress]);
+
+// Deny
+//await client.contacts.deny([walletAddress]);
 Code sample coming soon
 ```
 
@@ -1608,6 +1652,7 @@ await contact.isGroupAllowed(groupId: groupID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// Ry I can't seem to find a method for this - it is telling me that "permissions in the mls-client are typically managed at the individual wallet address level, not at the group chat level."
 Code sample coming soon
 ```
 
@@ -1643,6 +1688,7 @@ await contact.isInboxAllowed(inboxId: client.inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
+// Ry I can't seem to find a method for this for inbox ID - correct? But it offered me this by wallet address: const isAllowed = client.contacts.isAllowed(address);
 Code sample coming soon
 ```
 
@@ -1750,7 +1796,9 @@ try group.groupImageUrlSquare()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const imageUrl = conversation.imageUrl;
 ```
 
 </TabItem>
@@ -1783,7 +1831,9 @@ try await group.updateGroupImageUrlSquare(imageUrlSquare: "newurl.com")
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await conversation.updateImageUrl(newImageUrl);
 ```
 
 </TabItem>

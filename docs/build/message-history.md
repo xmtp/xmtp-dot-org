@@ -27,7 +27,13 @@ When your app creates a new client, specify the location where the client should
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-Code sample coming soon
+  const clientOptions = {
+    env: 'production' as const,
+    enableV3: true,
+    appVersion: 'YourApp/1.0.0',
+    // Add the history sync URL option
+    historySyncUrl: 'SYNC_URL'
+  }
 ```
 
 </TabItem>
@@ -63,7 +69,10 @@ let options = ClientOptions(
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// Ry, this might be totallly off...
+const client = await Client.create('0x1234...', {
+  apiUrl: 'SYNC_URL'
+});
 ```
 
 </TabItem>
@@ -95,7 +104,7 @@ Downloading message history may involve a large amount of data. To help users av
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-Code sample coming soon
+await client.requestMessageHistorySync()
 ```
 
 </TabItem>
@@ -116,7 +125,7 @@ try await client.requestMessageHistorySync()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+await client.requestHistorySync();
 ```
 
 </TabItem>
