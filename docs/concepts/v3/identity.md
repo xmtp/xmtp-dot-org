@@ -28,7 +28,7 @@ description: "Learn about multi-wallet identity and app installation concepts"
   * The inbox log can track 256 identity actions. Since identity actions can be combined, this can be more than 256 associations, removals, change of recovery wallets, etc.
 
 :::info More Information
-You can find more information on multi-wallet identity in [XIP-46](https:https://community.xmtp.org/t/xip-46-multi-wallet-identity/639).
+You can find more information on multi-wallet identity in [XIP-46](https://community.xmtp.org/t/xip-46-multi-wallet-identity/639).
 :::
 
 ## Multi-wallet support
