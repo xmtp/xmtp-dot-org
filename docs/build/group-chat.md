@@ -40,15 +40,21 @@ As a result of either of these actions, the user will lose access to the local d
 To prevent your users from entering this undesirable state, [Enable message history for group chat](/docs/build/message-history).
 :::
 
-If you choose to not enable message history, you can help users avoid losing access to their local databases by allowing them to store their local cache in iCloud or Google Cloud, for example. This option will enable message persistence within a single app ecosystem.
+You can choose to not support the message history feature in your app. 
+
+:::info
+If you choose to not support message history, we still recommend that you [set a message history sync URL](/docs/build/message-history#set-message-history-sync-url) upon client creation to enable other apps can benefit from your app's message history. 
+:::
+
+Without the message history feature, you can still help users avoid losing access to their local databases by allowing them to store their local cache in iCloud or Google Cloud, for example. This option will enable message persistence within a single app ecosystem.
 
 For example, let's say that App A enables users to store their local cache in iCloud. A user does this and then deletes App A from their device. The user can reinstall App A and restore their local cache from iCloud.
 
 However, this option does not allow users to restore a local cache across apps. For example, a local cache from App A can't be used to restore message history to App B. In this case, the best solution will be to [Enable message history for group chat](/docs/build/message-history).
 
-If you choose to provide neither message history nor local cache storage, be sure to clearly communicate the concept of losing access to group chat messages to your users. For example, you might consider using this language:
+If you choose to support neither message history nor local cache storage, be sure to clearly communicate the concept of losing access to group chat messages to your users. For example, you might consider using this language:
 
-> If you log out of &lt;app name&gt; and log into a different app on this device, or delete &lt;app name&gt; from this device, you will lose access to all group chat messages you sent using this installation of &lt;app name&gt; on this device.
+> If you log out of &lt;app name&gt; and log into a different app on this device, or delete &lt;app name&gt; from this device, you will lose access to all group chat messages you sent using this installation of &lt;app name&gt; on this device. However, you will still have access to all of your group chat conversations and be able to send new messages to them.
 
 ### Web support for group chat
 

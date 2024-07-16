@@ -21,7 +21,7 @@ To enable the message history feature, you must run your own [**xmtp-message-his
 
 ## Set message history sync URL
 
-When your app creates a new client, specify the location where the client should sync message history.
+When your app creates a new client, specify the location where the client should sync message history. Whether support the message history feature in your app or not, we recommend setting this value to allow other apps to pull in your app's message history starting from the point at which you set this value.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
@@ -31,6 +31,7 @@ When your app creates a new client, specify the location where the client should
     env: 'production' as const,
     enableV3: true,
     appVersion: 'YourApp/1.0.0',
+    dbEncryptionKey: encryptionKey, // Replace with actual Array encryption key
     // Add the history sync URL option
     historySyncUrl: 'SYNC_URL'
   }
@@ -45,6 +46,7 @@ Client().create(
     options = ClientOptions(
         ClientOptions.Api(XMTPEnvironment.PRODUCTION, true),
         enableV3 = true,
+        dbEncryptionKey: encryptionKey, // Replace with actual ByteArray encryption key
         appContext = context
         historySyncUrl = "SYNC_URL"
     )
@@ -61,6 +63,7 @@ let options = ClientOptions(
         isSecure: true
     ),
     enableV3: true,
+    dbEncryptionKey: encryptionKey, // Replace with actual String encryption key
     historySyncUrl: "SYNC_URL"
 )
 ```
@@ -69,7 +72,7 @@ let options = ClientOptions(
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-// Ry, this might be totallly off...
+// Ry, this might be totallly off... Also, does Node support dbEncryptionKey: "encryptionKey"?
 
 // this API is experimental and may change in the future
 const client = await Client.create('0x1234...', {
