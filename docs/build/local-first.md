@@ -18,9 +18,14 @@ import localfirst from '/docs/build/img/local-first-arch.jpeg';
 
 ## Mobile apps
 
-- When building a mobile app with the XMTP V3 [React Native](https://github.com/xmtp/xmtp-react-native), [Android](https://github.com/xmtp/xmtp-android), and [iOS](https://github.com/xmtp/xmtp-ios) SDKs, LibXMTP will [create and manage a local database](/docs/concepts/v3/group-chat#local-database-and-syncing) for you. However, if your app supports [reactions](./messages/reaction) and [replies](./messages/reply), you should create and manage a separate local database to store these content types. This local database is key to performantly displaying reactions and replies with their referenced messages when rendering message lists.
+When building a mobile app with the XMTP V3 [React Native](https://github.com/xmtp/xmtp-react-native), [Android](https://github.com/xmtp/xmtp-android), and [iOS](https://github.com/xmtp/xmtp-ios) SDKs, LibXMTP will [create and manage a local database](/docs/concepts/v3/group-chat#local-database-and-syncing) for you.
 
-- You can use the device's encrypted container as the local cache to store decrypted data. 
+However, you should create and manage an additional separate local database if your app:
+
+- Supports [reactions](./messages/reaction) and [replies](./messages/reply)
+- Supports 1:1 messaging backed by [XMTP V2 infrastructure](/docs/concepts/v2/architectural-overview.md)
+
+Use this separate local database to store reactions and replies content types, enabling your app to performantly display them with their referenced messages when rendering message lists.
 
 ## Web apps
 
