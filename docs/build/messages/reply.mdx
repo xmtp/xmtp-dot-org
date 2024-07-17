@@ -9,7 +9,7 @@ import TabItem from "@theme/TabItem";
 
 # Support replies in your app built with XMTP
 
-![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Beta-yellow)
+![Status](https://img.shields.io/badge/Content_type_status-Standards--track-yellow) ![Status](https://img.shields.io/badge/Reference_implementation_status-Stable-31CA54)
 
 Use the reply content type to support quote replies in your app. A reply is a method to directly respond to a specific message in a conversation. Users can select and reply to a particular message instead of sending a new one.
 
@@ -18,6 +18,12 @@ Use the reply content type to support quote replies in your app. A reply is a me
 You're welcome to provide feedback by commenting on the [Proposal for Reply content type](https://github.com/orgs/xmtp/discussions/35) XIP idea.
 
 :::
+
+## Use a local database for performance
+
+Use a local database to store replies. This will enable your app to performantly display a reply with its [referenced message](#send-a-reply) when rendering message lists.
+
+To learn more about using a local database, see [Use local-first architecture](/docs/build/local-first).
 
 ## Configure the content type
 

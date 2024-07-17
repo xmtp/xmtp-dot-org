@@ -204,6 +204,10 @@ Calling the `sync()` method on the Conversations protocol checks for welcome mes
 
 In some cases, LibXMTP will perform a sync automatically. This currently includes calls to add/remove members to a group or using the stream functions. Outside of those methods, apps can call `sync()` when they choose to efficiently manage network traffic.
 
+:::info
+If your app supports [reactions](/docs/build/messages/reaction) or [replies](/docs/build/messages/reply), you should create and manage a separate [local database](/docs/build/local-first) to store these content types. For example, you can use the device's encrypted container as the local cache to store decrypted data. This local database is key to performantly displaying reactions and replies with their referenced messages when rendering message lists.
+:::
+
 ## Group protocol
 
 The Group protocol contains methods specific to individual groups, identified by their `group_id`. These methods allow a user to communicate with the group. Each SDK has its own version of this protocol, using the underlying implementation in [LibXMTP](https://github.com/xmtp/libxmtp).
