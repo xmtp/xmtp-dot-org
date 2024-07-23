@@ -36,15 +36,25 @@ Here are the actions:
 
 As a result of either of these actions, the user will lose access to the local database for the app installation, which includes all group chat messages they sent using the installation of your app on their device.
 
-As an app developer, this concept is important to understand and communicate to your users. For example, you might consider using this language:
+:::tip
+To prevent your users from entering this undesirable state, [Enable message history for group chat](/docs/build/message-history).
+:::
 
-> If you log out of &lt;app name&gt; and log into a different app on this device, or delete &lt;app name&gt; from this device, you will lose access to all group chat messages you sent using this installation of &lt;app name&gt; on this device.
+You can choose to not support the message history feature in your app. 
 
-To enable your users to avoid losing access to their local databases, allow them to store their local cache in iCloud or Google Cloud, for example. This option will enable message persistence within a single app ecosystem. 
+:::info
+If you choose to not support message history, we still recommend that you [set a message history sync URL](/docs/build/message-history#set-message-history-sync-url) upon client creation to enable other apps can benefit from your app's message history. 
+:::
+
+Without the message history feature, you can still help users avoid losing access to their local databases by allowing them to store their local cache in iCloud or Google Cloud, for example. This option will enable message persistence within a single app ecosystem.
 
 For example, let's say that App A enables users to store their local cache in iCloud. A user does this and then deletes App A from their device. The user can reinstall App A and restore their local cache from iCloud.
 
-However, this option does not allow users to restore a local cache across apps. For example, a local cache from App A can't be used to restore message history to App B. In this case, the best solution will be the forthcoming XMTP Message History server.
+However, this option does not allow users to restore a local cache across apps. For example, a local cache from App A can't be used to restore message history to App B. In this case, the best solution will be to [Enable message history for group chat](/docs/build/message-history).
+
+If you choose to support neither message history nor local cache storage, be sure to clearly communicate the concept of losing access to group chat messages to your users. For example, you might consider using this language:
+
+> If you log out of &lt;app name&gt; and log into a different app on this device, or delete &lt;app name&gt; from this device, you will lose access to all group chat messages you sent using this installation of &lt;app name&gt; on this device. However, you will still have access to all of your group chat conversations and be able to send new messages to them.
 
 ### Web support for group chat
 
@@ -696,11 +706,15 @@ stream.stop()
 
 ## Sync group chats
 
-Calling `sync()` for a group or groups gets any updates since the last sync and adds them to the local database. Be sure to periodically synchronize each group chat to ensure your app has the latest group chat details, including the most recent messages, member list, and group chat details, for example.
+Calling `sync()` for a group or groups gets any updates since the last sync and adds them to the local database.
+
+Sync group chats anytime a user accesses a conversation view. This sync is especially important if a user backgrounds (switches away from) your app, then reopens the app and accesses a conversation view. 
+
+When the user reopens the app, the app might be using an old epoch (snapshot) of data. This is even more likely to be true if there were many group membership changes during the time the app was backgrounded. A group chat sync bumps the app to the latest epoch, helping to ensure that your user always sees the current group chat, including the most recent messages, member list, and group chat details, for example.
 
 Updates are also retrieved and added to the local database when streaming and when the user takes an action.
 
-When your user sends a message, you don’t need to sync with the network for them to see their own message. The message gets written to their local database, and it shows up immediately for them. The same applies when your user creates a group. 
+When your user sends a message, you don’t need to sync with the network for them to see their own message. The message gets written to their local database, and it shows up immediately for them. The same applies when your user creates a group.
 
 See [⚠️ Important: Manage actions that make a local database inaccessible](#️-important-manage-actions-that-make-a-local-database-inaccessible).
 
@@ -941,7 +955,9 @@ try group.listAdmins()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const admins = conversation.admins;
 ```
 
 </TabItem>
@@ -975,7 +991,9 @@ try group.listSuperAdmins()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const superAdmins = conversation.superAdmins;
 ```
 
 </TabItem>
@@ -1008,7 +1026,9 @@ try await group.addAdmin(inboxid: inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await conversation.addAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1041,7 +1061,9 @@ try await group.addSuperAdmin(inboxid: inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await conversation.addSuperAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1074,7 +1096,9 @@ try await group.removeAdmin(inboxid: inboxid)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await conversation.removeAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1107,7 +1131,9 @@ try await group.removeSuperAdmin(inboxid: inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await conversation.removeSuperAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1292,7 +1318,9 @@ try await client.inboxIdFromAddress(address: peerAddress)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const memberInboxIds = conversation.members.map(member => member.inboxId);
 ```
 
 </TabItem>
@@ -1405,7 +1433,11 @@ await contact.deny([walletAddress]);
 <TabItem value="kotlin" label="Kotlin" attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
-Code sample coming soon
+// Allow
+contacts.allow(listOf(walletAddress))
+
+// Deny
+contacts.deny(listOf(walletAddress))
 ```
 
 </TabItem>
@@ -1413,14 +1445,23 @@ Code sample coming soon
 
 ```swift
 // Allow
-try await contact.allowInboxes(inboxIDs: [inboxID])
+try await contacts.allow(addresses: [walletAddress])
+
+// Deny
+try await contacts.deny(addresses: [walletAddress])
 ```
 
 </TabItem>
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+// Allow contacts
+await client.contacts.allow(walletAddresses);
+
+// Deny contacts
+await client.contacts.deny(walletAddresses);
 ```
 
 </TabItem>
@@ -1433,10 +1474,10 @@ Code sample coming soon
 
 ```jsx
 // Allow
-await contact.allowGroup([groupId]);
+await contacts.allowInboxes([inboxId1, inboxId2, ...])
 
 // Deny
-await contact.denyGroup([groupId]);
+await contacts.denyInboxes([inboxId1, inboxId2, ...])
 ```
 
 </TabItem>
@@ -1499,14 +1540,24 @@ contact.denyGroups(listOf(group.id))
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
 
 ```swift
-Code sample coming soon
+// Allow
+try await contacts.allowGroups(groupIds: [groupId])
+
+// Deny
+try await contacts.denyGroups(groupIds: [groupId])
 ```
 
 </TabItem>
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+// Allow
+await client.contacts.allowGroup(groupId);
+
+// Deny
+await client.contacts.denyGroup(groupId);
 ```
 
 </TabItem>
@@ -1735,7 +1786,9 @@ try group.groupImageUrlSquare()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const imageUrl = conversation.imageUrl;
 ```
 
 </TabItem>
@@ -1768,7 +1821,9 @@ try await group.updateGroupImageUrlSquare(imageUrlSquare: "newurl.com")
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await conversation.updateImageUrl(newImageUrl);
 ```
 
 </TabItem>

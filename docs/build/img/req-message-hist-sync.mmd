@@ -1,0 +1,12 @@
+sequenceDiagram
+  actor aID as Alix
+  participant nID as Alix's new app install - inbox 1/client B
+  participant oID as Alix's old app install - inbox 1/client A
+  participant mID as Message history server
+
+  aID ->>+ nID: Request to sync message history
+  nID ->>+ oID: Request to sync message history
+  oID ->>+ mID: Encode, encrypt, and send group chat messages
+  oID ->>- nID: Inform new app installation of message location
+  nID ->>+ mID: Download encrypted messages
+  Note over nID: Insert messages into local DB
