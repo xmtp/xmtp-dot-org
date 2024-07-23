@@ -706,11 +706,13 @@ stream.stop()
 
 ## Sync group chats
 
-Calling `sync()` for a group or groups gets any updates since the last sync and adds them to the local database. Be sure to periodically synchronize each group chat to ensure your app has the latest group chat details, including the most recent messages, member list, and group chat details, for example.
+Calling `sync()` for a group or groups gets any updates since the last sync and adds them to the local database.
+
+Sync group chats anytime a user accesses a conversation view. This sync is especially important if a user backgrounds (switches away from) your app, then reopens the app and accesses a conversation view. When the user reopens the app, it may be using an old epoch (snapshot) of data. This is even more likely to be true if there were many group membership changes during the time the app was backgrounded. A group chat sync bumps the app to the latest epoch, helping to ensure that your user always sees the current group chat, including the most recent messages, member list, and group chat details, for example.
 
 Updates are also retrieved and added to the local database when streaming and when the user takes an action.
 
-When your user sends a message, you don’t need to sync with the network for them to see their own message. The message gets written to their local database, and it shows up immediately for them. The same applies when your user creates a group. 
+When your user sends a message, you don’t need to sync with the network for them to see their own message. The message gets written to their local database, and it shows up immediately for them. The same applies when your user creates a group.
 
 See [⚠️ Important: Manage actions that make a local database inaccessible](#️-important-manage-actions-that-make-a-local-database-inaccessible).
 
