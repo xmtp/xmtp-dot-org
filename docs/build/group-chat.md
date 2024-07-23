@@ -1502,15 +1502,6 @@ try await contact.denyInboxes(inboxIds: [inboxID])
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-// Ry I can't seem to find a method for this by inbox Id, but it did offer me this by wallet address:
-
-// this API is experimental and may change in the future
-
-// Allow
-// await client.contacts.allow([walletAddress]);
-
-// Deny
-//await client.contacts.deny([walletAddress]);
 Code sample coming soon
 ```
 
@@ -1610,15 +1601,6 @@ try await client.contacts.denyInboxes(inboxIds: [client.inboxID])
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-// Ry I can't seem to find a method for this by inbox ID, but it did offer me this by wallet address, which is the same as it gave me for Allow or deny contact by inbox ID in group chat
-
-// this API is experimental and may change in the future
-
-// Allow
-// await client.contacts.allow([walletAddress]);
-
-// Deny
-//await client.contacts.deny([walletAddress]);
 Code sample coming soon
 ```
 
@@ -1658,7 +1640,6 @@ await contact.isGroupAllowed(groupId: groupID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-// Ry I can't seem to find a method for this - it is telling me that "permissions in the mls-client are typically managed at the individual wallet address level, not at the group chat level."
 Code sample coming soon
 ```
 
@@ -1694,7 +1675,6 @@ await contact.isInboxAllowed(inboxId: client.inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-// Ry I can't seem to find a method for this for inbox ID - correct? But it offered me this by wallet address: const isAllowed = client.contacts.isAllowed(address);
 Code sample coming soon
 ```
 

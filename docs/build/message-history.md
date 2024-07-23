@@ -21,7 +21,7 @@ To enable the message history feature, you must run your own [**xmtp-message-his
 
 ## Set message history sync URL
 
-When your app creates a new client, specify the location where the client should sync message history. Whether support the message history feature in your app or not, we recommend setting this value to allow other apps to pull in your app's message history starting from the point at which you set this value.
+When your app creates a new client, specify the location where the client should sync message history. Whether you support the message history feature in your app or not, we recommend setting this value to allow other apps to pull in your app's message history. The message history starts at the point you set this value.
 
 <Tabs groupId="sdk-langs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
@@ -72,9 +72,8 @@ let options = ClientOptions(
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-// Ry, this might be totallly off... Also, does Node support dbEncryptionKey: "encryptionKey"?
-
 // this API is experimental and may change in the future
+
 const client = await Client.create('0x1234...', {
   apiUrl: 'SYNC_URL'
 });
@@ -85,11 +84,11 @@ const client = await Client.create('0x1234...', {
 
 ## Request message history sync
 
-When a new client is created, it will look for other clients registered with the same inbox ID. 
+Code your app to request a message history sync anytime a user accesses a conversation view. 
 
-If there are none, there is no message history to be synced.
+This sync is especially important if a user backgrounds (switches away from) your app, then reopens the app and accesses a conversation view. When the user reopens the app, it may be using an old epoch (snapshot) of data. This is even more likely to be true if there were many group membership changes during the time the app was backgrounded. A message history sync bumps the app to the latest epoch, helping to ensure that your user always sees the current group chat.
 
-If there are clients registered with the same inbox ID, it will request a message history sync with the clients. 
+When a new client is created, it will look for other clients registered with the same inbox ID. If there are none, there is no message history to be synced. If there are clients registered with the same inbox ID, it will request a message history sync with the clients.
 
 For example, let’s say that inbox ID 1/client B requests a message history sync with inbox ID 1/client A.
 
