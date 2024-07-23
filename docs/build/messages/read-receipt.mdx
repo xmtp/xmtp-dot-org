@@ -53,31 +53,6 @@ xmtp.registerCodec(new ReadReceiptCodec());
 ```
 
 </TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-The React SDK supports all current standards-track content types, but only text messages are enabled out of the box. Adding support for other standards-track content types requires a bit of configuration.
-
-```jsx
-import {
-  XMTPProvider,
-  readReceiptContentTypeConfig,
-} from "@xmtp/react-sdk";
-
-const contentTypeConfigs = [
-  readReceiptContentTypeConfig,
-  // other content type configs...
-];
-
-createRoot(document.getElementById("root") as HTMLElement).render(
-  <StrictMode>
-    <XMTPProvider contentTypeConfigs={contentTypeConfigs}>
-      <App />
-    </XMTPProvider>
-  </StrictMode>,
-);
-```
-
-</TabItem>
 <TabItem value="kotlin" label="Kotlin"  attributes={{className: "kotlin_tab"}}>
 
 ```kotlin
@@ -130,20 +105,6 @@ The content of a read receipt message must be an empty object.
 
 ```tsx
 await conversation.messages.send({}, ContentTypeReadReceipt);
-```
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-The content of a read receipt message must be an empty object.
-
-```jsx
-import { useSendMessage } from "@xmtp/react-sdk";
-import { ContentTypeReadReceipt } from "@xmtp/content-type-read-receipt";
-
-const { sendMessage } = useSendMessage();
-
-sendMessage(conversation, {}, ContentTypeReadReceipt);
 ```
 
 </TabItem>
@@ -212,41 +173,6 @@ if (message.contentType.sameAs(ContentTypeReadReceipt)) {
   // The message is a read receipt
   const timestamp = message.sent;
 }
-```
-
-</TabItem>
-<TabItem value="react" label="React"  attributes={{className: "react_tab"}}>
-
-```jsx
-import { ContentTypeId } from "@xmtp/react-sdk";
-import { ContentTypeReadReceipt } from "@xmtp/content-type-read-receipt";
-
-const contentType = ContentTypeId.fromString(message.contentType);
-
-if (ContentTypeReadReceipt.sameAs(contentType)) {
-  // The message is a read receipt
-  const timestamp = message.sentAt;
-}
-```
-
-**getReadReceipt**
-
-Use to retrieve the read receipt from a cached conversation. It takes a `CachedConversation` object as a parameter and returns the read receipt date, or `undefined`, if the conversation has no read receipt.
-
-```jsx
-import { getReadReceipt } from "@xmtp/react-sdk";
-
-const readReceiptDate = getReadReceipt(conversation);
-```
-
-**hasReadReceipt**
-
-Use to check if a cached conversation has a read receipt. It takes a `CachedConversation` object as a parameter and returns `true` if the conversation has a read receipt and `false` if otherwise.
-
-```jsx
-import { hasReadReceipt } from "@xmtp/react-sdk";
-
-const hasReceipt = hasReadReceipt(conversation);
 ```
 
 </TabItem>
