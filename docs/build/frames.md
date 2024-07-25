@@ -189,7 +189,7 @@ app.frame("/", (c) => {
 
 ### Tutorials
 
-- [**Transaction Frames**](/docs/tutorials/transaction-frames.md): Create transactional frames compatible with messaging apps
+- [**Transaction Frames**](/docs/tutorials/display-open-frames.md): Create transactional frames compatible with messaging apps
 
 ### Clients
 

@@ -452,7 +452,7 @@ const isActive = group.isActive;
 
 ## Send a message in a group chat
 
-Group chat supports all message types you can send using direct message conversations, including [Subscription Frames](/docs/tutorials/subscribe-frames), [replies](/docs/build/messages/reply), [reactions](/docs/build/messages/reaction), [attachments](/docs/build/messages/remote-attachment), and [read receipts](/docs/build/messages/read-receipt).
+Group chat supports all message types you can send using direct message conversations, including [Subscription Frames](/docs/tutorials/display-open-frames), [replies](/docs/build/messages/reply), [reactions](/docs/build/messages/reaction), [attachments](/docs/build/messages/remote-attachment), and [read receipts](/docs/build/messages/read-receipt).
 
 <Tabs groupId="sdklangs">
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
