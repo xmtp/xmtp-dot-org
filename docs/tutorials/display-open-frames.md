@@ -8,9 +8,11 @@ sidebar_position: 6.3
 This tutorial provides step-by-step instructions to:
 
 - Display a transactional Open Frame in an app built with XMTP  
-A transaction Open Frame is [built to enable users to trigger onchain transactions](https://message-kit.vercel.app/frames/tutorials/transactions).
 - Display a subscription Open Frame in an app built with XMTP  
-A subscription Open Frame is [built to enable users to subscribe to content](https://message-kit.vercel.app/frames/tutorials/subscribe).
+
+A transactional Open Frame enables users to trigger onchain transactions. To learn how to build a transaction Open Frame, see [Transactions](https://message-kit.vercel.app/frames/tutorials/transactions).
+
+A subscription Open Frame enables users to subscribe to content. To learn how to build a subscription Open Frame, see [Subscribe](https://message-kit.vercel.app/frames/tutorials/subscribe).
 
 An Open Frame is a Frame built according to the [Open Frames standard](https://framesjs.org/guides/open-frames). This standard enables you to build a Frame that works in multiple ecosystems, including Farcaster, XMTP, Lens, and others.
 
@@ -20,7 +22,7 @@ This tutorial assumes your app already supports non-transactional Open Frames. I
 
 :::tip
 
-A minting Open Frame is a type of transactional Open Frame. Where applicable, we'll specify steps for minting Open Frames in this tutorial.
+A minting Open Frame is a type of transactional Open Frame. Where applicable, we'll provide details specific to displaying minting Open Frames.
 
 :::
 
@@ -28,7 +30,17 @@ A minting Open Frame is a type of transactional Open Frame. Where applicable, we
 
 Use this example [transactional Open Frame](https://tx-boilerplate-frame.vercel.app/) with this tutorial to try out the steps in your app. This example uses the Sepolia network to make a 0.0000032ETH (~1 cent) transaction to the address associated with `hi.xmtp.eth`, or `0x194c31cAe1418D5256E8c58e0d08Aee1046C6Ed0`.
 
-You can explore the Open Frame's code in the [tx-boilerplate-frame](https://github.com/xmtp-labs/tx-boilerplate-frame) repo.
+You can explore this Open Frame's code in the [tx-boilerplate-frame](https://github.com/xmtp-labs/tx-boilerplate-frame) repo.
+
+### Security considerations for transactional Open Frames
+
+When displaying transactional Open Frames in your app, consider following these security best practices to keep your users safe:
+
+- Include allowlists that enable your app to interact with known “safe” transactional Open Frames only
+- For unknown Open Frames, inform the user that they are about to interact with an unknown Open Frame and provide the choice to cancel or proceed at their own risk.
+- Use simulation services if you want to allow access to unverified transactional Open Frames. These services enable you to submit transaction information to a simulator first. This lets users preview the transaction process and debit amount details without financial risk.
+
+For more transactional Open Frame security considerations, see [Frame Transactions: Security Consideration](https://www.notion.so/warpcast/Frame-Transactions-Public-9d9f9f4f527249519a41bd8d16165f73?pvs=4#03962a8da2574f9ea6ce093359f8235a).
 
 ### Identify a transactional Open Frame
 
@@ -129,19 +141,17 @@ if (
 }
 ```
 
-### Transaction Open Frame security considerations
-
-When rendering transactional Open Frames in your app, consider following these security best practices to keep your users safe:
-
-- Include allowlists that enable your app to interact with known “safe” transactional Open Frames only
-- For unknown Open Frames, inform the user that they are about to interact with an unknown Open Frame and to proceed at their own risk
-- Use simulation services in cases where you want to allow access to unverified transaction Open Frames. These services enable you to submit transaction information to a simulator first, which tests the process without financial risk and retrieves debit amount details.
-
-For more transactional Open Frame security considerations and mitigation strategies, see the Frame Transactions [Security Consideration](https://www.notion.so/warpcast/Frame-Transactions-Public-9d9f9f4f527249519a41bd8d16165f73?pvs=4#03962a8da2574f9ea6ce093359f8235a).
-
 ## Display a subscription Open Frame in an app built with XMTP
 
 This tutorial assumes your app already supports non-subscription Open Frames. If not, see [Introduction to Open Frames](https://message-kit.vercel.app/frames) to set this up first.
+
+### Example subscription Open Frame
+
+Use this example [subscription Open Frame](https://subscribe-boilerplate-frame.vercel.app/) with this tutorial to try out the steps in your app. 
+
+This example Open Frame uses a randomly generated wallet on the XMTP `dev` network to automatically send a "Thank you for subscribing!" message to your main inbox upon subscribing.
+
+You can explore this Open Frame's code in the [subscribe-boilerplate-frame](https://github.com/xmtp-labs/subscribe-boilerplate-frame).
 
 ### Identify a subscription Open Frame
 
@@ -161,7 +171,7 @@ const isTransactionFrame = button.action === "tx";
 
 ### Identify the transaction target and postUrl
 
-If the button action indicates the Open Frame transactional, get the `target` and `postUrl` from the button.  To learn more, see Open Frame Metadata [Optional Properties](https://www.openframes.xyz/#optional-properties).
+If the button action indicates the Open Frame is transactional, get the `target` and `postUrl` from the button. To learn more, see [Open Frame Metadata - Optional Properties](https://www.openframes.xyz/#optional-properties).
 
 ```jsx
 if (isTransactionFrame) {
@@ -171,7 +181,7 @@ if (isTransactionFrame) {
 }
 ```
 
-### Post to the target URL to fetch data
+### Post to the target URL to fetch transaction data
 
 Make a POST request to the `target` URL to fetch transaction data. The payload that gets returned will return an `eth_personalSign` method if in the subscribe flow, and this is how you know you're dealing with a subscription Open Frame.
 
@@ -224,9 +234,9 @@ const payload = await framesClient.signFrameAction({
 });
 ```
 
-### Complete the subscription and show a success screen
+### Complete the subscription and display a success screen
 
-To complete the subscription flow and return metadata of a new success frame, pass the `postUrl` from the button and the payload with the signature from the previous step.
+To complete the subscription flow and return metadata for a new success Frame, pass the `postUrl` from the button and the payload with the signature from the previous step.
 
 ```jsx
 const completeTransaction = await framesClient.proxy.post(
@@ -235,11 +245,3 @@ const completeTransaction = await framesClient.proxy.post(
 );
 // Finally, set the current frame state to this new metadata/success screen
 ```
-
-### Try an example subscription Open Frame
-
-Use this example [subscription Open Frame](https://subscribe-boilerplate-frame.vercel.app/) with this tutorial to try out the steps in your app. 
-
-This example Open Frame uses a randomly generated wallet on the XMTP `dev` network to automatically send a "Thank you for subscribing!" message to your main inbox upon subscribing.
-
-You can explore the Open Frame's code in the [subscribe-boilerplate-frame](https://github.com/xmtp-labs/subscribe-boilerplate-frame).
