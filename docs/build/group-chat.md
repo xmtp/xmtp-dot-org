@@ -299,7 +299,8 @@ const group = await client.conversations.newConversation(
 If a member is using an app installation that doesn’t support group chat, consider sending them a message from your app to let them know how to join the group chat. For example:
 
 > &lt;sender address&gt; added you to a group chat, but you aren't using an app that supports group chat. To join the group chat, use an app that supports group chat, such as &lt;your app name&gt;.
-> :::
+
+:::
 
 ## Display group chats
 
