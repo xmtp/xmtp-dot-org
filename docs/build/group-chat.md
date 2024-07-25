@@ -40,7 +40,7 @@ As an app developer, this concept is important to understand and communicate to 
 
 > If you log out of &lt;app name&gt; and log into a different app on this device, or delete &lt;app name&gt; from this device, you will lose access to all group chat messages you sent using this installation of &lt;app name&gt; on this device.
 
-To enable your users to avoid losing access to their local databases, allow them to store their local cache in iCloud or Google Cloud, for example. This option will enable message persistence within a single app ecosystem. 
+To enable your users to avoid losing access to their local databases, allow them to store their local cache in iCloud or Google Cloud, for example. This option will enable message persistence within a single app ecosystem.
 
 For example, let's say that App A enables users to store their local cache in iCloud. A user does this and then deletes App A from their device. The user can reinstall App A and restore their local cache from iCloud.
 
@@ -50,12 +50,12 @@ However, this option does not allow users to restore a local cache across apps. 
 
 The XMTP [JavaScript SDK](https://github.com/xmtp/xmtp-js) and [React SDK](https://github.com/xmtp/xmtp-web/tree/main/packages/react-sdk) don’t yet provide web support for group chat. However, if you want to integrate group chat backend support, you can use the [**experimental** Node SDK](https://www.npmjs.com/package/@xmtp/mls-client).
 
-Web support for group chat is lagging due to technical challenges related to integrating WebAssembly (WASM) and its extensions. WASM sandbox cannot access the operating system directly, which is necessary for tasks like file reads. WASI extends WASM to allow operating system interaction, but it comes with its own set of challenges. For example, current WASI 0.2 has no built-in way to handle asynchronous operations effectively. The team is working toward solutions. 
+Web support for group chat is lagging due to technical challenges related to integrating WebAssembly (WASM) and its extensions. WASM sandbox cannot access the operating system directly, which is necessary for tasks like file reads. WASI extends WASM to allow operating system interaction, but it comes with its own set of challenges. For example, current WASI 0.2 has no built-in way to handle asynchronous operations effectively. The team is working toward solutions.
 
 ### Push notifications
 
 Group chat supports push notifications. To learn more, see the [Notifications with XMTP](/docs/build/notifications/notifications.md) section.
- 
+
 ## XMTP V3 SDK example apps
 
 If you’d like to dive right into exploring the code, check out the example apps in these XMTP V3 SDKs that support group chat:
@@ -99,7 +99,7 @@ You can list, add, and remove members from a group chat. Only the group chat cre
 
 ## Create a client that supports group chat
 
-By default, XMTP V3 clients support XMTP V2 messages, which include direct messages only. 
+By default, XMTP V3 clients support XMTP V2 messages, which include direct messages only.
 
 If you want your app to support group chat offered by V3, you must explicitly configure your client to support group chat.
 
@@ -157,39 +157,39 @@ let client = try await Client.create(
 ```tsx
 // this API is experimental and may change in the future
 
-import { createWalletClient, http, toBytes } from 'viem'
-import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts'
-import { mainnet } from 'viem/chains'
-import { Client } from '@xmtp/mls-client'
+import { createWalletClient, http, toBytes } from "viem";
+import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
+import { mainnet } from "viem/chains";
+import { Client } from "@xmtp/mls-client";
 
 // create a wallet for signing
-const key = generatePrivateKey()
-const account = privateKeyToAccount(key)
+const key = generatePrivateKey();
+const account = privateKeyToAccount(key);
 const wallet = createWalletClient({
   account,
   chain: mainnet,
   transport: http(),
-})
+});
 
 // create client
 const client = Client.create(account.address, {
-  env: 'dev', // or 'production'
+  env: "dev", // or 'production'
   // provide a path for the local SQLite DB
-  dbPath: 'path/to/local/db/file.db3',
-})
+  dbPath: "path/to/local/db/file.db3",
+});
 
 // sign the provided message
 const signature = await user.wallet.signMessage({
   // it's possible for `signatureText` to be `null` if the identity is already registered
   message: client.signatureText!,
-})
-const signatureBytes = toBytes(signature)
+});
+const signatureBytes = toBytes(signature);
 
 // add the signature to the client
-client.addEcdsaSignature(signatureBytes)
+client.addEcdsaSignature(signatureBytes);
 
 // register client identity
-await client.registerIdentity()
+await client.registerIdentity();
 ```
 
 </TabItem>
@@ -207,10 +207,7 @@ To learn more about V3 identities, see [Multi-wallet Identity in V3](/docs/conce
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-const canMessageV3 = await client.canGroupMessage([
-  alix.address,
-  bo.address,
-]);
+const canMessageV3 = await client.canGroupMessage([alix.address, bo.address]);
 ```
 
 </TabItem>
@@ -252,14 +249,14 @@ To create a group chat, each of the specified member addresses must have a V3 id
 
 ```jsx
 const group = await client.conversations.newGroup(
-    [anotherClient.address],
-    // set the permission level for the group. Options include "admin_only", where only the creator is an admin, or "all_members" to make everyone an admin.
-    { 
-	    permissionLevel: 'admin_only',
-	    name: 'Group Name',
-	    imageUrlSquare: '<URL>'
-    }
-  )
+  [anotherClient.address],
+  // set the permission level for the group. Options include "admin_only", where only the creator is an admin, or "all_members" to make everyone an admin.
+  {
+    permissionLevel: "admin_only",
+    name: "Group Name",
+    imageUrlSquare: "<URL>",
+  },
+);
 ```
 
 </TabItem>
@@ -291,7 +288,7 @@ permissions: .adminOnly, name: "Group Name", imageUrlSquare: "<URL>")
 
 const group = await client.conversations.newConversation(
   [walletAddress1, walletAddress2],
-  GroupPermissions.GroupCreatorIsAdmin
+  GroupPermissions.GroupCreatorIsAdmin,
 );
 ```
 
@@ -301,7 +298,8 @@ const group = await client.conversations.newConversation(
 :::tip
 If a member is using an app installation that doesn’t support group chat, consider sending them a message from your app to let them know how to join the group chat. For example:
 
->&lt;sender address&gt; added you to a group chat, but you aren't using an app that supports group chat. To join the group chat, use an app that supports group chat, such as &lt;your app name&gt;.
+> &lt;sender address&gt; added you to a group chat, but you aren't using an app that supports group chat. To join the group chat, use an app that supports group chat, such as &lt;your app name&gt;.
+
 :::
 
 ## Display group chats
@@ -321,7 +319,7 @@ In this documentation, “group chat” refers to "group chat conversations." As
 //First fetch new data from the network
 await client.conversations.syncGroups();
 //Get the updated group list
-const groups =await client.conversations.listGroups();
+const groups = await client.conversations.listGroups();
 ```
 
 Get group chats and direct message conversations:
@@ -415,7 +413,7 @@ const messages = group.messages(options);
 
 ### Check if user is active in a group chat
 
-Use the `isActive` property to check if the current user is still a participant in a group chat. For example, if a user is removed from a group chat, the group chat will not be active for the user. 
+Use the `isActive` property to check if the current user is still a participant in a group chat. For example, if a user is removed from a group chat, the group chat will not be active for the user.
 
 Use this status to adjust the user’s interface accordingly, such as removing the user’s ability to send messages in the group chat.
 
@@ -460,7 +458,7 @@ Group chat supports all message types you can send using direct message conversa
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-const group =await client.conversations.newGroup([
+const group = await client.conversations.newGroup([
   walletAddress1,
   walletAddress2,
 ]);
@@ -494,7 +492,7 @@ try await group.send(content: "Hello, group!")
 
 const group = await client.conversations.newConversation(
   [walletAddress1, walletAddress2],
-  GroupPermissions.GroupCreatorIsAdmin
+  GroupPermissions.GroupCreatorIsAdmin,
 );
 await group.send("Hello, group!", ContentTypeText);
 ```
@@ -511,24 +509,24 @@ await group.send("Hello, group!", ContentTypeText);
 
 ```jsx
 // Listen for group chat updates
-const streamGroups =async (client) => {
-const groups = [];
-const cancelStreamGroups =await client.conversations.streamGroups(
-(group) => {
-groups.push(group);
-	},
-);
+const streamGroups = async (client) => {
+  const groups = [];
+  const cancelStreamGroups = await client.conversations.streamGroups(
+    (group) => {
+      groups.push(group);
+    },
+  );
 
-// Use cancelStreamGroups() to stop listening to group updates
+  // Use cancelStreamGroups() to stop listening to group updates
 };
 ```
 
 Stream group chats and direct message conversations:
 
 ```jsx
-const streamAllConversations =async (client) => {
-const allConvos = [];
-const cancelStreamAll =await client.conversations.streamAll(
+const streamAllConversations = async (client) => {
+  const allConvos = [];
+  const cancelStreamAll = await client.conversations.streamAll(
     (conversation) => {
       allConvos.push(conversation);
     },
@@ -586,10 +584,10 @@ for try await conversation in client.conversations.streamAll() {
 ```tsx
 // this API is experimental and may change in the future
 
-const stream = client.conversations.stream()
+const stream = client.conversations.stream();
 
 for await (const group of stream) {
-  console.log('New group created', group);
+  console.log("New group created", group);
 }
 
 // stop stream
@@ -608,13 +606,13 @@ Stream messages and member management updates in group chats, such as adding and
 
 ```jsx
 // Assuming `group` is an existing group chat object
-const streamGroupMessages =async (group) => {
-const cancelGroupMessageStream =await group.streamGroupMessages(
-async (message) => {
+const streamGroupMessages = async (group) => {
+  const cancelGroupMessageStream = await group.streamGroupMessages(
+    async (message) => {
       console.log(`New message: ${message.content}`);
       // Membership updates
-if (message.contentTypeId === ContentTypes.GroupMembershipChange) {
-const addresses =await group.memberAddresses();
+      if (message.contentTypeId === ContentTypes.GroupMembershipChange) {
+        const addresses = await group.memberAddresses();
         // Get new members
         console.log(addresses); // Example usage of addresses
       }
@@ -622,18 +620,17 @@ const addresses =await group.memberAddresses();
   );
 
   // Use cancelGroupMessageStream() to stop listening to group updates
-return cancelGroupMessageStream;
+  return cancelGroupMessageStream;
 };
 ```
 
 Stream messages in group chats and direct message conversations:
 
 ```jsx
-const streamAllGroupMessages =async (client) => {
-const allConvos = [];
-const cancelStreamAllGroupMessages =
-await client.conversations.streamAllMessages(
-			async (message) => {
+const streamAllGroupMessages = async (client) => {
+  const allConvos = [];
+  const cancelStreamAllGroupMessages =
+    await client.conversations.streamAllMessages(async (message) => {
       console.log(`New message: ${message.content}`);
     });
   // Use cancelStreamAllGroupMessages() to stop listening to all conversation updates
@@ -669,11 +666,11 @@ Stream messages in group chats, current and future:
 const stream = client.conversations.streamAllMessages();
 
 for await (const message of stream) {
-  console.log('New message received ', message);
+  console.log("New message received ", message);
 }
 
 // stop the stream
-stream.stop()
+stream.stop();
 ```
 
 Stream messages in a group chat:
@@ -681,14 +678,14 @@ Stream messages in a group chat:
 ```tsx
 // this API is experimental and may change in the future
 
-const stream = group.stream()
+const stream = group.stream();
 
 for await (const message of stream) {
-  console.log('New message received ', message);
+  console.log("New message received ", message);
 }
 
 // stop the stream
-stream.stop()
+stream.stop();
 ```
 
 </TabItem>
@@ -700,13 +697,13 @@ Calling `sync()` for a group or groups gets any updates since the last sync and 
 
 Updates are also retrieved and added to the local database when streaming and when the user takes an action.
 
-When your user sends a message, you don’t need to sync with the network for them to see their own message. The message gets written to their local database, and it shows up immediately for them. The same applies when your user creates a group. 
+When your user sends a message, you don’t need to sync with the network for them to see their own message. The message gets written to their local database, and it shows up immediately for them. The same applies when your user creates a group.
 
 See [⚠️ Important: Manage actions that make a local database inaccessible](#️-important-manage-actions-that-make-a-local-database-inaccessible).
 
 This means that everything XMTP gets from the network for the user is stored in this local database and never needs to be fetched again. Extra syncing isn’t costly as the process won’t fetch data it already has, but this is just an explanation of why syncing isn’t necessary for data created by a user’s own actions.
 
-To learn more, see [Local Database and Syncing](/docs/concepts/v3/group-chat#local-database-and-syncing). 
+To learn more, see [Local Database and Syncing](/docs/concepts/v3/group-chat#local-database-and-syncing).
 
 However, you must sync (or use streaming) to enable **other** users to see the group chats and messages your user created and sent.
 
@@ -781,7 +778,7 @@ Use **`sync()`** to synchronize group chat data, such as new messages or members
 // Assume group is an existing group chat object
 await group.sync(); // Synchronizes the group's messages and members
 // Fetch messages without network sync
-const messages =await group.messages(true);
+const messages = await group.messages(true);
 console.log(messages.length); // Shows messages fetched from local data
 ```
 
@@ -793,7 +790,7 @@ console.log(messages.length); // Shows messages fetched from local data
 group.sync() // Synchronizes the group's messages and members
 // Fetch messages without network sync
 val messages = group.messages()
-println("Messages fetched from local: ${messages}") // Shows messages fetched from local data 
+println("Messages fetched from local: ${messages}") // Shows messages fetched from local data
 ```
 
 </TabItem>
@@ -804,7 +801,7 @@ println("Messages fetched from local: ${messages}") // Shows messages fetched fr
 try await group.send(content: "sup gang")
 try await group.sync // Synchronizes the group's messages and members
 // Fetch messages without network sync
-try await group.messages() 
+try await group.messages()
 // verify contents
 print("Test message content: \(testMessage.content())"
 ```
@@ -827,9 +824,9 @@ Here's an overview of how group chat admin statuses work:
 
 - Everyone in a group chat is a member.
 - A member can be granted admin or super admin status.  
-If the member's admin or super admin status is removed, they are still a member of the group chat. 
+  If the member's admin or super admin status is removed, they are still a member of the group chat.
 - By default, only a member with super admin can add and remove admin and super admin statuses.  
-Also by default, the group creator is the only member with super admin status.
+  Also by default, the group creator is the only member with super admin status.
 
 :::info
 
@@ -882,7 +879,7 @@ const isAdmin = group.isAdmin(inboxId);
 
 ```jsx
 //Assume group is an existing group chat object for client
-const isSuperAdmin = await group.isSuperAdmin(client.inboxID)
+const isSuperAdmin = await group.isSuperAdmin(client.inboxID);
 ```
 
 </TabItem>
@@ -895,7 +892,6 @@ val isInboxIDSuperAdmin = group.isSuperAdmin(inboxId)
 
 </TabItem>
 <TabItem value="swift" label="Swift"  attributes={{className: "swift_tab"}}>
-
 
 ```swift
 try group.isSuperAdmin(inboxid: inboxID)
@@ -919,7 +915,7 @@ const isSuperAdmin = group.isSuperAdmin(inboxId);
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-await group.listAdmins()
+await group.listAdmins();
 ```
 
 </TabItem>
@@ -941,7 +937,9 @@ try group.listAdmins()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const admins = group.admins;
 ```
 
 </TabItem>
@@ -953,7 +951,7 @@ Code sample coming soon
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-await group.listSuperAdmins()
+await group.listSuperAdmins();
 ```
 
 </TabItem>
@@ -975,7 +973,9 @@ try group.listSuperAdmins()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const superAdmins = group.superAdmins;
 ```
 
 </TabItem>
@@ -987,7 +987,7 @@ Code sample coming soon
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-await group.addAdmin(client.inboxID)
+await group.addAdmin(client.inboxID);
 ```
 
 </TabItem>
@@ -1008,7 +1008,9 @@ try await group.addAdmin(inboxid: inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await group.addAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1020,7 +1022,7 @@ Code sample coming soon
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-await group.addSuperAdmin(client.inboxID)
+await group.addSuperAdmin(client.inboxID);
 ```
 
 </TabItem>
@@ -1041,7 +1043,9 @@ try await group.addSuperAdmin(inboxid: inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await group.addSuperAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1053,7 +1057,7 @@ Code sample coming soon
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-await group.removeAdmin(client.inboxID)
+await group.removeAdmin(client.inboxID);
 ```
 
 </TabItem>
@@ -1074,7 +1078,9 @@ try await group.removeAdmin(inboxid: inboxid)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await group.removeAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1086,7 +1092,7 @@ Code sample coming soon
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-await group.removeSuperAdmin(client.inboxId)
+await group.removeSuperAdmin(client.inboxId);
 ```
 
 </TabItem>
@@ -1107,7 +1113,9 @@ try await group.removeSuperAdmin(inboxid: inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await group.removeSuperAdmin(inboxId);
 ```
 
 </TabItem>
@@ -1144,7 +1152,7 @@ try await group.addMembersByInboxId(inboxIds: [inboxId])
 ```tsx
 // this API is experimental and may change in the future
 
-await group.addMembers([inboxId]);
+await group.addMembersByInboxId([inboxId]);
 ```
 
 </TabItem>
@@ -1185,7 +1193,6 @@ await group.addMembers([walletAddress]);
 </TabItem>
 </Tabs>
 
-
 ### Remove members by inbox ID
 
 <Tabs groupId="sdklangs">
@@ -1215,7 +1222,7 @@ try await group.removeMemberInboxIds(inboxIds: [inboxId])
 ```tsx
 // this API is experimental and may change in the future
 
-await group.removeMembers([inboxId]);
+await group.removeMembersByInboxId([inboxId]);
 ```
 
 </TabItem>
@@ -1262,7 +1269,7 @@ await group.removeMembers([walletAddress]);
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-await group.memberInboxIds()
+await group.memberInboxIds();
 ```
 
 </TabItem>
@@ -1292,7 +1299,7 @@ try await client.inboxIdFromAddress(address: peerAddress)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+const inboxId = await client.getInboxIdByAddress(address);
 ```
 
 </TabItem>
@@ -1304,8 +1311,8 @@ Code sample coming soon
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-const members = await group.members()
-const addresses = members.map(member => member.addresses)
+const members = await group.members();
+const addresses = members.map((member) => member.addresses);
 ```
 
 </TabItem>
@@ -1328,10 +1335,17 @@ let peerMembers = try Conversation.group(group).peerAddresses.sorted()
 
 ```tsx
 // this API is experimental and may change in the future
-// sync group first
 
+// sync group first
 await group.sync();
+
+// get group members
 const members = group.members;
+
+// map inbox ID to account addresses
+const inboxIdAddressMap = new Map(
+  members.map((member) => [member.inboxId, member.accountAddresses]),
+);
 ```
 
 </TabItem>
@@ -1345,7 +1359,7 @@ const members = group.members;
 ```jsx
 // this API is experimental and may change in the future
 
-const addedByInboxId =await group.addedByInboxId();
+const addedByInboxId = await group.addedByInboxId();
 ```
 
 </TabItem>
@@ -1420,7 +1434,9 @@ try await contact.allowInboxes(inboxIDs: [inboxID])
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// note that this can only be done with the JS SDK (@xmtp/xmtp-js)
+
+await client.contacts.allow([walletAddress]);
 ```
 
 </TabItem>
@@ -1465,7 +1481,12 @@ try await contact.denyInboxes(inboxIds: [inboxID])
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// note that this can only be done with the JS SDK (@xmtp/xmtp-js)
+
+// allow
+await client.contacts.allowInboxes([inboxID]);
+// deny
+await client.contacts.denyInboxes([inboxID]);
 ```
 
 </TabItem>
@@ -1506,7 +1527,12 @@ Code sample coming soon
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// note that this can only be done with the JS SDK (@xmtp/xmtp-js)
+
+// allow
+await client.contacts.allowGroups([groupId]);
+// deny
+await client.contacts.denyGroups([groupId]);
 ```
 
 </TabItem>
@@ -1521,11 +1547,10 @@ Enable a user to explicitly allow or deny contact from an inbox ID.
 
 ```jsx
 // Allow
-await client.contacts.allowInboxes([client.inboxId])
+await client.contacts.allowInboxes([client.inboxId]);
 
 // Deny
-await client.contacts.denyInboxes([client.inboxId])
-
+await client.contacts.denyInboxes([client.inboxId]);
 ```
 
 </TabItem>
@@ -1593,7 +1618,12 @@ await contact.isGroupAllowed(groupId: groupID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// note that this can only be done with the JS SDK (@xmtp/xmtp-js)
+
+// is group allowed?
+await client.contacts.isGroupAllowed(groupId);
+// is group denied?
+await client.contacts.isGroupDenied(groupId);
 ```
 
 </TabItem>
@@ -1607,7 +1637,7 @@ Check if contact from an inbox ID is allowed or denied for a user.
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-await client.contacts.isInboxAllowed(client.inboxId)
+await client.contacts.isInboxAllowed(client.inboxId);
 ```
 
 </TabItem>
@@ -1628,7 +1658,12 @@ await contact.isInboxAllowed(inboxId: client.inboxID)
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// note that this can only be done with the JS SDK (@xmtp/xmtp-js)
+
+// is inbox allowed?
+await client.contacts.isInboxAllowed(inboxId);
+// is inbox denied?
+await client.contacts.isInboxDenied(inboxId);
 ```
 
 </TabItem>
@@ -1644,7 +1679,7 @@ Group chats can have metadata, like names and images. Metadata can help users mo
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-const groupName =await group.groupName();
+const groupName = await group.groupName();
 ```
 
 </TabItem>
@@ -1714,7 +1749,7 @@ await group.updateName("New Group Name");
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-const groupName = await group.imageUrlSquare()
+const groupName = await group.imageUrlSquare();
 ```
 
 </TabItem>
@@ -1735,7 +1770,9 @@ try group.groupImageUrlSquare()
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+const groupImageUrl = group.imageUrl;
 ```
 
 </TabItem>
@@ -1747,7 +1784,7 @@ Code sample coming soon
 <TabItem value="rn" label="React Native" attributes={{className: "rn_tab"}}>
 
 ```jsx
-await group.updateImageUrlSquare("ImageURL")
+await group.updateImageUrlSquare("ImageURL");
 ```
 
 </TabItem>
@@ -1768,7 +1805,9 @@ try await group.updateGroupImageUrlSquare(imageUrlSquare: "newurl.com")
 <TabItem value="node" label="Node"  attributes={{className: "node_tab"}}>
 
 ```tsx
-Code sample coming soon
+// this API is experimental and may change in the future
+
+await group.updateImageUrl("newurl.com");
 ```
 
 </TabItem>
