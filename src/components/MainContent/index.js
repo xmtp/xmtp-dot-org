@@ -295,7 +295,7 @@ export const MainContent = ({ styles }) => {
               built with XMTP.
             </p>
             <Link
-              to="/docs/concepts/interoperable-inbox"
+              to="https://docs.xmtp.org/protocol/portable-inbox"
               className="bg-white rounded-lg w-52 h-12 text-black font-bold text-base cursor-pointer border-0 flex justify-center items-center hover:no-underline hover:text-black">
               Learn more
             </Link>

@@ -92,18 +92,6 @@ const config = {
     tailwindPlugin,
     // @ts-ignore
     webpackPlugin,
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "community",
-        path: "community",
-        routeBasePath: "/",
-        sidebarPath: require.resolve("./sidebars/sidebars-community.js"),
-        editUrl: "https://github.com/xmtp/xmtp-dot-org/tree/main",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
   ],
 
   themeConfig:
@@ -124,10 +112,9 @@ const config = {
         },
         items: [
           {
-            to: "docs/introduction",
-            position: "right",
-            label: "Documentation",
-            activeBaseRegex: `/`,
+            href: 'https://ephemerahq.com/',
+            position: 'right',
+            label: 'Documentation',
           },
           {
             type: "dropdown",
@@ -222,23 +209,22 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Calendar</div>`,
               },
               {
-                to: "/docs/contribute",
+                to: "/docs/community/contribute",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/heart-icon.svg" alt="Heart icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>`,
               },
               {
-                to: "code-of-conduct",
+                to: "/docs/community/code-of-conduct",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>`,
               },
-
             ],
           },
           {
             type: "html",
             position: "right",
             value:
-              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
+              '<button type="button" onClick="window.open(`https://app.converse.xyz/conversation`, `_blank`);" class="navbar__chatbutton"><strong>Try Converse</strong></button>',
           },
           {
             href: "https://github.com/xmtp",
@@ -282,11 +268,11 @@ const config = {
               },
               {
                 label: "Contribute",
-                to: "/docs/contribute",
+                to: "/docs/community/contribute",
               },
               {
                 label: "Code of conduct",
-                to: "code-of-conduct",
+                to: "/docs/community/code-of-conduct",
               },
             ],
           },
@@ -295,7 +281,7 @@ const config = {
             items: [
               {
                 label: "FAQ",
-                to: "/docs/faq",
+                to: "https://docs.xmtp.org/get-started/faq",
               },
               {
                 label: "Brand assets",
