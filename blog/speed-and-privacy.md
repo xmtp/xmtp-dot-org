@@ -25,7 +25,7 @@ This might initially seem confusing and inefficient. The operation is costly and
 
 XMTP utilizes what's known as an ["invite topic"](https://docs.xmtp.org/protocol/v2/architectural-overview#invite-topic-v2) to initiate conversations between participants, and a "conversation topic" for storing the ongoing exchange of messages. Importantly, XMTP avoids any linkage between the messages in the invite topic and those in the conversation topic. Linking these topics would risk de-anonymizing the conversations, something the protocol avoids to protect user privacy. As a result, the sorting and organizing of conversations happens on the client side, after decrypting the conversation topic. This ensures no sensitive information is processed or stored on the backend.
 
-To counter the initial performance impact, apps built with XMTP should **[adopt a local-first cache architecture](/docs/build/local-first)**. This approach significantly speeds up subsequent app loads, turning the initial delay into a one-time occurrence and enhancing the overall user experience.
+To counter the initial performance impact, apps built with XMTP should **[adopt a local-first cache architecture](https://docs.xmtp.org/perf-ux/local-first)**. This approach significantly speeds up subsequent app loads, turning the initial delay into a one-time occurrence and enhancing the overall user experience.
 
 While the first load may take a bit longer, this tradeoff highlights XMTP’s commitment to preserving privacy. The system is designed so that XMTP doesn't know who you're communicating with or when.
 

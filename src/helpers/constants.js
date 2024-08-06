@@ -2,7 +2,7 @@ export const HEADER_DATA = [
   {
     title: "Try messaging with XMTP",
     subtitle: "Use an app built with XMTP to start learning how to build one",
-    url: "/docs/introduction#try-messaging-with-xmtp",
+    url: "https://docs.xmtp.org/#try-messaging-with-xmtp",
     icon: "x-new.svg",
   },
   {
@@ -14,7 +14,7 @@ export const HEADER_DATA = [
   {
     title: "Start building with XMTP client SDKs",
     subtitle: "Build web3 messaging apps in React, JS, Kotlin, & Swift",
-    url: "/docs/introduction#xmtp-sdks-and-example-apps",
+    url: "https://docs.xmtp.org/#find-your-xmtp-client-sdk",
     icon: "quickstart-icon.svg",
   },
 ];

@@ -70,7 +70,7 @@ We've organized XMTP around various use cases in Finance, Commerce, Marketing, A
 Our tutorials are technical deep-dives that feature integration partners, highlight use cases, and educate on specific concepts. They are code-heavy, designed for rapid deployment, and perfect for developers looking to experiment and showcase possibilities.
 
 - [Chat bots 🤖](https://docs.xmtp.org/perf-ux/identity-resolution)
-- [CLI ✍🏻](/docs/tutorials/cli)
+- [CLI ✍🏻](https://docs.xmtp.org/get-started/examples#xmtp-node-js-tools)
 - [Identity resolution 🔑](https://docs.xmtp.org/perf-ux/identity-resolution)
 
 ## **Language Simplification 🗣**

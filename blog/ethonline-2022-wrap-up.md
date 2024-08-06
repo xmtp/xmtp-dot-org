@@ -87,7 +87,7 @@ These are just a few of the submissions that utilized XMTP in their ETHOnline sh
 
 Are you building something amazing with XMTP? [We’d love to know about it](https://x.com/xmtp_).
 
-Want to learn about how to add secure web3 messaging to your project? Check out [Start building with XMTP](/start-building).
+Want to learn about how to add secure web3 messaging to your project? Check out the [XMTP docs](https://docs.xmtp.org).
 
 <br/>
 <FeedbackWidget />

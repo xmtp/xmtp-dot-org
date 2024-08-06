@@ -10,7 +10,7 @@ const BuiltWithXmtp = () => {
       <div className="container text-left py-0 px-4 m-auto max-w-screen-max">
         <Link to="https://docs.xmtp.org/groups/build-group-chat">
           <div className="rounded-full border border-blue-300 bg-blue-50 text-l font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-3 lg:mb-4 w-fit">
-            Groups with MLS in production »
+            Groups with MLS in production ↗
           </div>
         </Link>
       </div>
@@ -34,14 +34,15 @@ const BuiltWithXmtp = () => {
           <div className="mt-4 max-w-2xl md:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
               <a
-                href="/docs/introduction"
+                href="https://docs.xmtp.org/"
                 className="btn-principal bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0 no-underline"
-                rel="noreferrer">
+                rel="noreferrer"
+                target="_blank">
                 <img
                   src="/img/xmtp-sm-icon.png"
                   className="w-5 h-5 mr-2.5"
                   alt="XMTP icon"></img>
-                Build with XMTP
+                Build with XMTP ↗
               </a>
             </div>
           </div>
