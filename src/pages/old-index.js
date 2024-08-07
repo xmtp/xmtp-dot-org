@@ -191,7 +191,7 @@ function HomepageLogos() {
               width="132"
               height="40"></img>
           </a>
-          <a href="/docs/tutorials/identity-resolution">
+          <a href="https://docs.xmtp.org/perf-ux/identity-resolution">
             <img
               class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               src="/img/logo-ens.svg"
@@ -199,7 +199,7 @@ function HomepageLogos() {
               width="109"
               height="42"></img>
           </a>
-          <a href="/docs/tutorials/identity-resolution">
+          <a href="https://docs.xmtp.org/perf-ux/identity-resolution">
             <img
               class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               src="/img/logo-unstoppabledomains.svg"
@@ -256,7 +256,7 @@ function HomepageLogos() {
               width="132"
               height="40"></img>
           </a>
-          <a href="/docs/tutorials/identity-resolution">
+          <a href="https://docs.xmtp.org/perf-ux/identity-resolution">
             <img
               class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               src="/img/logo-ens-dark.svg"
@@ -264,7 +264,7 @@ function HomepageLogos() {
               width="109"
               height="42"></img>
           </a>
-          <a href="/docs/tutorials/identity-resolution">
+          <a href="https://docs.xmtp.org/perf-ux/identity-resolution">
             <img
               class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               src="/img/logo-unstoppabledomains-dark.svg"

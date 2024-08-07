@@ -14,7 +14,7 @@ tags:
 
 import FeedbackWidget from '/src/components/FeedbackWidget'
 
-This holiday season, we have an early gift for all the web3 developers out there. Our mobile SDKs are now available in [Developer Preview](/docs/introduction#xmtp-sdks-and-example-apps) 🧑‍💻
+This holiday season, we have an early gift for all the web3 developers out there. Our mobile SDKs are now available in [Developer Preview](https://docs.xmtp.org/#find-your-xmtp-client-sdk) 🧑‍💻
 
 ![mobile sdk developer preview card](./media/blogGraphic.png)
 

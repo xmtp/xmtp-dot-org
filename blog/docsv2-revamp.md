@@ -39,7 +39,7 @@ We’ve abstracted the core concepts to help you build with XMTP more swiftly. T
 3. [Conversations](https://xmtp.org/docs/build/conversations)
 4. [Messages](https://xmtp.org/docs/build/messages)
 5. [Streams](https://xmtp.org/docs/build/streams)
-6. [Attachments](https://xmtp.org/docs/build/messages/remote-attachment)
+6. [Attachments](https://docs.xmtp.org/content-types/remote-attachment)
 7. [Groups](https://xmtp.org/docs/build/group-chats)
 8. [Notifications](https://xmtp.org/docs/build/notifications)
 
@@ -69,9 +69,9 @@ We've organized XMTP around various use cases in Finance, Commerce, Marketing, A
 
 Our tutorials are technical deep-dives that feature integration partners, highlight use cases, and educate on specific concepts. They are code-heavy, designed for rapid deployment, and perfect for developers looking to experiment and showcase possibilities.
 
-- [Chat bots 🤖](/docs/tutorials/identity-resolution)
-- [CLI ✍🏻](/docs/tutorials/cli)
-- [Identity resolution 🔑](/docs/tutorials/identity-resolution)
+- [Chat bots 🤖](https://docs.xmtp.org/perf-ux/identity-resolution)
+- [CLI ✍🏻](https://docs.xmtp.org/get-started/examples#xmtp-node-js-tools)
+- [Identity resolution 🔑](https://docs.xmtp.org/perf-ux/identity-resolution)
 
 ## **Language Simplification 🗣**
 

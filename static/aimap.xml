@@ -35,7 +35,7 @@
 <priority>0.5</priority>
 </url>
 <url>
-<loc>https://xmtp.org/docs/build/messages/remote-attachment</loc>
+<loc>https://docs.xmtp.org/content-types/remote-attachment</loc>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
