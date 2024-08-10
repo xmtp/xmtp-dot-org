@@ -67,9 +67,9 @@ You can fork the XMTP example app and Notifi experience repo shown in the exampl
 
 **Get started building with XMTP!**
 
-[Start building with XMTP](/start-building)
+[Start building with XMTP](https://docs.xmtp.org)
 
-[Explore SDKs and tools that help you build with XMTP](/docs/introduction#xmtp-sdks-and-example-apps)
+[Explore SDKs and tools that help you build with XMTP](https://docs.xmtp.org/#find-your-xmtp-client-sdk)
 
 **Learn more about Notifi:**
 

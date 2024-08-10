@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # How to demo
 
-When it comes to demos and pitch decks, many builders have confidence in their creations, but struggle with presenting them effectively. The key to a successful demo is simply being yourself, without relying on external resources. Here are some tips to help you present your project, idea, or milestone in a clear and engaging way:
+When it comes to demos and pitch decks, many builders have confidence in their creations but struggle with presenting them effectively. The key to a successful demo is simply being yourself, without relying on external resources. Here are some tips to help you present your project, idea, or milestone in a clear and engaging way:
 
 **Be yourself**. The best person to talk about your project is the person who built it. Don’t outsource the narration or presentation, and avoid using fancy graphics or text. Just speak from the heart about your project.
 

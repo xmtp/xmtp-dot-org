@@ -36,7 +36,7 @@ const NotifiCaseStudy = () => {
           <h1 class="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">Notifi uses XMTP to deliver real-time alerts on Coinbase Wallet</h1>
           <p class="mt-6 text-lg leading-8">Notifi’s integration with XMTP enables DeFi projects like GMX to deliver real-time notifications and critical alerts for traders directly in Coinbase Wallet.</p>
           <div class="mt-6 flex items-center gap-x-6">
-            <a href="/docs/build/subscribe" class="rounded-md bg-red-500 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pointer hover:no-underline">Get started</a>
+            <a href="https://docs.xmtp.org/consent/subscribe" class="rounded-md bg-red-500 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pointer hover:no-underline">Get started</a>
           </div>
           <div class="py-12">
             <div class="mx-auto max-w-7xl">
