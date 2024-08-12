@@ -12,7 +12,11 @@
       "tags": "community",
       "selectors_key": "community"
     },
-    "https://xmtp.org"
+    {
+      "url": "https://xmtp.org",
+      "tags": "",
+      "selectors_key": ""
+    }
   ],
   "stop_urls": [],
 
@@ -44,7 +48,8 @@
       "lvl5": "article h5, article td:first-child",
       "lvl6": "article h6",
       "text": "article p, article li, article td:last-child"
-    },
+    }
+  },
 
   "strip_chars": " .,;:#",
   "custom_settings": {
