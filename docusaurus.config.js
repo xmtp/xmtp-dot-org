@@ -237,12 +237,6 @@ const config = {
             position: "right",
             className: "header-github-link",
           },
-          {
-            type: "html",
-            position: "right",
-            value:
-              '<button type="button" class="navbar__chatbutton ask_gpt"><strong>Ask AI</strong></button>',
-          },
         ],
       },
       footer: {
