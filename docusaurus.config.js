@@ -92,18 +92,6 @@ const config = {
     tailwindPlugin,
     // @ts-ignore
     webpackPlugin,
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "community",
-        path: "community",
-        routeBasePath: "/",
-        sidebarPath: require.resolve("./sidebars/sidebars-community.js"),
-        editUrl: "https://github.com/xmtp/xmtp-dot-org/tree/main",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
   ],
 
   themeConfig:
@@ -124,16 +112,20 @@ const config = {
         },
         items: [
           {
-            to: "docs/introduction",
-            position: "right",
-            label: "Documentation",
-            activeBaseRegex: `/`,
+            to: 'https://docs.xmtp.org/',
+            position: 'right',
+            label: 'Documentation ↗',
           },
           {
             type: "dropdown",
             position: "right",
             label: "Use cases",
             items: [
+              {
+                href: "https://github.com/xmtp/awesome-xmtp/",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="XMTP icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Awesome XMTP ↗</div>`,
+              },
               {
                 to: "/docs/use-cases/messaging",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/messaging-icon.svg" alt="Messaging icon" /></div>
@@ -145,8 +137,13 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Web3 social</div></div>`,
               },
               {
-                to: "notifi-case-study",
+                to: "/docs/use-cases/marketing",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Marketing icon" /></div>
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
+              },
+              {
+                to: "notifi-case-study",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/mic-icon.svg" alt="Broadcast icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Broadcast</div></div>`,
               },
               {
@@ -181,12 +178,12 @@ const config = {
               },
               {
                 to: "/docs/use-cases/groups",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/groups.svg" alt="Finance icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/social-icon.svg" alt="Groups icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Groups</div></div>`,
               },
               {
                 to: "/docs/use-cases/frames",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/frames.svg" alt="Finance icon" /></div>
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/frames.svg" alt="Frames icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Frames</div></div>`,
               },
             ],
@@ -199,58 +196,46 @@ const config = {
               {
                 href: "https://community.xmtp.org/",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discourse-icon.svg" alt="Discourse icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Community forum</div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Community forum ↗</div>`,
               },
               {
                 href: "https://discord.com/invite/xmtp",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discord-nav-icon.svg" alt="Discord icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support & chat</div>`,
-              },
-              {
-                href: "https://github.com/xmtp/awesome-xmtp/",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="XMTP icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Awesome XMTP</div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support & chat ↗</div>`,
               },
               {
                 href: "https://paragraph.xyz/@xmtp_community/",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Megaphone icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Newsletter</div></div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Blog ↗</div></div>`,
               },
               {
                 href: "https://calendar.google.com/calendar/u/0?cid=aGlAeG10cC5vcmc",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/calendar-icon.svg" alt="Calendar icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Calendar</div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Events ↗</div>`,
               },
               {
-                to: "/docs/contribute",
+                to: "/docs/community/contribute",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/heart-icon.svg" alt="Heart icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>`,
               },
               {
-                to: "code-of-conduct",
+                to: "/docs/community/code-of-conduct",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>`,
               },
-
             ],
           },
           {
             type: "html",
             position: "right",
             value:
-              '<button type="button" onClick="window.open(`https://xmtp.chat/`, `_blank`);" class="navbar__chatbutton"><strong>Try demo</strong></button>',
+              '<button type="button" onClick="window.open(`https://app.converse.xyz/conversation`, `_blank`);" class="navbar__chatbutton"><strong>Try Converse</strong></button>',
           },
           {
             href: "https://github.com/xmtp",
             title: "Go to the XMTP GitHub repo",
             position: "right",
             className: "header-github-link",
-          },
-          {
-            type: "html",
-            position: "right",
-            value:
-              '<button type="button" class="navbar__chatbutton ask_gpt"><strong>Ask AI</strong></button>',
           },
         ],
       },
@@ -261,32 +246,32 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Community forum",
-                href: "https://community.xmtp.org/",
+                label: "Community forum ↗",
+                to: "https://community.xmtp.org/",
               },
               {
-                label: "Dev support & chat",
-                href: "https://discord.gg/xmtp",
+                label: "Dev support & chat ↗",
+                to: "https://discord.gg/xmtp",
               },
               {
-                label: "Awesome XMTP",
-                href: "https://github.com/xmtp/awesome-xmtp/",
+                label: "Awesome XMTP ↗",
+                to: "https://github.com/xmtp/awesome-xmtp/",
               },
               {
-                label: "Newsletter",
-                href: "https://paragraph.xyz/@xmtp_community/",
+                label: "XMTP Community blog ↗",
+                to: "https://paragraph.xyz/@xmtp_community/",
               },
               {
-                label: "Calendar",
-                href: "https://calendar.google.com/calendar/u/0/r?cid=aGlAeG10cC5vcmc",
+                label: "XMTP Dev Call calendar ↗",
+                to: "https://calendar.google.com/calendar/u/0/r?cid=aGlAeG10cC5vcmc",
               },
               {
                 label: "Contribute",
-                to: "/docs/contribute",
+                to: "/docs/community/contribute",
               },
               {
                 label: "Code of conduct",
-                to: "code-of-conduct",
+                to: "/docs/community/code-of-conduct",
               },
             ],
           },
@@ -294,24 +279,24 @@ const config = {
             title: "Resources",
             items: [
               {
-                label: "FAQ",
-                to: "/docs/faq",
+                label: "FAQ ↗",
+                to: "https://docs.xmtp.org/get-started/faq",
               },
               {
-                label: "Brand assets",
-                href: "https://github.com/xmtp/brand",
+                label: "Brand assets ↗",
+                to: "https://github.com/xmtp/brand",
               },
               {
-                label: "Status page",
-                href: "https://status.xmtp.com/",
+                label: "Status page ↗",
+                to: "https://status.xmtp.com/",
               },
               {
-                label: "Partnerships with Ephemera",
-                href: "https://forms.gle/UMCFjB8ukiMxBxnK6",
+                label: "Partnerships with Ephemera ↗",
+                to: "https://forms.gle/UMCFjB8ukiMxBxnK6",
               },
               {
-                label: "Careers at Ephemera",
-                href: "https://paragraph.xyz/@ephemera/careers",
+                label: "Careers at Ephemera ↗",
+                to: "https://paragraph.xyz/@ephemera/careers",
               },
             ],
           },
@@ -319,12 +304,12 @@ const config = {
             title: "Socials",
             items: [
               {
-                label: "Twitter / 𝕏",
-                href: "https://x.com/xmtp_",
+                label: "Twitter / 𝕏 ↗",
+                to: "https://x.com/xmtp_",
               },
               {
-                label: "Farcaster",
-                href: "https://warpcast.com/~/channel/xmtp",
+                label: "Farcaster ↗",
+                to: "https://warpcast.com/~/channel/xmtp",
               },
             ],
           },
@@ -340,8 +325,8 @@ const config = {
                 href: "terms",
               },
               {
-                label: "CC BY 4.0",
-                href: "https://creativecommons.org/licenses/by/4.0/",
+                label: "CC BY 4.0 ↗",
+                to: "https://creativecommons.org/licenses/by/4.0/",
               },
             ],
           },
