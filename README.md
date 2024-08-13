@@ -4,7 +4,7 @@ This is the repo for the [`xmtp.org`](https://xmtp.org) website, an XMTP communi
 
 This repo is open and contributions from the public are welcome! 🫶
 
-When contributing to `xmtp.org`, please follow the XMTP community [code of conduct]() to help create a safe and positive experience for all.
+When contributing to `xmtp.org`, please follow the XMTP community [code of conduct](https://github.com/xmtp/xmtp-dot-org/blob/main/docs/community/code-of-conduct.md) to help create a safe and positive experience for all.
 
 ## Ways to contribute
 
