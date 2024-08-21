@@ -22,13 +22,7 @@ const BuiltWithXmtp = () => {
               The open protocol for web3 messaging
             </h1>
             <p className="text-lg leading-7 text-gray-600">
-              <strong className="pr-1">
-                Over <a href="https://dune.com/xmtp_team/dash" target="_blank" rel="noreferrer">
-                  2 million
-                </a>
-              </strong>
-              web3 identities rely on apps built with XMTP for secure, private,
-              and portable messaging
+              Over 2 million web3 identities rely on apps built with XMTP for secure, private, and portable messaging
             </p>
           </div>
           <div className="mt-4 max-w-2xl md:mx-0 lg:max-w-none">
