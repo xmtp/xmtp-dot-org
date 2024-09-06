@@ -11,7 +11,7 @@ There are many ways to participate in the XMTP community, whether you are buildi
 
 :::caution Info
 
-XMTP is not accepting applications for grants at this time. Make sure to [follow XMTP on Twitter](https://x.com/xmtp_) for updates on when grants will reopen.
+XMTP is not accepting applications for grants at this time. Make sure to [follow XMTP on X (Twitter)](https://x.com/xmtp_) for updates on when grants will reopen.
 
 :::
 
