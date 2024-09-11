@@ -191,14 +191,16 @@
 }
 
 .builder-bg {
-  background-image: urL("/img/bwx-bg-light.png");
-  background-size: cover;
+  background-image: url("/img/bwx-bg-light.png");
+  background-size: auto 100%;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 [data-theme="dark"] .builder-bg {
-  background-image: urL("/img/bwx-bg-dark.png");
-  background-size: contain;
+  background-image: url("/img/bwx-bg-dark.png");
+  background-size: auto 100%;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
