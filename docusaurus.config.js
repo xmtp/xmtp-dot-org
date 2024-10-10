@@ -199,8 +199,8 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Community forum ↗</div>`,
               },
               {
-                href: "https://discord.com/invite/xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discord-nav-icon.svg" alt="Discord icon" /></div>
+                href: "https://converse.xyz/group-invite/a0XKzl9oVpWNXcuYDZLMf",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/chat.svg" alt="Chat icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support & chat ↗</div>`,
               },
               {
@@ -251,7 +251,7 @@ const config = {
               },
               {
                 label: "Dev support & chat ↗",
-                to: "https://discord.gg/xmtp",
+                to: "https://converse.xyz/group-invite/a0XKzl9oVpWNXcuYDZLMf",
               },
               {
                 label: "Awesome XMTP ↗",

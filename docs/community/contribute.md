@@ -25,11 +25,11 @@ Have a question? Want to discuss an idea or protocol improvement? Start or join 
 
 [Join the discussion](https://community.xmtp.org/)
 
-## Discord
+## XMTP Devs 💪 group chat
 
-Chat with the XMTP community. Say 👋, join a dev hangout, or get support.
+Get dev support and chat with the XMTP dev community.
 
-[Chat with other builders](https://discord.gg/xmtp)
+[Chat with other builders](https://converse.xyz/group-invite/a0XKzl9oVpWNXcuYDZLMf)
 
 ## 𝕏
 
