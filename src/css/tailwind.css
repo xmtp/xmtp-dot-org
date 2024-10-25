@@ -1689,3 +1689,9 @@ summary::before {
 .apparelbot .prism-code {
   background-color: #0233d2;
 }
+
+dd {
+    display: block;
+    margin-inline-start: 0px;
+    unicode-bidi: isolate;
+}
