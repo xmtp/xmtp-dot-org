@@ -87,7 +87,7 @@ const BuiltWithXmtp = () => {
                 <p class="mt-6 text-lg leading-8 text-gray-600">XMTP provides End-to-End Encryption with <a href="https://www.ietf.org/blog/mls-secure-and-usable-end-to-end-encryption/" target="_blank" className="underline underline-offset-2"><strong>MLS: An IETF Standard</strong></a></p>
                 <p class="mt-2 text-base leading-8 text-gray-900">XMTP leverages Messaging Layer Security (MLS), a cryptographic protocol developed by the IETF, to provide best-in-class security for decentralized messaging.</p>
                 <p class="mt-2 text-base leading-8 text-gray-900">Messages sent with XMTP are unspoorfable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p>
-                <p class="mt-2 text-base leading-8 text-gray-900"><a href="/docs/concepts/invitation-and-message-encryption" className="underline underline-offset-2">Read more about security and privacy guarantees →</a></p>
+                <p class="mt-2 text-base leading-8 text-gray-900"><a href="/docs/concepts/invitation-and-message-encryption" className="font-semibold underline underline-offset-2">Read more about security and privacy guarantees →</a></p>
               </div>
             </div>
             <div class="sm:px-6 lg:px-0">
@@ -146,7 +146,7 @@ const BuiltWithXmtp = () => {
                   </div>
                 </dl>
                 <p class="mt-6 text-base leading-8 text-gray-600">This flexibility allows users to authenticate and communicate using any identity they control, without being tied to a specific identity provider or platform.</p>
-                <p class="mt-2 text-base leading-8 text-gray-900"><a href="/docs/concepts/v3/identity" className="underline underline-offset-2">Read more about XMTP’s Universal Identity Support →</a></p>
+                <p class="mt-2 text-base leading-8 text-gray-900"><a href="/docs/concepts/v3/identity" className="font-semibold underline underline-offset-2">Read more about XMTP’s Universal Identity Support →</a></p>
               </div>
             </div>
           </div>
@@ -181,7 +181,7 @@ const BuiltWithXmtp = () => {
                   </div>
                 </dl>
                 <p class="mt-6 text-base leading-8 text-gray-600">This flexibility allows users to authenticate and communicate using any identity they control, without being tied to a specific identity provider or platform.</p>
-                <p class="mt-2 text-base leading-8 text-gray-900"><a href="https://community.xmtp.org/t/archived-decentralizing-xmtp-a-minimum-viable-proposal/510" className="underline underline-offset-2">Read more about XMTP’s Decentralization efforts →</a></p>
+                <p class="mt-2 text-base leading-8 text-gray-900"><a href="https://community.xmtp.org/t/archived-decentralizing-xmtp-a-minimum-viable-proposal/510" className="underline underline-offset-2 font-semibold">Read more about XMTP’s Decentralization efforts →</a></p>
               </div>
             </div>
             <div class="sm:px-6 lg:px-0">
