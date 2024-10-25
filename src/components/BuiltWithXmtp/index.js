@@ -83,17 +83,18 @@ const BuiltWithXmtp = () => {
             <div class="px-6 lg:px-0 lg:pr-4 lg:pt-4">
               <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                 <h2 class="text-base font-semibold leading-7 text-red-500">Secure</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Best in Class Security</p>
-                <p class="mt-6 text-lg leading-8 text-gray-600">XMTP provides End-to-End Encryption with <a href="https://www.ietf.org/blog/mls-secure-and-usable-end-to-end-encryption/" target="_blank" className="underline underline-offset-2"><strong>MLS: An IETF Standard</strong></a></p>
-                <p class="mt-2 text-base leading-8 text-gray-900">XMTP leverages Messaging Layer Security (MLS), a cryptographic protocol developed by the IETF, to provide best-in-class security for decentralized messaging.</p>
-                <p class="mt-2 text-base leading-8 text-gray-900">Messages sent with XMTP are unspoorfable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p>
-                <p class="mt-2 text-base leading-8 text-gray-900"><a href="/docs/concepts/invitation-and-message-encryption" className="font-semibold underline underline-offset-2">Read more about security and privacy guarantees →</a></p>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-4xl">Best in Class Security</p>
+                <p class="mt-2 text-lg leading-8">XMTP provides End-to-End Encryption with <a href="https://www.ietf.org/blog/mls-secure-and-usable-end-to-end-encryption/" target="_blank" className="underline underline-offset-2"><strong>MLS: An IETF Standard</strong></a></p>
+                <p class="mt-2 text-base leading-8">XMTP leverages Messaging Layer Security (MLS), a cryptographic protocol developed by the IETF, to provide best-in-class security for decentralized messaging.</p>
+                <p class="mt-2 text-base leading-8">Messages sent with XMTP are unspoorfable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p>
+                <p class="mt-2 text-base leading-8"><a href="/docs/concepts/invitation-and-message-encryption" className="font-semibold underline underline-offset-2">Read more about security and privacy guarantees →</a></p>
               </div>
             </div>
             <div class="sm:px-6 lg:px-0">
                 <div class="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
                 <img
-                  src="/img/security.png">
+                  src="/img/security.png"
+                  className="rounded-3xl">
                 </img>
               </div>
             </div>
@@ -108,19 +109,20 @@ const BuiltWithXmtp = () => {
             <div class="sm:px-6 lg:px-0">
               <div class="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
                 <img
-                  src="/img/identities.png">
+                  src="/img/identities.png"
+                  className="rounded-3xl">
                 </img>
               </div>
             </div>
             <div class="px-6 lg:px-0 lg:pl-4 lg:pt-4">
               <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                 <h2 class="text-base font-semibold leading-7 text-red-500">Identity</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Universal Identity Support</p>
-                <p class="mt-6 text-lg leading-8 text-gray-600">XMTP supports the broadest range of identity types for registration.</p>
-                <p class="mt-6 text-base leading-8 text-gray-600">XMTP is identity-agnostic, seamlessly integrating with a wide variety of identity systems, including:</p>
-                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-4xl">Universal Identity Support</p>
+                <p class="mt-2 text-lg leading-8">XMTP supports the broadest range of identity types for registration.</p>
+                <p class="mt-6 text-base leading-8">XMTP is identity-agnostic, seamlessly integrating with a wide variety of identity systems, including:</p>
+                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 lg:max-w-none">
                   <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
+                    <dt class="inline font-semibold">
                       <svg viewBox="0 0 24 24" fill="currentColor" className="absolute left-1 top-1 h-5 w-5 text-red-500">
                         <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z" clip-rule="evenodd" />
                         <path d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
@@ -129,7 +131,7 @@ const BuiltWithXmtp = () => {
                     <dd class="inline">Legacy systems with <strong>Federated Identities</strong></dd>
                   </div>
                   <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
+                    <dt class="inline font-semibold">
                       <svg viewBox="0 0 24 24" fill="currentColor" className="absolute left-1 top-1 h-5 w-5 text-red-500">
                         <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" />
                       </svg>
@@ -137,7 +139,7 @@ const BuiltWithXmtp = () => {
                     <dd class="inline"><strong>Cryptographic wallets</strong> like Ethereum, Decentralized Identifiers (DIDs), and ENS.</dd>
                   </div>
                   <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
+                    <dt class="inline font-semibold">
                       <svg viewBox="0 0 24 24" fill="currentColor" className="absolute left-1 top-1 h-5 w-5 text-red-500">
                         <path fill-rule="evenodd" d="M12 3.75a6.715 6.715 0 0 0-3.722 1.118.75.75 0 1 1-.828-1.25 8.25 8.25 0 0 1 12.8 6.883c0 3.014-.574 5.897-1.62 8.543a.75.75 0 0 1-1.395-.551A21.69 21.69 0 0 0 18.75 10.5 6.75 6.75 0 0 0 12 3.75ZM6.157 5.739a.75.75 0 0 1 .21 1.04A6.715 6.715 0 0 0 5.25 10.5c0 1.613-.463 3.12-1.265 4.393a.75.75 0 0 1-1.27-.8A6.715 6.715 0 0 0 3.75 10.5c0-1.68.503-3.246 1.367-4.55a.75.75 0 0 1 1.04-.211ZM12 7.5a3 3 0 0 0-3 3c0 3.1-1.176 5.927-3.105 8.056a.75.75 0 1 1-1.112-1.008A10.459 10.459 0 0 0 7.5 10.5a4.5 4.5 0 1 1 9 0c0 .547-.022 1.09-.067 1.626a.75.75 0 0 1-1.495-.123c.041-.495.062-.996.062-1.503a3 3 0 0 0-3-3Zm0 2.25a.75.75 0 0 1 .75.75c0 3.908-1.424 7.485-3.781 10.238a.75.75 0 0 1-1.14-.975A14.19 14.19 0 0 0 11.25 10.5a.75.75 0 0 1 .75-.75Zm3.239 5.183a.75.75 0 0 1 .515.927 19.417 19.417 0 0 1-2.585 5.544.75.75 0 0 1-1.243-.84 17.915 17.915 0 0 0 2.386-5.116.75.75 0 0 1 .927-.515Z" clip-rule="evenodd" />
                       </svg>
@@ -145,8 +147,8 @@ const BuiltWithXmtp = () => {
                     <dd class="inline"><strong>Modern authentication</strong> standards like passkeys and Biometric Identities.</dd>
                   </div>
                 </dl>
-                <p class="mt-6 text-base leading-8 text-gray-600">This flexibility allows users to authenticate and communicate using any identity they control, without being tied to a specific identity provider or platform.</p>
-                <p class="mt-2 text-base leading-8 text-gray-900"><a href="/docs/concepts/v3/identity" className="font-semibold underline underline-offset-2">Read more about XMTP’s Universal Identity Support →</a></p>
+                <p class="mt-6 text-base leading-8">This flexibility allows users to authenticate and communicate using any identity they control, without being tied to a specific identity provider or platform.</p>
+                <p class="mt-2 text-base leading-8"><a href="/docs/concepts/v3/identity" className="font-semibold underline underline-offset-2">Read more about XMTP’s Universal Identity Support →</a></p>
               </div>
             </div>
           </div>
@@ -159,12 +161,12 @@ const BuiltWithXmtp = () => {
             <div class="px-6 lg:px-0 lg:pr-4 lg:pt-4">
               <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                 <h2 class="text-base font-semibold leading-7 text-red-500">Decentralized</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">A global, decentralized distribution network</p>
-                <p class="mt-6 text-lg leading-8 text-gray-600">XMTP supports the broadest range of identity types for registration.</p>
-                <p class="mt-6 text-base leading-8 text-gray-600">XMTP is the largest wallet to wallet messaging network today, delivering a reliable, high-performance, end-to-end encrypted messaging service for users around the world.</p>
-                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-4xl">A global, decentralized distribution network</p>
+                <p class="mt-2 text-lg leading-8">XMTP supports the broadest range of identity types for registration.</p>
+                <p class="mt-6 text-base leading-8">XMTP is the largest wallet to wallet messaging network today, delivering a reliable, high-performance, end-to-end encrypted messaging service for users around the world.</p>
+                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 lg:max-w-none">
                   <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
+                    <dt class="inline font-semibold">
                       <svg viewBox="0 0 24 24" fill="currentColor" className="absolute left-1 top-1 h-5 w-5 text-red-500">
                         <path d="M16.881 4.345A23.112 23.112 0 0 1 8.25 6H7.5a5.25 5.25 0 0 0-.88 10.427 21.593 21.593 0 0 0 1.378 3.94c.464 1.004 1.674 1.32 2.582.796l.657-.379c.88-.508 1.165-1.593.772-2.468a17.116 17.116 0 0 1-.628-1.607c1.918.258 3.76.75 5.5 1.446A21.727 21.727 0 0 0 18 11.25c0-2.414-.393-4.735-1.119-6.905ZM18.26 3.74a23.22 23.22 0 0 1 1.24 7.51 23.22 23.22 0 0 1-1.41 7.992.75.75 0 1 0 1.409.516 24.555 24.555 0 0 0 1.415-6.43 2.992 2.992 0 0 0 .836-2.078c0-.807-.319-1.54-.836-2.078a24.65 24.65 0 0 0-1.415-6.43.75.75 0 1 0-1.409.516c.059.16.116.321.17.483Z" />
                       </svg>
@@ -172,7 +174,7 @@ const BuiltWithXmtp = () => {
                     <dd class="inline">Legacy systems with XMTP <strong>broadcast network</strong></dd>
                   </div>
                   <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
+                    <dt class="inline font-semibold">
                       <svg viewBox="0 0 24 24" fill="currentColor" className="absolute left-1 top-1 h-5 w-5 text-red-500">
                         <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
                       </svg>
@@ -180,14 +182,15 @@ const BuiltWithXmtp = () => {
                     <dd class="inline"><strong>XMTP appchain</strong> is an L3 blockchain securing all metadata that require strict ordering. Four smart contracts will manage this data</dd>
                   </div>
                 </dl>
-                <p class="mt-6 text-base leading-8 text-gray-600">This flexibility allows users to authenticate and communicate using any identity they control, without being tied to a specific identity provider or platform.</p>
-                <p class="mt-2 text-base leading-8 text-gray-900"><a href="https://community.xmtp.org/t/archived-decentralizing-xmtp-a-minimum-viable-proposal/510" className="underline underline-offset-2 font-semibold">Read more about XMTP’s Decentralization efforts →</a></p>
+                <p class="mt-6 text-base leading-8">This flexibility allows users to authenticate and communicate using any identity they control, without being tied to a specific identity provider or platform.</p>
+                <p class="mt-2 text-base leading-8"><a href="https://community.xmtp.org/t/archived-decentralizing-xmtp-a-minimum-viable-proposal/510" className="underline underline-offset-2 font-semibold">Read more about XMTP’s Decentralization efforts →</a></p>
               </div>
             </div>
             <div class="sm:px-6 lg:px-0">
                 <div class="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
                   <img
-                    src="/img/decentralized.png">
+                    src="/img/decentralized.png"
+                    className="rounded-3xl">
                   </img>
                 </div>
             </div>
@@ -199,7 +202,7 @@ const BuiltWithXmtp = () => {
       <div className="relative isolate overflow-hidden max-w-2xl px-6 bg-color mb-8">
         <div className=" absolute inset-0 -z-10 h-full w-full"></div>
         <h2>Explore the XMTP Ecosystem
-        <p class="mt-2 text-lg font-normal leading-8 text-gray-600">XMTP is trusted by thousands of developers across clients, tools, & dapps to power global communication.</p>
+        <p class="mt-2 text-lg font-normal leading-8">XMTP is trusted by thousands of developers across clients, tools, & dapps to power global communication.</p>
         </h2>
       </div>
 
