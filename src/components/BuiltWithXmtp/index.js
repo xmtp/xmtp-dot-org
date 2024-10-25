@@ -9,14 +9,14 @@ const BuiltWithXmtp = () => {
         <div className=" absolute inset-0 -z-10 h-full w-full builder-bg"></div>
         <div className="max-w-4xl">
           <div className="mx-auto md:mx-0">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-5xl mt-8">
               A secure, scalable, and decentralized communication protocol—<strong>for the next phase of the internet.</strong>
             </h1>
             <p className="text-lg leading-8 text-gray-600">
               XMTP is built from the ground up to provide developers with the necessary security, identity, & distribution to power global communication. 
             </p>
           </div>
-          <div className="mt-4 max-w-2xl md:mx-0 lg:max-w-none mb-16">
+          <div className="mt-6 max-w-2xl md:mx-0 lg:max-w-none mb-16">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-4 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
               <a
                 href="/docs/introduction"
@@ -82,7 +82,7 @@ const BuiltWithXmtp = () => {
           <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
             <div class="px-6 lg:px-0 lg:pr-4 lg:pt-4">
               <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-                <h2 class="text-base font-semibold leading-7 text-red-500">Secure</h2>
+                <h2 class="text-base font-semibold leading-7 text-red-500 mb-2">Secure</h2>
                 <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-4xl">Best in Class Security</p>
                 <p class="mt-2 text-lg leading-8">XMTP provides End-to-End Encryption with <a href="https://www.ietf.org/blog/mls-secure-and-usable-end-to-end-encryption/" target="_blank" className="underline underline-offset-2"><strong>MLS: An IETF Standard</strong></a></p>
                 <p class="mt-2 text-base leading-8">XMTP leverages Messaging Layer Security (MLS), a cryptographic protocol developed by the IETF, to provide best-in-class security for decentralized messaging.</p>
@@ -116,7 +116,7 @@ const BuiltWithXmtp = () => {
             </div>
             <div class="px-6 lg:px-0 lg:pl-4 lg:pt-4">
               <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-                <h2 class="text-base font-semibold leading-7 text-red-500">Identity</h2>
+                <h2 class="text-base font-semibold leading-7 text-red-500 mb-2">Identity</h2>
                 <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-4xl">Universal Identity Support</p>
                 <p class="mt-2 text-lg leading-8">XMTP supports the broadest range of identity types for registration.</p>
                 <p class="mt-6 text-base leading-8">XMTP is identity-agnostic, seamlessly integrating with a wide variety of identity systems, including:</p>
@@ -160,7 +160,7 @@ const BuiltWithXmtp = () => {
           <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
             <div class="px-6 lg:px-0 lg:pr-4 lg:pt-4">
               <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-                <h2 class="text-base font-semibold leading-7 text-red-500">Decentralized</h2>
+                <h2 class="text-base font-semibold leading-7 text-red-500 mb-2">Decentralized</h2>
                 <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-4xl">A global, decentralized distribution network</p>
                 <p class="mt-2 text-lg leading-8">XMTP supports the broadest range of identity types for registration.</p>
                 <p class="mt-6 text-base leading-8">XMTP is the largest wallet to wallet messaging network today, delivering a reliable, high-performance, end-to-end encrypted messaging service for users around the world.</p>
