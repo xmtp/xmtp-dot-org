@@ -10,7 +10,7 @@ const BuiltWithXmtp = () => {
         <div className="max-w-4xl">
           <div className="mx-auto md:mx-0">
             <h1 className="text-3xl font-bold tracking-tight sm:text-5xl mt-8">
-              A secure, scalable, and decentralized communication protocol—<strong>for the next phase of the internet.</strong>
+              A secure, scalable, and decentralized messaging protocol—<strong>for the next phase of the internet.</strong>
             </h1>
             <p className="text-lg leading-8 text-gray-600">
               XMTP is built from the ground up to provide developers with the necessary security, identity, & distribution to power global communication. 
@@ -33,8 +33,8 @@ const BuiltWithXmtp = () => {
           
           <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
             <p className="text-sm font-semibold text-gray-900 lg:text-left">
-                Trusted by 1,000s of developers and companies like:
-              </p>
+              Trusted by 1,000s of developers and companies like:
+            </p>
             <ul className="mt-2 flex max-w-xl flex-wrap gap-x-10 gap-y-2 lg:mx-0 lg:justify-start list-none pl-0 md:gap-x-12">
                   <li className="p-0 m-0">
                     <svg width="130" height="23" viewBox="0 0 130 23" fill="none" className="h-10">
