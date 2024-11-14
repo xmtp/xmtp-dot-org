@@ -43,7 +43,7 @@ const BuiltWithXmtp = () => {
               </div>
               <h1 class="mt-10 text-pretty text-3xl font-semibold tracking-tight text-white md:text-6xl">XMTP is the largest & most secure decentralized messaging network</h1>
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
-                <p class="mt-8 text-pretty text-lg font-normal text-gray-300 sm:text-lg/8">Bringing <a href="#" class="text-red-400 font-medium">Messaging Layer Security</a> to any app, any identity, and any messaging use case.</p>
+                <p class="mt-8 text-pretty text-lg font-normal text-gray-300 sm:text-lg/8">Bringing <a href="#" class="text-red-400 font-medium decoration-dotted">Messaging Layer Security</a> to any app, any identity, and any messaging use case.</p>
                 <p class="mt-8 text-pretty text-lg font-normal text-gray-300 sm:text-lg/8"><span class="text-white font-medium">Over 2 million web3 identities, 60+ apps, & 1,000’s of developers</span> use XMTP today for secure, private, and portable messaging.</p>
               </div>
               <div class="mt-10 flex items-center gap-x-4">
@@ -80,11 +80,13 @@ const BuiltWithXmtp = () => {
                     </div>
                 </div>
                 <div class="-m-2 grid grid-cols-1 rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
-                    <div class="grid grid-cols-1 rounded-3xl p-2 shadow-md shadow-black/5">
-                      <div class="rounded-2xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">  
-                        <p class="flex align-middle items-center justify-center text-sm/6 text-gray-950/75">Another video goes here.</p>
-                      </div>
+                  <div class="grid grid-cols-1 rounded-3xl p-2 shadow-md shadow-black/5">
+                    <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                      <video autoPlay loop muted class="aspect-square max-w-full rounded-2xl">
+                        <source src="img/circle-family-usdc.mp4" type="video/mp4"></source>
+                      </video>
                     </div>
+                  </div>
                 </div>
               </div>
           </div>
