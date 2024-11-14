@@ -107,6 +107,60 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
+      <div class="pt-24 pb-32 mb-32 overflow-hidden bg-gray-100 rounded-3xl">
+        <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
+            <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+              <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">A reimagined messaging protocol.</h2>
+              <p class="mt-6 text-xl/8 text-gray-600">Our personal communications have never been more vulnerable. Centralized companies control access, censor and remove users, & prevent innovation for third-party developers. Existing decentralized messaging protocols provide censorship-resistance, but are not built to handle AI, withstand complex phishing or spoofing, or support cryptographic and biometric identities & money.</p>
+              <p class="mt-6 text-xl/8 text-gray-600">Our messaging protocols need to evolve.</p>
+              <p class="mt-6 text-xl/8 text-gray-600">XMTP combines the <strong>security standards of Signal</strong> with the <strong>financial infrastructure of crypto,</strong> on a <strong>decentralized network.</strong> This ensures users are protected and that developers can innovate on messaging without the fear of being cut off.</p>
+            </div>
+            <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
+              <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+                <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                  <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                    <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                      <img src="https://placehold.co/800x800/fff/fff" alt="" class="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"></img>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
+                <div class="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
+                  <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                        <img src="https://placehold.co/800x800/fff/fff" alt="" class="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"></img>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
+                  <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                        <img src="https://placehold.co/800x800/fff/fff" alt="" class="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"></img>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+                  <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                        <img src="https://placehold.co/800x800/fff/fff" alt="" class="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"></img>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="bg-white pb-24 pt-0">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -247,7 +301,7 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-gray-50 py-24">
+      <div class="bg-gray-50 py-24 rounded-3xl mb-8">
         <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
           <p class="max-w-3xl text-balance text-4xl font-semibold tracking-tight text-gray-950">Add secure, decentralized messaging to your app in minutes</p>
           <p class="max-w-3xl text-lg font-normal">XMTP enables secure, censorship-resistant messaging with user-owned consent, leveraging robust encryption and identity flexibility, so users stay in control of their communication on any platform, free from centralized oversight.</p>
