@@ -73,7 +73,7 @@ const BuiltWithXmtp = () => {
                 <div class="-m-2 grid grid-cols-1 rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
                     <div class="grid grid-cols-1 rounded-3xl p-2 shadow-md shadow-black/5">
                       <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                        <video autoPlay loop muted class="aspect-square max-w-full rounded-2xl">
+                        <video autoPlay loop muted class="-mb-2 aspect-square max-w-full rounded-2xl">
                           <source src="img/familyVideo.mp4" type="video/mp4"></source>
                         </video>
                       </div>
@@ -82,7 +82,7 @@ const BuiltWithXmtp = () => {
                 <div class="-m-2 grid grid-cols-1 rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
                   <div class="grid grid-cols-1 rounded-3xl p-2 shadow-md shadow-black/5">
                     <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                      <video autoPlay loop muted class="aspect-square max-w-full rounded-2xl">
+                      <video autoPlay loop muted class="-mb-2 aspect-square max-w-full rounded-2xl">
                         <source src="img/circle-family-usdc.mp4" type="video/mp4"></source>
                       </video>
                     </div>
@@ -115,23 +115,45 @@ const BuiltWithXmtp = () => {
               <p class="mt-6 text-xl/8 text-gray-600">Our personal communications have never been more vulnerable. Centralized companies control access, censor and remove users, & prevent innovation for third-party developers. Existing decentralized messaging protocols provide censorship-resistance, but are not built to handle AI, withstand complex phishing or spoofing, or support cryptographic and biometric identities & money.</p>
               <p class="mt-6 text-xl/8 text-gray-600">Our messaging protocols need to evolve.</p>
               <p class="mt-6 text-xl/8 text-gray-600">XMTP combines the <strong>security standards of Signal</strong> with the <strong>financial infrastructure of crypto,</strong> on a <strong>decentralized network.</strong> This ensures users are protected and that developers can innovate on messaging without the fear of being cut off.</p>
+              <div>
+                <dl class="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
+                  <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
+                    <dt class="text-lg/6 text-gray-600">web3 activated identities</dt>
+                    <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900">2,000,000+</dd>
+                  </div>
+                  <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
+                    <dt class="text-lg/6 text-gray-600">Apps built with XMTP</dt>
+                    <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900">60+</dd>
+                  </div>
+                  <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
+                    <dt class="text-lg/6 text-gray-600">Developers using XMTP</dt>
+                    <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900">1,000+</dd>
+                  </div>
+                  <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
+                    <dt class="text-sm/6 text-gray-600"></dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900"></dd>
+                  </div>
+                </dl>
+              </div>
             </div>
             <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
               <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
                 <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
                   <div class="rounded-3xl p-2 shadow-md shadow-black/5">
                     <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                      <img src="https://placehold.co/800x800/fff/fff" alt="" class="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"></img>
-                      </div>
+                      <img src="img/grid-2.png" alt="" class="-mb-2 aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"></img>
                     </div>
                   </div>
+                </div>
               </div>
               <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
                 <div class="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                   <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
                     <div class="rounded-3xl p-2 shadow-md shadow-black/5">
                       <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                        <img src="https://placehold.co/800x800/fff/fff" alt="" class="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"></img>
+                        <video autoPlay loop muted class="-mb-2 aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover">
+                          <source src="img/Comp 1_10.mp4" type="video/mp4"></source>
+                        </video>
                       </div>
                     </div>
                   </div>
@@ -140,7 +162,7 @@ const BuiltWithXmtp = () => {
                   <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
                     <div class="rounded-3xl p-2 shadow-md shadow-black/5">
                       <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                        <img src="https://placehold.co/800x800/fff/fff" alt="" class="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"></img>
+                        <img src="img/grid-4.png" alt="" class="-mb-2 aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"></img>
                       </div>
                     </div>
                   </div>
@@ -149,7 +171,9 @@ const BuiltWithXmtp = () => {
                   <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
                     <div class="rounded-3xl p-2 shadow-md shadow-black/5">
                       <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                        <img src="https://placehold.co/800x800/fff/fff" alt="" class="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"></img>
+                        <video autoPlay loop muted class="-mb-2 aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover">
+                          <source src="img/ambiance_1.mp4" type="video/mp4"></source>
+                        </video>
                       </div>
                     </div>
                     </div>
@@ -292,7 +316,7 @@ const BuiltWithXmtp = () => {
               <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
                 <div class="rounded-3xl p-2 shadow-md shadow-black/5">
                   <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                    <img src="img/decentralized.png" alt="screenshot" class="min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+                    <img src="img/decentralized.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
                   </div>
                 </div>
               </div>
