@@ -107,27 +107,27 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="pt-24 pb-32 mb-32 overflow-hidden bg-gray-100 rounded-3xl">
+      <div class="pt-24 pb-32 mb-32 overflow-hidden bg-gray-900 rounded-3xl">
         <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
             <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-              <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">A reimagined messaging protocol.</h2>
-              <p class="mt-6 text-xl/8 text-gray-600">Our personal communications have never been more vulnerable. Centralized companies control access, censor and remove users, & prevent innovation for third-party developers. Existing decentralized messaging protocols provide censorship-resistance, but are not built to handle AI, withstand complex phishing or spoofing, or support cryptographic and biometric identities & money.</p>
-              <p class="mt-6 text-xl/8 text-gray-600">Our messaging protocols need to evolve.</p>
-              <p class="mt-6 text-xl/8 text-gray-600">XMTP combines the <strong>security standards of Signal</strong> with the <strong>financial infrastructure of crypto,</strong> on a <strong>decentralized network.</strong> This ensures users are protected and that developers can innovate on messaging without the fear of being cut off.</p>
+              <h2 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">A <span class="leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.7)]">reimagined</span> messaging protocol.</h2>
+              <p class="mt-6 text-xl/8 text-gray-300">Our personal communications have never been more vulnerable. Centralized companies control access, censor and remove users, & prevent innovation for third-party developers. Existing decentralized messaging protocols provide censorship-resistance, but are not built to handle AI, withstand complex phishing or spoofing, or support cryptographic and biometric identities & money.</p>
+              <p class="mt-6 text-xl/8 text-gray-300">Our messaging protocols need to evolve.</p>
+              <p class="mt-6 text-xl/8 text-gray-300">XMTP combines the <strong>security standards of Signal</strong> with the <strong>financial infrastructure of crypto,</strong> on a <strong>decentralized network.</strong> This ensures users are protected and that developers can innovate on messaging without the fear of being cut off.</p>
               <div>
                 <dl class="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
                   <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
-                    <dt class="text-lg/6 text-gray-600">web3 activated identities</dt>
-                    <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900">2,000,000+</dd>
+                    <dt class="text-lg/6 text-gray-300">web3 activated identities</dt>
+                    <dd class="order-first text-4xl font-semibold tracking-tight text-white">2,000,000+</dd>
                   </div>
                   <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
-                    <dt class="text-lg/6 text-gray-600">Apps built with XMTP</dt>
-                    <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900">60+</dd>
+                    <dt class="text-lg/6 text-gray-300">Apps built with XMTP</dt>
+                    <dd class="order-first text-4xl font-semibold tracking-tight text-white">60+</dd>
                   </div>
                   <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
-                    <dt class="text-lg/6 text-gray-600">Developers using XMTP</dt>
-                    <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900">1,000+</dd>
+                    <dt class="text-lg/6 text-gray-300">Developers using XMTP</dt>
+                    <dd class="order-first text-4xl font-semibold tracking-tight text-white">1,000+</dd>
                   </div>
                   <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
                     <dt class="text-sm/6 text-gray-600"></dt>
