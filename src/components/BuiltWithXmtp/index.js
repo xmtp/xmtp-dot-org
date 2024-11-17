@@ -49,7 +49,20 @@ const BuiltWithXmtp = () => {
               <h1 class="mt-10 text-pretty text-3xl font-semibold tracking-tight text-white md:text-6xl">XMTP is the largest & most secure decentralized messaging network</h1>
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
                 <p class="mt-8 text-pretty text-lg font-normal text-gray-300 sm:text-lg/8">Bringing <a href="#" class="text-red-400 font-medium decoration-dotted">Messaging Layer Security</a> to any app, any identity, and any messaging use case.</p>
-                <p class="mt-8 text-pretty text-lg font-normal text-gray-300 sm:text-lg/8"><span class="text-white font-medium">Over 2 million web3 identities, 60+ apps, & 1,000’s of developers</span> use XMTP today for secure, private, and portable messaging.</p>
+                <dl class="mx-auto mt-8 mb-8 grid max-w-4xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+                  <div class="flex flex-col gap-y-1 border-l border-white/10 pl-0">
+                    <dt class="text-base/6 text-gray-400">Identities</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight">2 Million+</dd>
+                  </div>
+                  <div class="flex flex-col gap-y-1 border-l border-white/10 pl-6">
+                    <dt class="text-base/6 text-gray-400">of Developers</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight">1,000s</dd>
+                  </div>
+                  <div class="flex flex-col gap-y-1 border-l border-white/10 pl-6">
+                    <dt class="text-base/6 text-gray-400">Apps</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight">60+</dd>
+                  </div>
+                </dl>
               </div>
               <div class="mt-10 flex items-center gap-x-4">
 
