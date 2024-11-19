@@ -1,6 +1,6 @@
 # Identity in XMTP
 
-:::info[Key takeaways]
+:::info Key takeaways
 
 - **Why it matters:** XMTP unifies messaging for all your web3 names in one inbox, making it easy to manage communication across apps.
 - **How it works:** Wallets and names link to a single identity using secure operations verified by wallet signatures.
@@ -100,18 +100,19 @@ List all wallet addresses and names that can message from a given XMTP inbox:
 
     Unlike traditional systems that bind user identity to a proprietary namespace, XMTP's identity model leverages existing namespaces. Users can consolidate all their names into a single messaging inbox managed by one wallet key, using different names for different contexts.
 
-    Benefits for users:
+    *Benefits for users:*
 
     - Receive all your messages without switching apps.
     - Communicate using any name you own.
 
-    Benefits for apps and services:
+    *Benefits for apps and services:*
 
     - No need to build and maintain your own messaging system.
     - No need to integrate a new namespace.
     - If you have a namespace, XMTP makes it more valuable by extending its reach to more apps.
     - Users can communicate using all their names without switching to other apps.
     - Users can access existing agents and mini-apps developed by the XMTP community.
+
 2. **How secure is this system? What happens if one of my linked wallets gets compromised?**
 
     XMTP requires a signature for every identity operation. The SDKs automatically verify and replay identity updates, ensuring all changes are authorized. If a wallet linked to an identity is compromised, the recovery wallet can unlink it to protect the inbox. By default, the recovery walelt is the wallet that created the identity.
