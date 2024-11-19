@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ListOfDevelopers from "./ListOfDevs.json";
 import useBaseUrl from "@docusaurus/useBaseUrl/";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -6,6 +6,28 @@ import Link from '@docusaurus/Link';
 import { motion } from "framer-motion";
 
 const BuiltWithXmtp = () => {
+  const [openAccordions, setOpenAccordions] = useState({});
+
+  const toggleAccordion = (index) => {
+    setOpenAccordions(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  // SVG components for better React integration
+  const MinusIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
+      <path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z" />
+    </svg>
+  );
+
+  const PlusIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
+      <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+    </svg>
+  );
+  
   return (
     <div>
 
@@ -46,23 +68,24 @@ const BuiltWithXmtp = () => {
                   </span>
                 </a>
               </div>
+
               <h1 class="mt-10 text-pretty text-3xl font-semibold tracking-tight text-white md:text-6xl">XMTP is the largest & most secure decentralized messaging network</h1>
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
-                <p class="mt-8 text-pretty text-lg font-normal text-gray-300 sm:text-lg/8">Bringing <a href="#" class="text-red-400 font-medium decoration-dotted">Messaging Layer Security</a> to any app, any identity, and any messaging use case.</p>
-                <dl class="mx-auto mt-8 mb-8 grid max-w-4xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-                  <div class="flex flex-col gap-y-1 border-l border-white/10 pl-0">
-                    <dt class="text-base/6 text-gray-400">Identities</dt>
+                <dl class="mx-auto mt-8 mb-8 grid max-w-4xl grid-cols-1 gap-x-0 gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
+                  <div class="flex flex-col gap-y-1 border-solid border-0 border-l border-white/30 pl-8">
+                    <dt class="text-lg/6 text-gray-400">Identities</dt>
                     <dd class="order-first text-3xl font-semibold tracking-tight">2 Million+</dd>
                   </div>
-                  <div class="flex flex-col gap-y-1 border-l border-white/10 pl-6">
-                    <dt class="text-base/6 text-gray-400">of Developers</dt>
+                  <div class="flex flex-col gap-y-1 border-solid border-0 border-l border-white/30 pl-10">
+                    <dt class="text-lg/6 text-gray-400">of Developers</dt>
                     <dd class="order-first text-3xl font-semibold tracking-tight">1,000s</dd>
                   </div>
-                  <div class="flex flex-col gap-y-1 border-l border-white/10 pl-6">
-                    <dt class="text-base/6 text-gray-400">Apps</dt>
+                  <div class="flex flex-col gap-y-1 border-solid border-0 border-l border-white/30 pl-16">
+                    <dt class="text-lg/6 text-gray-400">Apps</dt>
                     <dd class="order-first text-3xl font-semibold tracking-tight">60+</dd>
                   </div>
                 </dl>
+                <p class="mt-8 text-pretty text-lg font-semibold text-gray-200">XMTP is built for secure, private, and portable messaging.</p>
               </div>
               <div class="mt-10 flex items-center gap-x-4">
 
@@ -87,32 +110,83 @@ const BuiltWithXmtp = () => {
 
         <div class="relative px-6 lg:px-8 -mt-4">
           <div class="mx-auto max-w-full lg:max-w-7xl">
-              <div class="grid grid-cols-2 gap-8 lg:grid-cols-2">
-                <div class="-m-2 grid grid-cols-1 rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
-                    <div class="grid grid-cols-1 rounded-3xl p-2 shadow-md shadow-black/5">
-                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                        <video autoPlay loop muted class="-mb-2 aspect-square max-w-full rounded-2xl">
-                          <source src="img/Comp_1.mp4" type="video/mp4"></source>
-                        </video>
+
+            <div class="mx-auto -mt-4 grid max-w-full auto-rows-fr grid-cols-1 gap-4 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">    
+
+              <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                  <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                    <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
+                      <img src="img/family-header.png" alt="" class="absolute inset-0 -z-10 w-full h-full object-cover"></img>
+                      <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black via-gray-900/40"></div>
+                      <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+
+                      <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-gray-300">
+                        <img src="img/family-logo-white.svg" class="h-6 mb-2"></img>
                       </div>
-                    </div>
-                </div>
-                <div class="-m-2 grid grid-cols-1 rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
-                  <div class="grid grid-cols-1 rounded-3xl p-2 shadow-md shadow-black/5">
-                    <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                      <video autoPlay loop muted class="-mb-2 aspect-square max-w-full rounded-2xl">
-                        <source src="img/Comp_2.mp4" type="video/mp4"></source>
-                      </video>
-                    </div>
+                      <h3 class="mt-3 text-lg/6 font-semibold text-white">
+                        <a href="#" class="text-white hover:text-gray-400 hover:no-underline">
+                          <span class="absolute inset-0"></span>
+                          Family Wallet seamlessly integrates peer-to-peer payments into XMTP messaging
+                        </a>
+                      </h3>
+                    </article>
                   </div>
                 </div>
               </div>
+
+              <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                  <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                    <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
+                      <img src="img/cbw-header.jpg" alt="" class="absolute inset-0 -z-10 w-full h-full object-cover"></img>
+                      <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black via-gray-900/40"></div>
+                      <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+
+                      <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-gray-300">
+                        <img src="img/coinbase-wallet-white.svg" class="h-6 mb-2"></img>
+                      </div>
+                      <h3 class="mt-3 text-lg/6 font-semibold text-white">
+                        <a href="#" class="text-white hover:text-gray-400 hover:no-underline">
+                          <span class="absolute inset-0"></span>
+                          How Coinbase Wallet connects millions of users through messaging powered by XMTP
+                        </a>
+                      </h3>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                  <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                    <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
+                      <img src="img/notifi-header.png" alt="" class="absolute inset-0 -z-10 w-full h-full object-cover"></img>
+                      <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black via-gray-900/40"></div>
+                      <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+
+                      <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-gray-300">
+                        <img src="img/notifi-logo-white.svg" class="h-6 mb-2"></img>
+                      </div>
+                      <h3 class="mt-3 text-lg/6 font-semibold text-white">
+                        <a href="#" class="text-white hover:text-gray-400 hover:no-underline">
+                          <span class="absolute inset-0"></span>
+                          Learn about how Notifi delivers millions of critical DeFi alerts through XMTP every single day
+                        </a>
+                      </h3>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
 
       </div>
 
-      <div class="pt-24 pb-20">
+      <div class="py-16">
         <div class="mx-auto max-w-full">
           <h2 class="text-center text-lg/8 font-semibold text-gray-900">Trusted by companies around the world</h2>
 
@@ -136,7 +210,7 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="relative isolate pt-24 pb-32 mb-32 overflow-hidden bg-gray-900 rounded-3xl">
+      <div class="relative isolate py-24 mb-8 overflow-hidden bg-gray-900 rounded-3xl">
         <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
           <defs>
             <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
@@ -155,213 +229,68 @@ const BuiltWithXmtp = () => {
         <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
             <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-              <h2 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">A <span class="leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.9)]">reimagined</span> messaging protocol.</h2>
-              <p class="mt-6 text-xl/8 text-gray-300">Our personal communications have never been more vulnerable. Centralized companies control access, censor and remove users, & prevent innovation for third-party developers. Existing decentralized messaging protocols provide censorship-resistance, but are not built to handle AI, withstand complex phishing or spoofing, or support cryptographic and biometric identities & money.</p>
-              <p class="mt-6 text-xl/8 text-gray-300">Our messaging protocols need to evolve.</p>
-              <p class="mt-6 text-xl/8 text-gray-300">XMTP combines the <strong>security standards of Signal</strong> with the <strong>financial infrastructure of crypto,</strong> on a <strong>decentralized network.</strong> This ensures users are protected and that developers can innovate on messaging without the fear of being cut off.</p>
-              <div>
-                <dl class="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
-                  <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
-                    <dt class="text-lg/6 text-gray-300">web3 activated identities</dt>
-                    <dd class="order-first text-4xl font-semibold tracking-tight text-white">2,000,000+</dd>
-                  </div>
-                  <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
-                    <dt class="text-lg/6 text-gray-300">Apps built with XMTP</dt>
-                    <dd class="order-first text-4xl font-semibold tracking-tight text-white">60+</dd>
-                  </div>
-                  <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
-                    <dt class="text-lg/6 text-gray-300">Developers using XMTP</dt>
-                    <dd class="order-first text-4xl font-semibold tracking-tight text-white">1,000+</dd>
-                  </div>
-                  <div class="flex flex-col gap-y-2 border-l border-gray-900/10 pl-0">
-                    <dt class="text-sm/6 text-gray-600"></dt>
-                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900"></dd>
-                  </div>
-                </dl>
-              </div>
-            </div>
-            <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
-              <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-                <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-                  <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                    <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                      <img src="img/grid-2.png" alt="" class="-mb-2 aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"></img>
-                    </div>
+              <p><span class="leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.9)]">Re-Engineered Messaging Protocol</span></p>
+              <h2 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">XMTP powers the next generation of messaging apps</h2>
+              <div className="border-b border-slate-200">
+                <button 
+                  onClick={() => toggleAccordion(1)} 
+                  className="w-full flex justify-between items-center py-5 text-white bg-transparent border-solid border-0 border-b border-white/30 text-lg"
+                >
+                  <span>Real Security from Real Standards</span>
+                  <span className="text-white transition-transform duration-300">
+                    {openAccordions[1] ? <MinusIcon /> : <PlusIcon />}
+                  </span>
+                </button>
+                <div 
+                  className="overflow-hidden transition-all duration-300 ease-in-out"
+                  style={{ maxHeight: openAccordions[1] ? '200px' : '0' }}
+                >
+                  <div className="pb-5 text-md text-white">
+                    XMTP leverages Messaging Layer Security (MLS), a cryptographic protocol developed by the IETF, providing the strongest available open source security standard for decnetralized messaging.
                   </div>
                 </div>
               </div>
-              <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
-                <div class="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
-                  <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                      <div class="rounded-2xl bg-gray-900 p-0 shadow-2xl ring-1 ring-black/5">
-                        <img src="img/grid-5.png" alt="" class="-mb-2 aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"></img>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
-                  <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                      <div class="rounded-2xl bg-gray-900 p-0 shadow-2xl ring-1 ring-black/5">
-                        <video autoPlay loop muted class="-mb-2 aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-900 object-cover">
-                          <source src="img/Comp 1_10.mp4" type="video/mp4"></source>
-                        </video>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
-                  <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                      <div class="rounded-2xl bg-gray-900 p-0 shadow-2xl ring-1 ring-black/5">
-                        <img src="img/grid-6.png" alt="" class="-mb-2 aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-900 object-cover"></img>
-                      </div>
-                    </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-
-      <div class="bg-white pb-24 pt-0">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <div class="lg:pr-8 lg:pt-4">
-              <div class="lg:max-w-lg">
-                <h2 class="text-base/7 font-semibold text-red-500">Security</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Real Security from Real Standards.</p>
-                <p class="mt-6 text-lg/7 text-gray-600">XMTP leverages <a href="#" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a>, a cryptographic protocol developed by the IETF, providing the strongest available open source security standard for decentralized messaging.</p>
-                <p class="mt-6 text-lg/7 text-gray-600">Messages sent with XMTP are unspoofable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p>
-                <p class="mt-12">
-                
-                  <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
-                    </svg>
-
-                    Read more about XMTP encryption <span class="ml-2" aria-hidden="true">→</span>
-                  </a>
-                  
-                </p>
-              </div>
-            </div>
-            <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-              <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                  <img src="https://placehold.co/800x800/fff/fff" alt="screenshot" class="min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white pb-24 pt-16">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <div class="lg:ml-auto lg:pl-4 lg:pt-4">
-              <div class="lg:max-w-lg">
-                <h2 class="text-base/7 font-semibold text-red-500">Identity</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Universal Identity Support</p>
-                <p class="mt-6 text-lg/7 text-gray-600">XMTP is identity-agnostic, meaning it natively supports with a wide variety of identity systems, from cryptographic wallets (like Ethereum) to modern authentication standards like biometric passkeys.</p>
-                <p class="mt-6 text-lg/7 text-gray-600">This flexibility allows apps and users to authenticate and communicate using any identity they control, without being tied to a specific identity provider or platform.</p>
-                <p class="mt-12">
-                
-                  <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-                    </svg>
-
-
-                    Read more about XMTP’s Identity Support <span class="ml-2" aria-hidden="true">→</span>
-                  </a>
-                  
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start justify-end lg:order-first">
-              <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-                <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                  <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                  <img src="img/identity-square.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+              <div className="border-b border-slate-200">
+                <button 
+                  onClick={() => toggleAccordion(2)} 
+                  className="w-full flex justify-between items-center py-5 text-white bg-transparent border-solid border-0 border-b border-white/30 text-lg"
+                >
+                  <span>Universal Identity Support</span>
+                  <span className="text-white transition-transform duration-300">
+                    {openAccordions[2] ? <MinusIcon /> : <PlusIcon />}
+                  </span>
+                </button>
+                <div 
+                  className="overflow-hidden transition-all duration-300 ease-in-out"
+                  style={{ maxHeight: openAccordions[2] ? '200px' : '0' }}
+                >
+                  <div className="pb-5 text-md text-white">
+                    XMTP leverages Messaging Layer Security (MLS), a cryptographic protocol developed by the IETF, providing the strongest available open source security standard for decnetralized messaging.
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="bg-white pb-24 pt-0">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <div class="lg:pr-8 lg:pt-4">
-              <div class="lg:max-w-lg">
-                <h2 class="text-base/7 font-semibold text-red-500">No Spam</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Network-level Consent</p>
-                <p class="mt-6 text-lg/7 text-gray-600">XMTP takes a new approach to mitigating spam. Unlike legacy systems that filter spam out after the fact, XMTP clients block spam at the network level before it gets to your inbox. The difference is foundational: by using encrypted, user-owned consent at the protocol level, users decide which senders can reach them on any app built on XMTP.</p>
-                <p class="mt-6 text-lg/7 text-gray-600">The protocol ↔ client architecture enables developers to layer in entirely new forms of filtering and prioritization—proofs of human identity, on-chain and social graphs, even economic incentives like paying for attention. </p>
-                <p class="mt-12">
-                  
-                  <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
 
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
-                  </svg>
-
-                  Read more about XMTP’s network level consent <span class="ml-2" aria-hidden="true">→</span>
-                  </a>
-
-                </p>
-              </div>
-            </div>
-            <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-              <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                <img src="img/grid-4.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white pb-32 pt-16">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <div class="lg:ml-auto lg:pl-4 lg:pt-4">
-              <div class="lg:max-w-lg">
-                <h2 class="text-base/7 font-semibold text-red-500">Censorship-resistant</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Decentralized by Design</p>
-                <p class="mt-6 text-lg/7 text-gray-600">XMTP is designed as a decentralized messaging protocol, meaning it operates without a central server, giving users full ownership and control over their data. This structure ensures that no single entity has access to or control over messages, making communication censorship-resistant and enhancing privacy.</p>
-                <p class="mt-12">
-  
-                <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
-                </svg>
-
-                Explore the XMTP decentralization roadmap <span class="ml-2" aria-hidden="true">→</span>
-                </a>
-
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start justify-end lg:order-first">
-              <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-                <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                  <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                    <img src="img/decentralized.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+              <div className="border-b border-slate-200">
+                <button 
+                  onClick={() => toggleAccordion(3)} 
+                  className="w-full flex justify-between items-center py-5 text-white bg-transparent border-solid border-0 border-b border-white/30 text-lg"
+                >
+                  <span>Network-level Consent</span>
+                  <span className="text-white transition-transform duration-300">
+                    {openAccordions[3] ? <MinusIcon /> : <PlusIcon />}
+                  </span>
+                </button>
+                <div 
+                  className="overflow-hidden transition-all duration-300 ease-in-out"
+                  style={{ maxHeight: openAccordions[3] ? '200px' : '0' }}
+                >
+                  <div className="pb-5 text-md text-white">
+                    XMTP leverages Messaging Layer Security (MLS), a cryptographic protocol developed by the IETF, providing the strongest available open source security standard for decnetralized messaging.
                   </div>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>

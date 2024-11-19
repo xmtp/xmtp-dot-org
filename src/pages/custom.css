@@ -59,6 +59,10 @@
   margin-top: -8em;
 }
 
+.-mt-12 {
+  margin-top: -12em;
+}
+
 .navbar {
   padding: 1em !important;
 }
