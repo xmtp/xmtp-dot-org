@@ -202,11 +202,6 @@ const config = {
                 href: "https://community.xmtp.org/c/dev-support/76",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discourse-icon.svg" alt="Chat icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support ↗</div>`,
-              },              
-              {
-                href: "https://converse.xyz/group-invite/a0XKzl9oVpWNXcuYDZLMf",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/chat.svg" alt="Chat icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev chat ↗</div>`,
               },
               {
                 href: "https://paragraph.xyz/@xmtp_community/",
@@ -257,10 +252,6 @@ const config = {
               {
                 label: "Dev support ↗",
                 to: "https://community.xmtp.org/c/dev-support/76",
-              },
-              {
-                label: "Dev chat ↗",
-                to: "https://converse.xyz/group-invite/a0XKzl9oVpWNXcuYDZLMf",
               },
               {
                 label: "Awesome XMTP ↗",
