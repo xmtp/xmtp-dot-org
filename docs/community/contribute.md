@@ -25,12 +25,6 @@ Have a question? Want to discuss an idea or protocol improvement? Start or join 
 
 [Join the discussion](https://community.xmtp.org/)
 
-## XMTP Devs 💪 group chat
-
-Get dev support and chat with the XMTP dev community.
-
-[Chat with other builders](https://converse.xyz/group-invite/a0XKzl9oVpWNXcuYDZLMf)
-
 ## 𝕏
 
 Keep up with the latest news and insights from XMTP.
