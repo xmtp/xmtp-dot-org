@@ -23,11 +23,10 @@ XMTP’s web and mobile SDKs handle three basic identity operations:
 ```rust
 message IdentityAction {
   oneof kind {
-    CreateInbox create_inbox = 1;     // Create a new identity
-    AddAssociation add = 2;           // Associate a new wallet
-    RevokeAssociation revoke = 3;     // Remove a wallet association
-    ChangeRecoveryAddress change_recovery_address = 4;  
-                                      // Change the recovery address
+    CreateInbox create_inbox = 1;                       // Create a new identity
+    AddAssociation add = 2;                             // Associate a new wallet
+    RevokeAssociation revoke = 3;                       // Remove a wallet association
+    ChangeRecoveryAddress change_recovery_address = 4;  // Change the recovery address
   }
 }
 ```
@@ -49,7 +48,7 @@ The `IdentityUpdates` contract will govern identity association transactions:
 ```solidity
 event IdentityUpdateCreated(
     bytes32 inboxId,
-    bytes update,    // Signed state change from SDK
+    bytes update,                // Signed state change from SDK
     uint64 sequenceId
 );
 ```
