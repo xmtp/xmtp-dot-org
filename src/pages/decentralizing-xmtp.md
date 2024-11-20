@@ -29,7 +29,7 @@ Two distributed systems will coordinate these interactions.
 
 For more specifics, follow the team's progress in [the xmtpd repo](https://github.com/xmtp/xmtpd/issues/118). A detailed XIP outlining the decentralization process will be published shortly.
 
-![Diagram of actors in the XMTP decentralized network](../static/img/decentralizing-xmtp-1.png)
+![Diagram of actors in the XMTP decentralized network](../../static/img/decentralizing-xmtp-1.png)
 
 ### Timeline and key milestones
 
@@ -63,7 +63,7 @@ The XMTP appchain is an L3 blockchain built as an Arbitrum Orbit rollup that set
 
 **4. What is the XMTP broadcast network?**
 
-![Diagram of XMTP broadcast network](../static/img/decentralizing-xmtp-2.png)
+![Diagram of XMTP broadcast network](../../static/img/decentralizing-xmtp-2.png)
 
 The XMTP broadcast network is a small group of 5–20 nodes, each run by a separate organization. It replicates messages across diverse geographies to ensure availability, control latency, and enhance performance using scalable infrastructure.
 
