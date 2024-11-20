@@ -47,7 +47,7 @@ Today, the XMTP network is free to use. The decentralized network will have a co
 
 To sponsor transactions on behalf of your users client applications will need to pass in the URL to a payer service as part of client creation. The payer service is a small, stateless, backend service that holds a set of keys used to sponsor transactions and signs messages using the application’s account. While this may sound similar to a smart wallet paymaster, the payer service serves additional crucial functions: it enables off-chain bookkeeping and enhances user privacy by preventing the linking of senders to their messages. The service can be self hosted by developers and will be responsible for deciding which messages should be subsidized by the application.
 
-If you are interested in building a “payer-as-a-service” platform that can be used by many applications you should [reach out to us](hi@xmtp.org). We’d love to help support the development of a platform that helps app developers avoid running their own payer backend service.
+If you are interested in building a “payer-as-a-service” platform that can be used by many applications you should [reach out to us](mailto://hi@xmtp.org). We’d love to help support the development of a platform that helps app developers avoid running their own payer backend service.
 
 Complete guides for setting up a payer service and funding your account for sponsoring messages will be provided at least 3 months before the launch of mainnet.
 
