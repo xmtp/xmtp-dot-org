@@ -1,0 +1,114 @@
+# Consent in XMTP
+
+:::info[Key Takeaways]
+
+- **What is consent?** Simply put, consent is who you allow and who you block
+- **Why it matters:** Your choices about who can message you should be private and work across all apps
+- **How it works:** Each wallet maintains a private, encrypted list of allowed and blocked addresses
+- **Future-proof:** XMTP is making it easier to manage messaging permissions while keeping your choices private
+
+:::
+
+## Understanding Consent
+
+Consent in XMTP manages who can message you across all apps you use:
+
+**For direct messages**, it's about who you allow and who you block:
+
+- Allow certain addresses to message you
+- Block addresses you don't want to hear from
+
+**For group chats**, it's about which groups you want to participate in:
+
+- Join the group to receive its messages
+- Block to stop receiving messages from the group
+
+In both cases, new messages and invites stay in your message requests until you make a decision.
+
+## Privacy-First Design
+
+Your choices about who can message you are private. This means:
+
+- Only you can see who you've allowed or blocked
+- Your choices are encrypted and visible only to you
+- No one else can see your messaging preferences
+- Blocked users don't know they're blocked
+
+## How Consent Works
+
+The XMTP network maintains three private states for each potential messaging relationship:
+
+```rust
+pub enum ConsentState {
+    Unknown,    // Default state for new contacts
+    Allowed,    // Contacts you've allowed
+    Denied,     // Contacts you've blocked
+}
+```
+
+:::note[Implementation Note]
+Currently, consent preferences are client-side filters - they help apps determine which messages to show in your inbox, but don't prevent message transmission at the network level. The network plans to implement consent enforcement in the future.
+:::
+
+When you receive a new message, it appears in your message requests. Apps typically show:
+
+- Main inbox: Messages from allowed addresses and joined groups
+- Message requests: New messages and invites you haven't decided about
+- Hidden: Messages from blocked addresses and groups
+
+## The Future of Consent
+
+XMTP's consent system is expanding in two major ways:
+
+### 1. Programmable Consent
+
+Today, individual apps implement their own ways of handling consent granting - through app-specific invite links, group joining mechanisms, or eligibility rules. We are creating an interoperable standard that works across the entire ecosystem:
+
+- Apps can generate and validate consent links using a common protocol
+- Links work consistently across all XMTP apps
+- Supports flexible eligibility criteria (token ownership, DAO membership, etc.)
+- Enables ecosystem-wide features like group invites and automated consent rules
+- Maintains privacy while improving user experience
+
+### 2. Network Enforcement
+
+Moving from client-side filtering to network-level enforcement:
+
+- Network validates consent before delivering messages
+- Reduces network load from unwanted messages
+- Provides stronger spam prevention
+- Maintains end-to-end privacy
+
+More details about network enforcement will be shared as development progresses.
+
+## Frequently Asked Questions
+
+1. **If I block someone, will they know?**
+
+    No, blocked users aren't notified of their status. From their perspective, it appears the same as if you haven't responded to their message.
+
+2. **Can I revoke consent after granting it?**
+
+   Yes, you can always privately revoke consent. The other party won't be notified, but they'll no longer be able to message you.
+
+3. **What happens if someone I blocked is in a group chat with me?**
+
+   Apps typically show you that the blocked user sent a message but protect you from its content with a "tap to unhide" option. However, the exact UI implementation may vary by app.
+
+4. **Does blocking someone remove our message history?**
+
+   No, blocking only affects new messages. Previous conversations remain in your app but may be hidden from view depending on the app's design.
+
+5. **What happens when someone messages me from a different wallet than before?**
+
+   Each wallet address is treated separately for consent purposes. If someone messages you from a new address, that message will appear in your message requests, even if you've allowed their other address.
+
+6. **How will programmable consent criteria work?**
+
+   You'll be able to define specific conditions that automatically grant consent when met. These criteria will be evaluated privately - others won't see what rules you've set.
+
+   Consent rules will use cryptographic signatures to ensure they can't be forged or tampered with. They can be configured to expire after a certain time or number of uses.
+
+7. **Will I be able to mute conversations?**
+
+   Yes, XMTP plans to add muting capabilities to the protocol, allowing you to temporarily silence notifications while maintaining consent preferences.
