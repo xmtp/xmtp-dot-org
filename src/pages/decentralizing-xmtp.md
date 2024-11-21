@@ -27,7 +27,7 @@ Two distributed systems will coordinate these interactions.
     - The `IdentityUpdates` contract manages the list of wallet addresses associated with each XMTP inbox, enabling users to use multiple authorized wallet addresses to send and receive messages from a single inbox.
     - The `GroupMessages` contract manages group membership changes, ensuring that all clients have an identical view of group additions and removals in the correct order.
 
-For more specifics, follow the team's progress in [the xmtpd repo](https://github.com/xmtp/xmtpd/issues/118). A detailed XIP outlining the decentralization process will be published shortly.
+For more specifics, follow the team's progress in the [xmtpd repo](https://github.com/xmtp/xmtpd/issues/118). A detailed XIP outlining the decentralization process will be published shortly.
 
 ![Diagram of actors in the XMTP decentralized network](../../static/img/decentralizing-xmtp-1.png)
 
