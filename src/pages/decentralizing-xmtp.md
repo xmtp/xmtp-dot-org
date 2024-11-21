@@ -67,7 +67,7 @@ The XMTP appchain is an L3 blockchain built as an Arbitrum Orbit rollup that set
 
 The XMTP broadcast network is a small group of 5–20 nodes, each run by a separate organization. It replicates messages across diverse geographies to ensure availability, control latency, and enhance performance using scalable infrastructure.
 
-**5. Why can’t anyone run a node?**
+**5. Why can’t just anyone run a node?**
 
 It’s helpful to go back to our design goals for decentralization.
 
