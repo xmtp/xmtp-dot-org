@@ -1,6 +1,6 @@
 # Consent in XMTP
 
-:::info[Key Takeaways]
+:::info Key Takeaways
 
 - **What is consent?** Simply put, consent is who you allow and who you block
 - **Why it matters:** Your choices about who can message you should be private and work across all apps
@@ -46,7 +46,7 @@ pub enum ConsentState {
 }
 ```
 
-:::note[Implementation Note]
+:::note Implementation Note
 Currently, consent preferences are client-side filters - they help apps determine which messages to show in your inbox, but don't prevent message transmission at the network level. The network plans to implement consent enforcement in the future.
 :::
 
