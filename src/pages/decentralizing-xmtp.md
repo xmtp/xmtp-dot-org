@@ -81,7 +81,7 @@ A network of 20 node operators can still be credibly neutral and censorship resi
 
 This architecture reflects the blockchain trilemma of balancing security, scalability, and decentralization. Security is non-negotiable for a messaging protocol, and we believe this design strikes the right balance between scalability and decentralization for our use case. Messaging demands higher throughput and lower latency than financial applications, while having different trust requirements.
 
-The security of the network extends beyond the node operators themselves. Just as optimistic rollups use fault proofs, our network allows any participant to submit cryptographically verifiable `MisbehaviorReports` when nodes violate protocol rules. Looking ahead, we are developing an automated node selection process (likely involving staking mechanisms) to ensure long-term sustainability and decentralization.
+The security of the network extends beyond the node operators themselves. Just as optimistic rollups use fault proofs, the XMTP network allows any participant to submit cryptographically verifiable `MisbehaviorReports` when nodes violate protocol rules. Looking ahead, we are developing an automated node selection process (likely involving staking mechanisms) to ensure long-term sustainability and decentralization.
 
 **6. What are the messaging fees and who pays them?**
 
