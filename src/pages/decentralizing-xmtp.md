@@ -2,7 +2,7 @@
 
 Today we're announcing a new chapter for XMTP: a decentralized messaging network powered by the [Messaging Layer Security standard](https://messaginglayersecurity.rocks/) standard - the most secure and private messaging protocol available to developers.  Our entire protocol is open source, from the [node software](https://github.com/xmtp/xmtp-node-go) to the [SDKs](https://github.com/xmtp) to the [Converse app](https://github.com/ephemerahq/converse-app).
 
-Until now, the backend of the network has been centralized. All the nodes are run by Ephemera. It’s time to change that.
+Until now, the backend of the network has been centralized. All the nodes are run by [Ephemera](https://ephemerahq.com/). It’s time to change that.
 
 ## Why decentralization matters
 
