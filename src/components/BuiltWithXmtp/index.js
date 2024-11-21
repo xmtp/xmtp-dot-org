@@ -55,12 +55,12 @@ const BuiltWithXmtp = () => {
             <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#FC4F37] opacity-20" style={{"clipPath":"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"}}></div>
           </div>
 
-          <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-16 pt-8 md:pt-4 lg:flex md:pb-32">
+          <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-8 pt-4 md:pt-4 lg:flex md:pb-32">
             <div class="mx-auto max-w-5xl shrink-0 lg:mx-0 md:pt-24">
               <div class="mt-8 md:mt-24 lg:mt-0">
-                <a href="#" class="inline-flex flex-wrap md:flex-nowrap space-x-0 md:space-x-4">
-                  <span class="mb-2 md:mb-0 rounded-full bg-gray-500/10 px-4 py-1 text-center md:text-left text-xs/4 md:text-sm/6 font-semibold text-red-400 ring-2 ring-inset ring-red-500/50">What's new</span>
-                  <span class="inline-flex items-center space-x-2 text-sm/4 md:text-sm/6 font-semibold text-gray-300">
+                <a href="#" class="inline-flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4">
+                  <span class="mb-2 md:mb-0 rounded-full bg-gray-500/10 px-4 py-2 text-center md:py-1 md:text-left text-xs/4 md:text-sm/6 font-semibold text-red-400 ring-2 ring-inset ring-red-500/50">What's new</span>
+                  <span class="inline-flex items-center space-x-0 text-sm/4 md:text-sm/6 font-semibold text-gray-300">
                     <span>XMTP v3: Now with group chat</span>
                     <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                       <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
@@ -213,7 +213,7 @@ const BuiltWithXmtp = () => {
                           {/* <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white via-gray-100/40"></div> */}
 
                           <div class="h-full w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm pt-48 md:pt-0">
-                            <img src="img/cbw-header.png" alt="" class="absolute inset-0 -z-20 w-full h-full object-contain md:object-cover mt-32 md:mt-0"></img>
+                            <img src="img/cbw-header.png" alt="" class="absolute inset-0 -z-20 w-full h-full object-contain md:object-cover -mt-6 md:mt-0"></img>
                           </div>
                           <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
 
@@ -250,7 +250,7 @@ const BuiltWithXmtp = () => {
                           {/* <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white via-gray-100/40"></div> */}
 
                           <div class="h-full w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm pt-48 md:pt-0">
-                            <img src="img/family-top-header.png" alt="" class="absolute inset-0 -z-20 w-full h-full object-contain md:object-cover mt-32 md:mt-0"></img>
+                            <img src="img/family-top-header.png" alt="" class="absolute inset-0 -z-20 w-full h-full object-contain md:object-cover -mt-6 md:mt-0"></img>
                           </div>
                           <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
 
@@ -469,7 +469,7 @@ const BuiltWithXmtp = () => {
           <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#FC4F37] opacity-20" style={{"clipPath":"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"}}></div>
         </div>
         
-        <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-24 lg:px-8">
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
             <div class="rounded-3xl p-2 shadow-md shadow-black/5">
               
