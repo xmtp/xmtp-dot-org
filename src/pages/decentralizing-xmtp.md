@@ -8,7 +8,7 @@ Until now, the backend of the network has been centralized. All the nodes are ru
 
 1. Devs are tired of getting rugged by platforms who can change the rules any time it suits their business interests.
 2. Devs want to be owners of the network and share in the economic value that they are creating
-3. Devs should feel confident that the platform they are building on top of will not live or die with a single company.
+3. Devs should feel confident that the platform they are building on will not live or die with a single company.
 
 ## How does the network work?
 
