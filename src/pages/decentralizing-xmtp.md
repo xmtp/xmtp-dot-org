@@ -12,7 +12,7 @@ Until now, the backend of the network has been centralized. All the nodes are ru
 
 ## How does the network work?
 
-In this decentralized network there are three types of actor. Each plays a distinct role in delivering a reliable, high-performance, end-to-end encrypted messaging service for users.
+In this decentralized network there are three types of actors. Each plays a distinct role in delivering a reliable, high-performance, end-to-end encrypted messaging service for users.
 
 1. **Clients** will protect message confidentiality and integrity by using end-to-end encryption and signing message ordering metadata.
 2. **Node operators** will deliver encrypted messages as directed by clients and temporarily store them for recipients who are offline.
