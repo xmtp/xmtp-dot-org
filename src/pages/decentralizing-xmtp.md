@@ -69,7 +69,7 @@ The XMTP broadcast network is a small group of 5–20 nodes, each run by a separ
 
 **5. Why can’t just anyone run a node?**
 
-It’s helpful to go back to our design goals for decentralization.
+It’s helpful to go back to the design goals for the decentralization of XMTP.
 
 1. Have a network with the performance and latency of web2 messaging services
 2. Have extremely low messaging costs
