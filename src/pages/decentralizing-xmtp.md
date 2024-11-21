@@ -75,7 +75,7 @@ It’s helpful to go back to our design goals for decentralization.
 2. Have extremely low messaging costs
 3. Be credibly neutral and censorship resistant
 
-A smaller network of nodes is better for achieving these goals. For a message to be distributed to all node operators requires less bandwidth and fewer hops with a smaller network, and there are “less mouths to feed” to reach economic sustainability for node operators. This allows us to deliver high performance at a relatively low cost.
+A smaller network of nodes is better for achieving these goals. For a message to be distributed to all node operators requires less bandwidth and fewer hops with a smaller network, and there are “less mouths to feed” to reach economic sustainability for node operators. This allows XMTP to deliver high performance at a relatively low cost.
 
 A network of 20 node operators can still be credibly neutral and censorship resistant so long as the group of operators is sufficiently diverse to prevent collusion between operators. And the network is designed to achieve its censorship resistance so long as there is a single honest node.
 
