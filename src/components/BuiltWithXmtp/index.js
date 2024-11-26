@@ -6,13 +6,18 @@ import Link from '@docusaurus/Link';
 import { motion } from "framer-motion";
 
 const BuiltWithXmtp = () => {
-  const [openAccordions, setOpenAccordions] = useState({});
+  const [openAccordions, setOpenAccordions] = useState({ 1: true });
 
   const toggleAccordion = (index) => {
-    setOpenAccordions(prev => ({
-      ...prev,
-      [index]: !prev[index]
-    }));
+    setOpenAccordions(prev => {
+      // If clicking the currently open accordion and it's the only one open,
+      // don't allow it to close
+      if (prev[index] && Object.keys(prev).length === 1) {
+        return prev;
+      }
+      // Otherwise, close all others and open the clicked one
+      return { [index]: !prev[index] };
+    });
   };
 
   // SVG components for better React integration
@@ -141,7 +146,7 @@ const BuiltWithXmtp = () => {
             <div class="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
               <div class="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none">
                   <img src="img/converse-logo-full-black.svg" class="h-14 mb-2"></img>
-                  <h2 class="max-w-3xl text-balance text-3xl md:text-5xl font-semibold tracking-tight text-gray-950">Want to try XMTP messaging?</h2>
+                  <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">Want to try XMTP messaging?</h2>
                   <p class="max-w-3xl text-base md:text-lg font-normal">Converse Messenger is a messaging app for decentralized, secure, end-to-end encrypted conversations.</p>
                   <div class="mt-6 flex flex-wrap gap-x-4 gap-y-0">
                     <a aria-label="Download on the App Store" href="https://apps.apple.com/app/converse-messenger/id1658819514">
@@ -266,7 +271,7 @@ const BuiltWithXmtp = () => {
               </div>
               <div class="relative mt-0 sm:mt-20 lg:row-span-1 md:mt-0 lg:col-span-5">
                   <div class="h-[400px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-16 lg:h-auto lg:px-0 lg:pt-0 xl:-bottom-16 slide-from-bottom">
-                    <img class="h-auto" alt="Converse Messenger Homescreen" loading="lazy" width="1704" height="2906" decoding="async" data-nimg="1" src="img/converse-app.webp"></img>
+                    <img class="h-auto" alt="Converse Messenger Homescreen" loading="lazy" width="1704" height="2906" decoding="async" data-nimg="1" src="img/converse-app.png"></img>
                   </div>
               </div>
             </div>
@@ -277,7 +282,7 @@ const BuiltWithXmtp = () => {
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="lg:col-end-1 lg:w-full lg:max-w-3xl lg:pb-8 mb-8 md:mb-0">
               <p class="text-sm/4 md:text-base font-semibold uppercase tracking-wider leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.2)]">Use Cases</p>
-              <h2 class="max-w-3xl text-balance text-3xl md:text-5xl font-semibold tracking-tight text-gray-900">How apps and wallets use XMTP</h2>
+              <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">How apps and wallets use XMTP</h2>
               <p class="text-gray-600 max-w-3xl text-base md:text-lg font-normal">Learn about the connected and resilient ecosystem for seamless communication across apps and wallets</p>
           </div>
 
@@ -354,68 +359,206 @@ const BuiltWithXmtp = () => {
       <div class="bg-gray-50 py-24 rounded-3xl mb-6">
         <div class="mx-auto max-w-2xl px-0 lg:max-w-7xl md:px-8">
 
-          <div class="lg:col-end-1 md:w-full md:max-w-xl lg:pb-8 mb-12 md:mb-0">
-            <h2 class="max-w-5xl text-balance text-3xl md:text-5xl font-semibold tracking-tight text-gray-950">The New Standard for Decentralized Messaging</h2>
+          <div class="lg:col-end-1 md:w-full md:max-w-xl lg:pb-4 mb-8 md:mb-0 px-0">
+            <h2 class="max-w-5xl text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">The New Standard for Decentralized Messaging</h2>
             <p class="text-gray-700 max-w-3xl text-base md:text-lg font-normal">XMTP powers the next generation of messaging apps</p>
           </div>
+          
+          <div class="mt-4 grid max-w-xl grid-cols-1 gap-8 text-base/7 text-gray-700 lg:max-w-none lg:grid-cols-2">
+          
+            <div>
 
-          <div class="mt-0 grid gap-4 lg:grid-cols-2 lg:grid-rows-2">
-
-            <div class="relative lg:row-span-1 max-lg:row-start-1">
-              <div class="absolute inset-px rounded-2xl bg-white"></div>
-              <div class="relative flex h-full flex-col overflow-hidden rounded-2xl">
-                <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p class="mt-2 text-2xl font-semibold tracking-tight text-gray-950 max-lg:text-center">Universal Identity Support</p>
-                  <p class="mt-2 max-w-lg text-lg/7 text-gray-600 max-lg:text-center">Seamless, secure communication using any identity system to authenticate and connect without being locked into any specific platform</p>
-                </div>
-                <div class="relative min-h-[5rem] w-full grow">
-                  <img class="w-full" src="img/identity-short.png" alt=""></img>
-                </div>
-              </div>
-              <div class="pointer-events-none absolute inset-px rounded-2xl shadow ring-1 ring-black/5"></div>
-            </div>
-
-            <div class="relative">
-              <div class="absolute inset-px rounded-2xl bg-white"></div>
-              <div class="relative flex h-full flex-col overflow-hidden rounded-2xl">
-                <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p class="mt-2 text-2xl font-semibold tracking-tight text-gray-950 max-lg:text-center">Real Security from Real Standards</p>
-                  <p class="mt-2 max-w-lg text-lg/7 text-gray-600 max-lg:text-center">MLS ensures unspoofable, tamper-proof, and interception-resistant decentralized messaging interception-resistant decentralized messaging</p>
-                </div>
-                <div class="relative min-h-[5rem] w-full grow">
-                  <img src="img/security-short.png" alt="screenshot" class="w-full"></img>
-                </div>
-              </div>
-              <div class="pointer-events-none absolute inset-px rounded-2xl shadow ring-1 ring-black/5"></div>
-            </div>
+              <div>
               
-            <div class="relative max-lg:row-start-2 lg:col-start-1 lg:row-start-2">
-              <div class="absolute inset-px rounded-2xl bg-white"></div>
-              <div class="relative flex h-full flex-col overflow-hidden rounded-2xl">
-                <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p class="mt-2 text-2xl font-semibold tracking-tight text-gray-950 max-lg:text-center">Network-level Consent</p>
-                  <p class="mt-2 max-w-lg text-lg/7 text-gray-600 max-lg:text-center">Encrypted, user-owned consent at the protocol level, users decide which senders can reach them on any app using XMTP</p>
-                </div>
-                <div class="relative min-h-[5rem] w-full grow">
-                  <img class="w-full" src="img/consent-short.png" alt="screenshot"></img>
+                <button 
+                  onClick={() => toggleAccordion(1)} 
+                  className="w-full flex justify-between items-center py-5 text-gray-900 bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
+                >
+                  <span class="text-xl font-semibold">Real Security from Real Standards</span>
+                  <span className="text-gray-900 transition-transform duration-300">
+                    {openAccordions[1] ? <MinusIcon /> : <PlusIcon />}
+                  </span>
+                </button>
+                <div 
+                  className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
+                  style={{ maxHeight: openAccordions[1] ? '200px' : '0' }}
+                >
+
+                <div class="relative h-auto">
+                  <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+                  <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
                 </div>
               </div>
-              <div class="pointer-events-none absolute inset-px rounded-2xl shadow ring-1 ring-black/5"></div>
+
             </div>
 
+            <div>
 
-            <div class="relative">
-              <div class="absolute inset-px rounded-2xl bg-white"></div>
-              <div class="relative flex h-full flex-col overflow-hidden rounded-2xl">
-                <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p class="mt-2 text-2xl font-semibold tracking-tight text-gray-950 max-lg:text-center">Decentralized by Design</p>
-                  <p class="mt-2 max-w-lg text-lg/7 text-gray-600 max-lg:text-center">No single entity has access to or control over messages, making communication censorship-resistant and enhancing privacy</p>
+              <div>
+              
+                <button 
+                  onClick={() => toggleAccordion(2)} 
+                  className="w-full flex justify-between items-center py-5 text-gray-900 bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
+                >
+                  <span class="text-xl font-semibold">Universal Identity Support</span>
+                  <span className="text-gray-900 transition-transform duration-300">
+                    {openAccordions[2] ? <MinusIcon /> : <PlusIcon />}
+                  </span>
+                </button>
+
+                <div 
+                  className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
+                  style={{ maxHeight: openAccordions[2] ? '200px' : '0' }}
+                >
+
+                  <div class="relative h-auto">
+                    <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+                    <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                  </div>
+
                 </div>
-                <div class="relative min-h-[5rem] w-full grow">
-                  <img src="img/decentralized-short.png" alt="screenshot" class="w-full"></img>
-                </div>
+
               </div>
-              <div class="pointer-events-none absolute inset-px rounded-2xl shadow ring-1 ring-black/5"></div>
+              
+            </div>
+
+            <div>
+
+              <div>
+              
+                <button 
+                  onClick={() => toggleAccordion(3)} 
+                  className="w-full flex justify-between items-center py-5 text-gray-900 bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
+                >
+                  <span class="text-xl font-semibold">Network Level Consent</span>
+                  <span className="text-gray-900 transition-transform duration-300">
+                    {openAccordions[3] ? <MinusIcon /> : <PlusIcon />}
+                  </span>
+                </button>
+
+                <div 
+                  className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
+                  style={{ maxHeight: openAccordions[3] ? '200px' : '0' }}
+                >
+
+                  <div class="relative h-auto">
+                    <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+                    <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                  </div>
+
+                </div>
+
+              </div>
+              
+            </div>
+
+            <div>
+
+              <div>
+              
+                <button 
+                  onClick={() => toggleAccordion(4)} 
+                  className="w-full flex justify-between items-center py-5 text-gray-900 bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
+                >
+                  <span class="text-xl font-semibold">Decentralized</span>
+                  <span className="text-gray-900 transition-transform duration-300">
+                    {openAccordions[4] ? <MinusIcon /> : <PlusIcon />}
+                  </span>
+                </button>
+
+                <div 
+                  className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
+                  style={{ maxHeight: openAccordions[4] ? '200px' : '0' }}
+                >
+
+                  <div class="relative h-auto">
+                    <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+                    <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                  </div>
+
+                </div>
+
+              </div>
+              
+            </div>
+
+          </div>
+
+            <div>
+              {openAccordions[1] && (
+                  <>
+                  <div class="fade-in rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                        <article class="relative isolate overflow-hidden rounded-2xl bg-gray-900 pt-96 pb-48 sm:pt-48 lg:pt-96 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
+                          <img 
+                            src="img/decentralized.png" 
+                            className="absolute inset-0 -z-10 w-full h-full object-cover aspect-square" 
+                            alt="Security illustration 1" 
+                          />
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                  </>
+                )}
+  
+                {openAccordions[2] && (
+                  <>
+                  <div class="fade-in rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                        <article class="relative isolate overflow-hidden rounded-2xl bg-gray-900 pt-96 pb-48 sm:pt-48 lg:pt-96 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
+                          <img 
+                            src="img/universalIdentity.png" 
+                            className="absolute inset-0 -z-10 w-full h-full object-cover aspect-square" 
+                            alt="Security illustration 1" 
+                          />
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                  </>
+                )}
+
+
+  
+                {openAccordions[3] && (
+                  <>
+                  <div class="fade-in rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                        <article class="relative isolate overflow-hidden rounded-2xl bg-gray-900 pt-96 pb-48 sm:pt-48 lg:pt-96 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
+                          <img 
+                            src="img/decentralized.png" 
+                            className="absolute inset-0 -z-10 w-full h-full object-cover aspect-square" 
+                            alt="Security illustration 1" 
+                          />
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                  </>
+                )}
+                
+
+                {openAccordions[4] && (
+                  <>
+                  <div class="fade-in rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                        <article class="relative isolate overflow-hidden rounded-2xl bg-gray-900 pt-96 pb-48 sm:pt-48 lg:pt-96 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
+                          <img 
+                            src="img/universalIdentity.png" 
+                            className="absolute inset-0 -z-10 w-full h-full object-cover aspect-square" 
+                            alt="Security illustration 1" 
+                          />
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                  </>
+                )}
             </div>
 
           </div>
