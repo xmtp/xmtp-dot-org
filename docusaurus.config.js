@@ -199,8 +199,8 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Community forum ↗</div>`,
               },
               {
-                href: "https://community.xmtp.org/c/dev-support/76",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discourse-icon.svg" alt="Chat icon" /></div>
+                href: "https://discord.gg/N3smtr5upp",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discord-nav-icon.svg" alt="Discord icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support ↗</div>`,
               },
               {
@@ -251,7 +251,7 @@ const config = {
               },
               {
                 label: "Dev support ↗",
-                to: "https://community.xmtp.org/c/dev-support/76",
+                to: "https://discord.gg/N3smtr5upp",
               },
               {
                 label: "Awesome XMTP ↗",
