@@ -22,4 +22,4 @@ When it comes to demos and pitch decks, many builders have confidence in their c
 
 **Don’t get too technical**. Milestone demos should focus on meaningful and impactful features and flows, not on complex technical details. Explain things in simpler terms and demonstrate how the technology can be useful for the ecosystem.
 
-Sharing an idea is as important as the idea itself. Attention is scarce. You want to get as much as you can in the short amount of time possible. I hope this insights help you achieve your goals. Keep building.
+Sharing an idea is as important as the idea itself. Attention is scarce. You want to get as much as you can in the short amount of time possible. I hope these insights help you achieve your goals. Keep building.
