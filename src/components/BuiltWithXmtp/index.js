@@ -557,12 +557,30 @@ const BuiltWithXmtp = () => {
                       className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
                       style={{ maxHeight: openAccordions[1] ? '200px' : '0' }}
                     >
-                    <div class="relative h-auto text-gray-200 text-left">
-                      <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                      <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
-                    </div>
 
-                  </div>
+                      <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
+                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-black shadow-2xl">
+                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-black text-white p-6 w-full">
+                            <span class="flex gap-4">
+                              <span class="shrink-0 text-gray-500">
+                                  $
+                              </span>
+
+                              <span class="flex-1 flex gap-4">
+                                  <span>
+                                    npm install
+                                  </span>
+
+                                  <span class="text-red-500">
+                                    @xmtp/xmtp-js
+                                  </span>
+                              </span>
+                            </span>
+                          </code>
+                        </div>
+                      </div>
+
+                    </div>
                     
                   <div>
                     
@@ -582,10 +600,28 @@ const BuiltWithXmtp = () => {
                       className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
                       style={{ maxHeight: openAccordions[2] ? '200px' : '0' }}
                     >
-                      <div class="relative h-auto text-gray-200 text-left">
-                        <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                        <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                      <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
+                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-black shadow-2xl">
+                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-black text-white p-6 w-full">
+                            <span class="flex gap-4">
+                              <span class="shrink-0 text-gray-500">
+                                  $
+                              </span>
+
+                              <span class="flex-1 flex gap-4">
+                                  <span>
+                                    npm install
+                                  </span>
+
+                                  <span class="text-red-500">
+                                    @xmtp/xmtp-js
+                                  </span>
+                              </span>
+                            </span>
+                          </code>
+                        </div>
                       </div>
+
                     </div>
 
                   </div>
@@ -608,10 +644,28 @@ const BuiltWithXmtp = () => {
                       className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
                       style={{ maxHeight: openAccordions[3] ? '200px' : '0' }}
                     >
-                      <div class="relative h-auto text-gray-200 text-left">
-                        <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                        <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                      <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
+                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-black shadow-2xl">
+                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-black text-white p-6 w-full">
+                            <span class="flex gap-4">
+                              <span class="shrink-0 text-gray-500">
+                                  $
+                              </span>
+
+                              <span class="flex-1 flex gap-4">
+                                  <span>
+                                    npm install
+                                  </span>
+
+                                  <span class="text-red-500">
+                                    @xmtp/xmtp-js
+                                  </span>
+                              </span>
+                            </span>
+                          </code>
+                        </div>
                       </div>
+
                     </div>
 
                   </div>
@@ -634,10 +688,28 @@ const BuiltWithXmtp = () => {
                       className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
                       style={{ maxHeight: openAccordions[4] ? '200px' : '0' }}
                     >
-                      <div class="relative h-auto text-gray-200 text-left">
-                        <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                        <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                      <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
+                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-black shadow-2xl">
+                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-black text-white p-6 w-full">
+                            <span class="flex gap-4">
+                              <span class="shrink-0 text-gray-500">
+                                  $
+                              </span>
+
+                              <span class="flex-1 flex gap-4">
+                                  <span>
+                                    npm install
+                                  </span>
+
+                                  <span class="text-red-500">
+                                    @xmtp/xmtp-js
+                                  </span>
+                              </span>
+                            </span>
+                          </code>
+                        </div>
                       </div>
+
                     </div>
 
                   </div>
@@ -660,10 +732,28 @@ const BuiltWithXmtp = () => {
                       className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
                       style={{ maxHeight: openAccordions[5] ? '200px' : '0' }}
                     >
-                      <div class="relative h-auto text-gray-200 text-left">
-                        <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                        <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                      <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
+                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-black shadow-2xl">
+                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-black text-white p-6 w-full">
+                            <span class="flex gap-4">
+                              <span class="shrink-0 text-gray-500">
+                                  $
+                              </span>
+
+                              <span class="flex-1 flex gap-4">
+                                  <span>
+                                    npm install
+                                  </span>
+
+                                  <span class="text-red-500">
+                                    @xmtp/xmtp-js
+                                  </span>
+                              </span>
+                            </span>
+                          </code>
+                        </div>
                       </div>
+                      
                     </div>
 
                   </div>
