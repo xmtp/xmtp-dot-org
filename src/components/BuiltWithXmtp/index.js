@@ -38,7 +38,7 @@ const BuiltWithXmtp = () => {
 
       <div className="homepageHero -mt-2">
 
-        <div class="relative isolate overflow-hidden bg-gray-900 rounded-3xl">
+        <div class="relative isolate overflow-hidden bg-[#1d1d1d] rounded-3xl">
           <div class="lines">
             <div class="line"></div>
             <div class="line"></div>
@@ -57,11 +57,11 @@ const BuiltWithXmtp = () => {
           </div>
 
           <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]" aria-hidden="true">
-            <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#FC4F37] opacity-20" style={{"clipPath":"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"}}></div>
+            <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#959595] to-[#FC4F37] opacity-20" style={{"clipPath":"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"}}></div>
           </div>
 
-          <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-8 pt-4 md:pt-0 lg:flex md:pb-24">
-            <div class="mx-auto max-w-5xl shrink-0 lg:mx-0 md:pt-16">
+          <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-8 pt-4 md:pt-0 lg:flex md:pb-32 md:pt-24">
+            <div class="mx-auto max-w-5xl shrink-0 lg:mx-0">
               <div class="mt-8 md:mt-24 lg:mt-0">
                 <a href="#" class="inline-flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 hover:no-underline">
                   <span class="mb-2 md:mb-0 rounded-full bg-gray-500/10 px-4 py-2 text-center md:py-1 md:text-left text-xs/4 md:text-sm/6 font-semibold text-red-400 ring-2 ring-inset ring-red-500/50">What's new</span>
@@ -117,7 +117,7 @@ const BuiltWithXmtp = () => {
 
       <div class="pt-4 pb-0 bg-white rounded-3xl my-6">
         <div class="mx-auto max-w-full">
-          <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by companies around the world</h2>
+          <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by the best companies in the world</h2>
 
           <div class="relative flex overflow-x-hidden">
             <div class="py-4 animate-marquee whitespace-nowrap">
@@ -356,217 +356,149 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-gray-50 py-24 rounded-3xl mb-6">
-        <div class="mx-auto max-w-2xl px-0 lg:max-w-7xl md:px-8">
+      <div class="bg-white pb-24 pt-0">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:pr-8 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base font-semibold text-red-500">Security</h2>
+                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Real Security from Real Standards.</p>
+                <p class="mt-6 text-lg/8 text-gray-600">XMTP leverages <a href="#" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a>, a cryptographic protocol developed by the IETF, providing the strongest available open source security standard for decentralized messaging.</p>
+                <p class="mt-6 text-lg/8 text-gray-600">Messages sent with XMTP are unspoofable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p>
+                <p class="mt-12">
 
-          <div class="lg:col-end-1 md:w-full md:max-w-xl lg:pb-4 mb-8 md:mb-0 px-0">
-            <h2 class="max-w-5xl text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">The New Standard for Decentralized Messaging</h2>
-            <p class="text-gray-700 max-w-3xl text-base md:text-lg font-normal">XMTP powers the next generation of messaging apps</p>
+                  <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                    </svg>
+
+                    Read more about XMTP encryption <span class="ml-2" aria-hidden="true">→</span>
+                  </a>
+
+                </p>
+              </div>
+            </div>
+            <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+              <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                  <img src="img/realSecurityGraphic.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div class="mt-4 grid max-w-xl grid-cols-1 gap-8 text-base/7 text-gray-700 lg:max-w-none lg:grid-cols-2">
-          
-            <div>
-
-              <div>
-              
-                <button 
-                  onClick={() => toggleAccordion(1)} 
-                  className="w-full flex justify-between items-center py-5 text-gray-900 bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
-                >
-                  <span class="text-xl font-semibold">Real Security from Real Standards</span>
-                  <span className="text-gray-900 transition-transform duration-300">
-                    {openAccordions[1] ? <MinusIcon /> : <PlusIcon />}
-                  </span>
-                </button>
-                <div 
-                  className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
-                  style={{ maxHeight: openAccordions[1] ? '200px' : '0' }}
-                >
-
-                <div class="relative h-auto">
-                  <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                  <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
-                </div>
-              </div>
-
-            </div>
-
-            <div>
-
-              <div>
-              
-                <button 
-                  onClick={() => toggleAccordion(2)} 
-                  className="w-full flex justify-between items-center py-5 text-gray-900 bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
-                >
-                  <span class="text-xl font-semibold">Universal Identity Support</span>
-                  <span className="text-gray-900 transition-transform duration-300">
-                    {openAccordions[2] ? <MinusIcon /> : <PlusIcon />}
-                  </span>
-                </button>
-
-                <div 
-                  className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
-                  style={{ maxHeight: openAccordions[2] ? '200px' : '0' }}
-                >
-
-                  <div class="relative h-auto">
-                    <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                    <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
-                  </div>
-
-                </div>
-
-              </div>
-              
-            </div>
-
-            <div>
-
-              <div>
-              
-                <button 
-                  onClick={() => toggleAccordion(3)} 
-                  className="w-full flex justify-between items-center py-5 text-gray-900 bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
-                >
-                  <span class="text-xl font-semibold">Network Level Consent</span>
-                  <span className="text-gray-900 transition-transform duration-300">
-                    {openAccordions[3] ? <MinusIcon /> : <PlusIcon />}
-                  </span>
-                </button>
-
-                <div 
-                  className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
-                  style={{ maxHeight: openAccordions[3] ? '200px' : '0' }}
-                >
-
-                  <div class="relative h-auto">
-                    <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                    <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
-                  </div>
-
-                </div>
-
-              </div>
-              
-            </div>
-
-            <div>
-
-              <div>
-              
-                <button 
-                  onClick={() => toggleAccordion(4)} 
-                  className="w-full flex justify-between items-center py-5 text-gray-900 bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
-                >
-                  <span class="text-xl font-semibold">Decentralized</span>
-                  <span className="text-gray-900 transition-transform duration-300">
-                    {openAccordions[4] ? <MinusIcon /> : <PlusIcon />}
-                  </span>
-                </button>
-
-                <div 
-                  className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
-                  style={{ maxHeight: openAccordions[4] ? '200px' : '0' }}
-                >
-
-                  <div class="relative h-auto">
-                    <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                    <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
-                  </div>
-
-                </div>
-
-              </div>
-              
-            </div>
-
-          </div>
-
-            <div>
-              {openAccordions[1] && (
-                  <>
-                  <div class="fade-in rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                        <article class="relative isolate overflow-hidden rounded-2xl bg-gray-900 pt-96 pb-48 sm:pt-48 lg:pt-96 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
-                          <img 
-                            src="img/decentralized.png" 
-                            className="absolute inset-0 -z-10 w-full h-full object-cover aspect-square" 
-                            alt="Security illustration 1" 
-                          />
-                        </article>
-                      </div>
-                    </div>
-                  </div>
-                  </>
-                )}
-  
-                {openAccordions[2] && (
-                  <>
-                  <div class="fade-in rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                        <article class="relative isolate overflow-hidden rounded-2xl bg-gray-900 pt-96 pb-48 sm:pt-48 lg:pt-96 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
-                          <img 
-                            src="img/universalIdentity.png" 
-                            className="absolute inset-0 -z-10 w-full h-full object-cover aspect-square" 
-                            alt="Security illustration 1" 
-                          />
-                        </article>
-                      </div>
-                    </div>
-                  </div>
-                  </>
-                )}
-
-
-  
-                {openAccordions[3] && (
-                  <>
-                  <div class="fade-in rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                        <article class="relative isolate overflow-hidden rounded-2xl bg-gray-900 pt-96 pb-48 sm:pt-48 lg:pt-96 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
-                          <img 
-                            src="img/decentralized.png" 
-                            className="absolute inset-0 -z-10 w-full h-full object-cover aspect-square" 
-                            alt="Security illustration 1" 
-                          />
-                        </article>
-                      </div>
-                    </div>
-                  </div>
-                  </>
-                )}
-                
-
-                {openAccordions[4] && (
-                  <>
-                  <div class="fade-in rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
-                    <div class="rounded-3xl p-2 shadow-md shadow-black/5">
-                      <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
-                        <article class="relative isolate overflow-hidden rounded-2xl bg-gray-900 pt-96 pb-48 sm:pt-48 lg:pt-96 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
-                          <img 
-                            src="img/universalIdentity.png" 
-                            className="absolute inset-0 -z-10 w-full h-full object-cover aspect-square" 
-                            alt="Security illustration 1" 
-                          />
-                        </article>
-                      </div>
-                    </div>
-                  </div>
-                  </>
-                )}
-            </div>
-
-          </div>
-        
         </div>
       </div>
 
-      <div class="relative isolate overflow-hidden bg-gray-900 rounded-3xl">
+      <div class="bg-white pb-24 pt-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:ml-auto lg:pl-4 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base/7 font-semibold text-red-500">Identity</h2>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Universal Identity Support</p>
+                <p class="mt-6 text-lg/8 text-gray-600">XMTP unifies messaging for all your web3 names in one inbox, making it easy to manage communication across apps.</p>
+                <p class="mt-6 text-lg/8 text-gray-600">Wallets and names link to a single identity using secure operations verified by wallet signatures.</p>
+                <p class="mt-12">
+
+                  <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                    </svg>
+
+
+                    Read more about XMTP’s Identity Support <span class="ml-2" aria-hidden="true">→</span>
+                  </a>
+
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start justify-end lg:order-first">
+              <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                  <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                  <img src="img/universalIdentityGraphic.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white pb-24 pt-0">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:pr-8 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base/7 font-semibold text-red-500">No Spam</h2>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Network-level Consent</p>
+                <p class="mt-6 text-lg/8 text-gray-600">XMTP takes a new approach to mitigating spam. Unlike legacy systems that filter spam out after the fact, XMTP clients block spam at the network level before it gets to your inbox. The difference is foundational: by using encrypted, user-owned consent at the protocol level, users decide which senders can reach them on any app built on XMTP.</p>
+                <p class="mt-6 text-lg/8 text-gray-600">The protocol ↔ client architecture enables developers to layer in entirely new forms of filtering and prioritization—proofs of human identity, on-chain and social graphs, even economic incentives like paying for attention. </p>
+                <p class="mt-12">
+
+                  <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                  </svg>
+
+                  Read more about XMTP’s network level consent <span class="ml-2" aria-hidden="true">→</span>
+                  </a>
+
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+              <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                  <img src="img/universalConsentGraphic.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white pb-32 pt-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:ml-auto lg:pl-4 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base/7 font-semibold text-red-500">Censorship-resistant</h2>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Decentralized by Design</p>
+                <p class="mt-6 text-lg/8 text-gray-600">XMTP is designed as a decentralized messaging protocol, meaning it operates without a central server, giving users full ownership and control over their data. This structure ensures that no single entity has access to or control over messages, making communication censorship-resistant and enhancing privacy.</p>
+                <p class="mt-12">
+
+                <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+                </svg>
+
+                Explore the XMTP decentralization roadmap <span class="ml-2" aria-hidden="true">→</span>
+                </a>
+
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start justify-end lg:order-first">
+              <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                  <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                    <img src="img/decentralizedByDesignGraphic.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative isolate overflow-hidden bg-[#1d1d1d] rounded-3xl">
         
         <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
           <defs>
@@ -581,68 +513,165 @@ const BuiltWithXmtp = () => {
         </svg>
 
         <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]" aria-hidden="true">
-          <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#FC4F37] opacity-20" style={{"clipPath":"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"}}></div>
+          <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#959595] to-[#FC4F37] opacity-20" style={{"clipPath":"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"}}></div>
         </div>
         
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
             <div class="rounded-3xl p-2 shadow-md shadow-black/5">
               
-              <div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 pb-0 text-center shadow-2xl sm:rounded-2xl sm:px-16">
-                <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-4xl">XMTP is Open Source</h2>
-                <p class="mx-auto mt-2 max-w-2xl text-pretty text-lg/7 text-gray-300">XMTP’s protocol, app, and developer tools are all open source, enabling transparency, security, and community-driven improvements. XMTP’s features into their applications, expanding the ecosystem while upholding decentralized and privacy-first standards.</p>
-                <div class="mt-10 flex items-center justify-center gap-x-6">
+              <div class="relative isolate overflow-hidden bg-[#1d1d1d] px-6 pt-16 pb-16 text-left shadow-2xl sm:rounded-2xl sm:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-8">
                 
-                  <a class="cursor-pointer flex items-center gap-x-1 text-black bg-white hover:text-black shadow-sm hover:bg-gray-400 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+                <div>
+                  <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-4xl">XMTP is Open Source</h2>
+                  <p class="mt-2 max-w-2xl text-pretty text-lg/7 text-gray-300">XMTP’s protocol, app, and developer tools are all open source, enabling transparency, security, and community-driven improvements. XMTP’s features into their applications, expanding the ecosystem while upholding decentralized and privacy-first standards.</p>
                   
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 me-2" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <div class="mt-10 flex gap-x-6">
+                  
+                    <a class="cursor-pointer flex items-center gap-x-1 text-black bg-white hover:text-black shadow-sm hover:bg-gray-400 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 me-2" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
 
-                  Browse the Repos <span class="ml-2" aria-hidden="true">→</span>
-                  </a>
-                  
+                    Browse all of the Repos <span class="ml-2" aria-hidden="true">→</span>
+                    </a>
+                    
+                  </div>  
                 </div>
                 
-                <div class="relative min-h-[16rem] w-full grow invisible md:visible">
-                  <div class="absolute inset-x-[-50vw] -bottom-48 -top-32 [mask-image:linear-gradient(transparent,white,white)] lg:-bottom-32 lg:-top-32 lg:left-[calc(60%+14rem)] lg:right-0 lg:[mask-image:none] dark:[mask-image:linear-gradient(transparent,white,transparent)] lg:dark:[mask-image:linear-gradient(white,white,transparent)]"><svg aria-hidden="true" viewBox="0 0 668 1069" width="668" height="1069" fill="none" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-0 lg:translate-x-0 lg:translate-y-[-60%]"><defs><clipPath id=":Rqja:-clip-path"><path fill="#fff" transform="rotate(-180 334 534.4)" d="M0 0h668v1068.8H0z"></path></clipPath></defs><g opacity=".4" clip-path="url(#:Rqja:-clip-path)" stroke-width="4"><path opacity=".3" d="M584.5 770.4v-474M484.5 770.4v-474M384.5 770.4v-474M283.5 769.4v-474M183.5 768.4v-474M83.5 767.4v-474" stroke="#334155"></path><path d="M83.5 221.275v6.587a50.1 50.1 0 0 0 22.309 41.686l55.581 37.054a50.102 50.102 0 0 1 22.309 41.686v6.587M83.5 716.012v6.588a50.099 50.099 0 0 0 22.309 41.685l55.581 37.054a50.102 50.102 0 0 1 22.309 41.686v6.587M183.7 584.5v6.587a50.1 50.1 0 0 0 22.31 41.686l55.581 37.054a50.097 50.097 0 0 1 22.309 41.685v6.588M384.101 277.637v6.588a50.1 50.1 0 0 0 22.309 41.685l55.581 37.054a50.1 50.1 0 0 1 22.31 41.686v6.587M384.1 770.288v6.587a50.1 50.1 0 0 1-22.309 41.686l-55.581 37.054A50.099 50.099 0 0 0 283.9 897.3v6.588" stroke="#334155"></path><path d="M384.1 770.288v6.587a50.1 50.1 0 0 1-22.309 41.686l-55.581 37.054A50.099 50.099 0 0 0 283.9 897.3v6.588M484.3 594.937v6.587a50.1 50.1 0 0 1-22.31 41.686l-55.581 37.054A50.1 50.1 0 0 0 384.1 721.95v6.587M484.3 872.575v6.587a50.1 50.1 0 0 1-22.31 41.686l-55.581 37.054a50.098 50.098 0 0 0-22.309 41.686v6.582M584.501 663.824v39.988a50.099 50.099 0 0 1-22.31 41.685l-55.581 37.054a50.102 50.102 0 0 0-22.309 41.686v6.587M283.899 945.637v6.588a50.1 50.1 0 0 1-22.309 41.685l-55.581 37.05a50.12 50.12 0 0 0-22.31 41.69v6.59M384.1 277.637c0 19.946 12.763 37.655 31.686 43.962l137.028 45.676c18.923 6.308 31.686 24.016 31.686 43.962M183.7 463.425v30.69c0 21.564 13.799 40.709 34.257 47.529l134.457 44.819c18.922 6.307 31.686 24.016 31.686 43.962M83.5 102.288c0 19.515 13.554 36.412 32.604 40.645l235.391 52.309c19.05 4.234 32.605 21.13 32.605 40.646M83.5 463.425v-58.45M183.699 542.75V396.625M283.9 1068.8V945.637M83.5 363.225v-141.95M83.5 179.524v-77.237M83.5 60.537V0M384.1 630.425V277.637M484.301 830.824V594.937M584.5 1068.8V663.825M484.301 555.275V452.988M584.5 622.075V452.988M384.1 728.537v-56.362M384.1 1068.8v-20.88M384.1 1006.17V770.287M283.9 903.888V759.85M183.699 1066.71V891.362M83.5 1068.8V716.012M83.5 674.263V505.175" stroke="#334155"></path><circle cx="83.5" cy="384.1" r="10.438" transform="rotate(-180 83.5 384.1)" fill="#1E293B" stroke="#334155"></circle><circle cx="83.5" cy="200.399" r="10.438" transform="rotate(-180 83.5 200.399)" stroke="#334155"></circle><circle cx="83.5" cy="81.412" r="10.438" transform="rotate(-180 83.5 81.412)" stroke="#334155"></circle><circle cx="183.699" cy="375.75" r="10.438" transform="rotate(-180 183.699 375.75)" fill="#1E293B" stroke="#334155"></circle><circle cx="183.699" cy="563.625" r="10.438" transform="rotate(-180 183.699 563.625)" fill="#1E293B" stroke="#334155"></circle><circle cx="384.1" cy="651.3" r="10.438" transform="rotate(-180 384.1 651.3)" fill="#1E293B" stroke="#334155"></circle><circle cx="484.301" cy="574.062" r="10.438" transform="rotate(-180 484.301 574.062)" fill="#0EA5E9" fill-opacity=".42" stroke="#0EA5E9"></circle><circle cx="384.1" cy="749.412" r="10.438" transform="rotate(-180 384.1 749.412)" fill="#1E293B" stroke="#334155"></circle><circle cx="384.1" cy="1027.05" r="10.438" transform="rotate(-180 384.1 1027.05)" stroke="#334155"></circle><circle cx="283.9" cy="924.763" r="10.438" transform="rotate(-180 283.9 924.763)" stroke="#334155"></circle><circle cx="183.699" cy="870.487" r="10.438" transform="rotate(-180 183.699 870.487)" stroke="#334155"></circle><circle cx="283.9" cy="738.975" r="10.438" transform="rotate(-180 283.9 738.975)" fill="#1E293B" stroke="#FC4F37"></circle><circle cx="83.5" cy="695.138" r="10.438" transform="rotate(-180 83.5 695.138)" fill="#FC4F37" stroke="#FC4F37"></circle><circle cx="83.5" cy="484.3" r="10.438" transform="rotate(-180 83.5 484.3)" fill="#FC4F37" fill-opacity=".42" stroke="#FC4F37"></circle><circle cx="484.301" cy="432.112" r="10.438" transform="rotate(-180 484.301 432.112)" fill="#FC4F37" stroke="#FC4F37"></circle><circle cx="584.5" cy="432.112" r="10.438" transform="rotate(-180 584.5 432.112)" fill="#FC4F37" stroke="#FC4F37"></circle><circle cx="584.5" cy="642.95" r="10.438" transform="rotate(-180 584.5 642.95)" fill="#FC4F37" stroke="#FC4F37"></circle><circle cx="484.301" cy="851.699" r="10.438" transform="rotate(-180 484.301 851.699)" stroke="#FC4F37"></circle><circle cx="384.1" cy="256.763" r="10.438" transform="rotate(-180 384.1 256.763)" stroke="#FC4F37"></circle></g></svg></div>
-                  
-                  <div class="absolute bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-gray-900 shadow-2xl">
-                    <div class="flex bg-gray-800/40 ring-1 ring-white/5">
-                      <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
-                        <div class="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">xmtp-sdk.js</div>
-                        <div class="border-r border-gray-600/10 px-4 py-2">Your_App.jsx</div>
+                <div>
+                  <div>
+                    
+                    <button 
+                      onClick={() => toggleAccordion(1)} 
+                      className="w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
+                    >
+                      <div class="flex gap-x-6">
+                        <img class="max-h-8 object-contain" src="img/javascriptLogo.png" alt="Javascript Logo"></img>
+                        <span class="text-xl font-semibold">Javascript</span>
+                      </div>
+                      <span className="text-white transition-transform duration-300">
+                        {openAccordions[1] ? <MinusIcon /> : <PlusIcon />}
+                      </span>
+                    </button>
+                    <div 
+                      className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
+                      style={{ maxHeight: openAccordions[1] ? '200px' : '0' }}
+                    >
+                    <div class="relative h-auto text-gray-200 text-left">
+                      <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+                      <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                    </div>
+
+                  </div>
+                    
+                  <div>
+                    
+                    <button 
+                      onClick={() => toggleAccordion(2)} 
+                      className="w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
+                    >
+                      <div class="flex gap-x-6">
+                        <img class="max-h-8 object-contain" src="img/reactnativeLogo.png" alt="React Native Logo"></img>
+                        <span class="text-xl font-semibold">React Native</span>
+                      </div>
+                      <span className="text-white transition-transform duration-300">
+                        {openAccordions[2] ? <MinusIcon /> : <PlusIcon />}
+                      </span>
+                    </button>
+                    <div 
+                      className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
+                      style={{ maxHeight: openAccordions[2] ? '200px' : '0' }}
+                    >
+                      <div class="relative h-auto text-gray-200 text-left">
+                        <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+                        <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
                       </div>
                     </div>
-                    
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-900 text-white p-6 w-full">
-                        <span class="flex gap-4">
-                            <span class="shrink-0 text-gray-500">
-                                $
-                            </span>
 
-                            <span class="flex-1 flex gap-4">
-                                <span>
-                                  npm install
-                                </span>
-
-                                <span class="text-red-500">
-                                  @xmtp/xmtp-js
-                                </span>
-                            </span>
-                        </span>
-                    </code>
-                    
                   </div>
+
+                  <div>
+                    
+                    <button 
+                      onClick={() => toggleAccordion(3)} 
+                      className="w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
+                    >
+                      <div class="flex gap-x-6">
+                        <img class="max-h-8 object-contain" src="img/swiftLogo.png" alt="Swift Logo"></img>
+                        <span class="text-xl font-semibold">Swift (iOS)</span>
+                      </div>
+                      <span className="text-white transition-transform duration-300">
+                        {openAccordions[3] ? <MinusIcon /> : <PlusIcon />}
+                      </span>
+                    </button>
+                    <div 
+                      className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
+                      style={{ maxHeight: openAccordions[3] ? '200px' : '0' }}
+                    >
+                      <div class="relative h-auto text-gray-200 text-left">
+                        <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+                        <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div>
+                    
+                    <button 
+                      onClick={() => toggleAccordion(4)} 
+                      className="w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
+                    >
+                      <div class="flex gap-x-6">
+                        <img class="max-h-8 object-contain" src="img/kotlinLogo.png" alt="Kotlin Logo"></img>
+                        <span class="text-xl font-semibold">Kotlin (Android)</span>
+                      </div>
+                      <span className="text-white transition-transform duration-300">
+                        {openAccordions[3] ? <MinusIcon /> : <PlusIcon />}
+                      </span>
+                    </button>
+                    <div 
+                      className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
+                      style={{ maxHeight: openAccordions[4] ? '200px' : '0' }}
+                    >
+                      <div class="relative h-auto text-gray-200 text-left">
+                        <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+                        <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div>
+                    
+                    <button 
+                      onClick={() => toggleAccordion(5)} 
+                      className="w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400"
+                    >
+                      <div class="flex gap-x-6">
+                        <img class="max-h-8 object-contain" src="img/nodejsLogo.png" alt="Node JS Logo"></img>
+                        <span class="text-xl font-semibold">Node JS</span>
+                      </div>
+                      <span className="text-white transition-transform duration-300">
+                        {openAccordions[3] ? <MinusIcon /> : <PlusIcon />}
+                      </span>
+                    </button>
+                    <div 
+                      className="overflow-hidden transition-all duration-300 ease-in-out h-auto"
+                      style={{ maxHeight: openAccordions[5] ? '200px' : '0' }}
+                    >
+                      <div class="relative h-auto text-gray-200 text-left">
+                        <p class="relative mt-4 px-2">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+                        <a href="#" class="relative z-10 text-base font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all px-2">Read more <span aria-hidden="true">→</span></a>
+                      </div>
+                    </div>
+
+                  </div>
+
                 </div>
 
-                <svg viewBox="0 0 1024 1024" class="invisible md:visible absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]" aria-hidden="true">
-                  <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fill-opacity="0.7" />
-                  <defs>
-                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
-                      <stop stop-color="#FC4F37" />
-                      <stop offset="1" stop-color="#FC4F37" />
-                    </radialGradient>
-                  </defs>
-                </svg>
+              </div>
+                
               </div>
 
             </div>

@@ -135,14 +135,14 @@ dd {
 
 .line:nth-child(1) {
   margin-left: -25%;
-  opacity: 0;
+  opacity: 0.2;
 }
 .line:nth-child(1)::after {
   animation-delay: 1s;
 }
 .line:nth-child(2) {
   margin-left: -8%;
-  opacity: 0.4;
+  opacity: 0.25;
 }
 .line:nth-child(2)::after {
   animation-delay: 2s;
@@ -211,35 +211,35 @@ dd {
 }
 .h-line:nth-child(2) {
   margin-top: 12%;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 .h-line:nth-child(2)::after {
   animation-delay: 3s;
 }
 .h-line:nth-child(3) {
   margin-top: 20%;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 .h-line:nth-child(3)::after {
   animation-delay: 1.5s;
 }
 .h-line:nth-child(4) {
   margin-top: 28%;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 .h-line:nth-child(4)::after {
   animation-delay: 4s;
 }
 .h-line:nth-child(5) {
   margin-top: 36%;
-  opacity: 0.5;
+  opacity: 0.75;
 }
 .h-line:nth-child(5)::after {
   animation-delay: 5s;
 }
 .h-line:nth-child(6) {
   margin-top: 44%;
-  opacity: 0.5;
+  opacity: 0.75;
 }
 .h-line:nth-child(6)::after {
   animation-delay: 4.5s;
