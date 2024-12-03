@@ -74,23 +74,23 @@ const BuiltWithXmtp = () => {
                 </a>
               </div>
 
-              <h1 class="mt-4 md:mt-8 text-pretty text-3xl font-semibold tracking-tight text-white md:text-6xl">XMTP is the largest & most secure decentralized messaging network</h1>
+              <h1 class="mt-4 md:mt-8 text-pretty text-3xl font-semibold tracking-tight text-white md:text-6xl">Messaging Built To Last Forever</h1>
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
                 <dl class="mx-auto mt-8 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-6 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-8">
-                    <dt class="text-sm/6 md:text-md/6 text-gray-400">Identities</dt>
-                    <dd class="order-first text-xl md:text-3xl font-semibold tracking-tight">2 Million+</dd>
+                    <dt class="text-sm/6 md:text-md/6 text-gray-400">Connected identities</dt>
+                    <dd class="order-first text-xl md:text-3xl font-semibold tracking-tight">2 million+</dd>
                   </div>
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-10 ml-0 md:ml-8">
-                    <dt class="text-sm/6 md:text-md/6 text-gray-400">of Developers</dt>
+                    <dt class="text-sm/6 md:text-md/6 text-gray-400">of developers</dt>
                     <dd class="order-first text-xl md:text-3xl font-semibold tracking-tight">1,000s</dd>
                   </div>
                   <div class="flex flex-col gap-y-0 border-none ml-0 md:ml-8">
-                    <dt class="text-sm/6 md:text-md/6 text-gray-400">Apps</dt>
+                    <dt class="text-sm/6 md:text-md/6 text-gray-400">Production apps</dt>
                     <dd class="order-first text-xl md:text-3xl font-semibold tracking-tight">60+</dd>
                   </div>
                 </dl>
-                <p class="mt-8 text-pretty text-md md:text-lg font-semibold text-gray-200">Trust XMTP for secure, private, and portable messaging</p>
+                <p class="mt-8 text-pretty text-md md:text-lg font-semibold text-gray-200">XMTP is a complete toolkit for encrypted group chats, DMs, and notifications &mdash; powered by the most trusted, decentralized network for secure, private messaging.</p>
               </div>
               <div class="mt-10 flex flex-wrap md:flex-nowrap items-center gap-x-4">
 
@@ -117,7 +117,7 @@ const BuiltWithXmtp = () => {
 
       <div class="pt-4 pb-0 bg-white rounded-3xl my-6">
         <div class="mx-auto max-w-full">
-          <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by the best companies in the world</h2>
+          <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by innovators to face the hardest challenges in messaging</h2>
 
           <div class="relative flex overflow-x-hidden">
             <div class="py-4 animate-marquee whitespace-nowrap">
@@ -362,9 +362,9 @@ const BuiltWithXmtp = () => {
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold text-red-500">Security</h2>
-                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Real Security from Real Standards.</p>
-                <p class="mt-6 text-lg/8 text-gray-600">XMTP leverages <a href="#" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a>, a cryptographic protocol developed by the IETF, providing the strongest available open source security standard for decentralized messaging.</p>
-                <p class="mt-6 text-lg/8 text-gray-600">Messages sent with XMTP are unspoofable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p>
+                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Enterprise-grade encryption</p>
+                <p class="mt-6 text-lg/8 text-gray-600">Built on the IETF-standard <a href="#" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a>, protocol &ndash; the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's fully audited implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
+                {/* <p class="mt-6 text-lg/8 text-gray-600">Messages sent with XMTP are unspoofable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p> */}
                 <p class="mt-12">
 
                   <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
@@ -373,7 +373,7 @@ const BuiltWithXmtp = () => {
                       <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
                     </svg>
 
-                    Read more about XMTP encryption <span class="ml-2" aria-hidden="true">→</span>
+                    Encryption in XMTP <span class="ml-2" aria-hidden="true">→</span>
                   </a>
 
                 </p>
@@ -396,9 +396,8 @@ const BuiltWithXmtp = () => {
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">Identity</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Universal Identity Support</p>
-                <p class="mt-6 text-lg/8 text-gray-600">XMTP unifies messaging for all your web3 names in one inbox, making it easy to manage communication across apps.</p>
-                <p class="mt-6 text-lg/8 text-gray-600">Wallets and names link to a single identity using secure operations verified by wallet signatures.</p>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Instant unified identity</p>
+                <p class="mt-6 text-lg/8 text-gray-600">Add messaging capabilities to any web3 name or wallet without building identity infrastructure. Users automatically get unified communication across their ENS, Lens, and Farcaster identities while your app maintains its native identity experience.</p>
                 <p class="mt-12">
 
                   <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
@@ -408,7 +407,7 @@ const BuiltWithXmtp = () => {
                     </svg>
 
 
-                    Read more about XMTP’s Identity Support <span class="ml-2" aria-hidden="true">→</span>
+                    Identity in XMTP <span class="ml-2" aria-hidden="true">→</span>
                   </a>
 
                 </p>
@@ -432,10 +431,9 @@ const BuiltWithXmtp = () => {
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
-                <h2 class="text-base/7 font-semibold text-red-500">No Spam</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Network-level Consent</p>
-                <p class="mt-6 text-lg/8 text-gray-600">XMTP takes a new approach to mitigating spam. Unlike legacy systems that filter spam out after the fact, XMTP clients block spam at the network level before it gets to your inbox. The difference is foundational: by using encrypted, user-owned consent at the protocol level, users decide which senders can reach them on any app built on XMTP.</p>
-                <p class="mt-6 text-lg/8 text-gray-600">The protocol ↔ client architecture enables developers to layer in entirely new forms of filtering and prioritization—proofs of human identity, on-chain and social graphs, even economic incentives like paying for attention. </p>
+                <h2 class="text-base/7 font-semibold text-red-500">Consent</h2>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Built-in spam protection</p>
+                <p class="mt-6 text-lg/8 text-gray-600">Your application automatically inherits XMTP's network-wide consent framework, ensuring users receive messages only from authorized senders without requiring complex filtering systems.</p>
                 <p class="mt-12">
 
                   <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
@@ -444,7 +442,7 @@ const BuiltWithXmtp = () => {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
                   </svg>
 
-                  Read more about XMTP’s network level consent <span class="ml-2" aria-hidden="true">→</span>
+                  Consent in XMTP <span class="ml-2" aria-hidden="true">→</span>
                   </a>
 
                 </p>
@@ -468,9 +466,9 @@ const BuiltWithXmtp = () => {
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
-                <h2 class="text-base/7 font-semibold text-red-500">Censorship-resistant</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Decentralized by Design</p>
-                <p class="mt-6 text-lg/8 text-gray-600">XMTP is designed as a decentralized messaging protocol, meaning it operates without a central server, giving users full ownership and control over their data. This structure ensures that no single entity has access to or control over messages, making communication censorship-resistant and enhancing privacy.</p>
+                <h2 class="text-base/7 font-semibold text-red-500">Decentralization</h2>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Unruggable infrastructure</p>
+                <p class="mt-6 text-lg/8 text-gray-600">Your messaging infrastructure keeps running independently of any single operator or organization. No central authority can change the rules, revoke access, or shut down the service your users depend on.</p>
                 <p class="mt-12">
 
                 <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
@@ -479,7 +477,7 @@ const BuiltWithXmtp = () => {
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
                 </svg>
 
-                Explore the XMTP decentralization roadmap <span class="ml-2" aria-hidden="true">→</span>
+                Decentralizing XMTP <span class="ml-2" aria-hidden="true">→</span>
                 </a>
 
                 </p>
