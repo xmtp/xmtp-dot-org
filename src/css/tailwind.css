@@ -55,14 +55,12 @@
     --shadow-color: rgb(255 255 255 / 85%);
 
     --max-width: 1440px;
-    --nav-searchbox-shadow: inset 0 0 0 1px rgb(220, 220, 220);
     --dropdown-subtext-color: #475569;
     --build-xmtp-img-url: url("/img/build-xmtp.png");
   }
   [data-theme="light"] {
     --ifm-footer-background-color: #171717;
     --backdrop-mobile-menu: rgba(255, 255, 255, 0.95);
-    --nav-search-border-color: #d4d4d4;
     --header-back-img: url("/img/home_bg.png");
     --header-bg-color: white;
     --header-box-background: #fff;
@@ -86,14 +84,12 @@
     --ifm-heading-color: #fff;
     --shadow-color: rgb(0 0 0 / 85%);
     --backdrop-mobile-menu: rgba(0, 0, 0, 0.95);
-    --nav-search-border-color: #444444;
     --header-back-img: url("/img/home_bg-dark.png");
     --header-bg-color: black;
     --header-box-background: #171717;
     --dropdown-subtext-color: #cbd5e1;
     --toc-footer-border-color: #737373;
     --build-xmtp-img-url: url("/img/build-xmtp-dark.png");
-    --nav-searchbox-shadow: inset 0 0 0 1px rgb(76, 76, 76);
     --docusaurus-highlighted-code-line-bg: rgb(100 100 100 / 60%);
   }
 
@@ -426,23 +422,6 @@
   overflow: hidden;
 }
 
-.DocSearch-Button {
-  border-radius: 8px !important;
-  border: thin solid var(--nav-search-border-color) !important;
-  background: transparent !important;
-}
-
-.DocSearch-Search-Icon {
-  filter: invert(70%) sepia(8%) saturate(20%) hue-rotate(317deg) brightness(94%)
-    contrast(83%);
-}
-
-.DocSearch-Button:active,
-.DocSearch-Button:focus,
-.DocSearch-Button:hover {
-  box-shadow: var(--nav-searchbox-shadow) !important;
-}
-
 .theme-doc-sidebar-container {
   border: none !important;
 }
@@ -570,62 +549,6 @@ main[class*="docMainContainer"] tr {
   text-decoration: none;
 }
 
-/* DocSearch override */
-.DocSearch-Commands li:not(:last-child) {
-  display: none !important;
-}
-
-.DocSearch-Commands li .DocSearch-Commands-Key {
-  width: 37px;
-  height: 24px;
-  /* background: #e5e7eb; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  color: #9ca3af;
-  /* box-shadow: none; */
-}
-
-.DocSearch-Logo {
-  filter: grayscale(1) opacity(0.5);
-}
-
-.DocSearch {
-  backdrop-filter: blur(4px);
-}
-
-.DocSearch-SearchBar {
-  border-bottom: thin solid var(--docsearch-border-color);
-  padding: 0 var(--docsearch-spacing);
-}
-
-.DocSearch-Form {
-  background: none !important;
-  box-shadow: none !important;
-}
-
-.DocSearch-Footer {
-  box-shadow: none !important;
-  border-top: thin solid var(--docsearch-border-color);
-}
-
-[data-theme="light"] .DocSearch {
-  --docsearch-highlight-color: rgba(2 132 199 / 1);
-  --docsearch-container-background: rgba(229 229 229 0.86);
-  --docsearch-modal-background: #fff;
-  --docsearch-border-color: #e5e7eb;
-}
-
-[data-theme="dark"] .DocSearch {
-  --docsearch-highlight-color: rgba(2 132 199 / 1);
-  --docsearch-container-background: rgba(0 0 0 1);
-  --docsearch-modal-background: #000;
-  --docsearch-footer-background: #000;
-  --docsearch-border-color: #343434;
-}
 [class*="docItemContainer"] header + *,
 [class*="docItemContainer"] article > *:first-child {
   margin-top: 1rem !important;
@@ -790,13 +713,6 @@ main[class*="docMainContainer"] tr {
     margin-left: 0;
   }
 }
-
-@media only screen and (max-width: 750px) {
-  .DocSearch-Button {
-    border: none !important;
-  }
-}
-
 /*general g=text*/
 p,
 tr {
@@ -1643,26 +1559,6 @@ pre code {
   .quickstarts-tabs ul li {
     width: 100%;
   }
-}
-
-/*ask ai*/
-.DocSearch {
-  /*display: none;*/
-}
-.ask_gpt {
-  display: none;
-}
-.docs-doc-page .ask_gpt {
-  display: block;
-}
-.ask_gpt {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-}
-.ask_gpt:hover {
-  background-color: black;
-  color: white;
 }
 
 .btn-principal:hover {
