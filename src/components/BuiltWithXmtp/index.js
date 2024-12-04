@@ -60,7 +60,7 @@ const BuiltWithXmtp = () => {
             <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#959595] to-[#FC4F37] opacity-20" style={{"clipPath":"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"}}></div>
           </div>
 
-          <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-8 pt-4 md:pt-0 lg:flex md:pb-32 md:pt-24">
+          <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-8 pt-0 lg:flex md:pb-32 md:pt-24">
             <div class="mx-auto max-w-5xl shrink-0 lg:mx-0">
               <div class="mt-8 md:mt-24 lg:mt-0">
                 <a href="#" class="inline-flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 hover:no-underline">
@@ -76,7 +76,7 @@ const BuiltWithXmtp = () => {
 
               <h1 class="mt-4 md:mt-8 text-pretty text-3xl font-semibold tracking-tight text-white md:text-6xl">XMTP is the largest & most secure decentralized messaging network</h1>
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
-                <dl class="mx-auto mt-8 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-6 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
+                <dl class="mx-auto mt-8 mb-8 grid max-w-4xl grid-cols-2 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-8">
                     <dt class="text-sm/6 md:text-md/6 text-gray-400">Identities</dt>
                     <dd class="order-first text-xl md:text-3xl font-semibold tracking-tight">2 Million+</dd>
@@ -90,18 +90,18 @@ const BuiltWithXmtp = () => {
                     <dd class="order-first text-xl md:text-3xl font-semibold tracking-tight">60+</dd>
                   </div>
                 </dl>
-                <p class="mt-8 text-pretty text-md md:text-lg font-semibold text-gray-200">Trust XMTP for secure, private, and portable messaging</p>
+                <p class="mt-8 text-pretty text-md md:text-lg font-normal md:font-semibold text-gray-200">Trust XMTP for secure, private, and portable messaging</p>
               </div>
               <div class="mt-10 flex flex-wrap md:flex-nowrap items-center gap-x-4">
 
-                <a class="mb-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse">
+                <a class="mb-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
                   </svg>
                   Explore SDKs <span aria-hidden="true">→</span>
                 </a>
 
-                <a href="#trynow" class="smooth-scroll cursor-pointer flex items-center gap-x-1 text-white hover:text-black shadow-sm hover:bg-gray-100 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
+                <a href="#trynow" class="smooth-scroll cursor-pointer flex items-center gap-x-1 text-white hover:text-black shadow-sm hover:bg-gray-100 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
                   </svg>
@@ -279,7 +279,7 @@ const BuiltWithXmtp = () => {
       </div>
 
       <div class="relative isolate overflow-hidden bg-white py-32 md:py-24">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="lg:col-end-1 lg:w-full lg:max-w-3xl lg:pb-8 mb-8 md:mb-0">
               <p class="text-sm/4 md:text-base font-semibold uppercase tracking-wider leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.2)]">Use Cases</p>
               <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">How apps and wallets use XMTP</h2>
@@ -356,8 +356,8 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-white pb-24 pt-0">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="bg-white pb-24 pt-0">  
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
@@ -367,7 +367,7 @@ const BuiltWithXmtp = () => {
                 <p class="mt-6 text-lg/8 text-gray-600">Messages sent with XMTP are unspoofable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p>
                 <p class="mt-12">
 
-                  <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+                  <a class="cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
@@ -390,8 +390,8 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-white pb-24 pt-16">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="bg-white pb-24 pt-16">  
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
@@ -401,7 +401,7 @@ const BuiltWithXmtp = () => {
                 <p class="mt-6 text-lg/8 text-gray-600">Wallets and names link to a single identity using secure operations verified by wallet signatures.</p>
                 <p class="mt-12">
 
-                  <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+                  <a class="cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
@@ -428,7 +428,7 @@ const BuiltWithXmtp = () => {
       </div>
 
       <div class="bg-white pb-24 pt-0">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
@@ -438,7 +438,7 @@ const BuiltWithXmtp = () => {
                 <p class="mt-6 text-lg/8 text-gray-600">The protocol ↔ client architecture enables developers to layer in entirely new forms of filtering and prioritization—proofs of human identity, on-chain and social graphs, even economic incentives like paying for attention. </p>
                 <p class="mt-12">
 
-                  <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+                  <a class="cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
 
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
@@ -464,7 +464,7 @@ const BuiltWithXmtp = () => {
       </div>
 
       <div class="bg-white pb-32 pt-16">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
@@ -473,7 +473,7 @@ const BuiltWithXmtp = () => {
                 <p class="mt-6 text-lg/8 text-gray-600">XMTP is designed as a decentralized messaging protocol, meaning it operates without a central server, giving users full ownership and control over their data. This structure ensures that no single entity has access to or control over messages, making communication censorship-resistant and enhancing privacy.</p>
                 <p class="mt-12">
 
-                <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
+                <a class="cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
@@ -526,7 +526,7 @@ const BuiltWithXmtp = () => {
                   <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-4xl">XMTP is Open Source</h2>
                   <p class="mt-2 max-w-2xl text-pretty text-lg/7 text-gray-300">XMTP’s protocol, app, and developer tools are all open source, enabling transparency, security, and community-driven improvements. XMTP’s features into their applications, expanding the ecosystem while upholding decentralized and privacy-first standards.</p>
                   
-                  <div class="mt-10 flex gap-x-6">
+                  <div class="mt-10 flex gap-x-6 mb-8">
                   
                     <a class="cursor-pointer flex items-center gap-x-1 text-black bg-white hover:text-black shadow-sm hover:bg-gray-400 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
                     
@@ -559,8 +559,8 @@ const BuiltWithXmtp = () => {
                     >
 
                       <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
-                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-black shadow-2xl">
-                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-black text-white p-6 w-full">
+                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-gray-950 shadow-2xl">
+                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-950 text-white p-6 w-full">
                             <span class="flex gap-4">
                               <span class="shrink-0 text-gray-500">
                                   $
@@ -601,8 +601,8 @@ const BuiltWithXmtp = () => {
                       style={{ maxHeight: openAccordions[2] ? '200px' : '0' }}
                     >
                       <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
-                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-black shadow-2xl">
-                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-black text-white p-6 w-full">
+                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-gray-950 shadow-2xl">
+                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-950 text-white p-6 w-full">
                             <span class="flex gap-4">
                               <span class="shrink-0 text-gray-500">
                                   $
@@ -645,8 +645,8 @@ const BuiltWithXmtp = () => {
                       style={{ maxHeight: openAccordions[3] ? '200px' : '0' }}
                     >
                       <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
-                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-black shadow-2xl">
-                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-black text-white p-6 w-full">
+                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-gray-950 shadow-2xl">
+                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-950 text-white p-6 w-full">
                             <span class="flex gap-4">
                               <span class="shrink-0 text-gray-500">
                                   $
@@ -689,8 +689,8 @@ const BuiltWithXmtp = () => {
                       style={{ maxHeight: openAccordions[4] ? '200px' : '0' }}
                     >
                       <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
-                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-black shadow-2xl">
-                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-black text-white p-6 w-full">
+                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-gray-950 shadow-2xl">
+                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-950 text-white p-6 w-full">
                             <span class="flex gap-4">
                               <span class="shrink-0 text-gray-500">
                                   $
@@ -733,8 +733,8 @@ const BuiltWithXmtp = () => {
                       style={{ maxHeight: openAccordions[5] ? '200px' : '0' }}
                     >
                       <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
-                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-black shadow-2xl">
-                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-black text-white p-6 w-full">
+                        <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-gray-950 shadow-2xl">
+                          <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-950 text-white p-6 w-full">
                             <span class="flex gap-4">
                               <span class="shrink-0 text-gray-500">
                                   $
