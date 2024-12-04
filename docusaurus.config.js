@@ -25,23 +25,6 @@ const config = {
   projectName: "xmtp-dot-org",
   scripts: [
     {
-      src: "https://widget.kapa.ai/kapa-widget.bundle.js",
-      "data-website-id": "7039ef02-1fe3-4e7a-9dfa-5421408b7cea",
-      "data-project-name": "XMTP",
-      "data-project-color": "#5A2895",
-      "data-project-logo":
-        "https://avatars.githubusercontent.com/u/82580170?s=280&v=4",
-      "data-modal-example-questions":
-        "How do I send a remote attachment?,Is XMTP Decentralized?, Do you have group chats?",
-      "data-button-position-bottom": "120px",
-      "data-button-hide": "true",
-      "data-modal-override-open-class": "ask_gpt",
-      "data-search-mode-default": "false",
-      "data-search-mode-enabled": "true",
-      "data-modal-title": "XMTP Docs",
-      async: true,
-    },
-    {
       src: "/js/myjs.js",
     },
     {
@@ -199,8 +182,8 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Community forum ↗</div>`,
               },
               {
-                href: "https://discord.gg/N3smtr5upp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discord-nav-icon.svg" alt="Discord icon" /></div>
+                href: "https://community.xmtp.org/c/dev-support/76",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discourse-icon.svg" alt="Discourse icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support ↗</div>`,
               },
               {
@@ -251,7 +234,7 @@ const config = {
               },
               {
                 label: "Dev support ↗",
-                to: "https://discord.gg/N3smtr5upp",
+                to: "https://community.xmtp.org/c/dev-support/76",
               },
               {
                 label: "Awesome XMTP ↗",
@@ -331,29 +314,6 @@ const config = {
             ],
           },
         ],
-      },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: process.env.ALGOLIA_APP_ID,
-
-        // Public API key: it is safe to commit it
-        apiKey: process.env.ALGOLIA_API_KEY,
-
-        indexName: process.env.ALGOLIA_INDEX_NAME,
-
-        // Optional: see doc section below
-        contextualSearch: true,
-
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        // externalUrlRegex: 'external\\.com|domain\\.com',
-
-        // Optional: Algolia search parameters
-        searchParameters: {},
-
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: "search",
-
-        //... other Algolia params
       },
       prism: {
         additionalLanguages: ["swift", "kotlin", "graphql"],
