@@ -432,7 +432,7 @@ const BuiltWithXmtp = () => {
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">Consent</h2>
                 <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Built-in spam protection</p>
-                <p class="mt-6 text-lg/8 text-gray-600">Your application automatically inherits XMTP's network-wide consent framework, ensuring users receive messages only from authorized senders without requiring complex filtering systems.</p>
+                <p class="mt-6 text-lg/8 text-gray-600">Users block spam once, and it's blocked everywhere they go. Your app automatically inherits spam protection that works across the entire XMTP network — giving every user control of who can message them.</p>
                 <p class="mt-12">
 
                   <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
