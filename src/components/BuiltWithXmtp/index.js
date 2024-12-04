@@ -74,7 +74,7 @@ const BuiltWithXmtp = () => {
                 </a>
               </div>
 
-              <h1 class="mt-4 md:mt-8 text-pretty text-3xl font-semibold tracking-tight text-white md:text-6xl">Messaging Built To Last Forever</h1>
+              <h1 class="mt-4 md:mt-8 text-pretty text-3xl font-semibold tracking-tight text-white md:text-6xl">The largest & most secure network for censorship-resistant messaging</h1>
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
                 <dl class="mx-auto mt-8 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-6 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-8">
@@ -90,7 +90,7 @@ const BuiltWithXmtp = () => {
                     <dd class="order-first text-xl md:text-3xl font-semibold tracking-tight">60+</dd>
                   </div>
                 </dl>
-                <p class="mt-8 text-pretty text-md md:text-lg font-semibold text-gray-200">XMTP is a complete toolkit for encrypted group chats, DMs, and notifications &mdash; powered by the most trusted, decentralized network for secure, private messaging.</p>
+                <p class="mt-8 text-pretty text-md md:text-lg font-semibold text-gray-200">Enterprise-grade secure messaging &mdash; powered by decentralization.<br/>Start building group chats, DMs, and notifications in minutes.</p>
               </div>
               <div class="mt-10 flex flex-wrap md:flex-nowrap items-center gap-x-4">
 
@@ -105,7 +105,7 @@ const BuiltWithXmtp = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
                   </svg>
-                  Try XMTP Now<span aria-hidden="true">→</span>
+                  Try XMTP now<span aria-hidden="true">→</span>
                 </a>
                 
               </div>
@@ -117,7 +117,7 @@ const BuiltWithXmtp = () => {
 
       <div class="pt-4 pb-0 bg-white rounded-3xl my-6">
         <div class="mx-auto max-w-full">
-          <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by innovators to face the hardest challenges in messaging</h2>
+          <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by the best companies in the world</h2>
 
           <div class="relative flex overflow-x-hidden">
             <div class="py-4 animate-marquee whitespace-nowrap">
@@ -147,7 +147,7 @@ const BuiltWithXmtp = () => {
               <div class="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none">
                   <img src="img/converse-logo-full-black.svg" class="h-14 mb-2"></img>
                   <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">Want to try XMTP messaging?</h2>
-                  <p class="max-w-3xl text-base md:text-lg font-normal">Converse Messenger is a messaging app for decentralized, secure, end-to-end encrypted conversations.</p>
+                  <p class="max-w-3xl text-base md:text-lg font-normal">Converse Messenger is for decentralized, secure, end-to-end encrypted conversations.</p>
                   <div class="mt-6 flex flex-wrap gap-x-4 gap-y-0">
                     <a aria-label="Download on the App Store" href="https://apps.apple.com/app/converse-messenger/id1658819514">
                         <svg width="130" height="52" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -363,8 +363,7 @@ const BuiltWithXmtp = () => {
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold text-red-500">Security</h2>
                 <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Enterprise-grade encryption</p>
-                <p class="mt-6 text-lg/8 text-gray-600">Built on the IETF-standard <a href="#" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a>, protocol &ndash; the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's fully audited implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
-                {/* <p class="mt-6 text-lg/8 text-gray-600">Messages sent with XMTP are unspoofable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p> */}
+                <p class="mt-6 text-lg/8 text-gray-600">Built on the IETF-standard <a href="#" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a> protocol &ndash; the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's fully audited implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
                 <p class="mt-12">
 
                   <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
@@ -396,8 +395,8 @@ const BuiltWithXmtp = () => {
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">Identity</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Instant unified identity</p>
-                <p class="mt-6 text-lg/8 text-gray-600">Add messaging capabilities to any web3 name or wallet without building identity infrastructure. Users automatically get unified communication across their ENS, Lens, and Farcaster identities while your app maintains its native identity experience.</p>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Flexible identity foundation</p>
+                <p class="mt-6 text-lg/8 text-gray-600">Turn any collection of wallet addresses into a unified messaging identity. Support the full spectrum of web3 identities — from naming systems (ENS, Base, Lens) to social platforms (Farcaster, Lens) to smart accounts (Safe, ERC-4337 wallets) — through simple wallet signatures.</p>
                 <p class="mt-12">
 
                   <a class="cursor-pointer flex items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">
@@ -521,7 +520,7 @@ const BuiltWithXmtp = () => {
               <div class="relative isolate overflow-hidden bg-[#1d1d1d] px-6 pt-16 pb-16 text-left shadow-2xl sm:rounded-2xl sm:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-8">
                 
                 <div>
-                  <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-4xl">XMTP is Open Source</h2>
+                  <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-4xl">XMTP is open source</h2>
                   <p class="mt-2 max-w-2xl text-pretty text-lg/7 text-gray-300">XMTP’s protocol, app, and developer tools are all open source, enabling transparency, security, and community-driven improvements. XMTP’s features into their applications, expanding the ecosystem while upholding decentralized and privacy-first standards.</p>
                   
                   <div class="mt-10 flex gap-x-6">
@@ -530,7 +529,7 @@ const BuiltWithXmtp = () => {
                     
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 me-2" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
 
-                    Browse all of the Repos <span class="ml-2" aria-hidden="true">→</span>
+                    Browse all of the repos <span class="ml-2" aria-hidden="true">→</span>
                     </a>
                     
                   </div>  
