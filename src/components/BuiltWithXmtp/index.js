@@ -78,19 +78,20 @@ const BuiltWithXmtp = () => {
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
                 <dl class="mx-auto mt-10 md:mt-8 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-8">
-                    <dt class="text-xs/6 md:text-md/6 text-gray-400">Identities</dt>
+                    <dt class="text-xs/6 md:text-md/6 text-gray-400">Connected identities</dt>
                     <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">2 Million+</dd>
                   </div>
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-10 ml-0 md:ml-8">
-                    <dt class="text-xs/6 md:text-md/6 text-gray-400">of Developers</dt>
+                    <dt class="text-xs/6 md:text-md/6 text-gray-400">of developers</dt>
                     <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">1,000s</dd>
                   </div>
                   <div class="flex flex-col gap-y-0 border-none ml-0 md:ml-8">
-                    <dt class="text-xs/6 md:text-md/6 text-gray-400">Apps</dt>
+                    <dt class="text-xs/6 md:text-md/6 text-gray-400">Production apps</dt>
                     <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">60+</dd>
                   </div>
                 </dl>
-                <p class="mt-8 text-pretty text-md md:text-lg font-normal md:font-semibold text-gray-200">Trust XMTP for secure, private, and portable messaging</p>
+                <p class="mt-8 text-pretty text-md md:text-lg font-normal md:font-semibold text-gray-200">Enterprise-grade secure messaging — powered by decentralization.
+                Start building group chats, DMs, and notifications in minutes.</p>
               </div>
               <div class="mt-10 flex flex-wrap md:flex-nowrap items-center gap-x-4">
 
@@ -119,24 +120,89 @@ const BuiltWithXmtp = () => {
         <div class="mx-auto max-w-full">
           <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by the best companies in the world</h2>
 
-          <div class="relative flex overflow-x-hidden">
-            <div class="py-4 animate-marquee w-full whitespace-nowrap">
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/cbwalletLogo.svg" alt="Coinbase Wallet" width="200" height="64"></img>
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/logo-ens.svg" alt="ENS" width="200" height="64"></img>
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/avara-wordmark-logo-dark.svg" alt="Avara" width="160" height="64"></img>
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/logo-converse.svg" alt="Converse" width="200" height="64"></img>
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" width="160" height="56"></img>
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/avara-wordmark-logo-dark.svg" alt="Avara" width="160" height="64"></img>
-            </div>
-            <div class="top-0 py-4 animate-marquee2 w-full whitespace-nowrap">
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/cbwalletLogo.svg" alt="Coinbase Wallet" width="200" height="64"></img>
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/logo-ens.svg" alt="ENS" width="200" height="64"></img>
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/avara-wordmark-logo-dark.svg" alt="Avara" width="160" height="64"></img>
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/logo-converse.svg" alt="Converse" width="200" height="64"></img>
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" width="160" height="56"></img>
-              <img class="mx-8 max-h-8 md:max-h-12 object-contain" src="img/avara-wordmark-logo-dark.svg" alt="Avara" width="160" height="64"></img>
-            </div>
-          </div>
+          <div class="w-full inline-flex flex-nowrap logo-row mt-4">
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+              <li>
+                  <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
+              </li>
+              <li>
+                  <img src="img/logo-ens.svg" alt="ENS" />
+              </li>
+              <li>
+                  <img src="img/family-logo-black.svg" alt="Family" />
+              </li>
+              <li>
+                  <img src="img/lens-logo-black.svg" alt="Lens" />
+              </li>
+              <li>
+                  <img src="img/converse-logo-full-black.svg" alt="Converse" />
+              </li>
+              <li>
+                  <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
+              </li>
+            </ul>  
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+              <li>
+                  <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
+              </li>
+              <li>
+                  <img src="img/logo-ens.svg" alt="ENS" />
+              </li>
+              <li>
+                  <img src="img/family-logo-black.svg" alt="Family" />
+              </li>
+              <li>
+                  <img src="img/lens-logo-black.svg" alt="Lens" />
+              </li>
+              <li>
+                  <img src="img/converse-logo-full-black.svg" alt="Converse" />
+              </li>
+              <li>
+                  <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
+              </li>
+            </ul>          
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+              <li>
+                  <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
+              </li>
+              <li>
+                  <img src="img/logo-ens.svg" alt="ENS" />
+              </li>
+              <li>
+                  <img src="img/family-logo-black.svg" alt="Family" />
+              </li>
+              <li>
+                  <img src="img/lens-logo-black.svg" alt="Lens" />
+              </li>
+              <li>
+                  <img src="img/converse-logo-full-black.svg" alt="Converse" />
+              </li>
+              <li>
+                  <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
+              </li>
+            </ul>          
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+              <li>
+                  <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
+              </li>
+              <li>
+                  <img src="img/logo-ens.svg" alt="ENS" />
+              </li>
+              <li>
+                  <img src="img/family-logo-black.svg" alt="Family" />
+              </li>
+              <li>
+                  <img src="img/lens-logo-black.svg" alt="Lens" />
+              </li>
+              <li>
+                  <img src="img/converse-logo-full-black.svg" alt="Converse" />
+              </li>
+              <li>
+                  <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
+              </li>
+            </ul>              
+        </div>
+
 
         </div>
       </div>
@@ -362,18 +428,17 @@ const BuiltWithXmtp = () => {
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold text-red-500">Security</h2>
-                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Real Security from Real Standards.</p>
-                <p class="mt-6 text-md/8 md:text-lg/8">XMTP leverages <a href="https://en.wikipedia.org/wiki/Messaging_Layer_Security" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a>, a cryptographic protocol developed by the IETF, providing the strongest available open source security standard for decentralized messaging.</p>
-                <p class="mt-6 text-md/8 md:text-lg/8">Messages sent with XMTP are unspoofable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p>
+                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Enterprise-grade encryption</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Built on the IETF-standard <a href="https://en.wikipedia.org/wiki/Messaging_Layer_Security" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a>protocol – the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's fully audited implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
                 <p class="mt-12">
 
                   <a class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal">
-{/* 
+
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 me-2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
-                    </svg> */}
+                    </svg>
 
-                    Read more about encryption <span class="ml-2" aria-hidden="true">→</span>
+                    Encryption in XMTP <span class="ml-2" aria-hidden="true">→</span>
                   </a>
 
                 </p>
@@ -396,18 +461,17 @@ const BuiltWithXmtp = () => {
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">Identity</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Universal Identity Support</p>
-                <p class="mt-6 text-md/8 md:text-lg/8">XMTP unifies messaging for all your web3 names in one inbox, making it easy to manage communication across apps.</p>
-                <p class="mt-6 text-md/8 md:text-lg/8">Wallets and names link to a single identity using secure operations verified by wallet signatures.</p>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Flexible identity foundation</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Turn any collection of wallet addresses into a unified messaging identity. Support the full spectrum of web3 identities — from naming systems (ENS, Base, Lens) to social platforms (Farcaster, Lens) to smart accounts (Safe, ERC-4337 wallets) — through simple wallet signatures.</p>
                 <p class="mt-12">
 
                 <a class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal">
 
-                    {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-                    </svg> */}
+                    </svg>
 
-                    Read more about Identity Support <span class="ml-2" aria-hidden="true">→</span>
+                    Identity in XMTP <span class="ml-2" aria-hidden="true">→</span>
                   </a>
 
                 </p>
@@ -431,19 +495,18 @@ const BuiltWithXmtp = () => {
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
-                <h2 class="text-base/7 font-semibold text-red-500">No Spam</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Network-level Consent</p>
-                <p class="mt-6 text-md/8 md:text-lg/8">XMTP takes a new approach to mitigating spam. Unlike legacy systems that filter spam out after the fact, XMTP clients block spam at the network level before it gets to your inbox. The difference is foundational: by using encrypted, user-owned consent at the protocol level, users decide which senders can reach them on any app built on XMTP.</p>
-                <p class="mt-6 text-md/8 md:text-lg/8">The protocol ↔ client architecture enables developers to layer in entirely new forms of filtering and prioritization—proofs of human identity, on-chain and social graphs, even economic incentives like paying for attention. </p>
+                <h2 class="text-base/7 font-semibold text-red-500">Consent</h2>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Built-in spam protection</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Users block spam once, and it's blocked everywhere they go. Your app automatically inherits spam protection that works across the entire XMTP network — giving every user control of who can message them.</p>
                 <p class="mt-12">
 
                   <a class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal">
 
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
-                  </svg> */}
+                  </svg>
 
-                  Read more about network level consent <span class="ml-2" aria-hidden="true">→</span>
+                  Consent in XMTP <span class="ml-2" aria-hidden="true">→</span>
                   </a>
 
                 </p>
@@ -467,18 +530,18 @@ const BuiltWithXmtp = () => {
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
-                <h2 class="text-base/7 font-semibold text-red-500">Censorship-resistant</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Decentralized by Design</p>
-                <p class="mt-6 text-md/8 md:text-lg/8">XMTP is designed as a decentralized messaging protocol, meaning it operates without a central server, giving users full ownership and control over their data. This structure ensures that no single entity has access to or control over messages, making communication censorship-resistant and enhancing privacy.</p>
+                <h2 class="text-base/7 font-semibold text-red-500">Decentralization</h2>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Unruggable infrastructure</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Your messaging infrastructure keeps running independently of any single operator or organization. No central authority can change the rules, revoke access, or shut down the service your users depend on.</p>
                 <p class="mt-12">
 
                 <a class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal">
 
-                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
-                </svg> */}
+                </svg>
 
-                Explore the XMTP decentralization roadmap <span class="ml-2" aria-hidden="true">→</span>
+                Decentralizing XMTP <span class="ml-2" aria-hidden="true">→</span>
                 </a>
 
                 </p>
