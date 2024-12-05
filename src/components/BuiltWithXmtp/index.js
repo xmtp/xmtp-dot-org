@@ -76,7 +76,7 @@ const BuiltWithXmtp = () => {
 
               <h1 class="mt-12 text-pretty text-4xl font-semibold tracking-tight text-white md:text-7xl">XMTP is the largest & most secure decentralized messaging network</h1>
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
-                <dl class="mx-auto mt-10 md:mt-8 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
+                <dl class="mx-auto mt-10 md:mt-12 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-8">
                     <dt class="text-xs/4 md:text-base/8 text-gray-400">Connected identities</dt>
                     <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">2 Million+</dd>
@@ -357,12 +357,12 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Payments</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="#" class=" hover:text-red-500 hover:no-underline">
+                  <a href="https://x.com/family/status/1768379809292530090" target="_blank" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Family seamlessly integrates peer-to-peer payments into XMTP messaging
                   </a>
                 </h3>
-                <a href="#" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Read more <span aria-hidden="true">→</span></a>
+                <a href="https://x.com/family/status/1768379809292530090" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
               </div>
             </article>
             
@@ -373,12 +373,12 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Messaging</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="#" class="hover:text-red-500 hover:no-underline">
+                  <a href="https://www.coinbase.com/blog/say-gm-with-messaging-on-coinbase-wallet" target="_blank" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     How Coinbase Wallet connects millions of users through messaging
                   </a>
                 </h3>
-                <a href="#" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Read more <span aria-hidden="true">→</span></a>
+                <a href="https://www.coinbase.com/blog/say-gm-with-messaging-on-coinbase-wallet" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
@@ -389,12 +389,12 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Agents</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="#" class="hover:text-red-500 hover:no-underline">
+                  <a href="https://converse.xyz" target="_blank" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Converse Messenger unleashes the power of AI agents and universal identity
                   </a>
                 </h3>
-                <a href="#" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Read more <span aria-hidden="true">→</span></a>
+                <a href="https://converse.xyz" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
@@ -405,12 +405,12 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Notifications</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="#" class="hover:text-red-500 hover:no-underline">
+                  <a href="https://xmtp.org/notifi-case-study" target="_blank" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Learn about how Notifi delivers millions of critical DeFi alerts through XMTP
                   </a>
                 </h3>
-                <a href="#" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Read more <span aria-hidden="true">→</span></a>
+                <a href="https://xmtp.org/notifi-case-study" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Read more <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
@@ -425,7 +425,7 @@ const BuiltWithXmtp = () => {
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold text-red-500">Security</h2>
                 <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Enterprise-grade encryption</p>
-                <p class="mt-6 text-md/8 md:text-lg/8">Built on the IETF-standard <a href="https://en.wikipedia.org/wiki/Messaging_Layer_Security" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a>protocol – the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's fully audited implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Built on the IETF-standard <a href="https://en.wikipedia.org/wiki/Messaging_Layer_Security" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a> protocol – the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's fully audited implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
                 <p class="mt-12">
 
                   <a href="/encryption" class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal hover:no-underline">
