@@ -74,9 +74,9 @@ const BuiltWithXmtp = () => {
                 </a>
               </div>
 
-              <h1 class="mt-4 md:mt-8 text-pretty text-4xl font-semibold tracking-tight text-white md:text-7xl">XMTP is the largest & most secure decentralized messaging network</h1>
+              <h1 class="mt-12 text-pretty text-4xl font-semibold tracking-tight text-white md:text-7xl">XMTP is the largest & most secure decentralized messaging network</h1>
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
-                <dl class="mx-auto mt-8 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
+                <dl class="mx-auto mt-10 md:mt-8 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-8">
                     <dt class="text-xs/6 md:text-md/6 text-gray-400">Identities</dt>
                     <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">2 Million+</dd>
@@ -294,7 +294,7 @@ const BuiltWithXmtp = () => {
               </div>
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Payments</p>
-                <h3 class="mt-3 text-lg/7 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
+                <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
                   <a href="#" class=" hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Family seamlessly integrates peer-to-peer payments into XMTP messaging
@@ -310,7 +310,7 @@ const BuiltWithXmtp = () => {
               </div>
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Messaging</p>
-                <h3 class="mt-3 text-lg/7 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
+                <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
                   <a href="#" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     How Coinbase Wallet connects millions of users through messaging
@@ -326,7 +326,7 @@ const BuiltWithXmtp = () => {
               </div>
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Agents</p>
-                <h3 class="mt-3 text-lg/7 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
+                <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
                   <a href="#" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Converse Messenger unleashes the power of AI agents and universal identity
@@ -342,7 +342,7 @@ const BuiltWithXmtp = () => {
               </div>
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Notifications</p>
-                <h3 class="mt-3 text-lg/7 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
+                <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
                   <a href="#" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Learn about how Notifi delivers millions of critical DeFi alerts through XMTP
@@ -407,7 +407,7 @@ const BuiltWithXmtp = () => {
                       <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
                     </svg> */}
 
-                    Read more about XMTP's Identity Support <span class="ml-2" aria-hidden="true">→</span>
+                    Read more about Identity Support <span class="ml-2" aria-hidden="true">→</span>
                   </a>
 
                 </p>
@@ -443,7 +443,7 @@ const BuiltWithXmtp = () => {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
                   </svg> */}
 
-                  Read more about XMTP’s network level consent <span class="ml-2" aria-hidden="true">→</span>
+                  Read more about network level consent <span class="ml-2" aria-hidden="true">→</span>
                   </a>
 
                 </p>
