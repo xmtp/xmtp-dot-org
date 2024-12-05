@@ -78,15 +78,15 @@ const BuiltWithXmtp = () => {
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
                 <dl class="mx-auto mt-10 md:mt-8 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-8">
-                    <dt class="text-xs/6 md:text-md/6 text-gray-400">Connected identities</dt>
+                    <dt class="text-xs/4 md:text-base/8 text-gray-400">Connected identities</dt>
                     <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">2 Million+</dd>
                   </div>
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-10 ml-0 md:ml-8">
-                    <dt class="text-xs/6 md:text-md/6 text-gray-400">of developers</dt>
+                    <dt class="text-xs/4 md:text-base/8 text-gray-400">of developers</dt>
                     <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">1,000s</dd>
                   </div>
                   <div class="flex flex-col gap-y-0 border-none ml-0 md:ml-8">
-                    <dt class="text-xs/6 md:text-md/6 text-gray-400">Production apps</dt>
+                    <dt class="text-xs/4 md:text-base/8 text-gray-400">Production apps</dt>
                     <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">60+</dd>
                   </div>
                 </dl>
