@@ -120,7 +120,7 @@ const BuiltWithXmtp = () => {
         <div class="mx-auto max-w-full">
           <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by the best</h2>
 
-          <div class="w-full inline-flex flex-nowrap logo-row mt-4">
+          <div class="w-full inline-flex flex-nowrap logo-row mt-4 overflow-hidden">
             <ul class="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-infinite-scroll">
               <li>
                   <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
@@ -355,7 +355,7 @@ const BuiltWithXmtp = () => {
                 <img src="img/family-logo-black.svg" class="h-6 mb-2"></img>
               </div>
               <div class="group relative">
-                <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Payments</p>
+                <p class="font-normal text-xs uppercase tracking-widest">Payments</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
                   <a href="https://x.com/family/status/1768379809292530090" target="_blank" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
@@ -371,7 +371,7 @@ const BuiltWithXmtp = () => {
                 <img src="img/cbwalletLogo.svg" class="h-7 mb-2"></img>
               </div>
               <div class="group relative">
-                <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Messaging</p>
+                <p class="font-normal text-xs uppercase tracking-widest">Messaging</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
                   <a href="https://www.coinbase.com/blog/say-gm-with-messaging-on-coinbase-wallet" target="_blank" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
@@ -387,7 +387,7 @@ const BuiltWithXmtp = () => {
                 <img src="img/converse-logo-full-black.svg" class="h-9 mb-6"></img>
               </div>
               <div class="group relative">
-                <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Agents</p>
+                <p class="font-normal text-xs uppercase tracking-widest">Agents</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
                   <a href="https://converse.xyz" target="_blank" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
@@ -403,7 +403,7 @@ const BuiltWithXmtp = () => {
                 <img src="img/notifiLogo.svg" class="h-5 mb-2"></img>
               </div>
               <div class="group relative">
-                <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Notifications</p>
+                <p class="font-normal text-xs uppercase tracking-widest">Notifications</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
                   <a href="https://xmtp.org/notifi-case-study" target="_blank" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
@@ -580,9 +580,9 @@ const BuiltWithXmtp = () => {
               
               <div class="relative isolate overflow-hidden bg-[#1d1d1d] px-6 pt-8 pb-8 md:pt-16 md:pb-16 text-left shadow-2xl sm:rounded-2xl sm:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-8 text-center">
                 
-                <div>
+                <div class="content-center">
                   <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-4xl">XMTP is open source</h2>
-                  <p class="mt-2 max-w-2xl text-pretty text-md/8 md:text-lg/7 text-gray-300">XMTP’s protocol, app, and developer tools are all open source, enabling transparency, security, and community-driven improvements. XMTP’s features into their applications, expanding the ecosystem while upholding decentralized and privacy-first standards.</p>
+                  <p class="mt-2 max-w-2xl text-pretty text-md/8 md:text-lg/7 text-gray-300">The entire XMTP stack — protocol, apps, and developer tools — is fully open to inspect, modify, and improve, creating a trustworthy foundation for developers to build on with confidence.</p>
 {/* 
                   <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
                     <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-gray-950">
@@ -627,13 +627,33 @@ const BuiltWithXmtp = () => {
                       >
                         <div class="flex gap-x-6">
                           <img class="max-h-8 object-contain" src="img/javascriptLogo.png" alt="Javascript Logo"></img>
-                          <span class="text-lg md:text-xl font-semibold">Javascript</span>
+                          <span class="text-lg md:text-xl font-semibold">Browser</span>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                       </button>
                     </a>
+
+                  </div>
+
+                  <div>
+                    
+                    <a href="https://github.com/xmtp/xmtp-js/tree/main/sdks/node-sdk" target="_blank" class="hover:no-underline">
+                      <button 
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
+                      >
+                      <div class="flex gap-x-6">
+                        <img class="max-h-8 object-contain" src="img/nodejsLogo.png" alt="Node JS Logo"></img>
+                        <span class="text-lg md:text-xl font-semibold">Node JS</span>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
+                    </button>
+                    </a>
+
+                  </div>
                     
                   <div>
                     
@@ -689,27 +709,7 @@ const BuiltWithXmtp = () => {
 
                   </div>
 
-                  <div>
-                    
-                    <a href="https://github.com/xmtp/xmtp-js/tree/main/sdks/node-sdk" target="_blank" class="hover:no-underline">
-                      <button 
-                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
-                      >
-                      <div class="flex gap-x-6">
-                        <img class="max-h-8 object-contain" src="img/nodejsLogo.png" alt="Node JS Logo"></img>
-                        <span class="text-lg md:text-xl font-semibold">Node JS</span>
-                      </div>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                      </svg>
-                    </button>
-                    </a>
-
-                  </div>
-
                 </div>
-
-              </div>
                 
               </div>
 
