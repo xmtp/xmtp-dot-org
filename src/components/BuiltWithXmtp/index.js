@@ -121,7 +121,7 @@ const BuiltWithXmtp = () => {
           <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by the best</h2>
 
           <div class="w-full inline-flex flex-nowrap logo-row mt-4">
-            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-infinite-scroll">
               <li>
                   <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
               </li>
@@ -159,7 +159,7 @@ const BuiltWithXmtp = () => {
                   <img src="img/frog-logo.svg" alt="Frog" />
               </li>
             </ul>  
-            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
               <li>
                   <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
               </li>
@@ -384,7 +384,7 @@ const BuiltWithXmtp = () => {
 
             <article class="flex max-w-xl flex-col items-start justify-between">
               <div class="flex items-center gap-x-4 text-xs">
-                <img src="img/converse-logo-full-black.svg" class="h-9 mb-4"></img>
+                <img src="img/converse-logo-full-black.svg" class="h-9 mb-6"></img>
               </div>
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Agents</p>
