@@ -53,7 +53,7 @@ GameJutsu uses XMTP’s end-to-end encrypted messages as signed game moves betwe
 
 The team also emphasized that this doesn’t mean you need to sign every game move with MetaMask, which would severely interrupt the gameplay experience. Instead, they have a special mechanism they’ve implemented that uses XMTP to transmit signed game moves.
 
-GameJustu shows how developers can use encrypted messages to solve peer-to-peer scenarios that need an additional layer of security to create trust.
+GameJutsu shows how developers can use encrypted messages to solve peer-to-peer scenarios that need an additional layer of security to create trust.
 
 **Get to know GameJutsu:**
 
