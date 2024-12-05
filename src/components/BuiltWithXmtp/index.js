@@ -118,7 +118,7 @@ const BuiltWithXmtp = () => {
 
       <div class="pt-4 pb-0 bg-white rounded-3xl my-6">
         <div class="mx-auto max-w-full">
-          <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by the best companies in the world</h2>
+          <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by the best</h2>
 
           <div class="w-full inline-flex flex-nowrap logo-row mt-4">
             <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
@@ -140,6 +140,24 @@ const BuiltWithXmtp = () => {
               <li>
                   <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
               </li>
+              <li>
+                  <img src="img/neynar-logo.png" alt="Neynar" />
+              </li>
+              <li>
+                  <img src="img/yup-logo-black.svg" alt="Yup" />
+              </li>
+              <li>
+                  <img src="img/hey-logo-dark.png" alt="Hey" />
+              </li>
+              <li>
+                  <img src="img/interface-logo.png" alt="Interface" />
+              </li>
+              <li>
+                  <img src="img/phaver-logo.png" alt="Phaver" />
+              </li>
+              <li>
+                  <img src="img/frog-logo.svg" alt="Frog" />
+              </li>
             </ul>  
             <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
               <li>
@@ -160,47 +178,25 @@ const BuiltWithXmtp = () => {
               <li>
                   <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
               </li>
-            </ul>          
-            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
               <li>
-                  <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
+                  <img src="img/neynar-logo.png" alt="Neynar" />
               </li>
               <li>
-                  <img src="img/logo-ens.svg" alt="ENS" />
+                  <img src="img/yup-logo-black.svg" alt="Yup" />
               </li>
               <li>
-                  <img src="img/family-logo-black.svg" alt="Family" />
+                  <img src="img/hey-logo-dark.png" alt="Hey" />
               </li>
               <li>
-                  <img src="img/lens-logo-black.svg" alt="Lens" />
+                  <img src="img/interface-logo.png" alt="Interface" />
               </li>
               <li>
-                  <img src="img/converse-logo-full-black.svg" alt="Converse" />
+                  <img src="img/phaver-logo.png" alt="Phaver" />
               </li>
               <li>
-                  <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
+                  <img src="img/frog-logo.svg" alt="Frog" />
               </li>
-            </ul>          
-            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
-              <li>
-                  <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
-              </li>
-              <li>
-                  <img src="img/logo-ens.svg" alt="ENS" />
-              </li>
-              <li>
-                  <img src="img/family-logo-black.svg" alt="Family" />
-              </li>
-              <li>
-                  <img src="img/lens-logo-black.svg" alt="Lens" />
-              </li>
-              <li>
-                  <img src="img/converse-logo-full-black.svg" alt="Converse" />
-              </li>
-              <li>
-                  <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
-              </li>
-            </ul>              
+            </ul>                     
         </div>
 
 
