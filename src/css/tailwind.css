@@ -248,7 +248,7 @@
 
 .navbar {
   box-shadow: none;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 1);
   /* blur/backdrop-blur-2xl */
   backdrop-filter: blur(20px);
 }

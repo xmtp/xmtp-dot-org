@@ -99,7 +99,7 @@ const BuiltWithXmtp = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
                   </svg>
-                  Explore SDKs <span aria-hidden="true">→</span>
+                  Get started <span aria-hidden="true">→</span>
                 </a>
 
                 <a href="#trynow" class="smooth-scroll w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-black shadow-sm hover:bg-gray-100 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline justify-center">
