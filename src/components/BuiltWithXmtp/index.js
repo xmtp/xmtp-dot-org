@@ -147,7 +147,7 @@ const BuiltWithXmtp = () => {
               <div class="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none text-center md:text-left">
                   <img src="img/converse-logo-full-black.svg" class="h-14 mb-2"></img>
                   <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">Want to try XMTP messaging?</h2>
-                  <p class="max-w-3xl text-base md:text-lg font-normal">Converse Messenger is a messaging app for decentralized, secure, end-to-end encrypted conversations.</p>
+                  <p class="max-w-3xl text-base md:text-lg font-normal text-gray-600">Converse Messenger is a messaging app for decentralized, secure, end-to-end encrypted conversations.</p>
                   <div class="mt-6 flex flex-wrap gap-x-4 gap-y-0 justify-center md:justify-normal">
                     <a aria-label="Download on the App Store" href="https://apps.apple.com/app/converse-messenger/id1658819514">
                         <svg width="130" height="44" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -278,12 +278,12 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="relative isolate overflow-hidden bg-white py-16 md:py-4 md:pb-16">
+      <div class="relative isolate overflow-hidden py-16 md:py-4 md:pb-16">
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="lg:col-end-1 lg:w-full lg:max-w-3xl lg:pb-8 mb-8 md:mb-0">
               <p class="text-sm/4 md:text-base font-semibold uppercase tracking-wider leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.2)]">Use Cases</p>
-              <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">How apps and wallets use XMTP</h2>
-              <p class="text-gray-600 max-w-3xl text-base md:text-lg font-normal">Learn about the connected and resilient ecosystem for seamless communication across apps and wallets</p>
+              <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight">How apps and wallets use XMTP</h2>
+              <p class=" max-w-3xl text-base md:text-lg font-normal">Learn about the connected and resilient ecosystem for seamless communication across apps and wallets</p>
           </div>
 
           <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 md:gap-y-16 border-solid border-0 border-t border-gray-200 pt-10 mt-4 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
@@ -295,7 +295,7 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Payments</p>
                 <h3 class="mt-3 text-lg/7 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="#" class="text-gray-900 hover:text-red-500 hover:no-underline">
+                  <a href="#" class=" hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Family seamlessly integrates peer-to-peer payments into XMTP messaging
                   </a>
@@ -311,7 +311,7 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Messaging</p>
                 <h3 class="mt-3 text-lg/7 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="#" class="text-gray-900 hover:text-red-500 hover:no-underline">
+                  <a href="#" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     How Coinbase Wallet connects millions of users through messaging
                   </a>
@@ -327,7 +327,7 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Agents</p>
                 <h3 class="mt-3 text-lg/7 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="#" class="text-gray-900 hover:text-red-500 hover:no-underline">
+                  <a href="#" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Converse Messenger unleashes the power of AI agents and universal identity
                   </a>
@@ -343,7 +343,7 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="text-gray-600 font-normal text-xs uppercase tracking-widest">Notifications</p>
                 <h3 class="mt-3 text-lg/7 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="#" class="text-gray-900 hover:text-red-500 hover:no-underline">
+                  <a href="#" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Learn about how Notifi delivers millions of critical DeFi alerts through XMTP
                   </a>
@@ -356,15 +356,15 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-white pb-8 md:pb-24 pt-4 md:pt-0">  
+      <div class="pb-8 md:pb-24 pt-4 md:pt-0">  
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-0 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold text-red-500">Security</h2>
-                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Real Security from Real Standards.</p>
-                <p class="mt-6 text-md/8 md:text-lg/8 text-gray-600">XMTP leverages <a href="https://en.wikipedia.org/wiki/Messaging_Layer_Security" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a>, a cryptographic protocol developed by the IETF, providing the strongest available open source security standard for decentralized messaging.</p>
-                <p class="mt-6 text-md/8 md:text-lg/8 text-gray-600">Messages sent with XMTP are unspoofable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p>
+                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Real Security from Real Standards.</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">XMTP leverages <a href="https://en.wikipedia.org/wiki/Messaging_Layer_Security" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a>, a cryptographic protocol developed by the IETF, providing the strongest available open source security standard for decentralized messaging.</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Messages sent with XMTP are unspoofable, tamper proof, cannot be intercepted, provide perfect forward secrecy & post-compromise security, even in environments with multiple recipients or devices.</p>
                 <p class="mt-12">
 
                   <a class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal">
@@ -390,15 +390,15 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-white pb-8 md:pb-0 pt-0">
+      <div class="pb-8 md:pb-0 pt-0">
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">Identity</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Universal Identity Support</p>
-                <p class="mt-6 text-md/8 md:text-lg/8 text-gray-600">XMTP unifies messaging for all your web3 names in one inbox, making it easy to manage communication across apps.</p>
-                <p class="mt-6 text-md/8 md:text-lg/8 text-gray-600">Wallets and names link to a single identity using secure operations verified by wallet signatures.</p>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Universal Identity Support</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">XMTP unifies messaging for all your web3 names in one inbox, making it easy to manage communication across apps.</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Wallets and names link to a single identity using secure operations verified by wallet signatures.</p>
                 <p class="mt-12">
 
                 <a class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal">
@@ -426,15 +426,15 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-white pb-8 md:pb-16 pt-0">
+      <div class="pb-8 md:pb-16 pt-0">
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-16 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">No Spam</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Network-level Consent</p>
-                <p class="mt-6 text-md/8 md:text-lg/8 text-gray-600">XMTP takes a new approach to mitigating spam. Unlike legacy systems that filter spam out after the fact, XMTP clients block spam at the network level before it gets to your inbox. The difference is foundational: by using encrypted, user-owned consent at the protocol level, users decide which senders can reach them on any app built on XMTP.</p>
-                <p class="mt-6 text-md/8 md:text-lg/8 text-gray-600">The protocol ↔ client architecture enables developers to layer in entirely new forms of filtering and prioritization—proofs of human identity, on-chain and social graphs, even economic incentives like paying for attention. </p>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Network-level Consent</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">XMTP takes a new approach to mitigating spam. Unlike legacy systems that filter spam out after the fact, XMTP clients block spam at the network level before it gets to your inbox. The difference is foundational: by using encrypted, user-owned consent at the protocol level, users decide which senders can reach them on any app built on XMTP.</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">The protocol ↔ client architecture enables developers to layer in entirely new forms of filtering and prioritization—proofs of human identity, on-chain and social graphs, even economic incentives like paying for attention. </p>
                 <p class="mt-12">
 
                   <a class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal">
@@ -462,14 +462,14 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-white pb-8 md:pb-16 pt-4 md:pt-0">
+      <div class="pb-8 md:pb-16 pt-4 md:pt-0">
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-16 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">Censorship-resistant</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900">Decentralized by Design</p>
-                <p class="mt-6 text-md/8 md:text-lg/8 text-gray-600">XMTP is designed as a decentralized messaging protocol, meaning it operates without a central server, giving users full ownership and control over their data. This structure ensures that no single entity has access to or control over messages, making communication censorship-resistant and enhancing privacy.</p>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Decentralized by Design</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">XMTP is designed as a decentralized messaging protocol, meaning it operates without a central server, giving users full ownership and control over their data. This structure ensures that no single entity has access to or control over messages, making communication censorship-resistant and enhancing privacy.</p>
                 <p class="mt-12">
 
                 <a class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal">
