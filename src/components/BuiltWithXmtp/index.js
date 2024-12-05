@@ -606,7 +606,7 @@ const BuiltWithXmtp = () => {
                     </div>
                   </div> */}
                   
-                  <div class="mt-10 flex gap-x-6 mb-8 justify-center">
+                  <div class="mt-10 flex gap-x-6 mb-8 md:mb-0 justify-center">
                   
                     <a href="https://github.com/xmtp" target="_blank" class="cursor-pointer flex items-center gap-x-1 text-black bg-white hover:text-black shadow-sm hover:bg-gray-400 transition-all font-semibold rounded-md text-md md:text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline w-full md:w-auto justify-center md:justify-normal">
                     
