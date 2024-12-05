@@ -60,7 +60,7 @@ const BuiltWithXmtp = () => {
             <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#959595] to-[#FC4F37] opacity-20" style={{"clipPath":"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"}}></div>
           </div>
 
-          <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-8 pt-0 lg:flex md:pb-32 md:pt-24 text-center md:text-left">
+          <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-8 pt-4 lg:flex md:pb-32 md:pt-24 text-center md:text-left">
             <div class="mx-auto max-w-5xl shrink-0 lg:mx-0">
               <div class="mt-6 md:mt-24 lg:mt-0">
                 <a href="#" class="inline-flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 hover:no-underline justify-center md:justify-normal">
@@ -144,11 +144,11 @@ const BuiltWithXmtp = () => {
       <div id="trynow" class="overflow-hidden pt-12 pb-0 md:pb-16 md:pt-16 bg-gray-50 rounded-3xl">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
-              <div class="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none">
+              <div class="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none text-center md:text-left">
                   <img src="img/converse-logo-full-black.svg" class="h-14 mb-2"></img>
                   <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">Want to try XMTP messaging?</h2>
                   <p class="max-w-3xl text-base md:text-lg font-normal">Converse Messenger is a messaging app for decentralized, secure, end-to-end encrypted conversations.</p>
-                  <div class="mt-6 flex flex-wrap gap-x-4 gap-y-0">
+                  <div class="mt-6 flex flex-wrap gap-x-4 gap-y-0 justify-center md:justify-normal">
                     <a aria-label="Download on the App Store" href="https://apps.apple.com/app/converse-messenger/id1658819514">
                         <svg width="130" height="44" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M179 46.0034C179 48.7745 176.709 51.0192 173.874 51.0192H6.13243C3.2995 51.0192 1 48.7745 1 46.0034V6.00382C1 3.23398 3.2995 0.981445 6.13243 0.981445H173.873C176.709 0.981445 178.999 3.23398 178.999 6.00382L179 46.0034Z" fill="black"></path>
@@ -278,7 +278,7 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="relative isolate overflow-hidden bg-white py-32 md:py-24">
+      <div class="relative isolate overflow-hidden bg-white py-16 md:py-4 md:pb-16">
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="lg:col-end-1 lg:w-full lg:max-w-3xl lg:pb-8 mb-8 md:mb-0">
               <p class="text-sm/4 md:text-base font-semibold uppercase tracking-wider leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.2)]">Use Cases</p>
@@ -286,7 +286,7 @@ const BuiltWithXmtp = () => {
               <p class="text-gray-600 max-w-3xl text-base md:text-lg font-normal">Learn about the connected and resilient ecosystem for seamless communication across apps and wallets</p>
           </div>
 
-          <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-solid border-0 border-t border-gray-200 pt-10 mt-4 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+          <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 md:gap-y-16 border-solid border-0 border-t border-gray-200 pt-10 mt-4 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
             
             <article class="flex max-w-xl flex-col items-start justify-between">
               <div class="flex items-center gap-x-4 text-xs">
@@ -356,9 +356,9 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-white pb-24 pt-0">  
-        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
-          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="bg-white pb-8 md:pb-24 pt-4 md:pt-0">  
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-0 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold text-red-500">Security</h2>
@@ -390,9 +390,9 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-white pb-24 pt-16">  
+      <div class="bg-white pb-8 md:pb-0 pt-0">
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
-          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">Identity</h2>
@@ -426,9 +426,9 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-white pb-24 pt-0">
-        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
-          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="bg-white pb-8 md:pb-16 pt-0">
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-16 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">No Spam</h2>
@@ -462,9 +462,9 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div class="bg-white pb-32 pt-16">
-        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
-          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="bg-white pb-8 md:pb-16 pt-4 md:pt-0">
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-16 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">Censorship-resistant</h2>
@@ -519,7 +519,7 @@ const BuiltWithXmtp = () => {
           <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
             <div class="rounded-3xl p-2 shadow-md shadow-black/5">
               
-              <div class="relative isolate overflow-hidden bg-[#1d1d1d] px-6 pt-16 pb-16 text-left shadow-2xl sm:rounded-2xl sm:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-8 text-center">
+              <div class="relative isolate overflow-hidden bg-[#1d1d1d] px-6 pt-8 pb-8 md:pt-16 md:pb-16 text-left shadow-2xl sm:rounded-2xl sm:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-8 text-center">
                 
                 <div>
                   <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-4xl">XMTP is Open Source</h2>
@@ -564,7 +564,7 @@ const BuiltWithXmtp = () => {
                     
                     <a href="https://github.com/xmtp/xmtp-js" target="_blank" class="hover:no-underline">
                       <button 
-                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400 hover:opacity-75"
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
                       >
                         <div class="flex gap-x-6">
                           <img class="max-h-8 object-contain" src="img/javascriptLogo.png" alt="Javascript Logo"></img>
@@ -580,7 +580,7 @@ const BuiltWithXmtp = () => {
                     
                     <a href="https://github.com/xmtp/xmtp-react-native" target="_blank" class="hover:no-underline">
                       <button 
-                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400 hover:opacity-75"
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
                       >
                       <div class="flex gap-x-6">
                         <img class="max-h-8 object-contain" src="img/reactnativeLogo.png" alt="React Native Logo"></img>
@@ -598,7 +598,7 @@ const BuiltWithXmtp = () => {
                     
                     <a href="https://github.com/xmtp/xmtp-ios" target="_blank" class="hover:no-underline">
                       <button 
-                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400 hover:opacity-75"
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
                       >
                       <div class="flex gap-x-6">
                         <img class="max-h-8 object-contain" src="img/swiftLogo.png" alt="Swift Logo"></img>
@@ -616,7 +616,7 @@ const BuiltWithXmtp = () => {
                     
                     <a href="https://github.com/xmtp/xmtp-android" target="_blank" class="hover:no-underline">
                       <button 
-                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400 hover:opacity-75"
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
                       >
                       <div class="flex gap-x-6">
                         <img class="max-h-8 object-contain" src="img/kotlinLogo.png" alt="Kotlin Logo"></img>
@@ -634,7 +634,7 @@ const BuiltWithXmtp = () => {
                     
                     <a href="https://github.com/xmtp/xmtpd" target="_blank" class="hover:no-underline">
                       <button 
-                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-400 hover:opacity-75"
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
                       >
                       <div class="flex gap-x-6">
                         <img class="max-h-8 object-contain" src="img/nodejsLogo.png" alt="Node JS Logo"></img>
