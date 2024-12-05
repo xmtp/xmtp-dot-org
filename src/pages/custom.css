@@ -81,6 +81,10 @@ dd {
   margin: 0;
 }
 
+.logo-row ul {
+  padding-left: 0;
+}
+
 .logo-row ul li {
   list-style-type: none;
 }
