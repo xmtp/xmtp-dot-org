@@ -1,150 +1,730 @@
-import React from "react";
+import React, { useState } from "react";
 import ListOfDevelopers from "./ListOfDevs.json";
 import useBaseUrl from "@docusaurus/useBaseUrl/";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
+import { motion } from "framer-motion";
 
 const BuiltWithXmtp = () => {
+  const [openAccordions, setOpenAccordions] = useState({ 1: true });
+
+  const toggleAccordion = (index) => {
+    setOpenAccordions(prev => {
+      // If clicking the currently open accordion and it's the only one open,
+      // don't allow it to close
+      if (prev[index] && Object.keys(prev).length === 1) {
+        return prev;
+      }
+      // Otherwise, close all others and open the clicked one
+      return { [index]: !prev[index] };
+    });
+  };
+
+  // SVG components for better React integration
+  const MinusIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
+      <path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z" />
+    </svg>
+  );
+
+  const PlusIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
+      <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+    </svg>
+  );
+  
   return (
     <div>
-      <div className="container text-left py-0 px-4 m-auto max-w-screen-max">
-        <Link to="https://docs.xmtp.org/groups/build-group-chat">
-          <div className="rounded-full border border-blue-300 bg-blue-50 text-l font-semibold text-blue-800 border-solid px-2.5 py-0.5 mb-3 lg:mb-4 w-fit">
-            Groups with MLS in production ↗
+
+      <div className="homepageHero -mt-2">
+
+        <div class="relative isolate overflow-hidden bg-[#1d1d1d] rounded-3xl">
+          <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
           </div>
-        </Link>
-      </div>
-      <div className="relative s isolate overflow-hidden px-6 py-16 sm:py-24 mb-8 bg-color  built">
-        <div className=" absolute inset-0 -z-10 h-full w-full builder-bg"></div>
-        <div className="max-w-7xl">
-          <div className="mx-auto md:mx-0">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
-              The open protocol for web3 messaging
-            </h1>
-            <p className="text-lg leading-7 text-gray-600">
-              Over 2 million web3 identities rely on apps built with XMTP for secure, private, and portable messaging
-            </p>
+
+          <div class="h-lines h-full">
+            <div class="h-line"></div>
+            <div class="h-line"></div>
+            <div class="h-line"></div>
+            <div class="h-line"></div>
+            <div class="h-line"></div>
+            <div class="h-line"></div>
           </div>
-          <div className="mt-4 max-w-2xl md:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-              <a
-                href="https://docs.xmtp.org/"
-                className="btn-principal bg-red-500 rounded-lg p-5 h-12 text-white font-bold text-base cursor-pointer flex justify-center items-center border-0 no-underline"
-                rel="noreferrer"
-                target="_blank">
-                <img
-                  src="/img/xmtp-sm-icon.png"
-                  className="w-5 h-5 mr-2.5"
-                  alt="XMTP icon"></img>
-                Build with XMTP ↗
-              </a>
-            </div>
+
+          <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]" aria-hidden="true">
+            <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#959595] to-[#FC4F37] opacity-20" style={{"clipPath":"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"}}></div>
           </div>
-        </div>
-      </div>
 
-      <div className="relative isolate overflow-hidden px-6 bg-color">
-        <div className=" absolute inset-0 -z-10 h-full w-full"></div>
-        <h2>
-          Pick any app. Message any identity.
-          <br />
-          Own your communications.
-        </h2>
-      </div>
+          <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-8 pt-4 lg:flex md:pb-32 md:pt-24 text-center md:text-left">
+            <div class="mx-auto max-w-5xl shrink-0 lg:mx-0">
+              <div class="mt-6 md:mt-24 lg:mt-0">
+                <a href="https://docs.xmtp.org/upgrade-to-v3" class="inline-flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 hover:no-underline justify-center md:justify-normal">
+                  <span class="mb-2 md:mb-0 rounded-full bg-gray-500/10 px-4 py-2 text-center md:py-1 md:text-left text-xs/4 md:text-sm/6 font-semibold text-red-400 ring-2 ring-inset ring-red-500/50">What's new</span>
+                  <span class="inline-flex items-center space-x-0 text-sm/4 md:text-sm/6 font-semibold text-gray-300 hover:text-red-400">
+                    <span>Upgrade to XMTP V3</span>
+                    <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {ListOfDevelopers.map((developer) => (
-          <div
-            className="relative flex items-top space-x-4 rounded-lg border border-gray-400 px-6 py-4 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
-            key={developer.name}>
-            <div className="flex-shrink-0">
-              <a
-                href={developer.href}
-                target="_blank"
-                className="rounded rounded-md flex justify-center py-0 mb-4">
-                <img
-                  className="h-16 w-16 max-h-16 max-w-16 rounded-2xl"
-                  src={useBaseUrl(developer.image)}
-                  alt={
-                    "this is an image of the" + developer.name + " icon"
-                  }></img>
-              </a>
-            </div>
+              <h1 class="mt-8 md:mt-12 text-pretty text-4xl font-semibold tracking-tight text-white md:text-7xl">XMTP is the largest & most secure decentralized messaging network</h1>
+              <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
+                <dl class="mx-auto mt-10 md:mt-12 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
+                  <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-8">
+                    <dt class="text-xs/4 md:text-base/8 text-gray-400">Connected identities</dt>
+                    <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">2 Million+</dd>
+                  </div>
+                  <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-10 ml-0 md:ml-8">
+                    <dt class="text-xs/4 md:text-base/8 text-gray-400">of developers</dt>
+                    <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">1,000s</dd>
+                  </div>
+                  <div class="flex flex-col gap-y-0 border-none ml-0 md:ml-8">
+                    <dt class="text-xs/4 md:text-base/8 text-gray-400">Production apps</dt>
+                    <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">60+</dd>
+                  </div>
+                </dl>
+                <p class="mt-8 text-pretty text-md md:text-lg font-normal md:font-semibold text-gray-200">Enterprise-grade secure messaging — powered by decentralization.
+                Start building group chats, DMs, and notifications in minutes.</p>
+              </div>
+              <div class="mt-10 flex flex-wrap md:flex-nowrap items-center gap-x-4">
 
-            <div className="min-w-0 flex-1 builder">
-              <a
-                href={developer.href}
-                target="_blank"
-                className="focus:outline-none">
-                <h5 className="text-lg font-bold text-gray-900 dark:text-white mb-0">
-                  {developer.name}
-                </h5>
-              </a>
-              <p className="text-base text-gray-400">{developer.description}</p>
+                <a href="https://docs.xmtp.org/" class="mb-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+                  </svg>
+                  Get started <span aria-hidden="true">→</span>
+                </a>
 
-              <div className="flex items-center space-x-3">
-                {developer.href && (
-                  <a
-                    className="text-base font-semibold text-red-500 flex align-center"
-                    href={developer.href}
-                    target="_blank">
-                    <div className="website-icon h-5 w-5"></div>
-                  </a>
-                )}
-                {developer.github && (
-                  <a
-                    className="text-base font-semibold  flex align-center"
-                    href={developer.github}
-                    target="_blank">
-                    <div className="github-icon h-5 w-5"></div>
-                  </a>
-                )}
-                {developer.twitter && (
-                  <a
-                    className="flex align-center text-black x-logo"
-                    href={developer.twitter}
-                    style={{
-                      fontSize: "20px",
-                      fontWeight: "bold",
-                    }}
-                    target="_blank">
-                    𝕏
-                  </a>
-                )}
+                <a href="#trynow" class="smooth-scroll w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-black shadow-sm hover:bg-gray-100 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                  </svg>
+                  Try XMTP now<span aria-hidden="true">→</span>
+                </a>
+                
               </div>
             </div>
           </div>
-        ))}
-        <div className="relative flex items-top space-x-4 rounded-lg border border-gray-400 px-6 py-4 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400">
-          <div className="flex-shrink-0">
-            <a className="rounded rounded-md flex justify-center py-0 mb-4">
-              <img
-                className="h-16 w-16 max-h-16 max-w-16 rounded-xl"
-                src="/img/getFeatured.jpg"></img>
-            </a>
+        </div>
+
+      </div>
+
+      <div class="pt-4 pb-0 bg-white rounded-3xl my-6">
+        <div class="mx-auto max-w-full">
+          <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by the best</h2>
+
+          <div class="w-full inline-flex space-x-10 flex-nowrap logo-row mt-2 overflow-hidden">
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-infinite-scroll">
+              <li>
+                  <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
+              </li>
+              <li>
+                  <img src="img/logo-ens.svg" alt="ENS" />
+              </li>
+              <li>
+                  <img src="img/family-logo-black.svg" alt="Family" />
+              </li>
+              <li>
+                  <img src="img/metamask-logo.svg" alt="Metamask"  />
+              </li>
+              <li>
+                  <img src="img/lens-logo-black.svg" alt="Lens" />
+              </li>
+              <li>
+                  <img src="img/converse-logo-full-black.svg" alt="Converse" />
+              </li>
+              <li>
+                  <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
+              </li>
+              <li>
+                  <img class="max-h-12" src="img/neynar-logo.png" alt="Neynar" />
+              </li>
+              <li>
+                  <img src="img/yup-logo-black.svg" alt="Yup" />
+              </li>
+              <li>
+                  <img class="max-h-12" src="img/hey-logo-dark.png" alt="Hey" />
+              </li>
+              <li>
+                  <img class="max-h-10" src="img/interface-logo.png" alt="Interface" />
+              </li>
+              <li>
+                  <img src="img/phaver-logo.svg" alt="Phaver" />
+              </li>
+              <li>
+                  <img src="img/frog-logo.svg" alt="Frog" />
+              </li>
+            </ul>  
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-infinite-scroll pl-8" aria-hidden="true">
+              <li>
+                  <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
+              </li>
+              <li>
+                  <img src="img/logo-ens.svg" alt="ENS" />
+              </li>
+              <li>
+                  <img src="img/family-logo-black.svg" alt="Family" />
+              </li>
+              <li>
+                  <img src="img/metamask-logo.svg" alt="Metamask"  />
+              </li>
+              <li>
+                  <img src="img/lens-logo-black.svg" alt="Lens" />
+              </li>
+              <li>
+                  <img src="img/converse-logo-full-black.svg" alt="Converse" />
+              </li>
+              <li>
+                  <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
+              </li>
+              <li>
+              <img class="max-h-12" src="img/neynar-logo.png" alt="Neynar" />
+              </li>
+              <li>
+                  <img src="img/yup-logo-black.svg" alt="Yup" />
+              </li>
+              <li>
+                  <img src="img/hey-logo-dark.png" alt="Hey" />
+              </li>
+              <li>
+                <img class="max-h-10" src="img/interface-logo.png" alt="Interface" />
+              </li>
+              <li>
+                  <img src="img/phaver-logo.svg" alt="Phaver" />
+              </li>
+              <li>
+                  <img src="img/frog-logo.svg" alt="Frog" />
+              </li>
+            </ul>                     
           </div>
-          <div className="min-w-0 flex-1">
-            <a
-              href="https://forms.gle/p1VgVtkoGfHXANXt5"
-              target="_blank"
-              className="focus:outline-none">
-              <h5 className="text-lg font-bold text-gray-900 mb-0">
-                Help build this list
-              </h5>
-            </a>
-            <p className="text-base text-gray-500">
-              Know of a project built with XMTP that should be here?
-              <a
-                className="px-1"
-                href="https://forms.gle/p1VgVtkoGfHXANXt5"
-                target="_blank"
-                rel="noreferrer">
-                <strong>Submit it</strong>
-              </a>
-            </p>
+
+
+        </div>
+      </div>
+
+      <div id="trynow" class="overflow-hidden pt-12 pb-0 md:pb-16 md:pt-16 bg-gray-50 rounded-3xl">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
+              <div class="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none text-center md:text-left">
+                  <img src="img/converse-logo-full-black.svg" class="h-14 mb-2"></img>
+                  <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">Want to try XMTP messaging?</h2>
+                  <p class="max-w-3xl text-base md:text-lg font-normal text-gray-600">Converse Messenger is an app for decentralized, secure, end-to-end encrypted conversations.</p>
+                  <div class="mt-6 flex flex-wrap gap-x-4 gap-y-0 justify-center md:justify-normal">
+                    <a aria-label="Download on the App Store" href="https://apps.apple.com/app/converse-messenger/id1658819514">
+                        <svg width="130" height="44" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M179 46.0034C179 48.7745 176.709 51.0192 173.874 51.0192H6.13243C3.2995 51.0192 1 48.7745 1 46.0034V6.00382C1 3.23398 3.2995 0.981445 6.13243 0.981445H173.873C176.709 0.981445 178.999 3.23398 178.999 6.00382L179 46.0034Z" fill="black"></path>
+                          <path d="M173.333 1.04162C176.42 1.04162 178.932 3.4905 178.932 6.5V45.5C178.932 48.5095 176.42 50.9584 173.333 50.9584H6.66667C3.58 50.9584 1.06833 48.5095 1.06833 45.5V6.5C1.06833 3.4905 3.58 1.04162 6.66667 1.04162H173.333ZM173.333 2.74817e-06H6.66667C3.00167 2.74817e-06 0 2.92663 0 6.5V45.5C0 49.0734 3.00167 52 6.66667 52H173.333C176.998 52 180 49.0734 180 45.5V6.5C180 2.92663 176.998 2.74817e-06 173.333 2.74817e-06Z" fill="#A6A6A6"></path>
+                          <path d="M40.1714 25.7191C40.1328 21.5292 43.6901 19.4908 43.8528 19.3959C41.8381 16.532 38.7154 16.1407 37.6181 16.1095C34.9954 15.8404 32.4514 17.6396 31.1154 17.6396C29.7528 17.6396 27.6954 16.1355 25.4781 16.1797C22.6248 16.2226 19.9554 17.8333 18.4914 20.3345C15.4701 25.4344 17.7234 32.9289 20.6181 37.0512C22.0661 39.0701 23.7581 41.3243 25.9728 41.245C28.1394 41.1579 28.9488 39.8982 31.5634 39.8982C34.1541 39.8982 34.9141 41.245 37.1728 41.1943C39.4981 41.1579 40.9621 39.1663 42.3594 37.1292C44.0328 34.8152 44.7048 32.5363 44.7314 32.4193C44.6768 32.4011 40.2154 30.741 40.1714 25.7191Z" fill="white"></path>
+                          <path d="M35.9048 13.3977C37.0701 11.9768 37.8674 10.0437 37.6461 8.08203C35.9594 8.15483 33.8501 9.21953 32.6354 10.6092C31.5608 11.8338 30.6008 13.841 30.8488 15.7286C32.7434 15.8664 34.6888 14.7965 35.9048 13.3977Z" fill="white"></path>
+                          <path d="M71.5269 40.9557H68.4989L66.8402 35.874H61.0749L59.4949 40.9557H56.5469L62.2589 23.6553H65.7869L71.5269 40.9557ZM66.3402 33.742L64.8402 29.2245C64.6815 28.763 64.3842 27.6762 63.9455 25.9654H63.8922C63.7175 26.7012 63.4362 27.788 63.0495 29.2245L61.5762 33.742H66.3402Z" fill="white"></path>
+                          <path d="M86.2159 34.5647C86.2159 36.6863 85.6279 38.3633 84.4519 39.5944C83.3985 40.6903 82.0905 41.2376 80.5292 41.2376C78.8439 41.2376 77.6332 40.6474 76.8959 39.467H76.8425V46.0385H73.9999V32.5874C73.9999 31.2536 73.9639 29.8847 73.8945 28.4807H76.3945L76.5532 30.458H76.6065C77.5545 28.9682 78.9932 28.2246 80.9239 28.2246C82.4332 28.2246 83.6932 28.8057 84.7012 29.9692C85.7119 31.134 86.2159 32.6654 86.2159 34.5647ZM83.3199 34.6661C83.3199 33.4519 83.0399 32.4509 82.4772 31.6631C81.8625 30.8415 81.0372 30.4307 80.0025 30.4307C79.3012 30.4307 78.6639 30.6595 78.0945 31.1106C77.5239 31.5656 77.1505 32.1597 76.9759 32.8955C76.8879 33.2387 76.8439 33.5195 76.8439 33.7405V35.8205C76.8439 36.7279 77.1292 37.4936 77.6999 38.1189C78.2705 38.7442 79.0119 39.0562 79.9239 39.0562C80.9945 39.0562 81.8279 38.6532 82.4239 37.8498C83.0212 37.0451 83.3199 35.9843 83.3199 34.6661Z" fill="white"></path>
+                          <path d="M100.931 34.5647C100.931 36.6863 100.343 38.3633 99.166 39.5944C98.114 40.6903 96.806 41.2376 95.2447 41.2376C93.5593 41.2376 92.3487 40.6474 91.6127 39.467H91.5593V46.0385H88.7167V32.5874C88.7167 31.2536 88.6807 29.8847 88.6113 28.4807H91.1113L91.27 30.458H91.3233C92.27 28.9682 93.7087 28.2246 95.6407 28.2246C97.1487 28.2246 98.4087 28.8057 99.4193 29.9692C100.426 31.134 100.931 32.6654 100.931 34.5647ZM98.0353 34.6661C98.0353 33.4519 97.754 32.4509 97.1913 31.6631C96.5767 30.8415 95.754 30.4307 94.718 30.4307C94.0153 30.4307 93.3793 30.6595 92.8087 31.1106C92.238 31.5656 91.866 32.1597 91.6913 32.8955C91.6047 33.2387 91.5593 33.5195 91.5593 33.7405V35.8205C91.5593 36.7279 91.8447 37.4936 92.4127 38.1189C92.9833 38.7429 93.7247 39.0562 94.6393 39.0562C95.71 39.0562 96.5433 38.6532 97.1393 37.8498C97.7367 37.0451 98.0353 35.9843 98.0353 34.6661Z" fill="white"></path>
+                          <path d="M117.385 36.1037C117.385 37.5753 116.861 38.7726 115.809 39.6969C114.653 40.707 113.044 41.2114 110.976 41.2114C109.066 41.2114 107.536 40.8526 106.377 40.1337L107.036 37.8236C108.284 38.5594 109.653 38.9286 111.145 38.9286C112.216 38.9286 113.049 38.692 113.648 38.2214C114.244 37.7508 114.541 37.119 114.541 36.3312C114.541 35.6292 114.296 35.0377 113.804 34.558C113.314 34.0783 112.497 33.6324 111.356 33.2203C108.249 32.0906 106.697 30.4357 106.697 28.2595C106.697 26.8373 107.241 25.6712 108.33 24.7638C109.416 23.8551 110.864 23.4014 112.674 23.4014C114.289 23.4014 115.63 23.6757 116.701 24.223L115.99 26.4824C114.99 25.952 113.86 25.6868 112.594 25.6868C111.594 25.6868 110.813 25.9273 110.253 26.4057C109.78 26.8334 109.542 27.3547 109.542 27.9722C109.542 28.656 109.813 29.2215 110.357 29.6661C110.83 30.0769 111.69 30.5215 112.938 31.0012C114.465 31.6005 115.586 32.3012 116.308 33.1046C117.026 33.9054 117.385 34.9077 117.385 36.1037Z" fill="white"></path>
+                          <path d="M126.784 30.5604H123.651V36.6171C123.651 38.1576 124.203 38.9272 125.31 38.9272C125.818 38.9272 126.239 38.8843 126.572 38.7985L126.651 40.9032C126.091 41.1073 125.354 41.21 124.44 41.21C123.318 41.21 122.44 40.8759 121.807 40.209C121.176 39.5408 120.859 38.4202 120.859 36.8459V30.5578H118.992V28.4778H120.859V26.1937L123.651 25.3721V28.4778H126.784V30.5604Z" fill="white"></path>
+                          <path d="M140.921 34.6151C140.921 36.5326 140.358 38.1069 139.235 39.338C138.058 40.6055 136.495 41.2373 134.547 41.2373C132.67 41.2373 131.175 40.6302 130.061 39.416C128.946 38.2018 128.389 36.6691 128.389 34.8218C128.389 32.8887 128.962 31.3053 130.113 30.0742C131.261 28.8418 132.81 28.2256 134.758 28.2256C136.635 28.2256 138.146 28.8327 139.286 30.0482C140.377 31.2273 140.921 32.7496 140.921 34.6151ZM137.971 34.7048C137.971 33.5543 137.719 32.5676 137.209 31.7447C136.613 30.7489 135.761 30.2523 134.657 30.2523C133.514 30.2523 132.646 30.7502 132.05 31.7447C131.539 32.5689 131.287 33.5712 131.287 34.7568C131.287 35.9073 131.539 36.894 132.05 37.7156C132.665 38.7114 133.523 39.208 134.631 39.208C135.717 39.208 136.569 38.701 137.183 37.6896C137.707 36.8511 137.971 35.854 137.971 34.7048Z" fill="white"></path>
+                          <path d="M150.162 30.9182C149.88 30.8675 149.58 30.8415 149.266 30.8415C148.266 30.8415 147.492 31.2094 146.948 31.9465C146.475 32.5965 146.238 33.4181 146.238 34.41V40.9555H143.396L143.423 32.4093C143.423 30.9715 143.387 29.6624 143.316 28.482H145.792L145.896 30.8688H145.975C146.275 30.0485 146.748 29.3881 147.396 28.8928C148.03 28.4469 148.714 28.2246 149.451 28.2246C149.714 28.2246 149.951 28.2428 150.162 28.2753V30.9182Z" fill="white"></path>
+                          <path d="M162.875 34.1279C162.875 34.6245 162.841 35.0431 162.771 35.385H154.243C154.276 36.6174 154.688 37.5599 155.48 38.2099C156.199 38.791 157.128 39.0822 158.269 39.0822C159.532 39.0822 160.684 38.8859 161.72 38.492L162.165 40.416C160.955 40.9308 159.525 41.1869 157.876 41.1869C155.892 41.1869 154.335 40.6175 153.201 39.48C152.071 38.3425 151.504 36.815 151.504 34.8988C151.504 33.0177 152.031 31.4512 153.085 30.2019C154.189 28.8681 155.681 28.2012 157.559 28.2012C159.403 28.2012 160.799 28.8681 161.747 30.2019C162.497 31.2614 162.875 32.5718 162.875 34.1279ZM160.164 33.409C160.183 32.5874 159.997 31.8776 159.612 31.2783C159.12 30.5074 158.364 30.1226 157.347 30.1226C156.417 30.1226 155.661 30.4983 155.084 31.2523C154.611 31.8516 154.329 32.5705 154.243 33.4077H160.164V33.409Z" fill="white"></path>
+                          <path d="M65.3997 13.0113C65.3997 14.5414 64.9291 15.6932 63.989 16.4667C63.1184 17.1804 61.881 17.5379 60.2784 17.5379C59.4837 17.5379 58.8037 17.5041 58.2344 17.4365V9.07621C58.977 8.95921 59.777 8.89941 60.641 8.89941C62.1677 8.89941 63.3184 9.22311 64.0944 9.87051C64.9637 10.6024 65.3997 11.6489 65.3997 13.0113ZM63.9264 13.049C63.9264 12.0571 63.657 11.2966 63.1184 10.7662C62.5797 10.2371 61.793 9.97191 60.757 9.97191C60.317 9.97191 59.9424 10.0005 59.6317 10.0603V16.416C59.8037 16.442 60.1184 16.4537 60.5757 16.4537C61.645 16.4537 62.4704 16.1638 63.0517 15.584C63.6331 15.0042 63.9264 14.1592 63.9264 13.049Z" fill="white"></path>
+                          <path d="M73.2126 14.3482C73.2126 15.2907 72.9366 16.0629 72.3846 16.6687C71.806 17.2914 71.0393 17.6021 70.082 17.6021C69.1593 17.6021 68.4246 17.3044 67.8766 16.7064C67.33 16.1097 67.0566 15.357 67.0566 14.4496C67.0566 13.5006 67.338 12.7219 67.9033 12.1174C68.4686 11.5129 69.2286 11.21 70.186 11.21C71.1086 11.21 71.85 11.5077 72.4113 12.1044C72.9446 12.6842 73.2126 13.433 73.2126 14.3482ZM71.7633 14.3924C71.7633 13.8269 71.638 13.342 71.3886 12.9377C71.0953 12.4489 70.678 12.2045 70.1353 12.2045C69.574 12.2045 69.1473 12.4489 68.854 12.9377C68.6033 13.342 68.4793 13.8347 68.4793 14.4171C68.4793 14.9826 68.6046 15.4675 68.854 15.8718C69.1566 16.3606 69.578 16.605 70.122 16.605C70.6553 16.605 71.074 16.3567 71.3753 15.8588C71.634 15.4467 71.7633 14.9579 71.7633 14.3924Z" fill="white"></path>
+                          <path d="M83.6867 11.334L81.7201 17.4622H80.4401L79.6254 14.8011C79.4187 14.1368 79.2507 13.4764 79.1201 12.8212H79.0947C78.9734 13.4946 78.8054 14.1537 78.5894 14.8011L77.7241 17.4622H76.4294L74.5801 11.334H76.0161L76.7267 14.2473C76.8987 14.9363 77.0401 15.5928 77.1534 16.2142H77.1787C77.2827 15.702 77.4547 15.0494 77.6974 14.2603L78.5894 11.3353H79.7281L80.5827 14.1979C80.7894 14.896 80.9574 15.5681 81.0867 16.2155H81.1254C81.2201 15.585 81.3627 14.9129 81.5521 14.1979L82.3147 11.3353H83.6867V11.334Z" fill="white"></path>
+                          <path d="M90.9312 17.463H89.5339V13.953C89.5339 12.8714 89.1125 12.3306 88.2672 12.3306C87.8525 12.3306 87.5179 12.4788 87.2579 12.7765C87.0005 13.0742 86.8699 13.4252 86.8699 13.8269V17.4617H85.4725V13.0859C85.4725 12.5477 85.4552 11.964 85.4219 11.3322H86.6499L86.7152 12.2903H86.7539C86.9165 11.9926 87.1592 11.7469 87.4779 11.5506C87.8565 11.3218 88.2805 11.2061 88.7445 11.2061C89.3312 11.2061 89.8192 11.3907 90.2072 11.7612C90.6899 12.2149 90.9312 12.8922 90.9312 13.7918V17.463Z" fill="white"></path>
+                          <path d="M94.7847 17.4626H93.3887V8.52246H94.7847V17.4626Z" fill="white"></path>
+                          <path d="M103.01 14.3482C103.01 15.2907 102.734 16.0629 102.182 16.6687C101.603 17.2914 100.835 17.6021 99.8789 17.6021C98.9549 17.6021 98.2202 17.3044 97.6735 16.7064C97.1268 16.1097 96.8535 15.357 96.8535 14.4496C96.8535 13.5006 97.1349 12.7219 97.7002 12.1174C98.2655 11.5129 99.0255 11.21 99.9815 11.21C100.906 11.21 101.646 11.5077 102.208 12.1044C102.742 12.6842 103.01 13.433 103.01 14.3482ZM101.559 14.3924C101.559 13.8269 101.434 13.342 101.184 12.9377C100.892 12.4489 100.474 12.2045 99.9322 12.2045C99.3695 12.2045 98.9428 12.4489 98.6508 12.9377C98.4002 13.342 98.2762 13.8347 98.2762 14.4171C98.2762 14.9826 98.4015 15.4675 98.6508 15.8718C98.9535 16.3606 99.3749 16.605 99.9189 16.605C100.452 16.605 100.87 16.3567 101.171 15.8588C101.431 15.4467 101.559 14.9579 101.559 14.3924Z" fill="white"></path>
+                          <path d="M109.773 17.463H108.519L108.415 16.7571H108.376C107.947 17.32 107.335 17.6021 106.54 17.6021C105.947 17.6021 105.467 17.4162 105.105 17.047C104.777 16.7116 104.613 16.2943 104.613 15.799C104.613 15.0502 104.933 14.4795 105.577 14.0843C106.22 13.6891 107.124 13.4954 108.288 13.5045V13.3901C108.288 12.5828 107.853 12.1798 106.983 12.1798C106.363 12.1798 105.816 12.3319 105.344 12.6335L105.06 11.7391C105.644 11.3868 106.365 11.21 107.216 11.21C108.859 11.21 109.683 12.055 109.683 13.745V16.0018C109.683 16.6141 109.713 17.1016 109.773 17.463ZM108.323 15.357V14.4119C106.781 14.3859 106.011 14.798 106.011 15.6469C106.011 15.9667 106.099 16.2059 106.279 16.3658C106.459 16.5257 106.688 16.605 106.961 16.605C107.268 16.605 107.555 16.5101 107.816 16.3216C108.079 16.1318 108.24 15.8913 108.3 15.5962C108.315 15.5299 108.323 15.4493 108.323 15.357Z" fill="white"></path>
+                          <path d="M117.713 17.4626H116.473L116.408 16.4785H116.369C115.973 17.2273 115.298 17.6017 114.35 17.6017C113.593 17.6017 112.962 17.3118 112.462 16.732C111.962 16.1522 111.713 15.3995 111.713 14.4752C111.713 13.4833 111.984 12.6799 112.528 12.0663C113.054 11.4943 113.7 11.2083 114.468 11.2083C115.312 11.2083 115.902 11.4852 116.238 12.0403H116.265V8.52246H117.664V15.8116C117.664 16.4083 117.68 16.9582 117.713 17.4626ZM116.265 14.8782V13.8564C116.265 13.6796 116.252 13.5366 116.226 13.4274C116.148 13.0998 115.978 12.8242 115.721 12.6019C115.461 12.3796 115.148 12.2678 114.786 12.2678C114.265 12.2678 113.857 12.4693 113.557 12.8736C113.26 13.2779 113.109 13.794 113.109 14.4245C113.109 15.0303 113.252 15.5217 113.538 15.9C113.841 16.303 114.249 16.5045 114.76 16.5045C115.218 16.5045 115.585 16.3368 115.864 16.0001C116.133 15.6894 116.265 15.315 116.265 14.8782Z" fill="white"></path>
+                          <path d="M129.664 14.3482C129.664 15.2907 129.388 16.0629 128.836 16.6687C128.257 17.2914 127.492 17.6021 126.533 17.6021C125.612 17.6021 124.877 17.3044 124.328 16.7064C123.781 16.1097 123.508 15.357 123.508 14.4496C123.508 13.5006 123.789 12.7219 124.354 12.1174C124.92 11.5129 125.68 11.21 126.638 11.21C127.56 11.21 128.302 11.5077 128.862 12.1044C129.396 12.6842 129.664 13.433 129.664 14.3482ZM128.216 14.3924C128.216 13.8269 128.09 13.342 127.841 12.9377C127.546 12.4489 127.13 12.2045 126.586 12.2045C126.026 12.2045 125.6 12.4489 125.305 12.9377C125.054 13.342 124.93 13.8347 124.93 14.4171C124.93 14.9826 125.056 15.4675 125.305 15.8718C125.608 16.3606 126.029 16.605 126.573 16.605C127.106 16.605 127.526 16.3567 127.828 15.8588C128.085 15.4467 128.216 14.9579 128.216 14.3924Z" fill="white"></path>
+                          <path d="M137.178 17.463H135.782V13.953C135.782 12.8714 135.361 12.3306 134.514 12.3306C134.099 12.3306 133.765 12.4788 133.506 12.7765C133.247 13.0742 133.118 13.4252 133.118 13.8269V17.4617H131.719V13.0859C131.719 12.5477 131.703 11.964 131.67 11.3322H132.897L132.962 12.2903H133.001C133.165 11.9926 133.407 11.7469 133.725 11.5506C134.105 11.3218 134.527 11.2061 134.993 11.2061C135.578 11.2061 136.066 11.3907 136.454 11.7612C136.938 12.2149 137.178 12.8922 137.178 13.7918V17.463Z" fill="white"></path>
+                          <path d="M146.582 12.3553H145.043V15.3323C145.043 16.0889 145.317 16.4672 145.858 16.4672C146.109 16.4672 146.317 16.4464 146.481 16.4035L146.517 17.437C146.241 17.5384 145.878 17.5891 145.431 17.5891C144.879 17.5891 144.45 17.4253 144.139 17.0977C143.827 16.7701 143.673 16.2189 143.673 15.4454V12.3553H142.754V11.3348H143.673V10.2116L145.042 9.80859V11.3335H146.581V12.3553H146.582Z" fill="white"></path>
+                          <path d="M153.978 17.4626H152.58V13.9786C152.58 12.8801 152.158 12.3302 151.314 12.3302C150.666 12.3302 150.224 12.6487 149.981 13.2857C149.94 13.4196 149.916 13.5834 149.916 13.7758V17.4613H148.52V8.52246H149.916V12.2158H149.942C150.382 11.5437 151.013 11.2083 151.83 11.2083C152.409 11.2083 152.888 11.3929 153.268 11.7634C153.741 12.2249 153.978 12.9113 153.978 13.8187V17.4626Z" fill="white"></path>
+                          <path d="M161.609 14.1089C161.609 14.3533 161.591 14.5587 161.557 14.7264H157.367C157.385 15.3322 157.585 15.7937 157.973 16.1135C158.328 16.3995 158.785 16.5425 159.345 16.5425C159.965 16.5425 160.531 16.4463 161.04 16.2526L161.259 17.199C160.663 17.4512 159.961 17.5773 159.149 17.5773C158.176 17.5773 157.409 17.2978 156.855 16.7388C156.297 16.1798 156.021 15.4297 156.021 14.4885C156.021 13.5642 156.279 12.7946 156.797 12.181C157.339 11.5258 158.071 11.1982 158.995 11.1982C159.899 11.1982 160.585 11.5258 161.049 12.181C161.424 12.701 161.609 13.3445 161.609 14.1089ZM160.276 13.7566C160.287 13.3523 160.195 13.0039 160.005 12.7101C159.763 12.3318 159.393 12.142 158.893 12.142C158.437 12.142 158.065 12.3266 157.781 12.6971C157.549 12.9922 157.412 13.3445 157.367 13.7566H160.276Z" fill="white"></path>
+                        </svg>
+                    </a>
+                    <a aria-label="Get it on Google Play" href="https://play.google.com/store/apps/details?id=com.converse.prod">
+                        <svg width="130" height="44" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_570_62)">
+                              <path d="M173.095 52H6.6575C2.99754 52 0 49.0734 0 45.5V6.5C0 2.92663 2.99754 0 6.6575 0H173.095C176.755 0 179.753 2.92663 179.753 6.5V45.5C179.753 49.0734 176.755 52 173.095 52Z" fill="black"></path>
+                              <path d="M173.095 1.04162C176.177 1.04162 178.686 3.4905 178.686 6.5V45.5C178.686 48.5095 176.177 50.9584 173.095 50.9584H6.6575C3.57508 50.9584 1.06686 48.5095 1.06686 45.5V6.5C1.06686 3.4905 3.57508 1.04162 6.6575 1.04162H173.095ZM173.095 0H6.6575C2.99754 0 0 2.92663 0 6.5V45.5C0 49.0734 2.99754 52 6.6575 52H173.095C176.755 52 179.753 49.0734 179.753 45.5V6.5C179.753 2.92663 176.755 0 173.095 0Z" fill="#A6A6A6"></path>
+                              <path d="M63.1361 13.3172C63.1361 14.4027 62.8032 15.2721 62.1475 15.9204C61.3935 16.6891 60.4115 17.0758 59.2082 17.0758C58.0581 17.0758 57.0761 16.6826 56.2705 15.9074C55.4633 15.1209 55.0605 14.1557 55.0605 13.0003C55.0605 11.8449 55.4633 10.8797 56.2705 10.0997C57.0761 9.31806 58.0581 8.9248 59.2082 8.9248C59.7807 8.9248 60.3266 9.04018 60.8476 9.25468C61.3669 9.4708 61.7896 9.7633 62.0959 10.1241L61.4002 10.8098C60.8659 10.1939 60.1386 9.89007 59.2082 9.89007C58.3693 9.89007 57.642 10.1761 57.0245 10.7529C56.4137 11.3314 56.1074 12.0806 56.1074 13.0003C56.1074 13.9201 56.4137 14.6757 57.0245 15.2542C57.642 15.8246 58.3693 16.1171 59.2082 16.1171C60.0986 16.1171 60.8476 15.8246 61.4384 15.2477C61.8279 14.8658 62.0493 14.3393 62.1075 13.6666H59.2082V12.7273H63.0762C63.1228 12.9304 63.1361 13.1271 63.1361 13.3172Z" fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10"></path>
+                              <path d="M69.2732 10.0606H65.6399V12.5306H68.9154V13.4699H65.6399V15.9399H69.2732V16.897H64.6113V9.10352H69.2732V10.0606Z" fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10"></path>
+                              <path d="M73.6029 16.897H72.5743V10.0606H70.3457V9.10352H75.8331V10.0606H73.6029V16.897Z" fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10"></path>
+                              <path d="M79.8047 16.897V9.10352H80.8316V16.897H79.8047Z" fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10"></path>
+                              <path d="M85.3841 16.897H84.3639V10.0606H82.127V9.10352H87.621V10.0606H85.3841V16.897Z" fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10"></path>
+                              <path d="M98.0099 15.8944C97.2227 16.6826 96.2474 17.0758 95.084 17.0758C93.9139 17.0758 92.9386 16.6826 92.1513 15.8944C91.3657 15.1079 90.9746 14.1427 90.9746 13.0003C90.9746 11.8579 91.3657 10.8927 92.1513 10.1062C92.9386 9.31805 93.9139 8.9248 95.084 8.9248C96.2407 8.9248 97.216 9.31806 98.0033 10.1127C98.7955 10.9057 99.1866 11.8644 99.1866 13.0003C99.1866 14.1427 98.7955 15.1079 98.0099 15.8944ZM92.9119 15.2412C93.5045 15.8246 94.2251 16.1171 95.084 16.1171C95.9361 16.1171 96.6634 15.8246 97.2493 15.2412C97.8402 14.6578 98.1397 13.9087 98.1397 13.0003C98.1397 12.0919 97.8402 11.3428 97.2493 10.7594C96.6634 10.1761 95.9361 9.88355 95.084 9.88355C94.2251 9.88355 93.5045 10.1761 92.9119 10.7594C92.3211 11.3428 92.0215 12.0919 92.0215 13.0003C92.0215 13.9087 92.3211 14.6578 92.9119 15.2412Z" fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10"></path>
+                              <path d="M100.629 16.897V9.10352H101.877L105.759 15.1648H105.803L105.759 13.6665V9.10352H106.785V16.897H105.714L101.649 10.5368H101.604L101.649 12.0415V16.897H100.629Z" fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10"></path>
+                              <path d="M90.7215 28.2783C87.5942 28.2783 85.0394 30.602 85.0394 33.8082C85.0394 36.9883 87.5942 39.3364 90.7215 39.3364C93.8555 39.3364 96.4104 36.9883 96.4104 33.8082C96.4104 30.602 93.8555 28.2783 90.7215 28.2783ZM90.7215 37.1589C89.0056 37.1589 87.5293 35.776 87.5293 33.8082C87.5293 31.8143 89.0056 30.4558 90.7215 30.4558C92.4375 30.4558 93.9205 31.8143 93.9205 33.8082C93.9205 35.776 92.4375 37.1589 90.7215 37.1589ZM78.3236 28.2783C75.1896 28.2783 72.6414 30.602 72.6414 33.8082C72.6414 36.9883 75.1896 39.3364 78.3236 39.3364C81.4559 39.3364 84.0058 36.9883 84.0058 33.8082C84.0058 30.602 81.4559 28.2783 78.3236 28.2783ZM78.3236 37.1589C76.606 37.1589 75.1247 35.776 75.1247 33.8082C75.1247 31.8143 76.606 30.4558 78.3236 30.4558C80.0396 30.4558 81.5159 31.8143 81.5159 33.8082C81.5159 35.776 80.0396 37.1589 78.3236 37.1589ZM63.5706 29.9732V32.3229H69.3177C69.1496 33.6359 68.7002 34.6012 68.0111 35.2739C67.1723 36.0864 65.8657 36.9883 63.5706 36.9883C60.0338 36.9883 57.2643 34.2014 57.2643 30.7483C57.2643 27.2952 60.0338 24.5083 63.5706 24.5083C65.4829 24.5083 66.8744 25.2379 67.9013 26.1837L69.5973 24.5278C68.1609 23.1888 66.2502 22.1602 63.5706 22.1602C58.7206 22.1602 54.6445 26.013 54.6445 30.7483C54.6445 35.4835 58.7206 39.3364 63.5706 39.3364C66.192 39.3364 68.1609 38.4979 69.7088 36.9249C71.2949 35.3763 71.7893 33.1988 71.7893 31.4405C71.7893 30.8945 71.7427 30.3924 71.6594 29.9732H63.5706ZM123.898 31.7948C123.43 30.5582 121.987 28.2783 119.048 28.2783C116.135 28.2783 113.71 30.5192 113.71 33.8082C113.71 36.9054 116.11 39.3364 119.327 39.3364C121.929 39.3364 123.43 37.7878 124.047 36.8859L122.117 35.6298C121.473 36.5495 120.595 37.1589 119.327 37.1589C118.067 37.1589 117.163 36.595 116.584 35.4835L124.159 32.4237L123.898 31.7948ZM116.175 33.6359C116.11 31.5039 117.871 30.4119 119.132 30.4119C120.121 30.4119 120.96 30.8945 121.24 31.5852L116.175 33.6359ZM110.018 39H112.508V22.75H110.018V39ZM105.941 29.51H105.857C105.298 28.8633 104.231 28.2783 102.88 28.2783C100.044 28.2783 97.4506 30.7093 97.4506 33.826C97.4506 36.9249 100.044 39.3364 102.88 39.3364C104.231 39.3364 105.298 38.7465 105.857 38.0803H105.941V38.8733C105.941 40.9874 104.784 42.1233 102.918 42.1233C101.397 42.1233 100.453 41.0508 100.064 40.1489L97.8983 41.0313C98.5225 42.497 100.175 44.3008 102.918 44.3008C105.837 44.3008 108.301 42.6238 108.301 38.5434V28.6147H105.941V29.51ZM103.093 37.1589C101.377 37.1589 99.9405 35.7565 99.9405 33.826C99.9405 31.8777 101.377 30.4558 103.093 30.4558C104.784 30.4558 106.117 31.8777 106.117 33.826C106.117 35.7565 104.784 37.1589 103.093 37.1589ZM135.555 22.75H129.6V39H132.083V32.8429H135.555C138.313 32.8429 141.017 30.8945 141.017 27.7957C141.017 24.6984 138.306 22.75 135.555 22.75ZM135.62 30.5825H132.083V25.0104H135.62C137.474 25.0104 138.532 26.5135 138.532 27.7957C138.532 29.0534 137.474 30.5825 135.62 30.5825ZM150.97 28.2474C149.176 28.2474 147.31 29.0209 146.543 30.7353L148.747 31.6372C149.221 30.7353 150.093 30.4428 151.015 30.4428C152.303 30.4428 153.61 31.1984 153.63 32.5325V32.7032C153.181 32.4497 152.219 32.0743 151.035 32.0743C148.662 32.0743 146.243 33.3499 146.243 35.7305C146.243 37.908 148.187 39.3104 150.373 39.3104C152.044 39.3104 152.966 38.5743 153.545 37.7179H153.63V38.974H156.028V32.7405C156.028 29.8594 153.825 28.2474 150.97 28.2474ZM150.671 37.1524C149.858 37.1524 148.727 36.7592 148.727 35.776C148.727 34.5183 150.138 34.0357 151.36 34.0357C152.453 34.0357 152.966 34.2713 153.63 34.5817C153.435 36.0864 152.109 37.1524 150.671 37.1524ZM164.766 28.6033L161.912 35.6477H161.827L158.876 28.6033H156.198L160.632 38.4475L158.102 43.9254H160.697L167.529 28.6033H164.766ZM142.382 39H144.872V22.75H142.382V39Z" fill="white"></path>
+                              <path d="M13.8948 9.80042C13.5037 10.2002 13.2773 10.8226 13.2773 11.6286V40.3781C13.2773 41.1841 13.5037 41.8064 13.8948 42.2062L13.9914 42.2939L30.492 26.1902V25.8099L13.9914 9.70618L13.8948 9.80042Z" fill="url(#paint0_linear_570_62)"></path>
+                              <path d="M35.9863 31.5605L30.4922 26.1899V25.8097L35.9929 20.439L36.1161 20.5089L42.6305 24.1278C44.4896 25.1548 44.4896 26.8448 42.6305 27.8783L36.1161 31.4907L35.9863 31.5605Z" fill="url(#paint1_linear_570_62)"></path>
+                              <path d="M36.1156 31.4912L30.4917 26.0003L13.8945 42.2065C14.512 42.8402 15.519 42.9166 16.6641 42.2828L36.1156 31.4912Z" fill="url(#paint2_linear_570_62)"></path>
+                              <path d="M36.1156 20.5091L16.6641 9.7175C15.519 9.09024 14.512 9.16662 13.8945 9.80037L30.4917 26L36.1156 20.5091Z" fill="url(#paint3_linear_570_62)"></path>
+                          </g>
+                          <defs>
+                              <linearGradient id="paint0_linear_570_62" x1="29.0269" y1="40.6775" x2="7.2161" y2="18.3381" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00A0FF"></stop>
+                                <stop offset="0.0066" stop-color="#00A1FF"></stop>
+                                <stop offset="0.2601" stop-color="#00BEFF"></stop>
+                                <stop offset="0.5122" stop-color="#00D2FF"></stop>
+                                <stop offset="0.7604" stop-color="#00DFFF"></stop>
+                                <stop offset="1" stop-color="#00E3FF"></stop>
+                              </linearGradient>
+                              <linearGradient id="paint1_linear_570_62" x1="45.0513" y1="25.998" x2="12.8332" y2="25.998" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFE000"></stop>
+                                <stop offset="0.4087" stop-color="#FFBD00"></stop>
+                                <stop offset="0.7754" stop-color="#FFA500"></stop>
+                                <stop offset="1" stop-color="#FF9C00"></stop>
+                              </linearGradient>
+                              <linearGradient id="paint2_linear_570_62" x1="33.0575" y1="23.0154" x2="3.48021" y2="-7.2786" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF3A44"></stop>
+                                <stop offset="1" stop-color="#C31162"></stop>
+                              </linearGradient>
+                              <linearGradient id="paint3_linear_570_62" x1="9.71671" y1="51.7709" x2="22.9243" y2="38.2434" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#32A071"></stop>
+                                <stop offset="0.0685" stop-color="#2DA771"></stop>
+                                <stop offset="0.4762" stop-color="#15CF74"></stop>
+                                <stop offset="0.8009" stop-color="#06E775"></stop>
+                                <stop offset="1" stop-color="#00F076"></stop>
+                              </linearGradient>
+                              <clipPath id="clip0_570_62">
+                                <rect width="180" height="52" fill="white"></rect>
+                              </clipPath>
+                          </defs>
+                        </svg>
+                    </a>
+                    <a aria-label="Download on the Mac App Store" href="https://apps.apple.com/app/converse-messenger/id1658819514">
+                        <svg width="160" height="44" viewBox="0 0 180 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_2135_26802)">
+                              <path d="M169.012 0.0001495H10.9945C10.5716 0.0001495 10.1539 0.0001495 9.73213 0.0024495C9.37911 0.0047495 9.0289 0.011431 8.67249 0.0170545C7.89819 0.0261416 7.12572 0.0940772 6.36178 0.220271C5.59892 0.349212 4.85995 0.592303 4.16987 0.941321C3.48064 1.29329 2.85087 1.75064 2.3034 2.29678C1.75307 2.84138 1.29432 3.47087 0.944795 4.16103C0.59431 4.84982 0.351282 5.58793 0.224106 6.34985C0.0957202 7.11081 0.0266348 7.88055 0.0174695 8.65215C0.00676872 9.00474 0.00563867 9.3585 0 9.71114V36.2925C0.00563867 36.6496 0.00676871 36.9955 0.017458 37.3527C0.0266261 38.1243 0.0957115 38.894 0.224094 39.6549C0.350919 40.4173 0.593961 41.1558 0.944783 41.8449C1.29415 42.5328 1.75297 43.1597 2.3034 43.7013C2.84879 44.2499 3.47897 44.7075 4.16987 45.0568C4.85995 45.4068 5.59883 45.6513 6.36178 45.7822C7.12585 45.9074 7.89824 45.9754 8.67249 45.9855C9.0289 45.9934 9.37911 45.9978 9.73213 45.9978C10.1538 46.0001 10.5716 46.0001 10.9945 46.0001H169.012C169.426 46.0001 169.847 46.0001 170.262 45.9978C170.613 45.9978 170.973 45.9934 171.325 45.9855C172.098 45.9759 172.868 45.9079 173.631 45.7822C174.396 45.6504 175.138 45.4059 175.831 45.0568C176.522 44.7073 177.151 44.2497 177.696 43.7013C178.245 43.1576 178.705 42.5311 179.059 41.8449C179.407 41.1553 179.648 40.4168 179.772 39.6549C179.901 38.8939 179.973 38.1244 179.987 37.3527C179.991 36.9955 179.991 36.6496 179.991 36.2925C180 35.8747 180 35.4592 180 35.0347V10.9667C180 10.5456 180 10.1278 179.991 9.71114C179.991 9.3585 179.991 9.00474 179.987 8.65211C179.973 7.88044 179.901 7.11087 179.772 6.34981C179.647 5.58832 179.406 4.85028 179.059 4.16099C178.347 2.77762 177.218 1.65158 175.831 0.941217C175.138 0.593052 174.396 0.350026 173.631 0.220167C172.869 0.0934177 172.098 0.0254584 171.325 0.0168935C170.973 0.0112815 170.613 0.0045425 170.262 0.0023C169.847 0 169.426 0.0001495 169.012 0.0001495Z" fill="#A6A6A6"></path>
+                              <path d="M9.73695 44.9934C9.38562 44.9934 9.04272 44.9889 8.69421 44.9811C7.97211 44.9717 7.25171 44.909 6.5389 44.7935C5.87424 44.6793 5.23036 44.467 4.62851 44.1634C4.03217 43.8624 3.48826 43.4676 3.01762 42.9943C2.54017 42.5266 2.14267 41.9841 1.84087 41.3883C1.53574 40.7887 1.32458 40.146 1.21473 39.4826C1.09611 38.7697 1.03192 38.0489 1.02274 37.3263C1.01543 37.0838 1.00586 36.2762 1.00586 36.2762V9.7106C1.00586 9.7106 1.01605 8.91548 1.0228 8.68188C1.03159 7.96046 1.0954 7.24076 1.21367 6.529C1.32372 5.86375 1.53505 5.21917 1.84034 4.61758C2.14103 4.02224 2.53632 3.47935 3.0109 3.00994C3.48494 2.53607 4.03059 2.1393 4.62794 1.8341C5.22841 1.53152 5.87107 1.32065 6.53439 1.20857C7.24954 1.09192 7.97245 1.02885 8.69704 1.0199L9.73751 1.00586H170.255L171.308 1.02046C172.026 1.02897 172.742 1.09148 173.451 1.20744C174.121 1.32093 174.77 1.53327 175.378 1.83747C176.574 2.45254 177.548 3.42565 178.162 4.62039C178.463 5.21782 178.671 5.85714 178.78 6.51665C178.899 7.23425 178.966 7.95961 178.98 8.68694C178.983 9.01262 178.983 9.36245 178.983 9.7106C178.992 10.1418 178.993 10.5523 178.993 10.9662V35.0341C178.993 35.4519 178.992 35.8596 178.983 36.2706C178.983 36.6446 178.983 36.9872 178.979 37.3398C178.965 38.0541 178.9 38.7665 178.782 39.4713C178.674 40.1395 178.464 40.7872 178.159 41.3918C177.855 41.9811 177.46 42.5189 176.988 42.9853C176.517 43.4612 175.972 43.8582 175.374 44.1612C174.769 44.4671 174.12 44.6803 173.451 44.7935C172.738 44.9096 172.018 44.9723 171.296 44.9811C170.958 44.9889 170.604 44.9934 170.261 44.9934L169.011 44.9957L9.73695 44.9934Z" fill="black"></path>
+                              <path d="M28.5609 23.3462C28.5733 22.3863 28.8289 21.4452 29.304 20.6103C29.7791 19.7755 30.4583 19.074 31.2782 18.5713C30.7573 17.8294 30.0701 17.2188 29.2712 16.788C28.4723 16.3573 27.5837 16.1183 26.676 16.09C24.7397 15.8873 22.8625 17.2455 21.8758 17.2455C20.8699 17.2455 19.3507 16.1101 17.7148 16.1437C16.6566 16.1777 15.6253 16.4846 14.7214 17.0344C13.8176 17.5842 13.0719 18.3581 12.557 19.2807C10.3269 23.1314 11.9904 28.7906 14.1267 31.9032C15.1955 33.4273 16.4446 35.1299 18.0791 35.0695C19.6785 35.0033 20.2758 34.0523 22.2065 34.0523C24.1192 34.0523 24.6796 35.0695 26.3473 35.0311C28.0635 35.0033 29.1449 33.5002 30.1762 31.9616C30.9441 30.8756 31.535 29.6753 31.9271 28.4052C30.93 27.9846 30.0791 27.2806 29.4805 26.381C28.8819 25.4813 28.562 24.4259 28.5609 23.3462Z" fill="white"></path>
+                              <path d="M25.4116 14.0425C26.3474 12.9222 26.8084 11.4822 26.6967 10.0283C25.2671 10.1781 23.9465 10.8595 22.9981 11.9369C22.5344 12.4632 22.1792 13.0755 21.9529 13.7388C21.7266 14.4021 21.6336 15.1033 21.6793 15.8025C22.3943 15.8098 23.1018 15.6552 23.7483 15.3504C24.3948 15.0455 24.9635 14.5984 25.4116 14.0425Z" fill="white"></path>
+                              <path d="M53.2142 35.0707V24.5601H53.1444L48.8281 34.9618H47.1807L42.8531 24.5601H42.7844V35.0707H40.7598V20.79H43.3306L47.9644 32.0621H48.0432L52.668 20.79H55.2479V35.0707L53.2142 35.0707Z" fill="white"></path>
+                              <path d="M56.959 32.1109C56.959 30.2904 58.3576 29.191 60.8394 29.0427L63.6974 28.8843V28.0926C63.6974 26.9347 62.9328 26.2811 61.6322 26.2811C61.1505 26.2172 60.662 26.3308 60.2583 26.6007C59.8546 26.8705 59.5636 27.278 59.4397 27.7467H57.4353C57.495 25.8656 59.2517 24.5303 61.6919 24.5303C64.1828 24.5303 65.8302 25.8858 65.8302 27.9343V35.0701H63.7763V33.3575H63.7267C63.3978 33.9382 62.9184 34.4201 62.3388 34.7528C61.7591 35.0855 61.1005 35.2568 60.4318 35.2487C59.9926 35.2915 59.5493 35.2423 59.1303 35.1042C58.7113 34.966 58.3259 34.742 57.9989 34.4465C57.6718 34.151 57.4104 33.7906 57.2313 33.3884C57.0522 32.9861 56.9595 32.551 56.959 32.1109ZM63.6974 31.1709V30.369L61.1266 30.5274C59.8463 30.6071 59.1222 31.1608 59.1222 32.0514C59.1222 32.9622 59.8767 33.5563 61.0275 33.5563C61.3608 33.5788 61.6953 33.5346 62.0112 33.4262C62.3271 33.3178 62.618 33.1474 62.8669 32.9251C63.1157 32.7028 63.3174 32.433 63.46 32.1318C63.6027 31.8305 63.6834 31.5038 63.6974 31.1709Z" fill="white"></path>
+                              <path d="M74.8279 28.2411C74.7342 27.6716 74.4291 27.1581 73.9733 26.8025C73.5175 26.4469 72.9442 26.2754 72.3674 26.3219C70.7199 26.3219 69.6288 27.6976 69.6288 29.8651C69.6288 32.082 70.7301 33.4173 72.3865 33.4173C72.9557 33.4741 73.5251 33.3123 73.9788 32.9648C74.4324 32.6174 74.7361 32.1104 74.8279 31.5474H76.8919C76.7635 32.624 76.2188 33.6082 75.3737 34.2903C74.5287 34.9724 73.45 35.2987 72.3674 35.1995C69.3901 35.1995 67.4453 33.1702 67.4453 29.8651C67.4453 26.6285 69.39 24.5306 72.3472 24.5306C73.4377 24.4384 74.5213 24.7747 75.3667 25.4679C76.2122 26.1611 76.7526 27.1562 76.8729 28.2411H74.8279Z" fill="white"></path>
+                              <path d="M90.817 31.2108H85.3589L84.0482 35.0707H81.7363L86.9061 20.79H89.3081L94.4779 35.0707H92.1266L90.817 31.2108ZM85.9242 29.4297H90.2507L88.1179 23.1653H88.0582L85.9242 29.4297Z" fill="white"></path>
+                              <path d="M105.643 29.8652C105.643 33.1007 103.906 35.1794 101.286 35.1794C100.622 35.214 99.9619 35.0616 99.381 34.7394C98.8 34.4172 98.3218 33.9384 98.0011 33.3578H97.9515V38.5149H95.8086V24.6587H97.8828V26.3904H97.9222C98.2577 25.8126 98.744 25.3363 99.3294 25.0122C99.9147 24.688 100.577 24.5282 101.246 24.5498C103.896 24.5498 105.643 26.6386 105.643 29.8652ZM103.44 29.8652C103.44 27.7572 102.348 26.3714 100.681 26.3714C99.0438 26.3714 97.9425 27.7864 97.9425 29.8652C97.9425 31.963 99.0438 33.3679 100.681 33.3679C102.348 33.3679 103.44 31.9922 103.44 29.8652Z" fill="white"></path>
+                              <path d="M117.133 29.8652C117.133 33.1007 115.396 35.1794 112.776 35.1794C112.112 35.214 111.452 35.0616 110.871 34.7394C110.29 34.4172 109.812 33.9384 109.491 33.3578H109.442V38.5149H107.299V24.6587H109.373V26.3904H109.412C109.748 25.8126 110.234 25.3363 110.82 25.0122C111.405 24.688 112.067 24.5282 112.737 24.5498C115.386 24.5498 117.133 26.6386 117.133 29.8652ZM114.93 29.8652C114.93 27.7572 113.838 26.3714 112.171 26.3714C110.534 26.3714 109.433 27.7864 109.433 29.8652C109.433 31.963 110.534 33.3679 112.171 33.3679C113.838 33.3679 114.93 31.9922 114.93 29.8652Z" fill="white"></path>
+                              <path d="M124.729 31.0916C124.888 32.5078 126.267 33.4376 128.152 33.4376C129.958 33.4376 131.258 32.5077 131.258 31.2308C131.258 30.1224 130.474 29.4587 128.618 29.0038L126.762 28.558C124.133 27.9246 122.912 26.6982 122.912 24.7082C122.912 22.2442 125.065 20.5518 128.123 20.5518C131.149 20.5518 133.223 22.2442 133.293 24.7082H131.129C131 23.283 129.819 22.4228 128.092 22.4228C126.366 22.4228 125.185 23.2931 125.185 24.5599C125.185 25.5695 125.939 26.1636 127.785 26.6184L129.363 27.0048C132.3 27.6977 133.521 28.8747 133.521 30.9635C133.521 33.6352 131.387 35.3086 127.993 35.3086C124.818 35.3086 122.674 33.6745 122.535 31.0915L124.729 31.0916Z" fill="white"></path>
+                              <path d="M138.146 22.1953V24.6593H140.131V26.3517H138.146V32.0916C138.146 32.9833 138.543 33.3988 139.416 33.3988C139.652 33.3947 139.887 33.3782 140.121 33.3494V35.0317C139.728 35.1048 139.33 35.1379 138.931 35.1305C136.817 35.1305 135.993 34.3388 135.993 32.3195V26.3517H134.475V24.6593H135.993V22.1953H138.146Z" fill="white"></path>
+                              <path d="M141.279 29.8657C141.279 26.5898 143.214 24.5312 146.231 24.5312C149.258 24.5312 151.183 26.5897 151.183 29.8657C151.183 33.1506 149.268 35.2002 146.231 35.2002C143.195 35.2002 141.279 33.1506 141.279 29.8657ZM149 29.8657C149 27.6185 147.967 26.2922 146.231 26.2922C144.494 26.2922 143.462 27.6286 143.462 29.8657C143.462 32.1219 144.494 33.4381 146.231 33.4381C147.967 33.4381 149 32.1219 149 29.8657Z" fill="white"></path>
+                              <path d="M152.951 24.6586H154.995V26.4308H155.045C155.183 25.8773 155.508 25.3882 155.965 25.0456C156.423 24.703 156.984 24.5279 157.556 24.5497C157.803 24.5488 158.049 24.5756 158.29 24.6294V26.6284C157.978 26.5334 157.653 26.4898 157.327 26.4993C157.016 26.4867 156.705 26.5414 156.417 26.6597C156.129 26.7781 155.87 26.9572 155.658 27.1847C155.446 27.4123 155.286 27.683 155.188 27.9781C155.091 28.2733 155.059 28.586 155.094 28.8947V35.0704H152.951V24.6586Z" fill="white"></path>
+                              <path d="M168.169 32.013C167.881 33.9031 166.035 35.2002 163.674 35.2002C160.637 35.2002 158.752 33.1708 158.752 29.9151C158.752 26.6493 160.647 24.5312 163.584 24.5312C166.472 24.5312 168.289 26.5101 168.289 29.6669V30.3992H160.915V30.5283C160.881 30.9115 160.929 31.2975 161.056 31.6607C161.183 32.0239 161.386 32.356 161.652 32.635C161.918 32.9139 162.24 33.1333 162.597 33.2785C162.954 33.4238 163.338 33.4916 163.724 33.4774C164.23 33.5248 164.738 33.4078 165.173 33.1439C165.607 32.8801 165.944 32.4834 166.135 32.013L168.169 32.013ZM160.925 28.9055H166.145C166.164 28.561 166.112 28.2162 165.991 27.8928C165.87 27.5694 165.684 27.2744 165.443 27.0263C165.203 26.7781 164.914 26.5823 164.594 26.4509C164.274 26.3196 163.93 26.2556 163.584 26.263C163.235 26.2609 162.889 26.3278 162.566 26.4597C162.243 26.5917 161.95 26.7861 161.703 27.0318C161.455 27.2775 161.259 27.5695 161.126 27.8911C160.993 28.2127 160.924 28.5575 160.925 28.9055Z" fill="white"></path>
+                              <path d="M43.6181 10.04C44.0673 10.0079 44.5181 10.0755 44.938 10.2382C45.3579 10.4008 45.7363 10.6544 46.046 10.9806C46.3557 11.3067 46.589 11.6974 46.729 12.1243C46.8689 12.5513 46.9122 13.0039 46.8555 13.4496C46.8555 15.6418 45.6675 16.9019 43.6181 16.9019H41.1328V10.04H43.6181ZM42.2015 15.9315H43.4987C43.8197 15.9506 44.141 15.8981 44.4391 15.7778C44.7372 15.6575 45.0047 15.4724 45.2221 15.236C45.4394 14.9996 45.6012 14.7178 45.6956 14.4112C45.79 14.1046 45.8146 13.7809 45.7677 13.4636C45.8112 13.1475 45.7841 12.8258 45.6882 12.5214C45.5924 12.217 45.4302 11.9376 45.2134 11.7031C44.9965 11.4685 44.7303 11.2848 44.4339 11.1649C44.1374 11.045 43.8181 10.992 43.4987 11.0097H42.2015V15.9315Z" fill="white"></path>
+                              <path d="M48.0624 14.3109C48.0297 13.9706 48.0688 13.6272 48.177 13.3028C48.2852 12.9784 48.4602 12.6802 48.6907 12.4272C48.9213 12.1742 49.2023 11.9721 49.5158 11.8338C49.8292 11.6955 50.1682 11.624 50.511 11.624C50.8538 11.624 51.1928 11.6955 51.5063 11.8338C51.8197 11.9721 52.1008 12.1742 52.3313 12.4272C52.5619 12.6802 52.7369 12.9784 52.8451 13.3028C52.9533 13.6272 52.9923 13.9706 52.9597 14.3109C52.9929 14.6515 52.9544 14.9953 52.8464 15.3202C52.7385 15.6451 52.5636 15.9439 52.333 16.1974C52.1024 16.4509 51.8212 16.6534 51.5074 16.7921C51.1936 16.9307 50.8542 17.0023 50.511 17.0023C50.1678 17.0023 49.8284 16.9307 49.5146 16.7921C49.2009 16.6534 48.9196 16.4509 48.689 16.1974C48.4584 15.9439 48.2835 15.6451 48.1756 15.3202C48.0677 14.9953 48.0291 14.6515 48.0624 14.3109ZM51.9057 14.3109C51.9057 13.1884 51.4 12.532 50.5127 12.532C49.622 12.532 49.1209 13.1884 49.1209 14.3109C49.1209 15.4423 49.622 16.0937 50.5127 16.0937C51.4001 16.0937 51.9057 15.4378 51.9057 14.3109Z" fill="white"></path>
+                              <path d="M59.4692 16.902H58.4062L57.3331 13.0881H57.252L56.1833 16.902H55.1305L53.6992 11.7236H54.7386L55.6687 15.675H55.7453L56.8128 11.7236H57.7959L58.8634 15.675H58.9445L59.8701 11.7236H60.8948L59.4692 16.902Z" fill="white"></path>
+                              <path d="M62.0996 11.7232H63.0861V12.5458H63.1626C63.2925 12.2504 63.5116 12.0027 63.7894 11.8373C64.0671 11.672 64.3897 11.5971 64.7121 11.6233C64.9648 11.6043 65.2184 11.6423 65.4544 11.7344C65.6903 11.8265 65.9024 11.9704 66.075 12.1554C66.2476 12.3403 66.3763 12.5617 66.4514 12.803C66.5266 13.0443 66.5464 13.2993 66.5093 13.5493V16.9015H65.4846V13.8059C65.4846 12.9737 65.122 12.5599 64.3642 12.5599C64.1926 12.5519 64.0214 12.581 63.8622 12.6452C63.703 12.7094 63.5596 12.8072 63.4418 12.9319C63.3241 13.0565 63.2347 13.2051 63.1799 13.3674C63.1251 13.5297 63.1062 13.7019 63.1243 13.8722V16.9016H62.0996L62.0996 11.7232Z" fill="white"></path>
+                              <path d="M68.1426 9.70215H69.1673V16.902H68.1426V9.70215Z" fill="white"></path>
+                              <path d="M70.5917 14.3109C70.559 13.9706 70.5981 13.6272 70.7063 13.3028C70.8145 12.9784 70.9895 12.6802 71.22 12.4272C71.4506 12.1742 71.7316 11.9721 72.0451 11.8338C72.3585 11.6955 72.6975 11.624 73.0403 11.624C73.3831 11.624 73.7221 11.6955 74.0356 11.8338C74.349 11.9721 74.6301 12.1742 74.8606 12.4272C75.0912 12.6802 75.2662 12.9784 75.3744 13.3028C75.4826 13.6272 75.5216 13.9706 75.489 14.3109C75.5222 14.6515 75.4837 14.9953 75.3757 15.3202C75.2678 15.6451 75.0929 15.9439 74.8623 16.1974C74.6317 16.4509 74.3505 16.6534 74.0367 16.7921C73.7229 16.9307 73.3835 17.0023 73.0403 17.0023C72.6971 17.0023 72.3577 16.9307 72.0439 16.7921C71.7302 16.6534 71.4489 16.4509 71.2183 16.1974C70.9877 15.9439 70.8128 15.6451 70.7049 15.3202C70.597 14.9953 70.5584 14.6515 70.5917 14.3109ZM74.435 14.3109C74.435 13.1884 73.9293 12.532 73.042 12.532C72.1513 12.532 71.6502 13.1884 71.6502 14.3109C71.6502 15.4423 72.1513 16.0937 73.042 16.0937C73.9294 16.0937 74.435 15.4378 74.435 14.3109Z" fill="white"></path>
+                              <path d="M76.5664 15.4379C76.5664 14.5058 77.2623 13.9684 78.4976 13.892L79.9041 13.8112V13.3642C79.9041 12.8173 79.5415 12.5084 78.8411 12.5084C78.269 12.5084 77.8727 12.7179 77.7589 13.084H76.7668C76.8716 12.1945 77.7105 11.624 78.8884 11.624C80.1901 11.624 80.9243 12.2703 80.9243 13.3642V16.9023H79.9379V16.1746H79.8568C79.6922 16.4356 79.4612 16.6485 79.1871 16.7913C78.9131 16.9341 78.606 17.0019 78.2972 16.9877C78.0792 17.0103 77.8589 16.9871 77.6505 16.9196C77.442 16.8521 77.2501 16.7418 77.087 16.5957C76.924 16.4497 76.7934 16.2713 76.7037 16.0718C76.614 15.8724 76.5673 15.6564 76.5664 15.4379ZM79.9041 14.9954V14.5625L78.6361 14.6433C77.9211 14.6911 77.5968 14.9336 77.5968 15.3901C77.5968 15.8562 78.0021 16.1274 78.5596 16.1274C78.7229 16.1439 78.8879 16.1275 79.0447 16.0791C79.2016 16.0307 79.347 15.9513 79.4725 15.8457C79.5979 15.7401 79.7008 15.6103 79.7749 15.4643C79.8491 15.3182 79.893 15.1587 79.9041 14.9954Z" fill="white"></path>
+                              <path d="M82.2715 14.3106C82.2715 12.6743 83.1149 11.6377 84.4268 11.6377C84.7513 11.6228 85.0734 11.7003 85.3553 11.8612C85.6373 12.0221 85.8675 12.2597 86.0191 12.5462H86.0957V9.70215H87.1204V16.902H86.1384V16.0839H86.0574C85.8941 16.3685 85.6558 16.6031 85.3684 16.7624C85.081 16.9216 84.7554 16.9994 84.4268 16.9873C83.1059 16.9874 82.2715 15.9508 82.2715 14.3106ZM83.33 14.3106C83.33 15.4089 83.8492 16.0698 84.7174 16.0698C85.581 16.0698 86.1148 15.3994 86.1148 14.3151C86.1148 13.2358 85.5754 12.5558 84.7174 12.5558C83.8547 12.5558 83.33 13.2212 83.33 14.3106Z" fill="white"></path>
+                              <path d="M91.3612 14.311C91.3285 13.9706 91.3676 13.6273 91.4758 13.3029C91.5841 12.9785 91.7591 12.6802 91.9897 12.4272C92.2203 12.1742 92.5013 11.9721 92.8148 11.8338C93.1283 11.6955 93.4673 11.624 93.8101 11.624C94.1529 11.624 94.4919 11.6955 94.8054 11.8338C95.1189 11.9721 95.4 12.1742 95.6305 12.4272C95.8611 12.6802 96.0361 12.9785 96.1444 13.3029C96.2526 13.6273 96.2917 13.9706 96.259 14.311C96.2923 14.6516 96.2537 14.9955 96.1457 15.3204C96.0377 15.6453 95.8628 15.944 95.6322 16.1975C95.4016 16.451 95.1203 16.6535 94.8065 16.7921C94.4927 16.9307 94.1533 17.0024 93.8101 17.0024C93.4669 17.0024 93.1275 16.9307 92.8137 16.7921C92.4999 16.6535 92.2186 16.451 91.988 16.1975C91.7574 15.944 91.5825 15.6453 91.4745 15.3204C91.3666 14.9955 91.3279 14.6516 91.3612 14.311ZM95.2045 14.311C95.2045 13.1885 94.6988 12.5321 93.8115 12.5321C92.9208 12.5321 92.4197 13.1885 92.4197 14.311C92.4197 15.4424 92.9208 16.0938 93.8115 16.0938C94.6988 16.0938 95.2045 15.4379 95.2045 14.311Z" fill="white"></path>
+                              <path d="M97.6328 11.7232H98.6193V12.5458H98.6958C98.8257 12.2504 99.0448 12.0027 99.3226 11.8373C99.6003 11.672 99.9229 11.5971 100.245 11.6233C100.498 11.6043 100.752 11.6423 100.988 11.7344C101.223 11.8265 101.436 11.9704 101.608 12.1554C101.781 12.3403 101.909 12.5617 101.985 12.803C102.06 13.0443 102.08 13.2993 102.043 13.5493V16.9015H101.018V13.8059C101.018 12.9737 100.655 12.5599 99.8974 12.5599C99.7258 12.5519 99.5546 12.581 99.3954 12.6452C99.2362 12.7094 99.0928 12.8072 98.9751 12.9319C98.8573 13.0565 98.7679 13.2051 98.7131 13.3674C98.6583 13.5297 98.6394 13.7019 98.6575 13.8722V16.9016H97.6328V11.7232Z" fill="white"></path>
+                              <path d="M107.833 10.4346V11.7474H108.958V12.6082H107.833V15.271C107.833 15.8134 108.057 16.0509 108.567 16.0509C108.697 16.0505 108.828 16.0426 108.958 16.0273V16.8786C108.774 16.9114 108.587 16.9289 108.4 16.9308C107.261 16.9308 106.807 16.531 106.807 15.5326V12.6082H105.982V11.7474H106.807V10.4346H107.833Z" fill="white"></path>
+                              <path d="M110.357 9.70215H111.373V12.5558H111.454C111.59 12.2576 111.816 12.0085 112.099 11.8425C112.382 11.6765 112.71 11.6017 113.037 11.6282C113.289 11.6145 113.54 11.6564 113.773 11.7507C114.007 11.8451 114.216 11.9896 114.387 12.174C114.558 12.3584 114.685 12.5781 114.761 12.8174C114.837 13.0568 114.859 13.3099 114.826 13.5587V16.902H113.8V13.8108C113.8 12.9837 113.414 12.5648 112.69 12.5648C112.513 12.5504 112.336 12.5745 112.171 12.6355C112.005 12.6966 111.854 12.793 111.73 12.918C111.605 13.043 111.51 13.1937 111.45 13.3595C111.39 13.5252 111.367 13.7021 111.382 13.8776V16.902H110.357L110.357 9.70215Z" fill="white"></path>
+                              <path d="M120.801 15.5042C120.662 15.9775 120.361 16.3869 119.949 16.6608C119.538 16.9346 119.043 17.0556 118.552 17.0024C118.209 17.0114 117.87 16.946 117.555 16.8109C117.241 16.6757 116.96 16.474 116.732 16.2197C116.504 15.9654 116.334 15.6646 116.234 15.3382C116.134 15.0118 116.106 14.6676 116.153 14.3295C116.107 13.9904 116.135 13.6455 116.235 13.3181C116.335 12.9907 116.504 12.6886 116.731 12.432C116.958 12.1755 117.238 11.9706 117.551 11.8312C117.864 11.6918 118.204 11.6212 118.547 11.6241C119.992 11.6241 120.863 12.6085 120.863 14.2346V14.5912H117.197V14.6485C117.181 14.8385 117.205 15.0298 117.267 15.2101C117.33 15.3903 117.429 15.5556 117.559 15.6953C117.689 15.8349 117.848 15.9459 118.023 16.0211C118.199 16.0963 118.388 16.1341 118.58 16.132C118.825 16.1613 119.073 16.1173 119.293 16.0055C119.513 15.8937 119.695 15.7192 119.815 15.5042L120.801 15.5042ZM117.197 13.8354H119.819C119.832 13.6616 119.809 13.487 119.75 13.3229C119.691 13.1588 119.599 13.0087 119.478 12.8824C119.358 12.756 119.212 12.6562 119.051 12.5893C118.89 12.5224 118.716 12.4899 118.541 12.4939C118.364 12.4917 118.188 12.5249 118.024 12.5915C117.86 12.6582 117.711 12.7569 117.585 12.8819C117.46 13.0069 117.361 13.1557 117.295 13.3195C117.228 13.4832 117.195 13.6586 117.197 13.8354Z" fill="white"></path>
+                          </g>
+                          <defs>
+                              <clipPath id="clip0_2135_26802">
+                                <rect width="180" height="46" fill="white"></rect>
+                              </clipPath>
+                          </defs>
+                        </svg>
+                    </a>
+                  </div>
+              </div>
+              <div class="relative mt-0 sm:mt-20 lg:row-span-1 md:mt-0 lg:col-span-5">
+                  <div class="h-[400px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-16 lg:h-auto lg:px-0 lg:pt-0 xl:-bottom-16 slide-from-bottom">
+                    <img class="h-auto" alt="Converse Messenger Homescreen" loading="lazy" width="1704" height="2906" decoding="async" data-nimg="1" src="img/converse-app.png"></img>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="relative isolate overflow-hidden py-16 md:py-4 md:pb-16">
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
+          <div class="lg:col-end-1 lg:w-full lg:max-w-3xl lg:pb-8 mb-8 md:mb-0">
+              <p class="text-sm/4 md:text-base font-semibold uppercase tracking-wider leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.2)]">Use Cases</p>
+              <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight">How apps and wallets use XMTP</h2>
+              <p class=" max-w-3xl text-base md:text-lg font-normal">Learn about the connected and resilient ecosystem for seamless communication across apps and wallets</p>
+          </div>
+
+          <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 md:gap-y-16 border-solid border-0 border-t border-gray-200 pt-10 mt-4 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+            
+            <article class="flex max-w-xl flex-col items-start justify-between">
+              <div class="flex items-center gap-x-4 text-xs">
+                <img src="img/family-logo-black.svg" class="h-6 mb-2"></img>
+              </div>
+              <div class="group relative">
+                <p class="font-normal text-xs uppercase tracking-widest">Payments</p>
+                <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
+                  <a href="https://x.com/family/status/1768379809292530090" target="_blank" class="hover:text-red-500 hover:no-underline">
+                    <span class="absolute inset-0"></span>
+                    Family seamlessly integrates peer-to-peer payments into XMTP messaging
+                  </a>
+                </h3>
+                <a href="https://x.com/family/status/1768379809292530090" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            
+            <article class="flex max-w-xl flex-col items-start justify-between">
+              <div class="flex items-center gap-x-4 text-xs">
+                <img src="img/cbwalletLogo.svg" class="h-7 mb-2"></img>
+              </div>
+              <div class="group relative">
+                <p class="font-normal text-xs uppercase tracking-widest">Messaging</p>
+                <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
+                  <a href="https://www.coinbase.com/blog/say-gm-with-messaging-on-coinbase-wallet" target="_blank" class="hover:text-red-500 hover:no-underline">
+                    <span class="absolute inset-0"></span>
+                    How Coinbase Wallet connects millions of users through messaging
+                  </a>
+                </h3>
+                <a href="https://www.coinbase.com/blog/say-gm-with-messaging-on-coinbase-wallet" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="flex max-w-xl flex-col items-start justify-between">
+              <div class="flex items-center gap-x-4 text-xs">
+                <img src="img/converse-logo-full-black.svg" class="h-9 mb-6"></img>
+              </div>
+              <div class="group relative">
+                <p class="font-normal text-xs uppercase tracking-widest">Agents</p>
+                <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
+                  <a href="https://converse.xyz" target="_blank" class="hover:text-red-500 hover:no-underline">
+                    <span class="absolute inset-0"></span>
+                    Converse Messenger unleashes the power of AI agents and universal identity
+                  </a>
+                </h3>
+                <a href="https://converse.xyz" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="flex max-w-xl flex-col items-start justify-between">
+              <div class="flex items-center gap-x-4 text-xs">
+                <img src="img/notifiLogo.svg" class="h-5 mb-2"></img>
+              </div>
+              <div class="group relative">
+                <p class="font-normal text-xs uppercase tracking-widest">Notifications</p>
+                <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
+                  <a href="https://xmtp.org/notifi-case-study" target="_blank" class="hover:text-red-500 hover:no-underline">
+                    <span class="absolute inset-0"></span>
+                    Learn about how Notifi delivers millions of critical DeFi alerts through XMTP
+                  </a>
+                </h3>
+                <a href="https://xmtp.org/notifi-case-study" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Read more <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
           </div>
         </div>
       </div>
+
+      <div class="pb-8 md:pb-24 pt-4 md:pt-0">  
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-0 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:pr-8 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base font-semibold text-red-500">Security</h2>
+                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Enterprise-grade encryption</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Built on the IETF-standard <a href="https://messaginglayersecurity.rocks/" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a> protocol – the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's fully audited implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
+                <p class="mt-12">
+
+                  <a href="/encryption" class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal hover:no-underline">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 me-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                    </svg>
+
+                    Encryption in XMTP <span class="ml-2" aria-hidden="true">→</span>
+                  </a>
+
+                </p>
+              </div>
+            </div>
+            <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+              <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                  <img src="img/realSecurityGraphic.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-8 md:pb-0 pt-0">
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:ml-auto lg:pl-4 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base/7 font-semibold text-red-500">Identity</h2>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Flexible identity foundation</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Turn any collection of wallet addresses into a unified messaging identity. Support the full spectrum of web3 identities — from naming systems (ENS, Base, Lens) to social platforms (Farcaster, Lens) to smart accounts (Safe, ERC-4337 wallets) — through simple wallet signatures.</p>
+                <p class="mt-12">
+
+                <a href="/identity" class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal hover:no-underline">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                    </svg>
+
+                    Identity in XMTP <span class="ml-2" aria-hidden="true">→</span>
+                  </a>
+
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start justify-end lg:order-first">
+              <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                  <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                  <img src="img/universalIdentityGraphic.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-8 md:pb-16 pt-0">
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-16 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:pr-8 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base/7 font-semibold text-red-500">Consent</h2>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Built-in spam protection</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Users block spam once, and it's blocked everywhere they go. Your app automatically inherits spam protection that works across the entire XMTP network — giving every user control of who can message them.</p>
+                <p class="mt-12">
+
+                  <a href="/consent" class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal hover:no-underline">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                  </svg>
+
+                  Consent in XMTP <span class="ml-2" aria-hidden="true">→</span>
+                  </a>
+
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+              <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                  <img src="img/universalConsentGraphic.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-8 md:pb-16 pt-4 md:pt-0">
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-16 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 md:gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:ml-auto lg:pl-4 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base/7 font-semibold text-red-500">Decentralization</h2>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Unruggable infrastructure</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Your messaging infrastructure keeps running independently of any single operator or organization. No central authority can change the rules, revoke access, or shut down the service your users depend on.</p>
+                <p class="mt-12">
+
+                <a href="/decentralizing-xmtp" class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal hover:no-underline">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+                </svg>
+
+                Decentralizing XMTP <span class="ml-2" aria-hidden="true">→</span>
+                </a>
+
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start justify-end lg:order-first">
+              <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+                <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+                  <div class="rounded-2xl bg-white p-0 shadow-2xl ring-1 ring-black/5">
+                    <img src="img/decentralizedByDesignGraphic.png" alt="screenshot" class="-mb-2 min-w-full max-w-full min-h-full max-h-full rounded-2xl ring-1 ring-gray-400/10"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative isolate overflow-hidden bg-[#1d1d1d] rounded-3xl">
+        
+        <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+          <defs>
+            <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+              <path d="M.5 200V.5H200" fill="none" />
+            </pattern>
+          </defs>
+          <svg x="50%" y="-1" class="overflow-visible fill-gray-800/20">
+            <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
+          </svg>
+          <rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
+        </svg>
+
+        <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]" aria-hidden="true">
+          <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#959595] to-[#FC4F37] opacity-20" style={{"clipPath":"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"}}></div>
+        </div>
+        
+        <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
+          <div class="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto w-full">
+            <div class="rounded-3xl p-2 shadow-md shadow-black/5">
+              
+              <div class="relative isolate overflow-hidden bg-[#1d1d1d] px-6 pt-8 pb-8 md:pt-16 md:pb-16 text-left shadow-2xl sm:rounded-2xl sm:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-8 text-center">
+                
+                <div class="content-center">
+                  <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-4xl">XMTP is open source</h2>
+                  <p class="mt-2 max-w-2xl text-pretty text-md/8 md:text-lg/7 text-gray-300">The entire XMTP stack — protocol, apps, and developer tools — is fully open to inspect, modify, and improve, creating a trustworthy foundation for developers to build on with confidence.</p>
+{/* 
+                  <div class="relative h-auto text-gray-200 text-left mt-6 mb-4">
+                    <div class=" bottom-0 left-20 right-20 top-16 overflow-hidden rounded-xl bg-gray-950">
+                      <code class="text-xs md:text-base inline-flex text-left items-center space-x-4 bg-gray-950 text-white p-6 w-full">
+                        <span class="flex gap-4">
+                          <span class="shrink-0 text-gray-500">
+                              $
+                          </span>
+
+                          <span class="flex-1 flex gap-4">
+                              <span>
+                                npm install
+                              </span>
+
+                              <span class="text-red-500">
+                                @xmtp/xmtp-js
+                              </span>
+                          </span>
+                        </span>
+                      </code>
+                    </div>
+                  </div> */}
+                  
+                  <div class="mt-10 flex gap-x-6 mb-8 md:mb-0 justify-center">
+                  
+                    <a href="https://github.com/xmtp" target="_blank" class="cursor-pointer flex items-center gap-x-1 text-black bg-white hover:text-black shadow-sm hover:bg-gray-400 transition-all font-semibold rounded-md text-md md:text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline w-full md:w-auto justify-center md:justify-normal">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 me-2" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+
+                    Browse XMTP repos <span class="ml-2" aria-hidden="true">→</span>
+                    </a>
+                    
+                  </div>  
+                </div>
+                
+                <div>
+                  <div>
+                    
+                    <a href="https://github.com/xmtp/xmtp-js/tree/main/sdks/browser-sdk" target="_blank" class="hover:no-underline">
+                      <button 
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
+                      >
+                        <div class="flex gap-x-6">
+                          <img class="max-h-8 object-contain" src="img/javascriptLogo.png" alt="Javascript Logo"></img>
+                          <span class="text-lg md:text-xl font-semibold">Browser</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                      </button>
+                    </a>
+
+                  </div>
+
+                  <div>
+                    
+                    <a href="https://github.com/xmtp/xmtp-js/tree/main/sdks/node-sdk" target="_blank" class="hover:no-underline">
+                      <button 
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
+                      >
+                      <div class="flex gap-x-6">
+                        <img class="max-h-8 object-contain" src="img/nodejsLogo.png" alt="Node JS Logo"></img>
+                        <span class="text-lg md:text-xl font-semibold">Node JS</span>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
+                    </button>
+                    </a>
+
+                  </div>
+                    
+                  <div>
+                    
+                    <a href="https://github.com/xmtp/xmtp-react-native" target="_blank" class="hover:no-underline">
+                      <button 
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
+                      >
+                      <div class="flex gap-x-6">
+                        <img class="max-h-8 object-contain" src="img/reactnativeLogo.png" alt="React Native Logo"></img>
+                        <span class="text-lg md:text-xl font-semibold">React Native</span>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
+                      </button>
+                    </a>
+
+                  </div>
+
+                  <div>
+                    
+                    <a href="https://github.com/xmtp/xmtp-android" target="_blank" class="hover:no-underline">
+                      <button 
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
+                      >
+                      <div class="flex gap-x-6">
+                        <img class="max-h-8 object-contain" src="img/kotlinLogo.png" alt="Kotlin Logo"></img>
+                        <span class="text-lg md:text-xl font-semibold">Kotlin (Android)</span>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
+                      </button>
+                    </a>
+
+                  </div>
+
+                  <div>
+                    
+                    <a href="https://github.com/xmtp/xmtp-ios" target="_blank" class="hover:no-underline">
+                      <button 
+                        className="cursor-pointer w-full flex justify-between items-center py-5 text-white bg-transparent text-lg border-none md:border-solid border-0 border-b border-gray-600 hover:opacity-75"
+                      >
+                      <div class="flex gap-x-6">
+                        <img class="max-h-8 object-contain" src="img/swiftLogo.png" alt="Swift Logo"></img>
+                        <span class="text-lg md:text-xl font-semibold">Swift (iOS)</span>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
+                    </button>
+                    </a>
+
+                  </div>
+
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
     </div>
   );
 };

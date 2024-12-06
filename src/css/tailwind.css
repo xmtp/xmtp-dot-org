@@ -248,7 +248,7 @@
 
 .navbar {
   box-shadow: none;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 1);
   /* blur/backdrop-blur-2xl */
   backdrop-filter: blur(20px);
 }
@@ -745,10 +745,11 @@ main[class*="docMainContainer"] tr {
 }
 
 .navbar__chatbutton {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: white;
   border: none;
-  background-color: #4f45e4;
+  background-color: #000;
+  border: 1px solid #000;
   border-radius: 4px;
   padding: 7px 11px;
   cursor: pointer;
@@ -756,7 +757,9 @@ main[class*="docMainContainer"] tr {
 }
 
 .navbar__chatbutton:hover {
-  background-color: #5a2895;
+  background-color: #fff;
+  border: 1px solid #000;
+  color: black;
 }
 
 @media (max-width: 450px) {
@@ -1690,4 +1693,17 @@ summary::before {
 
 .apparelbot .prism-code {
   background-color: #0233d2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.25s ease-in forwards;
 }
