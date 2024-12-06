@@ -74,7 +74,7 @@ const BuiltWithXmtp = () => {
                 </a>
               </div>
 
-              <h1 class="mt-12 text-pretty text-4xl font-semibold tracking-tight text-white md:text-7xl">XMTP is the largest & most secure decentralized messaging network</h1>
+              <h1 class="mt-8 md:mt-12 text-pretty text-4xl font-semibold tracking-tight text-white md:text-7xl">XMTP is the largest & most secure decentralized messaging network</h1>
               <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
                 <dl class="mx-auto mt-10 md:mt-12 mb-8 grid max-w-4xl grid-cols-3 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-white sm:gap-y-16 lg:grid-cols-3">
                   <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-8">
