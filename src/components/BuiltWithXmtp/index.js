@@ -120,7 +120,7 @@ const BuiltWithXmtp = () => {
         <div class="mx-auto max-w-full">
           <h2 class="text-center text-base/8 md:text-lg/8 font-semibold text-gray-900">Trusted by the best</h2>
 
-          <div class="w-full inline-flex flex-nowrap logo-row mt-2 overflow-hidden">
+          <div class="w-full inline-flex space-x-10 flex-nowrap logo-row mt-2 overflow-hidden">
             <ul class="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-infinite-scroll">
               <li>
                   <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
