@@ -63,10 +63,10 @@ const BuiltWithXmtp = () => {
           <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-8 pt-4 lg:flex md:pb-32 md:pt-24 text-center md:text-left">
             <div class="mx-auto max-w-5xl shrink-0 lg:mx-0">
               <div class="mt-6 md:mt-24 lg:mt-0">
-                <a href="#" class="inline-flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 hover:no-underline justify-center md:justify-normal">
+                <a href="https://docs.xmtp.org/upgrade-to-v3" class="inline-flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 hover:no-underline justify-center md:justify-normal">
                   <span class="mb-2 md:mb-0 rounded-full bg-gray-500/10 px-4 py-2 text-center md:py-1 md:text-left text-xs/4 md:text-sm/6 font-semibold text-red-400 ring-2 ring-inset ring-red-500/50">What's new</span>
                   <span class="inline-flex items-center space-x-0 text-sm/4 md:text-sm/6 font-semibold text-gray-300 hover:text-red-400">
-                    <span>XMTP v3: Decentralized group chat is here</span>
+                    <span>Upgrade to XMTP V3</span>
                     <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                       <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                     </svg>
@@ -431,7 +431,7 @@ const BuiltWithXmtp = () => {
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold text-red-500">Security</h2>
                 <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Enterprise-grade encryption</p>
-                <p class="mt-6 text-md/8 md:text-lg/8">Built on the IETF-standard <a href="https://en.wikipedia.org/wiki/Messaging_Layer_Security" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a> protocol – the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's fully audited implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">Built on the IETF-standard <a href="https://messaginglayersecurity.rocks/" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a> protocol – the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's fully audited implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
                 <p class="mt-12">
 
                   <a href="/encryption" class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal hover:no-underline">
