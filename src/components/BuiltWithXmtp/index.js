@@ -144,19 +144,19 @@ const BuiltWithXmtp = () => {
                   <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
               </li>
               <li>
-                  <img src="img/neynar-logo.png" alt="Neynar" />
+                  <img class="max-h-12" src="img/neynar-logo.png" alt="Neynar" />
               </li>
               <li>
                   <img src="img/yup-logo-black.svg" alt="Yup" />
               </li>
               <li>
-                  <img src="img/hey-logo-dark.png" alt="Hey" />
+                  <img class="max-h-12" src="img/hey-logo-dark.png" alt="Hey" />
               </li>
               <li>
-                  <img src="img/interface-logo.png" alt="Interface" />
+                  <img class="max-h-10" src="img/interface-logo.png" alt="Interface" />
               </li>
               <li>
-                  <img src="img/phaver-logo.png" alt="Phaver" />
+                  <img src="img/phaver-logo.svg" alt="Phaver" />
               </li>
               <li>
                   <img src="img/frog-logo.svg" alt="Frog" />
@@ -185,7 +185,7 @@ const BuiltWithXmtp = () => {
                   <img src="img/logo-unstoppabledomains.svg" alt="Unstoppable Domains" />
               </li>
               <li>
-                  <img src="img/neynar-logo.png" alt="Neynar" />
+              <img class="max-h-12" src="img/neynar-logo.png" alt="Neynar" />
               </li>
               <li>
                   <img src="img/yup-logo-black.svg" alt="Yup" />
@@ -194,10 +194,10 @@ const BuiltWithXmtp = () => {
                   <img src="img/hey-logo-dark.png" alt="Hey" />
               </li>
               <li>
-                  <img src="img/interface-logo.png" alt="Interface" />
+                <img class="max-h-10" src="img/interface-logo.png" alt="Interface" />
               </li>
               <li>
-                  <img src="img/phaver-logo.png" alt="Phaver" />
+                  <img src="img/phaver-logo.svg" alt="Phaver" />
               </li>
               <li>
                   <img src="img/frog-logo.svg" alt="Frog" />
