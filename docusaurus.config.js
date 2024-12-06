@@ -212,7 +212,7 @@ const config = {
             type: "html",
             position: "right",
             value:
-              '<button type="button" onClick="window.open(`https://app.converse.xyz/conversation`, `_blank`);" class="navbar__chatbutton"><strong>Try Converse</strong></button>',
+              '<button type="button" onClick="window.open(`https://converse.xyz`, `_blank`);" class="navbar__chatbutton"><strong>Try Converse</strong></button>',
           },
           {
             href: "https://github.com/xmtp",

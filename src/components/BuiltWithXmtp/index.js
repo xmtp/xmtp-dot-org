@@ -132,6 +132,9 @@ const BuiltWithXmtp = () => {
                   <img src="img/family-logo-black.svg" alt="Family" />
               </li>
               <li>
+                  <img src="img/metamask-logo.svg" alt="Metamask"  />
+              </li>
+              <li>
                   <img src="img/lens-logo-black.svg" alt="Lens" />
               </li>
               <li>
@@ -160,7 +163,7 @@ const BuiltWithXmtp = () => {
               </li>
             </ul>  
             <ul class="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
-              <li>
+            <li>
                   <img src="img/cbwalletLogo.svg" alt="Coinbase Wallet"  />
               </li>
               <li>
@@ -168,6 +171,9 @@ const BuiltWithXmtp = () => {
               </li>
               <li>
                   <img src="img/family-logo-black.svg" alt="Family" />
+              </li>
+              <li>
+                  <img src="img/metamask-logo.svg" alt="Metamask"  />
               </li>
               <li>
                   <img src="img/lens-logo-black.svg" alt="Lens" />
