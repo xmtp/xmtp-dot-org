@@ -38,3 +38,251 @@
     background-image: linear-gradient(to right, var(--tw-gradient-stops));
   }
 }
+
+.container {
+  max-width: 100% !important;
+}
+
+.-mt-2 {
+  margin-top: -2em;
+}
+
+.-mt-4 {
+  margin-top: -4em;
+}
+
+.-mt-6 {
+  margin-top: -6em;
+}
+
+.-mt-8 {
+  margin-top: -8em;
+}
+
+.-mt-12 {
+  margin-top: -12em;
+}
+
+.navbar {
+  padding: 1em !important;
+}
+
+.col {
+  padding: 0;
+}
+
+.footer__links {
+  .col {
+    padding: 0 3em;
+  }
+}
+
+dd {
+  margin: 0;
+}
+
+.logo-row ul {
+  padding-left: 0;
+}
+
+.logo-row ul li {
+  list-style-type: none;
+}
+
+.pulse-this {
+  box-shadow: 0px 0px 1px 1px #0000001a;
+  }
+
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 2px 0px rgba(252, 79, 55, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px 15px rgba(252, 79, 55, 0);
+  }
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 100vw;
+  z-index: -9;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(252, 79, 55, 0) 0%, #FC4F37 75%, #FC4F37 100%);
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line:nth-child(1) {
+  margin-left: -25%;
+  opacity: 0.2;
+}
+.line:nth-child(1)::after {
+  animation-delay: 1s;
+}
+.line:nth-child(2) {
+  margin-left: -8%;
+  opacity: 0.25;
+}
+.line:nth-child(2)::after {
+  animation-delay: 2s;
+}
+.line:nth-child(3) {
+  margin-left: 25%;
+}
+.line:nth-child(3)::after {
+  animation-delay: 1.5s;
+}
+.line:nth-child(4) {
+  margin-left: 8%;
+  opacity: 0.5;
+}
+.line:nth-child(4)::after {
+  animation-delay: 2.5s;
+}
+.line:nth-child(5) {
+  margin-left: 42%;
+  opacity: 1;
+}
+.line:nth-child(5)::after {
+  animation-delay: 3.5s;
+}
+
+.h-lines {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  z-index: -9;
+}
+
+.h-line {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 50%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 100%);
+  overflow: hidden;
+}
+
+@media (max-width: 680px) {
+  .h-line {
+    position: relative;
+  }
+}
+
+.h-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15vh;
+  height: 100%;
+  top: 0%;
+  left: -50%;
+  background: linear-gradient(to right, rgba(252, 79, 55, 0) 0%, #FC4F37 75%, #FC4F37 100%);
+  animation: hdrop 10s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.h-line:nth-child(1) {
+  margin-top: 4%;
+}
+.h-line:nth-child(1)::after {
+  animation-delay: 0.5s;
+}
+.h-line:nth-child(2) {
+  margin-top: 12%;
+  opacity: 0.25;
+}
+.h-line:nth-child(2)::after {
+  animation-delay: 3s;
+}
+.h-line:nth-child(3) {
+  margin-top: 20%;
+  opacity: 0.25;
+}
+.h-line:nth-child(3)::after {
+  animation-delay: 1.5s;
+}
+.h-line:nth-child(4) {
+  margin-top: 28%;
+  opacity: 0.25;
+}
+.h-line:nth-child(4)::after {
+  animation-delay: 4s;
+}
+.h-line:nth-child(5) {
+  margin-top: 36%;
+  opacity: 0.75;
+}
+.h-line:nth-child(5)::after {
+  animation-delay: 5s;
+}
+.h-line:nth-child(6) {
+  margin-top: 44%;
+  opacity: 0.75;
+}
+.h-line:nth-child(6)::after {
+  animation-delay: 4.5s;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes hdrop {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+.breathe {
+  background: linear-gradient(-38deg, #101827, #FC4F37);
+	background-size: 200% 200%;
+	animation: verticalBreathing 15s ease infinite;
+}
+
+@keyframes verticalBreathing {
+    0%   { background-position: 0% 0%;  }
+	25%  { background-position: 40% 40%; }
+	50%  { background-position: 80% 80%; }
+	75%  { background-position: 20% 60%; }
+    100% { background-position: 0% 0%;  }
+}

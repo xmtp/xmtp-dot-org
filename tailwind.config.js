@@ -43,4 +43,18 @@ module.exports = {
       // }, */
     },
   },
+  mode: 'jit',
+  theme: {
+    extend: {
+      animation: {
+        'infinite-scroll': 'infinite-scroll 40s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translate3d(0, 0, 0)' },
+          to: { transform: 'translate3d(-100%, 0, 0)' },
+        }
+      }        
+    },
+  },
 }
