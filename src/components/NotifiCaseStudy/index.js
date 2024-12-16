@@ -35,9 +35,6 @@ const NotifiCaseStudy = () => {
           </div>
           <h1 class="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">Notifi uses XMTP to deliver real-time alerts on Coinbase Wallet</h1>
           <p class="mt-6 text-lg leading-8">Notifi’s integration with XMTP enables DeFi projects like GMX to deliver real-time notifications and critical alerts for traders directly in Coinbase Wallet.</p>
-          <div class="mt-6 flex items-center gap-x-6">
-            <a href="https://docs.xmtp.org/consent/subscribe" class="rounded-md bg-red-500 px-6 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pointer hover:no-underline">Get started</a>
-          </div>
           <div class="py-12">
             <div class="mx-auto max-w-7xl">
               <div class="mx-auto grid grid-cols-3 gap-x-4 gap-y-10">
@@ -163,6 +160,15 @@ const NotifiCaseStudy = () => {
               <img src="img/notifiGraphic3.png" alt="Product screenshot" width="600" height="850" />
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl lg:text-center">
+        <p class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Want to learn more?</p>
+          <p class="mt-6 text-xl leading-8">Reach out to us at <strong><a href="https://converse.xyz/dm/hi.xmtp.eth" target="_blank" rel="noopener noreferrer">hi.xmtp.eth</a></strong>.</p>
         </div>
       </div>
     </div>
