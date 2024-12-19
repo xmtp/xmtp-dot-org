@@ -2,23 +2,25 @@
 
 :::info Key takeaways
 
-- **Why it matters:** XMTP unifies messaging for all your web3 names in one inbox, making it easy to manage communication across apps.
-- **How it works:** Wallets and names link to a single identity using secure operations verified by wallet signatures.
-- **Future-proof:** Ephemera will seamlessly transition identity to the XMTP appchain in 2025 for enhanced security and censorship resistance.
+- **Why it matters:** Your messaging identity starts private by default, letting you maintain separate personas or unify them as you choose
+- **How it works:** Each wallet gets its own standalone inbox, with the option to link them under one identity
+- **Future-proof:** Identity moves to the XMTP appchain in 2025, providing trustless censorship resistance
 
 :::
 
-## All your names, in all your apps
+## Private by default
 
-Web3 users maintain different names across their communities - a .base.eth name for Base, Lens and Farcaster handles for social, a .eth name for general use. These names become truly valuable when people can use them to communicate. But apps that support only one name system fragment the messaging potential of web3 names.
+Identity in XMTP is privacy-first, letting you reveal only what you choose, when you choose. Each wallet you activate starts with a private, standalone inbox that no one can link with your other inboxes, wallets, or onchain activity. At any time, you can associate your inbox with new wallets to make their activity part of your messaging identity and give them access to send and receive messages for you.
 
-XMTP solves this by offering a single messaging identity for all your web3 names and wallets. Whether you're using *alix.eth*, *aa.base.eth*, or *@alixnotalice*, your messages all flow through one inbox, accessible in any XMTP app.
+For example, you might start with a single anonymous wallet for a memecoin holder chat, connect a wallet with your ENS name when you're ready to be found, or add a vault wallet to showcase your NFT collection. Once linked, these wallets share a unified inbox and let you receive messages through any of their associated names or addresses -- all while giving cryptographic proof to senders that you are the owner.
 
-![Diagram of XMTP identity bringing multiple names into multiple apps](../../static/img/identity-1.png)
+## How identity works
 
-## How it works now
+:::tip Technical specification
+For the complete technical specification of XMTP's identity system, see [XIP-46: Multi-Wallet Identity](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-46-multi-wallet-identity.md). This XIP defines the protocol-level implementation of Inbox IDs, identity actions, permission hierarchies, and migration from XMTP v2.
+:::
 
-XMTP’s web and mobile SDKs handle three basic identity operations:
+XMTP identity operates at the wallet address level, using cryptographic signatures to manage associations between wallets. These associations are controlled through XMTP `IdentityAction` operations:
 
 ```rust
 message IdentityAction {
@@ -31,94 +33,91 @@ message IdentityAction {
 }
 ```
 
-All associated wallets can access an inbox and associate new wallets. Only a designated recovery wallet can remove associations. By default, this is the wallet that created the identity.
+Identity operations create public records that prove you own the associated wallets. The wallet first used to create the association becomes the recovery wallet. Any linked wallet can add new associations, but only this recovery wallet can remove them or designate a new recovery wallet.
 
-- For each operation, the SDKs verify wallet signatures to ensure authorized changes.
-- Only wallet addresses can be directly associated with XMTP identities. Application developers use third-party SDKs to resolve names to these wallet addresses.
-- The SDKs keep state current by automatically replaying identity association history.
-
-Currently, Ephemera operates a centralized service to synchronize identity association history across the network.
+While XMTP works purely with wallet addresses, applications handle the connection to human-readable identities, resolving addresses to ENS names, Lens handles, or other web3 usernames to create user-friendly experiences. Messages sent to any of these identifiers are automatically routed to the unified inbox of their associated wallet.
 
 ## Decentralizing identity
 
-In 2025, Ephemera will transition wallet associations to the XMTP appchain, enhancing security and censorship resistance while maintaining state consistency. Ephemera’s centralized service will remain active during this period to ensure seamless functionality for developers and users.
+In 2025, wallet associations will transition to the XMTP appchain, providing trustless, censorship-resistant infrastructure for maintaining consistent state, while preserving the privacy, security, and unlinkability guarantees of the system.
 
-The `IdentityUpdates` contract will govern identity association transactions:
+Users can continue to optionally link their wallets when they choose to do so using the `IdentityUpdates` contract:
 
 ```solidity
 event IdentityUpdateCreated(
     bytes32 inboxId,
-    bytes update,                // Signed state change from SDK
+    bytes update,      // Signed IdentityAction from SDK
     uint64 sequenceId
 );
 ```
 
-SDKs will maintain the same simple operations, allowing identity association history to move onchain without affecting developers' implementations. At this point, applications will have two paths for working with messaging identities:
+SDKs will maintain the same methods for working with messaging identities, allowing identity association history to move onchain without affecting existing implementations.
 
-1. **Using XMTP SDKs:** Developers using XMTP for messaging can continue to leverage the SDKs' built-in identity management and third-party libraries for name resolution.
-2. **Using the Appchain:** Developers not directly providing messaging, such as infrastructure providers and data platforms, can independently monitor association updates on the XMTP appchain by:
-    - Watching chain events and building their own state tracking
+Applications will have two paths for working with messaging identities:
+
+1. **Using XMTP SDKs:** Developers using XMTP for messaging can continue leveraging the SDKs’ built-in identity management and third-party libraries for name resolution.
+2. **Using the Appchain:** Developers not directly providing messaging, such as infrastructure and data providers, can independently monitor identity updates by:
+    - Watching chain events and building state tracking
     - Using third-party APIs to retrieve the latest state
-    - Accessing state permissionlessly via a community-provided subgraph
-
-    Messaging app developers can also verify the SDK using these methods.
+    - Accessing state permissionlessly via community-built subgraphs
 
 ### Privacy considerations for onchain identity
 
-Users concerned about linking public and private wallets onchain can create separate XMTP identities for sensitive communications. However, apps catering to these users can merge their identities locally into a single inbox. Future updates may introduce privacy-preserving features for unlinkable identity associations to address these concerns while maintaining a unified inbox.
+The default separation between wallets provides strong privacy guarantees. Users who choose to link wallets should be aware that these associations become visible onchain. For maximum privacy, users should maintain separate XMTP inboxes for sensitive communications. Apps built for these users can merge their inboxes locally. Research into privacy-preserving unlinkable associations is ongoing.
 
 ## Composability
 
 XMTP identity associations enable developers to build new experiences around messaging. Here are the two main patterns:
 
-### Inbox discovery
+### 1. Inbox Discovery
 
-Find a user's XMTP inbox using any of their wallet addresses or ENS names:
+Looking up a user’s XMTP inbox using any of their wallet addresses or ENS names.
 
-- Notify NFT holders of bids on their tokens via an auction platform.
-- Send messages to DAO members for governance proposals.
-- Initiate group chats based on shared contract interactions.
+- NFT marketplace notifications for bids
+- DAO governance communications
+- Group chat creation based on contract interactions
 
-### Address discovery
+### 2. Address Discovery
 
-List all wallet addresses and names that can message from a given XMTP inbox:
+Retrieving all wallet addresses and names associated with an XMTP inbox.
 
-- Build comprehensive web3 contact cards with ENS, Base, Farcaster, and Lens names
-- Display ENS and other blockchain names belonging to a conversation partner
-- Verify that different addresses belong to the same XMTP user
+- Web3 contact cards with ENS, Base, Farcaster, and Lens names
+- Blockchain name display for conversation partners
+- Cross-address identity verification
 
 ## What’s next
 
-- **2025:** Transition wallet associations to the XMTP appchain for enhanced security and censorship resistance.
-- **Late 2025:** Expand wallet linking and inbox support to non-EVM ecosystems, such as Solana.
-- **2026+:** Introduce privacy-preserving identity features, such as unlinkable associations, to balance privacy with usability.
+- **2025:** Transition wallet associations to the XMTP appchain for enhanced security and trustless censorship resistance
+- **Late 2025:** Expand wallet linking and inbox support to non-EVM ecosystems, such as Solana
+- **2026+:** Introduce privacy-preserving identity features, such as unlinkable associations, to balance privacy with usability
 
-## FAQ
+## Frequently Asked Questions (FAQ)
 
 1. **What differentiates XMTP’s approach to identity? What are its benefits?**
 
-    Unlike traditional systems that bind user identity to a proprietary namespace, XMTP's identity model leverages existing namespaces. Users can consolidate all their names into a single messaging inbox managed by one wallet key, using different names for different contexts.
+    Unlike traditional systems that bind user identity to a proprietary namespace, XMTP’s identity model leverages existing namespaces while prioritizing privacy. Users can choose which wallets to link, maintaining privacy by default, and consolidate their chosen names into a single messaging inbox.
 
     *Benefits for users:*
 
-    - Receive all your messages without switching apps.
-    - Communicate using any name you own.
+    - Private identity by default
+    - Receive all your messages without switching apps
+    - Communicate using any name you own
 
     *Benefits for apps and services:*
 
-    - No need to build and maintain your own messaging system.
-    - No need to integrate a new namespace.
-    - If you have a namespace, XMTP makes it more valuable by extending its reach to more apps.
-    - Users can communicate using all their names without switching to other apps.
-    - Users can access existing agents and mini-apps developed by the XMTP community.
+    - No need to build and maintain your own messaging system
+    - No need to integrate a new namespace
+    - If you have a namespace, XMTP makes it more valuable by extending its reach to more apps
+    - Users can communicate using all their names without switching to other apps
+    - Users can access existing agents and mini-apps developed by the XMTP community
 
 2. **How secure is this system? What happens if one of my linked wallets gets compromised?**
 
-    XMTP requires a signature for every identity operation. The SDKs automatically verify and replay identity updates, ensuring all changes are authorized. If a wallet linked to an identity is compromised, the recovery wallet can unlink it to protect the inbox. By default, the recovery wallet is the wallet that created the identity.
+    XMTP requires cryptographic signatures for every identity operation and maintains strict validation rules. The system protects against replay attacks by tracking all previously seen signatures, and each action must be properly authorized according to the key hierarchy. If a wallet linked to an identity is compromised, the recovery wallet can unlink it to protect the inbox. By default, the recovery wallet is the first wallet that created the identity.
 
 3. **How do I recover my identity? What if I lose access to my recovery wallet?**
 
-    The first wallet associated with an identity becomes the recovery wallet. This recovery wallet is the only one that can remove other wallet associations. It can also change the recovery address to a different wallet address. If access to the recovery wallet is lost, you can continue using your inbox with other linked wallets, but you won't be able to revoke other wallet associations in case of compromise.
+    The first wallet associated with an identity becomes the recovery wallet. This recovery wallet is the only one that can remove other wallet associations. It can also change the recovery address to a different wallet address. If access to the recovery wallet is lost, you can continue using your inbox with other linked wallets, but you won’t be able to revoke other wallet associations in case of compromise.
 
     As a last resort, you can create a new inbox and associate your wallet addresses to it. This ensures continued messaging access, though previous messages tied to the original inbox will remain inaccessible.
 
@@ -128,7 +127,7 @@ List all wallet addresses and names that can message from a given XMTP inbox:
 
 5. **How does wallet linking work across chains?**
 
-    Messages sent to any address are delivered to its associated inbox, regardless of the wallet app or blockchain used. Currently, XMTP supports only EVM chains. However, XMTP aims to extend support to wallets on non-EVM ecosystems by late 2025. This expansion will further enhance cross-chain messaging and broaden accessibility.
+     Currently, XMTP supports only EVM chains. Messages sent to any address are delivered to its associated inbox, regardless of the network used by the app. XMTP aims to extend support to wallets on non-EVM ecosystems by late 2025.
 
 6. **What is the maximum number of wallets that can be linked to an identity?**
 
