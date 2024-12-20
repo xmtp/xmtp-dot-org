@@ -8,7 +8,7 @@ export const HeaderBox = ({ title, subtitle, url, styles, icon }) => {
         className={`${styles.headerBox} xl:min-h-[300px] rounded-lg border border-solid border-black dark:border-neutral-700 relative group px-6 pb-6 pt-6 md:pt-6 lg:px-8 lg:pt-8 lg:pb-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 transition-all hover:shadow-lg`}
       >
         <div>
-          <h4 className="inline-flex text-lg font-semibold text-red-500 md:text-x">
+          <h4 className="inline-flex text-lg font-semibold text-red-500 md:text-xl">
             {title}
           </h4>
         </div>
