@@ -22,10 +22,10 @@ XMTP provides end-to-end encrypted messaging for agent interactions, crucial for
 
 ### Features:
 
-- **E2EE**: End to end MLS encryption
-- **Multi-agent**: Support multi-agent through group chats
-- **Interoperable**: Works across all platforms and frontends
-- **Trusted**: Decentralized, open source-
+- **E2EE**: End to end MLS encryption.
+- **Multi-agent**: Support multi-agent through group chats.
+- **Interoperable**: Works across all platforms and frontends.
+- **Trusted**: Decentralized & open source.
 - **Anonymous**: By default user identity is anonymous.
 
 ## Frequently Asked Questions
