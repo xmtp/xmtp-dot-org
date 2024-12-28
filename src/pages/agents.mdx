@@ -30,11 +30,11 @@ XMTP provides end-to-end encrypted messaging for agent interactions, crucial for
 
 ## Frequently Asked Questions
 
-### 1. **What are the risks of not using end-to-end encryption for agent interactions?**
+### 1. What are the risks of not using end-to-end encryption for agent interactions?
 
 These are some of the potential risks that agent messages are exposed in traditional web architectures.
 
-#### **1. Man-in-the-Middle (MitM) Attacks**
+**1. Man-in-the-Middle (MitM) Attacks**
 
 MitM attacks occur when an attacker intercepts the communication between the client and backend where the LLM service lies. This could involve stealing sensitive information, injecting malicious data, or altering the transmitted data.
 
@@ -44,13 +44,13 @@ MitM attacks occur when an attacker intercepts the communication between the cli
 - **Data Manipulation:** The attacker modifies user queries or responses. This could lead to incorrect actions or responses.
 - **Command Injection:** Malicious instructions injected by an attacker could trigger unintended backend actions, potentially compromising the system.
 
-#### **2. Prompt Injection**
+**2. Prompt Injection**
 
 An attacker may inject malicious prompts into user queries by intercepting the request from in-between, resulting in disastrous actions (in the case of an Agentic AI system).
 
 - https://arxiv.org/pdf/2410.14728
 
-#### **3. Cross-Site Scripting (XSS)**
+**3. Cross-Site Scripting (XSS)**
 
 An attacker injects malicious scripts into the chatbot interface or backend responses, exploiting vulnerabilities in the web app.
 
@@ -63,12 +63,12 @@ An attacker injects malicious scripts into the chatbot interface or backend resp
 
 XMTP facilitates compliance with key data protection regulations:
 
-#### **1. General Data Protection Regulation (GDPR)**
+**1. General Data Protection Regulation (GDPR)**
 
 - **Data Protection by Design**: XMTP's end-to-end encryption ensures that personal data is secured throughout its lifecycle, aligning with GDPR's requirement for data protection measures to be integrated into processing activities.
 - **Data Subject Rights**: XMTP's architecture supports efficient management of data access and deletion requests, aiding compliance with GDPR mandates on user rights.
 
-#### **2. California Consumer Privacy Act (CCPA)**
+**2. California Consumer Privacy Act (CCPA)**
 
 - **Data Security Measures**: By implementing robust encryption, XMTP helps protect personal information, addressing CCPA's emphasis on reasonable security procedures to prevent unauthorized access.
 - **Transparency and User Control**: XMTP's open-source nature allows organizations to maintain transparency in their communication systems, building trust with users and supporting CCPA's requirements for consumer rights.
