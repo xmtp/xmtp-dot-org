@@ -114,7 +114,7 @@ To learn about current XMTP network concepts, see [Network](https://docs.xmtp.or
 
 ### Timeline and key milestones
 
-We expect to launch a testnet of the new decentralized network at the end of November, 2024. The testnet will be unincentivized with no fees charged to payers and no rewards distributed to node operators.
+We launched a [testnet](https://docs.xmtp.org/protocol/network) of the new decentralized network in December 2024 and are adding more node operators. The testnet is unincentivized with no fees charged to payers and no rewards distributed to node operators.
 
 We expect to add incentives to the testnet in Q1 2025 and to be ready for final audits and mainnet in H2 2025.
 
