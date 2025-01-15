@@ -100,6 +100,11 @@ const config = {
             label: 'Documentation ↗',
           },
           {
+            to: '/roadmap',
+            position: 'right',
+            label: 'Roadmap',
+          },
+          {
             type: "dropdown",
             position: "right",
             label: "Use cases",
