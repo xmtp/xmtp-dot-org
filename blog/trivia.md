@@ -32,9 +32,9 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 
 ### Steps to running an event using XMTP
 
-1. **Onboarding:** We bought an ENS that anyone could then send a message to to join the waitlist.
+1. **Onboarding:** We bought an ENS that anyone could then send a message to join the waitlist.
 2. **Automatic registration:** Every wallet address was then automatically registered for the event, and approved or not by our team.
-3. **Direct line of communication without collecting personal information:** The approved list then received updates about the event, like the location, by text on whatever client app they prefered to use.
+3. **Direct line of communication without collecting personal information:** The approved list then received updates about the event, like the location, by text on whatever client app they preferred to use.
 4. **POAP delivery:** Once someone checks in, the bot automatically drops a unique POAP mint link into the chat for them to claim.
 
 :::
