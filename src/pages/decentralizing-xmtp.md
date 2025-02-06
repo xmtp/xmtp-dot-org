@@ -20,22 +20,22 @@ In this decentralized network there are three types of actors. Each plays a dist
 
 Two distributed systems will coordinate these interactions.
 
-1. The **XMTP broadcast network:** a small, permissioned set of node operators replicating messages across diverse organizations and geographies to ensure availability.
+1. The **XMTP broadcast network:** a small, permissioned set of node operators replicating messages across [diverse organizations and geographies](https://community.xmtp.org/t/xip-54-xmtp-network-node-operator-qualification-criteria/868) to ensure availability.
 2. The **XMTP appchain:** an L3 blockchain securing all metadata that require strict ordering. Four smart contracts will manage this data:
     - The `Nodes` contract manages the list of broadcast network nodes, ensuring that only authorized nodes participate in the network.
     - The `Payers` contract manages the payment of messaging fees to node operators, allowing applications and organizations to cover network costs without requiring users to pay directly.
     - The `IdentityUpdates` contract manages the list of wallet addresses associated with each XMTP inbox, enabling users to use multiple authorized wallet addresses to send and receive messages from a single inbox.
     - The `GroupMessages` contract manages group membership changes, ensuring that all clients have an identical view of group additions and removals in the correct order.
 
-For more specifics, follow the team's progress in the [xmtpd repo](https://github.com/xmtp/xmtpd/issues/118). A detailed XIP outlining the decentralization process will be published shortly.
+For more specifics, review [XIP-49](https://community.xmtp.org/t/xip-49-decentralized-backend-for-mls-messages/856) and follow the team's progress in the [xmtpd repo](https://github.com/xmtp/xmtpd/issues/118).
 
 ![Diagram of actors in the XMTP decentralized network](../../static/img/decentralizing-xmtp-1.png)
 
 ### Timeline and key milestones
 
-We expect to launch a testnet of the new decentralized network at the end of November, 2024. The testnet will be unincentivized with no fees charged to payers and no rewards distributed to node operators.
+We launched a testnet in February, 2024. The testnet is currently unincentivized, with no fees charged to payers and no rewards distributed to node operators.
 
-We expect to add incentives to the testnet in Q1 2025 and to be ready for final audits and mainnet in H2 2025.
+We expect to add incentives to the testnet later in Q1 2025 and to be ready for final audits and mainnet in H2 2025.
 
 ## FAQ
 
@@ -66,6 +66,8 @@ The XMTP appchain is an L3 blockchain built as an Arbitrum Orbit rollup that set
 ![Diagram of XMTP broadcast network](../../static/img/decentralizing-xmtp-2.png)
 
 The XMTP broadcast network is a small group of 5–20 nodes, each run by a separate organization. It replicates messages across diverse geographies to ensure availability, control latency, and enhance performance using scalable infrastructure.
+
+[XIP-54](https://community.xmtp.org/t/xip-54-xmtp-network-node-operator-qualification-criteria/868) discusses the selection criteria for node operators.
 
 **5. Why can’t just anyone run a node?**
 
@@ -99,6 +101,8 @@ The broadcast network is resilient to node failures as any functioning node can 
 
 During the testnet, nodes are chosen by Ephemera, prioritizing neutrality, geographic diversity, and infrastructure quality. Node selection is managed through the `Nodes` smart contract, which maintains the list of authorized broadcast network nodes. For mainnet, node selection will be automated through staking and delegation mechanisms. This document will be updated as the details of these mechanisms become available.
 
+[XIP-54](https://community.xmtp.org/t/xip-54-xmtp-network-node-operator-qualification-criteria/868) discusses the selection criteria for node operators in greater detail.
+
 **10. How do clients ensure confidentiality and integrity?**
 
 Clients use end-to-end encryption based on the IETF [**Messaging Layer Security (MLS)**](https://messaginglayersecurity.rocks/) standard. MLS provides a high level of confidentiality, integrity, and authenticity for messages, similar to protocols used by secure messaging apps like Signal. Additionally, clients sign causal ordering metadata to maintain the correct order of messages.
@@ -127,7 +131,45 @@ Any node or client can issue `MisbehaviorReports` to identify and prove non-comp
 
 XMTP's distributed architecture, use of smart contracts, and participation from multiple nodes and clients ensure that the network operates independently even if any single organization - including Ephemera - ceases to exist.
 
-**17. Does this mean there is a token I can buy?**
+**17. What metadata is visible on the network?**
+
+| Content | Is visible |
+| --- | --- |
+| When you joined the network | ✅ |
+| When you add a new wallet or device to your account | ✅ |
+| What time you have been invited to a conversation | ✅ |
+| How many devices and wallets you have added to your account | ✅ |
+| Who invited you to the conversation | ❌ |
+| What conversations you have been invited to | ❌* |
+| Who is in any group | ❌* |
+| When you sent a message in a conversation | ❌ |
+| The contents of the messages you send | ❌ |
+| How many messages you have sent | ❌ |
+| When you consent to join a conversation | ❌ |
+| The name and description of any group | ❌ |
+| The permissions and admin roles of any group | ❌ |
+
+**There is a risk that an attacker reading all messages on the network could draw statistical correlations between otherwise unrelated messages to reveal members that members were invited to a group at the same time, and which group ID they were added to, by looking at messages sent at similar times. We plan to address this risk by adding jitter to message timing before the release of XMTP mainnet.*
+
+**18. What are the risks of all payloads on the network being public?**
+
+Messages on the XMTP network are end-to-end encrypted, so only the sender and recipient have the keys required to read their contents or sensitive metadata. These encrypted payloads are visible to node operators and anyone using public APIs to query a node. 
+
+We believe the only true protection for your messages is strong encryption. Other messaging services may claim to have an additional layer of protection by limiting who can access the encrypted payloads and keeping them private, but this protection is prone to failure. Even the most trusted providers routinely get hacked and find the contents of their databases on the dark web. Government agencies find backdoors into supposedly closed networks. And when this happens, the hackers often find that there is lots of useful metadata - even in end-to-end encrypted systems - worth stealing. 
+
+By keeping all the data in our network public our model is simple and transparent. Rather than hoping our systems will never get compromised, our goal is to make sure your private information stays private even if every node on our network has already been hacked. Anyone can inspect what data is available on the network, and security researchers can try their hardest to find vulnerabilities that compromise user security or privacy in the open. 
+
+**19. Will XMTP support post quantum encryption?**
+
+Yes. Today there are no known quantum computers capable of decrypting messages encrypted with elliptic curves as large as the ones used in XMTP today, but we need to be prepared for the possibility that those computers are in development and will likely exist in the next decade. Given how cheap it is to store data, a well-funded adversary like a government may decide to keep a copy of some messages stored on our network today and wait for a computer capable of decrypting them. This is referred to as “Harvest Now Decrypt Later”. Other messaging services have recently started to roll out hybrid encryption schemes that include post quantum algorithms to protect against this threat.
+
+We expect to complete the work needed to roll out Post Quantum encryption in 2025. MLS itself is very flexible with encryption schemes and makes it straightforward to migrate our ciphersuites to one that offers post quantum protection such as ML-KEM. The challenge lies in the payload sizes. Keys that are 32 bytes today can become multiple kilobytes. Ciphertext and signatures can double in size. 
+
+For centralized services owned by trillion dollar tech companies, this increase in size is a small line item. But for a decentralized network that needs to become economically self-sufficient these increases can be substantial. Before rolling out these changes we need to ensure that our economic model can support them (by continuing to drive down messaging costs), and that we have thoroughly studied the cryptographic risks today.
+
+Our friends at Cryspen have a great write-up about the path to Post Quantum MLS, and the risks, that you can read [here](https://cryspen.com/post/pq-mls/).
+
+**20. Does this mean there is a token I can buy?**
 
 At this time there is no XMTP token and anyone who is trying to sell you one is trying to scam you.
 
