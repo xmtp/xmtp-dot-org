@@ -209,7 +209,7 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div id="trynow" class="overflow-hidden pt-12 pb-0 md:pb-16 md:pt-16 bg-gray-50 rounded-3xl">
+      {/* <div id="trynow" class="overflow-hidden pt-12 pb-0 md:pb-16 md:pt-16 bg-gray-50 rounded-3xl">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
               <div class="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none text-center md:text-left">
@@ -344,7 +344,7 @@ const BuiltWithXmtp = () => {
               </div>
             </div>
         </div>
-      </div>
+      </div> */}
 
       <div class="relative isolate overflow-hidden py-16 md:py-4 md:pb-16">
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
