@@ -165,7 +165,7 @@ Yes. Today there are no known quantum computers capable of decrypting messages e
 
 We expect to complete the work needed to roll out Post Quantum encryption in 2025. MLS itself is very flexible with encryption schemes and makes it straightforward to migrate the ciphersuites used by XMTP to one that offers post-quantum protection such as ML-KEM. The challenge lies in the payload sizes. Keys that are 32 bytes today can become multiple kilobytes. Ciphertext and signatures can double in size. 
 
-For centralized services owned by trillion dollar tech companies, this increase in size is a small line item. But for a decentralized network that needs to become economically self-sufficient these increases can be substantial. Before rolling out these changes we need to ensure that our economic model can support them (by continuing to drive down messaging costs), and that we have thoroughly studied the cryptographic risks today.
+For centralized services owned by trillion-dollar tech companies, this increase in size is a small line item. But for a decentralized network that needs to become economically self-sufficient these increases can be substantial. Before rolling out these changes we need to ensure that the XMTP economic model can support them (by continuing to drive down messaging costs), and that we have thoroughly studied the cryptographic risks today.
 
 Our friends at Cryspen have a great write-up about the path to Post Quantum MLS, and the risks, that you can read [here](https://cryspen.com/post/pq-mls/).
 
