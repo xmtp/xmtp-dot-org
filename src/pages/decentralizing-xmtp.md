@@ -33,7 +33,7 @@ For more specifics, review [XIP-49](https://community.xmtp.org/t/xip-49-decentra
 
 ### Timeline and key milestones
 
-We launched a testnet in February, 2024. The testnet is currently unincentivized, with no fees charged to payers and no rewards distributed to node operators.
+We launched a testnet in February, 2025. The testnet is currently unincentivized, with no fees charged to payers and no rewards distributed to node operators.
 
 We expect to add incentives to the testnet later in Q1 2025 and to be ready for final audits and mainnet in H2 2025.
 
