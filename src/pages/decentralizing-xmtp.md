@@ -149,7 +149,7 @@ XMTP's distributed architecture, use of smart contracts, and participation from 
 | The name and description of any group | ❌ |
 | The permissions and admin roles of any group | ❌ |
 
-**There is a risk that an attacker reading all messages on the network could draw statistical correlations between otherwise unrelated messages to reveal members that members were invited to a group at the same time, and which group ID they were added to, by looking at messages sent at similar times. We plan to address this risk by adding jitter to message timing before the release of XMTP mainnet.*
+**There is a risk that an attacker reading all messages on the network could draw statistical correlations between otherwise unrelated messages to reveal that members were invited to a group at the same time, and which group ID they were added to, by looking at messages sent at similar times. We plan to address this risk by adding jitter to message timing before the release of XMTP mainnet.*
 
 **18. What are the risks of all payloads on the network being public?**
 
