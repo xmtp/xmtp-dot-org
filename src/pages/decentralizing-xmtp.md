@@ -157,7 +157,7 @@ Messages on the XMTP network are end-to-end encrypted, so only the sender and re
 
 We believe the only true protection for your messages is strong encryption. Other messaging services may claim to have an additional layer of protection by limiting who can access the encrypted payloads and keeping them private, but this protection is prone to failure. Even the most trusted providers routinely get hacked and find the contents of their databases on the dark web. Government agencies find backdoors into supposedly closed networks. And when this happens, the hackers often find that there is lots of useful metadata - even in end-to-end encrypted systems - worth stealing. 
 
-By keeping all the data in our network public our model is simple and transparent. Rather than hoping our systems will never get compromised, our goal is to make sure your private information stays private even if every node on our network has already been hacked. Anyone can inspect what data is available on the network, and security researchers can try their hardest to find vulnerabilities that compromise user security or privacy in the open. 
+By keeping all the data in the network public, the model is simple and transparent. Rather than hoping XMTP systems will never get compromised, the goal is to make sure your private information stays private even if every node on the network has already been hacked. Anyone can inspect what data is available on the network, and security researchers can try their hardest to find vulnerabilities that compromise user security or privacy in the open. 
 
 **19. Will XMTP support post quantum encryption?**
 
