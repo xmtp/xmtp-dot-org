@@ -22,10 +22,10 @@ Two distributed systems will coordinate these interactions.
 
 1. The **XMTP broadcast network:** a small, permissioned set of node operators replicating messages across [diverse organizations and geographies](https://community.xmtp.org/t/xip-54-xmtp-network-node-operator-qualification-criteria/868) to ensure availability.
 2. The **XMTP appchain:** an L3 blockchain securing all metadata that require strict ordering. Four smart contracts will manage this data:
-    - The `Nodes` contract manages the list of broadcast network nodes, ensuring that only authorized nodes participate in the network.
+    - The `Nodes` [contract](https://community.xmtp.org/t/xip-49-decentralized-backend-for-mls-messages/856#p-2045-h-221-node-registry-21) manages the list of broadcast network nodes, ensuring that only authorized nodes participate in the network.
     - The `Payers` contract manages the payment of messaging fees to node operators, allowing applications and organizations to cover network costs without requiring users to pay directly.
-    - The `IdentityUpdates` contract manages the list of wallet addresses associated with each XMTP inbox, enabling users to use multiple authorized wallet addresses to send and receive messages from a single inbox.
-    - The `GroupMessages` contract manages group membership changes, ensuring that all clients have an identical view of group additions and removals in the correct order.
+    - The `IdentityUpdates` [contract](https://github.com/xmtp/xmtpd/blob/main/contracts/src/IdentityUpdates.sol) manages the list of wallet addresses associated with each XMTP inbox, enabling users to use multiple authorized wallet addresses to send and receive messages from a single inbox.
+    - The `GroupMessages` [contract](https://github.com/xmtp/xmtpd/blob/main/contracts/src/GroupMessages.sol) manages group membership changes, ensuring that all clients have an identical view of group additions and removals in the correct order.
 
 For more specifics, review [XIP-49](https://community.xmtp.org/t/xip-49-decentralized-backend-for-mls-messages/856) and follow the team's progress in the [xmtpd repo](https://github.com/xmtp/xmtpd/issues/118).
 
