@@ -342,7 +342,7 @@ const BuiltWithXmtp = () => {
       <div class="relative isolate overflow-hidden py-16 md:py-4 md:pb-16">
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="lg:col-end-1 lg:w-full lg:max-w-3xl lg:pb-8 mb-8 md:mb-0">
-              <p class="text-sm/4 md:text-base font-semibold uppercase tracking-wider leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.2)]">Use Cases</p>
+              <p class="text-sm/4 md:text-base font-semibold uppercase tracking-wider leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.2)]">Using XMTP</p>
               <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight">How apps and wallets use XMTP</h2>
               <p class=" max-w-3xl text-base md:text-lg font-normal">Learn about the connected and resilient ecosystem for seamless communication across apps and wallets</p>
           </div>
