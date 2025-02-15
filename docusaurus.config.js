@@ -100,76 +100,9 @@ const config = {
             label: 'Documentation ↗',
           },
           {
-            type: "dropdown",
+            to: '/docs/use-cases/introduction',
             position: "right",
             label: "Use cases",
-            items: [
-              {
-                href: "https://github.com/xmtp/awesome-xmtp/",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/xmtp-icon.svg" alt="XMTP icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Awesome XMTP ↗</div>`,
-              },
-              {
-                to: "/docs/use-cases/messaging",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/messaging-icon.svg" alt="Messaging icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Messaging</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/deso",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/social-icon.svg" alt="Social icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Web3 social</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/marketing",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Marketing icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Marketing</div></div>`,
-              },
-              {
-                to: "notifi-case-study",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/mic-icon.svg" alt="Broadcast icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Broadcast</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/automation",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/chip-icon.svg" alt="Automation icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Automation</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/support",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/support-icon.svg" alt="Automation icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Support</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/commerce",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/commerce-icon.svg" alt="Automation icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Commerce</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/defi",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DeFi</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/gaming",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/smile.svg" alt="Smile icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Gaming</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/dao",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/finance-icon.svg" alt="Finance icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">DAOs</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/groups",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/social-icon.svg" alt="Groups icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Groups</div></div>`,
-              },
-              {
-                to: "/docs/use-cases/frames",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/frames.svg" alt="Frames icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Frames</div></div>`,
-              },
-            ],
           },
           {
             type: "dropdown",
@@ -207,12 +140,6 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>`,
               },
             ],
-          },
-          {
-            type: "html",
-            position: "right",
-            value:
-              '<button type="button" onClick="window.open(`https://converse.xyz`, `_blank`);" class="navbar__chatbutton"><strong>Try Converse</strong></button>',
           },
           {
             href: "https://github.com/xmtp",

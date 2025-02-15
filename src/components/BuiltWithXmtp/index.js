@@ -101,13 +101,6 @@ const BuiltWithXmtp = () => {
                   </svg>
                   Get started <span aria-hidden="true">→</span>
                 </a>
-
-                <a href="#trynow" class="smooth-scroll w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-black shadow-sm hover:bg-gray-100 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
-                  </svg>
-                  Try XMTP now<span aria-hidden="true">→</span>
-                </a>
                 
               </div>
             </div>
@@ -209,7 +202,7 @@ const BuiltWithXmtp = () => {
         </div>
       </div>
 
-      <div id="trynow" class="overflow-hidden pt-12 pb-0 md:pb-16 md:pt-16 bg-gray-50 rounded-3xl">
+      {/* <div id="trynow" class="overflow-hidden pt-12 pb-0 md:pb-16 md:pt-16 bg-gray-50 rounded-3xl">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
               <div class="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none text-center md:text-left">
@@ -344,17 +337,33 @@ const BuiltWithXmtp = () => {
               </div>
             </div>
         </div>
-      </div>
+      </div> */}
 
       <div class="relative isolate overflow-hidden py-16 md:py-4 md:pb-16">
         <div class="mx-auto max-w-7xl py-0 sm:px-6 md:py-24 lg:px-8">
           <div class="lg:col-end-1 lg:w-full lg:max-w-3xl lg:pb-8 mb-8 md:mb-0">
-              <p class="text-sm/4 md:text-base font-semibold uppercase tracking-wider leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.2)]">Use Cases</p>
+              <p class="text-sm/4 md:text-base font-semibold uppercase tracking-wider leading-tight bg-gradient-to-r from-[#FFB07F] to-[#FC4F37] inline-block text-transparent bg-clip-text [text-shadow:_0_2px_24px_rgba(255_176_127_/_0.2)]">Using XMTP</p>
               <h2 class="max-w-3xl text-balance text-3xl md:text-4xl font-semibold tracking-tight">How apps and wallets use XMTP</h2>
               <p class=" max-w-3xl text-base md:text-lg font-normal">Learn about the connected and resilient ecosystem for seamless communication across apps and wallets</p>
           </div>
 
           <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 md:gap-y-16 border-solid border-0 border-t border-gray-200 pt-10 mt-4 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+            
+          <article class="flex max-w-xl flex-col items-start justify-between">
+              <div class="flex items-center gap-x-4 text-xs">
+                <img src="img/xmtp-logo-lockup-black.svg" class="h-6 mb-2"></img>
+              </div>
+              <div class="group relative">
+                <p class="font-normal text-xs uppercase tracking-widest">Decentralization</p>
+                <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
+                  <a href="https://paragraph.xyz/@xmtp_community/xmtp-launches-testnet-building-the-worlds-most-secure-decentralized-messaging-network" target="_blank" class="hover:text-red-500 hover:no-underline">
+                    <span class="absolute inset-0"></span>
+                    XMTP testnet: Building the most secure decentralized messaging network
+                  </a>
+                </h3>
+                <a href="https://paragraph.xyz/@xmtp_community/xmtp-launches-testnet-building-the-worlds-most-secure-decentralized-messaging-network" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
             
             <article class="flex max-w-xl flex-col items-start justify-between">
               <div class="flex items-center gap-x-4 text-xs">
@@ -390,22 +399,6 @@ const BuiltWithXmtp = () => {
 
             <article class="flex max-w-xl flex-col items-start justify-between">
               <div class="flex items-center gap-x-4 text-xs">
-                <img src="img/converse-logo-full-black.svg" class="h-9 mb-6"></img>
-              </div>
-              <div class="group relative">
-                <p class="font-normal text-xs uppercase tracking-widest">Agents</p>
-                <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="https://converse.xyz" target="_blank" class="hover:text-red-500 hover:no-underline">
-                    <span class="absolute inset-0"></span>
-                    Converse Messenger unleashes the power of AI agents and universal identity
-                  </a>
-                </h3>
-                <a href="https://converse.xyz" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
-              </div>
-            </article>
-
-            <article class="flex max-w-xl flex-col items-start justify-between">
-              <div class="flex items-center gap-x-4 text-xs">
                 <img src="img/notifiLogo.svg" class="h-5 mb-2"></img>
               </div>
               <div class="group relative">
@@ -416,7 +409,7 @@ const BuiltWithXmtp = () => {
                     Learn about how Notifi delivers millions of critical DeFi alerts through XMTP
                   </a>
                 </h3>
-                <a href="https://xmtp.org/notifi-case-study" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Read more <span aria-hidden="true">→</span></a>
+                <a href="https://xmtp.org/notifi-case-study" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
