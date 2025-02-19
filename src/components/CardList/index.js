@@ -163,18 +163,6 @@ const EcosystemProjectsCardList = () => {
   );
 };
 
-// this provides the content in the cards in the Status section on the SDKs and tools page
-const statuscards = [
-  {
-    title: "XMTP status page",
-    description:
-      "View the real-time status of the XMTP production network, XMTP dev network, and XMTP Chat app.",
-    firstLink: { name: "View status page", link: "https://status.xmtp.com/" },
-    logo: "img/x-mark.svg",
-    theme: "sunrise",
-  },
-];
-
 // this provides the list of cards in the Status section on the SDKs and tools page
 const StatusCardList = () => {
   return (
