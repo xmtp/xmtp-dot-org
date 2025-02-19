@@ -966,7 +966,8 @@ ul li a:before {
 }*/
 .chain-item img {
   width: 100%;
-  max-width: 80px; /* 20% smaller than before */
+  max-width: 80px;
+  aspect-ratio: 1 / 1;  /* forces a square placeholder */
   margin-bottom: 10px;
   object-fit: contain;
 }
