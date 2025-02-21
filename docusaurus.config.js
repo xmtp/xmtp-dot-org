@@ -197,10 +197,6 @@ const config = {
                 to: "https://github.com/xmtp/brand",
               },
               {
-                label: "Status page ↗",
-                to: "https://status.xmtp.com/",
-              },
-              {
                 label: "Partnerships with Ephemera ↗",
                 to: "https://forms.gle/UMCFjB8ukiMxBxnK6",
               },
