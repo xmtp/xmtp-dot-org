@@ -220,11 +220,11 @@ const config = {
             items: [
               {
                 label: "Privacy policy",
-                to: "privacy",
+                to: "/privacy",
               },
               {
                 label: "Terms of service",
-                href: "terms",
+                href: "/terms",
               },
               {
                 label: "CC BY 4.0 ↗",
