@@ -125,7 +125,7 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Blog ↗</div></div>`,
               },
               {
-                href: "https://calendar.google.com/calendar/u/0?cid=aGlAeG10cC5vcmc",
+                href: "https://lu.ma/xmtp",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/calendar-icon.svg" alt="Calendar icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Events ↗</div>`,
               },
@@ -164,16 +164,12 @@ const config = {
                 to: "https://github.com/xmtp",
               },
               {
-                label: "Awesome XMTP ↗",
-                to: "https://github.com/xmtp/awesome-xmtp/",
-              },
-              {
                 label: "XMTP Community blog ↗",
                 to: "https://paragraph.xyz/@xmtp_community/",
               },
               {
-                label: "XMTP Dev Call calendar ↗",
-                to: "https://calendar.google.com/calendar/u/0/r?cid=aGlAeG10cC5vcmc",
+                label: "XMTP Community events ↗",
+                to: "https://lu.ma/xmtp",
               },
               {
                 label: "Contribute",
