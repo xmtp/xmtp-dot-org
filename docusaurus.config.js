@@ -115,7 +115,7 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Community forum ↗</div>`,
               },
               {
-                href: "https://github.com/xmtp",
+                href: "https://docs.xmtp.org/intro/dev-support",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/github-icon-orange.svg" alt="GitHub icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support ↗</div>`,
               },
@@ -161,7 +161,7 @@ const config = {
               },
               {
                 label: "Dev support ↗",
-                to: "https://github.com/xmtp",
+                to: "https://docs.xmtp.org/intro/dev-support",
               },
               {
                 label: "XMTP Community blog ↗",
@@ -187,6 +187,10 @@ const config = {
               {
                 label: "FAQ ↗",
                 to: "https://docs.xmtp.org/get-started/faq",
+              },
+              {
+                label: "XMTP status ↗",
+                to: "https://status.xmtp.org/",
               },
               {
                 label: "Brand assets ↗",
