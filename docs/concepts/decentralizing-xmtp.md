@@ -1,3 +1,8 @@
+---
+sidebar_label: Decentralization
+sidebar_position: 4
+---
+
 # Decentralizing XMTP
 
 Today we're announcing a new chapter for XMTP: a decentralized messaging network powered by the [Messaging Layer Security standard](https://messaginglayersecurity.rocks/) standard - the most secure and private messaging protocol available to developers.  Our entire protocol is open source, from the [node software](https://github.com/xmtp/xmtp-node-go) to the [SDKs](https://github.com/xmtp) to the [Converse app](https://github.com/ephemerahq/converse-app).

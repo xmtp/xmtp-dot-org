@@ -100,11 +100,6 @@ const config = {
             label: 'Documentation ↗',
           },
           {
-            to: '/docs/use-cases/introduction',
-            position: "right",
-            label: "Use cases",
-          },
-          {
             type: "dropdown",
             position: "right",
             label: "Community",
@@ -224,7 +219,7 @@ const config = {
               },
               {
                 label: "Terms of service",
-                href: "terms",
+                to: "/terms",
               },
               {
                 label: "CC BY 4.0 ↗",
