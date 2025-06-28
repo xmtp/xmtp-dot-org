@@ -85,7 +85,7 @@ const web3Storage = new Web3Storage({
   token: "your token here, not one i accidentally committed and had to revoke",
 });
 
-const upload = new Upload("XMTPEncryptedContent", encryptedEncoded.payload);
+const upload = new Upload("XMTPEncryptedContent", encryptedAttachment.payload);
 const cid = await web3Storage.put([upload]);
 const url = `https://${cid}.ipfs.w3s.link/XMTPEncryptedContent`;
 ```
