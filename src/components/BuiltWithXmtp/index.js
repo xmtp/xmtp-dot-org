@@ -63,10 +63,10 @@ const BuiltWithXmtp = () => {
           <div class="mx-auto max-w-7xl md:max-w-7xl px-6 md:px-16 pb-8 pt-4 lg:flex md:pb-32 md:pt-24 text-center md:text-left">
             <div class="mx-auto max-w-5xl shrink-0 lg:mx-0">
               <div class="mt-6 md:mt-24 lg:mt-0">
-                <a href="https://docs.xmtp.org/upgrade-to-v3" class="inline-flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 hover:no-underline justify-center md:justify-normal">
+                <a href="https://docs.xmtp.org/agents/build-an-agent" class="inline-flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 hover:no-underline justify-center md:justify-normal">
                   <span class="mb-2 md:mb-0 rounded-full bg-gray-500/10 px-4 py-2 text-center md:py-1 md:text-left text-xs/4 md:text-sm/6 font-semibold text-red-400 ring-2 ring-inset ring-red-500/50">What's new</span>
                   <span class="inline-flex items-center space-x-0 text-sm/4 md:text-sm/6 font-semibold text-gray-300 hover:text-red-400">
-                    <span>Upgrade to XMTP V3</span>
+                    <span>Build an agent on XMTP</span>
                     <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                       <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                     </svg>
