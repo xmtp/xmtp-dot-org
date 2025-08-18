@@ -1,8 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl/";
 import Head from "@docusaurus/Head";
 
 const Agents = () => {
+  const wordsToType = ["Coordinate", "Transact", "Scale"];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [typedWord, setTypedWord] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const fullWord = wordsToType[currentWordIndex];
+    const isWordFullyTyped = typedWord === fullWord;
+    const isWordFullyDeleted = typedWord.length === 0;
+
+    let delayMs = isDeleting ? 45 : 90;
+
+    if (!isDeleting && isWordFullyTyped) {
+      delayMs = 1100; // pause at full word
+      const timeoutId = setTimeout(() => {
+        setIsDeleting(true);
+      }, delayMs);
+      return () => clearTimeout(timeoutId);
+    }
+
+    if (isDeleting && isWordFullyDeleted) {
+      setIsDeleting(false);
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % wordsToType.length);
+      delayMs = 250; // brief pause before typing next word
+    }
+
+    const nextText = isDeleting
+      ? fullWord.slice(0, Math.max(typedWord.length - 1, 0))
+      : fullWord.slice(0, typedWord.length + 1);
+
+    const timeoutId = setTimeout(() => {
+      setTypedWord(nextText);
+    }, delayMs);
+
+    return () => clearTimeout(timeoutId);
+  }, [typedWord, isDeleting, currentWordIndex]);
   return (
   <div>
     <Head>
@@ -24,8 +60,8 @@ const Agents = () => {
           className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
         />
       </div>
-      <div className="mx-auto max-w-2xl py-32 sm:py-16 lg:py-0">
-        <div className="hidden sm:mb-4 sm:flex sm:justify-center">
+      <div className="mx-auto max-w-3xl py-32 sm:py-16 lg:py-0">
+        <div className="hidden sm:mb-4 sm:flex">
           <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             XMTP is now fully quantum-resistant {' '}
             <a href="#" className="font-semibold text-red-500">
@@ -34,29 +70,50 @@ const Agents = () => {
             </a>
           </div>
         </div>
-        <div className="text-center">
-          <h1 className="text-5xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-7xl">
-            Give your agents a voice
+        <div className="text-left">
+          <h1 className="text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
+            Build A.I.<br />agents that
           </h1>
-          <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat.
-          </p>
-          
-          <div class="mt-10 flex-wrap md:flex-nowrap gap-x-4 flex flex-col items-center">
-            <a href="https://docs.xmtp.org/" class="mb-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-              </svg>
-              Get started <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
+          <h2 className="mt-0 text-[140px] leading-none font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
+            <span className="typing-wrap">
+              <span className="typing-placeholder">Coordinate</span>
+              <span className="typing-live">
+                {typedWord}
+                <span className="typing-cursor">|</span>
+              </span>
+            </span>
+          </h2>
         </div>
       </div>
 
       <div className="overflow-hidden">
-        <img className="mt-24 relative -left-24 -right-24 top-0 min-w-[110%]" src="img/temp-hero.png"></img>
+        <img className="mt-8 relative top-0 min-w-full rounded-lg" src="img/fpoHero.png"></img>
+      </div>
+
+      <div className="mx-auto max-w-3xl py-32 sm:py-16 lg:py-0">
+
+        <div className="text-left">
+          <div className="max-w-lg">
+            <h2 className="mt-8 text-2xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-3xl">
+              Create powerful AI agents with built-in payments, secure and private communication, and seamless access to the entire XMTP messaging ecosystem.
+            </h2>
+          </div>
+          <div className="max-w-lg">
+            <p className="mt-6 text-lg font-normal text-pretty text-gray-500 sm:text-xl/7">
+              Your agents can live anywhere — wallets, apps, bots — and transact everywhere.
+            </p>
+            <p className="mt-6">
+              All powered by XMTP’s quantum-resistant, enterprise-grade, decentralized messaging protocol.
+            </p>
+            <a href="https://docs.xmtp.org/" class="my-6 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+              </svg>
+              Get started <span aria-hidden="true">→</span>
+          </a>
+          </div>
+        </div>
+
       </div>
 
       <div
@@ -73,19 +130,103 @@ const Agents = () => {
       </div>
     </div>
 
+    <div className="overflow-hidden">
+      <img className="mt-32 relative -left-24 -right-24 top-0 min-w-[110%]" src="img/temp-hero.png"></img>
+    </div>
+
+    <div className="mx-auto max-w-xl py-32 sm:py-16 lg:py-0">
+
+      <div className="text-left">
+        <h2 className="mt-24 text-3xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
+          Commerce 🤝 Messaging
+        </h2>
+        <div className="max-w-lg">
+          <p className="text-lg">
+            AI agents that can listen, respond, and transact natively in the conversation are the future of customer experience, financial coordination, and agent-to-agent collaboration.
+          </p>
+          <a href="https://docs.xmtp.org/" class="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+            </svg>
+            Start building <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="overflow-hidden">
+        <img className="mt-16 relative min-w-full rounded-lg" src="img/fpoBankr.png"></img>
+      </div>
+
+      <div className="text-left">
+        <div className="mt-4 max-w-xs">
+          <p className="text-xs font-mono">
+            AI agents that can listen, respond, and transact natively in the conversation are the future of customer experience, financial coordination, and agent-to-agent collaboration.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div className="mt-16 mx-auto max-w-xl py-32 sm:py-16 lg:py-0">
+      <p className="text-lg font-semibold">XMTP makes this seamless:</p>
+  
+      <div class="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-t-1 border-r-0 border-l-0 border-gray-200">
+        <div class="col-start-1 col-end-4">
+          <p className="font-bold text-normal/6">Payments are programmable messages.</p>
+        </div>
+        <div class="col-span-3 col-end-7">
+          <p className="text-normal/6">Send, receive, and settle assets as easily as sending a text — all within a secure chat.</p>
+        </div>
+      </div>
+      <div class="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-t-1 border-r-0 border-l-0 border-gray-200">
+        <div class="col-start-1 col-end-4">
+          <p className="font-bold text-normal/6">No middlemen.</p>
+        </div>
+        <div class="col-span-3 col-end-7">
+          <p className="text-normal/6">No need to rely on third-party processors or embed external widgets. Transactions happen directly between wallets and apps.</p>
+        </div>
+      </div>
+      <div class="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-t-1 border-r-0 border-l-0 border-gray-200">
+        <div class="col-start-1 col-end-4">
+          <p className="font-bold text-normal/6">One agent, every app.</p>
+        </div>
+        <div class="col-span-3 col-end-7">
+          <p className="text-normal/6">Write your agent once and deploy across all XMTP-connected apps, from wallets and web apps to bots and browser extensions.</p>
+        </div>
+      </div>
+      <div class="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-t-1 border-r-0 border-l-0 border-gray-200">
+        <div class="col-start-1 col-end-4">
+          <p className="font-bold text-normal/6">Built for developer freedom.</p>
+        </div>
+        <div class="col-span-3 col-end-7">
+          <p className="text-normal/6">Integrate with any EVM chain, wallet, identity system or mini-app ecosystem.</p>
+        </div>
+      </div>
+
+    </div>
+
     <div class="overflow-hidden py-32">
       <div class="px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:max-w-7xl">
-          <div>
-            <h2 class="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Featured Agents</h2>
-            <h3 class="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl">See what agents can do with XMTP</h3>
+          <div class="max-w-2xl">
+            <div>
+              <h2 class="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Featured Agents</h2>
+              <h3 class="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl">See XMTP Agents in the Wild</h3>
+              <p>Agents are already live across the XMTP network & on the Base App, serving users, coordinating payments, and making onchain actions conversational.</p>
+              <a href="https://docs.xmtp.org/" class="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+                </svg>
+                Start building <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
           
-          <div className="mx-auto mt-8 max-w-2xl sm:mt-10 lg:mt-12 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+          <div className="mx-auto mt-4 max-w-2xl sm:mt-10 lg:mt-12 lg:max-w-none">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-3">
               
             <div className="flex flex-col border border-black">
-                <video class="h-full w-full rounded-2xl" autoplay="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
                 <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
                   <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                   Your very own crypto quant
@@ -101,7 +242,7 @@ const Agents = () => {
               </div>
 
               <div className="flex flex-col border border-black">
-                <video class="h-full w-full rounded-2xl" autoplay="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
                 <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
                   <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                   Your very own crypto quant
@@ -116,7 +257,54 @@ const Agents = () => {
                 </dd>
               </div>
               <div className="flex flex-col border border-black">
-                <video class="h-full w-full rounded-2xl" autoplay="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+                  <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                  Your very own crypto quant
+                </dt>
+                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                  <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                  <p className="mt-2">
+                    <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                      Learn more <span aria-hidden="true">→</span>
+                    </a>
+                  </p>
+                </dd>
+              </div>
+
+              <div className="flex flex-col border border-black">
+                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+                  <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                  Your very own crypto quant
+                </dt>
+                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                  <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                  <p className="mt-2">
+                    <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                      Learn more <span aria-hidden="true">→</span>
+                    </a>
+                  </p>
+                </dd>
+              </div>
+
+              <div className="flex flex-col border border-black">
+                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+                  <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                  Your very own crypto quant
+                </dt>
+                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                  <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                  <p className="mt-2">
+                    <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                      Learn more <span aria-hidden="true">→</span>
+                    </a>
+                  </p>
+                </dd>
+              </div>
+              <div className="flex flex-col border border-black">
+                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
                 <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
                   <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                   Your very own crypto quant
@@ -142,7 +330,8 @@ const Agents = () => {
     <div className="bg-gray-50 py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-center text-base/7 font-semibold text-red-500">Deploy faster</h2>
-        <h3 class="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl text-center">Everything you need to deploy your app</h3>
+        <h3 class="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl text-center">You Own the Agent,
+        XMTP Handles the Infrastructure</h3>
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
           <div className="relative lg:row-span-2">
             <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-4xl" />

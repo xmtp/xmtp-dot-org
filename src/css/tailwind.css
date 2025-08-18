@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16:wght@400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,6 +9,34 @@
 @layer utilities {
   .w-432 {
     width: 432px;
+  }
+  
+  .font-dotgothic {
+    font-family: var(--font-dotgothic);
+  }
+
+  .typing-wrap {
+    position: relative;
+    display: inline-block;
+  }
+
+  .typing-placeholder {
+    visibility: hidden;
+  }
+
+  .typing-live {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  @keyframes cursor-blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+
+  .typing-cursor {
+    animation: cursor-blink 1s steps(1, end) infinite;
   }
 }
 
@@ -44,6 +73,7 @@
       "Segoe UI Symbol", "Noto Color Emoji";
 
     --font-prose: var(--font-ui);
+    --font-dotgothic: "DotGothic16", monospace;
 
     --ifm-heading-font-family: var(--font-ui);
     --ifm-font-family-base: var(--font-ui);
