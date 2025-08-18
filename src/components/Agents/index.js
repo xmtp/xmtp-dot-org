@@ -204,123 +204,127 @@ const Agents = () => {
       </div>
 
     </div>
-
+    
     <div class="overflow-hidden py-32">
       <div class="px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:max-w-7xl">
-          <div class="max-w-2xl">
+          <div class="py-4 pb-2 grid grid-cols-6 gap-4">
+          <div class="col-start-1 col-end-4">
             <div>
               <h2 class="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Featured Agents</h2>
               <h3 class="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl">See XMTP Agents in the Wild</h3>
               <p>Agents are already live across the XMTP network & on the Base App, serving users, coordinating payments, and making onchain actions conversational.</p>
-              <a href="https://docs.xmtp.org/" class="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-                </svg>
-                Start building <span aria-hidden="true">→</span>
-              </a>
             </div>
           </div>
-          
-          <div className="mx-auto mt-4 max-w-2xl sm:mt-10 lg:mt-12 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-3">
-              
-            <div className="flex flex-col border border-black">
-                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-                <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
-                  <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                  Your very own crypto quant
-                </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                  <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
-                  <p className="mt-2">
-                    <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
-                      Learn more <span aria-hidden="true">→</span>
-                    </a>
-                  </p>
-                </dd>
-              </div>
-
-              <div className="flex flex-col border border-black">
-                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-                <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
-                  <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                  Your very own crypto quant
-                </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                  <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
-                  <p className="mt-2">
-                    <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
-                      Learn more <span aria-hidden="true">→</span>
-                    </a>
-                  </p>
-                </dd>
-              </div>
-              <div className="flex flex-col border border-black">
-                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-                <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
-                  <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                  Your very own crypto quant
-                </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                  <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
-                  <p className="mt-2">
-                    <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
-                      Learn more <span aria-hidden="true">→</span>
-                    </a>
-                  </p>
-                </dd>
-              </div>
-
-              <div className="flex flex-col border border-black">
-                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-                <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
-                  <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                  Your very own crypto quant
-                </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                  <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
-                  <p className="mt-2">
-                    <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
-                      Learn more <span aria-hidden="true">→</span>
-                    </a>
-                  </p>
-                </dd>
-              </div>
-
-              <div className="flex flex-col border border-black">
-                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-                <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
-                  <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                  Your very own crypto quant
-                </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                  <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
-                  <p className="mt-2">
-                    <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
-                      Learn more <span aria-hidden="true">→</span>
-                    </a>
-                  </p>
-                </dd>
-              </div>
-              <div className="flex flex-col border border-black">
-                <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-                <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
-                  <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                  Your very own crypto quant
-                </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                  <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
-                  <p className="mt-2">
-                    <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
-                      Learn more <span aria-hidden="true">→</span>
-                    </a>
-                  </p>
-                </dd>
-              </div>
-              
-            </dl>
+          <div class="col-span-2 col-end-7 text-right">
+            <a href="https://docs.xmtp.org/" class="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+              </svg>
+              Start building <span aria-hidden="true">→</span>
+            </a>
           </div>
+        </div>
+          
+        <div className="mx-auto mt-4 max-w-2xl sm:mt-10 lg:mt-12 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-3">
+            
+          <div className="flex flex-col border border-black">
+              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Your very own crypto quant
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="mt-2">
+                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </p>
+              </dd>
+            </div>
+
+            <div className="flex flex-col border border-black">
+              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Your very own crypto quant
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="mt-2">
+                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </p>
+              </dd>
+            </div>
+            <div className="flex flex-col border border-black">
+              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Your very own crypto quant
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="mt-2">
+                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </p>
+              </dd>
+            </div>
+
+            <div className="flex flex-col border border-black">
+              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Your very own crypto quant
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="mt-2">
+                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </p>
+              </dd>
+            </div>
+
+            <div className="flex flex-col border border-black">
+              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Your very own crypto quant
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="mt-2">
+                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </p>
+              </dd>
+            </div>
+            <div className="flex flex-col border border-black">
+              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Your very own crypto quant
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="mt-2">
+                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </p>
+              </dd>
+            </div>
+            
+          </dl>
+        </div>
 
         </div>
       </div>
@@ -417,23 +421,21 @@ const Agents = () => {
       <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-            Add messaging to your app in 10 minutes. Try it today.
+            Ready to Launch?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-200">
-            Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur
-            commodo do ea.
+            Join thousands of developers building next-generation transactional agents with XMTP — the secure messaging layer for AI, money, and coordination.
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-red-600 shadow-xs hover:bg-red-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              {' '}
-              Get started{' '}
+          <div className="mt-10 flex items-center justify-center gap-x-4">
+            <a href="https://docs.xmtp.org/" class="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+              </svg>
+              Start building <span aria-hidden="true">→</span>
             </a>
-            <a href="#" className="text-sm/6 font-semibold text-white">
-              Learn more
-              <span aria-hidden="true">→</span>
+            <a href="#" className="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white font-semibold text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 justify-center hover:no-underline text-white">
+              Read the docs
+              <span className="ml-1" aria-hidden="true">→</span>
             </a>
           </div>
         </div>
