@@ -62,7 +62,7 @@ const Agents = () => {
       </div>
       <div className="mx-auto max-w-3xl py-32 sm:py-16 lg:py-0">
         <div className="hidden sm:mb-4 sm:flex">
-          <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+          <div className="relative rounded-full px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             XMTP is now fully quantum-resistant {' '}
             <a href="#" className="font-semibold text-red-500">
               <span aria-hidden="true" className="absolute inset-0" />
@@ -87,14 +87,23 @@ const Agents = () => {
       </div>
 
       <div className="overflow-hidden">
-        <img className="mt-8 relative top-0 min-w-full rounded-lg" src="img/fpoHero.png"></img>
+        <div className="absolute inset-0 pt-0 flex items-center justify-center z-20">
+          <a className="color text-gray-700" href="https://x.com/xmtp_/status/1950599730322702400" target="_blank">
+            <div className="-mt-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-gray-700">
+                <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clipRule="evenodd" />
+              </svg>
+            </div>
+          </a>
+        </div>
+        <video className="rounded-2xl mt-8 relative top-0 max-w-full" autoPlay muted playsInline loop src="img/agentsHeroVideo.mp4" type="video/mp4">Your browser does not support the video tag.</video>
       </div>
 
       <div className="mx-auto max-w-3xl py-32 sm:py-16 lg:py-0">
 
         <div className="text-left">
           <div className="max-w-lg">
-            <h2 className="mt-8 text-2xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-3xl">
+            <h2 className="mt-8 text-2xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-4xl/tight">
               Create powerful AI agents with built-in payments, secure and private communication, and seamless access to the entire XMTP messaging ecosystem.
             </h2>
           </div>
@@ -105,9 +114,9 @@ const Agents = () => {
             <p className="mt-6">
               All powered by XMTP’s quantum-resistant, enterprise-grade, decentralized messaging protocol.
             </p>
-            <a href="https://docs.xmtp.org/" class="my-6 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+            <a href="https://docs.xmtp.org/" className="my-6 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
               Get started <span aria-hidden="true">→</span>
           </a>
@@ -137,16 +146,16 @@ const Agents = () => {
     <div className="mx-auto max-w-xl py-32 sm:py-16 lg:py-0">
 
       <div className="text-left">
-        <h2 className="mt-24 text-3xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
+        <h2 className="mt-0 text-3xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
           Commerce 🤝 Messaging
         </h2>
         <div className="max-w-lg">
           <p className="text-lg">
             AI agents that can listen, respond, and transact natively in the conversation are the future of customer experience, financial coordination, and agent-to-agent collaboration.
           </p>
-          <a href="https://docs.xmtp.org/" class="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+          <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
             </svg>
             Start building <span aria-hidden="true">→</span>
           </a>
@@ -154,7 +163,7 @@ const Agents = () => {
       </div>
 
       <div className="overflow-hidden">
-        <img className="mt-16 relative min-w-full rounded-lg" src="img/fpoBankr.png"></img>
+        <img className="mt-16 relative min-w-full rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-100" src="img/commerceImage.png"></img>
       </div>
 
       <div className="text-left">
@@ -170,56 +179,56 @@ const Agents = () => {
     <div className="mt-16 mx-auto max-w-xl py-32 sm:py-16 lg:py-0">
       <p className="text-lg font-semibold">XMTP makes this seamless:</p>
   
-      <div class="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-t-1 border-r-0 border-l-0 border-gray-200">
-        <div class="col-start-1 col-end-4">
+      <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-black">
+        <div className="col-start-1 col-end-4">
           <p className="font-bold text-normal/6">Payments are programmable messages.</p>
         </div>
-        <div class="col-span-3 col-end-7">
+        <div className="col-span-3 col-end-7">
           <p className="text-normal/6">Send, receive, and settle assets as easily as sending a text — all within a secure chat.</p>
         </div>
       </div>
-      <div class="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-t-1 border-r-0 border-l-0 border-gray-200">
-        <div class="col-start-1 col-end-4">
+      <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-gray-200">
+        <div className="col-start-1 col-end-4">
           <p className="font-bold text-normal/6">No middlemen.</p>
         </div>
-        <div class="col-span-3 col-end-7">
+        <div className="col-span-3 col-end-7">
           <p className="text-normal/6">No need to rely on third-party processors or embed external widgets. Transactions happen directly between wallets and apps.</p>
         </div>
       </div>
-      <div class="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-t-1 border-r-0 border-l-0 border-gray-200">
-        <div class="col-start-1 col-end-4">
+      <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-gray-200">
+        <div className="col-start-1 col-end-4">
           <p className="font-bold text-normal/6">One agent, every app.</p>
         </div>
-        <div class="col-span-3 col-end-7">
+        <div className="col-span-3 col-end-7">
           <p className="text-normal/6">Write your agent once and deploy across all XMTP-connected apps, from wallets and web apps to bots and browser extensions.</p>
         </div>
       </div>
-      <div class="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-t-1 border-r-0 border-l-0 border-gray-200">
-        <div class="col-start-1 col-end-4">
+      <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-gray-200">
+        <div className="col-start-1 col-end-4">
           <p className="font-bold text-normal/6">Built for developer freedom.</p>
         </div>
-        <div class="col-span-3 col-end-7">
+        <div className="col-span-3 col-end-7">
           <p className="text-normal/6">Integrate with any EVM chain, wallet, identity system or mini-app ecosystem.</p>
         </div>
       </div>
 
     </div>
     
-    <div class="overflow-hidden py-32">
-      <div class="px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:max-w-7xl">
-          <div class="py-4 pb-2 grid grid-cols-6 gap-4">
-          <div class="col-start-1 col-end-4">
+    <div className="overflow-hidden py-32">
+      <div className="px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:max-w-7xl">
+          <div className="py-4 pb-2 grid grid-cols-6 gap-4">
+          <div className="col-start-1 col-end-4">
             <div>
-              <h2 class="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Featured Agents</h2>
-              <h3 class="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl">See XMTP Agents in the Wild</h3>
+              <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Featured Agents</h2>
+              <h3 className="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl">See XMTP Agents in the Wild</h3>
               <p>Agents are already live across the XMTP network & on the Base App, serving users, coordinating payments, and making onchain actions conversational.</p>
             </div>
           </div>
-          <div class="col-span-2 col-end-7 text-right">
-            <a href="https://docs.xmtp.org/" class="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+          <div className="col-span-2 col-end-7 text-right">
+            <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
               Start building <span aria-hidden="true">→</span>
             </a>
@@ -229,9 +238,27 @@ const Agents = () => {
         <div className="mx-auto mt-4 max-w-2xl sm:mt-10 lg:mt-12 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-3">
             
-          <div className="flex flex-col border border-black">
-              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+            <div className="flex flex-col">
+              <video className="rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-200" autoPlay muted playsInline loop src="img/featuredBNKR.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bankr</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Your very own crypto quant
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="mt-0">
+                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </p>
+              </dd>
+            </div>
+
+            <div className="flex flex-col border border-black">
+              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Flaunch</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Your very own crypto quant
               </dt>
@@ -246,23 +273,9 @@ const Agents = () => {
             </div>
 
             <div className="flex flex-col border border-black">
-              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
-                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Your very own crypto quant
-              </dt>
-              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
-                <p className="mt-2">
-                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
-                    Learn more <span aria-hidden="true">→</span>
-                  </a>
-                </p>
-              </dd>
-            </div>
-            <div className="flex flex-col border border-black">
-              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bracky</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Your very own crypto quant
               </dt>
@@ -277,8 +290,9 @@ const Agents = () => {
             </div>
 
             <div className="flex flex-col border border-black">
-              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-8 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Squabble</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Your very own crypto quant
               </dt>
@@ -293,23 +307,9 @@ const Agents = () => {
             </div>
 
             <div className="flex flex-col border border-black">
-              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
-                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Your very own crypto quant
-              </dt>
-              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
-                <p className="mt-2">
-                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
-                    Learn more <span aria-hidden="true">→</span>
-                  </a>
-                </p>
-              </dd>
-            </div>
-            <div className="flex flex-col border border-black">
-              <video class="h-full w-full rounded-2xl" autoplay="" muted="" playsinline="" loop="" src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <dt className="mt-4 flex items-center text-base/7 font-semibold text-gray-900">
+              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/featuredOnit.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-8 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Onit</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Your very own crypto quant
               </dt>
@@ -331,105 +331,164 @@ const Agents = () => {
     
     </div>
 
-    <div className="bg-gray-50 py-24 sm:py-32">
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-center text-base/7 font-semibold text-red-500">Deploy faster</h2>
-        <h3 class="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl text-center">You Own the Agent,
-        XMTP Handles the Infrastructure</h3>
-        <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-          <div className="relative lg:row-span-2">
-            <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-4xl" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-              <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Enterprise-grade encryption
-                </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
-                </p>
-              </div>
-              <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-                <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                  <img
-                    alt=""
-                    src="#"
-                    className="size-full object-cover object-top"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 lg:rounded-l-4xl" />
-          </div>
-          <div className="relative max-lg:row-start-1">
-            <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-4xl" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-              <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Flexible identity foundation</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
-                </p>
-              </div>
-              <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
-                <img
-                  alt=""
-                  src="#"
-                  className="w-full max-lg:max-w-xs"
-                />
-              </div>
-            </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-t-4xl" />
-          </div>
-          <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-            <div className="absolute inset-px rounded-lg bg-white" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
-              <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Built-in spam protection</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
-                </p>
-              </div>
-              <div className="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
-                <img
-                  alt=""
-                  src="#"
-                  className="h-[min(152px,40cqw)] object-cover"
-                />
-              </div>
-            </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5" />
-          </div>
-          <div className="relative lg:row-span-2">
-            <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-4xl lg:rounded-r-4xl" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-              <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                Unruggable infrastructure
-                </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
-                </p>
-              </div>
-              
-            </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-b-4xl lg:rounded-r-4xl" />
-          </div>
-        </div>
+    <div className="py-32 pt-16 rounded-2xl mb-8 relative overflow-hidden text-center">
+      <div className="bg-white absolute inset-0" style={{ background: 'linear-gradient(200deg,#163869 15%,#571861 35%,#a79bb0 55%,#163869 85%)', opacity: 0.16 }}></div>
+        <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
+
+        <div className="mt-16">
+          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-4">🗸 No gatekeepers or app store approvals</h4>
+          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-4">🗸 No centralized servers</h4>
+          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-16">🗸 Full encryption, including metadata</h4>
+        </div>  
+        <h2 className="text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Messages that are yours</h2>
+        <h3 className="mt-4 font-medium leading-normal tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-4xl text-center">
+          You Own the Agent,<br />XMTP Handles the Infrastructure
+        </h3>
+        <p className="text-center">You own the logic. You own the keys. You own the experience.</p>
+        <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+          </svg>
+          Start building <span aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
 
-    <div className="bg-gray-900 bg-[url(/img/footerBG.jpg)] bg-cover">
-      <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+    <div className="bg-gray-50 py-24 sm:py-24 rounded-2xl mb-8">
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-2xl px-6">
+          <h2 className="text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Privacy is the future</h2>
+          <h3 className="mt-2 text-4xl font-medium leading-normal tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl text-center">
+            XMTP is built for next generation messaging apps.
+          </h3>
+        </div>
+
+        <div className="mt-24 grid grid-cols-3 tablet:grid-cols-2 desktop:grid-cols-3 gap-6 tablet:gap-8">
+          <div className="relative">
+              <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10">
+                  <div className="w-12 h-12 bg-[#FC4F37] rounded-md shadow-lg flex justify-center items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-white">
+                  <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd" />
+            </svg>
+
+                  </div>
+              </div>
+              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+                  <div className="flex flex-col justify-center items-center gap-2 text-center">
+                      <div className="text-black text-lg font-semibold font-inter leading-7">End-to-End Encrypted</div>
+                      <div className="text-gray-500 text-base font-normal font-inter leading-normal">Messages and transactions are fully encrypted — including metadata — with built-in key rotation and MLS-based security.</div>
+                  </div>
+              </div>
+          </div>
+          <div className="relative">
+              <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10">
+                  <div className="w-12 h-12 bg-[#FC4F37] rounded-md shadow-lg flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-white">
+                      <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                      <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+              </div>
+              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+                  <div className="flex flex-col justify-center items-center gap-2 text-center">
+                      <div className="text-black text-lg font-semibold font-inter leading-7">Native Money</div>
+                      <div className="text-gray-500 text-base font-normal font-inter leading-normal">Send, receive, and manage digital assets - all through a secure, consent-based messaging channel. No third-part infrastructure needed.</div>
+                  </div>
+              </div>
+          </div>
+          <div className="relative">
+              <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10">
+                  <div className="w-12 h-12 bg-[#FC4F37] rounded-md shadow-lg flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-white">
+                      <path fill-rule="evenodd" d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.03 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v4.94a.75.75 0 0 0 1.5 0v-4.94l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+              </div>
+              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+                  <div className="flex flex-col justify-center items-center gap-2 text-center">
+                      <div className="text-black text-lg font-semibold font-inter leading-7">Deploy in Minutes</div>
+                      <div className="text-gray-500 text-base font-normal font-inter leading-normal">XMTP’s developer experience makes it easy to ship agents using frameworks like Railway, Replit, or you can bring your own stack.</div>
+                  </div>
+              </div>
+          </div>
+          <div className="relative mt-16">
+              <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10">
+                  <div className="w-12 h-12 bg-[#FC4F37] rounded-md shadow-lg flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-white">
+                      <path fill-rule="evenodd" d="M2.25 2.25a.75.75 0 0 0 0 1.5H3v10.5a3 3 0 0 0 3 3h1.21l-1.172 3.513a.75.75 0 0 0 1.424.474l.329-.987h8.418l.33.987a.75.75 0 0 0 1.422-.474l-1.17-3.513H18a3 3 0 0 0 3-3V3.75h.75a.75.75 0 0 0 0-1.5H2.25Zm6.54 15h6.42l.5 1.5H8.29l.5-1.5Zm8.085-8.995a.75.75 0 1 0-.75-1.299 12.81 12.81 0 0 0-3.558 3.05L11.03 8.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l2.47-2.47 1.617 1.618a.75.75 0 0 0 1.146-.102 11.312 11.312 0 0 1 3.612-3.321Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+              </div>
+              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+                  <div className="flex flex-col justify-center items-center gap-2 text-center">
+                      <div className="text-black text-lg font-semibold font-inter leading-7">Scales With You</div>
+                      <div className="text-gray-500 text-base font-normal font-inter leading-normal">Whether it’s 10 users or 10 million, the XMTP network handles scaling automatically — no server ops required.</div>
+                  </div>
+              </div>
+          </div>
+          <div className="relative mt-16">
+              <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10">
+                  <div className="w-12 h-12 bg-[#FC4F37] rounded-md shadow-lg flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-white">
+                      <path d="M16.881 4.345A23.112 23.112 0 0 1 8.25 6H7.5a5.25 5.25 0 0 0-.88 10.427 21.593 21.593 0 0 0 1.378 3.94c.464 1.004 1.674 1.32 2.582.796l.657-.379c.88-.508 1.165-1.593.772-2.468a17.116 17.116 0 0 1-.628-1.607c1.918.258 3.76.75 5.5 1.446A21.727 21.727 0 0 0 18 11.25c0-2.414-.393-4.735-1.119-6.905ZM18.26 3.74a23.22 23.22 0 0 1 1.24 7.51 23.22 23.22 0 0 1-1.41 7.992.75.75 0 1 0 1.409.516 24.555 24.555 0 0 0 1.415-6.43 2.992 2.992 0 0 0 .836-2.078c0-.807-.319-1.54-.836-2.078a24.65 24.65 0 0 0-1.415-6.43.75.75 0 1 0-1.409.516c.059.16.116.321.17.483Z" />
+                    </svg>
+                  </div>
+              </div>
+              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+                  <div className="flex flex-col justify-center items-center gap-2 text-center">
+                      <div className="text-black text-lg font-semibold font-inter leading-7">Built for Censorship Resistance</div>
+                      <div className="text-gray-500 text-base font-normal font-inter leading-normal">Your agents can’t be blocked, silenced, or surveilled. XMTP nodes preserve communication and consent at the protocol level.</div>
+                  </div>
+              </div>
+          </div>
+          <div className="relative mt-16">
+              <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10">
+                  <div className="w-12 h-12 bg-[#FC4F37] rounded-md shadow-lg flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-white">
+                      <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
+                    </svg>
+                  </div>
+              </div>
+              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+                  <div className="flex flex-col justify-center items-center gap-2 text-center">
+                      <div className="text-black text-lg font-semibold font-inter leading-7">Decentralized by Default</div>
+                      <div className="text-gray-500 text-base font-normal font-inter leading-normal">Your messaging infrastructure doesn’t depend on one company or server. XMTP is an open protocol backed by a growing decentralized network of nodes.</div>
+                  </div>
+              </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+
+    <div className="bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-contain bg-no-repeat bg-bottom rounded-2xl">
+      <div className="px-6 py-24 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-            Ready to Launch?
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-200">
-            Join thousands of developers building next-generation transactional agents with XMTP — the secure messaging layer for AI, money, and coordination.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-4">
-            <a href="https://docs.xmtp.org/" class="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 me-2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+          <div className="space-y-8 text-left">
+            <div className="flex justify-end">
+              <div className="bg-blue-500 text-white px-4 py-2 pb-0 rounded-2xl rounded-br-md max-w-xs">
+                <p className="text-lg">Hey @Agent, I'm ready to build with XMTP.</p>
+              </div>
+            </div>
+            <div className="flex justify-start">
+              <div className="bg-gray-200 text-gray-900 px-4 py-2 pb-4 rounded-2xl rounded-bl-md max-w-sm">
+              <p className="text-lg">Amazing.</p>
+                <p className="text-lg">Join thousands of developers building next-generation transactional agents with XMTP — the secure messaging layer for AI, money, and coordination.</p>
+                <a target="_blank" className="color-white underline text-lg hover:no-underline" href="https://docs.xmtp.org/">https://docs.xmtp.org</a>
+              </div>
+            </div>
+          </div>
+          <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Messages that are yours</h2>
+          <h3 className="mt-4 font-medium leading-normal tracking-normal text-pretty text-white data-dark:text-white sm:text-7xl text-center font-dotgothic">
+            Ready to<br />Launch?
+          </h3>
+          <p className="mt-8 text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the logic.</p>
+          <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the keys.</p>
+          <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the experience.</p>
+          
+          <div className="mt-8 flex items-center justify-center gap-x-4">
+            <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 w-full md:w-auto cursor-pointer flex items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
               Start building <span aria-hidden="true">→</span>
             </a>
