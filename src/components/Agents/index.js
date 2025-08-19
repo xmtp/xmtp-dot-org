@@ -248,7 +248,7 @@ const Agents = () => {
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
                 <p className="mt-0">
-                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                  <a href="https://x.com/bankrbot" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
                   </a>
                 </p>
@@ -256,16 +256,16 @@ const Agents = () => {
             </div>
 
             <div className="flex flex-col border border-black">
-              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/flaunchyWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
               <h2 className="mt-4 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Flaunch</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Your very own crypto quant
+                Permissionless fundraising agent
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
                 <p className="mt-2">
-                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                  <a href="https://x.com/flaunchgg" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
                   </a>
                 </p>
@@ -273,16 +273,16 @@ const Agents = () => {
             </div>
 
             <div className="flex flex-col border border-black">
-              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <img className="min-w-full rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-200" src="img/brackyWeb.png"></img>
               <h2 className="mt-4 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bracky</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Your very own crypto quant
+                Prediction markets
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
                 <p className="mt-2">
-                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                  <a href="https://x.com/BrackyHQ" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
                   </a>
                 </p>
@@ -290,16 +290,16 @@ const Agents = () => {
             </div>
 
             <div className="flex flex-col border border-black">
-              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/temp-elsa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <h2 className="mt-8 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Squabble</h2>
+              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/squabbleWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Squabble</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Your very own crypto quant
+                Games
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
                 <p className="mt-2">
-                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                  <a href="https://x.com/xmtp_/status/1937889105188388879" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
                   </a>
                 </p>
@@ -307,16 +307,16 @@ const Agents = () => {
             </div>
 
             <div className="flex flex-col border border-black">
-              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/featuredOnit.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <h2 className="mt-8 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Onit</h2>
+              <video className="rounded-2xl" autoPlay muted playsInline loop src="img/onitWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Onit</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Your very own crypto quant
+                Coordination and group tasks over XMTP
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
                 <p className="mt-2">
-                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                  <a href="https://x.com/onit_fun" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
                   </a>
                 </p>
