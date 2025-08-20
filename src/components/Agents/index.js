@@ -47,7 +47,7 @@ const Agents = () => {
       <meta property="og:description" content="Notifi’s integration with XMTP enables DeFi projects like GMX to deliver real-time notifications and critical alerts for traders directly in Coinbase Wallet." />
     </Head>
     
-    <div className="relative isolate px-6 pt-14 lg:px-8">
+    <div className="relative isolate px-6 pt-4 lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -60,8 +60,8 @@ const Agents = () => {
           className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
         />
       </div>
-      <div className="mx-auto max-w-3xl py-32 sm:py-16 lg:py-0">
-        <div className="hidden sm:mb-4 sm:flex">
+      <div className="mx-auto max-w-full py-32 sm:py-16 lg:py-0">
+        <div className="hidden sm:mb-6 sm:flex">
           <div className="relative rounded-full px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             XMTP is now fully quantum-resistant {' '}
             <a href="#" className="font-semibold text-red-500">
@@ -71,10 +71,10 @@ const Agents = () => {
           </div>
         </div>
         <div className="text-left">
-          <h1 className="text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
+          <h1 className="mr-10 float-left text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
             Build A.I.<br />agents that
           </h1>
-          <h2 className="mt-0 text-[140px] leading-none font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
+          <h2 className="mt-0 text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
             <span className="typing-wrap">
               <span className="typing-placeholder">Coordinate</span>
               <span className="typing-live">
@@ -86,10 +86,10 @@ const Agents = () => {
         </div>
       </div>
 
-      <div className="overflow-hidden">
+      <div>
         <div className="absolute inset-0 pt-0 flex items-center justify-center z-20">
           <a className="color text-gray-700" href="https://x.com/xmtp_/status/1950599730322702400" target="_blank">
-            <div className="-mt-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+            <div className="-mt-8 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-gray-700">
                 <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clipRule="evenodd" />
               </svg>
