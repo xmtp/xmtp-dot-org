@@ -44,7 +44,7 @@ const Agents = () => {
     <Head>
       <title>Give your agents a voice by building on XMTP</title>
       <meta property="og:title" content="Notifi uses XMTP to deliver real-time alerts on Coinbase Wallet" />
-      <meta property="og:description" content="Notifi’s integration with XMTP enables DeFi projects like GMX to deliver real-time notifications and critical alerts for traders directly in Coinbase Wallet." />
+      <meta property="og:description" content="Notifi's integration with XMTP enables DeFi projects like GMX to deliver real-time notifications and critical alerts for traders directly in Coinbase Wallet." />
     </Head>
     
     <div className="relative isolate px-6 pt-4 lg:px-8">
@@ -60,8 +60,10 @@ const Agents = () => {
           className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
         />
       </div>
-      <div className="mx-auto max-w-full py-32 sm:py-16 lg:py-0">
-        <div className="hidden sm:mb-6 sm:flex">
+
+      {/* Main content container with consistent max-width and centering */}
+      <div className="mx-auto max-w-7xl">
+        <div className="hidden sm:mb-6 sm:flex lg:ml-16">
           <div className="relative rounded-full px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             XMTP is now fully quantum-resistant {' '}
             <a href="#" className="font-semibold text-red-500">
@@ -70,38 +72,45 @@ const Agents = () => {
             </a>
           </div>
         </div>
-        <div className="text-left">
-          <h1 className="mr-10 float-left text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
-            Build A.I.<br />agents that
-          </h1>
-          <h2 className="mt-0 text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
-            <span className="typing-wrap">
-              <span className="typing-placeholder">Coordinate</span>
-              <span className="typing-live">
-                {typedWord}
-                <span className="typing-cursor">|</span>
+        
+        <div className="py-32 sm:py-16 lg:py-0 lg:ml-16">
+          <div className="text-left">
+            <h1 className="mr-10 float-left text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
+              Build A.I.<br />agents that
+            </h1>
+            <h2 className="mt-0 text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
+              <span className="typing-wrap">
+                <span className="typing-placeholder">Coordinate</span>
+                <span className="typing-live">
+                  {typedWord}
+                  <span className="typing-cursor">|</span>
+                </span>
               </span>
-            </span>
-          </h2>
+            </h2>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <div className="absolute inset-0 pt-0 flex items-center justify-center z-20">
-          <a className="color text-gray-700" href="https://x.com/xmtp_/status/1950599730322702400" target="_blank">
-            <div className="-mt-8 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-gray-700">
-                <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clipRule="evenodd" />
-              </svg>
+        {/* Video section with relative positioning within the container */}
+        <div className="relative mt-8 -mx-6 lg:-mx-8">
+          <div className="relative mx-auto max-w-[1680px]">
+            <div className="absolute inset-0 flex items-center justify-center z-20">
+              <a className="color text-gray-700" href="https://x.com/xmtp_/status/1950599730322702400" target="_blank">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-gray-700">
+                    <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </a>
             </div>
-          </a>
+            <video className="mt-8 rounded-2xl w-full" autoPlay muted playsInline loop src="img/agentsHeroVideo.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+          </div>
         </div>
-        <video className="rounded-2xl mt-8 relative top-0 max-w-full" autoPlay muted playsInline loop src="img/agentsHeroVideo.mp4" type="video/mp4">Your browser does not support the video tag.</video>
       </div>
 
+      {/* Second section - Description */}
       <div className="mx-auto max-w-3xl py-32 sm:py-16 lg:py-0">
 
-        <div className="text-left">
+        <div className="text-left lg:ml-24">
           <div className="max-w-lg">
             <h2 className="mt-8 text-2xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-4xl/tight">
               Create powerful AI agents with built-in payments, secure and private communication, and seamless access to the entire XMTP messaging ecosystem.
@@ -125,6 +134,7 @@ const Agents = () => {
 
       </div>
 
+      {/* Background decoration */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -132,15 +142,16 @@ const Agents = () => {
         <div
           style={{
             clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 17.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
           }}
           className="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
         />
       </div>
     </div>
 
+    {/* Additional sections */}
     <div className="overflow-hidden">
-      <img className="mt-32 relative -left-24 -right-24 top-0 min-w-[110%]" src="img/temp-hero.png"></img>
+      <img className="mt-32 relative -left-24 -right-24 top-0 min-w-[110%]" src="img/phoneHero.png"></img>
     </div>
 
     <div className="mx-auto max-w-xl py-32 sm:py-16 lg:py-0">
@@ -169,7 +180,7 @@ const Agents = () => {
       <div className="text-left">
         <div className="mt-4 max-w-xs">
           <p className="text-xs font-mono">
-            AI agents that can listen, respond, and transact natively in the conversation are the future of customer experience, financial coordination, and agent-to-agent collaboration.
+            Orchestrate advanced actions and coordinate between multiple human and agent parties to enhance and add magic to conversations.
           </p>
         </div>
       </div>
@@ -243,7 +254,7 @@ const Agents = () => {
               <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bankr</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Your very own crypto quant
+                Autonomous finance chat
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
@@ -257,13 +268,13 @@ const Agents = () => {
 
             <div className="flex flex-col border border-black">
               <video className="rounded-2xl" autoPlay muted playsInline loop src="img/flaunchyWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <h2 className="mt-4 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Flaunch</h2>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Flaunch</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Permissionless fundraising agent
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="flex-auto">A platform that lives in your messages to buy, sell, launch coins & earn 100% revenue</p>
                 <p className="mt-2">
                   <a href="https://x.com/flaunchgg" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
@@ -274,13 +285,13 @@ const Agents = () => {
 
             <div className="flex flex-col border border-black">
               <img className="min-w-full rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-200" src="img/brackyWeb.png"></img>
-              <h2 className="mt-4 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bracky</h2>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bracky</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Prediction markets
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="flex-auto">An AI-powered predcition market platform that becomes so much fun by messaging with friends</p>
                 <p className="mt-2">
                   <a href="https://x.com/BrackyHQ" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
@@ -291,13 +302,13 @@ const Agents = () => {
 
             <div className="flex flex-col border border-black">
               <video className="rounded-2xl" autoPlay muted playsInline loop src="img/squabbleWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <h2 className="mt-4 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Squabble</h2>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Squabble</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Games
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="flex-auto">Play a popular interlocking word game now with onchain stakes and payouts</p>
                 <p className="mt-2">
                   <a href="https://x.com/xmtp_/status/1937889105188388879" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
@@ -308,13 +319,13 @@ const Agents = () => {
 
             <div className="flex flex-col border border-black">
               <video className="rounded-2xl" autoPlay muted playsInline loop src="img/onitWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <h2 className="mt-4 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Onit</h2>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Onit</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Coordination and group tasks over XMTP
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
+                <p className="flex-auto">Deploy fully customisable prediction markets for any question, now in your chats</p>
                 <p className="mt-2">
                   <a href="https://x.com/onit_fun" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
@@ -336,11 +347,11 @@ const Agents = () => {
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
 
         <div className="mt-16">
-          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-4">🗸 No gatekeepers or app store approvals</h4>
-          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-4">🗸 No centralized servers</h4>
-          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-16">🗸 Full encryption, including metadata</h4>
+          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-4">✔️ No gatekeepers or app store approvals</h4>
+          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-4">✔️ No centralized servers</h4>
+          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-16">✔️ Full encryption, including metadata</h4>
         </div>  
-        <h2 className="text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Messages that are yours</h2>
+        <h2 className="text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Messages unleashed</h2>
         <h3 className="mt-4 font-medium leading-normal tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-4xl text-center">
           You Own the Agent,<br />XMTP Handles the Infrastructure
         </h3>
@@ -429,7 +440,7 @@ const Agents = () => {
           <div className="relative mt-16">
               <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10">
                   <div className="w-12 h-12 bg-[#FC4F37] rounded-md shadow-lg flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-white">
                       <path d="M16.881 4.345A23.112 23.112 0 0 1 8.25 6H7.5a5.25 5.25 0 0 0-.88 10.427 21.593 21.593 0 0 0 1.378 3.94c.464 1.004 1.674 1.32 2.582.796l.657-.379c.88-.508 1.165-1.593.772-2.468a17.116 17.116 0 0 1-.628-1.607c1.918.258 3.76.75 5.5 1.446A21.727 21.727 0 0 0 18 11.25c0-2.414-.393-4.735-1.119-6.905ZM18.26 3.74a23.22 23.22 0 0 1 1.24 7.51 23.22 23.22 0 0 1-1.41 7.992.75.75 0 1 0 1.409.516 24.555 24.555 0 0 0 1.415-6.43 2.992 2.992 0 0 0 .836-2.078c0-.807-.319-1.54-.836-2.078a24.65 24.65 0 0 0-1.415-6.43.75.75 0 1 0-1.409.516c.059.16.116.321.17.483Z" />
                     </svg>
                   </div>
@@ -444,7 +455,7 @@ const Agents = () => {
           <div className="relative mt-16">
               <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10">
                   <div className="w-12 h-12 bg-[#FC4F37] rounded-md shadow-lg flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-white">
                       <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
                     </svg>
                   </div>
@@ -477,7 +488,7 @@ const Agents = () => {
               </div>
             </div>
           </div>
-          <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Messages that are yours</h2>
+          <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Build the future of messaging</h2>
           <h3 className="mt-4 font-medium leading-normal tracking-normal text-pretty text-white data-dark:text-white sm:text-7xl text-center font-dotgothic">
             Ready to<br />Launch?
           </h3>
