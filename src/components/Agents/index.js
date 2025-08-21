@@ -61,7 +61,6 @@ const Agents = () => {
         />
       </div>
 
-      {/* Main content container with consistent max-width and centering */}
       <div className="mx-auto max-w-7xl">
         <div className="hidden sm:mb-6 sm:flex lg:ml-16">
           <div className="relative rounded-full px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -73,12 +72,12 @@ const Agents = () => {
           </div>
         </div>
         
-        <div className="py-32 sm:py-16 lg:py-0 lg:ml-16">
+        <div className="py-0 md:py-32 lg:py-0 lg:ml-16">
           <div className="text-left">
             <h1 className="mr-10 float-left text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
               Build A.I.<br />agents that
             </h1>
-            <h2 className="mt-0 text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
+            <h2 className="mt-0 text-[84px] md:text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
               <span className="typing-wrap">
                 <span className="typing-placeholder">Coordinate</span>
                 <span className="typing-live">
@@ -90,7 +89,6 @@ const Agents = () => {
           </div>
         </div>
 
-        {/* Video section with relative positioning within the container */}
         <div className="relative mt-8 -mx-6 lg:-mx-8">
           <div className="relative mx-auto max-w-[1680px]">
             <div className="absolute inset-0 flex items-center justify-center z-20">
@@ -107,8 +105,7 @@ const Agents = () => {
         </div>
       </div>
 
-      {/* Second section - Description */}
-      <div className="mx-auto max-w-3xl py-32 sm:py-16 lg:py-0">
+      <div className="mx-auto max-w-3xl py-0 md:py-32 lg:py-0">
 
         <div className="text-left lg:ml-24">
           <div className="max-w-lg">
@@ -134,7 +131,6 @@ const Agents = () => {
 
       </div>
 
-      {/* Background decoration */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -150,11 +146,11 @@ const Agents = () => {
     </div>
 
     {/* Additional sections */}
-    <div className="overflow-hidden">
-      <img className="mt-32 relative -left-24 -right-24 top-0 min-w-[110%]" src="img/phoneHero.png"></img>
+    <div className="overflow-hidden flex justify-center">
+      <img className="mt-24 md:mt-32 relative top-0 min-w-[250%] md:min-w-[110%] " src="img/phoneHero.png"></img>
     </div>
 
-    <div className="mx-auto max-w-xl py-32 sm:py-16 lg:py-0">
+    <div className="mx-auto max-w-xl py-16 md:py-0">
 
       <div className="text-left">
         <h2 className="mt-0 text-3xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
@@ -187,7 +183,7 @@ const Agents = () => {
 
     </div>
 
-    <div className="mt-16 mx-auto max-w-xl py-32 sm:py-16 lg:py-0">
+    <div className="mt-16 mx-auto max-w-xl py-0 md:py-8">
       <p className="text-lg font-semibold">XMTP makes this seamless:</p>
   
       <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-black">
@@ -228,7 +224,7 @@ const Agents = () => {
     <div className="overflow-hidden py-32">
       <div className="px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
-          <div className="py-4 pb-2 grid grid-cols-6 gap-4">
+          <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
           <div className="col-start-1 col-end-4">
             <div>
               <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Featured Agents</h2>
@@ -236,7 +232,7 @@ const Agents = () => {
               <p>Agents are already live across the XMTP network & on the Base App, serving users, coordinating payments, and making onchain actions conversational.</p>
             </div>
           </div>
-          <div className="col-span-2 col-end-7 text-right">
+          <div className="col-span-2 col-end-7 md:text-right">
             <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
@@ -347,12 +343,12 @@ const Agents = () => {
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
 
         <div className="mt-16">
-          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-4">✔️ No gatekeepers or app store approvals</h4>
-          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-4">✔️ No centralized servers</h4>
-          <h4 className="text-6xl font-semibold tracking-tighter text-center mb-16">✔️ Full encryption, including metadata</h4>
+          <h4 className="text-4xl md:text-6xl font-semibold tracking-tighter text-center mb-8 md:mb-4">✔️ No gatekeepers or app store approvals</h4>
+          <h4 className="text-4xl md:text-6xl font-semibold tracking-tighter text-center mb-8 md:mb-4">✔️ No centralized servers</h4>
+          <h4 className="text-4xl md:text-6xl font-semibold tracking-tighter text-center mb-16">✔️ Full encryption, including metadata</h4>
         </div>  
         <h2 className="text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Messages unleashed</h2>
-        <h3 className="mt-4 font-medium leading-normal tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-4xl text-center">
+        <h3 className="mt-4 font-semibold leading-normal tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-4xl text-center">
           You Own the Agent,<br />XMTP Handles the Infrastructure
         </h3>
         <p className="text-center">You own the logic. You own the keys. You own the experience.</p>
@@ -365,16 +361,16 @@ const Agents = () => {
       </div>
     </div>
 
-    <div className="bg-gray-50 py-24 sm:py-24 rounded-2xl mb-8">
+    <div className="bg-gray-50 pb-8 md:pb-24 py-24 rounded-2xl mb-8">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl px-6">
           <h2 className="text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Privacy is the future</h2>
-          <h3 className="mt-2 text-4xl font-medium leading-normal tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl text-center">
+          <h3 className="mt-2 text-4xl font-medium leading-none tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl text-center">
             XMTP is built for next generation messaging apps.
           </h3>
         </div>
 
-        <div className="mt-24 grid grid-cols-3 tablet:grid-cols-2 desktop:grid-cols-3 gap-6 tablet:gap-8">
+        <div className="mt-24 md:grid md:grid-cols-3 tablet:grid-cols-2 desktop:grid-cols-3 md:gap-6 tablet:gap-8">
           <div className="relative">
               <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10">
                   <div className="w-12 h-12 bg-[#FC4F37] rounded-md shadow-lg flex justify-center items-center">
@@ -384,7 +380,7 @@ const Agents = () => {
 
                   </div>
               </div>
-              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+              <div className="mb-16 md:mb-0 pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
                   <div className="flex flex-col justify-center items-center gap-2 text-center">
                       <div className="text-black text-lg font-semibold font-inter leading-7">End-to-End Encrypted</div>
                       <div className="text-gray-500 text-base font-normal font-inter leading-normal">Messages and transactions are fully encrypted — including metadata — with built-in key rotation and MLS-based security.</div>
@@ -400,7 +396,7 @@ const Agents = () => {
                     </svg>
                   </div>
               </div>
-              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+              <div className="mb-16 md:mb-0 pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
                   <div className="flex flex-col justify-center items-center gap-2 text-center">
                       <div className="text-black text-lg font-semibold font-inter leading-7">Native Money</div>
                       <div className="text-gray-500 text-base font-normal font-inter leading-normal">Send, receive, and manage digital assets - all through a secure, consent-based messaging channel. No third-part infrastructure needed.</div>
@@ -415,7 +411,7 @@ const Agents = () => {
                     </svg>
                   </div>
               </div>
-              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+              <div className="mb-16 md:mb-0 pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
                   <div className="flex flex-col justify-center items-center gap-2 text-center">
                       <div className="text-black text-lg font-semibold font-inter leading-7">Deploy in Minutes</div>
                       <div className="text-gray-500 text-base font-normal font-inter leading-normal">XMTP’s developer experience makes it easy to ship agents using frameworks like Railway, Replit, or you can bring your own stack.</div>
@@ -430,7 +426,7 @@ const Agents = () => {
                     </svg>
                   </div>
               </div>
-              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+              <div className="mb-16 md:mb-0 pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
                   <div className="flex flex-col justify-center items-center gap-2 text-center">
                       <div className="text-black text-lg font-semibold font-inter leading-7">Scales With You</div>
                       <div className="text-gray-500 text-base font-normal font-inter leading-normal">Whether it’s 10 users or 10 million, the XMTP network handles scaling automatically — no server ops required.</div>
@@ -445,7 +441,7 @@ const Agents = () => {
                     </svg>
                   </div>
               </div>
-              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+              <div className="mb-16 md:mb-0 pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
                   <div className="flex flex-col justify-center items-center gap-2 text-center">
                       <div className="text-black text-lg font-semibold font-inter leading-7">Built for Censorship Resistance</div>
                       <div className="text-gray-500 text-base font-normal font-inter leading-normal">Your agents can’t be blocked, silenced, or surveilled. XMTP nodes preserve communication and consent at the protocol level.</div>
@@ -460,7 +456,7 @@ const Agents = () => {
                     </svg>
                   </div>
               </div>
-              <div className="pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
+              <div className="mb-16 md:mb-0 pt-10 p-8 bg-[rgba(255,255,255,0.7)] bg-blur-sm rounded-3xl shadow-[inset_2px_4px_4px_0px_rgba(0,0,0,0.02)] outline outline-[1.5px] outline-offset-[-1.5px] outline-black/5 backdrop-blur-[50px] flex flex-col justify-center items-center pb-10">
                   <div className="flex flex-col justify-center items-center gap-2 text-center">
                       <div className="text-black text-lg font-semibold font-inter leading-7">Decentralized by Default</div>
                       <div className="text-gray-500 text-base font-normal font-inter leading-normal">Your messaging infrastructure doesn’t depend on one company or server. XMTP is an open protocol backed by a growing decentralized network of nodes.</div>
@@ -489,7 +485,7 @@ const Agents = () => {
             </div>
           </div>
           <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Build the future of messaging</h2>
-          <h3 className="mt-4 font-medium leading-normal tracking-normal text-pretty text-white data-dark:text-white sm:text-7xl text-center font-dotgothic">
+          <h3 className="mt-4 font-medium mleading-none d:leading-normal tracking-normal text-5xl md:text-7xl text-pretty text-white data-dark:text-white text-center font-dotgothic">
             Ready to<br />Launch?
           </h3>
           <p className="mt-8 text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the logic.</p>
