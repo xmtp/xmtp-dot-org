@@ -2,6 +2,34 @@ import React, { useEffect, useState } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl/";
 import Head from "@docusaurus/Head";
 
+// Optimized image component with lazy loading
+const OptimizedImage = ({ src, alt, className, ...props }) => (
+  <img 
+    loading="lazy" 
+    src={src} 
+    alt={alt} 
+    className={className} 
+    {...props}
+  />
+);
+
+// Optimized video component with performance attributes
+const OptimizedVideo = ({ src, className, ...props }) => (
+  <video 
+    className={className}
+    autoPlay 
+    muted 
+    playsInline 
+    loop 
+    src={src} 
+    type="video/mp4"
+    preload="metadata"
+    {...props}
+  >
+    Your browser does not support the video tag.
+  </video>
+);
+
 const Agents = () => {
   const wordsToType = ["Coordinate", "Transact", "Scale"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -145,10 +173,10 @@ const Agents = () => {
       </div>
     </div>
 
-    {/* Additional sections */}
-    <div className="overflow-hidden flex justify-center">
-      <img className="mt-24 md:mt-32 relative top-0 min-w-[250%] md:min-w-[110%] " src="img/phoneHero.png"></img>
-    </div>
+          {/* Additional sections */}
+      <div className="overflow-hidden flex justify-center">
+        <img className="mt-24 md:mt-32 relative top-0 min-w-[250%] md:min-w-[110%] " src="img/phoneHero.png" alt="Phone hero" />
+      </div>
 
     <div className="mx-auto max-w-xl py-16 md:py-0">
 
@@ -169,9 +197,9 @@ const Agents = () => {
         </div>
       </div>
 
-      <div className="overflow-hidden">
-        <img className="mt-16 relative min-w-full rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-100" src="img/commerceImage.png"></img>
-      </div>
+              <div className="overflow-hidden">
+          <img className="mt-16 relative min-w-full rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-100" src="img/commerceImage.png" alt="Commerce image" />
+        </div>
 
       <div className="text-left">
         <div className="mt-4 max-w-xs">
@@ -279,8 +307,8 @@ const Agents = () => {
               </dd>
             </div>
 
-            <div className="flex flex-col border border-black">
-              <img className="min-w-full rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-200" src="img/brackyWeb.png"></img>
+                          <div className="flex flex-col border border-black">
+                <img loading="lazy" className="min-w-full rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-200" src="img/brackyWeb.png" alt="Bracky" />
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bracky</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
