@@ -5,14 +5,14 @@ sidebar_position: 4
 
 # Decentralizing XMTP
 
-Today we're announcing a new chapter for XMTP: a decentralized messaging network powered by the [Messaging Layer Security standard](https://messaginglayersecurity.rocks/) standard - the most secure and private messaging protocol available to developers.  Our entire protocol is open source, from the [node software](https://github.com/xmtp/xmtp-node-go) to the [SDKs](https://github.com/xmtp) to the [Converse app](https://github.com/ephemerahq/converse-app).
+Today we're announcing a new chapter for XMTP: a decentralized messaging network powered by the [Messaging Layer Security standard](https://messaginglayersecurity.rocks/) - the most secure and private messaging protocol available to developers.  Our entire protocol is open source, from the [node software](https://github.com/xmtp/xmtp-node-go) to the [SDKs](https://github.com/xmtp) to the [Converse app](https://github.com/ephemerahq/converse-app).
 
 Until now, the backend of the network has been centralized. All the nodes are run by [Ephemera](https://ephemerahq.com/). It’s time to change that.
 
 ## Why decentralization matters
 
 1. Devs are tired of getting rugged by platforms who can change the rules any time it suits their business interests.
-2. Devs want to be owners of the network and share in the economic value that they are creating
+2. Devs want to be owners of the network and share in the economic value that they are creating.
 3. Devs should feel confident that the platform they are building on will not live or die with a single company.
 
 ## How does the network work?
