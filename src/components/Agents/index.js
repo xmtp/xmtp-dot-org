@@ -249,7 +249,7 @@ const Agents = () => {
 
     </div>
     
-    <div className="overflow-hidden py-32">
+    <div className="overflow-hidden pt-32 pb-16">
       <div className="px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
           <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
@@ -365,6 +365,33 @@ const Agents = () => {
       </div>
     
     </div>
+
+    <div className="bg-white pb-32">
+      <div className="mx-auto max-w-7xl">
+
+        <hr />
+
+        <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2 pt-24">
+          <div className="mx-auto w-full max-w-xl lg:mx-0">
+            <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+              Want to try the future of messaging today?
+            </h2>
+            <p className="mt-6 text-lg/8 text-gray-600">
+              The future is almost here. Experience what a messaging experience with native financial rails feels like today by joining the waitlist for the newest Coinbase Wallet app.
+            </p>
+            <a target="_blank" href="https://t.co/puSNuuycBo" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-[#0039B2] transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0052FF] hover:no-underline">
+              Join the Waitlist <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div className="mx-auto max-w-full">
+            <a href="https://x.com/baseapp/status/1922331294899245202" target="_blank">
+              <video className="rounded-2xl max-w-full" autoPlay muted playsInline loop src="img/OKI1P22FGAQ6DknB.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <div className="py-32 pt-16 rounded-2xl mb-8 relative overflow-hidden text-center">
       <div className="bg-white absolute inset-0" style={{ background: 'linear-gradient(200deg,#163869 15%,#571861 35%,#a79bb0 55%,#163869 85%)', opacity: 0.16 }}></div>
