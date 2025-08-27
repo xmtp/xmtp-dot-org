@@ -201,86 +201,19 @@ const Agents = () => {
       <img className="hidden md:block mt-24 md:mt-32 relative top-0 min-w-[110%]" src="img/phoneHero.png" alt="Phone hero" />
     </div>
 
-    <div className="mx-auto max-w-xl py-0 md:py-16 md:py-0">
-
-      <div className="text-left">
-        <h2 className="mt-0 text-3xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
-          Commerce 🤝 Messaging
-        </h2>
-        <div className="max-w-lg">
-          <p className="text-lg">
-            AI agents that can listen, respond, and transact natively in the conversation are the future of customer experience, financial coordination, and agent-to-agent collaboration.
-          </p>
-          <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-            </svg>
-            Start building <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-
-        <div className="overflow-hidden">
-          <video className="mt-16 relative max-w-full rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-100" autoPlay muted playsInline loop src="img/commerceVid.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-        </div>
-
-      <div className="text-left">
-        <div className="mt-4 max-w-xs">
-          <p className="text-xs font-mono">
-            Orchestrate advanced actions and coordinate between multiple human and agent parties to enhance and add magic to conversations.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <div className="mt-16 mx-auto max-w-xl py-0 md:py-8">
-      <p className="text-lg font-semibold">XMTP makes this seamless:</p>
-  
-      <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-black">
-        <div className="col-start-1 col-end-4">
-          <p className="font-bold text-normal/6">Payments are programmable messages.</p>
-        </div>
-        <div className="col-span-3 col-end-7">
-          <p className="text-normal/6">Send, receive, and settle assets as easily as sending a text — all within a secure chat.</p>
-        </div>
-      </div>
-      <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-gray-200">
-        <div className="col-start-1 col-end-4">
-          <p className="font-bold text-normal/6">No middlemen.</p>
-        </div>
-        <div className="col-span-3 col-end-7">
-          <p className="text-normal/6">No need to rely on third-party processors or embed external widgets. Transactions happen directly between wallets and apps.</p>
-        </div>
-      </div>
-      <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-gray-200">
-        <div className="col-start-1 col-end-4">
-          <p className="font-bold text-normal/6">One agent, every app.</p>
-        </div>
-        <div className="col-span-3 col-end-7">
-          <p className="text-normal/6">Write your agent once and deploy across all XMTP-connected apps, from wallets and web apps to bots and browser extensions.</p>
-        </div>
-      </div>
-      <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-gray-200">
-        <div className="col-start-1 col-end-4">
-          <p className="font-bold text-normal/6">Built for developer freedom.</p>
-        </div>
-        <div className="col-span-3 col-end-7">
-          <p className="text-normal/6">Integrate with any EVM chain, wallet, identity system or mini-app ecosystem.</p>
-        </div>
-      </div>
-
-    </div>
-    
-    <div className="overflow-hidden pt-32 pb-16">
+    <div className="overflow-hidden pt-0 pb-0">
       <div className="px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
           <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
           <div className="col-start-1 col-end-4">
             <div>
               <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Featured Agents</h2>
-              <h3 className="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl">See XMTP Agents in the Wild</h3>
-              <p>Agents are already live across the XMTP network & on the Base App, serving users, coordinating payments, and making onchain actions conversational.</p>
+              <h2 className="mt-0 text-3xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
+                Commerce 🤝 Messaging
+              </h2>
+              <p className="text-lg">
+                AI agents that can listen, respond, and transact natively in the conversation are the future of customer experience, financial coordination, and agent-to-agent collaboration.
+              </p>
             </div>
           </div>
           <div className="col-span-2 col-end-7 md:text-right">
@@ -388,28 +321,83 @@ const Agents = () => {
       </div>
     
     </div>
+    
+    
 
-    <div className="bg-white pb-32">
+    <div className="mt-16 md:mt-0 mx-auto max-w-7xl py-0 md:py-8">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2 pt-16">
+        <div className="mx-auto w-full max-w-xl lg:mx-0">
+          <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900">
+            Messaging that's secure, extensible, and built for every app
+          </h2>
+          <p className="mt-6 text-lg/8 text-gray-600">
+            Make payments as easy as sending a text — secure, direct, and wallet-to-wallet — with one agent that works across all apps and full flexibility for developers on any EVM chain or ecosystem.
+          </p>
+          <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+            </svg>
+            Start building <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div className="mx-auto max-w-full">
+          <p className="text-lg font-semibold">XMTP makes this seamless:</p>
+          <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-black">
+            <div className="col-start-1 col-end-4">
+              <p className="font-bold text-normal/6">Payments are programmable messages.</p>
+            </div>
+            <div className="col-span-3 col-end-7">
+              <p className="text-normal/6">Send, receive, and settle assets as easily as sending a text — all within a secure chat.</p>
+            </div>
+          </div>
+          <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-gray-200">
+            <div className="col-start-1 col-end-4">
+              <p className="font-bold text-normal/6">No middlemen.</p>
+            </div>
+            <div className="col-span-3 col-end-7">
+              <p className="text-normal/6">No need to rely on third-party processors or embed external widgets. Transactions happen directly between wallets and apps.</p>
+            </div>
+          </div>
+          <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-gray-200">
+            <div className="col-start-1 col-end-4">
+              <p className="font-bold text-normal/6">One agent, every app.</p>
+            </div>
+            <div className="col-span-3 col-end-7">
+              <p className="text-normal/6">Write your agent once and deploy across all XMTP-connected apps, from wallets and web apps to bots and browser extensions.</p>
+            </div>
+          </div>
+          <div className="py-4 pb-2 grid grid-cols-6 gap-4 border-solid border-b-0 border-t-1 border-r-0 border-l-0 border-gray-200">
+            <div className="col-start-1 col-end-4">
+              <p className="font-bold text-normal/6">Built for developer freedom.</p>
+            </div>
+            <div className="col-span-3 col-end-7">
+              <p className="text-normal/6">Integrate with any EVM chain, wallet, identity system or mini-app ecosystem.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div className="bg-white pb-0">
       <div className="mx-auto max-w-7xl">
 
         <hr />
 
-        <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2 pt-24">
+        <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2 pt-8">
           <div className="mx-auto w-full max-w-xl lg:mx-0">
             <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
               Want to try the future of messaging today?
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-              The future is almost here. Experience what a messaging experience with native financial rails feels like today by downloading Base App.
+              The future is almost here. Experience what a messaging experience with native financial rails feels like today by joining the waitlist for Base App.
             </p>
-            <a target="_blank" href="https://www.coinbase.com/wallet/downloads" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-[#0039B2] transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0052FF] hover:no-underline">
-              Download Base App <span aria-hidden="true">→</span>
+            <a target="_blank" href="https://join.base.app/" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-[#0039B2] transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0052FF] hover:no-underline">
+              Join the waitlist <span aria-hidden="true">→</span>
             </a>
           </div>
           <div className="mx-auto max-w-full">
-            <a href="https://x.com/baseapp/status/1922331294899245202" target="_blank">
-              <video className="rounded-2xl max-w-full" autoPlay muted playsInline loop src="img/OKI1P22FGAQ6DknB.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-            </a>
+            <img className="max-w-full" src="img/hand-replace.webp" alt="Phone hero" />
           </div>
         </div>
       </div>
