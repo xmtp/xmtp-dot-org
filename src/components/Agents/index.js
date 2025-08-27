@@ -105,7 +105,7 @@ const Agents = () => {
             <h1 className="mr-10 float-left text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
               Build A.I.<br />agents that
             </h1>
-            <h2 className="mt-0 text-[84px] md:text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
+            <h2 className="mt-0 text-[72px] md:text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
               <span className="typing-wrap">
                 <span className="typing-placeholder">Coordinate</span>
                 <span className="typing-live">
@@ -197,8 +197,8 @@ const Agents = () => {
         </div>
       </div>
 
-              <div className="overflow-hidden">
-          <img className="mt-16 relative min-w-full rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-100" src="img/commerceImage.png" alt="Commerce image" />
+        <div className="overflow-hidden">
+          <video className="mt-16 relative max-w-full rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-100" autoPlay muted playsInline loop src="img/commerceVid.mp4" type="video/mp4">Your browser does not support the video tag.</video>
         </div>
 
       <div className="text-left">
@@ -377,10 +377,10 @@ const Agents = () => {
               Want to try the future of messaging today?
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-              The future is almost here. Experience what a messaging experience with native financial rails feels like today by joining the waitlist for the newest Coinbase Wallet app.
+              The future is almost here. Experience what a messaging experience with native financial rails feels like today by downloading Base App.
             </p>
-            <a target="_blank" href="https://t.co/puSNuuycBo" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-[#0039B2] transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0052FF] hover:no-underline">
-              Join the Waitlist <span aria-hidden="true">→</span>
+            <a target="_blank" href="https://www.coinbase.com/wallet/downloads" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-[#0039B2] transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0052FF] hover:no-underline">
+              Download Base App <span aria-hidden="true">→</span>
             </a>
           </div>
           <div className="mx-auto max-w-full">
