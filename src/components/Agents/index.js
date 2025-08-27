@@ -67,6 +67,27 @@ const Agents = () => {
 
     return () => clearTimeout(timeoutId);
   }, [typedWord, isDeleting, currentWordIndex]);
+
+  // Center mobile image on load
+  useEffect(() => {
+    const centerMobileImage = () => {
+      const container = document.getElementById('mobile-scroll-container');
+      if (container && window.innerWidth < 768) { // Only on mobile (md breakpoint)
+        const scrollWidth = container.scrollWidth;
+        const clientWidth = container.clientWidth;
+        const scrollLeft = (scrollWidth - clientWidth) / 2;
+        container.scrollLeft = scrollLeft;
+      }
+    };
+
+    // Center on initial load
+    centerMobileImage();
+    
+    // Also center on window resize (in case of orientation change)
+    window.addEventListener('resize', centerMobileImage);
+    
+    return () => window.removeEventListener('resize', centerMobileImage);
+  }, []);
   return (
   <div>
     <Head>
@@ -102,7 +123,7 @@ const Agents = () => {
         
         <div className="py-0 md:py-32 lg:py-0 lg:ml-16">
           <div className="text-left">
-            <h1 className="mr-10 float-left text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
+            <h1 className="mr-0 md:mr-10 float-left text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
               Build A.I.<br />agents that
             </h1>
             <h2 className="mt-0 text-[72px] md:text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
@@ -173,12 +194,14 @@ const Agents = () => {
       </div>
     </div>
 
-          {/* Additional sections */}
-      <div className="overflow-hidden flex justify-center">
-        <img className="mt-24 md:mt-32 relative top-0 min-w-[250%] md:min-w-[110%] " src="img/phoneHero.png" alt="Phone hero" />
+    <div className="md:overflow-hidden md:flex md:justify-center">
+      <div className="md:hidden overflow-x-auto overflow-y-hidden" id="mobile-scroll-container">
+        <img className="mt-24 relative top-0 min-w-[250%] pl-6" src="img/phoneHero.png" alt="Phone hero" />
       </div>
+      <img className="hidden md:block mt-24 md:mt-32 relative top-0 min-w-[110%]" src="img/phoneHero.png" alt="Phone hero" />
+    </div>
 
-    <div className="mx-auto max-w-xl py-16 md:py-0">
+    <div className="mx-auto max-w-xl py-0 md:py-16 md:py-0">
 
       <div className="text-left">
         <h2 className="mt-0 text-3xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
