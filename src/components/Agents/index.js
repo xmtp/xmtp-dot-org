@@ -31,7 +31,7 @@ const OptimizedVideo = ({ src, className, ...props }) => (
 );
 
 const Agents = () => {
-  const wordsToType = ["Coordinate", "Transact", "Scale"];
+  const wordsToType = ["Coordinate", "Transact", "Launch", "Play", "Predict"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [typedWord, setTypedWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -117,7 +117,7 @@ const Agents = () => {
         <div className="hidden sm:mb-6 sm:flex lg:ml-16">
           <div className="relative rounded-full px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             XMTP is now fully quantum-resistant {' '}
-            <a href="#" className="font-semibold text-red-500">
+            <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="font-semibold text-red-500">
               <span aria-hidden="true" className="absolute inset-0" />
               Read more <span aria-hidden="true">&rarr;</span>
             </a>
@@ -143,15 +143,6 @@ const Agents = () => {
 
         <div className="relative mt-0 md:mt-8 -mx-6 lg:-mx-8">
           <div className="relative mx-auto max-w-[1680px]">
-            <div className="absolute inset-0 flex items-center justify-center z-20">
-              <a className="color text-gray-700" href="https://x.com/xmtp_/status/1950599730322702400" target="_blank">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-gray-700">
-                    <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clipRule="evenodd" />
-                  </svg>
-                </div>
-              </a>
-            </div>
             <video className="mt-8 rounded-none md:rounded-2xl relative top-0 max-w-[100%] overflow-hidden md:min-w-full md:w-full md:max-w-full" autoPlay muted playsInline loop src="img/agentsHeroVideo.mp4" type="video/mp4">Your browser does not support the video tag.</video>
           </div>
         </div>
@@ -172,7 +163,7 @@ const Agents = () => {
             <p className="mt-6">
               All powered by XMTP’s quantum-resistant, enterprise-grade, decentralized messaging protocol.
             </p>
-            <a href="https://docs.xmtp.org/" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+            <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
@@ -196,7 +187,13 @@ const Agents = () => {
         />
       </div>
     </div>
-
+    
+    <div className="mx-auto max-w-2xl px-6 mt-24 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-6">
+        <h2 className="mt-0 text-3xl text-center font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">Secure agents in your group chats that can transact</h2>
+      </div>
+    </div>
+    
     <div className="md:overflow-hidden md:flex md:justify-center bg-[#FBFBFB] relative">
       <div className="absolute top-0 inset-0 h-10 bg-gradient-to-t from-[#FBFBFB] to-white"></div>
       <div className="md:hidden overflow-x-auto overflow-y-hidden" id="mobile-scroll-container">
@@ -222,7 +219,7 @@ const Agents = () => {
             </div>
           </div>
           <div className="col-span-2 col-end-7 md:text-right">
-            <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+            <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
@@ -239,7 +236,7 @@ const Agents = () => {
               <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bankr</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Autonomous finance chat
+                Your onchain finance agent
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all in a chat</p>
@@ -256,7 +253,7 @@ const Agents = () => {
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Flaunch</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Permissionless fundraising agent
+                 Launch coins from your group chat
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">A platform that lives in your messages to buy, sell, launch coins & earn 100% revenue</p>
@@ -273,7 +270,7 @@ const Agents = () => {
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bracky</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Prediction markets
+                Your sports prediction market agent
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">An AI-powered predcition market platform that becomes so much fun by messaging with friends</p>
@@ -290,7 +287,7 @@ const Agents = () => {
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Squabble</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Games
+                Play a game for real stakes
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Play a popular interlocking word game now with onchain stakes and payouts</p>
@@ -307,13 +304,30 @@ const Agents = () => {
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Onit</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Coordination and group tasks over XMTP
+                Create any market between friends
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Deploy fully customisable prediction markets for any question, now in your chats</p>
                 <p className="mt-2">
                   <a href="https://x.com/onit_fun" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </p>
+              </dd>
+            </div>
+
+            <div className="flex flex-col">
+              <video className="rounded-2xl border-solid border-b-1 border-t-1 border-r-1 border-l-1 border-gray-200" autoPlay muted playsInline loop src="img/communityVid.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">XMTP Community</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Say "gm" to the XMTP group chat
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Join a community of 100+ builders building on XMTP and unlock the potential in your ideas</p>
+                <p className="mt-0">
+                  <a href="https://x.com/bankrbot" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Request to join the group chat <span aria-hidden="true">→</span>
                   </a>
                 </p>
               </dd>
@@ -338,7 +352,7 @@ const Agents = () => {
           <p className="mt-6 text-lg/8 text-gray-600">
             Make payments as easy as sending a text — secure, direct, and wallet-to-wallet — with one agent that works across all apps and full flexibility for developers on any EVM chain or ecosystem.
           </p>
-          <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+          <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
               <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
             </svg>
@@ -401,7 +415,7 @@ const Agents = () => {
           You Own the Agent,<br />XMTP Handles the Infrastructure
         </h3>
         <p className="text-center">You own the logic. You own the keys. You own the experience.</p>
-        <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+        <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
             <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
           </svg>
@@ -410,7 +424,7 @@ const Agents = () => {
       </div>
     </div>
 
-    <div className="bg-gray-50 pb-8 md:pb-24 py-8 md:py-24 rounded-2xl mb-8">
+    <div className="bg-gray-50 pb-8 md:pb-24 py-8 md:py-24 rounded-2xl mb-0">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl px-6">
           <h2 className="text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Privacy is the future</h2>
@@ -519,20 +533,27 @@ const Agents = () => {
     <div className="bg-white pb-0">
       <div className="mx-auto max-w-7xl">
 
-        <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2 pt-8">
+        <div className="grid grid-cols-1 items-center gap-x-24 gap-y-16 lg:grid-cols-2 pt-0">
           <div className="mx-auto w-full max-w-xl lg:mx-0">
-            <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-              Want to try the future of messaging today?
+            <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900">
+              Ready to join a community building the future of messaging?
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
               The future is almost here. Experience what a messaging experience with native financial rails feels like today by joining the waitlist for Base App.
             </p>
-            <a target="_blank" href="https://join.base.app/" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-[#0039B2] transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0052FF] hover:no-underline">
-              Join the waitlist <span aria-hidden="true">→</span>
-            </a>
+
+            <div className="mt-8 flex items-center gap-x-4">
+              <a href="https://docs.xmtp.org/agents/get-started/build-an-agenthttps://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 justify-center hover:no-underline">
+                Request to join the group chat <span aria-hidden="true">→</span>
+              </a>
+              <a href="https://docs.xmtp.org" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+                Join the Base App waitlist
+                <span className="ml-1" aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
           <div className="mx-auto max-w-full">
-            <img className="max-w-xs md:max-w-sm" src="img/basePlace.png" alt="Phone hero" />
+            <video className="mt-0 -mb-2 max-w-xs md:max-w-md rounded-none relative top-0 bottom-0 max-w-[100%] overflow-hidden" autoPlay muted playsInline loop src="img/sectionVid.mp4" type="video/mp4">Your browser does not support the video tag.</video>
           </div>
         </div>
       </div>
@@ -551,7 +572,7 @@ const Agents = () => {
               <div className="bg-gray-200 text-gray-900 px-4 py-2 pb-4 rounded-2xl rounded-bl-md max-w-sm">
               <p className="text-lg">Amazing.</p>
                 <p className="text-lg">Join thousands of developers building next-generation transactional agents with XMTP — the secure messaging layer for AI, money, and coordination.</p>
-                <a target="_blank" className="color-white underline text-lg hover:no-underline" href="https://docs.xmtp.org/">https://docs.xmtp.org</a>
+                <a target="_blank" className="color-white underline text-lg hover:no-underline" href="https://docs.xmtp.org/agents/get-started/build-an-agent">https://docs.xmtp.org</a>
               </div>
             </div>
           </div>
@@ -564,13 +585,13 @@ const Agents = () => {
           <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the experience.</p>
           
           <div className="mt-8 flex items-center justify-center gap-x-4">
-            <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+            <a href="https://docs.xmtp.org/agents/get-started/build-an-agenthttps://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
               Start building <span aria-hidden="true">→</span>
             </a>
-            <a href="#" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+            <a href="https://docs.xmtp.org" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
               Read the docs
               <span className="ml-1" aria-hidden="true">→</span>
             </a>
