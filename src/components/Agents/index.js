@@ -68,25 +68,28 @@ const Agents = () => {
     return () => clearTimeout(timeoutId);
   }, [typedWord, isDeleting, currentWordIndex]);
 
-  // Center mobile image on load
+  // Center mobile video on load
   useEffect(() => {
-    const centerMobileImage = () => {
+    const centerMobileVideo = () => {
       const container = document.getElementById('mobile-scroll-container');
       if (container && window.innerWidth < 768) { // Only on mobile (md breakpoint)
-        const scrollWidth = container.scrollWidth;
-        const clientWidth = container.clientWidth;
-        const scrollLeft = (scrollWidth - clientWidth) / 2;
-        container.scrollLeft = scrollLeft;
+        // Wait for content to be fully loaded
+        setTimeout(() => {
+          const scrollWidth = container.scrollWidth;
+          const clientWidth = container.clientWidth;
+          const scrollLeft = (scrollWidth - clientWidth) / 2;
+          container.scrollLeft = scrollLeft;
+        }, 100);
       }
     };
 
-    // Center on initial load
-    centerMobileImage();
+    // Center on initial load with delay
+    setTimeout(centerMobileVideo, 200);
     
     // Also center on window resize (in case of orientation change)
-    window.addEventListener('resize', centerMobileImage);
+    window.addEventListener('resize', centerMobileVideo);
     
-    return () => window.removeEventListener('resize', centerMobileImage);
+    return () => window.removeEventListener('resize', centerMobileVideo);
   }, []);
   return (
   <div>
@@ -96,7 +99,7 @@ const Agents = () => {
       <meta property="og:description" content="Notifi's integration with XMTP enables DeFi projects like GMX to deliver real-time notifications and critical alerts for traders directly in Coinbase Wallet." />
     </Head>
     
-    <div className="relative isolate px-6 pt-4 lg:px-8">
+    <div className="relative isolate px-0 md:px-6 pt-4 pb-8 lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -138,7 +141,7 @@ const Agents = () => {
           </div>
         </div>
 
-        <div className="relative mt-8 -mx-6 lg:-mx-8">
+        <div className="relative mt-0 md:mt-8 -mx-6 lg:-mx-8">
           <div className="relative mx-auto max-w-[1680px]">
             <div className="absolute inset-0 flex items-center justify-center z-20">
               <a className="color text-gray-700" href="https://x.com/xmtp_/status/1950599730322702400" target="_blank">
@@ -149,7 +152,7 @@ const Agents = () => {
                 </div>
               </a>
             </div>
-            <video className="mt-8 rounded-2xl w-full" autoPlay muted playsInline loop src="img/agentsHeroVideo.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+            <video className="mt-8 rounded-none md:rounded-2xl relative top-0 max-w-[100%] overflow-hidden md:min-w-full md:w-full md:max-w-full" autoPlay muted playsInline loop src="img/agentsHeroVideo.mp4" type="video/mp4">Your browser does not support the video tag.</video>
           </div>
         </div>
       </div>
@@ -158,7 +161,7 @@ const Agents = () => {
 
         <div className="text-left lg:ml-24">
           <div className="max-w-lg">
-            <h2 className="mt-8 text-2xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-4xl/tight">
+            <h2 className="mt-4 md:mt-8 text-2xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-4xl/tight">
               Create powerful AI agents with built-in payments, secure and private communication, and seamless access to the entire XMTP messaging ecosystem.
             </h2>
           </div>
@@ -194,15 +197,17 @@ const Agents = () => {
       </div>
     </div>
 
-    <div className="md:overflow-hidden md:flex md:justify-center">
+    <div className="md:overflow-hidden md:flex md:justify-center bg-[#FBFBFB] relative">
+      <div className="absolute top-0 inset-0 h-10 bg-gradient-to-t from-[#FBFBFB] to-white"></div>
       <div className="md:hidden overflow-x-auto overflow-y-hidden" id="mobile-scroll-container">
-        <img className="mt-24 relative top-0 min-w-[250%] pl-6" src="img/phoneHero.png" alt="Phone hero" />
+        <video className="mt-24 relative top-0 max-w-[200%]" autoPlay muted playsInline loop src="img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
       </div>
-      <img className="hidden md:block mt-24 md:mt-32 relative top-0 min-w-[110%]" src="img/phoneHero.png" alt="Phone hero" />
+        <video className="hidden md:block mt-24 md:mt-16 relative top-0 max-w-full" autoPlay muted playsInline loop src="img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+       <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-[#FBFBFB]"></div>
     </div>
 
     <div className="overflow-hidden pt-0 pb-0">
-      <div className="px-6 lg:px-8">
+      <div className="px-0 md:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
           <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
           <div className="col-start-1 col-end-4">
@@ -324,8 +329,8 @@ const Agents = () => {
     
     
 
-    <div className="mt-16 md:mt-0 mx-auto max-w-7xl py-0 md:py-8">
-      <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2 pt-16">
+    <div className="mt-16 mb-16 md:mt-0 mx-auto max-w-7xl py-0 md:py-8">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2 pt-0 md:pt-16">
         <div className="mx-auto w-full max-w-xl lg:mx-0">
           <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900">
             Messaging that's secure, extensible, and built for every app
@@ -379,32 +384,10 @@ const Agents = () => {
       
     </div>
     
-    <div className="bg-white pb-0">
-      <div className="mx-auto max-w-7xl">
-
-        <hr />
-
-        <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2 pt-8">
-          <div className="mx-auto w-full max-w-xl lg:mx-0">
-            <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-              Want to try the future of messaging today?
-            </h2>
-            <p className="mt-6 text-lg/8 text-gray-600">
-              The future is almost here. Experience what a messaging experience with native financial rails feels like today by joining the waitlist for Base App.
-            </p>
-            <a target="_blank" href="https://join.base.app/" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-[#0039B2] transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0052FF] hover:no-underline">
-              Join the waitlist <span aria-hidden="true">→</span>
-            </a>
-          </div>
-          <div className="mx-auto max-w-full">
-            <img className="max-w-full" src="img/hand-replace.webp" alt="Phone hero" />
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
 
-    <div className="py-32 pt-16 rounded-2xl mb-8 relative overflow-hidden text-center">
+    <div className="py-16 md:py-32 pt-4 md:pt-16 rounded-2xl mb-8 relative overflow-hidden text-center">
       <div className="bg-white absolute inset-0" style={{ background: 'linear-gradient(200deg,#163869 15%,#571861 35%,#a79bb0 55%,#163869 85%)', opacity: 0.16 }}></div>
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
 
@@ -427,7 +410,7 @@ const Agents = () => {
       </div>
     </div>
 
-    <div className="bg-gray-50 pb-8 md:pb-24 py-24 rounded-2xl mb-8">
+    <div className="bg-gray-50 pb-8 md:pb-24 py-8 md:py-24 rounded-2xl mb-8">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl px-6">
           <h2 className="text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Privacy is the future</h2>
@@ -530,6 +513,28 @@ const Agents = () => {
               </div>
           </div>
         </div>  
+      </div>
+    </div>
+
+    <div className="bg-white pb-0">
+      <div className="mx-auto max-w-7xl">
+
+        <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2 pt-8">
+          <div className="mx-auto w-full max-w-xl lg:mx-0">
+            <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+              Want to try the future of messaging today?
+            </h2>
+            <p className="mt-6 text-lg/8 text-gray-600">
+              The future is almost here. Experience what a messaging experience with native financial rails feels like today by joining the waitlist for Base App.
+            </p>
+            <a target="_blank" href="https://join.base.app/" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-[#0039B2] transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0052FF] hover:no-underline">
+              Join the waitlist <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div className="mx-auto max-w-full">
+            <img className="max-w-xs md:max-w-sm" src="img/basePlace.png" alt="Phone hero" />
+          </div>
+        </div>
       </div>
     </div>
 
