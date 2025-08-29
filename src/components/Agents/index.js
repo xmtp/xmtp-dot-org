@@ -31,7 +31,7 @@ const OptimizedVideo = ({ src, className, ...props }) => (
 );
 
 const Agents = () => {
-  const wordsToType = ["Coordinate", "Transact", "Launch", "Play", "Predict"];
+  const wordsToType = ["Transact", "Coordinate", "Launch", "Play", "Predict"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [typedWord, setTypedWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -41,10 +41,10 @@ const Agents = () => {
     const isWordFullyTyped = typedWord === fullWord;
     const isWordFullyDeleted = typedWord.length === 0;
 
-    let delayMs = isDeleting ? 45 : 90;
+    let delayMs = isDeleting ? 50 : 90;
 
     if (!isDeleting && isWordFullyTyped) {
-      delayMs = 1100; // pause at full word
+      delayMs = 1200; // pause at full word
       const timeoutId = setTimeout(() => {
         setIsDeleting(true);
       }, delayMs);
@@ -326,7 +326,7 @@ const Agents = () => {
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Join a community of 100+ builders building on XMTP and unlock the potential in your ideas</p>
                 <p className="mt-0">
-                  <a href="https://x.com/bankrbot" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                  <a href="mailto:eric@ephemerahq.com" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Request to join the group chat <span aria-hidden="true">→</span>
                   </a>
                 </p>
@@ -543,10 +543,10 @@ const Agents = () => {
             </p>
 
             <div className="mt-8 flex items-center gap-x-4">
-              <a href="https://docs.xmtp.org/agents/get-started/build-an-agenthttps://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 justify-center hover:no-underline">
+              <a href="mailto:eric@ephemerahq.com" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 justify-center hover:no-underline">
                 Request to join the group chat <span aria-hidden="true">→</span>
               </a>
-              <a href="https://docs.xmtp.org" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+              <a href="https://join.base.app" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
                 Join the Base App waitlist
                 <span className="ml-1" aria-hidden="true">→</span>
               </a>
