@@ -117,7 +117,7 @@ const Agents = () => {
         <div className="hidden sm:mb-6 sm:flex lg:ml-16">
           <div className="relative rounded-full px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             XMTP is now fully quantum-resistant {' '}
-            <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="font-semibold text-red-500">
+            <a href="https://github.com/xmtp/libxmtp/blob/main/xmtp_mls/hndl_security.md" className="font-semibold text-red-500">
               <span aria-hidden="true" className="absolute inset-0" />
               Read more <span aria-hidden="true">&rarr;</span>
             </a>
@@ -196,10 +196,12 @@ const Agents = () => {
     
     <div className="md:overflow-hidden md:flex md:justify-center bg-[#FBFBFB] relative">
       <div className="absolute top-0 inset-0 h-10 bg-gradient-to-t from-[#FBFBFB] to-white"></div>
-      <div className="md:hidden overflow-x-auto overflow-y-hidden" id="mobile-scroll-container">
-        <video className="mt-24 relative top-0 max-w-[200%]" autoPlay muted playsInline loop src="img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-      </div>
-        <video className="hidden md:block mt-24 md:mt-16 relative top-0 max-w-full" autoPlay muted playsInline loop src="img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+        <div className="md:hidden overflow-x-auto overflow-y-hidden" id="mobile-scroll-container">
+          <video className="mt-24 relative top-0 max-w-[200%]" autoPlay muted playsInline loop src="img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+        </div>
+        <div className="mx-auto max-w-2xl lg:max-w-7xl">
+          <video className="hidden md:block mt-24 md:mt-16 relative top-0 max-w-full" autoPlay muted playsInline loop src="img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+        </div>
        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-[#FBFBFB]"></div>
     </div>
 
@@ -590,10 +592,6 @@ const Agents = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
               Start building <span aria-hidden="true">→</span>
-            </a>
-            <a href="https://docs.xmtp.org" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
-              Read the docs
-              <span className="ml-1" aria-hidden="true">→</span>
             </a>
           </div>
         </div>
