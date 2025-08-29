@@ -456,8 +456,10 @@ const BuiltWithXmtp = () => {
             <div class="lg:ml-auto lg:pl-4 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base/7 font-semibold text-red-500">Identity</h2>
-                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Flexible identity foundation</p>
-                <p class="mt-6 text-md/8 md:text-lg/8">Turn any collection of wallet addresses into a unified messaging identity. Support the full spectrum of web3 identities — from naming systems (ENS, Base, Lens) to social platforms (Farcaster, Lens) to smart accounts (Safe, ERC-4337 wallets) — through simple wallet signatures.</p>
+                <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight">Built for digital identities</p>
+                <p class="mt-6 text-md/8 md:text-lg/8">XMTP makes any digital identity your passport to secure, censorship-resistant messaging.
+                </p>
+                <ul class="text-md/8 md:text-lg/8"><li>Works with wallets, passkeys, World ID, and social IDs like Base, Farcaster, ENS.</li><li>Built to support new networks like Bluesky, Nostr, or any other identity you own.</li><li>Delivers end-to-end encrypted, quantum-safe messaging on open cryptographic rails.</li></ul>
                 <p class="mt-12">
 
                 <a href="/docs/concepts/identity" class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal hover:no-underline">
