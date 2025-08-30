@@ -532,10 +532,10 @@ const Agents = () => {
       </div>
     </div>
 
-    <div className="bg-white pb-0">
+    <div className="bg-white pb-0 pt-16 md:pt-0">
       <div className="mx-auto max-w-7xl">
 
-        <div className="grid grid-cols-1 items-center gap-x-24 gap-y-16 lg:grid-cols-2 pt-0">
+        <div className="grid grid-cols-1 items-center gap-x-24 gap-y-8 md:gap-y-16 lg:grid-cols-2 pt-0">
           <div className="mx-auto w-full max-w-xl lg:mx-0">
             <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900">
               Ready to join a community building the future of messaging?
@@ -544,18 +544,18 @@ const Agents = () => {
               The future is almost here. Experience what a messaging experience with native financial rails feels like today by joining the waitlist for Base App.
             </p>
 
-            <div className="mt-8 flex items-center gap-x-4">
-              <a href="mailto:eric@ephemerahq.com" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 justify-center hover:no-underline">
-                Request to join the group chat <span aria-hidden="true">→</span>
-              </a>
-              <a href="https://join.base.app" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
-                Join the Base App waitlist
-                <span className="ml-1" aria-hidden="true">→</span>
-              </a>
-            </div>
+            <div className="mt-8 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">
+               <a href="mailto:eric@ephemerahq.com" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
+                 Request to join the group chat <span aria-hidden="true">→</span>
+               </a>
+               <a href="https://join.base.app" className="w-full md:w-auto my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+                 Join the Base App waitlist
+                 <span className="ml-1" aria-hidden="true">→</span>
+               </a>
+             </div>
           </div>
           <div className="mx-auto max-w-full">
-            <video className="mt-0 -mb-2 max-w-xs md:max-w-md rounded-none relative top-0 bottom-0 max-w-[100%] overflow-hidden" autoPlay muted playsInline loop src="img/sectionVid.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+            <video className="mt-0 -mb-2 max-w-xs h-80 md:h-auto md:max-w-md rounded-none relative top-0 bottom-0 max-w-[100%] overflow-hidden" autoPlay muted playsInline loop src="img/sectionVid.mp4" type="video/mp4">Your browser does not support the video tag.</video>
           </div>
         </div>
       </div>
@@ -587,7 +587,7 @@ const Agents = () => {
           <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the experience.</p>
           
           <div className="mt-8 flex items-center justify-center gap-x-4">
-            <a href="https://docs.xmtp.org/agents/get-started/build-an-agenthttps://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+            <a href="https://docs.xmtp.org/" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
