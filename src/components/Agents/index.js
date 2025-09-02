@@ -255,7 +255,7 @@ const Agents = () => {
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Flaunch</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                 Launch coins from your group chat
+                Launch coins from your group chat
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">A platform that lives in your messages to buy, sell, launch coins & earn 100% revenue</p>
