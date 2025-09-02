@@ -532,7 +532,7 @@ const Agents = () => {
       </div>
     </div>
 
-    <div className="bg-white pb-0 pt-16 md:pt-0">
+    <div className="bg-white pb-0 pt-16 md:pt-16">
       <div className="mx-auto max-w-7xl">
 
         <div className="grid grid-cols-1 items-center gap-x-24 gap-y-8 md:gap-y-16 lg:grid-cols-2 pt-0">
@@ -548,14 +548,14 @@ const Agents = () => {
                <a href="mailto:eric@ephemerahq.com" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
                  Request to join the group chat <span aria-hidden="true">→</span>
                </a>
-               <a href="https://join.base.app" className="w-full md:w-auto my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+               <a href="https://join.base.app" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
                  Join the Base App waitlist
                  <span className="ml-1" aria-hidden="true">→</span>
                </a>
              </div>
           </div>
           <div className="mx-auto max-w-full">
-            <video className="mt-0 -mb-2 max-w-xs h-80 md:h-auto md:max-w-md rounded-none relative top-0 bottom-0 max-w-[100%] overflow-hidden" autoPlay muted playsInline loop src="img/sectionVid.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+            <img className="max-w-xs md:max-w-sm" src="img/basePlace.png" alt="Phone hero" />
           </div>
         </div>
       </div>
