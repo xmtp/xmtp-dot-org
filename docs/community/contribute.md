@@ -1,60 +1,93 @@
----
-sidebar_label: Contribute
-sidebar_position: 1
----
-
 # Contribute to the XMTP community
 
-There are many ways to participate in the XMTP community, whether you are building with XMTP, working on improving the protocol, or simply interested in learning more about XMTP.
+Whether you code, design, write, test, educate, or just want to learn—there’s a place for you in the XMTP community.
 
-## XMTP grants
+## 🚀 Ways you can contribute
 
-:::caution Info
+- 🧑‍💻 Build apps or contribute to protocol code
+- ✍️ Help write documentation, guides, or tutorials
+- 🐛 Report bugs and request features
+- 📣 Share XMTP with your network
+- 💡 Propose improvements to the protocol
+- 🤝 Explore a partnership with Ephemera
 
-XMTP is not accepting applications for grants at this time. Make sure to [follow XMTP on X (Twitter)](https://x.com/xmtp_) for updates on when grants will reopen.
+---
 
-:::
+## 🗞️ Follow the XMTP conversation
 
-## Partnerships with Ephemera
+Stay in the loop on what’s happening in the XMTP ecosystem:
 
-Maximize your app's reach with guidance and assistance from the Partnerships team at Ephemera. Ephemera’s mission is to promote and support the development and global adoption of XMTP. [Get in touch](https://forms.gle/UMCFjB8ukiMxBxnK6)
+- On Farcaster: [Follow @XMTP](https://farcaster.xyz/xmtp)
+- On 𝕏: [Follow @XMTP\_](https://x.com/xmtp_)
+- On YouTube: [Subscribe to @hi_xmtp](https://www.youtube.com/@hi_xmtp)
+- On Paragraph: [Subscribe to @xmtp_community](https://paragraph.com/@xmtp_community)
 
-## Discourse
+---
 
-Have a question? Want to discuss an idea or protocol improvement? Start or join a discussion in the XMTP Community Forums.
+## 💬 Join the community forum
 
-[Join the discussion](https://community.xmtp.org/)
+Got an idea? A question? Curious about how XMTP works?
 
-## 𝕏
+[Join the XMTP Community Forum](https://community.xmtp.org/) to discuss with developers, researchers, enthusiasts, and more.
 
-Keep up with the latest news and insights from XMTP.
+All types of contributions are welcome—whether you’re exploring messaging standards or just getting started in web3.
 
-[Follow @XMTP\_](https://x.com/xmtp_)
+---
 
-## Open source projects
+## 🧑‍💻 Contribute to open source projects
 
-XMTP welcomes contributions to any of the public repos in the [XMTP](https://github.com/xmtp) and [Ephemera](https://github.com/xmtp-labs) GitHub orgs.
+You can contribute to any public repo in the [XMTP GitHub org](https://github.com/xmtp) or [EphemeraHQ GitHub org](https://github.com/ephemeraHQ).
 
-### 🐞 Bugs
+- **🐛 Report bugs**: Create an issue with detailed steps in the relevant repo. Please check first to avoid duplicates.
 
-Report a bug by creating an issue in the [related XMTP GitHub repo](https://github.com/xmtp/). Please confirm that there isn't an existing open issue about the bug and include detailed steps to reproduce the bug.
+- **🌟 Request features**: Create an issue describing your use case and how the feature could help. The more detail, the better!
 
-### ✨ Feature requests
+- **📦 Submit pull requests**:  
+  Thinking about opening a PR? Start with a feature request or post in the [Community Forum](https://community.xmtp.org/) to get feedback first.
 
-Request features by creating an issue in the [related XMTP GitHub repo](https://github.com/xmtp/). Please confirm there isn't an existing open issue requesting the feature. Let us know which use cases the feature can unlock so that we can investigate and prioritize.
+  If your PR makes major protocol changes, it should first be written up as an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) (XIP).
 
-### 🔀 Pull requests
+  If your PR is merged, you're eligible for an [XMTP contributor POAP](https://www.gitpoap.io/s/xmtp)!
 
-We encourage pull requests (PRs) from the community, but we suggest that you start with a feature request or a post to the [XMTP Community Forums](https://community.xmtp.org/) just to do a temperature check. For example, if the PR involves a major change to the XMTP protocol, it must be fleshed out as an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-0-purpose-process.md) before work begins.
+---
 
-If your PR to a repo in the [XMTP](https://github.com/xmtp) or [Ephemera](https://github.com/xmtp-labs) GitHub org is meerged you're eligible to claim this [XMTP contributor POAP](https://www.gitpoap.io/gp/1042).
+## 📜 XMTP Improvement Proposals (XIPs)
 
-## XMTP Improvement Proposals
+XIPs are formal proposals to improve XMTP. They help evolve the protocol in the open with input from the community.
 
-XMTP Improvement Proposals (XIPs) propose and document updates to XMTP, which may become standards for XMTP clients and applications to adopt.
+Is there something your app needs that XMTP doesn’t yet support? Propose a change by creating an XIP.
 
-Is there something your app needs that the protocol doesn’t currently support? Consider creating an [XMTP Improvement Proposal](https://github.com/xmtp/XIPs/blob/ae6fc638332f57f918d82a096f69b1e79df0bd0a/XIPs/xip-0-purpose-process.md) (XIP).
+- Use the [XIP template](https://github.com/xmtp/XIPs/blob/main/xip-template.md) to get started.
+- Review [existing XIPs](https://github.com/xmtp/XIPs/tree/main/XIPs) for ideas and prior proposals.
 
-Here’s a [template](https://github.com/xmtp/XIPs/blob/main/xip-template.md) you can use to create one.
+You don’t need to be a protocol engineer to contribute to XIPs. If you have insight into what should change or how something can be improved, we want your voice in the process.
 
-Take a look at [existing XIPs](https://github.com/xmtp/XIPs/tree/main/XIPs). XIPs are meant to reflect the needs of the XMTP developer community and benefit from your input and expertise.
+---
+
+## 🤝 Explore a partnership with Ephemera
+
+Are you building an app, wallet, agent, or protocol that uses XMTP? Ephemera is here to help.
+
+As the steward of the XMTP protocol, Ephemera’s mission is to support adoption, experimentation, and best practices across the ecosystem.
+
+[Reach out to the Partnerships team](https://forms.gle/UMCFjB8ukiMxBxnK6) to explore how we can collaborate.
+
+---
+
+## 🎓 XMTP grants
+
+XMTP is not accepting applications for grants at this time. [Follow XMTP](#️-follow-the-xmtp-conversation) for updates on future grant opportunities.
+
+In the meantime, you can still share your project ideas on the [Community Forum](https://community.xmtp.org/) or reach out via [Ephemera’s partnership form](https://forms.gle/UMCFjB8ukiMxBxnK6).
+
+---
+
+## 📝 A note on tokens and airdrops
+
+There is no token or planned airdrop at this time. Participating in the community or contributing does not guarantee future rewards.
+
+If and when an official token is introduced, announcements will be made exclusively through XMTP’s official channels.
+
+---
+
+Thank you for being part of the XMTP community 💌
