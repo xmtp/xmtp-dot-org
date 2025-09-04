@@ -127,7 +127,7 @@ const Agents = () => {
         <div className="py-0 md:py-32 lg:py-0 lg:ml-16">
           <div className="text-left">
             <h1 className="mr-0 md:mr-10 float-left text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
-              Build A.I.<br />agents that
+              Build A.I.<br />agents and Mini Apps that
             </h1>
             <h2 className="mt-0 text-[72px] md:text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
               <span className="typing-wrap">
