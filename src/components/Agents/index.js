@@ -97,6 +97,7 @@ const Agents = () => {
       <title>Give your agents a voice by building on XMTP</title>
       <meta property="og:title" content="Notifi uses XMTP to deliver real-time alerts on Coinbase Wallet" />
       <meta property="og:description" content="Notifi's integration with XMTP enables DeFi projects like GMX to deliver real-time notifications and critical alerts for traders directly in Coinbase Wallet." />
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </Head>
     
     <div className="relative isolate px-0 md:px-6 pt-4 pb-8 lg:px-8">
@@ -290,10 +291,10 @@ const Agents = () => {
         <div className="mx-auto mt-8 max-w-2xl sm:mt-12 lg:mt-16 lg:max-w-none">
           
           <div className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">🤖 Trading & Finance Agents</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">💰 Trading & Finance</h3>
           </div>
           
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-2 mb-16">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-4 mb-16">
             
             <div className="flex flex-col relative">
               <div className="absolute top-2 left-2 z-10">
@@ -326,7 +327,7 @@ const Agents = () => {
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Flaunch</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Launch coins from your group chat
+                Earn from launches
               </dt>
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">A complete token launch platform that lives in your messages - buy, sell, launch coins & earn 100% revenue.</p>
@@ -338,10 +339,54 @@ const Agents = () => {
               </dd>
             </div>
 
+            <div className="flex flex-col relative">
+              <div className="absolute top-2 left-2 z-10">
+                <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT</span>
+              </div>
+              <div className="rounded-2xl border-solid border-2 border-gray-200 bg-gray-100 flex items-center justify-center h-48">
+                <img loading="lazy" className="max-w-32 max-h-32" src="https://heyelsa.ai/assets/img/logo.svg" alt="Elsa logo" />
+              </div>
+              <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Elsa</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Turn words into onchain actions
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Trade smarter, and maximize returns, all with unparalleled ease and safety.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
+            <div className="flex flex-col relative">
+              <div className="absolute top-2 left-2 z-10">
+                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
+              </div>
+              <div className="rounded-2xl border-solid border-2 border-gray-200 bg-gray-100 flex items-center justify-center h-48">
+                <img loading="lazy" className="max-w-32 max-h-32" src="https://pbs.twimg.com/profile_images/1922015106508193793/EC-4X-lf_400x400.png" alt="Mamo logo" />
+              </div>
+              <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Mamo</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Personal finance companion
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Mamo helps you track, grow, and understand your money – step by step, without the stress.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
           </dl>
           
           <div className="mb-8 mt-16">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">🎮 Gaming & Social</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">🔮 Prediction Markets</h3>
           </div>
           
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-3 mb-16">
@@ -370,26 +415,6 @@ const Agents = () => {
               <div className="absolute top-2 left-2 z-10">
                 <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
               </div>
-              <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/squabbleWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Squabble</h2>
-              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
-                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
-                Play a word game for real stakes
-              </dt>
-              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-                <p className="flex-auto">Play a popular interlocking word game with real onchain stakes and instant payouts, all within your chat.</p>
-                <div className="mt-2 flex gap-2">
-                  <a href="https://x.com/xmtp_/status/1937889105188388879" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
-                    Learn more <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </dd>
-            </div>
-
-            <div className="flex flex-col relative">
-              <div className="absolute top-2 left-2 z-10">
-                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
-              </div>
               <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/onitWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Onit</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
@@ -406,7 +431,87 @@ const Agents = () => {
               </dd>
             </div>
 
+            <div className="flex flex-col relative">
+              <div className="absolute top-2 left-2 z-10">
+                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
+              </div>
+              <div className="rounded-2xl border-solid border-2 border-gray-200 bg-gray-100 flex items-center justify-center h-48">
+                <img loading="lazy" className="max-w-32 max-h-32" src="https://pbs.twimg.com/profile_images/1965768681847222272/Gx1IMqFf_400x400.jpg" alt="Ponder logo" />
+              </div>
+              <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Ponder</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Predict what the crowd thinks
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Ponder lets you make money by answering simple daily polls on group opinions.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
           </dl>
+          
+          <div className="mb-8 mt-16">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">🎮 Gaming & Social</h3>
+          </div>
+          
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-1 mb-16">
+
+            <div className="flex flex-col relative max-w-md">
+              <div className="absolute top-2 left-2 z-10">
+                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
+              </div>
+              <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/squabbleWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Squabble</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Play a word game for real stakes
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Play a popular interlocking word game with real onchain stakes and instant payouts, all within your chat.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="https://x.com/xmtp_/status/1937889105188388879" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
+          </dl>
+          
+          <div className="mx-auto max-w-7xl py-16 md:py-24 lg:py-16">
+            <div className="text-right lg:mr-24">
+              <div className="max-w-lg ml-auto">
+                <h2 className="text-2xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-4xl/tight">
+                  Go viral with your agents and mini apps
+                </h2>
+                <p className="mt-6 text-lg font-normal text-pretty text-gray-500 sm:text-xl/7">
+                  Join thousands of conversations happening right now across the XMTP network.
+                </p>
+                <div className="mt-8">
+                  <div className="bg-gray-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <img loading="lazy" className="h-8 w-8 rounded-full" src="img/bankr-logo.jpg" alt="Bankr logo" />
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-lg font-medium text-gray-900">
+                          "Bankr is part of <span className="font-bold text-red-600">20,000+ DMs and Group chats</span> in the Base App and it's not even out of beta yet"
+                        </p>
+                        <p className="mt-2 text-sm text-gray-600">
+                          — <a href="https://x.com/bankrbot/status/1957564153780228405" target="_blank" className="text-red-500 hover:text-red-600">@bankrbot on X</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           
         </div>
 
@@ -468,32 +573,32 @@ const Agents = () => {
           <p className="text-2xl font-bold mb-8">Here's why devs love building with us:</p>
           
           <div className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <div className="text-3xl">💸</div>
+            <div className="flex space-x-4">
+              <div className="text-xl flex items-center h-6">💸</div>
               <div>
                 <h3 className="font-bold text-xl text-gray-900">Money = Messages</h3>
                 <p className="text-gray-600">Send money like sending a DM. No APIs to wrestle with.</p>
               </div>
             </div>
             
-            <div className="flex items-center space-x-4">
-              <div className="text-3xl">🚫</div>
+            <div className="flex space-x-4">
+              <div className="text-xl flex items-center h-6">🚫</div>
               <div>
                 <h3 className="font-bold text-xl text-gray-900">Zero Gatekeepers</h3>
                 <p className="text-gray-600">No app store approvals. No middlemen taking cuts.</p>
               </div>
             </div>
             
-            <div className="flex items-center space-x-4">
-              <div className="text-3xl">🔥</div>
+            <div className="flex space-x-4">
+              <div className="text-xl flex items-center h-6">🔥</div>
               <div>
                 <h3 className="font-bold text-xl text-gray-900">Write Once, Run Everywhere</h3>
                 <p className="text-gray-600">Your code works in every app that supports XMTP.</p>
               </div>
             </div>
             
-            <div className="flex items-center space-x-4">
-              <div className="text-3xl">🛠️</div>
+            <div className="flex space-x-4">
+              <div className="text-xl flex items-center h-6">🛠️</div>
               <div>
                 <h3 className="font-bold text-xl text-gray-900">Actually Decentralized</h3>
                 <p className="text-gray-600">No single point of failure. No rug pulls.</p>
