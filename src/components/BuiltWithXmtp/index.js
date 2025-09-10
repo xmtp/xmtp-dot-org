@@ -423,7 +423,7 @@ const BuiltWithXmtp = () => {
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold text-red-500">Security</h2>
-                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Enterprise-grade encryption</p>
+                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Next-gen security protocols</p>
                 <p class="mt-6 text-md/8 md:text-lg/8">Built on the IETF-standard <a href="https://messaginglayersecurity.rocks/" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a> protocol – the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's <a href="https://www.nccgroup.com/us/research-blog/public-report-xmtp-mls-implementation-review/" target="_blank" class="text-red-500 font-medium">fully audited</a> implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
                 <p class="mt-12">
 
@@ -433,7 +433,7 @@ const BuiltWithXmtp = () => {
                       <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
                     </svg>
 
-                    Encryption in XMTP <span class="ml-2" aria-hidden="true">→</span>
+                    Security in XMTP <span class="ml-2" aria-hidden="true">→</span>
                   </a>
 
                 </p>
