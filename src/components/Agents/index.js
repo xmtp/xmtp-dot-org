@@ -624,7 +624,7 @@ await agent.start();`}
     
     </div>
 
-    <div className="py-12 md:py-16 pt-8 rounded-2xl mt-0 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 mt-16 mb-0 bg-cover bg-no-repeat bg-center bg-[#fcfcfc]" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
+    <div className="py-12 md:py-16 pt-8 md:pt-6 rounded-2xl mt-0 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 mt-16 mb-0 bg-cover bg-no-repeat bg-center bg-[#fcfcfc]" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
         
           <div className="mt-8 flex justify-center">
