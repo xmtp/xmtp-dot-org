@@ -207,10 +207,10 @@ const Agents = () => {
     <div className="md:overflow-hidden md:flex md:justify-center bg-[#FBFBFB] relative">
       <div className="absolute top-0 inset-0 h-10 bg-gradient-to-t from-[#FBFBFB] to-white"></div>
         <div className="md:hidden overflow-x-auto overflow-y-hidden" id="mobile-scroll-container">
-          <video className="mt-24 relative top-0 max-w-[200%]" autoPlay muted playsInline loop src="img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+          <video className="mt-24 relative top-0 max-w-[200%]" autoPlay muted playsInline loop src="/img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
         </div>
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
-          <video className="hidden md:block mt-24 md:mt-16 relative top-0 max-w-full" autoPlay muted playsInline loop src="img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+          <video className="hidden md:block mt-24 md:mt-16 relative top-0 max-w-full" autoPlay muted playsInline loop src="/img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
         </div>
        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-[#FBFBFB]"></div>
     </div>
@@ -406,7 +406,7 @@ await agent.start();`}
             <div>
               <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Featured Agents and Mini Apps</h2>
               <h2 className="mt-0 text-3xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
-                Agents 💬 Mini Apps
+                Agents  🤝  Mini Apps
               </h2>
               <p className="text-lg max-w-4xl">
                 AI agents and mini apps that can listen, respond, and transact natively in conversations are transforming customer experience, financial coordination, and real-time collaboration across apps.
@@ -423,16 +423,21 @@ await agent.start();`}
           
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-4 mb-16">
             
-            <div className="flex flex-col relative">
-              <div className="absolute top-2 left-2 z-10">
-                <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT</span>
-              </div>
-              <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/featuredBNKR.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <div className="flex flex-col relative">
+                <div className="absolute top-2 left-2 z-10">
+                  <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-blue-50 px-2 py-1 font-mono text-xs font-semibold tracking-widest text-blue-700 inset-ring inset-ring-blue-700/10">
+                    Agent
+                  </span>
+                </div>
+                <video className="mb-2 rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/featuredBNKR.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              
               <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bankr</h2>
+              
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Your onchain finance agent
               </dt>
+              
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all through natural conversation in any chat.</p>
                 <div className="mt-2 flex gap-6">
@@ -448,7 +453,9 @@ await agent.start();`}
 
             <div className="flex flex-col relative">
               <div className="absolute top-2 left-2 z-10">
-                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold tracking-widest text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
               </div>
               <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/flaunchyWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Flaunch</h2>
@@ -468,12 +475,12 @@ await agent.start();`}
 
             <div className="flex flex-col relative">
               <div className="absolute top-2 left-2 z-10">
-                <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT</span>
+              <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-blue-50 px-2 py-1 font-mono text-xs font-semibold tracking-widest text-blue-700 inset-ring inset-ring-blue-700/10">
+                Agent
+              </span>
               </div>
-              <div className="rounded-2xl border-solid border-2 border-gray-200 bg-gray-100 flex items-center justify-center h-48">
-                <img loading="lazy" className="max-w-32 max-h-32" src="https://heyelsa.ai/assets/img/logo.svg" alt="Elsa logo" />
-              </div>
-              <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Elsa</h2>
+              <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/elsaWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Elsa</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Turn words into onchain actions
@@ -481,7 +488,7 @@ await agent.start();`}
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Trade smarter, and maximize returns, all with unparalleled ease and safety.</p>
                 <div className="mt-2 flex gap-2">
-                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                  <a href="https://x.com/flaunchgg" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
                   </a>
                 </div>
@@ -490,10 +497,12 @@ await agent.start();`}
 
             <div className="flex flex-col relative">
               <div className="absolute top-2 left-2 z-10">
-                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold tracking-widest text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
               </div>
               <div className="rounded-2xl border-solid border-2 border-gray-200 bg-gray-100 flex items-center justify-center h-48">
-                <img loading="lazy" className="max-w-32 max-h-32" src="https://pbs.twimg.com/profile_images/1922015106508193793/EC-4X-lf_400x400.png" alt="Mamo logo" />
+                <img loading="lazy" className="min-w-full rounded-2xl border-solid border-2 border-gray-200" src="img/mamoWeb.png" alt="Mamo" />
               </div>
               <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Mamo</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
@@ -520,7 +529,9 @@ await agent.start();`}
 
             <div className="flex flex-col relative">
               <div className="absolute top-2 left-2 z-10">
-                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold tracking-widest text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
               </div>
               <img loading="lazy" className="min-w-full rounded-2xl border-solid border-2 border-gray-200" src="img/brackyWeb.png" alt="Bracky" />
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bracky</h2>
@@ -540,7 +551,9 @@ await agent.start();`}
 
             <div className="flex flex-col relative">
               <div className="absolute top-2 left-2 z-10">
-                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold tracking-widest text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
               </div>
               <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/onitWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Onit</h2>
@@ -560,12 +573,12 @@ await agent.start();`}
 
             <div className="flex flex-col relative">
               <div className="absolute top-2 left-2 z-10">
-                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold tracking-widest text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
               </div>
-              <div className="rounded-2xl border-solid border-2 border-gray-200 bg-gray-100 flex items-center justify-center h-48">
-                <img loading="lazy" className="max-w-32 max-h-32" src="https://pbs.twimg.com/profile_images/1965768681847222272/Gx1IMqFf_400x400.jpg" alt="Ponder logo" />
-              </div>
-              <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Ponder</h2>
+              <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/ponderWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Ponder</h2>
               <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
                 <div aria-hidden="true" className="size-5 flex-none text-red-600" />
                 Predict what the crowd thinks
@@ -573,7 +586,7 @@ await agent.start();`}
               <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                 <p className="flex-auto">Ponder lets you make money by answering simple daily polls on group opinions.</p>
                 <div className="mt-2 flex gap-2">
-                  <a href="#" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                  <a href="#" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
                     Learn more <span aria-hidden="true">→</span>
                   </a>
                 </div>
@@ -582,7 +595,9 @@ await agent.start();`}
 
             <div className="flex flex-col relative max-w-md">
               <div className="absolute top-2 left-2 z-10">
-                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">AGENT & MINI APP</span>
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold tracking-widest text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
               </div>
               <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/squabbleWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
               <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Squabble</h2>
@@ -677,19 +692,19 @@ await agent.start();`}
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
         <div className="mt-16">
         <h2 className="mb-8 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Why Builders Love Building on XMTP</h2>
-          <h4 className="text-3xl md:text-5xl font-semibold tracking-tighter text-center mb-3">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
           💸 Money = 💬 Messages</h4>
           <p className="text-black">Send money like sending a DM. No APIs to wrestle with.</p>
         </div>
 
         <div className="mt-10">
-          <h4 className="text-3xl md:text-5xl font-semibold tracking-tighter text-center mb-3">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
           🚫 Zero Gatekeepers</h4>
           <p className="text-black">No app store approvals. No middlemen taking cuts.</p>
         </div>
 
         <div className="mt-10">
-          <h4 className="text-3xl md:text-5xl font-semibold tracking-tighter text-center mb-3">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
           🔥 Write Once, Run Everywhere</h4>
           <p className="text-black">Your code works in every app that supports XMTP.</p>
         </div>
