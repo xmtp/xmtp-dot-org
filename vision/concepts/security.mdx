@@ -1,0 +1,65 @@
+---
+sidebar_label: Security
+sidebar_position: 1
+---
+
+# Security with XMTP
+
+<p className="text-2xl font-bold mb-4">Add production-ready, secure messaging to your app without the complexity.</p>
+
+XMTP handles the cryptography—from key generation and rotation to group membership and message encryption—so you can add secure messaging without building custom security infrastructure.
+
+<br/>
+
+:::info Key Takeaways
+
+- **Enterprise-grade security**: Same protection standards as Signal and WhatsApp using IETF-standard [Messaging Layer Security](https://messaginglayersecurity.rocks/) (MLS) protocol
+- **Future-proof security**: Protected against quantum computer attacks with post-compromise recovery
+- **Complete privacy**: XMTP can't read your messages or see who you're messaging
+- **Audited security**: Open source implementation with comprehensive security reviews
+
+:::
+
+### Next-gen security built on industry standards
+
+Your messages get the same robust protection that users expect from Signal and WhatsApp, powered by the **Messaging Layer Security** (MLS) protocol—the IETF standard trusted by Mozilla, Google, Wire, and Cisco. XMTP delivers:
+
+- **Perfect forward secrecy**: Past messages stay secure even if current keys are compromised
+- **Post-compromise security**: Future messages remain protected even after a security breach
+- **End-to-end protection**: Messages stay private between sender and recipient—even network nodes can't read them
+- **Scalable group security**: Efficient rekeying and membership updates for groups ranging from small chats to thousands of participants.
+- **Tamper-proof:** Every message is cryptographically signed, ensuring messages can’t be forged or altered in transit.
+
+### Message content and metadata privacy by default
+
+XMTP delivers complete message content privacy and protects the metadata that matters most. Messages are end-to-end encrypted, and while network nodes can see basic transmission data like timing and message size, they cannot determine who is communicating with whom or reconstruct social graphs. This means your app can deliver messaging features without exposing user relationships or conversation patterns. As a developer, you don't need to implement custom privacy protection—XMTP provides meaningful metadata shielding by default.
+
+### Quantum-resistant by design
+
+XMTP protects your messages against future quantum computer attacks through quantum-resistant hybrid encryption algorithms using NIST PQC standards (Kyber for key exchange). This means user conversations stay secure against "Harvest Now, Decrypt Later" attacks, where adversaries store encrypted messages until quantum computers can break current cryptography. This hybrid approach ensures protection against both current and future threats.
+
+Read more about [XMTP and the Future of Privacy in a Quantum World](https://community.xmtp.org/t/xmtp-and-the-future-of-privacy-in-a-quantum-world/1079)
+
+### Fully audited and open source
+
+XMTP's MLS implementation is fully open source, and a [security assessment](https://www.nccgroup.com/us/research-blog/public-report-xmtp-mls-implementation-review/) of the [LibXMTP](https://github.com/xmtp/libxmtp) core library and its use of MLS was completed by NCC Group in December 2024. Built on IETF standards, the protocol's efficiency aims to keep network costs low while delivering enterprise-grade protection at scale. 
+
+### Secure messaging that just works
+
+XMTP has securely delivered billions of messages for thousands of developers, and provided secure messaging for best-in-class companies like Coinbase. 
+
+Whether you're building chat apps or agents, XMTP's security architecture delivers automatic protection at scale. The protocol handles key management, group operations, and security updates seamlessly—so your team can focus on building great user experiences with bulletproof security built in.
+
+:::info Learn more
+
+- XMTP security overview docs: [Messaging security properties with XMTP](https://docs.xmtp.org/protocol/security)
+- See XMTP's [implementation of MLS in the LibXMTP core library](https://github.com/xmtp/libxmtp/tree/main/xmtp_mls).
+- [Security FAQ](https://docs.xmtp.org/protocol/security#faq-about-messaging-security)
+
+:::
+
+---
+
+### XMTP security roadmap
+
+- Late 2025 → [Self-removal](https://github.com/orgs/xmtp/projects/34/views/1?filterQuery=self&pane=issue&itemId=125905894&issue=xmtp%7Clibxmtp%7C2335): A user can choose to leave a group chat

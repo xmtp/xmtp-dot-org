@@ -423,17 +423,17 @@ const BuiltWithXmtp = () => {
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold text-red-500">Security</h2>
-                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Enterprise-grade encryption</p>
+                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Enterprise-grade message security</p>
                 <p class="mt-6 text-md/8 md:text-lg/8">Built on the IETF-standard <a href="https://messaginglayersecurity.rocks/" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a> protocol – the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's <a href="https://www.nccgroup.com/us/research-blog/public-report-xmtp-mls-implementation-review/" target="_blank" class="text-red-500 font-medium">fully audited</a> implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
                 <p class="mt-12">
 
-                  <a href="/vision/concepts/encryption" class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal hover:no-underline">
+                  <a href="/vision/concepts/security" class="text-md/8 md:text-lg/8 cursor-pointer items-center gap-x-1 text-white bg-gray-900 hover:text-white shadow-sm hover:bg-red-600 transition-all font-semibold rounded-md text-base text-center inline-flex items-center me-2 px-5 py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 w-full md:w-auto justify-center md:justify-normal hover:no-underline">
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 me-2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
                     </svg>
 
-                    Encryption in XMTP <span class="ml-2" aria-hidden="true">→</span>
+                    Security in XMTP <span class="ml-2" aria-hidden="true">→</span>
                   </a>
 
                 </p>
