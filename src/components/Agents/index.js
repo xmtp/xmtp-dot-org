@@ -687,7 +687,7 @@ await agent.start();`}
       </div>
     </div>
 
-    <div className="py-8 md:py-16 pt-4 md:pb-20 rounded-2xl mb-8 relative overflow-hidden text-center">
+    <div className="py-8 md:py-16 pt-4 md:pt-0 md:pb-20 rounded-2xl mb-8 relative overflow-hidden text-center">
       <div className="bg-white absolute inset-0" style={{ background: 'linear-gradient(200deg,#163869 15%,#571861 35%,#a79bb0 55%,#163869 85%)', opacity: 0.16 }}></div>
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
         <div className="mt-16">
