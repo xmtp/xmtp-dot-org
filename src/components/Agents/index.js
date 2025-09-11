@@ -218,18 +218,9 @@ const Agents = () => {
     <div className="mx-auto max-w-3xl py-0 md:py-32 lg:py-0">
       <div className="text-left lg:ml-24">
         <div className="max-w-lg">
-          <h2 className="mt-4 md:mt-8 text-2xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-4xl/tight">
-            Mini Apps built for chat.
-          </h2>
-          <h3 className="mt-6 text-xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-2xl">
-            Bring your mini app into any secure DM or group
-          </h3>
-          <p className="mt-2 text-lg font-normal text-pretty text-gray-500 sm:text-xl/7">
-            Enhance your mini app with an agent
-          </p>
           
           <div className="mt-12">
-            <h2 className="text-2xl font-bold tracking-tighter text-balance text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tighter text-balance text-gray-900 sm:text-4xl">
               <strong>Agents Make Mini Apps Talk 💬</strong>
             </h2>
             <p className="mt-4 text-lg font-normal text-pretty text-gray-500 sm:text-xl/7">
@@ -267,12 +258,62 @@ const Agents = () => {
           
           
           
-          <a href="https://github.com/xmtp/xmtp-js/tree/main/sdks/agent-sdk" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-            </svg>
-            Explore the Agent SDK <span aria-hidden="true">→</span>
-          </a>
+          
+          <div className="mt-16 p-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200">
+            <h3 className="text-2xl font-bold tracking-tighter text-gray-900 sm:text-3xl mb-4">
+              Zero-config Agent Development
+            </h3>
+            <p className="text-lg text-gray-600 mb-6">
+              Our Agent SDK handles all the complexity so you can focus on building amazing experiences.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0">
+                  <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="text-gray-700 font-medium">One environment variable</span>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0">
+                  <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="text-gray-700 font-medium">Full TypeScript Support</span>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0">
+                  <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="text-gray-700 font-medium">Rich-content messaging</span>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0">
+                  <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="text-gray-700 font-medium">Middleware support to add your own logic</span>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <a href="https://github.com/xmtp/xmtp-js/tree/main/sdks/agent-sdk" className="inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base px-6 py-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 me-2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+                </svg>
+                Explore the Agent SDK <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
