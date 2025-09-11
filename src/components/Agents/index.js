@@ -136,7 +136,7 @@ const Agents = () => {
         
         <div className="py-0 md:py-32 lg:py-0 lg:ml-16">
           <div className="text-left">
-            <h1 className="mr-0 md:mr-10 float-left text-3xl font-normal tracking-tighter text-balance text-gray-900 sm:text-6xl">
+            <h1 className="mr-0 md:mr-10 float-left text-5xl md:text-6xl font-normal tracking-tighter text-balance text-gray-900">
               Build<br />Agents and Mini Apps that
             </h1>
             <h2 className="mt-0 text-[72px] md:text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
@@ -162,7 +162,7 @@ const Agents = () => {
 
         <div className="text-left lg:ml-24">
           <div className="max-w-lg">
-            <h2 className="mt-4 md:mt-8 text-2xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-4xl/tight">
+            <h2 className="mt-4 md:mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-gray-900">
               Create powerful AI agents and native mini apps with built-in payments, secure and private communication, and seamless access to the entire XMTP messaging ecosystem.
             </h2>
           </div>
@@ -198,9 +198,9 @@ const Agents = () => {
       </div>
     </div>
     
-    <div className="mx-auto max-w-2xl px-6 mt-24 lg:max-w-7xl lg:px-8">
-      <div className="mx-auto max-w-2xl px-6">
-        <h2 className="mt-0 text-3xl text-center font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">Secure agents and mini apps in your group chats that can transact</h2>
+    <div className="mx-auto max-w-full px-6 mt-24 md:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-full md:max-w-2xl px-6">
+        <h2 className="mt-0 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">Secure agents and mini apps in your group chats that can transact</h2>
       </div>
     </div>
     
@@ -235,7 +235,7 @@ const Agents = () => {
                     boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
                     borderRadius: '18px 18px 18px 4px'
                   }}>
-                    <p className="text-lg font-normal !mb-0 pb-0">Natural language interface</p>
+                    <p className="text-base md:text-lg font-normal !mb-0 pb-0">Natural language interface</p>
                   </div>
                 </div>
               </div>
@@ -246,7 +246,7 @@ const Agents = () => {
                     boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
                     borderRadius: '18px 18px 4px 18px'
                   }}>
-                    <p className="text-lg font-normal !mb-0 pb-0">Real-time group coordination</p>
+                    <p className="text-base md:text-lg font-normal !mb-0 pb-0">Real-time group coordination</p>
                   </div>
                   <div className="mt-0 mr-2 text-right">
                     <span className="text-xs text-gray-500 font-semibold">Delivered</span>
@@ -260,7 +260,7 @@ const Agents = () => {
                     boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
                     borderRadius: '18px 18px 18px 4px'
                   }}>
-                    <p className="text-lg font-normal !mb-0 pb-0">More distribution and sharing</p>
+                    <p className="text-base md:text-lg font-normal !mb-0 pb-0">More distribution and sharing</p>
                   </div>
                 </div>
               </div>
@@ -271,7 +271,7 @@ const Agents = () => {
                     boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
                     borderRadius: '18px 18px 4px 18px'
                   }}>
-                    <p className="text-lg font-normal !mb-0 pb-0">Persistent memory and context</p>
+                    <p className="text-base md:text-lg font-normal !mb-0 pb-0">Persistent memory and context</p>
                   </div>
                   <div className="mt-0 mr-2 text-right">
                     <span className="text-xs text-gray-500 font-semibold">Delivered</span>
@@ -290,7 +290,7 @@ const Agents = () => {
         <div className="grid grid-cols-1 items-center gap-x-4 gap-y-8 md:gap-y-16 lg:grid-cols-12 pt-0">
           <div className="mx-auto w-full max-w-lg lg:mx-0 lg:col-span-5">
             <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase data-dark:text-gray-200">Up and Running in no time</h2>
-            <h2 className="text-2xl font-bold tracking-tighter text-balance text-white sm:text-4xl">
+            <h2 className="text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white sm:text-4xl">
               Zero-config Agent Development
             </h2>
             <p className="mt-6 text-lg/8 text-gray-200">
@@ -405,7 +405,7 @@ await agent.start();`}
           <div className="col-start-1 col-end-7 text-left">
             <div>
               <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Featured Agents and Mini Apps</h2>
-              <h2 className="mt-0 text-3xl font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
+              <h2 className="mt-0 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
                 Agents  🤝  Mini Apps
               </h2>
               <p className="text-lg max-w-4xl">
@@ -418,7 +418,7 @@ await agent.start();`}
         <div className="mx-auto mt-8 max-w-2xl sm:mt-12 lg:mt-16 lg:max-w-none">
           
           <div className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Trading & Finance</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 md:mb-4">Trading & Finance</h3>
           </div>
           
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-4 mb-16">
@@ -522,7 +522,7 @@ await agent.start();`}
           </dl>
           
           <div className="mb-8 mt-16">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Prediction Markets, Games, and Social</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 md:mb-4">Prediction Markets, Games, and Social</h3>
           </div>
           
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-4 mb-16">
@@ -616,40 +616,6 @@ await agent.start();`}
             </div>
 
           </dl>
-
-          <div className="py-16 pt-4 rounded-2xl mt-24 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 mt-16 mb-0 bg-contain bg-no-repeat bg-center bg-[#fcfcfc]" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
-              <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
-                
-                 <div className="mt-8 flex justify-center">
-                   <div className="bg-gradient-to-r from-slate-900 to-slate-700 border-red-500 p-8 pb-6 rounded-xl max-w-2xl">
-                     <div className="flex items-start">
-                       <div className="flex-shrink-0">
-                         <img loading="lazy" className="h-8 w-8 rounded-full" src="img/bankr-logo.jpg" alt="Bankr logo" />
-                       </div>
-                       <div className="ml-3">
-                         <p className="text-xl font-medium text-white">
-                           "Bankr is part of <span className="font-bold text-red-600">20,000+ DMs and Group chats</span> in the Base App and it's not even out of beta yet"
-                         </p>
-                         <p className="mt-2 text-md text-white">
-                           <a href="https://x.com/bankrbot/status/1957564153780228405" target="_blank" className="text-red-500 hover:text-red-600">@bankrbot on X</a>
-                         </p>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-
-              <h3 className="mt-12 font-semibold leading-normal tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-4xl text-center">
-              Go viral with your agents and mini apps
-              </h3>
-              <p className="m-auto max-w-full md:max-w-lg text-center">Join thousands of conversations happening right now across the XMTP network.</p>
-              <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-                </svg>
-                Start building <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
           
         </div>
 
@@ -658,12 +624,46 @@ await agent.start();`}
     
     </div>
 
+    <div className="py-12 md:py-16 pt-8 rounded-2xl mt-0 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 mt-16 mb-0 bg-cover bg-no-repeat bg-center bg-[#fcfcfc]" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
+        
+          <div className="mt-8 flex justify-center">
+            <div className="bg-gradient-to-r from-black to-gray-900 border-red-500 p-8 pb-6 rounded-xl max-w-2xl shadow-lg">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <img loading="lazy" className="h-8 w-8 rounded-full" src="img/bankr-logo.jpg" alt="Bankr logo" />
+                </div>
+                <div className="ml-3">
+                  <p className="text-xl text-left md:text-center font-medium text-white">
+                    "Bankr is part of <span className="font-bold text-red-600">20,000+ DMs and Group chats</span> in the Base App and it's not even out of beta yet"
+                  </p>
+                  <p className="mt-2 text-left md:text-center text-md text-white">
+                    <a href="https://x.com/bankrbot/status/1957564153780228405" target="_blank" className="text-red-500 hover:text-red-600">@bankrbot on X</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <h3 className="mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white data-dark:text-white sm:text-4xl text-center">
+      Go viral with your agents and mini apps
+      </h3>
+      <p className="m-auto max-w-full md:max-w-lg text-center text-white">Join thousands of conversations happening right now across the XMTP network.</p>
+      <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+        </svg>
+        Start building <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
     <div className="bg-white pb-0 pt-16 md:pt-16">
       <div className="mx-auto max-w-7xl">
 
         <div className="grid grid-cols-1 items-center gap-x-24 gap-y-8 md:gap-y-16 lg:grid-cols-2 pt-0">
           <div className="mx-auto w-full max-w-xl lg:mx-0">
-            <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900">
+            <h2 className="text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-gray-900">
               Ready to join a community building the future of messaging?
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
@@ -687,7 +687,7 @@ await agent.start();`}
       </div>
     </div>
 
-    <div className="py-16 pt-4 md:pb-20 rounded-2xl mb-8 relative overflow-hidden text-center">
+    <div className="py-8 md:py-16 pt-4 md:pb-20 rounded-2xl mb-8 relative overflow-hidden text-center">
       <div className="bg-white absolute inset-0" style={{ background: 'linear-gradient(200deg,#163869 15%,#571861 35%,#a79bb0 55%,#163869 85%)', opacity: 0.16 }}></div>
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
         <div className="mt-16">
@@ -723,18 +723,18 @@ await agent.start();`}
     </div>
 
     <div className="bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-contain bg-no-repeat bg-bottom rounded-2xl">
-      <div className="px-6 py-24 sm:px-6 sm:py-24 lg:px-8">
+      <div className="px-6 py-6 pb-16 md:pb-24 md:py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <div className="space-y-8 text-left">
             <div className="flex justify-end">
               <div className="bg-blue-500 text-white px-4 py-2 pb-0 rounded-2xl rounded-br-md max-w-xs">
-                <p className="text-lg">Hey @Agent, I'm ready to build with XMTP.</p>
+                <p className="text-base md:text-md">Hey @Agent, I'm ready to build with XMTP.</p>
               </div>
             </div>
             <div className="flex justify-start">
               <div className="bg-gray-200 text-gray-900 px-4 py-2 pb-4 rounded-2xl rounded-bl-md max-w-sm">
-              <p className="text-lg">Amazing.</p>
-                <p className="text-lg">Join thousands of developers building next-generation transactional agents with XMTP — the secure messaging layer for AI, money, and coordination.</p>
+              <p className="text-base md:text-md">Amazing.</p>
+                <p className="text-base md:text-md">Join thousands of developers building next-generation transactional agents with XMTP — the secure messaging layer for AI, money, and coordination.</p>
                 <a target="_blank" className="color-white underline text-lg hover:no-underline" href="https://docs.xmtp.org/agents/get-started/build-an-agent">https://docs.xmtp.org</a>
               </div>
             </div>
