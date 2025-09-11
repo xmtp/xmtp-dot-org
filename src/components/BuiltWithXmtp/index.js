@@ -423,7 +423,7 @@ const BuiltWithXmtp = () => {
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold text-red-500">Security</h2>
-                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Next-gen security protocols</p>
+                <p class="mt-0 text-pretty text-4xl font-semibold tracking-tight">Enterprise-grade message security</p>
                 <p class="mt-6 text-md/8 md:text-lg/8">Built on the IETF-standard <a href="https://messaginglayersecurity.rocks/" target="_blank" class="text-red-500 font-medium">Messaging Layer Security (MLS)</a> protocol – the same open-source security foundation trusted by Mozilla, Google, Wire, and Cisco. XMTP's <a href="https://www.nccgroup.com/us/research-blog/public-report-xmtp-mls-implementation-review/" target="_blank" class="text-red-500 font-medium">fully audited</a> implementation provides perfect forward secrecy and post-compromise security, ensuring messages can never be retroactively decrypted.</p>
                 <p class="mt-12">
 
