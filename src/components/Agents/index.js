@@ -221,10 +221,10 @@ const Agents = () => {
           
           <div className="mt-0">
             <h2 className="text-2xl font-bold tracking-tighter text-balance text-gray-900 sm:text-4xl">
-              <strong>Agents Give Mini Apps a Voice</strong>
+              <strong>Agents give mini apps a voice</strong>
             </h2>
             <p className="mt-4 text-lg font-normal text-pretty text-gray-500 sm:text-xl/7">
-              Give your mini app a voice, memory, and a presence in every conversation.
+              Every mini app can now have a voice, memory, and presence in every conversation.
             </p>
             
             <div className="mt-10 space-y-6 max-w-full">
@@ -291,10 +291,10 @@ const Agents = () => {
           <div className="mx-auto w-full max-w-lg lg:mx-0 lg:col-span-5">
             <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase data-dark:text-gray-200">Up and Running in no time</h2>
             <h2 className="text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white sm:text-4xl">
-              Zero-config Agent Development
+              Say hello to zero-config agent development
             </h2>
             <p className="mt-6 text-lg/8 text-gray-200">
-            Our new Agent SDK handles all the complexity so you can focus on building amazing experiences.
+            Our Agent SDK handles all the complexity so you can focus on building amazing experiences.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-1 gap-1 mb-4 mt-6">
@@ -408,8 +408,8 @@ await agent.start();`}
               <h2 className="mt-0 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-gray-900 sm:text-5xl">
                 Agents  🤝  Mini Apps
               </h2>
-              <p className="text-lg max-w-4xl">
-                AI agents and mini apps that can listen, respond, and transact natively in conversations are transforming customer experience, financial coordination, and real-time collaboration across apps.
+              <p className="text-lg max-w-full md:max-w-3xl">
+                See some examples of AI agents and mini apps that can listen, respond, and transact natively in conversations are transforming customer experience, financial coordination, and real-time collaboration across apps.
               </p>
             </div>
           </div>
@@ -646,7 +646,7 @@ await agent.start();`}
           </div>
 
       <h3 className="mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white data-dark:text-white sm:text-4xl text-center">
-      Go viral with your agents and mini apps
+      Here. There. Everywhere.<br />Go viral with your agents and mini apps.
       </h3>
       <p className="m-auto max-w-full md:max-w-lg text-center text-white">Join thousands of conversations happening right now across the XMTP network.</p>
       <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
