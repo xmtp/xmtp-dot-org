@@ -297,7 +297,7 @@ const Agents = () => {
             Our new Agent SDK handles all the complexity so you can focus on building amazing experiences.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4 mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-1 mb-4 mt-6">
               <div className="flex items-center space-x-2">
                 <div className="flex-shrink-0">
                   <svg className="w-6 h-6 mt-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
