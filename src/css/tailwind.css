@@ -1699,17 +1699,19 @@ pre code {
     padding-left: 0.75rem !important;
   }
 
-  /* Fix blurry images on mobile - balanced approach */
+  /* Fix image rendering on mobile */
   .markdown img,
   [class*="docItemContainer"] img,
   [class*="docPage"] img {
-    image-rendering: auto !important;
-    -webkit-backface-visibility: hidden !important;
-    backface-visibility: hidden !important;
-    transform: translateZ(0) !important;
     max-width: 100% !important;
     height: auto !important;
-    -webkit-transform: translate3d(0, 0, 0) !important;
+    display: block !important;
+    /* Remove transforms that can cause pixelation/blur */
+    transform: none !important;
+    -webkit-transform: none !important;
+    /* Ensure smooth rendering */
+    image-rendering: auto !important;
+    -webkit-image-rendering: auto !important;
   }
 }
 
