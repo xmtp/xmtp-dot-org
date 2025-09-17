@@ -367,17 +367,17 @@ const BuiltWithXmtp = () => {
             
             <article class="flex max-w-xl flex-col items-start justify-between">
               <div class="flex items-center gap-x-4 text-xs">
-                <img src="img/family-logo-black.svg" class="h-6 mb-2"></img>
+                <img src="img/base-logo-light-mode.svg" class="h-6 mb-2"></img>
               </div>
               <div class="group relative">
-                <p class="font-normal text-xs uppercase tracking-widest">Payments</p>
+                <p class="font-normal text-xs uppercase tracking-widest">Agents</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="https://x.com/family/status/1768379809292530090" target="_blank" class="hover:text-red-500 hover:no-underline">
+                  <a href="/buildinchat" target="_blank" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
-                    Family seamlessly integrates peer-to-peer payments into XMTP messaging
+                    How apps like Base bring agents+mini apps together to unlock new use cases
                   </a>
                 </h3>
-                <a href="https://x.com/family/status/1768379809292530090" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
+                <a href="/buildinchat" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
               </div>
             </article>
             
