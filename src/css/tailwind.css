@@ -1699,20 +1699,6 @@ pre code {
     padding-left: 0.75rem !important;
   }
 
-  /* Fix image rendering on mobile */
-  .markdown img,
-  [class*="docItemContainer"] img,
-  [class*="docPage"] img {
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    /* Remove transforms that can cause pixelation/blur */
-    transform: none !important;
-    -webkit-transform: none !important;
-    /* Ensure smooth rendering */
-    image-rendering: auto !important;
-    -webkit-image-rendering: auto !important;
-  }
 }
 
 /*ask ai*/
