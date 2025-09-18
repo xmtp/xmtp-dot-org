@@ -372,12 +372,12 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="font-normal text-xs uppercase tracking-widest">Agents</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="/buildinchat" target="_blank" class="hover:text-red-500 hover:no-underline">
+                  <a href="/buildinchat" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     How apps like Base bring agents+mini apps together to unlock new use cases
                   </a>
                 </h3>
-                <a href="/buildinchat" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
+                <a href="/buildinchat" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
               </div>
             </article>
             
@@ -404,12 +404,12 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="font-normal text-xs uppercase tracking-widest">Notifications</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="https://xmtp.org/notifi-case-study" target="_blank" class="hover:text-red-500 hover:no-underline">
+                  <a href="/notifi-case-study" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Learn about how Notifi delivers millions of critical DeFi alerts through XMTP
                   </a>
                 </h3>
-                <a href="https://xmtp.org/notifi-case-study" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
+                <a href="/notifi-case-study" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
