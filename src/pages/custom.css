@@ -286,3 +286,9 @@ dd {
 	75%  { background-position: 20% 60%; }
     100% { background-position: 0% 0%;  }
 }
+
+/* Custom logo sizing to visually match XMTP logo */
+.logo-base-sized {
+  height: 1.75rem; /* slightly larger than h-6 to compensate for aspect ratio */
+  margin-bottom: 0.5rem;
+}

@@ -367,7 +367,7 @@ const BuiltWithXmtp = () => {
             
             <article class="flex max-w-xl flex-col items-start justify-between">
               <div class="flex items-center gap-x-4 text-xs">
-                <img src="img/base-logo-light-mode.svg" class="h-6 mb-2"></img>
+                <img src="img/base-logo-light-mode.svg" class="logo-base-sized"></img>
               </div>
               <div class="group relative">
                 <p class="font-normal text-xs uppercase tracking-widest">Agents</p>
