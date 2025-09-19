@@ -289,6 +289,6 @@ dd {
 
 /* Custom logo sizing to visually match XMTP logo */
 .logo-base-sized {
-  height: 1.75rem; /* slightly larger than h-6 to compensate for aspect ratio */
+  height: 2rem; /* slightly larger than h-6 to compensate for aspect ratio */
   margin-bottom: 0.5rem;
 }
