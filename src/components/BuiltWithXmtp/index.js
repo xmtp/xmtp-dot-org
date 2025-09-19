@@ -140,6 +140,9 @@ const BuiltWithXmtp = () => {
                   <img class="max-h-12" src="img/neynar-logo.png" alt="Neynar" />
               </li>
               <li>
+                  <img class="max-h-10" src="img/NodleLogo_Aqua.png" alt="Nodle" />
+              </li>
+              <li>
                   <img src="img/yup-logo-black.svg" alt="Yup" />
               </li>
               <li>
@@ -179,6 +182,9 @@ const BuiltWithXmtp = () => {
               </li>
               <li>
               <img class="max-h-12" src="img/neynar-logo.png" alt="Neynar" />
+              </li>
+              <li>
+                  <img class="max-h-10" src="img/NodleLogo_Aqua.png" alt="Nodle" />
               </li>
               <li>
                   <img src="img/yup-logo-black.svg" alt="Yup" />
