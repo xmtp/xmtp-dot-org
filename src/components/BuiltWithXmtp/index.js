@@ -140,6 +140,9 @@ const BuiltWithXmtp = () => {
                   <img class="max-h-12" src="img/neynar-logo.png" alt="Neynar" />
               </li>
               <li>
+                  <img class="max-h-10" src="img/NodleLogo_Aqua.png" alt="Nodle" />
+              </li>
+              <li>
                   <img src="img/yup-logo-black.svg" alt="Yup" />
               </li>
               <li>
@@ -179,6 +182,9 @@ const BuiltWithXmtp = () => {
               </li>
               <li>
               <img class="max-h-12" src="img/neynar-logo.png" alt="Neynar" />
+              </li>
+              <li>
+                  <img class="max-h-10" src="img/NodleLogo_Aqua.png" alt="Nodle" />
               </li>
               <li>
                   <img src="img/yup-logo-black.svg" alt="Yup" />
@@ -367,17 +373,17 @@ const BuiltWithXmtp = () => {
             
             <article class="flex max-w-xl flex-col items-start justify-between">
               <div class="flex items-center gap-x-4 text-xs">
-                <img src="img/family-logo-black.svg" class="h-6 mb-2"></img>
+                <img src="img/base-logo-light-mode.svg" class="logo-base-sized"></img>
               </div>
               <div class="group relative">
-                <p class="font-normal text-xs uppercase tracking-widest">Payments</p>
+                <p class="font-normal text-xs uppercase tracking-widest">Agents</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="https://x.com/family/status/1768379809292530090" target="_blank" class="hover:text-red-500 hover:no-underline">
+                  <a href="/buildinchat" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
-                    Family seamlessly integrates peer-to-peer payments into XMTP messaging
+                    How apps like Base bring agents+mini apps together to unlock new use cases
                   </a>
                 </h3>
-                <a href="https://x.com/family/status/1768379809292530090" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
+                <a href="/buildinchat" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
               </div>
             </article>
             
@@ -404,12 +410,12 @@ const BuiltWithXmtp = () => {
               <div class="group relative">
                 <p class="font-normal text-xs uppercase tracking-widest">Notifications</p>
                 <h3 class="mt-3 text-lg/6 md:text-xl/7 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href="https://xmtp.org/notifi-case-study" target="_blank" class="hover:text-red-500 hover:no-underline">
+                  <a href="/notifi-case-study" class="hover:text-red-500 hover:no-underline">
                     <span class="absolute inset-0"></span>
                     Learn about how Notifi delivers millions of critical DeFi alerts through XMTP
                   </a>
                 </h3>
-                <a href="https://xmtp.org/notifi-case-study" target="_blank" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
+                <a href="/notifi-case-study" class="relative z-10 text-sm font-medium text-red-500 hover:no-underline hover:text-red-800 transition-all">Learn more <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
