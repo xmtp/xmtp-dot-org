@@ -194,7 +194,7 @@ const Agents = () => {
     
     <div className="mx-auto max-w-full px-6 mt-24 md:max-w-7xl lg:px-8">
       <div className="mx-auto max-w-full md:max-w-2xl px-6">
-        <h2 className="mt-0 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">Join the next generation of mini apps that talk, transact, and scale</h2>
+        <h2 className="mt-0 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">Join thousands of builders launching mini apps inside of Chat.</h2>
       </div>
     </div>
     
@@ -343,13 +343,10 @@ await agent.start();`}
             <div className="col-start-1 col-end-7 text-center">
               <div>
                 <h2 className="mt-8 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">
-                  Native chat apps are exploding<br />across the ecosystem
+                  Chat is the new App Store
                 </h2>
                 <p className="mt-6 text-lg max-w-full md:max-w-3xl mx-auto">
                   XMTP powers a rapidly growing ecosystem of chat-native apps—where everything is a built in chat experience from trading, prediction markets, event coordination, payments, and games.
-                </p>
-                <p className="mt-4 text-lg max-w-full md:max-w-3xl mx-auto font-semibold">
-                  The future of app stores is in your DMs and Groups.
                 </p>
                 <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
