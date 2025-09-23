@@ -193,7 +193,7 @@ const Agents = () => {
     </div>
     
     <div className="mx-auto max-w-full px-6 mt-24 md:max-w-7xl lg:px-8">
-      <div className="mx-auto max-w-full md:max-w-2xl px-6">
+      <div className="mx-auto max-w-full md:max-w-4xl px-6">
         <h2 className="mt-0 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">Join thousands of builders launching mini apps inside of chat.</h2>
         <p className="mt-6 text-lg max-w-full md:max-w-3xl mx-auto text-center text-gray-600">
           In chat, your mini apps don't get buried in feeds — they surface at the right moment, spark reactions and replies in a tap, and thrive as multiplayer experiences that persist over time.
@@ -212,6 +212,78 @@ const Agents = () => {
        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-[#FBFBFB]"></div>
     </div>
 
+
+    <div className="py-12 md:py-16 pt-8 md:pt-6 rounded-2xl mt-0 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#fcfcfc]" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
+        
+          <div className="mt-8 flex justify-center">
+            <div className="bg-gradient-to-r from-black to-gray-900 border-red-500 p-8 pb-6 rounded-xl max-w-2xl shadow-lg">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <img loading="lazy" className="h-8 w-8 rounded-full" src="img/bankr-logo.jpg" alt="Bankr logo" />
+                </div>
+                <div className="ml-3">
+                  <p className="text-xl text-left md:text-center font-medium text-white">
+                    "Bankr is part of <span className="font-bold text-red-600">20,000+ DMs and Group chats</span> in the Base App and it's not even out of beta yet"
+                  </p>
+                  <p className="mt-2 text-left md:text-center text-md text-white">
+                    <a href="https://x.com/bankrbot/status/1957564153780228405" target="_blank" className="text-red-500 hover:text-red-600">@bankrbot on X</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <h3 className="mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white data-dark:text-white sm:text-4xl text-center">
+      Here. There. Everywhere.<br />Go viral with your mini apps in chat.
+      </h3>
+      <p className="m-auto max-w-full md:max-w-lg text-center text-white">Join thousands of conversations happening right now across the XMTP network.</p>
+      <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+        </svg>
+        Start building <span aria-hidden="true">→</span>
+      </a>
+      </div>
+    </div>
+
+    <div className="py-8 md:py-16 pt-4 md:pt-0 md:pb-16 rounded-2xl mb-0 relative overflow-hidden text-center">
+      <div className="bg-white absolute inset-0"></div>
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
+        <div className="mt-8">
+        <h2 className="mb-8 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Why Builders Love XMTP</h2>
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
+          ⚡ Apps in Motion</h4>
+          <p className="text-black">Mini apps don't just sit in feeds — they live inside conversations, where people are.</p>
+        </div>
+
+        <div className="mt-10">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
+          🔒 Privacy by Default</h4>
+          <p className="text-black">Every message is end-to-end encrypted. Your users own their conversations.</p>
+        </div>
+
+
+        <div className="mt-10">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
+          🤝 Plug Into People, Not Platforms</h4>
+          <p className="text-black">Groups are the distribution channel. Chats are the retention engine.</p>
+        </div>
+
+        <div className="mt-10">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
+          🧩 Composable by Design</h4>
+          <p className="text-black">Use our SDK like Legos: Works across any Mini App framework.</p>
+        </div>
+
+        <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+          </svg>
+          Start building <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
 
     <div className="px-8 py-16 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 mt-2 mb-0 bg-cover bg-center" style={{ backgroundImage: 'url(/img/spaceBG.jpg)' }}>
       <div className="mx-auto max-w-7xl">
@@ -336,12 +408,20 @@ await agent.start();`}
           <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
             <div className="col-start-1 col-end-7 text-center">
               <div>
-                <h2 className="mt-8 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">
+                <h2 className="mt-8 text-center text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-gray-900">
                   Chat is the new App Store
                 </h2>
-                <p className="mt-6 text-lg max-w-full md:max-w-3xl mx-auto">
+                <p className="mt-0 text-lg max-w-full md:max-w-3xl mx-auto">
                   XMTP powers a rapidly growing ecosystem of chat-native apps—where everything is a built in chat experience from trading, prediction markets, event coordination, payments, and games.
                 </p>
+                <p className="mt-6 font-normal text-lg max-w-full md:max-w-3xl mx-auto">
+                  All miniapps are suppported whether they are built on <span className="font-semibold">Base, Farcaster, and more.</span>
+                </p>
+
+                <div className="mx-auto mt-6 mb-4 grid max-w-sm grid-cols-2 items-center gap-x-8 gap-y-10">
+                  <img src="img/baseLogo.png" alt="Base App Logo" className="w-auto" />
+                  <img src="img/farcasterLogo.png" alt="Farcaster Logo" className="w-auto" />
+                </div>
                 <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
@@ -355,40 +435,6 @@ await agent.start();`}
       </div>
     </div>
 
-    <div className="py-12 md:py-16 pt-8 md:pt-6 rounded-2xl mt-0 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 mt-16 mb-0 bg-cover bg-no-repeat bg-center bg-[#fcfcfc]" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
-        
-          <div className="mt-8 flex justify-center">
-            <div className="bg-gradient-to-r from-black to-gray-900 border-red-500 p-8 pb-6 rounded-xl max-w-2xl shadow-lg">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <img loading="lazy" className="h-8 w-8 rounded-full" src="img/bankr-logo.jpg" alt="Bankr logo" />
-                </div>
-                <div className="ml-3">
-                  <p className="text-xl text-left md:text-center font-medium text-white">
-                    "Bankr is part of <span className="font-bold text-red-600">20,000+ DMs and Group chats</span> in the Base App and it's not even out of beta yet"
-                  </p>
-                  <p className="mt-2 text-left md:text-center text-md text-white">
-                    <a href="https://x.com/bankrbot/status/1957564153780228405" target="_blank" className="text-red-500 hover:text-red-600">@bankrbot on X</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-      <h3 className="mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white data-dark:text-white sm:text-4xl text-center">
-      Here. There. Everywhere.<br />Go viral with your mini apps in chat.
-      </h3>
-      <p className="m-auto max-w-full md:max-w-lg text-center text-white">Join thousands of conversations happening right now across the XMTP network.</p>
-      <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-        </svg>
-        Start building <span aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
-
     <div className="bg-white pb-0 pt-16 md:pt-16">
       <div className="mx-auto max-w-7xl">
 
@@ -401,15 +447,28 @@ await agent.start();`}
               The next wave of apps won't launch in stores — they'll start in conversations. Join the builders making it happen.
             </p>
 
+            <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
+              <dl class="mx-auto mt-4 mb-4 grid max-w-4xl grid-cols-2 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-black sm:gap-y-16 lg:grid-cols-2">
+                <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-10">
+                  <dt class="text-xs/4 md:text-base/8 text-black">of developers</dt>
+                  <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">1,000s</dd>
+                </div>
+                <div class="flex flex-col gap-y-0 border-none ml-0 md:ml-8">
+                  <dt class="text-xs/4 md:text-base/8 text-black">Production apps</dt>
+                  <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">60+</dd>
+                </div>
+              </dl>
+            </div>
+
             <div className="mt-8 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">
-               <a href="mailto:eric@ephemerahq.com" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
-                 Request to join the group chat <span aria-hidden="true">→</span>
-               </a>
-               <a href="https://join.base.app" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
-                 Join the Base App waitlist
-                 <span className="ml-1" aria-hidden="true">→</span>
-               </a>
-             </div>
+              <a href="mailto:eric@ephemerahq.com" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
+                Request to join the group chat <span aria-hidden="true">→</span>
+              </a>
+              <a href="https://join.base.app" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+                Join the Base App waitlist
+                <span className="ml-1" aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
           <div className="mx-auto max-w-full">
             <img className="max-w-xs md:max-w-sm" src="img/basePlace.png" alt="Phone hero" />
@@ -418,48 +477,10 @@ await agent.start();`}
       </div>
     </div>
 
-    <div className="py-8 md:py-16 pt-4 md:pt-0 md:pb-20 rounded-2xl mb-8 relative overflow-hidden text-center">
-      <div className="bg-white absolute inset-0" style={{ background: 'linear-gradient(200deg,#163869 15%,#571861 35%,#a79bb0 55%,#163869 85%)', opacity: 0.16 }}></div>
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
-        <div className="mt-16">
-        <h2 className="mb-8 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Why Builders Love XMTP</h2>
-          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          ⚡ Apps in Motion</h4>
-          <p className="text-black">Mini apps don't just sit in feeds — they live inside conversations, where people are.</p>
-        </div>
 
-        <div className="mt-10">
-          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          🔒 Privacy by Default</h4>
-          <p className="text-black">Every message is end-to-end encrypted. Your users own their conversations.</p>
-        </div>
-
-
-        <div className="mt-10">
-          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          🤝 Plug Into People, Not Platforms</h4>
-          <p className="text-black">Groups are the distribution channel. Chats are the retention engine.</p>
-        </div>
-
-        <div className="mt-10">
-          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          🧩 Composable by Design</h4>
-          <p className="text-black">Use our SDK like Legos: Works across any Mini App framework.</p>
-        </div>
-
-        <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-          </svg>
-          Start building <span aria-hidden="true">→</span>
-        </a>
-      </div>
-    </div>
-
-    <div className="bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-contain bg-no-repeat bg-bottom rounded-2xl">
-      <div className="px-6 py-6 pb-16 md:pb-24 md:py-24 sm:px-6 lg:px-8">
+    <div className="bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-cover bg-no-repeat bg-bottom rounded-2xl">
+      <div className="px-6 py-6 pb-16 md:pb-24 md:py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-xl text-center">
-          <img src="img/messageGraphic.png" alt="Ecosystem" className="w-full" />
           <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Build the future of messaging</h2>
           <h3 className="mt-4 font-medium mleading-none d:leading-normal tracking-normal text-5xl md:text-7xl text-pretty text-white data-dark:text-white text-center font-dotgothic">
             Ready to<br />Launch?
