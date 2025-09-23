@@ -31,7 +31,7 @@ const OptimizedVideo = ({ src, className, ...props }) => (
 );
 
 const Agents = () => {
-  const wordsToType = ["Transacts", "Coordinates", "Launches", "Plays", "Predicts"];
+  const wordsToType = ["Transact", "Coordinate", "Launch", "Play", "Predict"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [typedWord, setTypedWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -137,7 +137,7 @@ const Agents = () => {
         <div className="py-0 md:py-32 lg:py-0 lg:ml-16">
           <div className="text-left">
             <h1 className="mr-0 md:mr-10 float-left text-5xl md:text-6xl font-normal tracking-tighter text-balance text-gray-900">
-              Chat is the innovation layer that
+              Build chat experiences that
             </h1>
             <h2 className="mt-0 text-[72px] md:text-[135px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
               <span className="typing-wrap">
@@ -163,7 +163,7 @@ const Agents = () => {
         <div className="text-left lg:ml-24">
           <div className="max-w-lg">
             <h2 className="mt-4 md:mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-gray-900">
-              Create new chat experiences with built-in payments, secure and private communication, and seamless access to the entire XMTP messaging ecosystem.
+              Create mini app experiences in chat with built-in payments 💸 secure communication 🔒 seamless interoperability 🌐
             </h2>
           </div>
           <div className="max-w-lg">
@@ -194,7 +194,7 @@ const Agents = () => {
     
     <div className="mx-auto max-w-full px-6 mt-24 md:max-w-7xl lg:px-8">
       <div className="mx-auto max-w-full md:max-w-2xl px-6">
-        <h2 className="mt-0 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">Build apps that talk, transact, and scale</h2>
+        <h2 className="mt-0 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">Join the next generation of mini apps that talk, transact, and scale</h2>
       </div>
     </div>
     
@@ -226,10 +226,10 @@ const Agents = () => {
           <div className="mx-auto w-full max-w-lg lg:mx-0 lg:col-span-5">
             <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase data-dark:text-gray-200">Up and Running in no time</h2>
             <h2 className="text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white sm:text-4xl">
-              A Universal Chat SDK to Make Your App Come Alive
+              An Interoperable SDK to Make Your Mini App Come Alive
             </h2>
             <p className="mt-6 text-lg/8 text-gray-200">
-            Enhance any product experiene  with automatic actions, powerful  LLMs, automations, and real-time notifications.
+            Make your mini app TALK
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-1 gap-1 mb-4 mt-6">
@@ -273,7 +273,7 @@ const Agents = () => {
             <div className="mt-8 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">     
                 <a href="https://github.com/xmtp/xmtp-js/tree/main/sdks/agent-sdk" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
                   <svg viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6 me-2 fill-white"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z"></path></svg>
-                  Explore the Chat SDK <span aria-hidden="true">→</span>
+                  Explore the SDK <span aria-hidden="true">→</span>
                 </a>
              </div>
           </div>
@@ -284,7 +284,7 @@ const Agents = () => {
                 <div className="flex bg-gray-800/40 ring-1 ring-white/5">
                   <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
                     <div className="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">
-                      chat.js
+                      agent.js
                     </div>
                     <div className="border-r border-gray-600/10 px-4 py-2">package.json</div>
                   </div>
@@ -611,7 +611,7 @@ await agent.start();`}
           </div>
 
       <h3 className="mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white data-dark:text-white sm:text-4xl text-center">
-      Here. There. Everywhere.<br />Go viral with your apps in chat.
+      Here. There. Everywhere.<br />Go viral with your mini apps in chat.
       </h3>
       <p className="m-auto max-w-full md:max-w-lg text-center text-white">Join thousands of conversations happening right now across the XMTP network.</p>
       <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
