@@ -465,55 +465,7 @@ await agent.start();`}
     <div className="bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-contain bg-no-repeat bg-bottom rounded-2xl">
       <div className="px-6 py-6 pb-16 md:pb-24 md:py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="space-y-4 text-left">
-            {/* Group chat header */}
-            <div className="text-center mb-6">
-              <p className="text-sm text-gray-400 font-medium">Group: Dev Team Planning 💡</p>
-            </div>
-
-            {/* Alice message */}
-            <div className="flex justify-start">
-              <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-2xl rounded-bl-md max-w-xs">
-                <p className="text-xs text-gray-600 font-medium">Alice</p>
-                <p className="text-base">Who wants to split dinner tonight?</p>
-              </div>
-            </div>
-
-            {/* Bob message */}
-            <div className="flex justify-end">
-              <div className="bg-blue-500 text-white px-4 py-2 rounded-2xl rounded-br-md max-w-xs">
-                <p className="text-xs text-blue-100 font-medium">Bob</p>
-                <p className="text-base">I'm in! @split $80 pizza 🍕</p>
-              </div>
-            </div>
-
-            {/* Mini app response */}
-            <div className="flex justify-center">
-              <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-4 rounded-2xl max-w-sm border-2 border-green-400">
-                <div className="flex items-center mb-2">
-                  <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center mr-2">
-                    <span className="text-green-500 font-bold text-xs">$</span>
-                  </div>
-                  <p className="text-xs font-bold">Split Pay Mini App</p>
-                </div>
-                <p className="text-sm">Split $80 pizza between 3 people</p>
-                <p className="text-sm font-bold">$26.67 each</p>
-                <div className="mt-2 space-y-1">
-                  <p className="text-xs">✅ Alice: Paid</p>
-                  <p className="text-xs">✅ Bob: Paid</p>
-                  <p className="text-xs">⏳ Charlie: Pending</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Charlie message */}
-            <div className="flex justify-start">
-              <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-2xl rounded-bl-md max-w-xs">
-                <p className="text-xs text-gray-600 font-medium">Charlie</p>
-                <p className="text-base">Just paid! Thanks for organizing 🙌</p>
-              </div>
-            </div>
-          </div>
+          <img src="img/messageGraphic.png" alt="Ecosystem" className="w-full" />
           <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Build the future of messaging</h2>
           <h3 className="mt-4 font-medium mleading-none d:leading-normal tracking-normal text-5xl md:text-7xl text-pretty text-white data-dark:text-white text-center font-dotgothic">
             Ready to<br />Launch?
