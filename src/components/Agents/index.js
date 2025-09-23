@@ -195,9 +195,6 @@ const Agents = () => {
     <div className="mx-auto max-w-full px-6 mt-24 md:max-w-7xl lg:px-8">
       <div className="mx-auto max-w-full md:max-w-4xl px-6">
         <h2 className="mt-0 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">Join thousands of builders launching mini apps inside of chat.</h2>
-        <p className="mt-6 text-lg max-w-full md:max-w-3xl mx-auto text-center text-gray-600">
-          In chat, your mini apps don't get buried in feeds — they surface at the right moment, spark reactions and replies in a tap, and thrive as multiplayer experiences that persist over time.
-        </p>
       </div>
     </div>
     
