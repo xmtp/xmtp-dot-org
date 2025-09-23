@@ -346,7 +346,7 @@ await agent.start();`}
                   Native chat apps are exploding<br />across the ecosystem
                 </h2>
                 <p className="mt-6 text-lg max-w-full md:max-w-3xl mx-auto">
-                  XMTP powers a rapidly growing ecosystem of chat-native apps—where everything is handled by the mini app and agent from trading, prediction markets, event coordination, payments, and games.
+                  XMTP powers a rapidly growing ecosystem of chat-native apps—where everything is a built in chat experience from trading, prediction markets, event coordination, payments, and games.
                 </p>
                 <p className="mt-4 text-lg max-w-full md:max-w-3xl mx-auto font-semibold">
                   The future of app stores is in your DMs and Groups.
@@ -443,11 +443,6 @@ await agent.start();`}
           <p className="text-black">Every message is end-to-end encrypted. Your users own their conversations.</p>
         </div>
 
-        <div className="mt-10">
-          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          🌍 One Protocol, Many Surfaces</h4>
-          <p className="text-black">Write once → your mini app works across the entire XMTP ecosystem of apps.</p>
-        </div>
 
         <div className="mt-10">
           <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
@@ -461,10 +456,6 @@ await agent.start();`}
           <p className="text-black">Use our SDK like Legos: Works across any Mini App framework.</p>
         </div>
 
-        <h3 className="mt-12 font-semibold leading-normal tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-4xl text-center">
-        We know chat.
-        </h3>
-        <p className="m-auto md:max-w-xl text-center">Building mini apps for native chat experiences shouldn't be rocket science. We've done the heavy lifting so you can focus on the fun stuff.</p>
         <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
             <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
