@@ -404,10 +404,10 @@ await agent.start();`}
         <div className="grid grid-cols-1 items-center gap-x-24 gap-y-8 md:gap-y-16 lg:grid-cols-2 pt-0">
           <div className="mx-auto w-full max-w-xl lg:mx-0">
             <h2 className="text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-gray-900">
-              Ready to join a community building the future of messaging?
+              Join the community bringing mini apps into chat
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-              The future is almost here. Experience what a messaging experience with native financial rails feels like today by joining the waitlist for Base App.
+              The next wave of apps won't launch in stores — they'll start in conversations. Join the builders making it happen.
             </p>
 
             <div className="mt-8 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">
@@ -431,28 +431,40 @@ await agent.start();`}
       <div className="bg-white absolute inset-0" style={{ background: 'linear-gradient(200deg,#163869 15%,#571861 35%,#a79bb0 55%,#163869 85%)', opacity: 0.16 }}></div>
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
         <div className="mt-16">
-        <h2 className="mb-8 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Why Builders Love Building on XMTP</h2>
+        <h2 className="mb-8 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Why Builders Love XMTP</h2>
           <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          💸 Money = 💬 Messages</h4>
-          <p className="text-black">Send money like sending a DM. No APIs to wrestle with.</p>
+          ⚡ Apps in Motion</h4>
+          <p className="text-black">Mini apps don't just sit in feeds — they live inside conversations, where people are.</p>
         </div>
 
         <div className="mt-10">
           <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          🚫 Zero Gatekeepers</h4>
-          <p className="text-black">No app store approvals. No middlemen taking cuts.</p>
+          🔒 Privacy by Default</h4>
+          <p className="text-black">Every message is end-to-end encrypted. Your users own their conversations.</p>
         </div>
 
         <div className="mt-10">
           <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          🔥 Write Once, Run Everywhere</h4>
-          <p className="text-black">Your code works in every app that supports XMTP.</p>
+          🌍 One Protocol, Many Surfaces</h4>
+          <p className="text-black">Write once → your mini app works across the entire XMTP ecosystem of apps.</p>
+        </div>
+
+        <div className="mt-10">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
+          🤝 Plug Into People, Not Platforms</h4>
+          <p className="text-black">Groups are the distribution channel. Chats are the retention engine.</p>
+        </div>
+
+        <div className="mt-10">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
+          🧩 Composable by Design</h4>
+          <p className="text-black">Use our SDK like Legos: Works across any Mini App framework.</p>
         </div>
 
         <h3 className="mt-12 font-semibold leading-normal tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-4xl text-center">
         We know chat.
         </h3>
-        <p className="m-auto md:max-w-xl text-center">Building apps for native chat experiences shouldn't be rocket science. We've done the heavy lifting so you can focus on the fun stuff.</p>
+        <p className="m-auto md:max-w-xl text-center">Building mini apps for native chat experiences shouldn't be rocket science. We've done the heavy lifting so you can focus on the fun stuff.</p>
         <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
             <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
