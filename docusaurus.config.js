@@ -49,9 +49,9 @@ const config = {
       "classic",
       {
         docs: {
-          path: "docs",
+          path: "vision",
           id: "default",
-          routeBasePath: "docs",
+          routeBasePath: "vision",
           sidebarPath: require.resolve("./sidebars/sidebars.js"),
           showLastUpdateAuthor: false,
           showLastUpdateTime: true,
@@ -125,12 +125,12 @@ const config = {
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Events ↗</div>`,
               },
               {
-                to: "/docs/community/contribute",
+                to: "/vision/community/contribute",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/heart-icon.svg" alt="Heart icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>`,
               },
               {
-                to: "/docs/community/code-of-conduct",
+                to: "/vision/community/code-of-conduct",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>`,
               },
@@ -168,11 +168,11 @@ const config = {
               },
               {
                 label: "Contribute",
-                to: "/docs/community/contribute",
+                to: "/vision/community/contribute",
               },
               {
                 label: "Code of conduct",
-                to: "/docs/community/code-of-conduct",
+                to: "/vision/community/code-of-conduct",
               },
             ],
           },

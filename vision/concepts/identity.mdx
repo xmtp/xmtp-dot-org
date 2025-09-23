@@ -1,0 +1,95 @@
+---
+sidebar_label: Identity
+sidebar_position: 2
+---
+
+# Identity with XMTP
+
+<p className="text-2xl font-bold mb-4">Connect your digital identity to XMTP to provide users with secure, censorship-resistant messaging.</p>
+
+XMTP makes it simple to take any digital identity and use it as the basis for private, end-to-end encrypted, quantum-resistant conversations in your app.
+
+<br/>
+
+:::info Key Takeaways
+
+- **What is identity?** A cryptographically verified digital identifier (wallet, passkey, social ID, etc.) that can be linked to an XMTP inbox for secure messaging
+- **Why it matters:** Enables secure, censorship-resistant communication while preventing lockouts and allowing users to unify multiple identifiers under one inbox
+- **How it works:** Apps create inboxes, then add/revoke identity associations (wallets, passkeys, social IDs). Recovery is handled through a designated recovery authority.
+- **Future-proof:** Open design supports any identity system (current: wallets, passkeys, World ID; future: Solana, Bitcoin, Bluesky, etc.)
+
+:::
+
+### Supported identities
+
+XMTP is **open by design**. A single XMTP inbox can be associated with multiple identifiers, each cryptographically verified:
+
+- **Wallets** → EVM addresses, smart contract wallets, ERC-4337 accounts
+- **Passkeys** → device-native WebAuthn credentials (p256)
+- **World ID** → proof of personhood
+- **Social IDs** → ENS, Farcaster, Lens, Base handles
+- **Future networks** → Bluesky, Nostr, BTC, Solana, or any identity you want to support
+
+With XMTP, you don't need to build a secure messaging layer for your app. Just connect your identity system to XMTP, and provide your users with encrypted, censorship-resistant communication out of the box.
+
+---
+
+### How identity works with XMTP
+
+On XMTP, every user has an **inbox**, identified by a cryptographic **InboxID**.
+
+That inbox can be linked to one or more identifiers through signed **IdentityActions**, defined in [XIP-46](https://community.xmtp.org/t/xip-46-multi-wallet-identity/639?utm_source=chatgpt.com).
+
+![image.png](/img/id-tree.png)
+
+Below are the core technical concepts for creating, managing, recovering, and verifying identity with XMTP. 
+
+### Manage identities with XMTP
+
+Your app has complete control over how users' identities are connected to messaging. With XMTP, you can:
+
+- **Create** → spin up a new inbox tied to a user's chosen identity
+- **Link** → add additional identifiers (wallets, passkeys, social IDs) to the same inbox
+- **Recover** → restore access if one identifier is lost or compromised
+- **Rotate** → change or update the recovery authority that safeguards the inbox
+
+### Secure recovery for compromised inboxes
+
+Each inbox has a **recovery authority** (e.g., a wallet or passkey) that can revoke associations or rotate control if another identifier is compromised.
+
+- A designated identifier (e.g., wallet or passkey) with the ability to revoke associations or transfer recovery rights.
+- Provides resilience if a linked identifier is lost or compromised.
+- Prevents single-point lockouts.
+
+### Identity verification
+
+- All associations are backed by cryptographic signatures.
+- The XMTP SDKs verify proofs so apps don't have to implement their own crypto.
+- Ensures identifiers cannot be spoofed or maliciously linked.
+
+:::info Learn more
+
+To learn more, see the full specification, code samples, and SDK references for building with [XMTP identity](https://docs.xmtp.org/chat-apps/core-messaging/manage-inboxes).
+
+:::
+
+---
+
+### XMTP identity roadmap
+
+- **Late 2025** → Decentralized identity coordination on the XMTP Appchain as part of mainnet launch.
+- **2026** → Add more networks and identities like Solana, Bitcoin, and Bluesky.
+
+---
+
+### Why XMTP
+
+XMTP's mission is to increase the world's freedom to communicate. 
+
+By connecting your identity model to XMTP, you give your users a messaging experience that is:
+
+- **Secure by default** → End-to-end encryption with MLS, forward secrecy, post-compromise security, and post-quantum protection.
+- **Private** → Metadata protection ensures no one can see who is messaging whom, when, or how often.
+- **Resilient** → Recovery authority prevents lockout and allows compromised identifiers to be revoked.
+- **Composable** → Users can unify multiple identifiers (wallets, passkeys, social IDs) into a single inbox.
+- **Standards-based** → Built on open cryptographic standards and XIPs like [XIP-46](https://community.xmtp.org/t/xip-46-multi-wallet-identity/639?utm_source=chatgpt.com).
