@@ -96,7 +96,7 @@ const Agents = () => {
     <Head>
       <title>Build Agents and Mini Apps on XMTP</title>
       <meta property="og:title" content="Mini-apps in chat" />
-      <meta property="og:description" content="Create mini app experiences in chat with built-in payments, secure communication, and seamless access to the entire XMTP messaging ecosystem." />
+      <meta property="og:description" content="Add mini app experiences to chat with built-in payments, secure communication, and seamless access to the entire XMTP messaging ecosystem." />
       <meta property="og:image" content="https://xmtp.org/img/miniapps-preview.png" />
       <meta property="og:image:width" content="1470" />
       <meta property="og:image:height" content="710" />
@@ -104,7 +104,7 @@ const Agents = () => {
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Mini-apps in chat" />
-      <meta name="twitter:description" content="Create mini app experiences in chat with built-in payments, secure communication, and seamless access to the entire XMTP messaging ecosystem." />
+      <meta name="twitter:description" content="Add mini app experiences to chat with built-in payments, secure communication, and seamless access to the entire XMTP messaging ecosystem." />
       <meta name="twitter:image" content="https://xmtp.org/img/miniapps-preview.png" />
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </Head>
@@ -163,7 +163,7 @@ const Agents = () => {
         <div className="text-left lg:ml-24">
           <div className="max-w-lg">
             <h2 className="mt-4 md:mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-gray-900">
-              Create mini app experiences in chat with built-in payments 💸 secure communication 🔒 seamless interoperability 🌐
+              Add mini app experiences to chat with built-in payments 💸 secure communication 🔒 seamless interoperability 🌐
             </h2>
           </div>
           <div className="max-w-lg">
