@@ -95,16 +95,16 @@ const Agents = () => {
   <div>
     <Head>
       <title>Build Agents and Mini Apps on XMTP</title>
-      <meta property="og:title" content="Build Agents and Mini Apps on XMTP" />
-      <meta property="og:description" content="Create powerful AI agents and native mini apps with built-in payments, secure communication, and seamless access to the entire XMTP messaging ecosystem." />
+      <meta property="og:title" content="Mini-apps in chat" />
+      <meta property="og:description" content="Create mini app experiences in chat with built-in payments, secure communication, and seamless access to the entire XMTP messaging ecosystem." />
       <meta property="og:image" content="https://xmtp.org/img/miniapps-preview.png" />
       <meta property="og:image:width" content="1470" />
       <meta property="og:image:height" content="710" />
       <meta property="og:url" content="https://xmtp.org/miniapps" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Build Agents and Mini Apps on XMTP" />
-      <meta name="twitter:description" content="Create powerful AI agents and native mini apps with built-in payments, secure communication, and seamless access to the entire XMTP messaging ecosystem." />
+      <meta name="twitter:title" content="Mini-apps in chat" />
+      <meta name="twitter:description" content="Create mini app experiences in chat with built-in payments, secure communication, and seamless access to the entire XMTP messaging ecosystem." />
       <meta name="twitter:image" content="https://xmtp.org/img/miniapps-preview.png" />
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </Head>
