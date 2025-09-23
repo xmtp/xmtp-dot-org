@@ -194,7 +194,10 @@ const Agents = () => {
     
     <div className="mx-auto max-w-full px-6 mt-24 md:max-w-7xl lg:px-8">
       <div className="mx-auto max-w-full md:max-w-2xl px-6">
-        <h2 className="mt-0 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">Join thousands of builders launching mini apps inside of Chat.</h2>
+        <h2 className="mt-0 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">Join thousands of builders launching mini apps inside of chat.</h2>
+        <p className="mt-6 text-lg max-w-full md:max-w-3xl mx-auto text-center text-gray-600">
+          In chat, your mini apps don't get buried in feeds — they surface at the right moment, spark reactions and replies in a tap, and thrive as multiplayer experiences that persist over time.
+        </p>
       </div>
     </div>
     
@@ -209,15 +212,6 @@ const Agents = () => {
        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-[#FBFBFB]"></div>
     </div>
 
-    <div className="mx-auto max-w-3xl py-0 md:py-32 lg:py-0">
-      <div className="text-left lg:ml-24">
-        <div className="max-w-lg">
-          
-          <div className="mt-0">
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div className="px-8 py-16 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 mt-2 mb-0 bg-cover bg-center" style={{ backgroundImage: 'url(/img/spaceBG.jpg)' }}>
       <div className="mx-auto max-w-7xl">
