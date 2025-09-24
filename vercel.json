@@ -1,12 +1,9 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
   "build": {
     "env": {
       "NODE_OPTIONS": "--max-old-space-size=4096"
-    }
-  },
-  "functions": {
-    "src/pages/**/*.js": {
-      "maxDuration": 30
     }
   },
   "headers": [
