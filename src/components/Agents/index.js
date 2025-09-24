@@ -2,6 +2,53 @@ import React, { useEffect, useState } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl/";
 import Head from "@docusaurus/Head";
 
+// Custom hook for counting animation
+const useCountUp = (end, duration = 2000, start = 0) => {
+  const [count, setCount] = useState(start);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.querySelector(`[data-count="${end}"]`);
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => observer.disconnect();
+  }, [end, isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime;
+    const animate = (currentTime) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(easeOutQuart * (end - start) + start);
+      
+      setCount(currentCount);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [isVisible, end, start, duration]);
+
+  return count;
+};
+
 // Optimized image component with lazy loading
 const OptimizedImage = ({ src, alt, className, ...props }) => (
   <img 
@@ -35,6 +82,10 @@ const Agents = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [typedWord, setTypedWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  
+  // Count-up animations
+  const developerCount = useCountUp(1000, 2000);
+  const appCount = useCountUp(100, 2000);
 
   useEffect(() => {
     const fullWord = wordsToType[currentWordIndex];
@@ -167,7 +218,7 @@ const Agents = () => {
                   XMTP powers a rapidly growing ecosystem of chat-native apps—where everything is a built in chat experience from trading, prediction markets, event coordination, payments, and games.
                 </p>
                 <p className="mt-6 font-normal text-lg max-w-full md:max-w-3xl mx-auto fadeup">
-                  All miniapps are suppported whether they are built on <span className="font-semibold">Base, Farcaster, and more.</span>
+                  As an <span className="font-semibold">open, permissionless protocol,</span> all miniapps are suppported whether they are built on <span className="font-semibold">Base, Farcaster, and more.</span>
                 </p>
 
                 <div className="mx-auto mt-6 mb-4 grid max-w-sm grid-cols-2 items-center gap-x-8 gap-y-10 fadeup">
@@ -181,6 +232,20 @@ const Agents = () => {
                   Start building now <span aria-hidden="true">→</span>
                 </a>
               </div>
+
+              <div class="mt-10 mx-auto max-w-full shrink-0 lg:mx-0 fadeup">
+                <dl class="mx-auto mt-4 mb-4 grid max-w-sm grid-cols-2 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-4 text-black sm:gap-y-16 lg:grid-cols-2">
+                  <div class="flex flex-col gap-y-0 border-none pr-0">
+                    <dt class="text-base/8 text-black">of developers</dt>
+                    <dd class="order-first text-4xl font-semibold tracking-tight" data-count="1000">{developerCount.toLocaleString()}+</dd>
+                  </div>
+                  <div class="flex flex-col gap-y-0 border-none ml-0 lg:ml-8">
+                    <dt class="text-base/8 text-black">Production apps</dt>
+                    <dd class="order-first text-4xl font-semibold tracking-tight" data-count="100">{appCount}+</dd>
+                  </div>
+                </dl>
+              </div>
+
             </div>
           </div>
         </div>
@@ -457,20 +522,7 @@ await agent.start();`}
               The next wave of apps won't launch in stores — they'll start in conversations. Join the builders making it happen.
             </p>
 
-            <div class="mx-auto max-w-full shrink-0 lg:mx-0 lg:max-w-2xl">
-              <dl class="mx-auto mt-4 mb-4 grid max-w-4xl grid-cols-2 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-10 text-black sm:gap-y-16 lg:grid-cols-2">
-                <div class="flex flex-col gap-y-0 border-none md:border-solid border-0 border-r border-white/30 pr-0 md:pr-10">
-                  <dt class="text-xs/4 md:text-base/8 text-black">of developers</dt>
-                  <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">1,000s</dd>
-                </div>
-                <div class="flex flex-col gap-y-0 border-none ml-0 md:ml-8">
-                  <dt class="text-xs/4 md:text-base/8 text-black">Production apps</dt>
-                  <dd class="order-first text-lg md:text-3xl font-semibold tracking-tight">60+</dd>
-                </div>
-              </dl>
-            </div>
-
-            <div className="mt-8 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">
+            <div className="mt-4 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">
               <a href="mailto:eric@ephemerahq.com" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
                 Request to join the group chat <span aria-hidden="true">→</span>
               </a>
