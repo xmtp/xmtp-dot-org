@@ -218,7 +218,7 @@ const Agents = () => {
                   XMTP powers a rapidly growing ecosystem of chat-native apps—where everything is a built in chat experience from trading, prediction markets, event coordination, payments, and games.
                 </p>
                 <p className="mt-6 font-normal text-lg max-w-full md:max-w-3xl mx-auto fadeup">
-                  As an <span className="font-semibold">open, permissionless protocol,</span> all miniapps are suppported whether they are built on <span className="font-semibold">Base, Farcaster, and more.</span>
+                  As an <span className="font-semibold">open, permissionless protocol,</span> all miniapps are suppported whether they are built on <span className="font-semibold">Base, Farcaster, or any other emerging ecosystem.</span> XMTP is built to support <a href="https://xmtp.org/vision/concepts/identity" targe="_blank"><span className="font-semibold underline decoration-dotted hover:no-underline underline-offset-4">any identity and any network.</span></a>
                 </p>
 
                 <div className="mx-auto mt-6 mb-4 grid max-w-sm grid-cols-2 items-center gap-x-8 gap-y-10 fadeup">
