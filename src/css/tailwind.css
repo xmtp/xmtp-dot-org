@@ -1678,6 +1678,29 @@ pre code {
   }
 }
 
+/* Mobile improvements for vision pages */
+@media (max-width: 768px) {
+  /* Fix small margins on mobile for docs content */
+  [class*="docPage"] .container,
+  [class*="docItemContainer"],
+  .markdown {
+    padding-left: .75rem !important;
+    padding-right: .75rem !important;
+  }
+
+  /* Ensure proper spacing for article content */
+  [class*="docItemContainer"] article {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  /* Add left padding to "Edit this page" link */
+  .theme-edit-this-page {
+    padding-left: 0.75rem !important;
+  }
+
+}
+
 /*ask ai*/
 .DocSearch {
   /*display: none;*/

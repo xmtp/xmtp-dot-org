@@ -267,6 +267,32 @@ const Agents = () => {
       </div>
 
       <div className="mx-auto max-w-7xl">
+        <div className="hidden sm:mb-6 sm:flex lg:ml-16">
+          <div className="relative rounded-full px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            XMTP is now fully quantum-resistant {' '}
+            <a href="https://github.com/xmtp/libxmtp/blob/main/xmtp_mls/hndl_security.md" className="font-semibold text-red-500">
+              <span aria-hidden="true" className="absolute inset-0" />
+              Read more <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+        
+        <div className="py-0 md:py-32 lg:py-0 lg:ml-16">
+          <div className="text-left">
+             <h1 className="mr-0 md:mr-10 float-left text-5xl md:text-6xl font-normal tracking-tighter text-balance text-gray-900 dark:text-white">
+                Build<br />Agents and Mini Apps that
+              </h1>
+            <h2 className="mt-0 text-[72px] md:text-[135px] leading-[0.75] font-normal text-balance text-gray-900 dark:text-white font-dotgothic tracking-tight" aria-live="polite">
+              <span className="typing-wrap">
+                <span className="typing-placeholder">Coordinate</span>
+                <span className="typing-live">
+                  {typedWord}
+                  <span className="typing-cursor">|</span>
+                </span>
+              </span>
+            </h2>
+          </div>
+        </div>
 
         <div className="relative mt-0 md:mt-8 -mx-6 lg:-mx-8 fadeup">
           <div className="relative mx-auto max-w-[1680px]">
@@ -313,6 +339,12 @@ const Agents = () => {
       </div>
     </div>
     
+    <div className="mx-auto max-w-full px-6 mt-24 md:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-full md:max-w-2xl px-6">
+         <h2 className="mt-0 text-center text-3xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900">Secure agents and mini apps in your group chats that can transact</h2>
+      </div>
+    </div>
+    
     <div className="md:overflow-hidden md:flex md:justify-center bg-[#FBFBFB] relative fadeup">
       <div className="absolute top-0 inset-0 h-10 bg-gradient-to-t from-[#FBFBFB] to-white"></div>
         <div className="md:hidden overflow-x-auto overflow-y-hidden" id="mobile-scroll-container">
@@ -321,7 +353,190 @@ const Agents = () => {
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
           <video className="hidden md:block mt-24 md:mt-16 relative top-0 max-w-full" autoPlay muted playsInline loop src="/img/Comp2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
         </div>
-       <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-[#FBFBFB]"></div>
+       <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white dark:from-gray-800 to-[#FBFBFB] dark:to-gray-900"></div>
+    </div>
+
+    <div className="mx-auto max-w-3xl py-0 md:py-32 lg:py-0">
+      <div className="text-left lg:ml-24">
+        <div className="max-w-lg">
+          
+          <div className="mt-0">
+             <h2 className="text-2xl font-bold tracking-tighter text-balance text-gray-900 dark:text-white sm:text-4xl">
+               <strong>Agents give mini apps a voice</strong>
+             </h2>
+             <p className="mt-4 text-lg font-normal text-pretty text-gray-500 dark:text-gray-400 sm:text-xl/7">
+               Every mini app can now have a voice, memory, and presence in every conversation.
+             </p>
+            
+            <div className="mt-10 space-y-6 max-w-full">
+              <div className="flex justify-start">
+                <div className="flex flex-col">
+                  <div className="bg-[#E5E5EA] dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-3xl rounded-bl-sm max-w-sm shadow-sm relative" style={{ 
+                    background: 'linear-gradient(135deg, #E5E5EA 0%, #D1D1D6 100%)',
+                    boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                    borderRadius: '18px 18px 18px 4px'
+                  }}>
+                    <p className="text-base md:text-lg font-normal !mb-0 pb-0">Natural language interface</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-end">
+                <div className="flex flex-col">
+                  <div className="bg-[#007AFF] text-white px-4 py-2 rounded-3xl rounded-br-sm max-w-sm shadow-sm relative" style={{ 
+                    background: 'linear-gradient(135deg, #007AFF 0%, #0056CC 100%)',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
+                    borderRadius: '18px 18px 4px 18px'
+                  }}>
+                    <p className="text-base md:text-lg font-normal !mb-0 pb-0">Real-time group coordination</p>
+                  </div>
+                  <div className="mt-0 mr-2 text-right">
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-semibold">Delivered</span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-start">
+                <div className="flex flex-col">
+                  <div className="bg-[#E5E5EA] dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-3xl rounded-bl-sm max-w-sm shadow-sm relative" style={{ 
+                    background: 'linear-gradient(135deg, #E5E5EA 0%, #D1D1D6 100%)',
+                    boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                    borderRadius: '18px 18px 18px 4px'
+                  }}>
+                    <p className="text-base md:text-lg font-normal !mb-0 pb-0">More distribution and sharing</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-end">
+                <div className="flex flex-col">
+                  <div className="bg-[#007AFF] text-white px-4 py-2 rounded-3xl rounded-br-sm max-w-sm shadow-sm relative" style={{ 
+                    background: 'linear-gradient(135deg, #007AFF 0%, #0056CC 100%)',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
+                    borderRadius: '18px 18px 4px 18px'
+                  }}>
+                    <p className="text-base md:text-lg font-normal !mb-0 pb-0">Persistent memory and context</p>
+                  </div>
+                  <div className="mt-0 mr-2 text-right">
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-semibold">Delivered</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div className="px-8 py-16 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 mt-16 mb-24 bg-cover bg-center" style={{ backgroundImage: 'url(/img/spaceBG.jpg)' }}>
+      <div className="mx-auto max-w-7xl">
+
+        <div className="grid grid-cols-1 items-center gap-x-4 gap-y-8 md:gap-y-16 lg:grid-cols-12 pt-0">
+          <div className="mx-auto w-full max-w-lg lg:mx-0 lg:col-span-5">
+            <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 dark:text-gray-300 uppercase">Up and Running in no time</h2>
+            <h2 className="text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white sm:text-4xl">
+              Say hello to zero-config agent development
+            </h2>
+            <p className="mt-6 text-lg/8 text-gray-200 dark:text-gray-300">
+            Our Agent SDK handles all the complexity so you can focus on building amazing experiences.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-1 mb-4 mt-6">
+              <div className="flex items-center space-x-2">
+                <div className="flex-shrink-0">
+                  <svg className="w-6 h-6 mt-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                 <span className="text-gray-200 dark:text-gray-300 font-semibold text-base/6">One environment variable</span>
+              </div>
+              
+              <div className="flex items-center space-x-2">
+                <div className="flex-shrink-0">
+                  <svg className="w-6 h-6 mt-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                 <span className="text-gray-200 dark:text-gray-300 font-semibold text-base/6">Full TypeScript Support</span>
+              </div>
+              
+              <div className="flex items-center space-x-2">
+                <div className="flex-shrink-0">
+                  <svg className="w-6 h-6 mt-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                 <span className="text-gray-200 dark:text-gray-300 font-semibold text-base/6">Rich-content messaging</span>
+              </div>
+              
+              <div className="flex items-center space-x-2">
+                <div className="flex-shrink-0">
+                  <svg className="w-6 h-6 mt-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                 <span className="text-gray-200 dark:text-gray-300 font-semibold text-base/6">Middleware support</span>
+              </div>
+            </div>
+
+            <div className="mt-8 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">     
+                <a href="https://github.com/xmtp/xmtp-js/tree/main/sdks/agent-sdk" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6 me-2 fill-white"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z"></path></svg>
+                  Explore the Agents SDK <span aria-hidden="true">→</span>
+                </a>
+             </div>
+          </div>
+          
+           <div className="mx-auto min-w-full max-w-full lg:col-span-7">
+             <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
+              <div className="w-full overflow-hidden rounded-xl bg-gray-900 ring-1 ring-white/10">
+                <div className="flex bg-gray-800/40 ring-1 ring-white/5">
+                  <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
+                    <div className="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">
+                      agent.js
+                    </div>
+                    <div className="border-r border-gray-600/10 px-4 py-2">package.json</div>
+                  </div>
+                  <div className="ml-auto flex items-center px-4">
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                  </div>
+                </div>
+                 <div className="px-6 pt-6 pb-4 font-mono text-sm">
+                   <pre className="text-sm leading-relaxed text-white" style={{
+                     background: 'transparent',
+                     color: '#ffffff'
+                   }}>
+{`import { createUser, createSigner, Agent, getTestUrl } from "@xmtp/agent-sdk";
+
+// 1. Create a local user + signer
+const user = createUser();
+const signer = createSigner(user);
+
+// 2. Spin up the agent
+const agent = await Agent.create(signer, {
+  env: "dev", // or 'production'
+  dbPath: null, // in-memory store
+});
+
+// 3. Respond to text messages
+agent.on("text", async (ctx) => {
+  await ctx.conversation.send("Hello from my XMTP Agent! 👋");
+});
+
+// 4. Log when we're ready
+agent.on("start", () => {
+  console.log(\`We are online: \${getTestUrl(agent)}\`);
+});
+
+await agent.start();`}
+                   </pre>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div className="py-12 md:py-24 pt-8 md:pt-12 rounded-2xl mt-0 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#fcfcfc] fadeup" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
@@ -522,6 +737,266 @@ await agent.start();`}
     </div>
 
     <div className="bg-white pb-0 pt-16 md:pt-16">
+      <div className="px-0 md:px-8">
+        <div className="mx-auto max-w-2xl lg:max-w-7xl">
+          <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
+          <div className="col-start-1 col-end-7 text-left">
+            <div>
+              <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Featured Agents and Mini Apps</h2>
+               <h2 className="mt-0 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-gray-900 dark:text-white sm:text-5xl">
+                 Agents  🤝  Mini Apps
+               </h2>
+               <p className="text-lg max-w-full md:max-w-3xl text-gray-600 dark:text-gray-300">
+                 See some examples of AI agents and mini apps that can listen, respond, and transact natively in conversations are transforming customer experience, financial coordination, and real-time collaboration across apps.
+               </p>
+            </div>
+          </div>
+        </div>
+          
+        <div className="mx-auto mt-8 max-w-2xl sm:mt-12 lg:mt-16 lg:max-w-none">
+          
+          <div className="mb-8">
+             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-4">Trading & Finance</h3>
+          </div>
+          
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-4 mb-16">
+            
+              <div className="flex flex-col relative">
+                <div className="absolute top-2 left-2 z-10">
+                  <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-blue-50 px-2 py-1 font-mono text-xs font-semibold text-blue-700 inset-ring inset-ring-blue-700/10">
+                    Agent
+                  </span>
+                </div>
+                <video className="mb-2 rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/featuredBNKR.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              
+               <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase">Bankr</h2>
+              
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900 dark:text-white">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Your onchain finance agent
+              </dt>
+              
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-300">
+                <p className="flex-auto">Buy/sell tokens, manage, and analyze your crypto portfolio all through natural conversation in any chat.</p>
+                <div className="mt-2 flex gap-6">
+                  <a href="https://x.com/bankrbot" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                  <a href="https://bankr.bot/" target="_blank" className="text-sm/6 font-semibold text-blue-500 hover:text-blue-500">
+                    Try it now <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
+            <div className="flex flex-col relative">
+              <div className="absolute top-2 left-2 z-10">
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
+              </div>
+              <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/flaunchyWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Flaunch</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Earn from launches
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">A complete token launch platform that lives in your messages - buy, sell, launch coins & earn 100% revenue.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="https://x.com/flaunchgg" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
+            <div className="flex flex-col relative">
+              <div className="absolute top-2 left-2 z-10">
+              <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-blue-50 px-2 py-1 font-mono text-xs font-semibold text-blue-700 inset-ring inset-ring-blue-700/10">
+                Agent
+              </span>
+              </div>
+              <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/elsaWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Elsa</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Turn words into onchain actions
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Trade smarter, and maximize returns, all with unparalleled ease and safety.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="https://x.com/flaunchgg" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
+            <div className="flex flex-col relative">
+              <div className="absolute top-2 left-2 z-10">
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
+              </div>
+              <div className="rounded-2xl border-solid border-2 border-gray-200 bg-gray-100 flex items-center justify-center h-48">
+                <img loading="lazy" className="min-w-full rounded-2xl border-solid border-2 border-gray-200" src="img/mamoWeb.png" alt="Mamo" />
+              </div>
+              <h2 className="mt-4 mb-2 font-mono text-xs font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Mamo</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Personal finance companion
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Mamo helps you track, grow, and understand your money – step by step, without the stress.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="https://x.com/mamo" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
+          </dl>
+          
+          <div className="mb-8 mt-16">
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 md:mb-4">Prediction Markets, Games, and Social</h3>
+          </div>
+          
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-4 mb-16">
+
+            <div className="flex flex-col relative">
+              <div className="absolute top-2 left-2 z-10">
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
+              </div>
+              <img loading="lazy" className="min-w-full rounded-2xl border-solid border-2 border-gray-200" src="img/brackyWeb.png" alt="Bracky" />
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Bracky</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Your sports prediction market agent
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">An AI-powered prediction market platform that makes betting with friends fun and social through messaging.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="https://x.com/BrackyHQ" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
+            <div className="flex flex-col relative">
+              <div className="absolute top-2 left-2 z-10">
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
+              </div>
+              <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/onitWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Onit</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Create custom prediction markets
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Deploy fully customizable prediction markets for any question with AI assistance, all happening in your group chats.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="https://x.com/onit_fun" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
+            <div className="flex flex-col relative">
+              <div className="absolute top-2 left-2 z-10">
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
+              </div>
+              <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/ponderWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Ponder</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Predict what the crowd thinks
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Ponder lets you make money by answering simple daily polls on group opinions.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="https://x.com/PonderOnBase" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
+            <div className="flex flex-col relative max-w-md">
+              <div className="absolute top-2 left-2 z-10">
+                <span className="uppercase tracking-widest inline-flex items-center rounded-full bg-orange-50 px-2 py-1 font-mono text-xs font-semibold text-orange-700 inset-ring inset-ring-blue-700/10">
+                  Agent & Mini App
+                </span>
+              </div>
+              <video className="rounded-2xl border-solid border-2 border-gray-200" autoPlay muted playsInline loop src="img/squabbleWeb.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+              <h2 className="mt-4 mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Squabble</h2>
+              <dt className="mt-0 flex items-center text-base/7 font-semibold text-gray-900">
+                <div aria-hidden="true" className="size-5 flex-none text-red-600" />
+                Play a word game for real stakes
+              </dt>
+              <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p className="flex-auto">Play a popular interlocking word game with real onchain stakes and instant payouts, all within your chat.</p>
+                <div className="mt-2 flex gap-2">
+                  <a href="https://x.com/xmtp_/status/1937889105188388879" target="_blank" className="text-sm/6 font-semibold text-red-500 hover:text-red-500">
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </dd>
+            </div>
+
+          </dl>
+          
+        </div>
+
+        </div>
+      </div>
+    
+    </div>
+
+     <div className="py-12 md:py-16 pt-8 md:pt-6 rounded-2xl mt-16 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#fcfcfc]" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
+        
+          <div className="mt-8 flex justify-center">
+            <div className="bg-gradient-to-r from-black to-gray-900 border-red-500 p-8 pb-6 rounded-xl max-w-2xl shadow-lg">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <img loading="lazy" className="h-8 w-8 rounded-full" src="img/bankr-logo.jpg" alt="Bankr logo" />
+                </div>
+                <div className="ml-3">
+                  <p className="text-xl text-left md:text-center font-medium text-white">
+                    "Bankr is part of <span className="font-bold text-red-600">20,000+ DMs and Group chats</span> in the Base App and it's not even out of beta yet"
+                  </p>
+                  <p className="mt-2 text-left md:text-center text-md text-white">
+                    <a href="https://x.com/bankrbot/status/1957564153780228405" target="_blank" className="text-red-500 hover:text-red-600">@bankrbot on X</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <h3 className="mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white data-dark:text-white sm:text-4xl text-center">
+      Here. There. Everywhere.<br />Go viral with your agents and mini apps.
+      </h3>
+      <p className="m-auto max-w-full md:max-w-lg text-center text-white">Join thousands of conversations happening right now across the XMTP network.</p>
+      <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+        </svg>
+        Start building <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+    <div className="bg-white pb-0 pt-16 md:pt-16">
       <div className="mx-auto max-w-7xl">
 
         <div className="grid grid-cols-1 items-center gap-x-24 gap-y-8 md:gap-y-16 lg:grid-cols-2 pt-0 fadeup">
@@ -550,17 +1025,70 @@ await agent.start();`}
       </div>
     </div>
 
-
     <div className="bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-cover bg-no-repeat bg-bottom rounded-2xl fadeup">
       <div className="px-6 py-6 pb-16 md:pb-24 md:py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-xl text-center">
           <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Build the future of messaging</h2>
           <h3 className="mt-4 font-medium mleading-none d:leading-normal tracking-normal text-5xl md:text-7xl text-pretty text-white data-dark:text-white text-center font-dotgothic">
+    <div className="py-8 md:py-16 pt-4 md:pt-0 md:pb-20 rounded-2xl mb-8 relative overflow-hidden text-center">
+      <div className="bg-white absolute inset-0" style={{ background: 'linear-gradient(200deg,#163869 15%,#571861 35%,#a79bb0 55%,#163869 85%)', opacity: 0.16 }}></div>
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
+        <div className="mt-16">
+         <h2 className="mb-8 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase">Why Builders Love Building on XMTP</h2>
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
+          💸 Money = 💬 Messages</h4>
+          <p className="text-black dark:text-white">Send money like sending a DM. No APIs to wrestle with.</p>
+        </div>
+
+        <div className="mt-10">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
+          🚫 Zero Gatekeepers</h4>
+          <p className="text-black dark:text-white">No app store approvals. No middlemen taking cuts.</p>
+        </div>
+
+        <div className="mt-10">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
+          🔥 Write Once, Run Everywhere</h4>
+          <p className="text-black dark:text-white">Your code works in every app that supports XMTP.</p>
+        </div>
+
+        <h3 className="mt-12 font-semibold leading-normal tracking-tighter text-pretty text-gray-950 dark:text-white sm:text-4xl text-center">
+        We know chat.
+        </h3>
+        <p className="m-auto md:max-w-xl text-center text-gray-600 dark:text-gray-300">Building agents and mini apps shouldn't be rocket science. We've done the heavy lifting so you can focus on the fun stuff.</p>
+        <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+          </svg>
+          Start building <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div className="bg-[#141414] dark:bg-gray-900 bg-[url(/img/footerBG.jpg)] bg-contain bg-no-repeat bg-bottom rounded-2xl">
+      <div className="px-6 py-6 pb-16 md:pb-24 md:py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <div className="space-y-8 text-left">
+            <div className="flex justify-end">
+              <div className="bg-blue-500 text-white px-4 py-2 pb-0 rounded-2xl rounded-br-md max-w-xs">
+                <p className="text-base md:text-md">Hey @Agent, I'm ready to build with XMTP.</p>
+              </div>
+            </div>
+            <div className="flex justify-start">
+              <div className="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 pb-4 rounded-2xl rounded-bl-md max-w-sm">
+              <p className="text-base md:text-md">Amazing.</p>
+                <p className="text-base md:text-md">Join thousands of developers building next-generation transactional agents with XMTP — the secure messaging layer for AI, money, and coordination.</p>
+                <a target="_blank" className="color-white underline text-lg hover:no-underline" href="https://docs.xmtp.org/agents/get-started/build-an-agent">https://docs.xmtp.org</a>
+              </div>
+            </div>
+          </div>
+          <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 dark:text-gray-400 uppercase">Build the future of messaging</h2>
+          <h3 className="mt-4 font-medium mleading-none d:leading-normal tracking-normal text-5xl md:text-7xl text-pretty text-white data-dark:text-white text-center font-dotgothic">
             Ready to<br />Launch?
           </h3>
-          <p className="mt-8 text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the logic.</p>
-          <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the keys.</p>
-          <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the experience.</p>
+          <p className="mt-8 text-lg font-dotgothic font-bold text-gray-300 dark:text-gray-200 tracking-normal text-center leading-none">You own the logic.</p>
+          <p className="text-lg font-dotgothic font-bold text-gray-300 dark:text-gray-200 tracking-normal text-center leading-none">You own the keys.</p>
+          <p className="text-lg font-dotgothic font-bold text-gray-300 dark:text-gray-200 tracking-normal text-center leading-none">You own the experience.</p>
           
           <div className="mt-8 flex items-center justify-center gap-x-4">
             <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
