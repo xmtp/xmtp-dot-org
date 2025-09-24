@@ -1,9 +1,11 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm ci && npm run build:production",
   "outputDirectory": "build",
+  "installCommand": "npm ci",
   "build": {
     "env": {
-      "NODE_OPTIONS": "--max-old-space-size=4096"
+      "NODE_OPTIONS": "--max-old-space-size=4096",
+      "NODE_ENV": "production"
     }
   },
   "headers": [
