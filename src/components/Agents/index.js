@@ -84,8 +84,8 @@ const Agents = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   // Count-up animations
-  const developerCount = useCountUp(1000, 2000);
-  const appCount = useCountUp(100, 2000);
+  const developerCount = useCountUp(1505, 2000);
+  const appCount = useCountUp(1218, 2000);
 
   useEffect(() => {
     const fullWord = wordsToType[currentWordIndex];
@@ -237,11 +237,11 @@ const Agents = () => {
                 <dl class="mx-auto mt-4 mb-4 grid max-w-sm grid-cols-2 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-4 text-black sm:gap-y-16 lg:grid-cols-2">
                   <div class="flex flex-col gap-y-0 border-none pr-0">
                     <dt class="text-base/8 text-black">of developers</dt>
-                    <dd class="order-first text-4xl font-semibold tracking-tight" data-count="1000">{developerCount.toLocaleString()}+</dd>
+                    <dd class="order-first text-4xl font-semibold tracking-tight" data-count="1505">{developerCount.toLocaleString()}+</dd>
                   </div>
                   <div class="flex flex-col gap-y-0 border-none ml-0 lg:ml-8">
                     <dt class="text-base/8 text-black">Production apps</dt>
-                    <dd class="order-first text-4xl font-semibold tracking-tight" data-count="100">{appCount}+</dd>
+                    <dd class="order-first text-4xl font-semibold tracking-tight" data-count="1218">{appCount.toLocaleString()}+</dd>
                   </div>
                 </dl>
               </div>
