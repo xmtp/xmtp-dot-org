@@ -324,7 +324,7 @@ const Agents = () => {
        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-[#FBFBFB]"></div>
     </div>
 
-    <div className="py-12 md:py-16 pt-8 md:pt-6 rounded-2xl mt-0 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#fcfcfc] fadeup" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
+    <div className="py-12 md:py-24 pt-8 md:pt-12 rounded-2xl mt-0 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#fcfcfc] fadeup" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
         
           <div className="mt-8 flex justify-center">
@@ -351,13 +351,13 @@ const Agents = () => {
       <p className="m-auto max-w-full md:max-w-lg text-center text-white">Go viral with your mini apps in chat. Join the thousands of supercharged conversations happening right now across the vibrant ecosystems integrated with the XMTP network.</p>
 
        <div className="mx-auto mt-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-x-4">
-        <a href="https://www.base.org/ecosystem" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+        <a href="https://www.base.org/ecosystem" className="my-4 mb-0 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" className="w-5 h-5 me-2">
            <path fill="white" d="M0,101.12c0-34.64,0-51.95,6.53-65.28,6.25-12.76,16.56-23.07,29.32-29.32C49.17,0,66.48,0,101.12,0h1077.76C1213.51,0,1230.84,0,1244.16,6.53c12.75,6.25,23.06,16.56,29.32,29.32,6.52,13.32,6.52,30.64,6.52,65.28v1077.76c0,34.63,0,51.96-6.52,65.28-6.26,12.75-16.57,23.06-29.32,29.32-13.32,6.52-30.65,6.52-65.28,6.52H101.12c-34.64,0-51.95,0-65.28-6.52-12.76-6.26-23.07-16.57-29.32-29.32-6.53-13.32-6.53-30.65-6.53-65.28V101.12Z"/>
          </svg>
           Explore the Base ecosystem <span aria-hidden="true">→</span>
         </a>
-        <a href="https://farcaster.xyz/miniapps" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#8364C9] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+        <a href="https://farcaster.xyz/miniapps" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#8364C9] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 mt-0 lg:mt-0 hover:no-underline">
         <svg className="w-6 h-6 me-2" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path fill="white" d="M18.24 0.24H5.76C2.5789 0.24 0 2.8188 0 6v12c0 3.1811 2.5789 5.76 5.76 5.76h12.48c3.1812 0 5.76 -2.5789 5.76 -5.76V6C24 2.8188 21.4212 0.24 18.24 0.24m0.8155 17.1662v0.504c0.2868 -0.0256 0.5458 0.1905 0.5439 0.479v0.5688h-5.1437v-0.5688c-0.0019 -0.2885 0.2576 -0.5047 0.5443 -0.479v-0.504c0 -0.22 0.1525 -0.402 0.358 -0.458l-0.0095 -4.3645c-0.1589 -1.7366 -1.6402 -3.0979 -3.4435 -3.0979 -1.8038 0 -3.2846 1.3613 -3.4435 3.0979l-0.0096 4.3578c0.2276 0.0424 0.5318 0.2083 0.5395 0.4648v0.504c0.2863 -0.0256 0.5457 0.1905 0.5438 0.479v0.5688H4.3915v-0.5688c-0.0019 -0.2885 0.2575 -0.5047 0.5438 -0.479v-0.504c0 -0.2529 0.2011 -0.4548 0.4536 -0.4724v-7.895h-0.4905L4.2898 7.008l2.6405 -0.0005V5.0419h9.9495v1.9656h2.8219l-0.6091 2.0314h-0.4901v7.8949c0.2519 0.0177 0.453 0.2195 0.453 0.4724" stroke-width="1"></path>
         </svg>
