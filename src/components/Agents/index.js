@@ -238,7 +238,7 @@ const Agents = () => {
               <div class="mt-10 mx-auto max-w-full shrink-0 lg:mx-0 fadeup">
                 <dl class="mx-auto mt-4 mb-4 grid max-w-sm grid-cols-2 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-4 text-black sm:gap-y-16 lg:grid-cols-2">
                   <div class="flex flex-col gap-y-0 border-none pr-0">
-                    <dt class="text-base/8 text-black">of developers</dt>
+                    <dt class="text-base/8 text-black">Developers</dt>
                     <dd class="order-first text-4xl font-semibold tracking-tight" data-count="1505">{developerCount.toLocaleString()}+</dd>
                   </div>
                   <div class="flex flex-col gap-y-0 border-none ml-0 lg:ml-8">
