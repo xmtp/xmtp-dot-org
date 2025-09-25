@@ -205,7 +205,9 @@ const Agents = () => {
     <div className="overflow-hidden pt-0 pb-8">
       <div className="px-0 md:px-8">
         <div className="mx-auto max-w-full max-w-[1920px]">
-          <img src="img/ecosystemGraphic.png" alt="Ecosystem" className="w-full fadeup" />
+          <div className="w-full overflow-hidden md:overflow-visible flex justify-center">
+            <img src="img/ecosystemGraphic.png" alt="Ecosystem" className="w-[1200px] max-w-none md:w-full md:max-w-full fadeup" />
+          </div>
         </div>
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
           <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
