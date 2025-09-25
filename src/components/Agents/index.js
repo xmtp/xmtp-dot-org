@@ -187,8 +187,8 @@ const Agents = () => {
       }
     `}</style>
     <Head>
-      <title>Build Agents and Mini Apps on XMTP</title>
-      <meta property="og:title" content="Mini-apps in chat" />
+      <title>Build agents and mini apps on XMTP</title>
+      <meta property="og:title" content="Mini apps in chat" />
       <meta property="og:description" content="Add mini app experiences to chat with built-in payments, secure communication, and seamless access to the entire XMTP messaging ecosystem." />
       <meta property="og:image" content="https://xmtp.org/img/miniapps-preview.png" />
       <meta property="og:image:width" content="1470" />
@@ -196,7 +196,7 @@ const Agents = () => {
       <meta property="og:url" content="https://xmtp.org/miniapps" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Mini-apps in chat" />
+      <meta name="twitter:title" content="Mini apps in chat" />
       <meta name="twitter:description" content="Add mini app experiences to chat with built-in payments, secure communication, and seamless access to the entire XMTP messaging ecosystem." />
       <meta name="twitter:image" content="https://xmtp.org/img/miniapps-preview.png" />
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -214,20 +214,20 @@ const Agents = () => {
             <div className="col-start-1 col-end-7 text-center">
               <div>
                 <h2 className="mt-8 text-center text-5xl md:text-6xl font-semibold tracking-tighter text-balance text-gray-900 fadeup">
-                  Chat is the new App Store
+                  Chat is the new app store
                 </h2>
                 <p className="mt-0 text-lg max-w-full md:max-w-3xl mx-auto fadeup">
-                  XMTP powers a rapidly growing ecosystem of chat-native apps—where everything is a built in chat experience from trading, prediction markets, event coordination, payments, and games.
+                  XMTP powers a rapidly growing ecosystem of mini apps—where everything is a built-in chat experience from trading, prediction markets, event coordination, payments, and games.
                 </p>
                 <p className="mt-6 font-normal text-lg max-w-full md:max-w-3xl mx-auto fadeup">
-                  As an <span className="font-semibold">open, permissionless protocol,</span> all miniapps are suppported whether they are built on <span className="font-semibold">Base, Farcaster, or any other emerging ecosystem.</span> XMTP is built to support <a href="https://xmtp.org/vision/concepts/identity" targe="_blank"><span className="font-semibold underline decoration-dotted hover:no-underline underline-offset-4">any identity and any network.</span></a>
+                  As an <span className="font-semibold">open, permissionless protocol,</span> all mini apps are suppported whether they are built on <span className="font-semibold">Base, Farcaster, or any other ecosystem.</span> XMTP is built to support <a href="https://xmtp.org/vision/concepts/identity" target="_blank"><span className="font-semibold underline decoration-dotted hover:no-underline underline-offset-4">any identity and any network.</span></a>
                 </p>
 
                 <div className="mx-auto mt-6 mb-4 grid max-w-sm grid-cols-2 items-center gap-x-8 gap-y-10 fadeup">
                   <a href="https://www.base.org/ecosystem" target="_blank"><img src="img/baseLogo.png" alt="Base App Logo" className="w-auto" /></a>
                   <a href="https://farcaster.xyz/miniapps" target="_blank"><img src="img/farcasterLogo.png" alt="Farcaster Logo" className="w-auto" /></a>
                 </div>
-                <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
+                <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
                   </svg>
@@ -242,7 +242,7 @@ const Agents = () => {
                     <dd class="order-first text-4xl font-semibold tracking-tight" data-count="1505">{developerCount.toLocaleString()}+</dd>
                   </div>
                   <div class="flex flex-col gap-y-0 border-none ml-0 lg:ml-8">
-                    <dt class="text-base/8 text-black">Production apps</dt>
+                    <dt class="text-base/8 text-black">Production mini apps</dt>
                     <dd class="order-first text-4xl font-semibold tracking-tight" data-count="1218">{appCount.toLocaleString()}+</dd>
                   </div>
                 </dl>
@@ -303,7 +303,7 @@ const Agents = () => {
             </h2>
           </div>
           <div className="max-w-lg">
-            <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+            <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-6 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
@@ -353,13 +353,13 @@ const Agents = () => {
       <p className="m-auto max-w-full md:max-w-lg text-center text-white">Go viral with your mini apps in chat. Join the thousands of supercharged conversations happening right now across the vibrant ecosystems integrated with the XMTP network.</p>
 
        <div className="mx-auto mt-4 lg:mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-x-4">
-        <a href="https://www.base.org/ecosystem" className="my-4 md:my-0 mb-0 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+        <a href="https://www.base.org/ecosystem" target="_blank" className="my-4 md:my-0 mb-0 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" className="w-5 h-5 me-2">
            <path fill="white" d="M0,101.12c0-34.64,0-51.95,6.53-65.28,6.25-12.76,16.56-23.07,29.32-29.32C49.17,0,66.48,0,101.12,0h1077.76C1213.51,0,1230.84,0,1244.16,6.53c12.75,6.25,23.06,16.56,29.32,29.32,6.52,13.32,6.52,30.64,6.52,65.28v1077.76c0,34.63,0,51.96-6.52,65.28-6.26,12.75-16.57,23.06-29.32,29.32-13.32,6.52-30.65,6.52-65.28,6.52H101.12c-34.64,0-51.95,0-65.28-6.52-12.76-6.26-23.07-16.57-29.32-29.32-6.53-13.32-6.53-30.65-6.53-65.28V101.12Z"/>
          </svg>
           Explore the Base ecosystem <span aria-hidden="true">→</span>
         </a>
-        <a href="https://farcaster.xyz/miniapps" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#8364C9] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 mt-0 lg:mt-0 hover:no-underline">
+        <a href="https://farcaster.xyz/miniapps" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#8364C9] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 mt-0 lg:mt-0 hover:no-underline">
         <svg className="w-6 h-6 me-2" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path fill="white" d="M18.24 0.24H5.76C2.5789 0.24 0 2.8188 0 6v12c0 3.1811 2.5789 5.76 5.76 5.76h12.48c3.1812 0 5.76 -2.5789 5.76 -5.76V6C24 2.8188 21.4212 0.24 18.24 0.24m0.8155 17.1662v0.504c0.2868 -0.0256 0.5458 0.1905 0.5439 0.479v0.5688h-5.1437v-0.5688c-0.0019 -0.2885 0.2576 -0.5047 0.5443 -0.479v-0.504c0 -0.22 0.1525 -0.402 0.358 -0.458l-0.0095 -4.3645c-0.1589 -1.7366 -1.6402 -3.0979 -3.4435 -3.0979 -1.8038 0 -3.2846 1.3613 -3.4435 3.0979l-0.0096 4.3578c0.2276 0.0424 0.5318 0.2083 0.5395 0.4648v0.504c0.2863 -0.0256 0.5457 0.1905 0.5438 0.479v0.5688H4.3915v-0.5688c-0.0019 -0.2885 0.2575 -0.5047 0.5438 -0.479v-0.504c0 -0.2529 0.2011 -0.4548 0.4536 -0.4724v-7.895h-0.4905L4.2898 7.008l2.6405 -0.0005V5.0419h9.9495v1.9656h2.8219l-0.6091 2.0314h-0.4901v7.8949c0.2519 0.0177 0.453 0.2195 0.453 0.4724" stroke-width="1"></path>
         </svg>
@@ -375,32 +375,32 @@ const Agents = () => {
       <div className="bg-white absolute inset-0"></div>
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
         <div className="mt-8">
-        <h2 className="mb-8 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400 fadeup">Why Builders Love XMTP</h2>
+        <h2 className="mb-8 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400 fadeup">Why builders love XMTP</h2>
           <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2 fadeup">
-          ⚡ Apps in Motion</h4>
-          <p className="text-black fadeup">Mini apps don't just sit in feeds — they live inside conversations, where people are.</p>
+          ⚡ Apps in motion</h4>
+          <p className="text-black fadeup">Mini apps don't just sit in feeds—they live inside conversations, where people are.</p>
         </div>
 
         <div className="mt-10 fadeup">
           <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          🔒 Privacy by Default</h4>
+          🔒 Private by default</h4>
           <p className="text-black">Every message is end-to-end encrypted. Your users own their conversations.</p>
         </div>
 
 
         <div className="mt-10 fadeup">
           <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          🤝 Plug Into People, Not Platforms</h4>
+          🤝 Plug into people, not platforms</h4>
           <p className="text-black">Groups are the distribution channel. Chats are the retention engine.</p>
         </div>
 
         <div className="mt-10 fadeup">
           <h4 className="text-3xl md:text-4xl font-semibold tracking-tighter text-center mb-2">
-          🧩 Composable by Design</h4>
-          <p className="text-black">Use our SDK like Legos: Works across any Mini App framework.</p>
+          🧩 Composable by design</h4>
+          <p className="text-black">Use the XMTP SDK like Legos. Works across any mini app framework.</p>
         </div>
 
-        <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
+        <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
             <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
           </svg>
@@ -414,9 +414,9 @@ const Agents = () => {
 
         <div className="grid grid-cols-1 items-center gap-x-4 gap-y-8 md:gap-y-16 lg:grid-cols-12 pt-0">
           <div className="mx-auto w-full max-w-lg lg:mx-0 lg:col-span-5">
-            <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase data-dark:text-gray-200">Up and Running in no time</h2>
+            <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase data-dark:text-gray-200">Up and running in no time</h2>
             <h2 className="text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white sm:text-4xl">
-              An Interoperable SDK to Make Your Mini App Come Alive
+              A modern SDK to make your mini app come alive
             </h2>
             <p className="mt-6 text-lg/8 text-gray-200">
             Make your mini app TALK
@@ -438,7 +438,7 @@ const Agents = () => {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-gray-200 font-semibold text-base/6">Full TypeScript Support</span>
+                <span className="text-gray-200 font-semibold text-base/6">Full TypeScript support</span>
               </div>
               
               <div className="flex items-center space-x-2">
@@ -461,7 +461,7 @@ const Agents = () => {
             </div>
 
             <div className="mt-8 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">     
-                <a href="https://github.com/xmtp/xmtp-js/tree/main/sdks/agent-sdk" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
+                <a href="https://github.com/xmtp/xmtp-js/tree/main/sdks/agent-sdk" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline">
                   <svg viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6 me-2 fill-white"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z"></path></svg>
                   Explore the SDK <span aria-hidden="true">→</span>
                 </a>
@@ -532,11 +532,11 @@ await agent.start();`}
               Join the community bringing mini apps into chat
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-              The next wave of apps won't launch in stores — they'll start in conversations. Join the builders making it happen.
+              The next wave of apps won't launch in stores—they'll start in chat. Join the builders making it happen.
             </p>
 
             <div className="mt-4 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">
-              <a href="mailto:eric@ephemerahq.com" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
+              <a href="mailto:eric@ephemerahq.com" target="_blank" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
                 Request to join the group chat <span aria-hidden="true">→</span>
               </a>
               <a href="https://join.base.app" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
@@ -558,14 +558,14 @@ await agent.start();`}
         <div className="mx-auto max-w-xl text-center">
           <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Build the future of messaging</h2>
           <h3 className="mt-4 font-medium mleading-none d:leading-normal tracking-normal text-5xl md:text-7xl text-pretty text-white data-dark:text-white text-center font-dotgothic">
-            Ready to<br />Launch?
+            Ready to<br />launch?
           </h3>
           <p className="mt-8 text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the logic.</p>
-          <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the keys.</p>
           <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the experience.</p>
+          <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">Your users own their messages.</p>
           
           <div className="mt-8 flex items-center justify-center gap-x-4">
-            <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
+            <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
