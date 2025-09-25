@@ -1,17 +1,20 @@
 # This is a basic workflow to help you get started with Actions
 
-name: DocSearch Scraper
+name: DocSearch Scraper (Disabled)
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  # Temporarily disabled - only runs manually
+  # push:
+  #   branches: [ main ]
+  # pull_request:
+  #   branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+# Temporarily disabled due to Docker build issues
+# This workflow can be re-enabled by uncommenting the push/pull_request triggers above
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
