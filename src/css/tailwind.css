@@ -1701,6 +1701,17 @@ pre code {
 
 }
 
+/* Tablet improvements for vision pages */
+@media (min-width: 760px) and (max-width: 996px) {
+  /* Add horizontal margins for tablet viewports */
+  [class*="docPage"] .container,
+  [class*="docItemContainer"],
+  .markdown {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
 /*ask ai*/
 .DocSearch {
   /*display: none;*/
