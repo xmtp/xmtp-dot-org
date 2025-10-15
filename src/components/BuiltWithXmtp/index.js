@@ -279,15 +279,32 @@ const BuiltWithXmtp = () => {
           </div>
         </div>
 
-        <div className="rounded-2xl mt-0 mb-8 pb-10 relative overflow-hidden border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#1d1d1d] ">
+        {/* <div className="rounded-2xl mt-0 mb-8 pb-10 relative overflow-hidden border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#1d1d1d] ">
    
-          <div className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-16 py-8 rounded-3xl">
+          
+        </div> */}
 
-            <div className="max-w-2xl lg:max-w-3xl relative z-10">
-              <h3 className="mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white data-dark:text-white sm:text-4xl">
-                Built on an open-source, standards-based, secure chat protocol
-              </h3>
-            </div>
+        <div className="bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-contain bg-no-repeat bg-bottom rounded-2xl">
+          <div className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-16 py-16 rounded-3xl">
+
+          <div class="grid grid-cols-2 gap-4 items-center align-top">
+
+              <div className="max-w-2xl lg:max-w-3xl relative z-10">
+                <h3 className="mt-0 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white data-dark:text-white sm:text-4xl">
+                  Built on an open-source, standards-based, secure chat protocol
+                </h3>
+              </div>
+
+              <div className="relative z-10 flex justify-end">
+                <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+                  </svg>
+                  Start building now <span aria-hidden="true">→</span>
+                </a>
+              </div>
+
+          </div>
    
           <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-1">
 
@@ -353,9 +370,6 @@ const BuiltWithXmtp = () => {
 
           </div>
         </div>
-        </div>
-
-        <div className="bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-cover bg-no-repeat bg-bottom rounded-2xl fadeup">
           <div className="px-6 py-6 pb-16 md:pb-24 md:py-8 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-xl text-center">
               <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Build the future of messaging</h2>
