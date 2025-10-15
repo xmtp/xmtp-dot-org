@@ -283,19 +283,19 @@ const Agents = () => {
       <div className="grid grid-cols-1 items-top gap-x-24 gap-y-8 md:gap-y-16 lg:grid-cols-2 pt-0 fadeup">
         <div>
           <h1 className="mr-0 md:mr-10 float-left text-3xl md:text-4xl font-normal tracking-tighter text-balance text-gray-900">
-            Build chat experiences that
-          </h1>
+              Build chat experiences that
+            </h1>
           <h2 className="mt-0 text-[72px] md:text-[128px] leading-[0.75] font-normal text-balance text-gray-900 font-dotgothic tracking-tight" aria-live="polite">
-            <span className="typing-wrap">
-              <span className="typing-placeholder">Coordinate</span>
-              <span className="typing-live">
-                {typedWord}
-                <span className="typing-cursor">|</span>
+              <span className="typing-wrap">
+                <span className="typing-placeholder">Coordinate</span>
+                <span className="typing-live">
+                  {typedWord}
+                  <span className="typing-cursor">|</span>
+                </span>
               </span>
-            </span>
-          </h2>
+            </h2>
         </div>
-        
+
         <div className="mx-auto max-w-full text-left">
           <div className="max-w-full">
             <h2 className="text-2xl/tight font-normal tracking-tight text-balance text-gray-900">
@@ -530,20 +530,20 @@ await agent.start();`}
           <div className="mx-auto w-full max-w-xl lg:mx-0">
             <h2 className="text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-gray-900">
               Join the community bringing mini apps into chat
-            </h2>
+             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
               The next wave of apps won't launch in stores—they'll start in chat. Join the builders making it happen.
             </p>
 
             <div className="mt-4 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">
               <a href="mailto:eric@ephemerahq.com" target="_blank" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
-                Request to join the group chat <span aria-hidden="true">→</span>
-              </a>
-              <a href="https://join.base.app" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
-                Join the Base App waitlist
-                <span className="ml-1" aria-hidden="true">→</span>
-              </a>
-            </div>
+                 Request to join the group chat <span aria-hidden="true">→</span>
+               </a>
+               <a href="https://join.base.app" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+                 Join the Base App waitlist
+                 <span className="ml-1" aria-hidden="true">→</span>
+               </a>
+             </div>
           </div>
           <div className="mx-auto max-w-full">
             <img className="max-w-xs md:max-w-sm" src="img/basePlace.png" alt="Phone hero" />
