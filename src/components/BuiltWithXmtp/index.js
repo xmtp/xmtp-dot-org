@@ -53,7 +53,7 @@ const BuiltWithXmtp = () => {
           <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10">
 
             <div className="mt-5 max-w-3xl text-center mx-auto">
-              <h1 className="mt-8 text-center text-5xl md:text-6xl font-semibold tracking-tighter text-balance text-gray-900 fadeup">
+              <h1 className="mt-8 text-center text-5xl md:text-6xl font-semibold tracking-tighter text-balance text-gray-900">
                 XMTP powers the next generation of secure chat
               </h1>
             </div>
@@ -76,7 +76,16 @@ const BuiltWithXmtp = () => {
         </div>
 
         <div className="mx-auto w-full max-w-[1920px] overflow-hidden py-0 bg-gray-50 rounded-2xl">
-          <h2 className="text-center font-normal text-sm pt-4">Compelling hero graphic goes here</h2>
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-auto"
+          >
+            <source src="/img/CROP.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <div className="overflow-hidden py-32">
@@ -85,16 +94,16 @@ const BuiltWithXmtp = () => {
                 <div class="grid grid-flow-col grid-rows-1 gap-4">
                     <div>
                         <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">Trusted by the best</h2>
-                        <h3 className="mt-2 text-2xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl">Experience the future secured by XMTP</h3>
+                        <h3 className="mt-0 text-2xl font-normal tracking-tight text-pretty text-gray-950 data-dark:text-white sm:text-5xl font-ivar">Experience the future secured by XMTP</h3>
                     </div>
 
-                    <div className="flex justify-center items-center mb-8 space-x-4">
+                    <div className="flex justify-center items-center mb-0 space-x-3">
                       <button
                         onClick={prevSlide}
-                        className="p-3 rounded-full bg-gray-100 hover:bg-gray-700 text-black hover:text-white transition-colors duration-200"
+                        className="p-2 rounded-full bg-gray-100 hover:bg-gray-700 text-black hover:text-white transition-colors duration-200"
                         aria-label="Previous slide"
                       >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                         </svg>
                       </button>
@@ -119,10 +128,10 @@ const BuiltWithXmtp = () => {
                       
                       <button
                         onClick={nextSlide}
-                        className="p-3 rounded-full bg-gray-100 hover:bg-gray-700 text-black hover:text-white transition-colors duration-200"
+                        className="p-2 rounded-full bg-gray-100 hover:bg-gray-700 text-black hover:text-white transition-colors duration-200"
                         aria-label="Next slide"
                       >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </button>
@@ -290,7 +299,7 @@ const BuiltWithXmtp = () => {
           <div class="grid grid-cols-2 gap-4 items-center align-top">
 
               <div className="max-w-2xl lg:max-w-3xl relative z-10">
-                <h3 className="mt-0 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white data-dark:text-white sm:text-4xl">
+                <h3 className="mt-0 text-3xl/tight md:text-4xl font-normal tracking-tight text-balance text-white data-dark:text-white sm:text-3xl font-ivar">
                   Built on an open-source, standards-based, secure chat protocol
                 </h3>
               </div>
@@ -372,9 +381,10 @@ const BuiltWithXmtp = () => {
         </div>
           <div className="px-6 py-6 pb-16 md:pb-24 md:py-8 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-xl text-center">
-              <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Build the future of messaging</h2>
-              <h3 className="mt-4 font-medium mleading-none d:leading-normal tracking-normal text-5xl md:text-7xl text-pretty text-white data-dark:text-white text-center font-dotgothic">
-                Ready to<br />launch?
+              <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400">Code </h2>
+              <h3 className="mt-4 font-normal mleading-none d:leading-normal tracking-normal text-5xl md:text-6xl text-pretty text-white data-dark:text-white text-center">
+                Build Different.
+                Build with XMTP.
               </h3>
               <p className="mt-8 text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the logic.</p>
               <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none">You own the experience.</p>

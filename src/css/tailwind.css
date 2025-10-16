@@ -2,6 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16:wght@400&display=swap");
 
+@font-face {
+  font-family: 'Ivar Headline';
+  src: url('/fonts/IvarHeadline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,6 +21,10 @@
   
   .font-dotgothic {
     font-family: var(--font-dotgothic);
+  }
+
+  .font-ivar {
+    font-family: var(--font-ivar);
   }
 
   .typing-wrap {
@@ -74,6 +86,7 @@
 
     --font-prose: var(--font-ui);
     --font-dotgothic: "DotGothic16", monospace;
+    --font-ivar: "Ivar Headline", serif;
 
     --ifm-heading-font-family: var(--font-ui);
     --ifm-font-family-base: var(--font-ui);
