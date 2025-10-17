@@ -27,6 +27,17 @@
     font-family: var(--font-ivar);
   }
 
+  /* Target the main element that contains the built-with-xmtp-page */
+  main.container.margin-vert--lg:has(.built-with-xmtp-page) {
+    margin-top: 0 !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Fallback for browsers that don't support :has() */
+  .built-with-xmtp-page {
+    margin-top: -2rem !important;
+  }
+
   .typing-wrap {
     position: relative;
     display: inline-block;
@@ -1772,4 +1783,17 @@ summary::before {
 
 .fade-in {
   animation: fadeIn 0.25s ease-in forwards;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1600px);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite;
 }
