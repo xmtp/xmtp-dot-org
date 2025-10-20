@@ -414,7 +414,7 @@ const BuiltWithXmtp = () => {
         <div className="rounded-2xl mt-6 mb-0 p-16 relative overflow-hidden border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#1d1d1d] h-[50vh]">
           {/* Background globe image anchored to bottom right */}
           <div 
-            className="absolute bottom-0 right-0 w-full h-full bg-no-repeat bg-right-bottom opacity-20"
+            className="absolute bottom-0 right-0 w-full h-full bg-no-repeat bg-right-bottom"
             style={{
               backgroundImage: 'url(/img/globe-fpo.png)',
               backgroundSize: 'contain',
