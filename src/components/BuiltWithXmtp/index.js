@@ -90,86 +90,6 @@ const BuiltWithXmtp = () => {
         }
       `}</style>
 
-        <div className="relative overflow-hidden rounded-2xl">
-          
-          <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-16 pt-8 pb-10 rounded-2xl mt-8 bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-contain bg-no-repeat bg-bottom rounded-2xl h-[75vh]">
-
-            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-16">
-              {/* Left side - Content */}
-              <div className="flex-1">
-                <div className="mt-5 max-w-3xl text-left">
-                  <h1 className="mt-12 text-left text-5xl md:text-6xl font-semibold tracking-tighter text-balance text-white fadeup">
-                    The next generation of secure chat runs on XMTP
-                  </h1>
-                </div>
-
-                <div className="mt-5 max-w-3xl text-left">
-                  <p className="text-lg text-gray-300 fadeup">Quantum-resistant, secure chat — powered by a decentralized network.</p>
-                </div>
-
-                <div className="mt-8 gap-3 flex">
-                  
-                    <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-                      </svg>
-                      Start building now <span aria-hidden="true">→</span>
-                    </a>
-                </div>
-              </div>
-
-              {/* Right side - Metrics */}
-              <div className="flex flex-col gap-8 lg:gap-12">
-                {/* First metric */}
-                <div className="text-center lg:text-left fadeup">
-                  <div className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white">
-                    2.2M+
-                  </div>
-                  <div className="text-lg text-gray-300 mt-0">
-                    Identities
-                  </div>
-                </div>
-
-                {/* Second metric */}
-                <div className="text-center lg:text-left fadeup">
-                  <div className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white">
-                    100+
-                  </div>
-                  <div className="text-lg text-gray-300 mt-0">
-                    Apps
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="absolute bottom-0 h-[200px] w-full -mb-8">
-            <div className="flex animate-scroll">
-              <img
-                src="img/slidingHero.png"
-                className="w-auto flex-shrink-0"
-                style={{ width: '1400px', height: '200px', objectFit: 'cover' }}
-                alt=""
-              />
-              <img
-                src="img/slidingHero.png"
-                className="w-auto flex-shrink-0"
-                style={{ width: '1400px', height: '200px', objectFit: 'cover' }}
-                alt=""
-              />
-              <img
-                src="img/slidingHero.png"
-                className="w-auto flex-shrink-0"
-                style={{ width: '1400px', height: '200px', objectFit: 'cover' }}
-                alt=""
-              />
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1d1d1d] to-transparent pointer-events-none"></div>
-          </div>
-          
-        </div>
-
         <div className="mx-auto w-full max-w-[1920px] overflow-hidden py-0 pb-16 mt-6 mb-6 bg-gray-50 rounded-2xl border border-gray-800">
           <div className="px-0 md:px-8">
             <div className="mx-auto max-w-7xl">
@@ -181,7 +101,7 @@ const BuiltWithXmtp = () => {
               <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
                 <div className="col-start-1 col-end-7 text-center">
                   <div>
-                    <h2 className="mt-0 text-center text-4xl md:text-5xl font-semibold tracking-tighter text-balance text-gray-900 fadeup">
+                    <h2 className="mt-0 text-center text-4xl md:text-6xl font-semibold tracking-tighter text-balance text-gray-900 fadeup">
                       Chat is the new app store
                     </h2>
                     <p className="mt-0 text-lg max-w-full md:max-w-2xl mx-auto fadeup">
@@ -201,7 +121,7 @@ const BuiltWithXmtp = () => {
                         Start building now <span aria-hidden="true">→</span>
                       </a>
                       <a href="/miniapps" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-red-500 cursor-pointer font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
-                        Learn more
+                        Explore apps
                         <span className="ml-1" aria-hidden="true">→</span>
                       </a>
                     </div>
@@ -220,7 +140,7 @@ const BuiltWithXmtp = () => {
                 <div class="grid grid-flow-col grid-rows-1 gap-4">
                     <div>
                         <h2 className="mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400 fadeup">Trusted by the best</h2>
-                        <h3 className="mt-0 text-2xl font-semibold tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl fadeup">Say hello to the future of messaging</h3>
+                        <h3 className="mt-0 text-2xl font-semibold tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl fadeup">Say hello<br />to the future of messaging</h3>
                     </div>
 
                     <div className="flex justify-center items-center mb-0 space-x-3">
@@ -356,10 +276,17 @@ const BuiltWithXmtp = () => {
           </div>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-6 lg:grid-rows-1">
+        <div className="py-24 grid grid-cols-1 gap-6 lg:grid-cols-3 lg:grid-rows-2">
 
-          <div className="rounded-2xl lg:col-span-2 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
-            {/* Background quantum image */}
+          <div className="p-10 lg:col-span-1 lg:row-span-2 group relative flex flex-col overflow-hidden bg-white duration-300 fadeup h-[1200px]">
+            <h3 className="mt-0 text-2xl font-semibold tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl fadeup">Build on a different foundation</h3>
+            <p className="mt-0 text-lg max-w-full md:max-w-2xl mx-auto fadeup">
+              XMTP powers a rapidly growing ecosystem of mini apps—where everything is a built-in chat experience from trading, prediction markets, event coordination, payments, and games.
+            </p>
+          </div>
+
+          <div className="rounded-2xl lg:col-span-1 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
+            
             <div 
               className="absolute inset-0 bg-no-repeat bg-center bg-contain"
               style={{
@@ -375,29 +302,29 @@ const BuiltWithXmtp = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl lg:col-span-2 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
-            {/* Background quantum image */}
+          <div className="rounded-2xl lg:col-span-1 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
+            
             <div 
-              className="absolute inset-0 bg-no-repeat bg-center bg-contain opacity-20"
+              className="absolute inset-0 bg-no-repeat bg-center bg-contain"
               style={{
-                backgroundImage: 'url()',
+                backgroundImage: 'url(/img/identity-image.jpg)',
                 backgroundPosition: 'center bottom'
               }}
             ></div>
             <div className="relative p-10 z-10">
               <h3 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase">Identity</h3>
-              <p className="mt-0 text-2xl/8 font-normal tracking-tight text-white">Any network, any identity, anywhere in the world</p>
+              <p className="mt-0 text-2xl/8 font-normal tracking-tight text-white">Any network, any identity,<br />anywhere in the world</p>
               <p className="mt-2 max-w-[600px] text-sm/6 text-gray-300">XMTP makes it simple to take any digital identity and use it as the basis for private, end-to-end encrypted, quantum-resistant conversations in your app.</p>
               <a href="#" className="mt-2 max-w-[600px] text-sm/6 text-red-400 underline">Learn more</a>
             </div>
           </div>
 
-          <div className="rounded-2xl lg:col-span-2 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
-            {/* Background quantum image */}
+          <div className="rounded-2xl lg:col-span-1 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
+            
             <div 
               className="absolute inset-0 bg-no-repeat bg-center bg-contain"
               style={{
-                backgroundImage: 'url()',
+                backgroundImage: 'url(/img/spam-image.jpg)',
                 backgroundPosition: 'center bottom'
               }}
             ></div>
@@ -405,6 +332,23 @@ const BuiltWithXmtp = () => {
               <h3 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase">No Spam</h3>
               <p className="mt-0 text-2xl/8 font-medium tracking-tight text-white">Spam protection, built-in</p>
               <p className="mt-2 max-w-[600px] text-sm/6 text-gray-300">XMTP's consent system gives your users complete inbox control with encrypted preferences that work across all apps built with XMTP, creating spam-free messaging experiences.</p>
+              <a href="#" className="mt-2 max-w-[600px] text-sm/6 text-red-400 underline">Learn more</a>
+            </div>
+          </div>
+
+          <div className="rounded-2xl lg:col-span-1 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
+            
+            <div 
+              className="absolute inset-0 bg-no-repeat bg-center bg-contain"
+              style={{
+                backgroundImage: 'url(/img/money-image.jpg)',
+                backgroundPosition: 'center bottom'
+              }}
+            ></div>
+            <div className="relative p-10 z-10">
+              <h3 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase">Crypto</h3>
+              <p className="mt-0 text-2xl/8 font-medium tracking-tight text-white">Works with any digital asset around the world</p>
+              <p className="mt-2 max-w-[600px] text-sm/6 text-gray-300">XMTP makes it simple to take any digital identity and use it as the basis for priate, end-to-end encrypted, quantum-resistant conversations in your app.</p>
               <a href="#" className="mt-2 max-w-[600px] text-sm/6 text-red-400 underline">Learn more</a>
             </div>
           </div>
@@ -424,7 +368,7 @@ const BuiltWithXmtp = () => {
           
           <div className="max-w-2xl lg:max-w-3xl relative z-10">
             <h3 className="mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase fadeup">Decentralization</h3>
-            <h3 className="mt-0 text-3xl/tight md:text-4xl font-normal tracking-tight text-balance text-white data-dark:text-white sm:text-3xl fadeup">
+            <h3 className="mt-0 text-2xl font-semibold tracking-tighter text-pretty text-white data-dark:text-white sm:text-5xl fadeup">
               Censorship-resistant infrastructure backed by sustainable economics
             </h3>
             <p className="mt-2 max-w-[600px] text-sm/6 text-gray-300 fadeup">XMTP's decentralized global server network ensures no single country can shut down messaging for everybody. Small messaging fees keep servers running indefinitely while protecting the network from DOS and spam.</p>
@@ -432,28 +376,84 @@ const BuiltWithXmtp = () => {
           </div>
         </div>
 
-        <div className="mt-6 bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-cover bg-no-repeat bg-bottom rounded-2xl">
-          <div className="px-6 py-6 pb-16 md:pb-24 md:py-8 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-xl text-center">
-              <h2 className="mt-16 text-center font-mono text-xs/5 font-semibold tracking-widest text-gray-300 uppercase data-dark:text-gray-400 fadeup">Code</h2>
-              <h3 className="mt-4 font-medium mleading-none d:leading-normal tracking-normal text-5xl md:text-6xl text-pretty text-white data-dark:text-white text-center font-dotgothic fadeup">
-                Build Different.
-                Build with XMTP.
-              </h3>
-              <p className="mt-8 text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none fadeup">You own the logic.</p>
-              <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none fadeup">You own the experience.</p>
-              <p className="text-lg font-dotgothic font-bold text-gray-300 tracking-normal text-center leading-none fadeup">Your users own their messages.</p>
-              
-              <div className="mt-8 flex items-center justify-center gap-x-4">
-                <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse justify-center hover:no-underline fadeup">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-                  </svg>
-                  Start building <span aria-hidden="true">→</span>
-                </a>
+        <div className="relative overflow-hidden rounded-2xl">
+          
+          <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-16 pt-8 pb-10 rounded-2xl mt-6 bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-contain bg-no-repeat bg-bottom rounded-2xl h-[75vh]">
+
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-16">
+              {/* Left side - Content */}
+              <div className="flex-1">
+                <div className="mt-5 max-w-3xl text-left">
+                  <h1 className="mt-12 text-left text-5xl md:text-6xl font-semibold tracking-tighter text-balance text-white fadeup">
+                    The new internet runs on open protocols
+                  </h1>
+                </div>
+
+                <div className="mt-5 max-w-3xl text-left">
+                  <p className="text-lg text-gray-300 fadeup">Join the thousands of developers building the future of messaging on XMTP</p>
+                </div>
+
+                <div className="mt-8 gap-3 flex">
+                  
+                    <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+                      </svg>
+                      Start building now <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+              </div>
+
+              {/* Right side - Metrics */}
+              <div className="flex flex-col gap-8 lg:gap-12">
+                {/* First metric */}
+                <div className="text-center lg:text-left fadeup">
+                  <div className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white">
+                    2.2M+
+                  </div>
+                  <div className="text-lg text-gray-300 mt-0">
+                    Identities
+                  </div>
+                </div>
+
+                {/* Second metric */}
+                <div className="text-center lg:text-left fadeup">
+                  <div className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white">
+                    100+
+                  </div>
+                  <div className="text-lg text-gray-300 mt-0">
+                    Apps
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
+
+          <div className="absolute bottom-0 h-[200px] w-full -mb-8">
+            <div className="flex animate-scroll">
+              <img
+                src="img/slidingHero.png"
+                className="w-auto flex-shrink-0"
+                style={{ width: '1400px', height: '200px', objectFit: 'cover' }}
+                alt=""
+              />
+              <img
+                src="img/slidingHero.png"
+                className="w-auto flex-shrink-0"
+                style={{ width: '1400px', height: '200px', objectFit: 'cover' }}
+                alt=""
+              />
+              <img
+                src="img/slidingHero.png"
+                className="w-auto flex-shrink-0"
+                style={{ width: '1400px', height: '200px', objectFit: 'cover' }}
+                alt=""
+              />
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1d1d1d] to-transparent pointer-events-none"></div>
+          </div>
+          
         </div>
 
       </div>
