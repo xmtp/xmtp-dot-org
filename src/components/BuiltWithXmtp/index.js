@@ -280,8 +280,11 @@ const BuiltWithXmtp = () => {
 
           <div className="p-10 lg:col-span-1 lg:row-span-2 group relative flex flex-col overflow-hidden bg-white duration-300 fadeup h-[1200px]">
             <h3 className="mt-0 text-2xl font-semibold tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl fadeup">Build on a different foundation</h3>
-            <p className="mt-0 text-lg max-w-full md:max-w-2xl mx-auto fadeup">
-              XMTP powers a rapidly growing ecosystem of mini apps—where everything is a built-in chat experience from trading, prediction markets, event coordination, payments, and games.
+            <p className="mt-4 text-lg max-w-full md:max-w-2xl fadeup">
+              Chat. Reinvented.
+            </p>
+            <p className="mt-2 text-lg max-w-full md:max-w-2xl mx-auto fadeup">
+              Built on XMTP, every message is private, quantum-secure, and free from spam. Your identity works anywhere, across any network. Encryption, trust, and control—built in, not bolted on.
             </p>
           </div>
 
@@ -355,7 +358,7 @@ const BuiltWithXmtp = () => {
 
         </div>
 
-        <div className="rounded-2xl mt-6 mb-0 p-16 relative overflow-hidden border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#1d1d1d] h-[50vh]">
+        <div className="rounded-2xl mt-6 mb-0 p-16 py-32 relative overflow-hidden border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#1d1d1d]">
           {/* Background globe image anchored to bottom right */}
           <div 
             className="absolute bottom-0 right-0 w-full h-full bg-no-repeat bg-right-bottom"
@@ -368,7 +371,7 @@ const BuiltWithXmtp = () => {
           
           <div className="max-w-2xl lg:max-w-3xl relative z-10">
             <h3 className="mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase fadeup">Decentralization</h3>
-            <h3 className="mt-0 text-2xl font-semibold tracking-tighter text-pretty text-white data-dark:text-white sm:text-5xl fadeup">
+            <h3 className="mt-0 text-left text-5xl md:text-6xl font-semibold tracking-tighter text-balance text-white fadeup">
               Censorship-resistant infrastructure backed by sustainable economics
             </h3>
             <p className="mt-2 max-w-[600px] text-sm/6 text-gray-300 fadeup">XMTP's decentralized global server network ensures no single country can shut down messaging for everybody. Small messaging fees keep servers running indefinitely while protecting the network from DOS and spam.</p>
