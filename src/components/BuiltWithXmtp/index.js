@@ -101,11 +101,14 @@ const BuiltWithXmtp = () => {
               <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
                 <div className="col-start-1 col-end-7 text-center">
                   <div>
-                    <h2 className="mt-0 text-center text-4xl md:text-6xl font-semibold tracking-tighter text-balance text-gray-900 fadeup">
-                      Chat is the new app store
+                    <h2 className="mt-0 mb-8 text-center text-4xl md:text-6xl font-semibold tracking-tighter text-balance text-gray-900 fadeup">
+                      The world’s open source<br />messaging layer
                     </h2>
-                    <p className="mt-0 text-lg max-w-full md:max-w-2xl mx-auto fadeup">
-                      XMTP powers a rapidly growing ecosystem of mini apps—where everything is a built-in chat experience from trading, prediction markets, event coordination, payments, and games.
+                    <h3 className="font-semibold tracking-tight text-balance text-gray-900 fadeup">
+                      Chat is the new app store.
+                    </h3>
+                    <p className="mt-4 text-lg max-w-full md:max-w-2xl mx-auto fadeup">
+                      Build with a rapidly growing ecosystem of mini apps—where everything is a built-in chat experience from trading, prediction markets, event coordination, payments, and games.
                     </p>
 
                     <div className="mx-auto mt-6 mb-4 grid max-w-sm grid-cols-2 items-center gap-x-8 gap-y-10 fadeup">
@@ -120,7 +123,7 @@ const BuiltWithXmtp = () => {
                         </svg>
                         Start building now <span aria-hidden="true">→</span>
                       </a>
-                      <a href="/miniapps" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-red-500 cursor-pointer font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+                      <a href="/miniapps" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-red-500 cursor-pointer font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline fadeup">
                         Explore apps
                         <span className="ml-1" aria-hidden="true">→</span>
                       </a>
