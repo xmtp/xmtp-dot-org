@@ -90,25 +90,18 @@ const BuiltWithXmtp = () => {
         }
       `}</style>
 
-        <div className="mx-auto w-full max-w-[1920px] overflow-hidden py-0 pb-16 mt-6 mb-6 bg-gray-50 rounded-2xl border border-gray-800">
+        <div className="mx-auto w-full max-w-[1920px] overflow-hidden py-0 pb-16 mt-6 mb-6 bg-gray-50 rounded-2xl border border-gray-800 bg-cover bg-no-repeat bg-center fadeup" style={{backgroundImage: 'url(/img/newGraphic.png)'}}>
           <div className="px-0 md:px-8">
-            <div className="mx-auto max-w-7xl">
-              <div className="w-full overflow-hidden md:overflow-visible flex justify-center">
-                <img src="img/ecosystemGraphicCut.png" alt="Ecosystem" className="w-[1200px] max-w-none md:w-full md:max-w-full fadeup" />
-              </div>
-            </div>
             <div className="mx-auto max-w-2xl lg:max-w-7xl">
               <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
                 <div className="col-start-1 col-end-7 text-center">
                   <div>
+                    <img src="img/XMTPicon.png" alt="Ecosystem" className="w-[120px] fadeup mt-16 mb-8" />
                     <h2 className="mt-0 mb-8 text-center text-4xl md:text-6xl font-semibold tracking-tighter text-balance text-gray-900 fadeup">
-                      The world’s open source<br />messaging layer
+                      A secure chat protocol for the<br />future of identity & money
                     </h2>
-                    <h3 className="font-semibold tracking-tight text-balance text-gray-900 fadeup">
-                      Chat is the new app store.
-                    </h3>
                     <p className="mt-4 text-lg max-w-full md:max-w-2xl mx-auto fadeup">
-                      Build with a rapidly growing ecosystem of mini apps—where everything is a built-in chat experience from trading, prediction markets, event coordination, payments, and games.
+                      XMTP allows app developers to build secure chat and messaging applications with any digital identity or currency. All on a decentralized, self-sustaining messaging network.
                     </p>
 
                     <div className="mx-auto mt-6 mb-4 grid max-w-sm grid-cols-2 items-center gap-x-8 gap-y-10 fadeup">
