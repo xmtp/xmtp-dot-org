@@ -19,6 +19,7 @@ module.exports = {
       fontFamily: {
         sans: ['"Inter"', defaultTheme.fontFamily.sans],
         mono: ['"Inconsolata"', defaultTheme.fontFamily.mono],
+        satoshi: ['"Satoshi"', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       screens: {
         lg: '1193px',

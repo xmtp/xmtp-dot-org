@@ -1,462 +1,375 @@
-import React, { useState, useEffect } from "react";
-import ListOfDevelopers from "./ListOfDevs.json";
-import useBaseUrl from "@docusaurus/useBaseUrl/";
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Link from '@docusaurus/Link';
-import { motion } from "framer-motion";
+import React, { useEffect, useState, useRef } from "react";
 
 const BuiltWithXmtp = () => {
-  const [openAccordions, setOpenAccordions] = useState({ 1: true });
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [imageOffset, setImageOffset] = useState(0);
+  const [textOpacity, setTextOpacity] = useState(1);
+  const [activeSection, setActiveSection] = useState(0);
+  const textSectionRef = useRef(null);
+  const scrollSectionRef = useRef(null);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => Math.min(prev + 1, 1)); // Max slide 1 to show cards 1,2,3
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => Math.max(prev - 1, 0)); // Min slide 0 to show cards 0,1,2
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(Math.max(0, Math.min(index, 1))); // Clamp between 0 and 1
-  };
-
-  const toggleAccordion = (index) => {
-    setOpenAccordions(prev => {
-      // If clicking the currently open accordion and it's the only one open,
-      // don't allow it to close
-      if (prev[index] && Object.keys(prev).length === 1) {
-        return prev;
-      }
-      // Otherwise, close all others and open the clicked one
-      return { [index]: !prev[index] };
-    });
-  };
-
-  // Fade-up animation effect
   useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Add 0.1s delay before animation starts
-          setTimeout(() => {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }, 100);
+    const handleScroll = () => {
+      if (textSectionRef.current && scrollSectionRef.current) {
+        const textSectionRect = textSectionRef.current.getBoundingClientRect();
+        const scrollSectionRect = scrollSectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Check if text section has been fully scrolled past (its bottom has passed viewport top)
+        // This means the entire text section was visible and is now above the viewport
+        const textSectionFullyScrolledPast = textSectionRect.bottom <= 0;
+        
+        // Only start animating image after the entire text section has been in view and scrolled past
+        if (textSectionFullyScrolledPast && scrollSectionRect.bottom > 0) {
+          const scrollSectionTop = scrollSectionRect.top;
+          const scrollSectionHeight = scrollSectionRect.height;
+          
+          // The section is 200vh (windowHeight * 2) tall
+          // Image starts from the very bottom of the section and moves to center (0)
+          // The bottom of the section would be at scrollSectionHeight from the top
+          const startOffset = scrollSectionHeight; // Start from bottom of the section
+          
+          // Calculate scroll progress through the section
+          // When scroll section first enters viewport: scrollSectionTop = windowHeight
+          // As we scroll, scrollSectionTop decreases
+          // When we've scrolled the full section height: scrollSectionTop = windowHeight - scrollSectionHeight
+          
+          const sectionEnterPoint = windowHeight; // When section top reaches viewport top
+          const scrollRange = scrollSectionHeight; // Full height to scroll through
+          
+          // Calculate how far past the entry point we've scrolled
+          const scrolledPastEntry = sectionEnterPoint - scrollSectionTop;
+          const progress = Math.max(0, Math.min(1, scrolledPastEntry / scrollRange));
+          
+          // Map progress to image offset: start at scrollSectionHeight (bottom), end at 0 (center)
+          const newOffset = startOffset - (progress * startOffset);
+          setImageOffset(newOffset);
+          
+          // Fade out text as image scrolls in (opacity goes from 1 to 0.25 as progress goes from 0 to 1)
+          const newOpacity = 1 - (progress * 0.9);
+          setTextOpacity(newOpacity);
+        } else {
+          // Keep image at bottom of section until text section has been fully scrolled past
+          if (scrollSectionRef.current) {
+            const scrollSectionHeight = scrollSectionRef.current.getBoundingClientRect().height;
+            setImageOffset(scrollSectionHeight);
+          } else {
+            setImageOffset(window.innerHeight * 2); // Fallback to 200vh
+          }
+          // Keep text fully visible
+          setTextOpacity(1);
         }
-      });
-    }, observerOptions);
-
-    // Observe all elements with fadeup class
-    const fadeupElements = document.querySelectorAll('.fadeup');
-    fadeupElements.forEach((el) => {
-      // Set initial state - ensure 0% opacity by default
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
-      el.style.visibility = 'visible'; // Ensure element is visible but transparent
-      observer.observe(el);
-    });
-
-    return () => {
-      observer.disconnect();
+      }
     };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial calculation
+    
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // SVG components for better React integration
-  const MinusIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-      <path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z" />
-    </svg>
-  );
-
-  const PlusIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-      <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
-    </svg>
-  );
   
   return (
-    <div className="built-with-xmtp-page">
-      <style jsx>{`
-        .fadeup {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-      `}</style>
-
-        <div className="mx-auto w-full max-w-[1920px] overflow-hidden py-0 pb-16 mt-6 mb-6 bg-gray-50 rounded-2xl border border-gray-800 bg-cover bg-no-repeat bg-center fadeup" style={{backgroundImage: 'url(/img/newGraphic.png)'}}>
-          <div className="px-0 md:px-8">
-            <div className="mx-auto max-w-2xl lg:max-w-7xl">
-              <div className="py-4 pb-2 md:grid md:grid-cols-6 md:gap-4">
-                <div className="col-start-1 col-end-7 text-center">
-                  <div>
-                    <img src="img/XMTPicon.png" alt="Ecosystem" className="w-[120px] fadeup mt-16 mb-8" />
-                    <h2 className="mt-0 mb-8 text-center text-4xl md:text-6xl font-semibold tracking-tighter text-balance text-gray-900 fadeup">
-                      A secure chat protocol for the<br />future of identity & money
-                    </h2>
-                    <p className="mt-4 text-lg max-w-full md:max-w-2xl mx-auto fadeup">
-                      XMTP allows app developers to build secure chat and messaging applications with any digital identity or currency. All on a decentralized, self-sustaining messaging network.
-                    </p>
-
-                    <div className="mx-auto mt-6 mb-4 grid max-w-sm grid-cols-2 items-center gap-x-8 gap-y-10 fadeup">
-                      <a href="https://www.base.org/ecosystem" target="_blank"><img src="img/baseLogo.png" alt="Base App Logo" className="w-auto" /></a>
-                      <a href="https://farcaster.xyz/miniapps" target="_blank"><img src="img/farcasterLogo.png" alt="Farcaster Logo" className="w-auto" /></a>
-                    </div>
-
-                    <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-x-4">
-                      <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-                        </svg>
-                        Start building now <span aria-hidden="true">→</span>
-                      </a>
-                      <a href="/miniapps" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-red-500 cursor-pointer font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline fadeup">
-                        Explore apps
-                        <span className="ml-1" aria-hidden="true">→</span>
-                      </a>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="overflow-hidden py-0">
-        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10 rounded-2xl mt-0 bg-[#F5F5EF]">
-          <div className="px-6 lg:px-8">
-              <div className="mx-auto max-w-full">
-                <div class="grid grid-flow-col grid-rows-1 gap-4">
-                    <div>
-                        <h2 className="mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400 fadeup">Trusted by the best</h2>
-                        <h3 className="mt-0 text-2xl font-semibold tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl fadeup">Say hello<br />to the future of messaging</h3>
-                    </div>
-
-                    <div className="flex justify-center items-center mb-0 space-x-3">
-                      <button
-                        onClick={prevSlide}
-                        className="p-2 rounded-full bg-[#F5F5EF] hover:bg-gray-700 text-black hover:text-white transition-colors duration-200 cursor-pointer"
-                        aria-label="Previous slide"
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                      </button>
-
-                      {/* Slide Indicators
-                      <div className="flex space-x-2">
-                        {[0, 1].map((index) => (
-                          <button
-                            key={index}
-                            onClick={() => goToSlide(index)}
-                            className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                              index === currentSlide 
-                                ? 'bg-gray-800' 
-                                : 'bg-gray-400 hover:bg-gray-300'
-                            }`}
-                            aria-label={`Go to slide ${index + 1}`}
-                          />
-                        ))}
-                      </div> /*}
-
-                      */}
-                      
-                      <button
-                        onClick={nextSlide}
-                        className="p-2 rounded-full bg-[#F5F5EF] hover:bg-gray-700 text-black hover:text-white transition-colors duration-200 cursor-pointer"
-                        aria-label="Next slide"
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-                    </div>
-                </div>
-              </div>        
+    <>
+    <div ref={textSectionRef} className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-gradient-to-b from-[#FFFFFF] to-[#FFFEEA]">
+      <div className="mx-auto max-w-6xl px-4 py-20">
+        <h1 className="font-satoshi font-normal text-[56px] leading-[64px] tracking-[-2px] text-gray-900 text-center">
+          Our mission is to increase the world's freedom to communicate.
+        </h1>
+        <h2 className="font-satoshi font-normal mt-6 text-[40px] leading-[56px] tracking-tight text-gray-900 text-center">
+          Every idea, every movement, every revolution has started with a message; one person reaching out to another and saying something new. But somewhere along the way, we lost that freedom. Our words were captured. Our messages were mined. Our voices were filtered, ranked, and sold. Technology promised connection and delivered control. Promised openness and instead built walls. It's time to take it back. XMTP is that new foundation — a <span className="font-bold underline">decentralized</span>, <span className="font-bold underline">private</span>, and <span className="font-bold underline">permissionless protocol</span> for messaging. One that belongs to everyone, not anyone. One that can't be turned off, sold out, or censored. And now, your words can move money. Freedom doesn't ask for permission.
+          <br />
+          It moves through every message sent.
+          <br />
+          <br />
+          <span className="font-bold">The future of freedom begins here.</span>
+        </h2>
+      </div>        
+    </div> 
+    <div 
+      ref={scrollSectionRef}
+      className="relative px-24 left-1/2 right-1/2 -mx-[50vw] w-screen tracking-tight transition-colors duration-500 ease-in-out"
+      style={{ 
+        height: '200vh',
+        backgroundColor: activeSection === 1 ? '#0000FF' : activeSection === 2 ? '#E54D01' : '#FFFEEA'
+      }}
+    >
+      {/* Sticky text container - stays fixed while image scrolls */}
+      <div className="sticky top-0 h-screen flex flex-col items-center z-10 overflow-hidden">
+        <div className="mx-auto px-4 py-12 w-full relative flex-1 flex flex-col items-center">
+          <div className="flex-1 flex items-center justify-center">
+          <p 
+            className="mx-auto max-w-6xl font-satoshi font-normal text-center tracking-tight text-gray-900 text-[112px] leading-[112px] relative z-20"
+            style={{ opacity: textOpacity, willChange: 'opacity' }}
+          >
+            The next generation of messengers build with the future of identity and money
+          </p>
           </div>
 
-          <div className="mt-8">
-            
-             <div className="mx-auto max-w-full px-8">
-              <div 
-                className="flex gap-8 transition-transform duration-500 ease-in-out fadeup"
-                style={{ transform: `translateX(-${currentSlide * (256 + 40)}px)` }}
-              >
-               <div 
-                 className="relative flex aspect-9/16 w-64 h-[640px] shrink-0 snap-start scroll-ml-(--scroll-padding) flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-80 bg-black cursor-pointer transition-all duration-300 hover:scale-102"
-                 onClick={() => goToSlide(0)}
-               >
-                 <img
-                  src="img/worldPhoneCrop.png"
-                   className="absolute inset-x-0 top-0 w-full object-cover"
-                 >
-                 </img>
-                   <div aria-hidden="true" className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/90 via-transparent to-transparent ring-1 ring-gray-950/10 ring-inset"></div>
-                  <p className="relative p-6">
-                      <figcaption className="mt-6 border-t border-white/20 pt-6">
-                          <p className="text-lg/6 font-semibold text-white">World App</p>
-                          <p className="text-sm/6 font-medium"><span className="text-white">World combines Proof of Humanity with XMTP’s secure messaging, to create the world’s first, verified human messaging network.</span></p>
-                      </figcaption>
-                      <img src="img/worldLogoWhite.png" alt="Ecosystem" className="w-24 mt-2 fadeup" />
-                  </p>
-              </div>
-
-              <div 
-                className="relative flex aspect-9/16 w-64 h-[640px] shrink-0 snap-start scroll-ml-(--scroll-padding) flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-80 bg-[#0000ff] cursor-pointer transition-all duration-300 hover:scale-102"
-                onClick={() => goToSlide(1)}
-              >
-                 <img
-                  src="img/basePhoneCrop.png"
-                   className="absolute inset-x-0 top-0 w-full object-cover"
-                 >
-                 </img>
-                   <div aria-hidden="true" className="absolute inset-0 rounded-3xl bg-gradient-to-t from-[#0000ff]/100 via-transparent to-transparent ring-1 ring-gray-950/10 ring-inset"></div>
-                  <p className="relative p-6">
-                      <figcaption className="mt-6 border-t border-white/20 pt-6">
-                          <p className="text-lg/6 font-semibold text-white">Base App</p>
-                          <p className="text-sm/6 font-medium"><span className="text-white">Base App combines the power of wallets, agents, and mini apps with XMTP’s encrypted messaging — creating the connective layer for the onchain economy.</span></p>
-                      </figcaption>
-                      <img src="img/Base_lockup_white.png" alt="Ecosystem" className="w-20 mt-2 fadeup" />
-                  </p>
-              </div>
-              
-              <div 
-                className="relative flex aspect-9/16 w-64 h-[640px] shrink-0 snap-start scroll-ml-(--scroll-padding) flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-80 bg-[#E54D00] cursor-pointer transition-all duration-300 hover:scale-102"
-                onClick={() => goToSlide(2)}
-              >
-                 <img
-                  src="img/convosPhoneCrop.png"
-                   className="absolute inset-x-0 top-0 w-full object-cover"
-                 >
-                 </img>
-                   <div aria-hidden="true" className="absolute inset-0 rounded-3xl bg-gradient-to-t from-[#E54D00]/100 via-transparent to-transparent ring-1 ring-gray-950/10 ring-inset"></div>
-                  <p className="relative p-6">
-                      <figcaption className="mt-6 border-t border-white/20 pt-6">
-                          <p className="text-lg/6 font-semibold text-white">Convos</p>
-                          <p className="text-sm/6 font-medium"><span className="text-white">World combines Proof of Humanity with XMTP’s secure messaging, to create the world’s first, verified human messaging network.</span></p>
-                      </figcaption>
-                      <img src="img/convosLogo.svg" alt="Ecosystem" className="w-28 mt-2 fadeup" />
-                  </p>
-              </div>
-
-              <div 
-                className="relative flex aspect-9/16 w-64 h-[640px] shrink-0 snap-start scroll-ml-(--scroll-padding) flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-80 bg-[#4D7CF3] cursor-pointer transition-all duration-300 hover:scale-102"
-                onClick={() => goToSlide(3)}
-              >
-                 <img
-                  src="img/zoraPhoneCrop.png"
-                   className="absolute inset-x-0 top-0 w-full object-cover"
-                 >
-                 </img>
-                   <div aria-hidden="true" className="absolute inset-0 rounded-3xl bg-gradient-to-t from-[#4D7CF3]/80 via-transparent to-transparent ring-1 ring-gray-950/10 ring-inset"></div>
-                  <p className="relative p-6">
-                      <figcaption className="mt-6 border-t border-white/20 pt-6">
-                          <p className="text-lg/6 font-semibold text-white">Zora</p>
-                          <p className="text-sm/6 font-medium"><span className="text-white">Zora combines Proof of Humanity with XMTP's secure messaging, to create the world's first, verified human messaging network.</span></p>
-                      </figcaption>
-                      <img src="img/convosLogo.svg" alt="Ecosystem" className="w-28 mt-2 fadeup" />
-                  </p>
-              </div>
-              
-              </div>
-            </div>
-
-            </div>      
-          </div>
-        </div>
-
-        <div className="py-24 grid grid-cols-1 gap-6 lg:grid-cols-3 lg:grid-rows-2">
-
-          <div className="p-10 lg:col-span-1 lg:row-span-2 group relative flex flex-col overflow-hidden bg-white duration-300 fadeup h-[1200px]">
-            <h3 className="mt-0 text-2xl font-semibold tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl fadeup">Build on a different foundation</h3>
-            <p className="mt-4 text-lg max-w-full md:max-w-2xl fadeup">
-              Chat. Reinvented.
-            </p>
-            <p className="mt-2 text-lg max-w-full md:max-w-2xl mx-auto fadeup">
-              Built on XMTP, every message is private, quantum-secure, and free from spam. Your identity works anywhere, across any network. Encryption, trust, and control—built in, not bolted on.
-            </p>
-          </div>
-
-          <div className="rounded-2xl lg:col-span-1 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
-            
-            <div 
-              className="absolute inset-0 bg-no-repeat bg-center bg-contain"
-              style={{
-                backgroundImage: 'url(/img/quantum-image.jpg)',
-                backgroundPosition: 'center bottom'
-              }}
-            ></div>
-            <div className="relative p-10 z-10">
-              <h3 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase">Encryption</h3>
-              <p className="mt-0 text-2xl/8 font-medium tracking-tight text-white">Quantum-resistant end-to-end encryption</p>
-              <p className="mt-2 max-w-[600px] text-sm/6 text-gray-300">XMTP handles the cryptography—from key generation and rotation to group membership and message encryption—so you can add secure messaging without building custom security infrastructure.</p>
-              <a href="#" className="mt-2 max-w-[600px] text-sm/6 text-red-400 underline">Learn more</a>
-            </div>
-          </div>
-
-          <div className="rounded-2xl lg:col-span-1 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
-            
-            <div 
-              className="absolute inset-0 bg-no-repeat bg-center bg-contain"
-              style={{
-                backgroundImage: 'url(/img/identity-image.jpg)',
-                backgroundPosition: 'center bottom'
-              }}
-            ></div>
-            <div className="relative p-10 z-10">
-              <h3 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase">Identity</h3>
-              <p className="mt-0 text-2xl/8 font-normal tracking-tight text-white">Any network, any identity,<br />anywhere in the world</p>
-              <p className="mt-2 max-w-[600px] text-sm/6 text-gray-300">XMTP makes it simple to take any digital identity and use it as the basis for private, end-to-end encrypted, quantum-resistant conversations in your app.</p>
-              <a href="#" className="mt-2 max-w-[600px] text-sm/6 text-red-400 underline">Learn more</a>
-            </div>
-          </div>
-
-          <div className="rounded-2xl lg:col-span-1 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
-            
-            <div 
-              className="absolute inset-0 bg-no-repeat bg-center bg-contain"
-              style={{
-                backgroundImage: 'url(/img/spam-image.jpg)',
-                backgroundPosition: 'center bottom'
-              }}
-            ></div>
-            <div className="relative p-10 z-10">
-              <h3 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase">No Spam</h3>
-              <p className="mt-0 text-2xl/8 font-medium tracking-tight text-white">Spam protection, built-in</p>
-              <p className="mt-2 max-w-[600px] text-sm/6 text-gray-300">XMTP's consent system gives your users complete inbox control with encrypted preferences that work across all apps built with XMTP, creating spam-free messaging experiences.</p>
-              <a href="#" className="mt-2 max-w-[600px] text-sm/6 text-red-400 underline">Learn more</a>
-            </div>
-          </div>
-
-          <div className="rounded-2xl lg:col-span-1 lg:row-span-1 group relative flex flex-col overflow-hidden bg-[#1d1d1d] shadow-xs ring-1 ring-gray-700/50 hover:ring-gray-600/50 transition-all duration-300 fadeup h-[600px]">
-            
-            <div 
-              className="absolute inset-0 bg-no-repeat bg-center bg-contain"
-              style={{
-                backgroundImage: 'url(/img/money-image.jpg)',
-                backgroundPosition: 'center bottom'
-              }}
-            ></div>
-            <div className="relative p-10 z-10">
-              <h3 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase">Crypto</h3>
-              <p className="mt-0 text-2xl/8 font-medium tracking-tight text-white">Works with any digital asset around the world</p>
-              <p className="mt-2 max-w-[600px] text-sm/6 text-gray-300">XMTP makes it simple to take any digital identity and use it as the basis for priate, end-to-end encrypted, quantum-resistant conversations in your app.</p>
-              <a href="#" className="mt-2 max-w-[600px] text-sm/6 text-red-400 underline">Learn more</a>
-            </div>
-          </div>
-
-        </div>
-
-        <div className="rounded-2xl mt-6 mb-0 p-16 py-32 relative overflow-hidden border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#1d1d1d]">
-          {/* Background globe image anchored to bottom right */}
+          {/* Scrolling sections container */}
           <div 
-            className="absolute bottom-0 right-0 w-full h-full bg-no-repeat bg-right-bottom"
+            className="absolute inset-0 flex items-center justify-center z-30 pointer-events-none"
             style={{
-              backgroundImage: 'url(/img/globe-fpo.png)',
-              backgroundSize: 'contain',
-              backgroundPosition: 'right bottom'
+              transform: `translateY(${imageOffset}px)`,
             }}
-          ></div>
-          
-          <div className="max-w-2xl lg:max-w-3xl relative z-10">
-            <h3 className="mb-2 font-mono text-xs/5 font-semibold tracking-widest text-gray-400 uppercase fadeup">Decentralization</h3>
-            <h3 className="mt-0 text-left text-5xl md:text-6xl font-semibold tracking-tighter text-balance text-white fadeup">
-              Censorship-resistant infrastructure backed by sustainable economics
-            </h3>
-            <p className="mt-2 max-w-[600px] text-sm/6 text-gray-300 fadeup">XMTP's decentralized global server network ensures no single country can shut down messaging for everybody. Small messaging fees keep servers running indefinitely while protecting the network from DOS and spam.</p>
-            <a href="#" className="mt-2 max-w-[600px] text-sm/6 text-red-400 underline fadeup">Learn more</a>
-          </div>
-        </div>
+          >
+            {/* Segmented Controller - positioned below content sections */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40 pointer-events-auto">
+              <div className="inline-flex rounded-full p-0.5" style={{ backgroundColor: '#fafafa' }}>
+                {[
+                  { name: 'World', icon: (
+                    <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m18.0167 1.60446c-1.8384-1.069641-3.844-1.60446-6.0167-1.60446s-4.17827.534819-6.01671 1.60446c-1.83844 1.06963-3.3092 2.54039-4.37883 4.37883-1.069641 1.83844-1.60446 3.84401-1.60446 6.01671s.534819 4.1783 1.60446 6.0167c1.06963 1.8385 2.54039 3.3092 4.37883 4.3788 1.83844 1.0697 3.84401 1.6045 6.01671 1.6045s4.1783-.5348 6.0167-1.6045c1.8385-1.0696 3.3092-2.5403 4.3788-4.3788 1.0697-1.8384 1.6045-3.844 1.6045-6.0167s-.5348-4.17827-1.6045-6.01671c-1.0696-1.83844-2.5403-3.3092-4.3788-4.37883zm-5.2813 14.74094c-1.3705 0-2.4401-.4011-3.27579-1.1699-.56825-.5348-.93593-1.1699-1.10306-1.9387h12.96935c-.1337 1.103-.468 2.1392-.9359 3.1086h-7.6212zm-4.37885-5.5487c.16713-.7354.53481-1.40394 1.10306-1.93876.83569-.7688 1.90529-1.16992 3.27579-1.16992h7.6546c.5014.96936.8022 2.00557.9359 3.10868zm-4.47911-3.57664c.83565-1.43733 1.97214-2.60725 3.40947-3.4429 1.43732-.83566 3.00839-1.2702 4.74649-1.2702 1.7382 0 3.3092.43454 4.7465 1.2702.7354.43454 1.3705.93593 1.9722 1.5376h-6.0502c-1.3704 0-2.6072.30084-3.67683.86908-1.06964.56825-1.90529 1.37048-2.47354 2.37326-.40111.70195-.66852 1.4708-.80223 2.273h-2.97493c.13371-1.27021.53482-2.47355 1.16992-3.57662zm12.86906 13.00274c-1.4373.8357-3.0083 1.2702-4.7465 1.2702s-3.30919-.4345-4.74652-1.2702c-1.43732-.8356-2.57381-2.0055-3.40947-3.4429-.6351-1.103-1.03621-2.2729-1.16992-3.5431h2.97493c.13371.8022.40112 1.571.80223 2.2729.60167 1.0028 1.43733 1.7716 2.47354 2.3733 1.06964.5683 2.30641.8691 3.67691.8691h6.0167c-.5683.5682-1.2034 1.0696-1.9053 1.4707z" fill="#fff"/></svg>
+                  )},
+                  { name: 'Base App', icon: (                    
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_165_59)">
+                    <path d="M0.0001875 1.896C0.0001875 1.2465 0.000187504 0.921937 0.122625 0.672C0.239812 0.43275 0.433125 0.239437 0.672375 0.12225C0.922125 0 1.24669 0 1.89619 0H22.1042C22.7535 0 23.0784 0 23.3282 0.122437C23.5672 0.239625 23.7606 0.432937 23.8779 0.672187C24.0002 0.921937 24.0002 1.24669 24.0002 1.89619V22.1042C24.0002 22.7535 24.0002 23.0784 23.8779 23.3282C23.7606 23.5672 23.5672 23.7606 23.3282 23.8779C23.0784 24.0002 22.7535 24.0002 22.1042 24.0002H1.89619C1.24669 24.0002 0.922125 24.0002 0.672187 23.8779C0.432937 23.7606 0.239625 23.5672 0.122437 23.3282C0 23.0784 0 22.7535 0 22.1042V1.896H0.0001875Z" fill="#0000FF"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_165_59">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
 
-        <div className="relative overflow-hidden rounded-2xl">
-          
-          <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-16 pt-8 pb-10 rounded-2xl mt-6 bg-[#141414] bg-[url(/img/footerBG.jpg)] bg-contain bg-no-repeat bg-bottom rounded-2xl h-[75vh]">
-
-            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-16">
-              {/* Left side - Content */}
-              <div className="flex-1">
-                <div className="mt-5 max-w-3xl text-left">
-                  <h1 className="mt-12 text-left text-5xl md:text-6xl font-semibold tracking-tighter text-balance text-white fadeup">
-                    The new internet runs on open protocols
-                  </h1>
-                </div>
-
-                <div className="mt-5 max-w-3xl text-left">
-                  <p className="text-lg text-gray-300 fadeup">Join the thousands of developers building the future of messaging on XMTP</p>
-                </div>
-
-                <div className="mt-8 gap-3 flex">
-                  
-                    <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-                      </svg>
-                      Start building now <span aria-hidden="true">→</span>
-                    </a>
-                </div>
-              </div>
-
-              {/* Right side - Metrics */}
-              <div className="flex flex-col gap-8 lg:gap-12">
-                {/* First metric */}
-                <div className="text-center lg:text-left fadeup">
-                  <div className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white">
-                    2.2M+
-                  </div>
-                  <div className="text-lg text-gray-300 mt-0">
-                    Identities
-                  </div>
-                </div>
-
-                {/* Second metric */}
-                <div className="text-center lg:text-left fadeup">
-                  <div className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white">
-                    100+
-                  </div>
-                  <div className="text-lg text-gray-300 mt-0">
-                    Apps
-                  </div>
-                </div>
+                  )},
+                  { name: 'Convos', icon: (                    
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.7328 13.1188L17.7743 16.1537L16.1882 17.7363L13.1467 14.7014V18.9933H10.9043V14.7434L7.90484 17.7363L6.31877 16.1537L9.36027 13.1188H5.01564V10.8812H9.31694L6.27544 7.84634L7.86151 6.26372L10.9036 9.29924V5.00665H13.1461V9.34185L16.2303 6.26435L17.8163 7.84697L14.7748 10.8819H23.9987C23.4341 4.77838 18.2898 0 12.0264 0C5.38459 0 0 5.3729 0 11.9997C0 18.6265 5.38459 24 12.0264 24C18.2904 24 23.4348 19.2216 24 13.1188H14.7334H14.7328Z" fill="#E54D01"/>
+                    </svg>
+                  )},
+                  { name: 'Zora', icon: (                  
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                      <g clipPath="url(#clip0_165_63)">
+                        <mask id="mask0_165_63" style={{ maskType: 'luminance' }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                          <path d="M23.9877 0.012207H0.0117188V23.9882H23.9877V0.012207Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_165_63)">
+                          <mask id="mask1_165_63" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                            <path d="M11.9923 23.9733C18.6089 23.9733 23.9728 18.6094 23.9728 11.9928C23.9728 5.37607 18.6089 0.012207 11.9923 0.012207C5.37559 0.012207 0.0117188 5.37607 0.0117188 11.9928C0.0117188 18.6094 5.37559 23.9733 11.9923 23.9733Z" fill="#D9D9D9"/>
+                          </mask>
+                          <g mask="url(#mask1_165_63)">
+                            <path d="M28.0328 -5.19678H-3.68555V26.5216H28.0328V-5.19678Z" fill="#A1723A"/>
+                            <g filter="url(#filter0_f_165_63)">
+                              <path d="M12.9074 23.4692C19.9682 23.4692 25.6919 17.747 25.6919 10.6885C25.6919 3.62984 19.9682 -2.09229 12.9074 -2.09229C5.84684 -2.09229 0.123047 3.62984 0.123047 10.6885C0.123047 17.747 5.84684 23.4692 12.9074 23.4692Z" fill="#531002"/>
+                            </g>
+                            <g filter="url(#filter1_f_165_63)">
+                              <path d="M14.286 19.4238C20.0127 19.4238 24.6552 14.7797 24.6552 9.05103C24.6552 3.32227 20.0127 -1.32178 14.286 -1.32178C8.5594 -1.32178 3.91699 3.32227 3.91699 9.05103C3.91699 14.7797 8.5594 19.4238 14.286 19.4238Z" fill="#2B5DF0"/>
+                            </g>
+                            <g filter="url(#filter2_f_165_63)">
+                              <path d="M14.097 20.0168C20.0672 20.0168 24.9068 15.1754 24.9068 9.20327C24.9068 3.23106 20.0672 -1.61035 14.097 -1.61035C8.12688 -1.61035 3.28711 3.23106 3.28711 9.20327C3.28711 15.1754 8.12688 20.0168 14.097 20.0168Z" fill="url(#paint0_radial_165_63)"/>
+                            </g>
+                            <g filter="url(#filter3_f_165_63)">
+                              <path d="M15.89 11.926C18.8977 11.926 21.3357 9.48796 21.3357 6.48036C21.3357 3.47279 18.8977 1.03467 15.89 1.03467C12.8824 1.03467 10.4443 3.47279 10.4443 6.48036C10.4443 9.48796 12.8824 11.926 15.89 11.926Z" fill="#FCB8D4"/>
+                            </g>
+                            <g filter="url(#filter4_f_165_63)">
+                              <path d="M15.8865 8.65091C17.0876 8.65091 18.0611 7.67734 18.0611 6.47634C18.0611 5.27535 17.0876 4.30176 15.8865 4.30176C14.6855 4.30176 13.7119 5.27535 13.7119 6.47634C13.7119 7.67734 14.6855 8.65091 15.8865 8.65091Z" fill="white"/>
+                            </g>
+                            <g filter="url(#filter5_f_165_63)">
+                              <path d="M14.441 28.189C25.2335 28.189 33.9826 19.44 33.9826 8.64752C33.9826 -2.14497 25.2335 -10.894 14.441 -10.894C3.64848 -10.894 -5.10059 -2.14497 -5.10059 8.64752C-5.10059 19.44 3.64848 28.189 14.441 28.189Z" fill="url(#paint1_radial_165_63)" fillOpacity="0.9"/>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                      <defs>
+                        <filter id="filter0_f_165_63" x="-2.8406" y="-5.05593" width="31.4956" height="31.4888" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                          <feGaussianBlur stdDeviation="1.48182" result="effect1_foregroundBlur_165_63"/>
+                        </filter>
+                        <filter id="filter1_f_165_63" x="-2.01031" y="-7.24908" width="32.5929" height="32.6002" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                          <feGaussianBlur stdDeviation="2.96365" result="effect1_foregroundBlur_165_63"/>
+                        </filter>
+                        <filter id="filter2_f_165_63" x="1.06437" y="-3.83309" width="26.0656" height="26.0724" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                          <feGaussianBlur stdDeviation="1.11137" result="effect1_foregroundBlur_165_63"/>
+                        </filter>
+                        <filter id="filter3_f_165_63" x="5.99886" y="-3.4108" width="19.7825" height="19.7825" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                          <feGaussianBlur stdDeviation="2.22274" result="effect1_foregroundBlur_165_63"/>
+                        </filter>
+                        <filter id="filter4_f_165_63" x="10.7483" y="1.33812" width="10.2769" height="10.2764" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                          <feGaussianBlur stdDeviation="1.48182" result="effect1_foregroundBlur_165_63"/>
+                        </filter>
+                        <filter id="filter5_f_165_63" x="-7.32333" y="-13.1168" width="43.5285" height="43.5285" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                          <feGaussianBlur stdDeviation="1.11137" result="effect1_foregroundBlur_165_63"/>
+                        </filter>
+                        <radialGradient id="paint0_radial_165_63" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.9203 6.15254) rotate(128.228) scale(20.4158 20.4141)">
+                          <stop offset="0.286458" stopColor="#387AFA"/>
+                          <stop offset="0.647782" stopColor="#387AFA" stopOpacity="0"/>
+                        </radialGradient>
+                        <radialGradient id="paint1_radial_165_63" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.441 8.64752) rotate(90) scale(19.5416)">
+                          <stop offset="0.598958" stopOpacity="0"/>
+                          <stop offset="0.671875"/>
+                          <stop offset="0.734375" stopOpacity="0"/>
+                        </radialGradient>
+                        <clipPath id="clip0_165_63">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  )}
+                ].map((item, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveSection(index)}
+                    type="button"
+                    className={`inline-flex items-center gap-3 px-6 py-2 text-base font-satoshi font-semibold tracking-tight transition-all duration-200 ease-out rounded-full border-0 outline-none ${
+                      activeSection === index
+                        ? 'text-white shadow-[0_1px_3px_rgba(0,0,0,0.1)]'
+                        : 'font-normal text-gray-900 hover:text-gray-700 bg-transparent cursor-pointer'
+                    }`}
+                    style={activeSection === index ? { backgroundColor: '#000000' } : {}}
+                  >
+                    {item.icon}
+                    {item.name}
+                  </button>
+                ))}
               </div>
             </div>
 
-          </div>
-
-          <div className="absolute bottom-0 h-[200px] w-full -mb-8">
-            <div className="flex animate-scroll">
-              <img
-                src="img/slidingHero.png"
-                className="w-auto flex-shrink-0"
-                style={{ width: '1400px', height: '200px', objectFit: 'cover' }}
-                alt=""
+            {/* Section 1 */}
+            <div 
+              className={`absolute flex flex-col items-center justify-center transition-opacity duration-500 ${
+                activeSection === 0 ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <img 
+                src="/img/worldiPhone.png" 
+                alt="Section 1 Image" 
+                className="max-w-full h-auto object-contain"
+                style={{ height: '60vh' }}
               />
-              <img
-                src="img/slidingHero.png"
-                className="w-auto flex-shrink-0"
-                style={{ width: '1400px', height: '200px', objectFit: 'cover' }}
-                alt=""
-              />
-              <img
-                src="img/slidingHero.png"
-                className="w-auto flex-shrink-0"
-                style={{ width: '1400px', height: '200px', objectFit: 'cover' }}
-                alt=""
-              />
+              <div className="mt-4 mb-8 max-w-2xl flex flex-col items-center">
+                <img 
+                  src="/img/worldLogo.svg" 
+                  alt="Section 1 Logo" 
+                  className="h-auto block"
+                  style={{ height: '2em' }}
+                />
+                <h3 className="font-satoshi font-normal text-center text-gray-900 text-lg leading-7 mt-4">
+                  World App combines Proof of Humanity with XMTP's secure messaging to create the world's first, verified human messaging network.
+                </h3>
+                <img 
+                  src="/img/apple-store.svg" 
+                  alt="Section 1 Badge" 
+                  className="h-auto block"
+                  style={{ height: '2.5em' }}
+                />
+              </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1d1d1d] to-transparent pointer-events-none"></div>
-          </div>
-          
-        </div>
 
+            {/* Section 2 */}
+            <div 
+              className={`absolute flex flex-col items-center justify-center transition-opacity duration-500 ${
+                activeSection === 1 ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <img 
+                src="/img/baseiPhone.png" 
+                alt="Section 2 Image" 
+                className="max-w-full h-auto object-contain"
+                style={{ height: '60vh' }}
+              />
+              <div className="mt-4 mb-8 max-w-xl flex flex-col items-center">
+                <img 
+                  src="/img/Base_lockup_white.svg" 
+                  alt="Section 2 Logo" 
+                  className="h-auto block"
+                  style={{ height: '2em' }}
+                />
+                <h3 className="font-satoshi font-normal text-center text-white text-lg leading-7 mt-4">
+                  Base App is powered by XMTP's secure messaging, to create the world's first, verified human messaging network.
+                </h3>
+                <img 
+                  src="/img/apple-store.svg" 
+                  alt="Section 2 Badge" 
+                  className="h-auto block"
+                  style={{ height: '2.5em' }}
+                />
+              </div>
+            </div>
+
+            {/* Section 3 */}
+            <div 
+              className={`absolute flex flex-col items-center justify-center transition-opacity duration-500 ${
+                activeSection === 2 ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <img 
+                src="/img/convosiPhone.png" 
+                alt="Section 3 Image" 
+                className="max-w-full h-auto object-contain"
+                style={{ height: '60vh' }}
+              />
+              <div className="mt-4 mb-8 max-w-xl flex flex-col items-center">
+                <img 
+                  src="/img/convosLogoBlack.svg" 
+                  alt="Section 3 Logo" 
+                  className="h-auto block"
+                  style={{ height: '2em' }}
+                />
+                <h3 className="font-satoshi font-normal text-center text-black text-lg leading-7 mt-4">
+                  Convos is powered by XMTP's secure messaging, to create the world's first, verified human messaging network.
+                </h3>
+                <img 
+                  src="/img/apple-store.svg" 
+                  alt="Section 3 Badge" 
+                  className="h-auto block"
+                  style={{ height: '2.5em' }}
+                />
+              </div>
+            </div>
+
+            {/* Section 4 */}
+            <div 
+              className={`absolute flex flex-col items-center justify-center transition-opacity duration-500 ${
+                activeSection === 3 ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <img 
+                src="/img/zoraiPhone.png" 
+                alt="Section 4 Image" 
+                className="max-w-full h-auto object-contain"
+                style={{ height: '60vh' }}
+              />
+              <div className="mt-4 mb-8 max-w-xl flex flex-col items-center">
+                <img 
+                  src="/img/zoraLogo.svg" 
+                  alt="Section 4 Logo" 
+                  className="h-auto block"
+                  style={{ height: '2em' }}
+                />
+                <h3 className="font-satoshi font-normal text-center text-black text-lg leading-7 mt-4">
+                  Zora is powered by XMTP's secure messaging, to create the world's first, verified human messaging network.
+                </h3>
+                <img 
+                  src="/img/apple-store.svg" 
+                  alt="Section 4 Badge" 
+                  className="h-auto block"
+                  style={{ height: '2.5em' }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
+    </div>
+    {/* New section that slides up */}
+    <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-white min-h-[100vh] flex items-center justify-center">
+      <div className="mx-auto max-w-6xl px-4 py-20">
+        <p className="font-satoshi font-normal text-center text-gray-900 text-4xl">
+          This section slides up after scrolling past
+        </p>
+      </div>
+    </div>
+    </>
   );
 };
 
