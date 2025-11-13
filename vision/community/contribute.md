@@ -36,7 +36,7 @@ All types of contributions are welcome—whether you’re exploring messaging st
 
 ## 🧑‍💻 Contribute to open source projects
 
-You can contribute to any public repo in the [XMTP GitHub org](https://github.com/xmtp) or [EphemeraHQ GitHub org](https://github.com/ephemeraHQ).
+You can contribute to any public repo in the [XMTP GitHub org](https://github.com/xmtp) or [XMTP Labs GitHub org](https://github.com/xmtplabs).
 
 - **🐛 Report bugs**: Create an issue with detailed steps in the relevant repo. Please check first to avoid duplicates.
 
