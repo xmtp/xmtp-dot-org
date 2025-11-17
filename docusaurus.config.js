@@ -107,11 +107,11 @@ const config = {
               {
                 href: "https://community.xmtp.org/",
                 html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discourse-icon.svg" alt="Discourse icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Community forum ↗</div>`,
+                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Technical forum ↗</div>`,
               },
               {
-                href: "https://github.com/xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/github-icon-orange.svg" alt="GitHub icon" /></div>
+                href: "https://docs.xmtp.org/chat-apps/intro/dev-support",
+                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/support-icon-orange.svg" alt="support icon" /></div>
                 <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support ↗</div>`,
               },
               {
@@ -151,12 +151,12 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Community forum ↗",
+                label: "Technical forum ↗",
                 to: "https://community.xmtp.org/",
               },
               {
                 label: "Dev support ↗",
-                to: "https://github.com/xmtp",
+                to: "https://docs.xmtp.org/chat-apps/intro/dev-support",
               },
               {
                 label: "XMTP Community blog ↗",
@@ -188,12 +188,12 @@ const config = {
                 to: "https://github.com/xmtp/brand",
               },
               {
-                label: "Partnerships with Ephemera ↗",
+                label: "Partnerships with XMTP Labs ↗",
                 to: "https://forms.gle/UMCFjB8ukiMxBxnK6",
               },
               {
-                label: "Careers at Ephemera ↗",
-                to: "https://paragraph.xyz/@ephemera/careers",
+                label: "Careers at XMTP Labs ↗",
+                to: "https://paragraph.com/@xmtplabs/careers",
               },
             ],
           },

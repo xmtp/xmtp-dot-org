@@ -1,6 +1,4 @@
-# Contribute to the XMTP community
-
-Whether you code, design, write, test, educate, or just want to learn—there’s a place for you in the XMTP community.
+# Contribute to XMTP
 
 ## 🚀 Ways you can contribute
 
@@ -9,7 +7,7 @@ Whether you code, design, write, test, educate, or just want to learn—there’
 - 🐛 Report bugs and request features
 - 📣 Share XMTP with your network
 - 💡 Propose improvements to the protocol
-- 🤝 Explore a partnership with Ephemera
+- 🤝 Explore a partnership with XMTP Labs
 
 ---
 
@@ -24,13 +22,9 @@ Stay in the loop on what’s happening in the XMTP ecosystem:
 
 ---
 
-## 💬 Join the community forum
+## 💬 Join the technical forum
 
-Got an idea? A question? Curious about how XMTP works?
-
-[Join the XMTP Community Forum](https://community.xmtp.org/) to discuss with developers, researchers, enthusiasts, and more.
-
-All types of contributions are welcome—whether you’re exploring messaging standards or just getting started in web3.
+[Join the XMTP Technical Forum](https://community.xmtp.org/) to discuss and collaborate on the technical design, implementation, and evolution of XMTP.
 
 ---
 
@@ -64,11 +58,11 @@ You don’t need to be a protocol engineer to contribute to XIPs. If you have in
 
 ---
 
-## 🤝 Explore a partnership with Ephemera
+## 🤝 Explore a partnership with XMTP Labs
 
-Are you building an app, wallet, agent, or protocol that uses XMTP? Ephemera is here to help.
+Are you building an app, wallet, agent, or protocol that uses XMTP? XMTP Labs is here to help.
 
-As the steward of the XMTP protocol, Ephemera’s mission is to support adoption, experimentation, and best practices across the ecosystem.
+As the steward of the XMTP protocol, XMTP Labs' mission is to support adoption, experimentation, and best practices across the ecosystem.
 
 [Reach out to the Partnerships team](https://forms.gle/UMCFjB8ukiMxBxnK6) to explore how we can collaborate.
 
@@ -78,7 +72,7 @@ As the steward of the XMTP protocol, Ephemera’s mission is to support adoption
 
 XMTP is not accepting applications for grants at this time. [Follow XMTP](#️-follow-the-xmtp-conversation) for updates on future grant opportunities.
 
-In the meantime, you can still share your project ideas on the [Community Forum](https://community.xmtp.org/) or reach out via [Ephemera’s partnership form](https://forms.gle/UMCFjB8ukiMxBxnK6).
+In the meantime, you can still share your project ideas on the [Technical Forum](https://community.xmtp.org/) or reach out via [XMTP Labs' partnership form](https://forms.gle/UMCFjB8ukiMxBxnK6).
 
 ---
 
