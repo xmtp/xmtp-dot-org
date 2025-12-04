@@ -84,8 +84,8 @@ const Agents = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   // Count-up animations
-  const developerCount = useCountUp(1505, 2000);
-  const appCount = useCountUp(1218, 2000);
+  const developerCount = useCountUp(4500, 2000);
+  const appCount = useCountUp(1700, 2000);
 
   useEffect(() => {
     const fullWord = wordsToType[currentWordIndex];
@@ -220,14 +220,15 @@ const Agents = () => {
                   XMTP powers a rapidly growing ecosystem of mini apps—where everything is a built-in chat experience from trading, prediction markets, event coordination, payments, and games.
                 </p>
                 <p className="mt-6 font-normal text-lg max-w-full md:max-w-3xl mx-auto fadeup">
-                  As an <span className="font-semibold">open, permissionless protocol,</span> all mini apps are suppported whether they are built on <span className="font-semibold">Base, Farcaster, or any other ecosystem.</span> XMTP is built to support <a href="https://xmtp.org/vision/concepts/identity" target="_blank"><span className="font-semibold underline decoration-dotted hover:no-underline underline-offset-4">any identity and any network.</span></a>
+                  As an <span className="font-semibold">open, permissionless protocol,</span> all mini apps are suppported whether they are built on <span className="font-semibold">Base, World, Farcaster, or any other ecosystem.</span> XMTP is built to support <a href="https://xmtp.org/vision/concepts/identity" target="_blank"><span className="font-semibold underline decoration-dotted hover:no-underline underline-offset-4">any identity and any network.</span></a>
                 </p>
 
-                <div className="mx-auto mt-6 mb-4 grid max-w-sm grid-cols-2 items-center gap-x-8 gap-y-10 fadeup">
-                  <a href="https://www.base.org/ecosystem" target="_blank"><img src="img/baseLogo.png" alt="Base App Logo" className="w-auto" /></a>
-                  <a href="https://farcaster.xyz/miniapps" target="_blank"><img src="img/farcasterLogo.png" alt="Farcaster Logo" className="w-auto" /></a>
+                <div className="mx-auto mt-6 mb-2 grid max-w-2xl grid-cols-3 items-center gap-x-8 gap-y-10 fadeup">
+                  <a href="https://www.base.org/ecosystem" target="_blank"><img src="img/baseLogo.png" alt="Base App Logo" className="w-full h-auto" /></a>
+                  <a href="https://www.miniapps.world/" target="_blank"><img src="img/worldLogo.svg" alt="World Logo" className="w-full h-auto" /></a>
+                  <a href="https://farcaster.xyz/miniapps" target="_blank"><img src="img/farcasterLogo.png" alt="Farcaster Logo" className="w-full h-auto" /></a>
                 </div>
-                <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
+                <a href="https://docs.xmtp.org/agents/get-started/build-an-agent" target="_blank" className="mt-4 mb-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 pulse-this pulse hover:no-underline fadeup">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 me-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
                   </svg>
@@ -239,11 +240,11 @@ const Agents = () => {
                 <dl class="mx-auto mt-4 mb-4 grid max-w-sm grid-cols-2 md:grid-cols-1 gap-x-0 gap-y-4 md:gap-y-4 text-black sm:gap-y-16 lg:grid-cols-2">
                   <div class="flex flex-col gap-y-0 border-none pr-0">
                     <dt class="text-base/8 text-black">Developers</dt>
-                    <dd class="order-first text-4xl font-semibold tracking-tight" data-count="1505">{developerCount.toLocaleString()}+</dd>
+                    <dd class="order-first text-4xl font-semibold tracking-tight" data-count="4500">{developerCount.toLocaleString()}+</dd>
                   </div>
                   <div class="flex flex-col gap-y-0 border-none ml-0 lg:ml-8">
                     <dt class="text-base/8 text-black">Production mini apps</dt>
-                    <dd class="order-first text-4xl font-semibold tracking-tight" data-count="1218">{appCount.toLocaleString()}+</dd>
+                    <dd class="order-first text-4xl font-semibold tracking-tight" data-count="1700">{appCount.toLocaleString()}+</dd>
                   </div>
                 </dl>
               </div>
@@ -328,24 +329,6 @@ const Agents = () => {
 
     <div className="py-12 md:py-24 pt-8 md:pt-12 rounded-2xl mt-0 mb-8 relative overflow-hidden text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 bg-cover bg-no-repeat bg-center bg-[#fcfcfc] fadeup" style={{ backgroundImage: 'url(/img/viralBG.jpg)' }}>
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative z-10">
-        
-          <div className="mt-8 flex justify-center">
-            <div className="bg-gradient-to-r from-black to-gray-900 border-red-500 p-8 pb-6 rounded-xl max-w-2xl shadow-lg">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <img loading="lazy" className="h-8 w-8 rounded-full" src="img/bankr-logo.jpg" alt="Bankr logo" />
-                </div>
-                <div className="ml-3">
-                  <p className="text-xl text-left md:text-center font-medium text-white">
-                    "Bankr is part of <span className="font-bold text-red-600">20,000+ DMs and Group chats</span> in the Base App and it's not even out of beta yet"
-                  </p>
-                  <p className="mt-2 text-left md:text-center text-md text-white">
-                    <a href="https://x.com/bankrbot/status/1957564153780228405" target="_blank" className="text-red-500 hover:text-red-600">@bankrbot on X</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
 
       <h3 className="mt-8 text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white data-dark:text-white sm:text-4xl text-center">
       Here. There. Everywhere.<br />Unlock a whole new world for group chats.
@@ -353,13 +336,17 @@ const Agents = () => {
       <p className="m-auto max-w-full md:max-w-lg text-center text-white">Go viral with your mini apps in chat. Join the thousands of supercharged conversations happening right now across the vibrant ecosystems integrated with the XMTP network.</p>
 
        <div className="mx-auto mt-4 lg:mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-x-4">
-        <a href="https://www.base.org/ecosystem" target="_blank" className="my-4 md:my-0 mb-0 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+        <a href="https://www.base.org/build/mini-apps" target="_blank" className="my-4 md:my-0 mb-0 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#0052FF] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" className="w-5 h-5 me-2">
            <path fill="white" d="M0,101.12c0-34.64,0-51.95,6.53-65.28,6.25-12.76,16.56-23.07,29.32-29.32C49.17,0,66.48,0,101.12,0h1077.76C1213.51,0,1230.84,0,1244.16,6.53c12.75,6.25,23.06,16.56,29.32,29.32,6.52,13.32,6.52,30.64,6.52,65.28v1077.76c0,34.63,0,51.96-6.52,65.28-6.26,12.75-16.57,23.06-29.32,29.32-13.32,6.52-30.65,6.52-65.28,6.52H101.12c-34.64,0-51.95,0-65.28-6.52-12.76-6.26-23.07-16.57-29.32-29.32-6.53-13.32-6.53-30.65-6.53-65.28V101.12Z"/>
          </svg>
           Explore the Base ecosystem <span aria-hidden="true">→</span>
         </a>
-        <a href="https://farcaster.xyz/miniapps" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#8364C9] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 mt-0 lg:mt-0 hover:no-underline">
+        <a href="https://docs.world.org/mini-apps" target="_blank" className="my-4 md:my-0 mb-0 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-black hover:bg-gray-800 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
+          <img src="img/worldLogomark.svg" alt="World Logo" className="w-5 h-5 me-2 invert" />
+          Explore the World ecosystem <span aria-hidden="true">→</span>
+        </a>
+        <a href="https://miniapps.farcaster.xyz/docs/getting-started" target="_blank" className="my-4 md:mb-0 inline-flex shrink-0 items-center gap-x-1 text-white hover:text-white shadow-sm bg-[#8364C9] hover:bg-black transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 mt-0 lg:mt-0 hover:no-underline">
         <svg className="w-6 h-6 me-2" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path fill="white" d="M18.24 0.24H5.76C2.5789 0.24 0 2.8188 0 6v12c0 3.1811 2.5789 5.76 5.76 5.76h12.48c3.1812 0 5.76 -2.5789 5.76 -5.76V6C24 2.8188 21.4212 0.24 18.24 0.24m0.8155 17.1662v0.504c0.2868 -0.0256 0.5458 0.1905 0.5439 0.479v0.5688h-5.1437v-0.5688c-0.0019 -0.2885 0.2576 -0.5047 0.5443 -0.479v-0.504c0 -0.22 0.1525 -0.402 0.358 -0.458l-0.0095 -4.3645c-0.1589 -1.7366 -1.6402 -3.0979 -3.4435 -3.0979 -1.8038 0 -3.2846 1.3613 -3.4435 3.0979l-0.0096 4.3578c0.2276 0.0424 0.5318 0.2083 0.5395 0.4648v0.504c0.2863 -0.0256 0.5457 0.1905 0.5438 0.479v0.5688H4.3915v-0.5688c-0.0019 -0.2885 0.2575 -0.5047 0.5438 -0.479v-0.504c0 -0.2529 0.2011 -0.4548 0.4536 -0.4724v-7.895h-0.4905L4.2898 7.008l2.6405 -0.0005V5.0419h9.9495v1.9656h2.8219l-0.6091 2.0314h-0.4901v7.8949c0.2519 0.0177 0.453 0.2195 0.453 0.4724" stroke-width="1"></path>
         </svg>
@@ -418,9 +405,6 @@ const Agents = () => {
             <h2 className="text-3xl/tight md:text-4xl/tight font-semibold tracking-tighter text-balance text-white sm:text-4xl">
               A modern SDK to make your mini app come alive
             </h2>
-            <p className="mt-6 text-lg/8 text-gray-200">
-            Make your mini app TALK
-            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-1 gap-1 mb-4 mt-6">
               <div className="flex items-center space-x-2">
@@ -535,14 +519,23 @@ await agent.start();`}
               The next wave of apps won't launch in stores—they'll start in chat. Join the builders making it happen.
             </p>
 
-            <div className="mt-4 flex flex-col md:flex-row items-center gap-4 md:gap-x-4">
-              <a href="mailto:eric@ephemerahq.com" target="_blank" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base me-2 px-5 py-2.5 md:py-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
-                Request to join the group chat <span aria-hidden="true">→</span>
+            <div className="mt-8 flex flex-col items-start gap-4">
+              <a href="https://forms.gle/AoTpF6rJTn1vXZ1o9" target="_blank" className="inline-flex shrink-0 items-center justify-center gap-x-1 text-white hover:text-white shadow-sm bg-red-500 hover:bg-red-700 transition-all font-semibold rounded-md text-base px-8 py-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 hover:no-underline">
+                Join the group chat <span aria-hidden="true">→</span>
               </a>
-              <a href="https://join.base.app" className="w-full md:w-auto my-0 md:my-4 md:mb-0 inline-flex shrink-0 items-center justify-center gap-x-1 text-black hover:text-[#0052FF] font-semibold text-base me-2 px-5 py-2.5 md:py-3.5 hover:no-underline">
-                Join the Base App waitlist
-                <span className="ml-1" aria-hidden="true">→</span>
-              </a>
+
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-3 mt-2">
+                <span className="text-sm text-gray-500">Download apps:</span>
+                <div className="flex items-center gap-3">
+                  <a href="https://join.base.app/" target="_blank" className="text-sm font-medium text-gray-900 hover:text-[#0052FF] transition-colors hover:no-underline">
+                    Base App
+                  </a>
+                  <span className="text-gray-300">|</span>
+                  <a href="https://world.org/download" target="_blank" className="text-sm font-medium text-gray-900 hover:text-black transition-colors hover:no-underline">
+                    World App
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div className="mx-auto max-w-full">

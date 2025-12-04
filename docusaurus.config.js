@@ -100,41 +100,9 @@ const config = {
             label: 'Documentation ↗',
           },
           {
-            type: "dropdown",
+            to: "https://forms.gle/C5A6EEsrp4ENxnf48",
+            label: "Join the XMTP Dev Community ↗",
             position: "right",
-            label: "Community",
-            items: [
-              {
-                href: "https://community.xmtp.org/",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/discourse-icon.svg" alt="Discourse icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Community forum ↗</div>`,
-              },
-              {
-                href: "https://github.com/xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/github-icon-orange.svg" alt="GitHub icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Dev support ↗</div>`,
-              },
-              {
-                href: "https://paragraph.xyz/@xmtp_community/",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/marketing-icon.svg" alt="Megaphone icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Blog ↗</div></div>`,
-              },
-              {
-                href: "https://lu.ma/xmtp",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/calendar-icon.svg" alt="Calendar icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Events ↗</div>`,
-              },
-              {
-                to: "/vision/community/contribute",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/heart-icon.svg" alt="Heart icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Contribute</div>`,
-              },
-              {
-                to: "/vision/community/code-of-conduct",
-                html: `<div class="navbar__client__dropdown"><div class="navbar__client__dropdown__icon"><img src="/img/shield.svg" alt="Shield icon" /></div>
-                <div class="navbar__client__dropdown_text"><div class="text-base text-semibold">Code of conduct</div>`,
-              },
-            ],
           },
           {
             href: "https://github.com/xmtp",
