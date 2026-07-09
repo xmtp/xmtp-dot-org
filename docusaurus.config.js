@@ -215,7 +215,7 @@ const config = {
             items: [
               {
                 label: "Privacy policy",
-                to: "privacy",
+                to: "/privacy",
               },
               {
                 label: "Terms of service",
