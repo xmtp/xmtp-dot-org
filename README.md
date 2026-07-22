@@ -6,7 +6,7 @@ If you are looking for documentation about XMTP, please visit [docs.xmtp.org](ht
 
 ## Contribute to xmtp.org
 
-When contributing to xmtp.org, please follow the XMTP community [code of conduct](https://github.com/xmtp/xmtp-dot-org/blob/main/docs/community/code-of-conduct.md) to help create a safe and positive experience for all.
+When contributing to xmtp.org, please follow the XMTP community [code of conduct](https://github.com/xmtp/xmtp-dot-org/blob/main/vision/community/code-of-conduct.md) to help create a safe and positive experience for all.
 
 ### Report a bug
 
