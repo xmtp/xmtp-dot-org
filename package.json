@@ -8,8 +8,8 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096' docusaurus build",
-    "build:production": "NODE_OPTIONS='--max-old-space-size=4096' docusaurus build",
+    "build": "node --max-old-space-size=4096 node_modules/@docusaurus/core/bin/docusaurus.mjs build",
+    "build:production": "node --max-old-space-size=4096 node_modules/@docusaurus/core/bin/docusaurus.mjs build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
